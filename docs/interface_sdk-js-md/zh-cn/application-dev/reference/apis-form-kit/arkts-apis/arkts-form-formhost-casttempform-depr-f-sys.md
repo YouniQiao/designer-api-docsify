@@ -45,6 +45,17 @@ formHost.castTempForm(formId, (error: Base.BusinessError) => {
 });
 ```
 
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.castTempForm(formId).then(() => {
+  console.info('formHost castTempForm success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## castTempForm
 
@@ -80,13 +91,4 @@ function castTempForm(formId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import Base from '@ohos.base';
-
-let formId: string = '12400633174999288';
-formHost.castTempForm(formId).then(() => {
-  console.info('formHost castTempForm success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
-});
-```
+参见 [castTempForm](#casttempform)

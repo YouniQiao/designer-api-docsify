@@ -42,13 +42,3 @@ DLP管理应用需要追踪沙箱的创建和销毁状态，以便维护沙箱�
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.on('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
-  console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName);
-}); // 订阅。
-```

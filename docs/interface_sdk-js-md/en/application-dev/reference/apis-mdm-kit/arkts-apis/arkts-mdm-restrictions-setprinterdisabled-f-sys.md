@@ -67,6 +67,24 @@ restrictions.setPrinterDisabled(wantTemp, true, (err) => {
 })
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+restrictions.setPrinterDisabled(wantTemp, true).then(() => {
+  console.info('Succeeded in setting printer disabled');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set printer disabled. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setPrinterDisabled
 
@@ -115,20 +133,4 @@ Enables or disables the printing capability of the device. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-restrictions.setPrinterDisabled(wantTemp, true).then(() => {
-  console.info('Succeeded in setting printer disabled');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set printer disabled. Code is ${err.code}, message is ${err.message}`);
-})
-```
+See [setPrinterDisabled](#setprinterdisabled)

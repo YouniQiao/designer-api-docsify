@@ -62,6 +62,20 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: "bundleName1",
+};
+
+notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
+    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSlotNumByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getSlotNumByBundle
 
@@ -106,16 +120,4 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
-};
-
-notificationManager.getSlotNumByBundle(bundle).then((data: number) => {
-    console.info(`getSlotNumByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotNumByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlotNumByBundle](#getslotnumbybundle)

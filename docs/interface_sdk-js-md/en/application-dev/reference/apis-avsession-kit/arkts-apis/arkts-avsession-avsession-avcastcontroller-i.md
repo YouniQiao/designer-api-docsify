@@ -510,12 +510,6 @@ Unregister listener for video size change event, used at remote side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-**Examples**
-
-```TypeScript
-avCastController.off('videoSizeChange');
-```
-
 ## off('error')
 
 ```TypeScript
@@ -1011,16 +1005,6 @@ Register listener for video size change event, used at remote side.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-
-**Examples**
-
-```TypeScript
-// Obtain the avCastController instance through avSession.getAVCastController.
-avCastController.on('videoSizeChange', (width: number, height: number) => {
-  console.info(`width : ${width} `);
-  console.info(`height: ${height} `);
-});
-```
 
 ## on('error')
 

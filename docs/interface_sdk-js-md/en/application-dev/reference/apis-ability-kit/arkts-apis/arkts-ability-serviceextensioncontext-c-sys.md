@@ -275,6 +275,38 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let commRemote: rpc.IRemoteObject | null; // Release the instance when the connection is disconnected.
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    // connection is the return value of connectServiceExtensionAbility.
+    let connection = 1;
+    try {
+      this.context.disconnectServiceExtensionAbility(connection)
+        .then(() => {
+          commRemote = null;
+          // Carry out normal service processing.
+          console.info('disconnectServiceExtensionAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          commRemote = null;
+          // Process service logic errors.
+          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      commRemote = null;
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -313,37 +345,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let commRemote: rpc.IRemoteObject | null; // Release the instance when the connection is disconnected.
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    // connection is the return value of connectServiceExtensionAbility.
-    let connection = 1;
-    try {
-      this.context.disconnectServiceExtensionAbility(connection)
-        .then(() => {
-          commRemote = null;
-          // Carry out normal service processing.
-          console.info('disconnectServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          commRemote = null;
-          // Process service logic errors.
-          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      commRemote = null;
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
 
 ## openAtomicService
 
@@ -669,6 +671,43 @@ class ServiceExtension extends ServiceExtensionAbility {
   onCreate() {
     let pickerWant: Want = {
       bundleName: 'com.example.myapplication',
+      abilityName: 'UIExtAbility',
+      moduleName: 'entry_test',
+      parameters: {
+        'bundleName': 'com.example.myapplication',
+        // The value is the same as the value of type configured for com.example.myapplication.UIExtAbility.
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      }
+    };
+
+    try {
+      this.context.requestModalUIExtension(pickerWant)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('requestModalUIExtension succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class ServiceExtension extends ServiceExtensionAbility {
+  onCreate() {
+    let pickerWant: Want = {
+      bundleName: 'com.example.myapplication',
       abilityName: 'com.example.myapplication.UIExtAbility',
       moduleName: 'entry_test',
       parameters: {
@@ -748,42 +787,7 @@ Before starting the UIExtensionAbility, ensure that the focused application has 
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class ServiceExtension extends ServiceExtensionAbility {
-  onCreate() {
-    let pickerWant: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'UIExtAbility',
-      moduleName: 'entry_test',
-      parameters: {
-        'bundleName': 'com.example.myapplication',
-        // The value is the same as the value of type configured for com.example.myapplication.UIExtAbility.
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-
-    try {
-      this.context.requestModalUIExtension(pickerWant)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('requestModalUIExtension succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [requestModalUIExtension](#requestmodaluiextension)
 
 ## requestModalUIExtensionWithAccount
 
@@ -959,6 +963,71 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      bundleName: 'com.example.myapp',
+      abilityName: 'MyAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0,
+    };
+
+    try {
+      this.context.startAbility(want, options)
+        .then((data: void) => {
+          // Carry out normal service processing.
+          console.info('startAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0
+    };
+
+    try {
+      this.context.startAbility(want, options, (error: BusinessError) => {
+        if (error.code) {
+          // Process service logic errors.
+          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startAbility succeed');
+      });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
+    }
+  }
+}
+```
+
 ## startAbility
 
 ```TypeScript
@@ -1016,38 +1085,7 @@ Starts an ability. This API can be called only on the main thread. It uses an as
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbility(want, options, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)
 
 ## startAbility
 
@@ -1111,37 +1149,7 @@ Starts an ability. This API can be called only on the main thread. It uses a pro
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MyAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then((data: void) => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)
 
 ## startAbilityAsCaller
 
@@ -1227,6 +1235,61 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    // want contains the information about the caller who starts the application.
+    let localWant: Want = want;
+    localWant.bundleName = 'com.example.demo';
+    localWant.moduleName = 'entry';
+    localWant.abilityName = 'TestAbility';
+
+    let option: StartOptions = {
+      displayId: 0
+    }
+
+    // Start a new ability using the caller information.
+    this.context.startAbilityAsCaller(localWant, option, (err) => {
+      if (err && err.code != 0) {
+        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info('startAbilityAsCaller success.');
+      }
+    })
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate(want: Want) {
+    // want contains the information about the caller who starts the application.
+    let localWant: Want = want;
+    localWant.bundleName = 'com.example.demo';
+    localWant.moduleName = 'entry';
+    localWant.abilityName = 'TestAbility';
+
+    let option: StartOptions = {
+      displayId: 0
+    };
+
+    // Start a new ability using the caller information.
+    this.context.startAbilityAsCaller(localWant, option)
+      .then(() => {
+        console.info('startAbilityAsCaller success.');
+      })
+      .catch((err: BusinessError) => {
+        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
+      })
+  }
+}
+```
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1287,32 +1350,7 @@ Starts an ability with the caller information and start options specified. The c
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want contains the information about the caller who starts the application.
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let option: StartOptions = {
-      displayId: 0
-    }
-
-    // Start a new ability using the caller information.
-    this.context.startAbilityAsCaller(localWant, option, (err) => {
-      if (err && err.code != 0) {
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      } else {
-        console.info('startAbilityAsCaller success.');
-      }
-    })
-  }
-}
-```
+See [startAbilityAsCaller](#startabilityascaller)
 
 ## startAbilityAsCaller
 
@@ -1381,33 +1419,7 @@ Starts an ability with the start options specified. The caller information is ca
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate(want: Want) {
-    // want contains the information about the caller who starts the application.
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-
-    let option: StartOptions = {
-      displayId: 0
-    };
-
-    // Start a new ability using the caller information.
-    this.context.startAbilityAsCaller(localWant, option)
-      .then(() => {
-        console.info('startAbilityAsCaller success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`startAbilityAsCaller failed, err: ${JSON.stringify(err)}`);
-      })
-  }
-}
-```
+See [startAbilityAsCaller](#startabilityascaller)
 
 ## startAbilityByCall
 
@@ -1468,77 +1480,12 @@ ohos.permission.START_INVISIBLE_ABILITY permission.
 
 **Examples**
 
-Start an ability in the background.
-
 ```TypeScript
-import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let caller: Caller;
-    // Start an ability in the background by not passing parameters.
-    let wantBackground: Want = {
-      bundleName: 'com.example.myservice',
-      moduleName: 'entry',
-      abilityName: 'EntryAbility',
-      deviceId: ''
-    };
-
-    try {
-      this.context.startAbilityByCall(wantBackground)
-        .then((obj: Caller) => {
-          // Carry out normal service processing.
-          caller = obj;
-          console.info('startAbilityByCall succeed');
-        }).catch((error: BusinessError) => {
-        // Process service logic errors.
-        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
+Start an ability in the background.
 ```
 
-Start an ability in the foreground.
-
 ```TypeScript
-import { ServiceExtensionAbility, Caller, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let caller: Caller;
-    // Start an ability in the foreground with ohos.aafwk.param.callAbilityToForeground in parameters set to true.
-    let wantForeground: Want = {
-      bundleName: 'com.example.myservice',
-      moduleName: 'entry',
-      abilityName: 'EntryAbility',
-      deviceId: '',
-      parameters: {
-        'ohos.aafwk.param.callAbilityToForeground': true
-      }
-    };
-
-    try {
-      this.context.startAbilityByCall(wantForeground)
-        .then((obj: Caller) => {
-          // Carry out normal service processing.
-          caller = obj;
-          console.info('startAbilityByCall succeed');
-        }).catch((error: BusinessError) => {
-        // Process service logic errors.
-        console.error(`startAbilityByCall failed, error.code: ${error.code}, error.message: ${error.message}`);
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
+Start an ability in the foreground.
 ```
 
 ## startAbilityByCallWithAccount
@@ -1741,6 +1688,76 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    // accountId is the system account ID, which can be obtained via the getOsAccountLocalId API. Here 100 is used as an example.
+    let accountId = 100;
+    let options: StartOptions = {
+      windowMode: 0
+    };
+
+    try {
+      this.context.startAbilityWithAccount(want, accountId, options, (error: BusinessError) => {
+        if (error.code) {
+          // Process service logic errors.
+          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startAbilityWithAccount succeed');
+      });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
+    let accountId = 100;
+    let options: StartOptions = {
+      windowMode: 0
+    };
+
+    try {
+      this.context.startAbilityWithAccount(want, accountId, options)
+        .then((data: void) => {
+          // Carry out normal service processing.
+          console.info('startAbilityWithAccount succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -1807,40 +1824,7 @@ Starts an ability with the account ID and start options specified. This API can 
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    // accountId is the system account ID, which can be obtained via the getOsAccountLocalId API. Here 100 is used as an example.
-    let accountId = 100;
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options, (error: BusinessError) => {
-        if (error.code) {
-          // Process service logic errors.
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbilityWithAccount succeed');
-      });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startAbilityWithAccount
 
@@ -1913,40 +1897,7 @@ Starts an ability with the account ID specified. This API can be called only on 
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
-    let accountId = 100;
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options)
-        .then((data: void) => {
-          // Carry out normal service processing.
-          console.info('startAbilityWithAccount succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startRecentAbility
 
@@ -2038,6 +1989,75 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0
+    };
+
+    try {
+      this.context.startRecentAbility(want, options, (err: BusinessError) => {
+        if (err.code) {
+          // Process service logic errors.
+          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startRecentAbility succeed');
+      });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0,
+    };
+
+    try {
+      this.context.startRecentAbility(want, options)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('startRecentAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startRecentAbility
 
 ```TypeScript
@@ -2100,40 +2120,7 @@ You can use this API to carry start options.
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0
-    };
-
-    try {
-      this.context.startRecentAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startRecentAbility succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startRecentAbility](#startrecentability)
 
 ## startRecentAbility
 
@@ -2200,39 +2187,7 @@ Starts an ability. If the ability has multiple instances, the latest instance is
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 0,
-    };
-
-    try {
-      this.context.startRecentAbility(want, options)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startRecentAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startRecentAbility](#startrecentability)
 
 ## startServiceExtensionAbility
 
@@ -2309,6 +2264,36 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+
+    try {
+      this.context.startServiceExtensionAbility(want)
+        .then((data) => {
+          // Carry out normal service processing.
+          console.info('startServiceExtensionAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2359,35 +2344,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result a
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.startServiceExtensionAbility(want)
-        .then((data) => {
-          // Carry out normal service processing.
-          console.info('startServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [startServiceExtensionAbility](#startserviceextensionability)
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2476,6 +2433,38 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. Here 100 is used as an example.
+    let accountId = 100;
+
+    try {
+      this.context.startServiceExtensionAbilityWithAccount(want, accountId)
+        .then((data: void) => {
+          // Carry out normal service processing.
+          console.info('startServiceExtensionAbilityWithAccount succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## startServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -2536,37 +2525,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. Here 100 is used as an example.
-    let accountId = 100;
-
-    try {
-      this.context.startServiceExtensionAbilityWithAccount(want, accountId)
-        .then((data: void) => {
-          // Carry out normal service processing.
-          console.info('startServiceExtensionAbilityWithAccount succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [startServiceExtensionAbilityWithAccount](#startserviceextensionabilitywithaccount)
 
 ## startUIAbilities
 
@@ -2809,6 +2768,36 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+
+    try {
+      this.context.stopServiceExtensionAbility(want)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('stopServiceExtensionAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`stopServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2855,35 +2844,7 @@ Stops a ServiceExtensionAbility. This API uses a promise to return the result as
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-
-    try {
-      this.context.stopServiceExtensionAbility(want)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('stopServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`stopServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [stopServiceExtensionAbility](#stopserviceextensionability)
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -2965,6 +2926,38 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
+    let accountId = 100;
+
+    try {
+      this.context.stopServiceExtensionAbilityWithAccount(want, accountId)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('stopServiceExtensionAbilityWithAccount succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`stopServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
+
 ## stopServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -3018,37 +3011,7 @@ Stops a ServiceExtensionAbility with the specified account. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    // accountId is the system account ID, which can be obtained through the getOsAccountLocalId API. 100 is used as an example here.
-    let accountId = 100;
-
-    try {
-      this.context.stopServiceExtensionAbilityWithAccount(want, accountId)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('stopServiceExtensionAbilityWithAccount succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          console.error(`stopServiceExtensionAbilityWithAccount failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-}
-```
+See [stopServiceExtensionAbilityWithAccount](#stopserviceextensionabilitywithaccount)
 
 ## terminateSelf
 
@@ -3105,6 +3068,23 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+```TypeScript
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class EntryAbility extends ServiceExtensionAbility {
+  onCreate() {
+    this.context.terminateSelf().then(() => {
+      // Carry out normal service processing.
+      console.info('terminateSelf succeed');
+    }).catch((error: BusinessError) => {
+      // Process service logic errors.
+      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  }
+}
+```
+
 ## terminateSelf
 
 ```TypeScript
@@ -3140,19 +3120,4 @@ Terminates this ability. This API can be called only on the main thread. It uses
 
 **Examples**
 
-```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class EntryAbility extends ServiceExtensionAbility {
-  onCreate() {
-    this.context.terminateSelf().then(() => {
-      // Carry out normal service processing.
-      console.info('terminateSelf succeed');
-    }).catch((error: BusinessError) => {
-      // Process service logic errors.
-      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-}
-```
+See [terminateSelf](#terminateself)

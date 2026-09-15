@@ -34,6 +34,30 @@ Displays the dialog box.
 ```TypeScript
 import prompt from '@ohos.prompt'
 prompt.showDialog({
+  title: 'Title Info',
+  message: 'Message Info',
+  buttons: [
+    {
+      text: 'button1',
+      color: '#000000'
+    },
+    {
+      text: 'button2',
+      color: '#000000'
+    }
+  ],
+})
+  .then(data => {
+    console.info('showDialog success, click button: ' + data.index);
+  })
+  .catch((err:Error) => {
+    console.info('showDialog error: ' + err);
+  })
+```
+
+```TypeScript
+import prompt from '@ohos.prompt'
+prompt.showDialog({
   title: 'showDialog Title Info',
   message: 'Message Info',
   buttons: [
@@ -86,26 +110,4 @@ Displays the dialog box.
 
 **Examples**
 
-```TypeScript
-import prompt from '@ohos.prompt'
-prompt.showDialog({
-  title: 'Title Info',
-  message: 'Message Info',
-  buttons: [
-    {
-      text: 'button1',
-      color: '#000000'
-    },
-    {
-      text: 'button2',
-      color: '#000000'
-    }
-  ],
-})
-  .then(data => {
-    console.info('showDialog success, click button: ' + data.index);
-  })
-  .catch((err:Error) => {
-    console.info('showDialog error: ' + err);
-  })
-```
+See [showDialog](#showdialog)

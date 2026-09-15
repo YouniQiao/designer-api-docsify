@@ -112,6 +112,10 @@ constructor(numerator: number, denominator: number)
 **示例**
 
 ```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
 ```
 
@@ -133,6 +137,10 @@ constructor()
 
 ```TypeScript
 let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
 ```
 
 ## createRationalFromString
@@ -208,14 +216,8 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let rational = util.RationalNumber.createRationalFromString("3/4");
-let result = rationalNumber.equals(rational);
-console.info("result = " + result);
-// 输出结果：result = false
+API 9及以上建议使用以下写法：
 ```
 
 ## getCommonDivisor
@@ -316,13 +318,8 @@ console.info("result = " + result);
 // 输出结果：result = 2
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2)
-let result = rationalNumber.getDenominator();
-console.info("result = " + result);
-// 输出结果：result = 2
+API 9及以上建议使用以下写法：
 ```
 
 ## getNumerator
@@ -354,13 +351,8 @@ console.info("result = " + result);
 // 输出结果：result = 1
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.getNumerator();
-console.info("result = " + result);
-// 输出结果：result = 1
+API 9及以上建议使用以下写法：
 ```
 
 ## isFinite
@@ -392,13 +384,8 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.isFinite();
-console.info("result = " + result);
-// 输出结果：result = true
+API 9及以上建议使用以下写法：
 ```
 
 ## isNaN
@@ -430,13 +417,8 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.isNaN();
-console.info("result = " + result);
-// 输出结果：result = false
+API 9及以上建议使用以下写法：
 ```
 
 ## isZero
@@ -468,13 +450,8 @@ console.info("result = " + result);
 // 输出结果：result = false
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.isZero();
-console.info("result = " + result);
-// 输出结果：result = false
+API 9及以上建议使用以下写法：
 ```
 
 ## parseRationalNumber
@@ -544,13 +521,8 @@ console.info("result = " + result);
 // 输出结果：result = 1/2
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// 输出结果：result = 1/2
+API 9及以上建议使用以下写法：
 ```
 
 ## valueOf
@@ -582,11 +554,6 @@ console.info("result = " + result);
 // 输出结果：result = 0.5
 ```
 
-API 9及以上建议使用以下写法：
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.valueOf();
-console.info("result = " + result);
-// 输出结果：result = 0.5
+API 9及以上建议使用以下写法：
 ```

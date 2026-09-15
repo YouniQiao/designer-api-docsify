@@ -78,6 +78,40 @@ try {
 }
 ```
 
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 实现回调函数
+function NotifyMissionsChanged(deviceId: string): void {
+  console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
+ }
+function NotifySnapshot(deviceId: string, missionId: number): void {
+  console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
+  console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));
+}
+function NotifyNetDisconnect(deviceId: string, state: number): void {
+  console.info('NotifyNetDisconnect deviceId ' + JSON.stringify(deviceId));
+  console.info('NotifyNetDisconnect state ' + JSON.stringify(state));
+}
+try {
+    // 调用registerMissionListener接口
+    distributedMissionManager.registerMissionListener(
+      { deviceId: "" },
+      {
+        notifyMissionsChanged: NotifyMissionsChanged,
+        notifySnapshot: NotifySnapshot,
+        notifyNetDisconnect: NotifyNetDisconnect
+      }).then(() => {
+        console.info('registerMissionListener finished. ');
+    }).catch((error: BusinessError) => {
+        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
+    })
+} catch (error) {
+    console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
+}
+```
+
 
 ## registerMissionListener
 
@@ -119,36 +153,4 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 
 **示例**
 
-```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 实现回调函数
-function NotifyMissionsChanged(deviceId: string): void {
-  console.info('NotifyMissionsChanged deviceId ' + JSON.stringify(deviceId));
- }
-function NotifySnapshot(deviceId: string, missionId: number): void {
-  console.info('NotifySnapshot deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifySnapshot missionId ' + JSON.stringify(missionId));
-}
-function NotifyNetDisconnect(deviceId: string, state: number): void {
-  console.info('NotifyNetDisconnect deviceId ' + JSON.stringify(deviceId));
-  console.info('NotifyNetDisconnect state ' + JSON.stringify(state));
-}
-try {
-    // 调用registerMissionListener接口
-    distributedMissionManager.registerMissionListener(
-      { deviceId: "" },
-      {
-        notifyMissionsChanged: NotifyMissionsChanged,
-        notifySnapshot: NotifySnapshot,
-        notifyNetDisconnect: NotifyNetDisconnect
-      }).then(() => {
-        console.info('registerMissionListener finished. ');
-    }).catch((error: BusinessError) => {
-        console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-    })
-} catch (error) {
-    console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
-}
-```
+参见 [registerMissionListener](#registermissionlistener)

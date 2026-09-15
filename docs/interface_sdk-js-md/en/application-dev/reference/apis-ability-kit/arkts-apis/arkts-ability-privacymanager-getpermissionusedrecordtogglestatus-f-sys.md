@@ -56,6 +56,18 @@ privacyManager.getPermissionUsedRecordToggleStatus().then((status) => {
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
+privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: boolean) => {
+  console.info(`getPermissionUsedRecordToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getPermissionUsedRecordToggleStatus
 
@@ -99,14 +111,4 @@ A system application can call this API to obtain the permission usage record tog
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
-privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: boolean) => {
-  console.info(`getPermissionUsedRecordToggleStatus success, status: ${status}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getPermissionUsedRecordToggleStatus](#getpermissionusedrecordtogglestatus)

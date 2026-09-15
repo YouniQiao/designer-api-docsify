@@ -58,6 +58,26 @@ let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventM
 commonEvent.createSubscriber(subscribeInfo, createCallBack);
 ```
 
+```TypeScript
+import Base from '@ohos.base';
+import CommonEventManager from '@ohos.commonEventManager';
+
+let subscriber:CommonEventManager.CommonEventSubscriber; // Used to save the created subscriber object for subsequent subscription and unsubscription.
+
+// Subscriber information.
+let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
+    events: ["event"]
+};
+
+// Create a subscriber.
+commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+    console.info("createSubscriber");
+    subscriber = commonEventSubscriber;
+}).catch((err:Base.BusinessError) => {
+    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## createSubscriber
 
@@ -89,22 +109,4 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import Base from '@ohos.base';
-import CommonEventManager from '@ohos.commonEventManager';
-
-let subscriber:CommonEventManager.CommonEventSubscriber; // Used to save the created subscriber object for subsequent subscription and unsubscription.
-
-// Subscriber information.
-let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
-    events: ["event"]
-};
-
-// Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
-    console.info("createSubscriber");
-    subscriber = commonEventSubscriber;
-}).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [createSubscriber](#createsubscriber)

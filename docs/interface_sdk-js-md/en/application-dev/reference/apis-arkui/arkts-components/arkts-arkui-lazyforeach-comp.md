@@ -96,64 +96,12 @@ Enter the value to obtain the LazyForEach.
 
 ## Examples
 
-In the following example, the automatic memory optimization strategy is used through the memoryOptimizationStrategy attribute of [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md). When the application moves to the background, the cache is cleared. When the application returns to the foreground, the cache is restored.
-Since API version 26.0.0, the LazyForEachOptions API is added.
-For the BasicDataSource code, see the BasicDataSource sample code at the end of the LazyForEach developer guide: [BasicDataSource implementation for the string array](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#basicdatasource-implementation-for-the-string-array).
-
 ```TypeScript
-import { BasicDataSource } from './BasicDataSource';
+### Example 1: Using the Automatic Memory Optimization Strategy
 
-class DataSource extends BasicDataSource {
-  public dataArray: string[] = [];
-  public totalCount(): number {
-    return this.dataArray.length;
-  }
-  public getData(index: number): string {
-    return this.dataArray[index];
-  }
-  public pushData(data: string): void {
-    this.dataArray.push(data);
-    this.notifyDataAdd(this.dataArray.length - 1);
-  }
-}
+In the following example, the automatic memory optimization strategy is used through the memoryOptimizationStrategy attribute of [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md). When the application moves to the background, the cache is cleared. When the application returns to the foreground, the cache is restored.
 
-@Component
-struct ChildComponent {
-  aboutToAppear() {
-    console.info('ChildComponent aboutToAppear');
-  }
-  aboutToDisappear() {
-    console.info('ChildComponent aboutToDisappear');
-  }
-  build() {
-    Text('ChildComponent')
-  }
-}
+Since API version 26.0.0, the LazyForEachOptions API is added.
 
-@Entry
-@Component
-struct MemoryOptimizeDemo {
-  private data: DataSource = new DataSource();
-  aboutToAppear() {
-    for (let i = 0; i < 100; i++) {
-      this.data.pushData(`item ${i}`);
-    }
-  }
-  build() {
-    Column() {
-      List() {
-        LazyForEach(this.data,
-          (item: string, index: number) => {
-            ListItem() {
-              ChildComponent()
-            }
-          },
-          (item: string, index: number) => item,
-          { memoryOptimizationStrategy: LazyForEachMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION } // Use the automatic memory optimization strategy.
-        )
-      }
-      .cachedCount(5)
-    }
-  }
-}
+For the BasicDataSource code, see the BasicDataSource sample code at the end of the LazyForEach developer guide: [BasicDataSource implementation for the string array](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#basicdatasource-implementation-for-the-string-array).
 ```

@@ -1,8 +1,8 @@
 # LocalizedEdgeWidths
 
-Defines the localized border width property.
+边框宽度类型，用于描述组件边框不同方向的宽度。
 
-@interface LocalizedEdgeWidths
+引入该对象时，至少传入一个参数。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@ Defines the localized border width property.
 bottom?: LengthMetrics
 ```
 
-bottom property.
+组件下边框宽度。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -34,7 +34,9 @@ bottom property.
 end?: LengthMetrics
 ```
 
-end property.
+组件右边框宽度。
+
+从右至左显示语言模式下为组件左边框宽度。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -54,7 +56,9 @@ end property.
 start?: LengthMetrics
 ```
 
-start property.
+组件左边框宽度。
+
+从右至左显示语言模式下为组件右边框宽度。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -74,7 +78,7 @@ start property.
 top?: LengthMetrics
 ```
 
-top property.
+组件上边框宽度。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

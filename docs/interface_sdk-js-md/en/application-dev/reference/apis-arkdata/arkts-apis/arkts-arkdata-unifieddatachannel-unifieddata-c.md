@@ -93,6 +93,10 @@ Defines a constructor used to create a **UnifiedData** object with a data record
 **Examples**
 
 ```TypeScript
+let unifiedData = new unifiedDataChannel.UnifiedData();
+```
+
+```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 let plainText : uniformDataStruct.PlainText = {
   uniformDataType: 'general.plain-text',
@@ -123,6 +127,17 @@ Defines a constructor used to create a **UnifiedData** object.
 
 ```TypeScript
 let unifiedData = new unifiedDataChannel.UnifiedData();
+```
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+};
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
 
 ## getRecords

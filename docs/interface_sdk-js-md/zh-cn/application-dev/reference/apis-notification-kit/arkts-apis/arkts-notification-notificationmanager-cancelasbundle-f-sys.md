@@ -70,6 +70,33 @@ let userId: number = 100;
 notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 被代理应用的包名
+let representativeBundle: string = 'com.example.demo';
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 100;
+notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
+    console.info('cancelAsBundle success');
+}).catch((err: BusinessError) => {
+    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let representativeBundle: notificationManager.BundleOption = {
+  bundle: 'bundleName1',
+};
+notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
+    console.info('cancelAsBundle success');
+}).catch((err: BusinessError) => {
+    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## cancelAsBundle
 
@@ -117,19 +144,7 @@ function cancelAsBundle(id: number, representativeBundle: string, userId: number
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 被代理应用的包名
-let representativeBundle: string = 'com.example.demo';
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
-    console.info('cancelAsBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [cancelAsBundle](#cancelasbundle)
 
 
 ## cancelAsBundle
@@ -178,15 +193,4 @@ function cancelAsBundle(representativeBundle: BundleOption, id: number): Promise
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let representativeBundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
-    console.info('cancelAsBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [cancelAsBundle](#cancelasbundle)

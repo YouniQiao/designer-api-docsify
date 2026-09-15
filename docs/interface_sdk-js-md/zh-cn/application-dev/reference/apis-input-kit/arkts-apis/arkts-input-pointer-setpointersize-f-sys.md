@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置鼠标指针大小
+            pointer.setPointerSize(3).then(() => {
+              console.info(`Succeeded in setting pointer size.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setPointerSize
 
@@ -101,29 +128,4 @@ function setPointerSize(size: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置鼠标指针大小
-            pointer.setPointerSize(3).then(() => {
-              console.info(`Succeeded in setting pointer size.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [setPointerSize](#setpointersize)

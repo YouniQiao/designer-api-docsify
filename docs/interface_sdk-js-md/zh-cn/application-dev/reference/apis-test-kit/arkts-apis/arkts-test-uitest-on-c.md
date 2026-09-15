@@ -508,6 +508,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // 忽略大小写匹配控件的id属性值。
+```
+
 ## id
 
 ```TypeScript
@@ -544,6 +551,13 @@ id(id: string, pattern: MatchPattern): On
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -955,6 +969,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
 ```
 
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
+
 ## type
 
 ```TypeScript
@@ -991,6 +1012,13 @@ type(tp: string, pattern: MatchPattern): On
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
+```
 
 ```TypeScript
 // xxx.test.ets

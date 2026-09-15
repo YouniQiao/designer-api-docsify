@@ -70,11 +70,11 @@ class MySequenceable implements rpc.Sequenceable {
 }
 
 try {
-  let sequenceable = new MySequenceable(1, "aaa");
+  let sequenceable = new MySequenceable(1, 'aaa');
   let data = rpc.MessageParcel.create();
   let result = data.writeSequenceable(sequenceable);
   hilog.info(0x0000, 'testTag', 'writeSequenceable is ' + result);
-  let ret = new MySequenceable(0, "");
+  let ret = new MySequenceable(0, '');
   let result2 = data.readSequenceable(ret);
   hilog.info(0x0000, 'testTag', 'readSequenceable is ' + result2);
 } catch (error) {
@@ -136,11 +136,11 @@ class MySequenceable implements rpc.Sequenceable {
 }
 
 try {
-  let sequenceable = new MySequenceable(1, "aaa");
+  let sequenceable = new MySequenceable(1, 'aaa');
   let data = rpc.MessageParcel.create();
   let result = data.writeSequenceable(sequenceable);
   hilog.info(0x0000, 'testTag', 'writeSequenceable is ' + result);
-  let ret = new MySequenceable(0, "");
+  let ret = new MySequenceable(0, '');
   let result2 = data.readSequenceable(ret);
   hilog.info(0x0000, 'testTag', 'readSequenceable is ' + result2);
 } catch (error) {

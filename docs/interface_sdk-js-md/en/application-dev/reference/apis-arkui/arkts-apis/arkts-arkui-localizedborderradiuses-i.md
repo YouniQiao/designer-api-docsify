@@ -1,8 +1,8 @@
 # LocalizedBorderRadiuses
 
-Defines the localized border radius property.
+Defines the corner radius of a component's border.
 
-@interface LocalizedBorderRadiuses
+To reference this object, at least one parameter must be passed.
 
 **Since:** 12
 
@@ -14,7 +14,9 @@ Defines the localized border radius property.
 bottomEnd?: LengthMetrics
 ```
 
-bottom-end property.
+Radius of the bottom-right corner of the component.
+
+For right-to-left scripts, this indicates the corner radius of the bottom-left corner of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -34,7 +36,9 @@ bottom-end property.
 bottomStart?: LengthMetrics
 ```
 
-bottom-start property.
+Radius of the bottom-left corner of the component.
+
+For right-to-left scripts, this indicates the corner radius of the bottom-right corner of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -54,7 +58,9 @@ bottom-start property.
 topEnd?: LengthMetrics
 ```
 
-top-end property.
+Radius of the top-right corner of the component.
+
+For right-to-left scripts, this indicates the corner radius of the top-left corner of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -74,7 +80,9 @@ top-end property.
 topStart?: LengthMetrics
 ```
 
-top-start property.
+Radius of the top-left corner of the component.
+
+For right-to-left scripts, this indicates the radius of the top-right corner of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

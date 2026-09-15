@@ -4,9 +4,7 @@
 declare type VoidCallback = () => void
 ```
 
-Defines VoidCallback.
-
-@typedef { function } VoidCallback
+Function callback type with no parameters and no return value, used to define callback scenarios where no data needs to be passed and no result is returned.
 
 **Since:** 12
 

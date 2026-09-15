@@ -1,8 +1,6 @@
 # ItemFillPolicy
 
-Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper components.
-
-@interface ItemFillPolicy
+Defines a responsive layout policy applicable to the WaterFlow, Grid, List, Swiper, and LazyVWaterFlowLayout components. The LazyVWaterFlowLayout component is supported since API version 26.0.0.
 
 **Since:** 22
 
@@ -14,9 +12,7 @@ Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper co
 fillType?: ResponsiveFillType
 ```
 
-Specify the number of columns for different responsive breakpoints.
-
-@typedef { ?ResponsiveFillType }
+Column count for different breakpoints. The default value is **BREAKPOINT_DEFAULT**.
 
 **Type:** [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md)
 

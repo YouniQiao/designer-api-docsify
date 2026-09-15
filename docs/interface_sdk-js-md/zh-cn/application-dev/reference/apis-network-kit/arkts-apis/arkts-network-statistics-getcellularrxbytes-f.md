@@ -53,6 +53,16 @@ statistics.getCellularRxBytes((error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getCellularRxBytes().then((stats: number) => {
+  console.info('getCellularRxBytes success', JSON.stringify(stats));
+}).catch((error: Error) => {
+   console.error('getCellularRxBytes error', JSON.stringify(error));
+});
+```
+
 
 ## getCellularRxBytes
 
@@ -88,12 +98,4 @@ function getCellularRxBytes(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getCellularRxBytes().then((stats: number) => {
-  console.info('getCellularRxBytes success', JSON.stringify(stats));
-}).catch((error: Error) => {
-   console.error('getCellularRxBytes error', JSON.stringify(error));
-});
-```
+参见 [getCellularRxBytes](#getcellularrxbytes)

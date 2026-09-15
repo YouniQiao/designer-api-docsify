@@ -49,6 +49,16 @@ watcher.stop().then(() => {
 });
 ```
 
+```TypeScript
+let filePath = pathDir + "/test.txt";
+let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
+  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
+});
+watcher.stop(() => {
+  console.info("close watcher succeed");
+})
+```
+
 ## stop
 
 ```TypeScript
@@ -73,12 +83,4 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-let filePath = pathDir + "/test.txt";
-let watcher = fileio.createWatcher(filePath, 1, (err: BusinessError, event: number) => {
-  console.info("event: " + event + "errmsg: " + JSON.stringify(err));
-});
-watcher.stop(() => {
-  console.info("close watcher succeed");
-})
-```
+See [stop](#stop)

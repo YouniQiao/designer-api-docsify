@@ -40,14 +40,6 @@ Registers an observer for network status change events. This API uses an asynchr
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-observer.on('networkStateChange', (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('networkStateChange')
 
@@ -84,17 +76,6 @@ Registers an observer for network status change events of the SIM card in the sp
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('networkStateChange', options, (data: observer.NetworkState) => {
-    console.info("on networkStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('signalInfoChange')
 
@@ -124,16 +105,6 @@ Registers an observer for signal status change events. This API uses an asynchro
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('signalInfoChange')
@@ -166,19 +137,6 @@ Registers an observer for signal status change events of the SIM card in the spe
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { radio } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) => {
-    console.info("on signalInfoChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellularDataConnectionStateChange')
 
@@ -208,14 +166,6 @@ Registers an observer for connection status change events of the cellular data l
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-
-**Examples**
-
-```TypeScript
-observer.on('cellularDataConnectionStateChange', (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('cellularDataConnectionStateChange')
@@ -249,17 +199,6 @@ Registers an observer for connection status change events of the cellular data l
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellularDataConnectionStateChange', options, (data: observer.DataConnectionStateInfo) => {
-    console.info("on cellularDataConnectionStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('cellularDataFlowChange')
 
@@ -289,16 +228,6 @@ Registers an observer for the uplink and downlink data flow status change events
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('cellularDataFlowChange')
@@ -331,19 +260,6 @@ Registers an observer for the uplink and downlink data flow status change events
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
-    console.info("on cellularDataFlowChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChange')
 
@@ -373,14 +289,6 @@ Registers an observer for call status change events. This API uses an asynchrono
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-
-**Examples**
-
-```TypeScript
-observer.on('callStateChange', (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-});
-```
 
 
 ## on('callStateChange')
@@ -413,17 +321,6 @@ Registers an observer for call status change events. This API uses an asynchrono
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
-    console.info("on callStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('callStateChangeEx')
 
@@ -453,22 +350,6 @@ Registers an observer for extended call status change events. This API uses an a
 | [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
 | [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
 | [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
-
-**Examples**
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-
-let callback: (data: call.TelCallState) => void = (data: call.TelCallState) => {
-    console.info("on callStateChangeEx, data:" + JSON.stringify(data));
-}
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-
-observer.on('callStateChangeEx', callback, options);
-observer.on('callStateChangeEx', callback);
-```
 
 
 ## on('simStateChange')
@@ -505,14 +386,6 @@ Registers an observer for SIM card status change events. This API uses an asynch
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-observer.on('simStateChange', (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('simStateChange')
 
@@ -544,17 +417,6 @@ Registers an observer for status change events of the SIM card in the specified 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
-**Examples**
-
-```TypeScript
-let options: observer.ObserverOptions = {
-    slotId: 0
-}
-observer.on('simStateChange', options, (data: observer.SimStateData) => {
-    console.info("on simStateChange, data:" + JSON.stringify(data));
-});
-```
-
 
 ## on('iccAccountInfoChange')
 
@@ -584,11 +446,3 @@ Registers an observer for account information change events of the SIM card. Thi
 | [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-
-**Examples**
-
-```TypeScript
-observer.on('iccAccountInfoChange', () => {
-    console.info("on iccAccountInfoChange success");
-});
-```

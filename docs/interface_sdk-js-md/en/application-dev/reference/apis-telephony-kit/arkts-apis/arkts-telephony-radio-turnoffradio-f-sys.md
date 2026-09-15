@@ -46,6 +46,18 @@ Turn off the radio service.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.turnOffRadio((err: BusinessError) => {
+    if (err) {
+        console.error(`turnOffRadio failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`turnOffRadio success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.turnOffRadio(slotId, (err: BusinessError) => {
     if (err) {
@@ -53,6 +65,17 @@ radio.turnOffRadio(slotId, (err: BusinessError) => {
         return;
     }
     console.info(`turnOffRadio success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.turnOffRadio(slotId).then(() => {
+    console.info(`turnOffRadio success.`);
+}).catch((err: BusinessError) => {
+    console.error(`turnOffRadio failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -99,16 +122,7 @@ Turn off the radio service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.turnOffRadio(slotId).then(() => {
-    console.info(`turnOffRadio success.`);
-}).catch((err: BusinessError) => {
-    console.error(`turnOffRadio failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [turnOffRadio](#turnoffradio)
 
 
 ## turnOffRadio
@@ -147,14 +161,4 @@ Turn off the radio service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.turnOffRadio((err: BusinessError) => {
-    if (err) {
-        console.error(`turnOffRadio failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`turnOffRadio success.`);
-});
-```
+See [turnOffRadio](#turnoffradio)

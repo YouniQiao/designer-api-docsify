@@ -85,8 +85,9 @@ static envProp<S>(key: string, value: S): boolean
 
 **示例**
 
+```TypeScript
 envProp具体使用，详见[从UI中访问Environment参数](../../../ui/state-management/arkts-environment.md#从ui中访问environment参数)。
-- simpleType:
+```
 
 ## EnvProps
 

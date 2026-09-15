@@ -40,6 +40,14 @@ particleAbility.terminateSelf(
 );
 ```
 
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+
+particleAbility.terminateSelf().then(() => {
+  console.info('particleAbility terminateSelf');
+});
+```
+
 
 ## terminateSelf
 
@@ -63,10 +71,4 @@ Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-
-particleAbility.terminateSelf().then(() => {
-  console.info('particleAbility terminateSelf');
-});
-```
+See [terminateSelf](#terminateself)

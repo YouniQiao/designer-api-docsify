@@ -60,6 +60,26 @@ try {
 }
 ```
 
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  securityManager.setAppClipboardPolicy(wantTemp, bundleName, accountId, securityManager.ClipboardPolicy.IN_APP);
+  console.info(`Succeeded in setting clipboard policy.`);
+} catch(err) {
+  console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## setAppClipboardPolicy
 
@@ -96,22 +116,4 @@ Sets the device clipboard policy of a specified application for a specified user
 
 **Examples**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  securityManager.setAppClipboardPolicy(wantTemp, bundleName, accountId, securityManager.ClipboardPolicy.IN_APP);
-  console.info(`Succeeded in setting clipboard policy.`);
-} catch(err) {
-  console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [setAppClipboardPolicy](#setappclipboardpolicy)

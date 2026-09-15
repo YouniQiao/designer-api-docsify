@@ -1,8 +1,8 @@
 # LocalizedEdgeWidths
 
-Defines the localized border width property.
+Defines component edge widths for localized logical directions.
 
-@interface LocalizedEdgeWidths
+To reference this object, at least one parameter must be passed.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Defines the localized border width property.
 bottom?: LengthMetrics
 ```
 
-bottom property.
+Width of the bottom edge of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -34,7 +34,9 @@ bottom property.
 end?: LengthMetrics
 ```
 
-end property.
+Width of the right edge of the component.
+
+Width of the left edge of the component in RTL mode.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -54,7 +56,9 @@ end property.
 start?: LengthMetrics
 ```
 
-start property.
+Width of the left edge of the component.
+
+Width of the right edge of the component in RTL mode.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -74,7 +78,7 @@ start property.
 top?: LengthMetrics
 ```
 
-top property.
+Width of the top edge of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

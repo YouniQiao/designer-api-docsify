@@ -48,13 +48,13 @@ let splitConfig: intelligence.SplitConfig = {
   size: 10,
   overlapRatio: 0.1
 }
-let splitText = 'text';
+let textToSplit = 'text';
 
-intelligence.splitText(splitText, splitConfig)
+intelligence.splitText(textToSplit, splitConfig)
   .then((data: Array<string>) => {
     console.info("Succeeded in splitting Text");
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to split Text and code is " + err.code);
+    console.error(`Failed to split Text. Code: ${err.code}, message: ${err.message}`);
   })
 ```

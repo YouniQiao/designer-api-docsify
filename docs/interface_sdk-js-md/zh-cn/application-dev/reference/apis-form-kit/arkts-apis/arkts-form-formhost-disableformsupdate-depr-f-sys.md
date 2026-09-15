@@ -45,6 +45,17 @@ formHost.disableFormsUpdate(formIds, (error: Base.BusinessError) => {
 });
 ```
 
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = ['12400633174999288'];
+formHost.disableFormsUpdate(formIds).then(() => {
+  console.info('formHost disableFormsUpdate success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost disableFormsUpdate, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## disableFormsUpdate
 
@@ -80,13 +91,4 @@ function disableFormsUpdate(formIds: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-import Base from '@ohos.base';
-
-let formIds: string[] = ['12400633174999288'];
-formHost.disableFormsUpdate(formIds).then(() => {
-  console.info('formHost disableFormsUpdate success');
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost disableFormsUpdate, error: ${JSON.stringify(error)}`);
-});
-```
+参见 [disableFormsUpdate](#disableformsupdate)

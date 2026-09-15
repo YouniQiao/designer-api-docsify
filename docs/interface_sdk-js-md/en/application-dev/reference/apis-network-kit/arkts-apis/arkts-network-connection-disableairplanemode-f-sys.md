@@ -49,6 +49,14 @@ connection.disableAirplaneMode((error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.disableAirplaneMode().then((error: void) => {
+  console.error(JSON.stringify(error));
+});
+```
+
 
 ## disableAirplaneMode
 
@@ -83,10 +91,4 @@ Disables airplane mode. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.disableAirplaneMode().then((error: void) => {
-  console.error(JSON.stringify(error));
-});
-```
+See [disableAirplaneMode](#disableairplanemode)

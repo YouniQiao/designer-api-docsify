@@ -49,6 +49,22 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoRecorder: media.VideoRecorder;
+media.createVideoRecorder().then((video: media.VideoRecorder) => {
+  if (video != null) {
+    videoRecorder = video;
+    console.info('video createVideoRecorder success');
+  } else {
+    console.error('video createVideoRecorder fail');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error message:${error.message}`);
+});
+```
+
 
 ## createVideoRecorder
 
@@ -79,18 +95,4 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoRecorder: media.VideoRecorder;
-media.createVideoRecorder().then((video: media.VideoRecorder) => {
-  if (video != null) {
-    videoRecorder = video;
-    console.info('video createVideoRecorder success');
-  } else {
-    console.error('video createVideoRecorder fail');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error message:${error.message}`);
-});
-```
+See [createVideoRecorder](#createvideorecorder)

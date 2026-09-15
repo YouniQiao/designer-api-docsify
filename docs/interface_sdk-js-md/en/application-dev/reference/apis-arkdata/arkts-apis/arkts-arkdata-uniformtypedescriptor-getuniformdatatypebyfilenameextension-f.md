@@ -46,23 +46,23 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let typeId = uniformTypeDescriptor.getUniformDataTypeByFilenameExtension('.ts', 'general.source-code');
-    if(typeId) {
-        console.info('typeId is general.type-script');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypeByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
+  let typeId = uniformTypeDescriptor.getUniformDataTypeByFilenameExtension('.ts', 'general.source-code');
+  if (typeId) {
+    console.info('typeId is general.type-script');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getUniformDataTypeByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 
 // If no uniform data type ID is found based on ".myts" and "general.plain-text", the type generated based on the input parameters is returned.
 try {
-    let typeId = uniformTypeDescriptor.getUniformDataTypeByFilenameExtension('.myts', 'general.plain-text');
-    if(typeId) {
-        console.info('typeId is flex.************');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypeByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
+  let typeId = uniformTypeDescriptor.getUniformDataTypeByFilenameExtension('.myts', 'general.plain-text');
+  if (typeId) {
+    console.info('typeId is flex.************');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getUniformDataTypeByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```

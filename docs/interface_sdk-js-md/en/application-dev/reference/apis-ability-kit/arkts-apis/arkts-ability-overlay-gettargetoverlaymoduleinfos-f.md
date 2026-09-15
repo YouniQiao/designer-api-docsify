@@ -41,6 +41,24 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let targetModuleName = "feature";
 
+(async () => {
+  try {
+    let overlayModuleInfos = await overlay.getTargetOverlayModuleInfos(targetModuleName);
+    console.info('overlayModuleInfos are ' + JSON.stringify(overlayModuleInfos));
+  } catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
+  }
+})();
+```
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetModuleName = "feature";
+
 try {
   overlay.getTargetOverlayModuleInfos(targetModuleName, (err, data) => {
     if (err) {
@@ -92,20 +110,4 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 
 **Examples**
 
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetModuleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfos = await overlay.getTargetOverlayModuleInfos(targetModuleName);
-    console.info('overlayModuleInfos are ' + JSON.stringify(overlayModuleInfos));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
+See [getTargetOverlayModuleInfos](#gettargetoverlaymoduleinfos)

@@ -43,6 +43,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getTimezone().then((timezone: string) => {
+    console.info(`Succeeded in getting timezone: ${timezone}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## getTimezone
 
@@ -64,17 +79,4 @@ function getTimezone(): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getTimezone().then((timezone: string) => {
-    console.info(`Succeeded in getting timezone: ${timezone}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get timezone. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getTimezone](#gettimezone)

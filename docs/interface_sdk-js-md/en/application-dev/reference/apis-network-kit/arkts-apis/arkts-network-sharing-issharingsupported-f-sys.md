@@ -50,6 +50,20 @@ sharing.isSharingSupported((error: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .isSharingSupported()
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## isSharingSupported
 
@@ -85,16 +99,4 @@ Checks whether network sharing is supported. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .isSharingSupported()
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [isSharingSupported](#issharingsupported)

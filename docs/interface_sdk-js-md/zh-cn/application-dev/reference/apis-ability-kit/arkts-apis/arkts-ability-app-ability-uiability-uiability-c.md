@@ -171,42 +171,12 @@ onContinue(wantParam: Record<string, Object>):
 
 **示例**
 
-应用迁移时使用同步接口进行数据保存，示例如下：
-
 ```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onContinue(wantParam: Record<string, Object>) {
-    console.info('onContinue');
-    wantParam['myData'] = 'my1234567'; // 保存待迁移的业务数据
-    return AbilityConstant.OnContinueResult.AGREE;
-  }
-}
+应用迁移时使用同步接口进行数据保存，示例如下：
 ```
 
-应用迁移时使用异步接口进行数据保存，示例如下：
-
 ```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  async setWant(wantParams: Record<string, Object>) {
-    console.info('setWant start');
-    for (let time = 0; time < 1000; ++time) {
-      wantParams[time] = time;
-    }
-    console.info('setWant end');
-  }
-
-  async onContinue(wantParams: Record<string, Object>) {
-    console.info('onContinue');
-    // 异步保存待迁移数据
-    return this.setWant(wantParams).then(() => {
-      return AbilityConstant.OnContinueResult.AGREE;
-    });
-  }
-}
+应用迁移时使用异步接口进行数据保存，示例如下：
 ```
 
 ## onCreate
@@ -275,32 +245,12 @@ onDestroy(): void | Promise<void>
 
 **示例**
 
-同步回调示例如下：
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // 调用同步函数...
-  }
-}
+同步回调示例如下：
 ```
 
-Promise异步回调示例如下：
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  async onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // 调用异步函数...
-  }
-}
+Promise异步回调示例如下：
 ```
 
 ## onDidBackground
@@ -393,8 +343,9 @@ UIAbility生命周期回调，应用转到前台后触发，在[onForeground](#o
 
 **示例**
 
+```TypeScript
 参考[onWillForeground](#onwillforeground)。
-- simpleType:
+```
 
 ## onDump
 

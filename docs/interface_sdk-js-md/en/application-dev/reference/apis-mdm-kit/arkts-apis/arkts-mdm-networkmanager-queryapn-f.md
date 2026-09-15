@@ -69,6 +69,24 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { networkManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility',
+};
+let apnId: string = "1"; // Replace it as required.
+try {
+  let queryResult: Record<string, string> = networkManager.queryApn(wantTemp, apnId);
+  console.info(`Succeeded in querying apn, result : ${JSON.stringify(queryResult)}`);
+} catch (err) {
+  console.error(`Failed to query apn. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## queryApn
 
@@ -109,20 +127,4 @@ Queries the APN parameter information. This API is suitable for enterprise mobil
 
 **Examples**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility',
-};
-let apnId: string = "1"; // Replace it as required.
-try {
-  let queryResult: Record<string, string> = networkManager.queryApn(wantTemp, apnId);
-  console.info(`Succeeded in querying apn, result : ${JSON.stringify(queryResult)}`);
-} catch (err) {
-  console.error(`Failed to query apn. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [queryApn](#queryapn)

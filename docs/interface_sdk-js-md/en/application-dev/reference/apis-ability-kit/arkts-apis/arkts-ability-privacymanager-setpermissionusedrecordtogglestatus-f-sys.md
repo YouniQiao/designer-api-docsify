@@ -61,6 +61,18 @@ privacyManager.setPermissionUsedRecordToggleStatus(true).then(() => {
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
+privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setPermissionUsedRecordToggleStatus
 
@@ -109,14 +121,4 @@ When **status** is **true**, the [addPermissionUsedRecord](arkts-ability-privacy
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let subProfileId: number = 100001; // Replace with the valid ID of the current user's sub-profile.
-privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
-  console.info('setPermissionUsedRecordToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setPermissionUsedRecordToggleStatus](#setpermissionusedrecordtogglestatus)

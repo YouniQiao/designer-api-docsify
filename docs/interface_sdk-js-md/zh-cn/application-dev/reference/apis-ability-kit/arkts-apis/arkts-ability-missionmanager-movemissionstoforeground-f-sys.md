@@ -76,6 +76,73 @@ try {
 }
 ```
 
+```TypeScript
+import { abilityManager, missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
+    if (error.code) {
+      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
+      return;
+    }
+    if (missionInfos.length < 1) {
+      return;
+    }
+
+    let toShows = new Array<number>();
+    for (let missionInfo of missionInfos) {
+      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
+        toShows.push(missionInfo.missionId);
+      }
+    }
+    // 将指定任务批量切换到前台，并将第一个任务移动到最顶层
+    missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
+      if (err) {
+        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
+      } else {
+        console.info(`moveMissionsToForeground successfully`);
+      }
+    });
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message} `);
+}
+```
+
+```TypeScript
+import { abilityManager, missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
+    if (error.code) {
+      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
+      return;
+    }
+    if (missionInfos.length < 1) {
+      return;
+    }
+
+    let toShows = new Array<number>();
+    for (let missionInfo of missionInfos) {
+      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
+        toShows.push(missionInfo.missionId);
+      }
+    }
+    missionManager.moveMissionsToForeground(toShows, toShows[0]).then(() => {
+      console.info(`moveMissionsToForeground is called`);
+    });
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message} `);
+}
+```
+
 
 ## moveMissionsToForeground
 
@@ -112,41 +179,7 @@ function moveMissionsToForeground(missionIds: Array<number>, topMission: number,
 
 **示例**
 
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    // 将指定任务批量切换到前台，并将第一个任务移动到最顶层
-    missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
-      if (err) {
-        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
-      } else {
-        console.info(`moveMissionsToForeground successfully`);
-      }
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+参见 [moveMissionsToForeground](#movemissionstoforeground)
 
 
 ## moveMissionsToForeground
@@ -189,33 +222,4 @@ function moveMissionsToForeground(missionIds: Array<number>, topMission?: number
 
 **示例**
 
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    missionManager.moveMissionsToForeground(toShows, toShows[0]).then(() => {
-      console.info(`moveMissionsToForeground is called`);
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+参见 [moveMissionsToForeground](#movemissionstoforeground)

@@ -45,6 +45,22 @@ Disables a common device administrator application for the current user. This AP
 ```TypeScript
 import { adminManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+adminManager.disableAdmin(wantTemp, 100).catch((err: BusinessError) => {
+  console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -53,6 +69,25 @@ let wantTemp: Want = {
 };
 
 adminManager.disableAdmin(wantTemp, (err) => {
+  if (err) {
+    console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in disabling admin');
+});
+```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+adminManager.disableAdmin(wantTemp, 100, (err) => {
   if (err) {
     console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
     return;
@@ -99,21 +134,4 @@ Disables a common device administrator application for the user specified by **u
 
 **Examples**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.disableAdmin(wantTemp, 100, (err) => {
-  if (err) {
-    console.error(`Failed to disable admin. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in disabling admin');
-});
-```
+See [disableAdmin](#disableadmin)

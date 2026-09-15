@@ -35,25 +35,6 @@ function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResp
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -84,28 +65,6 @@ function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<Acce
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -132,23 +91,6 @@ function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.AMBIENT_LIGHT, (data: sensor.LightResponse) => {
-    console.info('Succeeded in invoking once. the ambient light intensity: ' + data.intensity);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -177,23 +119,6 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
-    console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -221,23 +146,6 @@ function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.BAROMETER, (data: sensor.BarometerResponse) => {
-    console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -264,25 +172,6 @@ function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.GRAVITY, (data: sensor.GravityResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -314,25 +203,6 @@ function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.GYROSCOPE, (data: sensor.GyroscopeResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -363,28 +233,6 @@ function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<Gyroscop
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -411,23 +259,6 @@ function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.HALL, (data: sensor.HallResponse) => {
-    console.info('Succeeded in invoking once. Status: ' + data.status);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -459,23 +290,6 @@ function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>):
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.HEART_RATE, (data: sensor.HeartRateResponse) => {
-    console.info('Succeeded in invoking once. Heart rate: ' + data.heartRate);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -502,23 +316,6 @@ function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): vo
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.HUMIDITY, (data: sensor.HumidityResponse) => {
-    console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -550,25 +347,6 @@ function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAcce
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.LINEAR_ACCELEROMETER, (data: sensor.LinearAccelerometerResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -595,25 +373,6 @@ function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldRes
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -642,28 +401,6 @@ function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Mag
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -690,25 +427,6 @@ function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ORIENTATION, (data: sensor.OrientationResponse) => {
-    console.info('Succeeded in the device rotating at an angle around the X axis: ' + data.beta);
-    console.info('Succeeded in the device rotating at an angle around the Y axis: ' + data.gamma);
-    console.info('Succeeded in the device rotating at an angle around the Z axis: ' + data.alpha);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -744,23 +462,6 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.PEDOMETER, (data: sensor.PedometerResponse) => {
-    console.info('Succeeded in invoking once. Step count: ' + data.steps);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -791,23 +492,6 @@ function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDe
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
-    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -834,23 +518,6 @@ function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.PROXIMITY, (data: sensor.ProximityResponse) => {
-    console.info('Succeeded in invoking once. Distance: ' + data.distance);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -879,26 +546,6 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -926,23 +573,6 @@ function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantM
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
-    console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
-
 
 ## once
 
@@ -969,23 +599,6 @@ function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRes
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  sensor.once(sensor.SensorId.WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
-    console.info('Succeeded in invoking once. Wear status: ' + data.value);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke once. Code: ${e.code}, message: ${e.message}`);
-}
-```
 
 
 ## once
@@ -1019,18 +632,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<
 | type | [SensorType.SENSOR_TYPE_ID_ACCELEROMETER](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 加速度传感器类型为SENSOR_TYPE_ID_ACCELEROMETER。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)&gt; | 是 | 注册一次加速度传感器的回调函数，上报的数据类型为AccelerometerResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.AccelerometerResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-});
-```
-
 
 ## once
 
@@ -1063,21 +664,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 | type | [SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 未校准加速度传感器类型为SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)&gt; | 是 | 注册一次未校准加速度传感器的回调函数，上报的数据类型为AccelerometerUncalibratedResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: sensor.AccelerometerUncalibratedResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-  console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-  console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-});
-```
-
 
 ## once
 
@@ -1107,16 +693,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 环境光传感器类型为SENSOR_TYPE_ID_AMBIENT_LIGHT。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LightResponse](arkts-sensorservice-sensor-lightresponse-i.md)&gt; | 是 | 注册一次环境光传感器的回调函数，上报的数据类型为LightResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightResponse) => {
-  console.info('Succeeded in invoking once. Illumination: ' + data.intensity);
-});
-```
 
 
 ## once
@@ -1148,16 +724,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 | type | [SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 环境温度传感器类型为SENSOR_TYPE_ID_AMBIENT_TEMPERATURE。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | 是 | 注册一次环境温度传感器的回调函数，上报的数据类型为AmbientTemperatureResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.AmbientTemperatureResponse) => {
-  console.info('Succeeded in invoking once. Temperature: ' + data.temperature);
-});
-```
-
 
 ## once
 
@@ -1188,16 +754,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 | type | [SensorType.SENSOR_TYPE_ID_BAROMETER](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 气压计传感器类型为SENSOR_TYPE_ID_BAROMETER。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)&gt; | 是 | 注册一次气压计传感器的回调函数，上报的数据类型为BarometerResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerResponse) => {
-  console.info('Succeeded in invoking once. Atmospheric pressure: ' + data.pressure);
-});
-```
-
 
 ## once
 
@@ -1227,18 +783,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<Gravit
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_GRAVITY](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 重力传感器类型为SENSOR_TYPE_ID_GRAVITY。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | 是 | 注册一次重力传感器的回调函数，上报的数据类型为GravityResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  });
-```
 
 
 ## once
@@ -1272,18 +816,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 | type | [SensorType.SENSOR_TYPE_ID_GYROSCOPE](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md)&gt; | 是 | 注册一次陀螺仪传感器的回调函数，上报的数据类型为GyroscopeResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-});
-```
-
 
 ## once
 
@@ -1316,21 +848,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: 
 | type | [SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 未校准陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md)&gt; | 是 | 注册一次未校准陀螺仪传感器的回调函数，上报的数据类型为GyroscopeUncalibratedResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sensor.GyroscopeUncalibratedResponse) => {
-    console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-    console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-    console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-    console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-    console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-    console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-});
-```
-
 
 ## once
 
@@ -1360,16 +877,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_HALL](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 霍尔传感器类型为SENSOR_TYPE_ID_HALL。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | 是 | 注册一次霍尔传感器的回调函数，上报的数据类型为HallResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) => {
-  console.info('Succeeded in invoking once. Status: ' + data.status);
-});
-```
 
 
 ## once
@@ -1403,16 +910,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 | type | [SensorType.SENSOR_TYPE_ID_HEART_RATE](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 心率传感器类型为SENSOR_TYPE_ID_HEART_RATE。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md)&gt; | 是 | 注册一次心率传感器的回调函数，上报的数据类型为HeartRateResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRateResponse) => {
-  console.info("Succeeded in invoking once. Heart rate: " + data.heartRate);
-});
-```
-
 
 ## once
 
@@ -1442,16 +939,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_HUMIDITY](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 湿度传感器类型为SENSOR_TYPE_ID_HUMIDITY。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | 是 | 注册一次湿度传感器的回调函数，上报的数据类型为HumidityResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityResponse) => {
-  console.info('Succeeded in invoking once. Humidity: ' + data.humidity);
-});
-```
 
 
 ## once
@@ -1515,18 +1002,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 | type | [SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | 是 | 注册一次磁场传感器的回调函数，上报的数据类型为MagneticFieldResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.MagneticFieldResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-});
-```
-
 
 ## once
 
@@ -1557,21 +1032,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 | type | [SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 未校准磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | 是 | 注册一次未校准磁场传感器的回调函数，上报的数据类型为MagneticFieldUncalibratedResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data: sensor.MagneticFieldUncalibratedResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  console.info('Succeeded in invoking once. X-coordinate bias: ' + data.biasX);
-  console.info('Succeeded in invoking once. Y-coordinate bias: ' + data.biasY);
-  console.info('Succeeded in invoking once. Z-coordinate bias: ' + data.biasZ);
-});
-```
-
 
 ## once
 
@@ -1601,18 +1061,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_ORIENTATION](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 方向传感器类型为SENSOR_TYPE_ID_ORIENTATION。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | 是 | 注册一次方向传感器的回调函数，上报的数据类型为OrientationResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.OrientationResponse) => {
-  console.info('Succeeded in invoking the device rotating at an angle around the X axis: ' + data.beta);
-  console.info('Succeeded in invoking the device rotating at an angle around the Y axis: ' + data.gamma);
-  console.info('Succeeded in invoking the device rotating at an angle around the Z axis: ' + data.alpha);
-});
-```
 
 
 ## once
@@ -1646,16 +1094,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 | type | [SensorType.SENSOR_TYPE_ID_PEDOMETER](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 计步传感器类型为SENSOR_TYPE_ID_PEDOMETER。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 | 注册一次计步传感器的回调函数，上报的数据类型为PedometerResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerResponse) => {
-  console.info('Succeeded in invoking once. Steps: ' + data.steps);
-});
-```
-
 
 ## once
 
@@ -1688,16 +1126,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Cal
 | type | [SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 计步检测传感器类型为SENSOR_TYPE_ID_PEDOMETER_DETECTION。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | 注册一次计步检测传感器的回调函数，上报的数据类型为PedometerDetectionResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.PedometerDetectionResponse) => {
-  console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
-});
-```
-
 
 ## once
 
@@ -1727,17 +1155,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Prox
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_PROXIMITY](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 接近光传感器类型为SENSOR_TYPE_ID_PROXIMITY。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)&gt; | 是 | 注册一次接近光传感器的回调函数，上报的数据类型为ProximityResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityResponse) => {
-  console.info('Succeeded in invoking once. Distance: ' + data.distance);
-}
-);
-```
 
 
 ## once
@@ -1769,19 +1186,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 | type | [SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 旋转矢量传感器类型为SENSOR_TYPE_ID_ROTATION_VECTOR。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 是 | 注册一次旋转矢量传感器的回调函数，上报的数据类型为RotationVectorResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.RotationVectorResponse) => {
-  console.info('Succeeded in invoking once. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking once. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking once. Z-coordinate component: ' + data.z);
-  console.info('Succeeded in invoking once. Scalar quantity: ' + data.w);
-});
-```
-
 
 ## once
 
@@ -1812,16 +1216,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 | type | [SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 有效运动传感器类型为SENSOR_TYPE_ID_SIGNIFICANT_MOTION。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | 注册一次有效运动传感器的回调函数，上报的数据类型为SignificantMotionResponse。 |
 
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.SignificantMotionResponse) => {
-  console.info('Succeeded in invoking once. Scalar data: ' + data.scalar);
-});
-```
-
 
 ## once
 
@@ -1851,13 +1245,3 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 | --- | --- | --- | --- |
 | type | [SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-sensortype-e.md) | 是 | 佩戴检测传感器类型为SENSOR_TYPE_ID_WEAR_DETECTION。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | 是 | 注册一次穿戴检测传感器的回调函数，上报的数据类型为WearDetectionResponse。 |
-
-**示例**
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-sensor.once(sensor.SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, (data: sensor.WearDetectionResponse) => {
-  console.info("Succeeded in invoking once. Wear status: " + data.value);
-});
-```

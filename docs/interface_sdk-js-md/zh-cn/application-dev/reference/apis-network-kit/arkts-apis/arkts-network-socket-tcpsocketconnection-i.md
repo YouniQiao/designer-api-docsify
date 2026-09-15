@@ -63,6 +63,20 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.close().then(() => {
+    console.info('close success');
+  }).catch((err: BusinessError) => {
+    console.error('close fail');
+  });
+});
+```
+
 ## close
 
 ```TypeScript
@@ -91,6 +105,23 @@ close(): Promise<void>
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.close((err: BusinessError) => {
+    if (err) {
+      console.error('close fail');
+      return;
+    }
+    console.info('close success');
+  });
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -222,6 +253,20 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.getRemoteAddress().then(() => {
+    console.info('getRemoteAddress success');
+  }).catch((err: BusinessError) => {
+    console.error('getRemoteAddress fail');
+  });
+});
+```
+
 ## getRemoteAddress
 
 ```TypeScript
@@ -255,6 +300,22 @@ getRemoteAddress(): Promise<NetAddress>
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
 
 **示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  client.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
+    if (err) {
+      console.error('getRemoteAddress fail');
+      return;
+    }
+    console.info('getRemoteAddress success:' + JSON.stringify(data));
+  });
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -355,32 +416,6 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-let callback = (value: socket.SocketMessageInfo) => {
-  let messageView = '';
-  for (let i: number = 0; i < value.message.byteLength; i++) {
-    let uint8Array = new Uint8Array(value.message) 
-    let messages = uint8Array[i]
-    let message = String.fromCharCode(messages);
-    messageView += message;
-  }
-  console.info('on message message: ' + JSON.stringify(messageView));
-  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
-}
-tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-  client.on('message', callback);
-  // 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-  client.off('message', callback);
-  client.off('message');
-});
-```
-
 ## off('close')
 
 ```TypeScript
@@ -405,23 +440,6 @@ off(type: 'close', callback?: Callback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-let callback = () => {
-  console.info("on close success");
-}
-tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-  client.on('close', callback);
-  // 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-  client.off('close', callback);
-  client.off('close');
-});
-```
 
 ## off('error')
 
@@ -448,24 +466,6 @@ off(type: 'error', callback?: ErrorCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callback = (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-  client.on('error', callback);
-  // 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-  client.off('error', callback);
-  client.off('error');
-});
-```
-
 ## on('message')
 
 ```TypeScript
@@ -490,29 +490,6 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-
-tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-  client.on('message', (value: socket.SocketMessageInfo) => {
-    let messageView = '';
-    let uint8Array = new Uint8Array(value.message); 
-    for (let i: number = 0; i < value.message.byteLength; i++) {
-      let messages = uint8Array[i];
-      let message = String.fromCharCode(messages);
-      messageView += message;
-    }
-    console.info('on message message: ' + JSON.stringify(messageView));
-    console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
-  });
-});
-```
 
 ## on('close')
 
@@ -539,20 +516,6 @@ on(type: 'close', callback: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-  client.on('close', () => {
-    console.info("on close success")
-  });
-});
-```
-
 ## on('error')
 
 ```TypeScript
@@ -577,20 +540,6 @@ on(type: 'error', callback: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
-  client.on('error', (err: BusinessError) => {
-    console.error("on error, err:" + JSON.stringify(err))
-  });
-});
-```
 
 ## send
 
@@ -642,6 +591,24 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  let tcpSendOption: socket.TCPSendOptions = {
+    data: 'Hello, client!'
+  }
+  client.send(tcpSendOption).then(() => {
+    console.info('send success');
+  }).catch((err: BusinessError) => {
+    console.error('send fail');
+  });
+});
+```
+
 ## send
 
 ```TypeScript
@@ -681,6 +648,21 @@ send(options: TCPSendOptions): Promise<void>
 | [2300002](../errorcode-net-socket.md#2300002-系统内部错误) | System internal error. |
 
 **示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+
+tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
+  let tcpSendOption: socket.TCPSendOptions = {
+    data: 'Hello, client!'
+  }
+  client.send(tcpSendOption, () => {
+    console.info('send success');
+  });
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

@@ -50,6 +50,14 @@ tonePlayer.load(audio.ToneType.TONE_TYPE_DIAL_5, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+tonePlayer.load(audio.ToneType.TONE_TYPE_DIAL_1).then(() => {
+  console.info('promise call load ');
+}).catch(() => {
+  console.error('promise call load fail');
+});
+```
+
 ## load
 
 ```TypeScript
@@ -78,13 +86,7 @@ Loads tone. This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-tonePlayer.load(audio.ToneType.TONE_TYPE_DIAL_1).then(() => {
-  console.info('promise call load ');
-}).catch(() => {
-  console.error('promise call load fail');
-});
-```
+See [load](#load)
 
 ## release
 
@@ -121,6 +123,14 @@ tonePlayer.release((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+tonePlayer.release().then(() => {
+  console.info('promise call release');
+}).catch(() => {
+  console.error('promise call release fail');
+});
+```
+
 ## release
 
 ```TypeScript
@@ -142,6 +152,19 @@ Releases the player. This method uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.release((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call release failed error: ${err.message}`);
+    return;
+  } else {
+    console.info('callback call release success ');
+  }
+});
+```
 
 ```TypeScript
 tonePlayer.release().then(() => {
@@ -186,6 +209,14 @@ tonePlayer.start((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+tonePlayer.start().then(() => {
+  console.info('promise call start');
+}).catch(() => {
+  console.error('promise call start fail');
+});
+```
+
 ## start
 
 ```TypeScript
@@ -207,6 +238,19 @@ Starts player. This method uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.start((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call start failed error: ${err.message}`);
+    return;
+  } else {
+    console.info('callback call start success');
+  }
+});
+```
 
 ```TypeScript
 tonePlayer.start().then(() => {
@@ -251,6 +295,14 @@ tonePlayer.stop((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+tonePlayer.stop().then(() => {
+  console.info('promise call stop finish');
+}).catch(() => {
+  console.error('promise call stop fail');
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -272,6 +324,19 @@ Stops player. This method uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+tonePlayer.stop((err: BusinessError) => {
+  if (err) {
+    console.error(`callback call stop error: ${err.message}`);
+    return;
+  } else {
+    console.error('callback call stop success ');
+  }
+});
+```
 
 ```TypeScript
 tonePlayer.stop().then(() => {

@@ -35,6 +35,13 @@ import { intl } from '@kit.LocalizationKit';
 let formatter: intl.NumberFormat = new intl.NumberFormat();
 ```
 
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用en-GB区域ID创建NumberFormat对象，style设置为decimal，notation设置为scientific
+let formatter: intl.NumberFormat = new intl.NumberFormat('en-GB', { style: 'decimal', notation: 'scientific' });
+```
+
 ## constructor
 
 ```TypeScript
@@ -57,6 +64,13 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 | options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | 否 | 创建数字格式化对象时可设置的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统当前区域ID创建NumberFormat对象
+let formatter: intl.NumberFormat = new intl.NumberFormat();
+```
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

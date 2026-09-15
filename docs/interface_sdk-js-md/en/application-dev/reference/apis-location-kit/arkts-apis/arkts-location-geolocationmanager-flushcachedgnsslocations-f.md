@@ -53,6 +53,22 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.flushCachedGnssLocations().then(() => {
+    console.info('promise, flushCachedGnssLocations success');
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, flushCachedGnssLocations: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## flushCachedGnssLocations
 
@@ -86,18 +102,4 @@ All prepared GNSS locations are returned to the application, and the bottom-laye
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.flushCachedGnssLocations().then(() => {
-    console.info('promise, flushCachedGnssLocations success');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, flushCachedGnssLocations: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [flushCachedGnssLocations](#flushcachedgnsslocations)

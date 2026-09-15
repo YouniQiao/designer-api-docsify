@@ -66,6 +66,32 @@ try {
     eventType: hiSysEvent.EventType.FAULT,
     params: customizedParams
   };
+  hiSysEvent.write(eventInfo, (err: BusinessError) => {
+    // do something here.
+  });
+} catch (err) {
+  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let customizedParams: Record<string, string | number> = {
+    'PID': 487,
+    'UID': 103,
+    'PACKAGE_NAME': "com.ohos.hisysevent.test",
+    'PROCESS_NAME': "syseventservice",
+    'MSG': "no msg."
+  };
+  let eventInfo: hiSysEvent.SysEventInfo = {
+    domain: "RELIABILITY",
+    name: "STACK",
+    eventType: hiSysEvent.EventType.FAULT,
+    params: customizedParams
+  };
   hiSysEvent.write(eventInfo).then(
     () => {
       // do something here.
@@ -118,28 +144,4 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 **Examples**
 
-```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let customizedParams: Record<string, string | number> = {
-    'PID': 487,
-    'UID': 103,
-    'PACKAGE_NAME': "com.ohos.hisysevent.test",
-    'PROCESS_NAME': "syseventservice",
-    'MSG': "no msg."
-  };
-  let eventInfo: hiSysEvent.SysEventInfo = {
-    domain: "RELIABILITY",
-    name: "STACK",
-    eventType: hiSysEvent.EventType.FAULT,
-    params: customizedParams
-  };
-  hiSysEvent.write(eventInfo, (err: BusinessError) => {
-    // do something here.
-  });
-} catch (err) {
-  console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
-}
-```
+See [write](#write)

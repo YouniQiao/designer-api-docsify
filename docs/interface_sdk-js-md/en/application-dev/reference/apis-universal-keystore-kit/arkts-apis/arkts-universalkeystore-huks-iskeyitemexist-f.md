@@ -44,40 +44,16 @@ If the key does not exist, the error code 12000011 is returned.
 
 **Examples**
 
-ArkTS sample code:
-
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.isKeyItemExist(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: isKeyItemExist failed`);
-  } else {
-    if (data) {
-      console.info(`keyAlias:${keyAlias} is existed!`);
-    } else {
-      console.error(`find key failed`);
-    }
-  }
-});
+ArkTS sample code:
 ```
 
+```TypeScript
 JS sample code:
+
 > NOTE
 > 
 > The JS sample code is used only for the lightweight devices.
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="existBtn" @click="existKey">Query Key</input>
-    <text class="result">{{result}}</text>
-</stack>
 ```
 
 ```TypeScript
@@ -148,6 +124,20 @@ export default {
 };
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
+  console.info(`keyAlias:${keyAlias} is existed!`);
+});
+```
+
 
 ## isKeyItemExist
 
@@ -192,16 +182,4 @@ If the key does not exist, the error code 12000011 is returned.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
-  console.info(`keyAlias:${keyAlias} is existed!`);
-});
-```
+See [isKeyItemExist](#iskeyitemexist)

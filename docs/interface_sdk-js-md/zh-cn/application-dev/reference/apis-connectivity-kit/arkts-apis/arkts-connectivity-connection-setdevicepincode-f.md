@@ -55,6 +55,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    connection.setDevicePinCode('11:22:33:44:55:66', '12345').then(() => {
+        console.info('setDevicePinCode');
+    }, (error: BusinessError) => {
+        console.error('setDevicePinCode: errCode:' + error.code + ',errMessage' + error.message);
+    })
+
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 
 ## setDevicePinCode
 
@@ -98,17 +113,4 @@ function setDevicePinCode(deviceId: string, code: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.setDevicePinCode('11:22:33:44:55:66', '12345').then(() => {
-        console.info('setDevicePinCode');
-    }, (error: BusinessError) => {
-        console.error('setDevicePinCode: errCode:' + error.code + ',errMessage' + error.message);
-    })
-
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [setDevicePinCode](#setdevicepincode)

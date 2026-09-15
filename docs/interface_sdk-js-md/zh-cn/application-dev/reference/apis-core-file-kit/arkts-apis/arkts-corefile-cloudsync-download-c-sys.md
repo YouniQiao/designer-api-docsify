@@ -66,20 +66,6 @@ off(evt: 'progress', callback: (pg: DownloadProgress) => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
-**示例**
-
-```TypeScript
-let download = new cloudSync.Download();
-
-let callback = (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-}
-
-download.on('progress', callback);
-
-download.off('progress', callback);
-```
-
 ## off
 
 ```TypeScript
@@ -110,18 +96,6 @@ off(evt: 'progress'): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
-
-**示例**
-
-```TypeScript
-let download = new cloudSync.Download();
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-    console.info("download state: " + pg.state);
-});
-
-download.off('progress');
-```
 
 ## on
 
@@ -154,16 +128,6 @@ on(evt: 'progress', callback: (pg: DownloadProgress) => void): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
-
-**示例**
-
-```TypeScript
-let download = new cloudSync.Download();
-
-download.on('progress', (pg: cloudSync.DownloadProgress) => {
-  console.info("download state: " + pg.state);
-});
-```
 
 ## start
 
@@ -222,6 +186,21 @@ download.start(uri).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.start(uri, (err: BusinessError) => {
+  if (err) {
+    console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("start download successfully");
+  }
+});
+```
+
 ## start
 
 ```TypeScript
@@ -256,6 +235,23 @@ start(uri: string, callback: AsyncCallback<void>): void
 | 13900025 | No space left on device. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.on('progress', (pg: cloudSync.DownloadProgress) => {
+  console.info("download state: " + pg.state);
+});
+
+download.start(uri).then(() => {
+  console.info("start download successfully");
+}).catch((err: BusinessError) => {
+  console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -327,6 +323,21 @@ download.stop(uri).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.stop(uri, (err: BusinessError) => {
+  if (err) {
+    console.error(`stop download failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("stop download successfully");
+  }
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -363,6 +374,19 @@ stop(uri: string, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let download = new cloudSync.Download();
+let uri: string = "file:///media/Photo/1";
+
+download.stop(uri).then(() => {
+  console.info("stop download successfully");
+}).catch((err: BusinessError) => {
+  console.error(`stop download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

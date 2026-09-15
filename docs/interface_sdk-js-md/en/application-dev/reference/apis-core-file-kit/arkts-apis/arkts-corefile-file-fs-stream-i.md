@@ -57,6 +57,20 @@ stream.close().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing stream.`);
+  }
+});
+```
+
 ## close
 
 ```TypeScript
@@ -89,6 +103,18 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 | 13900042 | Unknown error |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close().then(() => {
+  console.info(`Succeeded in closing file stream.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -189,6 +215,21 @@ stream.flush().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.flush((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to flush stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in flushing.`);
+    stream.close();
+  }
+});
+```
+
 ## flush
 
 ```TypeScript
@@ -228,20 +269,7 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.flush((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to flush stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in flushing.`);
-    stream.close();
-  }
-});
-```
+See [flush](#flush)
 
 ## flushSync
 
@@ -351,6 +379,47 @@ stream.read(arrayBuffer, readOption).then((readLen: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
+  if (err) {
+    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    let buf = buffer.from(arrayBuffer, 0, readLen);
+    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+    stream.close();
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
+  if (err) {
+    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    let buf = buffer.from(arrayBuffer, 0, readLen);
+    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+    stream.close();
+  }
+});
+```
+
 ## read
 
 ```TypeScript
@@ -391,11 +460,55 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { buffer } from '@kit.ArkTS';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+stream.read(arrayBuffer, readOption).then((readLen: number) => {
+  let buf = buffer.from(arrayBuffer, 0, readLen);
+  console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+  stream.close();
+}).catch((err: BusinessError) => {
+  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
 
 let filePath = pathDir + "/test.txt";
 let stream = fileIo.createStreamSync(filePath, "r+");
 let arrayBuffer = new ArrayBuffer(4096);
 stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
+  if (err) {
+    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    let buf = buffer.from(arrayBuffer, 0, readLen);
+    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+    stream.close();
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
   if (err) {
     console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -447,6 +560,45 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 | 13900042 | Unknown error |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+stream.read(arrayBuffer, readOption).then((readLen: number) => {
+  let buf = buffer.from(arrayBuffer, 0, readLen);
+  console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+  stream.close();
+}).catch((err: BusinessError) => {
+  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
+  if (err) {
+    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    let buf = buffer.from(arrayBuffer, 0, readLen);
+    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+    stream.close();
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -600,6 +752,46 @@ stream.write("hello, world", writeOption).then((number: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  stream.close();
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  stream.close();
+});
+```
+
 ## write
 
 ```TypeScript
@@ -642,10 +834,52 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+stream.write("hello, world", writeOption).then((number: number) => {
+  console.info(`Succeeded in writing, size is: ${number}`);
+  stream.close();
+}).catch((err: BusinessError) => {
+  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let filePath = pathDir + "/test.txt";
 let stream = fileIo.createStreamSync(filePath, "r+");
 stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  stream.close();
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: number) => {
   if (err) {
     console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -701,6 +935,42 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | 13900042 | Unknown error |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+stream.write("hello, world", writeOption).then((number: number) => {
+  console.info(`Succeeded in writing, size is: ${number}`);
+  stream.close();
+}).catch((err: BusinessError) => {
+  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
+  if (err) {
+    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+    }
+  }
+  stream.close();
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

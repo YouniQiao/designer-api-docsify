@@ -87,42 +87,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setDensityDpi
-
-```TypeScript
-setDensityDpi(densityDpi: number): Promise<void>
-```
-
-Sets the pixel density of the screen. This API uses a promise to return the result.
-
-**Since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| densityDpi | number | Yes | Pixel density. The value must be an integer in the range [80, 640]. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -159,6 +123,44 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+## setDensityDpi
+
+```TypeScript
+setDensityDpi(densityDpi: number): Promise<void>
+```
+
+Sets the pixel density of the screen. This API uses a promise to return the result.
+
+**Since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| densityDpi | number | Yes | Pixel density. The value must be an integer in the range [80, 640]. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+See [setDensityDpi](#setdensitydpi)
 
 ## setOrientation
 
@@ -230,42 +232,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setOrientation
-
-```TypeScript
-setOrientation(orientation: Orientation): Promise<void>
-```
-
-Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
-
-**Since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| orientation | Orientation | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -302,6 +268,71 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let orientationOptions : screen.OrientationOptions = {
+  needAnimation: true,
+  ignoreRotationLock: false,
+};
+
+let screenClass: screen.Screen | null = null;
+// Obtain all screen objects.
+let screensPromise: Promise<Array<screen.Screen>> = screen.getAllScreens();
+screensPromise.then((data: Array<screen.Screen>) => {
+  if (data.length > 0) {
+    screenClass = data[0];
+    // Set the screen orientation to vertical, with animation and rotation lock not ignored.
+    let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL, orientationOptions);
+    promise.then(() => {
+      console.info('Succeeded in setting the vertical orientation with orientationOptions.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to set the vertical orientation with orientationOptions. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## setOrientation
+
+```TypeScript
+setOrientation(orientation: Orientation): Promise<void>
+```
+
+Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
+
+**Since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| orientation | Orientation | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+See [setOrientation](#setorientation)
 
 ## setOrientation
 
@@ -342,32 +373,7 @@ Set the orientation of the screen
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let orientationOptions : screen.OrientationOptions = {
-  needAnimation: true,
-  ignoreRotationLock: false,
-};
-
-let screenClass: screen.Screen | null = null;
-// Obtain all screen objects.
-let screensPromise: Promise<Array<screen.Screen>> = screen.getAllScreens();
-screensPromise.then((data: Array<screen.Screen>) => {
-  if (data.length > 0) {
-    screenClass = data[0];
-    // Set the screen orientation to vertical, with animation and rotation lock not ignored.
-    let promise: Promise<void> = screenClass.setOrientation(screen.Orientation.VERTICAL, orientationOptions);
-    promise.then(() => {
-      console.info('Succeeded in setting the vertical orientation with orientationOptions.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set the vertical orientation with orientationOptions. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setOrientation](#setorientation)
 
 ## setScreenActiveMode
 
@@ -440,42 +446,6 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-## setScreenActiveMode
-
-```TypeScript
-setScreenActiveMode(modeIndex: number): Promise<void>
-```
-
-Sets the active mode of the screen. This API uses a promise to return the result.
-
-**Since:** 9
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value must be an integer. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -513,6 +483,44 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+## setScreenActiveMode
+
+```TypeScript
+setScreenActiveMode(modeIndex: number): Promise<void>
+```
+
+Sets the active mode of the screen. This API uses a promise to return the result.
+
+**Since:** 9
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| modeIndex | number | Yes | Index of the mode to set. The current value and value range of this parameter vary according to the screen resolution, refresh rate, and device hardware. The value must be an integer. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+**Examples**
+
+See [setScreenActiveMode](#setscreenactivemode)
 
 ## activeModeIndex
 

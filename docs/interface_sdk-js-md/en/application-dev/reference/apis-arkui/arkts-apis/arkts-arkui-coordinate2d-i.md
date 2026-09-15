@@ -1,10 +1,12 @@
 # Coordinate2D
 
-Describes a two-dimension coordinate.
+/** Describes a two-dimension coordinate. Responsive layout fill mode, used for the WaterFlow, Grid, List, Swiper, and LazyVWaterFlowLayout components. The LazyVWaterFlowLayout component is supported since API version 26.0.0.
 
 **Since:** 26.0.0
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+**System capability:** 
+- SystemCapability.ArkUI.ArkUI.Full
+- SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 

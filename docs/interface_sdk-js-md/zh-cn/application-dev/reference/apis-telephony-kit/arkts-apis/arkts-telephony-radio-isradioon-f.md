@@ -43,6 +43,18 @@ function isRadioOn(slotId: number, callback: AsyncCallback<boolean>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.isRadioOn((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`isRadioOn failed, callback: err code: ${err.code}, message: ${err.message}`);
+        return;
+    }
+    console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
     if (err) {
@@ -50,6 +62,17 @@ radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
         return;
     }
     console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.isRadioOn(slotId).then((data: boolean) => {
+    console.info(`isRadioOn success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isRadioOn failed, promise: err code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -93,16 +116,7 @@ function isRadioOn(slotId?: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.isRadioOn(slotId).then((data: boolean) => {
-    console.info(`isRadioOn success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRadioOn failed, promise: err code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isRadioOn](#isradioon)
 
 
 ## isRadioOn
@@ -138,14 +152,4 @@ function isRadioOn(callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.isRadioOn((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isRadioOn failed, callback: err code: ${err.code}, message: ${err.message}`);
-        return;
-    }
-    console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
-});
-```
+参见 [isRadioOn](#isradioon)

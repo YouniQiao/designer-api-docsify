@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取触摸板右键点击类型
+            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
+              console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getTouchpadRightClickType
 
@@ -94,29 +121,4 @@ function getTouchpadRightClickType(): Promise<RightClickType>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 获取触摸板右键点击类型
-            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
-              console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [getTouchpadRightClickType](#gettouchpadrightclicktype)

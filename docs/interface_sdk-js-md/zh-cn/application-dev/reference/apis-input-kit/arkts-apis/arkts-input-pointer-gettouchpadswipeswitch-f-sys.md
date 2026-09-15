@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取触摸板滑动开关
+            pointer.getTouchpadSwipeSwitch().then((state: boolean) => {
+              console.info(`Succeeded in getting touchpad swipe switch, state: ${JSON.stringify(state)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getTouchpadSwipeSwitch
 
@@ -94,29 +121,4 @@ function getTouchpadSwipeSwitch(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 获取触摸板滑动开关
-            pointer.getTouchpadSwipeSwitch().then((state: boolean) => {
-              console.info(`Succeeded in getting touchpad swipe switch, state: ${JSON.stringify(state)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [getTouchpadSwipeSwitch](#gettouchpadswipeswitch)

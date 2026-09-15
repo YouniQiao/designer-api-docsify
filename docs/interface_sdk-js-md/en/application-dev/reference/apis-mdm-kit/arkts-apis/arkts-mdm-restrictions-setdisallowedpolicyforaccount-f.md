@@ -65,6 +65,25 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  restrictions.setDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, true, 100);
+  console.info('Succeeded in setting super hub disabled');
+} catch (err) {
+  console.error(`Failed to set super hub disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## setDisallowedPolicyForAccount
 
@@ -104,21 +123,4 @@ Disallows a feature for a specified user.
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  restrictions.setDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, true, 100);
-  console.info('Succeeded in setting super hub disabled');
-} catch (err) {
-  console.error(`Failed to set super hub disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setDisallowedPolicyForAccount](#setdisallowedpolicyforaccount)

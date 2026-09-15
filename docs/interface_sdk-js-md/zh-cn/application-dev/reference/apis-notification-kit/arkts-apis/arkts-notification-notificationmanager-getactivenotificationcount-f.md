@@ -55,6 +55,16 @@ let getActiveNotificationCountCallback = (err: BusinessError, data: number): voi
 notificationManager.getActiveNotificationCount(getActiveNotificationCountCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getActiveNotificationCount().then((data: number) => {
+  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get active notification count. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getActiveNotificationCount
 
@@ -90,12 +100,4 @@ function getActiveNotificationCount(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getActiveNotificationCount().then((data: number) => {
-  console.info(`Succeeded in getting active notification count, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get active notification count. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getActiveNotificationCount](#getactivenotificationcount)

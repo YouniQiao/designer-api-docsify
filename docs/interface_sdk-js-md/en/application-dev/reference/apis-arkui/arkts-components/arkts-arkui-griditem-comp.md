@@ -44,114 +44,16 @@ Creates a **GridItem** component.
 
 ## Examples
 
+```TypeScript
+### Example 1: Setting the Grid Item Position
+
 The GridItem component sets its own position by setting reasonable rowStart, rowEnd, columnStart, and columnEnd attributes. For scenarios where you need to specify the start row and column and the occupied rows and columns of GridItem, it is recommended to use the [GridLayoutOptions](ts-container-grid.md#gridlayoutoptions10) parameter of Grid. For details, refer to [Example 1: Creating a Fixed Row and Column Grid Layout](ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout) and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns) of Grid.
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct GridItemExample {
-  @State numbers: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
 
-  build() {
-    Column() {
-      Grid() {
-        GridItem() {
-          Text('4')
-            .fontSize(16)
-            .backgroundColor(0xFAEEE0)
-            .width('100%')
-            .height('100%')
-            .textAlign(TextAlign.Center)
-        }.rowStart(1).rowEnd(2).columnStart(1).columnEnd(2) // Set valid row and column numbers.
-
-        ForEach(this.numbers, (item: string) => {
-          GridItem() {
-            Text(item)
-              .fontSize(16)
-              .backgroundColor(0xF9CF93)
-              .width('100%')
-              .height('100%')
-              .textAlign(TextAlign.Center)
-          }
-        }, (item: string) => item)
-
-        GridItem() {
-          Text('5')
-            .fontSize(16)
-            .backgroundColor(0xDBD0C0)
-            .width('100%')
-            .height('100%')
-            .textAlign(TextAlign.Center)
-        }.columnStart(1).columnEnd(4) // No row number is set, so positioning does not follow columnStart(1). Here, the layout starts from row 5, column index 0, and spans 4 columns.
-      }
-      .columnsTemplate('1fr 1fr 1fr 1fr 1fr')
-      .rowsTemplate('1fr 1fr 1fr 1fr 1fr')
-      .width('90%').height(300)
-    }.width('100%').margin({ top: 5 })
-  }
-}
 ```
 
-This example shows how to set the grid item style using GridItemOptions.
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct GridItemExample {
-  @State numbers: string[] = ['0', '1', '2'];
+### Example 2: Setting the Grid Item Style
 
-  build() {
-    Column({ space: 5 }) {
-      Grid() {
-        ForEach(this.numbers, (rowItem: string) => {
-          ForEach(this.numbers, (item: string) => {
-            GridItem({ style: GridItemStyle.NONE }) {
-              Text(item)
-                .fontSize(16)
-                .width('100%')
-                .height('100%')
-                .textAlign(TextAlign.Center)
-                .focusable(true)
-            }
-            .backgroundColor(0xF9CF93)
-          }, (item: string) => item)
-        }, (rowItem: string) => rowItem)
-      }
-      .columnsTemplate('1fr 1fr 1fr')
-      .rowsTemplate('1fr 1fr')
-      .columnsGap(4)
-      .rowsGap(4)
-      .width('60%')
-      .backgroundColor(0xFAEEE0)
-      .height(150)
-      .padding(4)
-
-      Grid() {
-        ForEach(this.numbers, (rowItem: string) => {
-          ForEach(this.numbers, (item: string) => {
-            GridItem({ style: GridItemStyle.PLAIN }) {
-              Text(item)
-                .fontSize(16)
-                .width('100%')
-                .height('100%')
-                .textAlign(TextAlign.Center)
-                .focusable(true)
-            }
-            .backgroundColor(0xF9CF93)
-          }, (item: string) => item)
-        }, (rowItem: string) => rowItem)
-      }
-      .columnsTemplate('1fr 1fr 1fr')
-      .rowsTemplate('1fr 1fr')
-      .columnsGap(4)
-      .rowsGap(4)
-      .width('60%')
-      .backgroundColor(0xFAEEE0)
-      .height(150)
-      .padding(4)
-    }.width('100%').margin({ top: 5 })
-  }
-}
+This example shows how to set the grid item style using GridItemOptions.
 ```

@@ -38,6 +38,18 @@ Checks whether this application is the default application of a system-defined a
 import { defaultAppManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
+  .then((data) => {
+    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
@@ -81,14 +93,4 @@ Checks whether this application is the default application of a system-defined a
 
 **Examples**
 
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data) => {
-    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-```
+See [isDefaultApplication](#isdefaultapplication)

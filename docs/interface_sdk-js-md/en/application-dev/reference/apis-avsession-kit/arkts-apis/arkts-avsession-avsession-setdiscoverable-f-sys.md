@@ -42,6 +42,12 @@ avSession.setDiscoverable(true, () => {
 });
 ```
 
+```TypeScript
+avSession.setDiscoverable(true).then(() => {
+  console.info('Succeeded in setting discoverable.');
+});
+```
+
 
 ## setDiscoverable
 
@@ -78,8 +84,4 @@ Enable or disable device to be discoverable, used at sink side.
 
 **Examples**
 
-```TypeScript
-avSession.setDiscoverable(true).then(() => {
-  console.info('Succeeded in setting discoverable.');
-});
-```
+See [setDiscoverable](#setdiscoverable)

@@ -47,6 +47,13 @@ let eventInfo: accessibility.EventInfo = ({
 });
 ```
 
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+// 参数依次为：type、bundleName、triggerAction。
+let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
+```
+
 ## constructor
 
 ```TypeScript
@@ -73,12 +80,7 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 **示例**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-// 参数依次为：type、bundleName、triggerAction。
-let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
-```
+参见 [constructor](#constructor)
 
 ## beginIndex
 

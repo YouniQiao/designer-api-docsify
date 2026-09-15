@@ -52,6 +52,26 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
     return;
   }
   let uuid: string = volumes[0].uuid;
+  storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
+    console.info("getFreeSizeOfVolume successfully:" + number);
+  }).catch((err: BusinessError) => {
+    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  if (volumes == null || volumes.length <= 0) {
+    console.error("volumes is null or length is invalid");
+    return;
+  }
+  let uuid: string = volumes[0].uuid;
   storageStatistics.getFreeSizeOfVolume(uuid, (error: BusinessError, number: number) => {
     if (error) {
       console.error(`getFreeSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
@@ -107,22 +127,4 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<number>
 
 **示例**
 
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  if (volumes == null || volumes.length <= 0) {
-    console.error("volumes is null or length is invalid");
-    return;
-  }
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
-    console.info("getFreeSizeOfVolume successfully:" + number);
-  }).catch((err: BusinessError) => {
-    console.error(`getFreeSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
-});
-```
+参见 [getFreeSizeOfVolume](#getfreesizeofvolume)

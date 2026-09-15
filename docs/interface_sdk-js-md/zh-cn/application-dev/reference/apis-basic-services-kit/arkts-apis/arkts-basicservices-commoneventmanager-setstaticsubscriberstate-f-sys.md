@@ -52,6 +52,27 @@ commonEventManager.setStaticSubscriberState(true, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.setStaticSubscriberState(false).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventName: string[] = ['usual.event.SEND_DATA'];
+commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
+  console.info(`setStaticSubscriberState success`);
+}).catch((err: BusinessError) => {
+  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```
+
 
 ## setStaticSubscriberState
 
@@ -92,15 +113,7 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.setStaticSubscriberState(false).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
-});
-```
+参见 [setStaticSubscriberState](#setstaticsubscriberstate)
 
 
 ## setStaticSubscriberState
@@ -143,13 +156,4 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventName: string[] = ['usual.event.SEND_DATA'];
-commonEventManager.setStaticSubscriberState(true, eventName).then(() => {
-  console.info(`setStaticSubscriberState success`);
-}).catch((err: BusinessError) => {
-  console.error(`setStaticSubscriberState failed, errCode: ${err.code}, errMsg: ${err.message}`);
-});
-```
+参见 [setStaticSubscriberState](#setstaticsubscriberstate)

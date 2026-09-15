@@ -53,6 +53,16 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    wearDetection.isWearDetectionEnabled('XX:XX:XX:XX:XX:XX').then((enabled) => {
+        console.info('device enable wear detection ' + enabled);
+    });
+} catch (err) {
+    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
+}
+```
+
 
 ## isWearDetectionEnabled
 
@@ -96,12 +106,4 @@ Check whether the wearing detection is enabled.
 
 **Examples**
 
-```TypeScript
-try {
-    wearDetection.isWearDetectionEnabled('XX:XX:XX:XX:XX:XX').then((enabled) => {
-        console.info('device enable wear detection ' + enabled);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
+See [isWearDetectionEnabled](#isweardetectionenabled)

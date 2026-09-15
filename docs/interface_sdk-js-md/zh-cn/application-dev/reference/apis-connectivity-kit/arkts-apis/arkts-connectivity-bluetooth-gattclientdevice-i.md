@@ -153,6 +153,14 @@ let deviceName : void = gattClient.getDeviceName((err : BusinessError, data : st
 })
 ```
 
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getDeviceName().then((data) => {
+    console.info('device name' + JSON.stringify(data));
+})
+```
+
 ## getDeviceName
 
 ```TypeScript
@@ -181,13 +189,7 @@ client获取远端蓝牙低功耗设备名。
 
 **示例**
 
-```TypeScript
-// promise
-let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-gattClient.getDeviceName().then((data) => {
-    console.info('device name' + JSON.stringify(data));
-})
-```
+参见 [getDeviceName](#getdevicename)
 
 ## getRssiValue
 
@@ -228,6 +230,14 @@ gattClient.getRssiValue((err : BusinessError, data : number)=> {
 })
 ```
 
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getRssiValue().then((data : number) => {
+    console.info('rssi' + JSON.stringify(data));
+})
+```
+
 ## getRssiValue
 
 ```TypeScript
@@ -256,13 +266,7 @@ client获取远端蓝牙低功耗设备的信号强度 (Received Signal Strength
 
 **示例**
 
-```TypeScript
-// promise
-let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-gattClient.getRssiValue().then((data : number) => {
-    console.info('rssi' + JSON.stringify(data));
-})
-```
+参见 [getRssiValue](#getrssivalue)
 
 ## getServices
 
@@ -311,6 +315,15 @@ device.connect();
 device.getServices(getServices);
 ```
 
+```TypeScript
+// Promise 模式
+let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.connect();
+device.getServices().then((result : Array<bluetooth.GattService>) => {
+    console.info("getServices successfully:" + JSON.stringify(result));
+});
+```
+
 ## getServices
 
 ```TypeScript
@@ -339,14 +352,7 @@ client端获取蓝牙低功耗设备的所有服务，即服务发现。
 
 **示例**
 
-```TypeScript
-// Promise 模式
-let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.connect();
-device.getServices().then((result : Array<bluetooth.GattService>) => {
-    console.info("getServices successfully:" + JSON.stringify(result));
-});
-```
+参见 [getServices](#getservices)
 
 ## off('BLECharacteristicChange')
 
@@ -375,13 +381,6 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 | type | 'BLECharacteristicChange' | 是 | 填写"BLECharacteristicChange"字符串，表示特征值变化事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | 否 | 表示取消订阅蓝牙低功耗设备的特征值变化事件。不填该参数则取消订阅该type对应的所有回调。 |
 
-**示例**
-
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.off('BLECharacteristicChange');
-```
-
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -408,13 +407,6 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | 是 | 填写"BLEConnectionStateChange"字符串，表示连接状态变化事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | 否 | 表示取消订阅蓝牙低功耗设备的连接状态变化事件。不填该参数则取消订阅该type对应的所有回调。 |
-
-**示例**
-
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.off('BLEConnectionStateChange');
-```
 
 ## on('BLECharacteristicChange')
 
@@ -443,18 +435,6 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 | type | 'BLECharacteristicChange' | 是 | 填写"BLECharacteristicChange"字符串，表示特征值变化事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)&gt; | 是 | 表示蓝牙低功耗设备的特征值变化事件的回调函数。 |
 
-**示例**
-
-```TypeScript
-function CharacteristicChange(CharacteristicChangeReq : bluetooth.BLECharacteristic) {
-  let serviceUuid : string = CharacteristicChangeReq.serviceUuid;
-  let characteristicUuid : string = CharacteristicChangeReq.characteristicUuid;
-  let value = new Uint8Array(CharacteristicChangeReq.characteristicValue);
-}
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.on('BLECharacteristicChange', CharacteristicChange);
-```
-
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -481,17 +461,6 @@ client端订阅蓝牙低功耗设备的连接状态变化事件。
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | 是 | 填写"BLEConnectionStateChange"字符串，表示连接状态变化事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)&gt; | 是 | 表示连接状态，已连接或断开。 |
-
-**示例**
-
-```TypeScript
-function ConnectStateChanged(state : bluetooth.BLEConnectChangedState) {
-  console.info('bluetooth connect state changed');
-  let connectState : bluetooth.ProfileConnectionState = state.state;
-}
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-device.on('BLEConnectionStateChange', ConnectStateChanged);
-```
 
 ## readCharacteristicValue
 
@@ -552,6 +521,27 @@ characteristicValue: bufferCCC, descriptors:descriptors};
 device.readCharacteristicValue(characteristic, readCcc);
 ```
 
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+device.readCharacteristicValue(characteristic);
+```
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -586,26 +576,7 @@ client端读取蓝牙低功耗设备特定服务的特征值。
 
 **示例**
 
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let descriptors : Array<bluetooth.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-characteristicValue: bufferCCC, descriptors:descriptors};
-
-device.readCharacteristicValue(characteristic);
-```
+参见 [readCharacteristicValue](#readcharacteristicvalue)
 
 ## readDescriptorValue
 
@@ -656,6 +627,17 @@ let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-800
 device.readDescriptorValue(descriptor, readDesc);
 ```
 
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+device.readDescriptorValue(descriptor);
+```
+
 ## readDescriptorValue
 
 ```TypeScript
@@ -690,16 +672,7 @@ client端读取蓝牙低功耗设备特定的特征包含的描述符。
 
 **示例**
 
-```TypeScript
-let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-device.readDescriptorValue(descriptor);
-```
+参见 [readDescriptorValue](#readdescriptorvalue)
 
 ## setBLEMtuSize
 

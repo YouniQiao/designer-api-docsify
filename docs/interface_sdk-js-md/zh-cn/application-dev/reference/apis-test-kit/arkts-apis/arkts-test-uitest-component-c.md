@@ -635,6 +635,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function mode_demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  await text.inputText('123', { paste: true, addition: false });
+}
+```
+
 ## inputText
 
 ```TypeScript
@@ -674,6 +685,20 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找text为'hello world'的控件。
+  let text: Component = await driver.findComponent(ON.text('hello world'));
+  // 清空原有文本并输入'123'。
+  await text.inputText('123');
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -1246,6 +1271,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
+
 ## scrollSearch
 
 ```TypeScript
@@ -1285,6 +1321,20 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 | [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 获取可滑动的Scroll控件。
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  // 在Scroll控件上滑动查找text为'next page'的控件。
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
 
 ```TypeScript
 // xxx.test.ets

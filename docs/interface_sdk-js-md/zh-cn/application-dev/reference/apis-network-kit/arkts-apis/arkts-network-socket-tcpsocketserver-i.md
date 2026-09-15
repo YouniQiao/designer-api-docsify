@@ -242,6 +242,30 @@ tcpServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 })
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+tcpServer.getState().then((data: socket.SocketStateBase) => {
+  console.info('getState success' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error('getState fail');
+});
+```
+
 ## getState
 
 ```TypeScript
@@ -275,6 +299,32 @@ getState(): Promise<SocketStateBase>
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
 
 **示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+tcpServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
+  if (err) {
+    console.error('getState fail');
+    return;
+  }
+  console.info('getState success:' + JSON.stringify(data));
+})
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -358,6 +408,23 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr).then(() => {
+  console.info('listen success');
+}).catch((err: BusinessError) => {
+  console.error('listen fail');
+});
+```
+
 ## listen
 
 ```TypeScript
@@ -412,6 +479,25 @@ let listenAddr: socket.NetAddress = {
   port: 8080,
   family: 1
 }
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
 tcpServer.listen(listenAddr).then(() => {
   console.info('listen success');
 }).catch((err: BusinessError) => {
@@ -444,35 +530,6 @@ off(type: 'connect', callback?: Callback<TCPSocketConnection>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-
-let listenAddr: socket.NetAddress = {
-  address:  '192.168.xx.xxx',
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr, (err: BusinessError) => {
-  if (err) {
-    console.error("listen fail");
-    return;
-  }
-  console.info("listen success");
-  let callback = (data: socket.TCPSocketConnection) => {
-    console.info('on connect message: ' + JSON.stringify(data));
-  }
-  tcpServer.on('connect', callback);
-  // 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-  tcpServer.off('connect', callback);
-  tcpServer.off('connect');
-})
-```
-
 ## off('error')
 
 ```TypeScript
@@ -497,35 +554,6 @@ off(type: 'error', callback?: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-
-let listenAddr: socket.NetAddress = {
-  address:  '192.168.xx.xxx',
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr, (err: BusinessError) => {
-  if (err) {
-    console.error("listen fail");
-    return;
-  }
-  console.info("listen success");
-  let callback = (err: BusinessError) => {
-    console.error("on error, err:" + JSON.stringify(err));
-  }
-  tcpServer.on('error', callback);
-  // 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-  tcpServer.off('error', callback);
-  tcpServer.off('error');
-})
-```
 
 ## on('connect')
 
@@ -556,31 +584,6 @@ on(type: 'connect', callback: Callback<TCPSocketConnection>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-
-let listenAddr: socket.NetAddress = {
-  address:  '192.168.xx.xxx',
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr, (err: BusinessError) => {
-  if (err) {
-    console.error("listen fail");
-    return;
-  }
-  console.info("listen success");
-  tcpServer.on('connect', (data: socket.TCPSocketConnection) => {
-    console.info(JSON.stringify(data))
-  });
-})
-```
-
 ## on('error')
 
 ```TypeScript
@@ -609,31 +612,6 @@ on(type: 'error', callback: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
-
-let listenAddr: socket.NetAddress = {
-  address:  '192.168.xx.xxx',
-  port: 8080,
-  family: 1
-}
-tcpServer.listen(listenAddr, (err: BusinessError) => {
-  if (err) {
-    console.error("listen fail");
-    return;
-  }
-  console.info("listen success");
-  tcpServer.on('error', (err: BusinessError) => {
-    console.error("on error, err:" + JSON.stringify(err))
-  });
-})
-```
 
 ## setExtraOptions
 
@@ -713,6 +691,47 @@ tcpServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+
+let tcpExtraOptions: socket.TCPExtraOptions = {
+  keepAlive: true,
+  OOBInline: true,
+  TCPNoDelay: true,
+  socketLinger: { on: true, linger: 10 } as SocketLinger,
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  reuseAddress: true,
+  socketTimeout: 3000
+}
+tcpServer.setExtraOptions(tcpExtraOptions).then(() => {
+  console.info('setExtraOptions success');
+}).catch((err: BusinessError) => {
+  console.error('setExtraOptions fail');
+});
+```
+
 ## setExtraOptions
 
 ```TypeScript
@@ -753,6 +772,48 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 | [2303188](../errorcode-net-socket.md#2303188-非套接字的套接字操作) | Socket operation on non-socket. |
 
 **示例**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tcpServer: socket.TCPSocketServer = socket.constructTCPSocketServerInstance();
+let listenAddr: socket.NetAddress = {
+  address:  '192.168.xx.xxx',
+  port: 8080,
+  family: 1
+}
+tcpServer.listen(listenAddr, (err: BusinessError) => {
+  if (err) {
+    console.error("listen fail");
+    return;
+  }
+  console.info("listen success");
+})
+
+interface SocketLinger {
+  on: boolean;
+  linger: number;
+}
+
+let tcpExtraOptions: socket.TCPExtraOptions = {
+  keepAlive: true,
+  OOBInline: true,
+  TCPNoDelay: true,
+  socketLinger: { on: true, linger: 10 } as SocketLinger,
+  receiveBufferSize: 8192,
+  sendBufferSize: 8192,
+  reuseAddress: true,
+  socketTimeout: 3000
+}
+tcpServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('setExtraOptions fail');
+    return;
+  }
+  console.info('setExtraOptions success');
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

@@ -68,6 +68,25 @@ networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0', (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace parameters with actual values.
+networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0').then((result) => {
+  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isNetworkInterfaceDisabled
 
@@ -116,21 +135,4 @@ Queries whether a specified network interface is disabled. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0').then((result) => {
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isNetworkInterfaceDisabled](#isnetworkinterfacedisabled)

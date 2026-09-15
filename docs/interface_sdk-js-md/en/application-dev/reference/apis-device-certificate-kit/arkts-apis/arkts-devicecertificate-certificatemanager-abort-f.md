@@ -57,6 +57,26 @@ try {
 }
 ```
 
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* cmHandle is the value returned by init(). The value here is only an example. */
+let cmHandle: Uint8Array = new Uint8Array([
+  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
+]);
+try {
+  certificateManager.abort(cmHandle).then((result) => {
+    console.info('Succeeded in aborting.');
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to abort. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to abort. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## abort
 
@@ -94,22 +114,4 @@ Aborts the signing or signature verification operation. This method is mutually 
 
 **Examples**
 
-```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-/* cmHandle is the value returned by init(). The value here is only an example. */
-let cmHandle: Uint8Array = new Uint8Array([
-  0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08
-]);
-try {
-  certificateManager.abort(cmHandle).then((result) => {
-    console.info('Succeeded in aborting.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to abort. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to abort. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [abort](#abort)

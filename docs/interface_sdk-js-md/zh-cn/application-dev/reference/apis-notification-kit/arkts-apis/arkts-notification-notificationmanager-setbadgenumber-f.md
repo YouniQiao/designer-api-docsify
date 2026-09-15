@@ -47,6 +47,17 @@ function setBadgeNumber(badgeNumber: number, callback: AsyncCallback<void>): voi
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let badgeNumber: number = 10;
+notificationManager.setBadgeNumber(badgeNumber).then(() => {
+  console.info(`Succeeded in setting badge number.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let setBadgeNumberCallback = (err: BusinessError): void => {
   if (err) {
     console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
@@ -102,13 +113,4 @@ function setBadgeNumber(badgeNumber: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let badgeNumber: number = 10;
-notificationManager.setBadgeNumber(badgeNumber).then(() => {
-  console.info(`Succeeded in setting badge number.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set badge number. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [setBadgeNumber](#setbadgenumber)

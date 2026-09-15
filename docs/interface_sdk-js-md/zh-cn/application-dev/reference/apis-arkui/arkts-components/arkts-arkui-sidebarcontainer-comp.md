@@ -59,60 +59,6 @@ SideBarContainer(type?: SideBarContainerType)
 
 ## 示例
 
-该示例主要演示如何使用侧边栏组件及页面布局效果。
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct SideBarContainerExample {
-  // $r('app.media.icon')需要替换为开发者所需的图像资源文件。
-  normalIcon: Resource = $r('app.media.icon');
-  selectedIcon: Resource = $r('app.media.icon');
-  @State menuItems: number[] = [1, 2, 3];
-  @State selectedItemId: number = 1;
-
-  build() {
-    SideBarContainer(SideBarContainerType.Embed) {
-      Column() {
-        ForEach(this.menuItems, (item: number) => {
-          Column({ space: 5 }) {
-            Image(this.selectedItemId === item ? this.selectedIcon : this.normalIcon).width(64).height(64)
-            Text('Index0' + item)
-              .fontSize(25)
-              .fontColor(this.selectedItemId === item ? '#0A59F7' : '#999')
-              .fontFamily('source-sans-pro,cursive,sans-serif')
-          }
-          .onClick(() => {
-            this.selectedItemId = item;
-          })
-        }, (item: number) => item.toString())
-      }.width('100%')
-      .justifyContent(FlexAlign.SpaceEvenly)
-      .backgroundColor('#19000000')
-
-      Column() {
-        Text('SideBarContainer content text1').fontSize(25)
-        Text('SideBarContainer content text2').fontSize(25)
-      }
-      .margin({ top: 50, left: 20, right: 30 })
-    }
-    .controlButton({
-      icons: {
-        // $r('app.media.drawer')需要替换为开发者所需的图像资源文件。
-        hidden: $r('app.media.drawer'),
-        shown: $r('app.media.drawer'),
-        switching: $r('app.media.drawer')
-      }
-    })
-    .sideBarWidth(150)
-    .minSideBarWidth(50)
-    .maxSideBarWidth(300)
-    .minContentWidth(0)
-    .onChange((value: boolean) => {
-      console.info('status:' + value);
-    })
-    .divider({ strokeWidth: '1vp', color: Color.Gray, startMargin: '4vp', endMargin: '4vp' })
-  }
-}
+该示例主要演示如何使用侧边栏组件及页面布局效果。
 ```

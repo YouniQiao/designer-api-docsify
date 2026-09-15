@@ -99,6 +99,29 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+let options: osAccount.AuthOptions = {
+  accountId: 100
+};
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, options, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## auth
 
 ```TypeScript
@@ -166,6 +189,26 @@ Starts user authentication based on the specified challenge value, authenticatio
 | 12300211 | Server unreachable. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let challenge: Uint8Array = new Uint8Array([0]);
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let authTrustLevel: osAccount.AuthTrustLevel = osAccount.AuthTrustLevel.ATL1;
+try {
+  userAuth.auth(challenge, authType, authTrustLevel, {
+    onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+      console.info('auth result = ' + result);
+      console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -479,6 +522,31 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let keys: Array<osAccount.GetPropertyType> = [
+  osAccount.GetPropertyType.AUTH_SUB_TYPE,
+  osAccount.GetPropertyType.REMAIN_TIMES,
+  osAccount.GetPropertyType.FREEZING_TIME
+];
+let request: osAccount.GetPropertyRequest = {
+  authType: osAccount.AuthType.PIN,
+  keys: keys
+};
+try {
+  userAuth.getProperty(request).then((result: osAccount.ExecutorProperty) => {
+    console.info('getProperty result = ' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getProperty error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getProperty exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getProperty
 
 ```TypeScript
@@ -520,30 +588,7 @@ Obtains the executor property based on the request. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let keys: Array<osAccount.GetPropertyType> = [
-  osAccount.GetPropertyType.AUTH_SUB_TYPE,
-  osAccount.GetPropertyType.REMAIN_TIMES,
-  osAccount.GetPropertyType.FREEZING_TIME
-];
-let request: osAccount.GetPropertyRequest = {
-  authType: osAccount.AuthType.PIN,
-  keys: keys
-};
-try {
-  userAuth.getProperty(request).then((result: osAccount.ExecutorProperty) => {
-    console.info('getProperty result = ' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getProperty error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getProperty exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getProperty](#getproperty)
 
 ## getPropertyByCredentialId
 
@@ -781,6 +826,27 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userAuth = new osAccount.UserAuth();
+let request: osAccount.SetPropertyRequest = {
+  authType: osAccount.AuthType.PIN,
+  key: osAccount.SetPropertyType.INIT_ALGORITHM,
+  setInfo: new Uint8Array([0])
+};
+try {
+  userAuth.setProperty(request).then(() => {
+    console.info('setProperty successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setProperty failed, error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setProperty
 
 ```TypeScript
@@ -821,23 +887,4 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userAuth = new osAccount.UserAuth();
-let request: osAccount.SetPropertyRequest = {
-  authType: osAccount.AuthType.PIN,
-  key: osAccount.SetPropertyType.INIT_ALGORITHM,
-  setInfo: new Uint8Array([0])
-};
-try {
-  userAuth.setProperty(request).then(() => {
-    console.info('setProperty successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setProperty failed, error = code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setProperty exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setProperty](#setproperty)

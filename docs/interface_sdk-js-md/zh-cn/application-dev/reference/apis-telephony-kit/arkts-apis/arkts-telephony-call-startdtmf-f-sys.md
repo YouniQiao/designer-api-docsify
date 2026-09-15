@@ -56,6 +56,16 @@ call.startDTMF(1, "0", (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.startDTMF(1, "0").then(() => {
+    console.info(`startDTMF success.`);
+}).catch((err: BusinessError) => {
+    console.error(`startDTMF fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## startDTMF
 
@@ -100,12 +110,4 @@ function startDTMF(callId: number, character: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.startDTMF(1, "0").then(() => {
-    console.info(`startDTMF success.`);
-}).catch((err: BusinessError) => {
-    console.error(`startDTMF fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [startDTMF](#startdtmf)

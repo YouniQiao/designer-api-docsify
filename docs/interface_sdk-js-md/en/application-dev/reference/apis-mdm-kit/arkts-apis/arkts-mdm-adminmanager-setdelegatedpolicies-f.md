@@ -62,3 +62,20 @@ try {
   console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { common, Want } from '@kit.AbilityKit';
+
+// Replace with actual values.
+let bundleName = 'com.example.myapplication';
+let userId = 100;
+let policies: Array<string> = ["disabled_hdc"];
+
+try {
+  adminManager.setDelegatedPolicies(bundleName, userId, policies);
+  console.info(`Succeeded in setting delegated policies.`);
+} catch (err) {
+  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
+}
+```

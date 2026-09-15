@@ -59,6 +59,31 @@ let uploadConfig: request.UploadConfig = {
   data: [{ name: "name123", value: "123" }],
 };
 try {
+  request.uploadFile(context, uploadConfig).then((data: request.UploadTask) => {
+    uploadTask = data;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
+  data: [{ name: "name123", value: "123" }],
+};
+try {
   request.uploadFile(context, uploadConfig, (err: BusinessError, data: request.UploadTask) => {
     if (err) {
       console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
@@ -115,27 +140,4 @@ Uploads a file. This API uses a promise to return the result. HTTP is supported.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uploadTask: request.UploadTask;
-let uploadConfig: request.UploadConfig = {
-  url: 'http://www.example.com', // Replace the URL with the HTTP address of the real server.
-  header: { 'Accept': '*/*' },
-  method: "POST",
-  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // Set type to the MIME type specified by the HTTP.
-  data: [{ name: "name123", value: "123" }],
-};
-try {
-  request.uploadFile(context, uploadConfig).then((data: request.UploadTask) => {
-    uploadTask = data;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [uploadFile](#uploadfile)

@@ -242,6 +242,28 @@ try {
 }
 ```
 
+```TypeScript
+import { ble, constant } from '@kit.ConnectivityKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let gattClient: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
+gattClient.on('BLEConnectionStateChange', ConnectStateChanged);
+function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
+    console.info('bluetooth connect state changed');
+    let connectState: ble.ProfileConnectionState = state.state;
+    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
+        gattClient.getDeviceName().then((data: string) => {
+            console.info('device name' + JSON.stringify(data));
+        })
+    }
+}
+// promise
+try {
+    gattClient.connect();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getDeviceName
 
 ```TypeScript
@@ -280,27 +302,7 @@ client获取server端设备名称。使用Promise异步回调。
 
 **示例**
 
-```TypeScript
-import { ble, constant } from '@kit.ConnectivityKit';
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
-gattClient.on('BLEConnectionStateChange', ConnectStateChanged);
-function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
-    console.info('bluetooth connect state changed');
-    let connectState: ble.ProfileConnectionState = state.state;
-    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
-        gattClient.getDeviceName().then((data: string) => {
-            console.info('device name' + JSON.stringify(data));
-        })
-    }
-}
-// promise
-try {
-    gattClient.connect();
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [getDeviceName](#getdevicename)
 
 ## getRssiValue
 
@@ -356,6 +358,19 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    let gattClient: ble.GattClientDevice = ble.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+    gattClient.getRssiValue().then((data: number) => {
+        console.info('rssi' + JSON.stringify(data));
+    })
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getRssiValue
 
 ```TypeScript
@@ -395,18 +410,7 @@ client端获取GATT连接链路信号强度 (Received Signal Strength Indication
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    let gattClient: ble.GattClientDevice = ble.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.getRssiValue().then((data: number) => {
-        console.info('rssi' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [getRssiValue](#getrssivalue)
 
 ## getServices
 
@@ -489,6 +493,27 @@ try {
 }
 ```
 
+```TypeScript
+import { ble, constant } from '@kit.ConnectivityKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// Promise 模式。
+let device: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
+function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
+    console.info('bluetooth connect state changed');
+    let connectState: ble.ProfileConnectionState = state.state;
+    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
+        device.getServices().then((result: Array<ble.GattService>) => {
+            console.info('getServices successfully:' + JSON.stringify(result));
+        });
+    }
+}
+try {
+    device.connect();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getServices
 
 ```TypeScript
@@ -526,6 +551,37 @@ client端获取server端支持的所有服务能力，即服务发现流程。�
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
 **示例**
+
+```TypeScript
+import { ble, constant } from '@kit.ConnectivityKit';
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// callback 模式。
+let getServices = (code: BusinessError, gattServices: Array<ble.GattService>) => {
+    if (code && code.code != 0) {
+        console.info('bluetooth code is ' + code.code);
+        return;
+    }
+    let services: Array<ble.GattService> = gattServices;
+    console.info('bluetooth services size is ', services.length);
+    for (let i = 0; i < services.length; i++) {
+        console.info('bluetooth serviceUuid is ' + services[i].serviceUuid);
+    }
+}
+let device: ble.GattClientDevice = ble.createGattClientDevice("11:22:33:44:55:66");
+function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
+    console.info('bluetooth connect state changed');
+    let connectState: ble.ProfileConnectionState = state.state;
+    if (connectState == constant.ProfileConnectionState.STATE_CONNECTED) {
+        device.getServices(getServices);
+    }
+}
+
+try {
+    device.connect();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 
 ```TypeScript
 import { ble, constant } from '@kit.ConnectivityKit';
@@ -581,18 +637,6 @@ client端取消订阅server端特征值变化事件。
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLECharacteristicChange');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -625,18 +669,6 @@ client端取消订阅GATT profile协议的连接状态变化事件。
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLEConnectionStateChange');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## off('BLEMtuChange')
 
@@ -671,18 +703,6 @@ client端取消订阅MTU（最大传输单元）大小变更事件。
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLEMtuChange');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## off('serviceChange')
 
 ```TypeScript
@@ -714,23 +734,6 @@ client端设备取消订阅server端设备服务变化的通知事件。
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function ServiceChangedEvent() : void {
-    console.info("service has changed.");
-}
-
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-// 需预先调用connect接口先连上server端设备
-try {
-    gattClient.off('serviceChange', ServiceChangedEvent);
-} catch (err) {
-    console.error(`errCode: ${(err as BusinessError).code}, errMessage: ${(err as BusinessError).message}`);
-}
-```
 
 ## offBlePhyUpdate
 
@@ -810,23 +813,6 @@ client端订阅server端特征值变化事件。使用Callback异步回调。
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-function CharacteristicChange(characteristicChangeReq: ble.BLECharacteristic) {
-    let serviceUuid: string = characteristicChangeReq.serviceUuid;
-    let characteristicUuid: string = characteristicChangeReq.characteristicUuid;
-    let value: Uint8Array = new Uint8Array(characteristicChangeReq.characteristicValue);
-}
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLECharacteristicChange', CharacteristicChange);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -859,22 +845,6 @@ client端订阅GATT profile协议的连接状态变化事件。使用Callback异
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-function ConnectStateChanged(state: ble.BLEConnectionChangeState) {
-    console.info('bluetooth connect state changed');
-    let connectState: ble.ProfileConnectionState = state.state;
-}
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLEConnectionStateChange', ConnectStateChanged);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## on('BLEMtuChange')
 
@@ -909,20 +879,6 @@ client端订阅MTU（最大传输单元）大小变更事件。使用Callback异
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    gattClient.on('BLEMtuChange', (mtu: number) => {
-      console.info('BLEMtuChange, mtu: ' + mtu);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## on('serviceChange')
 
 ```TypeScript
@@ -954,23 +910,6 @@ client端设备订阅server端设备服务变化的通知事件，使用Callback
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function ServiceChangedEvent() : void {
-    console.info("service has changed.");
-}
-
-let gattClient: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-// 需预先调用connect接口先连上server端设备
-try {
-    gattClient.on('serviceChange', ServiceChangedEvent);
-} catch (err) {
-    console.error(`errCode: ${(err as BusinessError).code}, errMessage: ${(err as BusinessError).message}`);
-}
-```
 
 ## onBlePhyUpdate
 
@@ -1096,6 +1035,32 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let descriptors: Array<ble.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readCharacteristicValue(characteristic);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1145,31 +1110,7 @@ client端从指定的server端特征值读取数据。使用Promise异步回调�
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let descriptors: Array<ble.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-characteristicValue: bufferCCC, descriptors:descriptors};
-
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readCharacteristicValue(characteristic);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [readCharacteristicValue](#readcharacteristicvalue)
 
 ## readDescriptorValue
 
@@ -1243,6 +1184,25 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
+    descriptorValue: bufferDesc
+};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readDescriptorValue(descriptor);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## readDescriptorValue
 
 ```TypeScript
@@ -1292,24 +1252,7 @@ client端从指定的server端描述符读取数据。使用Promise异步回调�
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
-let descriptor: ble.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readDescriptorValue(descriptor);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [readDescriptorValue](#readdescriptorvalue)
 
 ## readPhy
 
@@ -1535,6 +1478,28 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// 创建descriptors。
+let descriptors: Array<ble.BLEDescriptor> = [];
+let arrayBuffer = new ArrayBuffer(2);
+let descV = new Uint8Array(arrayBuffer);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
+descriptors[0] = descriptor;
+let arrayBufferC = new ArrayBuffer(8);
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
+try {
+  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+  device.setCharacteristicChangeIndication(characteristic, false);
+} catch (err) {
+  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setCharacteristicChangeIndication
 
 ```TypeScript
@@ -1582,27 +1547,7 @@ client端启用或者禁用接收server端特征值内容变更指示的能力�
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// 创建descriptors。
-let descriptors: Array<ble.BLEDescriptor> = [];
-let arrayBuffer = new ArrayBuffer(2);
-let descV = new Uint8Array(arrayBuffer);
-descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
-descriptors[0] = descriptor;
-let arrayBufferC = new ArrayBuffer(8);
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-try {
-  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-  device.setCharacteristicChangeIndication(characteristic, false);
-} catch (err) {
-  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [setCharacteristicChangeIndication](#setcharacteristicchangeindication)
 
 ## setCharacteristicChangeNotification
 
@@ -1678,6 +1623,28 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+// 创建descriptors。
+let descriptors: Array<ble.BLEDescriptor> = [];
+let arrayBuffer = new ArrayBuffer(2);
+let descV = new Uint8Array(arrayBuffer);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
+descriptors[0] = descriptor;
+let arrayBufferC = new ArrayBuffer(8);
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
+try {
+  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+  device.setCharacteristicChangeNotification(characteristic, false);
+} catch (err) {
+  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setCharacteristicChangeNotification
 
 ```TypeScript
@@ -1725,27 +1692,7 @@ client端启用或者禁用接收server端特征值内容变更通知的能力�
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-// 创建descriptors。
-let descriptors: Array<ble.BLEDescriptor> = [];
-let arrayBuffer = new ArrayBuffer(2);
-let descV = new Uint8Array(arrayBuffer);
-descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
-descriptors[0] = descriptor;
-let arrayBufferC = new ArrayBuffer(8);
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
-try {
-  let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-  device.setCharacteristicChangeNotification(characteristic, false);
-} catch (err) {
-  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [setCharacteristicChangeNotification](#setcharacteristicchangenotification)
 
 ## setPhy
 
@@ -1937,6 +1884,31 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let descriptors: Array<ble.BLEDescriptor>  = [];
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  characteristicValue: bufferCCC, descriptors:descriptors};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.writeCharacteristicValue(characteristic, ble.GattWriteType.WRITE);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -1989,30 +1961,7 @@ client端向指定的server端特征值写入数据。使用Promise异步回调�
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let descriptors: Array<ble.BLEDescriptor>  = [];
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
-let descriptor: ble.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: ble.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-  characteristicValue: bufferCCC, descriptors:descriptors};
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.writeCharacteristicValue(characteristic, ble.GattWriteType.WRITE);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [writeCharacteristicValue](#writecharacteristicvalue)
 
 ## writeDescriptorValue
 
@@ -2085,6 +2034,27 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let bufferDesc = new ArrayBuffer(2);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
+let descriptor: ble.BLEDescriptor = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
+    descriptorValue: bufferDesc
+};
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.writeDescriptorValue(descriptor).then(() => {
+        console.info('writeDescriptorValue promise success');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## writeDescriptorValue
 
 ```TypeScript
@@ -2136,23 +2106,4 @@ client端向指定的server端描述符写入数据。使用Promise异步回调�
 
 **示例**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let bufferDesc = new ArrayBuffer(2);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 0; // 以Client Characteristic Configuration描述符为例，表示bit0、bit1均为0，notification和indication均不开启
-let descriptor: ble.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.writeDescriptorValue(descriptor).then(() => {
-        console.info('writeDescriptorValue promise success');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [writeDescriptorValue](#writedescriptorvalue)

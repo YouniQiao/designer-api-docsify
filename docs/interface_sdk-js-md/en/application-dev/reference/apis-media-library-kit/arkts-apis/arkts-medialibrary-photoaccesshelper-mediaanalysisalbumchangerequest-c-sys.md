@@ -121,20 +121,8 @@ Creates a change request for the **Analysis** album.
 
 **Examples**
 
-For details about how to create a photoAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
-  console.info('createAlbumRequestDemo');
-  try {
-    let albumName: string = 'newAlbumName' + new Date().getTime();
-    let albumChangeRequest: photoAccessHelper.MediaAnalysisAlbumChangeRequest = photoAccessHelper.MediaAnalysisAlbumChangeRequest.createAnalysisAlbumRequest(context, albumName, photoAccessHelper.AlbumSubtype.PORTRAIT);
-    await phAccessHelper.applyChanges(albumChangeRequest);
-    console.info('apply createAlbumRequest successfully');
-  } catch (err) {
-    console.error(`createAlbumRequestDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a photoAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## setDefaultCoverUri

@@ -35,6 +35,58 @@ After this API is used to unsubscribe from an event, the event that has been pub
 emitter.off(1);
 ```
 
+```TypeScript
+// Unregister all callbacks for events whose event ID is eventId1.
+emitter.off('eventId1');
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is 1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off(1, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
+```
+
 
 ## off
 
@@ -61,8 +113,60 @@ After this API is used to unsubscribe from an event, the event that has been pub
 **Examples**
 
 ```TypeScript
+// Unregister all callbacks for events whose event ID is 1.
+emitter.off(1);
+```
+
+```TypeScript
 // Unregister all callbacks for events whose event ID is eventId1.
 emitter.off('eventId1');
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is 1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off(1, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
 ```
 
 
@@ -92,6 +196,16 @@ After this API is used to unsubscribe from an event, the event that has been pub
 **Examples**
 
 ```TypeScript
+// Unregister all callbacks for events whose event ID is 1.
+emitter.off(1);
+```
+
+```TypeScript
+// Unregister all callbacks for events whose event ID is eventId1.
+emitter.off('eventId1');
+```
+
+```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
@@ -100,6 +214,42 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 // Unregister all callbacks for events whose event ID is 1. The callback object must be the object used during registration.
 // If the callback has not been registered, no processing is performed.
 emitter.off(1, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
 ```
 
 
@@ -129,10 +279,56 @@ After this API is used to unsubscribe from an event, the event that has been pub
 **Examples**
 
 ```TypeScript
+// Unregister all callbacks for events whose event ID is 1.
+emitter.off(1);
+```
+
+```TypeScript
+// Unregister all callbacks for events whose event ID is eventId1.
+emitter.off('eventId1');
+```
+
+```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is 1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off(1, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
 };
 // Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
 // If the callback has not been registered, no processing is performed.
@@ -164,6 +360,38 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
 **Examples**
+
+```TypeScript
+// Unregister all callbacks for events whose event ID is 1.
+emitter.off(1);
+```
+
+```TypeScript
+// Unregister all callbacks for events whose event ID is eventId1.
+emitter.off('eventId1');
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is 1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off(1, callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+// If the callback has not been registered, no processing is performed.
+emitter.off('eventId1', callback);
+```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

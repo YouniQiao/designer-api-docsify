@@ -48,6 +48,12 @@ function getCurrentInputMethodSubtype(userId?: number): InputMethodSubtype
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
+
+let currentImeSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+```
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {

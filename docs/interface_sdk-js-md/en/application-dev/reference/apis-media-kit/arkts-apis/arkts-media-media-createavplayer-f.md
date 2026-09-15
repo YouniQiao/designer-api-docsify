@@ -61,6 +61,22 @@ media.createAVPlayer((error: BusinessError, video: media.AVPlayer) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer;
+media.createAVPlayer().then((video: media.AVPlayer) => {
+  if (video) {
+    avPlayer = video;
+    console.info('Succeeded in creating AVPlayer');
+  } else {
+    console.error('Failed to create AVPlayer');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVPlayer, error message:${error.message}`);
+});
+```
+
 
 ## createAVPlayer
 
@@ -103,18 +119,4 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer;
-media.createAVPlayer().then((video: media.AVPlayer) => {
-  if (video) {
-    avPlayer = video;
-    console.info('Succeeded in creating AVPlayer');
-  } else {
-    console.error('Failed to create AVPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVPlayer, error message:${error.message}`);
-});
-```
+See [createAVPlayer](#createavplayer)

@@ -70,6 +70,27 @@ try {
 }
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace it as required.
+let bundleNames: Array<string> = ['com.example.myapplication'];
+
+try {
+  applicationManager.addKeepAliveApps(wantTemp, bundleNames, 100, true);
+  console.info('Succeeded in adding keep alive apps and set disallowModify.');
+} catch (err) {
+  console.error(`Failed to add keep alive apps and set disallowModify. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## addKeepAliveApps
 
@@ -115,23 +136,4 @@ To use similar functions on phones or tablets, call [addUserNonStopApps](arkts-m
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace it as required.
-let bundleNames: Array<string> = ['com.example.myapplication'];
-
-try {
-  applicationManager.addKeepAliveApps(wantTemp, bundleNames, 100, true);
-  console.info('Succeeded in adding keep alive apps and set disallowModify.');
-} catch (err) {
-  console.error(`Failed to add keep alive apps and set disallowModify. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [addKeepAliveApps](#addkeepaliveapps)

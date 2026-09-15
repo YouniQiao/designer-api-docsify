@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Obtain the mouse hover scrolling switch state.
+            pointer.getHoverScrollState().then((state: boolean) => {
+              console.info(`Succeeded in getting mouse hover scroll, state: ${JSON.stringify(state)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getHoverScrollState
 
@@ -94,29 +121,4 @@ Obtains the status of the mouse hover scroll switch. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Obtain the mouse hover scrolling switch state.
-            pointer.getHoverScrollState().then((state: boolean) => {
-              console.info(`Succeeded in getting mouse hover scroll, state: ${JSON.stringify(state)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [getHoverScrollState](#gethoverscrollstate)

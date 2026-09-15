@@ -47,6 +47,28 @@ import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let pid = 0;
+function getProcessMemoryByPidCallback(err: BusinessError, data: number) {
+  if (err) {
+    console.error(`getProcessMemoryByPidCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('getProcessMemoryByPidCallback success.');
+  }
+}
+
+try {
+  appManager.getProcessMemoryByPid(pid, getProcessMemoryByPidCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pid = 0;
 
 try {
   appManager.getProcessMemoryByPid(pid).then((data) => {
@@ -93,24 +115,4 @@ function getProcessMemoryByPid(pid: number, callback: AsyncCallback<number>): vo
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pid = 0;
-function getProcessMemoryByPidCallback(err: BusinessError, data: number) {
-  if (err) {
-    console.error(`getProcessMemoryByPidCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('getProcessMemoryByPidCallback success.');
-  }
-}
-
-try {
-  appManager.getProcessMemoryByPid(pid, getProcessMemoryByPidCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+参见 [getProcessMemoryByPid](#getprocessmemorybypid)

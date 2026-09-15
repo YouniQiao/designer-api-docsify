@@ -99,11 +99,4 @@ Remove a pairing remote device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.cancelPairingDevice('XX:XX:XX:XX:XX:XX');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [cancelPairingDevice](#cancelpairingdevice)

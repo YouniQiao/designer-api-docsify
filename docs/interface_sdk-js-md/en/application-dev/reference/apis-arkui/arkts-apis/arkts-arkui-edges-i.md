@@ -1,8 +1,6 @@
 # Edges
 
-Defines the Edges.
-
-@interface Edges
+Defines the offset relative to the four edges. If both **top** and **bottom** are set, only **top** takes effect. If both **left** and **right** are set, only **left** takes effect.
 
 **Since:** 12
 
@@ -14,7 +12,7 @@ Defines the Edges.
 bottom?: Dimension
 ```
 
-bottom property.
+Offset relative to the bottom edge.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -34,7 +32,7 @@ bottom property.
 left?: Dimension
 ```
 
-left property.
+Offset relative to the left edge.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -54,7 +52,7 @@ left property.
 right?: Dimension
 ```
 
-right property.
+Offset relative to the right edge.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -74,7 +72,7 @@ right property.
 top?: Dimension
 ```
 
-top property.
+Offset relative to the top edge.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

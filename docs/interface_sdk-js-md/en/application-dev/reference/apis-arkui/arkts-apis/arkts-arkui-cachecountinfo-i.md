@@ -1,8 +1,6 @@
 # CacheCountInfo
 
-Define cache count information.
-
-@interface CacheCountInfo
+Defines the number of cached items.
 
 **Since:** 22
 
@@ -14,7 +12,7 @@ Define cache count information.
 maxCount: number
 ```
 
-max cache count.
+Maximum number of cached items. When the actual number of cached items exceeds this value, redundant items are recycled or released. The system loads items to reach the maximum count when the UI is idle (no animations or user interactions). Values less than **minCount** are clamped to **minCount**. Value range: [**minCount**, +∞).
 
 **Type:** number
 
@@ -32,7 +30,7 @@ max cache count.
 minCount: number
 ```
 
-min cache count.
+Minimum number of cached items. When the actual number of cached items is lower than this value, cached items are loaded during idle intervals between scrolling animation frames. Values less than 0 are clamped to **1**. Value range: [0, +∞).
 
 **Type:** number
 

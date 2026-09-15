@@ -51,6 +51,16 @@ call.isNewCallAllowed((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isNewCallAllowed().then((data: boolean) => {
+    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isNewCallAllowed
 
@@ -83,12 +93,4 @@ Checks whether a new call is allowed. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isNewCallAllowed().then((data: boolean) => {
-    console.info(`isNewCallAllowed success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNewCallAllowed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isNewCallAllowed](#isnewcallallowed)

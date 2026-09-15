@@ -38,6 +38,18 @@ function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : 
 import { defaultAppManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
+  .then((data) => {
+    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+});
+```
+
+```TypeScript
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
@@ -81,14 +93,4 @@ function isDefaultApplication(type: string) : Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
-  .then((data) => {
-    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
-});
-```
+参见 [isDefaultApplication](#isdefaultapplication)

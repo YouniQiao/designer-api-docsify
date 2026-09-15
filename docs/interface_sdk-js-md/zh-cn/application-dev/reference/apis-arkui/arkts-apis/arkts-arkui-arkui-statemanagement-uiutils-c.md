@@ -766,37 +766,6 @@ struct CompV2 {
 }
 ```
 
-## makeBinding
-
-```TypeScript
-static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
-```
-
-创建可修改的双向数据绑定实例，用于构建\@Builder函数中参数类型为`MutableBinding`的对应实参。
-
-**起始版本：** 20
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
-| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | 是 | 定义如何更新值，当`.value`被修改时自动调用此函数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; | 包含一个`value`属性，支持通过`.value`读取和修改数据，设置值时会检查类型是否匹配泛型`T`。 |
-
-**示例**
-
 ```TypeScript
 import { MutableBinding, UIUtils } from '@kit.ArkUI';
 
@@ -841,6 +810,39 @@ struct CompV2 {
   }
 }
 ```
+
+## makeBinding
+
+```TypeScript
+static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
+```
+
+创建可修改的双向数据绑定实例，用于构建\@Builder函数中参数类型为`MutableBinding`的对应实参。
+
+**起始版本：** 20
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | 是 | 获取值的回调函数，每次访问值都会重新执行函数，获取最新值。 |
+| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | 是 | 定义如何更新值，当`.value`被修改时自动调用此函数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; | 包含一个`value`属性，支持通过`.value`读取和修改数据，设置值时会检查类型是否匹配泛型`T`。 |
+
+**示例**
+
+参见 [makeBinding](#makebinding)
 
 ## makeObserved
 

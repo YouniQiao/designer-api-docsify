@@ -43,6 +43,59 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
+        return;
+      }
+      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
+      let requestEnableNotificationCallback = (err: BusinessError): void => {
+        if (err) {
+          hilog.error(0x0000, 'testTag', `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
+        } else {
+          hilog.info(0x0000, 'testTag', `[ANS] requestEnableNotification success`);
+        }
+      };
+      notificationManager.requestEnableNotification(this.context, requestEnableNotificationCallback);
+    });
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
+        return;
+      }
+      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
+      notificationManager.requestEnableNotification(this.context).then(() => {
+        hilog.info(0x0000, 'testTag', `[ANS] requestEnableNotification success`);
+      }).catch((err: BusinessError) => {
+        hilog.error(0x0000, 'testTag', `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
+      });
+    });
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let requestEnableNotificationCallback = (err: BusinessError): void => {
   if (err) {
@@ -52,6 +105,16 @@ let requestEnableNotificationCallback = (err: BusinessError): void => {
   }
 };
 notificationManager.requestEnableNotification(requestEnableNotificationCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.requestEnableNotification().then(() => {
+  console.info(`requestEnableNotification success`);
+}).catch((err: BusinessError) => {
+  console.error(`requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -107,33 +170,7 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      let requestEnableNotificationCallback = (err: BusinessError): void => {
-        if (err) {
-          hilog.error(0x0000, 'testTag', `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-        } else {
-          hilog.info(0x0000, 'testTag', `[ANS] requestEnableNotification success`);
-        }
-      };
-      notificationManager.requestEnableNotification(this.context, requestEnableNotificationCallback);
-    });
-  }
-}
-```
+参见 [requestEnableNotification](#requestenablenotification)
 
 
 ## requestEnableNotification
@@ -170,15 +207,7 @@ function requestEnableNotification(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.requestEnableNotification().then(() => {
-  console.info(`requestEnableNotification success`);
-}).catch((err: BusinessError) => {
-  console.error(`requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [requestEnableNotification](#requestenablenotification)
 
 
 ## requestEnableNotification
@@ -238,27 +267,4 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class MyAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err) ?? ''}`);
-        return;
-      }
-      hilog.info(0x0000, 'testTag', `Succeeded in loading the content. Data: ${JSON.stringify(data) ?? ''}`);
-      notificationManager.requestEnableNotification(this.context).then(() => {
-        hilog.info(0x0000, 'testTag', `[ANS] requestEnableNotification success`);
-      }).catch((err: BusinessError) => {
-        hilog.error(0x0000, 'testTag', `[ANS] requestEnableNotification failed, code is ${err.code}, message is ${err.message}`);
-      });
-    });
-  }
-}
-```
+参见 [requestEnableNotification](#requestenablenotification)

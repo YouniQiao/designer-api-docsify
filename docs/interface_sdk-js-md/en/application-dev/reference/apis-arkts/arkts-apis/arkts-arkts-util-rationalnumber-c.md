@@ -112,6 +112,10 @@ A constructor used to create a **RationalNumber** object.
 **Examples**
 
 ```TypeScript
+let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
 let rationalNumber = new util.RationalNumber(1,2);
 ```
 
@@ -133,6 +137,10 @@ A constructor used to create a **RationalNumber** object.
 
 ```TypeScript
 let rationalNumber = new util.RationalNumber();
+```
+
+```TypeScript
+let rationalNumber = new util.RationalNumber(1,2);
 ```
 
 ## createRationalFromString
@@ -209,14 +217,8 @@ console.info("result = " + result);
 // Output: result = false
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let rational = util.RationalNumber.createRationalFromString("3/4");
-let result = rationalNumber.equals(rational);
-console.info("result = " + result);
-// Output: result = false
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## getCommonDivisor
@@ -317,13 +319,8 @@ console.info("result = " + result);
 // Output: result = 2
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2)
-let result = rationalNumber.getDenominator();
-console.info("result = " + result);
-// Output: result = 2
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## getNumerator
@@ -355,13 +352,8 @@ console.info("result = " + result);
 // Output: result = 1
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.getNumerator();
-console.info("result = " + result);
-// Output: result = 1
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## isFinite
@@ -393,13 +385,8 @@ console.info("result = " + result);
 // Output: result = true
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.isFinite();
-console.info("result = " + result);
-// Output: result = true
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## isNaN
@@ -431,13 +418,8 @@ console.info("result = " + result);
 // Output: result = false
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.isNaN();
-console.info("result = " + result);
-// Output: result = false
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## isZero
@@ -469,13 +451,8 @@ console.info("result = " + result);
 // Output: result = false
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.isZero();
-console.info("result = " + result);
-// Output: result = false
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## parseRationalNumber
@@ -546,13 +523,8 @@ console.info("result = " + result);
 // Output: result = 1/2
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.toString();
-console.info("result = " + result);
-// Output: result = 1/2
+You are advised to use the following code snippet for API version 9 and later versions:
 ```
 
 ## valueOf
@@ -584,11 +556,6 @@ console.info("result = " + result);
 // Output: result = 0.5
 ```
 
-You are advised to use the following code snippet for API version 9 and later versions:
-
 ```TypeScript
-let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
-let result = rationalNumber.valueOf();
-console.info("result = " + result);
-// Output: result = 0.5
+You are advised to use the following code snippet for API version 9 and later versions:
 ```

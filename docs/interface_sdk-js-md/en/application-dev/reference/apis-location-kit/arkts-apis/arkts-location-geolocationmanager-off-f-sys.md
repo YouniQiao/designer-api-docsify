@@ -38,23 +38,6 @@ Stop WiFi/BT scanning and unsubscribe from WiFi/BT scanning information changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call &#36;{geoLocationManager.off('locatingRequiredDataChange')} due to limited device capabilities. |
 
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let callback = (code: Array<geoLocationManager.LocatingRequiredData>): void => {
-  console.info('locatingRequiredDataChange: ' + JSON.stringify(code));
-}
-let config: geoLocationManager.LocatingRequiredDataConfig = { 'type': 1, 'needStartScan': true, 'scanInterval': 10000 };
-try {
-  geoLocationManager.on('locatingRequiredDataChange', config, callback);
-  geoLocationManager.off('locatingRequiredDataChange', callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('locationIconStatusChange')
 
@@ -85,19 +68,3 @@ Unsubscribe location icon status changed.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call &#36;{geoLocationManager.off('locationIconStatusChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-
-**Examples**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let callback = (code: geoLocationManager.LocationIconStatus): void => {
-  console.info('LocationIconStatus: ' + JSON.stringify(code));
-}
-try {
-  geoLocationManager.on('locationIconStatusChange', callback);
-  geoLocationManager.off('locationIconStatusChange', callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

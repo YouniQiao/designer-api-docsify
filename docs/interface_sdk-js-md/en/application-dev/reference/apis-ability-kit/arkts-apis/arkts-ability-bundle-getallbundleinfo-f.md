@@ -34,6 +34,35 @@ Obtains the information of all bundles of the specified user. This API uses an a
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleFlag: number = 0;
+let userId: number = 100;
+
+bundle.getAllBundleInfo(bundleFlag, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = 0;
+
+bundle.getAllBundleInfo(bundleFlag, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleFlag: number = 0;
 let userId: number = 100;
@@ -73,19 +102,7 @@ Obtains the information of all bundles of the current user. This API uses an asy
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleFlag: number = 0;
-
-bundle.getAllBundleInfo(bundleFlag, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
+See [getAllBundleInfo](#getallbundleinfo)
 
 
 ## getAllBundleInfo
@@ -119,17 +136,4 @@ Obtains the information of all bundles of the specified user. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleFlag: number = 0;
-let userId: number = 100;
-
-bundle.getAllBundleInfo(bundleFlag, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+See [getAllBundleInfo](#getallbundleinfo)

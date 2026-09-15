@@ -4,9 +4,9 @@
 declare type LocalizedMargin = LocalizedPadding
 ```
 
-Defines the localized margin property.
+外边距类型，用于描述组件不同方向的外边距。
 
-@typedef { LocalizedPadding } LocalizedMargin
+引入该对象时，至少传入一个参数。
 
 **起始版本：** 12
 

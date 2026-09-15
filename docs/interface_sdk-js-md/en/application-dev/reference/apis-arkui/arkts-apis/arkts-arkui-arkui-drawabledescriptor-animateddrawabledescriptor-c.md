@@ -154,76 +154,10 @@ Obtains the animation controller for playback control.
 
 **Examples**
 
-Scenario 1: 1:1 relationship between the [Image](../arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
-
 ```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Example {
-  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
-  // Replace $r('app.media.gif') with the image resource file you use.
-  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
-
-  build() {
-    Column() {
-      Image(this.animated)
-        .width(100)
-        .height(100)
-        .borderColor(Color.Red)
-        .borderWidth(1)
-      Button("start")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController()
-          controller?.start()
-        })
-      Button("stop")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController()
-          controller?.stop()
-        })
-    }
-  }
-}
+Scenario 1: 1:1 relationship between the [Image](../arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
 ```
 
-Scenario 2: 1:N relationship between the [Image](../arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
-
 ```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Example {
-  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
-  // Replace $r('app.media.gif') with the image resource file you use.
-  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
-
-  build() {
-    Column() {
-      Image(this.animated)
-        .width(100)
-        .height(100)
-        .borderColor(Color.Red)
-        .borderWidth(1)
-        .id("Component1")
-      Image(this.animated)
-        .width(100)
-        .height(100)
-        .borderColor(Color.Red)
-        .borderWidth(1)
-      Button("start")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController("Component1")
-          controller?.start()
-        })
-      Button("stop")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController("Component1")
-          controller?.stop()
-        })
-    }
-  }
-}
+Scenario 2: 1:N relationship between the [Image](../arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
 ```

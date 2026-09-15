@@ -55,6 +55,17 @@ dataPreferences.clear((err: BusinessError) =>{
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = dataPreferences.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
+})
+```
+
 ## clear
 
 ```TypeScript
@@ -83,16 +94,7 @@ clear(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = dataPreferences.clear();
-promise.then(() => {
-  console.info("Succeeded in clearing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
-})
-```
+参见 [clear](#clear)
 
 ## clearSync
 
@@ -156,6 +158,17 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deleteStartupPromise = dataPreferences.delete('startup');
+deleteStartupPromise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
+})
+```
+
 ## delete
 
 ```TypeScript
@@ -191,16 +204,7 @@ delete(key: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deleteStartupPromise = dataPreferences.delete('startup');
-deleteStartupPromise.then(() => {
-  console.info("Succeeded in deleting the key 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
-})
-```
+参见 [delete](#delete)
 
 ## deleteSync
 
@@ -283,6 +287,17 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let flushResult = dataPreferences.flush();
+flushResult.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+})
+```
+
 ## flush
 
 ```TypeScript
@@ -318,16 +333,7 @@ flush(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let flushResult = dataPreferences.flush();
-flushResult.then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-})
-```
+参见 [flush](#flush)
 
 ## flushSync
 
@@ -402,6 +408,17 @@ dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let data = dataPreferences.get('startup', 'default');
+data.then((data: preferences.ValueType) => {
+  console.info("Succeeded in getting value of 'startup'. Data: " + data);
+}).catch((err: BusinessError) => {
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
+})
+```
+
 ## get
 
 ```TypeScript
@@ -438,16 +455,7 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let data = dataPreferences.get('startup', 'default');
-data.then((data: preferences.ValueType) => {
-  console.info("Succeeded in getting value of 'startup'. Data: " + data);
-}).catch((err: BusinessError) => {
-  console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
-})
-```
+参见 [get](#get)
 
 ## getAll
 
@@ -499,6 +507,26 @@ dataPreferences.getAll((err: BusinessError, value: Object) => {
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 由于ArkTS中无Object.keys，且无法使用for..in...
+// 若报ArkTS问题，请将此方法单独抽离至一个ts文件中并暴露，在需要用到的ets文件中引入使用
+function getObjKeys(obj: Object): string[] {
+  let keys = Object.keys(obj);
+  return keys;
+}
+
+let allData = dataPreferences.getAll();
+allData.then((value: Object) => {
+  let allKeys = getObjKeys(value);
+  console.info('getAll keys = ' + allKeys);
+  console.info("getAll object = " + JSON.stringify(value));
+}).catch((err: BusinessError) => {
+  console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
+})
+```
+
 ## getAll
 
 ```TypeScript
@@ -527,25 +555,7 @@ getAll(): Promise<Object>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 由于ArkTS中无Object.keys，且无法使用for..in...
-// 若报ArkTS问题，请将此方法单独抽离至一个ts文件中并暴露，在需要用到的ets文件中引入使用
-function getObjKeys(obj: Object): string[] {
-  let keys = Object.keys(obj);
-  return keys;
-}
-
-let allData = dataPreferences.getAll();
-allData.then((value: Object) => {
-  let allKeys = getObjKeys(value);
-  console.info('getAll keys = ' + allKeys);
-  console.info("getAll object = " + JSON.stringify(value));
-}).catch((err: BusinessError) => {
-  console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
-})
-```
+参见 [getAll](#getall)
 
 ## getAllSync
 
@@ -675,6 +685,21 @@ dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let isStartupSet = dataPreferences.has('startup');
+isStartupSet.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err: BusinessError) => {
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
+})
+```
+
 ## has
 
 ```TypeScript
@@ -710,20 +735,7 @@ has(key: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let isStartupSet = dataPreferences.has('startup');
-isStartupSet.then((val: boolean) => {
-  if (val) {
-    console.info("The key 'startup' is contained.");
-  } else {
-    console.info("The key 'startup' does not contain.");
-  }
-}).catch((err: BusinessError) => {
-  console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
-})
-```
+参见 [has](#has)
 
 ## hasSync
 
@@ -797,26 +809,6 @@ off(type: 'change', callback?: Callback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.on('change', observer);
-dataPreferences.putSync('startup', 'auto');
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.off('change', observer);
-```
-
 ## off('multiProcessChange')
 
 ```TypeScript
@@ -847,26 +839,6 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.on('multiProcessChange', observer);
-dataPreferences.putSync('startup', 'auto');
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.off('multiProcessChange', observer);
-```
-
 ## off('dataChange')
 
 ```TypeScript
@@ -895,31 +867,6 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (data: Record<string, preferences.ValueType>) => {
-  for (const keyValue of Object.entries(data)) {
-    console.info(`observer : ${keyValue}`);
-  }
-  console.info("The observer called.");
-}
-let keys = ['name', 'age'];
-dataPreferences.on('dataChange', keys, observer);
-dataPreferences.putSync('name', 'xiaohong');
-dataPreferences.putSync('weight', 125);
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-dataPreferences.off('dataChange', keys, observer);
-```
 
 ## on('change')
 
@@ -966,25 +913,6 @@ on(type: 'change', callback: Callback<string>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.on('change', observer);
-dataPreferences.putSync('startup', 'manual');
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-```
-
 ## on('multiProcessChange')
 
 ```TypeScript
@@ -1024,25 +952,6 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 | [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-}
-dataPreferences.on('multiProcessChange', observer);
-dataPreferences.putSync('startup', 'manual');
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-```
-
 ## on('dataChange')
 
 ```TypeScript
@@ -1077,30 +986,6 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (data: Record<string, preferences.ValueType>) => {
-  for (const keyValue of Object.entries(data)) {
-    console.info(`observer : ${keyValue}`);
-  }
-  console.info("The observer called.");
-}
-let keys = ['name', 'age'];
-dataPreferences.on('dataChange', keys, observer);
-dataPreferences.putSync('name', 'xiaohong');
-dataPreferences.putSync('weight', 125);
-dataPreferences.flush((err: BusinessError) => {
-  if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
-    return;
-  }
-  console.info("Succeeded in flushing.");
-})
-```
 
 ## put
 
@@ -1151,6 +1036,17 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let putStartupPref = dataPreferences.put('startup', 'auto');
+putStartupPref.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err: BusinessError) => {
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
+})
+```
+
 ## put
 
 ```TypeScript
@@ -1193,16 +1089,7 @@ put(key: string, value: ValueType): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let putStartupPref = dataPreferences.put('startup', 'auto');
-putStartupPref.then(() => {
-  console.info("Succeeded in putting value of 'startup'.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
-})
-```
+参见 [put](#put)
 
 ## putSync
 

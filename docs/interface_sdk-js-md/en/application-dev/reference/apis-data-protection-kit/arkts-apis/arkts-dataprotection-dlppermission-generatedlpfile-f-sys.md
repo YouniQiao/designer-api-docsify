@@ -92,6 +92,37 @@ async function ExampleFunction() {
 ExampleFunction();
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { fileIo } from '@kit.CoreFileKit';
+
+let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
+let file: number | undefined = undefined;
+let dlp: number | undefined = undefined;
+
+file = fileIo.openSync(uri).fd;
+dlp = fileIo.openSync(dlpUri).fd;
+let dlpProperty: dlpPermission.DLPProperty = {
+  ownerAccount: 'zhangsan',
+  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
+  authUserList: [],
+  contactAccount: 'zhangsan',
+  offlineAccess: true,
+  ownerAccountID: 'xxxxxxx',
+  everyoneAccessList: []
+};
+dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // Generate a DLP file.
+  if (err) {
+    console.error(`Failed to generate DLPFile. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+  fileIo.closeSync(file);
+  fileIo.closeSync(dlp);
+});
+```
+
 
 ## generateDLPFile
 
@@ -138,33 +169,4 @@ After calling **generateDLPFile()** to return a **DLPFile** object, the system m
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { fileIo } from '@kit.CoreFileKit';
-
-let dlpUri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt';
-let file: number | undefined = undefined;
-let dlp: number | undefined = undefined;
-
-file = fileIo.openSync(uri).fd;
-dlp = fileIo.openSync(dlpUri).fd;
-let dlpProperty: dlpPermission.DLPProperty = {
-  ownerAccount: 'zhangsan',
-  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-  authUserList: [],
-  contactAccount: 'zhangsan',
-  offlineAccess: true,
-  ownerAccountID: 'xxxxxxx',
-  everyoneAccessList: []
-};
-dlpPermission.generateDLPFile(file, dlp, dlpProperty, (err, res) => { // Generate a DLP file.
-  if (err) {
-    console.error(`Failed to generate DLPFile. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-  fileIo.closeSync(file);
-  fileIo.closeSync(dlp);
-});
-```
+See [generateDLPFile](#generatedlpfile)

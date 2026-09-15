@@ -1,8 +1,6 @@
 # AccessibilityCustomAction
 
-定义AccessibilityCustomAction的结构体，可以在可访问性下的自定义操作处理中处理。
-
-@interface AccessibilityCustomAction
+自定义无障碍操作接口。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +12,7 @@
 onAction: VoidCallback
 ```
 
-onAction -处理自定义操作的回调。
+处理自定义操作的回调。
 
 **起始版本：** 26.0.0
 
@@ -32,7 +30,11 @@ onAction -处理自定义操作的回调。
 name: ResourceStr
 ```
 
-name -指定自定义操作的名称。
+自定义操作的名称，用于标识和绑定操作回调。
+
+**说明：** 
+
+名称的文本长度需在128字节以内，超出部分将被截断。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

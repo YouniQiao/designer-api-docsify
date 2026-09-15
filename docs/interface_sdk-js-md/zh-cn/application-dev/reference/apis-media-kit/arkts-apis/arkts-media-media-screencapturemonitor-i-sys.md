@@ -41,12 +41,6 @@ off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
-**示例**
-
-```TypeScript
-screenCaptureMonitor.off('systemScreenRecorder');
-```
-
 ## on('systemScreenRecorder')
 
 ```TypeScript
@@ -73,16 +67,6 @@ on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-
-**示例**
-
-```TypeScript
-// 当系统录屏应用的录屏状态发生变化时通过此订阅事件上报。
-screenCaptureMonitor.on('systemScreenRecorder', (event: media.ScreenCaptureEvent) => { 
-  // 设置'systemScreenRecorder'事件回调。
-  console.info(`system ScreenRecorder event: ${event}`);
-})
-```
 
 ## isSystemScreenRecorderWorking
 

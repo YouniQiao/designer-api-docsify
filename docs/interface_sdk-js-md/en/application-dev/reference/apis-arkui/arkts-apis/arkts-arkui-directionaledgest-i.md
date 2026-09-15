@@ -1,8 +1,6 @@
 # DirectionalEdgesT
 
-Defines the DirectionalEdgesT interface.
-
-@interface DirectionalEdgesT
+Defines component edge widths for localized logical directions. Globalization is supported.
 
 **Since:** 12
 
@@ -34,7 +32,7 @@ Bottom edge.
 end: T
 ```
 
-End edge.
+End edge. Corresponds to the right edge in LTR layout and the left edge in RTL layout.
 
 **Type:** T
 
@@ -54,7 +52,7 @@ End edge.
 start: T
 ```
 
-Start edge.
+Start edge. Corresponds to the left edge in LTR layout and the right edge in RTL layout.
 
 **Type:** T
 

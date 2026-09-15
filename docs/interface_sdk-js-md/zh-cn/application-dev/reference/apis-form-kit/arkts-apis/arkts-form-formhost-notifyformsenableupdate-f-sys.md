@@ -64,6 +64,22 @@ try {
 }
 ```
 
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+try {
+  formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
+    console.info('formHost notifyFormsEnableUpdate success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## notifyFormsEnableUpdate
 
@@ -108,18 +124,4 @@ function notifyFormsEnableUpdate(formIds: Array<string>, isEnableUpdate: boolean
 
 **示例**
 
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-try {
-  formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
-    console.info('formHost notifyFormsEnableUpdate success');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [notifyFormsEnableUpdate](#notifyformsenableupdate)

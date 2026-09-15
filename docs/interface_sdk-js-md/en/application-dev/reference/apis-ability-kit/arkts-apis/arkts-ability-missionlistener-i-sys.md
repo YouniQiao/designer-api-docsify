@@ -97,8 +97,9 @@ Called when the system creates a mission.
 
 **Examples**
 
+```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-- simpleType:
+```
 
 ## onMissionDestroyed
 
@@ -122,8 +123,9 @@ Called when the system destroys a mission.
 
 **Examples**
 
+```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-- simpleType:
+```
 
 ## onMissionIconUpdated
 
@@ -148,8 +150,9 @@ Called when the system updates the icon of a mission.
 
 **Examples**
 
+```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-- simpleType:
+```
 
 ## onMissionLabelUpdated
 
@@ -173,8 +176,9 @@ Called when the system updates the label of a mission.
 
 **Examples**
 
+```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-- simpleType:
+```
 
 ## onMissionMovedToFront
 
@@ -198,8 +202,9 @@ Called when the system moves a mission to the foreground.
 
 **Examples**
 
+```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-- simpleType:
+```
 
 ## onMissionSnapshotChanged
 
@@ -223,5 +228,6 @@ Called when the system updates the snapshot of a mission.
 
 **Examples**
 
+```TypeScript
 For details, see [onMissionClosed](#onmissionclosed).
-- simpleType:
+```

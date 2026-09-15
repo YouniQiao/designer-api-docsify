@@ -61,27 +61,6 @@ struct Index {
 }
 ```
 
-
-## isPointerVisible
-
-```TypeScript
-function isPointerVisible(): Promise<boolean>
-```
-
-Obtains the visible status of the mouse pointer. This API uses a promise to return the result.
-
-**Since:** 9
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
-
-**Examples**
-
 ```TypeScript
 import { pointer } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -108,3 +87,26 @@ struct Index {
   }
 }
 ```
+
+
+## isPointerVisible
+
+```TypeScript
+function isPointerVisible(): Promise<boolean>
+```
+
+Obtains the visible status of the mouse pointer. This API uses a promise to return the result.
+
+**Since:** 9
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if the mouse pointer is visible; **false** is returned if the mouse pointer is hidden. |
+
+**Examples**
+
+See [isPointerVisible](#ispointervisible)

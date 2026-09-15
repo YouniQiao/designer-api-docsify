@@ -78,6 +78,50 @@ try {
 ];
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let res: Array<Want> = applicationManager.getAutoStartApps(null);
+  console.info(`Succeeded in adding auto start apps: ${JSON.stringify(res)}`);
+} catch(err) {
+  console.error(`Failed to auto start apps. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp, 100);
+  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
+} catch (err) {
+  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let res: Array<Want> = applicationManager.getAutoStartApps(null, 100);
+  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
+} catch(err) {
+  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getAutoStartApps
 
@@ -118,33 +162,7 @@ function getAutoStartApps(admin: Want | null): Array<Want>
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let res: Array<Want> = applicationManager.getAutoStartApps(null);
-  console.info(`Succeeded in adding auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-];
-```
+参见 [getAutoStartApps](#getautostartapps)
 
 
 ## getAutoStartApps
@@ -186,38 +204,7 @@ function getAutoStartApps(admin: Want, accountId: number): Array<Want>
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp, 100);
-  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
-} catch (err) {
-  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-];
-```
+参见 [getAutoStartApps](#getautostartapps)
 
 
 ## getAutoStartApps
@@ -259,30 +246,4 @@ function getAutoStartApps(admin: Want | null, accountId: number): Array<Want>
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let res: Array<Want> = applicationManager.getAutoStartApps(null, 100);
-  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// 返回示例
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // 从API version 24支持
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-];
-```
+参见 [getAutoStartApps](#getautostartapps)

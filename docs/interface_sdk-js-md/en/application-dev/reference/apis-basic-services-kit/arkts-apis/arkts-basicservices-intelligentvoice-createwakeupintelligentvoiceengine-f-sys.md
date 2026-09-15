@@ -59,6 +59,22 @@ intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor, (err
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wakeupEngineDescriptor: intelligentVoice.WakeupIntelligentVoiceEngineDescriptor = {
+  needReconfirm: true,
+  wakeupPhrase: 'Xiaohua Xiaohua',
+}
+let wakeupIntelligentVoiceEngine: intelligentVoice.WakeupIntelligentVoiceEngine | null = null;
+intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor).then((data: intelligentVoice.WakeupIntelligentVoiceEngine) => {
+  wakeupIntelligentVoiceEngine = data;
+  console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+});
+```
+
 
 ## createWakeupIntelligentVoiceEngine
 
@@ -100,18 +116,4 @@ Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-w
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wakeupEngineDescriptor: intelligentVoice.WakeupIntelligentVoiceEngineDescriptor = {
-  needReconfirm: true,
-  wakeupPhrase: 'Xiaohua Xiaohua',
-}
-let wakeupIntelligentVoiceEngine: intelligentVoice.WakeupIntelligentVoiceEngine | null = null;
-intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor).then((data: intelligentVoice.WakeupIntelligentVoiceEngine) => {
-  wakeupIntelligentVoiceEngine = data;
-  console.info(`Succeeded in creating wakeupIntelligentVoice engine.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create wakeupIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-});
-```
+See [createWakeupIntelligentVoiceEngine](#createwakeupintelligentvoiceengine)

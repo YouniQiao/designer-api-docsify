@@ -61,6 +61,30 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  const promise = sensor.getGeomagneticInfo({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
+  promise.then((data: sensor.GeomagneticResponse) => {
+    console.info("Succeeded in getting geomagneticInfo x" + data.x);
+    console.info("Succeeded in getting geomagneticInfo y" + data.y);
+    console.info("Succeeded in getting geomagneticInfo z" + data.z);
+    console.info("Succeeded in getting geomagneticInfo geomagneticDip" + data.geomagneticDip);
+    console.info("Succeeded in getting geomagneticInfo deflectionAngle" + data.deflectionAngle);
+    console.info("Succeeded in getting geomagneticInfo levelIntensity" + data.levelIntensity);
+    console.info("Succeeded in getting geomagneticInfo totalIntensity" + data.totalIntensity);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get geomagneticInfo. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get geomagneticInfo. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getGeomagneticInfo
 
@@ -96,26 +120,4 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: number
 
 **示例**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 使用try catch对可能出现的异常进行捕获
-try {
-  const promise = sensor.getGeomagneticInfo({ latitude: 80, longitude: 0, altitude: 0 }, 1580486400000);
-  promise.then((data: sensor.GeomagneticResponse) => {
-    console.info("Succeeded in getting geomagneticInfo x" + data.x);
-    console.info("Succeeded in getting geomagneticInfo y" + data.y);
-    console.info("Succeeded in getting geomagneticInfo z" + data.z);
-    console.info("Succeeded in getting geomagneticInfo geomagneticDip" + data.geomagneticDip);
-    console.info("Succeeded in getting geomagneticInfo deflectionAngle" + data.deflectionAngle);
-    console.info("Succeeded in getting geomagneticInfo levelIntensity" + data.levelIntensity);
-    console.info("Succeeded in getting geomagneticInfo totalIntensity" + data.totalIntensity);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get geomagneticInfo. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get geomagneticInfo. Code: ${e.code}, message: ${e.message}`);
-}
-```
+参见 [getGeomagneticInfo](#getgeomagneticinfo)

@@ -45,14 +45,6 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-function unregisterSessionError(macroPhotoSession: camera.MacroPhotoSession): void {
-  macroPhotoSession.off('error');
-}
-```
-
 ## off('focusStateChange')
 
 ```TypeScript
@@ -79,14 +71,6 @@ Unsubscribes from focus state change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-function unregisterFocusStateChange(macroPhotoSession: camera.MacroPhotoSession): void {
-  macroPhotoSession.off('focusStateChange');
-}
-```
 
 ## off('smoothZoomInfoAvailable')
 
@@ -115,14 +99,6 @@ Unsubscribes from smooth zoom state change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-function unregisterSmoothZoomInfo(macroPhotoSession: camera.MacroPhotoSession): void {
-  macroPhotoSession.off('smoothZoomInfoAvailable');
-}
-```
-
 ## on('error')
 
 ```TypeScript
@@ -149,20 +125,6 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError): void {
-  console.error(`MacroPhotoSession error code: ${err.code}`);
-}
-
-function registerSessionError(macroPhotoSession: camera.MacroPhotoSession): void {
-  macroPhotoSession.on('error', callback);
-}
-```
 
 ## on('focusStateChange')
 
@@ -191,24 +153,6 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, focusState: camera.FocusState): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`Focus state: ${focusState}`);
-}
-
-function registerFocusStateChange(macroPhotoSession: camera.MacroPhotoSession): void {
-  macroPhotoSession.on('focusStateChange', callback);
-}
-```
-
 ## on('smoothZoomInfoAvailable')
 
 ```TypeScript
@@ -235,21 +179,3 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, smoothZoomInfo: camera.SmoothZoomInfo): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`The duration of smooth zoom: ${smoothZoomInfo.duration}`);
-}
-
-function registerSmoothZoomInfo(macroPhotoSession: camera.MacroPhotoSession): void {
-  macroPhotoSession.on('smoothZoomInfoAvailable', callback);
-}
-```

@@ -76,6 +76,32 @@ context.resourceManager.getRawFileContent("test.cer").then((value) => {
 });
 ```
 
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { common, Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let certFileArray: Uint8Array = new Uint8Array();
+let accountId: number = 100;
+// Initialize the context variable in the onCreate callback function of the MainAbility.
+// Store test.cer in the rawfile directory.
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+context.resourceManager.getRawFileContent("test.cer").then((value) => {
+  certFileArray = value;
+  try {
+    let result: string = securityManager.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" }, accountId);
+    console.info(`Succeeded in installing user certificate. result: ${result}`);
+  } catch (err) {
+    console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
+  }
+});
+```
+
 
 ## installUserCertificate
 
@@ -118,28 +144,4 @@ Installs a user certificate based on the system account. Enterprises can install
 
 **Examples**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let certFileArray: Uint8Array = new Uint8Array();
-let accountId: number = 100;
-// Initialize the context variable in the onCreate callback function of the MainAbility.
-// Store test.cer in the rawfile directory.
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-context.resourceManager.getRawFileContent("test.cer").then((value) => {
-  certFileArray = value;
-  try {
-    let result: string = securityManager.installUserCertificate(wantTemp, { inData: certFileArray, alias: "cert_alias_xts" }, accountId);
-    console.info(`Succeeded in installing user certificate. result: ${result}`);
-  } catch (err) {
-    console.error(`Failed to install user certificate. Code: ${err.code}, message: ${err.message}`);
-  }
-});
-```
+See [installUserCertificate](#installusercertificate)

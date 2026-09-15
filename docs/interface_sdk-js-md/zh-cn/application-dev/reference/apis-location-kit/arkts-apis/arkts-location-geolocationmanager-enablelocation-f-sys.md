@@ -56,6 +56,22 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.enableLocation().then(() => {
+    console.info('promise, enableLocation succeed');
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, enableLocation: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## enableLocation
 
@@ -92,18 +108,4 @@ function enableLocation(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.enableLocation().then(() => {
-    console.info('promise, enableLocation succeed');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, enableLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [enableLocation](#enablelocation)

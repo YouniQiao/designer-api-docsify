@@ -4,9 +4,7 @@
 declare type LengthMetrics = import('../api/arkui/Graphics').LengthMetrics
 ```
 
-Defines LengthMetrics.
-
-@typedef { import('../api/arkui/Graphics').LengthMetrics } LengthMetrics
+定义长度属性。
 
 **起始版本：** 12
 

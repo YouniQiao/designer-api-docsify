@@ -40,6 +40,39 @@ No permission is required for obtaining the caller's own information.
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+
+bundle.getBundleInfo(bundleName, bundleFlags, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleName: string = "com.example.myapplication";
 let bundleFlags: number = 1;
@@ -87,20 +120,7 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 1;
-
-bundle.getBundleInfo(bundleName, bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
+See [getBundleInfo](#getbundleinfo)
 
 
 ## getBundleInfo
@@ -139,20 +159,4 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 1;
-let options: bundle.BundleOptions = {
-  "userId": 100
-};
-
-bundle.getBundleInfo(bundleName, bundleFlags, options)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+See [getBundleInfo](#getbundleinfo)

@@ -1,6 +1,6 @@
 # AccessibilityNextFocusParams
 
-Defines struct of the parameters used to configure the next accessibility focus transition.
+Defines the detailed parameter object that can be used during the accessibility custom next focus processing.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,11 @@ Defines struct of the parameters used to configure the next accessibility focus 
 isConsiderDescendants?: boolean
 ```
 
-isConsiderDescendants - Determines whether the focus search should consider focusable nodes within the descendants of the target element during the next accessibility focus operation.
+Whether to search for the focus in descendant nodes during custom next-focus processing for accessibility.
+
+The value **true** means to search for the focus in descendant nodes during custom next-focus processing for accessibility; the value **false** means not to search for the focus in descendant nodes during custom next-focus processing for accessibility.
+
+Default value: **false**
 
 **Type:** boolean
 

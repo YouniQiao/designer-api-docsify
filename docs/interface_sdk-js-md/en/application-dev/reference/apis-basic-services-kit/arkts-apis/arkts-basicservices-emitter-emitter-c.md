@@ -71,6 +71,67 @@ let eventData: emitter.EventData = {
 emitter1.emit('eventId', eventData);
 ```
 
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', options, eventData);
+```
+
 ## emit
 
 ```TypeScript
@@ -99,6 +160,18 @@ After an event is published using this API, the event may not be executed immedi
 **Examples**
 
 ```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
 @Sendable
 class Sample {
   constructor() {
@@ -117,6 +190,46 @@ let eventData: emitter.GenericEventData<Sample> = {
 };
 
 emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', options, eventData);
 ```
 
 ## emit
@@ -149,6 +262,39 @@ After an event is published using this API, the event may not be executed immedi
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
@@ -158,6 +304,30 @@ let eventData: emitter.EventData = {
     "content": "content",
     "id": 1,
   }
+};
+
+emitter1.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
 };
 
 emitter1.emit('eventId', options, eventData);
@@ -190,6 +360,55 @@ After an event is published using this API, the event may not be executed immedi
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 **Examples**
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', options, eventData);
+```
 
 ```TypeScript
 @Sendable
@@ -278,6 +497,44 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 emitter1.off('eventId');
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+
+emitter1.off('eventId', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+
+emitter1.off('eventId', callback);
+```
+
 ## off
 
 ```TypeScript
@@ -304,12 +561,44 @@ After this API is used to unsubscribe from an event, the event that has been pub
 **Examples**
 
 ```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+emitter1.off('eventId');
+```
+
+```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+
+emitter1.off('eventId', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
 };
 
 emitter1.off('eventId', callback);
@@ -339,6 +628,24 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 **Examples**
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+emitter1.off('eventId');
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+
+emitter1.off('eventId', callback);
+```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -401,6 +708,32 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.on('eventId', callback);
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+
+emitter1.on('eventId', callback);
+```
+
 ## on
 
 ```TypeScript
@@ -423,6 +756,18 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+
+emitter1.on('eventId', callback);
+```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -485,6 +830,32 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.once('eventId', callback);
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+
+emitter1.once('eventId', callback);
+```
+
 ## once
 
 ```TypeScript
@@ -507,6 +878,18 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 **Examples**
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+
+emitter1.once('eventId', callback);
+```
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';

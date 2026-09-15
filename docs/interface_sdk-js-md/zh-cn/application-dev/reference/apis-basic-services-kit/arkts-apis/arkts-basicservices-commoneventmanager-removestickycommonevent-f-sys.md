@@ -54,6 +54,16 @@ commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
+  console.info(`removeStickyCommonEvent success`);
+}).catch((err: BusinessError) => {
+  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```
+
 
 ## removeStickyCommonEvent
 
@@ -96,12 +106,4 @@ function removeStickyCommonEvent(event: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch((err: BusinessError) => {
-  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
-});
-```
+参见 [removeStickyCommonEvent](#removestickycommonevent)

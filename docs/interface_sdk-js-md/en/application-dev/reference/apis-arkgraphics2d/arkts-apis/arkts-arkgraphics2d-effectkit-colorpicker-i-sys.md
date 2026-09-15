@@ -36,34 +36,6 @@ Discriminates the light and dark degree of the picture. When the light and dark 
 | --- | --- |
 | [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | Light and dark degree of the image. |
 
-**Examples**
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let pictureLightDegree: effectKit.PictureLightDegree = colorPicker.discriminatePictureLightDegree();
-      console.info('The color light degree of the image is ' + pictureLightDegree);
-    }
-  });
-});
-```
-
 ## getAlphaZeroTransparentProportion
 
 ```TypeScript

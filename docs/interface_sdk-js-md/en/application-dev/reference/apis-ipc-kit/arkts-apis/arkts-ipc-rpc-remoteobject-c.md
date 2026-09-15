@@ -449,6 +449,91 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      let pid = callingInfo?.callerPid;
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+```TypeScript
+// Override **onRemoteMessageRequest** to process requests asynchronously.
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  async onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
+      let pid = callingInfo?.callerPid;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+    await new Promise((resolve: (data: rpc.RequestResult) => void) => {
+      setTimeout(resolve, 100);
+    })
+    return true;
+  }
+}
+```
+
+```TypeScript
+// Override **onRemoteMessageRequest** and **onRemoteRequest** to process requests synchronously.
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+     if (code === 1) {
+        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+        return true;
+     } else {
+        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+        return false;
+     }
+  }
+    // Only onRemoteMessageRequest is executed.
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
+      let pid = callingInfo?.callerPid;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+    return true;
+  }
+}
+```
+
+```TypeScript
+// Override **onRemoteMessageRequest** to process requests synchronously.
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean {
     if (code === 1) {
       hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
@@ -563,90 +648,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 **Examples**
 
-```TypeScript
-// Override **onRemoteMessageRequest** to process requests synchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      let pid = callingInfo?.callerPid;
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-```TypeScript
-// Override **onRemoteMessageRequest** to process requests asynchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  async onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-      let pid = callingInfo?.callerPid;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    await new Promise((resolve: (data: rpc.RequestResult) => void) => {
-      setTimeout(resolve, 100);
-    })
-    return true;
-  }
-}
-```
-
-```TypeScript
-// Override **onRemoteMessageRequest** and **onRemoteRequest** to process requests synchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-     if (code === 1) {
-        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-        return true;
-     } else {
-        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-        return false;
-     }
-  }
-    // Only onRemoteMessageRequest is executed.
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-      let pid = callingInfo?.callerPid;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    return true;
-  }
-}
-```
+See [onRemoteMessageRequest](#onremotemessagerequest)
 
 ## onRemoteRequest
 
@@ -986,6 +988,50 @@ try {
 }
 ```
 
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
+  let b = a as Promise<rpc.SendRequestResult>;
+  b.then((result: rpc.SendRequestResult) => {
+    if (result.errCode === 0) {
+      hilog.info(0x0000, 'testTag', 'sendRequest got result');
+      let num = result.reply.readInt();
+      let msg = result.reply.readString();
+      hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+      hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+    } else {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+    }
+  }).catch((e: Error) => {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + JSON.stringify(e));
+  }).finally (() => {
+    hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+    data.reclaim();
+    reply.reclaim();
+  });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
 ## sendRequest
 
 ```TypeScript
@@ -1024,6 +1070,40 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise used to return a **sendRequestResult** instance. |
 
 **Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class testRemoteObject extends rpc.RemoteObject {
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // Process services based on the actual service logic.
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
+  if (ret) {
+    hilog.info(0x0000, 'testTag', 'sendRequest got result');
+    let msg = reply.readString();
+    hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+  } else {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed');
+  }
+  hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+  data.reclaim();
+  reply.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';

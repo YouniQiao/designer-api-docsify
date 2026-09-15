@@ -275,33 +275,9 @@ import { image } from '@kit.ImageKit';
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function SetXmageWatermarkMode(imageSourceObj : image.ImageSource) {
-  let makerNoteHuaweiMetadata = image.MakerNoteHuaweiMetadata.createInstance();
-  // 设置XMAGE水印模式为底部中央。
-  makerNoteHuaweiMetadata.xmageWatermarkMode = image.XMAGE_WATERMARK_MODE_AT_THE_BOTTOM;
-  console.info(`Succeeded in setting the XMAGE watermark mode. Mode: ${makerNoteHuaweiMetadata.xmageWatermarkMode}.`);
-  await imageSourceObj.writeImageMetadata({ makerNoteHuaweiMetadata: makerNoteHuaweiMetadata }).then(() => {
-    console.info(`Succeeded in writing image metadata.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to write image metadata. Code: ${error.code}, message: ${error.message}.`);
-  });
-}
+### XMAGE水印模式
 ```
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function SetCaptureMode(imageSourceObj : image.ImageSource) {
-  let makerNoteHuaweiMetadata = image.MakerNoteHuaweiMetadata.createInstance();
-  // 设置拍摄模式为专业模式。
-  makerNoteHuaweiMetadata.captureMode = image.CAPTURE_MODE_PROFESSIONAL;
-  console.info(`Succeeded in setting the capture mode. Mode: ${makerNoteHuaweiMetadata.captureMode}.`);
-  await imageSourceObj.writeImageMetadata({ makerNoteHuaweiMetadata: makerNoteHuaweiMetadata }).then(() => {
-    console.info(`Succeeded in writing image metadata.`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to write image metadata. Code: ${error.code}, message: ${error.message}.`);
-  });
-}
+### 拍摄模式
 ```

@@ -46,6 +46,18 @@ Get the current cell information.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getCellInformation((err: BusinessError, data: Array<radio.CellInformation>) => {
+    if (err) {
+        console.error(`getCellInformation failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getCellInformation(slotId, (err: BusinessError, data: Array<radio.CellInformation>) => {
     if (err) {
@@ -53,6 +65,17 @@ radio.getCellInformation(slotId, (err: BusinessError, data: Array<radio.CellInfo
         return;
     }
     console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getCellInformation(slotId).then((data: Array<radio.CellInformation>) => {
+    console.info(`getCellInformation success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCellInformation failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -99,16 +122,7 @@ Get the current cell information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getCellInformation(slotId).then((data: Array<radio.CellInformation>) => {
-    console.info(`getCellInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getCellInformation](#getcellinformation)
 
 
 ## getCellInformation
@@ -147,14 +161,4 @@ Get the current cell information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getCellInformation((err: BusinessError, data: Array<radio.CellInformation>) => {
-    if (err) {
-        console.error(`getCellInformation failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getCellInformation success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [getCellInformation](#getcellinformation)

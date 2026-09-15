@@ -59,33 +59,6 @@ audio.createAudioRenderer(audioRendererOptions,(err, data) => {
 });
 ```
 
-
-## createAudioRenderer
-
-```TypeScript
-function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>
-```
-
-获取音频渲染器。使用Promise异步回调。
-
-**起始版本：** 8
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Promise对象，返回音频渲染器对象。 |
-
-**示例**
-
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -116,3 +89,32 @@ audio.createAudioRenderer(audioRendererOptions).then((data) => {
   console.error(`AudioFrameworkRenderLog: AudioRenderer Created : ERROR : ${err}`);
 });
 ```
+
+
+## createAudioRenderer
+
+```TypeScript
+function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>
+```
+
+获取音频渲染器。使用Promise异步回调。
+
+**起始版本：** 8
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Promise对象，返回音频渲染器对象。 |
+
+**示例**
+
+参见 [createAudioRenderer](#createaudiorenderer)

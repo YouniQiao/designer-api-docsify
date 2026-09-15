@@ -220,14 +220,6 @@ Unsubscribes from PiP status change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
-**示例**
-
-```TypeScript
-function unregisterSketchStatusChanged(previewOutput: camera.PreviewOutput): void {
-  previewOutput.off('sketchStatusChanged');
-}
-```
-
 ## on('sketchStatusChanged')
 
 ```TypeScript
@@ -254,21 +246,3 @@ Subscribes to PiP status change events. This API uses an asynchronous callback t
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(error: BusinessError, data: camera.SketchStatusData): void {
-  if (error !== undefined && error.code !== 0) {
-    console.error(`Callback Error, errorCode: ${error.code}`);
-    return;
-  }
-  console.info(`sketch errorCode is ${error.code}, data is ${JSON.stringify(data)}`);
-}
-
-function registerSketchStatusChanged(previewOutput: camera.PreviewOutput): void {
-  previewOutput.on('sketchStatusChanged', callback);
-}
-```

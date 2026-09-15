@@ -52,6 +52,14 @@ connection.getAllNets((error: BusinessError, data: connection.NetHandle[]) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getAllNets().then((data: connection.NetHandle[]) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
+
 
 ## getAllNets
 
@@ -85,10 +93,4 @@ Obtains the list of all connected networks. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getAllNets().then((data: connection.NetHandle[]) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
+See [getAllNets](#getallnets)

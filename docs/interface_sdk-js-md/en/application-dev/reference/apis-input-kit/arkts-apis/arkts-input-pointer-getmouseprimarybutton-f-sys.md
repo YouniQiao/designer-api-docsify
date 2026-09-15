@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Obtain the primary mouse button.
+            pointer.getMousePrimaryButton().then((primary: pointer.PrimaryButton) => {
+              console.info(`Succeeded in getting mouse primary button, primary: ${JSON.stringify(primary)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getMousePrimaryButton
 
@@ -94,29 +121,4 @@ Obtains the current primary mouse button. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Obtain the primary mouse button.
-            pointer.getMousePrimaryButton().then((primary: pointer.PrimaryButton) => {
-              console.info(`Succeeded in getting mouse primary button, primary: ${JSON.stringify(primary)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [getMousePrimaryButton](#getmouseprimarybutton)

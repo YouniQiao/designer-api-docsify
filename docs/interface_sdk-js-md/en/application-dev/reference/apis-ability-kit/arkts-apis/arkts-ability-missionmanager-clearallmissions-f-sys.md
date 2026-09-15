@@ -56,6 +56,22 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.clearAllMissions().then((data: void) => {
+    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## clearAllMissions
 
@@ -88,18 +104,4 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.clearAllMissions().then((data: void) => {
-    console.info(`clearAllMissions successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearAllMissions failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+See [clearAllMissions](#clearallmissions)

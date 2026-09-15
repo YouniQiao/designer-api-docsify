@@ -56,14 +56,43 @@ const options = {
 }
 try {
     kvManager.getKVStore('storeId', options, async function (err, store) {
-        console.log('getKVStore success');
+        console.info('getKVStore success');
         kvStore = store;
         kvManager.closeKVStore('appId', 'storeId', kvStore, function (err, data) {
-            console.log('closeKVStore success');
+            console.info('closeKVStore success');
         });
     });
 } catch (e) {
-    console.log('closeKVStore e ' + e);
+    console.error('closeKVStore e ' + e);
+}
+```
+
+```TypeScript
+let kvManager;
+let kvStore;
+const options = {
+    createIfMissing: true,
+    encrypt: false,
+    backup: false,
+    autoSync: false,
+    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
+    schema: undefined,
+    securityLevel: distributedData.SecurityLevel.S3,
+}
+try {
+    kvManager.getKVStore('storeId', options).then(async (store) => {
+        console.info('getKVStore success');
+        kvStore = store;
+        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
+            console.info('closeKVStore success');
+        }).catch((err) => {
+            console.error('closeKVStore err ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('CloseKVStore getKVStore err ' + JSON.stringify(err));
+    });
+} catch (e) {
+    console.error('closeKVStore e ' + e);
 }
 ```
 
@@ -99,34 +128,7 @@ Closes a KV store. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedData.KVStoreType.SINGLE_VERSION,
-    schema: undefined,
-    securityLevel: distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
-            console.log('closeKVStore success');
-        }).catch((err) => {
-            console.log('closeKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('closeKVStore e ' + e);
-}
-```
+See [closeKVStore](#closekvstore)
 
 ## deleteKVStore
 
@@ -168,14 +170,43 @@ const options = {
 }
 try {
     kvManager.getKVStore('store', options, async function (err, store) {
-        console.log('getKVStore success');
+        console.info('getKVStore success');
         kvStore = store;
         kvManager.deleteKVStore('appId', 'storeId', function (err, data) {
-            console.log('deleteKVStore success');
+            console.info('deleteKVStore success');
         });
     });
 } catch (e) {
-    console.log('DeleteKVStore e ' + e);
+    console.error('DeleteKVStore e ' + e);
+}
+```
+
+```TypeScript
+let kvManager;
+let kvStore;
+const options = {
+    createIfMissing : true,
+    encrypt : false,
+    backup : false,
+    autoSync : true,
+    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
+    schema : undefined,
+    securityLevel : distributedData.SecurityLevel.S3,
+}
+try {
+    kvManager.getKVStore('storeId', options).then(async (store) => {
+        console.info('getKVStore success');
+        kvStore = store;
+        kvManager.deleteKVStore('appId', 'storeId').then(() => {
+            console.info('deleteKVStore success');
+        }).catch((err) => {
+            console.error('deleteKVStore err ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('getKVStore err ' + JSON.stringify(err));
+    });
+} catch (e) {
+    console.error('deleteKVStore e ' + e);
 }
 ```
 
@@ -210,34 +241,7 @@ Deletes a KV store. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let kvManager;
-let kvStore;
-const options = {
-    createIfMissing : true,
-    encrypt : false,
-    backup : false,
-    autoSync : true,
-    kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-    schema : undefined,
-    securityLevel : distributedData.SecurityLevel.S3,
-}
-try {
-    kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
-        kvStore = store;
-        kvManager.deleteKVStore('appId', 'storeId').then(() => {
-            console.log('deleteKVStore success');
-        }).catch((err) => {
-            console.log('deleteKVStore err ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('getKVStore err ' + JSON.stringify(err));
-    });
-} catch (e) {
-    console.log('deleteKVStore e ' + e);
-}
-```
+See [deleteKVStore](#deletekvstore)
 
 ## getAllKVStoreId
 
@@ -268,11 +272,26 @@ Obtains the IDs of all KV stores that are created by getKVStore() and have not b
 let kvManager;
 try {
     kvManager.getAllKVStoreId('appId', function (err, data) {
-        console.log('GetAllKVStoreId success');
-        console.log('GetAllKVStoreId size = ' + data.length);
+        console.info('GetAllKVStoreId success');
+        console.info('GetAllKVStoreId size = ' + data.length);
     });
 } catch (e) {
-    console.log('GetAllKVStoreId e ' + e);
+    console.error('GetAllKVStoreId e ' + e);
+}
+```
+
+```TypeScript
+let kvManager;
+try {
+    console.info('GetAllKVStoreId');
+    kvManager.getAllKVStoreId('appId').then((data) => {
+        console.info('getAllKVStoreId success');
+        console.info('size = ' + data.length);
+    }).catch((err) => {
+        console.error('getAllKVStoreId err ' + JSON.stringify(err));
+    });
+} catch(e) {
+    console.error('getAllKVStoreId e ' + e);
 }
 ```
 
@@ -306,20 +325,7 @@ Obtains the IDs of all KV stores that are created by getKVStore() and have not b
 
 **Examples**
 
-```TypeScript
-let kvManager;
-try {
-    console.log('GetAllKVStoreId');
-    kvManager.getAllKVStoreId('appId').then((data) => {
-        console.log('getAllKVStoreId success');
-        console.log('size = ' + data.length);
-    }).catch((err) => {
-        console.log('getAllKVStoreId err ' + JSON.stringify(err));
-    });
-} catch(e) {
-    console.log('getAllKVStoreId e ' + e);
-}
-```
+See [getAllKVStoreId](#getallkvstoreid)
 
 ## getKVStore
 
@@ -364,14 +370,39 @@ try {
         kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
         securityLevel : distributedData.SecurityLevel.S3,
     };
-    kvManager.getKVStore('storeId', options).then((store) => {
-        console.log("getKVStore success");
+    kvManager.getKVStore('storeId', options, function (err, store) {
+        if (err) {
+            console.error("getKVStore err: "  + JSON.stringify(err));
+            return;
+        }
+        console.info("getKVStore success");
         kvStore = store;
-    }).catch((err) => {
-        console.log("getKVStore err: "  + JSON.stringify(err));
     });
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
+}
+```
+
+```TypeScript
+let kvStore;
+let kvManager;
+try {
+    const options = {
+        createIfMissing : true,
+        encrypt : false,
+        backup : false,
+        autoSync : true,
+        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
+        securityLevel : distributedData.SecurityLevel.S3,
+    };
+    kvManager.getKVStore('storeId', options).then((store) => {
+        console.info("getKVStore success");
+        kvStore = store;
+    }).catch((err) => {
+        console.error("getKVStore err: "  + JSON.stringify(err));
+    });
+} catch (e) {
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -401,30 +432,7 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-let kvStore;
-let kvManager;
-try {
-    const options = {
-        createIfMissing : true,
-        encrypt : false,
-        backup : false,
-        autoSync : true,
-        kvStoreType : distributedData.KVStoreType.SINGLE_VERSION,
-        securityLevel : distributedData.SecurityLevel.S3,
-    };
-    kvManager.getKVStore('storeId', options, function (err, store) {
-        if (err) {
-            console.log("getKVStore err: "  + JSON.stringify(err));
-            return;
-        }
-        console.log("getKVStore success");
-        kvStore = store;
-    });
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+See [getKVStore](#getkvstore)
 
 ## off
 
@@ -449,21 +457,6 @@ Unsubscribes from service status changes.
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates service status changes. |
 | deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for service status changes will be unregistered. |
 
-**Examples**
-
-```TypeScript
-let kvManager;
-try {
-    console.log('KVManagerOff');
-    const deathCallback = function () {
-        console.log('death callback call');
-    }
-    kvManager.off('distributedDataServiceDie', deathCallback);
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -486,18 +479,3 @@ Subscribes to service status changes.
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates service status changes. |
 | deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-let kvManager;
-try {
-    console.log('KVManagerOn');
-    const deathCallback = function () {
-        console.log('death callback call');
-    }
-    kvManager.on('distributedDataServiceDie', deathCallback);
-} catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```

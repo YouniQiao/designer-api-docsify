@@ -129,8 +129,9 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 
 **Examples**
 
+```TypeScript
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
+```
 
 ## checkAccountRemovable
 
@@ -153,8 +154,9 @@ Checks whether an application account can be deleted. This API uses an asynchron
 
 **Examples**
 
+```TypeScript
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
+```
 
 ## createAccountImplicitly
 
@@ -195,51 +197,8 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 **Examples**
 
-This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
-  verifyCredential(name: string,
-    options: appAccount.VerifyCredentialOptions, callback: appAccount.AuthCallback) {
-      let want: Want = {
-        bundleName: 'com.example.accountjsdemo',
-        abilityName: 'com.example.accountjsdemo.VerifyAbility',
-        parameters: {
-          name: name
-        }
-      };
-      callback.onRequestRedirected(want);
-  }
-
-  setProperties(options: appAccount.SetPropertiesOptions, callback: appAccount.AuthCallback) {
-    let want: Want = {
-      bundleName: 'com.example.accountjsdemo',
-      abilityName: 'com.example.accountjsdemo.SetPropertiesAbility',
-      parameters: {
-        options: options
-      }
-    };
-    callback.onRequestRedirected(want);
-  }
-
-  checkAccountLabels(name: string, labels: string[], callback: appAccount.AuthCallback) {
-    callback.onResult(0);
-  }
-
-  checkAccountRemovable(name: string, callback: appAccount.AuthCallback) {
-    callback.onResult(0);
-  }
-}
-
-export default {
-  onConnect(want: Want): rpc.RemoteObject { // serviceAbility lifecycle function, which needs to be placed in serviceAbility.
-    let authenticator = new MyAuthenticator();
-    return authenticator.getRemoteObject();
-  }
-}
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
 ```
 
 ## setProperties
@@ -263,8 +222,9 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 **Examples**
 
+```TypeScript
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
+```
 
 ## verifyCredential
 
@@ -288,5 +248,6 @@ Verifies the credential of an application account. This API uses an asynchronous
 
 **Examples**
 
+```TypeScript
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
-- simpleType:
+```

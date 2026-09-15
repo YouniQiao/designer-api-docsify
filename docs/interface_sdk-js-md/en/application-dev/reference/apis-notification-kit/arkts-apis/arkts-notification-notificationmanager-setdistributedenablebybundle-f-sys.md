@@ -67,6 +67,20 @@ let enable: boolean = true;
 notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+let enable: boolean = true;
+notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
+    console.info("setDistributedEnableByBundle success");
+}).catch((err: BusinessError) => {
+    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setDistributedEnableByBundle
 
@@ -117,16 +131,4 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info("setDistributedEnableByBundle success");
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setDistributedEnableByBundle](#setdistributedenablebybundle)

@@ -68,6 +68,25 @@ networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0', (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 参数需根据实际情况进行替换
+networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0').then((result) => {
+  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isNetworkInterfaceDisabled
 
@@ -116,21 +135,4 @@ function isNetworkInterfaceDisabled(admin: Want, networkInterface: string): Prom
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0').then((result) => {
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isNetworkInterfaceDisabled](#isnetworkinterfacedisabled)

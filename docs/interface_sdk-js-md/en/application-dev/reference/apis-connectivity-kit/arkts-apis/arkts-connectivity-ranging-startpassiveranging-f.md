@@ -44,6 +44,6 @@ The returned handle can be used to stop the passive ranging broadcast via stopPa
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 34900052 | The specified type of ranging service is not supported. |
-| 34900053 | The ranging service is disabled. |
+| [34900052](../errorcode-fusionConnectivity.md#34900052-specified-ranging-service-unsupported) | The specified type of ranging service is not supported. |
+| [34900053](../errorcode-fusionConnectivity.md#34900053-ranging-service-disabled) | The ranging service is disabled. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |

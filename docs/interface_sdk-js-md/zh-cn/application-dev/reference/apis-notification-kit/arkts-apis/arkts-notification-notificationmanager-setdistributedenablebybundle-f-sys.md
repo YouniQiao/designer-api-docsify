@@ -67,6 +67,20 @@ let enable: boolean = true;
 notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+};
+let enable: boolean = true;
+notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
+    console.info('setDistributedEnableByBundle success');
+}).catch((err: BusinessError) => {
+    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setDistributedEnableByBundle
 
@@ -117,16 +131,4 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean): Pr
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-let enable: boolean = true;
-notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info('setDistributedEnableByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [setDistributedEnableByBundle](#setdistributedenablebybundle)

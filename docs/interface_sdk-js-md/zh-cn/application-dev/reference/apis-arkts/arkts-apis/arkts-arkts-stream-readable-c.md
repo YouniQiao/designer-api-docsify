@@ -32,6 +32,13 @@ constructor()
 let readableStream = new stream.Readable();
 ```
 
+```TypeScript
+let option : stream.ReadableOptions = {
+  encoding : "utf-8"
+};
+let readableStream = new stream.Readable(option);
+```
+
 ## constructor
 
 ```TypeScript
@@ -53,6 +60,10 @@ constructor(options: ReadableOptions)
 | options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | 是 | Readable构造函数的选项信息。 |
 
 **示例**
+
+```TypeScript
+let readableStream = new stream.Readable();
+```
 
 ```TypeScript
 let option : stream.ReadableOptions = {

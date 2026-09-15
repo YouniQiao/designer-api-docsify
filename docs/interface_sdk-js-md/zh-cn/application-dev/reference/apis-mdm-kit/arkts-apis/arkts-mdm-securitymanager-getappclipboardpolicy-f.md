@@ -65,6 +65,55 @@ try {
 }
 ```
 
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+
+// 需根据实际情况进行替换
+let tokenId: number = 586874394;
+try {
+  // 参数需根据实际情况进行替换
+  let result: string = securityManager.getAppClipboardPolicy(null, tokenId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  // 参数需根据实际情况进行替换
+  let result: string = securityManager.getAppClipboardPolicy(null, bundleName, accountId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getAppClipboardPolicy
 
@@ -106,19 +155,7 @@ function getAppClipboardPolicy(admin: Want | null, tokenId?: number): string
 
 **示例**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-// 需根据实际情况进行替换
-let tokenId: number = 586874394;
-try {
-  // 参数需根据实际情况进行替换
-  let result: string = securityManager.getAppClipboardPolicy(null, tokenId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
 ## getAppClipboardPolicy
@@ -161,25 +198,7 @@ function getAppClipboardPolicy(admin: Want, bundleName: string, accountId: numbe
 
 **示例**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
 ## getAppClipboardPolicy
@@ -222,17 +241,4 @@ function getAppClipboardPolicy(admin: Want | null, bundleName: string, accountId
 
 **示例**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-// 需根据实际情况进行替换
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  // 参数需根据实际情况进行替换
-  let result: string = securityManager.getAppClipboardPolicy(null, bundleName, accountId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getAppClipboardPolicy](#getappclipboardpolicy)

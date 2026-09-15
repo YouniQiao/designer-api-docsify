@@ -28,11 +28,8 @@ cancel(): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
 ```TypeScript
-// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
-animator.cancel();
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```
 
 ## finish
@@ -51,11 +48,8 @@ finish(): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
 ```TypeScript
-// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
-animator.finish();
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```
 
 ## oncancel
@@ -234,11 +228,8 @@ pause(): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
 ```TypeScript
-// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
-animator.pause();
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```
 
 ## play
@@ -257,11 +248,8 @@ play(): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
 ```TypeScript
-// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
-animator.play();
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```
 
 ## reset
@@ -330,6 +318,10 @@ struct AnimatorTest {
 }
 ```
 
+```TypeScript
+完整示例请参考基于ArkTS扩展的声明式开发范式。
+```
+
 ## reset
 
 ```TypeScript
@@ -361,28 +353,7 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
-```TypeScript
-import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-let options: AnimatorOptions = {
-  duration: 1500,
-  easing: 'ease',
-  delay: 0,
-  fill: "forwards",
-  direction: "normal",
-  iterations: 1,
-  begin: 100,
-  end: 200
-};
-let optionsNew: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200)
-  .duration(2000)
-  .iterations(3)
-  .delay(1000);
-let animatorResult: AnimatorResult = animator.create(options);
-animatorResult.reset(optionsNew);
-```
+参见 [reset](#reset)
 
 ## reverse
 
@@ -400,11 +371,8 @@ reverse(): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
 ```TypeScript
-// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
-animator.reverse();
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```
 
 ## setExpectedFrameRateRange
@@ -493,9 +461,6 @@ update(options: AnimatorOptions): void
 
 **示例**
 
-完整示例请参考基于ArkTS扩展的声明式开发范式。
-
 ```TypeScript
-// animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
-animator.update(options);
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 ```

@@ -36,6 +36,17 @@ sim.isSimActive(0, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.isSimActive(0).then((data: boolean) => {
+    console.info(`isSimActive success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isSimActive failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isSimActive
 
@@ -63,13 +74,4 @@ Checks whether the SIM card in the specified slot is activated. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.isSimActive(0).then((data: boolean) => {
-    console.info(`isSimActive success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSimActive failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isSimActive](#issimactive)

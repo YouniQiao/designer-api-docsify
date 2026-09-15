@@ -51,6 +51,29 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName = 'bundleName';
 
+function clearUpApplicationDataCallback(err: BusinessError) {
+  if (err) {
+    console.error(`clearUpApplicationDataCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('clearUpApplicationDataCallback success.');
+  }
+}
+
+try {
+  appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+
 try {
   appManager.clearUpApplicationData(bundleName).then((data) => {
     console.info('clearUpApplicationData success.');
@@ -99,25 +122,4 @@ Clears application data by bundle name. This API uses an asynchronous callback t
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-
-function clearUpApplicationDataCallback(err: BusinessError) {
-  if (err) {
-    console.error(`clearUpApplicationDataCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('clearUpApplicationDataCallback success.');
-  }
-}
-
-try {
-  appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+See [clearUpApplicationData](#clearupapplicationdata)

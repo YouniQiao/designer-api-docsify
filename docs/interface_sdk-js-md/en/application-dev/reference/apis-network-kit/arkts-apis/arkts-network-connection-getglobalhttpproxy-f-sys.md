@@ -47,6 +47,17 @@ connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy)
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getGlobalHttpProxy().then((data: connection.HttpProxy) => {
+  console.info(JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
+
 
 ## getGlobalHttpProxy
 
@@ -78,13 +89,4 @@ Obtains the global network proxy configuration information. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getGlobalHttpProxy().then((data: connection.HttpProxy) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
+See [getGlobalHttpProxy](#getglobalhttpproxy)

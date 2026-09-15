@@ -60,6 +60,20 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+  bundle: 'bundleName1',
+};
+
+notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
+    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isBadgeDisplayed failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## isBadgeDisplayed
 
@@ -104,16 +118,4 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-
-notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {
-    console.info(`isBadgeDisplayed success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isBadgeDisplayed failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [isBadgeDisplayed](#isbadgedisplayed)

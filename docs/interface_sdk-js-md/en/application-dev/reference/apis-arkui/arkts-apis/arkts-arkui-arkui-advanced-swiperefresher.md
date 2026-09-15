@@ -16,29 +16,6 @@ import { SwipeRefresher } from '@kit.ArkUI';
 
 ## Examples
 
-This example demonstrates how setting the content parameter to empty or non-empty strings and toggling the isLoading parameter between true and false affects the loading effect.
-
 ```TypeScript
-import { SwipeRefresher } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      SwipeRefresher({
-        content: 'Loading',
-        isLoading: true
-      })
-      SwipeRefresher({
-        content: '',
-        isLoading: true
-      })
-      SwipeRefresher({
-        content: 'Loading',
-        isLoading: false
-      })
-    }
-  }
-}
+This example demonstrates how setting the content parameter to empty or non-empty strings and toggling the isLoading parameter between true and false affects the loading effect.
 ```

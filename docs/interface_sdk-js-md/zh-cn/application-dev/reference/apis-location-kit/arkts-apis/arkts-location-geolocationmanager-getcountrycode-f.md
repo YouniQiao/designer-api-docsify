@@ -52,6 +52,23 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  geoLocationManager.getCountryCode()
+    .then((result) => {
+      console.info('promise, getCountryCode: result=' + JSON.stringify(result));
+    })
+    .catch((error: BusinessError) => {
+      console.error('promise, getCountryCode: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## getCountryCode
 
@@ -81,19 +98,4 @@ function getCountryCode(): Promise<CountryCode>
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  geoLocationManager.getCountryCode()
-    .then((result) => {
-      console.info('promise, getCountryCode: result=' + JSON.stringify(result));
-    })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCountryCode: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [getCountryCode](#getcountrycode)

@@ -57,6 +57,19 @@ authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
 });
 ```
 
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  let authenticator = userAuth.getAuthenticator();
+  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
+    console.info('auth successfully.');
+  });
+} catch (error) {
+  console.error(`Failed to auth. Code: ${error?.code}, message: ${error?.message}`);
+}
+```
+
 ## execute
 
 ```TypeScript
@@ -90,15 +103,4 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 
 **示例**
 
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
-    console.info('auth successfully.');
-  });
-} catch (error) {
-  console.error(`Failed to auth. Code: ${error?.code}, message: ${error?.message}`);
-}
-```
+参见 [execute](#execute)

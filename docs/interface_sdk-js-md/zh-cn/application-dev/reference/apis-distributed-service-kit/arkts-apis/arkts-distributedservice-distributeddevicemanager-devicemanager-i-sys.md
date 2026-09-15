@@ -397,21 +397,6 @@ off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('replyResult');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('replyResult')
 
 ```TypeScript
@@ -442,34 +427,6 @@ on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  param: string = '';
-}
-
-interface TmpStr {
-  verifyFailed: boolean;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('replyResult', (data: Data) => {
-    console.info('replyResult executed, dialog closed' + JSON.stringify(data));
-    let tmpStr: TmpStr = JSON.parse(data.param);
-    let isShow = tmpStr.verifyFailed;
-    console.info('replyResult executed, dialog closed' + isShow);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('replyResult errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## putDeviceProfileInfoList
 

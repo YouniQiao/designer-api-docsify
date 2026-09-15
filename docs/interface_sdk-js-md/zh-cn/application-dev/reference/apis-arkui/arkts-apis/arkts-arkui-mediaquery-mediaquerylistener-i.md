@@ -39,23 +39,6 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 | type | 'change' | 是 | 必须填写字符串'change'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 否 | 需要取消注册的回调，如果参数缺省则注销该句柄下所有的回调。 |
 
-**示例**
-
-```TypeScript
-import { mediaquery } from '@kit.ArkUI';
-
-let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
-function onPortrait(mediaQueryResult:mediaquery.MediaQueryResult) {
-  if (mediaQueryResult.matches) {
-    // do something here
-  } else {
-    // do something here
-  }
-}
-listener.on('change', onPortrait) // 注册回调
-listener.off('change', onPortrait) // 注销回调
-```
-
 ## on('change')
 
 ```TypeScript
@@ -82,8 +65,3 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 必须填写字符串'change'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | 是 | 向媒体查询注册的回调。 |
-
-**示例**
-
-详见[off('change')](#offchange)示例。
-- simpleType:

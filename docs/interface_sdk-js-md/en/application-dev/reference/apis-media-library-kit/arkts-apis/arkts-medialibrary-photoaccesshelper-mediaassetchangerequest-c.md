@@ -53,27 +53,8 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-class PhotoProxyImpl implements photoAccessHelper.PhotoProxy {
-  // Implement PhotoProxy.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset, context: Context) {
-  console.info('addResourceByPhotoProxyDemo');
-  try {
-    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
-    let extension: string = 'jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
-    let photoProxy: PhotoProxyImpl = new PhotoProxyImpl();
-    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, photoProxy);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('addResourceByPhotoProxy successfully');
-  } catch (err) {
-    console.error(`addResourceByPhotoProxyDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## addResource
@@ -112,27 +93,8 @@ Adds a resource using **ArrayBuffer** data.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-class PhotoProxyImpl implements photoAccessHelper.PhotoProxy {
-  // Implement PhotoProxy.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset, context: Context) {
-  console.info('addResourceByPhotoProxyDemo');
-  try {
-    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
-    let extension: string = 'jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
-    let photoProxy: PhotoProxyImpl = new PhotoProxyImpl();
-    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, photoProxy);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('addResourceByPhotoProxy successfully');
-  } catch (err) {
-    console.error(`addResourceByPhotoProxyDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## constructor
@@ -200,23 +162,8 @@ Create an asset change request based on the file type and filename extension.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
-  console.info('createAssetRequestDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, testFileName);
-    // Ensure that the asset specified by fileUri exists.
-    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
-    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, fileUri);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('apply createAssetRequest successfully');
-  } catch (err) {
-    console.error(`createAssetRequestDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createImageAssetRequest
@@ -522,29 +469,8 @@ Favorites or unfavorites this file asset.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setFavoriteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOption: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-  let asset = await fetchResult.getFirstObject();
-  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
-  assetChangeRequest.setFavorite(true);
-  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
-    console.info('apply setFavorite successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## setOrientation

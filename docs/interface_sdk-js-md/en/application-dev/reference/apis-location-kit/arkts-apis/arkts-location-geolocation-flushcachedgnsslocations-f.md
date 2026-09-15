@@ -44,6 +44,13 @@ geolocation.flushCachedGnssLocations((err, result) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.flushCachedGnssLocations().then((result) => {
+    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
+});
+```
+
 
 ## flushCachedGnssLocations
 
@@ -71,9 +78,4 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.flushCachedGnssLocations().then((result) => {
-    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
-});
-```
+See [flushCachedGnssLocations](#flushcachedgnsslocations)

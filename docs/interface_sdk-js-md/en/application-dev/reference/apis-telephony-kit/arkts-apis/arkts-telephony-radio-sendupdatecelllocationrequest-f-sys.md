@@ -46,6 +46,18 @@ Actively requests to update location information.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.sendUpdateCellLocationRequest((err: BusinessError) => {
+    if (err) {
+        console.error(`sendUpdateCellLocationRequest failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`sendUpdateCellLocationRequest success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.sendUpdateCellLocationRequest(slotId, (err: BusinessError) => {
     if (err) {
@@ -53,6 +65,17 @@ radio.sendUpdateCellLocationRequest(slotId, (err: BusinessError) => {
         return;
     }
     console.info(`sendUpdateCellLocationRequest success.`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.sendUpdateCellLocationRequest(slotId).then(() => {
+    console.info(`sendUpdateCellLocationRequest success.`);
+}).catch((err: BusinessError) => {
+    console.error(`sendUpdateCellLocationRequest failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -99,16 +122,7 @@ Actively requests to update location information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.sendUpdateCellLocationRequest(slotId).then(() => {
-    console.info(`sendUpdateCellLocationRequest success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendUpdateCellLocationRequest failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)
 
 
 ## sendUpdateCellLocationRequest
@@ -147,14 +161,4 @@ Actively requests to update location information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.sendUpdateCellLocationRequest((err: BusinessError) => {
-    if (err) {
-        console.error(`sendUpdateCellLocationRequest failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`sendUpdateCellLocationRequest success.`);
-});
-```
+See [sendUpdateCellLocationRequest](#sendupdatecelllocationrequest)

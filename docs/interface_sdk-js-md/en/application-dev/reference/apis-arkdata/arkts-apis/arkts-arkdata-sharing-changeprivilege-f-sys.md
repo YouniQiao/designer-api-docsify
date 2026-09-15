@@ -58,15 +58,40 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 
-cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: BusinessError, result) => {
+cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
+  console.info(`change privilege succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+});
+
+cloudData.sharing.changePrivilege('sharing_resource_test', participants, (err: BusinessError, result) => {
   if (err) {
     console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`change privilege succeeded, result: ${result}`);
-}))
+});
 ```
 
 
@@ -110,27 +135,4 @@ Changes the privilege on the shared data. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-
-cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
-  console.info(`change privilege succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [changePrivilege](#changeprivilege)

@@ -56,6 +56,18 @@ securityLabel.setSecurityLabel(filePath, "s0").then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + '/test.txt';
+securityLabel.setSecurityLabel(filePath, "s0", (err: BusinessError) => {
+  if (err) {
+    console.error("setSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("setSecurityLabel successfully.");
+  }
+});
+```
+
 
 ## setSecurityLabel
 
@@ -92,14 +104,4 @@ Sets the data security level for a file or directory. The level can only be adju
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + '/test.txt';
-securityLabel.setSecurityLabel(filePath, "s0", (err: BusinessError) => {
-  if (err) {
-    console.error("setSecurityLabel failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("setSecurityLabel successfully.");
-  }
-});
-```
+See [setSecurityLabel](#setsecuritylabel)

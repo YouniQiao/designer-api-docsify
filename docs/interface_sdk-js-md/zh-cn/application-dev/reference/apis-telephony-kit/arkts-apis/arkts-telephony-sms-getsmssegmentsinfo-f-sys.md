@@ -52,6 +52,19 @@ sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
+promise.then((data: sms.SmsSegmentsInfo) => {
+    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSmsSegmentsInfo
 
@@ -94,15 +107,4 @@ function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean)
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
-promise.then((data: sms.SmsSegmentsInfo) => {
-    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getSmsSegmentsInfo](#getsmssegmentsinfo)

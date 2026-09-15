@@ -38,8 +38,9 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 
 **示例**
 
+```TypeScript
 参见CompletionHandlerForAtomicService示例。
-- simpleType:
+```
 
 ## onAtomicServiceRequestSuccess
 
@@ -65,5 +66,6 @@ onAtomicServiceRequestSuccess(appId: string): void
 
 **示例**
 
+```TypeScript
 参见CompletionHandlerForAtomicService示例。
-- simpleType:
+```

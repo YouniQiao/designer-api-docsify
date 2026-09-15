@@ -53,32 +53,8 @@ Obtains analysis data. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { common } from '@kit.AbilityKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getAnalysisDataDemo')
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: new dataSharePredicates.DataSharePredicates()
-    }
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> =
-      await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (photoAsset != undefined) {
-      let analysisData: string = await photoAsset.getAnalysisData(
-        photoAccessHelper.AnalysisType.ANALYSIS_OCR);
-      console.info('get ocr result: ' + JSON.stringify(analysisData));
-    }
-    fetchResult.close();
-  } catch (err) {
-    console.error(`getAnalysisDataDemofailed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
 ```
 
 ## requestSource
@@ -113,30 +89,6 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { common } from '@kit.AbilityKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('requestSourcePromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    if (fetchResult === undefined) {
-      console.error('requestSourcePromise fetchResult is undefined');
-      return;
-    }
-    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let fd = await photoAsset.requestSource();
-    console.info('Source fd is ' + fd);
-  } catch (err) {
-    console.error(`requestSourcePromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-medialibrary-file-sendablephotoaccesshelper.md).
 ```

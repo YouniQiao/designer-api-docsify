@@ -54,6 +54,18 @@ backgroundTaskManager.getRemainingDelayTime(requestId, (error: BusinessError, re
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+
+let requestId = 1;
+backgroundTaskManager.getRemainingDelayTime(requestId).then((res: number) => {
+  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+}).catch((error: BusinessError) => {
+  console.error(`promise => Operation getRemainingDelayTime failed. code is ${error.code} message is ${error.message}`);
+})
+```
+
 
 ## getRemainingDelayTime
 
@@ -93,14 +105,4 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-
-let requestId = 1;
-backgroundTaskManager.getRemainingDelayTime(requestId).then((res: number) => {
-  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-}).catch((error: BusinessError) => {
-  console.error(`promise => Operation getRemainingDelayTime failed. code is ${error.code} message is ${error.message}`);
-})
-```
+参见 [getRemainingDelayTime](#getremainingdelaytime)

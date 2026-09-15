@@ -50,6 +50,21 @@ sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 },
 })
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 });
+promise.then((data: Array<number>) => {
+  console.info("Succeeded in starting Operation");
+  for (let i = 0; i < data.length; i++) {
+    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```
+
 
 ## transformCoordinateSystem
 
@@ -82,17 +97,4 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.transformCoordinateSystem([1, 0, 0, 0, 1, 0, 0, 0, 1], { x: 2, y: 3 });
-promise.then((data: Array<number>) => {
-  console.info("Succeeded in starting Operation");
-  for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting transformCoordinateSystem data[ " + i + "] = " + data[i]);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+See [transformCoordinateSystem](#transformcoordinatesystem)

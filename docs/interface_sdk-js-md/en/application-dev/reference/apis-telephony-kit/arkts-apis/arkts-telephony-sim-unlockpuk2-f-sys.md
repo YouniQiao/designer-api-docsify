@@ -58,6 +58,19 @@ sim.unlockPuk2(0, newPin2, puk2, (err: BusinessError, data: sim.LockStatusRespon
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let puk2: string = '1xxxxxxx';
+let newPin2: string = '1235';
+sim.unlockPuk2(0, newPin2, puk2).then((data: sim.LockStatusResponse) => {
+    console.info(`unlockPuk2 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`unlockPuk2 failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## unlockPuk2
 
@@ -105,15 +118,4 @@ Unlock the SIM card password in the specified card slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let puk2: string = '1xxxxxxx';
-let newPin2: string = '1235';
-sim.unlockPuk2(0, newPin2, puk2).then((data: sim.LockStatusResponse) => {
-    console.info(`unlockPuk2 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`unlockPuk2 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [unlockPuk2](#unlockpuk2)

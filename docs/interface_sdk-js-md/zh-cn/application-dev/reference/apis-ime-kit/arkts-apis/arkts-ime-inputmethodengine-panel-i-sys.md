@@ -36,18 +36,6 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 | type | 'sizeUpdate' | 是 | 取消监听当前面板的大小是否产生变化，固定值为'sizeUpdate'。 |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 否 | 回调函数。用于指定要取消监听的回调函数，如果不填则取消所有sizeUpdate监听。 |
 
-**示例**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-// 取消监听面板大小变化
-panel.off('sizeUpdate', (windowSize: window.Size, _keyboardArea: inputMethodEngine.KeyboardArea) => {
-  // 打印面板宽度、高度信息
-  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
-});
-```
-
 ## on('sizeUpdate')
 
 ```TypeScript
@@ -71,19 +59,6 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 | --- | --- | --- | --- |
 | type | 'sizeUpdate' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeUpdate'。 |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 是 | 面板大小变化时的回调，参数包含当前软键盘面板的宽度和高度。 |
-
-**示例**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-// 监听面板大小变化
-panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
-  // 打印面板大小和键盘区域信息
-  console.info(`panel size changed, windowSize: ${windowSize.width}, ${windowSize.height}, ` +
-    `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
-});
-```
 
 ## setShadow
 

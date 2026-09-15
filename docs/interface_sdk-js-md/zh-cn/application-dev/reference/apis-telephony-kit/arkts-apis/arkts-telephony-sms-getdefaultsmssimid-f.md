@@ -51,6 +51,18 @@ sms.getDefaultSmsSimId((err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = sms.getDefaultSmsSimId();
+promise.then((data: number) => {
+    console.info(`getDefaultSmsSimId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultSmsSimId failed, promise: errCode:${err.code},errMsg:${err.message}`);
+});
+```
+
 
 ## getDefaultSmsSimId
 
@@ -83,14 +95,4 @@ function getDefaultSmsSimId(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = sms.getDefaultSmsSimId();
-promise.then((data: number) => {
-    console.info(`getDefaultSmsSimId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultSmsSimId failed, promise: errCode:${err.code},errMsg:${err.message}`);
-});
-```
+参见 [getDefaultSmsSimId](#getdefaultsmssimid)

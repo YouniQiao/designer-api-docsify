@@ -885,6 +885,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
+
 ## fling
 
 ```TypeScript
@@ -923,15 +943,7 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000);
-}
-```
+参见 [fling](#fling)
 
 ## fling
 
@@ -972,15 +984,7 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000, 0);
-}
-```
+参见 [fling](#fling)
 
 ## getDisplayDensity
 
@@ -1022,6 +1026,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1059,15 +1073,7 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let density = await driver.getDisplayDensity(0);
-}
-```
+参见 [getDisplayDensity](#getdisplaydensity)
 
 ## getDisplayRotation
 
@@ -1109,6 +1115,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1146,15 +1162,7 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { DisplayRotation, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
-}
-```
+参见 [getDisplayRotation](#getdisplayrotation)
 
 ## getDisplaySize
 
@@ -1196,6 +1204,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
+
 ## getDisplaySize
 
 ```TypeScript
@@ -1233,15 +1251,7 @@ getDisplaySize(displayId: number): Promise<Point>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let size = await driver.getDisplaySize(0);
-}
-```
+参见 [getDisplaySize](#getdisplaysize)
 
 ## injectKnucklePointerAction
 
@@ -1478,6 +1488,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, '123', { paste: true, addition: false });
+}
+
+async function demoChinese() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, '中文&', { paste: false, addition: true });
+  // 以复制粘贴方式输入中文、特殊符号，指定文本追加到指定坐标所在文本段的末尾。
+}
+```
+
 ## inputText
 
 ```TypeScript
@@ -1517,6 +1547,22 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 | [801](../../errorcode-universal.md#801-该设备不支持此api) |  |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // 创建Driver对象。
+  let driver: Driver = Driver.create();
+  // 查找TextInput类型的目标控件。
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  // 获取控件中心点坐标。
+  let point = await text.getBoundsCenter();
+  // 在坐标点处输入文本'123'。
+  await driver.inputText(point, '123');
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -2041,6 +2087,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
+
 ## mouseDrag
 
 ```TypeScript
@@ -2081,15 +2137,7 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
-}
-```
+参见 [mouseDrag](#mousedrag)
 
 ## mouseDragWithOptions
 
@@ -2201,6 +2249,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // 键码值为2072时，按下Ctrl并进行鼠标长按动作，长按时长2000ms。
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
+
 ## mouseLongClick
 
 ```TypeScript
@@ -2242,16 +2301,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, MouseButton } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  // 键码值为2072时，按下Ctrl并进行鼠标长按动作，长按时长2000ms。
-  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
-}
-```
+参见 [mouseLongClick](#mouselongclick)
 
 ## mouseMoveTo
 
@@ -2400,6 +2450,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
+
 ## mouseScroll
 
 ```TypeScript
@@ -2442,15 +2502,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
-}
-```
+参见 [mouseScroll](#mousescroll)
 
 ## penClick
 
@@ -2684,6 +2736,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
+
 ## pressBack
 
 ```TypeScript
@@ -2720,6 +2782,16 @@ pressBack(displayId: number): Promise<void>
 | [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack();
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -2771,6 +2843,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
+
 ## pressHome
 
 ```TypeScript
@@ -2808,15 +2890,7 @@ pressHome(displayId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressHome(0);
-}
-```
+参见 [pressHome](#presshome)
 
 ## screenCap
 
@@ -2865,6 +2939,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
+
 ## screenCap
 
 ```TypeScript
@@ -2902,6 +2986,16 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -3367,6 +3461,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3407,15 +3511,7 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 **示例**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
-}
-```
+参见 [triggerCombineKeys](#triggercombinekeys)
 
 ## triggerKey
 
@@ -3465,6 +3561,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // 返回键。
+}
+```
+
 ## triggerKey
 
 ```TypeScript
@@ -3502,6 +3609,17 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 | [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 **示例**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
+}
+```
 
 ```TypeScript
 // xxx.test.ets

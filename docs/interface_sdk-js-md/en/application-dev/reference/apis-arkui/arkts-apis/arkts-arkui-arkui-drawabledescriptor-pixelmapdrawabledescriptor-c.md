@@ -38,28 +38,8 @@ A constructor used to create a **PixelMapDrawableDescriptor** object.
 
 **Examples**
 
-The following is the sample code for creating a PixelMapDrawableDescriptor object using ResourceStr:
-
 ```TypeScript
-// xxx.ets
-import { DrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PixelMapDrawableDescriptorExample {
-  // Create a PixelMapDrawableDescriptor object using Resource.
-  // Replace $r('app.media.icon') with the image resource file you use.
-  @State drawable: DrawableDescriptor = new PixelMapDrawableDescriptor($r('app.media.icon'))
-
-  build() {
-    Column() {
-      Image(this.drawable)
-        .width(100)
-        .height(100)
-        .margin({ bottom: 20 })
-    }
-  }
-}
+The following is the sample code for creating a PixelMapDrawableDescriptor object using ResourceStr:
 ```
 
 ## constructor
@@ -86,26 +66,6 @@ A constructor used to create a **PixelMapDrawableDescriptor** object through the
 
 **Examples**
 
-The following is the sample code for creating a PixelMapDrawableDescriptor object using ResourceStr:
-
 ```TypeScript
-// xxx.ets
-import { DrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PixelMapDrawableDescriptorExample {
-  // Create a PixelMapDrawableDescriptor object using Resource.
-  // Replace $r('app.media.icon') with the image resource file you use.
-  @State drawable: DrawableDescriptor = new PixelMapDrawableDescriptor($r('app.media.icon'))
-
-  build() {
-    Column() {
-      Image(this.drawable)
-        .width(100)
-        .height(100)
-        .margin({ bottom: 20 })
-    }
-  }
-}
+The following is the sample code for creating a PixelMapDrawableDescriptor object using ResourceStr:
 ```

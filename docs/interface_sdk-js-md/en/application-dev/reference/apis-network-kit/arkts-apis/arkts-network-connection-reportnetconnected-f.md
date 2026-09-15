@@ -57,6 +57,16 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  connection.reportNetConnected(netHandle).then(() => {
+    console.info(`report success`);
+  });
+});
+```
+
 
 ## reportNetConnected
 
@@ -98,12 +108,4 @@ Reports that the network is available to the network management module. This API
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  connection.reportNetConnected(netHandle).then(() => {
-    console.info(`report success`);
-  });
-});
-```
+See [reportNetConnected](#reportnetconnected)

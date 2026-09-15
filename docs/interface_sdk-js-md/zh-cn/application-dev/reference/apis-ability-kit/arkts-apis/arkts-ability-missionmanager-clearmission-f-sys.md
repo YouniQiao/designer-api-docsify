@@ -60,6 +60,25 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
+let testMissionId = 2;
+
+try {
+  missionManager.clearMission(testMissionId).then((data: void) => {
+    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## clearMission
 
@@ -99,21 +118,4 @@ function clearMission(missionId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.clearMission(testMissionId).then((data: void) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`clearMission failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [clearMission](#clearmission)

@@ -60,6 +60,15 @@ statistics.getUidRxBytes(uid, (error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+let uid = 123456789;  // uid示例，请传入正确的uid
+statistics.getUidRxBytes(uid).then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getUidRxBytes
 
@@ -106,11 +115,4 @@ function getUidRxBytes(uid: number): Promise<number>
 
 **示例**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let uid = 123456789;  // uid示例，请传入正确的uid
-statistics.getUidRxBytes(uid).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
+参见 [getUidRxBytes](#getuidrxbytes)

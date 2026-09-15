@@ -36,34 +36,6 @@ Unsubscribes from the state changes of the accessibility application. This API u
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe accessibility state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('accessibilityStateChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('accessibilityStateChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 
 ## off('touchGuideStateChange')
 
@@ -93,34 +65,6 @@ Unsubscribes from the state changes of touch guide mode. This API uses an asynch
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe touch guide state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('touchGuideStateChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('touchGuideStateChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
 
 
 ## off('screenReaderStateChange')
@@ -152,34 +96,6 @@ Unsubscribes from the state changes of screen reader mode. This API uses an asyn
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe screen reader state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('screenReaderStateChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('screenReaderStateChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 
 ## off('touchModeChange')
 
@@ -209,31 +125,3 @@ Unsubscribes from the single-tap/double-tap operation mode change event in touch
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (mode: string) => void = this.eventCallback;
-  eventCallback(mode: string): void {
-    console.info(`current touch mode: ${JSON.stringify(mode)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.on('touchModeChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.off('touchModeChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```

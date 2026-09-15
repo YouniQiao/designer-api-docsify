@@ -39,6 +39,18 @@ featureAbility.terminateSelf(
 )
 ```
 
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Stop the current Ability.
+featureAbility.terminateSelf().then(() => {
+  console.info('==========================>terminateSelf=======================>');
+}).catch((error: BusinessError) => {
+  console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
+});
+```
+
 
 ## terminateSelf
 
@@ -62,14 +74,4 @@ Terminates this ability. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Stop the current Ability.
-featureAbility.terminateSelf().then(() => {
-  console.info('==========================>terminateSelf=======================>');
-}).catch((error: BusinessError) => {
-  console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
-});
-```
+See [terminateSelf](#terminateself)

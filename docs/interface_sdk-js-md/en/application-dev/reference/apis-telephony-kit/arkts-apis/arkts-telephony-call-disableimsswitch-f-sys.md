@@ -55,6 +55,16 @@ call.disableImsSwitch(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.disableImsSwitch(0).then(() => {
+    console.info(`disableImsSwitch success.`);
+}).catch((err: BusinessError) => {
+    console.error(`disableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## disableImsSwitch
 
@@ -98,12 +108,4 @@ Disables the IMS service. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.disableImsSwitch(0).then(() => {
-    console.info(`disableImsSwitch success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [disableImsSwitch](#disableimsswitch)

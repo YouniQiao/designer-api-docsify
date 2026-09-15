@@ -74,8 +74,9 @@ addSupportedUIStates(uiStates: number, statesChangeHandler: UIStatesChangeHandle
 
 **示例**
 
+```TypeScript
 请参考组件设置和删除多态样式状态示例。
-- simpleType:
+```
 
 ## adoptChild
 
@@ -107,8 +108,9 @@ adoptChild(child: FrameNode): void
 
 **示例**
 
+```TypeScript
 完整示例请参考接纳为附属节点示例。
-- simpleType:
+```
 
 ## appendChild
 
@@ -141,8 +143,9 @@ appendChild(node: FrameNode): void
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## cancelAnimations
 
@@ -174,8 +177,9 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 
 **示例**
 
+```TypeScript
 请参考动画创建与取消示例。
-- simpleType:
+```
 
 ## clearChildren
 
@@ -201,8 +205,9 @@ clearChildren(): void
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## constructor
 
@@ -369,8 +374,9 @@ convertPositionFromWindow(positionByWindow: Position): Position
 
 **示例**
 
+```TypeScript
 请参考局部与窗口坐标转换示例。
-- simpleType:
+```
 
 ## convertPositionToWindow
 
@@ -409,8 +415,9 @@ convertPositionToWindow(positionByLocal: Position): Position
 
 **示例**
 
+```TypeScript
 请参考局部与窗口坐标转换示例。
-- simpleType:
+```
 
 ## createAnimation
 
@@ -445,8 +452,9 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 
 **示例**
 
+```TypeScript
 请参考动画创建与取消示例。
-- simpleType:
+```
 
 ## createFrameNodes
 
@@ -850,8 +858,13 @@ getChild(index: number): FrameNode | null
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
+
+```TypeScript
+请参考LazyForEach场景节点操作示例。
+```
 
 ## getChild
 
@@ -884,8 +897,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 
 **示例**
 
-请参考LazyForEach场景节点操作示例。
-- simpleType:
+参见 [getChild](#getchild)
 
 ## getChildrenCount
 
@@ -911,38 +923,9 @@ getChildrenCount(): number
 
 **示例**
 
-请参考节点操作示例。
-- simpleType:
-
-## getChildrenCount
-
 ```TypeScript
-getChildrenCount(countMode?: ChildrenCountMode): number
+请参考节点操作示例。
 ```
-
-根据指定的计数模式获取当前FrameNode的子节点数量。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | 否 | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| number | Returns the number of children of the current FrameNode based on the count mode. |
-
-**示例**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext, BuilderNode, ChildrenCountMode, LengthUnit } from '@kit.ArkUI';
@@ -1167,6 +1150,38 @@ struct Index {
 }
 ```
 
+## getChildrenCount
+
+```TypeScript
+getChildrenCount(countMode?: ChildrenCountMode): number
+```
+
+根据指定的计数模式获取当前FrameNode的子节点数量。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | 否 | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | Returns the number of children of the current FrameNode based on the count mode. |
+
+**示例**
+
+参见 [getChildrenCount](#getchildrencount)
+
 ## getCrossLanguageOptions
 
 ```TypeScript
@@ -1191,8 +1206,9 @@ getCrossLanguageOptions(): CrossLanguageOptions
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getCustomProperty
 
@@ -1224,8 +1240,9 @@ getCustomProperty(name: string): Object | undefined
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getFirstChild
 
@@ -1251,8 +1268,9 @@ getFirstChild(): FrameNode | null
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getFirstChildIndexWithoutExpand
 
@@ -1278,8 +1296,9 @@ getFirstChildIndexWithoutExpand(): number
 
 **示例**
 
+```TypeScript
 请参考LazyForEach场景节点操作示例。
-- simpleType:
+```
 
 ## getFrameNodeById
 
@@ -1472,8 +1491,9 @@ getGlobalPositionOnDisplay(): Position
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getId
 
@@ -1499,8 +1519,9 @@ getId(): string
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getInspectorInfo
 
@@ -1530,8 +1551,9 @@ getInspectorInfo(): Object
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getInteractionEventBindingInfo
 
@@ -1563,8 +1585,9 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getLastChildIndexWithoutExpand
 
@@ -1590,8 +1613,9 @@ getLastChildIndexWithoutExpand(): number
 
 **示例**
 
+```TypeScript
 请参考LazyForEach场景节点操作示例。
-- simpleType:
+```
 
 ## getLayoutPosition
 
@@ -1617,8 +1641,9 @@ getLayoutPosition(): Position
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getMeasuredSize
 
@@ -1644,8 +1669,9 @@ getMeasuredSize(): Size
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getNextSibling
 
@@ -1671,8 +1697,9 @@ getNextSibling(): FrameNode | null
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getNodePropertyValue
 
@@ -1704,8 +1731,9 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 
 **示例**
 
+```TypeScript
 请参考动画创建与取消示例。
-- simpleType:
+```
 
 ## getNodeType
 
@@ -1731,8 +1759,9 @@ getNodeType(): string
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getOpacity
 
@@ -1758,8 +1787,9 @@ getOpacity(): number
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getParent
 
@@ -1785,8 +1815,9 @@ getParent(): FrameNode | null
 
 **示例**
 
+```TypeScript
 请参考节点操作示例和获取根节点示例。
-- simpleType:
+```
 
 ## getPositionToParent
 
@@ -2326,8 +2357,9 @@ getPreviousSibling(): FrameNode | null
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getRenderNode
 
@@ -2411,8 +2443,9 @@ getUniqueId(): number
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getUserConfigBorderWidth
 
@@ -2438,8 +2471,9 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getUserConfigMargin
 
@@ -2465,8 +2499,9 @@ getUserConfigMargin(): Edges<LengthMetrics>
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getUserConfigPadding
 
@@ -2492,8 +2527,9 @@ getUserConfigPadding(): Edges<LengthMetrics>
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## getUserConfigSize
 
@@ -2519,8 +2555,9 @@ getUserConfigSize(): SizeT<LengthMetrics>
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## insertChildAfter
 
@@ -2554,8 +2591,9 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## invalidate
 
@@ -2595,106 +2633,8 @@ invalidateAttributes(): void
 
 **示例**
 
-从API version 21开始，通过if else动态切换两个节点，并且在节点创建时调用invalidateAttributes即时触发节点属性更新，避免组件切换过程中出现闪烁。
-
 ```TypeScript
-// index.ets
-import { FrameNode, NodeController, typeNode, NodeContent } from '@kit.ArkUI';
-
-// 继承NodeController实现自定义NodeAdapter控制器
-class MyNodeAdapterController extends NodeController {
-  rootNode: FrameNode | null = null;
-  imageUrl: string = '';
-
-  constructor(imageUrl: string) {
-    super();
-    this.imageUrl = imageUrl;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode.initialize($r(this.imageUrl))
-    imageNode.attribute.syncLoad(true).width(100).height(100);
-    // 强制当前帧内即时节点更新，避免出现切换闪烁
-    imageNode.invalidateAttributes();
-    return imageNode;
-  }
-}
-
-// 自定义挂载事件的自定义组件，挂载前加载样例图片
-@Component
-struct NodeComponent3 {
-  private rootSlot: NodeContent = new NodeContent();
-
-  aboutToAppear(): void {
-    const uiContext = this.getUIContext();
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode.initialize($r('app.media.startIcon'))
-    imageNode.attribute.syncLoad(true).width(100).height(100);
-    imageNode.invalidateAttributes();
-    this.rootSlot.addFrameNode(imageNode);
-  }
-
-  build() {
-    ContentSlot(this.rootSlot)
-  }
-}
-
-// 自定义挂载事件的自定义组件，挂载前加载样例图片
-@Component
-struct NodeComponent4 {
-  private rootSlot: NodeContent = new NodeContent();
-
-  aboutToAppear(): void {
-    const uiContext = this.getUIContext();
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode.initialize($r('app.media.startIcon'))
-    imageNode.attribute.syncLoad(true).width(100).height(100);
-    imageNode.invalidateAttributes();
-    this.rootSlot.addFrameNode(imageNode);
-  }
-
-  build() {
-    ContentSlot(this.rootSlot)
-  }
-}
-
-@Entry
-@Component
-struct ListNodeTest {
-  @State flag: boolean = true;
-  adapterController: MyNodeAdapterController = new MyNodeAdapterController('app.media.startIcon');
-
-  build() {
-    Column() {
-      Text('ListNode Adapter');
-      if (this.flag) {
-        NodeComponent3()
-      } else {
-        NodeComponent4()
-      }
-      if (this.flag) {
-        NodeContainer(this.adapterController)
-          .width(300).height(300)
-          .borderWidth(1).borderColor(Color.Black)
-      } else {
-        NodeContainer(this.adapterController)
-          .width(300).height(300)
-          .borderWidth(1).borderColor(Color.Black)
-      }
-      if (this.flag) {
-        Image($r('app.media.startIcon')).width(100).height(100).syncLoad(true)
-      } else {
-        Image($r('app.media.startIcon')).width(100).height(100).syncLoad(true)
-      }
-      Button('change').onClick(() => {
-        this.flag = !this.flag;
-      })
-    }
-    .borderWidth(1)
-    .width('100%')
-  }
-}
+从API version 21开始，通过if else动态切换两个节点，并且在节点创建时调用invalidateAttributes即时触发节点属性更新，避免组件切换过程中出现闪烁。
 ```
 
 ## isAttached
@@ -2721,8 +2661,9 @@ isAttached(): boolean
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## isClipToFrame
 
@@ -2748,8 +2689,9 @@ isClipToFrame(): boolean
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## isDisposed
 
@@ -2775,8 +2717,9 @@ isDisposed(): boolean
 
 **示例**
 
+```TypeScript
 请参考检验FrameNode是否有效示例。
-- simpleType:
+```
 
 ## isInRenderState
 
@@ -2891,8 +2834,9 @@ isModifiable(): boolean
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## isOnMainTree
 
@@ -2989,7 +2933,7 @@ class MyNodeController extends NodeController {
   removeChild(index: number) {
     let childNode = this.rootNode!.getChild(index);
     if (childNode == null) {
-      console.info(`${TEST_TAG} getchild at index {${index}} : fail`);
+      console.error(`${TEST_TAG} getchild at index {${index}} : fail`);
       return;
     }
     this.rootNode!.removeChild(childNode);
@@ -3012,29 +2956,29 @@ class MyNodeController extends NodeController {
     if (this.rootNode!.getFirstChild() === this.frameNode) {
       console.info(`${TEST_TAG} getFirstChild result: success. The first child of the rootNode is equals to frameNode.`);
     } else {
-      console.info(`${TEST_TAG} getFirstChild result: fail. The first child of the rootNode is not equals to frameNode.`);
+      console.error(`${TEST_TAG} getFirstChild result: fail. The first child of the rootNode is not equals to frameNode.`);
     }
     if (this.frameNode!.getChild(5) === this.frameNode!.getChild(4)!.getNextSibling()) {
       console.info(`${TEST_TAG} getNextSibling result: success.`);
     } else {
-      console.info(`${TEST_TAG} getNextSibling result: fail.`);
+      console.error(`${TEST_TAG} getNextSibling result: fail.`);
     }
     if (this.frameNode!.getChild(3) === this.frameNode!.getChild(4)!.getPreviousSibling()) {
       console.info(`${TEST_TAG} getPreviousSibling result: success.`);
     } else {
-      console.info(`${TEST_TAG} getPreviousSibling result: fail.`);
+      console.error(`${TEST_TAG} getPreviousSibling result: fail.`);
     }
     if (this.rootNode!.getFirstChild() !== null && this.rootNode!.getFirstChild()!.getParent() === this.rootNode) {
       console.info(`${TEST_TAG} getParent result: success.`);
     } else {
-      console.info(`${TEST_TAG} getParent result: fail.`);
+      console.error(`${TEST_TAG} getParent result: fail.`);
     }
     if (this.rootNode!.getParent() !== null) {
       console.info(`${TEST_TAG} get ArkTsNode success.`)
       console.info(`${TEST_TAG} check rootNode whether is modifiable ${this.rootNode!.isModifiable()}`)
       console.info(`${TEST_TAG} check getParent whether is modifiable ${this.rootNode!.getParent()!.isModifiable()}`)
     } else {
-      console.info(`${TEST_TAG} get ArkTsNode fail.`);
+      console.error(`${TEST_TAG} get ArkTsNode fail.`);
     }
   }
 
@@ -3045,7 +2989,7 @@ class MyNodeController extends NodeController {
       if (this.rootNode!.getChild(0) === currentNode) {
         console.info(`${TEST_TAG} moveTo result: success.`);
       } else {
-        console.info(`${TEST_TAG} moveTo result: fail.`);
+        console.error(`${TEST_TAG} moveTo result: fail.`);
       }
     } catch (err) {
       console.error(`${TEST_TAG} ${(err as BusinessError).code} : ${(err as BusinessError).message}`);
@@ -3493,8 +3437,9 @@ isVisible(): boolean
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## layout
 
@@ -3520,8 +3465,9 @@ layout(position: Position): void
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## measure
 
@@ -3547,8 +3493,9 @@ measure(constraint: LayoutConstraint): void
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## moveTo
 
@@ -3591,8 +3538,9 @@ moveTo(targetParent: FrameNode, index?: number): void
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## onDraw
 
@@ -3620,8 +3568,9 @@ FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNod
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## onLayout
 
@@ -3647,8 +3596,9 @@ FrameNode的自定义布局方法，该方法会重写默认布局方法，在Fr
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## onMeasure
 
@@ -3674,8 +3624,9 @@ FrameNode的自定义测量方法，该方法会重写默认测量方法，在Fr
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## recycle
 
@@ -3695,8 +3646,9 @@ recycle(): void
 
 **示例**
 
+```TypeScript
 请参考节点复用回收使用示例。
-- simpleType:
+```
 
 ## removeAdoptedChild
 
@@ -3728,8 +3680,9 @@ removeAdoptedChild(child: FrameNode): void
 
 **示例**
 
+```TypeScript
 完整示例请参考接纳为附属节点示例。
-- simpleType:
+```
 
 ## removeChild
 
@@ -3761,8 +3714,9 @@ removeChild(node: FrameNode): void
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## removeSupportedUIStates
 
@@ -3788,8 +3742,9 @@ removeSupportedUIStates(uiStates: number): void
 
 **示例**
 
+```TypeScript
 请参考组件设置和删除多态样式状态示例。
-- simpleType:
+```
 
 ## reuse
 
@@ -3809,8 +3764,9 @@ reuse(): void
 
 **示例**
 
+```TypeScript
 请参考节点复用回收使用示例。
-- simpleType:
+```
 
 ## setCrossLanguageOptions
 
@@ -3855,8 +3811,9 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 **示例**
 
+```TypeScript
 请参考节点操作示例。
-- simpleType:
+```
 
 ## setLayoutPosition
 
@@ -3882,8 +3839,9 @@ setLayoutPosition(position: Position): void
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## setMeasuredSize
 
@@ -3909,8 +3867,9 @@ setMeasuredSize(size: Size): void
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## setNeedsLayout
 
@@ -3930,8 +3889,9 @@ setNeedsLayout(): void
 
 **示例**
 
+```TypeScript
 请参考节点自定义示例。
-- simpleType:
+```
 
 ## commonAttribute
 
@@ -3962,8 +3922,9 @@ get commonAttribute(): CommonAttribute
 
 **示例**
 
+```TypeScript
 请参考基础事件示例。
-- simpleType:
+```
 
 ## commonEvent
 
@@ -3987,8 +3948,9 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 
 **示例**
 
+```TypeScript
 请参考基础事件示例和LazyForEach场景基础事件使用示例。
-- simpleType:
+```
 
 ## gestureEvent
 
@@ -4012,5 +3974,6 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 
 **示例**
 
+```TypeScript
 请参考手势事件示例。
-- simpleType:
+```

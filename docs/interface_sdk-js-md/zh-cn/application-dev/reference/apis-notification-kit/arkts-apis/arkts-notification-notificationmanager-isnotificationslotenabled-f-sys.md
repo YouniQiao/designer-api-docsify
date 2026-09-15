@@ -63,6 +63,18 @@ notificationManager.isNotificationSlotEnabled(
     isNotificationSlotEnabledCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// isNotificationSlotEnabled
+notificationManager.isNotificationSlotEnabled({ bundle: 'ohos.samples.notification', },
+    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
+    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## isNotificationSlotEnabled
 
@@ -108,14 +120,4 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promis
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// isNotificationSlotEnabled
-notificationManager.isNotificationSlotEnabled({ bundle: 'ohos.samples.notification', },
-    notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
-    console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isNotificationSlotEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [isNotificationSlotEnabled](#isnotificationslotenabled)

@@ -62,6 +62,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+try {
+  accountAbility.getOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
+    console.info('distributed information: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountDistributedInfo
 
 ```TypeScript
@@ -91,22 +108,7 @@ Obtains the distributed account information. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain a DistributedAccountAbility instance.
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-try {
-  accountAbility.getOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
-    console.info('distributed information: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
 
 ## queryOsAccountDistributedInfo
 
@@ -155,6 +157,18 @@ accountAbility.queryOsAccountDistributedInfo(
   });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
+  console.info('distributed information: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## queryOsAccountDistributedInfo
 
 ```TypeScript
@@ -187,17 +201,7 @@ Queries the distributed account information. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain a DistributedAccountAbility instance.
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.DistributedInfo) => {
-  console.info('distributed information: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`queryOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [queryOsAccountDistributedInfo](#queryosaccountdistributedinfo)
 
 ## setOsAccountDistributedInfo
 
@@ -255,6 +259,26 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+try {
+  accountAbility.setOsAccountDistributedInfo(accountInfo).then(() => {
+    console.info('setOsAccountDistributedInfo successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setOsAccountDistributedInfo
 
 ```TypeScript
@@ -294,25 +318,7 @@ Sets the distributed account information. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain a DistributedAccountAbility instance.
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-try {
-  accountAbility.setOsAccountDistributedInfo(accountInfo).then(() => {
-    console.info('setOsAccountDistributedInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
 
 ## updateOsAccountDistributedInfo
 
@@ -364,6 +370,21 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain a DistributedAccountAbility instance.
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+accountAbility.updateOsAccountDistributedInfo(accountInfo).then(() => {
+  console.info('updateOsAccountDistributedInfo successfully');
+}).catch((err: BusinessError) => {
+  console.error(`updateOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## updateOsAccountDistributedInfo
 
 ```TypeScript
@@ -402,17 +423,4 @@ Updates the distributed account information. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain a DistributedAccountAbility instance.
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-// This is an example. Replace it with the actual distributed account information obtained using getOsAccountDistributedInfo.
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-accountAbility.updateOsAccountDistributedInfo(accountInfo).then(() => {
-  console.info('updateOsAccountDistributedInfo successfully');
-}).catch((err: BusinessError) => {
-  console.error(`updateOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [updateOsAccountDistributedInfo](#updateosaccountdistributedinfo)

@@ -49,6 +49,22 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let videoRecorder: media.VideoRecorder;
+media.createVideoRecorder().then((video: media.VideoRecorder) => {
+  if (video != null) {
+    videoRecorder = video;
+    console.info('video createVideoRecorder success');
+  } else {
+    console.error('video createVideoRecorder fail');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`video catchCallback, error message:${error.message}`);
+});
+```
+
 
 ## createVideoRecorder
 
@@ -79,18 +95,4 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let videoRecorder: media.VideoRecorder;
-media.createVideoRecorder().then((video: media.VideoRecorder) => {
-  if (video != null) {
-    videoRecorder = video;
-    console.info('video createVideoRecorder success');
-  } else {
-    console.error('video createVideoRecorder fail');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`video catchCallback, error message:${error.message}`);
-});
-```
+参见 [createVideoRecorder](#createvideorecorder)

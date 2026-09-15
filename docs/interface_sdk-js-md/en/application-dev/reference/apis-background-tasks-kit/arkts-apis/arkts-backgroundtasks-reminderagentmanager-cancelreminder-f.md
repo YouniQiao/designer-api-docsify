@@ -49,6 +49,18 @@ reminderAgentManager.cancelReminder(reminderId, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: number = 1;
+reminderAgentManager.cancelReminder(reminderId).then(() => {
+  console.info("cancelReminder promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
 
 ## cancelReminder
 
@@ -84,14 +96,4 @@ Cancels a reminder published. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let reminderId: number = 1;
-reminderAgentManager.cancelReminder(reminderId).then(() => {
-  console.info("cancelReminder promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+See [cancelReminder](#cancelreminder)

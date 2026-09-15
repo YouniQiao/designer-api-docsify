@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取鼠标悬停滚动状态
+            pointer.getHoverScrollState().then((state: boolean) => {
+              console.info(`Succeeded in getting mouse hover scroll, state: ${JSON.stringify(state)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getHoverScrollState
 
@@ -94,29 +121,4 @@ function getHoverScrollState(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 获取鼠标悬停滚动状态
-            pointer.getHoverScrollState().then((state: boolean) => {
-              console.info(`Succeeded in getting mouse hover scroll, state: ${JSON.stringify(state)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get mouse hover scroll, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [getHoverScrollState](#gethoverscrollstate)

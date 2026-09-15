@@ -69,6 +69,47 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, (err) => {
 });
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
+  if (err) {
+    console.error(`Failed to remove disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing disallowed running bundles');
+});
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100).then(() => {
+  console.info('Succeeded in removing disallowed running bundles');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeDisallowedRunningBundles
 
@@ -113,26 +154,7 @@ Removes an application from the applications that are not allowed to run under t
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to remove disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing disallowed running bundles');
-});
-```
+See [removeDisallowedRunningBundles](#removedisallowedrunningbundles)
 
 
 ## removeDisallowedRunningBundles
@@ -183,22 +205,4 @@ Removes applications from the applications that are not allowed to run under the
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in removing disallowed running bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeDisallowedRunningBundles](#removedisallowedrunningbundles)

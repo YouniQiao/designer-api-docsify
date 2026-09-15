@@ -50,6 +50,19 @@ policy.getPowerSaveTrustlist((error: BusinessError, data: number[]) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getPowerSaveTrustlist()
+  .then((data: number[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getPowerSaveTrustlist
 
@@ -85,15 +98,4 @@ Obtains the UID array of applications that are on the device idle allowlist. Thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getPowerSaveTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getPowerSaveTrustlist](#getpowersavetrustlist)

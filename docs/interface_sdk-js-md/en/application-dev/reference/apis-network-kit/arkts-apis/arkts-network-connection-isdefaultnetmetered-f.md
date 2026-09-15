@@ -49,6 +49,14 @@ connection.isDefaultNetMetered((error: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.isDefaultNetMetered().then((data: boolean) => {
+  console.info('data: ' + data);
+});
+```
+
 
 ## isDefaultNetMetered
 
@@ -82,10 +90,4 @@ Checks whether the data traffic over the current default network is metered. For
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.isDefaultNetMetered().then((data: boolean) => {
-  console.info('data: ' + data);
-});
-```
+See [isDefaultNetMetered](#isdefaultnetmetered)

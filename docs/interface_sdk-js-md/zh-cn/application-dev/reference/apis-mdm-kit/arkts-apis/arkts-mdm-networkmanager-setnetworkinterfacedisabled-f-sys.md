@@ -69,6 +69,25 @@ networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true, (err) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 参数需根据实际情况进行替换
+networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true).then(() => {
+  console.info(`Succeeded in setting network interface disabled`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set network interface disabled. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setNetworkInterfaceDisabled
 
@@ -118,21 +137,4 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true).then(() => {
-  console.info(`Succeeded in setting network interface disabled`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set network interface disabled. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [setNetworkInterfaceDisabled](#setnetworkinterfacedisabled)

@@ -49,6 +49,18 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.dialCall("138xxxxxxxx", (err: BusinessError) => {
+    if (err) {
+        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`dialCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let dialCallOptions: call.DialCallOptions = {
     accountId: 0,
     videoState: 0,
@@ -61,6 +73,22 @@ call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
     } else {
         console.info(`dialCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialCallOptions: call.DialCallOptions = {
+    accountId: 0,
+    videoState: 0,
+    dialScene: 0,
+    dialType: 0
+}
+call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
+    console.info(`dialCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -110,21 +138,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialCallOptions: call.DialCallOptions = {
-    accountId: 0,
-    videoState: 0,
-    dialScene: 0,
-    dialType: 0
-}
-call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
-    console.info(`dialCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [dialCall](#dialcall)
 
 
 ## dialCall
@@ -166,14 +180,4 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dialCall("138xxxxxxxx", (err: BusinessError) => {
-    if (err) {
-        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`dialCall success.`);
-    }
-});
-```
+See [dialCall](#dialcall)

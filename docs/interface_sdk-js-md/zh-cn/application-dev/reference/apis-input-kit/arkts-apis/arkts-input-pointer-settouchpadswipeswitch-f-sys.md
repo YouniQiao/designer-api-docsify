@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置触摸板滑动开关
+            pointer.setTouchpadSwipeSwitch(false).then(() => {
+              console.info(`Succeeded in setting touchpad swipe switch.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setTouchpadSwipeSwitch
 
@@ -101,29 +128,4 @@ function setTouchpadSwipeSwitch(state: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触摸板滑动开关
-            pointer.setTouchpadSwipeSwitch(false).then(() => {
-              console.info(`Succeeded in setting touchpad swipe switch.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set touchpad swipe switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [setTouchpadSwipeSwitch](#settouchpadswipeswitch)

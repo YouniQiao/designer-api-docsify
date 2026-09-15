@@ -1,10 +1,8 @@
 # SizeOptions
 
-Defines the size options.
+Defines the width and height of a component during layout.
 
-@interface SizeOptions
-
-**Since:** 11
+**Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,15 +12,15 @@ Defines the size options.
 height?: Length
 ```
 
-Defines the height.
+Height of the component.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,14 +30,14 @@ Defines the height.
 width?: Length
 ```
 
-Defines the width.
+Width of the component.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

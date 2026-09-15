@@ -66,20 +66,6 @@ Removes the specified callback from the device-cloud sync progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
-**Examples**
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("gallery sync state: " + pg.state + "error type: " + pg.error);
-}
-
-gallerySync.on('progress', callback);
-
-gallerySync.off('progress', callback);
-```
-
 ## off
 
 ```TypeScript
@@ -110,18 +96,6 @@ Removes all callbacks from the device-cloud sync progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
-
-**Examples**
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-    console.info("syncState: " + pg.state);
-});
-
-gallerySync.off('progress');
-```
 
 ## on
 
@@ -154,16 +128,6 @@ Registers a listener for the device-cloud sync progress.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
-
-**Examples**
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-  console.info("syncState: " + pg.state);
-});
-```
 
 ## start
 
@@ -216,6 +180,20 @@ gallerySync.start().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.start((err: BusinessError) => {
+  if (err) {
+    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
+
 ## start
 
 ```TypeScript
@@ -250,6 +228,22 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 | 22400003 | Low battery level. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
+  console.info("syncState: " + pg.state);
+});
+
+gallerySync.start().then(() => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -314,6 +308,20 @@ gallerySync.stop().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.stop((err: BusinessError) => {
+  if (err) {
+    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -350,6 +358,18 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.stop().then(() => {
+  console.info("stop sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

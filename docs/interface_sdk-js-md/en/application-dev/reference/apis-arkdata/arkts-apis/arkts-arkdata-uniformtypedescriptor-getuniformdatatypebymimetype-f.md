@@ -46,23 +46,23 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/jpeg', 'general.image');
-    if(typeId) {
-        console.info('typeId is general.jpeg');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
+  let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/jpeg', 'general.image');
+  if (typeId) {
+    console.info('typeId is general.jpeg');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 
 // If no uniform data type ID is found based on "image/myimage" and "general.image", the type generated based on the input parameters is returned.
 try {
-    let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/myimage', 'general.image');
-    if(typeId) {
-        console.info('typeId is flex.************');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
+  let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/myimage', 'general.image');
+  if (typeId) {
+    console.info('typeId is flex.************');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```

@@ -38,8 +38,8 @@ Ranging state updates are notified via onRangingStateChange callback.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 34900051 | The device has already initiated ranging. |
-| 34900052 | The specified type of ranging service is not supported. |
-| 34900053 | The ranging service is disabled. |
-| 34900054 | The parameter value does not meet specifications. |
+| [34900051](../errorcode-fusionConnectivity.md#34900051-device-has-initiated-ranging) | The device has already initiated ranging. |
+| [34900052](../errorcode-fusionConnectivity.md#34900052-specified-ranging-service-unsupported) | The specified type of ranging service is not supported. |
+| [34900053](../errorcode-fusionConnectivity.md#34900053-ranging-service-disabled) | The ranging service is disabled. |
+| [34900054](../errorcode-fusionConnectivity.md#34900054-invalid-parameters) | The parameter value does not meet specifications. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |

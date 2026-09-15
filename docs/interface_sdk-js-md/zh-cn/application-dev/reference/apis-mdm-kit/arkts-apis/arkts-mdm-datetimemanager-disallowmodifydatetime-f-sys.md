@@ -67,6 +67,24 @@ dateTimeManager.disallowModifyDateTime(wantTemp, true, (err) => {
 })
 ```
 
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+dateTimeManager.disallowModifyDateTime(wantTemp, true).then(() => {
+  console.info('Succeeded in disallowing modify date time');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to disallow modify date time. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## disallowModifyDateTime
 
@@ -115,20 +133,4 @@ function disallowModifyDateTime(admin: Want, disallow: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-dateTimeManager.disallowModifyDateTime(wantTemp, true).then(() => {
-  console.info('Succeeded in disallowing modify date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to disallow modify date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [disallowModifyDateTime](#disallowmodifydatetime)

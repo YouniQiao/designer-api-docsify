@@ -46,6 +46,14 @@ geolocation.getAddressesFromLocation(reverseGeocodeRequest, (err, data) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let reverseGeocodeRequest:geolocation.ReverseGeoCodeRequest = {"latitude": 31.12, "longitude": 121.11, "maxItems": 1};
+geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
+    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
+});
+```
+
 
 ## getAddressesFromLocation
 
@@ -79,10 +87,4 @@ Obtain address info from location
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let reverseGeocodeRequest:geolocation.ReverseGeoCodeRequest = {"latitude": 31.12, "longitude": 121.11, "maxItems": 1};
-geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
-    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
-});
-```
+See [getAddressesFromLocation](#getaddressesfromlocation)

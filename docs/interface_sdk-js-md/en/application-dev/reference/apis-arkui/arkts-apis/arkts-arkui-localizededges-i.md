@@ -1,8 +1,6 @@
 # LocalizedEdges
 
-Defines the LocalizedEdges.
-
-@interface LocalizedEdges
+Defines the offset relative to the four edges. If both **top** and** bottom **are set, only **top** takes effect. If both **start** and **end** are set, only **start** takes effect.
 
 **Since:** 12
 
@@ -14,7 +12,7 @@ Defines the LocalizedEdges.
 bottom?: LengthMetrics
 ```
 
-bottom property.
+Offset relative to the bottom edge.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -32,7 +30,7 @@ bottom property.
 end?: LengthMetrics
 ```
 
-end property.
+Offset relative to the right in LTR mode; offset relative to the left in RTL mode.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -50,7 +48,7 @@ end property.
 start?: LengthMetrics
 ```
 
-start property.
+Offset relative to the left in LTR mode; offset relative to the right in RTL mode.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -68,7 +66,7 @@ start property.
 top?: LengthMetrics
 ```
 
-top property.
+Offset relative to the top edge.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

@@ -38,6 +38,10 @@ A constructor used to create a **SequenceRunner** instance.
 let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 ```
 
+```TypeScript
+let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);
+```
+
 ## constructor
 
 ```TypeScript
@@ -67,6 +71,10 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 | priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Examples**
+
+```TypeScript
+let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
+```
 
 ```TypeScript
 let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", taskpool.Priority.LOW);

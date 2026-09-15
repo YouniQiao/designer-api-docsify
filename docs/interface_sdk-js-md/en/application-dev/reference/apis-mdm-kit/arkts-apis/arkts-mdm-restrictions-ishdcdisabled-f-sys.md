@@ -66,6 +66,24 @@ restrictions.isHdcDisabled(wantTemp, (err, result) => {
 })
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+restrictions.isHdcDisabled(wantTemp).then((result) => {
+  console.info(`Succeeded in querying is hdc disabled : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query is hdc disabled or not. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## isHdcDisabled
 
@@ -113,20 +131,4 @@ Queries whether HDC is disabled. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-restrictions.isHdcDisabled(wantTemp).then((result) => {
-  console.info(`Succeeded in querying is hdc disabled : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query is hdc disabled or not. Code is ${err.code}, message is ${err.message}`);
-})
-```
+See [isHdcDisabled](#ishdcdisabled)

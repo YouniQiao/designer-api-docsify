@@ -53,9 +53,10 @@ let textEmbedding: intelligence.TextEmbedding;
 intelligence.getTextEmbeddingModel(textConfig)
   .then((data: intelligence.TextEmbedding) => {
     console.info("Succeeded in getting TextModel");
+    // Save the text embedding model object for later use.
     textEmbedding = data;
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to get TextModel and code is " + err.code);
+    console.error(`Failed to get TextModel. Code: ${err.code}, message: ${err.message}`);
   })
 ```

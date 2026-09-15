@@ -53,6 +53,18 @@ print.queryPrintJobById(jobId, (error: BusinessError, printJob : print.PrintJob)
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let jobId : string = '1';
+print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
+    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
+}).catch((error: BusinessError) => {
+    console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## queryPrintJobById
 
@@ -92,14 +104,4 @@ function queryPrintJobById(jobId: string): Promise<PrintJob>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let jobId : string = '1';
-print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
-    console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
-}).catch((error: BusinessError) => {
-    console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [queryPrintJobById](#queryprintjobbyid)

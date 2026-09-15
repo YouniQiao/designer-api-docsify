@@ -58,6 +58,21 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error('Failed to deleteBackward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## deleteBackward
 
 ```TypeScript
@@ -91,6 +106,23 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting backward.');
+  } else {
+    console.error(`Failed to deleteBackward.`);
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -186,6 +218,21 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error('Failed to delete Forward.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## deleteForward
 
 ```TypeScript
@@ -219,6 +266,23 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to deleteForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in deleting forward.');
+  } else {
+    console.error(`Failed to deleteForward.`);
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -409,6 +473,17 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length).then((text: string) => {
+  console.info('Succeeded in getting backward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getBackward
 
 ```TypeScript
@@ -442,6 +517,19 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 | [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getBackward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getBackward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting backward, text: ' + text);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -575,6 +663,17 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.EditorAttribute) => {
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -600,6 +699,19 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethodEngine.EditorAttribute) => {
+  if (err) {
+    console.error(`Failed to getEditorAttribute. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
+  console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -686,6 +798,17 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length).then((text: string) => {
+  console.info('Succeeded in getting forward, text: ' + text);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getForward
 
 ```TypeScript
@@ -719,6 +842,19 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 | [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let length: number = 1;
+inputClient.getForward(length, (err: BusinessError, text: string) => {
+  if (err) {
+    console.error(`Failed to getForward. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting forward, text: ' + text);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -810,6 +946,16 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.getTextIndexAtCursor().then((index: number) => {
+  console.info('Succeeded in getTextIndexAtCursor: ' + index);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getTextIndexAtCursor. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -837,15 +983,7 @@ Obtains the index of the text where the cursor is located. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.getTextIndexAtCursor().then((index: number) => {
-  console.info('Succeeded in getTextIndexAtCursor: ' + index);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getTextIndexAtCursor. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getTextIndexAtCursor](#gettextindexatcursor)
 
 ## getTextIndexAtCursorSync
 
@@ -925,6 +1063,20 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.insertText('test').then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## insertText
 
 ```TypeScript
@@ -958,6 +1110,23 @@ Inserts text. This API uses a promise to return the result.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+inputClient.insertText('test', (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to insertText. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in inserting text.');
+  } else {
+    console.error('Failed to insertText.');
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1045,6 +1214,16 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
+  console.info('Succeeded in moving cursor.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to moveCursor. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## moveCursor
 
 ```TypeScript
@@ -1078,15 +1257,7 @@ Moves the cursor. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
-  console.info('Succeeded in moving cursor.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to moveCursor. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [moveCursor](#movecursor)
 
 ## moveCursorSync
 
@@ -1138,20 +1309,6 @@ Unsubscribes from the event indicating that additional options for binding an in
 | type | 'attachOptionsDidChange' | Yes | Additional option change event when the input method is bound. The value is fixed to **'attachOptionsDidChange'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachOptions](arkts-ime-inputmethodengine-attachoptions-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
 
-**Examples**
-
-```TypeScript
-let attachOptionsDidChangeCallback: (attachOptions: inputMethodEngine.AttachOptions) => void =
-  (attachOptions: inputMethodEngine.AttachOptions) => {
-    console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
-  };
-
-inputClient.on('attachOptionsDidChange', attachOptionsDidChangeCallback);
-console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
-inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
-console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
-```
-
 ## on('attachOptionsDidChange')
 
 ```TypeScript
@@ -1176,20 +1333,6 @@ Subscribes to the event indicating that the additional options for binding an in
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 19 |
-
-**Examples**
-
-```TypeScript
-let attachOptionsDidChangeCallback: (attachOptions: inputMethodEngine.AttachOptions) => void =
-  (attachOptions: inputMethodEngine.AttachOptions) => {
-    console.info(`AttachOptionsDidChangeCallback1: attachOptionsDidChange event triggered`);
-  };
-
-inputClient.on('attachOptionsDidChange', attachOptionsDidChangeCallback);
-console.info(`attachOptionsDidChangeCallback subscribed to attachOptionsDidChange`);
-inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
-console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
-```
 
 ## recvMessage
 
@@ -1281,6 +1424,17 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let movement: inputMethodEngine.Movement = { direction: 1 };
+inputClient.selectByMovement(movement).then(() => {
+  console.info('Succeeded in selecting by movement.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to selectByMovement. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## selectByMovement
 
 ```TypeScript
@@ -1314,16 +1468,7 @@ Selects text based on the cursor movement direction. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let movement: inputMethodEngine.Movement = { direction: 1 };
-inputClient.selectByMovement(movement).then(() => {
-  console.info('Succeeded in selecting by movement.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to selectByMovement. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [selectByMovement](#selectbymovement)
 
 ## selectByMovementSync
 
@@ -1398,6 +1543,17 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let range: inputMethodEngine.Range = { start: 0, end: 1 };
+inputClient.selectByRange(range).then(() => {
+  console.info('Succeeded in selecting by range.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to selectByRange. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## selectByRange
 
 ```TypeScript
@@ -1431,16 +1587,7 @@ Selects text based on the specified range. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let range: inputMethodEngine.Range = { start: 0, end: 1 };
-inputClient.selectByRange(range).then(() => {
-  console.info('Succeeded in selecting by range.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to selectByRange. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [selectByRange](#selectbyrange)
 
 ## selectByRangeSync
 
@@ -1520,6 +1667,16 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
+  console.info('Succeeded in sending extend action.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendExtendAction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## sendExtendAction
 
 ```TypeScript
@@ -1559,15 +1716,7 @@ Sends an extended edit action. This API uses a promise to return the result. <br
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
-  console.info('Succeeded in sending extend action.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to sendExtendAction. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [sendExtendAction](#sendextendaction)
 
 ## sendKeyFunction
 
@@ -1615,6 +1764,21 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+inputClient.sendKeyFunction(action).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## sendKeyFunction
 
 ```TypeScript
@@ -1647,6 +1811,24 @@ Sends the function key. This API uses a promise to return the result.
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let action: number = 1;
+
+inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to sendKeyFunction. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in sending key function.');
+  } else {
+    console.error('Failed to sendKeyFunction.');
+  }
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

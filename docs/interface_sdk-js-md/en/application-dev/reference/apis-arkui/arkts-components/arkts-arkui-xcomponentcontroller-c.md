@@ -69,26 +69,7 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 **Examples**
 
 ```TypeScript
-// xxx.ets
-
-@Entry
-  @Component
-  struct Index {
-    myXComponentController: XComponentController = new XComponentController();
-
-    build() {
-      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-        XComponent({
-          type: XComponentType.SURFACE,
-          controller: this.myXComponentController
-        })
-          .onLoad(() => {
-            let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
-            console.info("XComponent SurfaceId: " + surfaceId);
-          })
-      }
-    }
-  }
+You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 ```
 
 ## getXComponentSurfaceRect

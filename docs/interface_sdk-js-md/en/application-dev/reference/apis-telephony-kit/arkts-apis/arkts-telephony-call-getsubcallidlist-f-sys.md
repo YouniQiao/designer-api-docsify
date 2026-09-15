@@ -52,6 +52,16 @@ call.getSubCallIdList(1, (err: BusinessError, data: Array<string>) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getSubCallIdList(1).then((data: Array<string>) => {
+    console.info(`getSubCallIdList success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSubCallIdList fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSubCallIdList
 
@@ -92,12 +102,4 @@ Obtains the list of subcall IDs. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getSubCallIdList(1).then((data: Array<string>) => {
-    console.info(`getSubCallIdList success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSubCallIdList fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSubCallIdList](#getsubcallidlist)

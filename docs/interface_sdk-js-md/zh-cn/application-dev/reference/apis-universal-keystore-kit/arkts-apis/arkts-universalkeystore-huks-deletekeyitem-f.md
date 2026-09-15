@@ -47,37 +47,16 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 **示例**
 
-ArkTS示例：
-
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 删除密钥 */
-huks.deleteKeyItem(keyAlias, emptyOptions, (error) => {
-  if (error) {
-    console.error(`callback: deleteKeyItem failed`);
-  } else {
-    console.info(`callback: deleteKeyItem key success`);
-  }
-});
+ArkTS示例：
 ```
 
+```TypeScript
 JS示例：
+
 > 说明
 > 
 > JS示例代码仅供轻量级设备使用。
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="deleteBtn" @click="deleteKey">删除密钥</input>
-    <text class="result">{{result}}</text>
-</stack>
 ```
 
 ```TypeScript
@@ -142,6 +121,21 @@ export default {
 };
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+/* 删除密钥 */
+huks.deleteKeyItem(keyAlias, emptyOptions)
+  .then(() => {
+    console.info(`promise: deleteKeyItem key success`);
+  });
+```
+
 
 ## deleteKeyItem
 
@@ -190,17 +184,4 @@ function deleteKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-/* 删除密钥 */
-huks.deleteKeyItem(keyAlias, emptyOptions)
-  .then(() => {
-    console.info(`promise: deleteKeyItem key success`);
-  });
-```
+参见 [deleteKeyItem](#deletekeyitem)

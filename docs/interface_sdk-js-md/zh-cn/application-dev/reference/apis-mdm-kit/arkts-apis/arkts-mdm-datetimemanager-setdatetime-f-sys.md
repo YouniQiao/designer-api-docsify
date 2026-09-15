@@ -68,6 +68,25 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
 })
 ```
 
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
+  console.info('Succeeded in setting date time');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setDateTime
 
@@ -116,21 +135,4 @@ function setDateTime(admin: Want, time: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
-  console.info('Succeeded in setting date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [setDateTime](#setdatetime)

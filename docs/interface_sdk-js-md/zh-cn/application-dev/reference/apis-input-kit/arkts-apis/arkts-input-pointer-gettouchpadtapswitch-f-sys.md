@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取触摸板点击开关
+            pointer.getTouchpadTapSwitch().then((state: boolean) => {
+              console.info(`Succeeded in getting touchpad tap switch, state: ${JSON.stringify(state)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getTouchpadTapSwitch
 
@@ -94,29 +121,4 @@ function getTouchpadTapSwitch(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 获取触摸板点击开关
-            pointer.getTouchpadTapSwitch().then((state: boolean) => {
-              console.info(`Succeeded in getting touchpad tap switch, state: ${JSON.stringify(state)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [getTouchpadTapSwitch](#gettouchpadtapswitch)

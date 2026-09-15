@@ -40,6 +40,16 @@ screenLock.isScreenLocked((err: BusinessError, data: Boolean)=>{
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.isScreenLocked().then((data: Boolean) => {
+  console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain whether the screen is locked, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isScreenLocked
 
@@ -63,12 +73,4 @@ Checks whether the screen is currently locked.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.isScreenLocked().then((data: Boolean) => {
-  console.info(`Succeeded in Obtaining whether the screen is locked. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain whether the screen is locked, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isScreenLocked](#isscreenlocked)

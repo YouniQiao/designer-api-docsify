@@ -50,6 +50,21 @@ function unregisterApplicationStateObserverCallback(err: BusinessError) {
 appManager.unregisterApplicationStateObserver(observerId, unregisterApplicationStateObserverCallback);
 ```
 
+```TypeScript
+import appManager from '@ohos.application.appManager';
+import { BusinessError } from '@ohos.base';
+
+let observerId = 100;
+
+appManager.unregisterApplicationStateObserver(observerId)
+.then((data) => {
+    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
+})
+.catch((err: BusinessError) => {
+    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
+```
+
 
 ## unregisterApplicationStateObserver
 
@@ -85,17 +100,4 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-import { BusinessError } from '@ohos.base';
-
-let observerId = 100;
-
-appManager.unregisterApplicationStateObserver(observerId)
-.then((data) => {
-    console.info(`unregisterApplicationStateObserver success, data: ${data}.`);
-})
-.catch((err: BusinessError) => {
-    console.error(`unregisterApplicationStateObserver failed, err code: ${err.code}, err msg: ${err.message}.`);
-});
-```
+参见 [unregisterApplicationStateObserver](#unregisterapplicationstateobserver)

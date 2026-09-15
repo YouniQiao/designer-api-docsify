@@ -50,6 +50,17 @@ radio.getISOCountryCodeForNetwork(slotId, (err: BusinessError, data: string) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getISOCountryCodeForNetwork(slotId).then((data: string) => {
+    console.info(`getISOCountryCodeForNetwork success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getISOCountryCodeForNetwork failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getISOCountryCodeForNetwork
 
@@ -87,13 +98,4 @@ Obtains the ISO country code of the network with which the SIM card in the speci
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getISOCountryCodeForNetwork(slotId).then((data: string) => {
-    console.info(`getISOCountryCodeForNetwork success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getISOCountryCodeForNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getISOCountryCodeForNetwork](#getisocountrycodefornetwork)

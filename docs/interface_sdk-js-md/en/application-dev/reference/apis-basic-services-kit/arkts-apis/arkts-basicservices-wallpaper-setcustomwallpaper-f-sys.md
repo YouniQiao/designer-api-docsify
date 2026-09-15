@@ -57,6 +57,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
+try {
+    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
+        console.info(`success to setCustomWallpaper.`);
+    }).catch((error: BusinessError) => {
+        console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
+    });
+} catch (error) {
+    console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
+}
+```
+
 
 ## setCustomWallpaper
 
@@ -97,17 +112,4 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wallpaperPath = "/data/storage/el2/base/haps/entry/files/test.zip";
-try {
-    wallpaper.setCustomWallpaper(wallpaperPath, wallpaper.WallpaperType.WALLPAPER_SYSTEM).then(() => {
-        console.info(`success to setCustomWallpaper.`);
-    }).catch((error: BusinessError) => {
-        console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-    });
-} catch (error) {
-    console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
-}
-```
+See [setCustomWallpaper](#setcustomwallpaper)

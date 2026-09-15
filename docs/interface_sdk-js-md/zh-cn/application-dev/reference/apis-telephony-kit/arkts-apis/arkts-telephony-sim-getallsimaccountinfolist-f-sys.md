@@ -51,6 +51,21 @@ sim.getAllSimAccountInfoList((err: BusinessError, data: Array<sim.IccAccountInfo
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getAllSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
+    try {
+      const accountInfoList: sim.IccAccountInfo[] =
+        await sim.getAllSimAccountInfoList();
+      return { success: true, code: CommonConstant.DEFAULT_SUCCESS_CODE, data: accountInfoList };
+    } catch (err) {
+      return this.handleError(this.getAllSimAccountInfoList.name, err);
+    }
+  }
+```
+
 
 ## getAllSimAccountInfoList
 
@@ -87,17 +102,4 @@ Get the list of all SIM card account information.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getAllSimAccountInfoList().then((data: Array<sim.IccAccountInfo>) => {
-    try {
-      const accountInfoList: sim.IccAccountInfo[] =
-        await sim.getAllSimAccountInfoList();
-      return { success: true, code: CommonConstant.DEFAULT_SUCCESS_CODE, data: accountInfoList };
-    } catch (err) {
-      return this.handleError(this.getAllSimAccountInfoList.name, err);
-    }
-  }
-```
+参见 [getAllSimAccountInfoList](#getallsimaccountinfolist)

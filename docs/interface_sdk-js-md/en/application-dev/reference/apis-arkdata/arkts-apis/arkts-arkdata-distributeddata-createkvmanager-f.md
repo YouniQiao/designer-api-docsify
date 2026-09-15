@@ -42,14 +42,34 @@ try {
     }
     distributedData.createKVManager(kvManagerConfig, function (err, manager) {
         if (err) {
-            console.log("Failed to create KVManager: "  + JSON.stringify(err));
+            console.error("Failed to create KVManager: "  + JSON.stringify(err));
             return;
         }
-        console.log("Succeeded in creating KVManager");
+        console.info("Succeeded in creating KVManager");
         kvManager = manager;
     });
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
+}
+```
+
+```TypeScript
+try {
+  const kvManagerConfig = {
+    bundleName: 'com.example.datamanagertest',
+    userInfo: {
+      userId: '0',
+      userType: distributedData.UserType.SAME_USER_ID
+    }
+  }
+  distributedData.createKVManager(kvManagerConfig).then((manager) => {
+    console.info("Succeeded in creating KVManager");
+    kvManager = manager;
+  }).catch((err) => {
+    console.error("Failed to create KVManager: " + JSON.stringify(err));
+  });
+} catch (e) {
+  console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -84,22 +104,4 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-try {
-  const kvManagerConfig = {
-    bundleName: 'com.example.datamanagertest',
-    userInfo: {
-      userId: '0',
-      userType: distributedData.UserType.SAME_USER_ID
-    }
-  }
-  distributedData.createKVManager(kvManagerConfig).then((manager) => {
-    console.log("Succeeded in creating KVManager");
-    kvManager = manager;
-  }).catch((err) => {
-    console.error("Failed to create KVManager: " + JSON.stringify(err));
-  });
-} catch (e) {
-  console.log("An unexpected error occurred. Error:" + e);
-}
-```
+See [createKVManager](#createkvmanager)

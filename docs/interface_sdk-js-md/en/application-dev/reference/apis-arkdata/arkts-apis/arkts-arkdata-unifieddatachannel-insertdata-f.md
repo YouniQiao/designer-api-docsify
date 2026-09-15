@@ -67,6 +67,33 @@ try {
 }
 ```
 
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let plainText: uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent: 'This is a plain text example',
+  abstract: 'This is abstract'
+};
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+let options: unifiedDataChannel.Options = {
+  intention: unifiedDataChannel.Intention.DATA_HUB
+};
+try {
+  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
+    console.info(`Succeeded in inserting data. key = ${key}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```
+
 
 ## insertData
 
@@ -105,29 +132,4 @@ Inserts data to the UDMF public data channel. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let plainText: uniformDataStruct.PlainText = {
-  uniformDataType: 'general.plain-text',
-  textContent: 'This is a plain text example',
-  abstract: 'This is abstract'
-};
-let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-let unifiedData = new unifiedDataChannel.UnifiedData(text);
-
-let options: unifiedDataChannel.Options = {
-  intention: unifiedDataChannel.Intention.DATA_HUB
-};
-try {
-  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
-    console.info(`Succeeded in inserting data. key = ${key}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message}`);
-}
-```
+See [insertData](#insertdata)

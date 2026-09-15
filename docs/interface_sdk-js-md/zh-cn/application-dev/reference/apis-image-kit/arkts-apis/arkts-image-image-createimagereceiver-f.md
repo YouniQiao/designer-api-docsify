@@ -46,6 +46,22 @@ function createImageReceiver(width: number, height: number, format: number, capa
 **示例**
 
 ```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
+
+```TypeScript
+let options: image.ImageReceiverOptions = {
+  size: { width: 480, height: 480 },
+  capacity: 3
+}
+let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
+```
+
+```TypeScript
 let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.ImageFormat.JPEG, 8);
 ```
 
@@ -86,13 +102,7 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: number):
 
 **示例**
 
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-```
+参见 [createImageReceiver](#createimagereceiver)
 
 
 ## createImageReceiver
@@ -131,10 +141,4 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 
 **示例**
 
-```TypeScript
-let options: image.ImageReceiverOptions = {
-  size: { width: 480, height: 480 },
-  capacity: 3
-}
-let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
-```
+参见 [createImageReceiver](#createimagereceiver)

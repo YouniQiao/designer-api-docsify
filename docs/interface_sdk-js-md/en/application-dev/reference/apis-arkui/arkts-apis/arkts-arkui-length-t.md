@@ -4,20 +4,18 @@
 declare type Length = string | number | Resource
 ```
 
-Defines the length property with string, number and resource unit.
+Defines a size unit.
 
-@typedef { string | number | Resource } Length
-
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |
 | --- | --- |
-| string |  |
-| number |  |
-| [Resource](arkts-arkui-resource-t.md) |  |
+| string | String type. Specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.<br>**NOTE:** <br>If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to 10 vp. |
+| number | Number type. The default unit is vp. |
+| [Resource](arkts-arkui-resource-t.md) | Size referenced from system or app resources. |

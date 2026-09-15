@@ -109,18 +109,7 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<boolean>): vo
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.isLastWorkTimeOut(500, (error: BusinessError, res: boolean) => {
-  if (error) {
-    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-  } else {
-    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-  }
-});
-```
+参见 [isLastWorkTimeOut](#islastworktimeout)
 
 
 ## isLastWorkTimeOut
@@ -161,15 +150,4 @@ function isLastWorkTimeOut(workId: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { workScheduler } from '@kit.BackgroundTasksKit';
-
-workScheduler.isLastWorkTimeOut(500)
-  .then((res: boolean) => {
-    console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-  })
-  .catch((error: BusinessError) => {
-    console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-  });
-```
+参见 [isLastWorkTimeOut](#islastworktimeout)

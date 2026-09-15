@@ -82,42 +82,6 @@ try {
 }
 ```
 
-## closeKVStore
-
-```TypeScript
-closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
-```
-
-通过storeId的值关闭指定的分布式键值数据库，如果使用kvConfig参数，关闭的是指定路径下的分布式键值数据库，使用Promise异步回调。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
-| storeId | string | 是 | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 否 | 要关闭的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
-
-**示例**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -156,6 +120,44 @@ try {
   console.error(`Failed to close KVStore. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## closeKVStore
+
+```TypeScript
+closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
+```
+
+通过storeId的值关闭指定的分布式键值数据库，如果使用kvConfig参数，关闭的是指定路径下的分布式键值数据库，使用Promise异步回调。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | 是 | 要关闭的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
+| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 否 | 要关闭的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
+
+**示例**
+
+参见 [closeKVStore](#closekvstore)
 
 ## deleteKVStore
 
@@ -229,43 +231,6 @@ try {
 }
 ```
 
-## deleteKVStore
-
-```TypeScript
-deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
-```
-
-通过storeId的值删除指定的分布式键值数据库，如果使用kvConfig参数，删除的是指定路径下的分布式键值数据库，使用Promise异步回调。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
-| storeId | string | 是 | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
-| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 否 | 要删除的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
-
-**示例**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -304,6 +269,45 @@ try {
   console.error(`Failed to delete KVStore. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+## deleteKVStore
+
+```TypeScript
+deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
+```
+
+通过storeId的值删除指定的分布式键值数据库，如果使用kvConfig参数，删除的是指定路径下的分布式键值数据库，使用Promise异步回调。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| appId | string | 是 | 应用的BundleName，不可为空且长度范围为1-256字节。 |
+| storeId | string | 是 | 要删除的数据库唯一标识符，长度范围为1-[MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，且只能包含字母数字或下划线_。 |
+| kvConfig | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 否 | 要删除的数据库的配置信息，默认为空。<br>**适用版本：** 24 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Parameter verification failed. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
+
+**示例**
+
+参见 [deleteKVStore](#deletekvstore)
 
 ## getAllKVStoreId
 
@@ -353,6 +357,24 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // appId为createKVManager中的appId
+  console.info('GetAllKVStoreId');
+  kvManager.getAllKVStoreId(appId).then((data: string[]) => {
+    console.info('Succeeded in getting AllKVStoreId');
+    console.info(`GetAllKVStoreId size = ${data.length}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get AllKVStoreId. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getAllKVStoreId
 
 ```TypeScript
@@ -387,23 +409,7 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // appId为createKVManager中的appId
-  console.info('GetAllKVStoreId');
-  kvManager.getAllKVStoreId(appId).then((data: string[]) => {
-    console.info('Succeeded in getting AllKVStoreId');
-    console.info(`GetAllKVStoreId size = ${data.length}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get AllKVStoreId. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get AllKVStoreId. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getAllKVStoreId](#getallkvstoreid)
 
 ## getKVStore
 
@@ -473,6 +479,33 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let kvStore: distributedKVStore.SingleKVStore | null = null;
+try {
+  const options: distributedKVStore.Options = {
+    createIfMissing: true,
+    encrypt: false,
+    backup: false,
+    autoSync: false,
+    kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
+    securityLevel: distributedKVStore.SecurityLevel.S3,
+    // 从API version 24开始，可使用rootDir指定数据库存储路径
+    rootDir: "/data/storage/el2/database/entry"
+  };
+  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
+    console.info('Succeeded in getting KVStore');
+    kvStore = store;
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getKVStore
 
 ```TypeScript
@@ -515,32 +548,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let kvStore: distributedKVStore.SingleKVStore | null = null;
-try {
-  const options: distributedKVStore.Options = {
-    createIfMissing: true,
-    encrypt: false,
-    backup: false,
-    autoSync: false,
-    kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-    securityLevel: distributedKVStore.SecurityLevel.S3,
-    // 从API version 24开始，可使用rootDir指定数据库存储路径
-    rootDir: "/data/storage/el2/database/entry"
-  };
-  kvManager.getKVStore<distributedKVStore.SingleKVStore>('storeId', options).then((store: distributedKVStore.SingleKVStore) => {
-    console.info('Succeeded in getting KVStore');
-    kvStore = store;
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get KVStore. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getKVStore](#getkvstore)
 
 ## off
 
@@ -567,23 +575,6 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  console.info('KVManagerOff');
-  const deathCallback = () => {
-    console.info('death callback call');
-  }
-  kvManager.off('distributedDataServiceDie', deathCallback);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -608,20 +599,3 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types; <br>3.Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  console.info('KVManagerOn');
-  const deathCallback = () => {
-    console.info('death callback call');
-  }
-  kvManager.on('distributedDataServiceDie', deathCallback);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```

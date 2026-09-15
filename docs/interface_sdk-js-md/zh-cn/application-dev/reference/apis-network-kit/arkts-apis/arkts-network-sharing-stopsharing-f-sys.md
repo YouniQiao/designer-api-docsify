@@ -56,6 +56,21 @@ sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_WIFI = 0;
+sharing
+  .stopSharing(SHARING_WIFI)
+  .then(() => {
+    console.info('stop wifi sharing successful');
+  })
+  .catch((error: BusinessError) => {
+    console.error('stop wifi sharing failed');
+  });
+```
+
 
 ## stopSharing
 
@@ -102,17 +117,4 @@ function stopSharing(type: SharingIfaceType): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .stopSharing(SHARING_WIFI)
-  .then(() => {
-    console.info('stop wifi sharing successful');
-  })
-  .catch((error: BusinessError) => {
-    console.error('stop wifi sharing failed');
-  });
-```
+参见 [stopSharing](#stopsharing)

@@ -40,6 +40,16 @@ screenLock.isSecureMode((err: BusinessError, data: Boolean)=>{
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+screenLock.isSecureMode().then((data: Boolean) => {
+  console.info(`Succeeded in Obtaining whether the device is in secure mode. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to obtain whether the device is in secure mode, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isSecureMode
 
@@ -63,12 +73,4 @@ Checks whether the screen lock of the current device is secure.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-screenLock.isSecureMode().then((data: Boolean) => {
-  console.info(`Succeeded in Obtaining whether the device is in secure mode. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to obtain whether the device is in secure mode, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isSecureMode](#issecuremode)

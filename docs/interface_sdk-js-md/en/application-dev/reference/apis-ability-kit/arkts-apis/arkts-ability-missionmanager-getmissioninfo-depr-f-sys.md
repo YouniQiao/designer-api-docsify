@@ -56,6 +56,23 @@ missionManager.getMissionInfo('', missionId, (error, mission) => {
 });
 ```
 
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 1;
+try {
+  // Obtain information about the specified mission.
+  missionManager.getMissionInfo('', testMissionId).then((data) => {
+    console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`getMissionInfo failed. Cause: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`getMissionInfo failed. Cause: ${error.message}`);
+}
+```
+
 
 ## getMissionInfo
 
@@ -92,19 +109,4 @@ Obtains the information about a given mission. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 1;
-try {
-  // Obtain information about the specified mission.
-  missionManager.getMissionInfo('', testMissionId).then((data) => {
-    console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`getMissionInfo failed. Cause: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`getMissionInfo failed. Cause: ${error.message}`);
-}
-```
+See [getMissionInfo](#getmissioninfo)

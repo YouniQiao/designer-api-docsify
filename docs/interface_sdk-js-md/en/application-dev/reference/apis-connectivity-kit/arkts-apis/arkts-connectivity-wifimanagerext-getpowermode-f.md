@@ -52,6 +52,24 @@ async function getWifiPowerMode() {
 }
 ```
 
+```TypeScript
+import { wifiManagerExt } from '@kit.ConnectivityKit';
+
+  wifiManagerExt.getPowerMode((err, data:wifiManagerExt.PowerMode) => {
+      if (err) {
+          console.error("Failed to get linked information");
+          return;
+      }
+      console.info("get power mode info: " + JSON.stringify(data));
+  });
+
+  wifiManagerExt.getPowerMode().then(data => {
+      console.info("get power mode info: " + JSON.stringify(data));
+  }).catch((error:number) => {
+      console.error("get power mode error");
+  });
+```
+
 
 ## getPowerMode
 
@@ -83,20 +101,4 @@ Obtains the current Wi-Fi power mode.
 
 **Examples**
 
-```TypeScript
-import { wifiManagerExt } from '@kit.ConnectivityKit';
-
-  wifiManagerExt.getPowerMode((err, data:wifiManagerExt.PowerMode) => {
-      if (err) {
-          console.error("Failed to get linked information");
-          return;
-      }
-      console.info("get power mode info: " + JSON.stringify(data));
-  });
-
-  wifiManagerExt.getPowerMode().then(data => {
-      console.info("get power mode info: " + JSON.stringify(data));
-  }).catch((error:number) => {
-      console.error("get power mode error");
-  });
-```
+See [getPowerMode](#getpowermode)

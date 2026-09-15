@@ -53,6 +53,12 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 let priorityGroup: number = usageStatistics.queryAppGroupSync();
 ```
 
+```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera");
+```
+
 
 ## queryAppGroupSync
 
@@ -102,8 +108,4 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 **Examples**
 
-```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let priorityGroup: number = usageStatistics.queryAppGroupSync("com.ohos.camera");
-```
+See [queryAppGroupSync](#queryappgroupsync)

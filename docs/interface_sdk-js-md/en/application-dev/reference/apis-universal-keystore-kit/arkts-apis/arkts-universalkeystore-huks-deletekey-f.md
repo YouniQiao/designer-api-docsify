@@ -44,6 +44,22 @@ huks.deleteKey(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+import { BusinessError } from "@kit.BasicServicesKit"
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
+  console.info('delete key success');
+}).catch((err: BusinessError) => {
+  console.error("Failed to delete the key. Error code: " + err.code + " Error message: " + err.message);
+});
+```
+
 
 ## deleteKey
 
@@ -76,18 +92,4 @@ Deletes a key. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { BusinessError } from "@kit.BasicServicesKit"
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.deleteKey(keyAlias, emptyOptions).then((data) => {
-  console.info('delete key success');
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete the key. Error code: " + err.code + " Error message: " + err.message);
-});
-```
+See [deleteKey](#deletekey)

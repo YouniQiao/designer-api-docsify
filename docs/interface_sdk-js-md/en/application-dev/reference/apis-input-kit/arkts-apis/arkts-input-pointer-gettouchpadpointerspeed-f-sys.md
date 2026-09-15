@@ -47,7 +47,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad cursor speed.
+            // Obtain the touchpad pointer speed.
             pointer.getTouchpadPointerSpeed((error: BusinessError, speed: number) => {
               if (error) {
                 console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -55,6 +55,33 @@ struct Index {
                 console.info(`Succeeded in getting touchpad pointer speed, speed: ${JSON.stringify(speed)}.`);
               }
             });
+          } catch (error) {
+            console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Obtain the touchpad pointer speed.
+            pointer.getTouchpadPointerSpeed().then((speed: number) => {
+              console.info(`Succeeded in getting touchpad pointer speed, speed: ${JSON.stringify(speed)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
           } catch (error) {
             console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -94,29 +121,4 @@ Obtains the touchpad pointer speed. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Obtain the touchpad pointer speed.
-            pointer.getTouchpadPointerSpeed().then((speed: number) => {
-              console.info(`Succeeded in getting touchpad pointer speed, speed: ${JSON.stringify(speed)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [getTouchpadPointerSpeed](#gettouchpadpointerspeed)

@@ -67,6 +67,24 @@ restrictions.setHdcDisabled(wantTemp, true, (err) => {
 })
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+restrictions.setHdcDisabled(wantTemp, true).then(() => {
+  console.info('Succeeded in setting hdc disabled');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set hdc disabled. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setHdcDisabled
 
@@ -115,20 +133,4 @@ Enables or disables HDC on a device. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-restrictions.setHdcDisabled(wantTemp, true).then(() => {
-  console.info('Succeeded in setting hdc disabled');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set hdc disabled. Code is ${err.code}, message is ${err.message}`);
-})
-```
+See [setHdcDisabled](#sethdcdisabled)

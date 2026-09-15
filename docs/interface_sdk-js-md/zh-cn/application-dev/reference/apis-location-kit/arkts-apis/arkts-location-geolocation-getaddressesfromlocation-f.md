@@ -46,6 +46,14 @@ geolocation.getAddressesFromLocation(reverseGeocodeRequest, (err, data) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let reverseGeocodeRequest:geolocation.ReverseGeoCodeRequest = {"latitude": 31.12, "longitude": 121.11, "maxItems": 1};
+geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
+    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
+});
+```
+
 
 ## getAddressesFromLocation
 
@@ -79,10 +87,4 @@ function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let reverseGeocodeRequest:geolocation.ReverseGeoCodeRequest = {"latitude": 31.12, "longitude": 121.11, "maxItems": 1};
-geolocation.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
-    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
-});
-```
+参见 [getAddressesFromLocation](#getaddressesfromlocation)

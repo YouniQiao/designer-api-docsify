@@ -53,6 +53,17 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.setDefaultSmsSlotId(0).then(() => {
+    console.info(`setDefaultSmsSlotId success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setDefaultSmsSlotId
 
@@ -97,13 +108,4 @@ Sets the default slot ID of the SIM card used to send SMS messages. This API use
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.setDefaultSmsSlotId(0).then(() => {
-    console.info(`setDefaultSmsSlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setDefaultSmsSlotId](#setdefaultsmsslotid)

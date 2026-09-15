@@ -73,6 +73,46 @@ try {
 }
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+let accountId = 0;
+let isClearPageStack = false;
+let appIndex = 1;
+
+try {
+  appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
+    console.info('killProcessWithAccount success');
+  }).catch((err: BusinessError) => {
+    console.error(`killProcessWithAccount fail, err: ${JSON.stringify(err)}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+let accountId = 0;
+
+function killProcessWithAccountCallback(err: BusinessError) {
+  if (err) {
+    console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('killProcessWithAccountCallback success.');
+  }
+}
+
+appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
+```
+
 
 ## killProcessWithAccount
 
@@ -122,27 +162,7 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-let isClearPageStack = false;
-let appIndex = 1;
-
-try {
-  appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
-    console.info('killProcessWithAccount success');
-  }).catch((err: BusinessError) => {
-    console.error(`killProcessWithAccount fail, err: ${JSON.stringify(err)}`);
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+See [killProcessWithAccount](#killprocesswithaccount)
 
 
 ## killProcessWithAccount
@@ -187,20 +207,4 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-let accountId = 0;
-
-function killProcessWithAccountCallback(err: BusinessError) {
-  if (err) {
-    console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('killProcessWithAccountCallback success.');
-  }
-}
-
-appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
-```
+See [killProcessWithAccount](#killprocesswithaccount)

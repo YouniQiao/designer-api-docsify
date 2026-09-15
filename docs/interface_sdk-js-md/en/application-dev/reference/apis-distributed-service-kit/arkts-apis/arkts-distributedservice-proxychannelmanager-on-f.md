@@ -40,35 +40,6 @@ Subscribes to data receive events. This API uses an asynchronous callback to ret
 | [32390100](../errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 
-**Examples**
-
-```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('Test')
-        .onClick(() => {
-          const receiveDataCallback = (dataInfo: proxyChannelManager.DataInfo) => {
-          };
-          try {
-            proxyChannelManager.on('receiveData', channelId, receiveDataCallback); // Obtain channelId from the promise returned by openProxyChannel.
-          } catch (err) {
-            let error = err as BusinessError;
-            console.error(`Failed to register receiveData callback. Code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 
 ## on('channelStateChange')
 
@@ -103,32 +74,3 @@ Subscribes to channel state events. This API uses an asynchronous callback to re
 | [32390006](../errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
 | [32390100](../errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
-
-**Examples**
-
-```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('Test')
-        .onClick(() => {
-          const channelStateChangeCallback = (channelStateInfo: proxyChannelManager.ChannelStateInfo) => {
-          };
-          try {
-            proxyChannelManager.on('channelStateChange', channelId, channelStateChangeCallback); // Obtain channelId from the promise returned by openProxyChannel.
-          } catch (err) {
-            let error = err as BusinessError;
-            console.error(`Failed to register channelStateChange callback. Code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

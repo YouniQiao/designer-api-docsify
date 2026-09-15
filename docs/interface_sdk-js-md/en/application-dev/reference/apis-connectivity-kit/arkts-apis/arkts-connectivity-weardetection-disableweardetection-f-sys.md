@@ -55,6 +55,16 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    wearDetection.disableWearDetection('XX:XX:XX:XX:XX:XX').then(() => {
+        console.info("disableWearDetection");
+    });
+} catch (err) {
+    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
+}
+```
+
 
 ## disableWearDetection
 
@@ -98,12 +108,4 @@ Turn off the wearing detection switch.
 
 **Examples**
 
-```TypeScript
-try {
-    wearDetection.disableWearDetection('XX:XX:XX:XX:XX:XX').then(() => {
-        console.info("disableWearDetection");
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
+See [disableWearDetection](#disableweardetection)

@@ -46,6 +46,26 @@ import { appControl } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let appId = "com.example.myapplication_xxxxx";
+
+try {
+  appControl.deleteDisposedStatus(appId)
+    .then(() => {
+      console.info('deleteDisposedStatus success');
+    }).catch((error: BusinessError) => {
+    let message = (error as BusinessError).message;
+    console.error('deleteDisposedStatus failed ' + message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('deleteDisposedStatus failed ' + message);
+}
+```
+
+```TypeScript
+import { appControl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appId = "com.example.myapplication_xxxxx";
 try {
   appControl.deleteDisposedStatus(appId, (error: BusinessError, data) => {
     if (error) {
@@ -101,22 +121,4 @@ Deletes the disposed status for an application. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { appControl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appId = "com.example.myapplication_xxxxx";
-
-try {
-  appControl.deleteDisposedStatus(appId)
-    .then(() => {
-      console.info('deleteDisposedStatus success');
-    }).catch((error: BusinessError) => {
-    let message = (error as BusinessError).message;
-    console.error('deleteDisposedStatus failed ' + message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('deleteDisposedStatus failed ' + message);
-}
-```
+See [deleteDisposedStatus](#deletedisposedstatus)

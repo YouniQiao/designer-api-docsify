@@ -40,6 +40,22 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 **Examples**
 
 ```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
+
+```TypeScript
+let options: image.ImageReceiverOptions = {
+  size: { width: 480, height: 480 },
+  capacity: 3
+}
+let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
+```
+
+```TypeScript
 let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.ImageFormat.JPEG, 8);
 ```
 
@@ -78,13 +94,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 **Examples**
 
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
-```
+See [createImageReceiver](#createimagereceiver)
 
 
 ## createImageReceiver
@@ -121,10 +131,4 @@ Creates an ImageReceiver instance.
 
 **Examples**
 
-```TypeScript
-let options: image.ImageReceiverOptions = {
-  size: { width: 480, height: 480 },
-  capacity: 3
-}
-let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
-```
+See [createImageReceiver](#createimagereceiver)

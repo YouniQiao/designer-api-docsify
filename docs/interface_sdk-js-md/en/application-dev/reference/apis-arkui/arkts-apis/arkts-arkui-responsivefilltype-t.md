@@ -4,9 +4,7 @@
 declare type ResponsiveFillType = PresetFillType
 ```
 
-Define a responsive item filling pattern that can be used in WaterFlow,Grid,List, and Swiper components.
-
-@typedef { PresetFillType } ResponsiveFillType
+Responsive layout fill mode, used for the WaterFlow, Grid, List, Swiper, and LazyVWaterFlowLayout components. The LazyVWaterFlowLayout component is supported since API version 26.0.0.
 
 **Since:** 22
 

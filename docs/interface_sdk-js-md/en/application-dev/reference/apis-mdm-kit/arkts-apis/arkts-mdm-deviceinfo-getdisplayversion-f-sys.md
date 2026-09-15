@@ -66,6 +66,24 @@ deviceInfo.getDisplayVersion(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { deviceInfo } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+deviceInfo.getDisplayVersion(wantTemp).then((result) => {
+  console.info(`Succeeded in getting display version, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get display version. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getDisplayVersion
 
@@ -113,20 +131,4 @@ Obtains the device version number. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDisplayVersion(wantTemp).then((result) => {
-  console.info(`Succeeded in getting display version, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get display version. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getDisplayVersion](#getdisplayversion)

@@ -56,6 +56,17 @@ call.closeUnfinishedUssd(slotId, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.closeUnfinishedUssd(slotId).then(() => {
+    console.info(`closeUnfinishedUssd success.`);
+}).catch((err: BusinessError) => {
+    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## closeUnfinishedUssd
 
@@ -99,13 +110,4 @@ Cancels the unfinished USSD services. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.closeUnfinishedUssd(slotId).then(() => {
-    console.info(`closeUnfinishedUssd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [closeUnfinishedUssd](#closeunfinishedussd)

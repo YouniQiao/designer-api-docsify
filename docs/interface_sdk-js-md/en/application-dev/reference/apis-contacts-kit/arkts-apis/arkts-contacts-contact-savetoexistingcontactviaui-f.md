@@ -46,27 +46,8 @@ Saves the information to an existing contact through UI interaction.. This API u
 
 **Examples**
 
+```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// Obtain the context in the component.
-let contactInfo: contact.Contact = {
-  id: 1,
-  name: {
-    fullName: 'xxx'
-  },
-  phoneNumbers: [{
-    phoneNumber: '138xxxxxx'
-  }]
-}
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.saveToExistingContactViaUI(context, contactInfo);
-promise.then((data) => {
-    console.info(`Succeeded in save to existing Contact via UI.data->${JSON.stringify(data)}`);
-  });
 ```

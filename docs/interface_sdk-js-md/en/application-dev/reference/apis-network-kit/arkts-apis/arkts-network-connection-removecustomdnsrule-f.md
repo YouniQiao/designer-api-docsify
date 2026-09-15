@@ -58,6 +58,17 @@ connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
 })
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.removeCustomDnsRule("xxxx").then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+})
+```
+
 
 ## removeCustomDnsRule
 
@@ -103,13 +114,4 @@ Removes the custom DNS rules of the specified host from the current application.
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.removeCustomDnsRule("xxxx").then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
+See [removeCustomDnsRule](#removecustomdnsrule)

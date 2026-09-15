@@ -119,5 +119,6 @@ releaseKey(keyCode: KeyCode): Promise<void>
 
 **示例**
 
+```TypeScript
 参见[pressKey](#presskey)示例。
-- simpleType:
+```

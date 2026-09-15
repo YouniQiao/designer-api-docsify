@@ -55,6 +55,19 @@ cloudSyncManager.disableCloud(accountId).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
+  if (err) {
+    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("disableCloud successfully");
+  }
+});
+```
+
 
 ## disableCloud
 
@@ -89,15 +102,4 @@ Disables device-cloud sync. This API uses an asynchronous callback to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-cloudSyncManager.disableCloud(accountId, (err: BusinessError) => {
-  if (err) {
-    console.error("disableCloud failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("disableCloud successfully");
-  }
-});
-```
+See [disableCloud](#disablecloud)

@@ -158,8 +158,9 @@ get the luminance sampler of the specified node. If the node cannot be found, re
 
 **Examples**
 
+```TypeScript
 For details, see the example of [offBackgroundLuminanceChange](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#offbackgroundluminancechange).
-- simpleType:
+```
 
 ## recycleInvisibleImageMemory
 

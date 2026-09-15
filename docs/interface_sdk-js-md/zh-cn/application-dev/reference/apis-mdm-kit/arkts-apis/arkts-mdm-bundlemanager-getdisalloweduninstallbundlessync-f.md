@@ -65,6 +65,19 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  // 参数需根据实际情况进行替换
+  let result: Array<string> = bundleManager.getDisallowedUninstallBundlesSync(null, 100);
+  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getDisallowedUninstallBundlesSync
 
@@ -106,15 +119,4 @@ function getDisallowedUninstallBundlesSync(admin: Want | null, accountId?: numbe
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = bundleManager.getDisallowedUninstallBundlesSync(null, 100);
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getDisallowedUninstallBundlesSync](#getdisalloweduninstallbundlessync)

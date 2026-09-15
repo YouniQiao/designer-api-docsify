@@ -44,6 +44,18 @@ sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data:
 })
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+promise.then((data: number) => {
+  console.info('Succeeded in get GeomagneticDip_promise', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```
+
 
 ## getGeomagneticDip
 
@@ -75,14 +87,4 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
-promise.then((data: number) => {
-  console.info('Succeeded in get GeomagneticDip_promise', data);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to operate.`);
-})
-```
+See [getGeomagneticDip](#getgeomagneticdip)

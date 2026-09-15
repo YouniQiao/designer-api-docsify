@@ -52,6 +52,50 @@ import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName = 'bundleName';
+let isClearPageStack = false;
+let appIndex = 1;
+
+try {
+  appManager.killProcessesByBundleName(bundleName, isClearPageStack, appIndex).then((data) => {
+    console.info('killProcessesByBundleName success.');
+  }).catch((err: BusinessError) => {
+    console.error(`killProcessesByBundleName fail, code: ${err.code}, msg:${err.message}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
+
+function killProcessesByBundleNameCallback(err: BusinessError) {
+  if (err) {
+    console.error(`killProcessesByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
+  } else {
+    console.info('killProcessesByBundleNameCallback success.');
+  }
+}
+
+try {
+  appManager.killProcessesByBundleName(bundleName, killProcessesByBundleNameCallback);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'bundleName';
 
 try {
   appManager.killProcessesByBundleName(bundleName).then((data) => {
@@ -103,25 +147,4 @@ Kills a process by bundle name. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'bundleName';
-
-function killProcessesByBundleNameCallback(err: BusinessError) {
-  if (err) {
-    console.error(`killProcessesByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
-  } else {
-    console.info('killProcessesByBundleNameCallback success.');
-  }
-}
-
-try {
-  appManager.killProcessesByBundleName(bundleName, killProcessesByBundleNameCallback);
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`[appManager] error: ${code}, ${message}`);
-}
-```
+See [killProcessesByBundleName](#killprocessesbybundlename)

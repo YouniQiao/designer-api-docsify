@@ -59,6 +59,56 @@ let bundle: notificationSubscribe.BundleOption = {
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+    if (err) {
+        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+        console.info("removeAll success");
+    }
+}
+notificationSubscribe.removeAll(removeAllCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// If no application is specified, notifications of all applications are deleted.
+notificationSubscribe.removeAll().then(() => {
+  console.info("removeAll success");
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let removeAllCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("removeAll success");
+  }
+}
+// Use the actual user ID when calling the API.
+let userId: number = 1;
+notificationSubscribe.removeAll(userId, removeAllCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId: number = 1;
+notificationSubscribe.removeAll(userId).then(() => {
+  console.info("removeAll success");
+}).catch((err: BusinessError) => {
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeAll
 
@@ -95,18 +145,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-    if (err) {
-        console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-        console.info("removeAll success");
-    }
-}
-notificationSubscribe.removeAll(removeAllCallback);
-```
+See [removeAll](#removeall)
 
 
 ## removeAll
@@ -146,20 +185,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let removeAllCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("removeAll success");
-  }
-}
-// Use the actual user ID when calling the API.
-let userId: number = 1;
-notificationSubscribe.removeAll(userId, removeAllCallback);
-```
+See [removeAll](#removeall)
 
 
 ## removeAll
@@ -204,16 +230,7 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId: number = 1;
-notificationSubscribe.removeAll(userId).then(() => {
-  console.info("removeAll success");
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeAll](#removeall)
 
 
 ## removeAll
@@ -258,13 +275,4 @@ Removes all notifications for a specified application. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// If no application is specified, notifications of all applications are deleted.
-notificationSubscribe.removeAll().then(() => {
-  console.info("removeAll success");
-}).catch((err: BusinessError) => {
-  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeAll](#removeall)

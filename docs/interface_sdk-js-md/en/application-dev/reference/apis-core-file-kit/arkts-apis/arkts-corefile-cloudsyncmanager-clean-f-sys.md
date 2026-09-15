@@ -60,6 +60,23 @@ cloudSyncManager.clean(accountId, appActions).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+  let appActions: Record<string, cloudSyncManager.Action> = {
+  'com.example.bundleName1': cloudSyncManager.Action.RETAIN_DATA,
+  'com.example.bundleName2': cloudSyncManager.Action.CLEAR_DATA
+};
+cloudSyncManager.clean(accountId, appActions, (err: BusinessError) => {
+  if (err) {
+    console.error("clean failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("clean successfully");
+  }
+});
+```
+
 
 ## clean
 
@@ -95,19 +112,4 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-  let appActions: Record<string, cloudSyncManager.Action> = {
-  'com.example.bundleName1': cloudSyncManager.Action.RETAIN_DATA,
-  'com.example.bundleName2': cloudSyncManager.Action.CLEAR_DATA
-};
-cloudSyncManager.clean(accountId, appActions, (err: BusinessError) => {
-  if (err) {
-    console.error("clean failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("clean successfully");
-  }
-});
-```
+See [clean](#clean)

@@ -96,6 +96,44 @@ class WindowExtAbility extends WindowExtensionAbility {
 }
 ```
 
+```TypeScript
+import { WindowExtensionAbility } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, StartOptions } from '@kit.AbilityKit';
+
+class WindowExtAbility extends WindowExtensionAbility {
+
+  onConnect() {
+    let want: Want = {
+      bundleName: 'com.example.myapp',
+      abilityName: 'MainAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 102,
+    };
+
+    try {
+      this.context.startAbility(want, options)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('startAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          let message = (error as BusinessError).message;
+          let errCode = (error as BusinessError).code;
+          console.error(`startAbility failed, error.code: ${errCode}, error.message: ${message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      let message = (paramError as BusinessError).message;
+      let errCode = (paramError as BusinessError).code;
+      console.error(`error.code: ${errCode}, error.message: ${message}`);
+    }
+  }
+}
+```
+
 ## startAbility
 
 ```TypeScript
@@ -136,40 +174,4 @@ Starts an ability. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { WindowExtensionAbility } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, StartOptions } from '@kit.AbilityKit';
-
-class WindowExtAbility extends WindowExtensionAbility {
-
-  onConnect() {
-    let want: Want = {
-      bundleName: 'com.example.myapp',
-      abilityName: 'MainAbility'
-    };
-    let options: StartOptions = {
-      windowMode: 102,
-    };
-
-    try {
-      this.context.startAbility(want, options)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          // Process service logic errors.
-          let message = (error as BusinessError).message;
-          let errCode = (error as BusinessError).code;
-          console.error(`startAbility failed, error.code: ${errCode}, error.message: ${message}`);
-        });
-    } catch (paramError) {
-      // Process input parameter errors.
-      let message = (paramError as BusinessError).message;
-      let errCode = (paramError as BusinessError).code;
-      console.error(`error.code: ${errCode}, error.message: ${message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)

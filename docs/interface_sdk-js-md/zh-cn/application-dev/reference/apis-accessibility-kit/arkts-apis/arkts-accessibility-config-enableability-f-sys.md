@@ -63,6 +63,22 @@ config.enableAbility(name, capability).then(() => {
 });
 ```
 
+```TypeScript
+import { accessibility, config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let name: string = 'com.ohos.example/axExtension';
+let capability: accessibility.Capability[] = ['retrieve'];
+
+config.enableAbility(name, capability, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
+});
+```
+
 
 ## enableAbility
 
@@ -106,18 +122,4 @@ function enableAbility(
 
 **示例**
 
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
-});
-```
+参见 [enableAbility](#enableability)

@@ -41,6 +41,19 @@ Get history avsession records. These sessions have been destroyed.
 **Examples**
 
 ```TypeScript
+avSession.getHistoricalSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
+  console.info(`Succeeded in getting historical session descriptors, length: ${descriptors.length}`);
+  if (descriptors.length > 0 && descriptors[0]) {
+    console.info(`Succeeded in getting historical session descriptor, isActive: ${descriptors[0].isActive}`);
+    console.info(`Succeeded in getting historical session descriptor, type: ${descriptors[0].type}`);
+    console.info(`Succeeded in getting historical session descriptor, sessionTag: ${descriptors[0].sessionTag}`);
+    console.info(`Succeeded in getting historical session descriptor, sessionId: ${descriptors[0].sessionId}`);
+    console.info(`Succeeded in getting historical session descriptor, bundleName: ${descriptors[0].elementName.bundleName}`);
+  }
+});
+```
+
+```TypeScript
 avSession.getHistoricalSessionDescriptors(1, (descriptors: avSession.AVSessionDescriptor[]) => { 
     console.info(`Succeeded in getting historical session descriptors, length: ${descriptors.length}`); 
     if (descriptors.length > 0 ) { 
@@ -93,15 +106,4 @@ Get history avsession records. These sessions have been destroyed.
 
 **Examples**
 
-```TypeScript
-avSession.getHistoricalSessionDescriptors().then((descriptors: avSession.AVSessionDescriptor[]) => {
-  console.info(`Succeeded in getting historical session descriptors, length: ${descriptors.length}`);
-  if (descriptors.length > 0 && descriptors[0]) {
-    console.info(`Succeeded in getting historical session descriptor, isActive: ${descriptors[0].isActive}`);
-    console.info(`Succeeded in getting historical session descriptor, type: ${descriptors[0].type}`);
-    console.info(`Succeeded in getting historical session descriptor, sessionTag: ${descriptors[0].sessionTag}`);
-    console.info(`Succeeded in getting historical session descriptor, sessionId: ${descriptors[0].sessionId}`);
-    console.info(`Succeeded in getting historical session descriptor, bundleName: ${descriptors[0].elementName.bundleName}`);
-  }
-});
-```
+See [getHistoricalSessionDescriptors](#gethistoricalsessiondescriptors)

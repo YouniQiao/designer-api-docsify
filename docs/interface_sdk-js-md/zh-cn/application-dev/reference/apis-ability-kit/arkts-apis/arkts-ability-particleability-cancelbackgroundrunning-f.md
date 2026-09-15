@@ -47,6 +47,17 @@ function callback(error: BusinessError, data: void) {
 particleAbility.cancelBackgroundRunning(callback);
 ```
 
+```TypeScript
+import { particleAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+particleAbility.cancelBackgroundRunning().then(() => {
+  console.info('Operation succeeded');
+}).catch((err: BusinessError) => {
+  console.error(`Operation failed cause: ${JSON.stringify(err)}`);
+});
+```
+
 
 ## cancelBackgroundRunning
 
@@ -74,13 +85,4 @@ function cancelBackgroundRunning(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-particleAbility.cancelBackgroundRunning().then(() => {
-  console.info('Operation succeeded');
-}).catch((err: BusinessError) => {
-  console.error(`Operation failed cause: ${JSON.stringify(err)}`);
-});
-```
+参见 [cancelBackgroundRunning](#cancelbackgroundrunning)

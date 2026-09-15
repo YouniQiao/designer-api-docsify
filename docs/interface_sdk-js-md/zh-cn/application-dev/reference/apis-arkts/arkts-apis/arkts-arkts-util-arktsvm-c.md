@@ -62,10 +62,8 @@ static napi_value CreateObject(napi_env env, napi_callback_info info)
 }
 ```
 
-在CMakeLists.txt中添加以下动态链接库：
-
 ```TypeScript
-libuv.so
+在CMakeLists.txt中添加以下动态链接库：
 ```
 
 ```TypeScript
@@ -89,17 +87,10 @@ try {
 }
 ```
 
-可能出现的问题：
-如果之前内存泄漏的对象被继续使用，使用enableLocalHandleDetection接口后，系统会回收内存泄漏对象。继续使用该对象会导致内存泄漏问题转变为稳定性问题。
-
 ```TypeScript
-napi_value global_js_object;
-napi_value dangerous_function(napi_env env, napi_callback_info info) {
-    napi_value js_obj;
-    napi_create_object(env, &js_obj);
-    global_js_object = js_obj; // 直接存储到全局变量，开启LocalHandle内存泄漏兜底机制后被释放
-    return nullptr;
-}
+可能出现的问题：
+
+如果之前内存泄漏的对象被继续使用，使用enableLocalHandleDetection接口后，系统会回收内存泄漏对象。继续使用该对象会导致内存泄漏问题转变为稳定性问题。
 ```
 
 ## getAllVMHeapMemoryInfo

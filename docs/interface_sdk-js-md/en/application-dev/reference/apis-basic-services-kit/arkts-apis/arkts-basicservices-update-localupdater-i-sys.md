@@ -105,6 +105,28 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+}];
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Install the new version.
+  localUpdater.applyNewVersion(upgradeFiles).then(() => {
+    console.info(`applyNewVersion success`);
+  }).catch((applyNewVersionError: BusinessError) => {
+    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
+
 ## applyNewVersion
 
 ```TypeScript
@@ -160,27 +182,7 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFiles: Array<update.UpgradeFile> = [{
-  fileType: update.ComponentType.OTA, // OTA package
-  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
-}];
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Install the new version.
-  localUpdater.applyNewVersion(upgradeFiles).then(() => {
-    console.info(`applyNewVersion success`);
-  }).catch((applyNewVersionError: BusinessError) => {
-    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+See [applyNewVersion](#applynewversion)
 
 ## off
 
@@ -394,6 +396,31 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFile: update.UpgradeFile = {
+  fileType: update.ComponentType.OTA, // OTA package
+  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+};
+
+// certsFile is the certificate file path, which needs to be downloaded from the official website of the vendor and saved to an accessible path on the device.
+const certsFile = '/path/to/certificate.cert'; // Certificate file path, which needs to be downloaded from the official website of the vendor.
+
+try {
+  // Obtain a LocalUpdater object.
+  let localUpdater = update.getLocalUpdater();
+  // Verify the upgrade package.
+  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
+    console.info(`verifyUpgradePackage success`);
+  }).catch((verifyUpgradePackageError: BusinessError) => {
+    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
+
 ## verifyUpgradePackage
 
 ```TypeScript
@@ -450,27 +477,4 @@ system may be damaged.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFile: update.UpgradeFile = {
-  fileType: update.ComponentType.OTA, // OTA package
-  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
-};
-
-// certsFile is the certificate file path, which needs to be downloaded from the official website of the vendor and saved to an accessible path on the device.
-const certsFile = '/path/to/certificate.cert'; // Certificate file path, which needs to be downloaded from the official website of the vendor.
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Verify the upgrade package.
-  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
-    console.info(`verifyUpgradePackage success`);
-  }).catch((verifyUpgradePackageError: BusinessError) => {
-    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+See [verifyUpgradePackage](#verifyupgradepackage)

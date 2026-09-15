@@ -50,23 +50,6 @@ off(type: 'BLEDeviceFind', callback?: Callback<ScanReport>): void
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { ble } from '@kit.ConnectivityKit';
-function onReceiveEvent(scanReport: ble.ScanReport) {
-    console.info('bluetooth device find = '+ JSON.stringify(scanReport));
-}
-let bleScanner: ble.BleScanner = ble.createBleScanner();
-try {
-    bleScanner.on('BLEDeviceFind', onReceiveEvent);
-    bleScanner.off('BLEDeviceFind', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
-
 ## on('BLEDeviceFind')
 
 ```TypeScript
@@ -103,22 +86,6 @@ on(type: 'BLEDeviceFind', callback: Callback<ScanReport>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**适用版本：** 15 - 24 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-**示例**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-import { ble } from '@kit.ConnectivityKit';
-function onReceiveEvent(scanReport: ble.ScanReport) {
-    console.info('bluetooth device find = '+ JSON.stringify(scanReport));
-}
-let bleScanner: ble.BleScanner = ble.createBleScanner();
-try {
-    bleScanner.on('BLEDeviceFind', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## startScan
 

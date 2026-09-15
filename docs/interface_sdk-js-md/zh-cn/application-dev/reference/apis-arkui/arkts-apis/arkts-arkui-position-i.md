@@ -1,10 +1,8 @@
 # Position
 
-定义位置。
+位置类型，用于表示一个坐标点。
 
-@interface Position
-
-**起始版本：** 11
+**起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,15 +12,17 @@
 x?: Length
 ```
 
-位置X坐标。
+x轴坐标。
+
+单位：vp
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
-**起始版本：** 11
+**起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,14 +32,16 @@ x?: Length
 y?: Length
 ```
 
-位置Y坐标。
+y轴坐标。
+
+单位：vp
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
-**起始版本：** 11
+**起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

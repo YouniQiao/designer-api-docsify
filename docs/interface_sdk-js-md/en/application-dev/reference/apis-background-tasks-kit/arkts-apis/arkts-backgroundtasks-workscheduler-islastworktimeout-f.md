@@ -109,18 +109,7 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.isLastWorkTimeOut(500, (error: BusinessError, res: boolean) =>{
-    if (error) {
-      console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-    } else {
-      console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-    }
-  });
-```
+See [isLastWorkTimeOut](#islastworktimeout)
 
 
 ## isLastWorkTimeOut
@@ -161,15 +150,4 @@ Checks whether the last execution of a task timed out. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.isLastWorkTimeOut(500)
-    .then((res: boolean) => {
-      console.info(`workschedulerLog isLastWorkTimeOut success, data is: ${res}`);
-    })
-    .catch((error: BusinessError) =>  {
-      console.error(`workschedulerLog isLastWorkTimeOut failed. code is ${error.code} message is ${error.message}`);
-    });
-```
+See [isLastWorkTimeOut](#islastworktimeout)

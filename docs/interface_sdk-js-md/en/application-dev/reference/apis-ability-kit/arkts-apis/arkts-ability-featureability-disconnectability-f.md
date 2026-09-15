@@ -61,35 +61,6 @@ featureAbility.disconnectAbility(connectId, (error) => {
 });
 ```
 
-
-## disconnectAbility
-
-```TypeScript
-function disconnectAbility(connection: number): Promise<void>
-```
-
-Disconnects this ability from a specific ServiceAbility. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| connection | number | Yes | ID of the ServiceAbility to disconnect. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
 ```TypeScript
 import { featureAbility } from '@kit.AbilityKit';
 import { rpc } from '@kit.IPCKit';
@@ -120,3 +91,34 @@ featureAbility.disconnectAbility(connectId).then(() => {
   console.error(`featureAbilityTest result errCode : ${error.code}`);
 });
 ```
+
+
+## disconnectAbility
+
+```TypeScript
+function disconnectAbility(connection: number): Promise<void>
+```
+
+Disconnects this ability from a specific ServiceAbility. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| connection | number | Yes | ID of the ServiceAbility to disconnect. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [disconnectAbility](#disconnectability)

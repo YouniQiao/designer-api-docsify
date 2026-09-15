@@ -54,6 +54,30 @@ dlpPermission.getRetentionSandboxList().then((sandboxList) => { // Obtain the sa
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('sandboxList', JSON.stringify(sandboxList));
+  }
+}); // Obtain the sandbox retention information.
+```
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
+  }
+}); // Obtain the sandbox retention information.
+```
+
 
 ## getRetentionSandboxList
 
@@ -88,17 +112,7 @@ This API is used to query the sandbox retention information of a specified appli
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList('bundleName', (err, sandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('sandboxList', JSON.stringify(sandboxList));
-  }
-}); // Obtain the sandbox retention information.
-```
+See [getRetentionSandboxList](#getretentionsandboxlist)
 
 
 ## getRetentionSandboxList
@@ -133,14 +147,4 @@ This API is used to query the sandbox retention information of a specified appli
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
-  if (err) {
-    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
-  }
-}); // Obtain the sandbox retention information.
-```
+See [getRetentionSandboxList](#getretentionsandboxlist)

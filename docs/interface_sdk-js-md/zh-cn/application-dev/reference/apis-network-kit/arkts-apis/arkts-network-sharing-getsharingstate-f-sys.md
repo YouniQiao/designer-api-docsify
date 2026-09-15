@@ -53,6 +53,21 @@ sharing.getSharingState(SHARING_WIFI, (error: BusinessError, data: sharing.Shari
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_WIFI = 0;
+sharing
+  .getSharingState(SHARING_WIFI)
+  .then((data: sharing.SharingIfaceState) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getSharingState
 
@@ -95,17 +110,4 @@ function getSharingState(type: SharingIfaceType): Promise<SharingIfaceState>
 
 **示例**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .getSharingState(SHARING_WIFI)
-  .then((data: sharing.SharingIfaceState) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [getSharingState](#getsharingstate)

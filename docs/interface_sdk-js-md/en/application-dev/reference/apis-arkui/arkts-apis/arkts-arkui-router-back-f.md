@@ -43,6 +43,14 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 this.getUIContext().getRouter().back({ url: 'pages/detail' });
 ```
 
+```TypeScript
+this.getUIContext().getRouter().back(1);
+```
+
+```TypeScript
+this.getUIContext().getRouter().back(1, { info: 'From Home' }); // Returning with parameters.
+```
+
 
 ## back
 
@@ -80,10 +88,4 @@ Returns to the specified page, which deletes all pages between the current page 
 
 **Examples**
 
-```TypeScript
-this.getUIContext().getRouter().back(1);
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1, { info: 'From Home' }); // Returning with parameters.
-```
+See [back](#back)

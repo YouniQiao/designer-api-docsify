@@ -1,8 +1,8 @@
 # LocalizedEdgeColors
 
-Defines the localized border color property.
+边框颜色，用于描述组件边框四条边的颜色。
 
-@interface LocalizedEdgeColors
+引入该对象时，至少传入一个参数。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@ Defines the localized border color property.
 bottom?: ResourceColor
 ```
 
-bottom property.
+组件下边框颜色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -34,7 +34,9 @@ bottom property.
 end?: ResourceColor
 ```
 
-end property.
+组件右边框颜色。
+
+从右至左显示语言模式下为组件左边框颜色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -54,7 +56,9 @@ end property.
 start?: ResourceColor
 ```
 
-start property.
+组件左边框颜色。
+
+从右至左显示语言模式下为组件右边框颜色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -74,7 +78,7 @@ start property.
 top?: ResourceColor
 ```
 
-top property.
+组件上边框颜色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

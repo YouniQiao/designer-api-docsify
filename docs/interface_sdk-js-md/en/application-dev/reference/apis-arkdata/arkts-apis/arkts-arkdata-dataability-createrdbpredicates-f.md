@@ -34,8 +34,8 @@ Creates an **RdbPredicates** object with a table name and **DataAbilityPredicate
 **Examples**
 
 ```TypeScript
-let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
-dataAbilityPredicates.equalTo("NAME", "Rose")
+let dataAbilityPredicates = new dataAbility.DataAbilityPredicates();
+dataAbilityPredicates.equalTo("NAME", "Rose");
 // EMPLOYEE is a table created in an RDB store.
-let predicates = dataAbility.createRdbPredicates("EMPLOYEE", dataAbilityPredicates)
+let predicates = dataAbility.createRdbPredicates("EMPLOYEE", dataAbilityPredicates);
 ```

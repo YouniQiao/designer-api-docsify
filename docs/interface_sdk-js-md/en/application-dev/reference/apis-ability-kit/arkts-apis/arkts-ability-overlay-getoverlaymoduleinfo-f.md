@@ -42,6 +42,24 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let moduleName = "feature";
 
+(async () => {
+  try {
+    let overlayModuleInfo = await overlay.getOverlayModuleInfo(moduleName);
+    console.info('overlayModuleInfo is ' + JSON.stringify(overlayModuleInfo));
+  } catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error('getOverlayModuleInfo failed due to err code : ' + code + ' ' + 'message :' + message);
+  }
+})();
+```
+
+```TypeScript
+import { overlay } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let moduleName = "feature";
+
 try {
   overlay.getOverlayModuleInfo(moduleName, (err, data) => {
     if (err) {
@@ -93,20 +111,4 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 **Examples**
 
-```TypeScript
-import { overlay } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let moduleName = "feature";
-
-(async () => {
-  try {
-    let overlayModuleInfo = await overlay.getOverlayModuleInfo(moduleName);
-    console.info('overlayModuleInfo is ' + JSON.stringify(overlayModuleInfo));
-  } catch (err) {
-    let code = (err as BusinessError).code;
-    let message = (err as BusinessError).message;
-    console.error('getOverlayModuleInfo failed due to err code : ' + code + ' ' + 'message :' + message);
-  }
-})();
-```
+See [getOverlayModuleInfo](#getoverlaymoduleinfo)

@@ -56,6 +56,17 @@ ethernet.isIfaceActive("eth0", (error: BusinessError, value: number) => {
 });
 ```
 
+```TypeScript
+import { ethernet } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+ethernet.isIfaceActive("eth0").then((data: number) => {
+  console.info("isIfaceActive promise = " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error("isIfaceActive promise error = " + JSON.stringify(error));
+});
+```
+
 
 ## isIfaceActive
 
@@ -99,13 +110,4 @@ function isIfaceActive(iface: string): Promise<number>
 
 **示例**
 
-```TypeScript
-import { ethernet } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-ethernet.isIfaceActive("eth0").then((data: number) => {
-  console.info("isIfaceActive promise = " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error("isIfaceActive promise error = " + JSON.stringify(error));
-});
-```
+参见 [isIfaceActive](#isifaceactive)

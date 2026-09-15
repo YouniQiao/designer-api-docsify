@@ -34,6 +34,12 @@ Queries a contact based on the specified email. This API uses an asynchronous ca
 **Examples**
 
 ```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -42,6 +48,90 @@ contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
     console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByEmail('xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByEmail('xxx@email.com', {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByEmail('xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryContactsByEmail('xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+});
+promise.then((data) => {
   console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
 });
 ```
@@ -78,25 +168,7 @@ Queries a contact based on the specified email. This API uses an asynchronous ca
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -127,22 +199,7 @@ Queries a contact based on the specified email and holder. This API uses an asyn
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByEmail('xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -178,29 +235,7 @@ Queries a contact based on the specified email and holder. This API uses an asyn
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -231,20 +266,7 @@ Queries a contact based on the specified email and attributes. This API uses an 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByEmail('xxx@email.com', {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -280,27 +302,7 @@ Queries a contact based on the specified email and attributes. This API uses an 
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -332,24 +334,7 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByEmail('xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -385,31 +370,7 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -446,20 +407,7 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryContactsByEmail('xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -500,23 +448,4 @@ Queries a contact based on the specified email, holder, and attributes. This API
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryContactsByEmail(context, 'xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+See [queryContactsByEmail](#querycontactsbyemail)

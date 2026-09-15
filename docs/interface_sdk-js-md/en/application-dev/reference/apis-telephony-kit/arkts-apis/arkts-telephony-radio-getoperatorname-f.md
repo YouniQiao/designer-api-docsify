@@ -50,6 +50,17 @@ radio.getOperatorName(slotId, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getOperatorName(slotId).then((data: string) => {
+    console.info(`getOperatorName success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getOperatorName failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getOperatorName
 
@@ -87,13 +98,4 @@ Obtains the carrier name of the SIM card in the specified slot. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getOperatorName(slotId).then((data: string) => {
-    console.info(`getOperatorName success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getOperatorName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getOperatorName](#getoperatorname)

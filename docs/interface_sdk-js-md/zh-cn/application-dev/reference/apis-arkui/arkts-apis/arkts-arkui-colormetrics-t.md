@@ -4,9 +4,7 @@
 declare type ColorMetrics = import('../api/arkui/Graphics').ColorMetrics
 ```
 
-Defines ColorMetrics.
-
-@typedef { import('../api/arkui/Graphics').ColorMetrics } ColorMetrics
+定义混合颜色。
 
 **起始版本：** 12
 

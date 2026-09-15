@@ -38,6 +38,12 @@ settings.canShowFloating((err:Error, status: boolean) => {
 });
 ```
 
+```TypeScript
+settings.canShowFloating().then((status:boolean) => {
+    console.info('Checks whether a specified application can show as float window.');
+});
+```
+
 
 ## canShowFloating
 
@@ -61,8 +67,4 @@ Checks whether a specified application can show as a floating window.
 
 **Examples**
 
-```TypeScript
-settings.canShowFloating().then((status:boolean) => {
-    console.info('Checks whether a specified application can show as float window.');
-});
-```
+See [canShowFloating](#canshowfloating)

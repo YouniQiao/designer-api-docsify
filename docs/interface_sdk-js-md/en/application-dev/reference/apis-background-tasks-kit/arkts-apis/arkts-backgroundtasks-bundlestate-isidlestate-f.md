@@ -42,6 +42,17 @@ bundleState.isIdleState("com.ohos.camera", (err: BusinessError, res: boolean) =>
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
+// When a third-party application uses the sample code, change bundleName to its own bundle name.
+bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
+  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE isIdleState promise failed, because: ' + err.code);
+});
+```
+
 
 ## isIdleState
 
@@ -71,13 +82,4 @@ Checks whether the application specified by **bundleName** is in the idle state.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
-// When a third-party application uses the sample code, change bundleName to its own bundle name.
-bundleState.isIdleState("com.ohos.camera").then((res: boolean) => {
-  console.info('BUNDLE_ACTIVE isIdleState promise succeeded, result: ' + JSON.stringify(res));
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE isIdleState promise failed, because: ' + err.code);
-});
-```
+See [isIdleState](#isidlestate)

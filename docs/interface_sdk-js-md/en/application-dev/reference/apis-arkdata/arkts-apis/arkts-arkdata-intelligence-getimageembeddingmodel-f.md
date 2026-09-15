@@ -53,9 +53,10 @@ let imageEmbedding: intelligence.ImageEmbedding;
 intelligence.getImageEmbeddingModel(imageConfig)
   .then((data: intelligence.ImageEmbedding) => {
     console.info("Succeeded in getting ImageModel");
+    // Save the image embedding model object for later use.
     imageEmbedding = data;
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to get ImageModel and code is " + err.code);
+    console.error(`Failed to get ImageModel. Code: ${err.code}, message: ${err.message}`);
   })
 ```

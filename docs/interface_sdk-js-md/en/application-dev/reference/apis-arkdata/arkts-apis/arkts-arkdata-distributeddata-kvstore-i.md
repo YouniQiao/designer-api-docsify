@@ -44,13 +44,26 @@ let kvStore;
 try {
     kvStore.commit(function (err,data) {
         if (err == undefined) {
-            console.log('commit success');
+            console.info('commit success');
         } else {
-            console.log('commit fail');
+            console.error('commit fail');
         }
     });
 }catch(e) {
-    console.log('Commit e ' + e);
+    console.error('Commit e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    kvStore.commit().then(async (err) => {
+        console.info('commit success');
+    }).catch((err) => {
+        console.error('commit fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('Commit e ' + e);
 }
 ```
 
@@ -78,18 +91,7 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit().then(async (err) => {
-        console.log('commit success');
-    }).catch((err) => {
-        console.log('commit fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Commit e ' + e);
-}
-```
+See [commit](#commit)
 
 ## delete
 
@@ -123,20 +125,40 @@ const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
 try {
     kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, function (err,data) {
         if (err != undefined) {
-            console.log("put err: " + JSON.stringify(err));
+            console.error("put err: " + JSON.stringify(err));
             return;
         }
-        console.log("put success");
+        console.info("put success");
         kvStore.delete(KEY_TEST_STRING_ELEMENT, function (err,data) {
             if (err != undefined) {
-                console.log("delete err: " + JSON.stringify(err));
+                console.error("delete err: " + JSON.stringify(err));
                 return;
             }
-            console.log("delete success");
+            console.info("delete success");
         });
     });
 }catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
+}
+```
+
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
+        console.info("put success: " + JSON.stringify(data));
+        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
+            console.info("delete success");
+        }).catch((err) => {
+            console.error("delete err: " + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error("put err: " + JSON.stringify(err));
+    });
+}catch (e) {
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -170,25 +192,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
-            console.log("delete success");
-        }).catch((err) => {
-            console.log("delete err: " + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+See [delete](#delete)
 
 ## deleteBatch
 
@@ -232,15 +236,48 @@ try {
         entries.push(entry);
         keys.push(key + i);
     }
-    console.log('entries: ' + JSON.stringify(entries));
+    console.info('entries: ' + JSON.stringify(entries));
     kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         kvStore.deleteBatch(keys, async function (err,data) {
-            console.log('deleteBatch success');
+            console.info('deleteBatch success');
         });
     });
 }catch(e) {
-    console.log('DeleteBatch e ' + e);
+    console.error('DeleteBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    let keys = [];
+    for (var i = 0; i < 5; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+        keys.push(key + i);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.deleteBatch(keys).then((err) => {
+            console.info('deleteBatch success');
+        }).catch((err) => {
+            console.error('deleteBatch fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('DeleteBatch e ' + e);
 }
 ```
 
@@ -274,38 +311,7 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    let keys = [];
-    for (var i = 0; i < 5; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-        keys.push(key + i);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.deleteBatch(keys).then((err) => {
-            console.log('deleteBatch success');
-        }).catch((err) => {
-            console.log('deleteBatch fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('DeleteBatch e ' + e);
-}
-```
+See [deleteBatch](#deletebatch)
 
 ## enableSync
 
@@ -337,13 +343,26 @@ let kvStore;
 try {
     kvStore.enableSync(true, function (err,data) {
         if (err == undefined) {
-            console.log('enableSync success');
+            console.info('enableSync success');
         } else {
-            console.log('enableSync fail');
+            console.error('enableSync fail');
         }
     });
 }catch(e) {
-    console.log('EnableSync e ' + e);
+    console.error('EnableSync e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    kvStore.enableSync(true).then((err) => {
+        console.info('enableSync success');
+    }).catch((err) => {
+        console.error('enableSync fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('EnableSync e ' + e);
 }
 ```
 
@@ -377,18 +396,7 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true).then((err) => {
-        console.log('enableSync success');
-    }).catch((err) => {
-        console.log('enableSync fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('EnableSync e ' + e);
-}
-```
+See [enableSync](#enablesync)
 
 ## off
 
@@ -413,27 +421,6 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("dataChange: " + data);
-    }
-    subscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_REMOTE, this.call);
-        }
-    }
-    unsubscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.off('dataChange', this.call);
-        }
-    }
-}
-```
-
 ## off
 
 ```TypeScript
@@ -456,27 +443,6 @@ Unsubscribes from sync completion events.
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("syncComplete: " + data);
-    }
-    subscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.on('syncComplete', this.call);
-        }
-    }
-    unsubscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.off('syncComplete', this.call);
-        }
-    }
-}
-```
 
 ## on
 
@@ -502,15 +468,6 @@ Subscribes to data changes of the specified type.
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, function (data) {
-    console.log("dataChange callback call data: " + JSON.stringify(data));
-});
-```
-
 ## on
 
 ```TypeScript
@@ -533,15 +490,6 @@ Subscribes to sync completion events.
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-kvStore.on('syncComplete', function (data) {
-    console.log("callback call data: " + data);
-});
-```
 
 ## put
 
@@ -576,13 +524,28 @@ const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
 try {
     kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, function (err,data) {
         if (err != undefined) {
-            console.log("put err: " + JSON.stringify(err));
+            console.error("put err: " + JSON.stringify(err));
             return;
         }
-        console.log("put success");
+        console.info("put success");
     });
 }catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
+}
+```
+
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
+        console.info("put success: " + JSON.stringify(data));
+    }).catch((err) => {
+        console.error("put err: " + JSON.stringify(err));
+    });
+}catch (e) {
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -617,20 +580,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.log("put success: " + JSON.stringify(data));
-    }).catch((err) => {
-        console.log("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
-}
-```
+See [put](#put)
 
 ## putBatch
 
@@ -672,17 +622,49 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + JSON.stringify(entries));
+    console.info('entries: ' + JSON.stringify(entries));
     kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         kvStore.getEntries('batch_test_string_key', function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
         });
     });
 }catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
+    console.info('PutBatch e ' + JSON.stringify(e));
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('PutBatch ' + JSON.stringify(entries));
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.info('PutBatch e ' + JSON.stringify(e));
 }
 ```
 
@@ -716,37 +698,7 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    let entries = [];
-    for (var i = 0; i < 10; i++) {
-        var key = 'batch_test_string_key';
-        var entry = {
-            key : key + i,
-            value : {
-                type : distributedData.ValueType.STRING,
-                value : 'batch_test_string_value'
-            }
-        }
-        entries.push(entry);
-    }
-    console.log('entries: ' + JSON.stringify(entries));
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.getEntries('batch_test_string_key').then((entries) => {
-            console.log('getEntries success');
-            console.log('PutBatch ' + JSON.stringify(entries));
-        }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('PutBatch e ' + JSON.stringify(e));
-}
-```
+See [putBatch](#putbatch)
 
 ## rollback
 
@@ -777,13 +729,26 @@ let kvStore;
 try {
     kvStore.rollback(function (err,data) {
         if (err == undefined) {
-            console.log('commit success');
+            console.info('commit success');
         } else {
-            console.log('commit fail');
+            console.error('commit fail');
         }
     });
 }catch(e) {
-    console.log('Rollback e ' + e);
+    console.error('Rollback e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    kvStore.rollback().then(async (err) => {
+        console.info('rollback success');
+    }).catch((err) => {
+        console.error('rollback fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('Rollback e ' + e);
 }
 ```
 
@@ -811,18 +776,7 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback().then(async (err) => {
-        console.log('rollback success');
-    }).catch((err) => {
-        console.log('rollback fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('Rollback e ' + e);
-}
-```
+See [rollback](#rollback)
 
 ## setSyncRange
 
@@ -856,10 +810,25 @@ try {
     const localLabels = ['A', 'B'];
     const remoteSupportLabels = ['C', 'D'];
     kvStore.setSyncRange(localLabels, remoteSupportLabels, function (err,data) {
-        console.log('SetSyncRange put success');
+        console.info('SetSyncRange put success');
     });
 }catch(e) {
-    console.log('SetSyncRange e ' + e);
+    console.error('SetSyncRange e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    const localLabels = ['A', 'B'];
+    const remoteSupportLabels = ['C', 'D'];
+    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
+        console.info('setSyncRange success');
+    }).catch((err) => {
+        console.error('delete fail ' + err);
+    });
+}catch(e) {
+    console.error('SetSyncRange e ' + e);
 }
 ```
 
@@ -894,20 +863,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
-        console.log('setSyncRange success');
-    }).catch((err) => {
-        console.log('delete fail ' + err);
-    });
-}catch(e) {
-    console.log('SetSyncRange e ' + e);
-}
-```
+See [setSyncRange](#setsyncrange)
 
 ## startTransaction
 
@@ -952,19 +908,37 @@ function putBatchString(len, prefix) {
 try {
     var count = 0;
     kvStore.on('dataChange', 0, function (data) {
-        console.log('startTransaction 0' + data)
+        console.info('startTransaction 0' + data)
         count++;
     });
     kvStore.startTransaction(async function (err,data) {
-        console.log('startTransaction success');
+        console.info('startTransaction success');
         let entries = putBatchString(10, 'batch_test_string_key');
-        console.log('entries: ' + JSON.stringify(entries));
+        console.info('entries: ' + JSON.stringify(entries));
         kvStore.putBatch(entries, async function (err,data) {
-            console.log('putBatch success');
+            console.info('putBatch success');
         });
     });
 }catch(e) {
-    console.log('startTransaction e ' + e);
+    console.error('startTransaction e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var count = 0;
+    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
+        console.info('startTransaction ' + JSON.stringify(data));
+        count++;
+    });
+    kvStore.startTransaction().then(async (err) => {
+        console.info('startTransaction success');
+    }).catch((err) => {
+        console.error('startTransaction fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('startTransaction e ' + e);
 }
 ```
 
@@ -992,20 +966,4 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-let kvStore;
-try {
-    var count = 0;
-    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
-        console.log('startTransaction ' + JSON.stringify(data));
-        count++;
-    });
-    kvStore.startTransaction().then(async (err) => {
-        console.log('startTransaction success');
-    }).catch((err) => {
-        console.log('startTransaction fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.log('startTransaction e ' + e);
-}
-```
+See [startTransaction](#starttransaction)

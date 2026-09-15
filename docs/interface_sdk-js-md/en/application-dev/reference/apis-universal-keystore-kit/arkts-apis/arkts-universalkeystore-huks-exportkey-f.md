@@ -44,6 +44,17 @@ huks.exportKey(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.exportKey(keyAlias, emptyOptions);
+```
+
 
 ## exportKey
 
@@ -76,13 +87,4 @@ Exports a key. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.exportKey(keyAlias, emptyOptions);
-```
+See [exportKey](#exportkey)

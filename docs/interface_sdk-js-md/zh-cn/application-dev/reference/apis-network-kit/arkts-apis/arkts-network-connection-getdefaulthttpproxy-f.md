@@ -53,6 +53,17 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
+});
+```
+
 
 ## getDefaultHttpProxy
 
@@ -88,13 +99,4 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message} `);
-});
-```
+参见 [getDefaultHttpProxy](#getdefaulthttpproxy)

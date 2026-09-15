@@ -64,6 +64,18 @@ try {
 }
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: Array<string> = applicationManager.getKeepAliveApps(null, 100);
+  console.info('Succeeded in getting keep alive apps.');
+} catch (err) {
+  console.error(`Failed to get keep alive apps. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getKeepAliveApps
 
@@ -105,14 +117,4 @@ function getKeepAliveApps(admin: Want | null, accountId: number): Array<string>
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<string> = applicationManager.getKeepAliveApps(null, 100);
-  console.info('Succeeded in getting keep alive apps.');
-} catch (err) {
-  console.error(`Failed to get keep alive apps. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getKeepAliveApps](#getkeepaliveapps)

@@ -47,6 +47,18 @@ sms.getDefaultSmsSimId((err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let promise = sms.getDefaultSmsSimId();
+promise.then((data: number) => {
+    console.info(`getDefaultSmsSimId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultSmsSimId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getDefaultSmsSimId
 
@@ -79,14 +91,4 @@ Obtains the default ID of the SIM card used to send SMS messages. This API uses 
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let promise = sms.getDefaultSmsSimId();
-promise.then((data: number) => {
-    console.info(`getDefaultSmsSimId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultSmsSimId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getDefaultSmsSimId](#getdefaultsmssimid)

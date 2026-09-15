@@ -42,16 +42,6 @@ Disables listening for the input method binding event.
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine()
-  .off('inputStart',
-    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
-      console.info('delete inputStart notification.');
-    });
-```
-
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -75,13 +65,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine().off('keyboardShow');
-inputMethodEngine.getInputMethodEngine().off('keyboardHide');
-```
-
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -104,10 +87,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | --- | --- | --- | --- |
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Examples**
-
-See off
 
 ## on('inputStart')
 
@@ -135,17 +114,6 @@ Enables listening for the input method binding event. This API uses an asynchron
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | Yes | Callback used to return the **KeyboardController** and **TextInputClient** instances. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine()
-  .on('inputStart',
-    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
-      let keyboardController: inputMethodEngine.KeyboardController = kbController;
-      let textInputClient: inputMethodEngine.TextInputClient = textClient;
-    });
-```
-
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -169,17 +137,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
-  console.info('inputMethodEngine keyboardShow.');
-});
-inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
-  console.info('inputMethodEngine keyboardHide.');
-});
-```
-
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -202,7 +159,3 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | --- | --- | --- | --- |
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
-
-**Examples**
-
-See on

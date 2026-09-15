@@ -59,6 +59,21 @@ try {
 }
 ```
 
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+try {
+  let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+  formHost.deleteInvalidForms(formIds).then((data: number) => {
+    console.info(`formHost deleteInvalidForms, data: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## deleteInvalidForms
 
@@ -101,17 +116,4 @@ function deleteInvalidForms(formIds: Array<string>): Promise<number>
 
 **示例**
 
-```TypeScript
-import { formHost } from '@kit.FormKit';
-
-try {
-  let formIds: string[] = new Array('12400633174999288', '12400633174999289');
-  formHost.deleteInvalidForms(formIds).then((data: number) => {
-    console.info(`formHost deleteInvalidForms, data: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [deleteInvalidForms](#deleteinvalidforms)

@@ -43,8 +43,9 @@ Constructs the vertical linear layout algorithm class.
 
 **Examples**
 
+```TypeScript
 For details, see [Example 2: Switching the Layout Algorithm](../arkui-ts/ts-container-dynamiclayout.md#example-2-switching-the-layout-algorithm).
-- simpleType:
+```
 
 ## alignItems
 

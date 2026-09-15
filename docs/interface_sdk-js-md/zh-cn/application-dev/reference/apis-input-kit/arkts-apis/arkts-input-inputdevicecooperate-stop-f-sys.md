@@ -67,6 +67,28 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          inputDeviceCooperate.stop().then(() => {
+            console.info(`Succeeded in stopping keyboard mouse crossing.`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to stop keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          });
+        })
+    }
+  }
+}
+```
+
 
 ## stop
 
@@ -100,24 +122,4 @@ function stop(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          inputDeviceCooperate.stop().then(() => {
-            console.info(`Succeeded in stopping keyboard mouse crossing.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to stop keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
-        })
-    }
-  }
-}
-```
+参见 [stop](#stop)

@@ -54,6 +54,20 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 let bundleName: string = "com.example.deviceUsageStatistics";
 let newGroup = usageStatistics.GroupType.DAILY_GROUP;
 
+usageStatistics.setAppGroup(bundleName, newGroup).then( () => {
+  console.info('BUNDLE_ACTIVE setAppGroup promise succeeded.');
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE setAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
+let bundleName: string = "com.example.deviceUsageStatistics";
+let newGroup = usageStatistics.GroupType.DAILY_GROUP;
+
 usageStatistics.setAppGroup(bundleName, newGroup, (err: BusinessError) => {
   if(err) {
     console.error('BUNDLE_ACTIVE setAppGroup callback failed. code is: ' + err.code + ',message is: ' + err.message);
@@ -110,16 +124,4 @@ Set app group by bundleName.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-let bundleName: string = "com.example.deviceUsageStatistics";
-let newGroup = usageStatistics.GroupType.DAILY_GROUP;
-
-usageStatistics.setAppGroup(bundleName, newGroup).then( () => {
-  console.info('BUNDLE_ACTIVE setAppGroup promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE setAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [setAppGroup](#setappgroup)

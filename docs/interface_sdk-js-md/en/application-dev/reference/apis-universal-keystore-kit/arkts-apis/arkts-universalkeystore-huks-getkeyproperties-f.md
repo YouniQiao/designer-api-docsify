@@ -45,6 +45,17 @@ huks.getKeyProperties(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.getKeyProperties(keyAlias, emptyOptions);
+```
+
 
 ## getKeyProperties
 
@@ -77,13 +88,4 @@ Obtains key properties. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.getKeyProperties(keyAlias, emptyOptions);
-```
+See [getKeyProperties](#getkeyproperties)

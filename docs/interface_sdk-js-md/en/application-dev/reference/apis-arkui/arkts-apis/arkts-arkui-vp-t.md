@@ -4,15 +4,13 @@
 declare type VP = `${number}vp` | number
 ```
 
-Defines the length property with number or number in units of vp.
+Defines a length in vp.
 
-@typedef { `&#36;{number}vp` | number } VP
-
-**Since:** 23
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -20,5 +18,5 @@ Defines the length property with number or number in units of vp.
 
 | Type | Description |
 | --- | --- |
-| `&#36;{number}vp` |  |
-| number |  |
+| `&#36;{number}vp` | Viewport pixel unit. The unit vp can be included, for example, **'10vp'**. |
+| number | Viewport pixel unit. The unit vp can be omitted, for example, **10**. |

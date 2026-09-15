@@ -465,6 +465,38 @@ export default class EntryAbility extends UIAbility {
 
     try {
       // Disconnect from the ServiceExtensionAbility.
+      this.context.disconnectServiceExtensionAbility(connection).then(() => {
+        commRemote = null;
+        // Carry out normal service processing.
+        console.info('disconnectServiceExtensionAbility succeed');
+      }).catch((err: BusinessError) => {
+        // Process service logic errors.
+        console.error(`disconnectServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      commRemote = null;
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`disconnectServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // connection is the return value of connectServiceExtensionAbility.
+    let connection = 1;
+    let commRemote: rpc.IRemoteObject | null;
+
+    try {
+      // Disconnect from the ServiceExtensionAbility.
       this.context.disconnectServiceExtensionAbility(connection, (err: BusinessError) => {
         commRemote = null;
         if (err.code) {
@@ -522,37 +554,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 **Examples**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    // connection is the return value of connectServiceExtensionAbility.
-    let connection = 1;
-    let commRemote: rpc.IRemoteObject | null;
-
-    try {
-      // Disconnect from the ServiceExtensionAbility.
-      this.context.disconnectServiceExtensionAbility(connection).then(() => {
-        commRemote = null;
-        // Carry out normal service processing.
-        console.info('disconnectServiceExtensionAbility succeed');
-      }).catch((err: BusinessError) => {
-        // Process service logic errors.
-        console.error(`disconnectServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
-      commRemote = null;
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`disconnectServiceExtensionAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
 
 ## disconnectUIServiceExtensionAbility
 
@@ -1214,6 +1216,37 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'AuthAccountServiceExtension'
+    };
+
+    try {
+      this.context.requestDialogService(want)
+        .then((result: dialogRequest.RequestResult) => {
+          // Carry out normal service processing.
+          console.info(`requestDialogService succeed, result = ${JSON.stringify(result)}`);
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`requestDialogService failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestDialogService failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## requestDialogService
 
 ```TypeScript
@@ -1269,36 +1302,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, dialogRequest } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'AuthAccountServiceExtension'
-    };
-
-    try {
-      this.context.requestDialogService(want)
-        .then((result: dialogRequest.RequestResult) => {
-          // Carry out normal service processing.
-          console.info(`requestDialogService succeed, result = ${JSON.stringify(result)}`);
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`requestDialogService failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestDialogService failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [requestDialogService](#requestdialogservice)
 
 ## restartApp
 
@@ -1475,41 +1479,20 @@ When the first UIAbility launched under a module needs to redirect to another UI
 
 **Examples**
 
+```TypeScript
 Set a DelegatorAbility.
+
 Configure abilitySrcEntryDelegator and abilityStageSrcEntryDelegator in the [module.json5](../../../quick-start/module-configuration-file.md) file. When the first UIAbility of the module is cold started, the system preferentially starts the UIAbility specified by abilitySrcEntryDelegator.
+
 > NOTE
 > 
 > If the UIAbility is started by calling [startAbilityByCall](#startabilitybycall), the system ignores abilitySrcEntryDelegator and abilityStageSrcEntryDelegator configured in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 > 
 > The module name specified by abilityStageSrcEntryDelegator must be different from the current module name.
-
-```TypeScript
-{
-  "module": {
-    // ...
-    "abilityStageSrcEntryDelegator": "xxxModuleName",
-    "abilitySrcEntryDelegator": "xxxAbilityName",
-    // ...
-  }
-}
 ```
 
-Revoke the DelegatorAbility.
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class DelegatorAbility extends UIAbility {
-  onForeground() {
-    // After the DelegatorAbility completes the specific operation, call revokeDelegator to revert to the first UIAbility.
-    this.context.revokeDelegator().then(() => {
-      console.info('revokeDelegator success');
-    }).catch((err: BusinessError) => {
-      console.error(`revokeDelegator failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
+Revoke the DelegatorAbility.
 ```
 
 ## setAbilityInstanceInfo
@@ -1758,6 +1741,21 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE).then(() => {
+      console.info('success');
+    }).catch((err: BusinessError) => {
+      console.error(`setMissionContinueState failed, code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
+```
+
 ## setMissionContinueState
 
 ```TypeScript
@@ -1796,20 +1794,7 @@ Sets the mission continuation state of this UIAbility. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    this.context.setMissionContinueState(AbilityConstant.ContinueState.INACTIVE).then(() => {
-      console.info('success');
-    }).catch((err: BusinessError) => {
-      console.error(`setMissionContinueState failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
+See [setMissionContinueState](#setmissioncontinuestate)
 
 ## setMissionLabel
 
@@ -1861,6 +1846,23 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    this.context.setMissionLabel('test').then(() => {
+      console.info('success');
+    }).catch((err: BusinessError) => {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`setMissionLabel failed, code is ${code}, message is ${message}`);
+    });
+  }
+}
+```
+
 ## setMissionLabel
 
 ```TypeScript
@@ -1899,22 +1901,7 @@ Sets a mission label for this UIAbility on the multitasking screen. This API use
 
 **Examples**
 
-```TypeScript
-import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    this.context.setMissionLabel('test').then(() => {
-      console.info('success');
-    }).catch((err: BusinessError) => {
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`setMissionLabel failed, code is ${code}, message is ${message}`);
-    });
-  }
-}
-```
+See [setMissionLabel](#setmissionlabel)
 
 ## setMissionWindowIcon
 
@@ -2312,6 +2299,77 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      // Start the UIAbility.
+      this.context.startAbility(want, options, (err: BusinessError) => {
+        if (err.code) {
+          // Process service logic errors.
+          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startAbility succeed');
+      });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      // Start the UIAbility.
+      this.context.startAbility(want, options)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('startAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startAbility
 
 ```TypeScript
@@ -2379,41 +2437,7 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      // Start the UIAbility.
-      this.context.startAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbility succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)
 
 ## startAbility
 
@@ -2487,40 +2511,7 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      // Start the UIAbility.
-      this.context.startAbility(want, options)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('startAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbility](#startability)
 
 ## startAbilityByCall
 
@@ -2602,129 +2593,16 @@ Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for c
 
 **Examples**
 
+```TypeScript
 The following code demonstrates that the caller launches the callee to the background, sends a message to the callee after successfully obtaining the Caller object, and then releases the Caller object.
-
-```TypeScript
-import { Caller, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { rpc } from '@kit.IPCKit';
-
-const DOMAIN = 0x0000;
-const LOG_TAG = 'TEST_TAG';
-
-class TestParcelable implements rpc.Parcelable {
-  age: number = 0;
-  name: string = '';
-  marshalling(dataOut: rpc.MessageSequence): boolean {
-    dataOut.writeInt(this.age);
-    dataOut.writeString(this.name);
-    return true;
-  }
-  unmarshalling(dataIn: rpc.MessageSequence): boolean {
-    this.age = dataIn.readInt();
-    this.name = dataIn.readString();
-    return true;
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  async onForeground() {
-    let caller: Caller;
-    // Start the ability in the background.
-    let wantBackground: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-    };
-
-    try {
-      // Obtain the Caller communication object and start the UIAbility in the background.
-      caller = await this.context.startAbilityByCall(wantBackground);
-      await caller.call('TEST_CALL', new TestParcelable());
-      caller.release();
-    } catch (err) {
-      // Process input parameter errors.
-      hilog.error(DOMAIN, LOG_TAG, `startAbilityByCall failed ${err}`);
-    }
-  }
-}
 ```
 
+```TypeScript
 The following code demonstrates that the callee registers a listener after being launched and unregisters the listener when destroyed.
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { rpc } from '@kit.IPCKit';
-
-const DOMAIN = 0x0000;
-const LOG_TAG = 'TEST_TAG';
-
-class TestParcelable implements rpc.Parcelable {
-  age: number = 0;
-  name: string = '';
-  marshalling(dataOut: rpc.MessageSequence): boolean {
-    dataOut.writeInt(this.age);
-    dataOut.writeString(this.name);
-    return true;
-  }
-  unmarshalling(dataIn: rpc.MessageSequence): boolean {
-    this.age = dataIn.readInt();
-    this.name = dataIn.readString();
-    return true;
-  }
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(DOMAIN, LOG_TAG, '%{public}s', 'Ability onCreate');
-    // Register a listener.
-    this.callee.on('TEST_CALL', (data: rpc.MessageSequence) => {
-      let recv = new TestParcelable();
-      data.readParcelable(recv);
-      recv.age++;
-      return recv;
-    });
-  }
-
-  onDestroy(): void {
-    hilog.info(DOMAIN, LOG_TAG, '%{public}s', 'Ability onDestroy');
-    // Unregisters the listener.
-    this.callee.off('TEST_CALL');
-  }
-}
 ```
 
-The following code demonstrates the scenario where the caller launches the callee to the foreground.
-
 ```TypeScript
-import { Caller, UIAbility, Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const DOMAIN = 0x0000;
-const LOG_TAG = 'TEST_TAG';
-
-export default class EntryAbility extends UIAbility {
-  async onForeground() {
-    let caller: Caller;
-    // Launch the UIAbility to the foreground and set 'ohos.aafwk.param.callAbilityToForeground' in parameters to true.
-    let wantForeground: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility',
-      parameters: {
-        'ohos.aafwk.param.callAbilityToForeground': true
-      }
-    };
-
-    try {
-      // Obtain the Caller communication object and start the UIAbility in the foreground.
-      caller = await this.context.startAbilityByCall(wantForeground);
-      caller.release();
-    } catch (err) {
-      // Process input parameter errors.
-      hilog.error(DOMAIN, LOG_TAG, `startAbilityByCall failed ${err}`);
-    }
-  }
-}
+The following code demonstrates the scenario where the caller launches the callee to the foreground.
 ```
 
 ## startAbilityByType
@@ -2795,6 +2673,33 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let wantParam: Record<string, Object> = {
+      'time': '2023-10-23 20:45'
+    };
+    let abilityStartCallback: common.AbilityStartCallback = {
+      onError: (code: number, name: string, message: string) => {
+        console.error(`code:` + code + `name:` + name + `message:` + message);
+      },
+      onResult: (abilityResult: common.AbilityResult) => {
+        console.info(`resultCode:` + abilityResult.resultCode + `bundleName:` + abilityResult.want?.bundleName);
+      }
+    };
+
+    this.context.startAbilityByType("photoEditor", wantParam, abilityStartCallback).then(() => {
+      console.info(`startAbilityByType success`);
+    }).catch((err: BusinessError) => {
+      console.error(`startAbilityByType fail, err: ${JSON.stringify(err)}`);
+    });
+  }
+}
+```
+
 ## startAbilityByType
 
 ```TypeScript
@@ -2840,32 +2745,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 
 **Examples**
 
-```TypeScript
-import { UIAbility, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let wantParam: Record<string, Object> = {
-      'time': '2023-10-23 20:45'
-    };
-    let abilityStartCallback: common.AbilityStartCallback = {
-      onError: (code: number, name: string, message: string) => {
-        console.error(`code:` + code + `name:` + name + `message:` + message);
-      },
-      onResult: (abilityResult: common.AbilityResult) => {
-        console.info(`resultCode:` + abilityResult.resultCode + `bundleName:` + abilityResult.want?.bundleName);
-      }
-    };
-
-    this.context.startAbilityByType("photoEditor", wantParam, abilityStartCallback).then(() => {
-      console.info(`startAbilityByType success`);
-    }).catch((err: BusinessError) => {
-      console.error(`startAbilityByType fail, err: ${JSON.stringify(err)}`);
-    });
-  }
-}
-```
+See [startAbilityByType](#startabilitybytype)
 
 ## startAbilityForResult
 
@@ -2969,6 +2849,77 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      // Start the UIAbility and obtain the return result.
+      this.context.startAbilityForResult(want, options, (err: BusinessError, result: common.AbilityResult) => {
+        if (err.code) {
+          // Process service logic errors.
+          console.error(`startAbilityForResult failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // Carry out normal service processing.
+        console.info('startAbilityForResult succeed');
+      });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityForResult failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      // Start the UIAbility and obtain the return result.
+      this.context.startAbilityForResult(want, options)
+        .then((result: common.AbilityResult) => {
+          // Carry out normal service processing.
+          console.info('startAbilityForResult succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbilityForResult failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityForResult failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -3039,41 +2990,7 @@ UIAbility is started multiple times by different applications calling this API, 
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      // Start the UIAbility and obtain the return result.
-      this.context.startAbilityForResult(want, options, (err: BusinessError, result: common.AbilityResult) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`startAbilityForResult failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('startAbilityForResult succeed');
-      });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityForResult failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbilityForResult](#startabilityforresult)
 
 ## startAbilityForResult
 
@@ -3150,40 +3067,7 @@ UIAbility is started multiple times by different applications calling this API, 
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, common, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      // Start the UIAbility and obtain the return result.
-      this.context.startAbilityForResult(want, options)
-        .then((result: common.AbilityResult) => {
-          // Carry out normal service processing.
-          console.info('startAbilityForResult succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`startAbilityForResult failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityForResult failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [startAbilityForResult](#startabilityforresult)
 
 ## startAppServiceExtensionAbility
 
@@ -3705,49 +3589,12 @@ Terminates this UIAbility. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    try {
-      // Destroy the current UIAbility.
-      this.context.terminateSelf((err: BusinessError) => {
-        if (err.code) {
-          // Process service logic errors.
-          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // Carry out normal service processing.
-        console.info('terminateSelf succeed');
-      });
-    } catch (err) {
-      // Capture the synchronization parameter error.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
+The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
 ```
 
-(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
-
 ```TypeScript
-{
-  "module": {
-    // ...
-    "abilities": [
-      {
-        // ...
-        "removeMissionAfterTerminate": true
-      }
-    ]
-  }
-}
+(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 ```
 
 ## terminateSelf
@@ -3790,50 +3637,7 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 **Examples**
 
-The following is an example of calling terminateSelf to terminate a UIAbility. By default, the application retains the snapshot in the recent tasks list.
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    try {
-      // Destroy the current UIAbility.
-      this.context.terminateSelf()
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('terminateSelf succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`terminateSelf failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Capture the synchronization parameter error.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`terminateSelf failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
-
-(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
-
-```TypeScript
-{
-  "module": {
-    // ...
-    "abilities": [
-      {
-        // ...
-        "removeMissionAfterTerminate": true
-      }
-    ]
-  }
-}
-```
+See [terminateSelf](#terminateself)
 
 ## terminateSelfWithResult
 
@@ -3915,6 +3719,44 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let resultCode = 100;
+    // AbilityResult information returned to the caller.
+    let abilityResult: common.AbilityResult = {
+      want,
+      resultCode
+    };
+
+    try {
+      // Destroy the current UIAbility.
+      this.context.terminateSelfWithResult(abilityResult)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('terminateSelfWithResult succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error(`terminateSelfWithResult failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`terminateSelfWithResult failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## terminateSelfWithResult
 
 ```TypeScript
@@ -3962,43 +3804,7 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 **Examples**
 
-```TypeScript
-import { UIAbility, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let resultCode = 100;
-    // AbilityResult information returned to the caller.
-    let abilityResult: common.AbilityResult = {
-      want,
-      resultCode
-    };
-
-    try {
-      // Destroy the current UIAbility.
-      this.context.terminateSelfWithResult(abilityResult)
-        .then(() => {
-          // Carry out normal service processing.
-          console.info('terminateSelfWithResult succeed');
-        })
-        .catch((err: BusinessError) => {
-          // Process service logic errors.
-          console.error(`terminateSelfWithResult failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // Process input parameter errors.
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`terminateSelfWithResult failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+See [terminateSelfWithResult](#terminateselfwithresult)
 
 ## abilityInfo
 

@@ -50,6 +50,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  let setPromise: Promise<void> = systemParameter.set('test.parameter.key', 'testValue');
+  setPromise.then(() => {
+    console.info('set test.parameter.key success');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  console.error('set unexpected error: ' + e);
+}
+```
+
 
 ## set
 
@@ -84,17 +99,4 @@ Sets a value for the specified key. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  let setPromise: Promise<void> = systemParameter.set('test.parameter.key', 'testValue');
-  setPromise.then(() => {
-    console.info('set test.parameter.key success');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set system parameter. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  console.error('set unexpected error: ' + e);
-}
-```
+See [set](#set)

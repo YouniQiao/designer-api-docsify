@@ -72,6 +72,53 @@ screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+// Call the save method to obtain the screenshot.
+screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
+  if (err) {
+    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
+  pixelMap.release(); // Release the memory in time after the PixelMap is used.
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+let screenshotOptions: screenshot.ScreenshotOptions = {
+  screenRect: {
+    left: 200,
+    top: 100,
+    width: 200,
+    height: 200 },
+  imageSize: {
+    width: 300,
+    height: 300 },
+  rotation: 0,
+  displayId: 0,
+  isNotificationNeeded: true,
+  isCaptureFullOfScreen: true
+};
+try {
+  let promise = screenshot.save(screenshotOptions);
+  promise.then((pixelMap: image.PixelMap) => {
+    let pixelBytesNumber = pixelMap.getPixelBytesNumber();
+    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelBytesNumber}`);
+    pixelMap.release(); // Release the memory in time after the PixelMap is used.
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
 
 ## save
 
@@ -108,20 +155,7 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-// Call the save method to obtain the screenshot.
-screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
-  if (err) {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
-  pixelMap.release(); // Release the memory in time after the PixelMap is used.
-});
-```
+See [save](#save)
 
 
 ## save
@@ -166,34 +200,4 @@ Obtains a screenshot. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { image } from '@kit.ImageKit';
-
-let screenshotOptions: screenshot.ScreenshotOptions = {
-  screenRect: {
-    left: 200,
-    top: 100,
-    width: 200,
-    height: 200 },
-  imageSize: {
-    width: 300,
-    height: 300 },
-  rotation: 0,
-  displayId: 0,
-  isNotificationNeeded: true,
-  isCaptureFullOfScreen: true
-};
-try {
-  let promise = screenshot.save(screenshotOptions);
-  promise.then((pixelMap: image.PixelMap) => {
-    let pixelBytesNumber = pixelMap.getPixelBytesNumber();
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelBytesNumber}`);
-    pixelMap.release(); // Release the memory in time after the PixelMap is used.
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
+See [save](#save)

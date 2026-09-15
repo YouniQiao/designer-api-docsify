@@ -120,76 +120,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
 ```
 
 ## createAsset
@@ -230,76 +162,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
 ```
 
 ## createAsset
@@ -346,76 +210,8 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
 ```
 
 ## createAssetWithShortTermPermission
@@ -1438,20 +1234,8 @@ Sets the asset compatibility capability. The system performs compatibility proce
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName = "com.test.example";
-    let capability : photoAccessHelper.AssetCompatibleCapability = {
-        supportedHighResolution : true,
-    };
-    await phAccessHelper.setAssetCompatibleCapability(bundleName, capability);
-  } catch (error) {
-    console.error('failed to setAssetCompatibleCapability err', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## showAssetsCreationDialog

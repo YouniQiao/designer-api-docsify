@@ -66,6 +66,24 @@ deviceInfo.getDeviceName(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { deviceInfo } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+deviceInfo.getDeviceName(wantTemp).then((result) => {
+  console.info(`Succeeded in getting device name, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getDeviceName
 
@@ -113,20 +131,4 @@ function getDeviceName(admin: Want): Promise<string>
 
 **示例**
 
-```TypeScript
-import { deviceInfo } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceInfo.getDeviceName(wantTemp).then((result) => {
-  console.info(`Succeeded in getting device name, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get device name. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getDeviceName](#getdevicename)

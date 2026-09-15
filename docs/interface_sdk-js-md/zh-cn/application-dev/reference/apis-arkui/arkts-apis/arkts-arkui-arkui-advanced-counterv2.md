@@ -41,202 +41,50 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 
 ## 示例
 
+```TypeScript
+### 示例1（列表型CounterV2）
+
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).LIST和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的numberOptions属性，实现了列表型CounterV2。
+
 从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持numberOptions属性。
 
-```TypeScript
-import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
 
-@Entry
-@ComponentV2
-struct ListCounterExample {
-  build() {
-    Column() {
-      // 列表型CounterV2
-      CounterV2Component({
-        options: {
-          type: CounterV2Type.LIST,
-          numberOptions: {
-            label: '价格',
-            min: 0,
-            value: 5,
-            max: 10,
-          }
-        }
-      })
-    }
-  }
-}
 ```
+
+```TypeScript
+### 示例2（紧凑型CounterV2）
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).COMPACT和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的numberOptions属性，实现紧凑型CounterV2。
+
 从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持numberOptions属性。
 
-```TypeScript
-import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
 
-@Entry
-@ComponentV2
-struct CompactCounterExample {
-  build() {
-    Column() {
-      // 紧凑型CounterV2
-      CounterV2Component({
-        options: {
-          type: CounterV2Type.COMPACT,
-          numberOptions: {
-            label: '数量',
-            value: 10,
-            min: 0,
-            max: 100,
-            step: 10
-          }
-        }
-      })
-    }
-  }
-}
 ```
+
+```TypeScript
+### 示例3（数值内联型CounterV2）
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).INLINE和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的inlineOptions属性，实现数值内联型CounterV2。
+
 从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持inlineOptions属性。
 
-```TypeScript
-import { CounterV2Type, CounterV2Component } from '@kit.ArkUI';
 
-@Entry
-@ComponentV2
-struct NumberStyleExample {
-  build() {
-    Column() {
-      // 数值内联型CounterV2
-      CounterV2Component({
-        options: {
-          type: CounterV2Type.INLINE,
-          inlineOptions: {
-            value: 100,
-            min: 10,
-            step: 2,
-            max: 1000,
-            textWidth: 100,
-            onChange: (value: number) => {
-              console.info('onCounterV2Change Counter: ' + value.toString());
-            }
-          }
-        }
-      })
-    }
-  }
-}
 ```
+
+```TypeScript
+### 示例4（日期内联型CounterV2）
 
 该示例通过设置[CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md).INLINE_DATE和配置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的dateOptions属性，实现日期内联型CounterV2。
+
 从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持dateOptions属性。
 
-```TypeScript
-import { CounterV2Type, CounterV2Component, CounterV2DateData } from '@kit.ArkUI';
 
-@Entry
-@ComponentV2
-struct DateStyleExample {
-  build() {
-    Column() {
-      // 日期内联型CounterV2
-      CounterV2Component({
-        options: {
-          type: CounterV2Type.INLINE_DATE,
-          dateOptions: {
-            year: 2016,
-            onDateChange: (date: CounterV2DateData) => {
-              console.info('onDateChange Date: ' + date.toString());
-            }
-          }
-        }
-      })
-    }
-  }
-}
 ```
 
-该示例通过设置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的direction属性，实现列表型、紧凑型、数值内联型、日期内联型CounterV2的镜像布局。
-从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持direction属性。
-
 ```TypeScript
-import { CounterV2Type, CounterV2Component, CounterV2DateData } from '@kit.ArkUI';
+### 示例5（镜像布局展示）
 
-@Entry
-@ComponentV2
-struct CounterPage {
-  @Local currentDirection: Direction = Direction.Rtl
+该示例通过设置[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)的direction属性，实现列表型、紧凑型、数值内联型、日期内联型CounterV2的镜像布局。
 
-  build() {
-    Column({space: 20}) {
-
-      // 列表型CounterV2
-      CounterV2Component({
-        options: {
-          direction: this.currentDirection,
-          type: CounterV2Type.LIST,
-          numberOptions: {
-            label: '价格',
-            min: 0,
-            value: 5,
-            max: 10,
-          }
-        }
-      })
-
-      // 紧凑型CounterV2
-      CounterV2Component({
-        options: {
-          direction: this.currentDirection,
-          type: CounterV2Type.COMPACT,
-          numberOptions: {
-            label: '数量',
-            value: 10,
-            min: 0,
-            max: 100,
-            step: 10
-          }
-        }
-      })
-
-      // 数值内联型CounterV2
-      CounterV2Component({
-        options: {
-          type: CounterV2Type.INLINE,
-          direction: this.currentDirection,
-          inlineOptions: {
-            value: 100,
-            min: 10,
-            step: 2,
-            max: 1000,
-            textWidth: 100,
-            onChange: (value: number) => {
-              console.info('onCounterV2Change Counter: ' + value.toString());
-            }
-          }
-        }
-      })
-
-      // 日期内联型CounterV2
-      CounterV2Component({
-        options: {
-          direction: this.currentDirection,
-          type: CounterV2Type.INLINE_DATE,
-          dateOptions: {
-            year: 2024,
-            onDateChange: (date: CounterV2DateData) => {
-              console.info('onDateChange Date: ' + date.toString());
-            }
-          }
-        }
-      })
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-    .alignItems(HorizontalAlign.Center)
-  }
-}
+从API版本26.0.0开始，[CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md)支持direction属性。
 ```

@@ -55,6 +55,17 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getOpName(0).then((data: string) => {
+    console.info(`getOpName success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getOpName failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getOpName
 
@@ -93,13 +104,4 @@ Obtains the OpName of the SIM card in the specified slot. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getOpName(0).then((data: string) => {
-    console.info(`getOpName success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getOpName failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getOpName](#getopname)

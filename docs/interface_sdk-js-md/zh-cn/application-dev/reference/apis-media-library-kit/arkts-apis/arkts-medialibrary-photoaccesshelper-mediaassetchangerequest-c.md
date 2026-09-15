@@ -58,27 +58,8 @@ addResource(type: ResourceType, fileUri: string): void
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-class PhotoProxyImpl implements photoAccessHelper.PhotoProxy {
-  // 应用实现PhotoProxy。
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset, context: Context) {
-  console.info('addResourceByPhotoProxyDemo');
-  try {
-    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
-    let extension: string = 'jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
-    let photoProxy: PhotoProxyImpl = new PhotoProxyImpl();
-    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, photoProxy);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('addResourceByPhotoProxy successfully');
-  } catch (err) {
-    console.error(`addResourceByPhotoProxyDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
 ## addResource
@@ -116,27 +97,8 @@ addResource(type: ResourceType, data: ArrayBuffer): void
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-class PhotoProxyImpl implements photoAccessHelper.PhotoProxy {
-  // 应用实现PhotoProxy。
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asset: photoAccessHelper.PhotoAsset, context: Context) {
-  console.info('addResourceByPhotoProxyDemo');
-  try {
-    let photoType: photoAccessHelper.PhotoType = photoAccessHelper.PhotoType.IMAGE;
-    let extension: string = 'jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, photoType, extension);
-    let photoProxy: PhotoProxyImpl = new PhotoProxyImpl();
-    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, photoProxy);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('addResourceByPhotoProxy successfully');
-  } catch (err) {
-    console.error(`addResourceByPhotoProxyDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
 ## constructor
@@ -204,23 +166,8 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
-  console.info('createAssetRequestDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = photoAccessHelper.MediaAssetChangeRequest.createAssetRequest(context, testFileName);
-    // 需要确保fileUri对应的资源存在。
-    let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg';
-    assetChangeRequest.addResource(photoAccessHelper.ResourceType.IMAGE_RESOURCE, fileUri);
-    await phAccessHelper.applyChanges(assetChangeRequest);
-    console.info('apply createAssetRequest successfully');
-  } catch (err) {
-    console.error(`createAssetRequestDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
 ## createImageAssetRequest

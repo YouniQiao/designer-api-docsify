@@ -52,6 +52,26 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
     return;
   }
   let uuid: string = volumes[0].uuid;
+  storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
+    console.info("getFreeSizeOfVolume successfully:" + number);
+  }).catch((err: BusinessError) => {
+    console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(err));
+  });
+}).catch((err: BusinessError) => {
+  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
+});
+```
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  if (volumes == null || volumes.length <= 0) {
+    console.error("volumes is null or length is invalid");
+    return;
+  }
+  let uuid: string = volumes[0].uuid;
   storageStatistics.getFreeSizeOfVolume(uuid, (error: BusinessError, number: number) => {
     if (error) {
       console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(error));
@@ -107,22 +127,4 @@ Get the free size of volume.
 
 **Examples**
 
-```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  if (volumes == null || volumes.length <= 0) {
-    console.error("volumes is null or length is invalid");
-    return;
-  }
-  let uuid: string = volumes[0].uuid;
-  storageStatistics.getFreeSizeOfVolume(uuid).then((number: number) => {
-    console.info("getFreeSizeOfVolume successfully:" + number);
-  }).catch((err: BusinessError) => {
-    console.error("getFreeSizeOfVolume failed with error:" + JSON.stringify(err));
-  });
-}).catch((err: BusinessError) => {
-  console.error("getAllVolumes failed with error:" + JSON.stringify(err));
-});
-```
+See [getFreeSizeOfVolume](#getfreesizeofvolume)

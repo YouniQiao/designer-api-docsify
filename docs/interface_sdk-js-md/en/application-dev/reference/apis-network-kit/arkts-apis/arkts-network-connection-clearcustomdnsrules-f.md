@@ -51,6 +51,17 @@ connection.clearCustomDnsRules((error: BusinessError, data: void) => {
 })
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.clearCustomDnsRules().then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+})
+```
+
 
 ## clearCustomDnsRules
 
@@ -83,13 +94,4 @@ Removes all custom DNS rules of the current application. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.clearCustomDnsRules().then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-})
-```
+See [clearCustomDnsRules](#clearcustomdnsrules)

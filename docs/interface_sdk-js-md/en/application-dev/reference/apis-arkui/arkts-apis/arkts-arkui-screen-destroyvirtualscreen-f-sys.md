@@ -54,6 +54,19 @@ screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the screen ID using getAllScreens() or from the return value of createVirtualScreen().
+let screenId: number = 1; // Virtual screen ID.
+// Destroy the virtual screen.
+screen.destroyVirtualScreen(screenId).then(() => {
+  console.info('Succeeded in destroying the virtual screen.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## destroyVirtualScreen
 
@@ -92,15 +105,4 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the screen ID using getAllScreens() or from the return value of createVirtualScreen().
-let screenId: number = 1; // Virtual screen ID.
-// Destroy the virtual screen.
-screen.destroyVirtualScreen(screenId).then(() => {
-  console.info('Succeeded in destroying the virtual screen.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [destroyVirtualScreen](#destroyvirtualscreen)

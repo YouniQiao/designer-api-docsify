@@ -129,6 +129,20 @@ atManager.getPermissionRequestToggleStatus(permission).then((res: abilityAccessC
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
+  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getPermissionRequestToggleStatus
 
 ```TypeScript
@@ -176,19 +190,7 @@ getPermissionRequestToggleStatus(
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permission: Permissions = 'ohos.permission.CAMERA';
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
-  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
-}).catch((err: BusinessError): void => {
-  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getPermissionRequestToggleStatus](#getpermissionrequesttogglestatus)
 
 ## getPermissionsStatus
 
@@ -406,6 +408,22 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: number = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
+
 ## grantUserGrantedPermission
 
 ```TypeScript
@@ -451,21 +469,7 @@ grantUserGrantedPermission(
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-let permissionFlags: number = 1;
-atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('grantUserGrantedPermission success');
-  }
-});
-```
+参见 [grantUserGrantedPermission](#grantusergrantedpermission)
 
 ## off('permissionStateChange')
 
@@ -513,6 +517,23 @@ off(
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 **示例**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 创建权限管理实例
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // 设置需要取消订阅的权限列表
+  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+  // 取消订阅权限状态变化
+  atManager.off('selfPermissionStateChange', permissionList);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -579,6 +600,26 @@ on(
 | [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
 
 **示例**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 创建权限管理实例
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // 设置需要订阅的权限列表
+  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+  // 订阅权限状态变化
+  atManager.on('selfPermissionStateChange', permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -812,28 +853,10 @@ requestPermissionsFromUserWithWindowId(
 
 **示例**
 
-下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
-
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
+下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// 请在组件内获取context
-let context: Context = this.getUIContext().getHostContext() as Context;
-let windowId = 0; // 获取方式 let windowId = window.findWindow(窗口名).getWindowProperties().id;
-// 基于窗口ID请求用户授权指定权限
-atManager.requestPermissionsFromUserWithWindowId(context, windowId, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
-  console.info(`requestPermissionsFromUserWithWindowId success, result: ${data}`);
-  console.info('requestPermissionsFromUserWithWindowId data permissions:' + data.permissions);
-  console.info('requestPermissionsFromUserWithWindowId data authResults:' + data.authResults);
-  console.info('requestPermissionsFromUserWithWindowId data dialogShownResults:' + data.dialogShownResults);
-  console.info('requestPermissionsFromUserWithWindowId data errorReasons:' + data.errorReasons);
-}).catch((err: BusinessError): void => {
-  console.error(`requestPermissionsFromUserWithWindowId fail, code: ${err.code}, message: ${err.message}`);
-});
+关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
 ```
 
 ## revokePermission
@@ -972,6 +995,22 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
+let permissionFlags: number = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1017,21 +1056,7 @@ revokeUserGrantedPermission(
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // 获取tokenID的方式可参考AtManager章节的描述。
-let permissionFlags: number = 1;
-atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('revokeUserGrantedPermission success');
-  }
-});
-```
+参见 [revokeUserGrantedPermission](#revokeusergrantedpermission)
 
 ## setPermissionRequestToggleStatus
 
@@ -1091,6 +1116,20 @@ atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.Permiss
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
+  console.info('setPermissionRequestToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setPermissionRequestToggleStatus
 
 ```TypeScript
@@ -1141,16 +1180,4 @@ setPermissionRequestToggleStatus(
 
 **示例**
 
-```TypeScript
-import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let permission: Permissions = 'ohos.permission.CAMERA';
-let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
-atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
-  console.info('setPermissionRequestToggleStatus success');
-}).catch((err: BusinessError): void => {
-  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus)

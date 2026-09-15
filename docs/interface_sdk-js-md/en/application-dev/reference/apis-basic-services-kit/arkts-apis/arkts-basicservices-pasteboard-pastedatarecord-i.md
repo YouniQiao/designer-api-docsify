@@ -93,6 +93,17 @@ record.convertToText((err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
+record.convertToText().then((data: string) => {
+    console.info(`Succeeded in converting to text. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## convertToText
 
 ```TypeScript
@@ -117,16 +128,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let record: pasteboard.PasteDataRecord = pasteboard.createUriRecord('dataability:///com.example.myapplication1/user.txt');
-record.convertToText().then((data: string) => {
-    console.info(`Succeeded in converting to text. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to convert to text. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [convertToText](#converttotext)
 
 ## getData
 

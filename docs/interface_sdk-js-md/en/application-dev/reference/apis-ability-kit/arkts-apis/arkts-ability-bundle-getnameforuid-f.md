@@ -33,6 +33,20 @@ Obtains bundle name by the given uid.
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let uid: number = 20010005;
+
+bundle.getNameForUid(uid)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let uid: number = 20010005;
 
@@ -76,16 +90,4 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let uid: number = 20010005;
-
-bundle.getNameForUid(uid)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+See [getNameForUid](#getnameforuid)

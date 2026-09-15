@@ -53,213 +53,58 @@ TimePicker(options?: TimePickerOptions)
 
 ## 示例
 
+```TypeScript
+### 示例1（设置文本样式）
+
 该示例通过配置[disappearTextStyle](#disappeartextstyle10)、[textStyle](#textstyle10)和[selectedTextStyle](#selectedtextstyle10)实现文本选择器中的文本样式。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  private selectedTime: Date = new Date('2022-07-22T08:00:00');
 
-  build() {
-    TimePicker({
-      selected: this.selectedTime
-    })
-      .disappearTextStyle({ color: '#004aaf', font: { size: 24, weight: FontWeight.Lighter } })
-      .textStyle({ color: Color.Black, font: { size: 26, weight: FontWeight.Normal } })
-      .selectedTextStyle({ color: Color.Blue, font: { size: 30, weight: FontWeight.Bolder } })
-      .onChange((value: TimePickerResult) => {
-        if (value.hour >= 0) {
-          this.selectedTime.setHours(value.hour, value.minute);
-          console.info('select current time is: ' + JSON.stringify(value));
-        }
-      })
-  }
-}
 ```
+
+```TypeScript
+### 示例2（切换小时制）
 
 该示例通过配置useMilitaryTime实现12小时制、24小时制的切换。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  @State isMilitaryTime: boolean = false;
-  private selectedTime: Date = new Date('2022-07-22T08:00:00');
 
-  build() {
-    Column() {
-      Button('切换12小时制/24小时制')
-        .margin(30)
-        .onClick(() => {
-          this.isMilitaryTime = !this.isMilitaryTime;
-        })
-
-      TimePicker({
-        selected: this.selectedTime
-      })
-        .useMilitaryTime(this.isMilitaryTime)
-        .onChange((value: TimePickerResult) => {
-          if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current time is: ' + JSON.stringify(value));
-          }
-        })
-        .onEnterSelectedArea((value: TimePickerResult) => {
-            console.info('item enter selected area, time is: ' + JSON.stringify(value));
-        })
-    }.width('100%')
-  }
-}
 ```
+
+```TypeScript
+### 示例3（设置时间格式）
 
 该示例使用format和dateTimeOptions设置TimePicker时间格式。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  private selectedTime: Date = new Date('2022-07-22T08:00:00');
 
-  build() {
-    Column() {
-      TimePicker({
-        selected: this.selectedTime,
-        format: TimePickerFormat.HOUR_MINUTE_SECOND
-      })
-        .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
-        .onChange((value: TimePickerResult) => {
-          if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute, value.second);
-            console.info('select current time is: ' + JSON.stringify(value));
-          }
-        })
-    }.width('100%')
-  }
-}
 ```
+
+```TypeScript
+### 示例4（设置循环滚动）
 
 该示例通过配置[loop](#loop11)设置TimePicker是否循环滚动。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  @State isLoop: boolean = true;
-  @State selectedTime: Date = new Date('2022-07-22T12:00:00');
 
-  build() {
-    Column() {
-      TimePicker({
-        selected: this.selectedTime
-      })
-        .loop(this.isLoop)
-        .onChange((value: TimePickerResult) => {
-          if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current time is: ' + JSON.stringify(value));
-          }
-        })
-
-      Row() {
-        Text('循环滚动').fontSize(20)
-
-        Toggle({ type: ToggleType.Switch, isOn: true })
-          .onChange((isOn: boolean) => {
-            this.isLoop = isOn;
-          })
-      }.position({ x: '60%', y: '40%' })
-
-    }.width('100%')
-  }
-}
 ```
+
+```TypeScript
+### 示例5（设置时间选择组件的起始时间）
 
 该示例设置TimePicker的起始时间。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  private selectedTime: Date = new Date('2022-07-22T08:50:00');
 
-  build() {
-    Column() {
-      TimePicker({
-        selected: this.selectedTime,
-        format: TimePickerFormat.HOUR_MINUTE_SECOND,
-        start: new Date('2022-07-22T08:30:00')
-      })
-        .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
-        .onChange((value: TimePickerResult) => {
-          if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute);
-            console.info('select current time is: ' + JSON.stringify(value));
-          }
-        })
-    }.width('100%')
-  }
-}
 ```
+
+```TypeScript
+### 示例6（设置时间选择组件的结束时间）
 
 该示例设置TimePicker的结束时间。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  private selectedTime: Date = new Date('2022-07-22T08:50:00');
 
-  build() {
-    Column() {
-      TimePicker({
-        selected: this.selectedTime,
-        format: TimePickerFormat.HOUR_MINUTE_SECOND,
-        end: new Date('2022-07-22T15:20:00'),
-      })
-        .dateTimeOptions({ hour: "numeric", minute: "2-digit", second: "2-digit" })
-        .onChange((value: TimePickerResult) => {
-          if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute, value.second);
-            console.info('select current time is: ' + JSON.stringify(value));
-          }
-        })
-    }.width('100%')
-  }
-}
 ```
 
-该示例通过配置[enableCascade](#enablecascade18)、[loop](#loop11)实现12小时制时上午/下午跟随时间联动。
-从API version 18开始，新增enableCascade接口。
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct TimePickerExample {
-  private selectedTime: Date = new Date('2022-07-22T08:00:00');
+### 示例7（设置上午/下午跟随时间联动）
 
-  build() {
-    Column() {
-      TimePicker({
-        selected: this.selectedTime,
-      })
-        .useMilitaryTime(false)
-        .enableCascade(true)
-        .loop(true)
-        .onChange((value: TimePickerResult) => {
-          if (value.hour >= 0) {
-            this.selectedTime.setHours(value.hour, value.minute);
-          console.info('select current time is: ' + JSON.stringify(value));
-          }
-        })
-    }.width('100%')
-  }
-}
+该示例通过配置[enableCascade](#enablecascade18)、[loop](#loop11)实现12小时制时上午/下午跟随时间联动。
+
+从API version 18开始，新增enableCascade接口。
 ```

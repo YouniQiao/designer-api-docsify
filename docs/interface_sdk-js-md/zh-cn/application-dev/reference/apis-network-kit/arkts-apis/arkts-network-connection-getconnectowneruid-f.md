@@ -59,8 +59,8 @@ import { connection } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let protocol = connection.ProtocolType.PROTO_TYPE_TCP;
-let local: connection.NetAddress = { address: '192.168.1.100', family: 1, port: 6666 };
-let remote: connection.NetAddress = { address: '192.168.1.200', family: 1, port: 8888 };
+let local: connection.NetAddress = { address: 'xxx.xxx.x.xxx', family: 1, port: 6666 };
+let remote: connection.NetAddress = { address: 'xxx.xxx.x.xxx', family: 1, port: 8888 };
 connection.getConnectOwnerUid(protocol, local, remote).then((uid) => {
   console.info(`Succeeded to get uid: ${uid}`);
 }).catch((error: BusinessError) => {

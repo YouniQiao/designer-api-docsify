@@ -61,6 +61,23 @@ try{
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try{
+  notificationManager.on('checkNotification',{
+    contentType: notificationManager.ContentType.NOTIFICATION_CONTENT_LIVE_VIEW,
+    slotType: notificationManager.SlotType.LIVE_VIEW ,
+    extraInfoKeys: ['event'],
+  },
+    async (checkInfo)=>{
+      return { code: 1, message: 'INVALID_PARAMETERS'};
+  },);
+} catch (err) {
+  console.error(`notificationManager.on failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## on('checkNotification')
 
@@ -102,19 +119,4 @@ function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try{
-  notificationManager.on('checkNotification',{
-    contentType: notificationManager.ContentType.NOTIFICATION_CONTENT_LIVE_VIEW,
-    slotType: notificationManager.SlotType.LIVE_VIEW ,
-    extraInfoKeys: ['event'],
-  },
-    async (checkInfo)=>{
-      return { code: 1, message: 'INVALID_PARAMETERS'};
-  },);
-} catch (err) {
-  console.error(`notificationManager.on failed, code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 on

@@ -81,6 +81,16 @@ function enableInputMethodSafely() {
 enableInputMethodSafely();
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodExtAbility', inputMethod.EnabledState.FULL_EXPERIENCE_MODE, 100).then(() => {
+  console.info('Succeeded in enabling input method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## enableInputMethod
 
 ```TypeScript
@@ -130,32 +140,7 @@ enableInputMethod(
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function enableInputMethodSafely() {
-  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-  if (!currentIme) {
-    console.error("Failed to get current input method");
-    return;
-  }
-
-  inputMethod.getSetting()
-    .enableInputMethod(currentIme.name, currentIme.id, inputMethod.EnabledState.BASIC_MODE)
-    .then(() => {
-      console.info('Succeeded in enable inputmethod.');
-    })
-    .catch((err) => {
-      if (err instanceof BusinessError) {
-        console.error(`Failed to enableInputMethod. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.error(`Failed to enableInputMethod. Error: ${err}`);
-      }
-    });
-}
-
-enableInputMethodSafely();
-```
+参见 [enableInputMethod](#enableinputmethod)
 
 ## getAllInputMethodsSync
 
@@ -200,6 +185,18 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 
 ```TypeScript
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync(100);
+  console.info('Succeeded in getting all input methods, count: ' + imeProperty.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getAllInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
+}
 ```
 
 ## getCursorInfo
@@ -349,6 +346,18 @@ getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true, 100);
+  console.info('Succeeded in getting enabled input methods, count: ' + imeProperty.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getInputMethodSubtypes
 
 ```TypeScript
@@ -388,6 +397,22 @@ getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSu
 | [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+
+**示例**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+try {
+  let subtypes: Array<InputMethodSubtype> = inputMethodSetting.getInputMethodSubtypes('com.example.keyboard', 100);
+  console.info('Succeeded in getting input method subtypes, count: ' + subtypes.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getInputMethodSubtypes. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## isPanelShown
 
@@ -441,6 +466,23 @@ try {
 }
 ```
 
+```TypeScript
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+
+let displayId: number = 10;
+let info: PanelInfo = {
+  type: PanelType.SOFT_KEYBOARD,
+  flag: PanelFlag.FLAG_FIXED
+}
+
+try {
+  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
+  console.info('Succeeded in querying isPanelShown, result: ' + result);
+} catch (err) {
+  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## isPanelShown
 
 ```TypeScript
@@ -479,22 +521,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
 
 **示例**
 
-```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
-
-let displayId: number = 10;
-let info: PanelInfo = {
-  type: PanelType.SOFT_KEYBOARD,
-  flag: PanelFlag.FLAG_FIXED
-}
-
-try {
-  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
-  console.info('Succeeded in querying isPanelShown, result: ' + result);
-} catch (err) {
-  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [isPanelShown](#ispanelshown)
 
 ## off('imeShow')
 
@@ -517,12 +544,6 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 | type | 'imeShow' | 是 | 设置监听类型，固定取值'imeShow'。 |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
-**示例**
-
-```TypeScript
-inputMethod.getSetting().off('imeShow');
-```
-
 ## off('imeHide')
 
 ```TypeScript
@@ -543,12 +564,6 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 | --- | --- | --- | --- |
 | type | 'imeHide' | 是 | 设置监听类型，固定取值'imeHide'。 |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
-
-**示例**
-
-```TypeScript
-inputMethod.getSetting().off('imeHide');
-```
 
 ## offImeChangeWithUserId
 
@@ -578,6 +593,12 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
+**示例**
+
+```TypeScript
+inputMethod.getSetting().offImeChangeWithUserId();
+```
+
 ## on('imeShow')
 
 ```TypeScript
@@ -604,14 +625,6 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-
-**示例**
-
-```TypeScript
-inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>) => {
-  console.info('Succeeded in subscribing imeShow event.');
-});
-```
 
 ## on('imeHide')
 
@@ -640,14 +653,6 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
-**示例**
-
-```TypeScript
-inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>) => {
-  console.info('Succeeded in subscribing imeHide event.');
-});
-```
-
 ## onImeChangeWithUserId
 
 ```TypeScript
@@ -675,3 +680,14 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+
+**示例**
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+
+inputMethod.getSetting()
+  .onImeChangeWithUserId((inputMethodProperty: inputMethod.InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: number) => {
+    console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name}, inputMethodSubtype.id: ${inputMethodSubtype.id}, userId: ${userId}`);
+  });
+```

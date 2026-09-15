@@ -44,6 +44,30 @@ function getLocalCapabilities(): Promise<FileData>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileIo, backup } from '@kit.CoreFileKit';
 
+try {
+  backup.getLocalCapabilities((err: BusinessError, fileData: backup.FileData) => {
+    if (err) {
+      console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fileIo.closeSync(fileData.fd);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
+
 async function getLocalCapabilities() {
   try {
     let fileData = await backup.getLocalCapabilities();
@@ -57,22 +81,24 @@ async function getLocalCapabilities() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
 ```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
+
+async function getLocalCapabilities() {
+  try {
+    let backupApps: backup.IncrementalBackupTime[] = [{
+      bundleName: 'com.example.hiworld',
+      lastIncrementalTime: 1700107870 // 调用者根据上次记录的增量备份时间
+    }];
+    let fileData = await backup.getLocalCapabilities(backupApps);
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fileIo.closeSync(fileData.fd);
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
 }
 ```
 
@@ -131,22 +157,45 @@ try {
 }
 ```
 
+```TypeScript
 能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
+```
 
 ```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
+
+async function getLocalCapabilities() {
+  try {
+    let fileData = await backup.getLocalCapabilities();
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fileIo.closeSync(fileData.fd);
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
+
+async function getLocalCapabilities() {
+  try {
+    let backupApps: backup.IncrementalBackupTime[] = [{
+      bundleName: 'com.example.hiworld',
+      lastIncrementalTime: 1700107870 // 调用者根据上次记录的增量备份时间
+    }];
+    let fileData = await backup.getLocalCapabilities(backupApps);
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fileIo.closeSync(fileData.fd);
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
 }
 ```
 
@@ -193,6 +242,47 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 | 13900042 | Unknown error |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
+
+try {
+  backup.getLocalCapabilities((err: BusinessError, fileData: backup.FileData) => {
+    if (err) {
+      console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fileIo.closeSync(fileData.fd);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+```TypeScript
+能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo, backup } from '@kit.CoreFileKit';
+
+async function getLocalCapabilities() {
+  try {
+    let fileData = await backup.getLocalCapabilities();
+    console.info('getLocalCapabilities success');
+    console.info('fileData info:' + fileData.fd);
+    fileIo.closeSync(fileData.fd);
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

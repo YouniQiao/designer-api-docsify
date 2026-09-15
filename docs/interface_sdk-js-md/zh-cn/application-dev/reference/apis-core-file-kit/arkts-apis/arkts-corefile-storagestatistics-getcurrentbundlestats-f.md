@@ -36,6 +36,15 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getCurrentBundleStats().then((bundleStats: storageStatistics.BundleStats) => {
+  console.info('getCurrentBundleStats successfully:' + JSON.stringify(bundleStats));
+}).catch((err: BusinessError) => {
+  console.error(`getCurrentBundleStats failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getCurrentBundleStats((error: BusinessError, bundleStats: storageStatistics.BundleStats) => {
   if (error) {
     console.error(`getCurrentBundleStats failed. Code: ${error.code}, message: ${error.message}`);
@@ -75,11 +84,4 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getCurrentBundleStats().then((bundleStats: storageStatistics.BundleStats) => {
-  console.info('getCurrentBundleStats successfully:' + JSON.stringify(bundleStats));
-}).catch((err: BusinessError) => {
-  console.error(`getCurrentBundleStats failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getCurrentBundleStats](#getcurrentbundlestats)

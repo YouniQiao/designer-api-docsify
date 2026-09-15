@@ -51,6 +51,48 @@ window.create('test', window.WindowType.TYPE_APP, (err: BusinessError, data) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.create('test', window.WindowType.TYPE_APP);
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in creating the subWindow. Data: ' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the subWindow. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT, (err: BusinessError, data) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  windowClass = data;
+  console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
+  windowClass.resetSize(500, 1000);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowClass: window.Window | undefined = undefined;
+let promise = window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT);
+promise.then((data) => {
+  windowClass = data;
+  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## create
 
@@ -87,18 +129,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.create('test', window.WindowType.TYPE_APP);
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in creating the subWindow. Data: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the subWindow. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [create](#create)
 
 
 ## create
@@ -133,18 +164,7 @@ Creates a system window. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-let promise = window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT);
-promise.then((data) => {
-  windowClass = data;
-  console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+See [create](#create)
 
 
 ## create
@@ -174,18 +194,4 @@ Creates a system window. This API uses an asynchronous callback to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowClass: window.Window | undefined = undefined;
-window.create(globalThis.getContext(), 'test', window.WindowType.TYPE_SYSTEM_ALERT, (err: BusinessError, data) => {
-  const errCode: number = err.code;
-  if (errCode) {
-    console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  windowClass = data;
-  console.info('Succeeded in creating the window. Data: ' + JSON.stringify(data));
-  windowClass.resetSize(500, 1000);
-});
-```
+See [create](#create)

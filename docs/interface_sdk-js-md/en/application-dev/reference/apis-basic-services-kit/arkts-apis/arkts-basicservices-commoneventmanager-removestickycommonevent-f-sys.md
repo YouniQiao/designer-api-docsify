@@ -54,6 +54,16 @@ commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
+  console.info(`removeStickyCommonEvent success`);
+}).catch((err: BusinessError) => {
+  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
+});
+```
+
 
 ## removeStickyCommonEvent
 
@@ -96,12 +106,4 @@ Removes a sticky common event that has been published. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
-  console.info(`removeStickyCommonEvent success`);
-}).catch((err: BusinessError) => {
-  console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
-});
-```
+See [removeStickyCommonEvent](#removestickycommonevent)

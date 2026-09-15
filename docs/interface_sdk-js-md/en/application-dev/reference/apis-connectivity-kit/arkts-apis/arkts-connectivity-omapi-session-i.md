@@ -274,8 +274,95 @@ function secureElementDemo() {
         // Set the AID of the application selected on the channel.
         seSession.openBasicChannel(aidArray).then((data) => {
             seChannel = data;
-        }).catch((error : BusinessError)=> {
+        }).catch((error : BusinessError) => {
             hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openBasicChannel(aidArray, (error, data) => {
+            if (error) {
+                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
+            } else {
+                seChannel = data;
+            }
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openBasicChannel(aidArray, p2).then((data) => {
+            seChannel = data;
+        }).catch((error : BusinessError) => {
+            hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openBasicChannel(aidArray, p2, (error, data) => {
+            if (error) {
+                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
+            } else {
+                seChannel = data;
+            }
         });
     } catch (exception) {
         hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
@@ -319,34 +406,7 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openBasicChannel(aidArray, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openBasicChannel](#openbasicchannel)
 
 ## openBasicChannel
 
@@ -386,33 +446,7 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openBasicChannel(aidArray, p2).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openBasicChannel](#openbasicchannel)
 
 ## openBasicChannel
 
@@ -447,35 +481,7 @@ Opens a basic channel, as defined in ISO/IEC 7816-4. If the SE cannot provide th
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openBasicChannel(aidArray, p2, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openBasicChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openBasicChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openBasicChannel](#openbasicchannel)
 
 ## openLogicalChannel
 
@@ -528,8 +534,95 @@ function secureElementDemo() {
         // Set the AID of the application selected on the channel.
         seSession.openLogicalChannel(aidArray).then((data) => {
             seChannel = data;
-        }).catch((error : BusinessError)=> {
+        }).catch((error : BusinessError) => {
             hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openLogicalChannel(aidArray, (error, data) => {
+            if (error) {
+                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
+            } else {
+                seChannel = data;
+            }
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Set the AID of the application selected on the channel.
+        seSession.openLogicalChannel(aidArray, p2).then((data) => {
+            seChannel = data;
+        }).catch((error : BusinessError) => {
+            hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
+        });
+    } catch (exception) {
+        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
+    }
+    if (seChannel == undefined) {
+        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
+        return;
+    }
+}
+```
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { omapi } from '@kit.ConnectivityKit';
+
+let seSession : omapi.Session;
+let seChannel : omapi.Channel;
+let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
+let p2 : number = 0x00;
+
+// Initialize seSession before using it.
+function secureElementDemo() {
+    try {
+        // Change to the AID of the App selected on this channel.
+        seSession.openLogicalChannel(aidArray, p2, (error, data) => {
+            if (error) {
+                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
+            } else {
+                seChannel = data;
+            }
         });
     } catch (exception) {
         hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
@@ -573,34 +666,7 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openLogicalChannel(aidArray, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openLogicalChannel](#openlogicalchannel)
 
 ## openLogicalChannel
 
@@ -640,33 +706,7 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-        // Set the AID of the application selected on the channel.
-        seSession.openLogicalChannel(aidArray, p2).then((data) => {
-            seChannel = data;
-        }).catch((error : BusinessError)=> {
-            hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openLogicalChannel](#openlogicalchannel)
 
 ## openLogicalChannel
 
@@ -701,32 +741,4 @@ Opens a logical channel, as defined in ISO/IEC 7816-4. If the SE cannot provide 
 
 **Examples**
 
-```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { omapi } from '@kit.ConnectivityKit';
-
-let seSession : omapi.Session;
-let seChannel : omapi.Channel;
-let aidArray : number[] = [0xA0, 0x00, 0x00, 0x00, 0x03, 0x10, 0x10];
-let p2 : number = 0x00;
-
-// Initialize seSession before using it.
-function secureElementDemo() {
-    try {
-    // Set the AID of the application selected on the channel.
-        seSession.openLogicalChannel(aidArray, p2, (error, data) => {
-            if (error) {
-                hilog.error(0x0000, 'testTag', 'openLogicalChannel error %{public}s', JSON.stringify(error));
-            } else {
-                seChannel = data;
-            }
-        });
-    } catch (exception) {
-        hilog.error(0x0000, 'testTag', 'openLogicalChannel exception %{public}s', JSON.stringify(exception));
-    }
-    if (seChannel == undefined) {
-        hilog.error(0x0000, 'testTag', 'seChannel invalid.');
-        return;
-    }
-}
-```
+See [openLogicalChannel](#openlogicalchannel)

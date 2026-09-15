@@ -413,17 +413,6 @@ Resets the connection to this tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
-// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
-
-tag.getIsoDep(tagInfo).reset();
-```
-
 ## resetConnection
 
 ```TypeScript
@@ -447,22 +436,6 @@ Resets the connection to this tag.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-
-**Examples**
-
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
-// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
-
-try {
-    tag.getIsoDep(tagInfo).resetConnection(); 
-    console.info("tag resetConnection success");
-} catch (businessError) {
-    console.error("tag resetConnection businessError: " + businessError);
-}
-```
 
 ## sendData
 
@@ -502,7 +475,7 @@ Sends data to the tag. This API uses a promise to return the result.
 **Examples**
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@ohos.base';
 
 // tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
@@ -519,9 +492,35 @@ function tagSessionDemo() {
 
     let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
     tag.getIsoDep(tagInfo).sendData(cmdData).then((response) => {
-    console.info("tagSession sendData Promise response: " + response);
-    }).catch((err : BusinessError)=> {
-    console.error("tagSession sendData Promise err: " + err);
+        console.info("tagSession sendData Promise response: " + response);
+    }).catch((err : BusinessError) => {
+        console.error("tagSession sendData Promise err: " + err);
+    });
+}
+```
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+    // Connect the tag if it has not been connected.
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response) => {
+        if (err) {
+            console.error("tagSession sendData AsyncCallback err: " + err);
+        } else {
+            console.info("tagSession sendData AsyncCallback response: " + response);
+        }
     });
 }
 ```
@@ -558,31 +557,7 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
-// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
-
-function tagSessionDemo() {
-    // Connect the tag if it has not been connected.
-    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
-        if (!tag.getIsoDep(tagInfo).connectTag()) {
-            console.error("tagSession connectTag failed.");
-            return;
-        }
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
-    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
-        if (err) {
-            console.error("tagSession sendData AsyncCallback err: " + err);
-        } else {
-            console.info("tagSession sendData AsyncCallback response: " + response);
-        }
-    });
-}
-```
+See [sendData](#senddata)
 
 ## setSendDataTimeout
 
@@ -728,7 +703,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
 
 function tagSessionDemo() {
-// Connect the tag if it has not been connected.
+    // Connect the tag if it has not been connected.
     try {
         if (!tag.getIsoDep(tagInfo).isConnected()) {
             tag.getIsoDep(tagInfo).connect();
@@ -740,11 +715,44 @@ function tagSessionDemo() {
 
     let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
     try {
-    tag.getIsoDep(tagInfo).transmit(cmdData).then((response) => {
+        tag.getIsoDep(tagInfo).transmit(cmdData).then((response) => {
         console.info("tagSession transmit Promise response: " + response);
-    }).catch((err : BusinessError)=> {
+    }).catch((err : BusinessError) => {
         console.error("tagSession transmit Promise err: " + err);
     });
+    } catch (businessError) {
+        console.error("tag transmit businessError: " + businessError);
+        return;
+    }
+}
+```
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+    // Connect the tag if it has not been connected.
+    try {
+        if (!tag.getIsoDep(tagInfo).isConnected()) {
+            tag.getIsoDep(tagInfo).connect();
+        }
+    } catch (businessError) {
+        console.error("tag connect businessError: " + businessError);
+        return;
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    try {
+        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response) => {
+            if (err) {
+                console.error("tagSession transmit AsyncCallback err: " + err);
+            } else {
+                console.info("tagSession transmit AsyncCallback response: " + response);
+            }
+        });
     } catch (businessError) {
         console.error("tag transmit businessError: " + businessError);
         return;
@@ -787,35 +795,4 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-
-// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
-// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
-
-function tagSessionDemo() {
-    // Connect the tag if it has not been connected.
-    try {
-        if (!tag.getIsoDep(tagInfo).isConnected()) {
-            tag.getIsoDep(tagInfo).connect();
-        }
-    } catch (businessError) {
-        console.error("tag connect businessError: " + businessError);
-        return;
-    }
-
-    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
-    try {
-        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response)=> {
-            if (err) {
-                console.error("tagSession transmit AsyncCallback err: " + err);
-            } else {
-                console.info("tagSession transmit AsyncCallback response: " + response);
-            }
-        });
-    } catch (businessError) {
-        console.error("tag transmit businessError: " + businessError);
-        return;
-    }
-}
-```
+See [transmit](#transmit)

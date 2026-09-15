@@ -61,7 +61,7 @@ function secureElementDemo() {
     // Obtain the service.
     try {
         seService = omapi.newSEService("serviceState", (state) => {
-        hilog.info(0x0000, 'testTag', 'se service state = %{public}s', JSON.stringify(state));
+            hilog.info(0x0000, 'testTag', 'se service state = %{public}s', JSON.stringify(state));
         });
     } catch (error) {
         hilog.error(0x0000, 'testTag', 'newSEService error %{public}s', JSON.stringify(error));

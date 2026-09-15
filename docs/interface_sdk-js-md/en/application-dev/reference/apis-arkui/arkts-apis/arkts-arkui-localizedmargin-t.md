@@ -4,9 +4,9 @@
 declare type LocalizedMargin = LocalizedPadding
 ```
 
-Defines the localized margin property.
+Defines the margins in different directions of a component.
 
-@typedef { LocalizedPadding } LocalizedMargin
+To reference this object, at least one parameter must be passed.
 
 **Since:** 12
 

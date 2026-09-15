@@ -38,6 +38,36 @@ Create an AVSession instance. An ability can only create one AVSession
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello world';
+
+  build() { 
+    Column() {
+        Text(this.message)
+          .onClick(()=>{
+            let currentAVSession: avSession.AVSession;
+            let tag = "createNewSession";
+            let context: Context = this.getUIContext().getHostContext() as Context;
+            let sessionId: string;  // Used as an input parameter of subsequent functions.
+
+            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
+            currentAVSession = data;
+            sessionId = currentAVSession.sessionId;
+            console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);
+            });
+          })
+      }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
@@ -109,32 +139,4 @@ Create an AVSession instance. An ability can only create one AVSession
 
 **Examples**
 
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() { 
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            let currentAVSession: avSession.AVSession;
-            let tag = "createNewSession";
-            let context: Context = this.getUIContext().getHostContext() as Context;
-            let sessionId: string;  // Used as an input parameter of subsequent functions.
-
-            avSession.createAVSession(context, tag, "audio").then(async (data: avSession.AVSession) => {
-            currentAVSession = data;
-            sessionId = currentAVSession.sessionId;
-            console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+See [createAVSession](#createavsession)

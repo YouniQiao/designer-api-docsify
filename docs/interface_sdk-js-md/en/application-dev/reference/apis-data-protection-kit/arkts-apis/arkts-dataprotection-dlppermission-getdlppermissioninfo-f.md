@@ -51,6 +51,22 @@ dlpPermission.isInSandbox().then(async (inSandbox) => { // Check whether the app
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
+  if (inSandbox) {
+    dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
+      if (err) {
+        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('permissionInfo', JSON.stringify(permissionInfo));
+      }
+    }); // Obtain the permission information.
+  }
+});
+```
+
 
 ## getDLPPermissionInfo
 
@@ -84,18 +100,4 @@ When processing files in the DLP sandbox, the system determines the operations t
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
-  if (inSandbox) {
-    dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
-      if (err) {
-        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        console.info('permissionInfo', JSON.stringify(permissionInfo));
-      }
-    }); // Obtain the permission information.
-  }
-});
-```
+See [getDLPPermissionInfo](#getdlppermissioninfo)

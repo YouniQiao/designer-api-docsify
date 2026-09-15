@@ -60,6 +60,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore.backup(backupFile).then(() => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## backup
 
 ```TypeScript
@@ -95,21 +111,7 @@ Backs up an RDB store. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backupFile = 'BK001';
-try {
-  kvStore.backup(backupFile).then(() => {
-    console.info(`Succeeded in backupping data`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [backup](#backup)
 
 ## backupEx
 
@@ -222,6 +224,31 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resultSet: distributedKVStore.KVStoreResultSet;
+try {
+  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting result set');
+    resultSet = result;
+    if (kvStore != null) {
+      kvStore.closeResultSet(resultSet).then(() => {
+        console.info('Succeeded in closing result set');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## closeResultSet
 
 ```TypeScript
@@ -256,30 +283,7 @@ Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resultSet: distributedKVStore.KVStoreResultSet;
-try {
-  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-    console.info('Succeeded in getting result set');
-    resultSet = result;
-    if (kvStore != null) {
-      kvStore.closeResultSet(resultSet).then(() => {
-        console.info('Succeeded in closing result set');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-  });
-
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [closeResultSet](#closeresultset)
 
 ## commit
 
@@ -326,6 +330,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.commit().then(async () => {
+    console.info('Succeeded in committing');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to commit. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## commit
 
 ```TypeScript
@@ -354,20 +373,7 @@ Commits the transaction in this single KV store. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.commit().then(async () => {
-    console.info('Succeeded in committing');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to commit. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [commit](#commit)
 
 ## delete
 
@@ -429,6 +435,30 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore.delete(KEY_TEST_STRING_ELEMENT).then(() => {
+        console.info('Succeeded in deleting');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -466,29 +496,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-  kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
-    console.info(`Succeeded in putting data`);
-    if (kvStore != null) {
-      kvStore.delete(KEY_TEST_STRING_ELEMENT).then(() => {
-        console.info('Succeeded in deleting');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [delete](#delete)
 
 ## deleteBackup
 
@@ -537,6 +545,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let files = ['BK001', 'BK002'];
+try {
+  kvStore.deleteBackup(files).then((data: [string, number][]) => {
+    console.info(`Succeed in deleting Backup.data=${data}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## deleteBackup
 
 ```TypeScript
@@ -571,21 +595,7 @@ Deletes a backup file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let files = ['BK001', 'BK002'];
-try {
-  kvStore.deleteBackup(files).then((data: [string, number][]) => {
-    console.info(`Succeed in deleting Backup.data=${data}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [deleteBackup](#deletebackup)
 
 ## deleteBackupEx
 
@@ -713,6 +723,43 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  let keys: string[] = [];
+  for (let i = 0; i < 5; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+    keys.push(key + i);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.deleteBatch(keys).then(() => {
+        console.info('Succeeded in deleting Batch');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to delete Batch. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## deleteBatch
 
 ```TypeScript
@@ -750,42 +797,7 @@ Batch deletes KV pairs from this single KV store. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  let keys: string[] = [];
-  for (let i = 0; i < 5; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-    keys.push(key + i);
-  }
-  console.info(`entries: ${entries}`);
-  kvStore.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting Batch');
-    if (kvStore != null) {
-      kvStore.deleteBatch(keys).then(() => {
-        console.info('Succeeded in deleting Batch');
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to delete Batch. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [deleteBatch](#deletebatch)
 
 ## enableSync
 
@@ -833,6 +845,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.enableSync(true).then(() => {
+    console.info('Succeeded in enabling sync');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## enableSync
 
 ```TypeScript
@@ -867,20 +894,7 @@ Sets cross-device data sync, which can be enabled or disabled. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.enableSync(true).then(() => {
-    console.info('Succeeded in enabling sync');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [enableSync](#enablesync)
 
 ## get
 
@@ -1131,42 +1145,6 @@ try {
 }
 ```
 
-## getEntries
-
-```TypeScript
-getEntries(keyPrefix: string): Promise<Entry[]>
-```
-
-Obtains all KV pairs that match the specified key prefix. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-
-**Examples**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -1203,37 +1181,6 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-
-## getEntries
-
-```TypeScript
-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
-```
-
-Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
-| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
-
-**Examples**
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1279,6 +1226,434 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info('Succeeded in getting Entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## getEntries
+
+```TypeScript
+getEntries(keyPrefix: string): Promise<Entry[]>
+```
+
+Obtains all KV pairs that match the specified key prefix. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info('Succeeded in getting Entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## getEntries
+
+```TypeScript
+getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
+```
+
+Obtains the KV pairs that match the specified **Query** object. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| query | [Query](arkts-arkdata-distributedkvstore-query-c.md) | Yes | Key prefix to match. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Entry](arkts-arkdata-distributedkvstore-entry-i.md)[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+  });
+  console.info('Succeeded in getting Entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getEntries
 
 ```TypeScript
@@ -1314,6 +1689,128 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_bool_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.BYTE_ARRAY,
+        value: arr
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting Batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
+        if (err) {
+          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting Entries');
+        console.info(`entries.length: ${entries.length}`);
+        console.info(`entries[0]: ${entries[0]}`);
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1435,6 +1932,122 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries).then(() => {
+    console.info('Succeeded in putting batch');
+    kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      if (kvStore != null) {
+        kvStore.closeResultSet(resultSet).then(() => {
+          console.info('Succeeded in closing result set');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+        });
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+    kvStore!.putBatch(entries).then(() => {
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info(`Succeeded in getting result set size=${result.getCount()}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getResultSet
 
 ```TypeScript
@@ -1489,6 +2102,55 @@ try {
     }
     entries.push(entry);
   }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    if (kvStore != null) {
+      kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+        resultSet = result;
+        if (kvStore != null) {
+          kvStore.closeResultSet(resultSet, (err :BusinessError) => {
+            if (err) {
+              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+              return;
+            }
+            console.info('Succeeded in closing result set');
+          });
+        }
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
   kvStore!.putBatch(entries).then(() => {
     console.info('Succeeded in putting batch');
     kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
@@ -1501,6 +2163,81 @@ try {
           console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
         });
       }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+    kvStore!.putBatch(entries).then(() => {
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info(`Succeeded in getting result set size=${result.getCount()}`);
     }).catch((err: BusinessError) => {
       console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
     });
@@ -1568,6 +2305,96 @@ try {
       return;
     }
     console.info('Succeeded in putting batch');
+    if (kvStore != null) {
+      kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+        resultSet = result;
+        if (kvStore != null) {
+          kvStore.closeResultSet(resultSet, (err :BusinessError) => {
+            if (err) {
+              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+              return;
+            }
+            console.info('Succeeded in closing result set');
+          });
+        }
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries).then(() => {
+    console.info('Succeeded in putting batch');
+    kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      if (kvStore != null) {
+        kvStore.closeResultSet(resultSet).then(() => {
+          console.info('Succeeded in closing result set');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+        });
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
     query.prefixKey('batch_test');
     if (kvStore != null) {
@@ -1579,6 +2406,40 @@ try {
         console.info('Succeeded in getting result set');
       });
     }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+    kvStore!.putBatch(entries).then(() => {
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info(`Succeeded in getting result set size=${result.getCount()}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
   let error = err as BusinessError;
@@ -1622,6 +2483,137 @@ Obtains a **KVStoreResultSet** object that matches the specified **Query** objec
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    if (kvStore != null) {
+      kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+        resultSet = result;
+        if (kvStore != null) {
+          kvStore.closeResultSet(resultSet, (err :BusinessError) => {
+            if (err) {
+              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+              return;
+            }
+            console.info('Succeeded in closing result set');
+          });
+        }
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries).then(() => {
+    console.info('Succeeded in putting batch');
+    kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      if (kvStore != null) {
+        kvStore.closeResultSet(resultSet).then(() => {
+          console.info('Succeeded in closing result set');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+        });
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, async (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
+        if (err) {
+          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1729,6 +2721,40 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  const query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  kvStore.getResultSize(query).then((resultSize: number) => {
+    console.info('Succeeded in getting result set size');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getResultSize
 
 ```TypeScript
@@ -1765,6 +2791,46 @@ Obtains the number of results that match the specified **Query** object. This AP
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore.putBatch(entries, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in putting batch');
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    if (kvStore != null) {
+      kvStore.getResultSize(query, (err: BusinessError, resultSize: number) => {
+        if (err) {
+          console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+          return;
+        }
+        console.info('Succeeded in getting result set size');
+      });
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1845,6 +2911,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.getSecurityLevel().then((data: distributedKVStore.SecurityLevel) => {
+    console.info('Succeeded in getting securityLevel');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get SecurityLevel. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getSecurityLevel
 
 ```TypeScript
@@ -1873,20 +2954,7 @@ Obtains the security level of this KV store. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.getSecurityLevel().then((data: distributedKVStore.SecurityLevel) => {
-    console.info('Succeeded in getting securityLevel');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get SecurityLevel. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [getSecurityLevel](#getsecuritylevel)
 
 ## off
 
@@ -1914,40 +2982,6 @@ Unsubscribes from data changes.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class KvstoreModel {
-  call(data: distributedKVStore.ChangeNotification) {
-    console.info(`dataChange : ${data}`);
-  }
-
-  subscribeDataChange() {
-    try {
-      if (kvStore != null) {
-        kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_REMOTE, this.call);
-      }
-    } catch (err) {
-      let error = err as BusinessError;
-      console.error(`Failed to subscribeDataChange. Code: ${error.code}, message: ${error.message}`);
-    }
-  }
-
-  unsubscribeDataChange() {
-    try {
-      if (kvStore != null) {
-        kvStore.off('dataChange', this.call);
-      }
-    } catch (err) {
-      let error = err as BusinessError;
-      console.error(`Failed to unsubscribeDataChange. Code: ${error.code}, message: ${error.message}`);
-    }
-  }
-}
-```
-
 ## off
 
 ```TypeScript
@@ -1972,40 +3006,6 @@ Unsubscribes from the cross-device data sync completion events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class KvstoreModel {
-  call(data: [string, number][]) {
-    console.info(`syncComplete : ${data}`);
-  }
-
-  subscribeDataChange() {
-    try {
-      if (kvStore != null) {
-        kvStore.on('syncComplete', this.call);
-      }
-    } catch (err) {
-      let error = err as BusinessError;
-      console.error(`Failed to subscribeDataChange. Code: ${error.code}, message: ${error.message}`);
-    }
-  }
-
-  unsubscribeDataChange() {
-    try {
-      if (kvStore != null) {
-        kvStore.off('syncComplete', this.call);
-      }
-    } catch (err) {
-      let error = err as BusinessError;
-      console.error(`Failed to unsubscribeDataChange. Code: ${error.code}, message: ${error.message}`);
-    }
-  } 
-}
-```
 
 ## on
 
@@ -2035,21 +3035,6 @@ Subscribes to data changes of the specified type.
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, (data: distributedKVStore.ChangeNotification) => {
-    console.info(`dataChange callback call data: ${data}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## on
 
 ```TypeScript
@@ -2074,29 +3059,6 @@ Subscribes to the cross-device data sync completion events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-
-const KEY_TEST_FLOAT_ELEMENT = 'key_test_float';
-const VALUE_TEST_FLOAT_ELEMENT = 321.12;
-try {
-  kvStore.on('syncComplete', (data: [string, number][]) => {
-    console.info(`syncComplete ${data}`);
-  });
-  kvStore.put(KEY_TEST_FLOAT_ELEMENT, VALUE_TEST_FLOAT_ELEMENT).then(() => {
-    console.info('succeeded in putting');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to subscribe syncComplete. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## put
 
@@ -2272,9 +3234,43 @@ try {
         console.info(`entries.length: ${entries.length}`);
         console.info(`entries[0]: ${entries[0]}`);
       });
-    } else {
-      console.error('KvStore is null'); // The subsequent sample code is the same as the code here.
     }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
   let error = err as BusinessError;
@@ -2319,41 +3315,7 @@ Batch inserts KV pairs to this single KV store. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let entries: distributedKVStore.Entry[] = [];
-  for (let i = 0; i < 10; i++) {
-    let key = 'batch_test_string_key';
-    let entry: distributedKVStore.Entry = {
-      key: key + i,
-      value: {
-        type: distributedKVStore.ValueType.STRING,
-        value: 'batch_test_string_value'
-      }
-    }
-    entries.push(entry);
-  }
-  console.info(`entries: ${entries}`);
-  kvStore.putBatch(entries).then(async () => {
-    console.info('Succeeded in putting Batch');
-    if (kvStore != null) {
-      kvStore.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
-        console.info('Succeeded in getting Entries');
-        console.info(`PutBatch ${entries}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
-      });
-    }
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [putBatch](#putbatch)
 
 ## rekey
 
@@ -2476,6 +3438,34 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info('Succeeded in putting data');
+    const deviceId = 'no_exist_device_id';
+    kvStore!.removeDeviceData(deviceId).then(() => {
+      console.info('succeeded in removing device data');
+      kvStore!.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
+        console.info(`Succeeded in getting data. Data=${data}`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to get data. Code: ${err.code}, message: ${err.message}`);
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove device data. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to put data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## removeDeviceData
 
 ```TypeScript
@@ -2521,33 +3511,7 @@ Deletes data of a device. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
-const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
-try {
-  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
-    console.info('Succeeded in putting data');
-    const deviceId = 'no_exist_device_id';
-    kvStore!.removeDeviceData(deviceId).then(() => {
-      console.info('succeeded in removing device data');
-      kvStore!.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | number | Uint8Array) => {
-        console.info(`Succeeded in getting data. Data=${data}`);
-      }).catch((err: BusinessError) => {
-        console.error(`Failed to get data. Code: ${err.code}, message: ${err.message}`);
-      });
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to remove device data. Code: ${err.code}, message: ${err.message}`);
-    });
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to put data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [removeDeviceData](#removedevicedata)
 
 ## restore
 
@@ -2597,6 +3561,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore.restore(backupFile).then(() => {
+    console.info(`Succeeded in restoring data`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## restore
 
 ```TypeScript
@@ -2632,21 +3612,7 @@ Restores a distributed KV store from a database file. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let backupFile = 'BK001';
-try {
-  kvStore.restore(backupFile).then(() => {
-    console.info(`Succeeded in restoring data`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [restore](#restore)
 
 ## restoreEx
 
@@ -2747,6 +3713,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.rollback().then(async () => {
+    console.info('Succeeded in rolling back');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to rollback. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## rollback
 
 ```TypeScript
@@ -2775,20 +3756,7 @@ Rolls back the transaction in this single KV store. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.rollback().then(async () => {
-    console.info('Succeeded in rolling back');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to rollback. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [rollback](#rollback)
 
 ## setSyncParam
 
@@ -2842,6 +3810,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const defaultAllowedDelayMs = 500;
+  kvStore.setSyncParam(defaultAllowedDelayMs).then(() => {
+    console.info('Succeeded in setting syncParam');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## setSyncParam
 
 ```TypeScript
@@ -2881,21 +3865,7 @@ Sets the default delay for cross-device data sync. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const defaultAllowedDelayMs = 500;
-  kvStore.setSyncParam(defaultAllowedDelayMs).then(() => {
-    console.info('Succeeded in setting syncParam');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [setSyncParam](#setsyncparam)
 
 ## setSyncRange
 
@@ -2946,6 +3916,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localLabels = ['A', 'B'];
+  const remoteSupportLabels = ['C', 'D'];
+  kvStore.setSyncRange(localLabels, remoteSupportLabels).then(() => {
+    console.info('Succeeded in setting syncRange');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## setSyncRange
 
 ```TypeScript
@@ -2981,22 +3968,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const localLabels = ['A', 'B'];
-  const remoteSupportLabels = ['C', 'D'];
-  kvStore.setSyncRange(localLabels, remoteSupportLabels).then(() => {
-    console.info('Succeeded in setting syncRange');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [setSyncRange](#setsyncrange)
 
 ## startTransaction
 
@@ -3075,6 +4047,24 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_ALL, (data: distributedKVStore.ChangeNotification) => {
+    console.info(`startTransaction 0 ${data}`);
+  });
+  kvStore.startTransaction().then(async () => {
+    console.info('Succeeded in starting Transaction');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## startTransaction
 
 ```TypeScript
@@ -3104,23 +4094,7 @@ Starts the transaction in this single KV store. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_ALL, (data: distributedKVStore.ChangeNotification) => {
-    console.info(`startTransaction 0 ${data}`);
-  });
-  kvStore.startTransaction().then(async () => {
-    console.info('Succeeded in starting Transaction');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [startTransaction](#starttransaction)
 
 ## sync
 
@@ -3172,7 +4146,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let devManager: distributedDeviceManager.DeviceManager;
 const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
 const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
-// create deviceManager
+
 export default class EntryAbility extends UIAbility {
   onCreate() {
     let context = this.context;
@@ -3200,6 +4174,61 @@ export default class EntryAbility extends UIAbility {
               const mode = distributedKVStore.SyncMode.PULL_ONLY;
               if (kvStore != null) {
                 kvStore.sync(deviceIds, mode, 1000);
+              }
+            });
+          }
+        }
+      } catch (err) {
+        let error = err as BusinessError;
+        console.error(`Failed to sync. Code: ${error.code}, message: ${error.message}`);
+      }
+
+    } catch (err) {
+      let error = err as BusinessError;
+      console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
+const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    let context = this.context;
+    try {
+      let devManager = distributedDeviceManager.createDeviceManager(context.applicationInfo.name);
+      let deviceIds: string[] = [];
+      if (devManager != null) {
+        let devices = devManager.getAvailableDeviceListSync();
+        for (let i = 0; i < devices.length; i++) {
+          deviceIds[i] = devices[i].networkId as string;
+        }
+      }
+      try {
+        if (kvStore != null) {
+          kvStore.on('syncComplete', (data: [string, number][]) => {
+            console.info('Sync dataChange');
+          });
+          if (kvStore != null) {
+            kvStore.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, (err: BusinessError) => {
+              if (err) {
+                console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
+                return;
+              }
+              console.info('Succeeded in putting data');
+              const mode = distributedKVStore.SyncMode.PULL_ONLY;
+              const query = new distributedKVStore.Query();
+              query.prefixKey('batch_test');
+              query.deviceId(devManager.getLocalDeviceNetworkId());
+              if (kvStore != null) {
+                kvStore.sync(deviceIds, query, mode, 1000);
               }
             });
           }
@@ -3260,57 +4289,4 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 
 **Examples**
 
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
-const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
-// create deviceManager
-export default class EntryAbility extends UIAbility {
-  onCreate() {
-    let context = this.context;
-    try {
-      let devManager = distributedDeviceManager.createDeviceManager(context.applicationInfo.name);
-      let deviceIds: string[] = [];
-      if (devManager != null) {
-        let devices = devManager.getAvailableDeviceListSync();
-        for (let i = 0; i < devices.length; i++) {
-          deviceIds[i] = devices[i].networkId as string;
-        }
-      }
-      try {
-        if (kvStore != null) {
-          kvStore.on('syncComplete', (data: [string, number][]) => {
-            console.info('Sync dataChange');
-          });
-          if (kvStore != null) {
-            kvStore.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, (err: BusinessError) => {
-              if (err) {
-                console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
-                return;
-              }
-              console.info('Succeeded in putting data');
-              const mode = distributedKVStore.SyncMode.PULL_ONLY;
-              const query = new distributedKVStore.Query();
-              query.prefixKey('batch_test');
-              query.deviceId(devManager.getLocalDeviceNetworkId());
-              if (kvStore != null) {
-                kvStore.sync(deviceIds, query, mode, 1000);
-              }
-            });
-          }
-        }
-      } catch (err) {
-        let error = err as BusinessError;
-        console.error(`Failed to sync. Code: ${error.code}, message: ${error.message}`);
-      }
-
-    } catch (err) {
-      let error = err as BusinessError;
-      console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
-    }
-  }
-}
-```
+See [sync](#sync)

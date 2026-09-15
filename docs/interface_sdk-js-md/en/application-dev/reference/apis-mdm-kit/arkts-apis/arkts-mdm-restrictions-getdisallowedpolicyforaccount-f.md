@@ -69,6 +69,25 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, 100);
+  console.info(`Succeeded in querying whether the super hub is disabled: ${result}`);
+} catch (err) {
+  console.error(`Failed to get whether super hub is disabled. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getDisallowedPolicyForAccount
 
@@ -112,21 +131,4 @@ Obtains the status of a feature for a specified user.
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let result: boolean = restrictions.getDisallowedPolicyForAccount(wantTemp, restrictions.FeatureForAccount.SUPER_HUB, 100);
-  console.info(`Succeeded in querying whether the super hub is disabled: ${result}`);
-} catch (err) {
-  console.error(`Failed to get whether super hub is disabled. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount)

@@ -55,6 +55,19 @@ connectedTag.writeNdefTag(rawData).then(() => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+let rawData = "010203"; // change it to be correct.
+connectedTag.writeNdefTag(rawData, (err)=> {
+    if (err) {
+        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag.writeNdefTag AsyncCallback success.");
+    }
+});
+```
+
 
 ## writeNdefTag
 
@@ -88,15 +101,4 @@ Writes data to this active tag. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = "010203"; // change it to be correct.
-connectedTag.writeNdefTag(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.writeNdefTag AsyncCallback success.");
-    }
-});
-```
+See [writeNdefTag](#writendeftag)

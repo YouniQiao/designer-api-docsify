@@ -50,6 +50,17 @@ radio.getSignalInformation(slotId, (err: BusinessError, data: Array<radio.Signal
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) => {
+    console.info(`getSignalInformation success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSignalInformation failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSignalInformation
 
@@ -87,13 +98,4 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) => {
-    console.info(`getSignalInformation success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSignalInformation failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSignalInformation](#getsignalinformation)

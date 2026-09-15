@@ -60,6 +60,20 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.getSlotsByBundle(bundle, getSlotsByBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+};
+
+notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {
+     console.info(`getSlotsByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getSlotsByBundle
 
@@ -104,16 +118,4 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-
-notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {
-     console.info(`getSlotsByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSlotsByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getSlotsByBundle](#getslotsbybundle)

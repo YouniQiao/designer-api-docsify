@@ -62,6 +62,32 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 公共事件相关信息
+let options: commonEventManager.CommonEventPublishData = {
+  code: 0,       // 公共事件的初始代码
+  data: 'initial data', // 公共事件的初始数据
+};
+
+// 指定发送的用户
+let userId = 100;
+// 发布公共事件
+try {
+  commonEventManager.publishAsUser('event', userId, options, (err: BusinessError) => {
+    if (err) {
+      console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+      return;
+    }
+    console.info('publishAsUser');
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## publishAsUser
 
@@ -104,28 +130,4 @@ function publishAsUser(
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 公共事件相关信息
-let options: commonEventManager.CommonEventPublishData = {
-  code: 0,       // 公共事件的初始代码
-  data: 'initial data', // 公共事件的初始数据
-};
-
-// 指定发送的用户
-let userId = 100;
-// 发布公共事件
-try {
-  commonEventManager.publishAsUser('event', userId, options, (err: BusinessError) => {
-    if (err) {
-      console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('publishAsUser');
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [publishAsUser](#publishasuser)

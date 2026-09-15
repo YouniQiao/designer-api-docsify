@@ -44,15 +44,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const count = resultSet.getCount();
-    console.log("getCount succeed:" + count);
+    console.info("getCount succeed:" + count);
 } catch (e) {
-    console.log("getCount failed: " + e);
+    console.error("getCount failed: " + e);
 }
 ```
 
@@ -85,15 +85,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const entry  = resultSet.getEntry();
-    console.log("getEntry succeed:" + JSON.stringify(entry));
+    console.info("getEntry succeed:" + JSON.stringify(entry));
 } catch (e) {
-    console.log("getEntry failed: " + e);
+    console.error("getEntry failed: " + e);
 }
 ```
 
@@ -126,15 +126,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeeded.');
+        console.info('getResultSet succeeded.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const position = resultSet.getPosition();
-    console.log("getPosition succeed:" + position);
+    console.info("getPosition succeed:" + position);
 } catch (e) {
-    console.log("getPosition failed: " + e);
+    console.error("getPosition failed: " + e);
 }
 ```
 
@@ -167,15 +167,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const isafterlast = resultSet.isAfterLast();
-    console.log("Check isAfterLast succeed:" + isafterlast);
+    console.info("Check isAfterLast succeed:" + isafterlast);
 } catch (e) {
-    console.log("Check isAfterLast failed: " + e);
+    console.error("Check isAfterLast failed: " + e);
 }
 ```
 
@@ -208,15 +208,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const isbeforefirst = resultSet.isBeforeFirst();
-    console.log("Check isBeforeFirst succeed: " + isbeforefirst);
+    console.info("Check isBeforeFirst succeed: " + isbeforefirst);
 } catch (e) {
-    console.log("Check isBeforeFirst failed: " + e);
+    console.error("Check isBeforeFirst failed: " + e);
 }
 ```
 
@@ -249,15 +249,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const isfirst = resultSet.isFirst();
-    console.log("Check isFirst succeed:" + isfirst);
+    console.info("Check isFirst succeed:" + isfirst);
 } catch (e) {
-    console.log("Check isFirst failed: " + e);
+    console.error("Check isFirst failed: " + e);
 }
 ```
 
@@ -290,15 +290,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const islast = resultSet.isLast();
-    console.log("Check isLast succeed: " + islast);
+    console.info("Check isLast succeed: " + islast);
 } catch (e) {
-    console.log("Check isLast failed: " + e);
+    console.error("Check isLast failed: " + e);
 }
 ```
 
@@ -337,15 +337,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const moved5 = resultSet.move(1);
-    console.log("move succeed:" + moved5);
+    console.info("move succeed:" + moved5);
 } catch (e) {
-    console.log("move failed: " + e);
+    console.error("move failed: " + e);
 }
 ```
 
@@ -378,15 +378,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const moved1 = resultSet.moveToFirst();
-    console.log("moveToFirst succeed: " + moved1);
+    console.info("moveToFirst succeed: " + moved1);
 } catch (e) {
-    console.log("moveToFirst failed " + e);
+    console.error("moveToFirst failed " + e);
 }
 ```
 
@@ -419,15 +419,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const moved2 = resultSet.moveToLast();
-    console.log("moveToLast succeed:" + moved2);
+    console.info("moveToLast succeed:" + moved2);
 } catch (e) {
-    console.log("moveToLast failed: " + e);
+    console.error("moveToLast failed: " + e);
 }
 ```
 
@@ -460,15 +460,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const moved3 = resultSet.moveToNext();
-    console.log("moveToNext succeed: " + moved3);
+    console.info("moveToNext succeed: " + moved3);
 } catch (e) {
-    console.log("moveToNext failed: " + e);
+    console.error("moveToNext failed: " + e);
 }
 ```
 
@@ -507,15 +507,15 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const moved6 = resultSet.moveToPosition(1);
-    console.log("moveToPosition succeed: " + moved6);
+    console.info("moveToPosition succeed: " + moved6);
 } catch (e) {
-    console.log("moveToPosition failed: " + e);
+    console.error("moveToPosition failed: " + e);
 }
 ```
 
@@ -548,14 +548,14 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + err);
+        console.error('getResultSet failed: ' + err);
     });
     const moved4 = resultSet.moveToPrevious();
-    console.log("moveToPrevious succeed:" + moved4);
+    console.info("moveToPrevious succeed:" + moved4);
 } catch (e) {
-    console.log("moveToPrevious failed: " + e);
+    console.error("moveToPrevious failed: " + e);
 }
 ```

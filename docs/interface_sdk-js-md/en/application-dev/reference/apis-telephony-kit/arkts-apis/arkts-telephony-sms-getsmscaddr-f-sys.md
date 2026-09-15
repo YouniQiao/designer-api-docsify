@@ -53,6 +53,18 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+sms.getSmscAddr(slotId).then((data: string) => {
+    console.info(`getSmscAddr success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSmscAddr failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSmscAddr
 
@@ -96,14 +108,4 @@ Obtains the SMSC address. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-sms.getSmscAddr(slotId).then((data: string) => {
-    console.info(`getSmscAddr success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSmscAddr failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSmscAddr](#getsmscaddr)

@@ -55,6 +55,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = window.setGestureNavigationEnabled(true);
+  promise.then(() => {
+    console.info('Succeeded in setting gesture navigation enabled.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
 
 ## setGestureNavigationEnabled
 
@@ -93,17 +108,4 @@ Enables or disables gesture navigation. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let promise = window.setGestureNavigationEnabled(true);
-  promise.then(() => {
-    console.info('Succeeded in setting gesture navigation enabled.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to set gesture navigation enabled. Cause code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to set gesture navigation enabled. Cause code: ${exception.code}, message: ${exception.message}`);
-}
-```
+See [setGestureNavigationEnabled](#setgesturenavigationenabled)

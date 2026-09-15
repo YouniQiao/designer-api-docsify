@@ -50,6 +50,21 @@ media.createAVRecorder((error: BusinessError, recorder: media.AVRecorder) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let avRecorder: media.AVRecorder;
+media.createAVRecorder().then((recorder: media.AVRecorder) => {
+  if (recorder) {
+    avRecorder = recorder;
+    console.info('Succeeded in creating AVRecorder');
+  } else {
+    console.error('Failed to create AVRecorder');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVRecorder, error message:${error.message}`);
+});
+```
+
 
 ## createAVRecorder
 
@@ -83,17 +98,4 @@ function createAVRecorder(): Promise<AVRecorder>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let avRecorder: media.AVRecorder;
-media.createAVRecorder().then((recorder: media.AVRecorder) => {
-  if (recorder) {
-    avRecorder = recorder;
-    console.info('Succeeded in creating AVRecorder');
-  } else {
-    console.error('Failed to create AVRecorder');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVRecorder, error message:${error.message}`);
-});
-```
+参见 [createAVRecorder](#createavrecorder)

@@ -69,6 +69,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the mouse pointer color.
+            pointer.setPointerColor(0xF6C800).then(() => {
+              console.info(`Succeeded in setting pointer color.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setPointerColor
 
@@ -109,29 +136,4 @@ Sets the mouse pointer color. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Set the mouse pointer color.
-            pointer.setPointerColor(0xF6C800).then(() => {
-              console.info(`Succeeded in setting pointer color.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setPointerColor](#setpointercolor)

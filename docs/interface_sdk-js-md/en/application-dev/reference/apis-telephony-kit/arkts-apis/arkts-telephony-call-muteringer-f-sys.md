@@ -54,6 +54,16 @@ call.muteRinger((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.muteRinger().then(() => {
+    console.info(`muteRinger success.`);
+}).catch((err: BusinessError) => {
+    console.error(`muteRinger fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## muteRinger
 
@@ -89,12 +99,4 @@ Mutes the ringtone while it is playing. It does not work if the ringtone has bee
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.muteRinger().then(() => {
-    console.info(`muteRinger success.`);
-}).catch((err: BusinessError) => {
-    console.error(`muteRinger fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [muteRinger](#muteringer)

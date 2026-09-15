@@ -1,10 +1,8 @@
 # BorderOptions
 
-Defines the options of border.
+Defines border information.
 
-@interface BorderOptions
-
-**Since:** 12
+**Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,15 +12,15 @@ Defines the options of border.
 color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 ```
 
-Defines the border color.
+Border color.
 
 **Type:** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
-**Since:** 12
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +30,11 @@ Defines the border color.
 dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 ```
 
-Defines the gap of dash when BorderStyle is dashed.
+Sets the gap between dashed line segments. This takes effect only when the border style is dashed.
+
+Percentage values are not supported.
+
+**Widget capability**: This API cannot be used in ArkTS widgets.
 
 **Type:** EdgeWidths &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
@@ -50,7 +52,11 @@ Defines the gap of dash when BorderStyle is dashed.
 dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 ```
 
-Defines the length of dash when BorderStyle is dashed.
+Sets the length of dashed line segments. This takes effect only when the border style is dashed.
+
+Percentage values are not supported.
+
+**Widget capability**: This API cannot be used in ArkTS widgets.
 
 **Type:** EdgeWidths &#124; [LengthMetrics](arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
@@ -68,15 +74,15 @@ Defines the length of dash when BorderStyle is dashed.
 radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 ```
 
-Defines the border radius.
+Border corner radius.
 
 **Type:** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) &#124; [Length](arkts-arkui-length-t.md) &#124; [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
-**Since:** 12
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,15 +92,15 @@ Defines the border radius.
 style?: EdgeStyles | BorderStyle
 ```
 
-Defines the border style.
+Border style.
 
 **Type:** EdgeStyles &#124; [BorderStyle](arkts-arkui-borderstyle-e.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,14 +110,14 @@ Defines the border style.
 width?: EdgeWidths | Length | LocalizedEdgeWidths
 ```
 
-Defines the border width.
+Border width.
 
 **Type:** EdgeWidths &#124; [Length](arkts-arkui-length-t.md) &#124; [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
-**Since:** 12
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

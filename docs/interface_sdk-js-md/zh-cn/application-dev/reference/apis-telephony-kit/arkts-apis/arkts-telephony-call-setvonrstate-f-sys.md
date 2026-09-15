@@ -58,6 +58,18 @@ call.setVoNRState(slotId, state, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let state: call.VoNRState = call.VoNRState.VONR_STATE_ON;
+call.setVoNRState(slotId, state).then(() => {
+    console.info(`setVoNRState success`);
+}).catch((err: BusinessError) => {
+    console.error(`setVoNRState fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setVoNRState
 
@@ -102,14 +114,4 @@ function setVoNRState(slotId: number, state: VoNRState): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let state: call.VoNRState = call.VoNRState.VONR_STATE_ON;
-call.setVoNRState(slotId, state).then(() => {
-    console.info(`setVoNRState success`);
-}).catch((err: BusinessError) => {
-    console.error(`setVoNRState fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setVoNRState](#setvonrstate)

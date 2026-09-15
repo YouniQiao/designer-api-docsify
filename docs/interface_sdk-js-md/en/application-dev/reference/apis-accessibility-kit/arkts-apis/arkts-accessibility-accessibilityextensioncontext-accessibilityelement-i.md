@@ -34,6 +34,17 @@ Obtains the names of all actions supported by the node element. This API uses an
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+rootElement.actionNames().then((data: string[]) => {
+  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
 rootElement.actionNames((err: BusinessError, data: string[]) => {
   if (err) {
     console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
@@ -65,16 +76,7 @@ Obtains the names of all actions supported by the node element. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.actionNames().then((data: string[]) => {
-  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [actionNames](#actionnames)
 
 ## attributeNames
 
@@ -97,6 +99,18 @@ Obtains all attribute names of the node element. This API uses an asynchronous c
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback invoked to return the result. If the attribute names are obtained successfully, **err** is undefined and **data** contains all attribute names of the node element; otherwise, **err** is an error object. |
 
 **Examples**
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
+  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -134,17 +148,7 @@ Obtains all attribute names of the node element. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
-  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [attributeNames](#attributenames)
 
 ## attributeValue
 
@@ -178,6 +182,20 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 | [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
 
 **Examples**
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let attributeName: ElementAttributeKeys = 'bundleName';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+rootElement.attributeValue(attributeName).then((data: string) => {
+  console.info(`succeeded in getting attribute value by name, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -230,19 +248,7 @@ Obtains the attribute value based on the attribute name. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let attributeName: ElementAttributeKeys = 'bundleName';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.attributeValue(attributeName).then((data: string) => {
-  console.info(`succeeded in getting attribute value by name, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [attributeValue](#attributevalue)
 
 ## findElement('content')
 
@@ -271,24 +277,6 @@ Finds an element based on the content type. This API uses an asynchronous callba
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition = 'keyword';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.findElement('content', condition, (err: BusinessError, data: AccessibilityElement[]) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('content')
 
@@ -323,22 +311,6 @@ Finds all node elements based on the node content. This API uses a promise to re
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition = 'keyword';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.findElement('content', condition).then((data: AccessibilityElement[]) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('focusType')
 
 ```TypeScript
@@ -366,24 +338,6 @@ Finds a node element based on the focus element type. This API uses an asynchron
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusType = 'normal';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.findElement('focusType', condition, (err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('focusType')
 
@@ -418,22 +372,6 @@ Finds a node element based on the focus element type. This API uses a promise to
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusType = 'normal';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.findElement('focusType', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element,${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('focusDirection')
 
 ```TypeScript
@@ -461,24 +399,6 @@ Finds a node element based on the next focus element direction. This API uses an
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusDirection = 'up';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.findElement('focusDirection', condition, (err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('focusDirection')
 
@@ -513,22 +433,6 @@ Finds a node element based on the next focus element direction. This API uses a 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusDirection = 'up';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.findElement('focusDirection', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## performAction
 
 ```TypeScript
@@ -559,6 +463,33 @@ Performs the specified action on the accessibility node element. This API uses a
 | [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
 **Examples**
+
+```TypeScript
+Action without parameters.
+```
+
+```TypeScript
+Action with parameters (setSelection).
+```
+
+```TypeScript
+Action with parameters (setCursorPosition).
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+
+// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
+rootElement.performAction(actionName, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in performing action, actionName is ${actionName}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -612,53 +543,7 @@ Performs the specified action on the accessibility node element. This API uses a
 
 **Examples**
 
-Action without parameters.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-// If no specific requirement is stated in the action description, the action has no parameters.
-rootElement.performAction('click').then(() => {
-  console.info(`succeeded in performing action.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-Action with parameters (setSelection).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-// Example code for setSelection.
-rootElement.performAction('setSelection', {
-  selectTextBegin: '0', // Indicates the start position of the selection.
-  selectTextEnd: '8',   // Indicates the end position of the selection.
-  selectTextInForWard: true   // The value true indicates the front cursor, and false indicates the rear cursor.
-}).then(() => {
-  console.info(`succeeded in performing action`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-Action with parameters (setCursorPosition).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-// Example code for setCursorPosition.
-rootElement.performAction('setCursorPosition', {
-  offset: '1'   // Indicates the cursor position to set.
-}).then(() => {
-  console.info(`succeeded in performing action`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [performAction](#performaction)
 
 ## performAction
 
@@ -690,17 +575,4 @@ Performs the specified action on the accessibility node element. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let actionName = 'action';
-
-// rootElement is an instance of AccessibilityElement, obtained through getFocusElement() or getWindowRootElement().
-rootElement.performAction(actionName, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in performing action, actionName is ${actionName}`);
-});
-```
+See [performAction](#performaction)

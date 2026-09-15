@@ -51,6 +51,16 @@ screenLock.lock((err: BusinessError, data: Boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+screenLock.lock().then((data: Boolean) => {
+  console.info(`Succeeded in locking the screen. result: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to lock the screen, Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## lock
 
@@ -84,12 +94,4 @@ Lock the screen.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-screenLock.lock().then((data: Boolean) => {
-  console.info(`Succeeded in locking the screen. result: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to lock the screen, Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [lock](#lock)

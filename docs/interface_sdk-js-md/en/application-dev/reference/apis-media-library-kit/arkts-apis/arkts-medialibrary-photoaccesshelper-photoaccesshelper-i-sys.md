@@ -261,23 +261,8 @@ Cancels the permission for accessing a URI from an application. This API uses a 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('cancelPhotoUriPermissionDemo');
-
-  try {
-    let tokenId = 502334412;
-    let result = await phAccessHelper.cancelPhotoUriPermission(tokenId,
-        'file://media/Photo/11/IMG_datetime_0001/displayName.jpg',
-        photoAccessHelper.PhotoPermissionType.TEMPORARY_READ_IMAGEVIDEO);
-
-    console.info('cancelPhotoUriPermission success, result=' + result);
-  } catch (err) {
-    console.error('cancelPhotoUriPermission failed, error=' + err);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## canPerformDeepOptimizeSpace
@@ -314,17 +299,8 @@ Whether deep storage space optimization can be performed.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let canPerform: boolean = await phAccessHelper.canPerformDeepOptimizeSpace();
-    console.info(`canPerformDeepOptimizeSpace result: ${canPerform}`);
-  } catch (err) {
-    console.error(`canPerformDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## cloneToAlbum
@@ -370,31 +346,8 @@ clone assets to Album.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let assetFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    let assets: Array<photoAccessHelper.PhotoAsset> = await assetFetchResult.getAllObjects();
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let target: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let options: photoAccessHelper.BatchOperationOptions = {
-      mode: 0
-    };
-    let clonedAssets: Array<photoAccessHelper.PhotoAsset> = await phAccessHelper.cloneToAlbum(assets, target, options);
-    console.info(`cloneToAlbum success, count: ${clonedAssets.length}`);
-  } catch (err) {
-    console.error(`cloneToAlbum failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## cloneWithShareAlbum
@@ -525,20 +478,8 @@ The album name must meet the following requirements:
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAlbumDemo');
-  let albumName: string = 'newAlbumName' + new Date().getTime();
-  phAccessHelper.createAlbum(albumName, (err, album) => {
-    if (err) {
-      console.error(`createAlbumCallback failed with err: ${err.code}, ${err.message}`);
-      return;
-    }
-    console.info('createAlbumCallback successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAlbum
@@ -595,21 +536,7 @@ The album name must meet the following requirements:
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAlbumDemo');
-  let albumName: string = 'newAlbumName' + new Date().getTime();
-  phAccessHelper.createAlbum(albumName).then((album) => {
-    console.info('createAlbumPromise successfully, album: ' + album.albumName + ' album uri: ' + album.albumUri);
-  }).catch((err: BusinessError) => {
-    console.error(`createAlbumPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [createAlbum](#createalbum)
 
 ## createAsset
 
@@ -657,21 +584,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAsset
@@ -725,20 +639,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAsset
@@ -793,23 +695,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAsset
@@ -859,24 +746,8 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAssetsForApp
@@ -921,30 +792,8 @@ Creates media assets for an application with the specified token ID. The returne
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetsForAppDemo.');
-
-  try {
-    let bundleName: string = 'testBundleName';
-    let appName: string = 'testAppName';
-    let tokenId: number = 537197950;
-    let photoCreationConfigs: Array<photoAccessHelper.PhotoCreationConfig> = [
-      {
-        title: 'test',
-        fileNameExtension: 'jpg',
-        photoType: photoAccessHelper.PhotoType.IMAGE,
-        subtype: photoAccessHelper.PhotoSubtype.DEFAULT,
-      }
-    ];
-    let desFileUris: Array<string> = await phAccessHelper.createAssetsForApp(bundleName, appName, tokenId, photoCreationConfigs);
-    console.info('createAssetsForApp success, data is ' + desFileUris);
-  } catch (err) {
-    console.error(`createAssetsForApp failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAssetsForAppWithAlbum
@@ -990,35 +839,8 @@ Creates assets for the current application or other applications in the specifie
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetsForAppWithAlbumDemo.');
-
-  try {
-    let source: photoAccessHelper.PhotoCreationSource = {
-      bundleName: 'testBundleName',
-      appName: 'testAppName',
-      appId: 'testAppId',
-      tokenId: 537197950,
-    }
-    let albumUri: string = 'file://media/PhotoAlbum/10';
-    let isAuthorized: boolean = true;
-    let photoCreationConfigs: Array<photoAccessHelper.PhotoCreationConfig> = [
-      {
-        title: 'test',
-        fileNameExtension: 'jpg',
-        photoType: photoAccessHelper.PhotoType.IMAGE,
-        subtype: photoAccessHelper.PhotoSubtype.DEFAULT,
-      }
-    ];
-    let desFileUris: Array<string> = await phAccessHelper.createAssetsForAppWithAlbum(source, albumUri, isAuthorized, photoCreationConfigs);
-    console.info('createAssetsForAppWithAlbum success, data is ' + desFileUris);
-  } catch (err) {
-    console.error(`createAssetsForAppWithAlbum failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAssetsForAppWithMode
@@ -1072,33 +894,8 @@ Creates assets with a temporary permission. This API uses a promise to return th
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetsForAppWithModeDemo.');
-
-  try {
-    let photoCreationConfigs: Array<photoAccessHelper.PhotoCreationConfig> = [
-      {
-        title: '123456',
-        fileNameExtension: 'jpg',
-        photoType: photoAccessHelper.PhotoType.IMAGE,
-        subtype: photoAccessHelper.PhotoSubtype.DEFAULT,
-      }
-    ];
-    let bundleName: string = 'testBundleName';
-    let appName: string = 'testAppName';
-    let appId: string = 'testAppId';
-    let tokenId: number = 537197950;
-    let authorizationMode: photoAccessHelper.AuthorizationMode = photoAccessHelper.AuthorizationMode.SHORT_TIME_AUTHORIZATION;
-    let result: Array<string> = await phAccessHelper.createAssetsForAppWithMode(bundleName, appName, appId, tokenId, authorizationMode, photoCreationConfigs);
-    console.info(`result: ${JSON.stringify(result)}`);
-    console.info('Photo createAssetsForAppWithMode success.');
-  } catch (err) {
-    console.error(`createAssetsForAppWithMode failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## createAssetsWithAlbum
@@ -1147,34 +944,8 @@ Batch create assets, which also support to choose whether specifying an album an
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    // Construct creation parameters.
-    let creationSettings: Array<photoAccessHelper.CreationSetting> = [
-      {
-        title: 'test',
-        fileNameExtension: 'jpg',
-        photoType: photoAccessHelper.PhotoType.IMAGE
-      }
-    ];
-    // Do not generate a thumbnail in real time when an asset is created.
-    let isRealTimeThumb: boolean = false;
-    // Specify the album URI.
-    let albumUri: string = 'file://media/PhotoAlbum/10';
-    // Call the API to create an asset.
-    let result: Array<string> = await phAccessHelper.createAssetsWithAlbum(
-      creationSettings,
-      isRealTimeThumb,
-      albumUri
-    );
-    console.info('Succeeded in creating assets with album, uri is ' + result);
-  } catch (err) {
-    console.error(`createAssetsWithAlbum failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## deleteAlbums
@@ -1216,31 +987,8 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  // Delete the album named newAlbumName.
-  console.info('deleteAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  phAccessHelper.deleteAlbums([album], (err) => {
-    if (err) {
-      console.error(`deletePhotoAlbumsCallback failed with err: ${err.code}, ${err.message}`);
-      return;
-    }
-    console.info('deletePhotoAlbumsCallback successfully');
-  });
-  fetchResult.close();
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## deleteAlbums
@@ -1287,30 +1035,8 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  // Delete the album named newAlbumName.
-  console.info('deleteAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  phAccessHelper.deleteAlbums([album]).then(() => {
-    console.info('deletePhotoAlbumsPromise successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`deletePhotoAlbumsPromise failed with err: ${err.code}, ${err.message}`);
-  });
-  fetchResult.close();
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## deleteAssets
@@ -1353,36 +1079,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('deleteAssetDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    phAccessHelper.deleteAssets([asset.uri], (err) => {
-      if (err === undefined) {
-        console.info('deleteAssets successfully');
-      } else {
-        console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
-      }
-    });
-  } catch (err) {
-    console.error(`fetch failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## deleteAssets
@@ -1430,31 +1128,8 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('deleteDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  try {
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let asset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (asset === undefined) {
-      console.error('asset not exist');
-      return;
-    }
-    await phAccessHelper.deleteAssets([asset.uri]);
-    console.info('deleteAssets successfully');
-  } catch (err) {
-    console.error(`deleteAssets failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getAlbumIdByBundleName
@@ -1498,22 +1173,8 @@ Get the corresponding albumId of a bundleName.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getAlbumIdByBundleName');
-
-  try {
-      let albumId: number = await phAccessHelper.getAlbumIdByBundleName('test.bundleName');
-      console.info('requestFile:: albumId: ', albumId);
-
-      console.info('getAlbumIdByBundleName completed.');
-      console.info(`albumId : ${albumId}`);
-    } catch (err) {
-      console.error(`getAlbumIdByBundleName failed: ${err.code}, ${err.message}`);
-    }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getAlbumsByIds
@@ -1555,23 +1216,8 @@ Obtains album information by album IDs. This API uses a promise to return the re
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('startGetAlbumsByIdsDemo');
-
-  try {
-    // Obtain the sandbox URIs of the images or videos to be saved to the media library.
-    let albumIds: Array<number> = [
-      12 //Use the actual album ID.
-    ];
-    let map: Map<number, photoAccessHelper.Album> = await phAccessHelper.getAlbumsByIds(albumIds);
-    console.info('getAlbumsByIds success, size is ' + map.size);
-  } catch (err) {
-    console.error('getAlbumsByIds failed, errCode is ' + err.code + ', errMsg is ' + err.message);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getAssetCompatibleCapability
@@ -1612,17 +1258,8 @@ Obtains the asset compatibility capability based on the bundle name. When an app
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName = "com.test.example";
-    let capability : photoAccessHelper.AssetCompatibleCapability = await phAccessHelper.getAssetCompatibleCapability(bundleName);
-  } catch (error) {
-    console.error('failed to getAssetCompatibleCapability err', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getAssetCompatibleUris
@@ -1665,29 +1302,8 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName: string = 'com.example.helloWorld';
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [photoAccessHelper.PhotoKeys.URI, photoAccessHelper.PhotoKeys.WIDTH, photoAccessHelper.PhotoKeys.HEIGHT],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let assets: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-    // compatibleFlag: Bit 0 indicates the full image, and bit 1 indicates the HEIF image.
-    let compatibleFlag: number = 0;
-    let uris: Array<string> = await phAccessHelper.getAssetCompatibleUris(bundleName, assets, compatibleFlag);
-    console.info(`getAssetCompatibleUris success, uri count: ${uris.length}`);
-  } catch (err) {
-    console.error(`getAssetCompatibleUris failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getClonedAlbumUris
@@ -1731,24 +1347,8 @@ To control the size of the database table space, the system automatically delete
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-    console.info('getClonedAlbumUrisDemo');
-    // The following is an array of URIs of media files.
-    let uris: Array<string> = [
-        'file://media/PhotoAlbum/1',
-        'file://media/PhotoAlbum/2',
-        'file://media/AnalysisAlbum/3'
-    ];
-    try {
-        let albums: Map<string, string> = await phAccessHelper.getClonedAlbumUris(uris);
-        console.info(`Albums: ${albums}`);
-    } catch (error) {
-        console.error(`Error thrown: ${error}`);
-    }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getClonedAssetUris
@@ -1792,24 +1392,8 @@ To control the size of the database table space, the system automatically delete
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-    console.info('getClonedAssetUrisDemo');
-    // The following is an array of URIs of media files.
-    let uris: Array<string> = [
-        'file://media/Photo/1/IMG_datetime_0001/displayName1.jpg',
-        'file://media/Photo/2/IMG_datetime_0002/displayName2.jpg',
-        'file://media/Photo/3/IMG_datetime_0003/displayName3.jpg'
-    ];
-    try {
-        let assets: Map<string, string> = await phAccessHelper.getClonedAssetUris(uris);
-        console.info(`Assets: ${assets}`);
-    } catch (error) {
-        console.error(`Error thrown: ${error}`);
-    }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getDataAnalysisProgress
@@ -1851,20 +1435,8 @@ Obtains the asset analysis progress. This API uses a promise to return the resul
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getDataAnalysisProgress test start');
-
-    let result: string = await phAccessHelper.getDataAnalysisProgress();
-    console.info('getDataAnalysisProgress:' + result);
-
-  } catch (err) {
-    console.error(`getDataAnalysisProgress failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getDeepOptimizeSpace
@@ -1903,20 +1475,8 @@ This API is time-consuming. Before using this API, you are advised to call [canP
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let canPerform: boolean = await phAccessHelper.canPerformDeepOptimizeSpace();
-    if (canPerform) {
-      let size: number = await phAccessHelper.getDeepOptimizeSpace();
-      console.info(`getDeepOptimizeSpace result: ${size}`);
-    }
-  } catch (err) {
-    console.error(`getDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getHiddenAlbums
@@ -1954,40 +1514,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-// Obtain the album newAlbumName that contains hidden files.
-async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getHiddenAlbumsViewDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  predicates.equalTo('album_name', 'newAlbumName');
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ALBUMS_MODE, fetchOptions,
-    async (err, fetchResult) => {
-      if (err !== undefined) {
-        console.error(`getHiddenAlbumsViewCallback failed with error: ${err.code}, ${err.message}`);
-        return;
-      }
-      if (fetchResult === undefined) {
-        console.error('getHiddenAlbumsViewCallback fetchResult is undefined');
-        return;
-      }
-      let album = await fetchResult.getFirstObject();
-      if (album === undefined) {
-        console.error('getHiddenAlbumsViewCallback album is undefined');
-        fetchResult.close();
-        return;
-      }
-      console.info('getHiddenAlbumsViewCallback successfully, album name: ' + album.albumName);
-      fetchResult.close();
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getHiddenAlbums
@@ -2024,65 +1552,7 @@ Obtains hidden albums based on the specified display mode. This API uses an asyn
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-// Obtain the preset hidden album.
-async function getSysHiddenAlbum(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getSysHiddenAlbumDemo');
-  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ASSETS_MODE, async (err, fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getSysHiddenAlbumCallback fetchResult is undefined');
-      return;
-    }
-    let hiddenAlbum: photoAccessHelper.Album = await fetchResult.getFirstObject();
-    if (hiddenAlbum === undefined) {
-      console.error('getSysHiddenAlbumCallback hiddenAlbum is undefined');
-      fetchResult.close();
-      return;
-    }
-    console.info('getSysHiddenAlbumCallback successfully, albumUri: ' + hiddenAlbum.albumUri);
-    fetchResult.close();
-  });
-}
-
-// Obtain the hidden albums displayed by album, that is, the albums with hidden files. Such albums do not include the preset hidden album and the albums in the trash.
-async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getHiddenAlbumsViewDemo');
-  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ALBUMS_MODE, async (err, fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getHiddenAlbumsViewCallback fetchResult is undefined');
-      return;
-    }
-    let albums: Array<photoAccessHelper.Album> = await fetchResult.getAllObjects();
-    if (albums === undefined) {
-      console.error('getHiddenAlbumsViewCallback albums is undefined');
-      fetchResult.close();
-      return;
-    }
-    console.info('getHiddenAlbumsViewCallback successfully, albums size: ' + albums.length);
-
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    for (let i = 0; i < albums.length; i++) {
-      // Obtain hidden files in the album.
-      albums[i].getAssets(fetchOption, (err, assetFetchResult) => {
-        if (assetFetchResult === undefined) {
-          console.error('getHiddenAlbumsViewCallback assetFetchResult is undefined');
-          return;
-        }
-        console.info('album get hidden assets successfully, getCount: ' + assetFetchResult.getCount());
-      });
-    }
-    fetchResult.close();
-  });
-}
-```
+See [getHiddenAlbums](#gethiddenalbums)
 
 ## getHiddenAlbums
 
@@ -2124,59 +1594,7 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the preset hidden album.
-async function getSysHiddenAlbum(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getSysHiddenAlbumDemo');
-  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ASSETS_MODE)
-    .then( async (fetchResult) => {
-      if (fetchResult === undefined) {
-        console.error('getSysHiddenAlbumPromise fetchResult is undefined');
-        return;
-      }
-      let hiddenAlbum: photoAccessHelper.Album = await fetchResult.getFirstObject();
-      console.info('getAlbumsPromise successfully, albumUri: ' + hiddenAlbum.albumUri);
-      fetchResult.close();
-    }).catch((err: BusinessError) => {
-      console.error(`getSysHiddenAlbumPromise failed with err: ${err.code}, ${err.message}`);
-    });
-}
-
-// Obtain the hidden albums displayed by album, that is, the albums with hidden files. Such albums do not include the preset hidden album and the albums in the trash.
-async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getHiddenAlbumsViewDemo');
-  phAccessHelper.getHiddenAlbums(photoAccessHelper.HiddenPhotosDisplayMode.ALBUMS_MODE).then( async (fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getHiddenAlbumsViewPromise fetchResult is undefined');
-      return;
-    }
-    let albums: Array<photoAccessHelper.Album> = await fetchResult.getAllObjects();
-    console.info('getHiddenAlbumsViewPromise successfully, albums size: ' + albums.length);
-
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    for (let i = 0; i < albums.length; i++) {
-      // Obtain hidden files in the album.
-      albums[i].getAssets(fetchOption).then((assetFetchResult) => {
-        console.info('album get hidden assets successfully, getCount: ' + assetFetchResult.getCount());
-      }).catch((err: BusinessError) => {
-        console.error(`album get hidden assets failed with error: ${err.code}, ${err.message}`);
-      });
-    }
-    fetchResult.close();
-  }).catch((err: BusinessError) => {
-    console.error(`getHiddenAlbumsViewPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [getHiddenAlbums](#gethiddenalbums)
 
 ## getIndexConstructProgress
 
@@ -2210,29 +1628,8 @@ Obtains the index construction progress. This API uses a promise to return the r
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-
-  class indexProgress {
-    finishedImageCount: number = 0;
-    totalImageCount: number = 0;
-    finishedVideoCount: number = 0;
-    totalVideoCount: number = 0;
-  }
-
-  try {
-    console.info('getIndexConstructProgress test start');
-    let result: string = await phAccessHelper.getIndexConstructProgress();
-    console.info('getIndexProgress:' + result);
-
-    let jsonObj: indexProgress = JSON.parse(result);
-    //...Use the obtained index construction progress data.
-  } catch (err) {
-    console.error(`getIndexConstructProgress failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getPhotoAlbumOrder
@@ -2275,32 +1672,8 @@ Obtains the sorting order for system, user, and source albums. This API uses a p
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getPhotoAlbumOrderDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let orderStyle: number = 0;
-  phAccessHelper.getPhotoAlbumOrder(orderStyle, fetchOptions).then( async (fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getPhotoAlbumOrderPromise fetchResult is undefined');
-      return;
-    }
-    let albumOrders: photoAccessHelper.AlbumOrder[] = await fetchResult.getAllObjects();
-    console.info(`getPhotoAlbumOrderPromise successfully, albumOrders length: ${albumOrders.length}`);
-    fetchResult.close();
-  }).catch((err: BusinessError) => {
-    console.error(`getPhotoAlbumOrderPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getPhotoAlbums
@@ -2343,31 +1716,8 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getPhotoAlbumsDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  phAccessHelper.getPhotoAlbums(fetchOptions).then( async (fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getPhotoAlbumsPromise fetchResult is undefined');
-      return;
-    }
-    let albums: photoAccessHelper.Album[] = await fetchResult.getAllObjects();
-    console.info(`getPhotoAlbumsPromise successfully, albums length: ${albums.length}`);
-    fetchResult.close();
-  }).catch((err: BusinessError) => {
-    console.error(`getPhotoAlbumsPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getPhotoAssets
@@ -2408,29 +1758,8 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getPhotoAssets demo');
-  let valuesArr: photoAccessHelper.ValuesBucket[] = [];
-  let resultSet: photoAccessHelper.ResultSet | undefined = undefined;
-  let photoAssetArr: photoAccessHelper.PhotoAsset[] = [];
-  let QUERY_SQL = 'SELECT file_id,data,display_name,media_type,subtype from Photos limit 100';
-  try {
-    resultSet = await phAccessHelper.query(QUERY_SQL);
-    let index: number = 0;
-    while(resultSet && index < resultSet.rowCount){
-      resultSet.goToRow(index);
-      valuesArr.push(resultSet.getRow());
-      index++;
-    }
-    photoAssetArr = await phAccessHelper.getPhotoAssets(valuesArr);
-    console.info('getPhotoAssets successfully');
-  } catch (err) {
-    console.error(`valuesArr failed: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getPhotoIndex
@@ -2470,44 +1799,8 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getPhotoIndexDemo');
-    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOp: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicatesForGetAsset
-    };
-    // Obtain the uri of the album.
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.FAVORITE, fetchOp);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc(photoAccessHelper.PhotoKeys.DATE_MODIFIED);
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [photoAccessHelper.PhotoKeys.DATE_MODIFIED],
-      predicates: predicates
-    };
-    let photoFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
-    let expectIndex = 1;
-    // Obtain the uri of the second file.
-    let photoAsset: photoAccessHelper.PhotoAsset = await photoFetchResult.getObjectByPosition(expectIndex);
-
-    phAccessHelper.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions, (err, index) => {
-      if (err === undefined) {
-        console.info(`getPhotoIndex successfully and index is : ${index}`);
-      } else {
-        console.error(`getPhotoIndex failed; error: ${err.code}, ${err.message}`);
-      }
-    });
-  } catch (error) {
-    console.error(`getPhotoIndex failed; error: ${error.code}, ${error.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getPhotoIndex
@@ -2552,43 +1845,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getPhotoIndexDemo');
-    let predicatesForGetAsset: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOp: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicatesForGetAsset
-    };
-    // Obtain the uri of the album.
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.SYSTEM, photoAccessHelper.AlbumSubtype.FAVORITE, fetchOp);
-    let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc(photoAccessHelper.PhotoKeys.DATE_MODIFIED);
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [photoAccessHelper.PhotoKeys.DATE_MODIFIED],
-      predicates: predicates
-    };
-    let photoFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await album.getAssets(fetchOptions);
-    let expectIndex = 1;
-    // Obtain the uri of the second file.
-    let photoAsset: photoAccessHelper.PhotoAsset = await photoFetchResult.getObjectByPosition(expectIndex);
-    phAccessHelper.getPhotoIndex(photoAsset.uri, album.albumUri, fetchOptions).then((index) => {
-      console.info(`getPhotoIndex successfully and index is : ${index}`);
-    }).catch((err: BusinessError) => {
-      console.error(`getPhotoIndex failed; error: ${err.code}, ${err.message}`);
-    });
-  } catch (error) {
-    console.error(`getPhotoIndex failed; error: ${error.code}, ${error.message}`);
-  }
-}
-```
+See [getPhotoIndex](#getphotoindex)
 
 ## getPreferredCompatibleMode
 
@@ -2628,27 +1885,8 @@ Obtains the preferred compatible mode configured by the application based on bun
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function getPreferredCompatibleMode(
-  phAccessHelper: photoAccessHelper.PhotoAccessHelper,
-  bundleName: string
-): Promise<photoAccessHelper.PreferredCompatibleMode> {
-  console.info('getPreferredCompatibleModeDemo');
-  let mode: photoAccessHelper.PreferredCompatibleMode = photoAccessHelper.PreferredCompatibleMode.DEFAULT;
-  await phAccessHelper.getPreferredCompatibleMode(bundleName)
-    .then((result: photoAccessHelper.PreferredCompatibleMode) => {
-      mode = result;
-      console.info('getPreferredCompatibleMode successfully');
-    })
-    .catch((err: BusinessError) => {
-      console.error(`The getPreferredCompatibleMode call failed. error: ${err.code}, ${err.message}`);
-    });
-  return mode;
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## getShareAlbums
@@ -2729,26 +1967,8 @@ Obtains the shared photo assets.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-
-  try {
-    console.info('getSharedPhotoAssets test start');
-    phAccessHelper.getSharedPhotoAssets(fetchOptions);
-    console.info('getSharedPhotoAssets test end');
-  } catch (err) {
-    console.error(`getSharedPhotoAssets failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## grantPhotoUriPermission
@@ -2798,24 +2018,8 @@ Grants an application the permission to access a URI. This API uses a promise to
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('grantPhotoUriPermissionDemo');
-
-  try {
-    let tokenId = 502334412;
-    let result = await phAccessHelper.grantPhotoUriPermission(tokenId,
-        'file://media/Photo/1/IMG_datetime_0001/displayName.jpg',
-        photoAccessHelper.PhotoPermissionType.TEMPORARY_READ_IMAGEVIDEO,
-        photoAccessHelper.HideSensitiveType.HIDE_LOCATION_AND_SHOOTING_PARAM);
-
-    console.info('grantPhotoUriPermission success, result=' + result);
-  } catch (err) {
-    console.error('grantPhotoUriPermission failed, error=' + err);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## grantPhotoUrisPermission
@@ -2865,27 +2069,8 @@ Grants an application the permission to access multiple URIs. This API uses a pr
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('grantPhotoUrisPermissionDemo');
-
-  try {
-    // URIs of the media assets.
-    let uris: Array<string> = [
-      'file://media/Photo/11/IMG_datetime_0001/displayName1.jpg',
-      'file://media/Photo/22/IMG_datetime_0002/displayName2.jpg'];
-    let tokenId = 502334412;
-    let result = await phAccessHelper.grantPhotoUrisPermission(tokenId, uris,
-        photoAccessHelper.PhotoPermissionType.TEMPORARY_READ_IMAGEVIDEO,
-        photoAccessHelper.HideSensitiveType.HIDE_LOCATION_AND_SHOOTING_PARAM);
-
-    console.info('grantPhotoUrisPermission success, result=' + result);
-  } catch (err) {
-    console.error('grantPhotoUrisPermission failed, error=' + err);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## invokeAnalysisTool
@@ -3021,23 +2206,8 @@ Checks whether the specified media data is ready.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('isMediaDataReady demo');
-
-  try {
-    let ready: boolean = await phAccessHelper.isMediaDataReady('date_added_year');
-    if (ready) {
-      console.info('date_added_year media data is ready.');
-    } else {
-      console.info('date_added_year media data is not ready.');
-    }
-  } catch (err) {
-    console.error(`isMediaDataReady failed: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## modifyAlbumDefaultCoverOrder
@@ -3085,29 +2255,8 @@ modify the default cover order of album.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function modifyAlbumDefaultCoverOrder(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let coverOrderInfos: Array<photoAccessHelper.DefaultCoverOrderInfo> = [];
-    let coverOrderInfo: photoAccessHelper.DefaultCoverOrderInfo = {
-      albumType: photoAccessHelper.AlbumType.USER,
-      albumSubtype: photoAccessHelper.AlbumSubtype.USER_GENERIC,
-      lpath: "/Pictures/Users/1",
-      orderKey: photoAccessHelper.PhotoKeys.DATE_ADDED,
-      orderSubKey: photoAccessHelper.PhotoKeys.DISPLAY_NAME,
-      orderType: 1,
-    }
-    coverOrderInfos.push(coverOrderInfo);
-    let disableModification: boolean = false;
-    let isAsyncRefreshAlbum: boolean = false;
-    await phAccessHelper.modifyAlbumDefaultCoverOrder(coverOrderInfos, disableModification, isAsyncRefreshAlbum);
-    console.info(`Succeeded in modifying default cover order of user album 1`);
-  } catch (err) {
-    console.error(`modifyAlbumDefaultCoverOrder failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## modifyHiddenAlbumDefaultCoverOrder
@@ -3155,28 +2304,8 @@ modify the default cover order of hidden album.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function modifyHiddenAlbumDefaultCoverOrder(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let coverOrderInfos: Array<photoAccessHelper.DefaultCoverOrderInfo> = [];
-    let coverOrderInfo: photoAccessHelper.DefaultCoverOrderInfo = {
-      albumType: photoAccessHelper.AlbumType.SYSTEM,
-      albumSubtype: photoAccessHelper.AlbumSubtype.HIDDEN,
-      orderKey: photoAccessHelper.PhotoKeys.DATE_ADDED,
-      orderSubKey: photoAccessHelper.PhotoKeys.DISPLAY_NAME,
-      orderType: 1,
-    }
-    coverOrderInfos.push(coverOrderInfo);
-    let disableModification: boolean = false;
-    let isAsyncRefreshAlbum: boolean = false;
-    await phAccessHelper.modifyHiddenAlbumDefaultCoverOrder(coverOrderInfos, disableModification, isAsyncRefreshAlbum);
-    console.info(`Succeeded in modifying default cover order of hidden album`);
-  } catch (err) {
-    console.error(`modifyHiddenAlbumDefaultCoverOrder failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## off('hiddenPhotoChange')
@@ -3211,39 +2340,6 @@ Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring 
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('offHiddenPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenPhotoChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('hiddenPhotoChange', onCallback1);
-  } catch (error) {
-    console.error('offHiddenPhotoChange failed, errCode is', error);
-  }
-}
-```
-
 ## off('trashedPhotoChange')
 
 ```TypeScript
@@ -3275,39 +2371,6 @@ Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('offTrashedPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedPhotoChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('trashedPhotoChange', onCallback1);
-  } catch (error) {
-    console.error('offTrashedPhotoChangeDemo failed, errCode is', error);
-  }
-}
-```
 
 ## off('hiddenAlbumChange')
 
@@ -3341,39 +2404,6 @@ Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring 
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenAlbumChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('hiddenAlbumChange', onCallback1);
-  } catch (error) {
-    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
 ## off('trashedAlbumChange')
 
 ```TypeScript
@@ -3405,39 +2435,6 @@ Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedAlbumChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('trashedAlbumChange', onCallback1);
-  } catch (error) {
-    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
 
 ## offAnalysisAlbumChange
 
@@ -3474,35 +2471,8 @@ Cancels the listener for the smart analysis album. If multiple listeners are reg
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('offAnalysisAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.onAnalysisAlbumChange(onCallback1);
-    // Register onCallback2.
-    phAccessHelper.onAnalysisAlbumChange(onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.offAnalysisAlbumChange(onCallback1);
-  } catch (error) {
-    console.error('offAnalysisAlbumChangeDemo failed, errCode is', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## offAnalysisPhotoChange
@@ -3540,35 +2510,8 @@ Cancels the listening for the media asset changes related to the smart analysis 
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('offAnalysisPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.offAnalysisPhotoChange(onCallback1);
-    // Register onCallback2.
-    phAccessHelper.offAnalysisPhotoChange(onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.offAnalysisPhotoChange(onCallback1);
-  } catch (error) {
-    console.error('offAnalysisPhotoChangeDemo failed, errCode is', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## offShareAlbumChange
@@ -3665,36 +2608,6 @@ Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden med
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenPhotoChange failed, errCode is', error);
-  }
-}
-```
-
 ## on('trashedPhotoChange')
 
 ```TypeScript
@@ -3726,36 +2639,6 @@ Registers a listener for the **'trashedPhotoChange'** event to monitor media ass
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
-  }
-}
-```
 
 ## on('hiddenAlbumChange')
 
@@ -3789,36 +2672,6 @@ Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden alb
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
 
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenAlbumChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
 ## on('trashedAlbumChange')
 
 ```TypeScript
@@ -3850,36 +2703,6 @@ Registers a listener for the **'trashedAlbumChange'** event to monitor album cha
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |  |
-
-**Examples**
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedAlbumChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
 
 ## onAnalysisAlbumChange
 
@@ -3916,32 +2739,8 @@ Listens for the smart analysis album and returns the album change result using a
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onAnalysisAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.onAnalysisAlbumChange(onCallback1);
-    // Register onCallback2.
-    phAccessHelper.onAnalysisAlbumChange(onCallback2);
-  } catch (error) {
-    console.error('onAnalysisAlbumChangeDemo failed, errCode is', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## onAnalysisPhotoChange
@@ -3979,32 +2778,8 @@ Listens for the changes of media assets associated with the smart analysis album
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onAnalysisPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.onAnalysisPhotoChange(onCallback1);
-    // Register onCallback2.
-    phAccessHelper.onAnalysisPhotoChange(onCallback2);
-  } catch (error) {
-    console.error('onAnalysisPhotoChangeDemo failed, errCode is', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## onShareAlbumChange
@@ -4108,25 +2883,8 @@ Queries data in the database using the specified SQL statement. This API does no
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('query');
-  try {
-    let ret: photoAccessHelper.ResultSet = await phAccessHelper.query('SELECT * from Photos');
-    while (ret.goToNextRow()) {
-      let row = ret.getRow();
-      Object.entries(row).forEach((entry) => {
-        const key = entry[0];
-        const value = entry[1];
-      });
-    }
-    ret.close();
-  } catch (err) {
-    console.error(`query failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## releaseDebugDatabase
@@ -4199,27 +2957,8 @@ Removes the Gallery widget information bound to a single image from the database
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('removeFormInfoDemo');
-  let info: photoAccessHelper.FormInfo = {
-    // formId is a string consisting of only digits. When removing a widget, leave uri empty.
-    formId: "20230116123",
-    uri: "",
-  }
-
-  phAccessHelper.removeFormInfo(info, async (err: BusinessError) => {
-    if (err == undefined) {
-      console.info('removeFormInfo success');
-    } else {
-      console.error(`removeFormInfo fail with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## removeFormInfo
@@ -4261,26 +3000,7 @@ Removes the Gallery widget information bound to a single image from the database
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('removeFormInfoDemo');
-  let info: photoAccessHelper.FormInfo = {
-    // formId is a string consisting of only digits. When removing a widget, leave uri empty.
-    formId: "20230116123",
-    uri: "",
-  }
-
-  phAccessHelper.removeFormInfo(info).then(() => {
-    console.info('removeFormInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`removeFormInfo failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [removeFormInfo](#removeforminfo)
 
 ## removeGalleryFormInfo
 
@@ -4373,36 +3093,8 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('saveFormInfoDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-
-  let info: photoAccessHelper.FormInfo = {
-    // formId is a string consisting of only digits. uri indicates the URI of the image in Gallery. If there is no image in Gallery, uri must be an empty string.
-    formId : "20230116123",
-    uri: photoAsset.uri,
-  }
-
-  phAccessHelper.saveFormInfo(info, async (err: BusinessError) => {
-    if (err == undefined) {
-      console.info('saveFormInfo success');
-    } else {
-      console.error(`saveFormInfo fail with error: ${err.code}, ${err.message}`);
-    }
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## saveFormInfo
@@ -4444,35 +3136,7 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('saveFormInfoDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-  let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-
-  let info: photoAccessHelper.FormInfo = {
-    // formId is a string consisting of only digits. uri indicates the URI of the image in Gallery. If there is no image in Gallery, uri must be an empty string.
-    formId: "20230116123",
-    uri: photoAsset.uri,
-  }
-
-  phAccessHelper.saveFormInfo(info).then(() => {
-    console.info('saveFormInfo successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`saveFormInfo failed with error: ${err.code}, ${err.message}`);
-  });
-}
-```
+See [saveFormInfo](#saveforminfo)
 
 ## saveGalleryFormInfo
 
@@ -4590,20 +3254,8 @@ Sets the asset compatibility capability based on the bundle name. You can obtain
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName = "com.test.example";
-    let capability : photoAccessHelper.AssetCompatibleCapability = {
-        supportedHighResolution : true,
-    };
-    await phAccessHelper.setAssetCompatibleCapability(bundleName, capability);
-  } catch (error) {
-    console.error('failed to setAssetCompatibleCapability err', error);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## setPhotoAlbumOrder
@@ -4646,37 +3298,8 @@ Sets the sorting order for system, user, and source albums. This API uses a prom
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('setPhotoAlbumOrderDemo');
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-  let fetchOptions: photoAccessHelper.FetchOptions = {
-    fetchColumns: [],
-    predicates: predicates
-  };
-  let orderStyle: number = 0;
-  phAccessHelper.getPhotoAlbumOrder(orderStyle, fetchOptions).then( async (fetchResult) => {
-    if (fetchResult === undefined) {
-      console.error('getPhotoAlbumOrderPromise fetchResult is undefined');
-      return;
-    }
-    let albumOrder: photoAccessHelper.AlbumOrder = await fetchResult.getFirstObject();
-    albumOrder.albumOrder = 10;
-    albumOrder.orderSection = 0;
-    albumOrder.orderType = 1;
-    albumOrder.orderStatus = 1;
-    await phAccessHelper.setPhotoAlbumOrder(orderStyle, [albumOrder]);
-    console.info('setPhotoAlbumOrderPromise successfully.');
-    fetchResult.close();
-  }).catch((err: BusinessError) => {
-    console.error(`setPhotoAlbumOrderPromise failed with err: ${err.code}, ${err.message}`);
-  });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## setPreferredCompatibleMode
@@ -4718,25 +3341,8 @@ Configure the preferred compatible mode configured by the application based on b
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function setPreferredCompatibleMode(
-  phAccessHelper: photoAccessHelper.PhotoAccessHelper,
-  bundleName: string,
-  preferredCompatibleMode: photoAccessHelper.PreferredCompatibleMode
-): Promise<void> {
-  console.info('setPreferredCompatibleModeDemo');
-  phAccessHelper.setPreferredCompatibleMode(bundleName, preferredCompatibleMode)
-    .then(() => {
-      console.info('setPreferredCompatibleMode successfully');
-    })
-    .catch((err: BusinessError) => {
-      console.error(`The setPreferredCompatibleMode call failed. error: ${err.code}, ${err.message}`);
-    });
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## startAssetAnalysis
@@ -4778,22 +3384,8 @@ Starts asset analysis.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(context: Context) {
-  console.info('startAssetAnalysisDemo');
-  try {
-    let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
-    let uris = ["file://media/Photo/14/IMG_1729066473_013/IMG_20241016_122253.jpg",
-                "file://media/Photo/68/IMG_1729033213_018/IMG_20241016_100082.jpg"];
-    let taskId = await phAccessHelper.startAssetAnalysis(photoAccessHelper.AnalysisType.ANALYSIS_SEARCH_INDEX,
-        uris);
-    console.info('startAssetAnalysis success, taskId=' + taskId);
-  } catch (err) {
-    console.error('startAssetAnalysis failed, error=' + err);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## startAssetAnalysisAsync
@@ -4838,28 +3430,8 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-let callback = (result: photoAccessHelper.AnalysisResult) => {
-  console.info('startAssetAnalysisAsync callback result: ' + JSON.stringify(result));
-};
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('startAssetAnalysisAsyncDemo');
-  let config: photoAccessHelper.AnalysisConfig = {
-    types: [photoAccessHelper.AnalysisType.ANALYSIS_SEARCH_INDEX],
-    uris: ['file://media/Photo/14/IMG_1729066473_013/IMG_20241016_122253.jpg'],
-    extraInfos: '{"trigger":"manual"}'
-  };
-
-  try {
-    let taskId = await phAccessHelper.startAssetAnalysisAsync(config, callback);
-    console.info('startAssetAnalysisAsync success, taskId=' + taskId);
-  } catch (err) {
-    console.error(`startAssetAnalysisAsync failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## startDeepOptimizeSpace
@@ -4905,19 +3477,8 @@ Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    await phAccessHelper.startDeepOptimizeSpace((progress: photoAccessHelper.DeepOptimizeSpaceProgress) => {
-      console.info(`startDeepOptimizeSpace progress: state=${progress.state}, progress=${progress.progress}`);
-    });
-    console.info('startDeepOptimizeSpace successfully');
-  } catch (err) {
-    console.error(`startDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## startThumbnailCreationTask
@@ -4960,25 +3521,8 @@ Generates a thumbnail based on the specified rule.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-function testCallBack() {
-
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-
-  try {
-    console.info('startThumbnailCreationTask test start');
-    phAccessHelper.startThumbnailCreationTask(predicates, testCallBack);
-  } catch (err) {
-    console.error(`startThumbnailCreationTask failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## startThumbnailCreationTask
@@ -5024,33 +3568,7 @@ Generates a thumbnail based on the specified rule. This API uses an asynchronous
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-function testCallBack() {
-  console.info(`startThumbnailCreationTask: First callback`);
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-
-  try {
-    console.info('startThumbnailCreationTask test start');
-    phAccessHelper.startThumbnailCreationTask(predicates, testCallBack, (err, state) =>{
-        if(err) {
-          console.error("error message: " + err?.message)
-          console.error("error code: " + err?.code)
-          return
-        }
-        console.info(`startThumbnailCreationTask: response state ${state}`);
-      });
-  } catch (err) {
-    console.error(`startThumbnailCreationTask failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
+See [startThumbnailCreationTask](#startthumbnailcreationtask)
 
 ## stopAssetAnalysis
 
@@ -5087,23 +3605,8 @@ Stops asset analysis.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('stopAssetAnalysisDemo');
-  let config: photoAccessHelper.AnalysisConfig = {
-    types: [photoAccessHelper.AnalysisType.ANALYSIS_SEARCH_INDEX],
-    uris: ['file://media/Photo/14/IMG_1729066473_013/IMG_20241016_122253.jpg']
-  };
-
-  try {
-    phAccessHelper.stopAssetAnalysis(config);
-    console.info('stopAssetAnalysis success');
-  } catch (err) {
-    console.error(`stopAssetAnalysis failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## stopDeepOptimizeSpace
@@ -5140,17 +3643,8 @@ Stop deep optimize storage space.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    await phAccessHelper.stopDeepOptimizeSpace();
-    console.info('stopDeepOptimizeSpace successfully');
-  } catch (err) {
-    console.error(`stopDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## stopThumbnailCreationTask
@@ -5186,18 +3680,8 @@ Stops generating a thumbnail.
 
 **Examples**
 
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('stopThumbnailCreationTask test start');
-    let taskId: number = 75983;
-    phAccessHelper.stopThumbnailCreationTask(taskId);
-  } catch (err) {
-    console.error(`stopThumbnailCreationTask failed, error: ${err.code}, ${err.message}`);
-  }
-}
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
 ```
 
 ## updateGalleryFormInfo

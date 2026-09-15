@@ -49,6 +49,18 @@ function dialCall(phoneNumber: string, options: DialCallOptions, callback: Async
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.dialCall("138xxxxxxxx", (err: BusinessError) => {
+    if (err) {
+        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
+    } else {
+        console.info(`dialCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let dialCallOptions: call.DialCallOptions = {
     accountId: 0,
     videoState: 0,
@@ -61,6 +73,22 @@ call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
     } else {
         console.info(`dialCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dialCallOptions: call.DialCallOptions = {
+    accountId: 0,
+    videoState: 0,
+    dialScene: 0,
+    dialType: 0
+}
+call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
+    console.info(`dialCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -110,21 +138,7 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dialCallOptions: call.DialCallOptions = {
-    accountId: 0,
-    videoState: 0,
-    dialScene: 0,
-    dialType: 0
-}
-call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
-    console.info(`dialCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`dialCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [dialCall](#dialcall)
 
 
 ## dialCall
@@ -166,14 +180,4 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.dialCall("138xxxxxxxx", (err: BusinessError) => {
-    if (err) {
-        console.error(`dialCall fail, err->${JSON.stringify(err)}`);
-    } else {
-        console.info(`dialCall success.`);
-    }
-});
-```
+参见 [dialCall](#dialcall)

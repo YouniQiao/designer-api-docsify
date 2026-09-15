@@ -155,40 +155,6 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
-## createPixelMapMask
-
-```TypeScript
-static createPixelMapMask(pixelMap: image.PixelMap): Mask
-```
-
-Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
-
-**Since:** 22
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the pixelMap. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-**Examples**
-
 ```TypeScript
 import { uiEffect } from '@kit.ArkGraphics2D';
 import { image } from '@kit.ImageKit';
@@ -277,6 +243,42 @@ struct Index {
   }
 }
 ```
+
+## createPixelMapMask
+
+```TypeScript
+static createPixelMapMask(pixelMap: image.PixelMap): Mask
+```
+
+Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
+
+**Since:** 22
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | The PixelMap instance created by the image module. It can be obtained through image decoding or direct creation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the pixelMap. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+**Examples**
+
+See [createPixelMapMask](#createpixelmapmask)
 
 ## createRadialGradientMask
 

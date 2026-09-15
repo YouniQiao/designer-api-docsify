@@ -34,6 +34,35 @@ function getAllBundleInfo(bundleFlag: BundleFlag, userId: number, callback: Asyn
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleFlag: number = 0;
+let userId: number = 100;
+
+bundle.getAllBundleInfo(bundleFlag, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = 0;
+
+bundle.getAllBundleInfo(bundleFlag, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleFlag: number = 0;
 let userId: number = 100;
@@ -73,19 +102,7 @@ function getAllBundleInfo(bundleFlag: BundleFlag, callback: AsyncCallback<Array<
 
 **示例**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleFlag: number = 0;
-
-bundle.getAllBundleInfo(bundleFlag, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
+参见 [getAllBundleInfo](#getallbundleinfo)
 
 
 ## getAllBundleInfo
@@ -119,17 +136,4 @@ function getAllBundleInfo(bundleFlag: BundleFlag, userId?: number): Promise<Arra
 
 **示例**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleFlag: number = 0;
-let userId: number = 100;
-
-bundle.getAllBundleInfo(bundleFlag, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+参见 [getAllBundleInfo](#getallbundleinfo)

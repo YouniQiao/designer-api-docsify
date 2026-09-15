@@ -36,53 +36,16 @@ ColumnSplit()
 
 ## 示例
 
+```TypeScript
+### 示例1（设置可拖动的ColumnSplit组件）
+
 本示例展示如何设置可拖动的ColumnSplit组件及其效果。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ColumnSplitExample {
-  build() {
-    Column() {
-      Text('The dividing line can be dragged').fontSize(9).fontColor(0xCCCCCC).width('90%')
-      ColumnSplit() {
-        Text('1').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-        Text('2').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
-        Text('3').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-        Text('4').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
-        Text('5').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-      }
-      .borderWidth(1)
-      .resizeable(true) // 设置分割线可拖拽
-      .width('90%').height('60%')
-    }.width('100%')
-  }
-}
+
 ```
 
-本示例展示如何设置带有间隔的ColumnSplit组件及其效果。
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ColumnSplitDividerExample {
-  build() {
-    Column() {
-      Text('The dividing line can be dragged').fontSize(9).fontColor(0xCCCCCC).width('90%')
-      ColumnSplit() {
-        Text('1').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-        Text('2').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
-        Text('3').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-        Text('4').width('100%').height(50).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
-        Text('5').width('100%').height(50).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-      }
-      .borderWidth(1)
-      .divider({ startMargin: 5, endMargin: 5 }) // 设置分割线与子组件的距离
-      .width('90%')
-      .height('60%')
-    }.width('100%')
-  }
-}
+### 示例2（设置带有间隔的ColumnSplit组件）
+
+本示例展示如何设置带有间隔的ColumnSplit组件及其效果。
 ```

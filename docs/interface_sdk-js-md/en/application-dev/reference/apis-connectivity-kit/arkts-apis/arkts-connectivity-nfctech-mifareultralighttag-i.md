@@ -111,6 +111,36 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct MIFARE Ultralight tag by using the tag.TagInfo API in @ohos.nfc.tag.
+
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!mifareUltralight.isTagConnected()) {
+        if (!mifareUltralight.connectTag()) {
+            console.error("mifareUltralight connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let pageIndex = 1; // Set a correct index.
+        mifareUltralight.readMultiplePages(pageIndex, (err : BusinessError, data : number[])=> {
+            if (err) {
+                console.error(`mifareUltralight readMultiplePages AsyncCallback Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareUltralight readMultiplePages AsyncCallback data: " + data);
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareUltralight readMultiplePages AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## readMultiplePages
 
 ```TypeScript
@@ -145,35 +175,7 @@ Reads four pages of data (16 bytes in total) from the tag. This API uses an asyn
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct MIFARE Ultralight tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!mifareUltralight.isTagConnected()) {
-        if (!mifareUltralight.connectTag()) {
-            console.error("mifareUltralight connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let pageIndex = 1; // Set a correct index.
-        mifareUltralight.readMultiplePages(pageIndex, (err : BusinessError, data : number[])=> {
-            if (err) {
-                console.error(`mifareUltralight readMultiplePages AsyncCallback Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareUltralight readMultiplePages AsyncCallback data: " + data);
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareUltralight readMultiplePages AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+See [readMultiplePages](#readmultiplepages)
 
 ## writeSinglePage
 
@@ -244,6 +246,37 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct MIFARE Ultralight tag by using the tag.TagInfo API in @ohos.nfc.tag.
+
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!mifareUltralight.isTagConnected()) {
+        if (!mifareUltralight.connectTag()) {
+            console.error("mifareUltralight connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        let pageIndex = 1; // Set a correct index.
+        let rawData = [0x01, 0x02, 0x03, 0x04];  // Set the correct data. The value must contain 4 bytes.
+        mifareUltralight.writeSinglePage(pageIndex, rawData, (err : BusinessError)=> {
+        if (err) {
+                console.error(`mifareUltralight writeSinglePage AsyncCallback Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("mifareUltralight writeSinglePage AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`mifareUltralight writeSinglePage AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## writeSinglePage
 
 ```TypeScript
@@ -279,33 +312,4 @@ Writes one page (4 bytes) of data to this tag. This API uses an asynchronous cal
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct MIFARE Ultralight tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!mifareUltralight.isTagConnected()) {
-        if (!mifareUltralight.connectTag()) {
-            console.error("mifareUltralight connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        let pageIndex = 1; // Set a correct index.
-        let rawData = [0x01, 0x02, 0x03, 0x04];  // Set the correct data. The value must contain 4 bytes.
-        mifareUltralight.writeSinglePage(pageIndex, rawData, (err : BusinessError)=> {
-        if (err) {
-                console.error(`mifareUltralight writeSinglePage AsyncCallback Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("mifareUltralight writeSinglePage AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`mifareUltralight writeSinglePage AsyncCallback catch Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+See [writeSinglePage](#writesinglepage)

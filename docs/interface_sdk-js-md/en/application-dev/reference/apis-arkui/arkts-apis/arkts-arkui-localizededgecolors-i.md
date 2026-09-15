@@ -1,8 +1,8 @@
 # LocalizedEdgeColors
 
-Defines the localized border color property.
+Defines the edge colors of a component.
 
-@interface LocalizedEdgeColors
+To reference this object, at least one parameter must be passed.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Defines the localized border color property.
 bottom?: ResourceColor
 ```
 
-bottom property.
+Color of the bottom edge of the component.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -34,7 +34,9 @@ bottom property.
 end?: ResourceColor
 ```
 
-end property.
+Color of the right edge of the component.
+
+Color of the left edge of the component in RTL mode.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -54,7 +56,9 @@ end property.
 start?: ResourceColor
 ```
 
-start property.
+Color of the left edge of the component.
+
+Color of the right edge of the component in RTL mode.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -74,7 +78,7 @@ start property.
 top?: ResourceColor
 ```
 
-top property.
+Color of the top edge of the component.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

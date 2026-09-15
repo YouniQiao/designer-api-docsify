@@ -268,14 +268,6 @@ Unsubscribes from HighResolutionPhotoSession error events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-function unregisterSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('error');
-}
-```
-
 ## off('focusStateChange')
 
 ```TypeScript
@@ -302,14 +294,6 @@ Unsubscribes from focus state change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-function unregisterFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('focusStateChange');
-}
-```
 
 ## off('isoInfoChange')
 
@@ -338,14 +322,6 @@ Unsubscribes from automatic ISO change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-function unregisterIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('isoInfoChange');
-}
-```
-
 ## off('exposureInfoChange')
 
 ```TypeScript
@@ -372,14 +348,6 @@ Unsubscribes from exposure information change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-function unregisterExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('exposureInfoChange');
-}
-```
 
 ## off('luminationInfoChange')
 
@@ -408,14 +376,6 @@ Unsubscribes from illumination change events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-function unregisterLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('luminationInfoChange');
-}
-```
-
 ## off('tryAEInfoChange')
 
 ```TypeScript
@@ -442,14 +402,6 @@ Unsubscribes from Try AE change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-function unregisterTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.off('tryAEInfoChange');
-}
-```
 
 ## on('error')
 
@@ -478,20 +430,6 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError): void {
-  console.error(`Time lapse photo session error code: ${err.code}`);
-}
-
-function registerSessionError(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('error', callback);
-}
-```
-
 ## on('focusStateChange')
 
 ```TypeScript
@@ -518,24 +456,6 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, focusState: camera.FocusState): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`Focus state: ${focusState}`);
-}
-
-function registerFocusStateChange(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('focusStateChange', callback);
-}
-```
 
 ## on('isoInfoChange')
 
@@ -564,24 +484,6 @@ Subscribes to automatic ISO change events to obtain real-time ISO information. T
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function isoInfoCallback(err: BusinessError, info: camera.IsoInfo): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`ISO value: ${info.iso}`);
-}
-
-function registerIsoInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('isoInfoChange', isoInfoCallback);
-}
-```
-
 ## on('exposureInfoChange')
 
 ```TypeScript
@@ -608,24 +510,6 @@ Subscribes to exposure information change events to obtain the exposure informat
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function exposureInfoCallback(err: BusinessError, info: camera.ExposureInfo): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`exposureTimeValue: ${info.exposureTime}`);
-}
-
-function registerExposureInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('exposureInfoChange', exposureInfoCallback);
-}
-```
 
 ## on('luminationInfoChange')
 
@@ -654,24 +538,6 @@ Subscribes to illumination change events to obtain real-time illumination inform
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function luminationInfoCallback(err: BusinessError, info: camera.LuminationInfo): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`Lumination: ${info.lumination}`);
-}
-
-function registerLuminationInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('luminationInfoChange', luminationInfoCallback);
-}
-```
-
 ## on('tryAEInfoChange')
 
 ```TypeScript
@@ -698,24 +564,6 @@ Subscribes to Try AE change events to obtain real-time Try AE parameters. This A
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function tryAEInfoCallback(err: BusinessError, info: camera.TryAEInfo): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`TryAEInfo: ${info.isTryAEDone}, ${info.isTryAEHintNeeded}, ${info.previewType}, ${info.captureInterval}`);
-}
-
-function registerTryAEInfoEvent(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
-  timeLapsePhotoSession.on('tryAEInfoChange', tryAEInfoCallback);
-}
-```
 
 ## setTimeLapseInterval
 

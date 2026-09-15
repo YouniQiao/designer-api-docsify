@@ -329,6 +329,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let path: string = '/data/out/tmp';
+  let delimiter: string = '/';
+  let locale: intl.Locale = new intl.Locale('ar');
+  let mirrorPath: string =
+    i18n.I18NUtil.getUnicodeWrappedFilePath(path, delimiter, locale); // mirrorPath显示为: 'tmp/out/data/'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 ## getUnicodeWrappedFilePath
 
 ```TypeScript
@@ -371,21 +387,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let path: string = '/data/out/tmp';
-  let delimiter: string = '/';
-  let locale: intl.Locale = new intl.Locale('ar');
-  let mirrorPath: string =
-    i18n.I18NUtil.getUnicodeWrappedFilePath(path, delimiter, locale); // mirrorPath显示为: 'tmp/out/data/'
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call I18NUtil.getUnicodeWrappedFilePath failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)
 
 ## setUnicodeWrappedBidiDirection
 

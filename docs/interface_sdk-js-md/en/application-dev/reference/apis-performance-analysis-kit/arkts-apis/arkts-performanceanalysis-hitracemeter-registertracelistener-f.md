@@ -50,9 +50,11 @@ Callbacks are stored in the application process. A maximum of 10 callbacks can b
 // Define the registered callback.
 let callback: hiTraceMeter.TraceEventListener = (traceStatus: boolean) => {
   if (traceStatus) {
-    // Trace capture is enabled for the current application. The service process is as follows:
+    // Trace capture is enabled for the current application.
+    // ...
   } else {
-    // Trace capture is disabled for the current application. The service process is as follows:
+    // Trace capture is disabled for the current application.
+    // ...
   }
 };
 

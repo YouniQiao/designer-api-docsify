@@ -50,6 +50,17 @@ print.queryPrintJobList((error: BusinessError, printJobs : print.PrintJob[]) => 
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
+    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
+}).catch((error: BusinessError) => {
+    console.error(`Failed to query print job list. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## queryPrintJobList
 
@@ -82,13 +93,4 @@ Queries all print jobs. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryPrintJobList().then((printJobs : print.PrintJob[]) => {
-    console.info('queryPrintJobList success, data : ' + JSON.stringify(printJobs));
-}).catch((error: BusinessError) => {
-    console.error(`Failed to query print job list. Code: ${error.code}, message: ${error.message}`);
-});
-```
+See [queryPrintJobList](#queryprintjoblist)

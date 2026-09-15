@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取键盘重复延迟
+            inputDevice.getKeyboardRepeatDelay().then((delay: number) => {
+              console.info(`Succeeded in getting keyboard repeat delay.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getKeyboardRepeatDelay
 
@@ -94,29 +121,4 @@ function getKeyboardRepeatDelay(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 获取键盘重复延迟
-            inputDevice.getKeyboardRepeatDelay().then((delay: number) => {
-              console.info(`Succeeded in getting keyboard repeat delay.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [getKeyboardRepeatDelay](#getkeyboardrepeatdelay)

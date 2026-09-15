@@ -56,6 +56,18 @@ securityLabel.setSecurityLabel(filePath, "s0").then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let filePath = pathDir + '/test.txt';
+securityLabel.setSecurityLabel(filePath, "s0", (err: BusinessError) => {
+  if (err) {
+    console.error("Failed to set security label. Code: " + err.code + ", message: " + err.message);
+  } else {
+    console.info("Succeeded in setting security label.");
+  }
+});
+```
+
 
 ## setSecurityLabel
 
@@ -92,14 +104,4 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-let filePath = pathDir + '/test.txt';
-securityLabel.setSecurityLabel(filePath, "s0", (err: BusinessError) => {
-  if (err) {
-    console.error("Failed to set security label. Code: " + err.code + ", message: " + err.message);
-  } else {
-    console.info("Succeeded in setting security label.");
-  }
-});
-```
+参见 [setSecurityLabel](#setsecuritylabel)

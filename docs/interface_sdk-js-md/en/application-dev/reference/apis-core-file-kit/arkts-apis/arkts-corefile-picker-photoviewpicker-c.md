@@ -37,6 +37,32 @@ A constructor used to create a PhotoViewPicker instance. This constructor is not
 **Examples**
 
 ```TypeScript
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(()=>{
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // Ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+            let photoPicker = new picker.PhotoViewPicker(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
 let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
 ```
 
@@ -90,6 +116,10 @@ struct Index {
 }
 ```
 
+```TypeScript
+let photoPicker = new picker.PhotoViewPicker(); // Construction without parameter is not recommended. There is a possibility that the PhotoViewPicker instance fails to start.
+```
+
 ## save
 
 ```TypeScript
@@ -141,6 +171,50 @@ async function example04(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example05(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg','PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example06(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
 ## save
 
 ```TypeScript
@@ -170,12 +244,54 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import  { picker } from '@kit.CoreFileKit';
+async function example04(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+      console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
 async function example05(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
   try {
     let photoSaveOptions = new picker.PhotoSaveOptions();
     photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg','PhotoViewPicker02.mp4'];
     let photoPicker = new picker.PhotoViewPicker(context);
     photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example06(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
       if (err) {
         console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
         return;
@@ -212,6 +328,50 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the images or videos saved. <br>**Note:**  This API saves files in **Files**, not in **Gallery**. For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example04(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+      console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example05(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg','PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error('PhotoViewPicker.save failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -288,6 +448,51 @@ async function example01(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example02(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example03(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select((err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
 ## select
 
 ```TypeScript
@@ -319,6 +524,28 @@ Starts a **photoPicker** page for the user to select one or more images or video
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import  { picker } from '@kit.CoreFileKit';
+async function example01(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: picker.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
 async function example02(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
   try {
     let photoSelectOptions = new picker.PhotoSelectOptions();
@@ -326,6 +553,27 @@ async function example02(context: common.UIAbilityContext) { // Ensure that cont
     photoSelectOptions.maxSelectNumber = 5;
     let photoPicker = new picker.PhotoViewPicker(context);
     photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example03(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select((err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
       if (err) {
         console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
         return;
@@ -364,6 +612,52 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Yes | Callback used to return the images or videos selected. <br>**Note:**  The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example01(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: picker.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import  { picker } from '@kit.CoreFileKit';
+async function example02(context: common.UIAbilityContext) { // Ensure that context is converted from UIAbilityContext.
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error('PhotoViewPicker.select failed with err: ' + JSON.stringify(err));
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error('PhotoViewPicker failed with err: ' + JSON.stringify(err));
+  }
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

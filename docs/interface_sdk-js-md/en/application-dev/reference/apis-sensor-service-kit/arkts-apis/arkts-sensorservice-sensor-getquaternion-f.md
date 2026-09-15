@@ -56,6 +56,27 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+    let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
+    const promise = sensor.getQuaternion(rotationVector);
+    promise.then((data: Array<number>) => {
+        for (let i = 0; i < data.length; i++) {
+            console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+        }
+    }, (err: BusinessError) => {
+        console.error(`Failed to get quaternion. Code: ${err.code}, message: ${err.message}`);
+    });
+} catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getQuaternion
 
@@ -90,23 +111,4 @@ Obtains the quaternion from a rotation vector. This API uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-    let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
-    const promise = sensor.getQuaternion(rotationVector);
-    promise.then((data: Array<number>) => {
-        for (let i = 0; i < data.length; i++) {
-            console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
-        }
-    }, (err: BusinessError) => {
-        console.error(`Failed to get quaternion. Code: ${err.code}, message: ${err.message}`);
-    });
-} catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to get quaternion. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getQuaternion](#getquaternion)

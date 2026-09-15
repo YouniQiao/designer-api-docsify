@@ -34,32 +34,6 @@ Destroys the **Connection** object to release resources. If the device needs to 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-    if (result.success) {
-      connection.close();
-    }
-  });
-  connection.connect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## connect
 
 ```TypeScript
@@ -84,33 +58,6 @@ Connects to the server on the client after the **Connection** object is successf
 | [32390204](../errorcode-link-enhance.md#32390204-number-of-connections-exceeding-the-limit) | The number of connection exceeds the limit. |
 | [32390300](../errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
 
-**Examples**
-
-After creating a Connection object, the application on the client device calls connect() to connect to the target device (that is, the server).
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // Subscribe to connectResult events.
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-  // Initiate a connection.
-  connection.connect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## disconnect
 
 ```TypeScript
@@ -132,32 +79,6 @@ Disconnects from the peer device. The created **Connection** object remains vali
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-    if (result.success) {
-      connection.disconnect();
-    }
-  });
-  connection.connect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
 
 ## getPeerDeviceId
 
@@ -186,26 +107,6 @@ Obtains the device ID of the peer device. This API is called when the connection
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  hilog.info(0x0000, TAG, "peerDeviceId=%{public}s", connection.getPeerDeviceId());
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
 
 ## off('connectResult')
 
@@ -237,32 +138,6 @@ Unregisters the listener for **connectResult** events.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-  // Unsubscribe from connectResult events.
-  connection.off('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## off('disconnected')
 
 ```TypeScript
@@ -292,32 +167,6 @@ Unregisters the listener for **disconnected** events. This API uses an asynchron
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-  // Unsubscribe from disconnected events.
-  connection.off('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
 
 ## off('dataReceived')
 
@@ -349,33 +198,6 @@ Unregisters the listener for **dataReceived** events.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // Subscribe to data receiving notifications.
-  connection.on('dataReceived', (data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-  // Unsubscribe from data receiving notifications.
-  connection.off('dataReceived', (data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## on('connectResult')
 
 ```TypeScript
@@ -405,32 +227,6 @@ Registers a listener for **connectResult** events. This API uses an asynchronous
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // Subscribe to connectResult events.
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-
-  // Initiate a connection.
-  connection.connect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
 
 ## on('disconnected')
 
@@ -462,29 +258,6 @@ Registers a listener for **disconnected** events. This API uses an asynchronous 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // Subscribe to disconnected events.
-  connection.on('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## on('dataReceived')
 
 ```TypeScript
@@ -514,31 +287,6 @@ Registers a listener for the **dataReceived** events. This API uses an asynchron
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // Initiate a connection.
-  connection.connect();
-  // Subscribe to data receiving notifications.
-  connection.on('dataReceived', (data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
 
 ## sendData
 
@@ -570,33 +318,3 @@ Sends data to the server after a connection is established successfully. When th
 | [32390206](../errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
 | [32390205](../errorcode-link-enhance.md#32390205-connection-unavailable) | Connection is not ready. |
 | [32390300](../errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
-
-**Examples**
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-    if (result.success) {
-      let len = 1;
-      let arrayBuffer = new ArrayBuffer(len); // Create the data to send.
-      connection.sendData(arrayBuffer);
-      hilog.info(0x0000, TAG, "sendData data connection peerDeviceId=%{public}s", connection.getPeerDeviceId());
-      connection.disconnect();
-    }
-  });
-  connection.connect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```

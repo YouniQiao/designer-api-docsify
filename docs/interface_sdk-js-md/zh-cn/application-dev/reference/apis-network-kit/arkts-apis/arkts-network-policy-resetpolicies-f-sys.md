@@ -50,6 +50,19 @@ policy.resetPolicies('1', (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .resetPolicies('1')
+  .then(() => {
+    console.info('resetPolicies success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## resetPolicies
 
@@ -92,15 +105,4 @@ function resetPolicies(simId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .resetPolicies('1')
-  .then(() => {
-    console.info('resetPolicies success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [resetPolicies](#resetpolicies)

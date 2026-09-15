@@ -48,6 +48,16 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().displayOptionalInputMethod().then(() => {
+  console.info('Succeeded in displaying optionalInputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -72,15 +82,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().displayOptionalInputMethod().then(() => {
-  console.info('Succeeded in displaying optionalInputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [displayOptionalInputMethod](#displayoptionalinputmethod)
 
 ## getAllInputMethods
 
@@ -121,6 +123,16 @@ inputMethod.getSetting().getAllInputMethods((err: BusinessError, data: Array<inp
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting all inputMethods.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## getAllInputMethods
 
 ```TypeScript
@@ -148,15 +160,7 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting all inputMethods.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [getAllInputMethods](#getallinputmethods)
 
 ## getAllInputMethodsSync
 
@@ -190,6 +194,18 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 ```TypeScript
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync(100);
+  console.info('Succeeded in getting all input methods, count: ' + imeProperty.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getAllInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
+}
 ```
 
 ## getInputMethods
@@ -238,6 +254,16 @@ inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting inputMethods.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## getInputMethods
 
 ```TypeScript
@@ -277,15 +303,7 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in getting inputMethods.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [getInputMethods](#getinputmethods)
 
 ## getInputMethodsSync
 
@@ -330,6 +348,18 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 ```TypeScript
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getInputMethodsSync(true, 100);
+  console.info('Succeeded in getting enabled input methods, count: ' + imeProperty.length);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
+}
 ```
 
 ## getInputMethodState
@@ -410,6 +440,19 @@ inputMethodSetting.listCurrentInputMethodSubtype((err: BusinessError, data: Arra
 });
 ```
 
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethodSubtype>) => {
+  console.info('Succeeded in listing currentInputMethodSubtype.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -437,18 +480,7 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 **示例**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethodSubtype>) => {
-  console.info('Succeeded in listing currentInputMethodSubtype.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [listCurrentInputMethodSubtype](#listcurrentinputmethodsubtype)
 
 ## listInputMethod
 
@@ -486,6 +518,16 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in listing inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## listInputMethod
 
 ```TypeScript
@@ -510,15 +552,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMethodProperty>) => {
-  console.info('Succeeded in listing inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [listInputMethod](#listinputmethod)
 
 ## listInputMethodSubtype
 
@@ -574,6 +608,25 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty,
   });
 ```
 
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodProperty: inputMethod.InputMethodProperty = {
+  name: 'com.example.keyboard',
+  id: 'propertyId',
+  packageName: 'com.example.keyboard',
+  methodId: 'propertyId'
+}
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array<InputMethodSubtype>) => {
+  console.info('Succeeded in listing inputMethodSubtype.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## listInputMethodSubtype
 
 ```TypeScript
@@ -608,24 +661,7 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 **示例**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputMethodProperty: inputMethod.InputMethodProperty = {
-  name: 'com.example.keyboard',
-  id: 'propertyId',
-  packageName: 'com.example.keyboard',
-  methodId: 'propertyId'
-}
-let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
-
-inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array<InputMethodSubtype>) => {
-  console.info('Succeeded in listing inputMethodSubtype.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [listInputMethodSubtype](#listinputmethodsubtype)
 
 ## off('imeChange')
 
@@ -649,12 +685,6 @@ off(
 | type | 'imeChange' | 是 | 设置监听类型，固定取值为'imeChange'。 |
 | callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | 否 | 回调函数，返回取消订阅的输入法属性对象及子类型对象。 |
 
-**示例**
-
-```TypeScript
-inputMethod.getSetting().off('imeChange');
-```
-
 ## on('imeChange')
 
 ```TypeScript
@@ -676,18 +706,6 @@ on(
 | --- | --- | --- | --- |
 | type | 'imeChange' | 是 | 设置监听类型，固定取值为'imeChange'。 |
 | callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | 是 | 回调函数，返回输入法属性对象及子类型对象。 |
-
-**示例**
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-
-inputMethod.getSetting()
-  .on('imeChange', (inputMethodProperty: inputMethod.InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => {
-    console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name} ` +
-      `, inputMethodSubtype.id: ${inputMethodSubtype.id}`);
-  });
-```
 
 ## showOptionalInputMethods
 
@@ -735,6 +753,20 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in showing optionalInputMethods.');
+  } else {
+    console.error(`Failed to showOptionalInputMethods.`);
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## showOptionalInputMethods
 
 ```TypeScript
@@ -765,16 +797,4 @@ showOptionalInputMethods(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getSetting().showOptionalInputMethods().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in showing optionalInputMethods.');
-  } else {
-    console.error(`Failed to showOptionalInputMethods.`);
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showOptionalInputMethods, code: ${err.code}, message: ${err.message}`);
-})
-```
+参见 [showOptionalInputMethods](#showoptionalinputmethods)

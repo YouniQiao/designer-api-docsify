@@ -220,16 +220,6 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 | type | 'volumeChange' | 是 | 事件回调类型，支持的事件为'volumeChange'，当系统音量发生变化时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
-**示例**
-
-```TypeScript
-audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
-  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
-  console.info(`Volume level: ${volumeEvent.volume} `);
-  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
-});
-```
-
 ## on('ringerModeChange')
 
 ```TypeScript
@@ -259,14 +249,6 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当铃声模式发生改变时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数，返回变化后的铃音模式。 |
-
-**示例**
-
-```TypeScript
-audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
-  console.info(`Updated ringermode: ${ringerMode}`);
-});
-```
 
 ## reportPlaybackCaptureUserAllowed
 
@@ -342,6 +324,16 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL, (err: Busine
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
+  console.info('Promise returned to indicate a successful setting of the audio scene mode.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set the audio scene mode ${err}`);
+});
+```
+
 ## setAudioScene
 
 ```TypeScript
@@ -370,15 +362,7 @@ setAudioScene(scene: AudioScene): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
-  console.info('Promise returned to indicate a successful setting of the audio scene mode.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set the audio scene mode ${err}`);
-});
-```
+参见 [setAudioScene](#setaudioscene)
 
 ## setExtraParameters
 

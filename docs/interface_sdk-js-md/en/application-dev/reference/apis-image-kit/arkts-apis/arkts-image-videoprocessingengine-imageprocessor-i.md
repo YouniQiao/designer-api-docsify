@@ -63,6 +63,18 @@ async function enhanceDetail(sourceImage: image.PixelMap, width: number, height:
 }
 ```
 
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // Example: The scale can be set to 2.0.
+  let enhancedPixelmap: Promise<image.PixelMap> =
+    imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
+
 ## enhanceDetail
 
 ```TypeScript
@@ -101,17 +113,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Examples**
 
-```TypeScript
-import { image, videoProcessingEngine } from '@kit.ImageKit';
-
-async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
-  videoProcessingEngine.initializeEnvironment();
-  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
-  // Example: The scale can be set to 2.0.
-  let enhancedPixelmap: Promise<image.PixelMap> =
-    imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
-}
-```
+See [enhanceDetail](#enhancedetail)
 
 ## enhanceDetailSync
 
@@ -165,6 +167,18 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, width: number, hei
 }
 ```
 
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // Example: The scale can be set to 2.0.
+  let enhancedPixelmap: image.PixelMap = imageProcessor.enhanceDetailSync(
+    sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
+
 ## enhanceDetailSync
 
 ```TypeScript
@@ -204,14 +218,4 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Examples**
 
-```TypeScript
-import { image, videoProcessingEngine } from '@kit.ImageKit';
-
-async function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
-  videoProcessingEngine.initializeEnvironment();
-  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
-  // Example: The scale can be set to 2.0.
-  let enhancedPixelmap: image.PixelMap = imageProcessor.enhanceDetailSync(
-    sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
-}
-```
+See [enhanceDetailSync](#enhancedetailsync)

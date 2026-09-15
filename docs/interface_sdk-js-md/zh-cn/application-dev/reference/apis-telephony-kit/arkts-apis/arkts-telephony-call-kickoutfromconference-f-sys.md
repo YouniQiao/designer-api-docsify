@@ -55,6 +55,16 @@ call.kickOutFromConference(1, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.kickOutFromConference(1).then(() => {
+    console.info(`kickOutFromConference success.`);
+}).catch((err: BusinessError) => {
+    console.error(`kickOutFromConference fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## kickOutFromConference
 
@@ -98,12 +108,4 @@ function kickOutFromConference(callId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.kickOutFromConference(1).then(() => {
-    console.info(`kickOutFromConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`kickOutFromConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [kickOutFromConference](#kickoutfromconference)

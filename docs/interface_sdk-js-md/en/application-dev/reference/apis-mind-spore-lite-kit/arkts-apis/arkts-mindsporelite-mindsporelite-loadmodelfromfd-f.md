@@ -49,6 +49,42 @@ import { fileIo } from '@kit.CoreFileKit';
 
 let modelFile = '/path/to/xxx.ms';
 let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
+mindSporeLite.loadModelFromFd(file.fd, (mindSporeLiteModel: mindSporeLite.Model) => {
+  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+  if (modelInputs == null) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Input count: 0`);
+  } else {
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
+  }
+})
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+let modelFile = '/path/to/xxx.ms';
+let context: mindSporeLite.Context = {};
+context.target = ['cpu'];
+let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
+mindSporeLite.loadModelFromFd(file.fd, context, (mindSporeLiteModel: mindSporeLite.Model) => {
+  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+  if (modelInputs == null) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Context: ${JSON.stringify(context)}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Context: ${JSON.stringify(context)}, Input count: 0`);
+  } else {
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
+  }
+})
+```
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+let modelFile = '/path/to/xxx.ms';
+let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadModelFromFd(file.fd).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
@@ -95,22 +131,7 @@ Create a Model instance from file description
 
 **Examples**
 
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-let modelFile = '/path/to/xxx.ms';
-let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
-mindSporeLite.loadModelFromFd(file.fd, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Result: null`);
-  } else if (modelInputs.length === 0) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Input count: 0`);
-  } else {
-    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-  }
-})
-```
+See [loadModelFromFd](#loadmodelfromfd)
 
 
 ## loadModelFromFd
@@ -146,21 +167,4 @@ Create a Model instance from file description
 
 **Examples**
 
-```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
-
-let modelFile = '/path/to/xxx.ms';
-let context: mindSporeLite.Context = {};
-context.target = ['cpu'];
-let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
-mindSporeLite.loadModelFromFd(file.fd, context, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Context: ${JSON.stringify(context)}, Result: null`);
-  } else if (modelInputs.length === 0) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, File descriptor: ${file.fd}, Context: ${JSON.stringify(context)}, Input count: 0`);
-  } else {
-    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-  }
-})
-```
+See [loadModelFromFd](#loadmodelfromfd)

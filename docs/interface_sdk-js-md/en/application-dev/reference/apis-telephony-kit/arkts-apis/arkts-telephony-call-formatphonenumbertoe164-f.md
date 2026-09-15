@@ -52,6 +52,16 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
+    console.info(`formatPhoneNumberToE164 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`formatPhoneNumberToE164 fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## formatPhoneNumberToE164
 
@@ -94,12 +104,4 @@ All country codes are supported.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.formatPhoneNumberToE164("138xxxxxxxx", "CN").then((data: string) => {
-    console.info(`formatPhoneNumberToE164 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`formatPhoneNumberToE164 fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [formatPhoneNumberToE164](#formatphonenumbertoe164)

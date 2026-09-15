@@ -30,38 +30,16 @@ Navigates to a specified page in the application.
 
 **Examples**
 
+```TypeScript
 push(options: RouterOptions): void
+
 Navigates to a specified page in the application.
+
 > NOTE
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use pushUrl(options: router.RouterOptions) instead.
 
 System capability: SystemCapability.ArkUI.ArkUI.Full
+
 Parameters
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.push({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-});
 ```

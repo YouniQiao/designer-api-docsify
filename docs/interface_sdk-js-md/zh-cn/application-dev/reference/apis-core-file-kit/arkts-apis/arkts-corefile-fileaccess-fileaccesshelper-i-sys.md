@@ -114,6 +114,33 @@ async function accessFunc() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceDir表示Download目录下文件夹，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceDir: string = "file://docs/storage/Users/currentUser/Download/test";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.access(sourceDir, (err: BusinessError, existJudgment: boolean) => {
+      if (err) {
+        console.error("Failed to access in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      if (existJudgment)
+        console.info("sourceDir exists");
+      else
+        console.info("sourceDir does not exist");
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## access
 
 ```TypeScript
@@ -182,32 +209,7 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceDir表示Download目录下文件夹，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceDir: string = "file://docs/storage/Users/currentUser/Download/test";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.access(sourceDir, (err: BusinessError, existJudgment: boolean) => {
-      if (err) {
-        console.error("Failed to access in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      if (existJudgment)
-        console.info("sourceDir exists");
-      else
-        console.info("sourceDir does not exist");
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [access](#access)
 
 ## copy
 
@@ -345,38 +347,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// 以内置存储目录为例
-// 示例代码中的sourceFile表示Download目录下的源文件(夹)，destFile表示Download目录下的目标文件夹，该uri对应fileInfo中的uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.copy(sourceFile, destFile, async (err: BusinessError, copyResult: Array<fileAccess.CopyResult>) => {
-      if (err) {
-        console.error("copy failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (copyResult.length === 0) {
-        console.info("copy success");
-      } else {
-        for (let i = 0; i < copyResult.length; i++) {
-          console.error("errCode" + copyResult[i].errCode);
-          console.error("errMsg" + copyResult[i].errMsg);
-          console.error("sourceUri" + copyResult[i].sourceUri);
-          console.error("destUri" + copyResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [copy](#copy)
 
 ## copy
 
@@ -411,38 +382,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// 以内置存储目录为例
-// 示例代码中的sourceFile表示Download目录下的源文件(夹)，destFile表示Download目录下的目标文件夹，该uri对应fileInfo中的uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.copy(sourceFile, destFile, true, async (err: BusinessError, copyResult: Array<fileAccess.CopyResult>) => {
-      if (err) {
-        console.error("copy failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (copyResult.length === 0) {
-        console.info("copy success");
-      } else {
-        for (let i = 0; i < copyResult.length; i++) {
-          console.error("errCode" + copyResult[i].errCode);
-          console.error("errMsg" + copyResult[i].errMsg);
-          console.error("sourceUri" + copyResult[i].sourceUri);
-          console.error("destUri" + copyResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [copy](#copy)
 
 ## copyFile
 
@@ -702,6 +642,30 @@ async function createFile() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceUri表示Download目录，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+let displayName: string = "file1";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.createFile(sourceUri, displayName, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to createFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("createFile success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## createFile
 
 ```TypeScript
@@ -771,29 +735,7 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceUri表示Download目录，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-let displayName: string = "file1";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.createFile(sourceUri, displayName, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to createFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("createFile success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [createFile](#createfile)
 
 ## delete
 
@@ -890,6 +832,29 @@ async function deleteFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码targetUri表示Download目录下文件，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.delete(targetUri, (err: BusinessError, code: number) => {
+      if (err) {
+        console.error("Failed to delete in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("delete success, code: " + code);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -958,28 +923,7 @@ delete(uri: string, callback: AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码targetUri表示Download目录下文件，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.delete(targetUri, (err: BusinessError, code: number) => {
-      if (err) {
-        console.error("Failed to delete in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("delete success, code: " + code);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [delete](#delete)
 
 ## getFileInfoFromRelativePath
 
@@ -1034,6 +978,29 @@ async function getRelativePath() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 示例代码relativePath表示Download目录，该relativePath是对应的fileInfo中relativePath
+// 开发者应根据自己实际获取的relativePath进行开发
+let relativePath: string = "Download/";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.getFileInfoFromRelativePath(relativePath, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
+      if (err) {
+        console.error("Failed to getFileInfoFromRelativePath in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      console.info("getFileInfoFromRelativePath success, fileInfo: " + JSON.stringify(fileInfo));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1063,28 +1030,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 示例代码relativePath表示Download目录，该relativePath是对应的fileInfo中relativePath
-// 开发者应根据自己实际获取的relativePath进行开发
-let relativePath: string = "Download/";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.getFileInfoFromRelativePath(relativePath, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
-      if (err) {
-        console.error("Failed to getFileInfoFromRelativePath in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileInfoFromRelativePath success, fileInfo: " + JSON.stringify(fileInfo));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [getFileInfoFromRelativePath](#getfileinfofromrelativepath)
 
 ## getFileInfoFromUri
 
@@ -1140,6 +1086,30 @@ async function getUri() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceUri表示Download目录，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.getFileInfoFromUri(sourceUri, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
+      if (err) {
+        console.error("Failed to getFileInfoFromUri in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      console.info("getFileInfoFromUri success, fileInfo: " + JSON.stringify(fileInfo));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## getFileInfoFromUri
 
 ```TypeScript
@@ -1169,29 +1139,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceUri表示Download目录，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.getFileInfoFromUri(sourceUri, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
-      if (err) {
-        console.error("Failed to getFileInfoFromUri in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileInfoFromUri success, fileInfo: " + JSON.stringify(fileInfo));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [getFileInfoFromUri](#getfileinfofromuri)
 
 ## getRoots
 
@@ -1287,6 +1235,36 @@ async function getRoots() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+async function getRoots() {
+  let rootinfos: Array<fileAccess.RootInfo> = [];
+  let isDone: boolean = false;
+  // fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+  try {
+    if (fileAccessHelper != undefined) {
+      fileAccessHelper.getRoots((err: BusinessError, rootIterator: fileAccess.RootIterator) => {
+        if (err) {
+          console.error("Failed to getRoots in async, errCode:" + err.code + ", errMessage:" + err.message);
+        }
+        while (!isDone) {
+          let result = rootIterator.next();
+          console.info("next result = " + JSON.stringify(result));
+          isDone = result.done;
+          if (!isDone) {
+            rootinfos.push(result.value);
+          }
+        }
+      });       
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("getRoots failed, errCode:" + error.code + ", errMessage:" + error.message);
+  }
+}
+```
+
 ## getRoots
 
 ```TypeScript
@@ -1352,35 +1330,7 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-async function getRoots() {
-  let rootinfos: Array<fileAccess.RootInfo> = [];
-  let isDone: boolean = false;
-  // fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-  try {
-    if (fileAccessHelper != undefined) {
-      fileAccessHelper.getRoots((err: BusinessError, rootIterator: fileAccess.RootIterator) => {
-        if (err) {
-          console.error("Failed to getRoots in async, errCode:" + err.code + ", errMessage:" + err.message);
-        }
-        while (!isDone) {
-          let result = rootIterator.next();
-          console.info("next result = " + JSON.stringify(result));
-          isDone = result.done;
-          if (!isDone) {
-            rootinfos.push(result.value);
-          }
-        }
-      });       
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("getRoots failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
+参见 [getRoots](#getroots)
 
 ## mkDir
 
@@ -1483,6 +1433,30 @@ async function createDirectory() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceUri表示Download目录，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+let dirName: string = "dirTest";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.mkDir(sourceUri, dirName, (err: BusinessError, dirUri: string) => {
+      if (err) {
+        console.error("Failed to mkDir in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("mkDir success, dirUri: " + JSON.stringify(dirUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## mkDir
 
 ```TypeScript
@@ -1552,29 +1526,7 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceUri表示Download目录，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-let dirName: string = "dirTest";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.mkDir(sourceUri, dirName, (err: BusinessError, dirUri: string) => {
-      if (err) {
-        console.error("Failed to mkDir in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("mkDir success, dirUri: " + JSON.stringify(dirUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [mkDir](#mkdir)
 
 ## move
 
@@ -1672,6 +1624,30 @@ async function moveFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceFile destFile表示Download目录下文件和文件夹，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.move(sourceFile, destFile, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to move in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("move success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## move
 
 ```TypeScript
@@ -1741,29 +1717,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceFile destFile表示Download目录下文件和文件夹，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.move(sourceFile, destFile, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to move in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("move success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [move](#move)
 
 ## moveFile
 
@@ -1855,6 +1809,31 @@ async function moveFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceUri destUri表示Download目录下文件和文件夹，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
+let fileName: string = "2.txt";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.moveFile(sourceUri, destUri, fileName, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to moveFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("moveFile success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## moveFile
 
 ```TypeScript
@@ -1917,30 +1896,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceUri destUri表示Download目录下文件和文件夹，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-let fileName: string = "2.txt";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveFile(sourceUri, destUri, fileName, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to moveFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("moveFile success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [moveFile](#movefile)
 
 ## moveItem
 
@@ -2136,38 +2092,7 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// 以内置存储目录为例
-// 示例代码中的sourceFile表示Download目录下的源文件(夹)，destFile表示Download目录下的目标文件夹，该uri对应fileInfo中的uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveItem(sourceUri, destUri, async (err: BusinessError, moveResult: Array<fileAccess.MoveResult>) => {
-      if (err) {
-        console.error("moveItem failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (moveResult.length === 0) {
-        console.info("moveItem success");
-      } else {
-        for (let i = 0; i < moveResult.length; i++) {
-          console.error("errCode" + moveResult[i].errCode);
-          console.error("errMsg" + moveResult[i].errMsg);
-          console.error("sourceUri" + moveResult[i].sourceUri);
-          console.error("destUri" + moveResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [moveItem](#moveitem)
 
 ## moveItem
 
@@ -2231,38 +2156,7 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// 以内置存储目录为例
-// 示例代码中的sourceFile表示Download目录下的源文件(夹)，destFile表示Download目录下的目标文件夹，该uri对应fileInfo中的uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveItem(sourceUri, destUri, true, async (err: BusinessError, moveResult: Array<fileAccess.MoveResult>) => {
-      if (err) {
-        console.error("moveItem failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (moveResult.length === 0) {
-        console.info("moveItem success");
-      } else {
-        for (let i = 0; i < moveResult.length; i++) {
-          console.error("errCode" + moveResult[i].errCode);
-          console.error("errMsg" + moveResult[i].errMsg);
-          console.error("sourceUri" + moveResult[i].sourceUri);
-          console.error("destUri" + moveResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [moveItem](#moveitem)
 
 ## openFile
 
@@ -2358,6 +2252,29 @@ async function openFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码targetUri表示Download目录下文件，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.openFile(targetUri, fileAccess.OPENFLAGS.READ, (err: BusinessError, fd: number) => {
+      if (err) {
+        console.error("Failed to openFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("openFile success, fd: " + fd);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## openFile
 
 ```TypeScript
@@ -2427,28 +2344,7 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码targetUri表示Download目录下文件，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.openFile(targetUri, fileAccess.OPENFLAGS.READ, (err: BusinessError, fd: number) => {
-      if (err) {
-        console.error("Failed to openFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("openFile success, fd: " + fd);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [openFile](#openfile)
 
 ## query
 
@@ -2505,6 +2401,31 @@ async function getQuery01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+async function getQuery02() {
+  let imageFileRelativePath: string = "/storage/Users/currentUser/Download/queryTest/image/01.jpg";
+  let jsonStrSingleRelativepath: string = JSON.stringify({ [fileAccess.FileKey.RELATIVE_PATH]: "" });
+  // fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+  try {
+    if (fileAccessHelper != undefined) {
+      let fileInfo = await fileAccessHelper.getFileInfoFromRelativePath(imageFileRelativePath);
+      fileAccessHelper.query(fileInfo.uri, jsonStrSingleRelativepath, (err: BusinessError, queryResult: string) => {
+        if (err) {
+          console.error(`query_file_single faf query Failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        console.info("query_file_single faf query, queryResult.relative_path: " + JSON.parse(queryResult).relative_path);
+      })
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("query_file_single faf query failed, error.code :" + error.code + ", errorMessage :" + error.message);
+  }
+}
+```
+
 ## query
 
 ```TypeScript
@@ -2535,30 +2456,7 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-async function getQuery02() {
-  let imageFileRelativePath: string = "/storage/Users/currentUser/Download/queryTest/image/01.jpg";
-  let jsonStrSingleRelativepath: string = JSON.stringify({ [fileAccess.FileKey.RELATIVE_PATH]: "" });
-  // fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-  try {
-    if (fileAccessHelper != undefined) {
-      let fileInfo = await fileAccessHelper.getFileInfoFromRelativePath(imageFileRelativePath);
-      fileAccessHelper.query(fileInfo.uri, jsonStrSingleRelativepath, (err: BusinessError, queryResult: string) => {
-        if (err) {
-          console.error(`query_file_single faf query Failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        console.info("query_file_single faf query, queryResult.relative_path: " + JSON.parse(queryResult).relative_path);
-      })
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("query_file_single faf query failed, error.code :" + error.code + ", errorMessage :" + error.message);
-  }
-}
-```
+参见 [query](#query)
 
 ## registerObserver
 
@@ -2689,6 +2587,29 @@ async function renameFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// 以内置存储目录为例
+// 示例代码sourceDir表示Download目录下文件，该uri是对应的fileInfo中uri
+// 开发者应根据自己实际获取的uri进行开发
+let sourceDir: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.rename(sourceDir, "testDir", (err: BusinessError, DestDir: string) => {
+      if (err) {
+        console.error("Failed to rename in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("rename success, DestDir: " + JSON.stringify(DestDir));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## rename
 
 ```TypeScript
@@ -2758,28 +2679,7 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// 以内置存储目录为例
-// 示例代码sourceDir表示Download目录下文件，该uri是对应的fileInfo中uri
-// 开发者应根据自己实际获取的uri进行开发
-let sourceDir: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// fileAccessHelper 参考 fileAccess.createFileAccessHelper 示例代码获取
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.rename(sourceDir, "testDir", (err: BusinessError, DestDir: string) => {
-      if (err) {
-        console.error("Failed to rename in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("rename success, DestDir: " + JSON.stringify(DestDir));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+参见 [rename](#rename)
 
 ## unregisterObserver
 

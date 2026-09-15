@@ -41,14 +41,6 @@ function off(type: 'callDetailsChange', callback?: Callback<CallAttributeOptions
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
-**示例**
-
-```TypeScript
-call.off('callDetailsChange', (data: call.CallAttributeOptions) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('callEventChange')
 
@@ -84,14 +76,6 @@ function off(type: 'callEventChange', callback?: Callback<CallEventOptions>): vo
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-
-**示例**
-
-```TypeScript
-call.off('callEventChange', (data: call.CallEventOptions) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
 
 
 ## off('callDisconnectedCause')
@@ -129,14 +113,6 @@ function off(type: 'callDisconnectedCause', callback?: Callback<DisconnectedDeta
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
-**示例**
-
-```TypeScript
-call.off('callDisconnectedCause', (data: call.DisconnectedDetails) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('mmiCodeResult')
 
@@ -172,14 +148,6 @@ function off(type: 'mmiCodeResult', callback?: Callback<MmiCodeResults>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-
-**示例**
-
-```TypeScript
-call.off('mmiCodeResult', (data: call.MmiCodeResults) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
 
 
 ## off('audioDeviceChange')
@@ -217,14 +185,6 @@ function off(type: 'audioDeviceChange', callback?: Callback<AudioDeviceCallbackI
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
-**示例**
-
-```TypeScript
-call.off('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('postDialDelay')
 
@@ -260,14 +220,6 @@ function off(type: 'postDialDelay', callback?: Callback<string>): void
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-
-**示例**
-
-```TypeScript
-call.off('postDialDelay', (data: string) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
 
 
 ## off('imsCallModeChange')
@@ -305,16 +257,6 @@ function off(type: 'imsCallModeChange', callback?: Callback<ImsCallModeInfo>): v
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.off('imsCallModeChange', (data: call.ImsCallModeInfo) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('callSessionEvent')
 
@@ -350,16 +292,6 @@ function off(type: 'callSessionEvent', callback?: Callback<CallSessionEvent>): v
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.off('callSessionEvent', (data: call.CallSessionEvent) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
 
 
 ## off('peerDimensionsChange')
@@ -397,16 +329,6 @@ function off(type: 'peerDimensionsChange', callback?: Callback<PeerDimensionsDet
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.off('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```
-
 
 ## off('cameraCapabilitiesChange')
 
@@ -442,11 +364,3 @@ function off(type: 'cameraCapabilitiesChange', callback?: Callback<CameraCapabil
 | [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-
-**示例**
-
-```TypeScript
-call.off('cameraCapabilitiesChange', (data: call.CameraCapabilities) => {
-    console.info(`callback: data->${JSON.stringify(data)}`);
-});
-```

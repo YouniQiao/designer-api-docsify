@@ -51,6 +51,19 @@ policy.setPowerSaveTrustlist([11111, 22222], true, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .setPowerSaveTrustlist([11111, 22222], true)
+  .then(() => {
+    console.info('setPowerSaveTrustlist success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## setPowerSaveTrustlist
 
@@ -94,15 +107,4 @@ function setPowerSaveTrustlist(uids: Array<number>, isAllowed: boolean): Promise
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .setPowerSaveTrustlist([11111, 22222], true)
-  .then(() => {
-    console.info('setPowerSaveTrustlist success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [setPowerSaveTrustlist](#setpowersavetrustlist)

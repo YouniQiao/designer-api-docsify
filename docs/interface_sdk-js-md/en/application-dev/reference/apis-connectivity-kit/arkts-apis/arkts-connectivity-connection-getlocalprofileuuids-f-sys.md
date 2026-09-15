@@ -55,6 +55,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    connection.getLocalProfileUuids().then(() => {
+        console.info('getLocalProfileUuids');
+    }, (err: BusinessError) => {
+        console.error('getLocalProfileUuids: errCode' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 
 ## getLocalProfileUuids
 
@@ -94,15 +107,4 @@ Obtains the profile UUIDs supported by the local device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    connection.getLocalProfileUuids().then(() => {
-        console.info('getLocalProfileUuids');
-    }, (err: BusinessError) => {
-        console.error('getLocalProfileUuids: errCode' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getLocalProfileUuids](#getlocalprofileuuids)

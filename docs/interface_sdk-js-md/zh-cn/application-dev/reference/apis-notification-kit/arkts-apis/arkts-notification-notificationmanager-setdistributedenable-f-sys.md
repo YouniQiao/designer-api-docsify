@@ -62,6 +62,17 @@ let enable: boolean = true;
 notificationManager.setDistributedEnable(enable, setDistributedEnableCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+notificationManager.setDistributedEnable(enable).then(() => {
+    console.info('setDistributedEnable success');
+}).catch((err: BusinessError) => {
+    console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setDistributedEnable
 
@@ -110,13 +121,4 @@ function setDistributedEnable(enable: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-notificationManager.setDistributedEnable(enable).then(() => {
-    console.info('setDistributedEnable success');
-}).catch((err: BusinessError) => {
-    console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [setDistributedEnable](#setdistributedenable)

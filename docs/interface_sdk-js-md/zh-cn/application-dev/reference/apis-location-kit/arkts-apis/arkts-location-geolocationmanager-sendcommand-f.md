@@ -50,6 +50,23 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let requestInfo: geoLocationManager.LocationCommand = { 'scenario': 0x301, 'command': "command_1" };
+try {
+  geoLocationManager.sendCommand(requestInfo).then(() => {
+    console.info('promise, sendCommand success');
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, sendCommand: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## sendCommand
 
@@ -85,19 +102,4 @@ function sendCommand(command: LocationCommand): Promise<void>
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let requestInfo: geoLocationManager.LocationCommand = { 'scenario': 0x301, 'command': "command_1" };
-try {
-  geoLocationManager.sendCommand(requestInfo).then(() => {
-    console.info('promise, sendCommand success');
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, sendCommand: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [sendCommand](#sendcommand)

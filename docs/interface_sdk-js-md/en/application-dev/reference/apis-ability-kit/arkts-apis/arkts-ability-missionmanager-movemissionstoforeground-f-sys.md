@@ -76,6 +76,73 @@ try {
 }
 ```
 
+```TypeScript
+import { abilityManager, missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
+    if (error.code) {
+      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
+      return;
+    }
+    if (missionInfos.length < 1) {
+      return;
+    }
+
+    let toShows = new Array<number>();
+    for (let missionInfo of missionInfos) {
+      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
+        toShows.push(missionInfo.missionId);
+      }
+    }
+    // Move the specified missions to the foreground in batches, and move the first mission to the top.
+    missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
+      if (err) {
+        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
+      } else {
+        console.info(`moveMissionsToForeground successfully`);
+      }
+    });
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message} `);
+}
+```
+
+```TypeScript
+import { abilityManager, missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
+    if (error.code) {
+      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
+      return;
+    }
+    if (missionInfos.length < 1) {
+      return;
+    }
+
+    let toShows = new Array<number>();
+    for (let missionInfo of missionInfos) {
+      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
+        toShows.push(missionInfo.missionId);
+      }
+    }
+    missionManager.moveMissionsToForeground(toShows, toShows[0]).then(() => {
+      console.info(`moveMissionsToForeground is called`);
+    });
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message} `);
+}
+```
+
 
 ## moveMissionsToForeground
 
@@ -112,41 +179,7 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 **Examples**
 
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, Code: ${error.code}, message: ${error.message}.`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    // Move the specified missions to the foreground in batches, and move the first mission to the top.
-    missionManager.moveMissionsToForeground(toShows, toShows[0], (err: BusinessError, data: void) => {
-      if (err) {
-        console.error(`moveMissionsToForeground failed. Code: ${err.code}, message: ${err.message}.`);
-      } else {
-        console.info(`moveMissionsToForeground successfully`);
-      }
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+See [moveMissionsToForeground](#movemissionstoforeground)
 
 
 ## moveMissionsToForeground
@@ -189,33 +222,4 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 **Examples**
 
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
-      return;
-    }
-    if (missionInfos.length < 1) {
-      return;
-    }
-
-    let toShows = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.BACKGROUND) {
-        toShows.push(missionInfo.missionId);
-      }
-    }
-    missionManager.moveMissionsToForeground(toShows, toShows[0]).then(() => {
-      console.info(`moveMissionsToForeground is called`);
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+See [moveMissionsToForeground](#movemissionstoforeground)

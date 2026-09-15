@@ -54,6 +54,18 @@ statistics.getSockfdRxBytes(sockfd, (error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { statistics } from '@kit.NetworkKit';
+
+let sockfd = 50; // 实际开发中需要先根据自己创建的Socket获取到。
+statistics.getSockfdRxBytes(sockfd).then((stats: number) => {
+  console.info(JSON.stringify(stats));
+}).catch((err: BusinessError) => {
+  console.error(JSON.stringify(err));
+});
+```
+
 
 ## getSockfdRxBytes
 
@@ -94,14 +106,4 @@ function getSockfdRxBytes(sockfd: number): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { statistics } from '@kit.NetworkKit';
-
-let sockfd = 50; // 实际开发中需要先根据自己创建的Socket获取到。
-statistics.getSockfdRxBytes(sockfd).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-}).catch((err: BusinessError) => {
-  console.error(JSON.stringify(err));
-});
-```
+参见 [getSockfdRxBytes](#getsockfdrxbytes)

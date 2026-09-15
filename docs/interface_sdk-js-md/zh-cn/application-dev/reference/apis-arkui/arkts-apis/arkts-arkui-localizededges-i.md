@@ -1,8 +1,6 @@
 # LocalizedEdges
 
-Defines the LocalizedEdges.
-
-@interface LocalizedEdges
+位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置start和end，仅start生效。
 
 **起始版本：** 12
 
@@ -14,7 +12,7 @@ Defines the LocalizedEdges.
 bottom?: LengthMetrics
 ```
 
-bottom property.
+相对底边的偏移量。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -32,7 +30,7 @@ bottom property.
 end?: LengthMetrics
 ```
 
-end property.
+LTR模式时相对右边的偏移量，RTL模式时相对左边的偏移量。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -50,7 +48,7 @@ end property.
 start?: LengthMetrics
 ```
 
-start property.
+LTR模式时相对左边的偏移量，RTL模式时相对右边的偏移量。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -68,7 +66,7 @@ start property.
 top?: LengthMetrics
 ```
 
-top property.
+相对顶边的偏移量。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

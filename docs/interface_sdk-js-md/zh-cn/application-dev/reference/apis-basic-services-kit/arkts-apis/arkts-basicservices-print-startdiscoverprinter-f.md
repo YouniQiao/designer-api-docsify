@@ -55,6 +55,21 @@ print.startDiscoverPrinter(extensionList, (error: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 加载所有打印扩展能力
+let extensionList: string[] = [];
+// 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
+// let extensionList: string[] = ['com.myapplication.test'];
+print.startDiscoverPrinter(extensionList).then(() => {
+    console.info('start Discovery success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
+})
+```
+
 
 ## startDiscoverPrinter
 
@@ -93,17 +108,4 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 加载所有打印扩展能力
-let extensionList: string[] = [];
-// 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
-// let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList).then(() => {
-    console.info('start Discovery success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
-})
-```
+参见 [startDiscoverPrinter](#startdiscoverprinter)

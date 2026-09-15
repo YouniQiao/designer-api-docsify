@@ -114,6 +114,33 @@ async function accessFunc() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceDir indicates a directory in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceDir: string = "file://docs/storage/Users/currentUser/Download/test";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.access(sourceDir, (err: BusinessError, existJudgment: boolean) => {
+      if (err) {
+        console.error("Failed to access in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      if (existJudgment)
+        console.info("sourceDir exists");
+      else
+        console.info("sourceDir does not exist");
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## access
 
 ```TypeScript
@@ -182,32 +209,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceDir indicates a directory in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceDir: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.access(sourceDir, (err: BusinessError, existJudgment: boolean) => {
-      if (err) {
-        console.error("Failed to access in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      if (existJudgment)
-        console.info("sourceDir exists");
-      else
-        console.info("sourceDir does not exist");
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [access](#access)
 
 ## copy
 
@@ -345,38 +347,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.copy(sourceFile, destFile, async (err: BusinessError, copyResult: Array<fileAccess.CopyResult>) => {
-      if (err) {
-        console.error("copy failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (copyResult.length === 0) {
-        console.info("copy success");
-      } else {
-        for (let i = 0; i < copyResult.length; i++) {
-          console.error("errCode" + copyResult[i].errCode);
-          console.error("errMsg" + copyResult[i].errMsg);
-          console.error("sourceUri" + copyResult[i].sourceUri);
-          console.error("destUri" + copyResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [copy](#copy)
 
 ## copy
 
@@ -411,38 +382,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.copy(sourceFile, destFile, true, async (err: BusinessError, copyResult: Array<fileAccess.CopyResult>) => {
-      if (err) {
-        console.error("copy failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (copyResult.length === 0) {
-        console.info("copy success");
-      } else {
-        for (let i = 0; i < copyResult.length; i++) {
-          console.error("errCode" + copyResult[i].errCode);
-          console.error("errMsg" + copyResult[i].errMsg);
-          console.error("sourceUri" + copyResult[i].sourceUri);
-          console.error("destUri" + copyResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [copy](#copy)
 
 ## copyFile
 
@@ -536,6 +476,28 @@ async function copyFunc01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
+let fileName: string = "2.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.copyFile(sourceFile, destFile, fileName, async (err: BusinessError, copyResult: string) => {
+          console.info("copyResult uri: " + copyResult);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## copyFile
 
 ```TypeScript
@@ -600,27 +562,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-let fileName: string = "2.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.copyFile(sourceFile, destFile, fileName, async (err: BusinessError, copyResult: string) => {
-          console.info("copyResult uri: " + copyResult);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [copyFile](#copyfile)
 
 ## createFile
 
@@ -723,6 +665,30 @@ async function createFile() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+let displayName: string = "file1";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.createFile(sourceUri, displayName, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to createFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("createFile success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## createFile
 
 ```TypeScript
@@ -792,29 +758,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-let displayName: string = "file1";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.createFile(sourceUri, displayName, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to createFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("createFile success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [createFile](#createfile)
 
 ## delete
 
@@ -911,6 +855,29 @@ async function deleteFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.delete(targetUri, (err: BusinessError, code: number) => {
+      if (err) {
+        console.error("Failed to delete in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("delete success, code: " + code);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -979,28 +946,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.delete(targetUri, (err: BusinessError, code: number) => {
-      if (err) {
-        console.error("Failed to delete in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("delete success, code: " + code);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [delete](#delete)
 
 ## getFileInfoFromRelativePath
 
@@ -1055,6 +1001,29 @@ async function getRelativePath() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// In the sample code, relativePath indicates the Download directory, which is the relativePath in fileInfo.
+// You can use the relativePath obtained.
+let relativePath: string = "Download/";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.getFileInfoFromRelativePath(relativePath, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
+      if (err) {
+        console.error("Failed to getFileInfoFromRelativePath in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      console.info("getFileInfoFromRelativePath success, fileInfo: " + JSON.stringify(fileInfo));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1084,28 +1053,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// In the sample code, relativePath indicates the Download directory, which is the relativePath in fileInfo.
-// You can use the relativePath obtained.
-let relativePath: string = "Download/";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.getFileInfoFromRelativePath(relativePath, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
-      if (err) {
-        console.error("Failed to getFileInfoFromRelativePath in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileInfoFromRelativePath success, fileInfo: " + JSON.stringify(fileInfo));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [getFileInfoFromRelativePath](#getfileinfofromrelativepath)
 
 ## getFileInfoFromUri
 
@@ -1161,6 +1109,30 @@ async function getUri() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.getFileInfoFromUri(sourceUri, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
+      if (err) {
+        console.error("Failed to getFileInfoFromUri in async, errCode:" + err.code + ", errMessage:" + err.message);
+        return;
+      }
+      console.info("getFileInfoFromUri success, fileInfo: " + JSON.stringify(fileInfo));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## getFileInfoFromUri
 
 ```TypeScript
@@ -1190,29 +1162,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.getFileInfoFromUri(sourceUri, (err: BusinessError, fileInfo: fileAccess.FileInfo) => {
-      if (err) {
-        console.error("Failed to getFileInfoFromUri in async, errCode:" + err.code + ", errMessage:" + err.message);
-        return;
-      }
-      console.info("getFileInfoFromUri success, fileInfo: " + JSON.stringify(fileInfo));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [getFileInfoFromUri](#getfileinfofromuri)
 
 ## getRoots
 
@@ -1308,6 +1258,36 @@ async function getRoots() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+async function getRoots() {
+  let rootinfos: Array<fileAccess.RootInfo> = [];
+  let isDone: boolean = false;
+  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+  try {
+    if (fileAccessHelper != undefined) {
+      fileAccessHelper.getRoots((err: BusinessError, rootIterator: fileAccess.RootIterator) => {
+        if (err) {
+          console.error("Failed to getRoots in async, errCode:" + err.code + ", errMessage:" + err.message);
+        }
+        while (!isDone) {
+          let result = rootIterator.next();
+          console.info("next result = " + JSON.stringify(result));
+          isDone = result.done;
+          if (!isDone) {
+            rootinfos.push(result.value);
+          }
+        }
+      });       
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("getRoots failed, errCode:" + error.code + ", errMessage:" + error.message);
+  }
+}
+```
+
 ## getRoots
 
 ```TypeScript
@@ -1373,35 +1353,7 @@ Obtains information about the device root nodes of the file management services 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-async function getRoots() {
-  let rootinfos: Array<fileAccess.RootInfo> = [];
-  let isDone: boolean = false;
-  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-  try {
-    if (fileAccessHelper != undefined) {
-      fileAccessHelper.getRoots((err: BusinessError, rootIterator: fileAccess.RootIterator) => {
-        if (err) {
-          console.error("Failed to getRoots in async, errCode:" + err.code + ", errMessage:" + err.message);
-        }
-        while (!isDone) {
-          let result = rootIterator.next();
-          console.info("next result = " + JSON.stringify(result));
-          isDone = result.done;
-          if (!isDone) {
-            rootinfos.push(result.value);
-          }
-        }
-      });       
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("getRoots failed, errCode:" + error.code + ", errMessage:" + error.message);
-  }
-}
-```
+See [getRoots](#getroots)
 
 ## mkDir
 
@@ -1504,6 +1456,30 @@ async function createDirectory() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
+let dirName: string = "dirTest";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.mkDir(sourceUri, dirName, (err: BusinessError, dirUri: string) => {
+      if (err) {
+        console.error("Failed to mkDir in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("mkDir success, dirUri: " + JSON.stringify(dirUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## mkDir
 
 ```TypeScript
@@ -1573,29 +1549,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri indicates the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download";
-let dirName: string = "dirTest";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.mkDir(sourceUri, dirName, (err: BusinessError, dirUri: string) => {
-      if (err) {
-        console.error("Failed to mkDir in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("mkDir success, dirUri: " + JSON.stringify(dirUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [mkDir](#mkdir)
 
 ## move
 
@@ -1693,6 +1647,30 @@ async function moveFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceFile and destFile indicate the files and directories in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.move(sourceFile, destFile, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to move in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("move success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## move
 
 ```TypeScript
@@ -1762,29 +1740,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile and destFile indicate the files and directories in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceFile: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destFile: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.move(sourceFile, destFile, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to move in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("move success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [move](#move)
 
 ## moveFile
 
@@ -1876,6 +1832,31 @@ async function moveFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceUri and destUri indicate the files or directories in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
+let fileName: string = "2.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.moveFile(sourceUri, destUri, fileName, (err: BusinessError, fileUri: string) => {
+      if (err) {
+        console.error("Failed to moveFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("moveFile success, fileUri: " + JSON.stringify(fileUri));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## moveFile
 
 ```TypeScript
@@ -1938,30 +1919,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceUri and destUri indicate the files or directories in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-let fileName: string = "2.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveFile(sourceUri, destUri, fileName, (err: BusinessError, fileUri: string) => {
-      if (err) {
-        console.error("Failed to moveFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("moveFile success, fileUri: " + JSON.stringify(fileUri));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [moveFile](#movefile)
 
 ## moveItem
 
@@ -2157,38 +2115,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveItem(sourceUri, destUri, async (err: BusinessError, moveResult: Array<fileAccess.MoveResult>) => {
-      if (err) {
-        console.error("moveItem failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (moveResult.length === 0) {
-        console.info("moveItem success");
-      } else {
-        for (let i = 0; i < moveResult.length; i++) {
-          console.error("errCode" + moveResult[i].errCode);
-          console.error("errMsg" + moveResult[i].errMsg);
-          console.error("sourceUri" + moveResult[i].sourceUri);
-          console.error("destUri" + moveResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [moveItem](#moveitem)
 
 ## moveItem
 
@@ -2252,38 +2179,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceFile indicates the file (directory) in the Download directory to copy, destFile indicates the destination directory in the Download directory, and URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-let destUri: string = "file://docs/storage/Users/currentUser/Download/test";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.moveItem(sourceUri, destUri, true, async (err: BusinessError, moveResult: Array<fileAccess.MoveResult>) => {
-      if (err) {
-        console.error("moveItem failed, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      if (moveResult.length === 0) {
-        console.info("moveItem success");
-      } else {
-        for (let i = 0; i < moveResult.length; i++) {
-          console.error("errCode" + moveResult[i].errCode);
-          console.error("errMsg" + moveResult[i].errMsg);
-          console.error("sourceUri" + moveResult[i].sourceUri);
-          console.error("destUri" + moveResult[i].destUri);
-        }
-      }
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [moveItem](#moveitem)
 
 ## openFile
 
@@ -2379,6 +2275,29 @@ async function openFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.openFile(targetUri, fileAccess.OPENFLAGS.READ, (err: BusinessError, fd: number) => {
+      if (err) {
+        console.error("Failed to openFile in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("openFile success, fd: " + fd);
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## openFile
 
 ```TypeScript
@@ -2448,28 +2367,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, targetUri indicates a file in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let targetUri: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.openFile(targetUri, fileAccess.OPENFLAGS.READ, (err: BusinessError, fd: number) => {
-      if (err) {
-        console.error("Failed to openFile in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("openFile success, fd: " + fd);
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [openFile](#openfile)
 
 ## query
 
@@ -2526,6 +2424,31 @@ async function getQuery01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+async function getQuery02() {
+  let imageFileRelativePath: string = "/storage/Users/currentUser/Download/queryTest/image/01.jpg";
+  let jsonStrSingleRelativepath: string = JSON.stringify({ [fileAccess.FileKey.RELATIVE_PATH]: "" });
+  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+  try {
+    if (fileAccessHelper != undefined) {
+      let fileInfo = await fileAccessHelper.getFileInfoFromRelativePath(imageFileRelativePath);
+      fileAccessHelper.query(fileInfo.uri, jsonStrSingleRelativepath, (err: BusinessError, queryResult: string) => {
+        if (err) {
+          console.error(`query_file_single faf query Failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        console.info("query_file_single faf query, queryResult.relative_path: " + JSON.parse(queryResult).relative_path);
+      })
+    }
+  } catch (err) {
+    let error: BusinessError = err as BusinessError;
+    console.error("query_file_single faf query failed, error.code :" + error.code + ", errorMessage :" + error.message);
+  }
+}
+```
+
 ## query
 
 ```TypeScript
@@ -2556,30 +2479,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-async function getQuery02() {
-  let imageFileRelativePath: string = "/storage/Users/currentUser/Download/queryTest/image/01.jpg";
-  let jsonStrSingleRelativepath: string = JSON.stringify({ [fileAccess.FileKey.RELATIVE_PATH]: "" });
-  // Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-  let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-  try {
-    if (fileAccessHelper != undefined) {
-      let fileInfo = await fileAccessHelper.getFileInfoFromRelativePath(imageFileRelativePath);
-      fileAccessHelper.query(fileInfo.uri, jsonStrSingleRelativepath, (err: BusinessError, queryResult: string) => {
-        if (err) {
-          console.error(`query_file_single faf query Failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        console.info("query_file_single faf query, queryResult.relative_path: " + JSON.parse(queryResult).relative_path);
-      })
-    }
-  } catch (err) {
-    let error: BusinessError = err as BusinessError;
-    console.error("query_file_single faf query failed, error.code :" + error.code + ", errorMessage :" + error.message);
-  }
-}
-```
+See [query](#query)
 
 ## registerObserver
 
@@ -2710,6 +2610,29 @@ async function renameFile01() {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// A built-in storage directory is used as an example.
+// In the sample code, sourceDir indicates a file in the Download directory. The URI is the URI in fileInfo.
+// You can use the URI obtained.
+let sourceDir: string = "file://docs/storage/Users/currentUser/Download/1.txt";
+// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
+let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
+try {
+  if (fileAccessHelper != undefined) {
+    fileAccessHelper.rename(sourceDir, "testDir", (err: BusinessError, DestDir: string) => {
+      if (err) {
+        console.error("Failed to rename in async, errCode:" + err.code + ", errMessage:" + err.message);
+      }
+      console.info("rename success, DestDir: " + JSON.stringify(DestDir));
+    });
+  }
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
+}
+```
+
 ## rename
 
 ```TypeScript
@@ -2779,28 +2702,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// A built-in storage directory is used as an example.
-// In the sample code, sourceDir indicates a file in the Download directory. The URI is the URI in fileInfo.
-// You can use the URI obtained.
-let sourceDir: string = "file://docs/storage/Users/currentUser/Download/1.txt";
-// Obtain fileAccessHelper by referring to the sample code of fileAccess.createFileAccessHelper.
-let fileAccessHelper : fileAccess.FileAccessHelper|undefined;
-try {
-  if (fileAccessHelper != undefined) {
-    fileAccessHelper.rename(sourceDir, "testDir", (err: BusinessError, DestDir: string) => {
-      if (err) {
-        console.error("Failed to rename in async, errCode:" + err.code + ", errMessage:" + err.message);
-      }
-      console.info("rename success, DestDir: " + JSON.stringify(DestDir));
-    });
-  }
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
-}
-```
+See [rename](#rename)
 
 ## unregisterObserver
 

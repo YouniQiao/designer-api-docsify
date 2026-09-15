@@ -73,6 +73,30 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          const sinkDeviceDescriptor = 'descriptor';
+          const srcInputDeviceId = 0;
+          inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
+            console.info(`Succeeded in starting keyboard mouse crossing.`);
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to start keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          });
+        })
+    }
+  }
+}
+```
+
 
 ## start
 
@@ -116,26 +140,4 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 
 **示例**
 
-```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          const sinkDeviceDescriptor = 'descriptor';
-          const srcInputDeviceId = 0;
-          inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
-            console.info(`Succeeded in starting keyboard mouse crossing.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to start keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
-        })
-    }
-  }
-}
-```
+参见 [start](#start)

@@ -61,6 +61,18 @@ let getSyncNotificationEnabledWithoutAppCallback = (err: BusinessError, data: bo
 notificationManager.getSyncNotificationEnabledWithoutApp(userId, getSyncNotificationEnabledWithoutAppCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 用户ID，使用时需替换为真实的userId。
+let userId: number = 100;
+notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
+  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getSyncNotificationEnabledWithoutApp
 
@@ -107,14 +119,4 @@ function getSyncNotificationEnabledWithoutApp(userId: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 用户ID，使用时需替换为真实的userId。
-let userId: number = 100;
-notificationManager.getSyncNotificationEnabledWithoutApp(userId).then((data: boolean) => {
-  console.info(`getSyncNotificationEnabledWithoutApp, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getSyncNotificationEnabledWithoutApp](#getsyncnotificationenabledwithoutapp)

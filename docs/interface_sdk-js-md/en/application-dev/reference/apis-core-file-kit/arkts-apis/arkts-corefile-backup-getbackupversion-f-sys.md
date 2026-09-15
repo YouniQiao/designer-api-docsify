@@ -52,8 +52,6 @@ function getBackupVersion() {
 }
 ```
 
-Content example:
-
 ```TypeScript
-{ "backupVersion" : "16.0" }
+Content example:
 ```

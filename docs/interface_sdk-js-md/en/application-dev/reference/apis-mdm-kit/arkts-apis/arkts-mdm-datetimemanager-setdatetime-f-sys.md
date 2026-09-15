@@ -68,6 +68,25 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
 })
 ```
 
+```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace with actual values.
+dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
+  console.info('Succeeded in setting date time');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## setDateTime
 
@@ -116,21 +135,4 @@ Sets the system time. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace with actual values.
-dateTimeManager.setDateTime(wantTemp, 1526003846000).then(() => {
-  console.info('Succeeded in setting date time');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set date time. Code is ${err.code}, message is ${err.message}`);
-})
-```
+See [setDateTime](#setdatetime)

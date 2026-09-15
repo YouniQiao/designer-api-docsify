@@ -457,6 +457,13 @@ let date: Date = new Date(2021, 10, 7, 8, 0, 0); // 时间日期为2021.11.07 08
 calendar.setTime(date);
 ```
 
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
+calendar.setTime(10540800000);
+```
+
 ## setTime
 
 ```TypeScript
@@ -479,12 +486,7 @@ setTime(time: number): void
 
 **示例**
 
-```TypeScript
-import { i18n } from '@kit.LocalizationKit';
-
-let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
-calendar.setTime(10540800000);
-```
+参见 [setTime](#settime)
 
 ## setTimeZone
 

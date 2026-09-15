@@ -59,6 +59,41 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let filePath: string = '/data/storage/vcf/contacts.vcf';
+        let accountId: number = 0;
+        vcard.importVCard(this.context, filePath, accountId).then(() => {
+            console.info(`importVCard success.`);
+        }).catch((err: BusinessError) => {
+            console.error(`importVCard failed, promise: err->${JSON.stringify(err)}`);
+        });
+    }
+}
+```
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { vcard } from '@kit.TelephonyKit';
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+        let filePath: string = "/data/storage/vcf/contacts.vcf";
+        vcard.importVCard(this.context, filePath, (err: BusinessError) => {
+            console.error(`callback: err->${JSON.stringify(err)}`);
+        });
+    }
+}
+```
+
 
 ## importVCard
 
@@ -101,24 +136,7 @@ function importVCard(context: Context, filePath: string, accountId?: number): Pr
 
 **示例**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let filePath: string = '/data/storage/vcf/contacts.vcf';
-        let accountId: number = 0;
-        vcard.importVCard(this.context, filePath, accountId).then(() => {
-            console.info(`importVCard success.`);
-        }).catch((err: BusinessError) => {
-            console.error(`importVCard failed, promise: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
+参见 [importVCard](#importvcard)
 
 
 ## importVCard
@@ -156,18 +174,4 @@ function importVCard(context: Context, filePath: string, callback: AsyncCallback
 
 **示例**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { vcard } from '@kit.TelephonyKit';
-
-class EntryAbility extends UIAbility {
-    onWindowStageCreate(windowStage: window.WindowStage) {
-        let filePath: string = "/data/storage/vcf/contacts.vcf";
-        vcard.importVCard(this.context, filePath, (err: BusinessError) => {
-            console.error(`callback: err->${JSON.stringify(err)}`);
-        });
-    }
-}
-```
+参见 [importVCard](#importvcard)

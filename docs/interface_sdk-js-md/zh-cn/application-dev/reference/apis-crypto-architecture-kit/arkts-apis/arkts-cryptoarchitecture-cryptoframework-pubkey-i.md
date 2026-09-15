@@ -84,7 +84,7 @@ function genEccCommonSpec(): cryptoFramework.ECCCommonParamsSpec {
   return eccCommonSpec;
 }
 
-async function testgetAsyKeySpec() {
+async function testGetAsyKeySpec() {
   let commKeySpec = genEccCommonSpec(); // 使用参数属性，构造ECC公私钥公共密钥参数对象。
   let generatorBySpec = cryptoFramework.createAsyKeyGeneratorBySpec(commKeySpec); // 使用密钥参数对象创建生成器。
   let keyPair = await generatorBySpec.generateKeyPair();
@@ -198,12 +198,12 @@ let publicPkcs1Str1024: string =
     + 'SHy2gC+bvEpuIuRe64yXGuM/aP+ZvmIj9QBIVI9mJD8jLEOvQBBpAgMBAAE=\n'
     + '-----END RSA PUBLIC KEY-----\n';
 
-function TestPubKeyPkcs1ToX509BySync1024() {
+function testPubKeyPkcs1ToX509BySync1024() {
   let rsaGenerator = cryptoFramework.createAsyKeyGenerator('RSA1024');
   let keyPair = rsaGenerator.convertPemKeySync(publicPkcs1Str1024, null);
   let pubPemKey = keyPair.pubKey;
   let pubString = pubPemKey.getEncodedPem('X509');
-  console.info('[sync]TestPubKeyPkcs1ToX509BySync1024 pubString output = ' + pubString);
+  console.info('[sync]testPubKeyPkcs1ToX509BySync1024 pubString output = ' + pubString);
 }
 ```
 

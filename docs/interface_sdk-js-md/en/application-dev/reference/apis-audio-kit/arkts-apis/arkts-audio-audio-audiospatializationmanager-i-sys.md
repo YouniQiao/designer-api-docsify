@@ -247,6 +247,34 @@ try {
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  let isHeadTrackingEnabled: boolean = audioSpatializationManager.isHeadTrackingEnabled(deviceDescriptor);
+  console.info(`AudioSpatializationManager isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isHeadTrackingEnabled
 
 ```TypeScript
@@ -283,33 +311,7 @@ Checks whether the head tracking is enabled by the specified device.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-
-try {
-  let isHeadTrackingEnabled: boolean = audioSpatializationManager.isHeadTrackingEnabled(deviceDescriptor);
-  console.info(`AudioSpatializationManager isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
+See [isHeadTrackingEnabled](#isheadtrackingenabled)
 
 ## isHeadTrackingSupported
 
@@ -524,6 +526,34 @@ try {
 }
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  let isSpatializationEnabled: boolean = audioSpatializationManager.isSpatializationEnabled(deviceDescriptor);
+  console.info(`AudioSpatializationManager isSpatializationEnabled: ${isSpatializationEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error}`);
+}
+```
+
 ## isSpatializationEnabled
 
 ```TypeScript
@@ -560,33 +590,7 @@ Checks whether the spatialization is enabled by the specified device.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-
-try {
-  let isSpatializationEnabled: boolean = audioSpatializationManager.isSpatializationEnabled(deviceDescriptor);
-  console.info(`AudioSpatializationManager isSpatializationEnabled: ${isSpatializationEnabled}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`ERROR: ${error}`);
-}
-```
+See [isSpatializationEnabled](#isspatializationenabled)
 
 ## isSpatializationSupported
 
@@ -725,22 +729,6 @@ Unsubscribes to the spatialization enable state change events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioSpatializationManager.off('spatializationEnabledChange');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
-
-audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
-```
-
 ## off('spatializationEnabledChangeForAnyDevice')
 
 ```TypeScript
@@ -769,25 +757,6 @@ Unsubscribes to the spatialization enable state change events by the specified d
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// Cancel all subscriptions to the event.
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
-```
 
 ## off('headTrackingEnabledChange')
 
@@ -822,24 +791,6 @@ Unsubscribes to the head tracking enable state change events.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// Cancel all subscriptions to the event.
-audioSpatializationManager.off('headTrackingEnabledChange');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let headTrackingEnabledChangeCallback = (isHeadTrackingEnabled: boolean) => {
-  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-};
-
-audioSpatializationManager.on('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
-
-audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
-```
-
 ## off('headTrackingEnabledChangeForAnyDevice')
 
 ```TypeScript
@@ -868,25 +819,6 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// Cancel all subscriptions to the event.
-audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let headTrackingEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
-```
 
 ## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
 
@@ -1041,16 +973,6 @@ Subscribes to the spatialization enable state change events. When the spatializa
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-});
-```
-
 ## on('spatializationEnabledChangeForAnyDevice')
 
 ```TypeScript
@@ -1079,17 +1001,6 @@ Subscribes to the spatialization enable state change events by the specified dev
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
-```
 
 ## on('headTrackingEnabledChange')
 
@@ -1124,16 +1035,6 @@ Subscribes to the head tracking enable state change events. When the head tracki
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
-  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-});
-```
-
 ## on('headTrackingEnabledChangeForAnyDevice')
 
 ```TypeScript
@@ -1162,17 +1063,6 @@ Subscribes to the head tracking enable state change events by the specified devi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
-```
 
 ## onAdaptiveSpatialRenderingEnabledChangeForAnyDevice
 
@@ -1401,6 +1291,46 @@ audioSpatializationManager.setHeadTrackingEnabled(enable, (err: BusinessError) =
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+
+audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
+  console.info(`setHeadTrackingEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+let enable: boolean = true;
+
+audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then(() => {
+  console.info(`setHeadTrackingEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
 ## setHeadTrackingEnabled
 
 ```TypeScript
@@ -1443,18 +1373,7 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-
-audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
-  console.info(`setHeadTrackingEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setHeadTrackingEnabled](#setheadtrackingenabled)
 
 ## setHeadTrackingEnabled
 
@@ -1496,32 +1415,7 @@ Sets the head tracking enabled or disabled by the specified device. This method 
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enable: boolean = true;
-
-audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then(() => {
-  console.info(`setHeadTrackingEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setHeadTrackingEnabled](#setheadtrackingenabled)
 
 ## setPersonalizedSpatializationEnabled
 
@@ -1615,6 +1509,46 @@ audioSpatializationManager.setSpatializationEnabled(enable, (err: BusinessError)
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let enable: boolean = true;
+
+audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
+  console.info(`setSpatializationEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+let enabled: boolean = true;
+
+audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).then(() => {
+  console.info(`setSpatializationEnabled success`);
+}).catch((err: BusinessError) => {
+  console.error(`Result ERROR: ${err}`);
+});
+```
+
 ## setSpatializationEnabled
 
 ```TypeScript
@@ -1657,18 +1591,7 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let enable: boolean = true;
-
-audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setSpatializationEnabled](#setspatializationenabled)
 
 ## setSpatializationEnabled
 
@@ -1710,32 +1633,7 @@ Sets the spatialization enabled or disabled by the specified device. This method
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor: audio.AudioDeviceDescriptor = {
-  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
-  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
-  id : 1,
-  name : "",
-  address : "123",
-  sampleRates : [44100],
-  channelCounts : [2],
-  channelMasks : [0],
-  networkId : audio.LOCAL_NETWORK_ID,
-  interruptGroupId : 1,
-  volumeGroupId : 1,
-  displayName : ""
-};
-let enabled: boolean = true;
-
-audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).then(() => {
-  console.info(`setSpatializationEnabled success`);
-}).catch((err: BusinessError) => {
-  console.error(`Result ERROR: ${err}`);
-});
-```
+See [setSpatializationEnabled](#setspatializationenabled)
 
 ## setSpatializationSceneType
 

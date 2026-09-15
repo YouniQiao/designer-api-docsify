@@ -43,6 +43,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getTimezone().then((data: string) => {
+    console.info(`Succeeded in getting timezone: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## getTimezone
 
@@ -64,17 +79,4 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getTimezone().then((data: string) => {
-    console.info(`Succeeded in getting timezone: ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getTimezone](#gettimezone)

@@ -54,6 +54,23 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let geocodeRequest: geoLocationManager.GeoCodeRequest = { "description": "上海市浦东新区xx路xx号", "maxItems": 1 };
+try {
+  geoLocationManager.getAddressesFromLocationName(geocodeRequest).then((result) => {
+    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getAddressesFromLocationName: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## getAddressesFromLocationName
 
@@ -90,19 +107,4 @@ function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<Ge
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let geocodeRequest: geoLocationManager.GeoCodeRequest = { "description": "上海市浦东新区xx路xx号", "maxItems": 1 };
-try {
-  geoLocationManager.getAddressesFromLocationName(geocodeRequest).then((result) => {
-    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getAddressesFromLocationName: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [getAddressesFromLocationName](#getaddressesfromlocationname)

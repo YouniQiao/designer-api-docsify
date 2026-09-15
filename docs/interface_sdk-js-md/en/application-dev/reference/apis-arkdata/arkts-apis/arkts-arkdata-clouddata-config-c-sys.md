@@ -74,8 +74,8 @@ try {
   }).catch((err: BusinessError) => {
     console.error(`Failed to query last sync info. Error code is ${err.code}, message is ${err.message}`);
   });
-} catch(e) {
-  let error = e as BusinessError;
+} catch(err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -134,8 +134,53 @@ try {
       console.error(`Failed to change App cloud switch. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
+try {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
+    console.info('Succeeded in changing App cloud switch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
+let config: cloudData.SwitchConfig = {
+  dbInfo: {
+    'test_storeName1': {
+      enable: true,
+      tableInfo: {
+        'test_tableName1': true,
+        'test_tableName2': false
+      }
+    }
+  }
+};
+try {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
+    console.info('Succeeded in changing App cloud switch');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -181,22 +226,7 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [changeAppCloudSwitch](#changeappcloudswitch)
 
 ## changeAppCloudSwitch
 
@@ -246,33 +276,7 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
-let config: cloudData.SwitchConfig = {
-  dbInfo: {
-    'test_storeName1': {
-      enable: true,
-      tableInfo: {
-        'test_tableName1': true,
-        'test_tableName2': false
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
-    console.info('Succeeded in changing App cloud switch');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [changeAppCloudSwitch](#changeappcloudswitch)
 
 ## clear
 
@@ -317,7 +321,7 @@ Clears the cloud data locally. This API uses an asynchronous callback to return 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>
+type dataType = Record<string, cloudData.ClearAction>;
 let appActions: dataType = {
   'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
   'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
@@ -330,8 +334,63 @@ try {
       console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+type dataType = Record<string, cloudData.ClearAction>;
+let appActions: dataType = {
+  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
+};
+try {
+  cloudData.Config.clear(account, appActions).then(() => {
+    console.info('Succeeded in clearing cloud data');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let appActions: Record<string, cloudData.ClearAction> = {
+  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
+  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
+};
+let config: Record<string, cloudData.ClearConfig> = {
+  'test_bundleName': {
+    dbInfo: {
+      'test_storeName': {
+        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
+        tableInfo: {
+          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
+          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
+        }
+      }
+    }
+  }
+};
+try {
+  cloudData.Config.clear(account, appActions, config).then(() => {
+    console.info('Succeeded in clearing cloud data');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -376,26 +435,7 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>;
-let appActions: dataType = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
-};
-try {
-  cloudData.Config.clear(account, appActions).then(() => {
-    console.info('Succeeded in clearing cloud data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [clear](#clear)
 
 ## clear
 
@@ -443,39 +483,7 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let appActions: Record<string, cloudData.ClearAction> = {
-  'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-  'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-  'test_bundleName3': cloudData.ClearAction.CLEAR_CLOUD_NONE,
-};
-let config: Record<string, cloudData.ClearConfig> = {
-  'test_bundleName': {
-    dbInfo: {
-      'test_storeName': {
-        action: cloudData.ClearAction.CLEAR_CLOUD_INFO,
-        tableInfo: {
-          'test_tableName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
-          'test_tableName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO,
-        }
-      }
-    }
-  }
-}
-try {
-  cloudData.Config.clear(account, appActions, config).then(() => {
-    console.info('Succeeded in clearing cloud data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [clear](#clear)
 
 ## cloudSync
 
@@ -529,15 +537,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { relationalStore } from '@kit.ArkData';
 
 try {
-  cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress)=>{
+  cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress) => {
     console.info('Succeeded in getting progress details.');
   }).then(() => {
     console.info('Succeeded in syncing cloud data.');
   }).catch((err: BusinessError) => {
     console.error(`Failed to sync cloud data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`Failed to sync cloud data. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -611,8 +619,8 @@ try {
   }).catch((err: BusinessError) => {
     console.error(`Failed to cloud sync. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -663,8 +671,24 @@ try {
       console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+try {
+  cloudData.Config.disableCloud(account).then(() => {
+    console.info('Succeeded in disabling cloud');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -708,21 +732,7 @@ Disables device-cloud synergy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-try {
-  cloudData.Config.disableCloud(account).then(() => {
-    console.info('Succeeded in disabling cloud');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [disableCloud](#disablecloud)
 
 ## enableCloud
 
@@ -776,8 +786,25 @@ try {
       console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
+try {
+  cloudData.Config.enableCloud(account, switches).then(() => {
+    console.info('Succeeded in enabling cloud');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -822,22 +849,7 @@ Enables device-cloud synergy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
-try {
-  cloudData.Config.enableCloud(account, switches).then(() => {
-    console.info('Succeeded in enabling cloud');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [enableCloud](#enablecloud)
 
 ## notifyDataChange
 
@@ -882,6 +894,85 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
+try {
+  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let account: string = "test_id";
+let bundleName: string = "test_bundleName";
+try {
+  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
+    console.info('Succeeded in notifying the change of data');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, (err: BusinessError) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+let userId: number = 100;
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, userId, (err: BusinessError) => {
+    if (err === undefined) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let eventId: string = "cloud_data_change";
 let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
 let userId: number = 100;
@@ -893,8 +984,8 @@ try {
   }).catch((err: BusinessError) => {
     console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -933,26 +1024,7 @@ Notifies the data changes in the cloud with the specified information, such as t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, (err: BusinessError) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -989,27 +1061,7 @@ Notifies the data changes of a user in the cloud. This API uses an asynchronous 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let eventId: string = "cloud_data_change";
-let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
-let userId: number = 100;
-try {
-  cloudData.Config.notifyDataChange({
-    eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1051,22 +1103,7 @@ Notifies the data changes in the cloud. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
-try {
-  cloudData.Config.notifyDataChange(account, bundleName).then(() => {
-    console.info('Succeeded in notifying the change of data');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## notifyDataChange
 
@@ -1103,24 +1140,7 @@ Notifies the data changes in the cloud. This API uses an asynchronous callback t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
-try {
-  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError) => {
-    if (err === undefined) {
-      console.info('Succeeded in notifying the change of data');
-    } else {
-      console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
-    }
-  });
-} catch (e) {
-  let error = e as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
-```
+See [notifyDataChange](#notifydatachange)
 
 ## offSyncInfoChanged
 
@@ -1176,24 +1196,24 @@ const progressCallback = (result: Record<string, Record<string, cloudData.SyncIn
 // Subscribe to sync information changes.
 try {
   cloudData.Config.onSyncInfoChanged(bundleInfos, progressCallback);
-} catch(e) {
-  let error = e as BusinessError;
+} catch(err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 
 // Unsubscribe from a specified callback.
 try {
   cloudData.Config.offSyncInfoChanged(bundleInfos, progressCallback);
-} catch(e) {
-  let error = e as BusinessError;
+} catch(err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 
 // Unsubscribe from all callbacks.
 try {
   cloudData.Config.offSyncInfoChanged(bundleInfos);
-} catch(e) {
-  let error = e as BusinessError;
+} catch(err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1249,8 +1269,8 @@ try {
   cloudData.Config.onSyncInfoChanged(bundleInfos, (result) => {
     console.info(`Sync info changed. Result is ${JSON.stringify(result)}`);
   });
-} catch(e) {
-  let error = e as BusinessError;
+} catch(err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1311,9 +1331,9 @@ try {
     console.info(`Succeeded in querying last syncinfo. Info is ${JSON.stringify(result)}`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to query last syncinfo. Error code is ${err.code}, message is ${err.message}`);
-	});
-} catch(e) {
-  let error = e as BusinessError;
+  });
+} catch(err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1482,8 +1502,8 @@ try {
   }).catch((err: BusinessError) => {
     console.error(`Failed to stop cloud sync. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  let error = e as BusinessError;
+} catch (err) {
+  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```

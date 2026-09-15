@@ -50,6 +50,17 @@ radio.getNetworkSelectionMode(slotId, (err: BusinessError, data: radio.NetworkSe
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) => {
+    console.info(`getNetworkSelectionMode success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNetworkSelectionMode failed, promise: err code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getNetworkSelectionMode
 
@@ -87,13 +98,4 @@ function getNetworkSelectionMode(slotId: number): Promise<NetworkSelectionMode>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNetworkSelectionMode(slotId).then((data: radio.NetworkSelectionMode) => {
-    console.info(`getNetworkSelectionMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNetworkSelectionMode failed, promise: err code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getNetworkSelectionMode](#getnetworkselectionmode)

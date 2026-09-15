@@ -508,6 +508,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.id('123'); // Use the static constructor ON to create an On object and specify the ID attribute of the target component.
 ```
 
+```TypeScript
+// xxx.test.ets
+import { MatchPattern, On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive regular expression to match the ID attribute value of the component.
+```
+
 ## id
 
 ```TypeScript
@@ -544,6 +551,13 @@ Specifies the **id** attribute and match pattern of the target component.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.id('123'); // Use the static constructor ON to create an On object and specify the ID attribute of the target component.
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -957,6 +971,13 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
 ```
 
+```TypeScript
+// xxx.test.ets
+import { On, ON, MatchPattern } from '@kit.TestKit';
+
+let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
+```
+
 ## type
 
 ```TypeScript
@@ -993,6 +1014,13 @@ Specifies the **type** attribute and match pattern of the target component.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { On, ON } from '@kit.TestKit';
+
+let on: On = ON.type('Button'); // Use the static constructor ON to create an On object and specify the type attribute of the target component.
+```
 
 ```TypeScript
 // xxx.test.ets

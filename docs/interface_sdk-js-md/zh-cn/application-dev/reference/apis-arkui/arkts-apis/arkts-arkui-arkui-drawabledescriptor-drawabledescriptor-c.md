@@ -42,8 +42,9 @@ getPixelMap(): image.PixelMap
 
 **示例**
 
+```TypeScript
 示例请参考[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)中的示例代码。
-- simpleType:
+```
 
 ## invalidate
 
@@ -112,8 +113,9 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 **示例**
 
+```TypeScript
 示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
-- simpleType:
+```
 
 ## loadSync
 
@@ -144,8 +146,9 @@ loadSync(): DrawableDescriptorLoadedResult
 
 **示例**
 
+```TypeScript
 示例请参考[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)中的示例代码。
-- simpleType:
+```
 
 ## release
 

@@ -59,6 +59,19 @@ notificationManager.getDoNotDisturbProfile(1).then((data: notificationManager.Do
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let id : number = 101;
+let userId : number = 100;
+
+notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile) => {
+  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDoNotDisturbProfile
 
@@ -106,15 +119,4 @@ function getDoNotDisturbProfile(id: number, userId: number): Promise<DoNotDistur
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let id : number = 101;
-let userId : number = 100;
-
-notificationManager.getDoNotDisturbProfile(id, userId).then((data: notificationManager.DoNotDisturbProfile) => {
-  console.info(`getDoNotDisturbProfile success: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getDoNotDisturbProfile](#getdonotdisturbprofile)

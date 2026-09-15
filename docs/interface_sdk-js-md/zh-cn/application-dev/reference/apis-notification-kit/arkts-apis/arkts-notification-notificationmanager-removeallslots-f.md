@@ -58,6 +58,16 @@ let removeAllSlotsCallback = (err: BusinessError): void => {
 notificationManager.removeAllSlots(removeAllSlotsCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.removeAllSlots().then(() => {
+  console.info(`Succeeded in removing all slots.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeAllSlots
 
@@ -97,12 +107,4 @@ function removeAllSlots(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.removeAllSlots().then(() => {
-  console.info(`Succeeded in removing all slots.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove all slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [removeAllSlots](#removeallslots)

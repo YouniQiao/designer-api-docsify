@@ -36,40 +36,12 @@ This API is deprecated since API version 9. You are advised to use [bundleManage
 
 **Examples**
 
-ArkTS example:
-
 ```TypeScript
-import app, { AppResponse } from '@system.app';
-export default class Info {
-  getInfo() {
-    let info:AppResponse = app.getInfo();
-    console.info(JSON.stringify(info));
-  }
-}
+ArkTS example:
 ```
 
-JS example:
-
 ```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        app.getInfo example
-    </text>
-    <div class="info-item">
-        <text class="label">appName:</text>
-        <text class="value">{{appName}}</text>
-    </div>
-    <div class="info-item">
-        <text class="label">versionName:</text>
-        <text class="value">{{versionName}}</text>
-    </div>
-    <div class="info-item">
-        <text class="label">versionCode:</text>
-        <text class="value">{{versionCode}}</text>
-    </div>
-    <input type="button" value="getAppInfo" style="width: 240px; height: 50px; margin: 5px;" onclick="getAppInfo"></input>
-</div>
+JS example:
 ```
 
 ```TypeScript
@@ -360,30 +332,12 @@ This API is deprecated since API version 7. You are advised to use [@ohos.abilit
 
 **Examples**
 
-ArkTS example:
-
 ```TypeScript
-import app, { AppResponse } from '@system.app';
-export default class TerM {
-  terminate() {
-    app.terminate();
-  }
-}
+ArkTS example:
 ```
 
-JS example:
-
 ```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-    <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
-        app.terminate example
-    </text>
-    <text class="desc">
-        Click the button below to exit the app
-    </text>
-    <input type="button" value="exit app" style="width: 240px; height: 50px; margin: 5px;" onclick="terminateApp"></input>
-</div>
+JS example:
 ```
 
 ```TypeScript

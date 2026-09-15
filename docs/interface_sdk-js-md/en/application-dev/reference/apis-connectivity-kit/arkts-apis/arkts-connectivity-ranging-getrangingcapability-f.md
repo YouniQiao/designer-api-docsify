@@ -34,4 +34,4 @@ Queries whether the current device supports ranging capability.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 34900053 | The ranging service is disabled. |
+| [34900053](../errorcode-fusionConnectivity.md#34900053-ranging-service-disabled) | The ranging service is disabled. |

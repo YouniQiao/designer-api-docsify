@@ -1,8 +1,6 @@
 # AccessibilityCustomAction
 
-Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility.
-
-@interface AccessibilityCustomAction
+Custom accessibility action API.
 
 **Since:** 26.0.0
 
@@ -14,7 +12,7 @@ Defines struct of AccessibilityCustomAction that can be processed in custom acti
 onAction: VoidCallback
 ```
 
-onAction - callback to process custom action.
+Callback for handling the custom action.
 
 **Since:** 26.0.0
 
@@ -32,7 +30,9 @@ onAction - callback to process custom action.
 name: ResourceStr
 ```
 
-name - name to specific custom action.
+Name of the custom action, used to identify and bind the action callback.
+
+**Note:** <br>The text length of the name must be within 128 bytes. The excess part will be truncated.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

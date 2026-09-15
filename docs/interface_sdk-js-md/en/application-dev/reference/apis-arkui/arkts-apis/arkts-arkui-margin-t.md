@@ -4,15 +4,15 @@
 declare type Margin = Padding
 ```
 
-Defines the margin property.
+Defines the margins in different directions of a component.
 
-@typedef { Padding } Margin
+To reference this object, at least one parameter must be passed.
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -51,7 +51,7 @@ Switches to another subtype of this input method. This API uses an asynchronous 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let extra: Record<string, string> = {}
-// For details, see the parameter description of **InputMethodSubtype**.
+// Refer to the InputMethodSubtype parameter description.
 inputMethod.switchCurrentInputMethodSubtype({
   id: "ServiceExtAbility",
   label: "",
@@ -72,6 +72,32 @@ inputMethod.switchCurrentInputMethodSubtype({
   } else {
     console.error('Failed to switchCurrentInputMethodSubtype');
   }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let extra: Record<string, string> = {}
+// Refer to the InputMethodSubtype parameter description.
+inputMethod.switchCurrentInputMethodSubtype({
+  id: "ServiceExtAbility",
+  label: "",
+  name: "com.example.keyboard",
+  mode: "upper",
+  locale: "",
+  language: "",
+  icon: "",
+  iconId: 0,
+  extra: extra
+}).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching currentInputMethodSubtype.');
+  } else {
+    console.error('Failed to switchCurrentInputMethodSubtype.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -122,28 +148,4 @@ Switches to another subtype of this input method. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let extra: Record<string, string> = {}
-// For details, see the parameter description of **InputMethodSubtype**.
-inputMethod.switchCurrentInputMethodSubtype({
-  id: "ServiceExtAbility",
-  label: "",
-  name: "com.example.keyboard",
-  mode: "upper",
-  locale: "",
-  language: "",
-  icon: "",
-  iconId: 0,
-  extra: extra
-}).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [switchCurrentInputMethodSubtype](#switchcurrentinputmethodsubtype)

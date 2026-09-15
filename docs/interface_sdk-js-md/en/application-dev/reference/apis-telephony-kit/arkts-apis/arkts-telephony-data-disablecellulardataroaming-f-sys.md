@@ -56,6 +56,17 @@ data.disableCellularDataRoaming(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.disableCellularDataRoaming(0).then(() => {
+    console.info(`disableCellularDataRoaming success.`);
+}).catch((err: BusinessError) => {
+    console.error(`disableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## disableCellularDataRoaming
 
@@ -99,13 +110,4 @@ Disables the cellular data roaming service. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularDataRoaming(0).then(() => {
-    console.info(`disableCellularDataRoaming success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [disableCellularDataRoaming](#disablecellulardataroaming)

@@ -97,8 +97,9 @@ onMissionCreated(mission: number): void
 
 **示例**
 
+```TypeScript
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
+```
 
 ## onMissionDestroyed
 
@@ -122,8 +123,9 @@ onMissionDestroyed(mission: number): void
 
 **示例**
 
+```TypeScript
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
+```
 
 ## onMissionIconUpdated
 
@@ -148,8 +150,9 @@ onMissionIconUpdated(mission: number, icon: image.PixelMap): void
 
 **示例**
 
+```TypeScript
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
+```
 
 ## onMissionLabelUpdated
 
@@ -173,8 +176,9 @@ onMissionLabelUpdated(mission: number): void
 
 **示例**
 
+```TypeScript
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
+```
 
 ## onMissionMovedToFront
 
@@ -198,8 +202,9 @@ onMissionMovedToFront(mission: number): void
 
 **示例**
 
+```TypeScript
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
+```
 
 ## onMissionSnapshotChanged
 
@@ -223,5 +228,6 @@ onMissionSnapshotChanged(mission: number): void
 
 **示例**
 
+```TypeScript
 详细示例请见[onMissionClosed](#onmissionclosed)。
-- simpleType:
+```

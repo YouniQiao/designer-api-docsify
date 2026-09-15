@@ -1,8 +1,6 @@
 # ChainWeightOptions
 
-Defines the ChainWeightOptions interface.
-
-@interface ChainWeightOptions
+Defines the layout weight of a component in a chain.
 
 **Since:** 14
 
@@ -14,7 +12,11 @@ Defines the ChainWeightOptions interface.
 horizontal?: number
 ```
 
-Horizontal ChainWeight.
+Layout weight of the component in the horizontal direction. It takes effect when set to a value greater than 0.
+
+Default value: **0**
+
+Invalid values are treated as **0**.
 
 **Type:** number
 
@@ -32,7 +34,11 @@ Horizontal ChainWeight.
 vertical?: number
 ```
 
-Vertical ChainWeight.
+Layout weight of the component in the vertical direction. It takes effect when set to a value greater than 0.
+
+Default value: **0**
+
+Invalid values are treated as **0**.
 
 **Type:** number
 

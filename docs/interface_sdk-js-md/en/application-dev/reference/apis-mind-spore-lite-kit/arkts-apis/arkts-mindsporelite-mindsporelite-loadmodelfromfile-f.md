@@ -47,6 +47,36 @@ Create a Model instance from file path
 **Examples**
 
 ```TypeScript
+let modelFile: string = '/path/to/xxx.ms';
+mindSporeLite.loadModelFromFile(modelFile, (mindSporeLiteModel: mindSporeLite.Model) => {
+  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+  if (modelInputs == null) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: 0`);
+  } else {
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
+  }
+})
+```
+
+```TypeScript
+let context: mindSporeLite.Context = {};
+context.target = ['cpu'];
+let modelFile: string = '/path/to/xxx.ms';
+mindSporeLite.loadModelFromFile(modelFile, context, (mindSporeLiteModel: mindSporeLite.Model) => {
+  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
+  if (modelInputs == null) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Context: ${JSON.stringify(context)}, Result: null`);
+  } else if (modelInputs.length === 0) {
+    console.error(`Failed to get model inputs. Model file: ${modelFile}, Context: ${JSON.stringify(context)}, Input count: 0`);
+  } else {
+    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
+  }
+})
+```
+
+```TypeScript
 let modelFile = '/path/to/xxx.ms';
 mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
@@ -96,19 +126,7 @@ Create a Model instance from file path.
 
 **Examples**
 
-```TypeScript
-let modelFile: string = '/path/to/xxx.ms';
-mindSporeLite.loadModelFromFile(modelFile, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, Result: null`);
-  } else if (modelInputs.length === 0) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: 0`);
-  } else {
-    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-  }
-})
-```
+See [loadModelFromFile](#loadmodelfromfile)
 
 
 ## loadModelFromFile
@@ -146,18 +164,4 @@ Create a Model instance from file path.
 
 **Examples**
 
-```TypeScript
-let context: mindSporeLite.Context = {};
-context.target = ['cpu'];
-let modelFile: string = '/path/to/xxx.ms';
-mindSporeLite.loadModelFromFile(modelFile, context, (mindSporeLiteModel: mindSporeLite.Model) => {
-  let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-  if (modelInputs == null) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, Context: ${JSON.stringify(context)}, Result: null`);
-  } else if (modelInputs.length === 0) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, Context: ${JSON.stringify(context)}, Input count: 0`);
-  } else {
-    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-  }
-})
-```
+See [loadModelFromFile](#loadmodelfromfile)

@@ -158,6 +158,43 @@ export default class EntryAbility extends UIAbility {
   onForeground() {
     let want: Want = {
       bundleName: 'com.example.myapplication',
+      abilityName: 'com.example.myapplication.UIExtAbility',
+      moduleName: 'entry_test',
+      parameters: {
+        'bundleName': 'com.example.myapplication',
+        // 与com.example.myapplication.UIExtAbility配置的type相同
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      }
+    };
+
+    try {
+      this.context.requestModalUIExtension(want)
+        .then(() => {
+          // 执行正常业务
+          console.info('requestModalUIExtension succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
       abilityName: 'UIExtAbility',
       moduleName: 'entry_test',
       parameters: {
@@ -234,42 +271,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'com.example.myapplication.UIExtAbility',
-      moduleName: 'entry_test',
-      parameters: {
-        'bundleName': 'com.example.myapplication',
-        // 与com.example.myapplication.UIExtAbility配置的type相同
-        'ability.want.params.uiExtensionType': 'sys/commonUI'
-      }
-    };
-
-    try {
-      this.context.requestModalUIExtension(want)
-        .then(() => {
-          // 执行正常业务
-          console.info('requestModalUIExtension succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`requestModalUIExtension failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`requestModalUIExtension failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [requestModalUIExtension](#requestmodaluiextension)
 
 ## requestModalUIExtensionWithAccount
 
@@ -426,6 +428,40 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let imagePixelMap: image.PixelMap;
+    let color = new ArrayBuffer(4 * 6 * 4); // 创建一个ArrayBuffer对象，用于存储图像像素。该对象的大小为（height * width * 4）字节。
+    let bufferArr = new Uint8Array(color);
+    for (let i = 0; i < bufferArr.length; i += 4) {
+      bufferArr[i] = 255;
+      bufferArr[i+1] = 0;
+      bufferArr[i+2] = 122;
+      bufferArr[i+3] = 255;
+    }
+    image.createPixelMap(color, {
+      editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 }
+    }).then((data) => {
+      imagePixelMap = data;
+      this.context.setMissionIcon(imagePixelMap)
+        .then(() => {
+          console.info('setMissionIcon succeed');
+        })
+        .catch((err: BusinessError) => {
+          console.error(`setMissionIcon failed, code is ${err.code}, message is ${err.message}`);
+        });
+    }).catch((err: BusinessError) => {
+      console.error(`createPixelMap failed, code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
+```
+
 ## setMissionIcon
 
 ```TypeScript
@@ -465,39 +501,7 @@ setMissionIcon(icon: image.PixelMap): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { image } from '@kit.ImageKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let imagePixelMap: image.PixelMap;
-    let color = new ArrayBuffer(4 * 6 * 4); // 创建一个ArrayBuffer对象，用于存储图像像素。该对象的大小为（height * width * 4）字节。
-    let bufferArr = new Uint8Array(color);
-    for (let i = 0; i < bufferArr.length; i += 4) {
-      bufferArr[i] = 255;
-      bufferArr[i+1] = 0;
-      bufferArr[i+2] = 122;
-      bufferArr[i+3] = 255;
-    }
-    image.createPixelMap(color, {
-      editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 4, width: 6 }
-    }).then((data) => {
-      imagePixelMap = data;
-      this.context.setMissionIcon(imagePixelMap)
-        .then(() => {
-          console.info('setMissionIcon succeed');
-        })
-        .catch((err: BusinessError) => {
-          console.error(`setMissionIcon failed, code is ${err.code}, message is ${err.message}`);
-        });
-    }).catch((err: BusinessError) => {
-      console.error(`createPixelMap failed, code is ${err.code}, message is ${err.message}`);
-    });
-  }
-}
-```
+参见 [setMissionIcon](#setmissionicon)
 
 ## startAbilityAsCaller
 
@@ -582,6 +586,59 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, AbilityConstant, StartOptions } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // want包含启动该应用的Caller信息
+    let localWant: Want = want;
+    localWant.bundleName = 'com.example.demo';
+    localWant.moduleName = 'entry';
+    localWant.abilityName = 'TestAbility';
+    let option: StartOptions = {
+      displayId: 0
+    };
+
+    // 使用启动方的Caller身份信息启动新Ability
+    this.context.startAbilityAsCaller(localWant, option, (err) => {
+      if (err.code) {
+        console.error(`startAbilityAsCaller failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('startAbilityAsCaller success.');
+      }
+    });
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, AbilityConstant, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // want包含启动该应用的Caller信息
+    let localWant: Want = want;
+    localWant.bundleName = 'com.example.demo';
+    localWant.moduleName = 'entry';
+    localWant.abilityName = 'TestAbility';
+    let option: StartOptions = {
+      displayId: 0
+    };
+
+    // 使用启动方的Caller身份信息启动新Ability
+    this.context.startAbilityAsCaller(localWant, option)
+      .then(() => {
+        console.info('startAbilityAsCaller success.');
+      })
+      .catch((err: BusinessError) => {
+        console.error(`startAbilityAsCaller failed, code is ${err.code}, message is ${err.message}`);
+      });
+  }
+}
+```
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -641,31 +698,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want, AbilityConstant, StartOptions } from '@kit.AbilityKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    // want包含启动该应用的Caller信息
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-    let option: StartOptions = {
-      displayId: 0
-    };
-
-    // 使用启动方的Caller身份信息启动新Ability
-    this.context.startAbilityAsCaller(localWant, option, (err) => {
-      if (err.code) {
-        console.error(`startAbilityAsCaller failed, code is ${err.code}, message is ${err.message}`);
-      } else {
-        console.info('startAbilityAsCaller success.');
-      }
-    });
-  }
-}
-```
+参见 [startAbilityAsCaller](#startabilityascaller)
 
 ## startAbilityAsCaller
 
@@ -733,32 +766,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want, AbilityConstant, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
-    // want包含启动该应用的Caller信息
-    let localWant: Want = want;
-    localWant.bundleName = 'com.example.demo';
-    localWant.moduleName = 'entry';
-    localWant.abilityName = 'TestAbility';
-    let option: StartOptions = {
-      displayId: 0
-    };
-
-    // 使用启动方的Caller身份信息启动新Ability
-    this.context.startAbilityAsCaller(localWant, option)
-      .then(() => {
-        console.info('startAbilityAsCaller success.');
-      })
-      .catch((err: BusinessError) => {
-        console.error(`startAbilityAsCaller failed, code is ${err.code}, message is ${err.message}`);
-      });
-  }
-}
-```
+参见 [startAbilityAsCaller](#startabilityascaller)
 
 ## startAbilityByCallWithAccount
 
@@ -965,6 +973,78 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, StartOptions, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let accountId = 100;
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbilityForResultWithAccount(want, accountId, options, (err: BusinessError) => {
+        if (err.code) {
+          // 处理业务逻辑错误
+          console.error(`startAbilityForResultWithAccount failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('startAbilityForResultWithAccount succeed');
+      });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityForResultWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, StartOptions, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let accountId = 100;
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbilityForResultWithAccount(want, accountId, options)
+        .then((result: common.AbilityResult) => {
+          // 执行正常业务
+          console.info('startAbilityForResultWithAccount succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`startAbilityForResultWithAccount failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityForResultWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startAbilityForResultWithAccount
 
 ```TypeScript
@@ -1037,41 +1117,7 @@ startAbilityForResultWithAccount(
 
 **示例**
 
-```TypeScript
-import { UIAbility, StartOptions, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbilityForResultWithAccount(want, accountId, options, (err: BusinessError) => {
-        if (err.code) {
-          // 处理业务逻辑错误
-          console.error(`startAbilityForResultWithAccount failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbilityForResultWithAccount succeed');
-      });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityForResultWithAccount failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startAbilityForResultWithAccount](#startabilityforresultwithaccount)
 
 ## startAbilityForResultWithAccount
 
@@ -1145,41 +1191,7 @@ startAbilityForResultWithAccount(want: Want, accountId: number, options?: StartO
 
 **示例**
 
-```TypeScript
-import { UIAbility, StartOptions, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbilityForResultWithAccount(want, accountId, options)
-        .then((result: common.AbilityResult) => {
-          // 执行正常业务
-          console.info('startAbilityForResultWithAccount succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startAbilityForResultWithAccount failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityForResultWithAccount failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startAbilityForResultWithAccount](#startabilityforresultwithaccount)
 
 ## startAbilityWithAccount
 
@@ -1280,6 +1292,78 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let accountId = 100;
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbilityWithAccount(want, accountId, options, (err: BusinessError) => {
+        if (err.code) {
+          // 处理业务逻辑错误
+          console.error(`startAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('startAbilityWithAccount succeed');
+      });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let accountId = 100;
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startAbilityWithAccount(want, accountId, options)
+        .then(() => {
+          // 执行正常业务
+          console.info('startAbilityWithAccount succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`startAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startAbilityWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -1347,41 +1431,7 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options, (err: BusinessError) => {
-        if (err.code) {
-          // 处理业务逻辑错误
-          console.error(`startAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startAbilityWithAccount succeed');
-      });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityWithAccount failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startAbilityWithAccount
 
@@ -1455,41 +1505,7 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let accountId = 100;
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startAbilityWithAccount(want, accountId, options)
-        .then(() => {
-          // 执行正常业务
-          console.info('startAbilityWithAccount succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startAbilityWithAccount failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startAbilityWithAccount](#startabilitywithaccount)
 
 ## startRecentAbility
 
@@ -1589,6 +1605,75 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0
+    };
+
+    try {
+      this.context.startRecentAbility(want, options, (err: BusinessError) => {
+        if (err.code) {
+          // 处理业务逻辑错误
+          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('startRecentAbility succeed');
+      });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+```TypeScript
+import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
+    };
+    let options: StartOptions = {
+      displayId: 0,
+    };
+
+    try {
+      this.context.startRecentAbility(want, options)
+        .then(() => {
+          // 执行正常业务
+          console.info('startRecentAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startRecentAbility
 
 ```TypeScript
@@ -1657,40 +1742,7 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0
-    };
-
-    try {
-      this.context.startRecentAbility(want, options, (err: BusinessError) => {
-        if (err.code) {
-          // 处理业务逻辑错误
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-          return;
-        }
-        // 执行正常业务
-        console.info('startRecentAbility succeed');
-      });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startRecentAbility](#startrecentability)
 
 ## startRecentAbility
 
@@ -1765,39 +1817,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want, StartOptions } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      bundleName: 'com.example.myapplication',
-      abilityName: 'EntryAbility'
-    };
-    let options: StartOptions = {
-      displayId: 0,
-    };
-
-    try {
-      this.context.startRecentAbility(want, options)
-        .then(() => {
-          // 执行正常业务
-          console.info('startRecentAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startRecentAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startRecentAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startRecentAbility](#startrecentability)
 
 ## startServiceExtensionAbility
 
@@ -1876,6 +1896,38 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ServiceExtensionAbility'
+    };
+
+    try {
+      this.context.startServiceExtensionAbility(want)
+        .then(() => {
+          // 执行正常业务
+          console.info('startServiceExtensionAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`startServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -1926,37 +1978,7 @@ startServiceExtensionAbility(want: Want): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'ServiceExtensionAbility'
-    };
-
-    try {
-      this.context.startServiceExtensionAbility(want)
-        .then(() => {
-          // 执行正常业务
-          console.info('startServiceExtensionAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startServiceExtensionAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startServiceExtensionAbility](#startserviceextensionability)
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2045,6 +2067,39 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ServiceExtensionAbility'
+    };
+    let accountId = 100;
+
+    try {
+      this.context.startServiceExtensionAbilityWithAccount(want, accountId)
+        .then(() => {
+          // 执行正常业务
+          console.info('startServiceExtensionAbilityWithAccount succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`startServiceExtensionAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startServiceExtensionAbilityWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## startServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -2104,38 +2159,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'ServiceExtensionAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.startServiceExtensionAbilityWithAccount(want, accountId)
-        .then(() => {
-          // 执行正常业务
-          console.info('startServiceExtensionAbilityWithAccount succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`startServiceExtensionAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`startServiceExtensionAbilityWithAccount failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [startServiceExtensionAbilityWithAccount](#startserviceextensionabilitywithaccount)
 
 ## stopServiceExtensionAbility
 
@@ -2212,6 +2236,38 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ServiceExtensionAbility'
+    };
+
+    try {
+      this.context.stopServiceExtensionAbility(want)
+        .then(() => {
+          // 执行正常业务
+          console.info('stopServiceExtensionAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`stopServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`stopServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2258,37 +2314,7 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'ServiceExtensionAbility'
-    };
-
-    try {
-      this.context.stopServiceExtensionAbility(want)
-        .then(() => {
-          // 执行正常业务
-          console.info('stopServiceExtensionAbility succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`stopServiceExtensionAbility failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`stopServiceExtensionAbility failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [stopServiceExtensionAbility](#stopserviceextensionability)
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -2371,6 +2397,39 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ServiceExtensionAbility'
+    };
+    let accountId = 100;
+
+    try {
+      this.context.stopServiceExtensionAbilityWithAccount(want, accountId)
+        .then(() => {
+          // 执行正常业务
+          console.info('stopServiceExtensionAbilityWithAccount succeed');
+        })
+        .catch((err: BusinessError) => {
+          // 处理业务逻辑错误
+          console.error(`stopServiceExtensionAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`stopServiceExtensionAbilityWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
 ## stopServiceExtensionAbilityWithAccount
 
 ```TypeScript
@@ -2424,35 +2483,4 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 
 **示例**
 
-```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onForeground() {
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.myapplication',
-      abilityName: 'ServiceExtensionAbility'
-    };
-    let accountId = 100;
-
-    try {
-      this.context.stopServiceExtensionAbilityWithAccount(want, accountId)
-        .then(() => {
-          // 执行正常业务
-          console.info('stopServiceExtensionAbilityWithAccount succeed');
-        })
-        .catch((err: BusinessError) => {
-          // 处理业务逻辑错误
-          console.error(`stopServiceExtensionAbilityWithAccount failed, code is ${err.code}, message is ${err.message}`);
-        });
-    } catch (err) {
-      // 处理入参错误异常
-      let code = (err as BusinessError).code;
-      let message = (err as BusinessError).message;
-      console.error(`stopServiceExtensionAbilityWithAccount failed, code is ${code}, message is ${message}`);
-    }
-  }
-}
-```
+参见 [stopServiceExtensionAbilityWithAccount](#stopserviceextensionabilitywithaccount)

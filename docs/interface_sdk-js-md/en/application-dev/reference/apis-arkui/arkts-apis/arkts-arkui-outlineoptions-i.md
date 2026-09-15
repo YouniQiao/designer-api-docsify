@@ -1,10 +1,8 @@
 # OutlineOptions
 
-Defines the options of outline.
+Defines the outline options.
 
-@interface OutlineOptions
-
-**Since:** 12
+**Since:** 11
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,17 +12,19 @@ Defines the options of outline.
 color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 ```
 
-Defines the outline color.
+Sets the outer outline color.
+
+Default value: **Color.Black**
 
 **Type:** EdgeColors &#124; [ResourceColor](arkts-arkui-resourcecolor-t.md) &#124; [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,17 +34,21 @@ Defines the outline color.
 radius?: OutlineRadiuses | Dimension
 ```
 
-Defines the outline radius.
+Sets the corner radius of the outer outline. Percentages are not supported.
+
+Default value: **0**
+
+Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth
 
 **Type:** OutlineRadiuses &#124; [Dimension](arkts-arkui-dimension-t.md)
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,17 +58,19 @@ Defines the outline radius.
 style?: EdgeOutlineStyles | OutlineStyle
 ```
 
-Defines the outline style.
+Sets the outer outline style.
+
+Default value: **OutlineStyle.SOLID**
 
 **Type:** EdgeOutlineStyles &#124; [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,16 +80,20 @@ Defines the outline style.
 width?: EdgeOutlineWidths | Dimension
 ```
 
-Defines the outline width.
+Sets the outer outline width. Percentages are not supported.
+
+Default value: **0**
+
+**width** must be set to display the outline effect.
 
 **Type:** EdgeOutlineWidths &#124; [Dimension](arkts-arkui-dimension-t.md)
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -57,6 +57,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.setTimezone('Asia/Shanghai').then(() => {
+    console.info(`Succeeded in setting timezone.`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## setTimezone
 
@@ -97,17 +112,4 @@ Sets the system time zone. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.setTimezone('Asia/Shanghai').then(() => {
-    console.info(`Succeeded in setting timezone.`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [setTimezone](#settimezone)

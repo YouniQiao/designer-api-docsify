@@ -56,6 +56,16 @@ call.separateConference(1, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.separateConference(1).then(() => {
+    console.info(`separateConference success.`);
+}).catch((err: BusinessError) => {
+    console.error(`separateConference fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## separateConference
 
@@ -100,12 +110,4 @@ Separates calls from a conference call. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.separateConference(1).then(() => {
-    console.info(`separateConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`separateConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [separateConference](#separateconference)

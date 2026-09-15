@@ -51,6 +51,19 @@ policy.getUidsByPolicy(11111, (error: BusinessError, data: number[]) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .getUidsByPolicy(11111)
+  .then((data: object) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getUidsByPolicy
 
@@ -93,15 +106,4 @@ function getUidsByPolicy(policy: NetUidPolicy): Promise<Array<number>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .getUidsByPolicy(11111)
-  .then((data: object) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [getUidsByPolicy](#getuidsbypolicy)

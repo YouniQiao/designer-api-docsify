@@ -46,10 +46,6 @@ function createKdf(algName: string): Kdf
 
 **示例**
 
-PBKDF2算法
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
+PBKDF2算法
 ```

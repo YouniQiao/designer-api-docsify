@@ -61,6 +61,17 @@ let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL
 notificationManager.getSlot(slotType, getSlotCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
+notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot) => {
+  console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slot. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getSlot
 
@@ -107,13 +118,4 @@ This API is used to query the detailed configuration information of a created no
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotType: notificationManager.SlotType = notificationManager.SlotType.SOCIAL_COMMUNICATION;
-notificationManager.getSlot(slotType).then((data: notificationManager.NotificationSlot) => {
-  console.info(`Succeeded in getting slot, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slot. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlot](#getslot)

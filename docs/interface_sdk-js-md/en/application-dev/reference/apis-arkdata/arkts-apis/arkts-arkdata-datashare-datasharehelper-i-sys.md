@@ -133,6 +133,30 @@ try {
 }
 ```
 
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let vbs: ValuesBucket[] = [
+  { "name": "roe11", "age": 21, "salary": 20.5 }
+]
+
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs).then((data: number) => {
+      console.info("batchInsert succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
+}
+```
+
 ## batchInsert
 
 ```TypeScript
@@ -174,29 +198,7 @@ In non-silent scenarios, the size of the **values** parameter and the **uri** pa
 
 **Examples**
 
-```TypeScript
-import { ValuesBucket } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let vbs: ValuesBucket[] = [
-  { "name": "roe11", "age": 21, "salary": 20.5 }
-]
-
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs).then((data: number) => {
-      console.info("batchInsert succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
-}
-```
+See [batchInsert](#batchinsert)
 
 ## batchUpdate
 
@@ -275,10 +277,10 @@ try {
   if (dataShareHelper != undefined) {
     (dataShareHelper as dataShare.DataShareHelper).batchUpdate(record).then((data: Record<string, Array<number>>) => {
       // Traverse data to obtain the update result of each data record. value indicates the number of data records that are successfully updated. If value is less than 0, the update fails.
-      let a = Object.entries(data);
-      for (let i = 0; i < a.length; i++) {
-        let key = a[i][0];
-        let values = a[i][1];
+      let entries = Object.entries(data);
+      for (let i = 0; i < entries.length; i++) {
+        let key = entries[i][0];
+        let values = entries[i][1];
         console.info(`Update uri:${key}`);
         for (const value of values) {
           console.info(`Update result:${value}`);
@@ -394,6 +396,28 @@ try {
 }
 ```
 
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
+      console.info("delete succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -436,6 +460,30 @@ In silent scenarios, the total size of the **uri** and **predicates** parameters
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
 **Examples**
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
+      if (err !== undefined) {
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info("delete succeed, data : " + data);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
+}
+```
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -563,6 +611,19 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
+    console.info("denormalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 ## denormalizeUri
 
 ```TypeScript
@@ -601,18 +662,7 @@ Denormalizes a URI. This API uses a promise to return the result. Silent access 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
-    console.info("denormalizeUri = " + data);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
+See [denormalizeUri](#denormalizeuri)
 
 ## getPublishedData
 
@@ -661,6 +711,12 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+if (dataShareHelper != undefined) {
+  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
+}
+```
+
 ## getPublishedData
 
 ```TypeScript
@@ -702,11 +758,7 @@ In silent scenarios, the size of the **bundleName** parameter passed in this API
 
 **Examples**
 
-```TypeScript
-if (dataShareHelper != undefined) {
-  let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
-}
-```
+See [getPublishedData](#getpublisheddata)
 
 ## insert
 
@@ -779,6 +831,37 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ValuesBucket } from '@kit.ArkData';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let key1: string = "name";
+let value1: string = "rose1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket).then((data: number) => {
+      console.info("insert succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to insert. Code: ${code}, message: ${message}`);
+}
+```
+
 ## insert
 
 ```TypeScript
@@ -822,36 +905,7 @@ In silent scenarios, the total size of the **uri** and **value** parameters pass
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { ValuesBucket } from '@kit.ArkData';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let key1: string = "name";
-let value1: string = "rose1";
-let key2: string = "age";
-let value2: number = 21;
-let key3: string = "salary";
-let value3: number = 20.5;
-const valueBucket: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-};
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket).then((data: number) => {
-      console.info("insert succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to insert. Code: ${code}, message: ${message}`);
-}
-```
+See [insert](#insert)
 
 ## normalizeUri
 
@@ -893,10 +947,23 @@ let uri = "datashare:///com.samples.datasharetest.DataShare";
 if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri, (err: BusinessError, data: string) => {
     if (err !== undefined) {
-      console.info("normalizeUri failed, error message : " + err);
+      console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info("normalizeUri = " + data);
     }
+  });
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
+    console.info("normalizeUri = " + data);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
   });
 }
 ```
@@ -939,18 +1006,7 @@ Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the lo
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
-    console.info("normalizeUri = " + data);
-  }).catch((err: BusinessError) => {
-    console.info("normalizeUri failed, error message : " + err);
-  });
-}
-```
+See [normalizeUri](#normalizeuri)
 
 ## notifyChange
 
@@ -996,6 +1052,29 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+```TypeScript
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
+}
+```
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+
+let dsUri = "datashare:///com.acts.datasharetest";
+let people: ValuesBucket[] = [
+  { "name": "LiSi" },
+  { "name": "WangWu" },
+  { "name": "ZhaoLiu" }
+]
+
+let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
+}
+```
+
 ## notifyChange
 
 ```TypeScript
@@ -1036,12 +1115,7 @@ In non-silent scenarios, the size of the **uri** parameter passed in this API ca
 
 **Examples**
 
-```TypeScript
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).notifyChange(uri);
-}
-```
+See [notifyChange](#notifychange)
 
 ## notifyChange
 
@@ -1083,21 +1157,7 @@ In non-silent scenarios, the size of the **data** parameter passed in this API c
 
 **Examples**
 
-```TypeScript
-import { ValuesBucket } from '@kit.ArkData';
-
-let dsUri = "datashare:///com.acts.datasharetest";
-let people: ValuesBucket[] = [
-  { "name": "LiSi" },
-  { "name": "WangWu" },
-  { "name": "ZhaoLiu" }
-]
-
-let changeData:dataShare.ChangeInfo= { type:dataShare.ChangeType.INSERT, uri:dsUri, values:people};
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).notifyChange(changeData);
-}
-```
+See [notifyChange](#notifychange)
 
 ## off('dataChange')
 
@@ -1131,19 +1191,6 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-let callback: () => void = (): void => {
-  console.info("**** Observer on callback ****");
-}
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper != undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).on("dataChange", uri, callback);
-  (dataShareHelper as dataShare.DataShareHelper).off("dataChange", uri, callback);
-}
-```
-
 ## off
 
 ```TypeScript
@@ -1176,21 +1223,6 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.acts.datasharetest";
-export function callback(error:BusinessError, ChangeInfo:dataShare.ChangeInfo) {
-    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
-}
-if (dataShareHelper !== undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).on("dataChange", dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
-  (dataShareHelper as dataShare.DataShareHelper).off("dataChange", dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
-}
-```
 
 ## off('rdbDataChange')
 
@@ -1236,16 +1268,6 @@ Unsubscribes from the changes of the data corresponding to the specified URI and
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-let uri = "datashareproxy://com.samples.datasharetest.DataShare";
-let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
-if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).off("rdbDataChange", [uri], templateId);
-}
-```
-
 ## off('publishedDataChange')
 
 ```TypeScript
@@ -1290,21 +1312,6 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let offCallback: (err: BusinessError, node: dataShare.PublishedDataChangeNode) => void = (err: BusinessError, node:dataShare.PublishedDataChangeNode): void => {
-  console.info("**** Observer off callback ****");
-}
-let uris:Array<string> = ["city", "datashareproxy://com.acts.ohos.data.datasharetest/appInfo", "key2"];
-let subscriberId = '11';
-if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).off("publishedDataChange", uris, subscriberId, offCallback);
-}
-```
-
 ## on('dataChange')
 
 ```TypeScript
@@ -1338,18 +1345,6 @@ Notification triggering: In non-silent scenarios, a notification is published if
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-let onCallback: () => void = (): void => {
-  console.info("**** Observer on callback ****");
-}
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-if (dataShareHelper !== undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).on("dataChange", uri, onCallback);
-}
-```
 
 ## on
 
@@ -1385,20 +1380,6 @@ Notification triggering: In non-silent scenarios, a notification is published if
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.acts.datasharetest";
-export function callback(error:BusinessError, ChangeInfo:dataShare.ChangeInfo) {
-    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
-}
-if (dataShareHelper !== undefined) {
-  (dataShareHelper as dataShare.DataShareHelper).on('dataChange', dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
-}
-```
 
 ## on('rdbDataChange')
 
@@ -1444,31 +1425,6 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onCallback: (err: BusinessError, node: dataShare.RdbDataChangeNode) => void = (err: BusinessError, node:dataShare.RdbDataChangeNode): void => {
-  if (!node.data.length) {
-    console.info("node.data is empty");
-    return;
-  }
-  console.info("onCallback " + JSON.stringify(node.uri));
-  console.info("onCallback " + JSON.stringify(node.templateId));
-  console.info("onCallback " + node.data.length);
-  for (let i = 0; i < node.data.length; i++) {
-    console.info("onCallback " + typeof node.data[i] + " " + node.data[i]);
-  }
-}
-
-let uri = "datashareproxy://com.samples.datasharetest.DataShare";
-let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
-if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).on("rdbDataChange", [uri], templateId, onCallback);
-}
-```
-
 ## on('publishedDataChange')
 
 ```TypeScript
@@ -1512,31 +1468,6 @@ Subscribes to the change of the published data. Only silent access is supported.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onPublishCallback: (err: BusinessError, node: dataShare.PublishedDataChangeNode) => void = (err: BusinessError, node:dataShare.PublishedDataChangeNode): void => {
-  console.info("onPublishCallback node bundleName " + JSON.stringify(node.bundleName));
-  console.info("onPublishCallback node data size" + node.data.length);
-  for (let i = 0; i < node.data.length; i++) {
-    console.info("onPublishCallback node " + typeof node.data[i].data);
-    if (typeof node.data[i].data != 'string') {
-      let array: ArrayBuffer = node.data[i].data as ArrayBuffer;
-      let data: Uint8Array = new Uint8Array(array);
-      console.info("onPublishCallback " + i + " " + JSON.stringify(data));
-    }
-    console.info("onPublishCallback data " + i + " " + JSON.stringify(node.data[i]));
-  }
-}
-let uris:Array<string> = ['city', 'datashareproxy://com.acts.ohos.data.datasharetest/appInfo', 'key2'];
-let subscriberId = '11';
-if (dataShareHelper != undefined) {
-  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).on('publishedDataChange', uris, subscriberId, onPublishCallback);
-}
-```
 
 ## publish
 
@@ -1600,6 +1531,31 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
+}
+```
+
 ## publish
 
 ```TypeScript
@@ -1642,7 +1598,26 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit'
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let arrayBuffer = new ArrayBuffer(1);
+let version = 1;
+let dataArray : Array<dataShare.PublishedItem> = [{key:"key2", subscriberId:"11", data:arrayBuffer}];
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+try {
+  console.info("dataArray length is:", dataArray.length);
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", version, publishCallback);
+  }
+} catch (e) {
+  console.error(`Failed to publish. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
   console.info("publishCallback " + JSON.stringify(result));
@@ -1653,6 +1628,16 @@ let dataArray : Array<dataShare.PublishedItem> = [
   {key:"empty", subscriberId:"11", data:"nobody sub"}];
 if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
+
+```TypeScript
+let dataArray: Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
 
@@ -1698,6 +1683,40 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let arrayBuffer = new ArrayBuffer(1);
+let version = 1;
+let dataArray : Array<dataShare.PublishedItem> = [{key:"key2", subscriberId:"11", data:arrayBuffer}];
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+try {
+  console.info("dataArray length is:", dataArray.length);
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", version, publishCallback);
+  }
+} catch (e) {
+  console.error(`Failed to publish. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let publishCallback: (err: BusinessError, result: Array<dataShare.OperationResult>) => void = (err: BusinessError, result: Array<dataShare.OperationResult>): void => {
+  console.info("publishCallback " + JSON.stringify(result));
+}
+let dataArray : Array<dataShare.PublishedItem> = [
+  {key:"city", subscriberId:"11", data:"xian"},
+  {key:"datashareproxy://com.acts.ohos.data.datasharetest/appInfo", subscriberId:"11", data:"appinfo is just a test app"},
+  {key:"empty", subscriberId:"11", data:"nobody sub"}];
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", publishCallback);
+}
+```
 
 ```TypeScript
 let dataArray: Array<dataShare.PublishedItem> = [
@@ -1780,6 +1799,29 @@ try {
 }
 ```
 
+```TypeScript
+import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let columns = ["*"];
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
+      console.info("query succeed, rowCount : " + data.rowCount);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to query. Code: ${code}, message: ${message}`);
+}
+```
+
 ## query
 
 ```TypeScript
@@ -1830,28 +1872,7 @@ When this API is used to query database data, if the query content exceeds the r
 
 **Examples**
 
-```TypeScript
-import { dataSharePredicates, DataShareResultSet } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let columns = ["*"];
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
-      console.info("query succeed, rowCount : " + data.rowCount);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to query. Code: ${code}, message: ${message}`);
-}
-```
+See [query](#query)
 
 ## update
 
@@ -1932,6 +1953,39 @@ try {
 }
 ```
 
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = "datashare:///com.samples.datasharetest.DataShare";
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let key1: string = "name";
+let value1: string = "roe1";
+let key2: string = "age";
+let value2: number = 21;
+let key3: string = "salary";
+let value3: number = 20.5;
+const va: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
+      console.info("update succeed, data : " + data);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`Failed to update. Code: ${code}, message: ${message}`);
+}
+```
+
 ## update
 
 ```TypeScript
@@ -1976,35 +2030,4 @@ In silent scenarios, the total size of the **uri**, **predicates**, and **value*
 
 **Examples**
 
-```TypeScript
-import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uri = "datashare:///com.samples.datasharetest.DataShare";
-let da = new dataSharePredicates.DataSharePredicates();
-da.equalTo("name", "ZhangSan");
-let key1: string = "name";
-let value1: string = "roe1";
-let key2: string = "age";
-let value2: number = 21;
-let key3: string = "salary";
-let value3: number = 20.5;
-const va: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-};
-try {
-  if (dataShareHelper != undefined) {
-    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
-      console.info("update succeed, data : " + data);
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-} catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
-  console.error(`Failed to update. Code: ${code}, message: ${message}`);
-}
-```
+See [update](#update)

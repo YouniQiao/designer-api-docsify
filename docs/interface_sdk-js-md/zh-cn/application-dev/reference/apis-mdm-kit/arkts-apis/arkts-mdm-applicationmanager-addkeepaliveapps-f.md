@@ -70,6 +70,27 @@ try {
 }
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+let bundleNames: Array<string> = ['com.example.myapplication'];
+
+try {
+  applicationManager.addKeepAliveApps(wantTemp, bundleNames, 100, true);
+  console.info('Succeeded in adding keep alive apps and set disallowModify.');
+} catch (err) {
+  console.error(`Failed to add keep alive apps and set disallowModify. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## addKeepAliveApps
 
@@ -115,23 +136,4 @@ function addKeepAliveApps(admin: Want, bundleNames: Array<string>, accountId: nu
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-let bundleNames: Array<string> = ['com.example.myapplication'];
-
-try {
-  applicationManager.addKeepAliveApps(wantTemp, bundleNames, 100, true);
-  console.info('Succeeded in adding keep alive apps and set disallowModify.');
-} catch (err) {
-  console.error(`Failed to add keep alive apps and set disallowModify. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [addKeepAliveApps](#addkeepaliveapps)

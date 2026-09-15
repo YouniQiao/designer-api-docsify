@@ -70,6 +70,25 @@ try {
 }
 ```
 
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+
+try {
+  let logObj = logLibrary.list('FAULTLOG');
+  if (logObj.length > 0) {
+    logLibrary.move('FAULTLOG', logObj[0].name, 'dir1/dir2', (error, val) => {
+      if (val === undefined) {
+        // move failed.
+      } else {
+        // move success.
+      }
+    });
+  }
+} catch (error) {
+    console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
+}
+```
+
 
 ## move
 
@@ -107,21 +126,4 @@ Moves log files of the specified type to the target application directory. This 
 
 **Examples**
 
-```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
-
-try {
-  let logObj = logLibrary.list('FAULTLOG');
-  if (logObj.length > 0) {
-    logLibrary.move('FAULTLOG', logObj[0].name, 'dir1/dir2', (error, val) => {
-      if (val === undefined) {
-        // move failed.
-      } else {
-        // move success.
-      }
-    });
-  }
-} catch (error) {
-    console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
-}
-```
+See [move](#move)

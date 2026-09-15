@@ -50,6 +50,19 @@ sms.isImsSmsSupported(slotId, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.isImsSmsSupported(slotId);
+promise.then((data: boolean) => {
+    console.info(`isImsSmsSupported success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isImsSmsSupported failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isImsSmsSupported
 
@@ -90,15 +103,4 @@ function isImsSmsSupported(slotId: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.isImsSmsSupported(slotId);
-promise.then((data: boolean) => {
-    console.info(`isImsSmsSupported success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isImsSmsSupported failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [isImsSmsSupported](#isimssmssupported)

@@ -48,6 +48,38 @@ Switches to another input method. This API uses a promise to return the result.
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+inputMethod.switchInputMethod(currentIme, (err: BusinessError, result: boolean) => {
+  if (err) {
+    console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  if (result) {
+    console.info('Succeeded in switching input method.');
+  } else {
+    console.error('Failed to switch input method.');
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+inputMethod.switchInputMethod(currentIme).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching input method.');
+  } else {
+    console.error('Failed to switch input method.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchInputMethod, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
 
 async function switchInputMethodWithSubtype() {
@@ -57,18 +89,26 @@ async function switchInputMethodWithSubtype() {
     console.error("Failed to get current input method");
     return;
   }
-  // 2. Switch the input method.
-  await inputMethod.switchInputMethod(currentIme.name);
-  console.info('Succeeded in switching inputmethod.');
+  try {
+    // 2. Switch the input method.
+    await inputMethod.switchInputMethod(currentIme.name);
+    console.info('Succeeded in switching inputMethod.');
+  } catch (err) {
+    console.error(`Failed to switchInputMethod. Code: ${err.code}, message: ${err.message}`);
+  }
   // 3. Obtain the current input method subtype.
   const currentSubtype: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
   if (!currentSubtype) {
     console.error("Failed to get current input subtype");
     return;
   }
-  // 4. Switch the input method subtype.
-  await inputMethod.switchInputMethod(currentIme.name, currentSubtype.id);
-  console.info('Succeeded in switching inputmethod.');
+  try {
+    // 4. Switch the input method subtype.
+    await inputMethod.switchInputMethod(currentIme.name, currentSubtype.id);
+    console.info('Succeeded in switching inputMethod.');
+  } catch (err) {
+    console.error(`Failed to switchInputMethod. Code: ${err.code}, message: ${err.message}`);
+  }
 }
 
 switchInputMethodWithSubtype();

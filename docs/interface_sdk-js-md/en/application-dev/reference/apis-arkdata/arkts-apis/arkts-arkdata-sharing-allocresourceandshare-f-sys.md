@@ -67,21 +67,123 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
 cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data']).then((resultSet) => {
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
+  if (resultSet === undefined || resultSet === null) {
+    console.error(`resultSet is null`);
     return;
   }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
+  try {
+    if (!resultSet.goToFirstRow()) {
+      console.error(`row error`);
+      return;
+    }
+    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+    console.info(`sharing resource: ${res}`);
+    sharingResource = res;
+  } catch (err) {
+    console.error(`Failed to get sharing resource: ${err}`);
+  } finally {
+    resultSet.close();
+  }
 }).catch((err: BusinessError) => {
   console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-})
+});
+```
+
+```TypeScript
+import { relationalStore } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+});
+let sharingResource: string;
+let predicates = new relationalStore.RdbPredicates('test_table');
+predicates.equalTo('data', 'data_test');
+cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data'], (err: BusinessError, resultSet: relationalStore.ResultSet) => {
+  if (err) {
+    console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
+    return;
+  }
+  if (resultSet === undefined || resultSet === null) {
+    console.error(`resultSet is null`);
+    return;
+  }
+  try {
+    if (!resultSet.goToFirstRow()) {
+      console.error(`row error`);
+      return;
+    }
+    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+    console.info(`sharing resource: ${res}`);
+    sharingResource = res;
+  } catch (err) {
+    console.error(`Failed to get sharing resource: ${err}`);
+  } finally {
+    resultSet.close();
+  }
+});
+```
+
+```TypeScript
+import { relationalStore } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+});
+let sharingResource: string;
+let predicates = new relationalStore.RdbPredicates('test_table');
+predicates.equalTo('data', 'data_test');
+cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (err: BusinessError, resultSet: relationalStore.ResultSet) => {
+  if (err) {
+    console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
+    return;
+  }
+  if (resultSet === undefined || resultSet === null) {
+    console.error(`resultSet is null`);
+    return;
+  }
+  try {
+    if (!resultSet.goToFirstRow()) {
+      console.error(`row error`);
+      return;
+    }
+    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+    console.info(`sharing resource: ${res}`);
+    sharingResource = res;
+  } catch (err) {
+    console.error(`Failed to get sharing resource: ${err}`);
+  } finally {
+    resultSet.close();
+  }
+});
 ```
 
 
@@ -123,41 +225,7 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 **Examples**
 
-```TypeScript
-import { relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-let sharingResource: string;
-let predicates = new relationalStore.RdbPredicates('test_table');
-predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (err: BusinessError, resultSet) => {
-  if (err) {
-    console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
-  }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-})
-```
+See [allocResourceAndShare](#allocresourceandshare)
 
 
 ## allocResourceAndShare
@@ -200,38 +268,4 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 **Examples**
 
-```TypeScript
-import { relationalStore } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let participants = new Array<cloudData.sharing.Participant>();
-participants.push({
-  identity: '000000000',
-  role: cloudData.sharing.Role.ROLE_INVITER,
-  state: cloudData.sharing.State.STATE_UNKNOWN,
-  privilege: {
-    writable: true,
-    readable: true,
-    creatable: false,
-    deletable: false,
-    shareable: false
-  },
-  attachInfo: ''
-})
-let sharingResource: string;
-let predicates = new relationalStore.RdbPredicates('test_table');
-predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data'], (err: BusinessError, resultSet) => {
-  if (err) {
-    console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
-  }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-})
-```
+See [allocResourceAndShare](#allocresourceandshare)

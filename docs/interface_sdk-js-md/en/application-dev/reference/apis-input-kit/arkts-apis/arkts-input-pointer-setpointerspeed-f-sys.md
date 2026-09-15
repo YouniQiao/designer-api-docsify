@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the mouse pointer speed.
+            pointer.setPointerSpeed(5).then(() => {
+              console.info(`Succeeded in setting pointer speed.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setPointerSpeed
 
@@ -101,29 +128,4 @@ Sets the mouse pointer speed. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Set the mouse pointer speed.
-            pointer.setPointerSpeed(5).then(() => {
-              console.info(`Succeeded in setting pointer speed.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setPointerSpeed](#setpointerspeed)

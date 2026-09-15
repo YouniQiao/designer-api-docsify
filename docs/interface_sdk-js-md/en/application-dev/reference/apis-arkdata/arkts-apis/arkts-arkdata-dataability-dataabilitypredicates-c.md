@@ -35,7 +35,7 @@ Creates a **DataAbilityPredicates** object to add the AND condition.
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Lisa")
     .and()
-    .equalTo("SALARY", 200.5)
+    .equalTo("SALARY", 200.5);
 ```
 
 ## beginsWith
@@ -68,7 +68,7 @@ This API is similar to the percent sign (%) in SQL statements.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.beginsWith("NAME", "os")
+dataAbilityPredicates.beginsWith("NAME", "os");
 ```
 
 ## beginWrap
@@ -97,7 +97,7 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
     .equalTo("AGE", 18)
     .or()
     .equalTo("SALARY", 200.5)
-    .endWrap()
+    .endWrap();
 ```
 
 ## between
@@ -129,7 +129,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.between("AGE", 10, 50)
+dataAbilityPredicates.between("AGE", 10, 50);
 ```
 
 ## contains
@@ -160,7 +160,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.contains("NAME", "os")
+dataAbilityPredicates.contains("NAME", "os");
 ```
 
 ## distinct
@@ -184,7 +184,7 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
+dataAbilityPredicates.equalTo("NAME", "Rose").distinct();
 ```
 
 ## endsWith
@@ -217,7 +217,7 @@ This API is similar to the percent sign (%) in SQL statements.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.endsWith("NAME", "se")
+dataAbilityPredicates.endsWith("NAME", "se");
 ```
 
 ## endWrap
@@ -246,7 +246,7 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
     .equalTo("AGE", 18)
     .or()
     .equalTo("SALARY", 200.5)
-    .endWrap()
+    .endWrap();
 ```
 
 ## equalTo
@@ -279,7 +279,7 @@ This API is similar to the SQL equal to (=) operator.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.equalTo("NAME", "lisi")
+dataAbilityPredicates.equalTo("NAME", "lisi");
 ```
 
 ## glob
@@ -310,13 +310,13 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.glob("NAME", "?h*g")
+dataAbilityPredicates.glob("NAME", "?h*g");
 
-// Only the records whose value is "Lisa" in the "name" column are matched.
-dataAbilityPredicates.glob("NAME", "Lisa")
+// Only matches the "NAME" field with the value "Lisa".
+dataAbilityPredicates.glob("NAME", "Lisa");
 
-// Only the records whose value is "lisa" in the "name" column are matched.
-dataAbilityPredicates.glob("NAME", "lisa")
+// Only matches the "NAME" field with the value "lisa".
+dataAbilityPredicates.glob("NAME", "lisa");
 ```
 
 ## greaterThan
@@ -347,7 +347,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.greaterThan("AGE", 18)
+dataAbilityPredicates.greaterThan("AGE", 18);
 ```
 
 ## greaterThanOrEqualTo
@@ -378,7 +378,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18)
+dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18);
 ```
 
 ## groupBy
@@ -408,7 +408,7 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.groupBy(["AGE", "NAME"])
+dataAbilityPredicates.groupBy(["AGE", "NAME"]);
 ```
 
 ## in
@@ -439,7 +439,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.in("AGE", [18, 20])
+dataAbilityPredicates.in("AGE", [18, 20]);
 ```
 
 ## indexedBy
@@ -483,7 +483,7 @@ export default class EntryAbility extends UIAbility {
         name: 'RdbTest.db', // Database file name.
         securityLevel: relationalStore.SecurityLevel.S3,
       };
-      // Table structure: EMPLOYEE (NAME, AGE, SALARY, CODES)
+      // Table structure: EMPLOYEE (ID, NAME, AGE, SALARY, CODES)
       const SQL_CREATE_TABLE =
         'CREATE TABLE IF NOT EXISTS EMPLOYEE (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, AGE INTEGER, SALARY REAL, CODES BLOB)'; // SQL statement for creating a data table.
       store = await relationalStore.getRdbStore(context, STORE_CONFIG);
@@ -499,14 +499,14 @@ export default class EntryAbility extends UIAbility {
     }
 
     // Create an index.
-    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)'
+    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)';
     await store.executeSql(SQL_CREATE_INDEX);
     // ...
 
-    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
-    dataAbilityPredicates.indexedBy("SALARY_INDEX")
+    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates();
+    dataAbilityPredicates.indexedBy("SALARY_INDEX");
 
-    //  ...
+    // ...
   }
 }
 ```
@@ -538,7 +538,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.isNotNull("NAME")
+dataAbilityPredicates.isNotNull("NAME");
 ```
 
 ## isNull
@@ -568,7 +568,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.isNull("NAME")
+dataAbilityPredicates.isNull("NAME");
 ```
 
 ## lessThan
@@ -599,7 +599,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.lessThan("AGE", 20)
+dataAbilityPredicates.lessThan("AGE", 20);
 ```
 
 ## lessThanOrEqualTo
@@ -630,7 +630,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
+dataAbilityPredicates.lessThanOrEqualTo("AGE", 20);
 ```
 
 ## like
@@ -663,7 +663,7 @@ This API is similar to the SQL **like** statement.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.like("NAME", "%os%")
+dataAbilityPredicates.like("NAME", "%os%");
 ```
 
 ## limitAs
@@ -693,7 +693,7 @@ Creates a **DataAbilityPredicates** object to limit the number of records.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
+dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3);
 ```
 
 ## notBetween
@@ -725,7 +725,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.notBetween("AGE", 10, 50)
+dataAbilityPredicates.notBetween("AGE", 10, 50);
 ```
 
 ## notEqualTo
@@ -758,7 +758,7 @@ This API is similar to the SQL not equal (!=) operator.
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.notEqualTo("NAME", "lisi")
+dataAbilityPredicates.notEqualTo("NAME", "lisi");
 ```
 
 ## notIn
@@ -789,7 +789,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 **Examples**
 
 ```TypeScript
-dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
+dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"]);
 ```
 
 ## offsetAs
@@ -820,7 +820,7 @@ Creates a **DataAbilityPredicates** object to set the start position of the quer
 
 ```TypeScript
 // Display the three data records following the first three records.
-dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
+dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3);
 ```
 
 ## or
@@ -848,7 +848,7 @@ This API is similar to the SQL **or** operator.
 ```TypeScript
 dataAbilityPredicates.equalTo("NAME", "Lisa")
     .or()
-    .equalTo("NAME", "Rose")
+    .equalTo("NAME", "Rose");
 ```
 
 ## orderByAsc
@@ -878,8 +878,8 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 **Examples**
 
 ```TypeScript
-// Sort data by name first; for the records with the same name, sort them by age; for the records with the same name and age, sort them by salary in ascending order.
-dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY")
+// Sort by the "NAME" field first, then by the "AGE" field when the values are the same, and finally by "SALARY".
+dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY");
 ```
 
 ## orderByDesc
@@ -909,6 +909,6 @@ Creates a **DataAbilityPredicates** object to sort the records in the specified 
 **Examples**
 
 ```TypeScript
-// Sort the data by age first. For the data records with the same age, sort them by salary.
-dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY")
+// Sort by "AGE" first, and by "SALARY" when the values are the same.
+dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY");
 ```

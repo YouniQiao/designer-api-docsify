@@ -40,36 +40,6 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe caption manager enable state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('enableChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.off('enableChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 ## off('styleChange')
 
 ```TypeScript
@@ -96,36 +66,6 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: accessibility.CaptionsStyle) => void = this.eventCallback;
-  eventCallback(data: accessibility.CaptionsStyle): void {
-    console.info(`subscribe caption manager style state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('styleChange', this.callback);
-  }
-
-  aboutToDisappear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.off('styleChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
 
 ## on('enableChange')
 
@@ -164,31 +104,6 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe caption manager enable state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('enableChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
-
 ## on('styleChange')
 
 ```TypeScript
@@ -225,31 +140,6 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: accessibility.CaptionsStyle) => void = this.eventCallback;
-  eventCallback(data: accessibility.CaptionsStyle): void {
-    console.info(`subscribe caption manager style state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    let captionsManager = accessibility.getCaptionsManager();
-    captionsManager.on('styleChange', this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
 
 ## enabled
 

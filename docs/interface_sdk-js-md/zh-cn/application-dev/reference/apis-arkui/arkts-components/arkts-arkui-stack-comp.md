@@ -47,24 +47,8 @@ Stack(options?: StackOptions)
 
 ## 示例
 
-当Stack的[alignContent](#aligncontent)属性设为Alignment.Bottom，且[syncLoad](#syncload)为true时，其子组件的显示效果表现为在Stack组件底部横向居中并且所有子组件在同一帧内加载完成。
-从API版本26.0.0开始，新增syncLoad属性。
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct StackExample {
-  build() {
-    // 设置子组件在Stack容器底部对齐
-    Stack({ alignContent: Alignment.Bottom }) {
-      // 第一个子组件，显示在底部
-      Text('First child, show in bottom').width('90%').height('100%').backgroundColor(0xd2cab3).align(Alignment.Top)
-      // 第二个子组件，显示在上层
-      Text('Second child, show in top').width('70%').height('60%').backgroundColor(0xc1cbac).align(Alignment.Top)
-    }.width('100%').height(150).margin({ top: 5 })
-    // 从API版本26.0.0开始，新增syncLoad属性，设置为true表示同步加载Stack区域内所有子组件
-    .syncLoad(true)
-  }
-}
+当Stack的[alignContent](#aligncontent)属性设为Alignment.Bottom，且[syncLoad](#syncload)为true时，其子组件的显示效果表现为在Stack组件底部横向居中并且所有子组件在同一帧内加载完成。
+
+从API版本26.0.0开始，新增syncLoad属性。
 ```

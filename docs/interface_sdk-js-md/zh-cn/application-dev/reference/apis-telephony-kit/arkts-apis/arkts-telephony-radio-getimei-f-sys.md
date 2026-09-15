@@ -46,6 +46,18 @@ Obtains the IMEI of a specified card slot of the device.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getIMEI((err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getIMEI(slotId, (err: BusinessError, data: string) => {
     if (err) {
@@ -53,6 +65,17 @@ radio.getIMEI(slotId, (err: BusinessError, data: string) => {
         return;
     }
     console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getIMEI(slotId).then((data: string) => {
+    console.info(`getIMEI success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getIMEI failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -99,16 +122,7 @@ Obtains the IMEI of a specified card slot of the device.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getIMEI(slotId).then((data: string) => {
-    console.info(`getIMEI success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getIMEI failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getIMEI](#getimei)
 
 
 ## getIMEI
@@ -147,14 +161,4 @@ Obtains the IMEI of a specified card slot of the device.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getIMEI((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getIMEI failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getIMEI success, callback: data->${JSON.stringify(data)}`);
-});
-```
+参见 [getIMEI](#getimei)

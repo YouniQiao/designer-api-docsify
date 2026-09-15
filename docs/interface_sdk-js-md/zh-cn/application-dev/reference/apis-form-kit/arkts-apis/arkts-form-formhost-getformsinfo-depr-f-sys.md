@@ -47,6 +47,30 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: Base.BusinessError,
 });
 ```
 
+```TypeScript
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
+  if (error.code) {
+    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
+  }
+});
+```
+
+```TypeScript
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
+  console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## getFormsInfo
 
@@ -82,18 +106,7 @@ function getFormsInfo(
 
 **示例**
 
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.BusinessError, data: formInfo.FormInfo[]) => {
-  if (error.code) {
-    console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-  }
-});
-```
+参见 [getFormsInfo](#getformsinfo)
 
 
 ## getFormsInfo
@@ -131,13 +144,4 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 
 **示例**
 
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getFormsInfo, data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
+参见 [getFormsInfo](#getformsinfo)

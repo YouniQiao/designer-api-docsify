@@ -167,8 +167,9 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 
 **Examples**
 
+```TypeScript
 See [NodeAdapter Validity Check Example.
-- simpleType:
+```
 
 ## moveItem
 
@@ -446,5 +447,6 @@ Get the total number of node count.
 
 **Examples**
 
+```TypeScript
 See the example for [NodeAdapter Usage Example.
-- simpleType:
+```

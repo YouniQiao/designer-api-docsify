@@ -74,6 +74,37 @@ let panelRect: inputMethodEngine.PanelRect = {
 panel.adjustPanelRect(panelFlag, panelRect);
 ```
 
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+let landscapeRect1: window.Rect = {
+  left: 300,
+  top: 650,
+  width: 2000,
+  height: 500
+};
+let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
+
+let portraitRect1: window.Rect = {
+  left: 0,
+  top: 1800,
+  width: 1200,
+  height: 800
+}
+let portraitInputRegion: Array<window.Rect> = [portraitRect1];
+// Target panel status type.
+let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
+// Location, size, avoid area, and hot zone of the target panel in both landscape and portrait orientations.
+let panelRect: inputMethodEngine.EnhancedPanelRect = {
+  landscapeAvoidY: 650,
+  landscapeInputRegion: landscapeInputRegion,
+  portraitAvoidY: 1800,
+  portraitInputRegion: portraitInputRegion,
+  fullScreenMode: true
+};
+panel.adjustPanelRect(panelFlag, panelRect);
+```
+
 ## adjustPanelRect
 
 ```TypeScript
@@ -110,36 +141,7 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> 
 
 **Examples**
 
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-let landscapeRect1: window.Rect = {
-  left: 300,
-  top: 650,
-  width: 2000,
-  height: 500
-};
-let landscapeInputRegion: Array<window.Rect> = [landscapeRect1];
-
-let portraitRect1: window.Rect = {
-  left: 0,
-  top: 1800,
-  width: 1200,
-  height: 800
-}
-let portraitInputRegion: Array<window.Rect> = [portraitRect1];
-// Target panel status type.
-let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
-// Location, size, avoid area, and hot zone of the target panel in both landscape and portrait orientations.
-let panelRect: inputMethodEngine.EnhancedPanelRect = {
-  landscapeAvoidY: 650,
-  landscapeInputRegion: landscapeInputRegion,
-  portraitAvoidY: 1800,
-  portraitInputRegion: portraitInputRegion,
-  fullScreenMode: true
-};
-panel.adjustPanelRect(panelFlag, panelRect);
-```
+See [adjustPanelRect](#adjustpanelrect)
 
 ## changeFlag
 
@@ -320,6 +322,16 @@ panel.hide((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide().then(() => {
+  console.info('Succeeded in hiding the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## hide
 
 ```TypeScript
@@ -339,6 +351,18 @@ Hides this panel. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.hide((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in hiding the panel.');
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -390,6 +414,16 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.moveTo(300, 300).then(() => {
+  console.info('Succeeded in moving the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## moveTo
 
 ```TypeScript
@@ -423,15 +457,7 @@ Moves this input method panel to the specified position. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.moveTo(300, 300).then(() => {
-  console.info('Succeeded in moving the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to move panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [moveTo](#moveto)
 
 ## off('show')
 
@@ -458,12 +484,6 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-panel.off('show');
-```
-
 ## off('hide')
 
 ```TypeScript
@@ -488,12 +508,6 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-panel.off('hide');
-```
 
 ## off('sizeChange')
 
@@ -521,16 +535,6 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
 | callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
-**Examples**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-panel.off('sizeChange', (windowSize: window.Size) => {
-  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
-});
-```
-
 ## on('show')
 
 ```TypeScript
@@ -550,14 +554,6 @@ Enables listening for the show event of this panel. This API uses an asynchronou
 | type | 'show' | Yes | Event type, which is **'show'**. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-panel.on('show', () => {
-  console.info('Panel is showing.');
-});
-```
-
 ## on('hide')
 
 ```TypeScript
@@ -576,14 +572,6 @@ Enables listening for the hide event of this panel. This API uses an asynchronou
 | --- | --- | --- | --- |
 | type | 'hide' | Yes | Event type, which is **'hide'**. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-panel.on('hide', () => {
-  console.info('Panel is hiding.');
-});
-```
 
 ## on('sizeChange')
 
@@ -611,21 +599,6 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
 | callback | [SizeChangeCallback](arkts-ime-inputmethodengine-sizechangecallback-t.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
-
-**Examples**
-
-```TypeScript
-import { window } from '@kit.ArkUI';
-
-panel.on('sizeChange', (windowSize: window.Size) => {
-  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
-});
-
-panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
-  console.info(`panel size changed, windowSize: ${windowSize.width}, ${windowSize.height}, ` +
-    `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
-});
-```
 
 ## resize
 
@@ -672,6 +645,16 @@ panel.resize(500, 1000, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.resize(500, 1000).then(() => {
+  console.info('Succeeded in changing the panel size.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## resize
 
 ```TypeScript
@@ -710,15 +693,7 @@ Resizes this input method panel. This API uses a promise to return the result. <
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.resize(500, 1000).then(() => {
-  console.info('Succeeded in changing the panel size.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to resize panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [resize](#resize)
 
 ## setImmersiveEffect
 
@@ -954,6 +929,42 @@ panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.setUiContent('pages/page2/page2').then(() => {
+  console.info('Succeeded in setting the content.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let storage: LocalStorage = new LocalStorage();
+storage.setOrCreate('storageSimpleProp', 121);
+panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in setting the content.');
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let storage: LocalStorage = new LocalStorage();
+storage.setOrCreate('storageSimpleProp', 121);
+panel.setUiContent('pages/page2/page2', storage).then(() => {
+  console.info('Succeeded in setting the content.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## setUiContent
 
 ```TypeScript
@@ -986,15 +997,7 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.setUiContent('pages/page2/page2').then(() => {
-  console.info('Succeeded in setting the content.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setUiContent](#setuicontent)
 
 ## setUiContent
 
@@ -1024,19 +1027,7 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in setting the content.');
-});
-```
+See [setUiContent](#setuicontent)
 
 ## setUiContent
 
@@ -1071,17 +1062,7 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let storage: LocalStorage = new LocalStorage();
-storage.setOrCreate('storageSimpleProp', 121);
-panel.setUiContent('pages/page2/page2', storage).then(() => {
-  console.info('Succeeded in setting the content.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setUiContent. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setUiContent](#setuicontent)
 
 ## show
 
@@ -1115,6 +1096,16 @@ panel.show((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+panel.show().then(() => {
+  console.info('Succeeded in showing the panel.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## show
 
 ```TypeScript
@@ -1135,15 +1126,7 @@ Shows this input method panel. This API uses a promise to return the result. It 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-panel.show().then(() => {
-  console.info('Succeeded in showing the panel.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show panel. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [show](#show)
 
 ## startMoving
 

@@ -57,6 +57,18 @@ appManager.getRunningProcessInformation().then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+appManager.getRunningProcessInformation((err, data) => {
+  if (err) {
+    console.error(`getRunningProcessInformation fail, code: ${err.code}, msg:${err.message}`);
+  } else {
+    console.info(`The running process information is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## getRunningProcessInformation
 
@@ -99,14 +111,4 @@ Obtains information about the running processes of the current application. This
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.getRunningProcessInformation((err, data) => {
-  if (err) {
-    console.error(`getRunningProcessInformation fail, code: ${err.code}, msg:${err.message}`);
-  } else {
-    console.info(`The running process information is: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [getRunningProcessInformation](#getrunningprocessinformation)

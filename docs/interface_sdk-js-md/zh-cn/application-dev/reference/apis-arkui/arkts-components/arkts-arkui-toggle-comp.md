@@ -48,188 +48,40 @@ Toggle(options: ToggleOptions)
 
 ## 示例
 
+```TypeScript
+### 示例1（设置开关的样式）
+
 该示例通过配置ToggleType设置Toggle的勾选框样式、状态按钮样式及开关样式。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToggleExample {
-  build() {
-    Column({ space: 10 }) {
-      Text('type: Switch').fontSize(12).fontColor(0xcccccc).width('90%')
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
-        Toggle({ type: ToggleType.Switch, isOn: false })
-          .selectedColor('#007DFF')
-          .switchPointColor('#FFFFFF')
-          .onChange((isOn: boolean) => {
-            console.info('Component status:' + isOn);
-          })
 
-        Toggle({ type: ToggleType.Switch, isOn: true })
-          .selectedColor('#007DFF')
-          .switchPointColor('#FFFFFF')
-          .onChange((isOn: boolean) => {
-            console.info('Component status:' + isOn);
-          })
-      }
-
-      Text('type: Checkbox').fontSize(12).fontColor(0xcccccc).width('90%')
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
-        Toggle({ type: ToggleType.Checkbox, isOn: false })
-          .size({ width: 20, height: 20 })
-          .selectedColor('#007DFF')
-          .onChange((isOn: boolean) => {
-            console.info('Component status:' + isOn);
-          })
-
-        Toggle({ type: ToggleType.Checkbox, isOn: true })
-          .size({ width: 20, height: 20 })
-          .selectedColor('#007DFF')
-          .onChange((isOn: boolean) => {
-            console.info('Component status:' + isOn);
-          })
-      }
-
-      Text('type: Button').fontSize(12).fontColor(0xcccccc).width('90%')
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
-        Toggle({ type: ToggleType.Button, isOn: false }) {
-          Text('status button').fontColor('#182431').fontSize(12)
-        }.width(106)
-        .selectedColor('rgba(0,125,255,0.20)')
-        .onChange((isOn: boolean) => {
-          console.info('Component status:' + isOn);
-        })
-
-        Toggle({ type: ToggleType.Button, isOn: true }) {
-          Text('status button').fontColor('#182431').fontSize(12)
-        }.width(106)
-        .selectedColor('rgba(0,125,255,0.20)')
-        .onChange((isOn: boolean) => {
-          console.info('Component status:' + isOn);
-        })
-      }
-    }.width('100%').padding(24)
-  }
-}
 ```
+
+```TypeScript
+### 示例2（自定义开关类型的样式）
 
 该示例实现了自定义设置Toggle组件Switch样式，包括圆形滑块半径、关闭状态的背景颜色、圆形滑块颜色、滑轨的圆角。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct ToggleExample {
-  build() {
-    Column({ space: 10 }) {
-      Text('type: Switch').fontSize(12).fontColor(0xcccccc).width('90%')
-      Flex({ justifyContent: FlexAlign.SpaceEvenly, alignItems: ItemAlign.Center }) {
-        Toggle({ type: ToggleType.Switch, isOn: false })
-          .selectedColor('#007DFF')
-          .switchStyle({
-            pointRadius: 15,
-            trackBorderRadius: 10,
-            pointColor: '#D2B48C',
-            unselectedColor: Color.Pink })
-          .onChange((isOn: boolean) => {
-            console.info('Component status:' + isOn);
-          })
 
-        Toggle({ type: ToggleType.Switch, isOn: true })
-          .selectedColor('#007DFF')
-          .switchStyle({
-            pointRadius: 15,
-            trackBorderRadius: 10,
-            pointColor: '#D2B48C',
-            unselectedColor: Color.Pink })
-          .onChange((isOn: boolean) => {
-            console.info('Component status:' + isOn);
-          })
-      }
-    }.width('100%').padding(24)
-  }
-}
 ```
+
+```TypeScript
+### 示例3（自定义Toggle样式）
 
 该示例实现自定义Toggle样式，通过按钮切换圆形背景颜色：点击蓝圆按钮，背景变蓝色；点击黄圆按钮，背景变黄色。
 
-```TypeScript
-// xxx.ets
-// 自定义Switch样式修改器，实现ContentModifier接口定制Toggle内容区
-class MySwitchStyle implements ContentModifier<ToggleConfiguration> {
-  // 开关打开时的背景颜色
-  selectedColor: Color = Color.White;
-  // 用于按钮显示的文本
-  lamp: string = 'string';
 
-  constructor(selectedColor: Color, lamp: string) {
-    this.selectedColor = selectedColor;
-    this.lamp = lamp;
-  }
-
-  applyContent(): WrappedBuilder<[ToggleConfiguration]> {
-    return wrapBuilder(buildSwitch);
-  }
-}
-
-@Builder
-function buildSwitch(config: ToggleConfiguration) {
-  Column({ space: 50 }) {
-    Circle({ width: 150, height: 150 })
-      .fill(config.isOn ? (config.contentModifier as MySwitchStyle).selectedColor : Color.Blue)
-    Row() {
-      Button('蓝' + JSON.stringify((config.contentModifier as MySwitchStyle).lamp))
-        .onClick(() => {
-          config.triggerChange(false);
-        })
-      Button('黄' + JSON.stringify((config.contentModifier as MySwitchStyle).lamp))
-        .onClick(() => {
-          config.triggerChange(true);
-        })
-    }
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column({ space: 50 }) {
-      // 使用自定义样式修改器定制Toggle内容，并通过onChange监听状态变化
-      Toggle({ type: ToggleType.Switch })
-        .enabled(true)
-        .contentModifier(new MySwitchStyle(Color.Yellow, '灯'))
-        .onChange((isOn: boolean) => {
-          console.info('Switch Log:' + isOn);
-        })
-    }.height('100%').width('100%')
-  }
-}
 ```
 
+```TypeScript
+### 示例4（Toggle沉浸光感效果）
+
 该示例展示了Toggle组件Switch类型在开启沉浸光感前后的效果对比。示例使用通用属性[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)接口来实现沉浸光感效果。
-组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+
+该示例配图为高算力设备强档效果，组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
+
 从API版本26.0.0开始，新增systemMaterial属性。
+
 > 说明：
 > 
 > 系统材质的实际显示效果与设备的算力档位相关，相同的代码在不同算力档位的设备上显示效果存在差异，低算力设备上会显示简化后的材质效果。算力档位由系统根据设备硬件能力自动划分和管理，应用无需感知，也无需进行额外设置，系统会根据当前设备的算力档位自动适配材质的显示效果。
-
-```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
-
-// xxx.ets
-@Entry
-@Component
-struct ToggleMaterialTest {
-  build() {
-    Stack() {
-      // 设置系统材质，开启沉浸光感效果（systemMaterial参数任意仅作为系统材质开关，最终使用组件侧固定参数），默认白色点光源（颜色为switchPointColor默认值）
-      Toggle({ type: ToggleType.Switch, isOn: true })
-        .systemMaterial(new uiMaterial.Material())
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
 ```

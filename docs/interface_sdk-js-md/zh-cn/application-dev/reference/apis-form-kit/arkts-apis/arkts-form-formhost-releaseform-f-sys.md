@@ -60,6 +60,38 @@ try {
 }
 ```
 
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string = '12400633174999288';
+  formHost.releaseForm(formId, true, (error: BusinessError) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formHost } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let formId: string = '12400633174999288';
+  formHost.releaseForm(formId, true).then(() => {
+    console.info('formHost releaseForm success');
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## releaseForm
 
@@ -100,21 +132,7 @@ function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCal
 
 **示例**
 
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.releaseForm(formId, true, (error: BusinessError) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [releaseForm](#releaseform)
 
 
 ## releaseForm
@@ -161,18 +179,4 @@ function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { formHost } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.releaseForm(formId, true).then(() => {
-    console.info('formHost releaseForm success');
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [releaseForm](#releaseform)

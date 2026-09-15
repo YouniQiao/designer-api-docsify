@@ -67,6 +67,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { shortKey } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the delay for starting the ability to 500 ms.
+            shortKey.setKeyDownDuration('businessId', 500).then(() => {
+              console.info(`Succeeded in setting key down duration.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setKeyDownDuration
 
@@ -104,29 +131,4 @@ Sets the delay for starting an ability using shortcut keys. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Set the delay for starting the ability to 500 ms.
-            shortKey.setKeyDownDuration('businessId', 500).then(() => {
-              console.info(`Succeeded in setting key down duration.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setKeyDownDuration](#setkeydownduration)

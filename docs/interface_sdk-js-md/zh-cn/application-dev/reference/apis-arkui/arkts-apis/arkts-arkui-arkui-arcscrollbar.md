@@ -30,42 +30,6 @@ import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 
 ## 示例
 
-该示例通过ArcScrollBar与[Scroll](ts-container-scroll.md)组件联动，设置了弧形外置滚动条。
-
 ```TypeScript
-import { ArcScrollBar } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct ArcScrollBarExample {
-  private scroller: Scroller = new Scroller();
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-  build() {
-    Stack({ alignContent: Alignment.Center }) {
-      Scroll(this.scroller) {
-        Flex({ direction: FlexDirection.Column }) {
-          ForEach(this.arr, (item: number) => {
-            Row() {
-              Text(item.toString())
-                .width('80%')
-                .height(60)
-                .backgroundColor('#3366CC')
-                .borderRadius(15)
-                .fontSize(16)
-                .textAlign(TextAlign.Center)
-                .margin({ top: 5 })
-            }
-          }, (item: number) => item.toString())
-        }.margin({ right: 15 })
-      }
-      .width('90%')
-      .scrollBar(BarState.Off)
-
-      ArcScrollBar({ scroller: this.scroller, state: BarState.Auto })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
+该示例通过ArcScrollBar与[Scroll](ts-container-scroll.md)组件联动，设置了弧形外置滚动条。
 ```

@@ -38,42 +38,12 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-FA model:
-
 ```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-preferences.deletePreferences(context, 'myStore', (err: BusinessError) => {
-  if (err) {
-    console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in deleting preferences.");
-})
+FA model:
 ```
 
-Stage model:
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    preferences.deletePreferences(this.context, 'myStore', (err: BusinessError) => {
-      if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      console.info("Succeeded in deleting preferences.");
-    })
-  }
-}
+Stage model:
 ```
 
 
@@ -112,45 +82,7 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let options: preferences.Options = { name: 'myStore' };
-preferences.deletePreferences(context, options, (err: BusinessError) => {
-  if (err) {
-    console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    return;
-  }
-  console.info("Succeeded in deleting preferences.");
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    preferences.deletePreferences(this.context, options, (err: BusinessError) => {
-      if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-        return;
-      }
-      console.info("Succeeded in deleting preferences.");
-    })
-  }
-}
-```
+See [deletePreferences](#deletepreferences)
 
 
 ## deletePreferences
@@ -190,41 +122,7 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let promise = preferences.deletePreferences(context, 'myStore');
-promise.then(() => {
-  console.info("Succeeded in deleting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let promise = preferences.deletePreferences(this.context, 'myStore');
-    promise.then(() => {
-      console.info("Succeeded in deleting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
+See [deletePreferences](#deletepreferences)
 
 
 ## deletePreferences
@@ -267,40 +165,4 @@ Deletes a specified **Preferences** instance from the cache. If the **Preference
 
 **Examples**
 
-FA model:
-
-```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let context = featureAbility.getContext();
-
-let options: preferences.Options = { name: 'myStore' };
-let promise = preferences.deletePreferences(context, options);
-promise.then(() => {
-  console.info("Succeeded in deleting preferences.");
-}).catch((err: BusinessError) => {
-  console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-})
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    let promise = preferences.deletePreferences(this.context, options);
-    promise.then(() => {
-      console.info("Succeeded in deleting preferences.");
-    }).catch((err: BusinessError) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
-    })
-  }
-}
-```
+See [deletePreferences](#deletepreferences)

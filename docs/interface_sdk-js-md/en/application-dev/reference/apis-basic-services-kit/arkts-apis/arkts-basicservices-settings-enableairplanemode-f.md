@@ -40,6 +40,15 @@ settings.enableAirplaneMode(isEnabled, (err:Error) => {
 })
 ```
 
+```TypeScript
+let isEnabled :boolean = true;
+settings.enableAirplaneMode(isEnabled).then(() => {
+  console.info('Succeeded in enabling AirplaneMode.');
+}).catch((err:Error) => {
+  console.error(`Failed to enable AirplaneMode. Cause: ${err}`);
+})
+```
+
 
 ## enableAirplaneMode
 
@@ -69,11 +78,4 @@ Enables or disables airplane mode.
 
 **Examples**
 
-```TypeScript
-let isEnabled :boolean = true;
-settings.enableAirplaneMode(isEnabled).then(() => {
-  console.info('Succeeded in enabling AirplaneMode.');
-}).catch((err:Error) => {
-  console.error(`Failed to enable AirplaneMode. Cause: ${err}`);
-})
-```
+See [enableAirplaneMode](#enableairplanemode)

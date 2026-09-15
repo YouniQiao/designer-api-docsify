@@ -50,6 +50,16 @@ statistics.getAllRxBytes((error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getAllRxBytes().then((stats: number) => {
+  console.info('getAllRxBytes success', JSON.stringify(stats));
+}).catch((error: Error) => {
+   console.error('getAllRxBytes error', JSON.stringify(error));
+});
+```
+
 
 ## getAllRxBytes
 
@@ -82,12 +92,4 @@ function getAllRxBytes(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getAllRxBytes().then((stats: number) => {
-  console.info('getAllRxBytes success', JSON.stringify(stats));
-}).catch((error: Error) => {
-   console.error('getAllRxBytes error', JSON.stringify(error));
-});
-```
+参见 [getAllRxBytes](#getallrxbytes)

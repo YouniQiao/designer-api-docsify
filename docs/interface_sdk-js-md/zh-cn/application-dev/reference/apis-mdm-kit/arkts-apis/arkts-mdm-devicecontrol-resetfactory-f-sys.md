@@ -66,6 +66,23 @@ deviceControl.resetFactory(wantTemp, (err) => {
 })
 ```
 
+```TypeScript
+import { deviceControl } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+deviceControl.resetFactory(wantTemp).then(() => {
+}).catch((err: BusinessError) => {
+  console.error(`Failed to reset factory. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## resetFactory
 
@@ -113,19 +130,4 @@ function resetFactory(admin: Want): Promise<void>
 
 **示例**
 
-```TypeScript
-import { deviceControl } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-deviceControl.resetFactory(wantTemp).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to reset factory. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [resetFactory](#resetfactory)

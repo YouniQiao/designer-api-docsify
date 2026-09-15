@@ -63,6 +63,18 @@ try {
 }
 ```
 
+```TypeScript
+import { common, securityManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: common.ManagedPolicy = securityManager.getExternalSourceExtensionsPolicy(null);
+  console.info(`Succeeded in getting managed policy, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get managed policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getExternalSourceExtensionsPolicy
 
@@ -103,14 +115,4 @@ function getExternalSourceExtensionsPolicy(admin: Want | null): common.ManagedPo
 
 **示例**
 
-```TypeScript
-import { common, securityManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: common.ManagedPolicy = securityManager.getExternalSourceExtensionsPolicy(null);
-  console.info(`Succeeded in getting managed policy, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to get managed policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getExternalSourceExtensionsPolicy](#getexternalsourceextensionspolicy)

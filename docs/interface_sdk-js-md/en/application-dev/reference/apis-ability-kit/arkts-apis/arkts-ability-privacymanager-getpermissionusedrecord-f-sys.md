@@ -69,6 +69,31 @@ privacyManager.getPermissionUsedRecord(request).then((data) => {
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let request: privacyManager.PermissionUsedRequest = {
+    'tokenId': 1, // It can be obtained through the accessTokenId field in the ApplicationInfo of the application's BundleInfo.
+    'isRemote': false,
+    'deviceId': 'device',
+    'bundleName': 'bundle',
+    'permissionNames': [],
+    'beginTime': 0,
+    'endTime': 1,
+    'flag': privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
+};
+
+// Query historical permission usage records
+privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: privacyManager.PermissionUsedResponse) => {
+  if (err) {
+    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`getPermissionUsedRecord success, result: ${data}`);
+  }
+});
+```
+
 
 ## getPermissionUsedRecord
 
@@ -107,27 +132,4 @@ Obtains historical permission usage records, which can be used in permission aud
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let request: privacyManager.PermissionUsedRequest = {
-    'tokenId': 1, // It can be obtained through the accessTokenId field in the ApplicationInfo of the application's BundleInfo.
-    'isRemote': false,
-    'deviceId': 'device',
-    'bundleName': 'bundle',
-    'permissionNames': [],
-    'beginTime': 0,
-    'endTime': 1,
-    'flag': privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
-};
-
-// Query historical permission usage records
-privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: privacyManager.PermissionUsedResponse) => {
-  if (err) {
-    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`getPermissionUsedRecord success, result: ${data}`);
-  }
-});
-```
+See [getPermissionUsedRecord](#getpermissionusedrecord)

@@ -66,6 +66,25 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 参数需根据实际情况进行替换
+  restrictions.setUserRestrictionForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100, true);
+  console.info('Succeeded in restricting from setting modifyWallpaper');
+} catch (err) {
+  console.error(`Failed to restrict from setting modifyWallpaper. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## setUserRestrictionForAccount
 
@@ -104,21 +123,4 @@ function setUserRestrictionForAccount(admin: Want, settingsItem: SettingsForAcco
 
 **示例**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // 参数需根据实际情况进行替换
-  restrictions.setUserRestrictionForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100, true);
-  console.info('Succeeded in restricting from setting modifyWallpaper');
-} catch (err) {
-  console.error(`Failed to restrict from setting modifyWallpaper. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setUserRestrictionForAccount](#setuserrestrictionforaccount)

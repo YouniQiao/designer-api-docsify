@@ -51,6 +51,17 @@ statistics.getIfaceRxBytes("wlan0", (error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+statistics.getIfaceRxBytes("wlan0").then((stats: number) => {
+  console.info(JSON.stringify(stats));
+}).catch((err: BusinessError) => {
+  console.error(JSON.stringify(err));
+});
+```
+
 
 ## getIfaceRxBytes
 
@@ -89,13 +100,4 @@ function getIfaceRxBytes(nic: string): Promise<number>
 
 **示例**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-statistics.getIfaceRxBytes("wlan0").then((stats: number) => {
-  console.info(JSON.stringify(stats));
-}).catch((err: BusinessError) => {
-  console.error(JSON.stringify(err));
-});
-```
+参见 [getIfaceRxBytes](#getifacerxbytes)

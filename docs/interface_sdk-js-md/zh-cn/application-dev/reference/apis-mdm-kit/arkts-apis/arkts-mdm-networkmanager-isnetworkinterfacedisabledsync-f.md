@@ -65,6 +65,19 @@ try {
 }
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  // 参数需根据实际情况进行替换
+  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(null, 'eth0');
+  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## isNetworkInterfaceDisabledSync
 
@@ -106,15 +119,4 @@ function isNetworkInterfaceDisabledSync(admin: Want | null, networkInterface: st
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  // 参数需根据实际情况进行替换
-  let result: boolean = networkManager.isNetworkInterfaceDisabledSync(null, 'eth0');
-  console.info(`Succeeded in querying network interface is disabled or not, result : ${result}`);
-} catch (err) {
-  console.error(`Failed to query network interface is disabled or not. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [isNetworkInterfaceDisabledSync](#isnetworkinterfacedisabledsync)

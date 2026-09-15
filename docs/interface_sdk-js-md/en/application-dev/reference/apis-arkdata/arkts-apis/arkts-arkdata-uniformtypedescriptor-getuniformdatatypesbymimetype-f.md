@@ -46,23 +46,23 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let typeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('text/plain', 'general.text');
-    for (let typeId of typeIds) {
-        console.info(`typeId is ${typeId}`);
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
+  let typeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('text/plain', 'general.text');
+  for (let typeId of typeIds) {
+    console.info(`typeId is ${typeId}`);
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 
-// If no uniform data type ID is found based on "image/myimage" and "general.image", the types generated based on the input parameters are returned.
+// If no preset data type is found for "image/myimage" and "general.image", return the dynamic type list generated based on the input parameters.
 try {
-    let flexTypeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('image/myimage', 'general.image');
-    for (let flexTypeId of flexTypeIds) {
-        console.info(`typeId is flex type, flex typeId is ${flexTypeId}`);
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
+  let flexTypeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('image/myimage', 'general.image');
+  for (let flexTypeId of flexTypeIds) {
+    console.info(`typeId is flex type, flex typeId is ${flexTypeId}`);
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```

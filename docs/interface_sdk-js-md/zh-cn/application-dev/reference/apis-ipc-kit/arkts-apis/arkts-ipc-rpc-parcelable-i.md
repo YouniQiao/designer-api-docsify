@@ -63,10 +63,10 @@ class MyParcelable implements rpc.Parcelable {
 }
 
 try {
-  let parcelable = new MyParcelable(1, "aaa");
+  let parcelable = new MyParcelable(1, 'aaa');
   let data = rpc.MessageSequence.create();
   data.writeParcelable(parcelable);
-  let ret = new MyParcelable(0, "");
+  let ret = new MyParcelable(0, '');
   data.readParcelable(ret);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
@@ -124,10 +124,10 @@ class MyParcelable implements rpc.Parcelable {
 }
 
 try {
-  let parcelable = new MyParcelable(1, "aaa");
+  let parcelable = new MyParcelable(1, 'aaa');
   let data = rpc.MessageSequence.create();
   data.writeParcelable(parcelable);
-  let ret = new MyParcelable(0, "");
+  let ret = new MyParcelable(0, '');
   data.readParcelable(ret);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);

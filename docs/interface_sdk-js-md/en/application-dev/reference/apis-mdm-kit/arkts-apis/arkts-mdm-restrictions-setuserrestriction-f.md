@@ -63,6 +63,24 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  restrictions.setUserRestriction(wantTemp, restrictions.SettingsForDevice.SET_APN, true);
+  console.info('Succeeded in restricting from setting apn');
+} catch (err) {
+  console.error(`Failed to restrict from setting apn. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## setUserRestriction
 
@@ -99,20 +117,4 @@ Restricts users from modifying specified device setting items.
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  restrictions.setUserRestriction(wantTemp, restrictions.SettingsForDevice.SET_APN, true);
-  console.info('Succeeded in restricting from setting apn');
-} catch (err) {
-  console.error(`Failed to restrict from setting apn. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setUserRestriction](#setuserrestriction)

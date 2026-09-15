@@ -58,6 +58,24 @@ adminManager.getEnterpriseInfo(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+adminManager.getEnterpriseInfo(wantTemp).then((result) => {
+  console.info(`Succeeded in getting enterprise info, enterprise name : ${result.name}, enterprise description : ${result.description}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get enterprise info. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getEnterpriseInfo
 
@@ -97,20 +115,4 @@ function getEnterpriseInfo(admin: Want): Promise<EnterpriseInfo>
 
 **示例**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-adminManager.getEnterpriseInfo(wantTemp).then((result) => {
-  console.info(`Succeeded in getting enterprise info, enterprise name : ${result.name}, enterprise description : ${result.description}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get enterprise info. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getEnterpriseInfo](#getenterpriseinfo)

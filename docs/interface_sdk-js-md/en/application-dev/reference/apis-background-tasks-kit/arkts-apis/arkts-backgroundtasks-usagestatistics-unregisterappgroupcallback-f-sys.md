@@ -48,6 +48,17 @@ Unregister appGroup change callback from service.
 import { BusinessError } from '@kit.BasicServicesKit';
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 
+usageStatistics.unregisterAppGroupCallBack().then( () => {
+  console.info('BUNDLE_ACTIVE unregisterAppGroupCallBack promise succeeded.');
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+
 usageStatistics.unregisterAppGroupCallBack((err: BusinessError) => {
   if(err) {
     console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack callback failed. code is: ' + err.code + ',message is: ' + err.message);
@@ -96,13 +107,4 @@ Unregister appGroup change callback from service.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
-
-usageStatistics.unregisterAppGroupCallBack().then( () => {
-  console.info('BUNDLE_ACTIVE unregisterAppGroupCallBack promise succeeded.');
-}).catch((err: BusinessError) => {
-  console.error('BUNDLE_ACTIVE unregisterAppGroupCallBack promise failed. code is: ' + err.code + ',message is: ' + err.message);
-});
-```
+See [unregisterAppGroupCallBack](#unregisterappgroupcallback)

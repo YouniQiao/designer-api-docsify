@@ -48,6 +48,42 @@ contact.selectContacts((err: BusinessError, data) => {
 });
 ```
 
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Open the contact selection UI.
+let promise = contact.selectContacts();
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// Open the contact selection UI and select a contact.
+contact.selectContacts({
+  isMultiSelect:false
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Open the contact selection UI to select a contact.
+let promise = contact.selectContacts({isMultiSelect:false});
+promise.then((data) => {
+  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
 
 ## selectContacts
 
@@ -71,15 +107,7 @@ Selects a contact. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Open the contact selection UI.
-let promise = contact.selectContacts();
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
+See [selectContacts](#selectcontacts)
 
 
 ## selectContacts
@@ -111,21 +139,7 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// Open the contact selection UI and select a contact.
-contact.selectContacts({
-  isMultiSelect:false
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to select Contacts. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
+See [selectContacts](#selectcontacts)
 
 
 ## selectContacts
@@ -162,12 +176,4 @@ Selects a contact. (Filter criteria can be transferred during contact selection.
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Open the contact selection UI to select a contact.
-let promise = contact.selectContacts({isMultiSelect:false});
-promise.then((data) => {
-  console.info(`Succeeded in selecting Contacts. data->${JSON.stringify(data)}`);
-});
-```
+See [selectContacts](#selectcontacts)

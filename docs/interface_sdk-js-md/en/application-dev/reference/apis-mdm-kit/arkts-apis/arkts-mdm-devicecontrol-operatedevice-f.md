@@ -59,6 +59,26 @@ try {
 }
 ```
 
+```TypeScript
+import { deviceControl } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let filePath: string = '/test.png';
+
+try {
+  // Replace the parameters as required.
+  deviceControl.operateDevice(wantTemp, deviceControl.Operation.DISK_ERASURE, filePath);
+} catch (err) {
+  console.error(`Failed to disk erase. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## operateDevice
 
@@ -98,22 +118,4 @@ Allows the administrator to operate devices, for example, erasing disks.
 
 **Examples**
 
-```TypeScript
-import { deviceControl } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-let filePath: string = '/test.png';
-
-try {
-  // Replace the parameters as required.
-  deviceControl.operateDevice(wantTemp, deviceControl.Operation.DISK_ERASURE, filePath);
-} catch (err) {
-  console.error(`Failed to disk erase. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [operateDevice](#operatedevice)

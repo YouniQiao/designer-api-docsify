@@ -1,8 +1,6 @@
 # DividerStyleOptions
 
-Defines the struct of DividerStyleOptions.
-
-@interface DividerStyleOptions
+Defines divider information.
 
 **Since:** 12
 
@@ -14,7 +12,7 @@ Defines the struct of DividerStyleOptions.
 color?: ResourceColor
 ```
 
-The color of Divider.
+Color of the divider.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -32,7 +30,7 @@ The color of Divider.
 endMargin?: LengthMetrics
 ```
 
-The endMargin of Divider.
+Distance between the divider and the end edge of the menu side.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -50,7 +48,7 @@ The endMargin of Divider.
 mode?: DividerMode
 ```
 
-The mode of Divider.
+Sets the divider mode.
 
 **Type:** [DividerMode](arkts-arkui-dividermode-e.md)
 
@@ -68,7 +66,7 @@ The mode of Divider.
 startMargin?: LengthMetrics
 ```
 
-The startMargin of Divider.
+Distance between the divider and the start edge of the menu side.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -86,7 +84,7 @@ The startMargin of Divider.
 strokeWidth?: LengthMetrics
 ```
 
-The strokeWidth of Divider.
+Width of the divider line.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

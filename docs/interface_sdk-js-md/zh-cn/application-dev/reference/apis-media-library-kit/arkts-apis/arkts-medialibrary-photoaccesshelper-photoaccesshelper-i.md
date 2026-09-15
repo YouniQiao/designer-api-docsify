@@ -120,76 +120,8 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
 ```
 
 ## createAsset
@@ -230,76 +162,8 @@ createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<str
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
 ```
 
 ## createAsset
@@ -346,76 +210,8 @@ createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): P
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  phAccessHelper.createAsset(testFileName, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName: string = 'testFile' + Date.now() + '.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  let testFileName: string = 'testFile' + Date.now() + '.jpg';
-  let createOption: photoAccessHelper.PhotoCreateOptions = {
-    subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-  }
-  phAccessHelper.createAsset(testFileName, createOption, (err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('createAsset file displayName' + photoAsset.displayName);
-      console.info('createAsset successfully');
-    } else {
-      console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-    }
-  });
-}
-```
-
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('createAssetDemo');
-  try {
-    let testFileName:string = 'testFile' + Date.now() + '.jpg';
-    let createOption: photoAccessHelper.PhotoCreateOptions = {
-      subtype: photoAccessHelper.PhotoSubtype.DEFAULT
-    }
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.createAsset(testFileName, createOption);
-    console.info('createAsset file displayName' + photoAsset.displayName);
-    console.info('createAsset successfully');
-  } catch (err) {
-    console.error(`createAsset failed, error: ${err.code}, ${err.message}`);
-  }
-}
 ```
 
 ## createAssetWithShortTermPermission
@@ -1445,20 +1241,8 @@ setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<voi
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
-
 ```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName = "com.test.example";
-    let capability : photoAccessHelper.AssetCompatibleCapability = {
-        supportedHighResolution : true,
-    };
-    await phAccessHelper.setAssetCompatibleCapability(bundleName, capability);
-  } catch (error) {
-    console.error('failed to setAssetCompatibleCapability err', error);
-  }
-}
+phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 ```
 
 ## showAssetsCreationDialog

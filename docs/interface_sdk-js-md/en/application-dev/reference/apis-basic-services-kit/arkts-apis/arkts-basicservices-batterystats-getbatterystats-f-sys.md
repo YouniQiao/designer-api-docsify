@@ -45,6 +45,16 @@ batteryStats.getBatteryStats()
 });
 ```
 
+```TypeScript
+batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
+    if (typeof err === 'undefined') {
+        console.info('battery statistics info: ' + data);
+    } else {
+        console.error('get battery statistics failed, err: ' + err);
+    }
+});
+```
+
 
 ## getBatteryStats
 
@@ -76,12 +86,4 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
-    if (typeof err === 'undefined') {
-        console.info('battery statistics info: ' + data);
-    } else {
-        console.error('get battery statistics failed, err: ' + err);
-    }
-});
-```
+See [getBatteryStats](#getbatterystats)

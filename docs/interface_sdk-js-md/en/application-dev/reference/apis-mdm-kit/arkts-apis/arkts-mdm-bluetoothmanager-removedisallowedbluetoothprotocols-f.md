@@ -63,6 +63,35 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { bluetoothManager } from '@kit.MDMKit';
+
+// Create an EnterpriseAdminExtensionAbility component.
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Define the user ID.
+let accountId: number = 100;
+// Define the Bluetooth protocol array.
+let protocols: Array<bluetoothManager.Protocol> = [
+  bluetoothManager.Protocol.GATT,
+  bluetoothManager.Protocol.SPP,
+  bluetoothManager.Protocol.OPP
+];
+
+try {
+  // Remove Bluetooth protocols from the blocklist and specify the transfer policy as disabling sending and receiving.
+  bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols, bluetoothManager.TransferPolicy.RECEIVE_SEND);
+  console.info('Succeeded in removing disallowed bluetooth protocols.');
+} catch (err) {
+  console.error(`Failed to remove disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## removeDisallowedBluetoothProtocols
 
@@ -112,31 +141,4 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 
 **Examples**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { bluetoothManager } from '@kit.MDMKit';
-
-// Create an EnterpriseAdminExtensionAbility component.
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Define the user ID.
-let accountId: number = 100;
-// Define the Bluetooth protocol array.
-let protocols: Array<bluetoothManager.Protocol> = [
-  bluetoothManager.Protocol.GATT,
-  bluetoothManager.Protocol.SPP,
-  bluetoothManager.Protocol.OPP
-];
-
-try {
-  // Remove Bluetooth protocols from the blocklist and specify the transfer policy as disabling sending and receiving.
-  bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols, bluetoothManager.TransferPolicy.RECEIVE_SEND);
-  console.info('Succeeded in removing disallowed bluetooth protocols.');
-} catch (err) {
-  console.error(`Failed to remove disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [removeDisallowedBluetoothProtocols](#removedisallowedbluetoothprotocols)

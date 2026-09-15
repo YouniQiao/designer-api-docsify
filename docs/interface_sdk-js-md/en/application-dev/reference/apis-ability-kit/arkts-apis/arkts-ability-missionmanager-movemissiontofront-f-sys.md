@@ -61,6 +61,46 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId is the mission ID, which can be obtained through the getMissionInfos API.
+let testMissionId = 2;
+
+try {
+  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err: BusinessError, data: void) => {
+    if (err) {
+      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+    } else {
+      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId is the mission ID. Obtain a valid mission ID through the getMissionInfos API.
+let testMissionId = 2;
+
+try {
+  missionManager.moveMissionToFront(testMissionId).then((data: void) => {
+    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${err.code}, Cause: ${err.message}.`);
+}
+```
+
 
 ## moveMissionToFront
 
@@ -97,26 +137,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId is the mission ID, which can be obtained through the getMissionInfos API.
-let testMissionId = 2;
-
-try {
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err: BusinessError, data: void) => {
-    if (err) {
-      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+See [moveMissionToFront](#movemissiontofront)
 
 
 ## moveMissionToFront
@@ -159,21 +180,4 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId is the mission ID. Obtain a valid mission ID through the getMissionInfos API.
-let testMissionId = 2;
-
-try {
-  missionManager.moveMissionToFront(testMissionId).then((data: void) => {
-    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${err.code}, Cause: ${err.message}.`);
-}
-```
+See [moveMissionToFront](#movemissiontofront)

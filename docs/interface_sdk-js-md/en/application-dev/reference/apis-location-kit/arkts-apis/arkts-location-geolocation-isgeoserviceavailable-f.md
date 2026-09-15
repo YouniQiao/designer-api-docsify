@@ -44,6 +44,13 @@ geolocation.isGeoServiceAvailable((err, data) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isGeoServiceAvailable().then((result) => {
+    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
+});
+```
+
 
 ## isGeoServiceAvailable
 
@@ -71,9 +78,4 @@ Obtain geocode service status
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isGeoServiceAvailable().then((result) => {
-    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
-});
-```
+See [isGeoServiceAvailable](#isgeoserviceavailable)

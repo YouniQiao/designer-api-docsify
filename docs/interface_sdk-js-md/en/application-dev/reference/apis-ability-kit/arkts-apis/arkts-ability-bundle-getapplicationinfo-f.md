@@ -38,12 +38,43 @@ No permission is required for obtaining the caller's own information.
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 0;
+let userId: number = 100;
+
+bundle.getApplicationInfo(bundleName, bundleFlags, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleName: string = "com.example.myapplication";
 let bundleFlags: number = 0;
 let userId: number = 100;
 
 bundle.getApplicationInfo(bundleName, bundleFlags, userId, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 0;
+
+bundle.getApplicationInfo(bundleName, bundleFlags, (err, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
     return;
@@ -81,20 +112,7 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 0;
-
-bundle.getApplicationInfo(bundleName, bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
+See [getApplicationInfo](#getapplicationinfo)
 
 
 ## getApplicationInfo
@@ -131,18 +149,4 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleName: string = "com.example.myapplication";
-let bundleFlags: number = 0;
-let userId: number = 100;
-
-bundle.getApplicationInfo(bundleName, bundleFlags, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+See [getApplicationInfo](#getapplicationinfo)

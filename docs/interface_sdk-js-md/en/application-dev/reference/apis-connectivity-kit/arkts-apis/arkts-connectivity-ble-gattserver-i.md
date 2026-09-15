@@ -415,6 +415,25 @@ try {
 }
 ```
 
+```TypeScript
+import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+let arrayBufferC = new ArrayBuffer(8);
+let notifyCharacter: ble.NotifyCharacteristic = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    characteristicValue: arrayBufferC,
+    confirm: true
+};
+try {
+    let gattServer: ble.GattServer = ble.createGattServer();
+    gattServer.notifyCharacteristicChanged('XX:XX:XX:XX:XX:XX', notifyCharacter).then(() => {
+        console.info('notifyCharacteristicChanged promise successful');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -461,24 +480,7 @@ This method should be called for every BLE peripheral device that has requested 
 
 **Examples**
 
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let arrayBufferC = new ArrayBuffer(8);
-let notifyCharacter: ble.NotifyCharacteristic = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: arrayBufferC,
-    confirm: true
-};
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.notifyCharacteristicChanged('XX:XX:XX:XX:XX:XX', notifyCharacter).then(() => {
-        console.info('notifyCharacteristicChanged promise successful');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [notifyCharacteristicChanged](#notifycharacteristicchanged)
 
 ## off('characteristicRead')
 
@@ -513,18 +515,6 @@ Unsubscribe characteristic read event.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.off('characteristicRead');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## off('characteristicWrite')
 
 ```TypeScript
@@ -557,18 +547,6 @@ Unsubscribe characteristic write event.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.off('characteristicWrite');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## off('descriptorRead')
 
@@ -603,18 +581,6 @@ Unsubscribe descriptor read event.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.off('descriptorRead');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## off('descriptorWrite')
 
 ```TypeScript
@@ -647,18 +613,6 @@ Unsubscribe descriptor write event.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-let gattServer: ble.GattServer = ble.createGattServer();
-gattServer.off('descriptorWrite');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## off('connectionStateChange')
 
@@ -693,18 +647,6 @@ Unsubscribe server connection state changed event.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.off('connectionStateChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## off('BLEMtuChange')
 
 ```TypeScript
@@ -735,18 +677,6 @@ Unsubscribe mtu changed event.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.off('BLEMtuChange');
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## offBlePhyUpdate
 
@@ -827,31 +757,6 @@ Subscribe characteristic read event. On API 26.0.0 and above, if the application
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 10 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let arrayBufferCCC = new ArrayBuffer(8);
-let cccValue = new Uint8Array(arrayBufferCCC);
-cccValue[0] = 1;
-let gattServer: ble.GattServer = ble.createGattServer();
-function ReadCharacteristicReq(characteristicReadRequest: ble.CharacteristicReadRequest) {
-    let deviceId: string = characteristicReadRequest.deviceId;
-    let transId: number = characteristicReadRequest.transId;
-    let offset: number = characteristicReadRequest.offset;
-    let characteristicUuid: string = characteristicReadRequest.characteristicUuid;
-
-    let serverResponse: ble.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, offset: offset, value:arrayBufferCCC};
-
-    try {
-        gattServer.sendResponse(serverResponse);
-    } catch (err) {
-        console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    }
-}
-gattServer.on('characteristicRead', ReadCharacteristicReq);
-```
-
 ## on('characteristicWrite')
 
 ```TypeScript
@@ -887,34 +792,6 @@ Subscribe characteristic write event. On API 26.0.0 and above, if the applicatio
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 10 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let arrayBufferCCC = new ArrayBuffer(8);
-let cccValue = new Uint8Array(arrayBufferCCC);
-let gattServer: ble.GattServer = ble.createGattServer();
-function WriteCharacteristicReq(characteristicWriteRequest: ble.CharacteristicWriteRequest) {
-    let deviceId: string = characteristicWriteRequest.deviceId;
-    let transId: number = characteristicWriteRequest.transId;
-    let offset: number = characteristicWriteRequest.offset;
-    let isPrepared: boolean = characteristicWriteRequest.isPrepared;
-    let needRsp: boolean = characteristicWriteRequest.needRsp;
-    let value: Uint8Array =  new Uint8Array(characteristicWriteRequest.value);
-    let characteristicUuid: string = characteristicWriteRequest.characteristicUuid;
-
-    cccValue[0] = value[0];
-    let serverResponse: ble.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, offset: offset, value:arrayBufferCCC};
-
-    try {
-        gattServer.sendResponse(serverResponse);
-    } catch (err) {
-        console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    }
-}
-gattServer.on('characteristicWrite', WriteCharacteristicReq);
-```
 
 ## on('descriptorRead')
 
@@ -952,31 +829,6 @@ Subscribe descriptor read event. On API 26.0.0 and above, if the application has
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 10 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let arrayBufferDesc = new ArrayBuffer(8);
-let descValue = new Uint8Array(arrayBufferDesc);
-descValue[0] = 1;
-let gattServer: ble.GattServer = ble.createGattServer();
-function ReadDescriptorReq(descriptorReadRequest: ble.DescriptorReadRequest) {
-    let deviceId: string = descriptorReadRequest.deviceId;
-    let transId: number = descriptorReadRequest.transId;
-    let offset: number = descriptorReadRequest.offset;
-    let descriptorUuid: string = descriptorReadRequest.descriptorUuid;
-
-    let serverResponse: ble.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, offset: offset, value:arrayBufferDesc};
-
-    try {
-        gattServer.sendResponse(serverResponse);
-    } catch (err) {
-        console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    }
-}
-gattServer.on('descriptorRead', ReadDescriptorReq);
-```
-
 ## on('descriptorWrite')
 
 ```TypeScript
@@ -1012,34 +864,6 @@ Subscribe descriptor write event. On API 26.0.0 and above, if the application ha
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 10 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-let arrayBufferDesc = new ArrayBuffer(8);
-let descValue = new Uint8Array(arrayBufferDesc);
-let gattServer: ble.GattServer = ble.createGattServer();
-function WriteDescriptorReq(descriptorWriteRequest: ble.DescriptorWriteRequest) {
-    let deviceId: string = descriptorWriteRequest.deviceId;
-    let transId: number = descriptorWriteRequest.transId;
-    let offset: number = descriptorWriteRequest.offset;
-    let isPrepared: boolean = descriptorWriteRequest.isPrepared;
-    let needRsp: boolean = descriptorWriteRequest.needRsp;
-    let value: Uint8Array = new Uint8Array(descriptorWriteRequest.value);
-    let descriptorUuid: string = descriptorWriteRequest.descriptorUuid;
-
-    descValue[0] = value[0];
-    let serverResponse: ble.ServerResponse = {deviceId: deviceId, transId: transId, status: 0, offset: offset, value:arrayBufferDesc};
-
-    try {
-        gattServer.sendResponse(serverResponse);
-    } catch (err) {
-        console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    }
-}
-gattServer.on('descriptorWrite', WriteDescriptorReq);
-```
 
 ## on('connectionStateChange')
 
@@ -1077,23 +901,6 @@ Subscribe server connection state changed event. On API 26.0.0 and above, if the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 10 - 24 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { constant } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-let connected = (bleConnectionChangeState: ble.BLEConnectionChangeState) => {
-    let deviceId: string = bleConnectionChangeState.deviceId;
-    let status: constant.ProfileConnectionState = bleConnectionChangeState.state;
-}
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.on('connectionStateChange', connected);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## on('BLEMtuChange')
 
 ```TypeScript
@@ -1124,20 +931,6 @@ Subscribe mtu changed event.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
-try {
-    let gattServer: ble.GattServer = ble.createGattServer();
-    gattServer.on('BLEMtuChange', (mtu: number) => {
-    console.info('BLEMtuChange, mtu: ' + mtu);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
 
 ## onBlePhyUpdate
 

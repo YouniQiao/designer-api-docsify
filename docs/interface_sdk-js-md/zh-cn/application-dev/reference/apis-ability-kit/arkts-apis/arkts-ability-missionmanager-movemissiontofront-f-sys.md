@@ -61,6 +61,46 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
+let testMissionId = 2;
+
+try {
+  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err: BusinessError, data: void) => {
+    if (err) {
+      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+    } else {
+      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+    }
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
+let testMissionId = 2;
+
+try {
+  missionManager.moveMissionToFront(testMissionId).then((data: void) => {
+    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`moveMissionToFront failed. Code: ${err.code}, Cause: ${err.message}.`);
+}
+```
+
 
 ## moveMissionToFront
 
@@ -97,26 +137,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err: BusinessError, data: void) => {
-    if (err) {
-      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [moveMissionToFront](#movemissiontofront)
 
 
 ## moveMissionToFront
@@ -159,21 +180,4 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.moveMissionToFront(testMissionId).then((data: void) => {
-    console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`moveMissionToFront failed. Code: ${err.code}, Cause: ${err.message}.`);
-}
-```
+参见 [moveMissionToFront](#movemissiontofront)

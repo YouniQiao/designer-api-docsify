@@ -62,79 +62,24 @@ Ellipse(options?: EllipseOptions)
 
 ## 示例
 
+```TypeScript
+### 示例1（组件属性绘制）
+
 通过fillOpacity、stroke属性分别绘制椭圆的透明度、边框颜色。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct EllipseExample {
-  build() {
-    Column({ space: 10 }) {
-      // 绘制一个 150 * 80 的椭圆
-      Ellipse({ width: 150, height: 80 })
-      // 绘制一个 150 * 100 、线条为蓝色的椭圆环
-      Ellipse()
-        .width(150)
-        .height(100)
-        .fillOpacity(0)
-        .stroke(Color.Blue)
-        .strokeWidth(3)
-    }.width('100%')
-  }
-}
+
 ```
+
+```TypeScript
+### 示例2（宽和高使用不同参数类型绘制椭圆）
 
 width、height属性分别使用不同的长度类型绘制椭圆。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct EllipseTypeExample {
-  build() {
-    Column({ space: 10 }) {
-      // 绘制一个 150 * 80 的椭圆
-      Ellipse({ width: '150', height: '80' }) // 使用string类型
-      // 绘制一个 80 * 150 的椭圆
-      Ellipse({ width: 80, height: 150 }) // 使用number类型
-      // 使用Resource类型引用宽高资源字符串的椭圆
-      Ellipse({ width: $r('app.string.EllipseWidth'), height: $r('app.string.EllipseHeight') }) // 使用Resource类型，需用户自定义
-    }.width('100%')
-  }
-}
+
 ```
 
-以下示例展示了如何使用attributeModifier动态设置Ellipse组件的fill、fillOpacity、stroke、strokeDashArray、strokeDashOffset、strokeLineCap、strokeOpacity、strokeWidth和antiAlias属性。
-
 ```TypeScript
-// xxx.ets
-class MyEllipseModifier implements AttributeModifier<EllipseAttribute> {
-  applyNormalAttribute(instance: EllipseAttribute): void {
-    // 填充颜色#707070，填充透明度0.5，边框颜色#2787D9，边框间隙[20]，向左偏移15，线条两端样式为半圆，边框透明度0.5，边框宽度10，抗锯齿开启
-    instance.fill('#707070')
-    instance.fillOpacity(0.5)
-    instance.stroke('#2787D9')
-    instance.strokeDashArray([20])
-    instance.strokeDashOffset('15')
-    instance.strokeLineCap(LineCapStyle.Round)
-    instance.strokeOpacity(0.5)
-    instance.strokeWidth(10)
-    instance.antiAlias(true)
-  }
-}
+### 示例3（使用attributeModifier动态设置Ellipse组件的属性）
 
-@Entry
-@Component
-struct EllipseModifierDemo {
-  @State modifier: MyEllipseModifier = new MyEllipseModifier()
-
-  build() {
-    Column() {
-      Ellipse({ width: 150, height: 80 })
-        .attributeModifier(this.modifier)
-        .offset({ x: 20, y: 20 })
-    }
-  }
-}
+以下示例展示了如何使用attributeModifier动态设置Ellipse组件的fill、fillOpacity、stroke、strokeDashArray、strokeDashOffset、strokeLineCap、strokeOpacity、strokeWidth和antiAlias属性。
 ```

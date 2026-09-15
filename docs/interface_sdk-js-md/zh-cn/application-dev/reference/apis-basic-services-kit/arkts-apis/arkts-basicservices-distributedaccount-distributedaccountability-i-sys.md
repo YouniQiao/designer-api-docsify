@@ -68,6 +68,24 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+try {
+  let localId: number = 100; // 示例值，实际使用时请获取真实的系统账号ID
+  accountAbility.getOsAccountDistributedInfoByLocalId(localId).then((
+    data: distributedAccount.DistributedInfo) => {
+    console.info('distributed information: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountDistributedInfoByLocalId
 
 ```TypeScript
@@ -109,23 +127,7 @@ getOsAccountDistributedInfoByLocalId(localId: number): Promise<DistributedInfo>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-try {
-  let localId: number = 100; // 示例值，实际使用时请获取真实的系统账号ID
-  accountAbility.getOsAccountDistributedInfoByLocalId(localId).then((
-    data: distributedAccount.DistributedInfo) => {
-    console.info('distributed information: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountDistributedInfoByLocalId](#getosaccountdistributedinfobylocalid)
 
 ## setOsAccountDistributedInfoByLocalId
 
@@ -187,6 +189,25 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+try {
+  let localId: number = 100; // 示例值，实际使用时请获取真实的系统账号ID
+  accountAbility.setOsAccountDistributedInfoByLocalId(localId, accountInfo).then(() => {
+    console.info('setOsAccountDistributedInfoByLocalId successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setOsAccountDistributedInfoByLocalId
 
 ```TypeScript
@@ -231,21 +252,4 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-try {
-  let localId: number = 100; // 示例值，实际使用时请获取真实的系统账号ID
-  accountAbility.setOsAccountDistributedInfoByLocalId(localId, accountInfo).then(() => {
-    console.info('setOsAccountDistributedInfoByLocalId successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setOsAccountDistributedInfoByLocalId](#setosaccountdistributedinfobylocalid)

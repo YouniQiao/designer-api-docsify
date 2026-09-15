@@ -41,13 +41,23 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED, ((err: BusinessError, result) => {
+cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
+  console.info(`change confirmation succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED, (err: BusinessError, result) => {
   if (err) {
     console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`change confirmation succeeded, result: ${result}`);
-}))
+});
 ```
 
 
@@ -88,12 +98,4 @@ Changes the invitation confirmation state based on the shared resource ID. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.State.STATE_REJECTED).then((result) => {
-  console.info(`change confirmation succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`change confirmation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [changeConfirmation](#changeconfirmation)

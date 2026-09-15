@@ -54,6 +54,17 @@ appManager.isRunningInStabilityTest((err, flag) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appManager.isRunningInStabilityTest().then((flag) => {
+  console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
+}).catch((error: BusinessError) => {
+  console.error(`error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## isRunningInStabilityTest
 
@@ -90,13 +101,4 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.isRunningInStabilityTest().then((flag) => {
-  console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
-});
-```
+See [isRunningInStabilityTest](#isrunninginstabilitytest)

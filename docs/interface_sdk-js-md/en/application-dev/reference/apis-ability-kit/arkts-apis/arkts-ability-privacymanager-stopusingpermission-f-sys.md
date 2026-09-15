@@ -65,6 +65,74 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit';
+
+let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // It can also be obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
+let pid: number = rpc.IPCSkeleton.getCallingPid();
+
+// without pid
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// with pid
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit';
+
+let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // It can also be obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
+let pid: number = rpc.IPCSkeleton.getCallingPid();
+
+// Without the pid parameter
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// With the pid parameter
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// With the extended identity ID
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, {enhancedIdentity: 'test'}).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // Obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
+// Stop using a specified permission
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('stopUsingPermission success');
+  }
+});
+```
+
 
 ## stopUsingPermission
 
@@ -107,20 +175,7 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // Obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
-// Stop using a specified permission
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('stopUsingPermission success');
-  }
-});
-```
+See [stopUsingPermission](#stopusingpermission)
 
 
 ## stopUsingPermission
@@ -177,35 +232,7 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-
-let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // It can also be obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
-let pid: number = rpc.IPCSkeleton.getCallingPid();
-
-// Without the pid parameter
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// With the pid parameter
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// With the extended identity ID
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, {enhancedIdentity: 'test'}).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [stopUsingPermission](#stopusingpermission)
 
 
 ## stopUsingPermission
@@ -259,25 +286,4 @@ The pid must be the same as the pid passed into [startUsingPermission](arkts-abi
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-
-let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // It can also be obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
-let pid: number = rpc.IPCSkeleton.getCallingPid();
-
-// without pid
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// with pid
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [stopUsingPermission](#stopusingpermission)

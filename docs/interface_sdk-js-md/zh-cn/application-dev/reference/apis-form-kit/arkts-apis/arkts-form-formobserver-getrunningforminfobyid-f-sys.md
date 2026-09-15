@@ -65,6 +65,58 @@ try {
 }
 ```
 
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId, true).then((data: formInfo.RunningFormInfo) => {
+    console.info(`formObserver getRunningFormInfoById success, formId: ${data.formId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId, (error: BusinessError, data: formInfo.RunningFormInfo) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let formId: string = '12400633174999288';
+try {
+  formObserver.getRunningFormInfoById(formId, true, (error: BusinessError, data: formInfo.RunningFormInfo) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## getRunningFormInfoById
 
@@ -110,21 +162,7 @@ function getRunningFormInfoById(formId: string, isUnusedIncluded: boolean): Prom
 
 **示例**
 
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId, true).then((data: formInfo.RunningFormInfo) => {
-    console.info(`formObserver getRunningFormInfoById success, formId: ${data.formId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [getRunningFormInfoById](#getrunningforminfobyid)
 
 
 ## getRunningFormInfoById
@@ -165,23 +203,7 @@ function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo
 
 **示例**
 
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId, (error: BusinessError, data: formInfo.RunningFormInfo) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [getRunningFormInfoById](#getrunningforminfobyid)
 
 
 ## getRunningFormInfoById
@@ -227,20 +249,4 @@ function getRunningFormInfoById(
 
 **示例**
 
-```TypeScript
-import { formInfo, formObserver } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let formId: string = '12400633174999288';
-try {
-  formObserver.getRunningFormInfoById(formId, true, (error: BusinessError, data: formInfo.RunningFormInfo) => {
-    if (error) {
-      console.error(`error, code: ${error.code}, message: ${error.message}`);
-    } else {
-      console.info(`formObserver getRunningFormInfoById, formId: ${data.formId}`);
-    }
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [getRunningFormInfoById](#getrunningforminfobyid)

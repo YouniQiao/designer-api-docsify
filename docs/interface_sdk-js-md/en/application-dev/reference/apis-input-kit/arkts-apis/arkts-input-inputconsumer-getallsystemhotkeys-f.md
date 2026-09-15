@@ -43,7 +43,7 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          // Obtains all system shortcut keys.
+          // Obtains all system hotkeys.
           inputConsumer.getAllSystemHotkeys().then((data: Array<inputConsumer.HotkeyOptions>) => {
             console.info(`Succeeded in getting list of system hotkeys: ${JSON.stringify(data)}.`);
           }).catch((error: BusinessError) => {

@@ -45,10 +45,10 @@ try {
     query.notEqualTo("field", "value1");
     query.and();
     query.notEqualTo("field", "value2");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -82,10 +82,10 @@ try {
     query.beginGroup();
     query.isNotNull("field");
     query.endGroup();
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -139,9 +139,9 @@ Creates a **Query** object with the device ID as the key prefix.
 try {
     let query = new distributedData.Query();
     query.deviceId("deviceId");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
 } catch (e) {
-    console.log("should be ok on Method Chaining : " + e);
+    console.error("should be ok on Method Chaining : " + e);
 }
 ```
 
@@ -175,10 +175,10 @@ try {
     query.beginGroup();
     query.isNotNull("field");
     query.endGroup();
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -217,10 +217,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.equalTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -252,9 +252,9 @@ Obtains the query statement of the **Query** object.
 try {
     let query = new distributedData.Query();
     let sql1 = query.getSqlLike();
-    console.log("GetSqlLike sql=" + sql1);
+    console.info("GetSqlLike sql=" + sql1);
 } catch (e) {
-    console.log("duplicated calls should be ok : " + e);
+    console.error("duplicated calls should be ok : " + e);
 }
 ```
 
@@ -293,10 +293,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.greaterThan("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -335,10 +335,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.greaterThanOrEqualTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -377,10 +377,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.inNumber("field", [0, 1]);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -419,10 +419,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.inString("field", ['test1', 'test2']);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -460,10 +460,10 @@ Creates a **Query** object to search for the records whose value is not **null**
 try {
     let query = new distributedData.Query();
     query.isNotNull("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -501,10 +501,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.isNull("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -543,10 +543,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.lessThan("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -585,10 +585,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.lessThanOrEqualTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -627,10 +627,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.like("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -672,10 +672,10 @@ try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
     query.limit(total, offset);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -714,10 +714,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -756,10 +756,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.notInNumber("field", [0, 1]);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -798,10 +798,10 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.notInString("field", ['test1', 'test2']);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -835,10 +835,10 @@ try {
     query.notEqualTo("field", "value1");
     query.or();
     query.notEqualTo("field", "value2");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -877,10 +877,10 @@ try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
     query.orderByAsc("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -919,10 +919,10 @@ try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
     query.orderByDesc("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -961,10 +961,10 @@ try {
     let query = new distributedData.Query();
     query.prefixKey("$.name");
     query.prefixKey("0");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -996,12 +996,12 @@ Resets the **Query** object.
 try {
     let query = new distributedData.Query();
     query.equalTo("key", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query.reset();
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("simply calls should be ok :" + e);
+    console.error("simply calls should be ok :" + e);
 }
 ```
 
@@ -1040,10 +1040,10 @@ try {
     let query = new distributedData.Query();
     query.setSuggestIndex("$.name");
     query.setSuggestIndex("0");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-   console.log("duplicated calls should be ok :" + e);
+   console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -1082,9 +1082,9 @@ Creates a **Query** object to search for the records with the specified field th
 try {
     let query = new distributedData.Query();
     query.unlike("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```

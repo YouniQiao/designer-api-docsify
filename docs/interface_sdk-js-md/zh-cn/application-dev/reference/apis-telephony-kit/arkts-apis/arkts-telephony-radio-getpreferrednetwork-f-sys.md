@@ -56,6 +56,17 @@ radio.getPreferredNetwork(slotId, (err: BusinessError, data: radio.PreferredNetw
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getPreferredNetwork(slotId).then((data: radio.PreferredNetworkMode) => {
+    console.info(`getPreferredNetwork success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getPreferredNetwork
 
@@ -99,13 +110,4 @@ Get the preferred network for the specified SIM card slot.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getPreferredNetwork(slotId).then((data: radio.PreferredNetworkMode) => {
-    console.info(`getPreferredNetwork success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getPreferredNetwork failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getPreferredNetwork](#getpreferrednetwork)

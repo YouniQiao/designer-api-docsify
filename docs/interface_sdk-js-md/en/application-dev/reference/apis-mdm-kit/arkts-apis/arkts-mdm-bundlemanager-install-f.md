@@ -104,3 +104,49 @@ bundleManager.install(wantTemp, hapFilePaths, installParam).then(() => {
   console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+
+bundleManager.install(wantTemp, hapFilePaths, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let hapFilePaths: Array<string> = ['/data/storage/el2/base/haps/entry/testinstall/ExtensionTest.hap'];
+let installParam: bundleManager.InstallParam = {
+  userId: 100,
+  installFlag: 1,
+};
+
+bundleManager.install(wantTemp, hapFilePaths, installParam, (err) => {
+  if (err) {
+    console.error(`Failed to install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in installing bundles');
+});
+```

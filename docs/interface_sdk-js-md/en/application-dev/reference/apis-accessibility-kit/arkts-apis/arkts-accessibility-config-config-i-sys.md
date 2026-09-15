@@ -54,6 +54,19 @@ config.highContrastText.get().then((data: boolean) => {
 });
 ```
 
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+config.highContrastText.get((err: BusinessError, data: boolean) => {
+  if (err) {
+    console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting highContrastText, data is ${data}`);
+});
+```
+
 ## get
 
 ```TypeScript
@@ -82,18 +95,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 **Examples**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-config.highContrastText.get((err: BusinessError, data: boolean) => {
-  if (err) {
-    console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting highContrastText, data is ${data}`);
-});
-```
+See [get](#get)
 
 ## off
 
@@ -229,6 +231,21 @@ config.highContrastText.set(value).then(() => {
 });
 ```
 
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value: boolean = true;
+
+config.highContrastText.set(value, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in setting highContrastText, value is ${value}`);
+});
+```
+
 ## set
 
 ```TypeScript
@@ -262,17 +279,4 @@ Sets the property value. This API uses an asynchronous callback to return the re
 
 **Examples**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value: boolean = true;
-
-config.highContrastText.set(value, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in setting highContrastText, value is ${value}`);
-});
-```
+See [set](#set)

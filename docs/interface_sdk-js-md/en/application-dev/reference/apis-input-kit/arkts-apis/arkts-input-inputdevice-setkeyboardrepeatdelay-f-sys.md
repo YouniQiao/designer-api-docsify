@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the key repeat delay to 350 ms
+            inputDevice.setKeyboardRepeatDelay(350).then(() => {
+              console.info(`Succeeded in setting keyboard repeat delay.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setKeyboardRepeatDelay
 
@@ -101,29 +128,4 @@ Sets the keyboard repeat delay. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Set the key repeat delay to 350 ms
-            inputDevice.setKeyboardRepeatDelay(350).then(() => {
-              console.info(`Succeeded in setting keyboard repeat delay.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setKeyboardRepeatDelay](#setkeyboardrepeatdelay)

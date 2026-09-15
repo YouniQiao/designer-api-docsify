@@ -55,6 +55,17 @@ data.isCellularDataRoamingEnabled(0, (err: BusinessError, contextData: boolean) 
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
+    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isCellularDataRoamingEnabled
 
@@ -97,13 +108,4 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataRoamingEnabled(0).then((contextData: boolean) => {
-    console.info(`isCellularDataRoamingEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataRoamingEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isCellularDataRoamingEnabled](#iscellulardataroamingenabled)

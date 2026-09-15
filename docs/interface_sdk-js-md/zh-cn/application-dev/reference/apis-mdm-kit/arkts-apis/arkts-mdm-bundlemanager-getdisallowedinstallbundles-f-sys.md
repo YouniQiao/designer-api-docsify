@@ -66,6 +66,43 @@ bundleManager.getDisallowedInstallBundles(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.getDisallowedInstallBundles(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to get disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting disallowed install bundles, result : ${JSON.stringify(result)}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.getDisallowedInstallBundles(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in getting disallowed install bundles, result : ${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDisallowedInstallBundles
 
@@ -109,24 +146,7 @@ function getDisallowedInstallBundles(admin: Want, userId: number, callback: Asyn
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedInstallBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed install bundles, result : ${JSON.stringify(result)}`);
-});
-```
+参见 [getDisallowedInstallBundles](#getdisallowedinstallbundles)
 
 
 ## getDisallowedInstallBundles
@@ -176,20 +196,4 @@ function getDisallowedInstallBundles(admin: Want, userId?: number): Promise<Arra
 
 **示例**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedInstallBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed install bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getDisallowedInstallBundles](#getdisallowedinstallbundles)

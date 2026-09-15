@@ -54,7 +54,7 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let remoteObject = new TestRemoteObject("aaa");
+  let remoteObject = new TestRemoteObject('aaa');
   rpc.IPCSkeleton.flushCmdBuffer(remoteObject);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -108,7 +108,7 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let remoteObject = new TestRemoteObject("aaa");
+  let remoteObject = new TestRemoteObject('aaa');
   let ret = rpc.IPCSkeleton.flushCommands(remoteObject);
   hilog.info(0x0000, 'testTag', 'RpcServer: flushCommands result: ' + ret);
 } catch (error) {

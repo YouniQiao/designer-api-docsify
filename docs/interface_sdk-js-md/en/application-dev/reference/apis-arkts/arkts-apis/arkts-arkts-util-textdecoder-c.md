@@ -35,6 +35,10 @@ console.info('retStr = ' + retStr);
 // Output: retStr = utf-8
 ```
 
+```TypeScript
+let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});
+```
+
 ## constructor
 
 ```TypeScript
@@ -59,6 +63,13 @@ A constructor used to create a **TextDecoder** object.
 | options | { fatal?: boolean; ignoreBOM?: boolean } | No | Decoding-related options, which include **fatal** and **ignoreBOM**. |
 
 **Examples**
+
+```TypeScript
+let textDecoder = new util.TextDecoder();
+let retStr = textDecoder.encoding;
+console.info('retStr = ' + retStr);
+// Output: retStr = utf-8
+```
 
 ```TypeScript
 let textDecoder = new util.TextDecoder("utf-8",{ignoreBOM: true});

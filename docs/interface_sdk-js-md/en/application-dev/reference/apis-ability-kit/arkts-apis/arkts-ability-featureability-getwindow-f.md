@@ -43,6 +43,19 @@ featureAbility.getWindow((error: BusinessError, data: window.Window) => {
 });
 ```
 
+```TypeScript
+import { featureAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Get the window corresponding to the current Ability.
+featureAbility.getWindow().then((data: window.Window) => {
+  console.info(`getWindow success, data: ${typeof(data)}`);
+}).catch((error: BusinessError)=>{
+  console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## getWindow
 
@@ -66,15 +79,4 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Get the window corresponding to the current Ability.
-featureAbility.getWindow().then((data: window.Window) => {
-  console.info(`getWindow success, data: ${typeof(data)}`);
-}).catch((error: BusinessError)=>{
-  console.error(`getWindow fail, error: ${JSON.stringify(error)}`);
-});
-```
+See [getWindow](#getwindow)

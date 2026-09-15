@@ -57,6 +57,29 @@ function createCameraPromise(): Promise<Camera> {
 }
 ```
 
+```TypeScript
+import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
+  RenderingPipelineType } from '@kit.ArkGraphics3D';
+
+function createCameraPromise(): Promise<Camera> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let nodeParameter: SceneNodeParameters = { name: "camera1" };
+      let camParameter: CameraParameters = {renderingPipeline: RenderingPipelineType.FORWARD};
+      // Create a camera.
+      let camera: Camera = await sceneFactory.createCamera(nodeParameter, camParameter);
+      resolve(camera);
+    }).catch((err: Error) => {
+      console.error(`Failed to load scene. Message: ${err.message}`);
+      reject(err);
+    });
+  });
+}
+```
+
 ## createCamera
 
 ```TypeScript
@@ -84,28 +107,7 @@ Creates a camera based on scene node parameters and camera parameters. This API 
 
 **Examples**
 
-```TypeScript
-import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
-  RenderingPipelineType } from '@kit.ArkGraphics3D';
-
-function createCameraPromise(): Promise<Camera> {
-  return new Promise((resolve, reject) => {
-    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
-    scene.then(async (result: Scene) => {
-      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
-      let nodeParameter: SceneNodeParameters = { name: "camera1" };
-      let camParameter: CameraParameters = {renderingPipeline: RenderingPipelineType.FORWARD};
-      // Create a camera.
-      let camera: Camera = await sceneFactory.createCamera(nodeParameter, camParameter);
-      resolve(camera);
-    }).catch((err: Error) => {
-      console.error(`Failed to load scene. Message: ${err.message}`);
-      reject(err);
-    });
-  });
-}
-```
+See [createCamera](#createcamera)
 
 ## createEffect
 

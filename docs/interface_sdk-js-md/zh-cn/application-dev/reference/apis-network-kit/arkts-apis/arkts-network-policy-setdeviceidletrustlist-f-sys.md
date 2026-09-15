@@ -51,6 +51,17 @@ policy.setDeviceIdleTrustlist([11111, 22222], true, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.setDeviceIdleTrustlist([11111, 22222], true).then(() => {
+    console.info('setDeviceIdleTrustlist success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## setDeviceIdleTrustlist
 
@@ -94,13 +105,4 @@ function setDeviceIdleTrustlist(uids: Array<number>, isAllowed: boolean): Promis
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setDeviceIdleTrustlist([11111, 22222], true).then(() => {
-    console.info('setDeviceIdleTrustlist success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [setDeviceIdleTrustlist](#setdeviceidletrustlist)

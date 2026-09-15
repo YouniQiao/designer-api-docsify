@@ -205,6 +205,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// promise
+try {
+    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+    gattClient.connect();
+    let deviceName = gattClient.getDeviceName().then((data) => {
+        console.info('device name' + JSON.stringify(data));
+    })
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## getDeviceName
 
 ```TypeScript
@@ -245,19 +259,7 @@ client获取远端蓝牙低功耗设备名。
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// promise
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.connect();
-    let deviceName = gattClient.getDeviceName().then((data) => {
-        console.info('device name' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+参见 [getDeviceName](#getdevicename)
 
 ## getRssiValue
 
@@ -313,6 +315,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// promise
+try {
+    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+    let rssi = gattClient.getRssiValue().then((data: number) => {
+        console.info('rssi' + JSON.stringify(data));
+    })
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## getRssiValue
 
 ```TypeScript
@@ -352,18 +367,7 @@ client获取远端蓝牙低功耗设备的信号强度 (Received Signal Strength
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// promise
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    let rssi = gattClient.getRssiValue().then((data: number) => {
-        console.info('rssi' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+参见 [getRssiValue](#getrssivalue)
 
 ## getServices
 
@@ -429,6 +433,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// Promise 模式
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.connect();
+    device.getServices().then(result => {
+        console.info("getServices successfully:" + JSON.stringify(result));
+    });
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## getServices
 
 ```TypeScript
@@ -469,19 +487,7 @@ client端获取蓝牙低功耗设备的所有服务，即服务发现。
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// Promise 模式
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.connect();
-    device.getServices().then(result => {
-        console.info("getServices successfully:" + JSON.stringify(result));
-    });
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+参见 [getServices](#getservices)
 
 ## off('BLECharacteristicChange')
 
@@ -519,18 +525,6 @@ off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): vo
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLECharacteristicChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -566,18 +560,6 @@ off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLEConnectionStateChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## on('BLECharacteristicChange')
 
@@ -615,23 +597,6 @@ on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-function CharacteristicChange(characteristicChangeReq: ble.BLECharacteristic) {
-    let serviceUuid: string = characteristicChangeReq.serviceUuid;
-    let characteristicUuid: string = characteristicChangeReq.characteristicUuid;
-    let value: Uint8Array = new Uint8Array(characteristicChangeReq.characteristicValue);
-}
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLECharacteristicChange', CharacteristicChange);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -667,22 +632,6 @@ client端订阅蓝牙低功耗设备的连接状态变化事件。
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function ConnectStateChanged(state: bluetoothManager.BLEConnectChangedState) {
-    console.info('bluetooth connect state changed');
-    let connectState: bluetoothManager.ProfileConnectionState = state.state;
-}
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLEConnectionStateChange', ConnectStateChanged);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## readCharacteristicValue
 
@@ -761,6 +710,32 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    characteristicValue: bufferCCC, descriptors:descriptors};
+
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readCharacteristicValue(characteristic);
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -808,31 +783,7 @@ client端读取蓝牙低功耗设备特定服务的特征值。
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: bufferCCC, descriptors:descriptors};
-
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readCharacteristicValue(characteristic);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+参见 [readCharacteristicValue](#readcharacteristicvalue)
 
 ## readDescriptorValue
 
@@ -903,6 +854,25 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor: bluetoothManager.BLEDescriptor = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
+    descriptorValue: bufferDesc
+};
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readDescriptorValue(descriptor);
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## readDescriptorValue
 
 ```TypeScript
@@ -950,24 +920,7 @@ client端读取蓝牙低功耗设备特定的特征包含的描述符。
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readDescriptorValue(descriptor);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+参见 [readDescriptorValue](#readdescriptorvalue)
 
 ## setBLEMtuSize
 

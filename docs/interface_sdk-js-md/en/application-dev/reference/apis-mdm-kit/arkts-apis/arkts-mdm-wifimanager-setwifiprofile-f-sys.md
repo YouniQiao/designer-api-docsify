@@ -73,6 +73,30 @@ wifiManager.setWifiProfile(wantTemp, profile, (err) => {
 });
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let profile: wifiManager.WifiProfile = {
+  // Replace with actual values.
+  'ssid': 'name',
+  'preSharedKey': 'passwd',
+  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
+};
+
+wifiManager.setWifiProfile(wantTemp, profile).then(() => {
+  console.info('Succeeded in setting wifi profile');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setWifiProfile
 
@@ -121,26 +145,4 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let profile: wifiManager.WifiProfile = {
-  // Replace with actual values.
-  'ssid': 'name',
-  'preSharedKey': 'passwd',
-  'securityType': wifiManager.WifiSecurityType.WIFI_SEC_TYPE_PSK
-};
-
-wifiManager.setWifiProfile(wantTemp, profile).then(() => {
-  console.info('Succeeded in setting wifi profile');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set wifi profile. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setWifiProfile](#setwifiprofile)

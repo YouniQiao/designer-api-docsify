@@ -41,8 +41,7 @@ Injects a touch event.
 **Examples**
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
-import { Touch, TouchEvent } from '@kit.InputKit';
+import { inputEventClient, Touch, TouchEvent } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry

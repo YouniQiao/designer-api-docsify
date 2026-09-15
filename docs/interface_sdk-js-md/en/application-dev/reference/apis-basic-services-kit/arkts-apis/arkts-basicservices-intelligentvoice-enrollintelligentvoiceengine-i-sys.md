@@ -60,6 +60,18 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).commit().then(() => {
+    console.info(`Succeeded in committing enroll.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to commit enroll, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## commit
 
 ```TypeScript
@@ -92,17 +104,7 @@ Commit enroll, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).commit().then(() => {
-    console.info(`Succeeded in committing enroll.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to commit enroll, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [commit](#commit)
 
 ## enrollForResult
 
@@ -154,6 +156,20 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackInfo: intelligentVoice.EnrollCallbackInfo | null = null;
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).enrollForResult(true).then((data: intelligentVoice.EnrollCallbackInfo) => {
+    callbackInfo = data;
+    console.info(`Succeeded in enrolling for result, info:${callbackInfo}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to enroll for result, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## enrollForResult
 
 ```TypeScript
@@ -193,19 +209,7 @@ Enrolls for result, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let callbackInfo: intelligentVoice.EnrollCallbackInfo | null = null;
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).enrollForResult(true).then((data: intelligentVoice.EnrollCallbackInfo) => {
-    callbackInfo = data;
-    console.info(`Succeeded in enrolling for result, info:${callbackInfo}.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to enroll for result, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [enrollForResult](#enrollforresult)
 
 ## evaluateForResult
 
@@ -309,6 +313,19 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key').then((data: string) => {
+    let param: string = data;
+    console.info(`Succeeded in getting parameter, param:${param}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## getParameter
 
 ```TypeScript
@@ -347,6 +364,21 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getParameter('key', (err: BusinessError, data: string) => {
+    if (err) {
+      console.error(`Failed to get parameter, Code:${err.code}, message:${err.message}`);
+    } else {
+      let param: string = data;
+      console.info(`Succeeded in getting parameter, param:${param}`);
+    }
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -409,6 +441,20 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let regions: Array<string> | null = null;
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getSupportedRegions().then((data: Array<string>) => {
+    regions = data;
+    console.info(`Succeeded in getting supported regions, regions:${regions}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## getSupportedRegions
 
 ```TypeScript
@@ -439,6 +485,23 @@ Obtains the supported regions, This method uses a promise to return the query re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let regions: Array<string> | null = null;
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).getSupportedRegions((err: BusinessError, data: Array<string>) => {
+    if (err) {
+      console.error(`Failed to get supported regions, Code:${err.code}, message:${err.message}`);
+    } else {
+      regions = data;
+      console.info(`Succeeded in getting supported regions, regions:${regions}.`);
+    }
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -507,6 +570,22 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config: intelligentVoice.EnrollEngineConfig = {
+  language: 'zh',
+  region: 'CN',
+}
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).init(config).then(() => {
+    console.info(`Succeeded in initializing enrollIntelligentVoice engine.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to initialize enrollIntelligentVoice engine. Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## init
 
 ```TypeScript
@@ -547,21 +626,7 @@ Initials the engine, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let config: intelligentVoice.EnrollEngineConfig = {
-  language: 'zh',
-  region: 'CN',
-}
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).init(config).then(() => {
-    console.info(`Succeeded in initializing enrollIntelligentVoice engine.`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to initialize enrollIntelligentVoice engine. Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [init](#init)
 
 ## release
 
@@ -608,6 +673,18 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).release().then(() => {
+    console.info(`Succeeded in releasing enrollIntelligentVoice engine.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to release enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## release
 
 ```TypeScript
@@ -638,6 +715,20 @@ Releases the engine, This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).release((err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to release enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in releasing enrollIntelligentVoice engine.`);
+    }
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -700,6 +791,18 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0').then(() => {
+    console.info(`Succeeded in setting parameter`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## setParameter
 
 ```TypeScript
@@ -739,6 +842,20 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setParameter('scene', '0', (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to set parameter, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in setting parameter`);
+    }
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -800,6 +917,18 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY).then(() => {
+    console.info(`Succeeded in setting sensibility.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## setSensibility
 
 ```TypeScript
@@ -838,6 +967,20 @@ Sets sensibility, This method uses a promise to return the result.
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setSensibility(intelligentVoice.SensibilityType.LOW_SENSIBILITY, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to set sensibility, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in setting sensibility.`);
+    }
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -903,6 +1046,22 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info: intelligentVoice.WakeupHapInfo = {
+  bundleName: 'com.wakeup',
+  abilityName: 'WakeUpExtAbility',
+}
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setWakeupHapInfo(info).then(() => {
+    console.info(`Succeeded in setting wakeup hap info.`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## setWakeupHapInfo
 
 ```TypeScript
@@ -941,6 +1100,24 @@ Sets wakeup hap information, This method uses a promise to return the result.
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info: intelligentVoice.WakeupHapInfo = {
+  bundleName: 'com.wakeup',
+  abilityName: 'WakeUpExtAbility',
+}
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).setWakeupHapInfo(info, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to set wakeup hap info, Code:${err.code}, message:${err.message}`);
+    } else {
+      console.info(`Succeeded in setting wakeup hap info.`);
+    }
+  });
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1003,6 +1180,18 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+if (enrollIntelligentVoiceEngine != null) {
+  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).stop().then(() => {
+    console.info(`Succeeded in stopping enrollIntelligentVoice engine.`);
+  }).catch((err:BusinessError) => {
+    console.error(`Failed to stop enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
+  });
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -1034,14 +1223,4 @@ Stops the engine, This method uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-if (enrollIntelligentVoiceEngine != null) {
-  (enrollIntelligentVoiceEngine as intelligentVoice.EnrollIntelligentVoiceEngine).stop().then(() => {
-    console.info(`Succeeded in stopping enrollIntelligentVoice engine.`);
-  }).catch((err:BusinessError) => {
-    console.error(`Failed to stop enrollIntelligentVoice engine, Code:${err.code}, message:${err.message}`);
-  });
-}
-```
+See [stop](#stop)

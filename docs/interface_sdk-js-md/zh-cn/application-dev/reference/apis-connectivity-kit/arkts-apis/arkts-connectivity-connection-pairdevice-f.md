@@ -58,6 +58,40 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    connection.pairDevice('11:22:33:44:55:66').then(() => {
+        console.info('pairDevice');
+    }, (error: BusinessError) => {
+        console.error('pairDevice: errCode:' + error.code + ',errMessage' + error.message);
+    })
+
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.ConnectivityKit';
+// promise
+try {
+    let btAddr: common.BluetoothAddress = {
+        "address": '11:22:33:44:55:66', // 目标设备的实际MAC地址或虚拟MAC地址
+        "addressType": common.BluetoothAddressType.REAL, // 相应的地址类型
+    }
+    connection.pairDevice(btAddr).then(() => {
+        console.info('pairDevice');
+    }, (error: BusinessError) => {
+        console.error('errCode: ' + error.code + ', errMessage' + error.message);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 
 ## pairDevice
 
@@ -104,20 +138,7 @@ function pairDevice(deviceId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.pairDevice('11:22:33:44:55:66').then(() => {
-        console.info('pairDevice');
-    }, (error: BusinessError) => {
-        console.error('pairDevice: errCode:' + error.code + ',errMessage' + error.message);
-    })
-
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [pairDevice](#pairdevice)
 
 
 ## pairDevice
@@ -162,21 +183,4 @@ function pairDevice(deviceId: BluetoothAddress): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.ConnectivityKit';
-// promise
-try {
-    let btAddr: common.BluetoothAddress = {
-        "address": '11:22:33:44:55:66', // 目标设备的实际MAC地址或虚拟MAC地址
-        "addressType": common.BluetoothAddressType.REAL, // 相应的地址类型
-    }
-    connection.pairDevice(btAddr).then(() => {
-        console.info('pairDevice');
-    }, (error: BusinessError) => {
-        console.error('errCode: ' + error.code + ', errMessage' + error.message);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [pairDevice](#pairdevice)

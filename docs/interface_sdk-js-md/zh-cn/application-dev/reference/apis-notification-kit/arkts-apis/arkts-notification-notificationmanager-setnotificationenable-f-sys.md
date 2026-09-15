@@ -60,6 +60,19 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: 'bundleName1',
+};
+notificationManager.setNotificationEnable(bundle, false).then(() => {
+    console.info('setNotificationEnable success');
+}).catch((err: BusinessError) => {
+    console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setNotificationEnable
 
@@ -104,15 +117,4 @@ function setNotificationEnable(bundle: BundleOption, enable: boolean): Promise<v
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: 'bundleName1',
-};
-notificationManager.setNotificationEnable(bundle, false).then(() => {
-    console.info('setNotificationEnable success');
-}).catch((err: BusinessError) => {
-    console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [setNotificationEnable](#setnotificationenable)

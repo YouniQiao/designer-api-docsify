@@ -54,6 +54,19 @@ config.highContrastText.get().then((data: boolean) => {
 });
 ```
 
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+config.highContrastText.get((err: BusinessError, data: boolean) => {
+  if (err) {
+    console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting highContrastText, data is ${data}`);
+});
+```
+
 ## get
 
 ```TypeScript
@@ -82,18 +95,7 @@ get(callback: AsyncCallback<T>): void
 
 **示例**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-config.highContrastText.get((err: BusinessError, data: boolean) => {
-  if (err) {
-    console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting highContrastText, data is ${data}`);
-});
-```
+参见 [get](#get)
 
 ## off
 
@@ -229,6 +231,21 @@ config.highContrastText.set(value).then(() => {
 });
 ```
 
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let value: boolean = true;
+
+config.highContrastText.set(value, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in setting highContrastText, value is ${value}`);
+});
+```
+
 ## set
 
 ```TypeScript
@@ -262,17 +279,4 @@ set(value: T, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let value: boolean = true;
-
-config.highContrastText.set(value, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in setting highContrastText, value is ${value}`);
-});
-```
+参见 [set](#set)

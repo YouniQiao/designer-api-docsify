@@ -54,6 +54,19 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    kvStore.commit().then(async (err) => {
+        console.info('commit success');
+    }).catch((err) => {
+        console.error('commit fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('Commit e ' + e);
+}
+```
+
 ## commit
 
 ```TypeScript
@@ -78,18 +91,7 @@ commit(): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.commit().then(async (err) => {
-        console.info('commit success');
-    }).catch((err) => {
-        console.error('commit fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('Commit e ' + e);
-}
-```
+参见 [commit](#commit)
 
 ## delete
 
@@ -140,6 +142,26 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
+        console.info("put success: " + JSON.stringify(data));
+        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
+            console.info("delete success");
+        }).catch((err) => {
+            console.error("delete err: " + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error("put err: " + JSON.stringify(err));
+    });
+}catch (e) {
+    console.error("An unexpected error occurred. Error:" + e);
+}
+```
+
 ## delete
 
 ```TypeScript
@@ -170,25 +192,7 @@ delete(key: string): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.info("put success: " + JSON.stringify(data));
-        kvStore.delete(KEY_TEST_STRING_ELEMENT).then((data) => {
-            console.info("delete success");
-        }).catch((err) => {
-            console.error("delete err: " + JSON.stringify(err));
-        });
-    }).catch((err) => {
-        console.error("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.error("An unexpected error occurred. Error:" + e);
-}
-```
+参见 [delete](#delete)
 
 ## deleteBatch
 
@@ -244,36 +248,6 @@ try {
 }
 ```
 
-## deleteBatch
-
-```TypeScript
-deleteBatch(keys: string[]): Promise<void>
-```
-
-批量删除KVStore数据库中的键值对，使用Promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** deleteBatch
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| keys | string[] | 是 | 表示要批量删除的键值对。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
 ```TypeScript
 let kvStore;
 try {
@@ -306,6 +280,38 @@ try {
     console.error('DeleteBatch e ' + e);
 }
 ```
+
+## deleteBatch
+
+```TypeScript
+deleteBatch(keys: string[]): Promise<void>
+```
+
+批量删除KVStore数据库中的键值对，使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** deleteBatch
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| keys | string[] | 是 | 表示要批量删除的键值对。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [deleteBatch](#deletebatch)
 
 ## enableSync
 
@@ -347,6 +353,19 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    kvStore.enableSync(true).then((err) => {
+        console.info('enableSync success');
+    }).catch((err) => {
+        console.error('enableSync fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('EnableSync e ' + e);
+}
+```
+
 ## enableSync
 
 ```TypeScript
@@ -377,18 +396,7 @@ enableSync(enabled: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.enableSync(true).then((err) => {
-        console.info('enableSync success');
-    }).catch((err) => {
-        console.error('enableSync fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('EnableSync e ' + e);
-}
-```
+参见 [enableSync](#enablesync)
 
 ## off
 
@@ -413,27 +421,6 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 | event | 'dataChange' | 是 | 取消订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.info("dataChange: " + data);
-    }
-    subscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_REMOTE, this.call);
-        }
-    }
-    unsubscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.off('dataChange', this.call);
-        }
-    }
-}
-```
-
 ## off
 
 ```TypeScript
@@ -456,27 +443,6 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 取消订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 否 | 取消订阅的函数。如不设置callback，则取消所有订阅的函数。 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.info("syncComplete: " + data);
-    }
-    subscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.on('syncComplete', this.call);
-        }
-    }
-    unsubscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.off('syncComplete', this.call);
-        }
-    }
-}
-```
 
 ## on
 
@@ -502,15 +468,6 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | 是 | 表示订阅的类型。 |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | 是 | 回调函数。 |
 
-**示例**
-
-```TypeScript
-let kvStore;
-kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, function (data) {
-    console.info("dataChange callback call data: " + JSON.stringify(data));
-});
-```
-
 ## on
 
 ```TypeScript
@@ -533,15 +490,6 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 | --- | --- | --- | --- |
 | event | 'syncComplete' | 是 | 订阅的事件名，固定为'syncComplete'，表示同步完成事件。 |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
-
-**示例**
-
-```TypeScript
-let kvStore;
-kvStore.on('syncComplete', function (data) {
-    console.info("callback call data: " + data);
-});
-```
 
 ## put
 
@@ -586,6 +534,21 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
+        console.info("put success: " + JSON.stringify(data));
+    }).catch((err) => {
+        console.error("put err: " + JSON.stringify(err));
+    });
+}catch (e) {
+    console.error("An unexpected error occurred. Error:" + e);
+}
+```
+
 ## put
 
 ```TypeScript
@@ -617,20 +580,7 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-const KEY_TEST_STRING_ELEMENT = 'key_test_string';
-const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
-try {
-    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((data) => {
-        console.info("put success: " + JSON.stringify(data));
-    }).catch((err) => {
-        console.error("put err: " + JSON.stringify(err));
-    });
-}catch (e) {
-    console.error("An unexpected error occurred. Error:" + e);
-}
-```
+参见 [put](#put)
 
 ## putBatch
 
@@ -686,36 +636,6 @@ try {
 }
 ```
 
-## putBatch
-
-```TypeScript
-putBatch(entries: Entry[]): Promise<void>
-```
-
-批量插入键值对到KVStore数据库中，使用Promise异步回调。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** putBatch
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**示例**
-
 ```TypeScript
 let kvStore;
 try {
@@ -747,6 +667,38 @@ try {
     console.error('PutBatch e ' + JSON.stringify(e));
 }
 ```
+
+## putBatch
+
+```TypeScript
+putBatch(entries: Entry[]): Promise<void>
+```
+
+批量插入键值对到KVStore数据库中，使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** putBatch
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**示例**
+
+参见 [putBatch](#putbatch)
 
 ## rollback
 
@@ -787,6 +739,19 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    kvStore.rollback().then(async (err) => {
+        console.info('rollback success');
+    }).catch((err) => {
+        console.error('rollback fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('Rollback e ' + e);
+}
+```
+
 ## rollback
 
 ```TypeScript
@@ -811,18 +776,7 @@ rollback(): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    kvStore.rollback().then(async (err) => {
-        console.info('rollback success');
-    }).catch((err) => {
-        console.error('rollback fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('Rollback e ' + e);
-}
-```
+参见 [rollback](#rollback)
 
 ## setSyncRange
 
@@ -863,6 +817,21 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    const localLabels = ['A', 'B'];
+    const remoteSupportLabels = ['C', 'D'];
+    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
+        console.info('setSyncRange success');
+    }).catch((err) => {
+        console.error('delete fail ' + err);
+    });
+}catch(e) {
+    console.error('SetSyncRange e ' + e);
+}
+```
+
 ## setSyncRange
 
 ```TypeScript
@@ -894,20 +863,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    const localLabels = ['A', 'B'];
-    const remoteSupportLabels = ['C', 'D'];
-    kvStore.setSyncRange(localLabels, remoteSupportLabels).then((err) => {
-        console.info('setSyncRange success');
-    }).catch((err) => {
-        console.error('delete fail ' + err);
-    });
-}catch(e) {
-    console.error('SetSyncRange e ' + e);
-}
-```
+参见 [setSyncRange](#setsyncrange)
 
 ## startTransaction
 
@@ -968,6 +924,24 @@ try {
 }
 ```
 
+```TypeScript
+let kvStore;
+try {
+    var count = 0;
+    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
+        console.info('startTransaction ' + JSON.stringify(data));
+        count++;
+    });
+    kvStore.startTransaction().then(async (err) => {
+        console.info('startTransaction success');
+    }).catch((err) => {
+        console.error('startTransaction fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('startTransaction e ' + e);
+}
+```
+
 ## startTransaction
 
 ```TypeScript
@@ -992,20 +966,4 @@ startTransaction(): Promise<void>
 
 **示例**
 
-```TypeScript
-let kvStore;
-try {
-    var count = 0;
-    kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_ALL, function (data) {
-        console.info('startTransaction ' + JSON.stringify(data));
-        count++;
-    });
-    kvStore.startTransaction().then(async (err) => {
-        console.info('startTransaction success');
-    }).catch((err) => {
-        console.error('startTransaction fail ' + JSON.stringify(err));
-    });
-}catch(e) {
-    console.error('startTransaction e ' + e);
-}
-```
+参见 [startTransaction](#starttransaction)

@@ -41,6 +41,16 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (
 });
 ```
 
+```TypeScript
+runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)
+.then((data: boolean) => {
+    console.info('BACKGROUND lock support status: ' + data);
+})
+.catch((err: Error) => {
+    console.error('check BACKGROUND lock support status failed, err: ' + err);
+});
+```
+
 
 ## isRunningLockTypeSupported
 
@@ -72,12 +82,4 @@ Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock
 
 **Examples**
 
-```TypeScript
-runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)
-.then((data: boolean) => {
-    console.info('BACKGROUND lock support status: ' + data);
-})
-.catch((err: Error) => {
-    console.error('check BACKGROUND lock support status failed, err: ' + err);
-});
-```
+See [isRunningLockTypeSupported](#isrunninglocktypesupported)

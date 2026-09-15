@@ -54,6 +54,41 @@ Navigates to a page using the named route. This API uses a promise to return the
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message', [123, 456, 789])
+})
+  .then(() => {
+    console.info(`pushNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
 class InnerParams {
   data3: number[];
 
@@ -76,6 +111,74 @@ router.pushNamedRoute({
   name: 'myPage',
   params: new RouterParams('message', [123, 456, 789])
 }, (err) => {
+  if (err) {
+    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('pushNamedRoute success');
+})
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message', [123, 456, 789])
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`pushNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message', [123, 456, 789])
+}, router.RouterMode.Standard, (err) => {
   if (err) {
     console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
     return;
@@ -135,40 +238,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-})
-  .then(() => {
-    console.info(`pushNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+See [pushNamedRoute](#pushnamedroute)
 
 
 ## pushNamedRoute
@@ -217,38 +287,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushNamedRoute success');
-})
-```
+See [pushNamedRoute](#pushnamedroute)
 
 
 ## pushNamedRoute
@@ -302,37 +341,4 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`pushNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+See [pushNamedRoute](#pushnamedroute)

@@ -60,6 +60,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetNetworkId = "networkId";
+let inputDeviceId = 0;
+try {
+  cooperate.activate(targetNetworkId, inputDeviceId).then(() => {
+    console.info(`Start Keyboard mouse crossing success.`);
+  }, (error: BusinessError) => {
+    console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## activate
 
@@ -102,18 +118,4 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNetworkId = "networkId";
-let inputDeviceId = 0;
-try {
-  cooperate.activate(targetNetworkId, inputDeviceId).then(() => {
-    console.info(`Start Keyboard mouse crossing success.`);
-  }, (error: BusinessError) => {
-    console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+See [activate](#activate)

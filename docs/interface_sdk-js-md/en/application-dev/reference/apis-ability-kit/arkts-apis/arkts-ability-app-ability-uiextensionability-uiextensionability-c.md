@@ -94,46 +94,12 @@ Called when a UIExtensionAbility is destroyed. You can clear resources and save 
 
 **Examples**
 
-A synchronous callback example is as follows:
-
 ```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onDestroy() {
-    console.info(TAG, `onDestroy`);
-  }
-}
+A synchronous callback example is as follows:
 ```
 
-An asynchronous callback example is as follows:
-
 ```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // Use the async/await syntax to implement an asynchronous callback. The async keyword declares that onDestroy is an asynchronous function.
-  async onDestroy(): Promise<void> {
-    console.info(TAG, `onDestroy begin`);
-    try {
-      const result: string = await new Promise((resolve: Function) => {
-        setTimeout(() => {
-          resolve('Hello, world!');
-        }, 3000);
-      });
-      console.info(TAG, result); // result is 'Hello, world!'
-    } catch (e) {
-      console.error(TAG, `Get exception: ${e}`);
-    }
-    console.info(TAG, `onDestroy end`);
-  }
-}
+An asynchronous callback example is as follows:
 ```
 
 ## onForeground

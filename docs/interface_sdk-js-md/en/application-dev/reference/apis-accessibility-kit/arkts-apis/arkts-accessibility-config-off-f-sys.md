@@ -37,18 +37,6 @@ Cancels the listener for changes in the list of enabled accessibility extensions
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-let callback = () => {
-  console.info('subscribe enabled accessibility extension list change state success');
-};
-config.on('enabledAccessibilityExtensionListChange', callback);
-config.off('enabledAccessibilityExtensionListChange', callback);
-```
-
 
 ## off('installedAccessibilityListChange')
 
@@ -80,15 +68,3 @@ Cancels the listener for changes in the list of installed accessibility extensio
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-let callback = () => {
-  console.info('subscribe installed accessibility extension list change state success');
-};
-config.on('installedAccessibilityListChange', callback);
-config.off('installedAccessibilityListChange', callback);
-```

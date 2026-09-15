@@ -44,6 +44,13 @@ geolocation.getCachedGnssLocationsSize((err, size) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getCachedGnssLocationsSize().then((result) => {
+    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
+});
+```
+
 
 ## getCachedGnssLocationsSize
 
@@ -71,9 +78,4 @@ function getCachedGnssLocationsSize(): Promise<number>
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getCachedGnssLocationsSize().then((result) => {
-    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
-});
-```
+参见 [getCachedGnssLocationsSize](#getcachedgnsslocationssize)

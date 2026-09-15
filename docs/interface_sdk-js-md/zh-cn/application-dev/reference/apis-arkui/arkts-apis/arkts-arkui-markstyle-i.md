@@ -1,10 +1,8 @@
 # MarkStyle
 
-Define the style of checkbox mark.
+定义checkbox标记的样式。
 
-@interface MarkStyle
-
-**起始版本：** 11
+**起始版本：** 10
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,11 +12,13 @@ Define the style of checkbox mark.
 size?: Length
 ```
 
-Define the size of checkbox mark.
+内部图标大小，单位vp。默认大小与多选框组件宽度相同。
+
+不支持百分比形式设置。设置为非法值时，按照默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
-**起始版本：** 11
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,11 +32,11 @@ Define the size of checkbox mark.
 strokeColor?: ResourceColor
 ```
 
-Define the stroke color of checkbox mark.
+内部图标颜色。默认值：Color.White
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
-**起始版本：** 11
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +50,11 @@ Define the stroke color of checkbox mark.
 strokeWidth?: Length
 ```
 
-Define the stroke width of checkbox mark.
+内部图标粗细，单位vp。不支持设置百分比。设置为非法值时，按照默认值处理。默认值：2
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
-**起始版本：** 11
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

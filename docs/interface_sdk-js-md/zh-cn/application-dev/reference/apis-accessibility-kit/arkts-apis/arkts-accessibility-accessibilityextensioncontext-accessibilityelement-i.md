@@ -34,6 +34,17 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.actionNames().then((data: string[]) => {
+  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
 rootElement.actionNames((err: BusinessError, data: string[]) => {
   if (err) {
     console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
@@ -65,16 +76,7 @@ actionNames(): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.actionNames().then((data: string[]) => {
-  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [actionNames](#actionnames)
 
 ## attributeNames
 
@@ -97,6 +99,18 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | 是 | 回调函数。当获取属性名称成功，err为undefined，data为节点元素的所有属性名称；否则为错误对象。 |
 
 **示例**
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
+  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -134,17 +148,7 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 
 **示例**
 
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
-  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [attributeNames](#attributenames)
 
 ## attributeValue
 
@@ -178,6 +182,20 @@ attributeValue<T extends keyof ElementAttributeValues>(
 | [9300004](../errorcode-accessibility.md#9300004-属性不存在) | This property does not exist. |
 
 **示例**
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let attributeName: ElementAttributeKeys = 'bundleName';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.attributeValue(attributeName).then((data: string) => {
+  console.info(`succeeded in getting attribute value by name, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { ElementAttributeKeys } from '@kit.AccessibilityKit';
@@ -230,19 +248,7 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 
 **示例**
 
-```TypeScript
-import { ElementAttributeKeys } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let attributeName: ElementAttributeKeys = 'bundleName';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.attributeValue(attributeName).then((data: string) => {
-  console.info(`succeeded in getting attribute value by name, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [attributeValue](#attributevalue)
 
 ## findElement('content')
 
@@ -271,24 +277,6 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition = 'keyword';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('content', condition, (err: BusinessError, data: AccessibilityElement[]) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('content')
 
@@ -323,22 +311,6 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition = 'keyword';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('content', condition).then((data: AccessibilityElement[]) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('focusType')
 
 ```TypeScript
@@ -366,24 +338,6 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusType = 'normal';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusType', condition, (err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('focusType')
 
@@ -418,22 +372,6 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusType = 'normal';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusType', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element,${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## findElement('focusDirection')
 
 ```TypeScript
@@ -461,24 +399,6 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusDirection = 'up';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusDirection', condition, (err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-});
-```
 
 ## findElement('focusDirection')
 
@@ -513,22 +433,6 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let condition: FocusDirection = 'up';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.findElement('focusDirection', condition).then((data: AccessibilityElement) => {
-  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
 ## performAction
 
 ```TypeScript
@@ -559,6 +463,33 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 | [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
 
 **示例**
+
+```TypeScript
+无参数Action。
+```
+
+```TypeScript
+有参数Action（setSelection）。
+```
+
+```TypeScript
+有参数Action（setCursorPosition）。
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.performAction(actionName, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in performing action, actionName is ${actionName}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -612,53 +543,7 @@ performAction(actionName: string, parameters?: object): Promise<void>
 
 **示例**
 
-无参数Action。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-// Action描述中无明确要求的，均为无参数Action。
-rootElement.performAction('click').then(() => {
-  console.info(`succeeded in performing action.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-有参数Action（setSelection）。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-// setSelection示例代码。
-rootElement.performAction('setSelection', {
-  selectTextBegin: '0', // 表示选择起始位置。
-  selectTextEnd: '8',   // 表示选择结束位置。
-  selectTextInForWard: true   // true表示为前光标，false表示为后光标。
-}).then(() => {
-  console.info(`succeeded in performing action`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-有参数Action（setCursorPosition）。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-// setCursorPosition示例代码。
-rootElement.performAction('setCursorPosition', {
-  offset: '1'   // 表示光标的设置位置。
-}).then(() => {
-  console.info(`succeeded in performing action`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [performAction](#performaction)
 
 ## performAction
 
@@ -690,17 +575,4 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let actionName = 'action';
-
-// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
-rootElement.performAction(actionName, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in performing action, actionName is ${actionName}`);
-});
-```
+参见 [performAction](#performaction)

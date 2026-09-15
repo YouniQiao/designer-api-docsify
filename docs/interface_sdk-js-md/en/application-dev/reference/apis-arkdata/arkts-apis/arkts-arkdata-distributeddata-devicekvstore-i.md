@@ -45,17 +45,32 @@ Closes the **KvStoreResultSet** object obtained by DeviceKVStore.getResultSet. T
 ```TypeScript
 let kvStore;
 try {
-    console.log('CloseResultSet success');
+    console.info('CloseResultSet success');
     let resultSet = null;
     kvStore.closeResultSet(resultSet, function (err, data) {
         if (err == undefined) {
-            console.log('closeResultSet success');
+            console.info('closeResultSet success');
         } else {
-            console.log('closeResultSet fail');
+            console.error('closeResultSet fail');
         }
     });
 }catch(e) {
-    console.log('CloseResultSet e ' + e);
+    console.error('CloseResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    console.info('CloseResultSet success');
+    let resultSet = null;
+    kvStore.closeResultSet(resultSet).then(() => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('CloseResultSet e ' + e);
 }
 ```
 
@@ -92,15 +107,32 @@ Closes the **KvStoreResultSet** object obtained by DeviceKVStore.getResultSet. T
 ```TypeScript
 let kvStore;
 try {
-    console.log('CloseResultSet success');
+    console.info('CloseResultSet success');
     let resultSet = null;
-    kvStore.closeResultSet(resultSet).then(() => {
-        console.log('closeResultSet success');
-    }).catch((err) => {
-        console.log('closeResultSet fail ' + JSON.stringify(err));
+    kvStore.closeResultSet(resultSet, function (err, data) {
+        if (err == undefined) {
+            console.info('closeResultSet success');
+        } else {
+            console.error('closeResultSet fail');
+        }
     });
 }catch(e) {
-    console.log('CloseResultSet e ' + e);
+    console.error('CloseResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    console.info('CloseResultSet success');
+    let resultSet = null;
+    kvStore.closeResultSet(resultSet).then(() => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('CloseResultSet e ' + e);
 }
 ```
 
@@ -136,13 +168,33 @@ const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
 try{
     kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async function (err,data) {
-        console.log('put success');
+        console.info('put success');
         kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, function (err,data) {
-            console.log('get success');
+            console.info('get success');
         });
     })
 }catch(e) {
-    console.log('get e' + e);
+    console.error('get e' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async (data) => {
+        console.info(' put success');
+        kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data) => {
+            console.info('get success');
+        }).catch((err) => {
+            console.error('get fail ' + JSON.stringify(err));
+        });
+    }).catch((error) => {
+        console.error('put error' + error);
+    });
+} catch (e) {
+    console.error('Get e ' + e);
 }
 ```
 
@@ -181,19 +233,35 @@ Obtains a string value that matches the specified device ID and key. This API us
 let kvStore;
 const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try{
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async function (err,data) {
+        console.info('put success');
+        kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, function (err,data) {
+            console.info('get success');
+        });
+    })
+}catch(e) {
+    console.error('get e' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
 try {
     kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(async (data) => {
-        console.log(' put success');
+        console.info(' put success');
         kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data) => {
-            console.log('get success');
+            console.info('get success');
         }).catch((err) => {
-            console.log('get fail ' + JSON.stringify(err));
+            console.error('get fail ' + JSON.stringify(err));
         });
     }).catch((error) => {
-        console.log('put error' + error);
+        console.error('put error' + error);
     });
 } catch (e) {
-    console.log('Get e ' + e);
+    console.error('Get e ' + e);
 }
 ```
 
@@ -238,17 +306,191 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + entries);
+    console.info('entries: ' + entries);
     kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         kvStore.getEntries('localDeviceId', 'batch_test_string_key', function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
         });
     });
 }catch(e) {
-    console.log('PutBatch e ' + e);
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('entries[0].value: ' + JSON.stringify(entries[0].value));
+            console.info('entries[0].value.value: ' + entries[0].value.value);
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getEntries(query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getEntries(query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('GetEntries putBatch fail ' + JSON.stringify(err))
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        })
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
 }
 ```
 
@@ -298,23 +540,191 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + entries);
-    kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
-        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
-            console.log('entries[0].value: ' + JSON.stringify(entries[0].value));
-            console.log('entries[0].value.value: ' + entries[0].value.value);
-        }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key', function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
         });
-    }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
     });
 }catch(e) {
-    console.log('PutBatch e ' + e);
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('entries[0].value: ' + JSON.stringify(entries[0].value));
+            console.info('entries[0].value.value: ' + entries[0].value.value);
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getEntries(query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getEntries(query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('GetEntries putBatch fail ' + JSON.stringify(err))
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        })
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
 }
 ```
 
@@ -346,6 +756,70 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 ```TypeScript
 let kvStore;
 try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key', function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('entries[0].value: ' + JSON.stringify(entries[0].value));
+            console.info('entries[0].value.value: ' + entries[0].value.value);
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
     var arr = new Uint8Array([21,31]);
     let entries = [];
     for (var i = 0; i < 10; i++) {
@@ -359,21 +833,126 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + JSON.stringify(entries));
+    console.info('entries: ' + JSON.stringify(entries));
     kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         const query = new distributedData.Query();
         query.prefixKey("batch_test");
         query.deviceId('localDeviceId');
         kvStore.getEntries(query, function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
         });
     });
-    console.log('GetEntries success');
+    console.info('GetEntries success');
 }catch(e) {
-    console.log('GetEntries e ' + e);
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getEntries(query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('GetEntries putBatch fail ' + JSON.stringify(err))
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        })
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
 }
 ```
 
@@ -410,6 +989,70 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 ```TypeScript
 let kvStore;
 try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key', function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('entries[0].value: ' + JSON.stringify(entries[0].value));
+            console.info('entries[0].value.value: ' + entries[0].value.value);
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
     var arr = new Uint8Array([21,31]);
     let entries = [];
     for (var i = 0; i < 10; i++) {
@@ -423,22 +1066,126 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + JSON.stringify(entries));
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getEntries(query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
     kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
+        console.info('putBatch success');
         const query = new distributedData.Query();
         query.prefixKey("batch_test");
         kvStore.getEntries(query).then((entries) => {
-            console.log('getEntries success');
+            console.info('getEntries success');
         }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
+            console.error('getEntries fail ' + JSON.stringify(err));
         });
     }).catch((err) => {
-        console.log('GetEntries putBatch fail ' + JSON.stringify(err))
+        console.error('GetEntries putBatch fail ' + JSON.stringify(err))
     });
-    console.log('GetEntries success');
+    console.info('GetEntries success');
 }catch(e) {
-    console.log('GetEntries e ' + e);
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        })
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
 }
 ```
 
@@ -471,6 +1218,70 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 ```TypeScript
 let kvStore;
 try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key', function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('entries[0].value: ' + JSON.stringify(entries[0].value));
+            console.info('entries[0].value.value: ' + entries[0].value.value);
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
     var arr = new Uint8Array([21,31]);
     let entries = [];
     for (var i = 0; i < 10; i++) {
@@ -484,21 +1295,126 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + JSON.stringify(entries));
+    console.info('entries: ' + JSON.stringify(entries));
     kvStore.putBatch(entries, async function (err,data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getEntries(query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getEntries(query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('GetEntries putBatch fail ' + JSON.stringify(err))
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
         var query = new distributedData.Query();
         query.deviceId('localDeviceId');
         query.prefixKey("batch_test");
         kvStore.getEntries('localDeviceId', query, function (err,entries) {
-            console.log('getEntries success');
-            console.log('entries.length: ' + entries.length);
-            console.log('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
         })
     });
-    console.log('GetEntries success');
+    console.info('GetEntries success');
 }catch(e) {
-    console.log('GetEntries e ' + e);
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
 }
 ```
 
@@ -536,6 +1452,70 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 ```TypeScript
 let kvStore;
 try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key', function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + entries);
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+        kvStore.getEntries('localDeviceId', 'batch_test_string_key').then((entries) => {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+            console.info('entries[0].value: ' + JSON.stringify(entries[0].value));
+            console.info('entries[0].value.value: ' + entries[0].value.value);
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('PutBatch e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
     var arr = new Uint8Array([21,31]);
     let entries = [];
     for (var i = 0; i < 10; i++) {
@@ -549,23 +1529,126 @@ try {
         }
         entries.push(entry);
     }
-    console.log('entries: ' + JSON.stringify(entries));
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getEntries(query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        });
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
     kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getEntries(query).then((entries) => {
+            console.info('getEntries success');
+        }).catch((err) => {
+            console.error('getEntries fail ' + JSON.stringify(err));
+        });
+    }).catch((err) => {
+        console.error('GetEntries putBatch fail ' + JSON.stringify(err))
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries, async function (err,data) {
+        console.info('putBatch success');
+        var query = new distributedData.Query();
+        query.deviceId('localDeviceId');
+        query.prefixKey("batch_test");
+        kvStore.getEntries('localDeviceId', query, function (err,entries) {
+            console.info('getEntries success');
+            console.info('entries.length: ' + entries.length);
+            console.info('entries[0]: ' + JSON.stringify(entries[0]));
+        })
+    });
+    console.info('GetEntries success');
+}catch(e) {
+    console.error('GetEntries e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    var arr = new Uint8Array([21,31]);
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_bool_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.BYTE_ARRAY,
+                value : arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info('entries: ' + JSON.stringify(entries));
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
         var query = new distributedData.Query();
         query.deviceId('localDeviceId');
         query.prefixKey("batch_test");
         kvStore.getEntries('localDeviceId', query).then((entries) => {
-            console.log('getEntries success');
+            console.info('getEntries success');
         }).catch((err) => {
-            console.log('getEntries fail ' + JSON.stringify(err));
+            console.error('getEntries fail ' + JSON.stringify(err));
         });
     }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
+        console.error('putBatch fail ' + JSON.stringify(err));
     });
-    console.log('GetEntries success');
+    console.info('GetEntries success');
 }catch(e) {
-    console.log('GetEntries e ' + e);
+    console.error('GetEntries e ' + e);
 }
 ```
 
@@ -600,14 +1683,184 @@ let kvStore;
 try {
     let resultSet;
     kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async function (err, result) {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
         kvStore.closeResultSet(resultSet, function (err, data) {
-            console.log('closeResultSet success');
+            console.info('closeResultSet success');
         })
     });
 }catch(e) {
-    console.log('GetResultSet e ' + e);
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getResultSet(query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + err);
+    });
+    const query = new distributedData.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey("batch_test");
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.getResultSet(query).then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('GetResultSet putBatch success');
+    }).catch((err) => {
+        console.error('PutBatch putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSet('localDeviceId', query).then((result) => {
+        console.info('GetResultSet getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('GetResultSet getResultSet failed: ' + JSON.stringify(err));
+    });
+    query.deviceId('localDeviceId');
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('GetResultSet closeResultSet success');
+    }).catch((err) => {
+        console.error('GetResultSet closeResultSet fail ' + JSON.stringify(err));
+    });
+
+}catch(e) {
+    console.error('GetResultSet e ' + e);
 }
 ```
 
@@ -646,19 +1899,185 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and k
 let kvStore;
 try {
     let resultSet;
-    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
-        console.log('getResultSet succeed.');
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async function (err, result) {
+        console.info('getResultSet succeed.');
         resultSet = result;
-    }).catch((err) => {
-        console.log('getResultSet failed: ' + JSON.stringify(err));
-    });
-    kvStore.closeResultSet(resultSet).then((err) => {
-        console.log('closeResultSet success');
-    }).catch((err) => {
-        console.log('closeResultSet fail ' + JSON.stringify(err));
+        kvStore.closeResultSet(resultSet, function (err, data) {
+            console.info('closeResultSet success');
+        })
     });
 }catch(e) {
-    console.log('GetResultSet e ' + e);
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getResultSet(query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + err);
+    });
+    const query = new distributedData.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey("batch_test");
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.getResultSet(query).then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('GetResultSet putBatch success');
+    }).catch((err) => {
+        console.error('PutBatch putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSet('localDeviceId', query).then((result) => {
+        console.info('GetResultSet getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('GetResultSet getResultSet failed: ' + JSON.stringify(err));
+    });
+    query.deviceId('localDeviceId');
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('GetResultSet closeResultSet success');
+    }).catch((err) => {
+        console.error('GetResultSet closeResultSet fail ' + JSON.stringify(err));
+    });
+
+}catch(e) {
+    console.error('GetResultSet e ' + e);
 }
 ```
 
@@ -691,6 +2110,42 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 let kvStore;
 try {
     let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async function (err, result) {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+        kvStore.closeResultSet(resultSet, function (err, data) {
+            console.info('closeResultSet success');
+        })
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
     let entries = [];
     for (var i = 0; i < 10; i++) {
         var key = 'batch_test_string_key';
@@ -704,20 +2159,136 @@ try {
         entries.push(entry);
     }
     kvStore.putBatch(entries, async function (err, data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         const query = new distributedData.Query();
         query.prefixKey("batch_test");
         query.deviceId('localDeviceId');
         kvStore.getResultSet(query, async function (err, result) {
-            console.log('getResultSet succeed.');
+            console.info('getResultSet succeed.');
             resultSet = result;
             kvStore.closeResultSet(resultSet, function (err, data) {
-                console.log('closeResultSet success');
+                console.info('closeResultSet success');
             })
         });
     });
 } catch(e) {
-    console.log('GetResultSet e ' + e);
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + err);
+    });
+    const query = new distributedData.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey("batch_test");
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.getResultSet(query).then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('GetResultSet putBatch success');
+    }).catch((err) => {
+        console.error('PutBatch putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSet('localDeviceId', query).then((result) => {
+        console.info('GetResultSet getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('GetResultSet getResultSet failed: ' + JSON.stringify(err));
+    });
+    query.deviceId('localDeviceId');
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('GetResultSet closeResultSet success');
+    }).catch((err) => {
+        console.error('GetResultSet closeResultSet fail ' + JSON.stringify(err));
+    });
+
+}catch(e) {
+    console.error('GetResultSet e ' + e);
 }
 ```
 
@@ -755,6 +2326,76 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 let kvStore;
 try {
     let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async function (err, result) {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+        kvStore.closeResultSet(resultSet, function (err, data) {
+            console.info('closeResultSet success');
+        })
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getResultSet(query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
     let entries = [];
     for (var i = 0; i < 10; i++) {
         var key = 'batch_test_string_key';
@@ -768,27 +2409,102 @@ try {
         entries.push(entry);
     }
     kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
+        console.info('putBatch success');
     }).catch((err) => {
-        console.log('putBatch fail ' + err);
+        console.error('putBatch fail ' + err);
     });
     const query = new distributedData.Query();
     query.deviceId('localDeviceId');
     query.prefixKey("batch_test");
-    console.log("GetResultSet " + query.getSqlLike());
+    console.info("GetResultSet " + query.getSqlLike());
     kvStore.getResultSet(query).then((result) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('getResultSet failed: ' + JSON.stringify(err));
+        console.error('getResultSet failed: ' + JSON.stringify(err));
     });
     kvStore.closeResultSet(resultSet).then((err) => {
-        console.log('closeResultSet success');
+        console.info('closeResultSet success');
     }).catch((err) => {
-        console.log('closeResultSet fail ' + JSON.stringify(err));
+        console.error('closeResultSet fail ' + JSON.stringify(err));
     });
 }catch(e) {
-    console.log('GetResultSet e ' + e);
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('GetResultSet putBatch success');
+    }).catch((err) => {
+        console.error('PutBatch putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSet('localDeviceId', query).then((result) => {
+        console.info('GetResultSet getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('GetResultSet getResultSet failed: ' + JSON.stringify(err));
+    });
+    query.deviceId('localDeviceId');
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('GetResultSet closeResultSet success');
+    }).catch((err) => {
+        console.error('GetResultSet closeResultSet fail ' + JSON.stringify(err));
+    });
+
+}catch(e) {
+    console.error('GetResultSet e ' + e);
 }
 ```
 
@@ -822,6 +2538,42 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 let kvStore;
 try {
     let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async function (err, result) {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+        kvStore.closeResultSet(resultSet, function (err, data) {
+            console.info('closeResultSet success');
+        })
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
     let entries = [];
     for (var i = 0; i < 10; i++) {
         var key = 'batch_test_string_key';
@@ -835,19 +2587,136 @@ try {
         entries.push(entry);
     }
     kvStore.putBatch(entries, async function (err, data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         const query = new distributedData.Query();
         query.prefixKey("batch_test");
-        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
-            console.log('getResultSet succeed.');
+        query.deviceId('localDeviceId');
+        kvStore.getResultSet(query, async function (err, result) {
+            console.info('getResultSet succeed.');
             resultSet = result;
             kvStore.closeResultSet(resultSet, function (err, data) {
-                console.log('closeResultSet success');
+                console.info('closeResultSet success');
             })
         });
     });
 } catch(e) {
-    console.log('GetResultSet e ' + e);
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + err);
+    });
+    const query = new distributedData.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey("batch_test");
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.getResultSet(query).then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('GetResultSet putBatch success');
+    }).catch((err) => {
+        console.error('PutBatch putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSet('localDeviceId', query).then((result) => {
+        console.info('GetResultSet getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('GetResultSet getResultSet failed: ' + JSON.stringify(err));
+    });
+    query.deviceId('localDeviceId');
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('GetResultSet closeResultSet success');
+    }).catch((err) => {
+        console.error('GetResultSet closeResultSet fail ' + JSON.stringify(err));
+    });
+
+}catch(e) {
+    console.error('GetResultSet e ' + e);
 }
 ```
 
@@ -886,6 +2755,76 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 let kvStore;
 try {
     let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async function (err, result) {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+        kvStore.closeResultSet(resultSet, function (err, data) {
+            console.info('closeResultSet success');
+        })
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    kvStore.getResultSet('localDeviceId', 'batch_test_string_key').then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getResultSet(query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
     let entries = [];
     for (var i = 0; i < 10; i++) {
         var key = 'batch_test_string_key';
@@ -899,28 +2838,102 @@ try {
         entries.push(entry);
     }
     kvStore.putBatch(entries).then(async (err) => {
-        console.log('GetResultSet putBatch success');
+        console.info('putBatch success');
     }).catch((err) => {
-        console.log('PutBatch putBatch fail ' + JSON.stringify(err));
+        console.error('putBatch fail ' + err);
+    });
+    const query = new distributedData.Query();
+    query.deviceId('localDeviceId');
+    query.prefixKey("batch_test");
+    console.info("GetResultSet " + query.getSqlLike());
+    kvStore.getResultSet(query).then((result) => {
+        console.info('getResultSet succeed.');
+        resultSet = result;
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+    kvStore.closeResultSet(resultSet).then((err) => {
+        console.info('closeResultSet success');
+    }).catch((err) => {
+        console.error('closeResultSet fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSet('localDeviceId', query, async function (err, result) {
+            console.info('getResultSet succeed.');
+            resultSet = result;
+            kvStore.closeResultSet(resultSet, function (err, data) {
+                console.info('closeResultSet success');
+            })
+        });
+    });
+} catch(e) {
+    console.error('GetResultSet e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let resultSet;
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('GetResultSet putBatch success');
+    }).catch((err) => {
+        console.error('PutBatch putBatch fail ' + JSON.stringify(err));
     });
     const query = new distributedData.Query();
     query.prefixKey("batch_test");
     kvStore.getResultSet('localDeviceId', query).then((result) => {
-        console.log('GetResultSet getResultSet succeed.');
+        console.info('GetResultSet getResultSet succeed.');
         resultSet = result;
     }).catch((err) => {
-        console.log('GetResultSet getResultSet failed: ' + JSON.stringify(err));
+        console.error('GetResultSet getResultSet failed: ' + JSON.stringify(err));
     });
     query.deviceId('localDeviceId');
-    console.log("GetResultSet " + query.getSqlLike());
+    console.info("GetResultSet " + query.getSqlLike());
     kvStore.closeResultSet(resultSet).then((err) => {
-        console.log('GetResultSet closeResultSet success');
+        console.info('GetResultSet closeResultSet success');
     }).catch((err) => {
-        console.log('GetResultSet closeResultSet fail ' + JSON.stringify(err));
+        console.error('GetResultSet closeResultSet fail ' + JSON.stringify(err));
     });
 
 }catch(e) {
-    console.log('GetResultSet e ' + e);
+    console.error('GetResultSet e ' + e);
 }
 ```
 
@@ -965,16 +2978,109 @@ try {
         entries.push(entry);
     }
     kvStore.putBatch(entries, async function (err, data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         const query = new distributedData.Query();
         query.prefixKey("batch_test");
         query.deviceId('localDeviceId');
         kvStore.getResultSize(query, async function (err, resultSize) {
-            console.log('getResultSet succeed.');
+            console.info('getResultSet succeed.');
         });
     });
 } catch(e) {
-    console.log('GetResultSize e ' + e);
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    query.deviceId('localDeviceId');
+    kvStore.getResultSize(query).then((resultSize) => {
+        console.info('getResultSet succeed.');
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSize('localDeviceId', query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
+        });
+    });
+} catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    var query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSize('localDeviceId', query).then((resultSize) => {
+        console.info('getResultSet succeed.');
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSize e ' + e);
 }
 ```
 
@@ -1023,21 +3129,110 @@ try {
         }
         entries.push(entry);
     }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getResultSize(query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
+        });
+    });
+} catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
     kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
+        console.info('putBatch success');
     }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
+        console.error('putBatch fail ' + JSON.stringify(err));
     });
     const query = new distributedData.Query();
     query.prefixKey("batch_test");
     query.deviceId('localDeviceId');
     kvStore.getResultSize(query).then((resultSize) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
     }).catch((err) => {
-        console.log('getResultSet failed: ' + JSON.stringify(err));
+        console.error('getResultSet failed: ' + JSON.stringify(err));
     });
 }catch(e) {
-    console.log('GetResultSize e ' + e);
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSize('localDeviceId', query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
+        });
+    });
+} catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    var query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSize('localDeviceId', query).then((resultSize) => {
+        console.info('getResultSet succeed.');
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSize e ' + e);
 }
 ```
 
@@ -1083,15 +3278,109 @@ try {
         entries.push(entry);
     }
     kvStore.putBatch(entries, async function (err, data) {
-        console.log('putBatch success');
+        console.info('putBatch success');
         const query = new distributedData.Query();
         query.prefixKey("batch_test");
-        kvStore.getResultSize('localDeviceId', query, async function (err, resultSize) {
-            console.log('getResultSet succeed.');
+        query.deviceId('localDeviceId');
+        kvStore.getResultSize(query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
         });
     });
 } catch(e) {
-    console.log('GetResultSize e ' + e);
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    query.deviceId('localDeviceId');
+    kvStore.getResultSize(query).then((resultSize) => {
+        console.info('getResultSet succeed.');
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSize('localDeviceId', query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
+        });
+    });
+} catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    var query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    kvStore.getResultSize('localDeviceId', query).then((resultSize) => {
+        console.info('getResultSet succeed.');
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSize e ' + e);
 }
 ```
 
@@ -1141,20 +3430,110 @@ try {
         }
         entries.push(entry);
     }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        query.deviceId('localDeviceId');
+        kvStore.getResultSize(query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
+        });
+    });
+} catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
     kvStore.putBatch(entries).then(async (err) => {
-        console.log('putBatch success');
+        console.info('putBatch success');
     }).catch((err) => {
-        console.log('putBatch fail ' + JSON.stringify(err));
+        console.error('putBatch fail ' + JSON.stringify(err));
+    });
+    const query = new distributedData.Query();
+    query.prefixKey("batch_test");
+    query.deviceId('localDeviceId');
+    kvStore.getResultSize(query).then((resultSize) => {
+        console.info('getResultSet succeed.');
+    }).catch((err) => {
+        console.error('getResultSet failed: ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries, async function (err, data) {
+        console.info('putBatch success');
+        const query = new distributedData.Query();
+        query.prefixKey("batch_test");
+        kvStore.getResultSize('localDeviceId', query, async function (err, resultSize) {
+            console.info('getResultSet succeed.');
+        });
+    });
+} catch(e) {
+    console.error('GetResultSize e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+try {
+    let entries = [];
+    for (var i = 0; i < 10; i++) {
+        var key = 'batch_test_string_key';
+        var entry = {
+            key : key + i,
+            value : {
+                type : distributedData.ValueType.STRING,
+                value : 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore.putBatch(entries).then(async (err) => {
+        console.info('putBatch success');
+    }).catch((err) => {
+        console.error('putBatch fail ' + JSON.stringify(err));
     });
     var query = new distributedData.Query();
     query.prefixKey("batch_test");
     kvStore.getResultSize('localDeviceId', query).then((resultSize) => {
-        console.log('getResultSet succeed.');
+        console.info('getResultSet succeed.');
     }).catch((err) => {
-        console.log('getResultSet failed: ' + JSON.stringify(err));
+        console.error('getResultSet failed: ' + JSON.stringify(err));
     });
 }catch(e) {
-    console.log('GetResultSize e ' + e);
+    console.error('GetResultSize e ' + e);
 }
 ```
 
@@ -1181,27 +3560,6 @@ Unsubscribes from data changes.
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("dataChange: " + data);
-    }
-    subscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_REMOTE, this.call);
-        }
-    }
-    unsubscribeDataChange() {
-        if (kvStore != null) {
-            kvStore.off('dataChange', this.call);
-        }
-    }
-}
-```
-
 ## off
 
 ```TypeScript
@@ -1224,27 +3582,6 @@ Unsubscribes from sync completion events.
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-class KvstoreModel {
-    call(data) {
-        console.log("syncComplete: " + data);
-    }
-    subscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.on('syncComplete', this.call);
-        }
-    }
-    unsubscribeSyncComplete() {
-        if (kvStore != null) {
-            kvStore.off('syncComplete', this.call);
-        }
-    }
-}
-```
 
 ## on
 
@@ -1270,15 +3607,6 @@ Subscribes to data changes of the specified type.
 | type | [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md)&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-let kvStore;
-kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, function (data) {
-    console.log("dataChange callback call data: " + JSON.stringify(data));
-});
-```
-
 ## on
 
 ```TypeScript
@@ -1301,26 +3629,6 @@ Subscribes to sync completion events.
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
 | syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
-
-**Examples**
-
-```TypeScript
-let kvStore;
-const KEY_TEST_FLOAT_ELEMENT = 'key_test_float';
-const VALUE_TEST_FLOAT_ELEMENT = 321.12;
-try {
-    kvStore.on('syncComplete', function (data) {
-        console.log('syncComplete ' + data)
-    });
-    kvStore.put(KEY_TEST_FLOAT_ELEMENT, VALUE_TEST_FLOAT_ELEMENT).then((data) => {
-        console.log('syncComplete put success');
-    }).catch((error) => {
-        console.log('syncComplete put fail ' + error);
-    });
-}catch(e) {
-    console.log('syncComplete put e ' + e);
-}
-```
 
 ## removeDeviceData
 
@@ -1353,21 +3661,47 @@ const KEY_TEST_STRING_ELEMENT = 'key_test_string';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
 try {
     kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async function (err,data) {
-        console.log('RemoveDeviceData  put success');
+        console.info('RemoveDeviceData  put success');
         const deviceid = 'no_exist_device_id';
         kvStore.removeDeviceData(deviceid, async function (err,data) {
             if (err == undefined) {
-                console.log('removeDeviceData success');
+                console.info('removeDeviceData success');
             } else {
-                console.log('removeDeviceData fail');
+                console.error('removeDeviceData fail');
                 kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, async function (err,data) {
-                    console.log('RemoveDeviceData get success');
+                    console.info('RemoveDeviceData get success');
                 });
             }
         });
     });
 }catch(e) {
-    console.log('RemoveDeviceData e ' + e);
+    console.error('RemoveDeviceData e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
+try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((err) => {
+        console.info('RemoveDeviceData put success');
+    }).catch((err) => {
+        console.error('RemoveDeviceData put fail ' + JSON.stringify(err));
+    });
+    const deviceid = 'no_exist_device_id';
+    kvStore.removeDeviceData(deviceid).then((err) => {
+        console.info('removeDeviceData success');
+    }).catch((err) => {
+        console.error('removeDeviceData fail ' + JSON.stringify(err));
+    });
+    kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data) => {
+        console.info('RemoveDeviceData get success data:' + data);
+    }).catch((err) => {
+        console.error('RemoveDeviceData get fail ' + JSON.stringify(err));
+    });
+}catch(e) {
+    console.error('RemoveDeviceData e ' + e);
 }
 ```
 
@@ -1406,24 +3740,48 @@ let kvStore;
 const KEY_TEST_STRING_ELEMENT = 'key_test_string';
 const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
 try {
+    kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async function (err,data) {
+        console.info('RemoveDeviceData  put success');
+        const deviceid = 'no_exist_device_id';
+        kvStore.removeDeviceData(deviceid, async function (err,data) {
+            if (err == undefined) {
+                console.info('removeDeviceData success');
+            } else {
+                console.error('removeDeviceData fail');
+                kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT, async function (err,data) {
+                    console.info('RemoveDeviceData get success');
+                });
+            }
+        });
+    });
+}catch(e) {
+    console.error('RemoveDeviceData e ' + e);
+}
+```
+
+```TypeScript
+let kvStore;
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
+try {
     kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then((err) => {
-        console.log('RemoveDeviceData put success');
+        console.info('RemoveDeviceData put success');
     }).catch((err) => {
-        console.log('RemoveDeviceData put fail ' + JSON.stringify(err));
+        console.error('RemoveDeviceData put fail ' + JSON.stringify(err));
     });
     const deviceid = 'no_exist_device_id';
     kvStore.removeDeviceData(deviceid).then((err) => {
-        console.log('removeDeviceData success');
+        console.info('removeDeviceData success');
     }).catch((err) => {
-        console.log('removeDeviceData fail ' + JSON.stringify(err));
+        console.error('removeDeviceData fail ' + JSON.stringify(err));
     });
     kvStore.get('localDeviceId', KEY_TEST_STRING_ELEMENT).then((data) => {
-        console.log('RemoveDeviceData get success data:' + data);
+        console.info('RemoveDeviceData get success data:' + data);
     }).catch((err) => {
-        console.log('RemoveDeviceData get fail ' + JSON.stringify(err));
+        console.error('RemoveDeviceData get fail ' + JSON.stringify(err));
     });
 }catch(e) {
-    console.log('RemoveDeviceData e ' + e);
+    console.error('RemoveDeviceData e ' + e);
 }
 ```
 
@@ -1456,39 +3814,24 @@ Synchronizes the KV store manually.
 **Examples**
 
 ```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let devManager;
 let kvStore;
 const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
 const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
-// create deviceManager
-deviceManager.createDeviceManager('bundleName', (err, value) => {
-  if (!err) {
-    devManager = value;
-    let deviceIds = [];
-    if (devManager != null) {
-      var devices = devManager.getTrustedDeviceListSync();
-      for (var i = 0; i < devices.length; i++) {
-        deviceIds[i] = devices[i].networkId;
-      }
+const deviceIds = ['networkId1', 'networkId2'];
+try {
+  kvStore.on('syncComplete', function (data) {
+    console.info('Sync dataChange');
+  });
+  kvStore.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, function (err, data) {
+    if (err != undefined) {
+      console.error("put err: " + JSON.stringify(err));
+      return;
     }
-    try {
-      kvStore.on('syncComplete', function (data) {
-        console.log('Sync dataChange');
-      });
-      kvStore.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, function (err, data) {
-        if (err != undefined) {
-          console.log("put err: " + JSON.stringify(err));
-          return;
-        }
-        console.log('Succeeded in putting data');
-        const mode = distributedData.SyncMode.PULL_ONLY;
-        kvStore.sync(deviceIds, mode, 1000);
-      });
-    } catch (e) {
-      console.log('Sync e' + e);
-    }
-  }
-});
+    console.info('Succeeded in putting data');
+    const mode = distributedData.SyncMode.PULL_ONLY;
+    kvStore.sync(deviceIds, mode, 1000);
+  });
+} catch (e) {
+  console.error('Sync e' + e);
+}
 ```

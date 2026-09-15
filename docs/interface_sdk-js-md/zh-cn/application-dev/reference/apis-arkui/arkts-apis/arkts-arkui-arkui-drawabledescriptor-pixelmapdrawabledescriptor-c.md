@@ -38,28 +38,8 @@ PixelMapDrawableDescriptor的构造函数。
 
 **示例**
 
-通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
-
 ```TypeScript
-// xxx.ets
-import { DrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PixelMapDrawableDescriptorExample {
-  // 使用Resource创建PixelMapDrawableDescriptor
-  // $r('app.media.icon')需要替换为开发者所需的图像资源文件。
-  @State drawable: DrawableDescriptor = new PixelMapDrawableDescriptor($r('app.media.icon'))
-
-  build() {
-    Column() {
-      Image(this.drawable)
-        .width(100)
-        .height(100)
-        .margin({ bottom: 20 })
-    }
-  }
-}
+通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
 ```
 
 ## constructor
@@ -86,26 +66,6 @@ PixelMapDrawableDescriptor的构造函数，通过PixelMap类型或者ResourceSt
 
 **示例**
 
-通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
-
 ```TypeScript
-// xxx.ets
-import { DrawableDescriptor, PixelMapDrawableDescriptor } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct PixelMapDrawableDescriptorExample {
-  // 使用Resource创建PixelMapDrawableDescriptor
-  // $r('app.media.icon')需要替换为开发者所需的图像资源文件。
-  @State drawable: DrawableDescriptor = new PixelMapDrawableDescriptor($r('app.media.icon'))
-
-  build() {
-    Column() {
-      Image(this.drawable)
-        .width(100)
-        .height(100)
-        .margin({ bottom: 20 })
-    }
-  }
-}
+通过ResourceStr创建PixelMapDrawableDescriptor，示例代码如下。
 ```

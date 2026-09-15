@@ -215,6 +215,39 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.camera';
+let index = 1;
+let userId = 100;
+let key = 'ohos.bms.param.verifyUninstallRule';
+let value = 'false';
+let item: installer.Parameters = {key, value};
+let destroyAppCloneOpt: installer.DestroyAppCloneParam = {
+    userId: userId,
+    parameters: [item]
+};
+
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.destroyAppClone(bundleName, index, destroyAppCloneOpt)
+            .then(() => {
+                console.info('destroyAppClone successfully.');
+        }).catch((error: BusinessError) => {
+            console.error('destroyAppClone failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## destroyAppClone
 
 ```TypeScript
@@ -259,38 +292,7 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.camera';
-let index = 1;
-let userId = 100;
-let key = 'ohos.bms.param.verifyUninstallRule';
-let value = 'false';
-let item: installer.Parameters = {key, value};
-let destroyAppCloneOpt: installer.DestroyAppCloneParam = {
-    userId: userId,
-    parameters: [item]
-};
-
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.destroyAppClone(bundleName, index, destroyAppCloneOpt)
-            .then(() => {
-                console.info('destroyAppClone successfully.');
-        }).catch((error: BusinessError) => {
-            console.error('destroyAppClone failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [destroyAppClone](#destroyappclone)
 
 ## install
 
@@ -389,6 +391,58 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.install(hapFilePaths, (err: BusinessError) => {
+            if (err) {
+                console.error('install failed:' + err.message);
+            } else {
+                console.info('install successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.install(hapFilePaths, installParam)
+            .then((data: void) => {
+                console.info('install successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('install failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## install
 
 ```TypeScript
@@ -455,29 +509,7 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, (err: BusinessError) => {
-            if (err) {
-                console.error('install failed:' + err.message);
-            } else {
-                console.info('install successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [install](#install)
 
 ## install
 
@@ -552,33 +584,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.install(hapFilePaths, installParam)
-            .then((data: void) => {
-                console.info('install successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('install failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [install](#install)
 
 ## installPlugin
 
@@ -801,6 +807,58 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.demo';
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.recover(bundleName, (err: BusinessError) => {
+            if (err) {
+                console.error('recover failed:' + err.message);
+            } else {
+                console.info('recover successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.demo';
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.recover(bundleName, installParam)
+            .then((data: void) => {
+                console.info('recover successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('recover failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## recover
 
 ```TypeScript
@@ -837,29 +895,7 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, (err: BusinessError) => {
-            if (err) {
-                console.error('recover failed:' + err.message);
-            } else {
-                console.info('recover successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [recover](#recover)
 
 ## recover
 
@@ -904,33 +940,7 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.recover(bundleName, installParam)
-            .then((data: void) => {
-                console.info('recover successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('recover failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [recover](#recover)
 
 ## removeExtResource
 
@@ -1066,6 +1076,84 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.demo';
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.uninstall(bundleName, (err: BusinessError) => {
+            if (err) {
+                console.error('uninstall failed:' + err.message);
+            } else {
+                console.info('uninstall successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName = 'com.ohos.demo';
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.uninstall(bundleName, installParam)
+            .then((data: void) => {
+                console.info('uninstall successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('uninstall failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uninstallParam: installer.UninstallParam = {
+    bundleName: "com.ohos.demo",
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.uninstall(uninstallParam, (err: BusinessError) => {
+            if (err) {
+                console.error('uninstall failed:' + err.message);
+            } else {
+                console.info('uninstall successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## uninstall
 
 ```TypeScript
@@ -1105,29 +1193,7 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [uninstall](#uninstall)
 
 ## uninstall
 
@@ -1176,33 +1242,7 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName = 'com.ohos.demo';
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(bundleName, installParam)
-            .then((data: void) => {
-                console.info('uninstall successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('uninstall failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [uninstall](#uninstall)
 
 ## uninstall
 
@@ -1240,31 +1280,7 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [uninstall](#uninstall)
 
 ## uninstall
 
@@ -1307,31 +1323,7 @@ uninstall(uninstallParam: UninstallParam): Promise<void>
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uninstallParam: installer.UninstallParam = {
-    bundleName: "com.ohos.demo",
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.uninstall(uninstallParam, (err: BusinessError) => {
-            if (err) {
-                console.error('uninstall failed:' + err.message);
-            } else {
-                console.info('uninstall successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [uninstall](#uninstall)
 
 ## uninstallNewPreinstalledApps
 
@@ -1617,6 +1609,58 @@ try {
 }
 ```
 
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.updateBundleForSelf(hapFilePaths, (err: BusinessError) => {
+            if (err) {
+                console.error('updateBundleForSelf failed:' + err.message);
+            } else {
+                console.info('updateBundleForSelf successfully.');
+            }
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
+let installParam: installer.InstallParam = {
+    userId: 100,
+    isKeepData: false,
+    installFlag: 1,
+};
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        data.updateBundleForSelf(hapFilePaths, installParam)
+            .then((data: void) => {
+                console.info('updateBundleForSelf successfully: ' + JSON.stringify(data));
+        }).catch((error: BusinessError) => {
+            console.error('updateBundleForSelf failed:' + error.message);
+        });
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1667,29 +1711,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, (err: BusinessError) => {
-            if (err) {
-                console.error('updateBundleForSelf failed:' + err.message);
-            } else {
-                console.info('updateBundleForSelf successfully.');
-            }
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [updateBundleForSelf](#updatebundleforself)
 
 ## updateBundleForSelf
 
@@ -1748,30 +1770,4 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 
 **示例**
 
-```TypeScript
-import { installer } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let hapFilePaths = ['/data/storage/el2/base/haps/entry/files/'];
-let installParam: installer.InstallParam = {
-    userId: 100,
-    isKeepData: false,
-    installFlag: 1,
-};
-
-try {
-    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
-        data.updateBundleForSelf(hapFilePaths, installParam)
-            .then((data: void) => {
-                console.info('updateBundleForSelf successfully: ' + JSON.stringify(data));
-        }).catch((error: BusinessError) => {
-            console.error('updateBundleForSelf failed:' + error.message);
-        });
-    }).catch((error: BusinessError) => {
-        console.error('getBundleInstaller failed. Cause: ' + error.message);
-    });
-} catch (error) {
-    let message = (error as BusinessError).message;
-    console.error('getBundleInstaller failed. Cause: ' + message);
-}
-```
+参见 [updateBundleForSelf](#updatebundleforself)

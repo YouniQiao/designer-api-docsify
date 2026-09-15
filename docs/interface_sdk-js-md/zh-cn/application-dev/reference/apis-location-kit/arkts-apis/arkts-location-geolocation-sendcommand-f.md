@@ -46,6 +46,14 @@ geolocation.sendCommand(requestInfo, (err, result) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo).then((result) => {
+    console.info('promise, sendCommand: ' + JSON.stringify(result));
+});
+```
+
 
 ## sendCommand
 
@@ -79,10 +87,4 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo).then((result) => {
-    console.info('promise, sendCommand: ' + JSON.stringify(result));
-});
-```
+参见 [sendCommand](#sendcommand)

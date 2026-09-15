@@ -195,22 +195,6 @@ off(type: 'playFinished', callback?: Callback<number>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
-**示例**
-
-```TypeScript
-// 取消该事件的所有监听。
-systemTonePlayer.off('playFinished');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let playFinishedCallback = (streamId: number) => {
-  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-};
-
-systemTonePlayer.on('playFinished', 0, playFinishedCallback);
-
-systemTonePlayer.off('playFinished', playFinishedCallback);
-```
-
 ## off('error')
 
 ```TypeScript
@@ -238,24 +222,6 @@ off(type: 'error', callback?: ErrorCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 取消该事件的所有监听。
-systemTonePlayer.off('error');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let callback = (err: BusinessError) => {
-  console.info(`Succeeded in using on or off function. code: ${err.code}, message: ${err.message}`);
-};
-
-systemTonePlayer.on('error', callback);
-
-systemTonePlayer.off('error', callback);
-```
 
 ## on('playFinished')
 
@@ -288,26 +254,6 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 监听所有音频流的结束事件。
-systemTonePlayer.on('playFinished', 0, (streamId: number) => {
-  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-});
-
-// 监听指定音频流的结束事件。
-systemTonePlayer.start().then((value: number) => {
-  systemTonePlayer.on('playFinished', value, (streamId: number) => {
-    console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
-  });
-}).catch((err: BusinessError) => {
-  console.error(`Failed to start system tone player. ${err}`);
-});
-```
-
 ## on('error')
 
 ```TypeScript
@@ -335,16 +281,6 @@ on(type: 'error', callback: ErrorCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-systemTonePlayer.on('error', (err: BusinessError) => {
-  console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
-});
-```
 
 ## prepare
 

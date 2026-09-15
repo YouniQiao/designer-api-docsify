@@ -65,6 +65,14 @@ connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+});
+```
+
 
 ## getDefaultNet
 
@@ -111,10 +119,4 @@ function getDefaultNet(): Promise<NetHandle>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-});
-```
+参见 [getDefaultNet](#getdefaultnet)

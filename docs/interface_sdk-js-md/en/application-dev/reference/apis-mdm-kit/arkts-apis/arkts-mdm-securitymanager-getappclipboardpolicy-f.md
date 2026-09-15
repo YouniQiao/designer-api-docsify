@@ -126,24 +126,7 @@ Obtains the device clipboard policy. Enterprises can use this API to query the c
 
 **Examples**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let tokenId: number = 586874394;
-try {
-  let result: string = securityManager.getAppClipboardPolicy(wantTemp, tokenId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch(err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [getAppClipboardPolicy](#getappclipboardpolicy)
 
 
 ## getAppClipboardPolicy
@@ -229,22 +212,4 @@ Obtains the device clipboard policy of a specified application for a specified u
 
 **Examples**
 
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-  let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
-  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
-} catch(err) {
-  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [getAppClipboardPolicy](#getappclipboardpolicy)

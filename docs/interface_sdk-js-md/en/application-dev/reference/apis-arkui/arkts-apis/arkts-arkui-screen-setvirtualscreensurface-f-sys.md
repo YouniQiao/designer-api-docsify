@@ -81,6 +81,43 @@ struct Index {
 }
 ```
 
+```TypeScript
+// Index.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  xComponentController: XComponentController = new XComponentController();
+
+  setVirtualScreenSurface = () => {
+    let screenId: number = 1; // Obtain the screen ID through getAllScreens() or from the return value of createVirtualScreen().
+    let surfaceId = this.xComponentController.getXComponentSurfaceId();
+    // Set the surface of the virtual screen.
+    screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {
+      console.info('Succeeded in setting the surface for the virtual screen.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to set the surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+  build() {
+    RelativeContainer() {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.xComponentController
+      })
+      Button('setSurface')
+        .onClick((event: ClickEvent) => {
+          this.setVirtualScreenSurface();
+      }).width('100%')
+      .height(20)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 
 ## setVirtualScreenSurface
 
@@ -122,39 +159,4 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 
 **Examples**
 
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  xComponentController: XComponentController = new XComponentController();
-
-  setVirtualScreenSurface = () => {
-    let screenId: number = 1; // Obtain the screen ID through getAllScreens() or from the return value of createVirtualScreen().
-    let surfaceId = this.xComponentController.getXComponentSurfaceId();
-    // Set the surface of the virtual screen.
-    screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {
-      console.info('Succeeded in setting the surface for the virtual screen.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to set the surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
-    });
-  }
-  build() {
-    RelativeContainer() {
-      XComponent({
-        type: XComponentType.SURFACE,
-        controller: this.xComponentController
-      })
-      Button('setSurface')
-        .onClick((event: ClickEvent) => {
-          this.setVirtualScreenSurface();
-      }).width('100%')
-      .height(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+See [setVirtualScreenSurface](#setvirtualscreensurface)

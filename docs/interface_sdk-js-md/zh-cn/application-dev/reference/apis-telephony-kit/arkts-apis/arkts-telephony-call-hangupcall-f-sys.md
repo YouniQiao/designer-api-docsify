@@ -46,12 +46,34 @@ function hangUpCall(callId: number, callback: AsyncCallback<void>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+call.hangUpCall((err: BusinessError) => {
+    if (err) {
+        console.error(`hangUpCall fail, err->Code${err.code}, message:${err.message}`);
+    } else {
+        console.info(`hangUpCall success.`);
+    }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 call.hangUpCall(1, (err: BusinessError) => {
     if (err) {
         console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
     } else {
         console.info(`hangUpCall success.`);
     }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.hangUpCall(1).then(() => {
+    console.info(`hangUpCall success.`);
+}).catch((err: BusinessError) => {
+    console.error(`hangUpCall fail, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -98,12 +120,4 @@ function hangUpCall(callId?: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.hangUpCall(1).then(() => {
-    console.info(`hangUpCall success.`);
-}).catch((err: BusinessError) => {
-    console.error(`hangUpCall fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [hangUpCall](#hangupcall)

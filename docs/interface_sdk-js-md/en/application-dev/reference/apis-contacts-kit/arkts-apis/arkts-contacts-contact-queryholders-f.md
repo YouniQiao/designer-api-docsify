@@ -33,6 +33,12 @@ Queries all applications that have created contacts. This API uses an asynchrono
 **Examples**
 
 ```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -41,6 +47,21 @@ contact.queryHolders((err: BusinessError, data) => {
     console.error(`Failed to query Holders. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryHolders();
+promise.then((data) => {
   console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
 });
 ```
@@ -76,25 +97,7 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryHolders(context, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Holders. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
-});
-```
+See [queryHolders](#queryholders)
 
 
 ## queryHolders
@@ -123,14 +126,7 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryHolders();
-promise.then((data) => {
-  console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
-});
-```
+See [queryHolders](#queryholders)
 
 
 ## queryHolders
@@ -168,18 +164,4 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryHolders(context);
-promise.then((data) => {
-  console.info(`Succeeded in querying Holders. data->${JSON.stringify(data)}`);
-});
-```
+See [queryHolders](#queryholders)

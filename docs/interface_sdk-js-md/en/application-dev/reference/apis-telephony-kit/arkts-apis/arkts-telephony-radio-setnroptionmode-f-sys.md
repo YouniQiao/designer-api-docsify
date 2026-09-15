@@ -58,6 +58,18 @@ radio.setNROptionMode(slotId, mode, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let mode: radio.NROptionMode = radio.NROptionMode.NR_OPTION_NSA_ONLY;
+radio.setNROptionMode(slotId, mode).then(() => {
+    console.info(`setNROptionMode success`);
+}).catch((err: BusinessError) => {
+    console.error(`setNROptionMode failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setNROptionMode
 
@@ -102,14 +114,4 @@ Set the NR option mode.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.NROptionMode = radio.NROptionMode.NR_OPTION_NSA_ONLY;
-radio.setNROptionMode(slotId, mode).then(() => {
-    console.info(`setNROptionMode success`);
-}).catch((err: BusinessError) => {
-    console.error(`setNROptionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setNROptionMode](#setnroptionmode)

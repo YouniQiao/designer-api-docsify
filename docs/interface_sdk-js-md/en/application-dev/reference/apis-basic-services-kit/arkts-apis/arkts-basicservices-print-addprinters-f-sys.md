@@ -61,6 +61,26 @@ print.addPrinters([printerInfo], (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerInfo : print.PrinterInfo = {
+    printerId : '3232',
+    printerName : 'hhhhh',
+    printerState : 0,
+    printerIcon : 12,
+    description : 'str',
+    capability : undefined,
+    options : 'opt'
+};
+print.addPrinters([printerInfo]).then(() => {
+    console.info('add printers success.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to add printers. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## addPrinters
 
@@ -100,22 +120,4 @@ Adds printers. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerInfo : print.PrinterInfo = {
-    printerId : '3232',
-    printerName : 'hhhhh',
-    printerState : 0,
-    printerIcon : 12,
-    description : 'str',
-    capability : undefined,
-    options : 'opt'
-};
-print.addPrinters([printerInfo]).then(() => {
-    console.info('add printers success.');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to add printers. Code: ${error.code}, message: ${error.message}`);
-});
-```
+See [addPrinters](#addprinters)

@@ -53,6 +53,16 @@ call.removeMissedIncomingCallNotification((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.removeMissedIncomingCallNotification().then(() => {
+    console.info(`removeMissedIncomingCallNotification success`);
+}).catch((err: BusinessError) => {
+    console.error(`removeMissedIncomingCallNotification failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## removeMissedIncomingCallNotification
 
@@ -88,12 +98,4 @@ Removes missed call notifications. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.removeMissedIncomingCallNotification().then(() => {
-    console.info(`removeMissedIncomingCallNotification success`);
-}).catch((err: BusinessError) => {
-    console.error(`removeMissedIncomingCallNotification failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [removeMissedIncomingCallNotification](#removemissedincomingcallnotification)

@@ -34,6 +34,12 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 **示例**
 
 ```TypeScript
+> 说明：
+> 
+> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -42,6 +48,72 @@ contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
     console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByEmail('xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByEmail('xxx@email.com', {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryContactsByEmail('xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryContactsByEmail('xxx@email.com', {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, {
+  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
+});
+promise.then((data) => {
   console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
 });
 ```
@@ -78,25 +150,7 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 
 **示例**
 
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -127,22 +181,7 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByEmail('xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -178,29 +217,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 
 **示例**
 
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -231,20 +248,7 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByEmail('xxx@email.com', {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -280,27 +284,7 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 
 **示例**
 
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -332,24 +316,7 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryContactsByEmail('xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -385,31 +352,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 
 **示例**
 
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryContactsByEmail(context, 'xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Contacts By Email. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -446,20 +389,7 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 
 **示例**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryContactsByEmail('xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)
 
 
 ## queryContactsByEmail
@@ -500,23 +430,4 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 
 **示例**
 
-> 说明：
-> 
-> 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-// 请在组件内获取context。
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryContactsByEmail(context, 'xxx@email.com', {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, {
-  attributes: [contact.Attribute.ATTR_EMAIL, contact.Attribute.ATTR_NAME]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Contacts By Email. data->${JSON.stringify(data)}`);
-});
-```
+参见 [queryContactsByEmail](#querycontactsbyemail)

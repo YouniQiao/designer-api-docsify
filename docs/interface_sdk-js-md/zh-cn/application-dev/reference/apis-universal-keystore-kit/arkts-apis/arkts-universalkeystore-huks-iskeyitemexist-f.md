@@ -44,41 +44,16 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncC
 
 **示例**
 
-ArkTS示例：
-
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 判断密钥是否存在 */
-huks.isKeyItemExist(keyAlias, emptyOptions, (error, data) => {
-  if (error) {
-    console.error(`callback: isKeyItemExist failed`);
-  } else {
-    if (data) {
-      console.info(`keyAlias:${keyAlias} is existed!`);
-    } else {
-      console.error(`find key failed`);
-    }
-  }
-});
+ArkTS示例：
 ```
 
+```TypeScript
 JS示例：
+
 > 说明
 > 
 > JS示例代码仅供轻量级设备使用。
-
-```TypeScript
-<stack class="container">
-    <input type="button" class="existBtn" @click="existKey">查询密钥</input>
-    <text class="result">{{result}}</text>
-</stack>
 ```
 
 ```TypeScript
@@ -149,6 +124,21 @@ export default {
 };
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+/* 判断密钥是否存在 */
+huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
+  console.info(`keyAlias:${keyAlias} is existed!`);
+});
+```
+
 
 ## isKeyItemExist
 
@@ -193,17 +183,4 @@ function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-/* 判断密钥是否存在 */
-huks.isKeyItemExist(keyAlias, emptyOptions).then(() => {
-  console.info(`keyAlias:${keyAlias} is existed!`);
-});
-```
+参见 [isKeyItemExist](#iskeyitemexist)

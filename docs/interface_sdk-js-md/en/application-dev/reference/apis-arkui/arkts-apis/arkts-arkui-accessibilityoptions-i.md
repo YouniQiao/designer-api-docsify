@@ -2,8 +2,6 @@
 
 Defines the struct of AccessibilityOptions.
 
-@interface AccessibilityOptions
-
 **Since:** 14
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +12,13 @@ Defines the struct of AccessibilityOptions.
 accessibilityPreferred?: boolean
 ```
 
-accessibilityPreferred - Should accessibilityText be prioritized when concatenating child component strings.
+If **accessibilityPreferred** is set to **true**, the accessibility text of this child node is prioritized during depth-first traversal of each child node.
+
+If **accessibilityText** is empty, the component's **Text** is used. The concatenated text is set for the parent node whose **accessibilityText** and **text** are both empty.
+
+If **accessibilityPreferred** is set to **false**, this feature is disabled.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -32,7 +36,7 @@ accessibilityPreferred - Should accessibilityText be prioritized when concatenat
 actionControllerId?: string
 ```
 
-actionControllerId - the first component of a specific id found within the composition defined by accessibility group will take over part of the accessibility action of the composition
+Unique ID of the target child component. After a container component with accessibilityGroup enabled performs accessibility grouping, any triggered accessibility control operation is forwarded to the child component of the specified ID. This aggregates click events during screen reading and eliminates the need to focus on child components individually. **NOTE:** If multiple child components of the same type exist in the grouped component, the first matching child component found under the grouped component in the component tree acts as the controller component. Currently, only accessibility click actions are supported. If this API is configured together with **actionControllerRoleType**, the component with a matching ID is prioritized. Specific types in cross-process embedded components are not supported, such as widgets and **EmbeddedUIExtension**. Default value: no specified component.
 
 **Type:** string
 
@@ -50,7 +54,17 @@ actionControllerId - the first component of a specific id found within the compo
 actionControllerRoleType?: AccessibilityRoleType
 ```
 
-actionControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over part of the accessibility action of the composition
+Type of the target child component. After a container component with accessibilityGroup enabled performs accessibility grouping, any triggered accessibility control operation is forwarded to the child component of the specified type. This aggregates click events during screen reading and eliminates the need to focus on child components individually.
+
+**NOTE:** 
+
+If multiple child components of the same type exist in the grouped component, the first matching child component found under the grouped component in the component tree acts as the controller component.
+
+Currently, only accessibility click actions are supported.
+
+Specific types in cross-process embedded components are not supported, such as widgets and **EmbeddedUIExtension**.
+
+Default value: no specified component
 
 **Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
 
@@ -68,7 +82,7 @@ actionControllerRoleType - the first component of a specific type found within t
 stateControllerId?: string
 ```
 
-stateControllerId - the first component of a specific id found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
+Unique ID of the target child component. After a container component with accessibilityGroup enabled performs accessibility grouping, the selection state and state announcement text of the child component of the specified ID are used as the state and announcement text of the grouped component. This aggregates state announcements during screen reading and eliminates the need to focus on child components individually. **NOTE:** If multiple child components of the same type exist in the grouped component, the first matching child component found under the grouped component in the component tree acts as the controller component. If this API is configured together with **stateControllerRoleType**, the component with a matching ID is prioritized. Specific types in cross-process embedded components are not supported, such as widgets and **EmbeddedUIExtension**. Default value: no specified component.
 
 **Type:** string
 
@@ -86,7 +100,15 @@ stateControllerId - the first component of a specific id found within the compos
 stateControllerRoleType?: AccessibilityRoleType
 ```
 
-stateControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
+Type of the target child component. After a container component with accessibilityGroup enabled performs accessibility grouping, the selection state and state announcement text of the child component of the specified type are used as the state and announcement text of the grouped component. This aggregates state announcements during screen reading and eliminates the need to focus on child components individually.
+
+**NOTE:** 
+
+If multiple child components of the same type exist in the grouped component, the first matching child component found under the grouped component in the component tree acts as the controller component.
+
+Specific types in cross-process embedded components are not supported, such as widgets and **EmbeddedUIExtension**.
+
+Default value: no specified component
 
 **Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
 

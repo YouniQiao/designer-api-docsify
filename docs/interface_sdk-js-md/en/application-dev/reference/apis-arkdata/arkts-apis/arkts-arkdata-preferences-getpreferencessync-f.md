@@ -45,31 +45,10 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 **Examples**
 
-FA model:
-
 ```TypeScript
-// Obtain the context.
-import { featureAbility } from '@kit.AbilityKit';
-
-let context = featureAbility.getContext();
-let dataPreferences: preferences.Preferences | null = null;
-
-let options: preferences.Options = { name: 'myStore' };
-dataPreferences = preferences.getPreferencesSync(context, options);
+FA model:
 ```
 
-Stage model:
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-let dataPreferences: preferences.Preferences | null = null;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let options: preferences.Options = { name: 'myStore' };
-    dataPreferences = preferences.getPreferencesSync(this.context, options);
-  }
-}
+Stage model:
 ```

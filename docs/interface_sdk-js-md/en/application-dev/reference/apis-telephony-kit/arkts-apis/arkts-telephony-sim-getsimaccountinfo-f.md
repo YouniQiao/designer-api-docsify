@@ -59,6 +59,17 @@ sim.getSimAccountInfo(0, (err:BusinessError , data: sim.IccAccountInfo) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
+    console.info(`getSimAccountInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimAccountInfo failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSimAccountInfo
 
@@ -109,13 +120,4 @@ Obtains SIM card account information. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimAccountInfo(0).then((data: sim.IccAccountInfo) => {
-    console.info(`getSimAccountInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimAccountInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimAccountInfo](#getsimaccountinfo)

@@ -36,5 +36,5 @@ Since API version 19, you are advised to use [startAsyncTrace()](arkts-performan
 **Examples**
 
 ```TypeScript
-hiTraceMeter.startTrace("myTestFunc", 1);
+hiTraceMeter.startTrace("myTestFunc", 1);  // Start the asynchronous tracing task.
 ```

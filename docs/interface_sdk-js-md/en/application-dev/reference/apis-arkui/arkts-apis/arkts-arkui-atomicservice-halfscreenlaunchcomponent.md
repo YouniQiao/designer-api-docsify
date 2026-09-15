@@ -24,7 +24,9 @@ import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 
 ## Examples
 
+```TypeScript
 This example demonstrates how to start a top-up service in embedded mode.
+
 > NOTE
 > 
 > Embedded atomic services run in separate processes, so their crashes and exceptions are not visible directly in the host's logs. Follow the steps below to view the complete error stack trace during local debugging:
@@ -34,37 +36,4 @@ This example demonstrates how to start a top-up service in embedded mode.
 > Switch the mode in the top-left corner to User logs of selected app.
 > 
 > In the process list on the right, select the process of the launched atomic service. The bundle name has embeddable within its suffix segment.
-
-```TypeScript
-import { HalfScreenLaunchComponent } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  appId: string = '576****************'; // The appId of the atomic service.
-
-  build() {
-    Column() {
-      HalfScreenLaunchComponent({
-        appId: this.appId,
-        options: {},
-        onTerminated: (info: TerminationInfo) => {
-          console.info('onTerminated info = ' + info.want);
-        },
-        onError: (err: BusinessError) => {
-          console.error(`onError code: ${err.code}, message: ${err.message}`);
-        },
-        onReceive: (data: Record<string, Object>) => {
-          console.info('onReceive, data: ' + data['ohos.atomicService.window']);
-        }
-      }) {
-        Column() {
-          Image($r('app.media.app_icon'))
-          Text('Start top-up')
-        }.width('80vp').height('80vp').margin({bottom:30})
-      } // Pass content through the trailing closure.
-    }
-  }
-
-}
 ```

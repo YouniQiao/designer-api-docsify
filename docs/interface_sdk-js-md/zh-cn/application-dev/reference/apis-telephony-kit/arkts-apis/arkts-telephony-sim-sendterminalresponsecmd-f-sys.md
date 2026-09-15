@@ -54,6 +54,17 @@ sim.sendTerminalResponseCmd(0, "ls", (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.sendTerminalResponseCmd(0, "ls").then(() => {
+    console.info(`sendTerminalResponseCmd success.`);
+}).catch((err: BusinessError) => {
+    console.error(`sendTerminalResponseCmd failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## sendTerminalResponseCmd
 
@@ -99,13 +110,4 @@ Send terminal response command to SIM card.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.sendTerminalResponseCmd(0, "ls").then(() => {
-    console.info(`sendTerminalResponseCmd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`sendTerminalResponseCmd failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [sendTerminalResponseCmd](#sendterminalresponsecmd)

@@ -84,6 +84,33 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, path).then((val
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let title = 'test'; // Change it to the actual name.
+let fileName = 'displayName_test'; // Change it to the actual file name.
+let categoryValue = systemSoundManager.TONE_CATEGORY_ALARM;
+
+let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
+toneAttrs.setTitle(title);
+toneAttrs.setFileName(fileName);
+toneAttrs.setCategory(categoryValue);
+
+let fd = 10; // Set the FD of the target tone.
+let offset = 0; // Set the offset.
+let length = 50; // Set the data length.
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, length).then((value: string) => {
+  console.info('Succeeded in doing addCustomizedTone.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## addCustomizedTone
 
 ```TypeScript
@@ -132,32 +159,7 @@ Add customized tone into ringtone library.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let title = 'test'; // Change it to the actual name.
-let fileName = 'displayName_test'; // Change it to the actual file name.
-let categoryValue = systemSoundManager.TONE_CATEGORY_ALARM;
-
-let toneAttrs = systemSoundManager.createCustomizedToneAttrs();
-toneAttrs.setTitle(title);
-toneAttrs.setFileName(fileName);
-toneAttrs.setCategory(categoryValue);
-
-let fd = 10; // Set the FD of the target tone.
-let offset = 0; // Set the offset.
-let length = 50; // Set the data length.
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, length).then((value: string) => {
-  console.info('Succeeded in doing addCustomizedTone.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [addCustomizedTone](#addcustomizedtone)
 
 ## close
 
@@ -856,6 +858,24 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type, (err: Business
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
+let systemRingtonePlayer: systemSoundManager.RingtonePlayer | undefined = undefined;
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: systemSoundManager.RingtonePlayer) => {
+  console.info('Succeeded in doing getSystemRingtonePlayer.');
+  systemRingtonePlayer = value;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getSystemRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getSystemRingtonePlayer
 
 ```TypeScript
@@ -889,23 +909,7 @@ Gets the ringtone player.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
-let systemRingtonePlayer: systemSoundManager.RingtonePlayer | undefined = undefined;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: systemSoundManager.RingtonePlayer) => {
-  console.info('Succeeded in doing getSystemRingtonePlayer.');
-  systemRingtonePlayer = value;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getSystemRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getSystemRingtonePlayer](#getsystemringtoneplayer)
 
 ## getSystemRingtoneUri
 
@@ -953,6 +957,22 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type, (err: BusinessErr
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: string) => {
+  console.info('Succeeded in doing getSystemRingtoneUri.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## getSystemRingtoneUri
 
 ```TypeScript
@@ -986,21 +1006,7 @@ Gets the ringtone uri.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: string) => {
-  console.info('Succeeded in doing getSystemRingtoneUri.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getSystemRingtoneUri](#getsystemringtoneuri)
 
 ## getSystemToneAttrList
 
@@ -1701,6 +1707,23 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type, (err: Busine
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uri = 'file://data/test.wav'; // Change it to the URI of the target tone file.
+let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
+
+let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
+systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
+  console.info('Succeeded in doing setSystemRingtoneUri.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setSystemRingtoneUri
 
 ```TypeScript
@@ -1735,22 +1758,7 @@ Sets the ringtone uri to system.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let uri = 'file://data/test.wav'; // Change it to the URI of the target tone file.
-let type: systemSoundManager.RingtoneType = systemSoundManager.RingtoneType.RINGTONE_TYPE_DEFAULT;
-
-let systemSoundManagerInstance: systemSoundManager.SystemSoundManager = systemSoundManager.getSystemSoundManager();
-systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
-  console.info('Succeeded in doing setSystemRingtoneUri.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setSystemRingtoneUri](#setsystemringtoneuri)
 
 ## setSystemToneUri
 

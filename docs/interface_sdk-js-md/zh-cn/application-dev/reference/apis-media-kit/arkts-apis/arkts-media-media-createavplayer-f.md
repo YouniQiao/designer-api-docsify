@@ -56,6 +56,22 @@ media.createAVPlayer((error: BusinessError, video: media.AVPlayer) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let avPlayer: media.AVPlayer;
+media.createAVPlayer().then((video: media.AVPlayer) => {
+  if (video) {
+    avPlayer = video;
+    console.info('Succeeded in creating AVPlayer');
+  } else {
+    console.error('Failed to create AVPlayer');
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to create AVPlayer, error message:${error.message}`);
+});
+```
+
 
 ## createAVPlayer
 
@@ -93,18 +109,4 @@ function createAVPlayer(): Promise<AVPlayer>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let avPlayer: media.AVPlayer;
-media.createAVPlayer().then((video: media.AVPlayer) => {
-  if (video) {
-    avPlayer = video;
-    console.info('Succeeded in creating AVPlayer');
-  } else {
-    console.error('Failed to create AVPlayer');
-  }
-}).catch((error: BusinessError) => {
-  console.error(`Failed to create AVPlayer, error message:${error.message}`);
-});
-```
+参见 [createAVPlayer](#createavplayer)

@@ -34,6 +34,12 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 **Examples**
 
 ```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -54,6 +60,61 @@ contact.selectContacts().then((data) => {
       console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
       return;
     }
+    console.info('Succeeded in updating Contact.');
+  });
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+
+// Select a contact through the selectContacts API.
+contact.selectContacts().then((data) => {
+  contact.updateContact({
+    id: data[0].id, // ID of the selected contact.
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  }, (err: BusinessError) => {
+    if (err) {
+      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in updating Contact.');
+  });
+});
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Select a contact through the selectContacts API.
+contact.selectContacts().then((data) => {
+  let promise = contact.updateContact({
+    id: data[0].id, // ID of the selected contact.
+    name: {
+      fullName: 'xxx'
+    },
+    phoneNumbers: [{
+      phoneNumber: '138xxxxxxxx'
+    }]
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  });
+  promise.then(() => {
     console.info('Succeeded in updating Contact.');
   });
 });
@@ -91,37 +152,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Select a contact through the selectContacts API.
-contact.selectContacts().then((data) => {
-  // Obtain the context in the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-  contact.updateContact(context, {
-    id: data[0].id, // ID of the selected contact.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -152,32 +183,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-
-// Select a contact through the selectContacts API.
-contact.selectContacts().then((data) => {
-  contact.updateContact({
-    id: data[0].id, // ID of the selected contact.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -212,38 +218,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Select contacts through the selectContacts API.
-contact.selectContacts().then((data) => {
-  // Obtain the context within the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.updateContact(context, {
-    id: data[0].id, // ID of the selected contact.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to update Contact. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -279,27 +254,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Select a contact through the selectContacts API.
-contact.selectContacts().then((data) => {
-  let promise = contact.updateContact({
-    id: data[0].id, // ID of the selected contact.
-    name: {
-      fullName: 'xxx'
-    },
-    phoneNumbers: [{
-      phoneNumber: '138xxxxxxxx'
-    }]
-  }, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  });
-  promise.then(() => {
-    console.info('Succeeded in updating Contact.');
-  });
-});
-```
+See [updateContact](#updatecontact)
 
 
 ## updateContact
@@ -339,31 +294,4 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Select a contact through the selectContacts API.
-  contact.selectContacts().then((data) => {
-    // Obtain the context within the component.
-    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-    let promise = contact.updateContact(context, {
-      id: data[0].id, // ID of the selected contact.
-      name: {
-        fullName: 'xxx'
-      },
-      phoneNumbers: [{
-        phoneNumber: '138xxxxxxxx'
-      }]
-    }, {
-      attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-    });
-    promise.then(() => {
-      console.info('Succeeded in updating Contact.');
-    });
-  });
-```
+See [updateContact](#updatecontact)

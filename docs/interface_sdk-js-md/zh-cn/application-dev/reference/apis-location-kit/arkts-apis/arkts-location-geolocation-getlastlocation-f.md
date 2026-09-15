@@ -44,6 +44,13 @@ geolocation.getLastLocation((err, data) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getLastLocation().then((result) => {
+    console.info('getLastLocation: result: ' + JSON.stringify(result));
+});
+```
+
 
 ## getLastLocation
 
@@ -71,9 +78,4 @@ function getLastLocation(): Promise<Location>
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getLastLocation().then((result) => {
-    console.info('getLastLocation: result: ' + JSON.stringify(result));
-});
-```
+参见 [getLastLocation](#getlastlocation)

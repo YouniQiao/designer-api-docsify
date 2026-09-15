@@ -40,6 +40,21 @@ avSession.startCastDeviceDiscovery(() => {
 });
 ```
 
+```TypeScript
+let filter = 2;
+avSession.startCastDeviceDiscovery(filter, () => {
+    console.info('Succeeded in starting cast device discovery.');
+});
+```
+
+```TypeScript
+let filter = 2;
+let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
+avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
+  console.info('Succeeded in starting cast device discovery.');
+});
+```
+
 
 ## startCastDeviceDiscovery
 
@@ -71,12 +86,7 @@ function startCastDeviceDiscovery(filter: number, callback: AsyncCallback<void>)
 
 **示例**
 
-```TypeScript
-let filter = 2;
-avSession.startCastDeviceDiscovery(filter, () => {
-    console.info('Succeeded in starting cast device discovery.');
-});
-```
+参见 [startCastDeviceDiscovery](#startcastdevicediscovery)
 
 
 ## startCastDeviceDiscovery
@@ -115,10 +125,4 @@ function startCastDeviceDiscovery(filter?: number, drmSchemes?: Array<string>): 
 
 **示例**
 
-```TypeScript
-let filter = 2;
-let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
-avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('Succeeded in starting cast device discovery.');
-});
-```
+参见 [startCastDeviceDiscovery](#startcastdevicediscovery)

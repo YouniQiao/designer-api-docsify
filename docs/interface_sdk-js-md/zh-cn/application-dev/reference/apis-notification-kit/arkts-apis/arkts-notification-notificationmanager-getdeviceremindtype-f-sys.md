@@ -57,6 +57,16 @@ let getDeviceRemindTypeCallback = (err: BusinessError, data: notificationManager
 notificationManager.getDeviceRemindType(getDeviceRemindTypeCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
+    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDeviceRemindType
 
@@ -95,12 +105,4 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getDeviceRemindType().then((data: notificationManager.DeviceRemindType) => {
-    console.info(`getDeviceRemindType success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDeviceRemindType failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getDeviceRemindType](#getdeviceremindtype)

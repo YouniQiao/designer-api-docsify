@@ -52,6 +52,39 @@ let isDistributedEnabledCallback = (err: BusinessError, data: boolean): void => 
 notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.isDistributedEnabled().then((data: boolean) => {
+  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    try {
+      let deviceType: string = "wearable";
+      notificationManager.isDistributedEnabled(deviceType).then((data: boolean) => {
+        console.info('isDistributedEnabled succeeded, result = ' + data);
+      }).catch((err: BusinessError) => {
+        console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      console.error(`isDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
 
 ## isDistributedEnabled
 
@@ -85,12 +118,4 @@ Checks whether the device supports cross-device notifications. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.isDistributedEnabled().then((data: boolean) => {
-  console.info(`isDistributedEnabled success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isDistributedEnabled failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isDistributedEnabled](#isdistributedenabled)

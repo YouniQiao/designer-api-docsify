@@ -53,6 +53,16 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    wearDetection.isWearDetectionSupported('XX:XX:XX:XX:XX:XX').then((supported) => {
+        console.info('device support wear detection ' + supported);
+    });
+} catch (err) {
+    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
+}
+```
+
 
 ## isWearDetectionSupported
 
@@ -96,12 +106,4 @@ function isWearDetectionSupported(deviceId: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-try {
-    wearDetection.isWearDetectionSupported('XX:XX:XX:XX:XX:XX').then((supported) => {
-        console.info('device support wear detection ' + supported);
-    });
-} catch (err) {
-    console.error('errCode: ' + err.code + ', errMessage: ' + err.message);
-}
-```
+参见 [isWearDetectionSupported](#isweardetectionsupported)

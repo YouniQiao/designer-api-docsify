@@ -57,6 +57,16 @@ let cancelAllCallback = (err: BusinessError): void => {
 notificationManager.cancelAll(cancelAllCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.cancelAll().then(() => {
+  console.info(`Succeeded in canceling all notification.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## cancelAll
 
@@ -94,12 +104,4 @@ function cancelAll(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.cancelAll().then(() => {
-  console.info(`Succeeded in canceling all notification.`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to cancel all notification. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [cancelAll](#cancelall)

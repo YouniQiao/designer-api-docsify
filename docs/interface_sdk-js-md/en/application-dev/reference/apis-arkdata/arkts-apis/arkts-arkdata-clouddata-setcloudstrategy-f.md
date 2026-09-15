@@ -43,7 +43,7 @@ Sets the cloud sync strategy of an application. This API uses a promise to retur
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Sync data over Wi-Fi only.
+// Synchronize over Wi-Fi only.
 cloudData.setCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
   console.info('Succeeded in setting the cloud strategy');
 }).catch((err: BusinessError) => {

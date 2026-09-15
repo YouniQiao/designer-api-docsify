@@ -47,6 +47,13 @@ let eventInfo = new accessibility.EventInfo({
 });
 ```
 
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+// The parameters are, in order: type, bundleName, triggerAction.
+let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
+```
+
 ## constructor
 
 ```TypeScript
@@ -73,12 +80,7 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 **Examples**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-// The parameters are, in order: type, bundleName, triggerAction.
-let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
-```
+See [constructor](#constructor)
 
 ## beginIndex
 

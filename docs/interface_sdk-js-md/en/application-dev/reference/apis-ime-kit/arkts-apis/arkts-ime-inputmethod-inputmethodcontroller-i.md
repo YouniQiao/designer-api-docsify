@@ -64,6 +64,38 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = {
+  textInputType: inputMethod.TextInputType.TEXT,
+  enterKeyType: inputMethod.EnterKeyType.GO
+}
+let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
+inputMethod.getController().attach(true, textConfig).then(() => {
+  console.info('Succeeded in attaching inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = {
+  textInputType: inputMethod.TextInputType.TEXT,
+  enterKeyType: inputMethod.EnterKeyType.GO
+}
+let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
+let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
+
+inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then(() => {
+  console.info('Succeeded in attaching inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## attach
 
 ```TypeScript
@@ -104,20 +136,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = {
-  textInputType: inputMethod.TextInputType.TEXT,
-  enterKeyType: inputMethod.EnterKeyType.GO
-}
-let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
-inputMethod.getController().attach(true, textConfig).then(() => {
-  console.info('Succeeded in attaching inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [attach](#attach)
 
 ## attach
 
@@ -160,22 +179,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = {
-  textInputType: inputMethod.TextInputType.TEXT,
-  enterKeyType: inputMethod.EnterKeyType.GO
-}
-let textConfig: inputMethod.TextConfig = { inputAttribute: inputAttribute };
-let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
-
-inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then(() => {
-  console.info('Succeeded in attaching inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to attach, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [attach](#attach)
 
 ## attachWithUIContext
 
@@ -279,6 +283,16 @@ inputMethod.getController().changeSelection('text', 0, 5, (err: BusinessError) =
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().changeSelection('test', 0, 5).then(() => {
+  console.info('Succeeded in changing selection.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to changeSelection, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## changeSelection
 
 ```TypeScript
@@ -316,15 +330,7 @@ Updates the information about the selected text in this edit box, to notify the 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().changeSelection('test', 0, 5).then(() => {
-  console.info('Succeeded in changing selection.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to changeSelection, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [changeSelection](#changeselection)
 
 ## detach
 
@@ -365,6 +371,16 @@ inputMethod.getController().detach((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().detach().then(() => {
+  console.info('Succeeded in detaching inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## detach
 
 ```TypeScript
@@ -392,15 +408,7 @@ Detaches the self-drawing component from the input method. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().detach().then(() => {
-  console.info('Succeeded in detaching inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to detach, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [detach](#detach)
 
 ## discardTypingText
 
@@ -488,6 +496,27 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideSoftKeyboard().then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: number = 30;
+inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -521,15 +550,7 @@ Hides the soft keyboard. This API uses a promise to return the result. <br> <br>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().hideSoftKeyboard().then(() => {
-  console.info('Succeeded in hiding softKeyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [hideSoftKeyboard](#hidesoftkeyboard)
 
 ## hideTextInput
 
@@ -576,6 +597,16 @@ inputMethod.getController().hideTextInput((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideTextInput().then(() => {
+  console.info('Succeeded in hiding inputMethod.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
+})
+```
+
 ## hideTextInput
 
 ```TypeScript
@@ -609,15 +640,7 @@ Exits the text editing mode. This API uses a promise to return the result. <br> 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().hideTextInput().then(() => {
-  console.info('Succeeded in hiding inputMethod.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to hideTextInput, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [hideTextInput](#hidetextinput)
 
 ## off('selectByRange')
 
@@ -638,20 +661,6 @@ Disables listening for the select-by-range event. This API uses an asynchronous 
 | type | 'selectByRange' | Yes | Listening type. The value is fixed at **'selectByRange'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Range](arkts-ime-inputmethod-range-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onSelectByRangeCallback: Callback<inputMethod.Range> = (range: inputMethod.Range): void => {
-  console.info(`Succeeded in subscribing selectByRange, start: ${range.start} , end: ${range.end}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('selectByRange', onSelectByRangeCallback);
-inputMethodController.off('selectByRange');
-```
-
 ## off('selectByMovement')
 
 ```TypeScript
@@ -670,20 +679,6 @@ Disables listening for the select-by-cursor-movement event. This API uses an asy
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | Listening type. The value is fixed at **'selectByMovement'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Movement](arkts-ime-inputmethod-movement-i.md)&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onSelectByMovementCallback: Callback<inputMethod.Movement> = (movement: inputMethod.Movement): void => {
-  console.info(`Succeeded in subscribing selectByMovement, movement.direction: ${movement.direction}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('selectByMovement', onSelectByMovementCallback);
-inputMethodController.off('selectByMovement');
-```
 
 ## off('insertText')
 
@@ -704,20 +699,6 @@ Disables listening for the text insertion event of the input method.
 | type | 'insertText' | Yes | Listening type. The value is fixed at **'insertText'**. |
 | callback | (text: string) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onInsertTextCallback: Callback<string> = (text: string): void => {
-  console.info(`Succeeded in subscribing insertText: ${text}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('insertText', onInsertTextCallback);
-inputMethodController.off('insertText');
-```
-
 ## off('deleteLeft')
 
 ```TypeScript
@@ -736,20 +717,6 @@ Disables listening for the leftward delete event.
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | Listening type. The value is fixed at **'deleteLeft'**. |
 | callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onDeleteLeftCallback: Callback<number> = (length: number): void => {
-  console.info(`Succeeded in subscribing deleteLeft, length: ${length}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('deleteLeft', onDeleteLeftCallback);
-inputMethodController.off('deleteLeft');
-```
 
 ## off('deleteRight')
 
@@ -770,19 +737,6 @@ Disables listening for the rightward delete event.
 | type | 'deleteRight' | Yes | Listening type. The value is fixed at `deleteRight`. |
 | callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onDeleteRightCallback: Callback<number> = (length: number): void => {
-  console.info(`Succeeded in subscribing deleteRight, length: ${length}`);
-};
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('deleteRight', onDeleteRightCallback);
-inputMethodController.off('deleteRight');
-```
-
 ## off('sendKeyboardStatus')
 
 ```TypeScript
@@ -801,20 +755,6 @@ Disables listening for the input method soft keyboard status event of the input 
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes | Listening type. The value is fixed at **'sendKeyboardStatus'**. |
 | callback | (keyboardStatus: KeyboardStatus) =&gt; void | No | Callback used for disable listening. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onSendKeyboardStatus: Callback<inputMethod.KeyboardStatus> = (keyboardStatus: inputMethod.KeyboardStatus): void => {
-  console.info(`Succeeded in subscribing sendKeyboardStatus, keyboardStatus: ${keyboardStatus}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('sendKeyboardStatus', onSendKeyboardStatus);
-inputMethodController.off('sendKeyboardStatus');
-```
 
 ## off('sendFunctionKey')
 
@@ -835,20 +775,6 @@ Disables listening for the function key sending event of the input method.
 | type | 'sendFunctionKey' | Yes | Listening type. The value is fixed at **'sendFunctionKey'**. |
 | callback | (functionKey: FunctionKey) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onSendFunctionKey: Callback<inputMethod.FunctionKey> = (functionKey: inputMethod.FunctionKey): void => {
-  console.info(`Succeeded in subscribing sendFunctionKey, functionKey: ${functionKey.enterKeyType}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('sendFunctionKey', onSendFunctionKey);
-inputMethodController.off('sendFunctionKey');
-```
-
 ## off('moveCursor')
 
 ```TypeScript
@@ -867,20 +793,6 @@ Disables listening for the cursor movement event of the input method.
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | Listening type. The value is fixed at **'moveCursor'**. |
 | callback | (direction: Direction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onMoveCursorCallback: Callback<inputMethod.Direction> = (direction: inputMethod.Direction): void => {
-  console.info(`Succeeded in subscribing moveCursor, direction: ${direction}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('moveCursor', onMoveCursorCallback);
-inputMethodController.off('moveCursor');
-```
 
 ## off('handleExtendAction')
 
@@ -901,20 +813,6 @@ Disables listening for the extended action handling event of the input method. T
 | type | 'handleExtendAction' | Yes | Listening type. The value is fixed at **'handleExtendAction'**. |
 | callback | (action: ExtendAction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let onHandleExtendActionCallback: Callback<inputMethod.ExtendAction> = (action: inputMethod.ExtendAction): void => {
-  console.info(`Succeeded in subscribing handleExtendAction, action: ${action}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('handleExtendAction', onHandleExtendActionCallback);
-inputMethodController.off('handleExtendAction');
-```
-
 ## off('getLeftTextOfCursor')
 
 ```TypeScript
@@ -933,20 +831,6 @@ Disables listening for the event of obtaining the length of text deleted leftwar
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes | Listening type. The value is fixed at **'getLeftTextOfCursor'**. |
 | callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-let getLeftTextOfCursorCallback: (length: number) => string = (length: number): string => {
-  console.info(`Succeeded in unsubscribing getLeftTextOfCursor, length: ${length}`);
-  let text: string = "";
-  return text;
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('getLeftTextOfCursor', getLeftTextOfCursorCallback);
-inputMethodController.off('getLeftTextOfCursor');
-```
 
 ## off('getRightTextOfCursor')
 
@@ -967,20 +851,6 @@ Disables listening for the event of obtaining the length of text deleted rightwa
 | type | 'getRightTextOfCursor' | Yes | Listening type. The value is fixed at **'getRightTextOfCursor'**. |
 | callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-let getRightTextOfCursorCallback: (length: number) => string = (length: number): string => {
-  console.info(`Succeeded in unsubscribing getRightTextOfCursor, length: ${length}`);
-  let text: string = "";
-  return text;
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('getRightTextOfCursor', getRightTextOfCursorCallback);
-inputMethodController.off('getRightTextOfCursor');
-```
-
 ## off('getTextIndexAtCursor')
 
 ```TypeScript
@@ -999,20 +869,6 @@ Disables listening for the event of obtaining the index of text at the cursor. T
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes | Listening type. The value is fixed at **'getTextIndexAtCursor'**. |
 | callback | () =&gt; number | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-let getTextIndexAtCursorCallback: () => number = (): number => {
-  console.info(`Succeeded in unsubscribing getTextIndexAtCursor.`);
-  let index: number = 0;
-  return index;
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.off('getTextIndexAtCursor', getTextIndexAtCursorCallback);
-inputMethodController.off('getTextIndexAtCursor');
-```
 
 ## off('setPreviewText')
 
@@ -1033,30 +889,6 @@ Unsubscribes from the event for text preview operations in an input method appli
 | type | 'setPreviewText' | Yes | Event type, which is **'setPreviewText'**. |
 | callback | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
-**Examples**
-
-```TypeScript
-let setPreviewTextCallback1: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range): void => {
-  console.info(`SetPreviewTextCallback1: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
-};
-
-let setPreviewTextCallback2: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range): void => {
-  console.info(`setPreviewTextCallback2: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.on('setPreviewText', setPreviewTextCallback1);
-console.info(`SetPreviewTextCallback1 subscribed to setPreviewText`);
-inputMethodController.on('setPreviewText', setPreviewTextCallback2);
-console.info(`SetPreviewTextCallback2 subscribed to setPreviewText`);
-// Cancel only the callback1 of setPreviewText.
-inputMethodController.off('setPreviewText', setPreviewTextCallback1);
-console.info(`SetPreviewTextCallback1 unsubscribed from setPreviewText`);
-// Cancel all callbacks of setPreviewText.
-inputMethodController.off('setPreviewText');
-console.info(`All callbacks unsubscribed from setPreviewText`);
-```
-
 ## off('finishTextPreview')
 
 ```TypeScript
@@ -1075,31 +907,6 @@ Unsubscribes from the event of finishing text preview. This API uses an asynchro
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | Yes | Event type, which is **'finishTextPreview'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used for disable listening, which must be the same as that passed by the **on** API.<br>If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let finishTextPreviewCallback1: Callback<void> = (): void => {
-  console.info(`FinishTextPreviewCallback1: finishTextPreview event triggered`);
-};
-let finishTextPreviewCallback2: Callback<void> = (): void => {
-  console.info(`FinishTextPreviewCallback2: finishTextPreview event triggered`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.on('finishTextPreview', finishTextPreviewCallback1);
-console.info(`FinishTextPreviewCallback1 subscribed to finishTextPreview`);
-inputMethodController.on('finishTextPreview', finishTextPreviewCallback2);
-console.info(`FinishTextPreviewCallback2 subscribed to finishTextPreview`);
-// Cancel only the callback1 of finishTextPreview.
-inputMethodController.off('finishTextPreview', finishTextPreviewCallback1);
-console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
-// Cancel all callbacks of finishTextPreview.
-inputMethodController.off('finishTextPreview');
-console.info(`All callbacks unsubscribed from finishTextPreview`);
-```
 
 ## on('selectByRange')
 
@@ -1126,14 +933,6 @@ Enables listening for the select-by-range event. This API uses an asynchronous c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
-  console.info(`Succeeded in subscribing selectByRange: start: ${range.start} , end: ${range.end}`);
-});
-```
-
 ## on('selectByMovement')
 
 ```TypeScript
@@ -1158,14 +957,6 @@ Enables listening for the select-by-cursor-movement event. This API uses an asyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('selectByMovement', (movement: inputMethod.Movement) => {
-  console.info('Succeeded in subscribing selectByMovement: direction: ' + movement.direction);
-});
-```
 
 ## on('insertText')
 
@@ -1193,27 +984,6 @@ Enables listening for the text insertion event of the input method. This API use
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-**Examples**
-
-```TypeScript
-function callback1(text: string): void {
-  console.info(`Succeeded in getting callback1, data: ${text}`);
-}
-
-function callback2(text: string): void {
-  console.info(`Succeeded in getting callback2, data: ${text}`);
-}
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-// Register a callback.
-inputMethodController.on('insertText', callback1);
-inputMethodController.on('insertText', callback2);
-// Cancel only callback1 of insertText.
-inputMethodController.off('insertText', callback1);
-// Cancel all callbacks of insertText.
-inputMethodController.off('insertText');
-```
-
 ## on('deleteLeft')
 
 ```TypeScript
@@ -1239,14 +1009,6 @@ Enables listening for the leftward delete event. This API uses an asynchronous c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
-
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('deleteLeft', (length: number) => {
-  console.info(`Succeeded in subscribing deleteLeft, length: ${length}`);
-});
-```
 
 ## on('deleteRight')
 
@@ -1274,14 +1036,6 @@ Enables listening for the rightward delete event. This API uses an asynchronous 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('deleteRight', (length: number) => {
-  console.info(`Succeeded in subscribing deleteRight, length: ${length}`);
-});
-```
-
 ## on('sendKeyboardStatus')
 
 ```TypeScript
@@ -1307,14 +1061,6 @@ Enables listening for the soft keyboard status event of the input method. This A
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
-
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMethod.KeyboardStatus) => {
-  console.info(`Succeeded in subscribing sendKeyboardStatus, keyboardStatus: ${keyboardStatus}`);
-});
-```
 
 ## on('sendFunctionKey')
 
@@ -1342,14 +1088,6 @@ Enables listening for the function key sending event of the input method. This A
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.FunctionKey) => {
-  console.info(`Succeeded in subscribing sendFunctionKey, functionKey.enterKeyType: ${functionKey.enterKeyType}`);
-});
-```
-
 ## on('moveCursor')
 
 ```TypeScript
@@ -1375,14 +1113,6 @@ Enables listening for the cursor movement event of the input method. This API us
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
-
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) => {
-  console.info(`Succeeded in subscribing moveCursor, direction: ${direction}`);
-});
-```
 
 ## on('handleExtendAction')
 
@@ -1410,14 +1140,6 @@ Enables listening for the extended action handling event of the input method. Th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('handleExtendAction', (action: inputMethod.ExtendAction) => {
-  console.info(`Succeeded in subscribing handleExtendAction, action: ${action}`);
-});
-```
-
 ## on('getLeftTextOfCursor')
 
 ```TypeScript
@@ -1443,16 +1165,6 @@ Enables listening for the event of obtaining the length of text deleted leftward
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
-
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
-  console.info(`Succeeded in subscribing getLeftTextOfCursor, length: ${length}`);
-  let text: string = "";
-  return text;
-});
-```
 
 ## on('getRightTextOfCursor')
 
@@ -1480,16 +1192,6 @@ Enables listening for the event of obtaining the length of text deleted rightwar
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
 
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
-  console.info(`Succeeded in subscribing getRightTextOfCursor, length: ${length}`);
-  let text: string = "";
-  return text;
-});
-```
-
 ## on('getTextIndexAtCursor')
 
 ```TypeScript
@@ -1515,16 +1217,6 @@ Enables listening for the event of obtaining the index of text at the cursor. Th
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 | [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) | input method client detached. |
-
-**Examples**
-
-```TypeScript
-inputMethod.getController().on('getTextIndexAtCursor', () => {
-  console.info(`Succeeded in subscribing getTextIndexAtCursor.`);
-  let index: number = 0;
-  return index;
-});
-```
 
 ## on('setPreviewText')
 
@@ -1554,30 +1246,6 @@ Subscribes to the event for text preview operations in an input method applicati
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
-**Examples**
-
-```TypeScript
-let setPreviewTextCallback1: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range): void => {
-  console.info(`SetPreviewTextCallback1: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
-};
-
-let setPreviewTextCallback2: inputMethod.SetPreviewTextCallback = (text: string, range: inputMethod.Range): void => {
-  console.info(`setPreviewTextCallback2: Received text - ${text}, Received range - start: ${range.start}, end: ${range.end}`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.on('setPreviewText', setPreviewTextCallback1);
-console.info(`SetPreviewTextCallback1 subscribed to setPreviewText`);
-inputMethodController.on('setPreviewText', setPreviewTextCallback2);
-console.info(`SetPreviewTextCallback2 subscribed to setPreviewText`);
-// Cancel only the callback1 of setPreviewText.
-inputMethodController.off('setPreviewText', setPreviewTextCallback1);
-console.info(`SetPreviewTextCallback1 unsubscribed from setPreviewText`);
-// Cancel all callbacks of setPreviewText.
-inputMethodController.off('setPreviewText');
-console.info(`All callbacks unsubscribed from setPreviewText`);
-```
-
 ## on('finishTextPreview')
 
 ```TypeScript
@@ -1605,31 +1273,6 @@ Subscribes to the event of finishing text preview. This API uses an asynchronous
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
-
-**Examples**
-
-```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
-let finishTextPreviewCallback1: Callback<void> = (): void => {
-  console.info(`FinishTextPreviewCallback1: finishTextPreview event triggered`);
-};
-let finishTextPreviewCallback2: Callback<void> = (): void => {
-  console.info(`FinishTextPreviewCallback2: finishTextPreview event triggered`);
-};
-
-let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
-inputMethodController.on('finishTextPreview', finishTextPreviewCallback1);
-console.info(`FinishTextPreviewCallback1 subscribed to finishTextPreview`);
-inputMethodController.on('finishTextPreview', finishTextPreviewCallback2);
-console.info(`FinishTextPreviewCallback2 subscribed to finishTextPreview`);
-// Cancel only the callback1 of finishTextPreview.
-inputMethodController.off('finishTextPreview', finishTextPreviewCallback1);
-console.info(`FinishTextPreviewCallback1 unsubscribed from finishTextPreview`);
-// Cancel all callbacks of finishTextPreview.
-inputMethodController.off('finishTextPreview');
-console.info(`All callbacks unsubscribed from finishTextPreview`);
-```
 
 ## recvMessage
 
@@ -1675,7 +1318,7 @@ let messageHandler: inputMethod.MessageHandler = {
 };
 let inputMethodController: inputMethod.InputMethodController = inputMethod.getController();
 inputMethodController.recvMessage(messageHandler);
-// Unregister the MessageHandler.
+// Unregister the registered MessageHandler.
 inputMethodController.recvMessage();
 ```
 
@@ -1780,6 +1423,17 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: number = 2000;
+inputMethod.getController().setCallingWindow(windowId).then(() => {
+  console.info('Succeeded in setting callingWindow.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to setCallingWindow, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## setCallingWindow
 
 ```TypeScript
@@ -1818,16 +1472,7 @@ Sets the window to be avoided by the input method. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let windowId: number = 2000;
-inputMethod.getController().setCallingWindow(windowId).then(() => {
-  console.info('Succeeded in setting callingWindow.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to setCallingWindow, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [setCallingWindow](#setcallingwindow)
 
 ## showSoftKeyboard
 
@@ -1874,6 +1519,27 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showSoftKeyboard().then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: number = 20;
+inputMethod.getController().showSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## showSoftKeyboard
 
 ```TypeScript
@@ -1907,15 +1573,7 @@ Shows the soft keyboard. This API uses a promise to return the result. <br> <br>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().showSoftKeyboard().then(() => {
-  console.info('Succeeded in showing softKeyboard.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [showSoftKeyboard](#showsoftkeyboard)
 
 ## showTextInput
 
@@ -1960,6 +1618,28 @@ inputMethod.getController().showTextInput((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showTextInput().then(() => {
+  console.info('Succeeded in showing text input.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
+
+inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
+  console.info('Succeeded in showing text input.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## showTextInput
 
 ```TypeScript
@@ -1991,15 +1671,7 @@ Enters the text editing mode. This API uses a promise to return the result. <br>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().showTextInput().then(() => {
-  console.info('Succeeded in showing text input.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [showTextInput](#showtextinput)
 
 ## showTextInput
 
@@ -2038,17 +1710,7 @@ Enters the text editing mode. This API uses a promise to return the result. <br>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let requestKeyboardReason: inputMethod.RequestKeyboardReason = inputMethod.RequestKeyboardReason.MOUSE;
-
-inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
-  console.info('Succeeded in showing text input.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [showTextInput](#showtextinput)
 
 ## stopInput
 
@@ -2093,6 +1755,20 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInput().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping input.');
+  } else {
+    console.error('Failed to stopInput.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## stopInput
 
 ```TypeScript
@@ -2120,19 +1796,7 @@ Ends this input session. This API uses a promise to return the result. <br> <br>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInput().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping input.');
-  } else {
-    console.error('Failed to stopInput.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stopInput, code: ${err.code}, message: ${err.message}`);
-})
-```
+See [stopInput](#stopinput)
 
 ## stopInputSession
 
@@ -2180,6 +1844,20 @@ inputMethod.getController().stopInputSession((err: BusinessError, result: boolea
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().stopInputSession().then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in stopping inputSession.');
+  } else {
+    console.error('Failed to stopInputSession.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stopInputSession, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## stopInputSession
 
 ```TypeScript
@@ -2210,19 +1888,7 @@ Ends this input session. This API uses a promise to return the result. <br> <br>
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-inputMethod.getController().stopInputSession().then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in stopping inputSession.');
-  } else {
-    console.error('Failed to stopInputSession.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to stopInputSession, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [stopInputSession](#stopinputsession)
 
 ## updateAttribute
 
@@ -2267,6 +1933,17 @@ inputMethod.getController().updateAttribute(inputAttribute, (err: BusinessError)
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputAttribute: inputMethod.InputAttribute = { textInputType: 0, enterKeyType: 1 };
+inputMethod.getController().updateAttribute(inputAttribute).then(() => {
+  console.info('Succeeded in updating attribute.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## updateAttribute
 
 ```TypeScript
@@ -2302,16 +1979,7 @@ Updates the attribute information of this edit box. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let inputAttribute: inputMethod.InputAttribute = { textInputType: 0, enterKeyType: 1 };
-inputMethod.getController().updateAttribute(inputAttribute).then(() => {
-  console.info('Succeeded in updating attribute.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [updateAttribute](#updateattribute)
 
 ## updateCursor
 
@@ -2361,6 +2029,22 @@ inputMethod.getController().updateCursor(cursorInfo, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let cursorInfo: inputMethod.CursorInfo = {
+  left: 0,
+  top: 0,
+  width: 600,
+  height: 800
+};
+inputMethod.getController().updateCursor(cursorInfo).then(() => {
+  console.info('Succeeded in updating cursorInfo.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## updateCursor
 
 ```TypeScript
@@ -2396,18 +2080,4 @@ Updates the cursor information in this edit box. This API can be called to notif
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let cursorInfo: inputMethod.CursorInfo = {
-  left: 0,
-  top: 0,
-  width: 600,
-  height: 800
-};
-inputMethod.getController().updateCursor(cursorInfo).then(() => {
-  console.info('Succeeded in updating cursorInfo.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to updateCursor, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [updateCursor](#updatecursor)

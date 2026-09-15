@@ -1,8 +1,6 @@
 # LocalizedPosition
 
-Defines the LocalizedPosition.
-
-@interface LocalizedPosition
+Defines the coordinates of a point.
 
 **Since:** 12
 
@@ -14,7 +12,7 @@ Defines the LocalizedPosition.
 start?: LengthMetrics
 ```
 
-Coordinate start of the Position.
+X-coordinate relative to the left for left-to-right (LTR) scripts; X-coordinate relative to the right for right-to- left (RTL) scripts.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -32,7 +30,7 @@ Coordinate start of the Position.
 top?: LengthMetrics
 ```
 
-Coordinate top of the Position.
+Y-coordinate.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

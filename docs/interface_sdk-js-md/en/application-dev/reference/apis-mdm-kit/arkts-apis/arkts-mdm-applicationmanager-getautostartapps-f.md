@@ -136,38 +136,7 @@ Checks the auto-start applications for the current user.
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp);
-  console.info(`Succeeded in adding auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// Return value example.
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // Supported since API version 24.
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
-```
+See [getAutoStartApps](#getautostartapps)
 
 
 ## getAutoStartApps
@@ -251,35 +220,4 @@ Checks the auto-start applications for the specified user.
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let res: Array<Want> = applicationManager.getAutoStartApps(wantTemp, 100);
-  console.info(`Succeeded in getting auto start apps: ${JSON.stringify(res)}`);
-} catch(err) {
-  console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-// Return value example.
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // Supported since API version 24.
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
-```
+See [getAutoStartApps](#getautostartapps)

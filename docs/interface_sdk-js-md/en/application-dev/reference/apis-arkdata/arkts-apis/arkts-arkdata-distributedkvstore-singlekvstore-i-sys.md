@@ -614,8 +614,6 @@ try {
         console.info(`entries.length: ${entries.length}`);
         console.info(`entries[0]: ${entries[0]}`);
       });
-    } else {
-      console.error('KvStore is null'); // The subsequent sample code is the same as the code here.
     }
   });
 } catch (err) {

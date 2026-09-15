@@ -41,6 +41,14 @@ Obtains the OAID. This API uses an asynchronous callback to return the result.
 
 ```TypeScript
 import { identifier } from '@kit.AdsKit';
+
+identifier.getOAID().then((data: string) => {
+  const oaid: string = data;
+});
+```
+
+```TypeScript
+import { identifier } from '@kit.AdsKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 identifier.getOAID((err: BusinessError, data: string) => {
@@ -85,10 +93,4 @@ Obtains the OAID. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { identifier } from '@kit.AdsKit';
-
-identifier.getOAID().then((data: string) => {
-  const oaid: string = data;
-});
-```
+See [getOAID](#getoaid)

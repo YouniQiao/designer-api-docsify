@@ -161,60 +161,12 @@ Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIEx
 
 **Examples**
 
-Implementation of the UIExtensionAbility:
-
 ```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import './pages/UIExtensionPage'; // Import the named route page. The ./pages/UIExtensionPage.ets file is used as an example in the sample code. Change the path and file name to the actual ones during your development.
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // Other lifecycles and implementations
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let storage: LocalStorage = new LocalStorage();
-    storage.setOrCreate('session', session);
-
-    let name: string = 'UIExtPage'; // Name of the named route page.
-    try {
-      session.loadContentByName(name, storage);
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`Failed to load content by name ${name}, code: ${code}, msg: ${message}`);
-    }
-  }
-
-  // Other lifecycles and implementations
-}
+Implementation of the UIExtensionAbility:
 ```
 
-Implementation of the named route page loaded by the UIExtensionAbility:
-
 ```TypeScript
-// Implementation of the ./pages/UIExtensionPage.ets file.
-import { UIExtensionContentSession } from '@kit.AbilityKit';
-
-@Entry ({routeName: 'UIExtPage'}) // Use routeName to define the name of the named route page.
-@Component
-struct UIExtensionPage {
-  @State message: string = 'Hello world';
-  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
-  private session: UIExtensionContentSession | undefined = this.storage?.get<UIExtensionContentSession>('session');
-
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(20)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
+Implementation of the named route page loaded by the UIExtensionAbility:
 ```
 
 ## setWindowPrivacyMode
@@ -283,6 +235,35 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+```TypeScript
+// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
+import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // ...
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let isPrivacyMode: boolean = true;
+    try {
+      session.setWindowPrivacyMode(isPrivacyMode, (err: BusinessError) => {
+        if (err) {
+          console.error(`Failed to set window to privacy mode, code: ${err.code}, msg: ${err.message}`);
+          return;
+        }
+        console.info(`Succeeded in setting window to privacy mode.`);
+      });
+    } catch (e) {
+      let code = (e as BusinessError).code;
+      let msg = (e as BusinessError).message;
+      console.error(`Failed to set window to privacy mode, code: ${code}, msg: ${msg}`);
+    }
+  }
+
+  // ...
+}
+```
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -315,34 +296,7 @@ Enables or disables the window privacy mode of the host application. A window in
 
 **Examples**
 
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let isPrivacyMode: boolean = true;
-    try {
-      session.setWindowPrivacyMode(isPrivacyMode, (err: BusinessError) => {
-        if (err) {
-          console.error(`Failed to set window to privacy mode, code: ${err.code}, msg: ${err.message}`);
-          return;
-        }
-        console.info(`Succeeded in setting window to privacy mode.`);
-      });
-    } catch (e) {
-      let code = (e as BusinessError).code;
-      let msg = (e as BusinessError).message;
-      console.error(`Failed to set window to privacy mode, code: ${code}, msg: ${msg}`);
-    }
-  }
-
-  // ...
-}
-```
+See [setWindowPrivacyMode](#setwindowprivacymode)
 
 ## startAbilityByType
 
@@ -416,6 +370,40 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+```TypeScript
+// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
+import { UIExtensionContentSession, ShareExtensionAbility, Want, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // ...
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let wantParams: Record<string, Object> = {
+      'sceneType': 1
+    };
+    let abilityStartCallback: common.AbilityStartCallback = {
+      onError: (code: number, name: string, message: string) => {
+        console.error(`onError, code: ${code}, name: ${name}, msg: ${message}`);
+      },
+      onResult: (result: common.AbilityResult) => {
+        console.info(`onResult, result: ${JSON.stringify(result)}`);
+      }
+    };
+
+    session.startAbilityByType('test', wantParams, abilityStartCallback)
+      .then(() => {
+        console.info(`Succeeded in startAbilityByType`);
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to startAbilityByType, code: ${err.code}, msg: ${err.message}`);
+      });
+  }
+
+  // ...
+}
+```
+
 ## startAbilityByType
 
 ```TypeScript
@@ -459,39 +447,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-// The UIExtensionAbility class does not allow direct inheritance by third-party applications. The child class ShareExtensionAbility is used here as an example.
-import { UIExtensionContentSession, ShareExtensionAbility, Want, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // ...
-
-  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
-    let wantParams: Record<string, Object> = {
-      'sceneType': 1
-    };
-    let abilityStartCallback: common.AbilityStartCallback = {
-      onError: (code: number, name: string, message: string) => {
-        console.error(`onError, code: ${code}, name: ${name}, msg: ${message}`);
-      },
-      onResult: (result: common.AbilityResult) => {
-        console.info(`onResult, result: ${JSON.stringify(result)}`);
-      }
-    };
-
-    session.startAbilityByType('test', wantParams, abilityStartCallback)
-      .then(() => {
-        console.info(`Succeeded in startAbilityByType`);
-      })
-      .catch((err: BusinessError) => {
-        console.error(`Failed to startAbilityByType, code: ${err.code}, msg: ${err.message}`);
-      });
-  }
-
-  // ...
-}
-```
+See [startAbilityByType](#startabilitybytype)
 
 ## terminateSelf
 
@@ -553,28 +509,6 @@ struct Index {
 }
 ```
 
-## terminateSelf
-
-```TypeScript
-terminateSelf(): Promise<void>
-```
-
-Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses a promise to return the result.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Examples**
-
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -606,6 +540,30 @@ struct Index {
   }
 }
 ```
+
+## terminateSelf
+
+```TypeScript
+terminateSelf(): Promise<void>
+```
+
+Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses a promise to return the result.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+See [terminateSelf](#terminateself)
 
 ## terminateSelfWithResult
 
@@ -678,40 +636,6 @@ struct Index {
 }
 ```
 
-## terminateSelfWithResult
-
-```TypeScript
-terminateSelfWithResult(parameter: AbilityResult): Promise<void>
-```
-
-Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses a promise to return the result.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the host application. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-**Examples**
-
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -753,3 +677,39 @@ struct Index {
   }
 }
 ```
+
+## terminateSelfWithResult
+
+```TypeScript
+terminateSelfWithResult(parameter: AbilityResult): Promise<void>
+```
+
+Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses a promise to return the result.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the host application. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+**Examples**
+
+See [terminateSelfWithResult](#terminateselfwithresult)

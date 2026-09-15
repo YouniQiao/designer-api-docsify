@@ -79,6 +79,56 @@ try {
 }
 ```
 
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  abilityName: 'FormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  }
+};
+try {
+  formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
+    if (error) {
+      console.error(`callback error, code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  abilityName: 'FormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  }
+};
+try {
+  formProvider.requestPublishForm(want).then((data: string) => {
+    console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## requestPublishForm
 
@@ -117,31 +167,7 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 
 **示例**
 
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
-    if (error) {
-      console.error(`callback error, code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [requestPublishForm](#requestpublishform)
 
 
 ## requestPublishForm
@@ -187,26 +213,4 @@ function requestPublishForm(want: Want, formBindingData?: formBindingData.FormBi
 
 **示例**
 
-```TypeScript
-import { formProvider } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let want: Want = {
-  abilityName: 'FormAbility',
-  parameters: {
-    'ohos.extra.param.key.form_dimension': 2,
-    'ohos.extra.param.key.form_name': 'widget',
-    'ohos.extra.param.key.module_name': 'entry'
-  }
-};
-try {
-  formProvider.requestPublishForm(want).then((data: string) => {
-    console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
-  }).catch((error: BusinessError) => {
-    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [requestPublishForm](#requestpublishform)

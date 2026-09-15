@@ -41,12 +41,6 @@ Unsubscribes from state change events of the system screen recorder.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
-**Examples**
-
-```TypeScript
-screenCaptureMonitor.off('systemScreenRecorder');
-```
-
 ## on('systemScreenRecorder')
 
 ```TypeScript
@@ -73,16 +67,6 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-
-**Examples**
-
-```TypeScript
-// This event is reported when the state of the system screen recorder changes.
-screenCaptureMonitor.on('systemScreenRecorder', (event: media.ScreenCaptureEvent) => { 
-  // Set the 'systemScreenRecorder' event callback.
-  console.info(`system ScreenRecorder event: ${event}`);
-})
-```
 
 ## isSystemScreenRecorderWorking
 

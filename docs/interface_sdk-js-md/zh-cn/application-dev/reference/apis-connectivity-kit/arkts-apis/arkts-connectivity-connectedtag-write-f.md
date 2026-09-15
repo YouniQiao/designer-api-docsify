@@ -55,6 +55,19 @@ connectedTag.write(rawData).then(() => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+let rawData = [0x01, 0x02, 0x03]; // change it to be correct.
+connectedTag.write(rawData, (err)=> {
+    if (err) {
+        console.error("connectedTag.write AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag.write AsyncCallback success.");
+    }
+});
+```
+
 
 ## write
 
@@ -88,15 +101,4 @@ function write(data: number[], callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = [0x01, 0x02, 0x03]; // change it to be correct.
-connectedTag.write(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.write AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.write AsyncCallback success.");
-    }
-});
-```
+参见 [write](#write)

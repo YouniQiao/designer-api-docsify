@@ -54,6 +54,38 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getRealTime((error: BusinessError, time: number) => {
+    if (error) {
+      console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in getting real time : ${time}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getRealTime().then((time: number) => {
+    console.info(`Succeeded in getting real time : ${time}`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## getRealTime
 
@@ -85,22 +117,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-      return;
-    }
-    console.info(`Succeeded in getting real time : ${time}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getRealTime](#getrealtime)
 
 
 ## getRealTime
@@ -139,17 +156,4 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemTime.getRealTime().then((time: number) => {
-    console.info(`Succeeded in getting real time : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.info(`Failed to get real time. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getRealTime](#getrealtime)

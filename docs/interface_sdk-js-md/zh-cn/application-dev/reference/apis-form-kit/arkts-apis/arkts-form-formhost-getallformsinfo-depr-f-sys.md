@@ -46,6 +46,17 @@ formHost.getAllFormsInfo((error: Base.BusinessError, data: formInfo.FormInfo[]) 
 });
 ```
 
+```TypeScript
+import formInfo from '@ohos.app.form.formInfo';
+import Base from '@ohos.base';
+
+formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
+  console.info(`formHost getAllFormsInfo data: ${JSON.stringify(data)}`);
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## getAllFormsInfo
 
@@ -75,13 +86,4 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 
 **示例**
 
-```TypeScript
-import formInfo from '@ohos.app.form.formInfo';
-import Base from '@ohos.base';
-
-formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
-  console.info(`formHost getAllFormsInfo data: ${JSON.stringify(data)}`);
-}).catch((error: Base.BusinessError) => {
-  console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
-});
-```
+参见 [getAllFormsInfo](#getallformsinfo)

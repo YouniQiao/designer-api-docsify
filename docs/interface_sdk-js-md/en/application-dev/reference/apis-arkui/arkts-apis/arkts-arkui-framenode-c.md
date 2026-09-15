@@ -77,8 +77,9 @@ Adds the polymorphic style states supported by the component.
 
 **Examples**
 
+```TypeScript
 See Example of Setting and Deleting a Polymorphic Style State.
-- simpleType:
+```
 
 ## adoptChild
 
@@ -110,8 +111,9 @@ Adopts the target node as an affiliated node. The adopted node must not have an 
 
 **Examples**
 
+```TypeScript
 See Example of Adopting a Node as an Affiliate.
-- simpleType:
+```
 
 ## appendChild
 
@@ -144,8 +146,9 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## cancelAnimations
 
@@ -177,8 +180,9 @@ Cancels all animations for specified properties on the FrameNode. This API execu
 
 **Examples**
 
+```TypeScript
 See Example of Creating and Canceling an Animation.
-- simpleType:
+```
 
 ## clearChildren
 
@@ -204,8 +208,9 @@ Clears all child nodes of this FrameNode. If this FrameNode is not modifiable, a
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## constructor
 
@@ -372,8 +377,9 @@ Converts the coordinates of a point from the coordinate system of the window whe
 
 **Examples**
 
+```TypeScript
 See Example of Converting Between Local Coordinates and Window Coordinates.
-- simpleType:
+```
 
 ## convertPositionToWindow
 
@@ -412,8 +418,9 @@ Converts the coordinates of a point from the coordinate system of the current no
 
 **Examples**
 
+```TypeScript
 See Example of Converting Between Local Coordinates and Window Coordinates.
-- simpleType:
+```
 
 ## createAnimation
 
@@ -448,8 +455,9 @@ Creates a property animation for the FrameNode.
 
 **Examples**
 
+```TypeScript
 See Example of Creating and Canceling an Animation.
-- simpleType:
+```
 
 ## createFrameNodes
 
@@ -855,8 +863,13 @@ Obtains the child node in the specified position of this node.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
+
+```TypeScript
+See Example of Node Operations in the LazyForEach Scenario.
+```
 
 ## getChild
 
@@ -889,8 +902,7 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 
 **Examples**
 
-See Example of Node Operations in the LazyForEach Scenario.
-- simpleType:
+See [getChild](#getchild)
 
 ## getChildrenCount
 
@@ -916,38 +928,9 @@ Obtains the number of child nodes of this FrameNode.
 
 **Examples**
 
-See Example of Node Operations.
-- simpleType:
-
-## getChildrenCount
-
 ```TypeScript
-getChildrenCount(countMode?: ChildrenCountMode): number
+See Example of Node Operations.
 ```
-
-Obtains the number of child nodes of this FrameNode based on the specified counting mode.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| number | Returns the number of children of the current FrameNode based on the count mode. |
-
-**Examples**
 
 ```TypeScript
 import { NodeController, FrameNode, UIContext, BuilderNode, ChildrenCountMode, LengthUnit } from '@kit.ArkUI';
@@ -1172,6 +1155,38 @@ struct Index {
 }
 ```
 
+## getChildrenCount
+
+```TypeScript
+getChildrenCount(countMode?: ChildrenCountMode): number
+```
+
+Obtains the number of child nodes of this FrameNode based on the specified counting mode.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Returns the number of children of the current FrameNode based on the count mode. |
+
+**Examples**
+
+See [getChildrenCount](#getchildrencount)
+
 ## getCrossLanguageOptions
 
 ```TypeScript
@@ -1196,8 +1211,9 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getCustomProperty
 
@@ -1229,8 +1245,9 @@ Obtains the component's custom property by its name.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getFirstChild
 
@@ -1256,8 +1273,9 @@ Obtains the first child node of this FrameNode.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getFirstChildIndexWithoutExpand
 
@@ -1283,8 +1301,9 @@ Obtains the sequence number of the first child node of this node that is in the 
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations in the LazyForEach Scenario.
-- simpleType:
+```
 
 ## getFrameNodeById
 
@@ -1477,8 +1496,9 @@ Obtains the position offset of this FrameNode relative to the global display, in
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getId
 
@@ -1504,8 +1524,9 @@ Obtains the node ID set by the user, which is the same as the value of the compo
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getInspectorInfo
 
@@ -1536,8 +1557,9 @@ Obtains the structure information of the node, which is consistent with what is 
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getInteractionEventBindingInfo
 
@@ -1569,8 +1591,9 @@ Obtains the event binding information for the target node. Returns **undefined**
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getLastChildIndexWithoutExpand
 
@@ -1596,8 +1619,9 @@ Obtains the sequence number of the last child node of this node that is in the m
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations in the LazyForEach Scenario.
-- simpleType:
+```
 
 ## getLayoutPosition
 
@@ -1623,8 +1647,9 @@ Obtains the position offset of this FrameNode relative to the parent component a
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getMeasuredSize
 
@@ -1650,8 +1675,9 @@ Obtains the measured size of this FrameNode, in px.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getNextSibling
 
@@ -1677,8 +1703,9 @@ Obtains the next sibling node of this FrameNode.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getNodePropertyValue
 
@@ -1710,8 +1737,9 @@ Obtains the property value of the FrameNode.
 
 **Examples**
 
+```TypeScript
 See Example of Creating and Canceling an Animation.
-- simpleType:
+```
 
 ## getNodeType
 
@@ -1737,8 +1765,9 @@ Obtains the type of the node. For built-in components, the node type corresponds
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getOpacity
 
@@ -1764,8 +1793,9 @@ Obtains the opacity of the node. The minimum value is 0, and the maximum value i
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getParent
 
@@ -1791,8 +1821,9 @@ Obtains the parent node of this FrameNode.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations and Example of Obtaining the Root Node.
-- simpleType:
+```
 
 ## getPositionToParent
 
@@ -2332,8 +2363,9 @@ Obtains the previous sibling node of this FrameNode.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getRenderNode
 
@@ -2417,8 +2449,9 @@ Obtains the system-assigned unique ID of the node.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getUserConfigBorderWidth
 
@@ -2444,8 +2477,9 @@ Obtains the border width set by the user.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getUserConfigMargin
 
@@ -2471,8 +2505,9 @@ Obtains the margin set by the user.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getUserConfigPadding
 
@@ -2498,8 +2533,9 @@ Obtains the padding set by the user.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## getUserConfigSize
 
@@ -2525,8 +2561,9 @@ Obtains the width and height set by the user.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## insertChildAfter
 
@@ -2560,8 +2597,9 @@ Inserts a child node after the specified child node of this FrameNode. If this F
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## invalidate
 
@@ -2601,106 +2639,8 @@ This API ensures rendering synchronization by triggering immediate property upda
 
 **Examples**
 
-Starting from API version 21, when dynamically switching between nodes using if/else statements, you can call invalidateAttributes during node creation to trigger immediate attribute updates, preventing visual flickering during component switching.
-
 ```TypeScript
-// index.ets
-import { FrameNode, NodeController, typeNode, NodeContent } from '@kit.ArkUI';
-
-// Implement a custom NodeAdapter controller by extending NodeController.
-class MyNodeAdapterController extends NodeController {
-  rootNode: FrameNode | null = null;
-  imageUrl: string = '';
-
-  constructor(imageUrl: string) {
-    super();
-    this.imageUrl = imageUrl;
-  }
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode.initialize($r(this.imageUrl))
-    imageNode.attribute.syncLoad(true).width(100).height(100);
-    // Force immediate node updates within the current frame to prevent flickering.
-    imageNode.invalidateAttributes();
-    return imageNode;
-  }
-}
-
-// Custom component with custom mount event handling that pre-loads sample images before mounting
-@Component
-struct NodeComponent3 {
-  private rootSlot: NodeContent = new NodeContent();
-
-  aboutToAppear(): void {
-    const uiContext = this.getUIContext();
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode.initialize($r('app.media.startIcon'))
-    imageNode.attribute.syncLoad(true).width(100).height(100);
-    imageNode.invalidateAttributes();
-    this.rootSlot.addFrameNode(imageNode);
-  }
-
-  build() {
-    ContentSlot(this.rootSlot)
-  }
-}
-
-// Custom component with custom mount event handling that pre-loads sample images before mounting
-@Component
-struct NodeComponent4 {
-  private rootSlot: NodeContent = new NodeContent();
-
-  aboutToAppear(): void {
-    const uiContext = this.getUIContext();
-    let imageNode = typeNode.createNode(uiContext, 'Image');
-    imageNode.initialize($r('app.media.startIcon'))
-    imageNode.attribute.syncLoad(true).width(100).height(100);
-    imageNode.invalidateAttributes();
-    this.rootSlot.addFrameNode(imageNode);
-  }
-
-  build() {
-    ContentSlot(this.rootSlot)
-  }
-}
-
-@Entry
-@Component
-struct ListNodeTest {
-  @State flag: boolean = true;
-  adapterController: MyNodeAdapterController = new MyNodeAdapterController('app.media.startIcon');
-
-  build() {
-    Column() {
-      Text('ListNode Adapter');
-      if (this.flag) {
-        NodeComponent3()
-      } else {
-        NodeComponent4()
-      }
-      if (this.flag) {
-        NodeContainer(this.adapterController)
-          .width(300).height(300)
-          .borderWidth(1).borderColor(Color.Black)
-      } else {
-        NodeContainer(this.adapterController)
-          .width(300).height(300)
-          .borderWidth(1).borderColor(Color.Black)
-      }
-      if (this.flag) {
-        Image($r('app.media.startIcon')).width(100).height(100).syncLoad(true)
-      } else {
-        Image($r('app.media.startIcon')).width(100).height(100).syncLoad(true)
-      }
-      Button('change').onClick(() => {
-        this.flag = !this.flag;
-      })
-    }
-    .borderWidth(1)
-    .width('100%')
-  }
-}
+Starting from API version 21, when dynamically switching between nodes using if/else statements, you can call invalidateAttributes during node creation to trigger immediate attribute updates, preventing visual flickering during component switching.
 ```
 
 ## isAttached
@@ -2727,8 +2667,9 @@ Obtains whether the node is mounted to the main node tree.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## isClipToFrame
 
@@ -2754,8 +2695,9 @@ Checks whether the node is clipped to the component area. This API returns **tru
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## isDisposed
 
@@ -2781,8 +2723,9 @@ Checks whether this FrameNode object has released its reference to its backend e
 
 **Examples**
 
+```TypeScript
 See FrameNode Validity Check Example.
-- simpleType:
+```
 
 ## isInRenderState
 
@@ -2897,8 +2840,9 @@ Checks whether this FrameNode is modifiable.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## isOnMainTree
 
@@ -3499,8 +3443,9 @@ Obtains whether the node is visible.
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## layout
 
@@ -3526,8 +3471,9 @@ Lays out this FrameNode, specifying the layout positions for the FrameNode and i
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## measure
 
@@ -3553,8 +3499,9 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## moveTo
 
@@ -3599,8 +3546,9 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## onDraw
 
@@ -3628,8 +3576,9 @@ Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## onLayout
 
@@ -3655,8 +3604,9 @@ Called when this FrameNode needs to determine its layout. This API provides cust
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## onMeasure
 
@@ -3682,8 +3632,9 @@ Called when this FrameNode needs to determine its size. This API provides custom
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## recycle
 
@@ -3703,8 +3654,9 @@ Triggers child component recycling in global reuse scenarios and fully releases 
 
 **Examples**
 
+```TypeScript
 See Example of Reusing and Recycling Nodes.
-- simpleType:
+```
 
 ## removeAdoptedChild
 
@@ -3736,8 +3688,9 @@ Removes a previously-adopted affiliated node.
 
 **Examples**
 
+```TypeScript
 See Example of Adopting a Node as an Affiliate.
-- simpleType:
+```
 
 ## removeChild
 
@@ -3769,8 +3722,9 @@ Deletes the specified child node from this FrameNode. If this FrameNode is not m
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## removeSupportedUIStates
 
@@ -3796,8 +3750,9 @@ Removes the state processing registration from the component.
 
 **Examples**
 
+```TypeScript
 See Example of Setting and Deleting a Polymorphic Style State.
-- simpleType:
+```
 
 ## reuse
 
@@ -3817,8 +3772,9 @@ Triggers child component reuse in global reuse scenarios to recycle FrameNode ba
 
 **Examples**
 
+```TypeScript
 See Example of Reusing and Recycling Nodes.
-- simpleType:
+```
 
 ## setCrossLanguageOptions
 
@@ -3864,8 +3820,9 @@ Sets the cross-language access options for this FrameNode. For example, for node
 
 **Examples**
 
+```TypeScript
 See Example of Node Operations.
-- simpleType:
+```
 
 ## setLayoutPosition
 
@@ -3891,8 +3848,9 @@ Sets the position of this FrameNode after layout. The default unit is PX.
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## setMeasuredSize
 
@@ -3918,8 +3876,9 @@ Sets the measured size of this FrameNode. The default unit is PX. If the configu
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## setNeedsLayout
 
@@ -3939,8 +3898,9 @@ Marks this FrameNode as needing layout, so that it will be relaid out in the nex
 
 **Examples**
 
+```TypeScript
 See Example of Customizing a Node.
-- simpleType:
+```
 
 ## commonAttribute
 
@@ -3972,8 +3932,9 @@ Note that only the attributes of a custom node can be modified.
 
 **Examples**
 
+```TypeScript
 See Basic Event Example.
-- simpleType:
+```
 
 ## commonEvent
 
@@ -3997,8 +3958,9 @@ In scenarios involving **LazyForEach**, where nodes may be destroyed and reconst
 
 **Examples**
 
+```TypeScript
 See Basic Event Example and Example of Using Basic Events in the LazyForEach Scenario.
-- simpleType:
+```
 
 ## gestureEvent
 
@@ -4020,5 +3982,6 @@ Obtains the **UIGestureEvent** object held by this FrameNode, which is used to s
 
 **Examples**
 
+```TypeScript
 For details, see Gesture Event Example.
-- simpleType:
+```

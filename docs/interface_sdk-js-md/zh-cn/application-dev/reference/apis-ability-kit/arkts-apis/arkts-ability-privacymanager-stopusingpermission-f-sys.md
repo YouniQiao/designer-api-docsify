@@ -65,6 +65,74 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit';
+
+let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // 也可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
+let pid: number = rpc.IPCSkeleton.getCallingPid();
+
+// without pid
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// with pid
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { rpc } from '@kit.IPCKit';
+
+let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // 也可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
+let pid: number = rpc.IPCSkeleton.getCallingPid();
+
+// 不带pid参数
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// 带pid参数
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+
+// 带扩展身份标识
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, {enhancedIdentity: 'test'}).then(() => {
+  console.info('stopUsingPermission success');
+}).catch((err: BusinessError): void => {
+  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // 可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
+// 停止使用指定权限
+privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('stopUsingPermission success');
+  }
+});
+```
+
 
 ## stopUsingPermission
 
@@ -107,20 +175,7 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions, callb
 
 **示例**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // 可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
-// 停止使用指定权限
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('stopUsingPermission success');
-  }
-});
-```
+参见 [stopUsingPermission](#stopusingpermission)
 
 
 ## stopUsingPermission
@@ -177,35 +232,7 @@ pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermis
 
 **示例**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-
-let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // 也可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
-let pid: number = rpc.IPCSkeleton.getCallingPid();
-
-// 不带pid参数
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// 带pid参数
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// 带扩展身份标识
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, {enhancedIdentity: 'test'}).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [stopUsingPermission](#stopusingpermission)
 
 
 ## stopUsingPermission
@@ -259,25 +286,4 @@ pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermis
 
 **示例**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
-
-let tokenID: number = rpc.IPCSkeleton.getCallingTokenId(); // 也可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
-let pid: number = rpc.IPCSkeleton.getCallingPid();
-
-// without pid
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-
-// with pid
-privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid).then(() => {
-  console.info('stopUsingPermission success');
-}).catch((err: BusinessError): void => {
-  console.error(`stopUsingPermission fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [stopUsingPermission](#stopusingpermission)

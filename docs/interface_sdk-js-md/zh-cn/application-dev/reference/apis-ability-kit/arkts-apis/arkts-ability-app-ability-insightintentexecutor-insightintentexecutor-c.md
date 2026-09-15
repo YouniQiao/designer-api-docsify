@@ -46,77 +46,12 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 
 **示例**
 
-同步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // 由开发者定义
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+同步返回意图执行结果的示例如下：
 ```
 
-使用Promise异步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // 实现异步接口需要使用async/await语法糖，通过async声明该接口是一个异步函数
-  async onExecuteInServiceExtensionAbility(name: string,
-    param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // 由开发者定义
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+使用Promise异步返回意图执行结果的示例如下：
 ```
 
 ## onExecuteInUIAbilityBackgroundMode
@@ -155,61 +90,12 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 
 **示例**
 
-同步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+同步返回意图执行结果的示例如下：
 ```
 
-使用Promise异步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // 实现异步接口需要使用async/await语法糖，通过async声明该接口是一个异步函数
-  async onExecuteInUIAbilityBackgroundMode(name: string,
-    param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+使用Promise异步返回意图执行结果的示例如下：
 ```
 
 ## onExecuteInUIAbilityForegroundMode
@@ -251,89 +137,12 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 
 **示例**
 
-同步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // 由开发者定义
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    // 若开发者需要加载意图内容，pages/IntentPage即为意图页面
-    pageLoader.loadContent('pages/IntentPage', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
-      }
-    });
-
-    result = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+同步返回意图执行结果的示例如下：
 ```
 
-使用Promise异步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // 实现异步接口需要使用async/await语法糖，通过async声明该接口是一个异步函数
-  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // 由开发者定义
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+使用Promise异步返回意图执行结果的示例如下：
 ```
 
 ## onExecuteInUIExtensionAbility
@@ -370,81 +179,12 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 
 **示例**
 
-同步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // 由开发者定义
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    // 若开发者需要加载意图内容，pages/Index即为意图页面
-    pageLoader.loadContent('pages/Index');
-
-    result = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+同步返回意图执行结果的示例如下：
 ```
 
-使用Promise异步返回意图执行结果的示例如下：
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // 实现异步接口需要使用async/await语法糖，通过async声明该接口是一个异步函数
-  async onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // 由开发者定义
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+使用Promise异步返回意图执行结果的示例如下：
 ```
 
 ## context

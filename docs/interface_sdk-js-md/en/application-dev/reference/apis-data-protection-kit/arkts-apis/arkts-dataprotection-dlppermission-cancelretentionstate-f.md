@@ -54,6 +54,19 @@ dlpPermission.cancelRetentionState([uri]).then(() => { // Cancel the retention s
 });
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
+dlpPermission.cancelRetentionState([uri], (err, res) => {
+  if (err) {
+    console.error(`Failed to cancel retention state. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('cancelRetentionState success');
+  }
+}); // Cancel the sandbox retention state.
+```
+
 
 ## cancelRetentionState
 
@@ -87,15 +100,4 @@ This API is used to cancel the retention state for sandbox application and resto
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
-dlpPermission.cancelRetentionState([uri], (err, res) => {
-  if (err) {
-    console.error(`Failed to cancel retention state. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('cancelRetentionState success');
-  }
-}); // Cancel the sandbox retention state.
-```
+See [cancelRetentionState](#cancelretentionstate)

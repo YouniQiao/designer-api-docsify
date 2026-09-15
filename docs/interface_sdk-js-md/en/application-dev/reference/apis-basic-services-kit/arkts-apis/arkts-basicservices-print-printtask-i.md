@@ -75,6 +75,105 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('succeed', () => {
+                            console.info('unregister state succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('fail', () => {
+                            console.info('unregister state fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('cancel', () => {
+                            console.info('unregister state cancel');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
 ## off('succeed')
 
 ```TypeScript
@@ -120,8 +219,107 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('block', () => {
+                            console.info('unregister state block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
                         printTask.off('succeed', () => {
                             console.info('unregister state succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('fail', () => {
+                            console.info('unregister state fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('cancel', () => {
+                            console.info('unregister state cancel');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -183,8 +381,107 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('block', () => {
+                            console.info('unregister state block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('succeed', () => {
+                            console.info('unregister state succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
                         printTask.off('fail', () => {
                             console.info('unregister state fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('cancel', () => {
+                            console.info('unregister state cancel');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -230,6 +527,105 @@ Unsubscribes from the cancellation events of a print job. This API uses an async
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('block', () => {
+                            console.info('unregister state block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('succeed', () => {
+                            console.info('unregister state succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.off('fail', () => {
+                            console.info('unregister state fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
@@ -327,6 +723,105 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('succeed', () => {
+                            console.info('print state is succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('fail', () => {
+                            console.info('print state is fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('cancel', () => {
+                            console.info('print state is cancel');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
 ## on('succeed')
 
 ```TypeScript
@@ -372,8 +867,107 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('block', () => {
+                            console.info('print state is block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
                         printTask.on('succeed', () => {
                             console.info('print state is succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('fail', () => {
+                            console.info('print state is fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('cancel', () => {
+                            console.info('print state is cancel');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -435,8 +1029,107 @@ struct Index {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('block', () => {
+                            console.info('print state is block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('succeed', () => {
+                            console.info('print state is succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
                         printTask.on('fail', () => {
                             console.info('print state is fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('cancel', () => {
+                            console.info('print state is cancel');
                         })
                         // ...
                     }).catch((error: BusinessError) => {
@@ -482,6 +1175,105 @@ Subscribes to the cancellation events of a print job. This API uses an asynchron
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('block', () => {
+                            console.info('print state is block');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('succeed', () => {
+                            console.info('print state is succeed');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+@Entry
+@Component
+struct Index {
+    build() {
+        Scroll() {
+            Column({ space: 10 }) {
+                Button("Print").width('90%').height(50).onClick(() => {
+                    let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+                    let context = this.getUIContext().getHostContext();
+                    print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
+                        printTask.on('fail', () => {
+                            console.info('print state is fail');
+                        })
+                        // ...
+                    }).catch((error: BusinessError) => {
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    })
+                })
+            }
+            .justifyContent(FlexAlign.Center)
+            .constraintSize({ minHeight: '100%' })
+            .width('100%')
+        }
+        .height('100%')
+    }
+}
+```
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

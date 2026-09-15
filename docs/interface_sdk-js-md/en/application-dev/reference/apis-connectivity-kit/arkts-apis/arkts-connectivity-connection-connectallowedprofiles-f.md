@@ -60,6 +60,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  connection.connectAllowedProfiles('68:13:24:79:4C:8C').then(() => {
+      console.info('connectAllowedProfiles');
+    }, (err: BusinessError) => {
+      console.error('connectAllowedProfiles:errCode' + err.code + ', errMessage: ' + err.message);
+  });
+} catch (err) {
+  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 
 ## connectAllowedProfiles
 
@@ -105,15 +118,4 @@ Connects all allowed bluetooth profiles between the local and remote device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-  connection.connectAllowedProfiles('68:13:24:79:4C:8C').then(() => {
-      console.info('connectAllowedProfiles');
-    }, (err: BusinessError) => {
-      console.error('connectAllowedProfiles:errCode' + err.code + ', errMessage: ' + err.message);
-  });
-} catch (err) {
-  console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [connectAllowedProfiles](#connectallowedprofiles)

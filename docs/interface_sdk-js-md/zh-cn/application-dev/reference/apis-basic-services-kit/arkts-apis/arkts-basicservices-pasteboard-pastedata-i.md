@@ -75,6 +75,13 @@ pasteData.addRecord(textRecord);
 pasteData.addRecord(htmlRecord);
 ```
 
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
+// 创建ArrayBuffer数据
+let dataXml = new ArrayBuffer(256);
+pasteData.addRecord('app/xml', dataXml);
+```
+
 ## addRecord
 
 ```TypeScript
@@ -105,12 +112,7 @@ addRecord(mimeType: string, value: ValueType): void
 
 **示例**
 
-```TypeScript
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// 创建ArrayBuffer数据
-let dataXml = new ArrayBuffer(256);
-pasteData.addRecord('app/xml', dataXml);
-```
+参见 [addRecord](#addrecord)
 
 ## addTextRecord
 
@@ -937,35 +939,6 @@ prop.tag = 'TestTag';
 pasteData.setProperty(prop);
 ```
 
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的localOnly与shareOption属性互斥，最终结果以shareOption为准，shareOption会影响localOnly的值。
-
 ```TypeScript
-(async () => {
-    let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-    let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
-    prop.shareOption = pasteboard.ShareOption.INAPP;
-    prop.localOnly = false;
-    pasteData.setProperty(prop);
-    const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-
-    await systemPasteboard.setData(pasteData).then(async () => {
-        console.info('Succeeded in setting PasteData.');
-        await systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-            let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
-            prop.localOnly; // true
-        });
-    });
-
-    prop.shareOption = pasteboard.ShareOption.LOCALDEVICE;
-    prop.localOnly = false;
-    pasteData.setProperty(prop);
-
-    await systemPasteboard.setData(pasteData).then(async () => {
-        console.info('Succeeded in setting PasteData.');
-        await systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-            let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
-            prop.localOnly; // true
-        });
-    });
-})
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的localOnly与shareOption属性互斥，最终结果以shareOption为准，shareOption会影响localOnly的值。
 ```

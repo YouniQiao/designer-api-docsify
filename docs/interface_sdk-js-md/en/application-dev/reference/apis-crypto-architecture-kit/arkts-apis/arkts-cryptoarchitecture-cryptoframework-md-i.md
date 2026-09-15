@@ -64,61 +64,12 @@ function mdByCallback() {
 }
 ```
 
-## digest
-
 ```TypeScript
-digest(): Promise<DataBlob>
-```
-
-Generates a message digest. This API uses a promise to return the result.
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API versions 9 to 11: SystemCapability.Security.CryptoFramework
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the message digest generated. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-
-**Examples**
-
 ArkTS example:
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function mdByPromise() {
-  let md = cryptoFramework.createMd('SHA256');
-  await md.update({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = await md.digest();
-  console.info('[Promise]: MD result: ' + mdOutput.data);
-  console.info('[Promise]: MD len: ' + md.getMdLength());
-}
 ```
 
-JS example:
-
 ```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto test</text>
-    <input class="btn" @click="MdTest">Md asynchronous test</input>
-</div>
+JS example:
 ```
 
 ```TypeScript
@@ -196,6 +147,41 @@ export default {
 };
 ```
 
+## digest
+
+```TypeScript
+digest(): Promise<DataBlob>
+```
+
+Generates a message digest. This API uses a promise to return the result.
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise used to return the message digest generated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+
+**Examples**
+
+See [digest](#digest)
+
 ## digestSync
 
 ```TypeScript
@@ -229,28 +215,12 @@ Generates a message digest. This API returns the result synchronously.
 
 **Examples**
 
-ArkTS example:
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function mdBySync() {
-  let md = cryptoFramework.createMd('SHA256');
-  md.updateSync({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = md.digestSync();
-  console.info('[Sync]: MD result: ' + mdOutput.data);
-  console.info('[Sync]: MD len: ' + md.getMdLength());
-}
+ArkTS example:
 ```
 
-JS example:
-
 ```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto test</text>
-    <input class="btn" @click="MdTestSync">Md synchronous test</input>
-</div>
+JS example:
 ```
 
 ```TypeScript

@@ -578,7 +578,7 @@ Currently, both the RDB store and KV store support this predicate.
 **Examples**
 
 ```TypeScript
-let predicates = new dataSharePredicates.DataSharePredicates()
+let predicates = new dataSharePredicates.DataSharePredicates();
 predicates.equalTo("NAME", "lisi")
     .or()
     .equalTo("NAME", "Rose");

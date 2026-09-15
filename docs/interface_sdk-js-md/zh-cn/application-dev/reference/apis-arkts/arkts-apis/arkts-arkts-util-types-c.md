@@ -216,15 +216,12 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
+```TypeScript
 > 说明：
 > 
 > 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
 > 
 > 该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export async function* asyncGeneratorFunc() {}
 ```
 
 ```TypeScript
@@ -662,13 +659,10 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
+```TypeScript
 > 说明：
 > 
 > 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
-
-```TypeScript
-// /entry/src/main/ets/pages/test.ts
-export async function* asyncGeneratorFunc() {}
 ```
 
 ```TypeScript

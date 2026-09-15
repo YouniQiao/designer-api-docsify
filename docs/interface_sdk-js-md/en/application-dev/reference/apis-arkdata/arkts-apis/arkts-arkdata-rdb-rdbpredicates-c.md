@@ -606,7 +606,7 @@ let devices: Array<string> = [];
 
 deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
   if (err) {
-    console.log("create device manager failed, err=" + err);
+    console.error("create device manager failed, err=" + err);
     return;
   }
   dmInstance = manager;
@@ -615,9 +615,6 @@ deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: Business
     deviceIds[i] = devices[i].deviceId;
   }
 })
-
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
-predicates.inDevices(deviceIds);
                                   
 let predicates = new data_rdb.RdbPredicates("EMPLOYEE");
 predicates.inDevices(deviceIds);

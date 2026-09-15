@@ -35,13 +35,3 @@ function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): voi
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) | No permission to call this API, which is available only for non-DLP sandbox applications. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
-
-**示例**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.off('openDLPFile', (info: dlpPermission.AccessedDLPFileInfo) => {
-  console.info('openDlpFile event', info.uri, info.lastOpenTime);
-}); // 取消订阅。
-```

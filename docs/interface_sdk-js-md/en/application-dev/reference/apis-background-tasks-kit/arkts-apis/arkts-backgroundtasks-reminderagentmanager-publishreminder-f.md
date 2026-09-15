@@ -62,6 +62,22 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
+  console.info("promise, reminderId = " + reminderId);
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
 
 ## publishReminder
 
@@ -106,18 +122,4 @@ Publishes a reminder. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let timer: reminderAgentManager.ReminderRequestTimer = {
-  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+See [publishReminder](#publishreminder)

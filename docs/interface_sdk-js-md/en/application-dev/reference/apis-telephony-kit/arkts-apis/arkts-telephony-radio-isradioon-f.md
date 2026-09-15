@@ -45,6 +45,18 @@ Checks whether the radio service is enabled on the SIM card in the specified slo
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.isRadioOn((err: BusinessError, data: boolean) => {
+    if (err) {
+        console.error(`isRadioOn failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
     if (err) {
@@ -52,6 +64,17 @@ radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
         return;
     }
     console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.isRadioOn(slotId).then((data: boolean) => {
+    console.info(`isRadioOn success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isRadioOn failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -97,16 +120,7 @@ Checks whether the radio service is enabled on the SIM card in the specified slo
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.isRadioOn(slotId).then((data: boolean) => {
-    console.info(`isRadioOn success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRadioOn failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isRadioOn](#isradioon)
 
 
 ## isRadioOn
@@ -144,14 +158,4 @@ Checks whether the radio service is enabled on the primary SIM card. This API us
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.isRadioOn((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`isRadioOn failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`isRadioOn success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [isRadioOn](#isradioon)

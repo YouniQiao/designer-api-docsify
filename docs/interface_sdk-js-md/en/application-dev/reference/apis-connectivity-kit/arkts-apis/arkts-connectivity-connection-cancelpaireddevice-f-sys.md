@@ -57,6 +57,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// promise
+try {
+    connection.cancelPairedDevice('11:22:33:44:55:66').then(() => {
+        console.info('cancelPairedDevice');
+    }, (error: BusinessError) => {
+        console.error('cancelPairedDevice: errCode:' + error.code + ',errMessage' + error.message);
+    })
+
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 
 ## cancelPairedDevice
 
@@ -102,17 +117,4 @@ Remove a paired remote device.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-// promise
-try {
-    connection.cancelPairedDevice('11:22:33:44:55:66').then(() => {
-        console.info('cancelPairedDevice');
-    }, (error: BusinessError) => {
-        console.error('cancelPairedDevice: errCode:' + error.code + ',errMessage' + error.message);
-    })
-
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [cancelPairedDevice](#cancelpaireddevice)

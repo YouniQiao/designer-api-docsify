@@ -44,6 +44,14 @@ try {
 }
 ```
 
+```TypeScript
+try {
+    brightness.setValue(128, true);
+} catch (err) {
+    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## setValue
 
@@ -76,10 +84,4 @@ function setValue(value: number, continuous: boolean): void
 
 **示例**
 
-```TypeScript
-try {
-    brightness.setValue(128, true);
-} catch (err) {
-    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [setValue](#setvalue)

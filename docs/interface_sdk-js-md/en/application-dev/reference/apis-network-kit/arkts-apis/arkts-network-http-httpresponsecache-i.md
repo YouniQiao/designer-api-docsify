@@ -65,34 +65,60 @@ Disables the cache and deletes the data in it. This API uses an asynchronous cal
 
 **Examples**
 
+```TypeScript
+### delete
+
 delete(callback: AsyncCallback<void>): void
+
 Disables the cache and deletes the data in it. This API uses an asynchronous callback to return the result.
+
 Atomic service API: This API can be used in atomic services since API version 11.
+
 System capability: SystemCapability.Communication.NetStack
+
 Parameters
+```
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+### delete
 
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL").then(data => {
-  const httpResponseCache = http.createHttpResponseCache();
-  httpResponseCache.delete((err: BusinessError) => {
-    try {
-      if (err) {
-        console.error('fail: ' + err);
-      } else {
-        console.info('success');
-      }
-    } catch (err) {
-      console.error('error: ' + err);
-    }
-  });
-  httpRequest.destroy();
-}).catch((error: BusinessError) => {
-  console.error("errcode" + JSON.stringify(error));
-});
+delete(): Promise<void>
+
+Disables the cache and deletes the data in it. This API uses a promise to return the result.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Return value
+```
+
+```TypeScript
+### delete
+
+delete(): Promise<void>
+
+Disables the cache and deletes the data in it. This API uses a promise to return the result.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Return value
+
+Defines HTTP request context data. The object instance is passed as a parameter in the [interceptorHandle](arkts-network-http-httpinterceptor-i.md#interceptorhandle) method of the interceptor. You can use this object to obtain and modify the information about the HTTP request.
+
+Atomic service API: This API can be used in atomic services since API version 22.
+
+System capability: SystemCapability.Communication.NetStack
+
+Defines the HTTP interceptor API, which is used to define the interception processing function.
+
+Atomic service API: This API can be used in atomic services since API version 22.
+
+System capability: SystemCapability.Communication.NetStack
+
+### Attributes
 ```
 
 ## delete
@@ -117,29 +143,7 @@ Disables the cache and deletes the data in it. This API uses a promise to return
 
 **Examples**
 
-delete(): Promise<void>
-Disables the cache and deletes the data in it. This API uses a promise to return the result.
-Atomic service API: This API can be used in atomic services since API version 11.
-System capability: SystemCapability.Communication.NetStack
-Return value
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL").then(data => {
-  const httpResponseCache = http.createHttpResponseCache();
-  httpResponseCache.delete().then(() => {
-    console.info("success");
-  }).catch((err: BusinessError) => {
-    console.error("fail");
-  });
-  httpRequest.destroy();
-}).catch((error: BusinessError) => {
-  console.error("errcode" + JSON.stringify(error));
-});
-```
+See [delete](#delete)
 
 ## flush
 
@@ -163,33 +167,32 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 **Examples**
 
+```TypeScript
+### flush
+
 flush(callback: AsyncCallback<void>): void
+
 Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses an asynchronous callback to return the result. Cached data includes the response header (header), response body (result), cookies, request time (requestTime), and response time (responseTime).
+
 Atomic service API: This API can be used in atomic services since API version 11.
+
 System capability: SystemCapability.Communication.NetStack
+
 Parameters
+```
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+### flush
 
-let httpResponseCache = http.createHttpResponseCache();
-let httpRequest = http.createHttp();
-httpRequest.request("EXAMPLE_URL", (err: BusinessError, data: http.HttpResponse) => {
-  if (!err) {
-    httpResponseCache.flush((err: BusinessError) => {
-      if (err) {
-        console.error('flush fail');
-      }
-      console.info('flush success');
-    });
-    httpRequest.destroy();
-  } else {
-    console.error('error:' + JSON.stringify(err));
-    // Call destroy() to release resources when the request is no longer needed, preventing memory leaks.
-    httpRequest.destroy();
-  }
-});
+flush(): Promise<void>
+
+Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
+
+Atomic service API: This API can be used in atomic services since API version 11.
+
+System capability: SystemCapability.Communication.NetStack
+
+Return value
 ```
 
 ## flush
@@ -214,27 +217,4 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 **Examples**
 
-flush(): Promise<void>
-Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
-Atomic service API: This API can be used in atomic services since API version 11.
-System capability: SystemCapability.Communication.NetStack
-Return value
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-let httpResponseCache = http.createHttpResponseCache();
-let promise = httpRequest.request("EXAMPLE_URL");
-
-promise.then((data: http.HttpResponse) => {
-  httpResponseCache.flush().then(() => {
-    console.error('flush success');
-  }).catch((err: BusinessError) => {
-    console.error('flush fail');
-  });
-}).catch((err: Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
+See [flush](#flush)

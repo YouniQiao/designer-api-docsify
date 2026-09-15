@@ -41,6 +41,15 @@ reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION, 
 });
 ```
 
+```TypeScript
+import notification from '@ohos.notification';
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION).then(() => {
+  console.info("removeNotificationSlot promise");
+});
+```
+
 
 ## removeNotificationSlot
 
@@ -72,11 +81,4 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 **示例**
 
-```TypeScript
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info("removeNotificationSlot promise");
-});
-```
+参见 [removeNotificationSlot](#removenotificationslot)

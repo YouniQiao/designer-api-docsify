@@ -11,11 +11,3 @@ Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityex
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Type:** _Rect
-
-**Examples**
-
-```TypeScript
-import { Rect } from '@kit.AccessibilityKit';
-
-let rect: Rect;
-```

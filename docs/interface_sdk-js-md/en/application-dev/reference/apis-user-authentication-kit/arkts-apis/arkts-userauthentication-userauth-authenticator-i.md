@@ -57,6 +57,19 @@ authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
 });
 ```
 
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  let authenticator = userAuth.getAuthenticator();
+  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
+    console.info('auth successfully.');
+  })
+} catch (error) {
+  console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
+}
+```
+
 ## execute
 
 ```TypeScript
@@ -90,15 +103,4 @@ Starts user authentication. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-try {
-  let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
-    console.info('auth successfully.');
-  })
-} catch (error) {
-  console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
-}
-```
+See [execute](#execute)

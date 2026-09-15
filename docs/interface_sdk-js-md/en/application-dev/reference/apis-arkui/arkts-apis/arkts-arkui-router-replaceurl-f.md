@@ -51,6 +51,31 @@ Replaces the current page with another one in the application and destroys the c
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceUrl({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+})
+  .then(() => {
+    console.info(`replaceUrl finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
 class RouterParams {
   data1: string;
 
@@ -69,6 +94,54 @@ router.replaceUrl({
   }
   console.info('replaceUrl success');
 })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceUrl({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`replaceUrl finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceUrl({
+  url: 'pages/detail',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard, (err) => {
+  if (err) {
+    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('replaceUrl success');
+});
 ```
 
 
@@ -119,30 +192,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.info(`replaceUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+See [replaceUrl](#replaceurl)
 
 
 ## replaceUrl
@@ -188,28 +238,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('replaceUrl success');
-});
-```
+See [replaceUrl](#replaceurl)
 
 
 ## replaceUrl
@@ -260,27 +289,4 @@ Replaces the current page with another one in the application and destroys the c
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceUrl({
-  url: 'pages/detail',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`replaceUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+See [replaceUrl](#replaceurl)

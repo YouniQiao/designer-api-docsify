@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Obtain the touchpad right-click menu type.
+            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
+              console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getTouchpadRightClickType
 
@@ -94,29 +121,4 @@ Obtains the touchpad right-click menu type. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Obtain the touchpad right-click menu type.
-            pointer.getTouchpadRightClickType().then((type: pointer.RightClickType) => {
-              console.info(`Succeeded in getting touchpad right click type, type: ${JSON.stringify(type)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get touchpad right click type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [getTouchpadRightClickType](#gettouchpadrightclicktype)

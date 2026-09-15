@@ -62,6 +62,24 @@ networkManager.listIptablesFilterRules(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+networkManager.listIptablesFilterRules(wantTemp).then((result) => {
+  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## listIptablesFilterRules
 
@@ -105,20 +123,4 @@ Obtains the network packet filtering rule. Only IPv4 is supported. This API uses
 
 **Examples**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp).then((result) => {
-  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [listIptablesFilterRules](#listiptablesfilterrules)

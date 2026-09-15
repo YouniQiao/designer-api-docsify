@@ -54,6 +54,25 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  sensor.getSensorList().then((data: Array<sensor.Sensor>) => {
+    for (let i = 0; i < data.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + JSON.stringify(data[i]));
+    }
+  }, (err: BusinessError) => {
+    console.error(`Failed to get sensorList. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getSensorList
 
@@ -82,21 +101,4 @@ Obtains information about all sensors on the device. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.getSensorList().then((data: Array<sensor.Sensor>) => {
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + JSON.stringify(data[i]));
-    }
-  }, (err: BusinessError) => {
-    console.error(`Failed to get sensorList. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get sensorList. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getSensorList](#getsensorlist)

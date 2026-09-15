@@ -54,6 +54,24 @@ try {
 }
 ```
 
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  // 解锁指定任务
+  missionManager.unlockMission(testMissionId).then((data) => {
+    console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`unlockMission failed. Code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`unlockMission sync failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## unlockMission
 
@@ -89,20 +107,4 @@ function unlockMission(missionId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // 解锁指定任务
-  missionManager.unlockMission(testMissionId).then((data) => {
-    console.info(`unlockMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`unlockMission failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`unlockMission sync failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [unlockMission](#unlockmission)

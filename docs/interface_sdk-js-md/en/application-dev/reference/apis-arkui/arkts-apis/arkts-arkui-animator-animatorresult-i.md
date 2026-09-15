@@ -28,11 +28,8 @@ Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/j
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
 ```TypeScript
-// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
-animator.cancel();
+See ArkTS-based Declarative Development Paradigm.
 ```
 
 ## finish
@@ -51,11 +48,8 @@ Ends the animation, triggering the [onFinish](../../../reference/apis-arkui/js-a
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
 ```TypeScript
-// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
-animator.finish();
+See ArkTS-based Declarative Development Paradigm.
 ```
 
 ## oncancel
@@ -232,11 +226,8 @@ Pauses this animation.
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
 ```TypeScript
-// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
-animator.pause();
+See ArkTS-based Declarative Development Paradigm.
 ```
 
 ## play
@@ -255,11 +246,8 @@ Plays this animation. The animation retains the previous playback state. For exa
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
 ```TypeScript
-// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
-animator.play();
+See ArkTS-based Declarative Development Paradigm.
 ```
 
 ## reset
@@ -328,6 +316,10 @@ struct AnimatorTest {
 }
 ```
 
+```TypeScript
+See ArkTS-based Declarative Development Paradigm.
+```
+
 ## reset
 
 ```TypeScript
@@ -359,28 +351,7 @@ Resets the animation parameters of this animator. Compared with [reset](#reset),
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
-```TypeScript
-import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
-
-let options: AnimatorOptions = {
-  duration: 1500,
-  easing: 'ease',
-  delay: 0,
-  fill: "forwards",
-  direction: "normal",
-  iterations: 1,
-  begin: 100,
-  end: 200
-};
-let optionsNew: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200)
-  .duration(2000)
-  .iterations(3)
-  .delay(1000);
-let animatorResult: AnimatorResult = animator.create(options);
-animatorResult.reset(optionsNew);
-```
+See [reset](#reset)
 
 ## reverse
 
@@ -398,11 +369,8 @@ Plays this animation in reverse order. This API does not take effect when the in
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
 ```TypeScript
-// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
-animator.reverse();
+See ArkTS-based Declarative Development Paradigm.
 ```
 
 ## setExpectedFrameRateRange
@@ -487,9 +455,6 @@ Updates this animator.
 
 **Examples**
 
-See ArkTS-based Declarative Development Paradigm.
-
 ```TypeScript
-// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
-animator.update(options);
+See ArkTS-based Declarative Development Paradigm.
 ```

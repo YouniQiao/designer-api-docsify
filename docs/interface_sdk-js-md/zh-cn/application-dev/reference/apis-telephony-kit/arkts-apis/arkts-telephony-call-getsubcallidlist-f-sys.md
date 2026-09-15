@@ -52,6 +52,16 @@ call.getSubCallIdList(1, (err: BusinessError, data: Array<string>) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.getSubCallIdList(1).then((data: Array<string>) => {
+    console.info(`getSubCallIdList success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSubCallIdList fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSubCallIdList
 
@@ -92,12 +102,4 @@ function getSubCallIdList(callId: number): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.getSubCallIdList(1).then((data: Array<string>) => {
-    console.info(`getSubCallIdList success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSubCallIdList fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getSubCallIdList](#getsubcallidlist)

@@ -42,6 +42,15 @@ function getFreeSize(callback: AsyncCallback<number>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getFreeSize().then((freeSize: number) => {
+  console.info('getFreeSize successfully:' + freeSize);
+}).catch((err: BusinessError) => {
+  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getFreeSize((error: BusinessError, freeSize: number) => {
   if (error) {
     console.error(`getFreeSize failed. Code: ${error.code}, message: ${error.message}`);
@@ -86,11 +95,4 @@ function getFreeSize(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getFreeSize().then((freeSize: number) => {
-  console.info('getFreeSize successfully:' + freeSize);
-}).catch((err: BusinessError) => {
-  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getFreeSize](#getfreesize)

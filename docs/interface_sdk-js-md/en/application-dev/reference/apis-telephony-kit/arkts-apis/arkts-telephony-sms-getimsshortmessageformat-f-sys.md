@@ -48,6 +48,17 @@ sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sms.getImsShortMessageFormat().then((data: string) => {
+    console.info(`getImsShortMessageFormat success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getImsShortMessageFormat
 
@@ -80,13 +91,4 @@ Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, o
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sms.getImsShortMessageFormat().then((data: string) => {
-    console.info(`getImsShortMessageFormat success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getImsShortMessageFormat](#getimsshortmessageformat)

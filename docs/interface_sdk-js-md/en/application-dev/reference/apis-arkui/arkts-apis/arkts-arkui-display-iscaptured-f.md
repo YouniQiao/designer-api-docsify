@@ -40,6 +40,16 @@ let ret: boolean = false;
 ret = display.isCaptured();
 ```
 
+```TypeScript
+try {
+  const bundleList: Array<string> = ['com.example.app'];
+  let ret = display.isCaptured(bundleList);
+  console.info(`The screen is captured or not: ${ret}`);
+} catch (err) {
+  console.error(`Failed to get display isCaptured. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## isCaptured
 
@@ -78,12 +88,4 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 **Examples**
 
-```TypeScript
-try {
-  const bundleList: Array<string> = ['com.example.app'];
-  let ret = display.isCaptured(bundleList);
-  console.info(`The screen is captured or not: ${ret}`);
-} catch (err) {
-  console.error(`Failed to get display isCaptured. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [isCaptured](#iscaptured)

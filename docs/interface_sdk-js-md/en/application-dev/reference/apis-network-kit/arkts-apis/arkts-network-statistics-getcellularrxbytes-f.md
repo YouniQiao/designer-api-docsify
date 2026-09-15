@@ -54,6 +54,16 @@ statistics.getCellularRxBytes((error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getCellularRxBytes().then((stats: number) => {
+  console.info('getCellularRxBytes success', JSON.stringify(stats));
+}).catch((error: Error) => {
+   console.error('getCellularRxBytes error', JSON.stringify(error));
+});
+```
+
 
 ## getCellularRxBytes
 
@@ -90,12 +100,4 @@ Obtains the total downlink traffic (in bytes) of the NIC corresponding to the cu
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getCellularRxBytes().then((stats: number) => {
-  console.info('getCellularRxBytes success', JSON.stringify(stats));
-}).catch((error: Error) => {
-   console.error('getCellularRxBytes error', JSON.stringify(error));
-});
-```
+See [getCellularRxBytes](#getcellularrxbytes)

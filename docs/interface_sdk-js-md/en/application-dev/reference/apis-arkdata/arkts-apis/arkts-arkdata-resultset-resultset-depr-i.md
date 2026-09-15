@@ -34,7 +34,7 @@ let promiseClose = rdbStore.query(predicatesClose, ["ID", "NAME", "AGE", "SALARY
 promiseClose.then((resultSet) => {
   resultSet.close();
 }).catch((err) => {
-  console.log('resultset close failed');
+  console.error('resultset close failed');
 });
 ```
 
@@ -287,7 +287,7 @@ promisequerygoto.then((resultSet) => {
   resultSet.goTo(1);
   resultSet.close();
 }).catch((err) => {
-  console.log('query failed');
+  console.error('query failed');
 });
 ```
 
@@ -322,7 +322,7 @@ promisequerygoFirst.then((resultSet) => {
   resultSet.goToFirstRow();
   resultSet.close();
 }).catch((err) => {
-  console.log('query failed');
+  console.error('query failed');
 });
 ```
 
@@ -357,7 +357,7 @@ promisequerygoLast.then((resultSet) => {
   resultSet.goToLastRow();
   resultSet.close();
 }).catch((err) => {
-  console.log('query failed');
+  console.error('query failed');
 });
 ```
 
@@ -392,7 +392,7 @@ promisequerygoNext.then((resultSet) => {
   resultSet.goToNextRow();
   resultSet.close();
 }).catch((err) => {
-  console.log('query failed');
+  console.error('query failed');
 });
 ```
 
@@ -427,7 +427,7 @@ promisequerygoPrev.then((resultSet) => {
   resultSet.goToPreviousRow();
   resultSet.close();
 }).catch((err) => {
-  console.log('query failed');
+  console.error('query failed');
 });
 ```
 
@@ -468,7 +468,7 @@ promisequerygotorow.then((resultSet) => {
   resultSet.goToRow(5);
   resultSet.close();
 }).catch((err) => {
-  console.log('query failed');
+  console.error('query failed');
 });
 ```
 

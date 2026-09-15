@@ -48,6 +48,25 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
 });
 ```
 
+```TypeScript
+// Detect memory leaks of the ArkTS objects CustomComponent and Window.
+// If the value of an object type is null or false, the default value is used.
+let config: jsLeakWatcher.LeakWatcherConfig = {
+    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
+    objectUniqueIDs: [],
+    checkInterval: 10000,
+    fgLeakCountThreshold: 5,
+    bgLeakCountThreshold: 3,
+    maxStoredHeapDumps: 5,
+    dumpHeapWaitTimeMs: 5000,
+    exclusionList: []
+};
+jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
+    console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
+    console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
+});
+```
+
 
 ## enableLeakWatcher
 
@@ -81,21 +100,4 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 
 **Examples**
 
-```TypeScript
-// Detect memory leaks of the ArkTS objects CustomComponent and Window.
-// If the value of an object type is null or false, the default value is used.
-let config: jsLeakWatcher.LeakWatcherConfig = {
-    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
-    objectUniqueIDs: [],
-    checkInterval: 10000,
-    fgLeakCountThreshold: 5,
-    bgLeakCountThreshold: 3,
-    maxStoredHeapDumps: 5,
-    dumpHeapWaitTimeMs: 5000,
-    exclusionList: []
-};
-jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
-    console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
-    console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
-});
-```
+See [enableLeakWatcher](#enableleakwatcher)

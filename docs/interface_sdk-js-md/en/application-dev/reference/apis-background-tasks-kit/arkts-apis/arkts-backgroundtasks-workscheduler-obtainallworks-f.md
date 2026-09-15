@@ -103,18 +103,7 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.obtainAllWorks((error: BusinessError, res: Array<workScheduler.WorkInfo>) =>{
-    if (error) {
-      console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-    } else {
-      console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-    }
-  });
-```
+See [obtainAllWorks](#obtainallworks)
 
 
 ## obtainAllWorks
@@ -148,13 +137,4 @@ Obtains all the deferred tasks. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
-
-  workScheduler.obtainAllWorks().then((res: Array<workScheduler.WorkInfo>) => {
-    console.info(`workschedulerLog obtainAllWorks success, data is: ${JSON.stringify(res)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`workschedulerLog obtainAllWorks failed. code is ${error.code} message is ${error.message}`);
-  })
-```
+See [obtainAllWorks](#obtainallworks)

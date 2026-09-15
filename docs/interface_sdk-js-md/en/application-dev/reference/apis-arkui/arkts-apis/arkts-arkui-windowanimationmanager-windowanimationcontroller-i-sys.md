@@ -43,8 +43,9 @@ Called on application transition.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onCloseWindow
 
@@ -71,8 +72,9 @@ Called on closing a window.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onMinimizeWindow
 
@@ -100,8 +102,9 @@ Called on minimizing a window.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onScreenUnlock
 
@@ -127,8 +130,9 @@ Called on unlocking the screen.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onStartAppFromLauncher
 
@@ -156,8 +160,9 @@ Called on starting an application form launcher.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onStartAppFromOther
 
@@ -185,8 +190,9 @@ Called on starting an application form other.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onStartAppFromRecent
 
@@ -214,8 +220,9 @@ Called on starting an application form recent.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```
 
 ## onWindowAnimationTargetsUpdate
 
@@ -243,5 +250,6 @@ Called on window animation targets update.
 
 **Examples**
 
+```TypeScript
 For details, see the sample code under windowAnimationManager.setController.
-- simpleType:
+```

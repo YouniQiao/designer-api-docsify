@@ -62,6 +62,24 @@ networkManager.listIptablesFilterRules(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+networkManager.listIptablesFilterRules(wantTemp).then((result) => {
+  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## listIptablesFilterRules
 
@@ -105,20 +123,4 @@ function listIptablesFilterRules(admin: Want): Promise<string>
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.listIptablesFilterRules(wantTemp).then((result) => {
-  console.info(`Succeeded in getting iptables filter rule, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove iptables filter rule. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [listIptablesFilterRules](#listiptablesfilterrules)

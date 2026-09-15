@@ -51,15 +51,19 @@ Obtains the embedding vector of the given image. The model can handle images bel
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-imageEmbedding.loadModel();
-let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
-imageEmbedding.getEmbedding(image)
-  .then((data: Array<number>) => {
-    console.info("Succeeded in getting Embedding");
-  })
-  .catch((err: BusinessError) => {
-    console.error("Failed to get Embedding and code is " + err.code);
-  })
+// Obtain imageEmbedding by calling intelligence.getImageEmbeddingModel first.
+imageEmbedding.loadModel().then(() => {
+  let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
+  imageEmbedding.getEmbedding(image)
+    .then((data: Array<number>) => {
+      console.info("Succeeded in getting Embedding");
+    })
+    .catch((err: BusinessError) => {
+      console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+    })
+}).catch((err: BusinessError) => {
+  console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## loadModel
@@ -92,12 +96,13 @@ Loads this image embedding model. If the loading fails, an error code is returne
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain imageEmbedding by calling intelligence.getImageEmbeddingModel first.
 imageEmbedding.loadModel()
   .then(() => {
     console.info("Succeeded in loading Model");
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to load Model and code is " + err.code);
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
 
@@ -131,11 +136,12 @@ Releases this image embedding model. If the releasing fails, an error code is re
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain imageEmbedding by calling intelligence.getImageEmbeddingModel first.
 imageEmbedding.releaseModel()
   .then(() => {
     console.info("Succeeded in releasing Model");
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to release Model and code is " + err.code);
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```

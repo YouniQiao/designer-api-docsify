@@ -61,6 +61,19 @@ import { wifiManager } from '@kit.ConnectivityKit';
   }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let networkId = 0;
+    wifiManager.removeCandidateConfig(networkId,(error,result) => {
+    console.info("result:" + JSON.stringify(result));
+    });  
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```
+
 
 ## removeCandidateConfig
 
@@ -97,15 +110,4 @@ Remove a specified candidate hotspot configuration, only the configuration which
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let networkId = 0;
-    wifiManager.removeCandidateConfig(networkId,(error,result) => {
-    console.info("result:" + JSON.stringify(result));
-    });  
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```
+See [removeCandidateConfig](#removecandidateconfig)

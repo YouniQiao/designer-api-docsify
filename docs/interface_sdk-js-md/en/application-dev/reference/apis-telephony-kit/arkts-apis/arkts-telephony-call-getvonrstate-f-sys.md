@@ -56,6 +56,17 @@ call.getVoNRState(slotId, (err: BusinessError, data: call.VoNRState) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.getVoNRState(slotId).then((data: call.VoNRState) => {
+    console.info(`getVoNRState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getVoNRState fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getVoNRState
 
@@ -99,13 +110,4 @@ Obtains the status of the VoNR switch. This API uses a promise to return the res
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.getVoNRState(slotId).then((data: call.VoNRState) => {
-    console.info(`getVoNRState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getVoNRState fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getVoNRState](#getvonrstate)

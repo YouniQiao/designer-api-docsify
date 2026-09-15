@@ -47,6 +47,17 @@ sim.getSimSpn(0, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimSpn(0).then((data: string) => {
+    console.info(`getSimSpn success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimSpn failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSimSpn
 
@@ -85,13 +96,4 @@ Obtains the SPN of the SIM card in the specified slot. This API uses a promise t
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimSpn(0).then((data: string) => {
-    console.info(`getSimSpn success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimSpn failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimSpn](#getsimspn)

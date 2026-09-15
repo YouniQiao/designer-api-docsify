@@ -47,6 +47,17 @@ sim.getCardType(0, (err: BusinessError, data: sim.CardType) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getCardType(0).then((data: sim.CardType) => {
+    console.info(`getCardType success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCardType failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getCardType
 
@@ -85,13 +96,4 @@ Obtains the type of the SIM card in the specified slot. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getCardType(0).then((data: sim.CardType) => {
-    console.info(`getCardType success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCardType failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getCardType](#getcardtype)

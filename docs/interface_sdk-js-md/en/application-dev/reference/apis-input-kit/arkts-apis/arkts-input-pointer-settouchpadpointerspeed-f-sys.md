@@ -48,7 +48,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the touchpad cursor speed.
+            // Set the touchpad pointer speed.
             pointer.setTouchpadPointerSpeed(1, (error: BusinessError) => {
               if (error) {
                 console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -56,6 +56,33 @@ struct Index {
               }
               console.info(`Succeeded in setting touchpad pointer speed.`);
             });
+          } catch (error) {
+            console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the touchpad pointer speed.
+            pointer.setTouchpadPointerSpeed(10).then(() => {
+              console.info(`Succeeded in setting touchpad pointer speed.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
           } catch (error) {
             console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -101,29 +128,4 @@ Sets the touchpad pointer speed. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Set the touchpad pointer speed.
-            pointer.setTouchpadPointerSpeed(10).then(() => {
-              console.info(`Succeeded in setting touchpad pointer speed.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set touchpad pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setTouchpadPointerSpeed](#settouchpadpointerspeed)

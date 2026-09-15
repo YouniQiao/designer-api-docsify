@@ -53,6 +53,31 @@ Replaces the current page with another one using the named route and destroys th
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message')
+})
+  .then(() => {
+    console.info(`replaceNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
 class RouterParams {
   data1: string;
 
@@ -71,6 +96,54 @@ router.replaceNamedRoute({
   }
   console.info('replaceNamedRoute success');
 })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`replaceNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class RouterParams {
+  data1: string;
+
+  constructor(str: string) {
+    this.data1 = str;
+  }
+}
+
+router.replaceNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message')
+}, router.RouterMode.Standard, (err) => {
+  if (err) {
+    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('replaceNamedRoute success');
+});
 ```
 
 
@@ -123,30 +196,7 @@ Replaces the current page with another one using the named route and destroys th
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-})
-  .then(() => {
-    console.info(`replaceNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+See [replaceNamedRoute](#replacenamedroute)
 
 
 ## replaceNamedRoute
@@ -194,28 +244,7 @@ Replaces the current page with another one using the named route and destroys th
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('replaceNamedRoute success');
-});
-```
+See [replaceNamedRoute](#replacenamedroute)
 
 
 ## replaceNamedRoute
@@ -268,27 +297,4 @@ Replaces the current page with another one using the named route and destroys th
 
 **Examples**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class RouterParams {
-  data1: string;
-
-  constructor(str: string) {
-    this.data1 = str;
-  }
-}
-
-router.replaceNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message')
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`replaceNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`replaceNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+See [replaceNamedRoute](#replacenamedroute)

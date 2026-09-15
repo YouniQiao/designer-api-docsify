@@ -40,13 +40,23 @@ Exits the share of the specified shared resource. This API uses an asynchronous 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.exit('sharing_resource_test', ((err: BusinessError, result) => {
+cloudData.sharing.exit('sharing_resource_test').then((result) => {
+  console.info(`exit share success, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.exit('sharing_resource_test', (err: BusinessError, result) => {
   if (err) {
     console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`exit share succeeded, result: ${result}`);
-}))
+});
 ```
 
 
@@ -86,12 +96,4 @@ Exits the share of the specified shared resource. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.exit('sharing_resource_test').then((result) => {
-  console.info(`exit share success, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`exit share failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [exit](#exit)

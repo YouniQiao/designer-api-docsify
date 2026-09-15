@@ -38,6 +38,35 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
+let userId: number = 100;
+
+bundle.getBundleInfos(bundleFlag, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
+
+bundle.getBundleInfos(bundleFlag, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
 let userId: number = 100;
@@ -81,19 +110,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
-
-bundle.getBundleInfos(bundleFlag, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
+See [getBundleInfos](#getbundleinfos)
 
 
 ## getBundleInfos
@@ -131,17 +148,4 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleFlag: number = bundle.BundleFlag.GET_BUNDLE_DEFAULT;
-let userId: number = 100;
-
-bundle.getBundleInfos(bundleFlag, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+See [getBundleInfos](#getbundleinfos)

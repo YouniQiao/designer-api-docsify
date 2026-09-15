@@ -120,9 +120,9 @@ The column name is passed in as an input parameter.
 **Examples**
 
 ```TypeScript
-let ColumnName = "name";
+let columnName = "name";
 if (resultSet != undefined) {
-  let getColumnIndex = (resultSet as DataShareResultSet).getColumnIndex(ColumnName);
+  let getColumnIndex = (resultSet as DataShareResultSet).getColumnIndex(columnName);
   console.info('resultSet.getColumnIndex: ' + getColumnIndex);
 }
 ```
@@ -202,8 +202,13 @@ If the specified column or key is empty or the value is not of the DataType type
 ```TypeScript
 let columnIndex = 1;
 if (resultSet != undefined) {
-  let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
-  console.info('resultSet.getDataType: ' + getDataType);
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
+    console.info('resultSet.getDataType: ' + getDataType);
+  }
 }
 ```
 
@@ -243,8 +248,12 @@ If the specified column or key is empty or the value is not of the double type, 
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
-  console.info('resultSet.getDouble: ' + getDouble);
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
+    console.info('resultSet.getDouble: ' + getDouble);
+  }
 }
 ```
 
@@ -284,8 +293,12 @@ If the specified column or key is empty or the value is not of the long type, yo
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
-  console.info('resultSet.getLong: ' + getLong);
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
+    console.info('resultSet.getLong: ' + getLong);
+  }
 }
 ```
 
@@ -325,8 +338,12 @@ If the specified column or key is empty or the value is not of the string type, 
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  let getString = (resultSet as DataShareResultSet).getString(columnIndex);
-  console.info('resultSet.getString: ' + getString);
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getString = (resultSet as DataShareResultSet).getString(columnIndex);
+    console.info('resultSet.getString: ' + getString);
+  }
 }
 ```
 

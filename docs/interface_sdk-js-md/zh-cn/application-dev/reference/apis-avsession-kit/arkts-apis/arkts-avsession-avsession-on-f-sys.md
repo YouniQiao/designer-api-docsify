@@ -35,33 +35,6 @@ function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => v
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-**示例**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.on('sessionCreate', (descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on sessionCreate : isActive : ${descriptor.isActive}`);
-              console.info(`on sessionCreate : type : ${descriptor.type}`);
-              console.info(`on sessionCreate : sessionTag : ${descriptor.sessionTag}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 
 ## on('sessionDestroy')
 
@@ -91,31 +64,6 @@ function on(type: 'sessionDestroy', callback: (session: AVSessionDescriptor) => 
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.on('sessionDestroy', (descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on sessionDestroy : ${descriptor.sessionId}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 
 ## on('topSessionChange')
@@ -147,33 +95,6 @@ function on(type: 'topSessionChange', callback: (session: AVSessionDescriptor) =
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-**示例**
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.on('topSessionChange', (descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on topSessionChange : isActive : ${descriptor.isActive}`);
-              console.info(`on topSessionChange : type : ${descriptor.type}`);
-              console.info(`on topSessionChange : sessionTag : ${descriptor.sessionTag}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 
 ## on('sessionServiceDie')
 
@@ -203,14 +124,6 @@ function on(type: 'sessionServiceDie', callback: () => void): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-
-**示例**
-
-```TypeScript
-avSession.on('sessionServiceDie', () => {
-  console.info('on sessionServiceDie : session is dead ');
-});
-```
 
 
 ## on('distributedSessionChange')
@@ -242,14 +155,6 @@ function on(type: 'distributedSessionChange', distributedSessionType: Distribute
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
-**示例**
-
-```TypeScript
-avSession.on('distributedSessionChange', avSession.DistributedSessionType.TYPE_SESSION_REMOTE, (sessionControllers: Array<avSession.AVSessionController>) => {
-  console.info(`on distributedSessionChange size: ${sessionControllers.length}`);
-});
-```
-
 
 ## on('deviceAvailable')
 
@@ -279,16 +184,6 @@ function on(type: 'deviceAvailable', callback: (device: OutputDeviceInfo) => voi
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-**示例**
-
-```TypeScript
-let castDevice: avSession.OutputDeviceInfo;
-avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
-  castDevice = device;
-  console.info(`on deviceAvailable  : ${device} `);
-});
-```
-
 
 ## on('deviceOffline')
 
@@ -317,16 +212,6 @@ function on(type: 'deviceOffline', callback: (deviceId: string) => void): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-
-**示例**
-
-```TypeScript
-let castDeviceId: string;
-avSession.on('deviceOffline', (deviceId: string) => {
-  castDeviceId = deviceId;
-  console.info(`on deviceOffline  : ${deviceId} `);
-});
-```
 
 
 ## on('deviceLogEvent')
@@ -359,14 +244,6 @@ function on(type: 'deviceLogEvent', callback: Callback<DeviceLogEventCode>): voi
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
-**示例**
-
-```TypeScript
-avSession.on('deviceLogEvent', (eventCode: avSession.DeviceLogEventCode) => {
-  console.info(`on deviceLogEvent code : ${eventCode}`);
-});
-```
-
 
 ## on('deviceStateChanged')
 
@@ -397,12 +274,3 @@ function on(type: 'deviceStateChanged', callback: Callback<DeviceState>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-
-**示例**
-
-```TypeScript
-avSession.on('deviceStateChanged', (state: avSession.DeviceState) => {
-  console.info(`on deviceStateChanged state, deviceId=${state.deviceId}, connect status=${state.deviceState},
-    reasonCode=${state.reasonCode}, radarErrorCode=${state.radarErrorCode}`)
-})
-```

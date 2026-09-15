@@ -41,8 +41,9 @@ onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowA
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onCloseWindow
 
@@ -69,8 +70,9 @@ onCloseWindow(closingWindowTarget: WindowAnimationTarget, finishCallback: Window
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onMinimizeWindow
 
@@ -98,8 +100,9 @@ onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onScreenUnlock
 
@@ -125,8 +128,9 @@ onScreenUnlock(finishCallback: WindowAnimationFinishedCallback): void
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onStartAppFromLauncher
 
@@ -154,8 +158,9 @@ onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onStartAppFromOther
 
@@ -183,8 +188,9 @@ onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onStartAppFromRecent
 
@@ -212,8 +218,9 @@ onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```
 
 ## onWindowAnimationTargetsUpdate
 
@@ -241,5 +248,6 @@ onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
 
 **示例**
 
+```TypeScript
 请参考windowAnimationManager.setController的示例代码。
-- simpleType:
+```

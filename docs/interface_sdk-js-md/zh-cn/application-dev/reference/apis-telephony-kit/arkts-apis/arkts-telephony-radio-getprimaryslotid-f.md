@@ -48,6 +48,16 @@ radio.getPrimarySlotId((err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getPrimarySlotId().then((data: number) => {
+    console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getPrimarySlotId failed, promise: err code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getPrimarySlotId
 
@@ -77,12 +87,4 @@ function getPrimarySlotId(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getPrimarySlotId().then((data: number) => {
-    console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getPrimarySlotId failed, promise: err code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getPrimarySlotId](#getprimaryslotid)

@@ -12,7 +12,7 @@ Defines the coordinates of the touch point. If it is not set, the touch point is
 x: Dimension
 ```
 
-X coordinate of the touch point.
+X-axis coordinate of the touch point.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -30,7 +30,7 @@ X coordinate of the touch point.
 y: Dimension
 ```
 
-Y coordinate of the touch point.
+Y-axis coordinate of the touch point.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

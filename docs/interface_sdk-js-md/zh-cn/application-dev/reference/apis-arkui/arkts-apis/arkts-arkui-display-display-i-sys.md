@@ -63,6 +63,22 @@ displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+// 获取默认Display对象
+displayClass = display.getDefaultDisplaySync();
+// 查询是否包含沉浸式窗口
+let promise = displayClass.hasImmersiveWindow();
+promise.then((data) => {
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## hasImmersiveWindow
 
 ```TypeScript
@@ -94,18 +110,4 @@ hasImmersiveWindow(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-// 获取默认Display对象
-displayClass = display.getDefaultDisplaySync();
-// 查询是否包含沉浸式窗口
-let promise = displayClass.hasImmersiveWindow();
-promise.then((data) => {
-  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [hasImmersiveWindow](#hasimmersivewindow)

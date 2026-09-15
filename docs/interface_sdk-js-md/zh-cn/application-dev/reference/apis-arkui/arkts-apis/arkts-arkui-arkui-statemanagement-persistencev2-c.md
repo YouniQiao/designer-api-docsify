@@ -68,42 +68,8 @@ static globalConnect<T extends object>(
 
 **示例**
 
-如下展示globalConnect持久化Map类型的示例代码：
-
 ```TypeScript
-import { PersistenceV2 } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Page1 {
-  // globalConnect支持持久化Map类型的数据
-  @Local map: Map<number, number> = PersistenceV2.globalConnect({
-    type: Map<number, number>, defaultCreator: () => new Map<number, number>()
-  })!;
-  output: string[] = [];
-
-  // 启动应用，第一次进入，展示restored Map.size=0, map.get(0)=undefined, map.get(1)=undefined, map.get(2)=undefined
-  // 关闭应用，第二次进入，展示restored Map.size=1, map.get(0)=0, map.get(1)=undefined, map.get(2)=undefined
-  // 关闭应用，第三次进入，展示restored Map.size=2, map.get(0)=0, map.get(1)=1, map.get(2)=undefined
-  // 关闭应用，第四次进入，展示restored Map.size=3, map.get(0)=0, map.get(1)=1, map.get(2)=2
-  aboutToAppear(): void {
-    const restoredMapSize = this.map.size;
-    this.output.push(`restored Map.size=${restoredMapSize}, map.get(0)=${this.map.get(0)}, map.get(1)=${this.map.get(1)}, map.get(2)=${this.map.get(2)}`);
-    this.map.set(restoredMapSize, restoredMapSize);
-    // 需要手工持久化
-    PersistenceV2.save('Map');
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Text(this.output.join('\n\n'))
-          .fontSize(24)
-      }
-    }
-    .width('100%')
-  }
-}
+如下展示globalConnect持久化Map类型的示例代码：
 ```
 
 ## globalConnect

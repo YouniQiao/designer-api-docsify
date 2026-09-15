@@ -31,6 +31,16 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@ohos.base';
+let path = "/dev";
+statfs.getFreeBytes(path).then((number: number) => {
+  console.info("getFreeBytes promise successfully:" + number);
+}).catch((err: BusinessError) => {
+  console.error("getFreeBytes failed with error:" + JSON.stringify(err));
+});
+```
+
+```TypeScript
 import common from '@ohos.app.ability.common';
 import { BusinessError } from '@ohos.base';
 let context = getContext(this) as common.UIAbilityContext;
@@ -75,12 +85,4 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let path = "/dev";
-statfs.getFreeBytes(path).then((number: number) => {
-  console.info("getFreeBytes promise successfully:" + number);
-}).catch((err: BusinessError) => {
-  console.error("getFreeBytes failed with error:" + JSON.stringify(err));
-});
-```
+See [getFreeBytes](#getfreebytes)

@@ -34,6 +34,12 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 **Examples**
 
 ```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -42,6 +48,42 @@ contact.queryKey(1, (err: BusinessError, data) => {
     console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryKey(1, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryKey(1, {
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+});
+promise.then((data) => {
   console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
 });
 ```
@@ -78,25 +120,7 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryKey(context, 1, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
+See [queryKey](#querykey)
 
 
 ## queryKey
@@ -127,22 +151,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryKey(1, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
+See [queryKey](#querykey)
 
 
 ## queryKey
@@ -177,29 +186,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryKey(context, 1, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Key. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
+See [queryKey](#querykey)
 
 
 ## queryKey
@@ -235,18 +222,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryKey(1, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
+See [queryKey](#querykey)
 
 
 ## queryKey
@@ -286,22 +262,4 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryKey(context, 1, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Key. data->${JSON.stringify(data)}`);
-});
-```
+See [queryKey](#querykey)

@@ -36,39 +36,12 @@ Obtains the device information.
 
 **Examples**
 
-ArkTS example:
-
 ```TypeScript
-interface DeviceData {
-  brand: string;
-}
-
-export default class Page {
-  getInfo() {
-    try {
-      Device.getInfo({
-        success: (data: DeviceData) => {
-          console.info(`Device information obtained successfully. Device brand: ${data.brand}`);
-        },
-        fail: (data: any, code: number) => {
-          console.error(`Failed to obtain device information. Code: ${code}, message: ${data}`);
-        },
-      });
-    } catch (error) {
-      console.error('Failed to call device information API:', error);
-    }
-  }
-}
+ArkTS example:
 ```
 
-JS example:
-
 ```TypeScript
-<div class="container">
-    <text class="title">Device Information</text>
-    <input type="button" value="Get Device Brand" class="button" onclick="getDeviceInfo"></input>
-    <text class="info">{{brandInfo}}</text>
-</div>
+JS example:
 ```
 
 ```TypeScript

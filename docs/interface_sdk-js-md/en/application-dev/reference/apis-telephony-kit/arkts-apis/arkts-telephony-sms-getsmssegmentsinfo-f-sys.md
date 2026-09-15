@@ -52,6 +52,19 @@ sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
+promise.then((data: sms.SmsSegmentsInfo) => {
+    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSmsSegmentsInfo
 
@@ -94,15 +107,4 @@ Obtains SMS message segment information. This API uses a promise to return the r
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getSmsSegmentsInfo(slotId, "message", false);
-promise.then((data: sms.SmsSegmentsInfo) => {
-    console.info(`getSmsSegmentsInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSmsSegmentsInfo](#getsmssegmentsinfo)

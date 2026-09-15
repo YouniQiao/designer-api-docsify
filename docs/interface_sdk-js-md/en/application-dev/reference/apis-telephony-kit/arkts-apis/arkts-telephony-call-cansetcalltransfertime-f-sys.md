@@ -56,6 +56,17 @@ call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.canSetCallTransferTime(slotId).then((data: boolean) => {
+    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## canSetCallTransferTime
 
@@ -99,13 +110,4 @@ Checks whether the call forwarding time can be set. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.canSetCallTransferTime(slotId).then((data: boolean) => {
-    console.info(`canSetCallTransferTime success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`canSetCallTransferTime fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [canSetCallTransferTime](#cansetcalltransfertime)

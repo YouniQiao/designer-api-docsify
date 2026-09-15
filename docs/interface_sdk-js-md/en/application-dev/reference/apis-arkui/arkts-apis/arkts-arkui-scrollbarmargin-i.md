@@ -1,8 +1,6 @@
 # ScrollBarMargin
 
-Define scrollbar margin options.
-
-@interface ScrollBarMargin
+Defines the margin of the scroll bar.
 
 **Since:** 20
 
@@ -14,7 +12,7 @@ Define scrollbar margin options.
 end?: LengthMetrics
 ```
 
-End margin of the scroll bar.
+End margin of the scroll bar. Default value: **0**, in vp
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -32,7 +30,7 @@ End margin of the scroll bar.
 start?: LengthMetrics
 ```
 
-Start margin of the scroll bar.
+Start margin of the scroll bar. Default value: **0**, in vp
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

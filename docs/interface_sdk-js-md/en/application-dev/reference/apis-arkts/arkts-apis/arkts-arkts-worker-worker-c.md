@@ -43,14 +43,8 @@ Creates a worker instance
 
 **Examples**
 
-The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
-
 ```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-// URL of the Worker file: "entry/src/main/ets/workers/worker.ets"
-const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 ```
 
 ## off
@@ -280,6 +274,18 @@ let buffer = new ArrayBuffer(8);
 workerInstance.postMessage(buffer, [buffer]);
 ```
 
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
+
 ## postMessage
 
 ```TypeScript
@@ -304,6 +310,16 @@ Sends a message to the worker thread. The data is transferred using the structur
 | options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | Option can be set for postmessage. The transferList array cannot contain null. |
 
 **Examples**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
 
 ```TypeScript
 // Index.ets

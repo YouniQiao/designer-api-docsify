@@ -62,6 +62,25 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+};
+try {
+  systemTimer.createTimer(options).then((timerId: number) => {
+    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## createTimer
 
@@ -103,21 +122,4 @@ function createTimer(options: TimerOptions): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-};
-try {
-  systemTimer.createTimer(options).then((timerId: number) => {
-    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [createTimer](#createtimer)

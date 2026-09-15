@@ -68,6 +68,24 @@ adminManager.unsubscribeManagedEvent(wantTemp, events, (err) => {
 });
 ```
 
+```TypeScript
+import { adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED, adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
+
+adminManager.unsubscribeManagedEvent(wantTemp, events).then(() => {
+}).catch((err: BusinessError) => {
+  console.error(`Failed to unsubscribe managed event. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
 
 ## unsubscribeManagedEvent
 
@@ -116,20 +134,4 @@ Unsubscribes from system management events. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED, adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
-
-adminManager.unsubscribeManagedEvent(wantTemp, events).then(() => {
-}).catch((err: BusinessError) => {
-  console.error(`Failed to unsubscribe managed event. Code: ${err.code}, message: ${err.message}`);
-})
-```
+See [unsubscribeManagedEvent](#unsubscribemanagedevent)

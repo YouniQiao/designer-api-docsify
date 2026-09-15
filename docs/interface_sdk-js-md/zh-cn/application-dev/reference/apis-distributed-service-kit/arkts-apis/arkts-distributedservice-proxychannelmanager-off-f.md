@@ -40,33 +40,6 @@ function off(type: 'receiveData', channelId: number, callback?: Callback<DataInf
 | [32390100](../errorcode-proxyChannelManager.md#32390100-内部异常) | Internal error. |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-调用受限) | Call is restricted. |
 
-**示例**
-
-```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('测试')
-        .onClick(() => {
-          try {
-            proxyChannelManager.off('receiveData', channelId); // channelId通过openProxyChannel接口的Promise返回值获取
-          } catch (err) {
-            let error = err as BusinessError;
-            console.error(`Failed to unregister receiveData callback. Code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```
-
 
 ## off('channelStateChange')
 
@@ -101,30 +74,3 @@ function off(type: 'channelStateChange', channelId: number, callback?: Callback<
 | [32390006](../errorcode-proxyChannelManager.md#32390006-参数错误) | Parameter error. |
 | [32390100](../errorcode-proxyChannelManager.md#32390100-内部异常) | Internal error. |
 | [32390101](../errorcode-proxyChannelManager.md#32390101-调用受限) | Call is restricted. |
-
-**示例**
-
-```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Button('测试')
-        .onClick(() => {
-          try {
-            proxyChannelManager.off('channelStateChange', channelId); // channelId通过openProxyChannel接口的Promise返回值获取
-          } catch (err) {
-            let error = err as BusinessError;
-            console.error(`Failed to unregister channelStateChange callback. Code: ${error.code}, message: ${error.message}`);
-          }
-        })
-    }
-    .height('100%')
-    .width('100%')
-  }
-}
-```

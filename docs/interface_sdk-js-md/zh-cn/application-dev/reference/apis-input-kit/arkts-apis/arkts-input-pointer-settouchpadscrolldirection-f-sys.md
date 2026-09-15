@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置触摸板滚动方向
+            pointer.setTouchpadScrollDirection(false).then(() => {
+              console.info(`Succeeded in setting touchpad scroll direction.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setTouchpadScrollDirection
 
@@ -101,29 +128,4 @@ function setTouchpadScrollDirection(state: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触摸板滚动方向
-            pointer.setTouchpadScrollDirection(false).then(() => {
-              console.info(`Succeeded in setting touchpad scroll direction.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [setTouchpadScrollDirection](#settouchpadscrolldirection)

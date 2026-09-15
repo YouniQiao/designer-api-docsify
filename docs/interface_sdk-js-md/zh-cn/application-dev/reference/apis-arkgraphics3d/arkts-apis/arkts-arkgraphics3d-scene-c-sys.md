@@ -38,6 +38,14 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 **示例**
 
 ```TypeScript
+示例1：通过rawfile加载（相对路径）
+```
+
+```TypeScript
+示例2：通过绝对路径加载（从应用沙盒目录/data/storage/el2/base/files加载模型）
+```
+
+```TypeScript
 import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
 
 function loadModelWithParams(): Promise<Scene> {

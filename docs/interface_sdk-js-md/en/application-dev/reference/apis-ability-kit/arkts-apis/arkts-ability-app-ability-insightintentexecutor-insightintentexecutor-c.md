@@ -45,77 +45,12 @@ Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbi
 
 **Examples**
 
-The code snippet below shows the synchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // Defined by the developer.
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+The code snippet below shows the synchronous call that returns the intent execution result:
 ```
 
-The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // Implement the asynchronous interface using the async/await syntax sugar, and declare the interface as an asynchronous function with async.
-  async onExecuteInServiceExtensionAbility(name: string,
-    param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // Defined by the developer.
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
 ```
 
 ## onExecuteInUIAbilityBackgroundMode
@@ -155,61 +90,12 @@ intent execution: onExecuteInUIAbilityBackgroundMode.
 
 **Examples**
 
-The code snippet below shows the synchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+The code snippet below shows the synchronous call that returns the intent execution result:
 ```
 
-The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // Use the async/await syntax sugar to implement an asynchronous interface, and declare the interface as an asynchronous function with async.
-  async onExecuteInUIAbilityBackgroundMode(name: string,
-    param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
 ```
 
 ## onExecuteInUIAbilityForegroundMode
@@ -252,89 +138,12 @@ following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
 **Examples**
 
-The code snippet below shows the synchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // Defined by the developer.
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    // If the developer needs to load the intent content, pages/IntentPage is the intent page.
-    pageLoader.loadContent('pages/IntentPage', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Code: ${err.code}, message: ${err.message}`);
-      } else {
-        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
-      }
-    });
-
-    result = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+The code snippet below shows the synchronous call that returns the intent execution result:
 ```
 
-The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // Use the async/await syntax to implement an asynchronous interface, and declare the interface as an asynchronous function with async.
-  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
-    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // Defined by the developer.
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
 ```
 
 ## onExecuteInUIExtensionAbility
@@ -371,81 +180,12 @@ Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](ark
 
 **Examples**
 
-The code snippet below shows the synchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // Defined by the developer.
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    // If the developer needs to load intent content, pages/Index is the intent page.
-    pageLoader.loadContent('pages/Index');
-
-    result = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    return result;
-  }
-}
+The code snippet below shows the synchronous call that returns the intent execution result:
 ```
 
-The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
-
 ```TypeScript
-import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-async function executeInsightIntent(param: Record<string, Object>): Promise<insightIntent.ExecuteResult> {
-  return new Promise((resolve, reject) => {
-    let result: insightIntent.ExecuteResult = {
-      code: 0,
-      result: {
-        message: 'Execute insight intent succeed.',
-      }
-    };
-    resolve(result);
-  })
-}
-
-export default class IntentExecutorImpl extends InsightIntentExecutor {
-  // Implement the asynchronous interface using the async/await syntax sugar, and declare the interface as an asynchronous function with async.
-  async onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
-    pageLoader: UIExtensionContentSession): Promise<insightIntent.ExecuteResult> {
-    let result: insightIntent.ExecuteResult;
-    if (name !== 'SupportedInsightIntentName') {
-      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
-      result = {
-        // Defined by the developer.
-        code: 404,
-        result: {
-          message: 'Unsupported insight intent.',
-        }
-      };
-      return result;
-    }
-
-    result = await executeInsightIntent(param);
-    return result;
-  }
-}
+The code snippet below shows the promise-based asynchronous call that returns the intent execution result:
 ```
 
 ## context

@@ -1,8 +1,6 @@
 # LocalizedPosition
 
-Defines the LocalizedPosition.
-
-@interface LocalizedPosition
+位置类型，用于表示一个坐标点。
 
 **起始版本：** 12
 
@@ -14,7 +12,7 @@ Defines the LocalizedPosition.
 start?: LengthMetrics
 ```
 
-Coordinate start of the Position.
+LTR模式时x轴相对左边坐标，RTL模式x轴相对右边坐标。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -32,7 +30,7 @@ Coordinate start of the Position.
 top?: LengthMetrics
 ```
 
-Coordinate top of the Position.
+y轴坐标。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

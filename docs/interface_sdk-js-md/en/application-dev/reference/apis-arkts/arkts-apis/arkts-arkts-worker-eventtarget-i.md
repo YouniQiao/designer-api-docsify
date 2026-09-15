@@ -95,17 +95,8 @@ workerPort.addEventListener("alert_add", ()=>{
 workerPort.dispatchEvent({type: 'alert_add', timeStamp: 0}); // timeStamp is not supported yet.
 ```
 
-The dispatchEvent API can be used together with the addEventListener API. The sample code is as follows:
-
 ```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
-workerInstance.postMessage("hello world");
-workerInstance.onmessage = (): void => {
-    console.info("receive data from worker.ets");
-}
+The dispatchEvent API can be used together with the addEventListener API. The sample code is as follows:
 ```
 
 ```TypeScript

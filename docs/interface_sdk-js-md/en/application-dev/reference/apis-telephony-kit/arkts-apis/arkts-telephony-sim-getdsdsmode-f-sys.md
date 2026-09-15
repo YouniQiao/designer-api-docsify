@@ -54,6 +54,18 @@ sim.getDsdsMode((err: BusinessError, data: sim.DsdsMode) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let promise = sim.getDsdsMode();
+promise.then((data: sim.DsdsMode) => {
+    console.info(`getDsdsMode success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDsdsMode failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getDsdsMode
 
@@ -90,14 +102,4 @@ Obtains the value of dsds mode.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let promise = sim.getDsdsMode();
-promise.then((data: sim.DsdsMode) => {
-    console.info(`getDsdsMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDsdsMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getDsdsMode](#getdsdsmode)

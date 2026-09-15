@@ -69,6 +69,47 @@ bundleManager.addDisallowedUninstallBundles(wantTemp, appIds, (err) => {
 });
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.addDisallowedUninstallBundles(wantTemp, appIds, 100, (err) => {
+  if (err) {
+    console.error(`Failed to add disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in adding disallowed uninstall bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.addDisallowedUninstallBundles(wantTemp, appIds, 100).then(() => {
+  console.info('Succeeded in adding disallowed uninstall bundles');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to add disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## addDisallowedUninstallBundles
 
@@ -113,26 +154,7 @@ Adds the applications that cannot be uninstalled by the user specified by **user
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addDisallowedUninstallBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed uninstall bundles');
-});
-```
+See [addDisallowedUninstallBundles](#adddisalloweduninstallbundles)
 
 
 ## addDisallowedUninstallBundles
@@ -183,22 +205,4 @@ Adds the applications that cannot be uninstalled by the current or specified use
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.addDisallowedUninstallBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in adding disallowed uninstall bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [addDisallowedUninstallBundles](#adddisalloweduninstallbundles)

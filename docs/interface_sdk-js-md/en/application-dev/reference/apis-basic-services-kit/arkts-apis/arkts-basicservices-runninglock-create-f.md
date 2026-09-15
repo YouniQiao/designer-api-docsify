@@ -47,6 +47,16 @@ runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SC
 });
 ```
 
+```TypeScript
+runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
+.then((lock: runningLock.RunningLock) => {
+    console.info('created running lock: ' + lock);
+})
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
+});
+```
+
 
 ## create
 
@@ -84,12 +94,4 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 
 **Examples**
 
-```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
-.then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
+See [create](#create)

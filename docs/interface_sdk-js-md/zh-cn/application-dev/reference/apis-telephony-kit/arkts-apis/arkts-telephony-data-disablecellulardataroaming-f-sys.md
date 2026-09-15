@@ -56,6 +56,17 @@ data.disableCellularDataRoaming(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.disableCellularDataRoaming(0).then(() => {
+    console.info(`disableCellularDataRoaming success.`);
+}).catch((err: BusinessError) => {
+    console.error(`disableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## disableCellularDataRoaming
 
@@ -99,13 +110,4 @@ function disableCellularDataRoaming(slotId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularDataRoaming(0).then(() => {
-    console.info(`disableCellularDataRoaming success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableCellularDataRoaming fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [disableCellularDataRoaming](#disablecellulardataroaming)

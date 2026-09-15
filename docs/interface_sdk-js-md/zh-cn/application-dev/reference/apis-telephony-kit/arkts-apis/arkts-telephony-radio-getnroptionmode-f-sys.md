@@ -53,6 +53,17 @@ radio.getNROptionMode(slotId, (err: BusinessError, data: radio.NROptionMode) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getNROptionMode(slotId).then((data: radio.NROptionMode) => {
+    console.info(`getNROptionMode success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getNROptionMode failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getNROptionMode
 
@@ -93,13 +104,4 @@ Get the option mode of NR.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getNROptionMode(slotId).then((data: radio.NROptionMode) => {
-    console.info(`getNROptionMode success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getNROptionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getNROptionMode](#getnroptionmode)

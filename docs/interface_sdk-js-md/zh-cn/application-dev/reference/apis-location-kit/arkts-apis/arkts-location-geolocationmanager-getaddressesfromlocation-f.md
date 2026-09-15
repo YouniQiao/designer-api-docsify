@@ -58,6 +58,27 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let reverseGeocodeRequest: geoLocationManager.ReverseGeoCodeRequest = {
+  "latitude": 31.12,
+  "longitude": 121.11,
+  "maxItems": 1
+};
+try {
+  geoLocationManager.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
+    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getAddressesFromLocation: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## getAddressesFromLocation
 
@@ -94,23 +115,4 @@ function getAddressesFromLocation(request: ReverseGeoCodeRequest): Promise<Array
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let reverseGeocodeRequest: geoLocationManager.ReverseGeoCodeRequest = {
-  "latitude": 31.12,
-  "longitude": 121.11,
-  "maxItems": 1
-};
-try {
-  geoLocationManager.getAddressesFromLocation(reverseGeocodeRequest).then((data) => {
-    console.info('getAddressesFromLocation: ' + JSON.stringify(data));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getAddressesFromLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [getAddressesFromLocation](#getaddressesfromlocation)

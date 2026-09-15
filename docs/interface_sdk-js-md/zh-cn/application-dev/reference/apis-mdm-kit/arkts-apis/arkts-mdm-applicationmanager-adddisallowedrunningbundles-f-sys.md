@@ -70,6 +70,47 @@ applicationManager.addDisallowedRunningBundles(wantTemp, appIds, (err) => {
 });
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
+  if (err) {
+    console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in adding disallowed running bundles');
+});
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100).then(() => {
+  console.info('Succeeded in adding disallowed running bundles');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## addDisallowedRunningBundles
 
@@ -115,26 +156,7 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId:
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in adding disallowed running bundles');
-});
-```
+参见 [addDisallowedRunningBundles](#adddisallowedrunningbundles)
 
 
 ## addDisallowedRunningBundles
@@ -186,22 +208,4 @@ function addDisallowedRunningBundles(admin: Want, appIds: Array<string>, userId?
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// 需根据实际情况进行替换
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in adding disallowed running bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to add disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [addDisallowedRunningBundles](#adddisallowedrunningbundles)

@@ -1,8 +1,6 @@
 # Edges
 
-Defines the Edges.
-
-@interface Edges
+位置类型，表示相对四边的偏移量。同时设置top和bottom，仅top生效；同时设置left和right，仅left生效。
 
 **起始版本：** 12
 
@@ -14,7 +12,7 @@ Defines the Edges.
 bottom?: Dimension
 ```
 
-bottom property.
+相对底边的偏移量。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -34,7 +32,7 @@ bottom property.
 left?: Dimension
 ```
 
-left property.
+相对左边的偏移量。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -54,7 +52,7 @@ left property.
 right?: Dimension
 ```
 
-right property.
+相对右边的偏移量。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -74,7 +72,7 @@ right property.
 top?: Dimension
 ```
 
-top property.
+相对顶边的偏移量。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 

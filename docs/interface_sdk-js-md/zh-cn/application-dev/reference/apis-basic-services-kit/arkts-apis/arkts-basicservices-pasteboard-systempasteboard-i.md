@@ -53,6 +53,17 @@ systemPasteboard.clear((err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clear().then((data) => {
+    console.info('Succeeded in clearing the PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## clear
 
 ```TypeScript
@@ -77,16 +88,7 @@ clear(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clear().then((data) => {
-    console.info('Succeeded in clearing the PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [clear](#clear)
 
 ## clearData
 
@@ -129,6 +131,17 @@ systemPasteboard.clearData((err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clearData().then((data: void) => {
+    console.info('Succeeded in clearing the pasteboard.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## clearData
 
 ```TypeScript
@@ -151,16 +164,7 @@ clearData(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clearData().then((data: void) => {
-    console.info('Succeeded in clearing the pasteboard.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [clearData](#cleardata)
 
 ## clearDataSync
 
@@ -333,6 +337,20 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取系统剪贴板对象
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// 读取系统剪贴板内容
+systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+    // 获取剪贴板中的纯文本内容
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## getData
 
 ```TypeScript
@@ -367,6 +385,22 @@ getData(): Promise<PasteData>
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取系统剪贴板对象
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// 读取系统剪贴板内容
+systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
+    if (err) {
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    // 获取剪贴板中的纯文本内容
+    let text: string = pasteData.getPrimaryText();
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -628,6 +662,20 @@ systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteDa
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 获取系统剪贴板对象
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// 读取系统剪贴板内容
+systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
+    // 获取剪贴板中的纯文本内容
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## getPasteData
 
 ```TypeScript
@@ -652,19 +700,7 @@ getPasteData(): Promise<PasteData>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 获取系统剪贴板对象
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
-systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
-    // 获取剪贴板中的纯文本内容
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [getPasteData](#getpastedata)
 
 ## getUnifiedData
 
@@ -803,6 +839,17 @@ systemPasteboard.hasData((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## hasData
 
 ```TypeScript
@@ -825,16 +872,7 @@ hasData(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [hasData](#hasdata)
 
 ## hasDataSync
 
@@ -962,6 +1000,17 @@ systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasPasteData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## hasPasteData
 
 ```TypeScript
@@ -986,16 +1035,7 @@ hasPasteData(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasPasteData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [hasPasteData](#haspastedata)
 
 ## hasRemoteData
 
@@ -1093,19 +1133,6 @@ off(type: 'update', callback?: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-**示例**
-
-```TypeScript
-// 获取系统剪贴板对象
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 定义剪贴板内容变化回调函数 
-let listener = () => {
-    console.info('The system pasteboard has changed.');
-};
-// 取消订阅剪贴板内容变化事件
-systemPasteboard.off('update', listener);
-```
-
 ## offRemoteUpdate
 
 ```TypeScript
@@ -1127,16 +1154,6 @@ offRemoteUpdate(callback?: UpdateCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | 否 | 远端设备剪贴板中内容变化时触发的用户程序的回调。如果此参数未填，表明清除本应用的所有远端监听回调，否则表示清除指定远端监听回调。 |
-
-**示例**
-
-```TypeScript
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-let listener = () => {
-    console.info('The remote pasteboard has changed.');
-};
-systemPasteboard.offRemoteUpdate(listener);
-```
 
 ## on('update')
 
@@ -1166,19 +1183,6 @@ on(type: 'update', callback: () => void): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**示例**
-
-```TypeScript
-// 获取系统剪贴板对象
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 定义剪贴板内容变化回调函数 
-let listener = () => {
-    console.info('The system pasteboard has changed.');
-};
-// 订阅剪贴板内容变化事件
-systemPasteboard.on('update', listener);
-```
 
 ## onRemoteUpdate
 
@@ -1345,6 +1349,21 @@ systemPasteboard.setData(pasteData, (err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建纯文本剪贴板内容对象
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
+// 获取系统剪贴板对象
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// 将数据写入系统剪贴板
+systemPasteboard.setData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## setData
 
 ```TypeScript
@@ -1381,20 +1400,7 @@ setData(data: PasteData): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 创建纯文本剪贴板内容对象
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
-// 获取系统剪贴板对象
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 将数据写入系统剪贴板
-systemPasteboard.setData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [setData](#setdata)
 
 ## setDataSync
 
@@ -1479,6 +1485,18 @@ systemPasteboard.setPasteData(pasteData, (err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setPasteData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## setPasteData
 
 ```TypeScript
@@ -1509,17 +1527,7 @@ setPasteData(data: PasteData): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.setPasteData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+参见 [setPasteData](#setpastedata)
 
 ## setUnifiedData
 

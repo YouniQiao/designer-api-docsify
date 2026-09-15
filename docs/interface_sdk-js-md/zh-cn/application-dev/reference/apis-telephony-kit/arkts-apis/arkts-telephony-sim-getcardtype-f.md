@@ -51,6 +51,17 @@ sim.getCardType(0, (err: BusinessError, data: sim.CardType) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getCardType(0).then((data: sim.CardType) => {
+    console.info(`getCardType success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCardType failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getCardType
 
@@ -89,13 +100,4 @@ function getCardType(slotId: number): Promise<CardType>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getCardType(0).then((data: sim.CardType) => {
-    console.info(`getCardType success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCardType failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getCardType](#getcardtype)

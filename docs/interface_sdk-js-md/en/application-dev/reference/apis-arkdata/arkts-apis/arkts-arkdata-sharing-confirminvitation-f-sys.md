@@ -41,15 +41,27 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let shareResource: string | undefined;
+cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
+  console.info(`confirm invitation succeeded, result: ${result}`);
+  shareResource = result.value;
+}).catch((err: BusinessError) => {
+  console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let shareResource: string;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED, ((err: BusinessError, result) => {
+cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED, (err: BusinessError, result) => {
   if (err) {
     console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`confirm invitation succeeded, result: ${result}`);
   shareResource = result.value;
-}))
+});
 ```
 
 
@@ -90,14 +102,4 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let shareResource: string | undefined;
-cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sharing.State.STATE_ACCEPTED).then((result: cloudData.sharing.Result<string>) => {
-  console.info(`confirm invitation succeeded, result: ${result}`);
-  shareResource = result.value;
-}).catch((err: BusinessError) => {
-  console.error(`confirm invitation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [confirmInvitation](#confirminvitation)

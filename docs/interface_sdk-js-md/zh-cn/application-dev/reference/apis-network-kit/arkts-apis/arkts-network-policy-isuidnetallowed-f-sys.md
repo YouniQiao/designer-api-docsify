@@ -52,6 +52,41 @@ policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .isUidNetAllowed(11111, true)
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .isUidNetAllowed(11111, 'wlan0')
+  .then((data: boolean) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## isUidNetAllowed
 
@@ -95,18 +130,7 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, true)
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [isUidNetAllowed](#isuidnetallowed)
 
 
 ## isUidNetAllowed
@@ -146,14 +170,7 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => {
-  console.error(JSON.stringify(error));
-  console.info(JSON.stringify(data));
-});
-```
+参见 [isUidNetAllowed](#isuidnetallowed)
 
 
 ## isUidNetAllowed
@@ -198,15 +215,4 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .isUidNetAllowed(11111, 'wlan0')
-  .then((data: boolean) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+参见 [isUidNetAllowed](#isuidnetallowed)

@@ -87,46 +87,13 @@ class EntryAbility extends UIAbility {
     g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to bind asset store. Code: ${err.code}, message: ${err.message}`);
+        return;
       }
       console.info('bindAssetStore success.');
     });
   }
 }
 ```
-
-## bindAssetStore
-
-```TypeScript
-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
-```
-
-Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
-
-**Since:** 11
-
-**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| assetKey | string | Yes | Key of the joint asset in the distributed data object. |
-| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -180,6 +147,42 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+## bindAssetStore
+
+```TypeScript
+bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
+```
+
+Binds joint assets. Currently, only the binding between an asset in a distributed data object and an asset in an RDB store is supported. This API uses a promise to return the result.
+
+**Since:** 11
+
+**System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| assetKey | string | Yes | Key of the joint asset in the distributed data object. |
+| bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+
+**Examples**
+
+See [bindAssetStore](#bindassetstore)
+
 ## off('change')
 
 ```TypeScript
@@ -204,22 +207,6 @@ Unsubscribes from data changes of this distributed data object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-// Unregister the specified data change callback.
-g_object.off('change', (sessionId: string, fields: Array<string>) => {
-    console.info('change' + sessionId);
-    if (g_object != null && fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info('changed !' + fields[index] + ' ' + g_object[fields[index]]);
-        }
-    }
-});
-// Unregister all data change callbacks.
-g_object.off('change');
-```
 
 ## off('status')
 
@@ -249,17 +236,6 @@ Unsubscribes from the status change of this distributed data object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-// Unregister the specified status change callback.
-g_object.off('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
-});
-// Unregister all status change callbacks.
-g_object.off('status');
-```
-
 ## off('change')
 
 ```TypeScript
@@ -278,41 +254,6 @@ Unsubscribes from data changes of this distributed object.
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for data changes of this distributed object. |
-
-**Examples**
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback1 ' + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info('change !' + fields[index]);
-      }
-  }
-}
-
-const changeCallback2: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback2 ' + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info('change !' + fields[index]);
-      }
-  }
-}
-
-try {
-  // Unregister a single data change callback function.
-  g_object.on('change', changeCallback1);
-  g_object.off('change', changeCallback1);
-
-  // Unregister all data change callback functions.
-  g_object.on('change', changeCallback1);
-  g_object.on('change', changeCallback2);
-  g_object.off('change');
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## off('status')
 
@@ -333,30 +274,6 @@ Unsubscribes from status changes of this distributed object.
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for status changes of this distributed object. |
 
-**Examples**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info('status callback1' + sessionId);
-}
-
-const statusCallback2: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info('status callback2' + sessionId);
-}
-try {
-  // Unregister a single status change callback function.
-  g_object.on('status', statusCallback1);
-  g_object.off('status', statusCallback1);
-
-  // Unregister all status change callback functions.
-  g_object.on('status', statusCallback1);
-  g_object.on('status', statusCallback2);
-  g_object.off('status');
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## off('progressChanged')
 
 ```TypeScript
@@ -375,32 +292,6 @@ Unsubscribes from asset transfer progress changes.
 | --- | --- | --- | --- |
 | type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | No | Callback to unregister. If this parameter is not specified, this API unsubscribes from all callbacks for progress changes of this distributed object. |
-
-**Examples**
-
-```TypeScript
-const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info('progressChanged callback1' + sessionId);
-  console.info('progressChanged callback1' + progress);
-}
-
-const progressChangedCallback2: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info('progressChanged callback2' + sessionId);
-  console.info('progressChanged callback2' + progress);
-}
-try {
-  g_object.on('progressChanged', progressChangedCallback1);
-  // Unsubscribes from the asset transfer progress changes.
-  g_object.off('progressChanged', progressChangedCallback1);
-
-  g_object.on('progressChanged', progressChangedCallback1);
-  g_object.on('progressChanged', progressChangedCallback2);
-  // Unsubscribes from all asset transfer progress changes.
-  g_object.off('progressChanged');
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## on('change')
 
@@ -426,19 +317,6 @@ Subscribes to data changes of this distributed data object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-**Examples**
-
-```TypeScript
-g_object.on('change', (sessionId: string, fields: Array<string>) => {
-    console.info('change' + sessionId);
-    if (g_object != null && fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info('changed !' + fields[index] + ' ' + g_object[fields[index]]);
-        }
-    }
-});
-```
 
 ## on('status')
 
@@ -468,14 +346,6 @@ Subscribes to status changes of this distributed data object.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
-**Examples**
-
-```TypeScript
-g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
-});
-```
-
 ## on('change')
 
 ```TypeScript
@@ -494,24 +364,6 @@ Subscribes to data changes of this distributed data object.
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is 'change', which indicates data changes. |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | Yes | Callback used to listen for data changes of a distributed object. |
-
-**Examples**
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback1 ' + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info('change !' + fields[index]);
-      }
-  }
-}
-try {
-  g_object.on('change', changeCallback1);
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## on('status')
 
@@ -532,19 +384,6 @@ Subscribes to the status changes of this distributed object.
 | type | 'status' | Yes | Event type. The value is 'status', which indicates the status changes of a distributed object. |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | Yes | Callback used to listen for status changes of a distributed object. |
 
-**Examples**
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info('status callback ' + sessionId);
-}
-try {
-  g_object.on('status', statusCallback1);
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## on('progressChanged')
 
 ```TypeScript
@@ -563,20 +402,6 @@ Subscribes to the asset transfer progress changes.
 | --- | --- | --- | --- |
 | type | 'progressChanged' | Yes | Event type. The value is 'progressChanged', which indicates the asset transfer progress changes. |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | Yes | Callback used to listen for the asset transfer progress changes. |
-
-**Examples**
-
-```TypeScript
-const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info('progressChanged callback' + sessionId);
-  console.info('progressChanged callback' + progress);
-}
-try {
-  g_object.on('progressChanged', progressChangedCallback);
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## revokeSave
 
@@ -611,6 +436,7 @@ g_object.setSessionId('123456');
 g_object.save('local', (err: BusinessError, result: distributedDataObject.SaveSuccessResponse) => {
     if (err) {
         console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
+        return;
     }
     console.info('save callback');
     console.info('save sessionId: ' + result.sessionId);
@@ -625,6 +451,26 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
     }
     console.info('revokeSave callback');
     console.info('revokeSave sessionId ' + result.sessionId);
+});
+```
+
+```TypeScript
+g_object.setSessionId('123456');
+// Save data for persistence. 
+g_object.save('local').then((result: distributedDataObject.SaveSuccessResponse) => {
+    console.info('save callback');
+    console.info('save sessionId ' + result.sessionId);
+    console.info('save version ' + result.version);
+    console.info('save deviceId ' + result.deviceId);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
+});
+// Delete the persistence data.
+g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
+    console.info('revokeSave callback');
+    console.info('sessionId' + result.sessionId);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to revoke save. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -654,25 +500,7 @@ Revokes the data of this distributed data object saved. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-g_object.setSessionId('123456');
-// Save data for persistence. 
-g_object.save('local').then((result: distributedDataObject.SaveSuccessResponse) => {
-    console.info('save callback');
-    console.info('save sessionId ' + result.sessionId);
-    console.info('save version ' + result.version);
-    console.info('save deviceId ' + result.deviceId);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
-});
-// Delete the persistence data.
-g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
-    console.info('revokeSave callback');
-    console.info('sessionId' + result.sessionId);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to revoke save. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [revokeSave](#revokesave)
 
 ## save
 
@@ -716,6 +544,18 @@ g_object.save('local', (err: BusinessError, result:distributedDataObject.SaveSuc
 });
 ```
 
+```TypeScript
+g_object.setSessionId('123456');
+g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
+    console.info('save callback');
+    console.info('save sessionId ' + callbackInfo.sessionId);
+    console.info('save version ' + callbackInfo.version);
+    console.info('save deviceId ' + callbackInfo.deviceId);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## save
 
 ```TypeScript
@@ -749,17 +589,7 @@ Saves a distributed data object. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-g_object.setSessionId('123456');
-g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
-    console.info('save callback');
-    console.info('save sessionId ' + callbackInfo.sessionId);
-    console.info('save version ' + callbackInfo.version);
-    console.info('save deviceId ' + callbackInfo.deviceId);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [save](#save)
 
 ## setAsset
 
@@ -955,6 +785,32 @@ g_object.setSessionId('', () => {
 });
 ```
 
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), () => {
+    console.info('join session');
+});
+// Exit the distributed network.
+g_object.setSessionId(() => {
+    console.info('leave all session.');
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId()).then(() => {
+    console.info('join session.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+// Exit the distributed network.
+g_object.setSessionId().then(() => {
+    console.info('leave all session.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 ## setSessionId
 
 ```TypeScript
@@ -992,9 +848,35 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 g_object.setSessionId(distributedDataObject.genSessionId(), () => {
     console.info('join session');
 });
+// g_object exits the distributed network.
+g_object.setSessionId('', () => {
+    console.info('leave all session');
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), () => {
+    console.info('join session');
+});
 // Exit the distributed network.
 g_object.setSessionId(() => {
     console.info('leave all session.');
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId()).then(() => {
+    console.info('join session.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+// Exit the distributed network.
+g_object.setSessionId().then(() => {
+    console.info('leave all session.');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 
@@ -1033,6 +915,28 @@ Sets a session ID or exits the distributed network. This API uses a promise to r
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
 
 **Examples**
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), () => {
+    console.info('join session');
+});
+// g_object exits the distributed network.
+g_object.setSessionId('', () => {
+    console.info('leave all session');
+});
+```
+
+```TypeScript
+// Add g_object to the distributed network.
+g_object.setSessionId(distributedDataObject.genSessionId(), () => {
+    console.info('join session');
+});
+// Exit the distributed network.
+g_object.setSessionId(() => {
+    console.info('leave all session.');
+});
+```
 
 ```TypeScript
 // Add g_object to the distributed network.

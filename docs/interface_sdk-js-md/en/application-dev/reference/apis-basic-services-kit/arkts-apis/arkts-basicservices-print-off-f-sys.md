@@ -42,8 +42,36 @@ Unregisters the listener for printer state change events. This API uses a callba
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 
+// Trigger this callback when an added printer is changed.
+let onPrinterChange =
+    (event: print.PrinterEvent, printerInformation: print.PrinterInformation) => {
+        console.info('printerChange, event: ' + event + ', printerInformation: ' + JSON.stringify(printerInformation));
+    };
+print.on('printerChange', onPrinterChange);
+print.off('printerChange');
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
 print.off('printerStateChange', (data: boolean) => {
     console.info('off printerStateChange data : ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('jobStateChange', (data: boolean) => {
+    console.info('offJobStateChanged data : ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('extInfoChange', (data: boolean) => {
+    console.info('offExtInfoChange data : ' + JSON.stringify(data));
 });
 ```
 
@@ -84,8 +112,36 @@ Unregisters the listener for print job state change events. This API uses a call
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 
+// Trigger this callback when an added printer is changed.
+let onPrinterChange =
+    (event: print.PrinterEvent, printerInformation: print.PrinterInformation) => {
+        console.info('printerChange, event: ' + event + ', printerInformation: ' + JSON.stringify(printerInformation));
+    };
+print.on('printerChange', onPrinterChange);
+print.off('printerChange');
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('printerStateChange', (data: boolean) => {
+    console.info('off printerStateChange data : ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
 print.off('jobStateChange', (data: boolean) => {
     console.info('offJobStateChanged data : ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('extInfoChange', (data: boolean) => {
+    console.info('offExtInfoChange data : ' + JSON.stringify(data));
 });
 ```
 
@@ -122,6 +178,34 @@ Unregisters the listener for printer extension information change events. This A
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 **Examples**
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+// Trigger this callback when an added printer is changed.
+let onPrinterChange =
+    (event: print.PrinterEvent, printerInformation: print.PrinterInformation) => {
+        console.info('printerChange, event: ' + event + ', printerInformation: ' + JSON.stringify(printerInformation));
+    };
+print.on('printerChange', onPrinterChange);
+print.off('printerChange');
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('printerStateChange', (data: boolean) => {
+    console.info('off printerStateChange data : ' + JSON.stringify(data));
+});
+```
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+print.off('jobStateChange', (data: boolean) => {
+    console.info('offJobStateChanged data : ' + JSON.stringify(data));
+});
+```
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';

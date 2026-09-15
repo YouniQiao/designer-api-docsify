@@ -52,6 +52,18 @@ dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.Gathe
 }); // Obtain the sandbox gathering policy.
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
+  if (err) {
+    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
+  }
+}); // Obtain the sandbox gathering policy.
+```
+
 
 ## getDLPGatheringPolicy
 
@@ -90,14 +102,4 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
-  if (err) {
-    console.error(`Failed to get DLPGatheringPolicy. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
-  }
-}); // Obtain the sandbox gathering policy.
-```
+See [getDLPGatheringPolicy](#getdlpgatheringpolicy)

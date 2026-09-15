@@ -66,34 +66,6 @@ reminderAgentManager.getValidReminders((err: BusinessError, reminders: Array<rem
 });
 ```
 
-
-## getValidReminders
-
-```TypeScript
-function getValidReminders(): Promise<Array<ReminderRequest>>
-```
-
-获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。
-
-**起始版本：** 9
-
-**系统能力：** SystemCapability.Notification.ReminderAgent
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;Array&lt;[ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)&gt;&gt; | Promise对象，返回当前应用设置的所有有效（未过期）的代理提醒。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
-| [1700004](../errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
-
-**示例**
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
@@ -124,3 +96,33 @@ reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentMan
   console.error("promise err code:" + err.code + " message:" + err.message);
 });
 ```
+
+
+## getValidReminders
+
+```TypeScript
+function getValidReminders(): Promise<Array<ReminderRequest>>
+```
+
+获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。
+
+**起始版本：** 9
+
+**系统能力：** SystemCapability.Notification.ReminderAgent
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;Array&lt;[ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)&gt;&gt; | Promise对象，返回当前应用设置的所有有效（未过期）的代理提醒。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the input parameter is not valid parameter. |
+| [1700004](../errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
+
+**示例**
+
+参见 [getValidReminders](#getvalidreminders)

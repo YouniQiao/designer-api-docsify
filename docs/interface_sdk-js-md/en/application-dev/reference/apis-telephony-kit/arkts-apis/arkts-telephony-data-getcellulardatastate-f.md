@@ -51,6 +51,17 @@ data.getCellularDataState((err: BusinessError, contextData: data.DataConnectStat
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.getCellularDataState().then((contextData: data.DataConnectState) => {
+    console.info(`getCellularDataState success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getCellularDataState
 
@@ -84,13 +95,4 @@ Obtains the cellular data connection status. This API uses a promise to return t
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getCellularDataState().then((contextData: data.DataConnectState) => {
-    console.info(`getCellularDataState success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getCellularDataState fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getCellularDataState](#getcellulardatastate)

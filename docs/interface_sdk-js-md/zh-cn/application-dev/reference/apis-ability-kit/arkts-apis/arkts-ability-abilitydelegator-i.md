@@ -69,6 +69,25 @@ abilityDelegator.addAbilityMonitor(monitor, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info('onAbilityCreateCallback');
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+
+abilityDelegator.addAbilityMonitor(monitor).then(() => {
+  console.info('addAbilityMonitor promise');
+});
+```
+
 ## addAbilityMonitor
 
 ```TypeScript
@@ -104,24 +123,7 @@ addAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info('onAbilityCreateCallback');
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-
-abilityDelegator.addAbilityMonitor(monitor).then(() => {
-  console.info('addAbilityMonitor promise');
-});
-```
+参见 [addAbilityMonitor](#addabilitymonitor)
 
 ## addAbilityMonitorSync
 
@@ -220,6 +222,20 @@ abilityDelegator.addAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.addAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then(() => {
+  console.info('addAbilityStageMonitor promise');
+});
+```
+
 ## addAbilityStageMonitor
 
 ```TypeScript
@@ -255,19 +271,7 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.addAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then(() => {
-  console.info('addAbilityStageMonitor promise');
-});
-```
+参见 [addAbilityStageMonitor](#addabilitystagemonitor)
 
 ## addAbilityStageMonitorSync
 
@@ -394,6 +398,28 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
+  if (err) {
+    console.error(`getCurrentTopAbility fail. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('getCurrentTopAbility callback');
+    ability = data;
+    abilityDelegator.doAbilityBackground(ability).then(() => {
+      console.info('doAbilityBackground promise');
+    });
+  }
+});
+```
+
 ## doAbilityBackground
 
 ```TypeScript
@@ -429,27 +455,7 @@ doAbilityBackground(ability: UIAbility): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
-  if (err) {
-    console.error(`getCurrentTopAbility fail. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('getCurrentTopAbility callback');
-    ability = data;
-    abilityDelegator.doAbilityBackground(ability).then(() => {
-      console.info('doAbilityBackground promise');
-    });
-  }
-});
-```
+参见 [doAbilityBackground](#doabilitybackground)
 
 ## doAbilityForeground
 
@@ -507,6 +513,28 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
+  if (err) {
+    console.error(`getCurrentTopAbility fail. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('getCurrentTopAbility callback');
+    ability = data;
+    abilityDelegator.doAbilityForeground(ability).then(() => {
+      console.info('doAbilityForeground promise');
+    });
+  }
+});
+```
+
 ## doAbilityForeground
 
 ```TypeScript
@@ -542,27 +570,7 @@ doAbilityForeground(ability: UIAbility): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
-  if (err) {
-    console.error(`getCurrentTopAbility fail. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('getCurrentTopAbility callback');
-    ability = data;
-    abilityDelegator.doAbilityForeground(ability).then(() => {
-      console.info('doAbilityForeground promise');
-    });
-  }
-});
-```
+参见 [doAbilityForeground](#doabilityforeground)
 
 ## executeShellCommand
 
@@ -607,6 +615,37 @@ abilityDelegator.executeShellCommand(shellCommand, (err: BusinessError, data: ab
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let shellCommand = 'cmd';
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(shellCommand, timeout, (err: BusinessError, data: abilityDelegatorRegistry.ShellCmdResult) => {
+  if (err) {
+    console.error(`executeShellCommand fail. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('executeShellCommand callback');
+  }
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let shellCommand = 'cmd';
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
+  console.info('executeShellCommand promise');
+});
+```
+
 ## executeShellCommand
 
 ```TypeScript
@@ -631,23 +670,7 @@ executeShellCommand(cmd: string, timeoutSecs: number, callback: AsyncCallback<Sh
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let shellCommand = 'cmd';
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(shellCommand, timeout, (err: BusinessError, data: abilityDelegatorRegistry.ShellCmdResult) => {
-  if (err) {
-    console.error(`executeShellCommand fail. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('executeShellCommand callback');
-  }
-});
-```
+参见 [executeShellCommand](#executeshellcommand)
 
 ## executeShellCommand
 
@@ -678,18 +701,7 @@ executeShellCommand(cmd: string, timeoutSecs?: number): Promise<ShellCmdResult>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let shellCommand = 'cmd';
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.executeShellCommand(shellCommand, timeout).then((data) => {
-  console.info('executeShellCommand promise');
-});
-```
+参见 [executeShellCommand](#executeshellcommand)
 
 ## finishTest
 
@@ -739,6 +751,18 @@ abilityDelegator.finishTest(msg, 0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let msg = 'msg';
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.finishTest(msg, 0).then(() => {
+  console.info('finishTest promise');
+});
+```
+
 ## finishTest
 
 ```TypeScript
@@ -775,17 +799,7 @@ finishTest(msg: string, code: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let msg = 'msg';
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.finishTest(msg, 0).then(() => {
-  console.info('finishTest promise');
-});
-```
+参见 [finishTest](#finishtest)
 
 ## getAbilityState
 
@@ -922,6 +936,20 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let ability: UIAbility;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
+  console.info('getCurrentTopAbility promise');
+  ability = data;
+});
+```
+
 ## getCurrentTopAbility
 
 ```TypeScript
@@ -950,19 +978,7 @@ getCurrentTopAbility(): Promise<UIAbility>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let ability: UIAbility;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.getCurrentTopAbility().then((data: UIAbility) => {
-  console.info('getCurrentTopAbility promise');
-  ability = data;
-});
-```
+参见 [getCurrentTopAbility](#getcurrenttopability)
 
 ## print
 
@@ -1004,6 +1020,18 @@ abilityDelegator.print(msg, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let msg = 'msg';
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.print(msg).then(() => {
+  console.info('print promise');
+});
+```
+
 ## print
 
 ```TypeScript
@@ -1032,17 +1060,7 @@ print(msg: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let msg = 'msg';
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.print(msg).then(() => {
-  console.info('print promise');
-});
-```
+参见 [print](#print)
 
 ## printSync
 
@@ -1136,6 +1154,27 @@ abilityDelegator.removeAbilityMonitor(monitor, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info('onAbilityCreateCallback');
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.removeAbilityMonitor(monitor).then(() => {
+  console.info('removeAbilityMonitor promise');
+});
+```
+
 ## removeAbilityMonitor
 
 ```TypeScript
@@ -1171,26 +1210,7 @@ removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info('onAbilityCreateCallback');
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.removeAbilityMonitor(monitor).then(() => {
-  console.info('removeAbilityMonitor promise');
-});
-```
+参见 [removeAbilityMonitor](#removeabilitymonitor)
 
 ## removeAbilityMonitorSync
 
@@ -1289,6 +1309,20 @@ abilityDelegator.removeAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.removeAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then(() => {
+  console.info('removeAbilityStageMonitor promise');
+});
+```
+
 ## removeAbilityStageMonitor
 
 ```TypeScript
@@ -1324,19 +1358,7 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.removeAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then(() => {
-  console.info('removeAbilityStageMonitor promise');
-});
-```
+参见 [removeAbilityStageMonitor](#removeabilitystagemonitor)
 
 ## removeAbilityStageMonitorSync
 
@@ -1521,6 +1543,22 @@ abilityDelegator.startAbility(want, (err: BusinessError, data: void) => {
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { Want } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let want: Want = {
+  bundleName: 'bundleName',
+  abilityName: 'abilityName'
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.startAbility(want).then((data: void) => {
+  console.info('startAbility promise');
+});
+```
+
 ## startAbility
 
 ```TypeScript
@@ -1570,21 +1608,7 @@ startAbility(want: Want): Promise<void>
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { Want } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let want: Want = {
-  bundleName: 'bundleName',
-  abilityName: 'abilityName'
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.startAbility(want).then((data: void) => {
-  console.info('startAbility promise');
-});
-```
+参见 [startAbility](#startability)
 
 ## waitAbilityMonitor
 
@@ -1642,6 +1666,58 @@ abilityDelegator.waitAbilityMonitor(monitor, (error: BusinessError, data: UIAbil
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 声明AbilityDelegator对象
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+// 设置最大等待时间（毫秒）
+let timeout = 100;
+// 创建AbilityMonitor实例，设置监听的Ability名称
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}.`);
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+// 获取AbilityDelegator实例
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+// 调用waitAbilityMonitor并传入超时参数等待匹配Ability
+abilityDelegator.waitAbilityMonitor(monitor, timeout, (error: BusinessError, data: UIAbility) => {
+  if (error) {
+    console.error(`waitAbilityMonitor fail. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('waitAbilityMonitor success.');
+  }
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { UIAbility } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+let onAbilityCreateCallback = (data: UIAbility) => {
+  console.info('onAbilityCreateCallback');
+};
+
+let monitor: abilityDelegatorRegistry.AbilityMonitor = {
+  abilityName: 'abilityName',
+  onAbilityCreate: onAbilityCreateCallback
+};
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
+  console.info('waitAbilityMonitor promise');
+});
+```
+
 ## waitAbilityMonitor
 
 ```TypeScript
@@ -1673,36 +1749,7 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout: number, callback: AsyncCall
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 声明AbilityDelegator对象
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-// 设置最大等待时间（毫秒）
-let timeout = 100;
-// 创建AbilityMonitor实例，设置监听的Ability名称
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info(`onAbilityCreateCallback, data: ${JSON.stringify(data)}.`);
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-// 获取AbilityDelegator实例
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-// 调用waitAbilityMonitor并传入超时参数等待匹配Ability
-abilityDelegator.waitAbilityMonitor(monitor, timeout, (error: BusinessError, data: UIAbility) => {
-  if (error) {
-    console.error(`waitAbilityMonitor fail. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('waitAbilityMonitor success.');
-  }
-});
-```
+参见 [waitAbilityMonitor](#waitabilitymonitor)
 
 ## waitAbilityMonitor
 
@@ -1740,26 +1787,7 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout?: number): Promise<UIAbility
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { UIAbility } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-let onAbilityCreateCallback = (data: UIAbility) => {
-  console.info('onAbilityCreateCallback');
-};
-
-let monitor: abilityDelegatorRegistry.AbilityMonitor = {
-  abilityName: 'abilityName',
-  onAbilityCreate: onAbilityCreateCallback
-};
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityMonitor(monitor).then((data: UIAbility) => {
-  console.info('waitAbilityMonitor promise');
-});
-```
+参见 [waitAbilityMonitor](#waitabilitymonitor)
 
 ## waitAbilityStageMonitor
 
@@ -1811,6 +1839,42 @@ abilityDelegator.waitAbilityStageMonitor({
 });
 ```
 
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { AbilityStage } from '@kit.AbilityKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}).then((data: AbilityStage) => {
+  console.info('waitAbilityStageMonitor promise');
+});
+```
+
+```TypeScript
+import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
+let timeout = 100;
+
+abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
+abilityDelegator.waitAbilityStageMonitor({
+  moduleName: 'moduleName',
+  srcEntrance: 'srcEntrance',
+}, timeout, (err: BusinessError, data: AbilityStage) => {
+  if (err) {
+    console.error(`waitAbilityStageMonitor fail. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('waitAbilityStageMonitor callback');
+  }
+});
+```
+
 ## waitAbilityStageMonitor
 
 ```TypeScript
@@ -1842,26 +1906,7 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: number, callback:
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { AbilityStage } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-let timeout = 100;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}, timeout, (err: BusinessError, data: AbilityStage) => {
-  if (err) {
-    console.error(`waitAbilityStageMonitor fail. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('waitAbilityStageMonitor callback');
-  }
-});
-```
+参见 [waitAbilityStageMonitor](#waitabilitystagemonitor)
 
 ## waitAbilityStageMonitor
 
@@ -1899,17 +1944,4 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: number): Promise
 
 **示例**
 
-```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
-import { AbilityStage } from '@kit.AbilityKit';
-
-let abilityDelegator: abilityDelegatorRegistry.AbilityDelegator;
-
-abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-abilityDelegator.waitAbilityStageMonitor({
-  moduleName: 'moduleName',
-  srcEntrance: 'srcEntrance',
-}).then((data: AbilityStage) => {
-  console.info('waitAbilityStageMonitor promise');
-});
-```
+参见 [waitAbilityStageMonitor](#waitabilitystagemonitor)

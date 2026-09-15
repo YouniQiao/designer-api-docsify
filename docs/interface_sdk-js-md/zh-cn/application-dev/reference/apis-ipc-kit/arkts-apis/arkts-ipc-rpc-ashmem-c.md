@@ -44,7 +44,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.closeAshmem();
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error is ' + error);
@@ -90,10 +90,27 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   hilog.info(0x0000, 'testTag', 'create ashmem: ' + ashmem);
   let size = ashmem.getAshmemSize();
   hilog.info(0x0000, 'testTag',  'size is ' + size);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
+  let ashmem2 = rpc.Ashmem.create(ashmem);
+  let size = ashmem2.getAshmemSize();
+  hilog.info(0x0000, 'testTag', 'size is ' + size);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
@@ -139,7 +156,24 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
+  hilog.info(0x0000, 'testTag', 'create ashmem: ' + ashmem);
+  let size = ashmem.getAshmemSize();
+  hilog.info(0x0000, 'testTag',  'size is ' + size);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let ashmem2 = rpc.Ashmem.create(ashmem);
   let size = ashmem2.getAshmemSize();
   hilog.info(0x0000, 'testTag', 'size is ' + size);
@@ -186,7 +220,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.createAshmem("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.createAshmem('ashmem', 1024*1024);
   hilog.info(0x0000, 'testTag', 'create ashmem: ' + ashmem);
   let size = ashmem.getAshmemSize();
   hilog.info(0x0000, 'testTag',  'size is ' + size);
@@ -230,7 +264,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let ashmem2 = rpc.Ashmem.createAshmemFromExisting(ashmem);
   let size = ashmem2.getAshmemSize();
   hilog.info(0x0000, 'testTag', 'size is ' + size);
@@ -264,7 +298,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let size = ashmem.getAshmemSize();
   hilog.info(0x0000, 'testTag', ' size is ' + size);
 } catch (error) {
@@ -307,7 +341,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let mapReadAndWrite = ashmem.mapAshmem(rpc.Ashmem.PROT_READ | rpc.Ashmem.PROT_WRITE);
   hilog.info(0x0000, 'testTag', 'map ashmem result is ' + mapReadAndWrite);
 } catch (error) {
@@ -344,7 +378,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let mapResult = ashmem.mapReadAndWriteAshmem();
   hilog.info(0x0000, 'testTag', 'map ashmem result is ' + mapResult);
 } catch (error) {
@@ -381,7 +415,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let mapResult = ashmem.mapReadOnlyAshmem();
   hilog.info(0x0000, 'testTag', 'Ashmem mapReadOnlyAshmem result is ' + mapResult);
 } catch (error) {
@@ -415,7 +449,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapReadonlyAshmem();
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -450,7 +484,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapReadWriteAshmem();
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -492,7 +526,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapTypedAshmem(rpc.Ashmem.PROT_READ | rpc.Ashmem.PROT_WRITE);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -549,10 +583,10 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapReadWriteAshmem();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  ashmem.writeAshmem(ByteArrayVar, 5, 0);
+  let byteArrayVar = [1, 2, 3, 4, 5];
+  ashmem.writeAshmem(byteArrayVar, 5, 0);
   let readResult = ashmem.readAshmem(5, 0);
   hilog.info(0x0000, 'testTag', 'read from Ashmem result is ' + readResult);
 } catch (error) {
@@ -612,7 +646,7 @@ try {
     int32View[i] = i * 2 + 1;
   }
   let size = buffer.byteLength;
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapReadWriteAshmem();
   ashmem.writeDataToAshmem(buffer, size, 0);
   let readResult = ashmem.readDataFromAshmem(size, 0);
@@ -665,11 +699,11 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let mapResult = ashmem.mapReadAndWriteAshmem();
   hilog.info(0x0000, 'testTag', 'RpcTest map ashmem result is ' + mapResult);
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  let writeResult = ashmem.writeToAshmem(ByteArrayVar, 5, 0);
+  let byteArrayVar = [1, 2, 3, 4, 5];
+  let writeResult = ashmem.writeToAshmem(byteArrayVar, 5, 0);
   hilog.info(0x0000, 'testTag', 'write to Ashmem result is ' + writeResult);
   let readResult = ashmem.readFromAshmem(5, 0);
   hilog.info(0x0000, 'testTag', 'read to Ashmem result is ' + readResult);
@@ -713,7 +747,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let result = ashmem.setProtection(rpc.Ashmem.PROT_READ);
   hilog.info(0x0000, 'testTag', 'Ashmem setProtection result is ' + result);
 } catch (error) {
@@ -755,7 +789,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.setProtectionType(rpc.Ashmem.PROT_READ);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -783,7 +817,7 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.unmapAshmem();
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error is ' + error);
@@ -833,10 +867,10 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapReadWriteAshmem();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  ashmem.writeAshmem(ByteArrayVar, 5, 0);
+  let byteArrayVar = [1, 2, 3, 4, 5];
+  ashmem.writeAshmem(byteArrayVar, 5, 0);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'Rpc write to ashmem fail, errorCode ' + e.code);
@@ -889,7 +923,7 @@ try {
     int32View[i] = i * 2 + 1;
   }
   let size = buffer.byteLength;
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   ashmem.mapReadWriteAshmem();
   ashmem.writeDataToAshmem(buffer, size, 0);
 } catch (error) {
@@ -940,11 +974,11 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let ashmem = rpc.Ashmem.create("ashmem", 1024*1024);
+  let ashmem = rpc.Ashmem.create('ashmem', 1024*1024);
   let mapResult = ashmem.mapReadAndWriteAshmem();
   hilog.info(0x0000, 'testTag', 'RpcTest map ashmem result is ' + mapResult);
-  let ByteArrayVar = [1, 2, 3, 4, 5];
-  let writeResult = ashmem.writeToAshmem(ByteArrayVar, 5, 0);
+  let byteArrayVar = [1, 2, 3, 4, 5];
+  let writeResult = ashmem.writeToAshmem(byteArrayVar, 5, 0);
   hilog.info(0x0000, 'testTag', 'write to Ashmem result is ' + writeResult);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error is ' + error);

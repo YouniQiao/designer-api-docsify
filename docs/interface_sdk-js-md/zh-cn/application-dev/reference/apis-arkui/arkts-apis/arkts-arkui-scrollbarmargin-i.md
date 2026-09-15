@@ -1,8 +1,6 @@
 # ScrollBarMargin
 
-定义滚动条边距选项。
-
-@interface ScrollBarMargin
+滚动条边距。
 
 **起始版本：** 20
 
@@ -14,7 +12,7 @@
 end?: LengthMetrics
 ```
 
-滚动条的末尾边距。
+滚动条末尾边距。<br>默认值：0，单位：vp
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -32,7 +30,7 @@ end?: LengthMetrics
 start?: LengthMetrics
 ```
 
-滚动条的起始边距。
+滚动条起始边距。<br>默认值：0，单位：vp
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

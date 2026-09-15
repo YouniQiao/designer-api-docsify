@@ -55,13 +55,13 @@ try {
     node.appendChild(child1);
     node.appendChild(child2);
     node.appendChild(child3);
-    console.log("appendNode " + JSON.stringify(node));
+    console.info("appendNode " + JSON.stringify(node));
     child1 = null;
     child2 = null;
     child3 = null;
     node = null;
 } catch (e) {
-    console.log("AppendChild " + e);
+    console.error("AppendChild " + e);
 }
 ```
 

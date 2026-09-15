@@ -80,6 +80,34 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0]);
+try {
+  let serverParams: Record<string, Object> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## auth
 
 ```TypeScript
@@ -130,6 +158,27 @@ static auth(
 | 12300211 | Server unreachable. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -220,6 +269,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  osAccount.DomainAccountManager.authWithPopup(100, {
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('authWithPopup resultCode = ' + resultCode);
+      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## authWithPopup
 
 ```TypeScript
@@ -266,6 +331,22 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 | 12300211 | Server unreachable.<br>**适用版本：** 11+ |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  osAccount.DomainAccountManager.authWithPopup({
+    onResult: (resultCode: number, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -344,6 +425,26 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let businessParams: Record<string, Object> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams)
+    .then((result: Uint8Array) => {
+    console.info('getAccessToken result: ' + result);
+  }).catch((err: BusinessError) => {
+    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getAccessToken
 
 ```TypeScript
@@ -387,6 +488,28 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 | 12300211 | Server unreachable. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let businessParams: Record<string, Object> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams,
+    (err: BusinessError, result: Uint8Array) => {
+    if (err) {
+      console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAccessToken result: ' + result);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -471,6 +594,26 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
+    .then((result: osAccount.DomainAccountInfo) => {
+    console.info('getAccountInfo result: ' + result);
+  }).catch((err: BusinessError) => {
+    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getAccountInfo
 
 ```TypeScript
@@ -516,6 +659,28 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 | 12300211 | Server unreachable. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo,
+    (err: BusinessError, result: osAccount.DomainAccountInfo) => {
+    if (err) {
+      console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAccountInfo result: ' + result);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -599,6 +764,25 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
+    console.info('hasAccount result: ' + result);
+  }).catch((err: BusinessError) => {
+      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## hasAccount
 
 ```TypeScript
@@ -645,24 +829,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan'
-}
-try {
-  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
-    console.info('hasAccount result: ' + result);
-  }).catch((err: BusinessError) => {
-      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [hasAccount](#hasaccount)
 
 ## isAuthenticationExpired
 
@@ -887,6 +1054,27 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan',
+  accountId: '123456'
+}
+let token = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token).then(() => {
+    console.info('updateAccountToken successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## updateAccountToken
 
 ```TypeScript
@@ -929,23 +1117,4 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let domainAccountInfo: osAccount.DomainAccountInfo = {
-  domain: 'CHINA',
-  accountName: 'zhangsan',
-  accountId: '123456'
-}
-let token = new Uint8Array([0])
-try {
-  osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token).then(() => {
-    console.info('updateAccountToken successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [updateAccountToken](#updateaccounttoken)

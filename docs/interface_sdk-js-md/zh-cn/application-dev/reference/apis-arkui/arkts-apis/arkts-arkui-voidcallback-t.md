@@ -4,9 +4,7 @@
 declare type VoidCallback = () => void
 ```
 
-定义VoidCallback。
-
-@typedef { function } VoidCallback
+无参数、无返回值的函数回调类型，用于定义不需要传递数据且不返回结果的回调场景。
 
 **起始版本：** 12
 

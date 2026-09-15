@@ -53,6 +53,21 @@ sharing.getSharableRegexes(SHARING_WIFI, (error: BusinessError, data: string[]) 
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_WIFI = 0;
+sharing
+  .getSharableRegexes(SHARING_WIFI)
+  .then((data: string[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getSharableRegexes
 
@@ -95,17 +110,4 @@ Obtains regular expressions of NICs of a specified type. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_WIFI = 0;
-sharing
-  .getSharableRegexes(SHARING_WIFI)
-  .then((data: string[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getSharableRegexes](#getsharableregexes)

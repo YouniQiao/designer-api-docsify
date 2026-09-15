@@ -67,6 +67,24 @@ accountManager.disallowAddLocalAccount(wantTemp, true, (err) => {
 });
 ```
 
+```TypeScript
+import { accountManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+accountManager.disallowAddLocalAccount(wantTemp, true).then(() => {
+  console.info('Succeeded in disallowing add local account');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to disallow add local account. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## disallowAddLocalAccount
 
@@ -115,20 +133,4 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-accountManager.disallowAddLocalAccount(wantTemp, true).then(() => {
-  console.info('Succeeded in disallowing add local account');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to disallow add local account. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [disallowAddLocalAccount](#disallowaddlocalaccount)

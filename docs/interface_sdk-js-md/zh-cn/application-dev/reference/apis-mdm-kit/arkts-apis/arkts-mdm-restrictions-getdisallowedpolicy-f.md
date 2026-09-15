@@ -71,6 +71,24 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let result: boolean = restrictions.getDisallowedPolicy(wantTemp, restrictions.FeatureForDevice.WIFI_P2P);
+  console.info(`Succeeded in querying whether Wi-Fi P2P is disabled. Disabled status: ${result}`);
+} catch (err) {
+  console.error(`Failed to get Wi-Fi P2P disabled status. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getDisallowedPolicy
 
@@ -112,20 +130,4 @@ function getDisallowedPolicy(admin: Want | null, feature: FeatureForDevice): boo
 
 **示例**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: boolean = restrictions.getDisallowedPolicy(wantTemp, restrictions.FeatureForDevice.WIFI_P2P);
-  console.info(`Succeeded in querying whether Wi-Fi P2P is disabled. Disabled status: ${result}`);
-} catch (err) {
-  console.error(`Failed to get Wi-Fi P2P disabled status. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getDisallowedPolicy](#getdisallowedpolicy)

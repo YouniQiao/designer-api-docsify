@@ -4,11 +4,11 @@
 declare type EdgeWidth = EdgeWidths
 ```
 
-Defines the border width property.
+Defines component edge widths for absolute directions.
 
-@typedef { EdgeWidths } EdgeWidth
+To reference this object, at least one parameter must be passed.
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,15 @@
 # ConstraintSizeOptions
 
-Defines the constrain size options.
+Defines the size constraints of a component during layout.
 
-@interface ConstraintSizeOptions
+> **NOTE:** 
+> 
+> In the Row, Column, and RelativeContainer
+> components, setting **width** and **height** to **auto** means that the size adapts to the size of their child
+> components. In the TextInput component, setting **width** to **auto** means that the width
+> adapts to the width of the text content.
 
-**Since:** 11
+**Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,15 +19,15 @@ Defines the constrain size options.
 maxHeight?: Length
 ```
 
-Defines the max height.
+Maximum height of the component.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,15 +37,15 @@ Defines the max height.
 maxWidth?: Length
 ```
 
-Defines the max width.
+Maximum width of the component.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,15 +55,15 @@ Defines the max width.
 minHeight?: Length
 ```
 
-Defines the min height.
+Minimum height of the component.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,14 +73,14 @@ Defines the min height.
 minWidth?: Length
 ```
 
-Defines the min width.
+Minimum width of the component.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

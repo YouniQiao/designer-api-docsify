@@ -63,6 +63,22 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onDisconnectCallback = () => {
+  console.info('subscribe disconnect');
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onDisconnect: onDisconnectCallback
+};
+notificationSubscribe.unsubscribe(subscriber).then(() => {
+  console.info('unsubscribe success');
+}).catch((err: BusinessError) => {
+  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## unsubscribe
 
@@ -107,18 +123,4 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onDisconnectCallback = () => {
-  console.info('subscribe disconnect');
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onDisconnect: onDisconnectCallback
-};
-notificationSubscribe.unsubscribe(subscriber).then(() => {
-  console.info('unsubscribe success');
-}).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [unsubscribe](#unsubscribe)

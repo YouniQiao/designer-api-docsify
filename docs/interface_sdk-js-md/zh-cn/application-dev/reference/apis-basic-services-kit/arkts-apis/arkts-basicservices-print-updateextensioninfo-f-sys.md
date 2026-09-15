@@ -53,6 +53,18 @@ print.updateExtensionInfo(info, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info : string = 'WIFI_INACTIVE';
+print.updateExtensionInfo(info).then(() => {
+    console.info('updateExtensionInfo success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## updateExtensionInfo
 
@@ -92,14 +104,4 @@ function updateExtensionInfo(info: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info).then(() => {
-    console.info('updateExtensionInfo success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [updateExtensionInfo](#updateextensioninfo)

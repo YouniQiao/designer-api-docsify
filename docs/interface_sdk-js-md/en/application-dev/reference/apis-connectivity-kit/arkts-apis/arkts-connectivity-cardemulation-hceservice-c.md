@@ -65,7 +65,7 @@ export default class EntryAbility extends UIAbility {
       bundleName: want.bundleName ?? '',
       abilityName: want.abilityName ?? '',
       moduleName: want.moduleName
-    }
+    };
     hceService.on('hceCmd', apduCallback);
   }
   onDestroy() {
@@ -108,6 +108,16 @@ Subscribes to events indicating receiving of APDUs from the peer card reader. Th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter.<br>**Applicable version:** 12 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
 
+**Examples**
+
+```TypeScript
+ArkTS example:
+```
+
+```TypeScript
+JS example:
+```
+
 ## sendResponse
 
 ```TypeScript
@@ -138,6 +148,68 @@ Sends a response to the peer card reader.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | responseApdu | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+
+**Examples**
+
+```TypeScript
+ArkTS example:
+
+For details, see the example of [transmit](#transmit).
+
+JS example:
+```
+
+```TypeScript
+/* Applicable to lite wearables */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.on("hceCmd", (err, res) => {
+            if(err.data === 0) {
+                console.info('callback => Operation hceCmd succeeded. Data: ${JSON.stringify(res)}');
+                hceService.sendResponse([0x00,0xa4,0x04,0x00,
+                    0x0e,0x32,0x50,0x41,0x59,0x2e,0x53,0x59,0x53,0x2e,0x44,0x44,
+                    0x46,0x30,0x31,0x00]);
+            } else {
+                console.info('callback => Operation hceCmd failed. Cause: ${JSON.stringify(err.data)}');
+            }
+        });
+    }
+}
+```
 
 ## start
 
@@ -208,6 +280,61 @@ Starts HCE, including enabling this application to run in the foreground prefere
 | --- | --- |
 | boolean | Returns **true** if HCE is started or has been started; returns **false** otherwise. |
 
+**Examples**
+
+```TypeScript
+ArkTS example:
+
+For details, see the example of on.
+
+JS example:
+```
+
+```TypeScript
+/* Applicable to lite wearables */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.startHCE([
+            "F0010203040506", "A0000000041010"
+        ]);
+    }
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -269,6 +396,59 @@ Stops HCE, including exiting the current application from the foreground, releas
 | Type | Description |
 | --- | --- |
 | boolean | **true** if HCE is stopped or disabled; **false** otherwise. |
+
+**Examples**
+
+```TypeScript
+ArkTS example:
+
+For details, see the example of on.
+
+JS example:
+```
+
+```TypeScript
+/* Applicable to lite wearables */
+/* xxx.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  width: 454px;
+  height: 454px;
+}
+.title {
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+.button {
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+```
+
+```TypeScript
+// Applicable to lite wearables
+// xxx.js
+import cardEmulation from '@ohos.nfc.cardEmulation';
+
+export default  {
+    data: {
+        fontSize: '30px',
+        fontColor: '#FF1AFF00',
+    },
+    onClick() {
+        var hceService = new cardEmulation.HceService();
+        hceService.stopHCE();
+    }
+}
+```
 
 ## transmit
 
@@ -341,40 +521,6 @@ hceService.transmit(responseData).then(() => {
 console.info("transmit Promise end.");
 ```
 
-## transmit
-
-```TypeScript
-transmit(response: number[], callback: AsyncCallback<void>): void
-```
-
-Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via on. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| response | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-
-**Examples**
-
 ```TypeScript
 // Applicable to devices other than lite wearables
 import { cardEmulation } from '@kit.ConnectivityKit';
@@ -412,3 +558,39 @@ hceService.transmit(responseData, () => {
 });
 console.info("transmit Promise end.");
 ```
+
+## transmit
+
+```TypeScript
+transmit(response: number[], callback: AsyncCallback<void>): void
+```
+
+Sends APDU data to the peer card reader. The application can call this API only after receiving an APDU sent by the card reader via on. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| response | number[] | Yes | Response APDU sent to the peer card reader. The value consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+
+**Examples**
+
+See [transmit](#transmit)

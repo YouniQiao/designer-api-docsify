@@ -110,37 +110,6 @@ struct Index {
 }
 ```
 
-## blur
-
-```TypeScript
-blur(radius: number, tileMode: TileMode): Filter
-```
-
-Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
-
-> **NOTE:** 
-> 
-> This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
-
-**Since:** 14
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| radius | number | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. No effect is applied when a negative value is passed in. |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Shader tile mode, which affects the blur effect at the image edges. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
-
-**Examples**
-
 ```TypeScript
 import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
@@ -204,6 +173,39 @@ struct Index {
   }
 }
 ```
+
+## blur
+
+```TypeScript
+blur(radius: number, tileMode: TileMode): Filter
+```
+
+Adds the blur effect to the effect chain and returns the instance of the chain. It supports selecting the shader effect tile mode. It is commonly used in scenarios such as background blurring, privacy information masking, frosted glass background effect, and pop-up window background blur.
+
+> **NOTE:** 
+> 
+> This API provides the blur effect for static images. To provide the real-time blur effect for components, use dynamic blur.
+
+**Since:** 14
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radius | number | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. No effect is applied when a negative value is passed in. |
+| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Shader tile mode, which affects the blur effect at the image edges. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Filter](arkts-arkgraphics2d-effectkit-filter-i.md) | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
+
+**Examples**
+
+See [blur](#blur)
 
 ## brightness
 
@@ -355,6 +357,30 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
+
+// Create a buffer for the image effect.
+const colorBuffer = new ArrayBuffer(96);
+// Set the image initialization options.
+let opts: image.InitializationOptions = {
+  editable: true,
+  pixelFormat: 3,
+  size: {
+    height: 4,
+    width: 6
+  }
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a Filter instance, add a grayscale effect, and obtain the processed PixelMap.
+  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap(false).then(data => {
+    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
+  });
+});
+```
+
 ## getEffectPixelMap
 
 ```TypeScript
@@ -385,29 +411,7 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 
 **Examples**
 
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-
-// Create a buffer for the image effect.
-const colorBuffer = new ArrayBuffer(96);
-// Set the image initialization options.
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-// Create a PixelMap instance.
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  // Create a Filter instance, add a grayscale effect, and obtain the processed PixelMap.
-  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap(false).then(data => {
-    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
-  });
-});
-```
+See [getEffectPixelMap](#geteffectpixelmap)
 
 ## getPixelMap
 

@@ -100,10 +100,10 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
   batchUpdate(operations: Record<string, Array<dataShare.UpdateOperation>>, callback: Function) {
     let recordOps : Record<string, Array<dataShare.UpdateOperation>> = operations;
     let results : Record<string, Array<number>> = {};
-    let a = Object.entries(recordOps);
-    for (let i = 0; i < a.length; i++) {
-      let key = a[i][0];
-      let values = a[i][1];
+    let entries = Object.entries(recordOps);
+    for (let i = 0; i < entries.length; i++) {
+      let key = entries[i][0];
+      let values = entries[i][1];
       let result : number[] = [];
       for (const value of values) {
         rdbStore.update(TBL_NAME, value.values, value.predicates).then(async (rows) => {
@@ -112,7 +112,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
         }).catch((err:BusinessError) => {
           console.error(`Failed to Update. Code: ${err.code}, message: ${err.message}`);
           result.push(-1)
-        })
+        });
       }
       results[key] = result;
     }

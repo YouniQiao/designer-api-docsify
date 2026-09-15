@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 设置触摸板双击拖拽状态
+            pointer.setTouchpadDoubleTapAndDragState(false).then(() => {
+              console.info(`Succeeded in setting touchpad double tap and drag state.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setTouchpadDoubleTapAndDragState
 
@@ -101,29 +128,4 @@ function setTouchpadDoubleTapAndDragState(isOpen: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置触摸板双击拖拽状态
-            pointer.setTouchpadDoubleTapAndDragState(false).then(() => {
-              console.info(`Succeeded in setting touchpad double tap and drag state.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [setTouchpadDoubleTapAndDragState](#settouchpaddoubletapanddragstate)

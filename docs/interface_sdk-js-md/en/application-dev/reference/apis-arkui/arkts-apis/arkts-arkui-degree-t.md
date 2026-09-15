@@ -4,11 +4,9 @@
 declare type Degree = `${number}deg`
 ```
 
-Defines the angle property with number in units of deg.
+Angle type, used to describe an angle in deg.
 
-@typedef { `&#36;{number}deg` } Degree
-
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

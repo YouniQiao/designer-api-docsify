@@ -39,6 +39,16 @@ MessageOption构造函数。
 import { rpc } from '@kit.IPCKit';
 
 class TestRemoteObject extends rpc.MessageOption {
+  constructor(async: boolean) {
+    super(async);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
   constructor(syncFlags?: number,waitTime?: number) {
     super(syncFlags,waitTime);
   }
@@ -73,6 +83,16 @@ import { rpc } from '@kit.IPCKit';
 class TestRemoteObject extends rpc.MessageOption {
   constructor(async: boolean) {
     super(async);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(syncFlags?: number,waitTime?: number) {
+    super(syncFlags,waitTime);
   }
 }
 ```
@@ -185,7 +205,7 @@ try {
   let option = new rpc.MessageOption();
   let result = option.isAsync();
 } catch (error) {
-  hilog.info(0x0000, 'testTag', 'error ' + error);
+  hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
 
@@ -219,7 +239,7 @@ try {
   let option = new rpc.MessageOption();
   option.setAsync(true);
 } catch (error) {
-  hilog.info(0x0000, 'testTag', 'error ' + error);
+  hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
 

@@ -45,6 +45,19 @@ reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
 });
 ```
 
+```TypeScript
+import notification from '@ohos.notification';
+import reminderAgent from '@ohos.reminderAgent';
+import { NotificationSlot } from './notification/notificationSlot';
+
+let mySlot:NotificationSlot = {
+  type: notification.SlotType.SOCIAL_COMMUNICATION
+}
+reminderAgent.addNotificationSlot(mySlot).then(() => {
+  console.info("addNotificationSlot promise");
+});
+```
+
 
 ## addNotificationSlot
 
@@ -76,15 +89,4 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
-import { NotificationSlot } from './notification/notificationSlot';
-
-let mySlot:NotificationSlot = {
-  type: notification.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgent.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-});
-```
+See [addNotificationSlot](#addnotificationslot)

@@ -62,6 +62,18 @@ try {
 }
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let appIdentifiers: Array<string> = applicationManager.getAllowedKioskApps(null);
+  console.info(`Succeeded in getting allowed kiosk apps, appIdentifiers: ${JSON.stringify(appIdentifiers)}`);
+} catch (err) {
+  console.error(`Failed to get allowed kiosk apps. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getAllowedKioskApps
 
@@ -101,14 +113,4 @@ function getAllowedKioskApps(admin: Want | null): Array<string>
 
 **示例**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let appIdentifiers: Array<string> = applicationManager.getAllowedKioskApps(null);
-  console.info(`Succeeded in getting allowed kiosk apps, appIdentifiers: ${JSON.stringify(appIdentifiers)}`);
-} catch (err) {
-  console.error(`Failed to get allowed kiosk apps. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAllowedKioskApps](#getallowedkioskapps)

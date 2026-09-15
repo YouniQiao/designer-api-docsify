@@ -49,6 +49,15 @@ storage.clear(function (err) {
 })
 ```
 
+```TypeScript
+let promiseclear = storage.clear();
+promiseclear.then(() => {
+    console.info("Succeeded in clearing the storage.");
+}).catch((err) => {
+    console.info("Failed to clear the storage with err: " + err);
+})
+```
+
 ## clear
 
 ```TypeScript
@@ -71,14 +80,7 @@ clear(): Promise<void>
 
 **示例**
 
-```TypeScript
-let promiseclear = storage.clear();
-promiseclear.then(() => {
-    console.info("Succeeded in clearing the storage.");
-}).catch((err) => {
-    console.info("Failed to clear the storage with err: " + err);
-})
-```
+参见 [clear](#clear)
 
 ## clearSync
 
@@ -133,6 +135,15 @@ storage.delete('startup', function (err) {
 })
 ```
 
+```TypeScript
+let promisedel = storage.delete('startup')
+promisedel.then(() => {
+    console.info("Succeeded in deleting startup key.");
+}).catch((err) => {
+    console.info("Failed to delete startup key failed err: " + err);
+})
+```
+
 ## delete
 
 ```TypeScript
@@ -161,14 +172,7 @@ delete(key: string): Promise<void>
 
 **示例**
 
-```TypeScript
-let promisedel = storage.delete('startup')
-promisedel.then(() => {
-    console.info("Succeeded in deleting startup key.");
-}).catch((err) => {
-    console.info("Failed to delete startup key failed err: " + err);
-})
-```
+参见 [delete](#delete)
 
 ## deleteSync
 
@@ -228,6 +232,15 @@ storage.flush(function (err) {
 })
 ```
 
+```TypeScript
+let promiseflush = storage.flush();
+promiseflush.then(() => {
+    console.info("Succeeded in flushing to file.");
+}).catch((err) => {
+    console.info("Failed to flush to file with err: " + err);
+})
+```
+
 ## flush
 
 ```TypeScript
@@ -250,14 +263,7 @@ flush(): Promise<void>
 
 **示例**
 
-```TypeScript
-let promiseflush = storage.flush();
-promiseflush.then(() => {
-    console.info("Succeeded in flushing to file.");
-}).catch((err) => {
-    console.info("Failed to flush to file with err: " + err);
-})
-```
+参见 [flush](#flush)
 
 ## flushSync
 
@@ -313,6 +319,15 @@ storage.get('startup', 'default', function(err, value) {
 })
 ```
 
+```TypeScript
+let promiseget = storage.get('startup', 'default');
+promiseget.then((value) => {
+    console.info("The value of startup is " + value)
+}).catch((err) => {
+    console.info("Failed to get the value of startup with err: " + err);
+})
+```
+
 ## get
 
 ```TypeScript
@@ -342,14 +357,7 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 **示例**
 
-```TypeScript
-let promiseget = storage.get('startup', 'default');
-promiseget.then((value) => {
-    console.info("The value of startup is " + value)
-}).catch((err) => {
-    console.info("Failed to get the value of startup with err: " + err);
-})
-```
+参见 [get](#get)
 
 ## getSync
 
@@ -426,6 +434,17 @@ storage.has('startup', function (err, isExist) {
 })
 ```
 
+```TypeScript
+let promisehas = storage.has('startup')
+promisehas.then((isExist) => {
+    if (isExist) {
+        console.info("The key of startup is contained.");
+    }
+}).catch((err) => {
+    console.info("Failed to check the key of startup with err: " + err);
+})
+```
+
 ## has
 
 ```TypeScript
@@ -454,16 +473,7 @@ has(key: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-let promisehas = storage.has('startup')
-promisehas.then((isExist) => {
-    if (isExist) {
-        console.info("The key of startup is contained.");
-    }
-}).catch((err) => {
-    console.info("Failed to check the key of startup with err: " + err);
-})
-```
+参见 [has](#has)
 
 ## hasSync
 
@@ -521,15 +531,6 @@ off(type: 'change', callback: Callback<StorageObserver>): void
 | type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 | 需要取消的回调对象实例。 |
 
-**示例**
-
-```TypeScript
-let observer = function (key) {
-    console.info("The key of " + key + " changed.");
-}
-storage.off('change', observer);
-```
-
 ## on('change')
 
 ```TypeScript
@@ -550,17 +551,6 @@ on(type: 'change', callback: Callback<StorageObserver>): void
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 | 回调对象实例。 |
-
-**示例**
-
-```TypeScript
-let observer = function (key) {
-    console.info("The key of " + key + " changed.");
-}
-storage.on('change', observer);
-storage.putSync('startup', 'auto');
-storage.flushSync();  // observer will be called.
-```
 
 ## put
 
@@ -596,6 +586,15 @@ storage.put('startup', 'auto', function (err) {
 })
 ```
 
+```TypeScript
+let promiseput = storage.put('startup', 'auto');
+promiseput.then(() => {
+    console.info("Succeeded in putting the value of startup.");
+}).catch((err) => {
+    console.info("Failed to put the value of startup with err: " + err);
+})
+```
+
 ## put
 
 ```TypeScript
@@ -625,14 +624,7 @@ put(key: string, value: ValueType): Promise<void>
 
 **示例**
 
-```TypeScript
-let promiseput = storage.put('startup', 'auto');
-promiseput.then(() => {
-    console.info("Succeeded in putting the value of startup.");
-}).catch((err) => {
-    console.info("Failed to put the value of startup with err: " + err);
-})
-```
+参见 [put](#put)
 
 ## putSync
 

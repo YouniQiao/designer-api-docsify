@@ -67,6 +67,28 @@ radio.setNetworkSelectionMode(networkSelectionModeOptions, (err: BusinessError) 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let networkInformation: radio.NetworkInformation = {
+    operatorName: "China Mobile",
+    operatorNumeric: "898600",
+    state: radio.NetworkInformationState.NETWORK_AVAILABLE,
+    radioTech: "CS"
+}
+let networkSelectionModeOptions: radio.NetworkSelectionModeOptions = {
+    slotId: 0,
+    selectMode: radio.NetworkSelectionMode.NETWORK_SELECTION_AUTOMATIC,
+    networkInformation: networkInformation,
+    resumeSelection: true
+}
+radio.setNetworkSelectionMode(networkSelectionModeOptions).then(() => {
+    console.info(`setNetworkSelectionMode success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setNetworkSelectionMode failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setNetworkSelectionMode
 
@@ -110,24 +132,4 @@ Set the current network selection mode.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let networkInformation: radio.NetworkInformation = {
-    operatorName: "China Mobile",
-    operatorNumeric: "898600",
-    state: radio.NetworkInformationState.NETWORK_AVAILABLE,
-    radioTech: "CS"
-}
-let networkSelectionModeOptions: radio.NetworkSelectionModeOptions = {
-    slotId: 0,
-    selectMode: radio.NetworkSelectionMode.NETWORK_SELECTION_AUTOMATIC,
-    networkInformation: networkInformation,
-    resumeSelection: true
-}
-radio.setNetworkSelectionMode(networkSelectionModeOptions).then(() => {
-    console.info(`setNetworkSelectionMode success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setNetworkSelectionMode failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setNetworkSelectionMode](#setnetworkselectionmode)

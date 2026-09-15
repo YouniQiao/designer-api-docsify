@@ -57,6 +57,41 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushUrl({
+  url: 'pages/routerpage2',
+  params: new RouterParams('message', [123, 456, 789])
+})
+  .then(() => {
+    console.info(`pushUrl finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
+  });
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
 class InnerParams {
   data3: number[];
 
@@ -85,6 +120,74 @@ router.pushUrl({
   }
   console.info('pushUrl success');
 });
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushUrl({
+  url: 'pages/routerpage2',
+  params: new RouterParams('message', [123, 456, 789])
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`pushUrl finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushUrl({
+  url: 'pages/routerpage2',
+  params: new RouterParams('message', [123, 456, 789])
+}, router.RouterMode.Standard, (err) => {
+  if (err) {
+    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('pushUrl success');
+})
 ```
 
 
@@ -141,40 +244,7 @@ function pushUrl(options: RouterOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-})
-  .then(() => {
-    console.info(`pushUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-  });
-```
+参见 [pushUrl](#pushurl)
 
 
 ## pushUrl
@@ -226,38 +296,7 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 
 **示例**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushUrl success');
-})
-```
+参见 [pushUrl](#pushurl)
 
 
 ## pushUrl
@@ -314,37 +353,4 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 **示例**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushUrl({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`pushUrl finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+参见 [pushUrl](#pushurl)

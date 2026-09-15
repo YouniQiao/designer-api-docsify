@@ -48,6 +48,30 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // addSlot回调
 let addSlotCallBack = (err: BusinessError): void => {
+  if (err) {
+    console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in adding slot.`);
+  }
+}
+notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION).then(() => {
+  console.info(`Succeeded in adding slot.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// addSlot回调
+let addSlotCallBack = (err: BusinessError): void => {
     if (err) {
         console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -59,6 +83,20 @@ let notificationSlot: notificationManager.NotificationSlot = {
     notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
 };
 notificationManager.addSlot(notificationSlot, addSlotCallBack);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 通知slot对象
+let notificationSlot: notificationManager.NotificationSlot = {
+    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+};
+notificationManager.addSlot(notificationSlot).then(() => {
+    console.info('addSlot success');
+}).catch((err: BusinessError) => {
+    console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -104,16 +142,4 @@ function addSlot(slot: NotificationSlot): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 通知slot对象
-let notificationSlot: notificationManager.NotificationSlot = {
-    notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-};
-notificationManager.addSlot(notificationSlot).then(() => {
-    console.info('addSlot success');
-}).catch((err: BusinessError) => {
-    console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [addSlot](#addslot)

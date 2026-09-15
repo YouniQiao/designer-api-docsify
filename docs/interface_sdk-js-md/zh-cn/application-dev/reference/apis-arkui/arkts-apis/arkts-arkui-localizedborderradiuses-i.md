@@ -1,8 +1,8 @@
 # LocalizedBorderRadiuses
 
-Defines the localized border radius property.
+圆角类型，用于描述组件边框圆角半径。
 
-@interface LocalizedBorderRadiuses
+引用该对象时，至少传入一个参数。
 
 **起始版本：** 12
 
@@ -14,7 +14,9 @@ Defines the localized border radius property.
 bottomEnd?: LengthMetrics
 ```
 
-bottom-end property.
+组件右下角圆角半径。
+
+从右至左显示语言模式下为组件左下角圆角半径。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -34,7 +36,9 @@ bottom-end property.
 bottomStart?: LengthMetrics
 ```
 
-bottom-start property.
+组件左下角圆角半径。
+
+从右至左显示语言模式下为组件右下角圆角半径。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -54,7 +58,9 @@ bottom-start property.
 topEnd?: LengthMetrics
 ```
 
-top-end property.
+组件右上角圆角半径。
+
+从右至左显示语言模式下为组件左上角圆角半径。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -74,7 +80,9 @@ top-end property.
 topStart?: LengthMetrics
 ```
 
-top-start property.
+组件左上角圆角半径。
+
+从右至左显示语言模式下为组件右上角圆角半径。
 
 **类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

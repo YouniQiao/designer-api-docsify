@@ -47,6 +47,19 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 });
 ```
 
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+let timer:reminderAgent.ReminderRequestTimer = {
+  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgent.publishReminder(timer).then((reminderId: number) => {
+  console.info("promise, reminderId = " + reminderId);
+});
+```
+
 
 ## publishReminder
 
@@ -80,15 +93,4 @@ Publishes a reminder through the reminder agent. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-let timer:reminderAgent.ReminderRequestTimer = {
-  reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
-  triggerTimeInSeconds: 10
-}
-
-reminderAgent.publishReminder(timer).then((reminderId: number) => {
-  console.info("promise, reminderId = " + reminderId);
-});
-```
+See [publishReminder](#publishreminder)

@@ -77,6 +77,34 @@ networkManager.setGlobalProxy(wantTemp, httpProxy, (err) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { connection } from '@kit.NetworkKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+let exclusionStr: string = "192.168,baidu.com"
+let exclusionArray: Array<string> = exclusionStr.split(',');
+let httpProxy: connection.HttpProxy = {
+  host: "192.168.xx.xxx",
+  port: 8080,
+  exclusionList: exclusionArray
+};
+
+networkManager.setGlobalProxy(wantTemp, httpProxy).then(() => {
+  console.info(`Succeeded in setting network global proxy`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setGlobalProxy
 
@@ -125,30 +153,4 @@ function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise<v
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { connection } from '@kit.NetworkKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 需根据实际情况进行替换
-let exclusionStr: string = "192.168,baidu.com"
-let exclusionArray: Array<string> = exclusionStr.split(',');
-let httpProxy: connection.HttpProxy = {
-  host: "192.168.xx.xxx",
-  port: 8080,
-  exclusionList: exclusionArray
-};
-
-networkManager.setGlobalProxy(wantTemp, httpProxy).then(() => {
-  console.info(`Succeeded in setting network global proxy`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set network global proxy. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [setGlobalProxy](#setglobalproxy)

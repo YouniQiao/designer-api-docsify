@@ -57,6 +57,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+  accountManager.checkMultiOsAccountEnabled().then((isEnabled: boolean) => {
+    console.info('checkMultiOsAccountEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((err: BusinessError) => {
+    console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## checkMultiOsAccountEnabled
 
 ```TypeScript
@@ -83,21 +99,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-  accountManager.checkMultiOsAccountEnabled().then((isEnabled: boolean) => {
-    console.info('checkMultiOsAccountEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkMultiOsAccountEnabled failed, code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkMultiOsAccountEnabled](#checkmultiosaccountenabled)
 
 ## checkOsAccountActivated
 
@@ -139,26 +141,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 **Examples**
 
-Check whether OS account 100 is activated.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.checkOsAccountActivated(localId, (err: BusinessError, isActivated: boolean) => {
-    if (err) {
-      console.error(`checkOsAccountActivated failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('checkOsAccountActivated successfully, isActivated:' + isActivated);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
-}
+Check whether OS account 100 is activated.
 ```
 
 ## checkOsAccountActivated
@@ -206,25 +190,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 **Examples**
 
-Check whether OS account 100 is activated.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.checkOsAccountActivated(localId).then((isActivated: boolean) => {
-    console.info('checkOsAccountActivated successfully, isActivated: ' + isActivated);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountActivated failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountActivated](#checkosaccountactivated)
 
 ## checkOsAccountConstraintEnabled
 
@@ -267,27 +233,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Examples**
 
-Check whether OS account 100 is forbidden to use Wi-Fi.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.checkOsAccountConstraintEnabled(localId, constraint, (err: BusinessError, isEnabled: boolean)=>{
-    if (err) {
-      console.error(`checkOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('checkOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
-}
+Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
 
 ## checkOsAccountConstraintEnabled
@@ -336,26 +283,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Examples**
 
-Check whether OS account 100 is forbidden to use Wi-Fi.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.checkOsAccountConstraintEnabled(localId, constraint).then((isEnabled: boolean) => {
-    console.info('checkOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountConstraintEnabled](#checkosaccountconstraintenabled)
 
 ## checkOsAccountTestable
 
@@ -404,6 +332,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.checkOsAccountTestable().then((isTestable: boolean) => {
+    console.info('checkOsAccountTestable successfully, isTestable: ' + isTestable);
+  }).catch((err: BusinessError) => {
+    console.error(`checkOsAccountTestable failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountTestable exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## checkOsAccountTestable
 
 ```TypeScript
@@ -432,21 +376,7 @@ Checks whether the current OS account is a test account. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.checkOsAccountTestable().then((isTestable: boolean) => {
-    console.info('checkOsAccountTestable successfully, isTestable: ' + isTestable);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountTestable failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountTestable exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountTestable](#checkosaccounttestable)
 
 ## checkOsAccountVerified
 
@@ -501,6 +431,60 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.checkOsAccountVerified().then((isVerified: boolean) => {
+    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
+let localId: number = 100;
+try {
+  accountManager.checkOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
+    if (err) {
+      console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
+let localId: number = 100;
+try {
+  accountManager.checkOsAccountVerified(localId).then((isVerified: boolean) => {
+    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## checkOsAccountVerified
 
 ```TypeScript
@@ -536,21 +520,7 @@ Checks whether the current OS account has been verified. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.checkOsAccountVerified().then((isVerified: boolean) => {
-    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountVerified](#checkosaccountverified)
 
 ## checkOsAccountVerified
 
@@ -592,25 +562,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.checkOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
-    if (err) {
-      console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountVerified](#checkosaccountverified)
 
 ## checkOsAccountVerified
 
@@ -657,23 +609,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.checkOsAccountVerified(localId).then((isVerified: boolean) => {
-    console.info('checkOsAccountVerified successfully, isVerified: ' + isVerified);
-  }).catch((err: BusinessError) => {
-    console.error(`checkOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`checkOsAccountVerified exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [checkOsAccountVerified](#checkosaccountverified)
 
 ## getActivatedOsAccountLocalIds
 
@@ -723,6 +659,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getActivatedOsAccountLocalIds().then((idArray: number[]) => {
+    console.info('getActivatedOsAccountLocalIds, idArray: ' + idArray);
+  }).catch((err: BusinessError) => {
+    console.error(`getActivatedOsAccountLocalIds err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getActivatedOsAccountLocalIds exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getActivatedOsAccountLocalIds
 
 ```TypeScript
@@ -749,21 +701,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getActivatedOsAccountLocalIds().then((idArray: number[]) => {
-    console.info('getActivatedOsAccountLocalIds, idArray: ' + idArray);
-  }).catch((err: BusinessError) => {
-    console.error(`getActivatedOsAccountLocalIds err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getActivatedOsAccountLocalIds exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getActivatedOsAccountLocalIds](#getactivatedosaccountlocalids)
 
 ## getCreatedOsAccountsCount
 
@@ -809,6 +747,17 @@ accountManager.getCreatedOsAccountsCount((err: BusinessError, count: number)=>{
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getCreatedOsAccountsCount().then((count: number) => {
+  console.info('getCreatedOsAccountsCount successfully, count: ' + count);
+}).catch((err: BusinessError) => {
+  console.error(`getCreatedOsAccountsCount failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getCreatedOsAccountsCount
 
 ```TypeScript
@@ -840,16 +789,7 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getCreatedOsAccountsCount().then((count: number) => {
-  console.info('getCreatedOsAccountsCount successfully, count: ' + count);
-}).catch((err: BusinessError) => {
-  console.error(`getCreatedOsAccountsCount failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getCreatedOsAccountsCount](#getcreatedosaccountscount)
 
 ## getCurrentOsAccount
 
@@ -907,6 +847,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
+    console.info('getCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`getCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCurrentOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getCurrentOsAccount
 
 ```TypeScript
@@ -945,21 +901,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
-    console.info('getCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`getCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getCurrentOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getCurrentOsAccount](#getcurrentosaccount)
 
 ## getDistributedVirtualDeviceId
 
@@ -1006,6 +948,17 @@ accountManager.getDistributedVirtualDeviceId((err: BusinessError, virtualID: str
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
+  console.info('getDistributedVirtualDeviceId, virtualID: ' + virtualID);
+}).catch((err: BusinessError) => {
+  console.error(`getDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getDistributedVirtualDeviceId
 
 ```TypeScript
@@ -1037,16 +990,7 @@ Queries the ID of a distributed virtual device. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
-  console.info('getDistributedVirtualDeviceId, virtualID: ' + virtualID);
-}).catch((err: BusinessError) => {
-  console.error(`getDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDistributedVirtualDeviceId](#getdistributedvirtualdeviceid)
 
 ## getForegroundOsAccountLocalId
 
@@ -1090,6 +1034,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let displayId: number = 0;
+try {
+  accountManager.getForegroundOsAccountLocalId(displayId).then((localId: number) => {
+    console.info('foreground account on display ' + displayId + ' is ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountLocalId failed: ${err.code} ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: ${err.code} ${err.message}`);
+}
+```
+
 ## getOsAccountAllConstraints
 
 ```TypeScript
@@ -1120,21 +1081,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 
 **Examples**
 
-Obtain all constraints of OS account 100.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.getOsAccountAllConstraints(localId, (err: BusinessError, constraints: string[])=>{
-  if (err) {
-    console.error(`getOsAccountAllConstraints code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getOsAccountAllConstraints:' + JSON.stringify(constraints));
-  }
-});
+Obtain all constraints of OS account 100.
 ```
 
 ## getOsAccountAllConstraints
@@ -1172,20 +1120,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 **Examples**
 
-Obtain all constraints of OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.getOsAccountAllConstraints(localId).then((constraints: string[]) => {
-  console.info('getOsAccountAllConstraints, constraints: ' + constraints);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountAllConstraints err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountAllConstraints](#getosaccountallconstraints)
 
 ## getOsAccountConstraints
 
@@ -1227,26 +1162,8 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 
 **Examples**
 
-Obtain all constraints of OS account 100.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.getOsAccountConstraints(localId, (err: BusinessError, constraints: string[]) => {
-    if (err) {
-      console.error(`getOsAccountConstraints failed, err: code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getOsAccountConstraints successfully, constraints: ' + JSON.stringify(constraints));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
+Obtain all constraints of OS account 100.
 ```
 
 ## getOsAccountConstraints
@@ -1294,25 +1211,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 **Examples**
 
-Obtain all constraints of OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.getOsAccountConstraints(localId).then((constraints: string[]) => {
-    console.info('getOsAccountConstraints, constraints: ' + constraints);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountConstraints err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountConstraints](#getosaccountconstraints)
 
 ## getOsAccountCount
 
@@ -1362,6 +1261,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountCount().then((count: number) => {
+    console.info('getOsAccountCount successfully, count: ' + count);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountCount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountCount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountCount
 
 ```TypeScript
@@ -1391,21 +1306,7 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountCount().then((count: number) => {
-    console.info('getOsAccountCount successfully, count: ' + count);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountCount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountCount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountCount](#getosaccountcount)
 
 ## getOsAccountDomainInfo
 
@@ -1507,6 +1408,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountLocalId().then((localId: number) => {
+    console.info('getOsAccountLocalId successfully, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountLocalId failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountLocalId
 
 ```TypeScript
@@ -1533,21 +1450,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountLocalId().then((localId: number) => {
-    console.info('getOsAccountLocalId successfully, localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalId failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountLocalId](#getosaccountlocalid)
 
 ## getOsAccountLocalIdBySerialNumber
 
@@ -1580,20 +1483,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Examples**
 
-Obtain the ID of the OS account whose SN is 12345.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let serialNumber: number = 12345;
-accountManager.getOsAccountLocalIdBySerialNumber(serialNumber, (err: BusinessError, localId: number)=>{
-  if (err) {
-    console.error(`get localId code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('get localId:' + localId + ' by serialNumber: ' + serialNumber);
-  }
-});
+Obtain the ID of the OS account whose SN is 12345.
 ```
 
 ## getOsAccountLocalIdBySerialNumber
@@ -1632,19 +1523,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 **Examples**
 
-Obtain the ID of the OS account whose SN is 12345.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let serialNumber: number = 12345;
-accountManager.getOsAccountLocalIdBySerialNumber(serialNumber).then((localId: number) => {
-  console.info('getOsAccountLocalIdBySerialNumber localId: ' + localId);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountLocalIdBySerialNumber err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountLocalIdBySerialNumber](#getosaccountlocalidbyserialnumber)
 
 ## getOsAccountLocalIdForDomain
 
@@ -1698,6 +1577,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
+try {
+  accountManager.getOsAccountLocalIdForDomain(domainInfo).then((localId: number) => {
+    console.info('getOsAccountLocalIdForDomain successfully, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountLocalIdForDomain failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountLocalIdForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountLocalIdForDomain
 
 ```TypeScript
@@ -1736,22 +1632,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
-try {
-  accountManager.getOsAccountLocalIdForDomain(domainInfo).then((localId: number) => {
-    console.info('getOsAccountLocalIdForDomain successfully, localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalIdForDomain failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
 
 ## getOsAccountLocalIdForSerialNumber
 
@@ -1783,26 +1664,8 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Examples**
 
-Obtain the ID of the OS account whose SN is 12345.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// serialNumber indicates the account serial number, which can be obtained by calling getSerialNumberForOsAccountLocalId.
-let serialNumber: number = 12345;
-try {
-  accountManager.getOsAccountLocalIdForSerialNumber(serialNumber, (err: BusinessError, localId: number)=>{
-    if (err) {
-      console.error(`get localId code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('get localId:' + localId + ' by serialNumber: ' + serialNumber);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`get localId exception: code is ${err.code}, message is ${err.message}`);
-}
+Obtain the ID of the OS account whose SN is 12345.
 ```
 
 ## getOsAccountLocalIdForSerialNumber
@@ -1840,25 +1703,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 **Examples**
 
-Obtain the ID of the OS account whose SN is 12345.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// serialNumber indicates the account serial number, which can be obtained by calling getSerialNumberForOsAccountLocalId.
-let serialNumber: number = 12345;
-try {
-  accountManager.getOsAccountLocalIdForSerialNumber(serialNumber).then((localId: number) => {
-    console.info('getOsAccountLocalIdForSerialNumber localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalIdForSerialNumber err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForSerialNumber exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountLocalIdForSerialNumber](#getosaccountlocalidforserialnumber)
 
 ## getOsAccountLocalIdForUid
 
@@ -1889,26 +1734,8 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 **Examples**
 
-Obtain the ID of the OS account whose process UID is 12345678.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// uid indicates the application process UID, which can be obtained from the application information.
-let uid: number = 12345678;
-try {
-  accountManager.getOsAccountLocalIdForUid(uid, (err: BusinessError, localId: number) => {
-    if (err) {
-      console.error(`getOsAccountLocalIdForUid failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('getOsAccountLocalIdForUid successfully, localId: ' + localId);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForUid exception: code is ${err.code}, message is ${err.message}`);
-}
+Obtain the ID of the OS account whose process UID is 12345678.
 ```
 
 ## getOsAccountLocalIdForUid
@@ -1945,25 +1772,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 **Examples**
 
-Obtain the ID of the OS account whose process UID is 12345678.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// uid indicates the application process UID, which can be obtained from the application information.
-let uid: number = 12345678;
-try {
-  accountManager.getOsAccountLocalIdForUid(uid).then((localId: number) => {
-    console.info('getOsAccountLocalIdForUid successfully, localId: ' + localId);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountLocalIdForUid failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForUid exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountLocalIdForUid](#getosaccountlocalidforuid)
 
 ## getOsAccountLocalIdForUidSync
 
@@ -1998,21 +1807,8 @@ Obtains the OS account ID based on the process UID. The API returns the result s
 
 **Examples**
 
-Obtain the ID of the OS account whose process UID is 12345678.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// uid indicates the application process UID, which can be obtained from the application information.
-let uid: number = 12345678;
-try {
-  let localId : number = accountManager.getOsAccountLocalIdForUidSync(uid);
-  console.info('getOsAccountLocalIdForUidSync successfully, localId: ' + localId);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountLocalIdForUidSync exception: code is ${err.code}, message is ${err.message}`);
-}
+Obtain the ID of the OS account whose process UID is 12345678.
 ```
 
 ## getOsAccountLocalIdFromDomain
@@ -2062,6 +1858,18 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
+accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) => {
+  console.info('getOsAccountLocalIdFromDomain successfully, localId: ' + localId);
+}).catch((err: BusinessError) => {
+  console.error(`getOsAccountLocalIdFromDomain failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getOsAccountLocalIdFromDomain
 
 ```TypeScript
@@ -2100,17 +1908,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo = {domain: 'testDomain', accountName: 'testAccountName'};
-accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) => {
-  console.info('getOsAccountLocalIdFromDomain successfully, localId: ' + localId);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountLocalIdFromDomain failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountLocalIdFromDomain](#getosaccountlocalidfromdomain)
 
 ## getOsAccountLocalIdFromProcess
 
@@ -2155,6 +1953,17 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
+  console.info('getOsAccountLocalIdFromProcess successfully, localId: ' + localId);
+}).catch((err: BusinessError) => {
+  console.error(`getOsAccountLocalIdFromProcess failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getOsAccountLocalIdFromProcess
 
 ```TypeScript
@@ -2184,16 +1993,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
-  console.info('getOsAccountLocalIdFromProcess successfully, localId: ' + localId);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountLocalIdFromProcess failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountLocalIdFromProcess](#getosaccountlocalidfromprocess)
 
 ## getOsAccountLocalIdFromUid
 
@@ -2226,20 +2026,8 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 **Examples**
 
-Obtain the ID of the OS account whose process UID is 12345678.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let uid: number = 12345678;
-accountManager.getOsAccountLocalIdFromUid(uid, (err: BusinessError, localId: number) => {
-  if (err) {
-    console.error(`getOsAccountLocalIdFromUid failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('getOsAccountLocalIdFromUid successfully, localId: ' + localId);
-  }
-});
+Obtain the ID of the OS account whose process UID is 12345678.
 ```
 
 ## getOsAccountLocalIdFromUid
@@ -2277,19 +2065,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 **Examples**
 
-Obtain the ID of the OS account whose process UID is 12345678.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let uid: number = 12345678;
-accountManager.getOsAccountLocalIdFromUid(uid).then((localId: number) => {
-  console.info('getOsAccountLocalIdFromUid successfully, localId: ' + localId);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountLocalIdFromUid failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountLocalIdFromUid](#getosaccountlocalidfromuid)
 
 ## getOsAccountLocalIds
 
@@ -2480,6 +2256,39 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
+    console.info('getOsAccountType, accountType: ' + accountType);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  let localId: number = 100;
+  accountManager.getOsAccountType(localId).then((type: osAccount.OsAccountType) => {
+    console.info('getOsAccountType Type:' + type);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountType
 
 ```TypeScript
@@ -2506,21 +2315,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
-    console.info('getOsAccountType, accountType: ' + accountType);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountType](#getosaccounttype)
 
 ## getOsAccountTypeFromProcess
 
@@ -2565,6 +2360,17 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAccountType) => {
+  console.info('getOsAccountTypeFromProcess, accountType: ' + accountType);
+}).catch((err: BusinessError) => {
+  console.error(`getOsAccountTypeFromProcess err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getOsAccountTypeFromProcess
 
 ```TypeScript
@@ -2594,16 +2400,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAccountType) => {
-  console.info('getOsAccountTypeFromProcess, accountType: ' + accountType);
-}).catch((err: BusinessError) => {
-  console.error(`getOsAccountTypeFromProcess err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getOsAccountTypeFromProcess](#getosaccounttypefromprocess)
 
 ## getSerialNumberByOsAccountLocalId
 
@@ -2636,21 +2433,8 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 **Examples**
 
-Obtain the SN of the OS account 100.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.getSerialNumberByOsAccountLocalId(localId, (err: BusinessError, serialNumber: number)=>{
-  if (err) {
-    console.error(`get serialNumber code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('get serialNumber:' + serialNumber + ' by localId: ' + localId);
-  }
-});
+Obtain the SN of the OS account 100.
 ```
 
 ## getSerialNumberByOsAccountLocalId
@@ -2689,20 +2473,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 **Examples**
 
-Obtain the SN of the OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.getSerialNumberByOsAccountLocalId(localId).then((serialNumber: number) => {
-  console.info('getSerialNumberByOsAccountLocalId serialNumber: ' + serialNumber);
-}).catch((err: BusinessError) => {
-  console.error(`getSerialNumberByOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSerialNumberByOsAccountLocalId](#getserialnumberbyosaccountlocalid)
 
 ## getSerialNumberForOsAccountLocalId
 
@@ -2734,26 +2505,8 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 **Examples**
 
-Obtain the SN of the OS account 100.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.getSerialNumberForOsAccountLocalId(localId, (err: BusinessError, serialNumber: number)=>{
-    if (err) {
-      console.error(`get serialNumber code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('get serialNumber:' + serialNumber + ' by localId: ' + localId);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`get serialNumber exception: code is ${err.code}, message is ${err.message}`);
-}
+Obtain the SN of the OS account 100.
 ```
 
 ## getSerialNumberForOsAccountLocalId
@@ -2791,25 +2544,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 **Examples**
 
-Obtain the SN of the OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-try {
-  accountManager.getSerialNumberForOsAccountLocalId(localId).then((serialNumber: number) => {
-    console.info('getSerialNumberForOsAccountLocalId serialNumber: ' + serialNumber);
-  }).catch((err: BusinessError) => {
-    console.error(`getSerialNumberForOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getSerialNumberForOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getSerialNumberForOsAccountLocalId](#getserialnumberforosaccountlocalid)
 
 ## isMultiOsAccountEnable
 
@@ -2854,6 +2589,17 @@ accountManager.isMultiOsAccountEnable((err: BusinessError, isEnabled: boolean) =
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
+  console.info('isMultiOsAccountEnable successfully, isEnabled: ' + isEnabled);
+}).catch((err: BusinessError) => {
+  console.error(`isMultiOsAccountEnable failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## isMultiOsAccountEnable
 
 ```TypeScript
@@ -2883,16 +2629,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
-  console.info('isMultiOsAccountEnable successfully, isEnabled: ' + isEnabled);
-}).catch((err: BusinessError) => {
-  console.error(`isMultiOsAccountEnable failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isMultiOsAccountEnable](#ismultiosaccountenable)
 
 ## isOsAccountActived
 
@@ -2924,21 +2661,8 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 **Examples**
 
-Check whether OS account 100 is activated.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.isOsAccountActived(localId, (err: BusinessError, isActived: boolean) => {
-  if (err) {
-    console.error(`isOsAccountActived failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('isOsAccountActived successfully, isActived:' + isActived);
-  }
-});
+Check whether OS account 100 is activated.
 ```
 
 ## isOsAccountActived
@@ -2976,20 +2700,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 **Examples**
 
-Check whether OS account 100 is activated.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.isOsAccountActived(localId).then((isActived: boolean) => {
-  console.info('isOsAccountActived successfully, isActived: ' + isActived);
-}).catch((err: BusinessError) => {
-  console.error(`isOsAccountActived failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isOsAccountActived](#isosaccountactived)
 
 ## isOsAccountConstraintEnable
 
@@ -3022,22 +2733,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Examples**
 
-Check whether OS account 100 is forbidden to use Wi-Fi.
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-accountManager.isOsAccountConstraintEnable(localId, constraint, (err: BusinessError, isEnabled: boolean) => {
-  if (err) {
-    console.error(`isOsAccountConstraintEnable failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('isOsAccountConstraintEnable successfully, isEnabled: ' + isEnabled);
-  }
-});
+Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
 
 ## isOsAccountConstraintEnable
@@ -3076,21 +2773,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Examples**
 
-Check whether OS account 100 is forbidden to use Wi-Fi.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-accountManager.isOsAccountConstraintEnable(localId, constraint).then((isEnabled: boolean) => {
-  console.info('isOsAccountConstraintEnable successfully, isEnabled: ' + isEnabled);
-}).catch((err: BusinessError) => {
-  console.error(`isOsAccountConstraintEnable err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isOsAccountConstraintEnable](#isosaccountconstraintenable)
 
 ## isOsAccountConstraintEnabled
 
@@ -3125,23 +2808,12 @@ Checks whether a constraint is enabled for the current OS account. This API uses
 
 **Examples**
 
+```TypeScript
 Check whether the current OS account is forbidden to use Wi-Fi.
+```
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.isOsAccountConstraintEnabled(constraint).then((isEnabled: boolean) => {
-    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
-}
+Check whether OS account 100 is forbidden to use Wi-Fi.
 ```
 
 ## isOsAccountUnlocked
@@ -3176,6 +2848,23 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 try {
   accountManager.isOsAccountUnlocked().then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let localId: number = 100;
+try {
+  accountManager.isOsAccountUnlocked(localId).then((isVerified: boolean) => {
     console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
   }).catch((err: BusinessError) => {
     console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
@@ -3231,6 +2920,32 @@ accountManager.isOsAccountVerified((err: BusinessError, isVerified: boolean) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
+let localId: number = 100;
+accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
+  if (err) {
+    console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.isOsAccountVerified().then((isVerified: boolean) => {
+  console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
+}).catch((err: BusinessError) => {
+  console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## isOsAccountVerified
 
 ```TypeScript
@@ -3261,20 +2976,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// localId indicates the OS account ID, which can be obtained by calling getOsAccountLocalId.
-let localId: number = 100;
-accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boolean) => {
-  if (err) {
-    console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
-  }
-});
-```
+See [isOsAccountVerified](#isosaccountverified)
 
 ## isOsAccountVerified
 
@@ -3311,16 +3013,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.isOsAccountVerified().then((isVerified: boolean) => {
-  console.info('isOsAccountVerified successfully, isVerified: ' + isVerified);
-}).catch((err: BusinessError) => {
-  console.error(`isOsAccountVerified failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isOsAccountVerified](#isosaccountverified)
 
 ## isTestOsAccount
 
@@ -3367,6 +3060,17 @@ accountManager.isTestOsAccount((err: BusinessError, isTestable: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+  accountManager.isTestOsAccount().then((isTestable: boolean) => {
+    console.info('isTestOsAccount successfully, isTestable: ' + isTestable);
+  }).catch((err: BusinessError) => {
+    console.error(`isTestOsAccount failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## isTestOsAccount
 
 ```TypeScript
@@ -3398,16 +3102,7 @@ Checks whether the current OS account is a test account. This API uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-  accountManager.isTestOsAccount().then((isTestable: boolean) => {
-    console.info('isTestOsAccount successfully, isTestable: ' + isTestable);
-  }).catch((err: BusinessError) => {
-    console.error(`isTestOsAccount failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isTestOsAccount](#istestosaccount)
 
 ## queryActivatedOsAccountIds
 
@@ -3455,6 +3150,17 @@ accountManager.queryActivatedOsAccountIds((err: BusinessError, idArray: number[]
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
+  console.info('queryActivatedOsAccountIds, idArray: ' + idArray);
+}).catch((err: BusinessError) => {
+  console.error(`queryActivatedOsAccountIds err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## queryActivatedOsAccountIds
 
 ```TypeScript
@@ -3484,16 +3190,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
-  console.info('queryActivatedOsAccountIds, idArray: ' + idArray);
-}).catch((err: BusinessError) => {
-  console.error(`queryActivatedOsAccountIds err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [queryActivatedOsAccountIds](#queryactivatedosaccountids)
 
 ## queryCurrentOsAccount
 
@@ -3537,6 +3234,17 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+accountManager.queryCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
+  console.info('queryCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+}).catch((err: BusinessError) => {
+  console.error(`queryCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## queryCurrentOsAccount
 
 ```TypeScript
@@ -3566,16 +3274,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-accountManager.queryCurrentOsAccount().then((accountInfo: osAccount.OsAccountInfo) => {
-  console.info('queryCurrentOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-}).catch((err: BusinessError) => {
-  console.error(`queryCurrentOsAccount err: code is ${err.code}, message is ${err.message}`);
-});
-```
+See [queryCurrentOsAccount](#querycurrentosaccount)
 
 ## queryDistributedVirtualDeviceId
 
@@ -3625,6 +3324,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryDistributedVirtualDeviceId().then((virtualID: string) => {
+    console.info('queryDistributedVirtualDeviceId, virtualID: ' + virtualID);
+  }).catch((err: BusinessError) => {
+    console.error(`queryDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryDistributedVirtualDeviceId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## queryDistributedVirtualDeviceId
 
 ```TypeScript
@@ -3654,18 +3369,4 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryDistributedVirtualDeviceId().then((virtualID: string) => {
-    console.info('queryDistributedVirtualDeviceId, virtualID: ' + virtualID);
-  }).catch((err: BusinessError) => {
-    console.error(`queryDistributedVirtualDeviceId err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryDistributedVirtualDeviceId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [queryDistributedVirtualDeviceId](#querydistributedvirtualdeviceid)

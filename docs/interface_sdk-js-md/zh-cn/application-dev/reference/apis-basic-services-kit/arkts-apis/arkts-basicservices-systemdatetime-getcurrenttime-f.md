@@ -54,6 +54,38 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getCurrentTime((error: BusinessError, time: number) => {
+    if (error) {
+      console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info(`Succeeded in getting currentTime : ${time}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getCurrentTime().then((time: number) => {
+    console.info(`Succeeded in getting currentTime : ${time}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## getCurrentTime
 
@@ -85,22 +117,7 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getCurrentTime((error: BusinessError, time: number) => {
-    if (error) {
-      console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
-      return;
-    }
-    console.info(`Succeeded in getting currentTime : ${time}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getCurrentTime](#getcurrenttime)
 
 
 ## getCurrentTime
@@ -139,17 +156,4 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getCurrentTime().then((time: number) => {
-    console.info(`Succeeded in getting currentTime : ${time}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get currentTime. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [getCurrentTime](#getcurrenttime)

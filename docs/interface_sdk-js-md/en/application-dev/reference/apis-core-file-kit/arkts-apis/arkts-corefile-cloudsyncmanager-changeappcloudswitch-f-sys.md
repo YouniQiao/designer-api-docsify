@@ -56,6 +56,20 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError) => {
+  if (err) {
+    console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("changeAppCloudSwitch successfully");
+  }
+});
+```
+
 
 ## changeAppCloudSwitch
 
@@ -90,16 +104,4 @@ Changes the device-cloud file sync switch for an application. This API uses an a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountId: string = "testAccount";
-let bundleName: string = "com.example.bundle";
-cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError) => {
-  if (err) {
-    console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    console.info("changeAppCloudSwitch successfully");
-  }
-});
-```
+See [changeAppCloudSwitch](#changeappcloudswitch)

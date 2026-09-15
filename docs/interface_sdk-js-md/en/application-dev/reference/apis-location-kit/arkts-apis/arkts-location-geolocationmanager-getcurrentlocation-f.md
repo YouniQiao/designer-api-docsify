@@ -88,6 +88,64 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let locationChange = (err: BusinessError, location: geoLocationManager.Location) => {
+  if (err) {
+    console.error('locationChange: err=' + JSON.stringify(err));
+  }
+  if (location) {
+    console.info('locationChange: location=' + JSON.stringify(location));
+  }
+};
+
+try {
+  geoLocationManager.getCurrentLocation(locationChange);
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Method 1: Use CurrentLocationRequest as the input parameter.
+let requestInfo: geoLocationManager.CurrentLocationRequest = {
+  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
+  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
+  'maxAccuracy': 0
+};
+try {
+  geoLocationManager.getCurrentLocation(requestInfo).then((result) => {
+    console.info('current location: ' + JSON.stringify(result));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+
+// Method 2: Use SingleLocationRequest as the input parameter.
+let request: geoLocationManager.SingleLocationRequest = {
+  'locatingTimeoutMs': 10000,
+  'locatingPriority': geoLocationManager.LocatingPriority.PRIORITY_ACCURACY
+};
+try {
+  geoLocationManager.getCurrentLocation(request).then((result) => {
+    console.info('current location: ' + JSON.stringify(result));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## getCurrentLocation
 
@@ -124,25 +182,7 @@ Obtain current location.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let locationChange = (err: BusinessError, location: geoLocationManager.Location) => {
-  if (err) {
-    console.error('locationChange: err=' + JSON.stringify(err));
-  }
-  if (location) {
-    console.info('locationChange: location=' + JSON.stringify(location));
-  }
-};
-
-try {
-  geoLocationManager.getCurrentLocation(locationChange);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [getCurrentLocation](#getcurrentlocation)
 
 
 ## getCurrentLocation
@@ -187,40 +227,4 @@ Obtain current location.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Method 1: Use CurrentLocationRequest as the input parameter.
-let requestInfo: geoLocationManager.CurrentLocationRequest = {
-  'priority': geoLocationManager.LocationRequestPriority.FIRST_FIX,
-  'scenario': geoLocationManager.LocationRequestScenario.UNSET,
-  'maxAccuracy': 0
-};
-try {
-  geoLocationManager.getCurrentLocation(requestInfo).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-
-// Method 2: Use SingleLocationRequest as the input parameter.
-let request: geoLocationManager.SingleLocationRequest = {
-  'locatingTimeoutMs': 10000,
-  'locatingPriority': geoLocationManager.LocatingPriority.PRIORITY_ACCURACY
-};
-try {
-  geoLocationManager.getCurrentLocation(request).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getCurrentLocation: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [getCurrentLocation](#getcurrentlocation)

@@ -63,6 +63,19 @@ try {
 }
 ```
 
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+
+let result: Array<systemManager.KeyEventPolicy> = [];
+try {
+  // 参数需根据实际情况进行替换
+  result = systemManager.getKeyEventPolicies(null);
+  console.info('Succeeded in getting key event policies.');
+} catch (err) {
+  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getKeyEventPolicies
 
@@ -103,15 +116,4 @@ function getKeyEventPolicies(admin: Want | null): Array<KeyEventPolicy>
 
 **示例**
 
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-
-let result: Array<systemManager.KeyEventPolicy> = [];
-try {
-  // 参数需根据实际情况进行替换
-  result = systemManager.getKeyEventPolicies(null);
-  console.info('Succeeded in getting key event policies.');
-} catch (err) {
-  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getKeyEventPolicies](#getkeyeventpolicies)

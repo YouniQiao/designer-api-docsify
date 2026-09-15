@@ -55,6 +55,16 @@ call.enableImsSwitch(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.enableImsSwitch(0).then(() => {
+    console.info(`enableImsSwitch success.`);
+}).catch((err: BusinessError) => {
+    console.error(`enableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## enableImsSwitch
 
@@ -98,12 +108,4 @@ function enableImsSwitch(slotId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.enableImsSwitch(0).then(() => {
-    console.info(`enableImsSwitch success.`);
-}).catch((err: BusinessError) => {
-    console.error(`enableImsSwitch fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [enableImsSwitch](#enableimsswitch)

@@ -50,6 +50,30 @@ Subscribes to notifications of all applications under this user. This API uses a
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// subscribe callback
+let subscribeCallback = (err: BusinessError) => {
+  if (err) {
+    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info("subscribe success");
+  }
+}
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+// Bundle names are not verified. You need to determine the target bundle names.
+let info: notificationSubscribe.NotificationSubscribeInfo = {
+  bundleNames: ["bundleName1","bundleName2"]
+};
+notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
@@ -64,6 +88,22 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribe(subscriber, subscribeCallback);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
+}
+let subscriber: notificationSubscribe.NotificationSubscriber = {
+  onConsume: onConsumeCallback
+};
+notificationSubscribe.subscribe(subscriber).then(() => {
+  console.info("subscribe success");
+}).catch((err: BusinessError) => {
+  console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+});
 ```
 
 
@@ -113,29 +153,7 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// subscribe callback
-let subscribeCallback = (err: BusinessError) => {
-  if (err) {
-    console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-  } else {
-    console.info("subscribe success");
-  }
-}
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-// Bundle names are not verified. You need to determine the target bundle names.
-let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1","bundleName2"]
-};
-notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
-```
+See [subscribe](#subscribe)
 
 
 ## subscribe
@@ -185,18 +203,4 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback: ${JSON.stringify(data)}`);
-}
-let subscriber: notificationSubscribe.NotificationSubscriber = {
-  onConsume: onConsumeCallback
-};
-notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info("subscribe success");
-}).catch((err: BusinessError) => {
-  console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [subscribe](#subscribe)

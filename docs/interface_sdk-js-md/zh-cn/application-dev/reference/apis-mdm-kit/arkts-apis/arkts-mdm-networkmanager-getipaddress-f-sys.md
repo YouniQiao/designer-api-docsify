@@ -68,6 +68,25 @@ networkManager.getIpAddress(wantTemp, 'eth0', (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 参数需根据实际情况进行替换
+networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
+  console.info(`Succeeded in getting ip address, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get ip address. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getIpAddress
 
@@ -116,21 +135,4 @@ function getIpAddress(admin: Want, networkInterface: string): Promise<string>
 
 **示例**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 参数需根据实际情况进行替换
-networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
-  console.info(`Succeeded in getting ip address, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get ip address. Code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getIpAddress](#getipaddress)

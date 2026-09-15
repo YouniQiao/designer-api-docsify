@@ -87,6 +87,21 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // 可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
+// 添加权限使用记录
+privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1, 0, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('addPermissionUsedRecord success');
+  }
+});
+```
+
 
 ## addPermissionUsedRecord
 
@@ -140,17 +155,4 @@ function addPermissionUsedRecord(
 
 **示例**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // 可以通过应用BundleInfo中的ApplicationInfo的accessTokenId字段获取。
-// 添加权限使用记录
-privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1, 0, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('addPermissionUsedRecord success');
-  }
-});
-```
+参见 [addPermissionUsedRecord](#addpermissionusedrecord)

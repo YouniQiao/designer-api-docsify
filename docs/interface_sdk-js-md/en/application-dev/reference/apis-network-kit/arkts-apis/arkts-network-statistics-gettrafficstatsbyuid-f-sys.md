@@ -80,6 +80,26 @@ statistics.getTrafficStatsByUid(
 );
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+let uidInfo: statistics.UidInfo = {
+  uid: 20010037,
+  ifaceInfo: {
+    iface: '',
+    startTime: 1,
+    endTime: 3,
+  }
+}
+
+statistics.getTrafficStatsByUid(uidInfo).then((statsInfo: statistics.NetStatsInfo) => {
+  console.info("getTrafficStatsByUid bytes of received = " + JSON.stringify(statsInfo.rxBytes));
+  console.info("getTrafficStatsByUid bytes of sent = " + JSON.stringify(statsInfo.txBytes));
+  console.info("getTrafficStatsByUid packets of received = " + JSON.stringify(statsInfo.rxPackets));
+  console.info("getTrafficStatsByUid packets of sent = " + JSON.stringify(statsInfo.txPackets));
+})
+```
+
 
 ## getTrafficStatsByUid
 
@@ -123,22 +143,4 @@ Obtains the historical data traffic of the specified application. This API uses 
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let uidInfo: statistics.UidInfo = {
-  uid: 20010037,
-  ifaceInfo: {
-    iface: '',
-    startTime: 1,
-    endTime: 3,
-  }
-}
-
-statistics.getTrafficStatsByUid(uidInfo).then((statsInfo: statistics.NetStatsInfo) => {
-  console.info("getTrafficStatsByUid bytes of received = " + JSON.stringify(statsInfo.rxBytes));
-  console.info("getTrafficStatsByUid bytes of sent = " + JSON.stringify(statsInfo.txBytes));
-  console.info("getTrafficStatsByUid packets of received = " + JSON.stringify(statsInfo.rxPackets));
-  console.info("getTrafficStatsByUid packets of sent = " + JSON.stringify(statsInfo.txPackets));
-})
-```
+See [getTrafficStatsByUid](#gettrafficstatsbyuid)

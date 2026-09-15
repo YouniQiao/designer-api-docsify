@@ -51,25 +51,12 @@ activateOsAccount(localId: number, callback: AsyncCallback<void>): void
 
 **示例**
 
+```TypeScript
 激活ID为100的系统账号。
+```
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.activateOsAccount(localId, (err: BusinessError)=>{
-    if (err) {
-      console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('activateOsAccount successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-}
+在ID为0的逻辑屏上激活ID为100的系统账号。
 ```
 
 ## activateOsAccount
@@ -116,24 +103,7 @@ activateOsAccount(localId: number): Promise<void>
 
 **示例**
 
-激活ID为100的系统账号。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.activateOsAccount(localId).then(() => {
-    console.info('activateOsAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [activateOsAccount](#activateosaccount)
 
 ## activateOsAccount
 
@@ -181,25 +151,7 @@ activateOsAccount(localId: number, displayId: number): Promise<void>
 
 **示例**
 
-在ID为0的逻辑屏上激活ID为100的系统账号。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let displayId: number = 0;
-try {
-  accountManager.activateOsAccount(localId, displayId).then(() => {
-    console.info('activateOsAccount with displayId successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`activateOsAccount with displayId failed, err: ${err.code} ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
-}
-```
+参见 [activateOsAccount](#activateosaccount)
 
 ## bindDomainAccount
 
@@ -326,6 +278,28 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let options: osAccount.CreateOsAccountOptions = {
+  shortName: 'myShortName',
+  disallowedPreinstalledBundles: [],
+  allowedPreinstalledBundles: [],
+}
+try {
+  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## createOsAccount
 
 ```TypeScript
@@ -374,27 +348,7 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let options: osAccount.CreateOsAccountOptions = {
-  shortName: 'myShortName',
-  disallowedPreinstalledBundles: [],
-  allowedPreinstalledBundles: [],
-}
-try {
-  accountManager.createOsAccount('testAccountName', osAccount.OsAccountType.NORMAL, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccount, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccount err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [createOsAccount](#createosaccount)
 
 ## createOsAccountForDomain
 
@@ -463,6 +417,28 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+let options: osAccount.CreateOsAccountForDomainOptions = {
+  shortName: 'myShortName'
+}
+try {
+  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
+    (accountInfo: osAccount.OsAccountInfo) => {
+    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
+  }).catch((err: BusinessError) => {
+    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## createOsAccountForDomain
 
 ```TypeScript
@@ -512,27 +488,7 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let domainInfo: osAccount.DomainAccountInfo =
-  {domain: 'testDomain', accountName: 'testAccountName'};
-let options: osAccount.CreateOsAccountForDomainOptions = {
-  shortName: 'myShortName'
-}
-try {
-  accountManager.createOsAccountForDomain(osAccount.OsAccountType.NORMAL, domainInfo, options).then(
-    (accountInfo: osAccount.OsAccountInfo) => {
-    console.info('createOsAccountForDomain, account info: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`createOsAccountForDomain err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [createOsAccountForDomain](#createosaccountfordomain)
 
 ## deactivateOsAccount
 
@@ -576,23 +532,8 @@ deactivateOsAccount(localId: number): Promise<void>
 
 **示例**
 
-注销ID为100的系统账号。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.deactivateOsAccount(localId).then(() => {
-    console.info('deactivateOsAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`deactivateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`deactivateOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
+注销ID为100的系统账号。
 ```
 
 ## getBundleIdForUid
@@ -647,6 +588,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let testUid: number = 1000000;
+try {
+  accountManager.getBundleIdForUid(testUid).then((result: number) => {
+    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getBundleIdForUid
 
 ```TypeScript
@@ -684,22 +642,7 @@ getBundleIdForUid(uid: number): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let testUid: number = 1000000;
-try {
-  accountManager.getBundleIdForUid(testUid).then((result: number) => {
-    console.info('getBundleIdForUid bundleId:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getBundleIdForUid errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getBundleIdForUid](#getbundleidforuid)
 
 ## getBundleIdForUidSync
 
@@ -791,23 +734,8 @@ getEnabledOsAccountConstraints(localId: number): Promise<Array<string>>
 
 **示例**
 
-获取ID为100的系统账号的全部约束。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getEnabledOsAccountConstraints(localId).then((constraints: string[]) => {
-    console.info('getEnabledOsAccountConstraints, constraints: ' + constraints);
-  }).catch((err: BusinessError) => {
-    console.error(`getEnabledOsAccountConstraints err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getEnabledOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
+获取ID为100的系统账号的全部约束。
 ```
 
 ## getForegroundOsAccountDisplayId
@@ -909,6 +837,22 @@ getForegroundOsAccountLocalId(displayId: number): Promise<number>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getForegroundOsAccountLocalId().then((localId: number) => {
+    console.info('getForegroundOsAccountLocalId, localId: ' + localId);
+  }).catch((err: BusinessError) => {
+    console.error(`getForegroundOsAccountLocalId err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getForegroundOsAccountLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 let displayId: number = 0;
 try {
   accountManager.getForegroundOsAccountLocalId(displayId).then((localId: number) => {
@@ -978,6 +922,23 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
+    (result: osAccount.ConstraintSourceTypeInfo[]) => {
+    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountConstraintSourceTypes
 
 ```TypeScript
@@ -1020,22 +981,7 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string): Promise<
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.getOsAccountConstraintSourceTypes(100, 'constraint.wifi').then(
-    (result: osAccount.ConstraintSourceTypeInfo[]) => {
-    console.info('getOsAccountConstraintSourceTypes sourceTypeInfos:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountConstraintSourceTypes errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountConstraintSourceTypes](#getosaccountconstraintsourcetypes)
 
 ## getOsAccountProfilePhoto
 
@@ -1073,25 +1019,8 @@ getOsAccountProfilePhoto(localId: number, callback: AsyncCallback<string>): void
 
 **示例**
 
-获取ID为100的系统账号的头像。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getOsAccountProfilePhoto(localId, (err: BusinessError, photo: string)=>{
-    if (err) {
-      console.error(`getOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('get photo:' + photo + ' by localId: ' + localId);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
+获取ID为100的系统账号的头像。
 ```
 
 ## getOsAccountProfilePhoto
@@ -1135,24 +1064,7 @@ getOsAccountProfilePhoto(localId: number): Promise<string>
 
 **示例**
 
-获取ID为100的系统账号的头像。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
-    console.info('getOsAccountProfilePhoto: ' + photo);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getOsAccountProfilePhoto](#getosaccountprofilephoto)
 
 ## getOsAccountType
 
@@ -1193,6 +1105,40 @@ getOsAccountType(localId: number): Promise<OsAccountType>
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType((err: BusinessError, accountType: osAccount.OsAccountType) => {
+    if (err) {
+      console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getOsAccountType accountType: ' + accountType);
+    }
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.getOsAccountType().then((accountType: osAccount.OsAccountType) => {
+    console.info('getOsAccountType, accountType: ' + accountType);
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountType err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1262,6 +1208,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isMainOsAccount().then((result: boolean) => {
+    console.info('isMainOsAccount result:' + JSON.stringify(result));
+  }).catch((err: BusinessError) => {
+    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## isMainOsAccount
 
 ```TypeScript
@@ -1294,21 +1256,7 @@ isMainOsAccount(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.isMainOsAccount().then((result: boolean) => {
-    console.info('isMainOsAccount result:' + JSON.stringify(result));
-  }).catch((err: BusinessError) => {
-    console.error(`isMainOsAccount errInfo:code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [isMainOsAccount](#ismainosaccount)
 
 ## isOsAccountActivated
 
@@ -1350,23 +1298,8 @@ isOsAccountActivated(localId: number): Promise<boolean>
 
 **示例**
 
-判断ID为100的系统账号是否处于激活状态。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.isOsAccountActivated(localId).then((isActivated: boolean) => {
-    console.info('isOsAccountActivated successfully, isActivated: ' + isActivated);
-  }).catch((err: BusinessError) => {
-    console.error(`isOsAccountActivated failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
-}
+判断ID为100的系统账号是否处于激活状态。
 ```
 
 ## isOsAccountConstraintEnabled
@@ -1410,24 +1343,12 @@ isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boole
 
 **示例**
 
-判断ID为100的系统账号是否有禁止使用Wi-Fi的约束。
+```TypeScript
+判断当前系统账号是否有禁止使用Wi-Fi的约束。
+```
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.isOsAccountConstraintEnabled(localId, constraint).then((isEnabled: boolean) => {
-    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
-}
+判断ID为100的系统账号是否有禁止使用Wi-Fi的约束。
 ```
 
 ## isOsAccountUnlocked
@@ -1469,6 +1390,22 @@ isOsAccountUnlocked(localId: number): Promise<boolean>
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.isOsAccountUnlocked().then((isVerified: boolean) => {
+    console.info('isOsAccountUnlocked successfully, isVerified: ' + isVerified);
+  }).catch((err: BusinessError) => {
+    console.error(`isOsAccountUnlocked failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1534,6 +1471,30 @@ function offCallback(){
 
 try {
   accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switched');
 } catch (e) {
   const err = e as BusinessError;
   console.error(`off exception: code is ${err.code}, message is ${err.message}`);
@@ -1614,17 +1575,7 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switching');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 off
 
 ## off('switched')
 
@@ -1662,17 +1613,7 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switched');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 off
 
 ## offConstraintChanged
 
@@ -1780,6 +1721,40 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switching', onSwitchingCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switched', onSwitchedCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## on('activate' | 'activating')
 
 ```TypeScript
@@ -1854,22 +1829,7 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switching', onSwitchingCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 on
 
 ## on('switched')
 
@@ -1907,22 +1867,7 @@ on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switched', onSwitchedCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 on
 
 ## onConstraintChanged
 
@@ -2023,6 +1968,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
+    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
+  }).catch((err: BusinessError) => {
+    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -2055,21 +2016,7 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryAllCreatedOsAccounts().then((accountArr: osAccount.OsAccountInfo[]) => {
-    console.info('queryAllCreatedOsAccounts, accountArr: ' + JSON.stringify(accountArr));
-  }).catch((err: BusinessError) => {
-    console.error(`queryAllCreatedOsAccounts err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [queryAllCreatedOsAccounts](#queryallcreatedosaccounts)
 
 ## queryMaxLoggedInOsAccountNumber
 
@@ -2164,6 +2111,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
+    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
+  }).catch((err: BusinessError) => {
+    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## queryMaxOsAccountNumber
 
 ```TypeScript
@@ -2193,21 +2156,7 @@ queryMaxOsAccountNumber(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.queryMaxOsAccountNumber().then((maxCnt: number) => {
-    console.info('queryMaxOsAccountNumber successfully, maxCnt: ' + maxCnt);
-  }).catch((err: BusinessError) => {
-    console.error(`queryMaxOsAccountNumber failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [queryMaxOsAccountNumber](#querymaxosaccountnumber)
 
 ## queryOsAccount
 
@@ -2293,25 +2242,8 @@ queryOsAccountById(localId: number, callback: AsyncCallback<OsAccountInfo>): voi
 
 **示例**
 
-查询ID为100的系统账号信息。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.queryOsAccountById(localId, (err: BusinessError, accountInfo: osAccount.OsAccountInfo)=>{
-    if (err) {
-      console.error(`queryOsAccountById exception:code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('queryOsAccountById accountInfo:' + JSON.stringify(accountInfo));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
-}
+查询ID为100的系统账号信息。
 ```
 
 ## queryOsAccountById
@@ -2355,24 +2287,7 @@ queryOsAccountById(localId: number): Promise<OsAccountInfo>
 
 **示例**
 
-查询ID为100的系统账号信息。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
-    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [queryOsAccountById](#queryosaccountbyid)
 
 ## removeOsAccount
 
@@ -2434,6 +2349,50 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+let accountName: string = 'testAccountName';
+let token: Uint8Array = new Uint8Array([0]);
+let options: osAccount.RemoveOsAccountOptions = {
+  token: token,
+}
+try {
+  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
+    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
+      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
+        console.info('removeOsAccount successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
+      });
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## removeOsAccount
 
 ```TypeScript
@@ -2477,25 +2436,7 @@ removeOsAccount(localId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let accountName: string = 'testAccountName';
-try {
-  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
-    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
-      accountManager.removeOsAccount(osAccountInfo.localId).then(() => {
-        console.info('removeOsAccount successfully');
-      }).catch((err: BusinessError) => {
-        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
-      });
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [removeOsAccount](#removeosaccount)
 
 ## removeOsAccount
 
@@ -2541,29 +2482,7 @@ removeOsAccount(localId: number, options: RemoveOsAccountOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let accountName: string = 'testAccountName';
-let token: Uint8Array = new Uint8Array([0]);
-let options: osAccount.RemoveOsAccountOptions = {
-  token: token,
-}
-try {
-  accountManager.createOsAccount(accountName, osAccount.OsAccountType.NORMAL,
-    (err: BusinessError, osAccountInfo: osAccount.OsAccountInfo)=>{
-      accountManager.removeOsAccount(osAccountInfo.localId, options).then(() => {
-        console.info('removeOsAccount successfully');
-      }).catch((err: BusinessError) => {
-        console.error(`removeOsAccount failed, code is ${err.code}, message is ${err.message}`);
-      });
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [removeOsAccount](#removeosaccount)
 
 ## setOsAccountConstraints
 
@@ -2604,26 +2523,12 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 
 **示例**
 
+```TypeScript
 给ID为100的系统账号设置禁止使用Wi-Fi的约束。
+```
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.setOsAccountConstraints(localId, [constraint], true, (err: BusinessError) => {
-    if (err) {
-      console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setOsAccountConstraints successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
+删除ID为100的系统账号的禁止使用Wi-Fi的约束。
 ```
 
 ## setOsAccountConstraints
@@ -2670,24 +2575,7 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 
 **示例**
 
-删除ID为100的系统账号的禁止使用Wi-Fi的约束。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
-    console.info('setOsAccountConstraints successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setOsAccountConstraints](#setosaccountconstraints)
 
 ## setOsAccountName
 
@@ -2727,26 +2615,8 @@ setOsAccountName(localId: number, localName: string, callback: AsyncCallback<voi
 
 **示例**
 
-将ID为100的系统账号的账号名设置成demoName。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let name: string = 'demoName';
-try {
-  accountManager.setOsAccountName(localId, name, (err: BusinessError) => {
-    if (err) {
-      console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setOsAccountName successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
-}
+将ID为100的系统账号的账号名设置成demoName。
 ```
 
 ## setOsAccountName
@@ -2792,25 +2662,7 @@ setOsAccountName(localId: number, localName: string): Promise<void>
 
 **示例**
 
-将ID为100的系统账号的账号名设置成demoName。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let name: string = 'testName';
-try {
-  accountManager.setOsAccountName(localId, name).then(() => {
-    console.info('setOsAccountName successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setOsAccountName](#setosaccountname)
 
 ## setOsAccountProfilePhoto
 
@@ -2850,29 +2702,8 @@ setOsAccountProfilePhoto(localId: number, photo: string, callback: AsyncCallback
 
 **示例**
 
-给ID为100的系统账号设置头像。
-
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
-'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
-'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
-'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
-try {
-  accountManager.setOsAccountProfilePhoto(localId, photo, (err: BusinessError)=>{
-    if (err) {
-      console.error(`setOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setOsAccountProfilePhoto successful.');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
+给ID为100的系统账号设置头像。
 ```
 
 ## setOsAccountProfilePhoto
@@ -2918,28 +2749,7 @@ setOsAccountProfilePhoto(localId: number, photo: string): Promise<void>
 
 **示例**
 
-给ID为100的系统账号设置头像。
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
-'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
-'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
-'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
-try {
-  accountManager.setOsAccountProfilePhoto(localId, photo).then(() => {
-    console.info('setOsAccountProfilePhoto success');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [setOsAccountProfilePhoto](#setosaccountprofilephoto)
 
 ## setOsAccountType
 

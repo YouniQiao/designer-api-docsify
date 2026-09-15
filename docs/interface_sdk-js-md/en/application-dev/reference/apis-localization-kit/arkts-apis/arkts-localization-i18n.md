@@ -1,4 +1,4 @@
-# @ohos.i18n
+# @ohos.i18n(Internationalization)
 
 This module provides system-related and enhanced [i18n](../../../internationalization/i18n-l10n.md) capabilities, such as locale management, phone number formatting, and calendar, through supplementary i18n APIs that are not defined in [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/). The [intl](arkts-localization-intl.md) module provides basic i18n capabilities through the standard i18n APIs defined in ECMA
 402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs

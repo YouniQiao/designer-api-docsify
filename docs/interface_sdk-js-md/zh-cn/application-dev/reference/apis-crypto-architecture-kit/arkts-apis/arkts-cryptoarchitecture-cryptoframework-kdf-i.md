@@ -48,48 +48,12 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 **示例**
 
-PBKDF2算法
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
+PBKDF2算法
 ```
 
-HKDF算法
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-kdf.generateSecret(spec, (err, secret) => {
-  if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
-    return;
-  }
-  console.info('key derivation output = ' + secret.data);
-});
+HKDF算法
 ```
 
 ## generateSecret
@@ -131,49 +95,7 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 **示例**
 
-PBKDF2算法
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
-
-HKDF算法
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-let kdfPromise = kdf.generateSecret(spec);
-kdfPromise.then(secret => {
-  console.info('key derivation output = ' + secret.data);
-}).catch((error: BusinessError) => {
-  console.error(`key derivation failed: errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
+参见 [generateSecret](#generatesecret)
 
 ## generateSecretSync
 
@@ -215,38 +137,12 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 **示例**
 
-PBKDF2算法
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.PBKDF2Spec = {
-  algName: 'PBKDF2',
-  password: '123456',
-  salt: new Uint8Array(16),
-  iterations: 10000,
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
-let secret = kdf.generateSecretSync(spec);
-console.info('[Sync]key derivation output = ' + secret.data);
+PBKDF2算法
 ```
 
-HKDF算法
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-let spec: cryptoFramework.HKDFSpec = {
-  algName: 'HKDF',
-  key: '123456',
-  salt: new Uint8Array(16),
-  info: new Uint8Array(16),
-  keySize: 32
-};
-let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
-let secret = kdf.generateSecretSync(spec);
-console.info('[Sync]key derivation output = ' + secret.data);
+HKDF算法
 ```
 
 ## algName

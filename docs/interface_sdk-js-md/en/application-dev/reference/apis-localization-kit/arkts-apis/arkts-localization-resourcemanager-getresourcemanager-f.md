@@ -53,30 +53,6 @@ export default {
 };
 ```
 
-
-## getResourceManager
-
-```TypeScript
-export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void
-```
-
-Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result.
-
-**Since:** 6
-
-**Model restriction:** This API can be used only in the FA model.
-
-**System capability:** SystemCapability.Global.ResourceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
-
-**Examples**
-
 ```TypeScript
 import resourceManager from '@ohos.resourceManager';
 // Use this method to import the module in the FA model.
@@ -104,6 +80,77 @@ export default {
 };
 ```
 
+```TypeScript
+import resourceManager from '@ohos.resourceManager';
+// Use this method to import the module in the FA model.
+
+export default {
+    onCreate() {
+        resourceManager.getResourceManager().then(resMgr => {
+            try {
+                // Replace "test" with the actual resource name.
+                let testStr = resMgr.getStringByNameSync('test')
+                console.info("getResourceManager success is " + testStr);
+            } catch (error) {
+                console.error("getResourceManager error is " + JSON.stringify(error));
+            }
+        }).catch(error => {
+            console.error("getResourceManager error is " + error);
+        });
+    }
+};
+```
+
+```TypeScript
+import resourceManager from '@ohos.resourceManager';
+// Use this method to import the module in the FA model.
+
+// Replace 'com.example.testapp' with the actual application package name.
+const BUNDLE_NAME = 'com.example.testapp';
+
+export default {
+    onCreate() {
+        resourceManager.getResourceManager(BUNDLE_NAME).then(resMgr => {
+            try {
+                // Replace "test" with the actual resource name.
+                let testStr = resMgr.getStringByNameSync('test')
+                console.info("getResourceManager success is " + testStr);
+            } catch (error) {
+                console.error("getResourceManager error is " + JSON.stringify(error));
+            }
+        }).catch(error => {
+            console.error("getResourceManager error is " + error);
+        });
+    }
+};
+```
+
+
+## getResourceManager
+
+```TypeScript
+export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void
+```
+
+Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result.
+
+**Since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Bundle name of the application. |
+| callback | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
+
+**Examples**
+
+See [getResourceManager](#getresourcemanager)
+
 
 ## getResourceManager
 
@@ -127,26 +174,7 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **Examples**
 
-```TypeScript
-import resourceManager from '@ohos.resourceManager';
-// Use this method to import the module in the FA model.
-
-export default {
-    onCreate() {
-        resourceManager.getResourceManager().then(resMgr => {
-            try {
-                // Replace "test" with the actual resource name.
-                let testStr = resMgr.getStringByNameSync('test')
-                console.info("getResourceManager success is " + testStr);
-            } catch (error) {
-                console.error("getResourceManager error is " + JSON.stringify(error));
-            }
-        }).catch(error => {
-            console.error("getResourceManager error is " + error);
-        });
-    }
-};
-```
+See [getResourceManager](#getresourcemanager)
 
 
 ## getResourceManager
@@ -177,26 +205,4 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 **Examples**
 
-```TypeScript
-import resourceManager from '@ohos.resourceManager';
-// Use this method to import the module in the FA model.
-
-// Replace 'com.example.testapp' with the actual application package name.
-const BUNDLE_NAME = 'com.example.testapp';
-
-export default {
-    onCreate() {
-        resourceManager.getResourceManager(BUNDLE_NAME).then(resMgr => {
-            try {
-                // Replace "test" with the actual resource name.
-                let testStr = resMgr.getStringByNameSync('test')
-                console.info("getResourceManager success is " + testStr);
-            } catch (error) {
-                console.error("getResourceManager error is " + JSON.stringify(error));
-            }
-        }).catch(error => {
-            console.error("getResourceManager error is " + error);
-        });
-    }
-};
-```
+See [getResourceManager](#getresourcemanager)

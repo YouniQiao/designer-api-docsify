@@ -48,6 +48,14 @@ function back(options?: RouterOptions): void
 this.getUIContext().getRouter().back({ url: 'pages/detail' });
 ```
 
+```TypeScript
+this.getUIContext().getRouter().back(1);
+```
+
+```TypeScript
+this.getUIContext().getRouter().back(1, { info: '来自Home页' }); // 携带参数返回
+```
+
 
 ## back
 
@@ -90,10 +98,4 @@ function back(index: number, params?: Object): void
 
 **示例**
 
-```TypeScript
-this.getUIContext().getRouter().back(1);
-```
-
-```TypeScript
-this.getUIContext().getRouter().back(1, { info: '来自Home页' }); // 携带参数返回
-```
+参见 [back](#back)

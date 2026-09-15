@@ -33,6 +33,12 @@ Queries my card. This API uses an asynchronous callback to return the result.
 **Examples**
 
 ```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -42,6 +48,40 @@ contact.queryMyCard((err: BusinessError, data) => {
     console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+// Pass in the contact attribute list to query "my card".
+contact.queryMyCard({
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+// Callback function used to query "My Card" by passing in the contact attribute list.
+let promise = contact.queryMyCard({
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
   console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
 });
 ```
@@ -77,25 +117,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Obtain the context in the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.queryMyCard(context, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-  });
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -125,21 +147,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-// Pass in the contact attribute list to query "my card".
-contact.queryMyCard({
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-});
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -173,27 +181,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-  import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Obtain the context in the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  contact.queryMyCard(context, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  }, (err: BusinessError, data) => {
-    if (err) {
-      console.error(`Failed to query My Card. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-  });
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -228,17 +216,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-// Callback function used to query "My Card" by passing in the contact attribute list.
-let promise = contact.queryMyCard({
-  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-});
-```
+See [queryMyCard](#querymycard)
 
 
 ## queryMyCard
@@ -277,20 +255,4 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-  import { common } from '@kit.AbilityKit';
-
-  // Obtain the context in the component.
-  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-  let promise = contact.queryMyCard(context, {
-    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
-  });
-  promise.then((data) => {
-    console.info(`Succeeded in querying My Card. data->${JSON.stringify(data)}`);
-  });
-```
+See [queryMyCard](#querymycard)

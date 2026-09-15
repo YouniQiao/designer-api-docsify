@@ -33,6 +33,12 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 **Examples**
 
 ```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { contact } from '@kit.ContactsKit';
 
@@ -42,6 +48,48 @@ contact.queryGroups((err: BusinessError, data) => {
     return;
   }
   console.info(`Succeeded in querying Groups.. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { contact } from '@kit.ContactsKit';
+
+contact.queryGroups({
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain UIAbilityContext, where this refers to a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
+import { contact } from '@kit.ContactsKit';
+
+let promise = contact.queryGroups({
+  holderId: 1,
+  bundleName: '',
+  displayName: ''
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
 });
 ```
 
@@ -76,25 +124,7 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryGroups(context, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
+See [queryGroups](#querygroups)
 
 
 ## queryGroups
@@ -124,22 +154,7 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-
-contact.queryGroups({
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
+See [queryGroups](#querygroups)
 
 
 ## queryGroups
@@ -173,29 +188,7 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Examples**
 
-> NOTE
-> 
-> In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-contact.queryGroups(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-}, (err: BusinessError, data) => {
-  if (err) {
-    console.error(`Failed to query Groups. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
+See [queryGroups](#querygroups)
 
 
 ## queryGroups
@@ -230,18 +223,7 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-
-let promise = contact.queryGroups({
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
+See [queryGroups](#querygroups)
 
 
 ## queryGroups
@@ -280,22 +262,4 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain UIAbilityContext, where this refers to a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
-
-// Obtain the context in the component.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let promise = contact.queryGroups(context, {
-  holderId: 1,
-  bundleName: '',
-  displayName: ''
-});
-promise.then((data) => {
-  console.info(`Succeeded in querying Groups. data->${JSON.stringify(data)}`);
-});
-```
+See [queryGroups](#querygroups)

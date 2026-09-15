@@ -56,6 +56,17 @@ sim.setVoiceMailInfo(0, "mail", "xxx@xxx.com", (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.setVoiceMailInfo(0, "mail", "xxx@xxx.com").then(() => {
+    console.info(`setVoiceMailInfo success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setVoiceMailInfo failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setVoiceMailInfo
 
@@ -103,13 +114,4 @@ Sets the voice mail information.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setVoiceMailInfo(0, "mail", "xxx@xxx.com").then(() => {
-    console.info(`setVoiceMailInfo success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setVoiceMailInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setVoiceMailInfo](#setvoicemailinfo)

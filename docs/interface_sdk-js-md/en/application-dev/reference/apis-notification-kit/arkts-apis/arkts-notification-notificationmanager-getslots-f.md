@@ -59,6 +59,16 @@ let getSlotsCallback = (err: BusinessError, data: Array<notificationManager.Noti
 notificationManager.getSlots(getSlotsCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
+  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getSlots
 
@@ -98,12 +108,4 @@ This API is used to batch query the configuration information of all notificatio
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getSlots().then((data: Array<notificationManager.NotificationSlot>) => {
-  console.info(`Succeeded in getting slots, data is ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get slots. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getSlots](#getslots)

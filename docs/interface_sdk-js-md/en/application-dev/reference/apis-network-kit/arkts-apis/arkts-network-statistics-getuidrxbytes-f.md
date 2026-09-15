@@ -61,6 +61,15 @@ statistics.getUidRxBytes(uid, (error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+let uid = 123456789;  // This is a sample UID. Replace it with the actual UID.
+statistics.getUidRxBytes(uid).then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getUidRxBytes
 
@@ -108,11 +117,4 @@ Obtains the total downlink traffic (in bytes) of the specified application from 
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-let uid = 123456789;  // This is a sample UID. Replace it with the actual UID.
-statistics.getUidRxBytes(uid).then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
+See [getUidRxBytes](#getuidrxbytes)

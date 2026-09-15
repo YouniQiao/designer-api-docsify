@@ -58,6 +58,17 @@ data.setDefaultCellularDataSlotId(0, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.setDefaultCellularDataSlotId(0).then(() => {
+    console.info(`setDefaultCellularDataSlotId success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setDefaultCellularDataSlotId fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## setDefaultCellularDataSlotId
 
@@ -103,13 +114,4 @@ Sets the default slot of the SIM card used for mobile data. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.setDefaultCellularDataSlotId(0).then(() => {
-    console.info(`setDefaultCellularDataSlotId success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setDefaultCellularDataSlotId fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setDefaultCellularDataSlotId](#setdefaultcellulardataslotid)

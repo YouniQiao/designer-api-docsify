@@ -66,6 +66,24 @@ restrictions.isHdcDisabled(wantTemp, (err, result) => {
 })
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+restrictions.isHdcDisabled(wantTemp).then((result) => {
+  console.info(`Succeeded in querying is hdc disabled : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query is hdc disabled or not. Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 
 ## isHdcDisabled
 
@@ -113,20 +131,4 @@ function isHdcDisabled(admin: Want): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-restrictions.isHdcDisabled(wantTemp).then((result) => {
-  console.info(`Succeeded in querying is hdc disabled : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query is hdc disabled or not. Code is ${err.code}, message is ${err.message}`);
-})
-```
+参见 [isHdcDisabled](#ishdcdisabled)

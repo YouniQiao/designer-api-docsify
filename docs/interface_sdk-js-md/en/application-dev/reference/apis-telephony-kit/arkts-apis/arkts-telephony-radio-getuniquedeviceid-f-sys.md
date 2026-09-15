@@ -48,6 +48,18 @@ If the device is registered with a 3GPP-compliant network, the international mob
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getUniqueDeviceId((err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`getUniqueDeviceId failed, callback: err->${JSON.stringify(err)}}`);
+        return;
+    }
+    console.info(`getUniqueDeviceId success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getUniqueDeviceId(slotId, (err: BusinessError, data: string) => {
     if (err) {
@@ -55,6 +67,17 @@ radio.getUniqueDeviceId(slotId, (err: BusinessError, data: string) => {
         return;
     }
     console.info(`getUniqueDeviceId success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getUniqueDeviceId(slotId).then((data: string) => {
+    console.info(`getUniqueDeviceId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getUniqueDeviceId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -103,16 +126,7 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getUniqueDeviceId(slotId).then((data: string) => {
-    console.info(`getUniqueDeviceId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getUniqueDeviceId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getUniqueDeviceId](#getuniquedeviceid)
 
 
 ## getUniqueDeviceId
@@ -153,14 +167,4 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getUniqueDeviceId((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getUniqueDeviceId failed, callback: err->${JSON.stringify(err)}}`);
-        return;
-    }
-    console.info(`getUniqueDeviceId success, callback: data->${JSON.stringify(data)}`);
-});
-```
+See [getUniqueDeviceId](#getuniquedeviceid)

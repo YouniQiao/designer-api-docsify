@@ -69,6 +69,25 @@ try {
 }
 ```
 
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = 1;
+let deviceId: string = "test deviceId";
+try {
+  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
+    .then(() => {
+      console.info('updateContinuationState finished. ');
+    })
+    .catch((err: BusinessError) => {
+      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
+    });
+} catch (err) {
+  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
+}
+```
+
 
 ## updateContinuationState
 
@@ -115,21 +134,4 @@ function updateContinuationState(token: number, deviceId: string, status: Device
 
 **示例**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = 1;
-let deviceId: string = "test deviceId";
-try {
-  continuationManager.updateContinuationState(token, deviceId, continuationManager.DeviceConnectState.CONNECTED)
-    .then(() => {
-      console.info('updateContinuationState finished. ');
-    })
-    .catch((err: BusinessError) => {
-      console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-    });
-} catch (err) {
-  console.error('updateContinuationState failed, cause: ' + JSON.stringify(err));
-}
-```
+参见 [updateContinuationState](#updatecontinuationstate)

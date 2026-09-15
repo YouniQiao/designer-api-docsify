@@ -67,6 +67,22 @@ try {
 }
 ```
 
+```TypeScript
+import { telephonyManager } from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
+
+try {
+  // 设置策略类型为禁用名单
+  // 参数需根据实际情况进行替换
+  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
+  // 获取通话呼出禁用名单
+  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(null, policy);
+  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
+} catch (err) {
+  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getOutgoingCallPolicyNumbers
 
@@ -108,18 +124,4 @@ function getOutgoingCallPolicyNumbers(admin: Want | null, policy: adminManager.P
 
 **示例**
 
-```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-try {
-  // 设置策略类型为禁用名单
-  // 参数需根据实际情况进行替换
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  // 获取通话呼出禁用名单
-  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(null, policy);
-  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getOutgoingCallPolicyNumbers](#getoutgoingcallpolicynumbers)

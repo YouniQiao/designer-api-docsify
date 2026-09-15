@@ -41,19 +41,10 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 
 ## Examples
 
-This example shows the redirection feature of the router.replace API in the web-like paradigm.
-The following describes the tree structure:
-
 ```TypeScript
-pages
-├─ index
-│  ├─ index.css
-│  ├─ index.hml
-│  └─ index.js
-└─ routerPages
-   ├─ routerPage.css
-   ├─ routerPage.hml
-   └─ routerPage.js
+This example shows the redirection feature of the router.replace API in the web-like paradigm.
+
+The following describes the tree structure:
 ```
 
 ```TypeScript

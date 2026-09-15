@@ -50,15 +50,17 @@ Checks whether this data type belongs to the specified uniform data type.
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.belongsTo('general.source-code');
-    if(ret) {
-        console.info('type general.type-script belongs to type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
+try {
+  // Obtain the TypeDescriptor object.
+  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+  // Check whether it belongs to the specified type.
+  let ret = typeObj.belongsTo('general.source-code');
+  if (ret) {
+    console.info('type general.type-script belongs to type general.source-code');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -100,15 +102,16 @@ Checks whether this data type is the same as the specified uniform data type. Th
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-try{
-    let typeA : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let typeB : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
-    if(!typeA.equals(typeB)) {
-      console.info('typeA is not equal to typeB');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`throws an exception. code is ${error.code}, message is ${error.message} `);
+try {
+  // Obtain two TypeDescriptor objects for comparison.
+  let typeA: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+  let typeB: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
+  if (!typeA.equals(typeB)) {
+    console.info('typeA is not equal to typeB');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -150,15 +153,16 @@ Checks whether this data type is a higher-level type of the specified uniform da
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
-    let ret = typeObj.isHigherLevelType('general.type-script');
-    if(ret) {
-        console.info('type general.source-code is higher level type of type general.type-script');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
+try {
+  // Obtain the TypeDescriptor object.
+  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
+  let ret = typeObj.isHigherLevelType('general.type-script');
+  if (ret) {
+    console.info('type general.source-code is higher level type of type general.type-script');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -200,15 +204,16 @@ Checks whether this data type is a lower-level type of the specified uniform dat
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-try{
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-    let ret = typeObj.isLowerLevelType('general.source-code');
-    if(ret) {
-        console.info('type general.type-script is lower level type of type general.source-code');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
+try {
+  // Obtain the TypeDescriptor object.
+  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+  let ret = typeObj.isLowerLevelType('general.source-code');
+  if (ret) {
+    console.info('type general.type-script is lower level type of type general.source-code');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 

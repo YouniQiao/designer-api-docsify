@@ -61,6 +61,25 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
+let testMissionId = 2;
+
+try {
+  missionManager.lockMission(testMissionId).then((data: void) => {
+    console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`lockMission failed. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## lockMission
 
@@ -101,21 +120,4 @@ function lockMission(missionId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId为任务ID，可通过getMissionInfos接口获取真实有效的任务ID
-let testMissionId = 2;
-
-try {
-  missionManager.lockMission(testMissionId).then((data: void) => {
-    console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`lockMission failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [lockMission](#lockmission)

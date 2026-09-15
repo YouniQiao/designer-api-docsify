@@ -64,6 +64,27 @@ bundleManager.getInstalledBundleList(wantTemp, accountId).then((result) => {
 });
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let accountId: number = 100;
+let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
+  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
+bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
+  console.info('Succeeded in getting installed bundle list.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getInstalledBundleList
 
@@ -105,23 +126,4 @@ Obtains the list of applications installed by a specified user based on the spec
 
 **Examples**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let accountId: number = 100;
-let bundleInfoGetFlag: number = bundleManager.BundleInfoGetFlag.WITH_APPLICATION_INFO
-  | bundleManager.BundleInfoGetFlag.WITH_SIGNATURE_INFO;
-bundleManager.getInstalledBundleList(wantTemp, accountId, bundleInfoGetFlag).then((result) => {
-  console.info('Succeeded in getting installed bundle list.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get installed bundle list. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getInstalledBundleList](#getinstalledbundlelist)

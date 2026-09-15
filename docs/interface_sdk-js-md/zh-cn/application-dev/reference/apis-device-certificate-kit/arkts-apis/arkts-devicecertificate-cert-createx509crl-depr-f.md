@@ -81,6 +81,42 @@ cert.createX509Crl(encodingBlob, (error, _x509Crl) => {
 });
 ```
 
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// string转Uint8Array。
+function stringToUint8Array(str: string): Uint8Array {
+  let arr: Array<number> = [];
+  for (let i = 0, j = str.length; i < j; i++) {
+    arr.push(str.charCodeAt(i));
+  }
+  return new Uint8Array(arr);
+}
+
+let crlData = '-----BEGIN X509 CRL-----\n' +
+  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
+  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
+  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
+  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
+  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
+  'eavsH0Q3\n' +
+  '-----END X509 CRL-----\n';
+
+// 证书吊销列表二进制数据，需业务自行赋值。
+let encodingBlob: cert.EncodingBlob = {
+  data: stringToUint8Array(crlData),
+  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
+  encodingFormat: cert.EncodingFormat.FORMAT_PEM
+};
+
+cert.createX509Crl(encodingBlob).then(_x509Crl => {
+  console.info('createX509Crl result: success.');
+}).catch((error: BusinessError) => {
+  console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
+});
+```
+
 
 ## createX509Crl
 
@@ -125,38 +161,4 @@ function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>
 
 **示例**
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// string转Uint8Array。
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-let crlData = '-----BEGIN X509 CRL-----\n' +
-  'MIHzMF4CAQMwDQYJKoZIhvcNAQEEBQAwFTETMBEGA1UEAxMKQ1JMIGlzc3VlchcN\n' +
-  'MTcwODA3MTExOTU1WhcNMzIxMjE0MDA1MzIwWjAVMBMCAgPoFw0zMjEyMTQwMDUz\n' +
-  'MjBaMA0GCSqGSIb3DQEBBAUAA4GBACEPHhlaCTWA42ykeaOyR0SGQIHIOUR3gcDH\n' +
-  'J1LaNwiL+gDxI9rMQmlhsUGJmPIPdRs9uYyI+f854lsWYisD2PUEpn3DbEvzwYeQ\n' +
-  '5SqQoPDoM+YfZZa23hoTLsu52toXobP74sf/9K501p/+8hm4ROMLBoRT86GQKY6g\n' +
-  'eavsH0Q3\n' +
-  '-----END X509 CRL-----\n';
-
-// 证书吊销列表二进制数据，需业务自行赋值。
-let encodingBlob: cert.EncodingBlob = {
-  data: stringToUint8Array(crlData),
-  // 根据encodingData的格式进行赋值，支持FORMAT_PEM和FORMAT_DER。
-  encodingFormat: cert.EncodingFormat.FORMAT_PEM
-};
-
-cert.createX509Crl(encodingBlob).then(_x509Crl => {
-  console.info('createX509Crl result: success.');
-}).catch((error: BusinessError) => {
-  console.error(`createX509Crl failed, errCode: ${error.code}, errMsg: ${error.message}`);
-});
-```
+参见 [createX509Crl](#createx509crl)

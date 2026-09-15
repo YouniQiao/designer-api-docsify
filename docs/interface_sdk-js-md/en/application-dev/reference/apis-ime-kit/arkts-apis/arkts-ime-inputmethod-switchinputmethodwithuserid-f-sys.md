@@ -49,3 +49,15 @@ Switch input method and subtype of a specified user.
 | [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.switchInputMethodWithUserId('com.example.keyboard', 'subtype_001', 100).then(() => {
+  console.info('Succeeded in switching input method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchInputMethodWithUserId, code: ${err.code}, message: ${err.message}`);
+});
+```

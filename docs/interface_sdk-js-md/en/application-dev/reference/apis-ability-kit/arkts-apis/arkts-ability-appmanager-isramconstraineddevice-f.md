@@ -45,6 +45,18 @@ appManager.isRamConstrainedDevice().then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+appManager.isRamConstrainedDevice((err, data) => {
+  if (err) {
+    console.error(`isRamConstrainedDevice fail, code: ${err.code}, msg:${err.message}`);
+  } else {
+    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## isRamConstrainedDevice
 
@@ -75,14 +87,4 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.isRamConstrainedDevice((err, data) => {
-  if (err) {
-    console.error(`isRamConstrainedDevice fail, code: ${err.code}, msg:${err.message}`);
-  } else {
-    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [isRamConstrainedDevice](#isramconstraineddevice)

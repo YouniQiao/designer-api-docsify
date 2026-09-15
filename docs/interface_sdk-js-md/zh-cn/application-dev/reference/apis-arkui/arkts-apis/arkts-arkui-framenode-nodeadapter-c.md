@@ -166,8 +166,9 @@ isDisposed(): boolean
 
 **示例**
 
+```TypeScript
 请参考[检验NodeAdapter是否有效示例。
-- simpleType:
+```
 
 ## moveItem
 
@@ -439,5 +440,6 @@ Get the total number of node count.
 
 **示例**
 
+```TypeScript
 请参考[NodeAdapter使用示例。
-- simpleType:
+```

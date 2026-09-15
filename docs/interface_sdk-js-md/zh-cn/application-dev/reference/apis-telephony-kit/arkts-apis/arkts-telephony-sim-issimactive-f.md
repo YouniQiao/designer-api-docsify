@@ -40,6 +40,17 @@ sim.isSimActive(0, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.isSimActive(0).then((data: boolean) => {
+    console.info(`isSimActive success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isSimActive failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isSimActive
 
@@ -67,13 +78,4 @@ function isSimActive(slotId: number): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.isSimActive(0).then((data: boolean) => {
-    console.info(`isSimActive success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isSimActive failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [isSimActive](#issimactive)

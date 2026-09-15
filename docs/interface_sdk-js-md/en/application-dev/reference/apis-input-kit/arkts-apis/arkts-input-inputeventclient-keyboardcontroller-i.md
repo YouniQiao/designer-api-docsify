@@ -124,5 +124,6 @@ Releases a key. This API uses a promise to return the result.
 
 **Examples**
 
+```TypeScript
 For details, see [pressKey](#presskey).
-- simpleType:
+```

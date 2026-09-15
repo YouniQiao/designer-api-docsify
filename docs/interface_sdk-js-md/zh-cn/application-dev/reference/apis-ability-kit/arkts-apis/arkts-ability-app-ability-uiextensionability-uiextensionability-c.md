@@ -94,46 +94,12 @@ onDestroy(): void | Promise<void>
 
 **示例**
 
-同步回调示例如下：
-
 ```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  onDestroy() {
-    console.info(TAG, `onDestroy`);
-  }
-}
+同步回调示例如下：
 ```
 
-异步回调示例如下：
-
 ```TypeScript
-// UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
-import { ShareExtensionAbility } from '@kit.AbilityKit';
-
-const TAG: string = '[testTag] ShareExtAbility';
-
-export default class ShareExtAbility extends ShareExtensionAbility {
-  // 实现异步回调需要使用async/await语法糖，通过async声明onDestroy是一个异步函数。
-  async onDestroy(): Promise<void> {
-    console.info(TAG, `onDestroy begin`);
-    try {
-      const result: string = await new Promise((resolve: Function) => {
-        setTimeout(() => {
-          resolve('Hello, world!');
-        }, 3000);
-      });
-      console.info(TAG, result); // result is 'Hello, world!'
-    } catch (e) {
-      console.error(TAG, `Get exception: ${e}`);
-    }
-    console.info(TAG, `onDestroy end`);
-  }
-}
+异步回调示例如下：
 ```
 
 ## onForeground

@@ -37,7 +37,42 @@ Triggers vibration based on a specified duration. This API uses an asynchronous 
 import { vibrator } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+vibrator.vibrate(1000).then(() => {
+  console.info('Succeed in vibrating');
+}, (error: BusinessError) => {
+  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 vibrator.vibrate(1000, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in vibrating');
+  }
+})
+```
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
+  console.info('Succeed in vibrating');
+}, (error: BusinessError) => {
+  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
   if (error) {
     console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
   } else {
@@ -79,16 +114,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-vibrator.vibrate(1000).then(() => {
-  console.info('Succeed in vibrating');
-}, (error: BusinessError) => {
-  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-});
-```
+See [vibrate](#vibrate)
 
 
 ## vibrate
@@ -123,16 +149,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
-  console.info('Succeed in vibrating');
-}, (error: BusinessError) => {
-  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-});
-```
+See [vibrate](#vibrate)
 
 
 ## vibrate
@@ -162,15 +179,4 @@ Triggers vibration based on a specified effect. This API uses an asynchronous ca
 
 **Examples**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-```
+See [vibrate](#vibrate)

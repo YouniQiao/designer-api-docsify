@@ -37,8 +37,9 @@ onRequestFailure(elementName: ElementName, message: string): void
 
 **示例**
 
+```TypeScript
 参见CompletionHandler使用。
-- simpleType:
+```
 
 ## onRequestSuccess
 
@@ -65,5 +66,6 @@ onRequestSuccess(elementName: ElementName, message: string): void
 
 **示例**
 
+```TypeScript
 参见CompletionHandler使用。
-- simpleType:
+```

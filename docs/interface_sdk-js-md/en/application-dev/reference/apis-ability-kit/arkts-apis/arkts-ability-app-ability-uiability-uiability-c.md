@@ -177,42 +177,12 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 
 **Examples**
 
-The following is an example of saving data using a synchronous API during application migration:
-
 ```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  onContinue(wantParam: Record<string, Object>) {
-    console.info('onContinue');
-    wantParam['myData'] = 'my1234567'; // Save the business data to be migrated.
-    return AbilityConstant.OnContinueResult.AGREE;
-  }
-}
+The following is an example of saving data using a synchronous API during application migration:
 ```
 
-The following is an example of saving data using an asynchronous API during application migration:
-
 ```TypeScript
-import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
-
-export default class MyUIAbility extends UIAbility {
-  async setWant(wantParams: Record<string, Object>) {
-    console.info('setWant start');
-    for (let time = 0; time < 1000; ++time) {
-      wantParams[time] = time;
-    }
-    console.info('setWant end');
-  }
-
-  async onContinue(wantParams: Record<string, Object>) {
-    console.info('onContinue');
-    // Save the data to be migrated asynchronously.
-    return this.setWant(wantParams).then(() => {
-      return AbilityConstant.OnContinueResult.AGREE;
-    });
-  }
-}
+The following is an example of saving data using an asynchronous API during application migration:
 ```
 
 ## onCreate
@@ -284,32 +254,12 @@ This API returns the result synchronously or uses a promise to return the result
 
 **Examples**
 
-A synchronous callback example is as follows:
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // Call the synchronous function.
-  }
-}
+A synchronous callback example is as follows:
 ```
 
-A promise asynchronous callback example is as follows:
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-export default class MyUIAbility extends UIAbility {
-  async onDestroy() {
-    hilog.info(0x0000, 'testTag', `onDestroy`);
-    // Call the asynchronous function.
-  }
-}
+A promise asynchronous callback example is as follows:
 ```
 
 ## onDidBackground
@@ -402,8 +352,9 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Examples**
 
+```TypeScript
 For details, see [onWillForeground](#onwillforeground).
-- simpleType:
+```
 
 ## onDump
 

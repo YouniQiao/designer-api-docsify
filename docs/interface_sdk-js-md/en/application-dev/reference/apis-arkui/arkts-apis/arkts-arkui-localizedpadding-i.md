@@ -1,8 +1,6 @@
 # LocalizedPadding
 
-Defines the localized padding property.
-
-@interface LocalizedPadding
+Defines the paddings in different directions of a component.
 
 **Since:** 12
 
@@ -14,7 +12,7 @@ Defines the localized padding property.
 bottom?: LengthMetrics
 ```
 
-bottom property.
+Height of the padding at the bottom of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -34,7 +32,9 @@ bottom property.
 end?: LengthMetrics
 ```
 
-end property.
+Width of the padding on the right of the component.
+
+Width of the padding on the left of the component in RTL mode.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -54,7 +54,9 @@ end property.
 start?: LengthMetrics
 ```
 
-start property.
+Width of the padding on the left of the component.
+
+Width of the padding on the right of the component in RTL mode.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -74,7 +76,7 @@ start property.
 top?: LengthMetrics
 ```
 
-top property.
+Height of the padding on the top of the component.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

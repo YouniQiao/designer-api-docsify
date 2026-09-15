@@ -70,6 +70,64 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 });
 ```
 
+```TypeScript
+import { uriPermissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetBundleName = 'com.example.test_case2';
+let uri = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+
+// Revoke the URI permission of the specified application.
+uriPermissionManager.revokeUriPermission(uri, targetBundleName)
+  .then((data) => {
+    console.info(`Verification success, data: ${JSON.stringify(data)}.`);
+  }).catch((error: BusinessError) => {
+  console.error(`Verification failed, err code: ${error.code}, err msg: ${error.message}.`);
+});
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    let targetBundleName: string = 'com.example.demo1';
+    let filePath: string = this.context.filesDir + "/test.txt";
+    let uri: string = fileUri.getUriFromPath(filePath);
+    // Revoke the URI permission of the main application.
+    try {
+      let appCloneIndex: number = 0;
+      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
+        .then(() => {
+          console.info('revokeUriPermission succeeded.');
+        }).catch((error: BusinessError) => {
+        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+
+    // Revoke the URI permission of the clone application.
+    try {
+      let appCloneIndex: number = 1;
+      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
+        .then(() => {
+          console.info('revokeUriPermission succeeded.');
+        }).catch((error: BusinessError) => {
+        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+  }
+}
+```
+
 
 ## revokeUriPermission
 
@@ -124,21 +182,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { uriPermissionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetBundleName = 'com.example.test_case2';
-let uri = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
-
-// Revoke the URI permission of the specified application.
-uriPermissionManager.revokeUriPermission(uri, targetBundleName)
-  .then((data) => {
-    console.info(`Verification success, data: ${JSON.stringify(data)}.`);
-  }).catch((error: BusinessError) => {
-  console.error(`Verification failed, err code: ${error.code}, err msg: ${error.message}.`);
-});
-```
+See [revokeUriPermission](#revokeuripermission)
 
 
 ## revokeUriPermission
@@ -194,44 +238,4 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
-import { fileUri } from '@kit.CoreFileKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  }
-
-  onForeground(): void {
-    let targetBundleName: string = 'com.example.demo1';
-    let filePath: string = this.context.filesDir + "/test.txt";
-    let uri: string = fileUri.getUriFromPath(filePath);
-    // Revoke the URI permission of the main application.
-    try {
-      let appCloneIndex: number = 0;
-      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
-        .then(() => {
-          console.info('revokeUriPermission succeeded.');
-        }).catch((error: BusinessError) => {
-        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-      });
-    } catch (error) {
-      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-    }
-
-    // Revoke the URI permission of the clone application.
-    try {
-      let appCloneIndex: number = 1;
-      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
-        .then(() => {
-          console.info('revokeUriPermission succeeded.');
-        }).catch((error: BusinessError) => {
-        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-      });
-    } catch (error) {
-      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
-    }
-  }
-}
-```
+See [revokeUriPermission](#revokeuripermission)

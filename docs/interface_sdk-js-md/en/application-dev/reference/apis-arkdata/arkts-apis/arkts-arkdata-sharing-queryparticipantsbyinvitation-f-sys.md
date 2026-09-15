@@ -43,13 +43,23 @@ Queries the participants based on the sharing invitation code. This API uses an 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', ((err: BusinessError, result) => {
+cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test').then((result) => {
+  console.info(`query participants by invitation succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', (err: BusinessError, result) => {
   if (err) {
     console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`query participants by invitation succeeded, result: ${result}`);
-}))
+});
 ```
 
 
@@ -89,12 +99,4 @@ Queries the participants based on the sharing invitation code. This API uses a p
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test').then((result) => {
-  console.info(`query participants by invitation succeeded, result: ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
-})
-```
+See [queryParticipantsByInvitation](#queryparticipantsbyinvitation)

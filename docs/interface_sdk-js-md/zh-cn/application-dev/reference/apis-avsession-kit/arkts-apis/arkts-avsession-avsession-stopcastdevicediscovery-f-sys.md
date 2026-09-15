@@ -40,6 +40,12 @@ avSession.stopCastDeviceDiscovery(() => {
 });
 ```
 
+```TypeScript
+avSession.stopCastDeviceDiscovery().then(() => {
+  console.info('Succeeded in stopping cast device discovery.');
+});
+```
+
 
 ## stopCastDeviceDiscovery
 
@@ -69,8 +75,4 @@ function stopCastDeviceDiscovery(): Promise<void>
 
 **示例**
 
-```TypeScript
-avSession.stopCastDeviceDiscovery().then(() => {
-  console.info('Succeeded in stopping cast device discovery.');
-});
-```
+参见 [stopCastDeviceDiscovery](#stopcastdevicediscovery)

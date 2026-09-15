@@ -62,6 +62,21 @@ try {
 }
 ```
 
+```TypeScript
+import { formHost } from '@kit.FormKit';
+
+try {
+  let formId: string = '12400633174999288';
+  formHost.deleteForm(formId).then(() => {
+    console.info('formHost deleteForm success');
+  }).catch((error: BusinessError) => {
+    console.error(`formHost deleteForm, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## deleteForm
 
@@ -106,17 +121,4 @@ function deleteForm(formId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { formHost } from '@kit.FormKit';
-
-try {
-  let formId: string = '12400633174999288';
-  formHost.deleteForm(formId).then(() => {
-    console.info('formHost deleteForm success');
-  }).catch((error: BusinessError) => {
-    console.error(`formHost deleteForm, code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+参见 [deleteForm](#deleteform)

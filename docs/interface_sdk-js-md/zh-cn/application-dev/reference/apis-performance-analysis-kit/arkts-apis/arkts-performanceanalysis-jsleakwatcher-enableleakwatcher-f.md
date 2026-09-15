@@ -55,6 +55,25 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
 });
 ```
 
+```TypeScript
+// 监测ArkTS对象CustomComponent和Window的内存泄漏
+// 对象中类型传入空值或假值代表该属性设置为默认值
+let config: jsLeakWatcher.LeakWatcherConfig = {
+    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
+    objectUniqueIDs: [],
+    checkInterval: 10000,
+    fgLeakCountThreshold: 5,
+    bgLeakCountThreshold: 3,
+    maxStoredHeapDumps: 5,
+    dumpHeapWaitTimeMs: 5000,
+    exclusionList: []
+};
+jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
+    console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
+    console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
+});
+```
+
 
 ## enableLeakWatcher
 
@@ -99,21 +118,4 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 
 **示例**
 
-```TypeScript
-// 监测ArkTS对象CustomComponent和Window的内存泄漏
-// 对象中类型传入空值或假值代表该属性设置为默认值
-let config: jsLeakWatcher.LeakWatcherConfig = {
-    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
-    objectUniqueIDs: [],
-    checkInterval: 10000,
-    fgLeakCountThreshold: 5,
-    bgLeakCountThreshold: 3,
-    maxStoredHeapDumps: 5,
-    dumpHeapWaitTimeMs: 5000,
-    exclusionList: []
-};
-jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
-    console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
-    console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
-});
-```
+参见 [enableLeakWatcher](#enableleakwatcher)

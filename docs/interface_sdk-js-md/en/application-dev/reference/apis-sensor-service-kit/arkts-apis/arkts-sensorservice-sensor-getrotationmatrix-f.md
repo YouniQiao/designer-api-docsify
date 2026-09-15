@@ -56,6 +56,68 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
+  const promise = sensor.getRotationMatrix(rotationVector);
+  promise.then((data: Array<number>) => {
+    for (let i = 0; i < data.length; i++) {
+      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
+    }
+  }, (err: BusinessError) => {
+    console.error(`Failed to get rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get rotationMatrix. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let gravity = [-0.27775216, 0.5351276, 9.788099];
+  let geomagnetic = [210.87253, -78.6096, -111.44444];
+  sensor.getRotationMatrix(gravity, geomagnetic, (err: BusinessError, data: sensor.RotationMatrixResponse) => {
+    if (err) {
+      console.error(`Failed to get rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in getting rotationMatrix' + JSON.stringify(data));
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get rotationMatrix. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let gravity = [-0.27775216, 0.5351276, 9.788099];
+  let geomagnetic = [210.87253, -78.6096, -111.44444];
+  const promise = sensor.getRotationMatrix(gravity, geomagnetic);
+  promise.then((data: sensor.RotationMatrixResponse) => {
+    console.info('Succeeded in getting rotationMatrix' + JSON.stringify(data));
+  }, (err: BusinessError) => {
+    console.error(`Failed to get rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get rotationMatrix. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getRotationMatrix
 
@@ -90,26 +152,7 @@ Obtains the rotation matrix from a rotation vector. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let rotationVector = [0.20046076, 0.21907, 0.73978853, 0.60376877];
-  const promise = sensor.getRotationMatrix(rotationVector);
-  promise.then((data: Array<number>) => {
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
-    }
-  }, (err: BusinessError) => {
-    console.error(`Failed to get rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get rotationMatrix. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getRotationMatrix](#getrotationmatrix)
 
 
 ## getRotationMatrix
@@ -141,26 +184,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let gravity = [-0.27775216, 0.5351276, 9.788099];
-  let geomagnetic = [210.87253, -78.6096, -111.44444];
-  sensor.getRotationMatrix(gravity, geomagnetic, (err: BusinessError, data: sensor.RotationMatrixResponse) => {
-    if (err) {
-      console.error(`Failed to get rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
-    console.info('Succeeded in getting rotationMatrix' + JSON.stringify(data));
-  })
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get rotationMatrix. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getRotationMatrix](#getrotationmatrix)
 
 
 ## getRotationMatrix
@@ -197,22 +221,4 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let gravity = [-0.27775216, 0.5351276, 9.788099];
-  let geomagnetic = [210.87253, -78.6096, -111.44444];
-  const promise = sensor.getRotationMatrix(gravity, geomagnetic);
-  promise.then((data: sensor.RotationMatrixResponse) => {
-    console.info('Succeeded in getting rotationMatrix' + JSON.stringify(data));
-  }, (err: BusinessError) => {
-    console.error(`Failed to get rotationMatrix. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get rotationMatrix. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getRotationMatrix](#getrotationmatrix)

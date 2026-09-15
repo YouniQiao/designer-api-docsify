@@ -347,20 +347,6 @@ Unsubscribes from camera mute status events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13+ |
 
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, curMuted: boolean): void {
-  let isMuted: boolean = curMuted;
-}
-
-function unregisterCameraMute(cameraManager: camera.CameraManager): void {
-  cameraManager.off('cameraMute', callback);
-}
-```
-
 ## off('controlCenterStatusChange')
 
 ```TypeScript
@@ -414,25 +400,6 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13+ |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, curMuted: boolean): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  let isMuted: boolean = curMuted;
-  console.info(`cameraMute status: ${isMuted}`);
-}
-
-function registerCameraMute(cameraManager: camera.CameraManager): void {
-  cameraManager.on('cameraMute', callback);
-}
-```
 
 ## on('controlCenterStatusChange')
 

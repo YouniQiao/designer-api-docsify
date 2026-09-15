@@ -46,6 +46,39 @@ scan.on('scanDeviceFound', callback);
 scan.off('scanDeviceFound', callback);
 ```
 
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerSyncDevice) => {
+    console.info('scan device sync: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceSync', callback);
+// 取消注册
+scan.off('scanDeviceSync', callback);
+```
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerDevice) => {
+    console.info('scan device add: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceAdd', callback);
+// 取消注册
+scan.off('scanDeviceAdd', callback);
+```
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+
+let callback = (device: scan.ScannerDevice) => {
+    console.info('scan device delete: ' + JSON.stringify(device));
+};
+scan.on('scanDeviceDel', callback);
+// 取消注册
+scan.off('scanDeviceDel', callback);
+```
+
 
 ## off('scanDeviceSync')
 
@@ -76,13 +109,4 @@ function off(type: 'scanDeviceSync', callback?: Callback<ScannerSyncDevice>): vo
 
 **示例**
 
-```TypeScript
-import { scan } from '@kit.BasicServicesKit';
-
-let callback = (device: scan.ScannerSyncDevice) => {
-    console.info('scan device sync: ' + JSON.stringify(device));
-};
-scan.on('scanDeviceSync', callback);
-// 取消注册
-scan.off('scanDeviceSync', callback);
-```
+参见 off

@@ -55,6 +55,16 @@ let getAllActiveNotificationsCallback = (err: BusinessError, data: Array<notific
 notificationManager.getAllActiveNotifications(getAllActiveNotificationsCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
+    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getAllActiveNotifications
 
@@ -90,12 +100,4 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-notificationManager.getAllActiveNotifications().then((data: Array<notificationManager.NotificationRequest>) => {
-    console.info(`getAllActiveNotifications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllActiveNotifications failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getAllActiveNotifications](#getallactivenotifications)

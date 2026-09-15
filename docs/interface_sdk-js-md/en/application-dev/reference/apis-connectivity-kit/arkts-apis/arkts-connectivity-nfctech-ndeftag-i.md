@@ -242,7 +242,7 @@ function nfcTechDemo(){
         ndefTag.readNdef().then((ndefmessage : tag.NdefMessage) => {
             console.info("ndef readNdef Promise ndefmessage: " + ndefmessage);
         }).catch((err : BusinessError)=> {
-            console.error("ndef readNdef Promise err Code: ${err.code}, message: ${err.message}");
+            console.error(`ndef readNdef Promise err Code: ${err.code}, message: ${err.message}`);
         });
     } catch (businessError) {
         console.error(`ndef readNdef Promise catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
@@ -373,6 +373,35 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
+
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!ndefTag.isTagConnected()) {
+        if (!ndefTag.connectTag()) {
+            console.error("ndefTag connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        ndefTag.setReadOnly((err : BusinessError)=> {
+            if (err) {
+                console.error(`ndef setReadOnly AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("ndef setReadOnly AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`ndef setReadOnly AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## setReadOnly
 
 ```TypeScript
@@ -406,34 +435,7 @@ Sets the NDEF tag to read-only. This API uses an asynchronous callback to return
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct ndefTag tag by using the tag.TagInfo API in @ohos.nfc.tag.
-
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!ndefTag.isTagConnected()) {
-        if (!ndefTag.connectTag()) {
-            console.error("ndefTag connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        ndefTag.setReadOnly((err : BusinessError)=> {
-            if (err) {
-                console.error(`ndef setReadOnly AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("ndef setReadOnly AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`ndef setReadOnly AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+See [setReadOnly](#setreadonly)
 
 ## writeNdef
 

@@ -48,6 +48,28 @@ let locationChange = (err:BusinessError.BusinessError, location:geolocation.Loca
 geolocation.getCurrentLocation(requestInfo, locationChange);
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+import BusinessError from "@ohos.base"
+let locationChange = (err:BusinessError.BusinessError, location:geolocation.Location):void => {
+    if (err) {
+        console.info('locationChanger: err=' + JSON.stringify(err));
+    }
+    if (location) {
+        console.info('locationChanger: location=' + JSON.stringify(location));
+    }
+};
+geolocation.getCurrentLocation(locationChange);
+```
+
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.CurrentLocationRequest = {'priority': 0x203, 'scenario': 0x300,'maxAccuracy': 0};
+geolocation.getCurrentLocation(requestInfo).then((result) => {
+    console.info('current location: ' + JSON.stringify(result));
+});
+```
+
 
 ## getCurrentLocation
 
@@ -75,19 +97,7 @@ function getCurrentLocation(callback: AsyncCallback<Location>): void
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-import BusinessError from "@ohos.base"
-let locationChange = (err:BusinessError.BusinessError, location:geolocation.Location):void => {
-    if (err) {
-        console.info('locationChanger: err=' + JSON.stringify(err));
-    }
-    if (location) {
-        console.info('locationChanger: location=' + JSON.stringify(location));
-    }
-};
-geolocation.getCurrentLocation(locationChange);
-```
+参见 [getCurrentLocation](#getcurrentlocation)
 
 
 ## getCurrentLocation
@@ -122,10 +132,4 @@ function getCurrentLocation(request?: CurrentLocationRequest): Promise<Location>
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.CurrentLocationRequest = {'priority': 0x203, 'scenario': 0x300,'maxAccuracy': 0};
-geolocation.getCurrentLocation(requestInfo).then((result) => {
-    console.info('current location: ' + JSON.stringify(result));
-});
-```
+参见 [getCurrentLocation](#getcurrentlocation)

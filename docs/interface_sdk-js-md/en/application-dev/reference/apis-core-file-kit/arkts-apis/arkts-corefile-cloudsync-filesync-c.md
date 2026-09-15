@@ -36,6 +36,10 @@ A constructor used to create a **FileSync** instance.
 let fileSync = new cloudSync.FileSync()
 ```
 
+```TypeScript
+let fileSync = new cloudSync.FileSync("com.ohos.demo")
+```
+
 ## getLastSyncTime
 
 ```TypeScript
@@ -76,6 +80,21 @@ fileSync.getLastSyncTime().then((timeStamp: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
+  if (err) {
+    console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    let date = new Date(timeStamp);
+    console.info("get last sync time successfully: "+ date);
+  }
+});
+```
+
 ## getLastSyncTime
 
 ```TypeScript
@@ -103,20 +122,7 @@ Obtains the last sync time. This API uses an asynchronous callback to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let fileSync = new cloudSync.FileSync();
-
-fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
-  if (err) {
-    console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
-  } else {
-    let date = new Date(timeStamp);
-    console.info("get last sync time successfully: "+ date);
-  }
-});
-```
+See [getLastSyncTime](#getlastsynctime)
 
 ## off
 
@@ -144,20 +150,6 @@ Removes the specified callback from the device-cloud sync progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type: " + pg.error);
-}
-
-fileSync.on('progress', callback);
-
-fileSync.off('progress', callback);
-```
-
 ## on
 
 ```TypeScript
@@ -183,17 +175,6 @@ Registers a listener for the device-cloud sync progress.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
-
-**Examples**
-
-```TypeScript
-let fileSync = new cloudSync.FileSync();
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("file sync state: " + pg.state + "error type: " + pg.error);
-}
-
-fileSync.on('progress', callback);
-```
 
 ## start
 
@@ -243,6 +224,20 @@ fileSync.start().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.start((err: BusinessError) => {
+  if (err) {
+    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
+
 ## start
 
 ```TypeScript
@@ -272,6 +267,24 @@ Starts device-cloud sync of a file. This API uses an asynchronous callback to re
 | 22400003 | Low battery level. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+let callback = (pg: cloudSync.SyncProgress) => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+
+fileSync.on('progress', callback);
+
+fileSync.start().then(() => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -328,6 +341,20 @@ fileSync.stop().then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.stop((err: BusinessError) => {
+  if (err) {
+    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
 ## stop
 
 ```TypeScript
@@ -356,6 +383,18 @@ Calling **stop** will stop the sync process. To resume the sync, call [start](#s
 | 13600001 | IPC error. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+
+fileSync.stop().then(() => {
+  console.info("stop sync successfully");
+}).catch((err: BusinessError) => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -11,9 +11,9 @@ Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionCont
 ```ts
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
 class EntryAbility extends AccessibilityExtensionAbility {
-  onConnect(): void {
-    let axContext = this.context; 
-  } 
+ onConnect(): void {
+ let axContext = this.context; 
+ } 
 }
 ```
 
@@ -685,48 +685,6 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.off('preDisconnect');
-    } catch (err) {
-      console.error(`Failed to unRegister. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
-
 ## on('preDisconnect')
 
 ```TypeScript
@@ -758,50 +716,6 @@ This registration function must be used together with [notifyDisconnect](#notify
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-
-**Examples**
-
-```TypeScript
-import {
-  AccessibilityEvent, 
-  AccessibilityExtensionContext
-} from '@kit.AccessibilityKit';
-
-export default class AccessibilityManager {
-  private static instance: AccessibilityManager;
-  context?: AccessibilityExtensionContext;
-
-  static getInstance(): AccessibilityManager {
-    if (!AccessibilityManager.instance) {
-      AccessibilityManager.instance = new AccessibilityManager();
-    }
-    return AccessibilityManager.instance;
-  }
-
-  onStart(context: AccessibilityExtensionContext) {
-    this.context = context;
-  }
-
-  onStop() {
-    this.context = undefined;
-  }
-
-  onEvent(accessibilityEvent: AccessibilityEvent): void {
-    if (!this.context) {
-      console.error('context is not available!');
-      return;
-    }
-
-    try {
-      this.context.on('preDisconnect', () => {
-        console.info(`To do something before accessibilityExtension disconnect.`);
-      });
-    } catch (err) {
-      console.error(`Failed to register. Code: ${err.code}, message: ${err.message}`);
-    }
-  }
-}
-```
 
 ## removeAccessibilityVirtualNodes
 

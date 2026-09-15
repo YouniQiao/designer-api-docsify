@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Obtain the number of mouse scroll lines.
+            pointer.getMouseScrollRows().then((rows: number) => {
+              console.info(`Succeeded in getting mouse scroll rows, rows: ${JSON.stringify(rows)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getMouseScrollRows
 
@@ -94,29 +121,4 @@ Obtains the number of mouse scroll lines. This API uses a promise to return the 
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Obtain the number of mouse scroll lines.
-            pointer.getMouseScrollRows().then((rows: number) => {
-              console.info(`Succeeded in getting mouse scroll rows, rows: ${JSON.stringify(rows)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [getMouseScrollRows](#getmousescrollrows)

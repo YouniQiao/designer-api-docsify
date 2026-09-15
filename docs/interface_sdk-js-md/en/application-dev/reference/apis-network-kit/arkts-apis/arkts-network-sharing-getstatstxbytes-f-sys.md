@@ -50,6 +50,20 @@ sharing.getStatsTxBytes((error: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sharing
+  .getStatsTxBytes()
+  .then((data: number) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getStatsTxBytes
 
@@ -85,16 +99,4 @@ Obtains the volume of mobile data traffic sent via network sharing. This API use
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-sharing
-  .getStatsTxBytes()
-  .then((data: number) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getStatsTxBytes](#getstatstxbytes)

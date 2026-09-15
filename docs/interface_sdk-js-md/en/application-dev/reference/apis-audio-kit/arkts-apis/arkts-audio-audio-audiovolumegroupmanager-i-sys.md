@@ -65,6 +65,16 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, audio.VolumeAdjustType.VOLUME_UP).then(() => {
+  console.info('Success to adjust the system volume by step.');
+}).catch((error: BusinessError) => {
+  console.error('Fail to adjust the system volume by step.');
+});
+```
+
 ## adjustSystemVolumeByStep
 
 ```TypeScript
@@ -105,15 +115,7 @@ Adjusts system volume by step for target volume type. This method uses a promise
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, audio.VolumeAdjustType.VOLUME_UP).then(() => {
-  console.info('Success to adjust the system volume by step.');
-}).catch((error: BusinessError) => {
-  console.error('Fail to adjust the system volume by step.');
-});
-```
+See [adjustSystemVolumeByStep](#adjustsystemvolumebystep)
 
 ## adjustVolumeByStep
 
@@ -162,6 +164,16 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).then(() => {
+  console.info('Success to adjust the volume by step.');
+}).catch((error: BusinessError) => {
+  console.error('Fail to adjust the volume by step.');
+});
+```
+
 ## adjustVolumeByStep
 
 ```TypeScript
@@ -201,15 +213,7 @@ Adjusts system volume by step, volume type is decided by system. This method use
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).then(() => {
-  console.info('Success to adjust the volume by step.');
-}).catch((error: BusinessError) => {
-  console.error('Fail to adjust the volume by step.');
-});
-```
+See [adjustVolumeByStep](#adjustvolumebystep)
 
 ## getActiveVolumeTypeSync
 
@@ -326,6 +330,12 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 });
 ```
 
+```TypeScript
+audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
+  console.info('Promise returned to indicate that the stream is muted.');
+});
+```
+
 ## mute
 
 ```TypeScript
@@ -356,6 +366,18 @@ Mutes a stream. This method uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to mute the stream. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate that the stream is muted.');
+});
+```
 
 ```TypeScript
 audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
@@ -491,6 +513,12 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 });
 ```
 
+```TypeScript
+audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
+  console.info('Promise returned to indicate a successful setting of the ringer mode.');
+});
+```
+
 ## setRingerMode
 
 ```TypeScript
@@ -520,6 +548,18 @@ Sets the ringer mode. This method uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the ringer mode. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful setting of the ringer mode.');
+});
+```
 
 ```TypeScript
 audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).then(() => {
@@ -565,6 +605,12 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: Busines
 });
 ```
 
+```TypeScript
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
+  console.info('Promise returned to indicate a successful volume setting.');
+});
+```
+
 ## setVolume
 
 ```TypeScript
@@ -595,6 +641,18 @@ Sets the volume for a stream. This method uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set the volume. ${err}`);
+    return;
+  }
+  console.info('Callback invoked to indicate a successful volume setting.');
+});
+```
 
 ```TypeScript
 audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {

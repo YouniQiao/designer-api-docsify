@@ -97,6 +97,28 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFiles: Array<update.UpgradeFile> = [{
+  fileType: update.ComponentType.OTA, // OTA包
+  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
+}];
+
+try {
+  // 获取本地升级对象
+  let localUpdater = update.getLocalUpdater();
+  // 安装新版本
+  localUpdater.applyNewVersion(upgradeFiles).then(() => {
+    console.info(`applyNewVersion success`);
+  }).catch((applyNewVersionError: BusinessError) => {
+    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
+
 ## applyNewVersion
 
 ```TypeScript
@@ -149,27 +171,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFiles: Array<update.UpgradeFile> = [{
-  fileType: update.ComponentType.OTA, // OTA包
-  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
-}];
-
-try {
-  // 获取本地升级对象
-  let localUpdater = update.getLocalUpdater();
-  // 安装新版本
-  localUpdater.applyNewVersion(upgradeFiles).then(() => {
-    console.info(`applyNewVersion success`);
-  }).catch((applyNewVersionError: BusinessError) => {
-    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+参见 [applyNewVersion](#applynewversion)
 
 ## off
 
@@ -377,6 +379,31 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const upgradeFile: update.UpgradeFile = {
+  fileType: update.ComponentType.OTA, // OTA包
+  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
+};
+
+// certsFile为证书文件路径，需从设备厂商官网下载并放置到设备可访问路径 
+const certsFile = '/path/to/certificate.cert'; // 证书文件路径，从厂商官网下载
+
+try {
+  // 获取本地升级对象
+  let localUpdater = update.getLocalUpdater();
+  // 验证升级包
+  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
+    console.info(`verifyUpgradePackage success`);
+  }).catch((verifyUpgradePackageError: BusinessError) => {
+    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
+  });
+} catch (error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
+```
+
 ## verifyUpgradePackage
 
 ```TypeScript
@@ -430,27 +457,4 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFile: update.UpgradeFile = {
-  fileType: update.ComponentType.OTA, // OTA包
-  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
-};
-
-// certsFile为证书文件路径，需从设备厂商官网下载并放置到设备可访问路径 
-const certsFile = '/path/to/certificate.cert'; // 证书文件路径，从厂商官网下载
-
-try {
-  // 获取本地升级对象
-  let localUpdater = update.getLocalUpdater();
-  // 验证升级包
-  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
-    console.info(`verifyUpgradePackage success`);
-  }).catch((verifyUpgradePackageError: BusinessError) => {
-    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+参见 [verifyUpgradePackage](#verifyupgradepackage)

@@ -66,6 +66,43 @@ bundleManager.getDisallowedUninstallBundles(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.getDisallowedUninstallBundles(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDisallowedUninstallBundles
 
@@ -109,24 +146,7 @@ Obtains the applications that cannot be uninstalled by the user specified by **u
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-});
-```
+See [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)
 
 
 ## getDisallowedUninstallBundles
@@ -176,20 +196,4 @@ Obtains the list of applications that are not allowed to be uninstalled by the c
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-bundleManager.getDisallowedUninstallBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed uninstall bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed uninstall bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDisallowedUninstallBundles](#getdisalloweduninstallbundles)

@@ -44,6 +44,13 @@ geolocation.flushCachedGnssLocations((err, result) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.flushCachedGnssLocations().then((result) => {
+    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
+});
+```
+
 
 ## flushCachedGnssLocations
 
@@ -71,9 +78,4 @@ function flushCachedGnssLocations(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.flushCachedGnssLocations().then((result) => {
-    console.info('promise, flushCachedGnssLocations: ' + JSON.stringify(result));
-});
-```
+参见 [flushCachedGnssLocations](#flushcachedgnsslocations)

@@ -44,16 +44,6 @@ Shows a full-screen ad.
 
 **Examples**
 
-For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
-
 ```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-
-function showAd(ad: advertising.Advertisement, context?: common.UIAbilityContext): void {
-  // Ad display parameters. You can set the parameters based on the project requirements.
-  const adDisplayOptions: advertising.AdDisplayOptions = {};
-  // Show the ad.
-  advertising.showAd(ad, adDisplayOptions, context);
-}
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 ```

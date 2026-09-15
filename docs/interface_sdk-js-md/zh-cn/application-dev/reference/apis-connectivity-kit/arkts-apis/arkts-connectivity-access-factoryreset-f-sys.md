@@ -54,6 +54,17 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    access.factoryReset().then(() => {
+        console.info("factoryReset");
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 
 ## factoryReset
 
@@ -89,13 +100,4 @@ function factoryReset(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    access.factoryReset().then(() => {
-        console.info("factoryReset");
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+参见 [factoryReset](#factoryreset)

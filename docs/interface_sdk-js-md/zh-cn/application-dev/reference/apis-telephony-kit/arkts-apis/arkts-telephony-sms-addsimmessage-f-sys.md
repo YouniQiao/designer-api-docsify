@@ -58,6 +58,23 @@ sms.addSimMessage(simMessageOptions, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let simMessageOptions: sms.SimMessageOptions = {
+    slotId: 0,
+    smsc: "test",
+    pdu: "xxxxxx",
+    status: sms.SimMessageStatus.SIM_MESSAGE_STATUS_READ
+};
+sms.addSimMessage(simMessageOptions).then(() => {
+    console.info(`addSimMessage success.`);
+}).catch((err: BusinessError) => {
+    console.error(`addSimMessage failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## addSimMessage
 
@@ -101,19 +118,4 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let simMessageOptions: sms.SimMessageOptions = {
-    slotId: 0,
-    smsc: "test",
-    pdu: "xxxxxx",
-    status: sms.SimMessageStatus.SIM_MESSAGE_STATUS_READ
-};
-sms.addSimMessage(simMessageOptions).then(() => {
-    console.info(`addSimMessage success.`);
-}).catch((err: BusinessError) => {
-    console.error(`addSimMessage failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [addSimMessage](#addsimmessage)

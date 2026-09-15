@@ -42,8 +42,9 @@ Obtains this **PixelMap** instance.
 
 **Examples**
 
+```TypeScript
 For details, see [LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md).
-- simpleType:
+```
 
 ## invalidate
 
@@ -115,8 +116,9 @@ Asynchronously loads the image resource and returns the loading result. This API
 
 **Examples**
 
+```TypeScript
 For details, see [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
-- simpleType:
+```
 
 ## loadSync
 
@@ -149,8 +151,9 @@ Synchronously loads the image resource and returns the loading result.
 
 **Examples**
 
+```TypeScript
 For details, see [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
-- simpleType:
+```
 
 ## release
 

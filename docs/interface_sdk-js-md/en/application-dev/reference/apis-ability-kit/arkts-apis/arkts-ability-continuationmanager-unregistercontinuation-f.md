@@ -61,6 +61,22 @@ try {
 }
 ```
 
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+try {
+  continuationManager.unregisterContinuation(token).then(() => {
+      console.info('unregisterContinuation finished. ');
+    }).catch((err: BusinessError) => {
+      console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
+  });
+} catch (err) {
+  console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
+}
+```
+
 
 ## unregisterContinuation
 
@@ -105,18 +121,4 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 **Examples**
 
-```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let token: number = -1;
-try {
-  continuationManager.unregisterContinuation(token).then(() => {
-      console.info('unregisterContinuation finished. ');
-    }).catch((err: BusinessError) => {
-      console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-  });
-} catch (err) {
-  console.error('unregisterContinuation failed, cause: ' + JSON.stringify(err));
-}
-```
+See [unregisterContinuation](#unregistercontinuation)

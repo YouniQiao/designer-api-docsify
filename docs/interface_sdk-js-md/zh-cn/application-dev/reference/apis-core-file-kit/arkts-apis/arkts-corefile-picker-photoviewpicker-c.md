@@ -35,6 +35,32 @@ constructor()
 **示例**
 
 ```TypeScript
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello World';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as common.UIAbilityContext; // 请确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+            let photoPicker = new picker.PhotoViewPicker(context);
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
 let photoPicker = new picker.PhotoViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
 ```
 
@@ -84,6 +110,10 @@ struct Index {
     .height('100%')
   }
 }
+```
+
+```TypeScript
+let photoPicker = new picker.PhotoViewPicker(); // 不推荐使用无参构造，会出现概率性拉起失败问题
 ```
 
 ## save
@@ -137,6 +167,50 @@ async function example04(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example05(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg', 'PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example06(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
 ## save
 
 ```TypeScript
@@ -166,12 +240,54 @@ save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import { picker } from '@kit.CoreFileKit';
+async function example04(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
 async function example05(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoSaveOptions = new picker.PhotoSaveOptions();
     photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg', 'PhotoViewPicker02.mp4'];
     let photoPicker = new picker.PhotoViewPicker(context);
     photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example06(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save((err: BusinessError, photoSaveResult: Array<string>) => {
       if (err) {
         console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
         return;
@@ -208,6 +324,50 @@ save(callback: AsyncCallback<Array<string>>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回photoPicker保存图片或视频文件后的结果集。<br>**注意**：此接口会将文件保存在文件管理器，而不是图库。返回的uri数组的具体使用方式参见用户文件uri介绍中的[文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example04(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker01.jpg', 'PhotoViewPicker01.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions).then((photoSaveResult: Array<string>) => {
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example05(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSaveOptions = new picker.PhotoSaveOptions();
+    photoSaveOptions.newFileNames = ['PhotoViewPicker02.jpg', 'PhotoViewPicker02.mp4'];
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.save(photoSaveOptions, (err: BusinessError, photoSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`PhotoViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.save successfully, photoSaveResult uri: ' + JSON.stringify(photoSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -284,6 +444,51 @@ async function example01(context: common.UIAbilityContext) { // 需确保 contex
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example02(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example03(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select((err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
 ## select
 
 ```TypeScript
@@ -315,6 +520,28 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
 import { picker } from '@kit.CoreFileKit';
+async function example01(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: picker.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
 async function example02(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let photoSelectOptions = new picker.PhotoSelectOptions();
@@ -322,6 +549,27 @@ async function example02(context: common.UIAbilityContext) { // 需确保 contex
     photoSelectOptions.maxSelectNumber = 5;
     let photoPicker = new picker.PhotoViewPicker(context);
     photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example03(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select((err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
       if (err) {
         console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
         return;
@@ -360,6 +608,52 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example01(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions).then((photoSelectResult: picker.PhotoSelectResult) => {
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    }).catch((err: BusinessError) => {
+      console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+import { picker } from '@kit.CoreFileKit';
+async function example02(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let photoSelectOptions = new picker.PhotoSelectOptions();
+    photoSelectOptions.MIMEType = picker.PhotoViewMIMETypes.IMAGE_TYPE;
+    photoSelectOptions.maxSelectNumber = 5;
+    let photoPicker = new picker.PhotoViewPicker(context);
+    photoPicker.select(photoSelectOptions, (err: BusinessError, photoSelectResult: picker.PhotoSelectResult) => {
+      if (err) {
+        console.error(`PhotoViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('PhotoViewPicker.select successfully, photoSelectResult uri: ' + JSON.stringify(photoSelectResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`PhotoViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

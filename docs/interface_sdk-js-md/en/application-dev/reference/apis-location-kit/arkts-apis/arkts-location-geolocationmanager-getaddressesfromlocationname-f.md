@@ -54,6 +54,23 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let geocodeRequest: geoLocationManager.GeoCodeRequest = { "description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
+try {
+  geoLocationManager.getAddressesFromLocationName(geocodeRequest).then((result) => {
+    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
+  })
+    .catch((error: BusinessError) => {
+      console.error('promise, getAddressesFromLocationName: error=' + JSON.stringify(error));
+    });
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## getAddressesFromLocationName
 
@@ -90,19 +107,4 @@ Obtain latitude and longitude info from location address.
 
 **Examples**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let geocodeRequest: geoLocationManager.GeoCodeRequest = { "description": "No. xx, xx Road, Pudong District, Shanghai", "maxItems": 1};
-try {
-  geoLocationManager.getAddressesFromLocationName(geocodeRequest).then((result) => {
-    console.info('getAddressesFromLocationName: ' + JSON.stringify(result));
-  })
-    .catch((error: BusinessError) => {
-      console.error('promise, getAddressesFromLocationName: error=' + JSON.stringify(error));
-    });
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+See [getAddressesFromLocationName](#getaddressesfromlocationname)

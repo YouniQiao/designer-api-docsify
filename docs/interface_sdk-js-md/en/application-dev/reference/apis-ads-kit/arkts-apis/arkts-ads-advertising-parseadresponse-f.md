@@ -38,27 +38,6 @@ Parses and processes the body of an ad response (this API is only open to some p
 
 **Examples**
 
-For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
-
 ```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-function parseAdResponse(adResponse: string, context: common.UIAbilityContext): void {
-  // Listen for the ad parsing callback.
-  const multiSlotsAdLoaderListener: advertising.MultiSlotsAdLoadListener = {
-    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
-      hilog.error(0x0000, 'testTag', `Failed to load multiSlots ad. Code is ${errorCode}, message is ${errorMsg}`);
-    },
-    onAdLoadSuccess: (ads: Map<string, Array<advertising.Advertisement>>) => {
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading multiSlots ad');
-      // Save the parsed ad content for display.
-      const returnAds: advertising.Advertisement[] = [];
-      ads.forEach((adsArray) => returnAds.push(...adsArray));
-    }
-  };
-  // Call the API to parse the response body.
-  advertising.parseAdResponse(adResponse, multiSlotsAdLoaderListener, context);
-}
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 ```

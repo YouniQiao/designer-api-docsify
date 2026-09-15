@@ -182,20 +182,3 @@ on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**适用版本：** 10 - 24 |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { a2dp } from '@kit.ConnectivityKit';
-
-function onReceiveEvent(data: baseProfile.StateChangeParam) {
-    console.info('a2dp state = '+ JSON.stringify(data));
-}
-try {
-    let a2dpSrc = a2dp.createA2dpSrcProfile(); // 以a2dp举例
-    a2dpSrc.on('connectionStateChange', onReceiveEvent);
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```

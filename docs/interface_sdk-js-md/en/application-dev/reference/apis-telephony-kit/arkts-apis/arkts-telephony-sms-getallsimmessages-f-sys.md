@@ -53,6 +53,19 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let promise = sms.getAllSimMessages(slotId);
+promise.then((data: sms.SimShortMessage[]) => {
+    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getAllSimMessages
 
@@ -96,15 +109,4 @@ Obtains all SIM card messages. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let promise = sms.getAllSimMessages(slotId);
-promise.then((data: sms.SimShortMessage[]) => {
-    console.info(`getAllSimMessages success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getAllSimMessages](#getallsimmessages)

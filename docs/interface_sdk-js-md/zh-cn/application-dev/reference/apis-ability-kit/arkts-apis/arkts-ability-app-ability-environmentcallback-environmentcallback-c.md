@@ -36,8 +36,9 @@ onConfigurationUpdated(config: Configuration): void
 
 **示例**
 
+```TypeScript
 参见EnvironmentCallback使用。
-- simpleType:
+```
 
 ## onMemoryLevel
 
@@ -63,5 +64,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 **示例**
 
+```TypeScript
 参见EnvironmentCallback使用。
-- simpleType:
+```

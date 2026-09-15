@@ -53,6 +53,21 @@ sharing.getSharingIfaces(SHARING_BLUETOOTH, (error: BusinessError, data: string[
 });
 ```
 
+```TypeScript
+import { sharing } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let SHARING_BLUETOOTH = 2;
+sharing
+  .getSharingIfaces(SHARING_BLUETOOTH)
+  .then((data: string[]) => {
+    console.info(JSON.stringify(data));
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## getSharingIfaces
 
@@ -95,17 +110,4 @@ Obtains the names of NICs in the specified network sharing state. This API uses 
 
 **Examples**
 
-```TypeScript
-import { sharing } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let SHARING_BLUETOOTH = 2;
-sharing
-  .getSharingIfaces(SHARING_BLUETOOTH)
-  .then((data: string[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [getSharingIfaces](#getsharingifaces)

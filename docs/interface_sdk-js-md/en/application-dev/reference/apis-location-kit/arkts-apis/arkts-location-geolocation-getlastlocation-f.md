@@ -44,6 +44,13 @@ geolocation.getLastLocation((err, data) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getLastLocation().then((result) => {
+    console.info('getLastLocation: result: ' + JSON.stringify(result));
+});
+```
+
 
 ## getLastLocation
 
@@ -71,9 +78,4 @@ Obtain last known location
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getLastLocation().then((result) => {
-    console.info('getLastLocation: result: ' + JSON.stringify(result));
-});
-```
+See [getLastLocation](#getlastlocation)

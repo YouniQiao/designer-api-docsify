@@ -36,8 +36,9 @@ Called when the system configuration changes, after [a listener has been registe
 
 **Examples**
 
+```TypeScript
 See Usage of EnvironmentCallback.
-- simpleType:
+```
 
 ## onMemoryLevel
 
@@ -63,5 +64,6 @@ Called when the system memory level changes, after [a listener has been register
 
 **Examples**
 
+```TypeScript
 See Usage of EnvironmentCallback.
-- simpleType:
+```

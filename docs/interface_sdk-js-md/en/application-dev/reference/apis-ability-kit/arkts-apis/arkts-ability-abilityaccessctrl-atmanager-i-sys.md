@@ -394,6 +394,22 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // For details about how to obtain the tokenID, see the description in the AtManager section.
+let permissionFlags: number = 1;
+atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('grantUserGrantedPermission success');
+  }
+});
+```
+
 ## grantUserGrantedPermission
 
 ```TypeScript
@@ -439,21 +455,7 @@ Grants a user_grant permission to an app. This API uses an asynchronous callback
 
 **Examples**
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // For details about how to obtain the tokenID, see the description in the AtManager section.
-let permissionFlags: number = 1;
-atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`grantUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('grantUserGrantedPermission success');
-  }
-});
-```
+See [grantUserGrantedPermission](#grantusergrantedpermission)
 
 ## off('permissionStateChange')
 
@@ -500,6 +502,23 @@ This API is usually used together with [on](#onpermissionstatechange) to cancel 
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Create a permission management instance
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // Set the permission list to unsubscribe from
+  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+  // Unsubscribe from permission status changes
+  atManager.off('selfPermissionStateChange', permissionList);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -566,6 +585,26 @@ This API is usually used together with [off](#offpermissionstatechange). When li
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 
 **Examples**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Create a permission management instance
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  // Set the list of permissions to subscribe to
+  let permissionList: Array<Permissions> = ['ohos.permission.APPROXIMATELY_LOCATION'];
+  // Subscribe to permission status changes
+  atManager.on('selfPermissionStateChange', permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ```TypeScript
 import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
@@ -799,28 +838,10 @@ If the user denies authorization, the dialog cannot be pulled up again. Permissi
 
 **Examples**
 
-For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
-
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { window } from '@kit.ArkUI';
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the context within the component.
-let context: Context = this.getUIContext().getHostContext() as Context;
-let windowId = 0; // Obtain the window ID: let windowId = window.findWindow(window name).getWindowProperties().id;
-// Request user authorization for a specified permission based on the window ID
-atManager.requestPermissionsFromUserWithWindowId(context, windowId, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
-  console.info(`requestPermissionsFromUserWithWindowId success, result: ${data}`);
-  console.info('requestPermissionsFromUserWithWindowId data permissions:' + data.permissions);
-  console.info('requestPermissionsFromUserWithWindowId data authResults:' + data.authResults);
-  console.info('requestPermissionsFromUserWithWindowId data dialogShownResults:' + data.dialogShownResults);
-  console.info('requestPermissionsFromUserWithWindowId data errorReasons:' + data.errorReasons);
-}).catch((err: BusinessError): void => {
-  console.error(`requestPermissionsFromUserWithWindowId fail, code: ${err.code}, message: ${err.message}`);
-});
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 ```
 
 ## revokePermission
@@ -959,6 +980,22 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+```TypeScript
+import { abilityAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let tokenID: number = 0; // For details about how to obtain the tokenID, see the description in the AtManager section.
+let permissionFlags: number = 1;
+atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('revokeUserGrantedPermission success');
+  }
+});
+```
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1004,21 +1041,7 @@ Revokes a user_grant permission from an app. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { abilityAccessCtrl } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-let tokenID: number = 0; // For details about how to obtain the tokenID, see the description in the AtManager section.
-let permissionFlags: number = 1;
-atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`revokeUserGrantedPermission fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('revokeUserGrantedPermission success');
-  }
-});
-```
+See [revokeUserGrantedPermission](#revokeusergrantedpermission)
 
 ## setPermissionRequestToggleStatus
 

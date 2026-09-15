@@ -49,6 +49,19 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let tonePlayer: audio.TonePlayer;
+async function createTonePlayerBefore(){
+  let audioRendererInfo: audio.AudioRendererInfo = {
+    usage : audio.StreamUsage.STREAM_USAGE_DTMF,
+    rendererFlags : 0
+  };
+  tonePlayer = await audio.createTonePlayer(audioRendererInfo);
+}
+```
+
 
 ## createTonePlayer
 
@@ -78,15 +91,4 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 
 **示例**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-let tonePlayer: audio.TonePlayer;
-async function createTonePlayerBefore(){
-  let audioRendererInfo: audio.AudioRendererInfo = {
-    usage : audio.StreamUsage.STREAM_USAGE_DTMF,
-    rendererFlags : 0
-  };
-  tonePlayer = await audio.createTonePlayer(audioRendererInfo);
-}
-```
+参见 [createTonePlayer](#createtoneplayer)

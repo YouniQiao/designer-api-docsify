@@ -48,6 +48,16 @@ radio.getPrimarySlotId((err: BusinessError, data: number) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+radio.getPrimarySlotId().then((data: number) => {
+    console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getPrimarySlotId
 
@@ -77,12 +87,4 @@ Obtains the ID of the slot in which the primary card is located. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getPrimarySlotId().then((data: number) => {
-    console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getPrimarySlotId](#getprimaryslotid)

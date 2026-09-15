@@ -48,23 +48,16 @@ Checks whether there are call records that meet the specified conditions. By def
 
 **Examples**
 
+```TypeScript
+> NOTE
+> 
+> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+```
+
+```TypeScript
 > NOTE
 > 
 > In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-const phoneNumber = '138xxxxxxxx';
-const minDuration = 60;
-// Call the API to query. By default, call logs within the last 6 hours are queried.
-contact.hasMatchedCallLog(context, phoneNumber, minDuration).then((hasMatch:boolean) => {
-  console.info(`Has matched call log: ${hasMatch}`);
-});
 ```
 
 
@@ -111,23 +104,4 @@ Checks whether there are call records that meet the specified conditions. This A
 
 **Examples**
 
-> NOTE
-> 
-> In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-const phoneNumber = '138xxxxxxxx';
-const minDuration = 60;
-const withinTime = 2 * 60 *60;
-
-// Call the API to query.
-contact.hasMatchedCallLog(context, phoneNumber, minDuration, withinTime).then((hasMatch:boolean) => {
-  console.info(`Has matched call log: ${hasMatch}`);
-});
-```
+See [hasMatchedCallLog](#hasmatchedcalllog)

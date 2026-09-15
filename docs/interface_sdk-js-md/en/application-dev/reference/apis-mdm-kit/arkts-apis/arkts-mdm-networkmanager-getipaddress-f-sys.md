@@ -68,6 +68,25 @@ networkManager.getIpAddress(wantTemp, 'eth0', (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace parameters with actual values.
+networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
+  console.info(`Succeeded in getting ip address, result : ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get ip address. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getIpAddress
 
@@ -116,21 +135,4 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace parameters with actual values.
-networkManager.getIpAddress(wantTemp, 'eth0').then((result) => {
-  console.info(`Succeeded in getting ip address, result : ${result}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get ip address. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getIpAddress](#getipaddress)

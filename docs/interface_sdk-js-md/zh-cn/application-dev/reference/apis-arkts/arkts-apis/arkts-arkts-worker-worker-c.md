@@ -43,14 +43,8 @@ constructor(scriptURL: string, options?: WorkerOptions)
 
 **示例**
 
-此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
-
 ```TypeScript
-// Index.ets
-import { worker } from '@kit.ArkTS';
-
-// worker文件所在路径："entry/src/main/ets/workers/worker.ets"
-const workerInstance = new worker.Worker('entry/ets/workers/worker.ets', {name: "WorkerThread"});
+此处以在Stage模型的entry模块Index.ets文件中加载Worker线程文件为例，使用Library加载Worker线程文件的场景参考[文件路径注意事项](../../../arkts-utils/worker-introduction.md#文件路径注意事项)。
 ```
 
 ## off
@@ -280,6 +274,18 @@ let buffer = new ArrayBuffer(8);
 workerInstance.postMessage(buffer, [buffer]);
 ```
 
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+workerInstance.postMessage("hello world");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
+
 ## postMessage
 
 ```TypeScript
@@ -304,6 +310,16 @@ postMessage(message: Object, options?: PostMessageOptions): void
 | options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 可为postMessage设置的选项。transferList数组不可包含null。 |
 
 **示例**
+
+```TypeScript
+// Index.ets
+import { worker } from '@kit.ArkTS';
+
+const workerInstance = new worker.Worker("entry/ets/workers/worker.ets");
+
+let buffer = new ArrayBuffer(8);
+workerInstance.postMessage(buffer, [buffer]);
+```
 
 ```TypeScript
 // Index.ets

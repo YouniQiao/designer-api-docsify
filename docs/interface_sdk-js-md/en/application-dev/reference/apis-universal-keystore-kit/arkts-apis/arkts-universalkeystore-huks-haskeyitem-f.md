@@ -67,6 +67,24 @@ huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* Set options to emptyOptions. */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+
+huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
+  if (data) {
+    console.info(`keyAlias:${keyAlias} is existed!`);
+  } else {
+    console.info(`find key failed!`);
+  }
+});
+```
+
 
 ## hasKeyItem
 
@@ -112,20 +130,4 @@ If the key does not exist, **false** is returned through the promise.
 
 **Examples**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* Set options to emptyOptions. */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-
-huks.hasKeyItem(keyAlias, emptyOptions).then((data) => {
-  if (data) {
-    console.info(`keyAlias:${keyAlias} is existed!`);
-  } else {
-    console.info(`find key failed!`);
-  }
-});
-```
+See [hasKeyItem](#haskeyitem)

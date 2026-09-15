@@ -35,6 +35,17 @@ Checks whether touch guide mode is enabled. This API uses an asynchronous callba
 import { accessibility } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+accessibility.isOpenTouchGuide().then((data: boolean) => {
+  console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to isOpenTouchGuide. Code:${err.code}, message:${err.message}`);
+});
+```
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 accessibility.isOpenTouchGuide((err: BusinessError, data: boolean) => {
   if (err) {
     console.error(`Failed to isOpenTouchGuide. Code:${err.code}, message:${err.message}`);
@@ -69,13 +80,4 @@ Checks whether touch guide mode is enabled. This API uses a promise to return th
 
 **Examples**
 
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-accessibility.isOpenTouchGuide().then((data: boolean) => {
-  console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to isOpenTouchGuide. Code:${err.code}, message:${err.message}`);
-});
-```
+See [isOpenTouchGuide](#isopentouchguide)

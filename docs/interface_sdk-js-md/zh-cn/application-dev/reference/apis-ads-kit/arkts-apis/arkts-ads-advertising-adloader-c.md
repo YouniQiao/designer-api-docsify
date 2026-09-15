@@ -34,16 +34,8 @@ constructor(context: common.Context)
 
 **示例**
 
-其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
 ```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-// ...
-
-function createAdLoader(context: common.Context): void {
-  const adLoader: advertising.AdLoader = new advertising.AdLoader(context);
-}
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 ```
 
 ## loadAd
@@ -79,33 +71,8 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 
 **示例**
 
-其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
 ```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// ...
-function loadAd(context: common.Context, adRequestParams: advertising.AdRequestParams): void {
-  // 广告配置参数，开发者可根据项目实际情况设置
-  const adOptions: advertising.AdOptions = {};
-  // 广告请求回调监听
-  const adLoaderListener: advertising.AdLoadListener = {
-    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
-      hilog.error(0x0000, 'testTag', `Failed to load ad. Code is ${errorCode}, message is ${errorMsg}`);
-    },
-    onAdLoadSuccess: (ads: Array<advertising.Advertisement>) => {
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading ad');
-      // 保存请求到的广告内容用于展示
-      const returnAds: advertising.Advertisement[] = ads;
-    }
-  };
-  // 创建AdLoader广告对象
-  const adLoader: advertising.AdLoader = new advertising.AdLoader(context);
-  // 调用广告请求接口
-  adLoader.loadAd(adRequestParams, adOptions, adLoaderListener);
-}
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 ```
 
 ## loadAdWithMultiSlots
@@ -141,32 +108,6 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 
 **示例**
 
-其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
-
 ```TypeScript
-import { common } from '@kit.AbilityKit';
-import { advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// ...
-function loadAdWithMultiSlots(context: common.Context, adRequestParamsArray: advertising.AdRequestParams[]): void {
-  // 广告配置参数，开发者可根据项目实际情况设置
-  const adOptions: advertising.AdOptions = {};
-  // 广告请求回调监听
-  const multiSlotsAdLoaderListener: advertising.MultiSlotsAdLoadListener = {
-    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
-      hilog.error(0x0000, 'testTag', `Failed to load multiSlots ad. Code is ${errorCode}, message is ${errorMsg}`);
-    },
-    onAdLoadSuccess: (ads: Map<string, Array<advertising.Advertisement>>) => {
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading multiSlots ad');
-      // 保存请求到的广告内容用于展示
-      const returnAds: advertising.Advertisement[] = [];
-      ads.forEach((adsArray) => returnAds.push(...adsArray));
-    }
-  };
-  // 创建AdLoader广告对象
-  const adLoader: advertising.AdLoader = new advertising.AdLoader(context);
-  // 调用广告请求接口
-  adLoader.loadAdWithMultiSlots(adRequestParamsArray, adOptions, multiSlotsAdLoaderListener);
-}
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 ```

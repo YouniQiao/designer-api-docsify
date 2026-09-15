@@ -56,6 +56,26 @@ try {
 }
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// Replace with the application bundle name, application index, and whether to enable the application and whether to exit the application process when the application is disabled.
+let bundleName: string = 'com.example.myapplication';
+let appIndex: number = 0;
+let isEnabled: boolean = true;
+let killProcess: boolean = false;
+
+try {
+  bundleManager.setApplicationEnabledSync(bundleName, appIndex, isEnabled, killProcess);
+  hilog.info(0x0000, 'testTag', 'setApplicationEnabledSync successfully');
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setApplicationEnabledSync failed: %{public}s', message);
+}
+```
+
 
 ## setApplicationEnabledSync
 
@@ -95,22 +115,4 @@ Set whether an application is enabled or disabled, with control over whether the
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// Replace with the application bundle name, application index, and whether to enable the application and whether to exit the application process when the application is disabled.
-let bundleName: string = 'com.example.myapplication';
-let appIndex: number = 0;
-let isEnabled: boolean = true;
-let killProcess: boolean = false;
-
-try {
-  bundleManager.setApplicationEnabledSync(bundleName, appIndex, isEnabled, killProcess);
-  hilog.info(0x0000, 'testTag', 'setApplicationEnabledSync successfully');
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabledSync failed: %{public}s', message);
-}
-```
+See [setApplicationEnabledSync](#setapplicationenabledsync)

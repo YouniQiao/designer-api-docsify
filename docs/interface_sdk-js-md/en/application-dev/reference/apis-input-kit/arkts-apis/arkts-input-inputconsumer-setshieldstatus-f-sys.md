@@ -52,7 +52,7 @@ struct Index {
         .onClick(() => {
           let FACTORY_MODE = 0;
           try {
-            // Set the blocking status.
+            // Set the shield status.
             inputConsumer.setShieldStatus(FACTORY_MODE, true);
             console.info(`Succeeded in setting shield status.`);
           } catch (error) {

@@ -38,6 +38,17 @@ Checks whether auto rotate is locked. This API uses an asynchronous callback to 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Check whether auto screen rotation is locked.
+screen.isScreenRotationLocked().then((isLocked: boolean) => {
+  console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get the screen rotation lock status. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Check whether auto screen rotation is locked.
 screen.isScreenRotationLocked((err: BusinessError, isLocked: boolean) => {
   const errCode: number = err.code;
   if (errCode) {
@@ -77,13 +88,4 @@ Checks whether auto rotate is locked. This API uses a promise to return the resu
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Check whether auto screen rotation is locked.
-screen.isScreenRotationLocked().then((isLocked: boolean) => {
-  console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get the screen rotation lock status. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isScreenRotationLocked](#isscreenrotationlocked)

@@ -56,6 +56,26 @@ try {
 }
 ```
 
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use try catch to capture possible exceptions.
+try {
+  let seaPressure = 1013.2;
+  let currentPressure = 1500.0;
+  const promise = sensor.getDeviceAltitude(seaPressure, currentPressure);
+  promise.then((data: number) => {
+    console.info('Succeeded in getting sensor_getDeviceAltitude_Promise', data);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get altitude. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
 
 ## getDeviceAltitude
 
@@ -91,22 +111,4 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  let seaPressure = 1013.2;
-  let currentPressure = 1500.0;
-  const promise = sensor.getDeviceAltitude(seaPressure, currentPressure);
-  promise.then((data: number) => {
-    console.info('Succeeded in getting sensor_getDeviceAltitude_Promise', data);
-  }, (err: BusinessError) => {
-    console.error(`Failed to get altitude. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to get altitude. Code: ${e.code}, message: ${e.message}`);
-}
-```
+See [getDeviceAltitude](#getdevicealtitude)

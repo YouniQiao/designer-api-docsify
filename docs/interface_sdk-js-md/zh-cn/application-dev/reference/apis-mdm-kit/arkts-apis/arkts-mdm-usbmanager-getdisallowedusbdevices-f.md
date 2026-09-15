@@ -68,6 +68,18 @@ try {
 }
 ```
 
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  let result: Array<usbManager.UsbDeviceType> = usbManager.getDisallowedUsbDevices(null);
+  console.info(`Succeeded in getting disallowed USB devices. Result: ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get disallowed USB devices. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getDisallowedUsbDevices
 
@@ -114,14 +126,4 @@ function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 
 **示例**
 
-```TypeScript
-import { usbManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  let result: Array<usbManager.UsbDeviceType> = usbManager.getDisallowedUsbDevices(null);
-  console.info(`Succeeded in getting disallowed USB devices. Result: ${JSON.stringify(result)}`);
-} catch (err) {
-  console.error(`Failed to get disallowed USB devices. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getDisallowedUsbDevices](#getdisallowedusbdevices)

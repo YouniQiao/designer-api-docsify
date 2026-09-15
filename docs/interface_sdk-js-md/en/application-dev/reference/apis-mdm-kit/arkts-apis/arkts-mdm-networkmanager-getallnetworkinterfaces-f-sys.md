@@ -66,6 +66,24 @@ networkManager.getAllNetworkInterfaces(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+networkManager.getAllNetworkInterfaces(wantTemp).then((result) => {
+  console.info(`Succeeded in getting all network interfaces, result : ${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get all network interfaces. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getAllNetworkInterfaces
 
@@ -113,20 +131,4 @@ Obtains all activated wired network interfaces. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.getAllNetworkInterfaces(wantTemp).then((result) => {
-  console.info(`Succeeded in getting all network interfaces, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get all network interfaces. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getAllNetworkInterfaces](#getallnetworkinterfaces)

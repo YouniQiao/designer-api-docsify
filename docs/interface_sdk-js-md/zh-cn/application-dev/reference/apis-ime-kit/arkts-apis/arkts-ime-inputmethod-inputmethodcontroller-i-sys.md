@@ -62,6 +62,28 @@ hideSoftKeyboard(displayId: number): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
+  if (!err) {
+    console.info('Succeeded in hiding softKeyboard.');
+  } else {
+    console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+  }
+})
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().hideSoftKeyboard().then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let displayId: number = 30;
 inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
   console.info('Succeeded in hiding softKeyboard.');
@@ -113,6 +135,28 @@ showSoftKeyboard(displayId: number): Promise<void>
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 **示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
+  if (!err) {
+    console.info('Succeeded in showing softKeyboard.');
+  } else {
+    console.error(`Failed to show softKeyboard, ${err.code}, message: ${err.message}`);
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+inputMethod.getController().showSoftKeyboard().then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

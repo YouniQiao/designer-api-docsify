@@ -72,6 +72,25 @@ try {
 }
 ```
 
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  let result: boolean = restrictions.getUserRestrictedForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100);
+  console.info(`Succeeded in getting user restricted: ${result}`);
+} catch (err) {
+  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getUserRestrictedForAccount
 
@@ -115,21 +134,4 @@ Obtains the disabled status of a setting item for a specified user.
 
 **Examples**
 
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let result: boolean = restrictions.getUserRestrictedForAccount(wantTemp, restrictions.SettingsForAccount.MODIFY_WALLPAPER, 100);
-  console.info(`Succeeded in getting user restricted: ${result}`);
-} catch (err) {
-  console.error(`Failed to get user restricted. Code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getUserRestrictedForAccount](#getuserrestrictedforaccount)

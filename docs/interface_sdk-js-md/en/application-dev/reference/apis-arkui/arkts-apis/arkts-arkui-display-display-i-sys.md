@@ -63,6 +63,22 @@ displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+// Obtain the default Display object.
+displayClass = display.getDefaultDisplaySync();
+// Check whether an immersive window is included.
+let promise = displayClass.hasImmersiveWindow();
+promise.then((data) => {
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## hasImmersiveWindow
 
 ```TypeScript
@@ -94,18 +110,4 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { display } from '@kit.ArkUI';
-
-let displayClass: display.Display | null = null;
-// Obtain the default Display object.
-displayClass = display.getDefaultDisplaySync();
-// Check whether an immersive window is included.
-let promise = displayClass.hasImmersiveWindow();
-promise.then((data) => {
-  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [hasImmersiveWindow](#hasimmersivewindow)

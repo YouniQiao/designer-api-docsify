@@ -32,10 +32,19 @@ Since API version 19, you are advised to use the [traceByValue](arkts-performanc
 **Examples**
 
 ```TypeScript
-let traceCount = 3;
-hiTraceMeter.traceByValue("myTestCount", traceCount);  // Use trace to record the value of myTestCount.
+let traceCount = 3;  // Define the initial value of the integer variable to be traced.
+hiTraceMeter.traceByValue("myTestCount", traceCount);
 traceCount = 4;
 hiTraceMeter.traceByValue("myTestCount", traceCount);  // When myTestCount changes, the new value is recorded.
+// Service flow...
+```
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+let traceCount = 3;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+traceCount = 4;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
 // Service flow...
 ```
 
@@ -64,11 +73,4 @@ Traces an integer with the trace output level specified. It is used to mark the 
 
 **Examples**
 
-```TypeScript
-const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-let traceCount = 3;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-traceCount = 4;
-hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
-// Service flow...
-```
+See [traceByValue](#tracebyvalue)

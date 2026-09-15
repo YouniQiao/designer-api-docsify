@@ -50,6 +50,19 @@ policy.resetPolicies('1', (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy
+  .resetPolicies('1')
+  .then(() => {
+    console.info('resetPolicies success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## resetPolicies
 
@@ -92,15 +105,4 @@ Resets the cellular network, background network policy, firewall policy, and app
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy
-  .resetPolicies('1')
-  .then(() => {
-    console.info('resetPolicies success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [resetPolicies](#resetpolicies)

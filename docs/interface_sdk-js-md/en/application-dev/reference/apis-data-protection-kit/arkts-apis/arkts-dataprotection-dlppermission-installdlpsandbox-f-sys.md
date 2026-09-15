@@ -66,6 +66,19 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 }); // Install a DLP sandbox application.
 ```
 
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+
+let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
+  if (err) {
+    console.error(`Failed to install DLPSandbox. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('res', JSON.stringify(res));
+  }
+}); // Install a DLP sandbox application.
+```
+
 
 ## installDLPSandbox
 
@@ -110,15 +123,4 @@ Before a DLP file management application opens a protected file, the system need
 
 **Examples**
 
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
-  if (err) {
-    console.error(`Failed to install DLPSandbox. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-}); // Install a DLP sandbox application.
-```
+See [installDLPSandbox](#installdlpsandbox)

@@ -42,6 +42,15 @@ Obtains the total size (in bytes) of the built-in storage. This API uses an asyn
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+storageStatistics.getTotalSize().then((number: number) => {
+  console.info("getTotalSize successfully:" + JSON.stringify(number));
+}).catch((err: BusinessError) => {
+  console.error("getTotalSize failed with error:"+ JSON.stringify(err));
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 storageStatistics.getTotalSize((error: BusinessError, number: number) => {
   if (error) {
     console.error("getTotalSize failed with error:" + JSON.stringify(error));
@@ -86,11 +95,4 @@ Obtains the total size (in bytes) of the built-in storage. This API uses a promi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getTotalSize().then((number: number) => {
-  console.info("getTotalSize successfully:" + JSON.stringify(number));
-}).catch((err: BusinessError) => {
-  console.error("getTotalSize failed with error:"+ JSON.stringify(err));
-});
-```
+See [getTotalSize](#gettotalsize)

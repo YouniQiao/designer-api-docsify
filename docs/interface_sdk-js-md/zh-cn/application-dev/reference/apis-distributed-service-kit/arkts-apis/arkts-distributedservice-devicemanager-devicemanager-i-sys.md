@@ -57,69 +57,8 @@ authenticateDevice(
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  deviceId: string = "";
-  pinToken?: number = 0;
-}
-
-interface DeviceInfo {
-  deviceId: string;
-  deviceName: string;
-  deviceType: number;
-  networkId: string;
-  range: number;
-};
-
-interface ExtraInfo {
-  targetPkgName: string;
-  appName: string;
-  appDescription: string;
-  business: string;
-}
-
-interface AuthParam {
-  authType: number; // 认证类型： 1 - 无账号PIN码认证
-  extraInfo: ExtraInfo;
-}
-
-// 认证的设备信息，可以从发现的结果中获取
-let deviceInfo: deviceManager.DeviceInfo = {
-  deviceId: "XXXXXXXX",
-  deviceName: "",
-  deviceType: 0x0E,
-  networkId: "xxxxxxx",
-  range: 0,
-  authForm: 0
-};
-let extraInfo: ExtraInfo = {
-  targetPkgName: 'ohos.samples.xxx',
-  appName: 'xxx',
-  appDescription: 'xxx',
-  business: '0'
-};
-let authParam: AuthParam = {
-  authType: 1,// 认证类型： 1 - 无账号PIN码认证
-  extraInfo: extraInfo
-};
-
-try {
-  dmInstance.authenticateDevice(deviceInfo, authParam, (err: BusinessError, data: Data) => {
-    if (err) {
-      console.error("authenticateDevice errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-    console.info("authenticateDevice result:" + JSON.stringify(data));
-    let token = data.pinToken;
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("authenticateDevice errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## deleteCredential
@@ -156,40 +95,8 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  resultInfo: string = "";
-}
-
-interface QueryInfo {
-  processType: number;
-  authType: number;
-  userId: string;
-}
-
-let queryInfo: QueryInfo = {
-  processType: 1,
-  authType: 1,
-  userId: "123"
-};
-
-try {
-  let jsonQueryInfo = JSON.stringify(queryInfo);
-  dmInstance.deleteCredential(jsonQueryInfo, (err: BusinessError, data: Data) => {
-    if (data) {
-      console.info("deleteCredential result:" + JSON.stringify(data));
-    } else {
-      console.info("deleteCredential result: data is null");
-    }
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deleteCredential err:" + e.code + "," + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## getDeviceInfo
@@ -228,26 +135,8 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  // 设备网络标识，可以从可信设备列表中获取
-  let networkId = "xxxxxxx";
-  dmInstance.getDeviceInfo(networkId, (err: BusinessError, data: deviceManager.DeviceInfo) => {
-    if (err) {
-      console.error("getDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-    console.info('get device info: ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getDeviceInfo errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## getDeviceInfo
@@ -291,20 +180,7 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-// 设备网络标识，可以从可信设备列表中获取
-let networkId = "xxxxxxx";
-dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
-  console.info('get device info: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error("getDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
-});
-```
+参见 [getDeviceInfo](#getdeviceinfo)
 
 ## getLocalDeviceInfo
 
@@ -341,25 +217,8 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-
-try {
-  dmInstance.getLocalDeviceInfo((err: BusinessError, data: deviceManager.DeviceInfo) => {
-    if (err) {
-      console.error("getLocalDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-    console.info('get local device info: ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getLocalDeviceInfo errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## getLocalDeviceInfo
@@ -396,18 +255,7 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-dmInstance.getLocalDeviceInfo().then((data: deviceManager.DeviceInfo) => {
-  console.info('get local device info: ' + JSON.stringify(data));
-}).catch((err: BusinessError) => {
-  console.error("getLocalDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
-});
-```
+参见 [getLocalDeviceInfo](#getlocaldeviceinfo)
 
 ## getLocalDeviceInfoSync
 
@@ -445,18 +293,8 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  let deviceInfo: deviceManager.DeviceInfo = dmInstance.getLocalDeviceInfoSync();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getLocalDeviceInfoSync errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## getTrustedDeviceList
@@ -494,24 +332,8 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.getTrustedDeviceList((err: BusinessError, data: Array<deviceManager.DeviceInfo>) => {
-    if (err) {
-      console.error("getTrustedDeviceList errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-    console.info('get trusted device info: ' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getTrustedDeviceList errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## getTrustedDeviceList
@@ -548,18 +370,7 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) => {
-  console.info('get trusted device info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error("getTrustedDeviceList errCode:" + err.code + ",errMessage:" + err.message);
-});
-```
+参见 [getTrustedDeviceList](#gettrusteddevicelist)
 
 ## getTrustedDeviceListSync
 
@@ -597,18 +408,8 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  let deviceInfoList: Array<deviceManager.DeviceInfo> = dmInstance.getTrustedDeviceListSync();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getTrustedDeviceListSync errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## getTrustedDeviceListSync
@@ -652,19 +453,7 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-try {
-  let deviceInfoList: Array<deviceManager.DeviceInfo> = dmInstance.getTrustedDeviceListSync(true);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("getTrustedDeviceListSync errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
+参见 [getTrustedDeviceListSync](#gettrusteddevicelistsync)
 
 ## importCredential
 
@@ -700,69 +489,8 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  resultInfo: string = "";
-}
-
-interface CredentialData {
-  credentialType: number;
-  credentialId: string;
-  serverPk: string;
-  pkInfoSignature : string;
-  pkInfo: string;
-  authCode: string;
-  peerDeviceId: string;
-}
-
-interface CredentialInfo {
-  processType: number;
-  authType: number;
-  userId: string;
-  deviceId: string;
-  version: string;
-  devicePk : string;
-  credentialData : CredentialData;
-}
-
-let credentialData: CredentialData = {
-  credentialType: 2,
-  credentialId: "102",
-  serverPk: "3059301306072A8648CE3D020106082A8648CE3D03",
-  pkInfoSignature : "30440220490BCB4F822004C9A76AB8D97F80041FC0E",
-  pkInfo: "",
-  authCode: "",
-  peerDeviceId: ""
-};
-
-
-let credentialInfo: CredentialInfo = {
-  processType: 1,
-  authType: 1,
-  userId: "123",
-  deviceId: "aaa",
-  version: "1.2.3",
-  devicePk : "0000",
-  credentialData : credentialData
-};
-
-try {
-  let jsonCredentialInfo = JSON.stringify(credentialInfo);
-  dmInstance.importCredential(jsonCredentialInfo, (err: BusinessError, data: Data) => {
-    if (data) {
-      console.info("importCredential result:" + JSON.stringify(data));
-    } else {
-      console.info("importCredential result: data is null");
-    }
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("importCredential err:" + e.code + "," + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## off('uiStateChange')
@@ -799,21 +527,6 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.off('uiStateChange');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## off('deviceStateChange')
 
 ```TypeScript
@@ -847,36 +560,6 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.off('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
 
 ## off('deviceFound')
 
@@ -912,36 +595,6 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  subscribeId: number = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.off('deviceFound', (data: Data) => {
-    console.info('deviceFound' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceFound errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## off('discoverFail')
 
 ```TypeScript
@@ -976,28 +629,6 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  subscribeId: number = 0;
-  reason: number = 0;
-}
-
-try {
-  dmInstance.off('discoverFail', (data: Data) => {
-    console.info('discoverFail' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("discoverFail errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## off('publishSuccess')
 
 ```TypeScript
@@ -1030,27 +661,6 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.off('publishSuccess', (data: Data) => {
-    console.info('publishSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## off('publishFail')
 
 ```TypeScript
@@ -1082,28 +692,6 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-  reason: number = 0;
-}
-
-try {
-  dmInstance.off('publishFail', (data: Data) => {
-    console.info('publishFail' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishFail errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
 
 ## off('serviceDie')
 
@@ -1139,23 +727,6 @@ off(type: 'serviceDie', callback?: () => void): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.off("serviceDie", () => {
-    console.info("serviceDie off");
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## on('uiStateChange')
 
 ```TypeScript
@@ -1189,34 +760,6 @@ ui状态变更回调。
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  param: string = "";
-}
-
-interface TmpStr {
-  verifyFailed: boolean;
-}
-
-try {
-  dmInstance.on('uiStateChange', (data: Data) => {
-    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
-    let tmpStr: TmpStr = JSON.parse(data.param);
-    let isShow = tmpStr.verifyFailed;
-    console.info("uiStateChange executed, dialog closed" + isShow);
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
 
 ## on('deviceStateChange')
 
@@ -1252,36 +795,6 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.on('deviceStateChange', (data: Data) => {
-    console.info("deviceStateChange on:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## on('deviceFound')
 
 ```TypeScript
@@ -1315,36 +828,6 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  subscribeId: number = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.on('deviceFound', (data: Data) => {
-    console.info("deviceFound:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceFound errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
 
 ## on('discoverFail')
 
@@ -1380,28 +863,6 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  subscribeId: number = 0;
-  reason: number = 0;
-}
-
-try {
-  dmInstance.on('discoverFail', (data: Data) => {
-    console.info("discoverFail on:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("discoverFail errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## on('publishSuccess')
 
 ```TypeScript
@@ -1434,27 +895,6 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.on('publishSuccess', (data: Data) => {
-    console.info("publishSuccess:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
 ## on('publishFail')
 
 ```TypeScript
@@ -1486,28 +926,6 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-  reason: number = 0;
-}
-
-try {
-  dmInstance.on('publishFail', (data: Data) => {
-    console.info("publishFail on:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishFail errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
 
 ## on('serviceDie')
 
@@ -1542,23 +960,6 @@ on(type: 'serviceDie', callback: () => void): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-
-**示例**
-
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.on("serviceDie", () => {
-    console.info("serviceDie on");
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
 
 ## publishDeviceDiscovery
 
@@ -1596,33 +997,8 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-interface PublishInfo {
-  publishId: number;
-  mode: number; // 主动模式
-  freq: number; // 高频率
-  ranging: boolean; // 支持发现时测距
-};
-
-// 生成发布标识，随机数确保每次调用发布接口的标识不一致
-let publishId = Math.floor(Math.random() * 10000 + 1000);
-let publishInfo: PublishInfo = {
-  publishId: publishId,
-  mode: 0xAA, // 主动模式
-  freq: 2,    // 高频率
-  ranging: true  // 支持发现时测距
-};
-
-try {
-  dmInstance.publishDeviceDiscovery(publishInfo); // 当有发布结果时，通过回调通知给应用程序
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## release
@@ -1655,17 +1031,8 @@ release(): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.release();
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("release errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## requestCredentialRegisterInfo
@@ -1702,37 +1069,8 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-interface CredentialInfo {
-  version: string;
-  userId: string;
-}
-
-class Data {
-  registerInfo: string = "";
-}
-
-let credentialInfo: CredentialInfo = {
-  version: "1.2.3",
-  userId: "123"
-};
-try {
-  let jsonCredentialInfo = JSON.stringify(credentialInfo);
-  dmInstance.requestCredentialRegisterInfo(jsonCredentialInfo, (err: BusinessError, data: Data) => {
-    if (data) {
-      console.info("requestCredentialRegisterInfo result:" + JSON.stringify(data));
-    } else {
-      console.info("requestCredentialRegisterInfo result: data is null");
-    }
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("requestCredentialRegisterInfo err:" + e.code + "," + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## setUserOperation
@@ -1772,26 +1110,8 @@ setUserOperation(operateAction: number, params: string): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  /*
-    operateAction = 0 - 允许授权
-    operateAction = 1 - 取消授权
-    operateAction = 2 - 授权框用户操作超时
-    operateAction = 3 - 取消pin码框展示
-    operateAction = 4 - 取消pin码输入框展示
-    operateAction = 5 - pin码输入框确定操作
-   */
-  let operation = 0;
-  dmInstance.setUserOperation(operation, "extra");
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("setUserOperation errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## startDeviceDiscovery
@@ -1832,38 +1152,8 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-interface SubscribeInfo {
-  subscribeId: number;
-  mode: number;   // 主动模式
-  medium: number; // 自动发现类型，同时支持多种发现类型
-  freq: number;   // 高频率
-  isSameAccount: boolean;
-  isWakeRemote: boolean;
-  capability: number;
-}
-
-// 生成发现标识，随机数确保每次调用发现接口的标识不一致
-let subscribeId = Math.floor(Math.random() * 10000 + 1000);
-let subscribeInfo: SubscribeInfo = {
-  subscribeId: subscribeId,
-  mode: 0xAA, // 主动模式
-  medium: 0,  // 自动发现类型，同时支持多种发现类型
-  freq: 2,    // 高频率
-  isSameAccount: false,
-  isWakeRemote: false,
-  capability: 1
-};
-try {
-  dmInstance.startDeviceDiscovery(subscribeInfo); // 当有设备发现时，通过deviceFound回调通知给应用程序
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("startDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## startDeviceDiscovery
@@ -1905,61 +1195,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-interface Filters {
-  type: string;
-  value: number;
-}
-
-interface FilterOptions {
-  filter_op: string; // 可选, 默认"OR"
-  filters: Filters[];
-}
-
-interface SubscribeInfo {
-  subscribeId: number;
-  mode: number;   // 主动模式
-  medium: number; // 自动发现类型，同时支持多种发现类型
-  freq: number;   // 高频率
-  isSameAccount: boolean;
-  isWakeRemote: boolean;
-  capability: number;
-}
-
-// 生成发现标识，随机数确保每次调用发现接口的标识不一致
-let subscribeId = Math.floor(Math.random() * 10000 + 1000);
-let subscribeInfo: SubscribeInfo = {
-  subscribeId: subscribeId,
-  mode: 0xAA, // 主动模式
-  medium: 0,  // 自动发现类型，同时支持多种发现类型
-  freq: 2,    // 高频率
-  isSameAccount: false,
-  isWakeRemote: false,
-  capability: 1
-};
-
-let filters: Filters[] = [
-  {
-      type: "range",
-      value: 50 // 需过滤发现设备的距离，单位(cm)
-  }
-];
-
-let filterOptions: FilterOptions = {
-  filter_op: "OR", // 可选, 默认"OR"
-  filters: filters
-};
-try {
-  dmInstance.startDeviceDiscovery(subscribeInfo, JSON.stringify(filterOptions)); // 当有设备发现时，通过deviceFound回调通知给应用程序
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("startDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
+参见 [startDeviceDiscovery](#startdevicediscovery)
 
 ## stopDeviceDiscovery
 
@@ -1998,19 +1234,8 @@ stopDeviceDiscovery(subscribeId: number): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  // stopDeviceDiscovery和startDeviceDiscovery需配对使用，入参需要和startDeviceDiscovery接口传入的subscribeId值相等
-  let subscribeId = 12345;
-  dmInstance.stopDeviceDiscovery(subscribeId);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("stopDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## unAuthenticateDevice
@@ -2050,33 +1275,8 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-interface DeviceInfo {
-  deviceId: string;
-  deviceName: string;
-  deviceType: number;
-  networkId: string;
-  range: number;
-}
-
-try {
-  let deviceInfo: deviceManager.DeviceInfo = {
-    deviceId: "XXXXXXXX",
-    deviceName: "",
-    deviceType: 0x0E,
-    networkId: "xxxxxxx",
-    range: 0,
-    authForm: 0
-  };
-  dmInstance.unAuthenticateDevice(deviceInfo);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("unAuthenticateDevice errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## unPublishDeviceDiscovery
@@ -2114,19 +1314,8 @@ unPublishDeviceDiscovery(publishId: number): void
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  // unPublishDeviceDiscovery和publishDeviceDiscovery配对使用，入参需要和publishDeviceDiscovery接口传入的publishId值相等
-  let publishId = 12345;
-  dmInstance.unPublishDeviceDiscovery(publishId);
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("unPublishDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```
 
 ## verifyAuthInfo
@@ -2163,47 +1352,6 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 
 **示例**
 
-示例中的初始化请参见deviceManager.createDeviceManager。
-
 ```TypeScript
-import { BusinessError } from '@ohos.base';
-
-interface ExtraInfo {
-  authType: number;
-  token: number;
-}
-
-interface AuthInfo {
-  authType: number;
-  token: number;
-  extraInfo: ExtraInfo;
-}
-
-class Data {
-  deviceId: string = "";
-  level: number = 0;
-}
-
-let extraInfo: ExtraInfo = {
-  authType: 0,
-  token: 0
-};
-
-let authInfo: AuthInfo = {
-  authType: 1,
-  token: 123456,
-  extraInfo: extraInfo
-};
-try {
-  dmInstance.verifyAuthInfo(authInfo, (err: BusinessError, data: Data) => {
-    if (err) {
-      console.error("verifyAuthInfo errCode:" + err.code + ",errMessage:" + err.message);
-      return;
-    }
-  console.info("verifyAuthInfo result:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("verifyAuthInfo errCode:" + e.code + ",errMessage:" + e.message);
-}
+示例中的初始化请参见deviceManager.createDeviceManager。
 ```

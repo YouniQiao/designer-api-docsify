@@ -53,6 +53,18 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+sms.getSmscAddr(slotId).then((data: string) => {
+    console.info(`getSmscAddr success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSmscAddr failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSmscAddr
 
@@ -96,14 +108,4 @@ function getSmscAddr(slotId: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-sms.getSmscAddr(slotId).then((data: string) => {
-    console.info(`getSmscAddr success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSmscAddr failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getSmscAddr](#getsmscaddr)

@@ -238,6 +238,22 @@ try {
 }
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  let bundleInfo: bundleManager.BundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+  let tokenIDList: Array<number> = [bundleInfo.appInfo.accessTokenId];
+  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
+  atManager.off('permissionStateChange', tokenIDList, permissionList);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`catch errcode: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## on('selfPermissionStateChange')
 
 ```TypeScript
@@ -309,6 +325,26 @@ try {
 }
 ```
 
+```TypeScript
+import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+  let bundleInfo: bundleManager.BundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
+  let tokenIDList: Array<number> = [bundleInfo.appInfo.accessTokenId];
+  let permissionList: Array<Permissions> = ['ohos.permission.DISTRIBUTED_DATASYNC'];
+
+  atManager.on('permissionStateChange', tokenIDList, permissionList, (data: abilityAccessCtrl.PermissionStateChangeInfo) => {
+    console.info('receive permission state change');
+    console.info(`data change: ${data.change}, tokenID: ${data.tokenID}, permission name: ${data.permissionName}`);
+    });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`catch errcode: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## openPermissionOnSetting
 
 ```TypeScript
@@ -348,22 +384,8 @@ Applicable to scenarios where [manual_settings](../../../security/AccessToken/ap
 
 **Examples**
 
-For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
 ```TypeScript
-import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a permission manager instance
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the context within the component.
-let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// Launch the pop-up window for redirecting to the settings page
-atManager.openPermissionOnSetting(context, 'ohos.permission.HOOK_KEY_EVENT').then((data: abilityAccessCtrl.SelectedResult) => {
-  console.info(`openPermissionOnSetting success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`openPermissionOnSetting fail, code: ${err.code}, message: ${err.message}`);
-});
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 ```
 
 ## requestGlobalSwitch
@@ -416,22 +438,8 @@ When an app needs to use functions such as the camera, microphone, or location t
 
 **Examples**
 
-For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
 ```TypeScript
-import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a permission manager instance
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the context within the component.
-let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// Open the global switch settings dialog box
-atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then((data: boolean) => {
-  console.info(`requestGlobalSwitch success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`requestGlobalSwitch fail, code: ${err.code}, message: ${err.message}`);
-});
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 ```
 
 ## requestPermissionOnSetting
@@ -486,22 +494,8 @@ Before calling this API, the app needs to call [requestPermissionsFromUser](#req
 
 **Examples**
 
-For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
 ```TypeScript
-import { abilityAccessCtrl, Context, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a permission manager instance
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the context within the component.
-let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// Open the permission settings dialog box
-atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((data: Array<abilityAccessCtrl.GrantStatus>) => {
-  console.info(`requestPermissionOnSetting success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`requestPermissionOnSetting fail, code: ${err.code}, message: ${err.message}`);
-});
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 ```
 
 ## requestPermissionsFromUser
@@ -548,29 +542,10 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Examples**
 
-For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
-
 ```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
-// Create a permission manager instance
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the context within the component.
-let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// Request user authorization
-atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: BusinessError, data: PermissionRequestResult) => {
-  if (err) {
-    console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`requestPermissionsFromUser success, result: ${data}`);
-    console.info('requestPermissionsFromUser data permissions:' + data.permissions);
-    console.info('requestPermissionsFromUser data authResults:' + data.authResults);
-    console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
-    console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
-  }
-});
+For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
 ```
 
 ## requestPermissionsFromUser
@@ -616,28 +591,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Examples**
 
-For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
-
-```TypeScript
-import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a permission manager instance
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the context within the component.
-let context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-// Request user authorization
-atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((data: PermissionRequestResult) => {
-  console.info(`requestPermissionsFromUser success, result: ${data}`);
-  console.info('requestPermissionsFromUser data permissions:' + data.permissions);
-  console.info('requestPermissionsFromUser data authResults:' + data.authResults);
-  console.info('requestPermissionsFromUser data dialogShownResults:' + data.dialogShownResults);
-  console.info('requestPermissionsFromUser data errorReasons:' + data.errorReasons);
-}).catch((err: BusinessError): void => {
-  console.error(`requestPermissionsFromUser fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [requestPermissionsFromUser](#requestpermissionsfromuser)
 
 ## verifyAccessToken
 
@@ -726,25 +680,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 **Examples**
 
-```TypeScript
-import { abilityAccessCtrl, Permissions, bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a permission manager instance
-let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
-// Obtain the bundleInfo of the app
-let bundleInfo = bundleManager.getBundleInfoForSelfSync(bundleManager.BundleFlag.GET_BUNDLE_INFO_WITH_APPLICATION);
-// Obtain the TokenID of the app
-let tokenID: number = bundleInfo.appInfo.accessTokenId;
-// Set the permission name to be verified
-let permissionName: Permissions = 'ohos.permission.GRANT_SENSITIVE_PERMISSIONS';
-// Verify whether the app has been granted the permission
-atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCtrl.GrantStatus) => {
-  console.info(`verifyAccessToken success, result: ${data}`);
-}).catch((err: BusinessError): void => {
-  console.error(`verifyAccessToken fail, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [verifyAccessToken](#verifyaccesstoken)
 
 ## verifyAccessTokenSync
 

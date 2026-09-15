@@ -66,6 +66,43 @@ applicationManager.getDisallowedRunningBundles(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
+  if (err) {
+    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
+});
+```
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
+  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getDisallowedRunningBundles
 
@@ -109,24 +146,7 @@ Obtains an application from the applications that are not allowed to run by the 
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
-  if (err) {
-    console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-});
-```
+See [getDisallowedRunningBundles](#getdisallowedrunningbundles)
 
 
 ## getDisallowedRunningBundles
@@ -176,20 +196,4 @@ Obtains applications that are not allowed to run under the current user or a spe
 
 **Examples**
 
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-applicationManager.getDisallowedRunningBundles(wantTemp, 100).then((result) => {
-  console.info(`Succeeded in getting disallowed running bundles, result : ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get disallowed running bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [getDisallowedRunningBundles](#getdisallowedrunningbundles)

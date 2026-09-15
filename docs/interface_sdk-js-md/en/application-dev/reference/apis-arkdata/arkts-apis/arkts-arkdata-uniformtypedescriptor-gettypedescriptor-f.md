@@ -45,21 +45,23 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('com.adobe.photoshop-image');
-    if (typeObj) {
-        let typeId = typeObj.typeId;
-        let belongingToTypes = typeObj.belongingToTypes;
-        let description = typeObj.description;
-        let referenceURL = typeObj.referenceURL;
-        let iconFile = typeObj.iconFile;
-        let filenameExtensions = typeObj.filenameExtensions;
-        let mimeTypes = typeObj.mimeTypes;
-        console.info(`typeId: ${typeId}, belongingToTypes: ${belongingToTypes}, description: ${description}, referenceURL: ${referenceURL}, iconFile: ${iconFile}, filenameExtensions: ${filenameExtensions}, mimeTypes: ${mimeTypes}`);
-    } else {
-        console.info('type com.adobe.photoshop-image does not exist');
-    }
-} catch(e) {
-    let error: BusinessError = e as BusinessError;
-    console.error(`getTypeDescriptor throws an exception. code is ${error.code}, message is ${error.message} `);
+  // Obtain the TypeDescriptor object of the specified type.
+  let typeObj: uniformTypeDescriptor.TypeDescriptor =
+    uniformTypeDescriptor.getTypeDescriptor('com.adobe.photoshop-image');
+  if (typeObj) {
+    let typeId = typeObj.typeId;
+    let belongingToTypes = typeObj.belongingToTypes;
+    let description = typeObj.description;
+    let referenceURL = typeObj.referenceURL;
+    let iconFile = typeObj.iconFile;
+    let filenameExtensions = typeObj.filenameExtensions;
+    let mimeTypes = typeObj.mimeTypes;
+    console.info(`typeId: ${typeId}, belongingToTypes: ${belongingToTypes}, description: ${description}, referenceURL: ${referenceURL}, iconFile: ${iconFile}, filenameExtensions: ${filenameExtensions}, mimeTypes: ${mimeTypes}`);
+  } else {
+    console.info('type com.adobe.photoshop-image does not exist');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`getTypeDescriptor throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```

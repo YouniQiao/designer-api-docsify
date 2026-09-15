@@ -2,9 +2,7 @@
 
 Define the style of checkbox mark.
 
-@interface MarkStyle
-
-**Since:** 11
+**Since:** 10
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,11 +12,13 @@ Define the style of checkbox mark.
 size?: Length
 ```
 
-Define the size of checkbox mark.
+Size of the internal icon, in vp. The default size is the same as the width of the check box component.
+
+Percentage values are not supported. If an invalid value is set, the default value is used.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,11 +32,13 @@ Define the size of checkbox mark.
 strokeColor?: ResourceColor
 ```
 
-Define the stroke color of checkbox mark.
+Color of the internal icon.
+
+Default value: **Color.White**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +52,13 @@ Define the stroke color of checkbox mark.
 strokeWidth?: Length
 ```
 
-Define the stroke width of checkbox mark.
+Thickness of the internal icon, in vp. Percentage values are not supported. If an invalid value is set, the default value is used.
+
+Default value: **2**
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

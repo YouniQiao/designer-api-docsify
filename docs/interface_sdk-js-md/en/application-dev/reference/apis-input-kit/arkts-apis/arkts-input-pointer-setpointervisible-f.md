@@ -63,6 +63,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Setting Mouse Pointer Visibility
+            pointer.setPointerVisible(false).then(() => {
+              console.info(`Succeeded in setting pointer cursor visible.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set pointer cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set pointer cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setPointerVisible
 
@@ -97,29 +124,4 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Setting Mouse Pointer Visibility
-            pointer.setPointerVisible(false).then(() => {
-              console.info(`Succeeded in setting pointer cursor visible.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set pointer cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set pointer cursor, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setPointerVisible](#setpointervisible)

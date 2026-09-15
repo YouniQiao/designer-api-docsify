@@ -45,7 +45,7 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // 获取触控板滚动方向
+            // 获取触控板滚轴方向
             pointer.getTouchpadScrollDirection((error: BusinessError, state: boolean) => {
               if (error) {
                 console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
@@ -53,6 +53,33 @@ struct Index {
               }
               console.info(`Succeeded in getting touchpad scroll direction, state: ${JSON.stringify(state)}.`);
             });
+          } catch (error) {
+            console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取触控板滚轴方向
+            pointer.getTouchpadScrollDirection().then((state: boolean) => {
+              console.info(`Succeeded in getting touchpad scroll direction, state: ${JSON.stringify(state)}.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
           } catch (error) {
             console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
@@ -90,29 +117,4 @@ function getTouchpadScrollDirection(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 获取触摸板滚动方向
-            pointer.getTouchpadScrollDirection().then((state: boolean) => {
-              console.info(`Succeeded in getting touchpad scroll direction, state: ${JSON.stringify(state)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get touchpad scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+参见 [getTouchpadScrollDirection](#gettouchpadscrolldirection)

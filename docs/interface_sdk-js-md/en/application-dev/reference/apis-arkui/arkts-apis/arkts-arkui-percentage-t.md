@@ -4,15 +4,13 @@
 declare type Percentage = `${number}%`
 ```
 
-Defines the length property with number in units of Percentage.
+Length type, used to describe a length in percentage units.
 
-@typedef { `&#36;{number}%` } Percentage
-
-**Since:** 23
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 

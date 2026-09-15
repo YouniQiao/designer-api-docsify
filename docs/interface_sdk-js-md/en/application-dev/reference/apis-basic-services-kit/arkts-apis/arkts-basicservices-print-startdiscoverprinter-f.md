@@ -55,6 +55,21 @@ print.startDiscoverPrinter(extensionList, (error: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Load all print extension abilities.
+let extensionList: string[] = [];
+// Specify the bundle name of your applications to load required print extension abilities during printer discovery.
+// let extensionList: string[] = ['com.myapplication.test'];
+print.startDiscoverPrinter(extensionList).then(() => {
+    console.info('start Discovery success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
+})
+```
+
 
 ## startDiscoverPrinter
 
@@ -93,17 +108,4 @@ Discovers printers by specifying the extension list. The discovered printers con
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Load all print extension abilities.
-let extensionList: string[] = [];
-// Specify the bundle name of your applications to load required print extension abilities during printer discovery.
-// let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList).then(() => {
-    console.info('start Discovery success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
-})
-```
+See [startDiscoverPrinter](#startdiscoverprinter)

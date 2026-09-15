@@ -103,23 +103,8 @@ struct FormLinkDemo {
 }
 ```
 
-FormLink
-待跳转应用 [module.json5](../../../quick-start/module-configuration-file.md#skills标签) uris 配置示例：
-
 ```TypeScript
-"abilities": [
-  {
-    "skills": [
-      {
-        "uris": [
-          {
-            "scheme": "example",
-            "host": "uri.ohos.com",
-            "path": "link_page"
-          },
-        ]
-      }
-    ],
-  }
-]
+
+
+待跳转应用 [module.json5](../../../quick-start/module-configuration-file.md#skills标签) uris 配置示例：
 ```

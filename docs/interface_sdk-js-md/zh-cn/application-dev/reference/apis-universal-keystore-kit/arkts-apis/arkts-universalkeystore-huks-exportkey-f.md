@@ -50,6 +50,17 @@ huks.exportKey(keyAlias, emptyOptions, (err, data) => {
 });
 ```
 
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+
+/* 此处options选择emptyOptions来传空 */
+let keyAlias = 'keyAlias';
+let emptyOptions: huks.HuksOptions = {
+  properties: []
+};
+let result = huks.exportKey(keyAlias, emptyOptions);
+```
+
 
 ## exportKey
 
@@ -87,13 +98,4 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 **示例**
 
-```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-
-/* 此处options选择emptyOptions来传空 */
-let keyAlias = 'keyAlias';
-let emptyOptions: huks.HuksOptions = {
-  properties: []
-};
-let result = huks.exportKey(keyAlias, emptyOptions);
-```
+参见 [exportKey](#exportkey)

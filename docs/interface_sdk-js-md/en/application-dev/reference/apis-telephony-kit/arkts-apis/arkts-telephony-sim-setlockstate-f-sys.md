@@ -60,6 +60,22 @@ sim.setLockState(0, lockInfo, (err: BusinessError, data: sim.LockStatusResponse)
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let lockInfo: sim.LockInfo = {
+    lockType: sim.LockType.PIN_LOCK,
+    password: "1234",
+    state: sim.LockState.LOCK_OFF
+};
+sim.setLockState(0, lockInfo).then((data: sim.LockStatusResponse) => {
+    console.info(`setLockState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`setLockState failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setLockState
 
@@ -106,18 +122,4 @@ Set the lock status of the SIM card in the specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-let lockInfo: sim.LockInfo = {
-    lockType: sim.LockType.PIN_LOCK,
-    password: "1234",
-    state: sim.LockState.LOCK_OFF
-};
-sim.setLockState(0, lockInfo).then((data: sim.LockStatusResponse) => {
-    console.info(`setLockState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`setLockState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [setLockState](#setlockstate)

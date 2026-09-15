@@ -40,26 +40,6 @@ compareTo(other: ScopeComparable): boolean
 
 **示例**
 
-构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
-
 ```TypeScript
-class Temperature implements util.ScopeComparable {
-  private readonly _temp: number;
-
-  constructor(value: number) {
-    this._temp = value;
-  }
-
-  compareTo(value: Temperature) {
-    return this._temp >= value.getTemp();
-  }
-
-  getTemp() {
-    return this._temp;
-  }
-
-  toString(): string {
-    return this._temp.toString();
-  }
-}
+构造新类，实现compareTo方法。后续示例代码中，均以此Temperature类为例。
 ```

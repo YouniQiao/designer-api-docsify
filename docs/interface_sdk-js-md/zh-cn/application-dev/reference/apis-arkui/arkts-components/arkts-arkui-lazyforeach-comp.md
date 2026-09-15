@@ -100,64 +100,12 @@ LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程
 
 ## 示例
 
-以下示例中，通过[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。应用退后台时，清理缓存。应用恢复前台时，恢复缓存。
-从API版本26.0.0开始，新增LazyForEachOptions接口。
-BasicDataSource代码见LazyForEach开发者指南末尾BasicDataSource示例代码：[string类型数组的BasicDataSource代码](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#string类型数组的basicdatasource代码)。
-
 ```TypeScript
-import { BasicDataSource } from './BasicDataSource';
+### 示例1（使用自动内存优化策略）
 
-class DataSource extends BasicDataSource {
-  public dataArray: string[] = [];
-  public totalCount(): number {
-    return this.dataArray.length;
-  }
-  public getData(index: number): string {
-    return this.dataArray[index];
-  }
-  public pushData(data: string): void {
-    this.dataArray.push(data);
-    this.notifyDataAdd(this.dataArray.length - 1);
-  }
-}
+以下示例中，通过[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。应用退后台时，清理缓存。应用恢复前台时，恢复缓存。
 
-@Component
-struct ChildComponent {
-  aboutToAppear() {
-    console.info('ChildComponent aboutToAppear');
-  }
-  aboutToDisappear() {
-    console.info('ChildComponent aboutToDisappear');
-  }
-  build() {
-    Text('ChildComponent')
-  }
-}
+从API版本26.0.0开始，新增LazyForEachOptions接口。
 
-@Entry
-@Component
-struct MemoryOptimizeDemo {
-  private data: DataSource = new DataSource();
-  aboutToAppear() {
-    for (let i = 0; i < 100; i++) {
-      this.data.pushData(`item ${i}`);
-    }
-  }
-  build() {
-    Column() {
-      List() {
-        LazyForEach(this.data,
-          (item: string, index: number) => {
-            ListItem() {
-              ChildComponent()
-            }
-          },
-          (item: string, index: number) => item,
-          { memoryOptimizationStrategy: LazyForEachMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION } // 使用自动内存优化策略
-        )
-      }
-      .cachedCount(5)
-    }
-  }
-}
+BasicDataSource代码见LazyForEach开发者指南末尾BasicDataSource示例代码：[string类型数组的BasicDataSource代码](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#string类型数组的basicdatasource代码)。
 ```

@@ -64,7 +64,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'change confirm succeeded'
-    }
+    };
   }
   // ...
 }
@@ -130,7 +130,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'change privilege succeeded',
       value: result
-    }
+    };
   }
   // ...
 }
@@ -187,7 +187,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'confirm invitation succeeded',
       value: 'sharing_resource_test'
-    }
+    };
   }
   // ...
 }
@@ -237,7 +237,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'exit share succeeded'
-    }
+    };
   }
   // ...
 }
@@ -303,7 +303,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
         shareable: false
       },
       attachInfo: ''
-    })
+    });
     participants.push({
       identity: '111111111',
       role: cloudData.sharing.Role.ROLE_INVITEE,
@@ -316,12 +316,12 @@ class MyShareCenter implements cloudExtension.ShareCenter {
         shareable: false
       },
       attachInfo: ''
-    })
+    });
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'query participants succeeded',
       value: participants
-    }
+    };
   }
   // ...
 }
@@ -387,7 +387,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
         shareable: false
       },
       attachInfo: ''
-    })
+    });
     participants.push({
       identity: '111111111',
       role: cloudData.sharing.Role.ROLE_INVITEE,
@@ -400,12 +400,12 @@ class MyShareCenter implements cloudExtension.ShareCenter {
         shareable: false
       },
       attachInfo: ''
-    })
+    });
     return {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'query participants by invitation succeeded',
       value: participants
-    }
+    };
   }
   // ...
 }
@@ -471,7 +471,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'share succeeded',
       value: result
-    }
+    };
   }
   // ...
 }
@@ -537,7 +537,7 @@ class MyShareCenter implements cloudExtension.ShareCenter {
       code: cloudData.sharing.SharingCode.SUCCESS,
       description: 'unshare succeeded',
       value: result
-    }
+    };
   }
   // ...
 }

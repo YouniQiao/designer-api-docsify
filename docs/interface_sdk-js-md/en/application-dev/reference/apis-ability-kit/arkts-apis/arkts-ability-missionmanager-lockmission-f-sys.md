@@ -61,6 +61,25 @@ try {
 }
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// testMissionId is the mission ID, which can be obtained through the getMissionInfos API.
+let testMissionId = 2;
+
+try {
+  missionManager.lockMission(testMissionId).then((data: void) => {
+    console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`lockMission failed. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## lockMission
 
@@ -101,21 +120,4 @@ Locks a given mission. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// testMissionId is the mission ID, which can be obtained through the getMissionInfos API.
-let testMissionId = 2;
-
-try {
-  missionManager.lockMission(testMissionId).then((data: void) => {
-    console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`lockMission failed. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}`);
-}
-```
+See [lockMission](#lockmission)

@@ -65,6 +65,29 @@ let getActiveNotificationByFilterCallback = (err: BusinessError, data: notificat
 notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+
+let bundleOption: notificationManager.BundleOption = {
+  bundle: 'bundleName1',
+};
+let notificationKey: notificationSubscribe.NotificationKey = {
+    id: 11,
+    label: ''
+};
+let filter: notificationManager.NotificationFilter = {
+    bundle: bundleOption,
+    notificationKey: notificationKey,
+    extraInfoKeys: ['event']
+}
+notificationManager.getActiveNotificationByFilter(filter).then((data: notificationManager.NotificationRequest) => {
+    console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## getActiveNotificationByFilter
 
@@ -104,25 +127,4 @@ function getActiveNotificationByFilter(filter: NotificationFilter): Promise<Noti
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { notificationSubscribe } from '@kit.NotificationKit';
-
-let bundleOption: notificationManager.BundleOption = {
-  bundle: 'bundleName1',
-};
-let notificationKey: notificationSubscribe.NotificationKey = {
-    id: 11,
-    label: ''
-};
-let filter: notificationManager.NotificationFilter = {
-    bundle: bundleOption,
-    notificationKey: notificationKey,
-    extraInfoKeys: ['event']
-}
-notificationManager.getActiveNotificationByFilter(filter).then((data: notificationManager.NotificationRequest) => {
-    console.info(`getActiveNotificationByFilter success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [getActiveNotificationByFilter](#getactivenotificationbyfilter)

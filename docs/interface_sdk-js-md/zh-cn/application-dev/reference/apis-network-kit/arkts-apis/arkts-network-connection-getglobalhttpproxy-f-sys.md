@@ -47,6 +47,17 @@ connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy)
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getGlobalHttpProxy().then((data: connection.HttpProxy) => {
+  console.info(JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
+
 
 ## getGlobalHttpProxy
 
@@ -78,13 +89,4 @@ function getGlobalHttpProxy(): Promise<HttpProxy>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getGlobalHttpProxy().then((data: connection.HttpProxy) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
+参见 [getGlobalHttpProxy](#getglobalhttpproxy)

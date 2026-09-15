@@ -56,6 +56,17 @@ call.closeUnfinishedUssd(slotId, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+call.closeUnfinishedUssd(slotId).then(() => {
+    console.info(`closeUnfinishedUssd success.`);
+}).catch((err: BusinessError) => {
+    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## closeUnfinishedUssd
 
@@ -99,13 +110,4 @@ function closeUnfinishedUssd(slotId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-call.closeUnfinishedUssd(slotId).then(() => {
-    console.info(`closeUnfinishedUssd success.`);
-}).catch((err: BusinessError) => {
-    console.error(`closeUnfinishedUssd fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [closeUnfinishedUssd](#closeunfinishedussd)

@@ -51,6 +51,16 @@ call.cancelMuted((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.cancelMuted().then(() => {
+    console.info(`cancelMuted success.`);
+}).catch((err: BusinessError) => {
+    console.error(`cancelMuted fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## cancelMuted
 
@@ -83,12 +93,4 @@ Cancels call muting. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.cancelMuted().then(() => {
-    console.info(`cancelMuted success.`);
-}).catch((err: BusinessError) => {
-    console.error(`cancelMuted fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [cancelMuted](#cancelmuted)

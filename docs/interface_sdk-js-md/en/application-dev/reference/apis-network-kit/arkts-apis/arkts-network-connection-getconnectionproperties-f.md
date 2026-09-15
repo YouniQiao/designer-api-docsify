@@ -61,6 +61,21 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
+  }
+
+  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  })
+});
+```
+
 
 ## getConnectionProperties
 
@@ -102,17 +117,4 @@ Obtains the connection information of the data network specified by **NetHandle*
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
-    return;
-  }
-
-  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  })
-});
-```
+See [getConnectionProperties](#getconnectionproperties)

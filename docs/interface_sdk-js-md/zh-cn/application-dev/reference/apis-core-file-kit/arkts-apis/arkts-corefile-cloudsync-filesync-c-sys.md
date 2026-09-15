@@ -42,6 +42,10 @@ constructor(bundleName: string)
 **示例**
 
 ```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
 let fileSync = new cloudSync.FileSync("com.ohos.demo")
 ```
 

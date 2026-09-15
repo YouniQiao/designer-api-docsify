@@ -55,6 +55,17 @@ data.disableCellularData((err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.disableCellularData().then(() => {
+    console.info(`disableCellularData success.`);
+}).catch((err: BusinessError) => {
+    console.error(`disableCellularData fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## disableCellularData
 
@@ -90,13 +101,4 @@ function disableCellularData(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.disableCellularData().then(() => {
-    console.info(`disableCellularData success.`);
-}).catch((err: BusinessError) => {
-    console.error(`disableCellularData fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [disableCellularData](#disablecellulardata)

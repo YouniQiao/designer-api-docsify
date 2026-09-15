@@ -40,3 +40,17 @@ Add a Bonjour (DNS-SD) local P2P service description and register it.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | The Wi-Fi service is not started properly, or there is an Wi-Fi service error. |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) | Wi-Fi STA disabled. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let txtRecord: Map<string, string> = new Map();
+  txtRecord.set("name", "xxx");
+  wifiManager.addDnsSdLocalP2pService("instanceName", "_http._tcp", txtRecord, "serviceName");
+} catch (error) {
+  console.error("failed: " + JSON.stringify(error));
+}
+```

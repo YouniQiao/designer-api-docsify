@@ -514,12 +514,6 @@ off(type: 'videoSizeChange'): void
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 
-**示例**
-
-```TypeScript
-avCastController.off('videoSizeChange');
-```
-
 ## off('error')
 
 ```TypeScript
@@ -1033,16 +1027,6 @@ on(type: 'videoSizeChange', callback: (width: number, height: number) => void): 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-
-**示例**
-
-```TypeScript
-// 需先通过avSession.getAVCastController获取avCastController实例。
-avCastController.on('videoSizeChange', (width: number, height: number) => {
-  console.info(`width ：${width} `);
-  console.info(`height：${height} `);
-});
-```
 
 ## on('error')
 

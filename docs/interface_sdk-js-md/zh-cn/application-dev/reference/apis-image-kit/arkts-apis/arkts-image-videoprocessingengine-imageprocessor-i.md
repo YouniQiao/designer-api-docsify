@@ -63,6 +63,18 @@ async function enhanceDetail(sourceImage: image.PixelMap, width: number, height:
 }
 ```
 
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
+  await videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // 示例：scale可配置为2.0。
+  let enhancedPixelMap: Promise<image.PixelMap> =
+    imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
+
 ## enhanceDetail
 
 ```TypeScript
@@ -101,17 +113,7 @@ enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel):
 
 **示例**
 
-```TypeScript
-import { image, videoProcessingEngine } from '@kit.ImageKit';
-
-async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
-  await videoProcessingEngine.initializeEnvironment();
-  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
-  // 示例：scale可配置为2.0。
-  let enhancedPixelMap: Promise<image.PixelMap> =
-    imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
-}
-```
+参见 [enhanceDetail](#enhancedetail)
 
 ## enhanceDetailSync
 
@@ -165,6 +167,18 @@ function enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: n
 }
 ```
 
+```TypeScript
+import { image, videoProcessingEngine } from '@kit.ImageKit';
+
+function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
+  videoProcessingEngine.initializeEnvironment();
+  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
+  // 示例：scale可配置为2.0。
+  let enhancedPixelMap: image.PixelMap = imageProcessor.enhanceDetailSync(
+    sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
+}
+```
+
 ## enhanceDetailSync
 
 ```TypeScript
@@ -204,14 +218,4 @@ enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLev
 
 **示例**
 
-```TypeScript
-import { image, videoProcessingEngine } from '@kit.ImageKit';
-
-function enhanceDetailSync(sourceImage: image.PixelMap, scale: number) {
-  videoProcessingEngine.initializeEnvironment();
-  let imageProcessor = videoProcessingEngine.create() as videoProcessingEngine.ImageProcessor;
-  // 示例：scale可配置为2.0。
-  let enhancedPixelMap: image.PixelMap = imageProcessor.enhanceDetailSync(
-    sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
-}
-```
+参见 [enhanceDetailSync](#enhancedetailsync)

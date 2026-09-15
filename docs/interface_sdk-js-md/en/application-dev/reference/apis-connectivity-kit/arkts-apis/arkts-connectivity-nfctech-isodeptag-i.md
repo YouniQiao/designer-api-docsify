@@ -133,6 +133,34 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the correct isoDep tag by using the tag.TagInfo API in @ohos.nfc.tag.
+function nfcTechDemo() {
+    // Connect the tag if it has not been connected.
+    if (!isoDep.isTagConnected()) {
+        if (!isoDep.connectTag()) {
+            console.error("isoDep connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        isoDep.isExtendedApduSupported((err: BusinessError, response: boolean) => {
+            if (err) {
+                console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${err.code}, message: ${err. message}`);
+            } else {
+                console.info("isoDep isExtendedApduSupported AsyncCallback response: " + response);
+            }
+        });
+    } catch (businessError) {
+        console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${(businessError as Business).code}, message: ${(businessError as Business).message}`);
+    }
+}
+```
+
 ## isExtendedApduSupported
 
 ```TypeScript
@@ -166,30 +194,4 @@ Checks whether extended APDUs are supported. This API uses an asynchronous callb
 
 **Examples**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the correct isoDep tag by using the tag.TagInfo API in @ohos.nfc.tag.
-function nfcTechDemo() {
-    // Connect the tag if it has not been connected.
-    if (!isoDep.isTagConnected()) {
-        if (!isoDep.connectTag()) {
-            console.error("isoDep connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        isoDep.isExtendedApduSupported((err: BusinessError, response: boolean) => {
-            if (err) {
-                console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${err.code}, message: ${err. message}`);
-            } else {
-                console.info("isoDep isExtendedApduSupported AsyncCallback response: " + response);
-            }
-        });
-    } catch (businessError) {
-        console.error(`isoDep isExtendedApduSupported AsyncCallback Code: ${(businessError as Business).code}, message: ${(businessError as Business).message}`);
-    }
-}
-```
+See [isExtendedApduSupported](#isextendedapdusupported)

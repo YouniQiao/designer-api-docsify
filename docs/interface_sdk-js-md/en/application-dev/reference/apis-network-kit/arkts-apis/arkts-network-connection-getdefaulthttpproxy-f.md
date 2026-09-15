@@ -54,6 +54,17 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
+  console.info(JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.info(JSON.stringify(error));
+});
+```
+
 
 ## getDefaultHttpProxy
 
@@ -90,13 +101,4 @@ Obtains the default HTTP proxy configuration of the network. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getDefaultHttpProxy().then((data: connection.HttpProxy) => {
-  console.info(JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.info(JSON.stringify(error));
-});
-```
+See [getDefaultHttpProxy](#getdefaulthttpproxy)

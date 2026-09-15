@@ -30,27 +30,6 @@ RowSplit()
 
 ## 示例
 
-RowSplit的基本用法。实现分割线可拖动的横向布局。
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct RowSplitExample {
-  build() {
-    Column() {
-      Text('The second line can be dragged').fontSize(9).fontColor(0xCCCCCC).width('90%')
-      // 创建RowSplit组件，实现横向布局
-      RowSplit() {
-        Text('1').width('10%').height(100).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-        Text('2').width('10%').height(100).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
-        Text('3').width('10%').height(100).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-        Text('4').width('10%').height(100).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
-        Text('5').width('10%').height(100).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
-      }
-      .resizeable(true) // 可拖拽
-      .width('90%').height(100)
-    }.width('100%').margin({ top: 5 })
-  }
-}
+RowSplit的基本用法。实现分割线可拖动的横向布局。
 ```

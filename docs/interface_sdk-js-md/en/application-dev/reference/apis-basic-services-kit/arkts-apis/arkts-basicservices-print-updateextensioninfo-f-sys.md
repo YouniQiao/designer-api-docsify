@@ -53,6 +53,18 @@ print.updateExtensionInfo(info, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let info : string = 'WIFI_INACTIVE';
+print.updateExtensionInfo(info).then(() => {
+    console.info('updateExtensionInfo success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## updateExtensionInfo
 
@@ -92,14 +104,4 @@ Updates the printer extension information. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info).then(() => {
-    console.info('updateExtensionInfo success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
-});
-```
+See [updateExtensionInfo](#updateextensioninfo)

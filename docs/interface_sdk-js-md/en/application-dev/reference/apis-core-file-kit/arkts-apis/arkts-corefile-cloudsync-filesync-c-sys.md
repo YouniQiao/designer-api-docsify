@@ -42,6 +42,10 @@ A constructor used to create a **FileSync** instance.
 **Examples**
 
 ```TypeScript
+let fileSync = new cloudSync.FileSync()
+```
+
+```TypeScript
 let fileSync = new cloudSync.FileSync("com.ohos.demo")
 ```
 

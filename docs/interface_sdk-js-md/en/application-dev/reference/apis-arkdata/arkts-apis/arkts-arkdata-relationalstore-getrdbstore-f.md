@@ -59,58 +59,12 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 **Examples**
 
-FA model:
-
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG, async (err: BusinessError, rdbStore: relationalStore.RdbStore) => {
-  if (err) {
-    console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    return;
-  }
-  console.info('Get RdbStore successfully.');
-  store = rdbStore;
-  // Perform subsequent operations after the rdbStore instance is successfully obtained.
-});
+FA model:
 ```
 
-Stage model:
-
 ```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG, async (err: BusinessError, rdbStore: relationalStore.RdbStore) => {
-      if (err) {
-        console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-        return;
-      }
-      console.info('Get RdbStore successfully.');
-      store = rdbStore;
-      // Perform subsequent operations after the rdbStore instance is successfully obtained.
-    });
-  }
-}
+Stage model:
 ```
 
 
@@ -172,50 +126,4 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 **Examples**
 
-FA model:
-
-```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-let context = featureAbility.getContext();
-
-const STORE_CONFIG: relationalStore.StoreConfig = {
-  name: "RdbTest.db",
-  securityLevel: relationalStore.SecurityLevel.S3
-};
-
-relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-  store = rdbStore;
-  console.info('Get RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-});
-```
-
-Stage model:
-
-```TypeScript
-import { UIAbility } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let store: relationalStore.RdbStore | undefined = undefined;
-
-class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    const STORE_CONFIG: relationalStore.StoreConfig = {
-      name: "RdbTest.db",
-      securityLevel: relationalStore.SecurityLevel.S3
-    };
-
-    relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
-      store = rdbStore;
-      console.info('Get RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
-    });
-  }
-}
-```
+See [getRdbStore](#getrdbstore)

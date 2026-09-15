@@ -54,6 +54,18 @@ function createPixelMapFromSurface(surfaceId: string) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurface(surfaceId: string) {
+  image.createPixelMapFromSurface(surfaceId).then((pixelMap: image.PixelMap) => {
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
+
 
 ## createPixelMapFromSurface
 
@@ -89,14 +101,4 @@ Creates a PixelMap object from surface id.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapFromSurface(surfaceId: string) {
-  image.createPixelMapFromSurface(surfaceId).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
-  });
-}
-```
+参见 [createPixelMapFromSurface](#createpixelmapfromsurface)

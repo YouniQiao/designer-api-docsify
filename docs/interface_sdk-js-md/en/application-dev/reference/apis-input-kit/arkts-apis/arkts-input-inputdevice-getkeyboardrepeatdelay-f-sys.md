@@ -64,6 +64,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Obtaining the Key Repeat Delay
+            inputDevice.getKeyboardRepeatDelay().then((delay: number) => {
+              console.info(`Succeeded in getting keyboard repeat delay.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getKeyboardRepeatDelay
 
@@ -94,29 +121,4 @@ Obtains the keyboard repeat delay. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Obtaining the Key Repeat Delay
-            inputDevice.getKeyboardRepeatDelay().then((delay: number) => {
-              console.info(`Succeeded in getting keyboard repeat delay.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get keyboard repeat delay, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [getKeyboardRepeatDelay](#getkeyboardrepeatdelay)

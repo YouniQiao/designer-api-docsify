@@ -64,6 +64,28 @@ avSession.sendSystemControlCommand(avcommand, () => {
 });
 ```
 
+```TypeScript
+let cmd : avSession.AVControlCommandType = 'play';
+// let cmd : avSession.AVControlCommandType = 'pause';
+// let cmd : avSession.AVControlCommandType = 'stop';
+// let cmd : avSession.AVControlCommandType = 'playNext';
+// let cmd : avSession.AVControlCommandType = 'playPrevious';
+// let cmd : avSession.AVControlCommandType = 'fastForward';
+// let cmd : avSession.AVControlCommandType = 'rewind';
+let avcommand: avSession.AVControlCommand = {command:cmd};
+// let cmd : avSession.AVControlCommandType = 'seek';
+// let avcommand = {command:cmd, parameter:10};
+// let cmd : avSession.AVControlCommandType = 'setSpeed';
+// let avcommand = {command:cmd, parameter:2.6};
+// let cmd : avSession.AVControlCommandType = 'setLoopMode';
+// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
+// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
+// let avcommand = {command:cmd, parameter:"false"};
+avSession.sendSystemControlCommand(avcommand).then(() => {
+  console.info('Succeeded in sending system control command.');
+});
+```
+
 
 ## sendSystemControlCommand
 
@@ -106,24 +128,4 @@ Send system control command.The system automatically selects the recipient.
 
 **Examples**
 
-```TypeScript
-let cmd : avSession.AVControlCommandType = 'play';
-// let cmd : avSession.AVControlCommandType = 'pause';
-// let cmd : avSession.AVControlCommandType = 'stop';
-// let cmd : avSession.AVControlCommandType = 'playNext';
-// let cmd : avSession.AVControlCommandType = 'playPrevious';
-// let cmd : avSession.AVControlCommandType = 'fastForward';
-// let cmd : avSession.AVControlCommandType = 'rewind';
-let avcommand: avSession.AVControlCommand = {command:cmd};
-// let cmd : avSession.AVControlCommandType = 'seek';
-// let avcommand = {command:cmd, parameter:10};
-// let cmd : avSession.AVControlCommandType = 'setSpeed';
-// let avcommand = {command:cmd, parameter:2.6};
-// let cmd : avSession.AVControlCommandType = 'setLoopMode';
-// let avcommand = {command:cmd, parameter:avSession.LoopMode.LOOP_MODE_SINGLE};
-// let cmd : avSession.AVControlCommandType = 'toggleFavorite';
-// let avcommand = {command:cmd, parameter:"false"};
-avSession.sendSystemControlCommand(avcommand).then(() => {
-  console.info('Succeeded in sending system control command.');
-});
-```
+See [sendSystemControlCommand](#sendsystemcontrolcommand)

@@ -39,6 +39,16 @@ A constructor used to create a **MessageOption** object.
 import { rpc } from '@kit.IPCKit';
 
 class TestRemoteObject extends rpc.MessageOption {
+  constructor(async: boolean) {
+    super(async);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
   constructor(syncFlags?: number,waitTime?: number) {
     super(syncFlags,waitTime);
   }
@@ -73,6 +83,16 @@ import { rpc } from '@kit.IPCKit';
 class TestRemoteObject extends rpc.MessageOption {
   constructor(async: boolean) {
     super(async);
+  }
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(syncFlags?: number,waitTime?: number) {
+    super(syncFlags,waitTime);
   }
 }
 ```

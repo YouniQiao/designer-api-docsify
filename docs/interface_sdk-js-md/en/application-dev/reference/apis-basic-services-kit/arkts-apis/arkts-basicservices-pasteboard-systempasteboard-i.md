@@ -53,6 +53,17 @@ systemPasteboard.clear((err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clear().then((data) => {
+    console.info('Succeeded in clearing the PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## clear
 
 ```TypeScript
@@ -77,16 +88,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clear().then((data) => {
-    console.info('Succeeded in clearing the PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [clear](#clear)
 
 ## clearData
 
@@ -129,6 +131,17 @@ systemPasteboard.clearData((err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.clearData().then((data: void) => {
+    console.info('Succeeded in clearing the pasteboard.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## clearData
 
 ```TypeScript
@@ -151,16 +164,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.clearData().then((data: void) => {
-    console.info('Succeeded in clearing the pasteboard.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [clearData](#cleardata)
 
 ## clearDataSync
 
@@ -333,6 +337,20 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the SystemPasteboard object.
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// Read the system clipboard content.
+systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
+    // Obtain the plain text content from the pasteboard.
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## getData
 
 ```TypeScript
@@ -367,6 +385,22 @@ While most applications must [request permissions to access the pasteboard](../.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 and later |
 
 **Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the SystemPasteboard object.
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// Read the system clipboard content.
+systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
+    if (err) {
+        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        return;
+    }
+    // Obtain the plain text content from the pasteboard.
+    let text: string = pasteData.getPrimaryText();
+});
+```
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -630,6 +664,20 @@ systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteDa
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain the SystemPasteboard object.
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// Read the system clipboard content.
+systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
+    // Obtain the plain text content from the pasteboard.
+    let text: string = pasteData.getPrimaryText();
+}).catch((err: BusinessError) => {
+    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## getPasteData
 
 ```TypeScript
@@ -654,19 +702,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Obtain the SystemPasteboard object.
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// Read the system clipboard content.
-systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
-    // Obtain the plain text content from the pasteboard.
-    let text: string = pasteData.getPrimaryText();
-}).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [getPasteData](#getpastedata)
 
 ## getUnifiedData
 
@@ -805,6 +841,17 @@ systemPasteboard.hasData((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## hasData
 
 ```TypeScript
@@ -827,16 +874,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [hasData](#hasdata)
 
 ## hasDataSync
 
@@ -964,6 +1002,17 @@ systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.hasPasteData().then((data: boolean) => {
+    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
+}).catch((err: BusinessError) => {
+    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## hasPasteData
 
 ```TypeScript
@@ -988,16 +1037,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.hasPasteData().then((data: boolean) => {
-    console.info(`Succeeded in checking the PasteData. Data: ${data}`);
-}).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [hasPasteData](#haspastedata)
 
 ## hasRemoteData
 
@@ -1091,19 +1131,6 @@ Unsubscribes the content change event of the system pasteboard.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
-**Examples**
-
-```TypeScript
-// Obtain the SystemPasteboard object.
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// Define a callback to be invoked when the pasteboard content changes.
-let listener = () => {
-    console.info('The system pasteboard has changed.');
-};
-// Unsubscribe from the pasteboard content change event.
-systemPasteboard.off('update', listener);
-```
-
 ## offRemoteUpdate
 
 ```TypeScript
@@ -1121,16 +1148,6 @@ Remove a callback invoked when remote pasteboard content changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
-
-**Examples**
-
-```TypeScript
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-let listener = () => {
-    console.info('The remote pasteboard has changed.');
-};
-systemPasteboard.offRemoteUpdate(listener);
-```
 
 ## on('update')
 
@@ -1156,19 +1173,6 @@ Subscribes the content change event of the system pasteboard.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-
-**Examples**
-
-```TypeScript
-// Obtain the SystemPasteboard object.
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// Define a callback to be invoked when the pasteboard content changes.
-let listener = () => {
-    console.info('The system pasteboard has changed.');
-};
-// Subscribe to the pasteboard content change event.
-systemPasteboard.on('update', listener);
-```
 
 ## onRemoteUpdate
 
@@ -1322,6 +1326,21 @@ systemPasteboard.setData(pasteData, (err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Create a PasteData object of the plain text type.
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
+// Obtain the SystemPasteboard object.
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+// Write data to the system pasteboard.
+systemPasteboard.setData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## setData
 
 ```TypeScript
@@ -1358,20 +1377,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Create a PasteData object of the plain text type.
-let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
-// Obtain the SystemPasteboard object.
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// Write data to the system pasteboard.
-systemPasteboard.setData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [setData](#setdata)
 
 ## setDataSync
 
@@ -1456,6 +1462,18 @@ systemPasteboard.setPasteData(pasteData, (err, data) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setPasteData(pasteData).then((data: void) => {
+    console.info('Succeeded in setting PasteData.');
+}).catch((err: BusinessError) => {
+    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+});
+```
+
 ## setPasteData
 
 ```TypeScript
@@ -1486,17 +1504,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-systemPasteboard.setPasteData(pasteData).then((data: void) => {
-    console.info('Succeeded in setting PasteData.');
-}).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
-});
-```
+See [setPasteData](#setpastedata)
 
 ## setUnifiedData
 

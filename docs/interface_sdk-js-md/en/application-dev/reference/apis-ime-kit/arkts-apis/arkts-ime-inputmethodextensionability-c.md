@@ -38,12 +38,36 @@ Called when the **InputMethodExtensionAbility** is started to implement initiali
 **Examples**
 
 ```TypeScript
-import { InputMethodExtensionAbility } from '@kit.IMEKit';
+import { InputMethodExtensionAbility, inputMethodEngine } from '@kit.IMEKit';
 import { Want } from '@kit.AbilityKit';
 
 class InputMethodExt extends InputMethodExtensionAbility {
   onCreate(want: Want): void {
-    console.info('onCreate, want:' + want.abilityName);
+    console.info(`onCreate, want: ${want.abilityName}`);
+
+    // Obtain the input method ability object.
+    let ability: inputMethodEngine.InputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+    // Obtain the keyboard delegate object.
+    let keyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.getKeyboardDelegate();
+
+    // Create a panel.
+    let panelInfo: inputMethodEngine.PanelInfo = {
+      type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+      flag: inputMethodEngine.PanelFlag.FLG_FIXED
+    };
+    ability.createPanel(this.context, panelInfo, (err, panel) => {
+      if (err) {
+        console.error(`Failed to create panel: ${err.code}`);
+        return;
+      }
+      console.info('Succeeded in creating panel.');
+    });
+
+    // Subscribe to the input method binding event.
+    ability.on('inputStart', (kbController, inputClient) => {
+      console.info('Input method bound to client.');
+    });
   }
 }
 ```
@@ -69,6 +93,7 @@ import { InputMethodExtensionAbility } from '@kit.IMEKit';
 
 class InputMethodExt extends InputMethodExtensionAbility {
   onDestroy(): void {
+    // Destroy the panel, cancel event subscriptions, and perform other cleanup tasks.
     console.info('onDestroy');
   }
 }

@@ -46,6 +46,17 @@ sim.hasSimCard(0, (err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.hasSimCard(0).then((data: boolean) => {
+    console.info(`hasSimCard success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`hasSimCard failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## hasSimCard
 
@@ -83,13 +94,4 @@ Checks whether the SIM card in the specified slot is installed. This API uses a 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.hasSimCard(0).then((data: boolean) => {
-    console.info(`hasSimCard success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`hasSimCard failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [hasSimCard](#hassimcard)

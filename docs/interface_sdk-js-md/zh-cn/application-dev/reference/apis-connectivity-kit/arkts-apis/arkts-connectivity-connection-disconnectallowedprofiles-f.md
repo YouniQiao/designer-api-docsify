@@ -64,6 +64,21 @@ try {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
+    connection.disconnectAllowedProfiles('68:13:24:79:4C:8C', (err: BusinessError) => {
+        if (err) {
+            console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+            return;
+        }
+        console.info('disconnectAllowedProfiles, err: ' + JSON.stringify(err));
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
     connection.disconnectAllowedProfiles('68:13:24:79:4C:8C').then(() => {
         console.info('disconnectAllowedProfiles');
     }, (err: BusinessError) => {

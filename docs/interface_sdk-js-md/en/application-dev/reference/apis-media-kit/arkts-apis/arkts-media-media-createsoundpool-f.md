@@ -66,6 +66,28 @@ media.createSoundPool(5, audioRendererInfo, (error, soundPool_: media.SoundPool)
 });
 ```
 
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let soundPool: media.SoundPool;
+let audioRendererInfo: audio.AudioRendererInfo = {
+  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
+  rendererFlags : 0
+};
+
+media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
+  if (soundpool_) {
+    soundPool = soundpool_;
+    console.info('Succeeded in creating SoundPool');
+  } else {
+    console.error('Failed to create SoundPool');
+  }
+}, (error: BusinessError) => {
+  console.error(`soundpool catchCallback, error message:${error.message}`);
+});
+```
+
 
 ## createSoundPool
 
@@ -108,24 +130,4 @@ Creates a SoundPool instance. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { audio } from '@kit.AudioKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let soundPool: media.SoundPool;
-let audioRendererInfo: audio.AudioRendererInfo = {
-  usage : audio.StreamUsage.STREAM_USAGE_MUSIC,
-  rendererFlags : 0
-};
-
-media.createSoundPool(5, audioRendererInfo).then((soundpool_: media.SoundPool) => {
-  if (soundpool_) {
-    soundPool = soundpool_;
-    console.info('Succeeded in creating SoundPool');
-  } else {
-    console.error('Failed to create SoundPool');
-  }
-}, (error: BusinessError) => {
-  console.error(`soundpool catchCallback, error message:${error.message}`);
-});
-```
+See [createSoundPool](#createsoundpool)

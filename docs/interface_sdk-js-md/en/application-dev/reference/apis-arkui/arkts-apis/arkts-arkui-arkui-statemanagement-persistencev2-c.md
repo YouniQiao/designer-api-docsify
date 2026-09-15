@@ -46,42 +46,8 @@ Stores key-value pair data on the application disk. If the given key already exi
 
 **Examples**
 
-The following is the sample code for globalConnect to persist data of the Map type:
-
 ```TypeScript
-import { PersistenceV2 } from '@kit.ArkUI';
-
-@Entry
-@ComponentV2
-struct Page1 {
-  // globalConnect supports the persistence of data of the Map type.
-  @Local map: Map<number, number> = PersistenceV2.globalConnect({
-    type: Map<number, number>, defaultCreator: () => new Map<number, number>()
-  })!;
-  output: string[] = [];
-
-  // Start the application. When you access the application for the first time, the following information is displayed: restored Map.size=0, map.get(0)=undefined, map.get(1)=undefined, map.get(2)=undefined.
-  // Stop the application. When you access the application for the second time, the following information is displayed: restored Map.size=1, map.get(0)=0, map.get(1)=undefined, map.get(2)=undefined.
-  // Stop the application. When you access the application for the third time, the following information is displayed: restored Map.size=2, map.get(0)=0, map.get(1)=1, map.get(2)=undefined.
-  // Stop the application. When you access the application for the fourth time, the following information is displayed: restored Map.size=3, map.get(0)=0, map.get(1)=1, map.get(2)=2.
-  aboutToAppear(): void {
-    const restoredMapSize = this.map.size;
-    this.output.push(`restored Map.size=${restoredMapSize}, map.get(0)=${this.map.get(0)}, map.get(1)=${this.map.get(1)}, map.get(2)=${this.map.get(2)}`);
-    this.map.set(restoredMapSize, restoredMapSize);
-    // Manual persistence is required.
-    PersistenceV2.save('Map');
-  }
-
-  build() {
-    Column() {
-      Row() {
-        Text(this.output.join('\n\n'))
-          .fontSize(24)
-      }
-    }
-    .width('100%')
-  }
-}
+The following is the sample code for globalConnect to persist data of the Map type:
 ```
 
 ## globalConnect

@@ -50,6 +50,16 @@ policy.setBackgroundAllowed(true, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+policy.setBackgroundAllowed(true).then(() => {
+  console.info("setBackgroundAllowed success");
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
+```
+
 
 ## setBackgroundAllowed
 
@@ -92,12 +102,4 @@ function setBackgroundAllowed(isAllowed: boolean): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.setBackgroundAllowed(true).then(() => {
-  console.info("setBackgroundAllowed success");
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-});
-```
+参见 [setBackgroundAllowed](#setbackgroundallowed)

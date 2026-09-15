@@ -43,6 +43,17 @@ import { intl } from '@kit.LocalizationKit';
 let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 ```
 
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用zh-CN区域ID创建RelativeTimeFormat对象，localeMatcher设置为lookup，numeric设置为always，style设置为long
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
+  localeMatcher: 'lookup',
+  numeric: 'always',
+  style: 'long'
+});
+```
+
 ## constructor
 
 ```TypeScript
@@ -69,6 +80,13 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 | options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | 否 | 创建相对时间格式化对象时的配置项。<br>默认值：所有属性都取默认值时的配置项。 |
 
 **示例**
+
+```TypeScript
+import { intl } from '@kit.LocalizationKit';
+
+// 使用系统区域创建RelativeTimeFormat对象
+let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
+```
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';

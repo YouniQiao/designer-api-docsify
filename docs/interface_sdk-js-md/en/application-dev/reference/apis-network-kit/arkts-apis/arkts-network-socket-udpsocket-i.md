@@ -60,6 +60,22 @@ udp.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 8080
+}
+udp.bind(bindAddr).then(() => {
+  console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+});
+```
+
 ## bind
 
 ```TypeScript
@@ -94,6 +110,24 @@ Binds the IP address and port number. The port number can be customized or rando
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx', // Local IP address
+  port: 1234
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+});
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -153,6 +187,18 @@ udp.close((err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.close().then(() => {
+  console.info('close success');
+}).catch((err: BusinessError) => {
+  console.error('close fail');
+});
+```
+
 ## close
 
 ```TypeScript
@@ -180,6 +226,20 @@ Closes a UDP socket connection. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+udp.close((err: BusinessError) => {
+  if (err) {
+    console.error('close fail');
+    return;
+  }
+  console.info('close success');
+})
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -366,6 +426,29 @@ udp.bind(bindAddr, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  udp.getState().then((data: socket.SocketStateBase) => {
+    console.info('getState success:' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('getState fail' + JSON.stringify(err));
+  });
+});
+```
+
 ## getState
 
 ```TypeScript
@@ -412,6 +495,31 @@ udp.bind(bindAddr, (err: BusinessError) => {
     console.error('bind fail');
     return;
   }
+  console.error('bind success');
+  udp.getState((err: BusinessError, data: socket.SocketStateBase) => {
+    if (err) {
+      console.error('getState fail');
+      return;
+    }
+    console.info('getState success:' + JSON.stringify(data));
+  })
+})
+```
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
   console.info('bind success');
   udp.getState().then((data: socket.SocketStateBase) => {
     console.info('getState success:' + JSON.stringify(data));
@@ -440,30 +548,6 @@ Unsubscribes from **message** events of the **UDPSocket** object. This API uses 
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let messageView = '';
-let callback = (value: socket.SocketMessageInfo) => {
-  for (let i: number = 0; i < value.message.byteLength; i++) {
-    let uint8Array = new Uint8Array(value.message) 
-    let messages = uint8Array[i]
-    let message = String.fromCharCode(messages);
-    messageView += message;
-  }
-  console.info('on message message: ' + JSON.stringify(messageView));
-  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
-}
-udp.on('message', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('message', callback);
-udp.off('message');
-```
-
 ## off('listening' | 'close')
 
 ```TypeScript
@@ -483,29 +567,6 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 | type | 'listening' &#124; 'close' | Yes | Event type.<br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback1 = () => {
-  console.info("on listening, success");
-}
-udp.on('listening', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('listening', callback1);
-udp.off('listening');
-let callback2 = () => {
-  console.info("on close, success");
-}
-udp.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('close', callback2);
-udp.off('close');
-```
-
 ## off('listening' | 'close')
 
 ```TypeScript
@@ -524,10 +585,6 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 | --- | --- | --- | --- |
 | type | 'listening' &#124; 'close' | Yes | Event type.<br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
-
-**Examples**
-
-See off
 
 ## off('error')
 
@@ -548,22 +605,6 @@ Unsubscribes from **error** events of the **UDPSocket** object. This API uses an
 | type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-let callback = (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-udp.on('error', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-udp.off('error', callback);
-udp.off('error');
-```
-
 ## on('message')
 
 ```TypeScript
@@ -583,27 +624,6 @@ Subscribes to **message** events of the **UDPSocket** object. This API uses an a
 | type | 'message' | Yes | Event type.<br> **message**: message receiving event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-
-udp.on('message', (value: socket.SocketMessageInfo) => {
-  let messageView = '';
-  let uint8Array = new Uint8Array(value.message); 
-  for (let i: number = 0; i < value.message.byteLength; i++) {
-    let messages = uint8Array[i];
-    let message = String.fromCharCode(messages);
-    messageView += message;
-  }
-  console.info('on message message: ' + JSON.stringify(messageView));
-  console.info('remoteInfo: ' + JSON.stringify(value.remoteInfo));
-});
-```
-
 ## on('listening' | 'close')
 
 ```TypeScript
@@ -623,21 +643,6 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 | type | 'listening' &#124; 'close' | Yes | Event type.<br> <br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('listening', () => {
-  console.info("on listening success");
-});
-udp.on('close', () => {
-  console.info("on close success");
-});
-```
-
 ## on('listening' | 'close')
 
 ```TypeScript
@@ -656,10 +661,6 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 | --- | --- | --- | --- |
 | type | 'listening' &#124; 'close' | Yes | Event type.<br> <br>- **listening**: data packet message event. <br>- **close**: close event. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-**Examples**
-
-See on
 
 ## on('error')
 
@@ -679,18 +680,6 @@ Subscribes to **error** events of the **UDPSocket** object. This API uses an asy
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br> **error**: error event. |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
-
-**Examples**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
-udp.on('error', (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err))
-});
-```
 
 ## send
 
@@ -765,7 +754,9 @@ udp.send(sendOptions, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
 Example (with socket proxy):
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -774,40 +765,26 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
 let bindAddr: socket.NetAddress = {
   address: '192.168.xx.xxx', // Local IP address
-  port: 1234
+  port: 8080
 }
-udp.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
+udp.bind(bindAddr).then(() => {
   console.info('bind success');
+}).catch((err: BusinessError) => {
+  console.error('bind fail');
+  return;
 });
 let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',  // Peer IP address
+  address: '192.168.xx.xxx', // Peer IP address
   port: 8080
-}
-let socks5Server: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let proxyOptions: socket.ProxyOptions = {
-  type : 1,
-  address: socks5Server,
-  username: "xxx",
-  password: "xxx"
 }
 let sendOptions: socket.UDPSendOptions = {
   data: 'Hello, server!',
-  address: netAddress,
-  proxy: proxyOptions,
+  address: netAddress
 }
-udp.send(sendOptions, (err: BusinessError) => {
-  if (err) {
-    console.error('send fail');
-    return;
-  }
+udp.send(sendOptions).then(() => {
   console.info('send success');
+}).catch((err: BusinessError) => {
+  console.error('send fail');
 });
 ```
 
@@ -863,30 +840,35 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
 let bindAddr: socket.NetAddress = {
   address: '192.168.xx.xxx', // Local IP address
-  port: 8080
+  port: 1234
 }
-udp.bind(bindAddr).then(() => {
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
   console.info('bind success');
-}).catch((err: BusinessError) => {
-  console.error('bind fail');
-  return;
 });
 let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx', // Peer IP address
+  address: '192.168.xx.xxx',  // Peer IP address
   port: 8080
 }
 let sendOptions: socket.UDPSendOptions = {
   data: 'Hello, server!',
   address: netAddress
 }
-udp.send(sendOptions).then(() => {
+udp.send(sendOptions, (err: BusinessError) => {
+  if (err) {
+    console.error('send fail');
+    return;
+  }
   console.info('send success');
-}).catch((err: BusinessError) => {
-  console.error('send fail');
 });
 ```
 
+```TypeScript
 Example (with socket proxy):
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -907,20 +889,9 @@ let netAddress: socket.NetAddress = {
   address: '192.168.xx.xxx', // Peer IP address
   port: 8080
 }
-let socks5Server: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let proxyOptions: socket.ProxyOptions = {
-  type : 1,
-  address: socks5Server,
-  username: "xxx",
-  password: "xxx"
-}
 let sendOptions: socket.UDPSendOptions = {
   data: 'Hello, server!',
-  address: netAddress,
-  proxy: proxyOptions,
+  address: netAddress
 }
 udp.send(sendOptions).then(() => {
   console.info('send success');
@@ -996,6 +967,37 @@ udp.bind(bindAddr, (err: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  let udpextraoptions: socket.UDPExtraOptions = {
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    reuseAddress: false,
+    socketTimeout: 6000,
+    broadcast: true
+  }
+  udp.setExtraOptions(udpextraoptions).then(() => {
+    console.info('setExtraOptions success');
+  }).catch((err: BusinessError) => {
+    console.error('setExtraOptions fail');
+  });
+})
+```
+
 ## setExtraOptions
 
 ```TypeScript
@@ -1034,6 +1036,39 @@ Sets other properties of the **UDPSocket** object. This API uses a promise to re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 **Examples**
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let udp: socket.UDPSocket = socket.constructUDPSocketInstance();
+
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+udp.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  let udpextraoptions: socket.UDPExtraOptions = {
+    receiveBufferSize: 8192,
+    sendBufferSize: 8192,
+    reuseAddress: false,
+    socketTimeout: 6000,
+    broadcast: true
+  }
+  udp.setExtraOptions(udpextraoptions, (err: BusinessError) => {
+    if (err) {
+      console.error('setExtraOptions fail');
+      return;
+    }
+    console.info('setExtraOptions success');
+  })
+})
+```
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

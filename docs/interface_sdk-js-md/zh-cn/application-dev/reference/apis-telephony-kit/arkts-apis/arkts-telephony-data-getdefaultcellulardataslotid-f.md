@@ -39,6 +39,17 @@ data.getDefaultCellularDataSlotId((err: BusinessError, contextData: number) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.getDefaultCellularDataSlotId().then((contextData: number) => {
+    console.info(`getDefaultCellularDataSlotId success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`getDefaultCellularDataSlotId fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getDefaultCellularDataSlotId
 
@@ -60,13 +71,4 @@ function getDefaultCellularDataSlotId(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.getDefaultCellularDataSlotId().then((contextData: number) => {
-    console.info(`getDefaultCellularDataSlotId success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`getDefaultCellularDataSlotId fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [getDefaultCellularDataSlotId](#getdefaultcellulardataslotid)

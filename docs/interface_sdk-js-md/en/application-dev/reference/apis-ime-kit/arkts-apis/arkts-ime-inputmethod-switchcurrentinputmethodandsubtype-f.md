@@ -69,6 +69,23 @@ inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType, (err: Busi
 });
 ```
 
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching currentInputMethodAndSubtype.');
+  } else {
+    console.error('Failed to switchCurrentInputMethodAndSubtype.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## switchCurrentInputMethodAndSubtype
 
@@ -118,19 +135,4 @@ Switches to a specified subtype of a specified input method. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
+See [switchCurrentInputMethodAndSubtype](#switchcurrentinputmethodandsubtype)

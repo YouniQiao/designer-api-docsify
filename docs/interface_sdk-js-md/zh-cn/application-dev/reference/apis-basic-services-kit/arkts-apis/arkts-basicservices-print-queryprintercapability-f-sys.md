@@ -53,6 +53,18 @@ print.queryPrinterCapability(printerId, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let printerId: string = 'printerId_32';
+print.queryPrinterCapability(printerId).then(() => {
+    console.info('start query Printer success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to query printer capability. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## queryPrinterCapability
 
@@ -92,14 +104,4 @@ function queryPrinterCapability(printerId: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerId: string = 'printerId_32';
-print.queryPrinterCapability(printerId).then(() => {
-    console.info('start query Printer success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to query printer capability. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [queryPrinterCapability](#queryprintercapability)

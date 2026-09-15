@@ -60,6 +60,17 @@ connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"], (error: Busin
 })
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
+    console.info("success");
+}).catch((error: BusinessError) => {
+    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
+})
+```
+
 
 ## addCustomDnsRule
 
@@ -107,13 +118,4 @@ function addCustomDnsRule(host: string, ip: Array<string>): Promise<void>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.addCustomDnsRule("xxxx", ["xx.xx.xx.xx","xx.xx.xx.xx"]).then(() => {
-    console.info("success");
-}).catch((error: BusinessError) => {
-    console.error(`Failed to get request.Code:${error.code}, message:${error.message}`);
-})
-```
+参见 [addCustomDnsRule](#addcustomdnsrule)

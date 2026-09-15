@@ -54,6 +54,16 @@ call.postDialProceed(1, true, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.postDialProceed(1, true).then(() => {
+    console.info(`postDialProceed success.`);
+}).catch((err: BusinessError) => {
+    console.error(`postDialProceed fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## postDialProceed
 
@@ -100,12 +110,4 @@ If the called number is in the format of "common phone number + semicolon (;) + 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.postDialProceed(1, true).then(() => {
-    console.info(`postDialProceed success.`);
-}).catch((err: BusinessError) => {
-    console.error(`postDialProceed fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [postDialProceed](#postdialproceed)

@@ -66,6 +66,33 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options: systemTimer.TimerOptions = {
+  type: systemTimer.TIMER_TYPE_REALTIME,
+  repeat:false
+};
+let triggerTime: number = new Date().getTime();
+triggerTime += 3000;
+
+try {
+  systemTimer.createTimer(options).then((timerId: number) => {
+    systemTimer.startTimer(timerId, triggerTime).then(() => {
+      console.info(`Succeeded in starting timer.`);
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to start timer. Code: ${error.code}, message: ${error.message}`);
+    });
+    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 ## startTimer
 
@@ -103,29 +130,4 @@ function startTimer(timer: number, triggerTime: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let options: systemTimer.TimerOptions = {
-  type: systemTimer.TIMER_TYPE_REALTIME,
-  repeat:false
-};
-let triggerTime: number = new Date().getTime();
-triggerTime += 3000;
-
-try {
-  systemTimer.createTimer(options).then((timerId: number) => {
-    systemTimer.startTimer(timerId, triggerTime).then(() => {
-      console.info(`Succeeded in starting timer.`);
-    }).catch((error: BusinessError) => {
-      console.error(`Failed to start timer. Code: ${error.code}, message: ${error.message}`);
-    });
-    console.info(`Succeeded in creating timer. timerId: ${timerId}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to create timer. Code: ${error.code}, message: ${error.message}`);
-}
-```
+参见 [startTimer](#starttimer)

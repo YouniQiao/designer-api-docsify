@@ -63,6 +63,19 @@ let setSyncNotificationEnabledWithoutAppCallback = (err: BusinessError): void =>
 notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSyncNotificationEnabledWithoutAppCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Use the actual user ID when calling the API.
+let userId: number = 100;
+let enable: boolean = true;
+notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
+    console.info('setSyncNotificationEnabledWithoutApp success');
+}).catch((err: BusinessError) => {
+    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setSyncNotificationEnabledWithoutApp
 
@@ -110,15 +123,4 @@ Sets whether to enable the notification sync feature for devices where the appli
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use the actual user ID when calling the API.
-let userId: number = 100;
-let enable: boolean = true;
-notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable).then(() => {
-    console.info('setSyncNotificationEnabledWithoutApp success');
-}).catch((err: BusinessError) => {
-    console.error(`setSyncNotificationEnabledWithoutApp failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setSyncNotificationEnabledWithoutApp](#setsyncnotificationenabledwithoutapp)

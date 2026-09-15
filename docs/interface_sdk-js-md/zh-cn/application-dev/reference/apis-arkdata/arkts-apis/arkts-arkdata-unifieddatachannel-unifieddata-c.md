@@ -93,6 +93,10 @@ constructor(record: UnifiedRecord)
 **示例**
 
 ```TypeScript
+let unifiedData = new unifiedDataChannel.UnifiedData();
+```
+
+```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 let plainText : uniformDataStruct.PlainText = {
   uniformDataType: 'general.plain-text',
@@ -123,6 +127,17 @@ constructor()
 
 ```TypeScript
 let unifiedData = new unifiedDataChannel.UnifiedData();
+```
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent : 'This is a plain text example',
+  abstract : 'This is abstract'
+};
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
 
 ## getRecords

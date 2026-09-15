@@ -56,7 +56,8 @@ let blender : uiEffect.ColorfulBrightnessBlender =
     darkenWeight: 0.6,
     vibrancyStrength: 0.5,
     lumaDiff: 0.4,
-    hdrEnabled: true})
+    hdrEnabled: true,
+    tintedColorPercent: 1.0})
 
 @Entry
 @Component

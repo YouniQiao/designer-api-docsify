@@ -59,6 +59,41 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message', [123, 456, 789])
+})
+  .then(() => {
+    console.info(`pushNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
 class InnerParams {
   data3: number[];
 
@@ -81,6 +116,74 @@ router.pushNamedRoute({
   name: 'myPage',
   params: new RouterParams('message', [123, 456, 789])
 }, (err) => {
+  if (err) {
+    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('pushNamedRoute success');
+})
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message', [123, 456, 789])
+}, router.RouterMode.Standard)
+  .then(() => {
+    console.info(`pushNamedRoute finish`);
+  })
+  .catch((err: BusinessError) => {
+    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
+  data3: number[];
+
+  constructor(tuple: number[]) {
+    this.data3 = tuple;
+  }
+}
+
+class RouterParams {
+  data1: string;
+  data2: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.data1 = str;
+    this.data2 = new InnerParams(tuple);
+  }
+}
+
+router.pushNamedRoute({
+  name: 'myPage',
+  params: new RouterParams('message', [123, 456, 789])
+}, router.RouterMode.Standard, (err) => {
   if (err) {
     console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
     return;
@@ -145,40 +248,7 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 
 **示例**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-})
-  .then(() => {
-    console.info(`pushNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+参见 [pushNamedRoute](#pushnamedroute)
 
 
 ## pushNamedRoute
@@ -232,38 +302,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 
 **示例**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard, (err) => {
-  if (err) {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info('pushNamedRoute success');
-})
-```
+参见 [pushNamedRoute](#pushnamedroute)
 
 
 ## pushNamedRoute
@@ -322,37 +361,4 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 
 **示例**
 
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.pushNamedRoute({
-  name: 'myPage',
-  params: new RouterParams('message', [123, 456, 789])
-}, router.RouterMode.Standard)
-  .then(() => {
-    console.info(`pushNamedRoute finish`);
-  })
-  .catch((err: BusinessError) => {
-    console.error(`pushNamedRoute failed. Code: ${err.code}, message: ${err.message}`);
-  })
-```
+参见 [pushNamedRoute](#pushnamedroute)

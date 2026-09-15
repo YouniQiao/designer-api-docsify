@@ -37,6 +37,40 @@ Creates a **NumberFormat** object for rich text display.
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let integerTextStyle: TextStyle = new TextStyle({ fontColor: Color.Red });
+  let decimalTextStyle: TextStyle = new TextStyle({ fontColor: Color.Brown });
+  let fractionTextStyle: TextStyle = new TextStyle({ fontColor: Color.Blue });
+  let unitTextStyle: TextStyle = new TextStyle({ fontColor: Color.Green });
+
+  // Create a StyledNumberFormat object through intl.NumberFormat.
+  let numFmt: intl.NumberFormat = new intl.NumberFormat('zh', { style: 'unit', unit: 'percent' });
+  let styledNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(numFmt, {
+    integer: integerTextStyle,
+    decimal: decimalTextStyle,
+    fraction: fractionTextStyle,
+    unit: unitTextStyle
+  });
+
+  // Create a StyledNumberFormat object through SimpleNumberFormat.
+  let locale: intl.Locale = new intl.Locale('zh');
+  let simpleNumFmt: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('percent', locale);
+  let styledSimpleNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(simpleNumFmt, {
+    integer: integerTextStyle,
+    decimal: decimalTextStyle,
+    fraction: fractionTextStyle,
+    unit: unitTextStyle
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.StyledNumberFormat failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { i18n } from '@kit.LocalizationKit';
 
 try {
@@ -117,6 +151,40 @@ try {
 
   // Create a StyledNumberFormat object through SimpleNumberFormat.
   let locale: intl.Locale = new intl.Locale('zh');
+  let simpleNumFmt: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('percent', locale);
+  let styledSimpleNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(simpleNumFmt, {
+    integer: integerTextStyle,
+    decimal: decimalTextStyle,
+    fraction: fractionTextStyle,
+    unit: unitTextStyle
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.StyledNumberFormat failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let integerTextStyle: TextStyle = new TextStyle({ fontColor: Color.Red });
+  let decimalTextStyle: TextStyle = new TextStyle({ fontColor: Color.Brown });
+  let fractionTextStyle: TextStyle = new TextStyle({ fontColor: Color.Blue });
+  let unitTextStyle: TextStyle = new TextStyle({ fontColor: Color.Green });
+
+  // Create a StyledNumberFormat object through Intl.NumberFormat.
+  let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh', { style: 'unit', unit: 'percent' });
+  let styledNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(numFmt, {
+    integer: integerTextStyle,
+    decimal: decimalTextStyle,
+    fraction: fractionTextStyle,
+    unit: unitTextStyle
+  });
+
+  // Create a StyledNumberFormat object through SimpleNumberFormat.
+  let locale: Intl.Locale = new Intl.Locale('zh');
   let simpleNumFmt: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('percent', locale);
   let styledSimpleNumFmt: i18n.StyledNumberFormat = new i18n.StyledNumberFormat(simpleNumFmt, {
     integer: integerTextStyle,

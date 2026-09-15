@@ -69,6 +69,47 @@ bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, (err) => {
 });
 ```
 
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
+  if (err) {
+    console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing disallowed install bundles');
+});
+```
+
+```TypeScript
+import { bundleManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
+
+bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
+  console.info('Succeeded in removing disallowed install bundles');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeDisallowedInstallBundles
 
@@ -113,26 +154,7 @@ Removes the applications that cannot be installed by the user specified by **use
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
-  if (err) {
-    console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-    return;
-  }
-  console.info('Succeeded in removing disallowed install bundles');
-});
-```
+See [removeDisallowedInstallBundles](#removedisallowedinstallbundles)
 
 
 ## removeDisallowedInstallBundles
@@ -183,22 +205,4 @@ Removes the applications that cannot be installed by the current or specified us
 
 **Examples**
 
-```TypeScript
-import { bundleManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let appIds: Array<string> = ['com.example.******_******/******5t5CoBM='];
-
-bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100).then(() => {
-  console.info('Succeeded in removing disallowed install bundles');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to remove disallowed install bundles. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [removeDisallowedInstallBundles](#removedisallowedinstallbundles)

@@ -44,6 +44,13 @@ geolocation.getCachedGnssLocationsSize((err, size) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.getCachedGnssLocationsSize().then((result) => {
+    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
+});
+```
+
 
 ## getCachedGnssLocationsSize
 
@@ -71,9 +78,4 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.getCachedGnssLocationsSize().then((result) => {
-    console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
-});
-```
+See [getCachedGnssLocationsSize](#getcachedgnsslocationssize)

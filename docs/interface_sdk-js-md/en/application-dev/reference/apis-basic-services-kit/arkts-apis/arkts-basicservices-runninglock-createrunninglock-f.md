@@ -44,6 +44,16 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 });
 ```
 
+```TypeScript
+runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
+.then((lock: runningLock.RunningLock) => {
+    console.info('created running lock: ' + lock);
+})
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
+});
+```
+
 
 ## createRunningLock
 
@@ -78,12 +88,4 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 
 **Examples**
 
-```TypeScript
-runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.BACKGROUND)
-.then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock);
-})
-.catch((err: Error) => {
-    console.error('create running lock failed, err: ' + err);
-});
-```
+See [createRunningLock](#createrunninglock)

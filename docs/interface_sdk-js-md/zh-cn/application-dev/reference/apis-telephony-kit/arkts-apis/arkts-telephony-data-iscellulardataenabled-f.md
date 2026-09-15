@@ -52,6 +52,17 @@ data.isCellularDataEnabled((err: BusinessError, contextData: boolean) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.isCellularDataEnabled().then((contextData: boolean) => {
+    console.info(`isCellularDataEnabled success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`isCellularDataEnabled fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isCellularDataEnabled
 
@@ -84,13 +95,4 @@ function isCellularDataEnabled(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataEnabled().then((contextData: boolean) => {
-    console.info(`isCellularDataEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [isCellularDataEnabled](#iscellulardataenabled)

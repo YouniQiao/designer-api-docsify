@@ -35,3 +35,16 @@ Queries the local P2P services. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | The Wi-Fi service is not started properly, or there is an Wi-Fi service error. |
+
+**Examples**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wifiManager.getLocalP2pServices().then((data: wifiManager.WifiP2pServiceInfo[]) => {
+  console.info("get local P2P services: " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error("failed: " + JSON.stringify(error));
+});
+```

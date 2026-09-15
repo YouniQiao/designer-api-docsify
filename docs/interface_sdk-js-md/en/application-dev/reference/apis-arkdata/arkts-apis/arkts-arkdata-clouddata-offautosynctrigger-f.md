@@ -39,12 +39,12 @@ function autoSyncTriggerObserver(info: cloudData.AutoSyncTriggerInfo) {
   console.info(`Auto sync triggered, mode: ${info.mode}`);
 }
 
-// Subscribe to an observer.
+// Subscribe.
 cloudData.onAutoSyncTrigger(autoSyncTriggerObserver);
 
-// Unsubscribe from a specified observer.
+// Cancel the specified subscription.
 cloudData.offAutoSyncTrigger(autoSyncTriggerObserver);
 
-// Unsubscribe from all observers.
+// Cancel all subscriptions.
 cloudData.offAutoSyncTrigger();
 ```

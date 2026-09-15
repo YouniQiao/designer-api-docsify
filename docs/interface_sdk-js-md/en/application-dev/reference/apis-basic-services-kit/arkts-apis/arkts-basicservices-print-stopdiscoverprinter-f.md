@@ -50,6 +50,17 @@ print.stopDiscoverPrinter((error: BusinessError) => {
 })
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.stopDiscoverPrinter().then(() => {
+    console.info('stop Discovery success');
+}).catch((error: BusinessError) => {
+    console.error(`Failed to stopDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
+})
+```
+
 
 ## stopDiscoverPrinter
 
@@ -82,13 +93,4 @@ Stops discovering printers. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.stopDiscoverPrinter().then(() => {
-    console.info('stop Discovery success');
-}).catch((error: BusinessError) => {
-    console.error(`Failed to stopDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
-})
-```
+See [stopDiscoverPrinter](#stopdiscoverprinter)

@@ -154,76 +154,10 @@ getAnimationController(id?: string): AnimationController | undefined
 
 **示例**
 
-[Image](../arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比1持有关系，示例代码如下。
-
 ```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Example {
-  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
-  // $r('app.media.gif')需要替换为开发者所需的图像资源文件。
-  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
-
-  build() {
-    Column() {
-      Image(this.animated)
-        .width(100)
-        .height(100)
-        .borderColor(Color.Red)
-        .borderWidth(1)
-      Button("start")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController()
-          controller?.start()
-        })
-      Button("stop")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController()
-          controller?.stop()
-        })
-    }
-  }
-}
+[Image](../arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比1持有关系，示例代码如下。
 ```
 
-[Image](../arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比N持有关系，示例代码如下。
-
 ```TypeScript
-import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Example {
-  options: AnimationOptions = { duration: 1000, iterations: -1, autoPlay: false };
-  // $r('app.media.gif')需要替换为开发者所需的图像资源文件。
-  @State animated: AnimatedDrawableDescriptor = new AnimatedDrawableDescriptor($r('app.media.gif'), this.options);
-
-  build() {
-    Column() {
-      Image(this.animated)
-        .width(100)
-        .height(100)
-        .borderColor(Color.Red)
-        .borderWidth(1)
-        .id("Component1")
-      Image(this.animated)
-        .width(100)
-        .height(100)
-        .borderColor(Color.Red)
-        .borderWidth(1)
-      Button("start")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController("Component1")
-          controller?.start()
-        })
-      Button("stop")
-        .onClick(() => {
-          let controller = this.animated.getAnimationController("Component1")
-          controller?.stop()
-        })
-    }
-  }
-}
+[Image](../arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比N持有关系，示例代码如下。
 ```

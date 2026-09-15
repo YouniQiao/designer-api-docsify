@@ -38,11 +38,40 @@ Obtains information about all installed apps for a specified user. This API uses
 
 ```TypeScript
 import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleFlags: number = bundle.BundleFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
+let userId: number = 100;
+
+bundle.getApplicationInfos(bundleFlags, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
 
 let bundleFlags: number = bundle.BundleFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
 let userId: number = 100;
 
 bundle.getApplicationInfos(bundleFlags, userId, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+```
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleFlags: number = bundle.BundleFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
+
+bundle.getApplicationInfos(bundleFlags, (err, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
     return;
@@ -81,19 +110,7 @@ Obtains information about installed apps for the user to which the caller belong
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-
-let bundleFlags: number = bundle.BundleFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
-
-bundle.getApplicationInfos(bundleFlags, (err, data) => {
-  if (err) {
-    console.error('Operation failed. Cause: ' + JSON.stringify(err));
-    return;
-  }
-  console.info('Operation successful. Data:' + JSON.stringify(data));
-})
-```
+See [getApplicationInfos](#getapplicationinfos)
 
 
 ## getApplicationInfos
@@ -131,17 +148,4 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Examples**
 
-```TypeScript
-import bundle from '@ohos.bundle';
-import { BusinessError } from '@ohos.base';
-
-let bundleFlags: number = bundle.BundleFlag.GET_APPLICATION_INFO_WITH_PERMISSION;
-let userId: number = 100;
-
-bundle.getApplicationInfos(bundleFlags, userId)
-  .then((data) => {
-    console.info('Operation successful. Data: ' + JSON.stringify(data));
-  }).catch((error: BusinessError) => {
-    console.error('Operation failed. Cause: ' + JSON.stringify(error));
-  })
-```
+See [getApplicationInfos](#getapplicationinfos)

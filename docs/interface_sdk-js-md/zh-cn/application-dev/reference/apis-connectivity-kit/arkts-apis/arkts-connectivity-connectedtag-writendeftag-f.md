@@ -50,6 +50,19 @@ connectedTag.writeNdefTag(rawData).then(() => {
 });
 ```
 
+```TypeScript
+import { connectedTag } from '@kit.ConnectivityKit';
+
+let rawData = "010203"; // change it to be correct.
+connectedTag.writeNdefTag(rawData, (err)=> {
+    if (err) {
+        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
+    } else {
+        console.info("connectedTag.writeNdefTag AsyncCallback success.");
+    }
+});
+```
+
 
 ## writeNdefTag
 
@@ -78,15 +91,4 @@ function writeNdefTag(data: string, callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { connectedTag } from '@kit.ConnectivityKit';
-
-let rawData = "010203"; // change it to be correct.
-connectedTag.writeNdefTag(rawData, (err)=> {
-    if (err) {
-        console.error("connectedTag.writeNdefTag AsyncCallback err: " + err);
-    } else {
-        console.info("connectedTag.writeNdefTag AsyncCallback success.");
-    }
-});
-```
+参见 [writeNdefTag](#writendeftag)

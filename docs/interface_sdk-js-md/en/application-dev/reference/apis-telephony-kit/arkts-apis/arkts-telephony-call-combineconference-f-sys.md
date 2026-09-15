@@ -53,6 +53,16 @@ call.combineConference(1, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.combineConference(1).then(() => {
+    console.info(`combineConference success.`);
+}).catch((err: BusinessError) => {
+    console.error(`combineConference fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## combineConference
 
@@ -94,12 +104,4 @@ Combines two calls into a conference call. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.combineConference(1).then(() => {
-    console.info(`combineConference success.`);
-}).catch((err: BusinessError) => {
-    console.error(`combineConference fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [combineConference](#combineconference)

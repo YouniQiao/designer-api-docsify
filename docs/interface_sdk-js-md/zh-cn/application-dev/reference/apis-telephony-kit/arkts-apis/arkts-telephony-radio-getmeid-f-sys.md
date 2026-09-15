@@ -46,6 +46,18 @@ Obtains the MEID of a specified card slot of the device.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+radio.getMEID((err: BusinessError, data: string) => {
+    if (err) {
+        console.error(`getMEID failed, callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`getMEID success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let slotId: number = 0;
 radio.getMEID(slotId, (err: BusinessError, data: string) => {
     if (err) {
@@ -53,6 +65,17 @@ radio.getMEID(slotId, (err: BusinessError, data: string) => {
         return;
     }
     console.info(`getMEID success, callback: data->${JSON.stringify(data)}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getMEID(slotId).then((data: string) => {
+    console.info(`getMEID success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getMEID failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
 
@@ -99,16 +122,7 @@ Obtains the MEID of a specified card slot of the device.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getMEID(slotId).then((data: string) => {
-    console.info(`getMEID success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getMEID failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getMEID](#getmeid)
 
 
 ## getMEID
@@ -147,14 +161,4 @@ Obtains the MEID of a specified card slot of the device.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-radio.getMEID((err: BusinessError, data: string) => {
-    if (err) {
-        console.error(`getMEID failed, callback: err->${JSON.stringify(err)}`);
-        return;
-    }
-    console.info(`getMEID success, callback: data->${JSON.stringify(data)}`);
-});
-```
+参见 [getMEID](#getmeid)

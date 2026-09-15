@@ -55,6 +55,17 @@ sim.getLockState(0, 1, (err: BusinessError, data: sim.LockState) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getLockState(0, 1).then((data: sim.LockState) => {
+    console.info(`getLockState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getLockState failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getLockState
 
@@ -101,13 +112,4 @@ Get the lock status of the SIM card in the specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getLockState(0, 1).then((data: sim.LockState) => {
-    console.info(`getLockState success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getLockState failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getLockState](#getlockstate)

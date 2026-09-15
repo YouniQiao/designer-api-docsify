@@ -56,6 +56,22 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  cooperate.prepareCooperate().then(() => {
+    console.info(`Keyboard mouse crossing prepareCooperate success.`);
+  }, (error: BusinessError) => {
+    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
+      [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
+    [`code`, `message`])}`);
+}
+```
+
 
 ## prepareCooperate
 
@@ -89,18 +105,4 @@ Prepares for screen hopping. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  cooperate.prepareCooperate().then(() => {
-    console.info(`Keyboard mouse crossing prepareCooperate success.`);
-  }, (error: BusinessError) => {
-    console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-      [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Keyboard mouse crossing prepareCooperate failed, error: ${JSON.stringify(error,
-    [`code`, `message`])}`);
-}
-```
+See [prepareCooperate](#preparecooperate)

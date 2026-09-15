@@ -43,32 +43,10 @@ LocalSocketServer停止监听并释放通过[listen](#listen)方法绑定的监�
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let localserver: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let addr: socket.LocalAddress = {
-  address: sandboxPath
-}
-localserver.on('connect', (connection: socket.LocalSocketConnection) => {
-  console.info("connection clientId: " + connection.clientId);
-  // 逻辑处理
-  localserver.close(); // 停止监听
-  connection.close(); // 关闭当前连接
-});
-localserver.listen(addr).then(() => {
-  console.info('listen success');
-}).catch((err: BusinessError) => {
-  console.error('listen fail: ' + err.code);
-});
 ```
 
 ## getExtraOptions
@@ -101,30 +79,10 @@ getExtraOptions(): Promise<ExtraOptionsBase>
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr: socket.LocalAddress = {
-  address: sandboxPath
-}
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
-server.getExtraOptions().then((options: socket.ExtraOptionsBase) => {
-  console.info('options: ' + JSON.stringify(options));
-}).catch((err: Object) => {
-  console.error('getExtraOptions fail: ' + JSON.stringify(err));
-});
 ```
 
 ## getLocalAddress
@@ -159,31 +117,10 @@ getLocalAddress(): Promise<string>
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr: socket.LocalAddress = {
-  address: sandboxPath
-}
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-  server.getLocalAddress().then((localPath: string) => {
-    console.info("SUCCESS " + JSON.stringify(localPath));
-  }).catch((err: BusinessError) => {
-    console.error("FAIL " + JSON.stringify(err));
-  })
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
 ```
 
 ## getSocketFd
@@ -214,31 +151,10 @@ getSocketFd(): Promise<number>
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr : socket.LocalAddress = {
-  address: sandboxPath
-}
-
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-  server.getSocketFd().then((fd: number) => {
-    console.info(`Socket FD：${fd}`);
-  }).catch((err: Object) => {
-    console.error(`getSocketFd fail: ${JSON.stringify(err)}`);
-  });
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
 ```
 
 ## getState
@@ -265,31 +181,10 @@ getState(): Promise<SocketStateBase>
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr: socket.LocalAddress = {
-  address: sandboxPath
-}
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
-server.getState().then((data: socket.SocketStateBase) => {
-  console.info('getState success: ' + JSON.stringify(data));
-}).catch((err: Object) => {
-  console.error('getState fail: ' + JSON.stringify(err));
-});
 ```
 
 ## listen
@@ -332,25 +227,10 @@ listen(address: LocalAddress): Promise<void>
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let addr: socket.LocalAddress = {
-  address: sandboxPath
-}
-server.listen(addr).then(() => {
-  console.info('listen success');
-}).catch((err: Object) => {
-  console.error('listen fail: ' + JSON.stringify(err));
-});
 ```
 
 ## off('connect')
@@ -378,23 +258,6 @@ off(type: 'connect', callback?: Callback<LocalSocketConnection>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let callback = (connection: socket.LocalSocketConnection) => {
-  if (connection) {
-    console.info('accept a client')
-  }
-}
-server.on('connect', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-server.off('connect', callback);
-server.off('connect');
-```
-
 ## off('error')
 
 ```TypeScript
@@ -419,21 +282,6 @@ off(type: 'error', callback?: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let callback = (err: Object) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-server.on('error', callback);
-// 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
-server.off('error', callback);
-server.off('error');
-```
 
 ## on('connect')
 
@@ -464,19 +312,6 @@ on(type: 'connect', callback: Callback<LocalSocketConnection>): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
 
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-server.on('connect', (connection: socket.LocalSocketConnection) => {
-  if (connection) {
-    console.info('accept a client')
-  }
-});
-```
-
 ## on('error')
 
 ```TypeScript
@@ -505,17 +340,6 @@ on(type: 'error', callback: ErrorCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
-
-**示例**
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-server.on('error', (err: Object) => {
-  console.error("on error, err:" + JSON.stringify(err))
-});
-```
 
 ## setExtraOptions
 
@@ -554,34 +378,8 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 **示例**
 
+```TypeScript
 > 说明：
 > 
 > 在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { common } from '@kit.AbilityKit';
-
-let server: socket.LocalSocketServer = socket.constructLocalSocketServerInstance();
-let context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let sandboxPath: string = context.filesDir + '/testSocket';
-let listenAddr: socket.LocalAddress = {
-  address: sandboxPath
-}
-server.listen(listenAddr).then(() => {
-  console.info("listen success");
-}).catch((err: Object) => {
-  console.error("listen fail: " + JSON.stringify(err));
-})
-
-let options: socket.ExtraOptionsBase = {
-  receiveBufferSize: 8192,
-  sendBufferSize: 8192,
-  socketTimeout: 3000
-}
-server.setExtraOptions(options).then(() => {
-  console.info('setExtraOptions success');
-}).catch((err: Object) => {
-  console.error('setExtraOptions fail: ' + JSON.stringify(err));
-});
 ```

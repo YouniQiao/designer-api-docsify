@@ -64,61 +64,12 @@ function mdByCallback() {
 }
 ```
 
-## digest
-
 ```TypeScript
-digest(): Promise<DataBlob>
-```
-
-生成消息摘要。使用Promise异步回调。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
-- API版本9-11：SystemCapability.Security.CryptoFramework
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回摘要计算结果。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
-
-**示例**
-
 ArkTS示例：
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-async function mdByPromise() {
-  let md = cryptoFramework.createMd('SHA256');
-  await md.update({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = await md.digest();
-  console.info('[Promise]: MD result: ' + mdOutput.data);
-  console.info('[Promise]: MD len: ' + md.getMdLength());
-}
 ```
 
-JS示例：
-
 ```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto测试</text>
-    <input class="btn" @click="MdTest">Md异步测试</input>
-</div>
+JS示例：
 ```
 
 ```TypeScript
@@ -196,6 +147,41 @@ export default {
 };
 ```
 
+## digest
+
+```TypeScript
+digest(): Promise<DataBlob>
+```
+
+生成消息摘要。使用Promise异步回调。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.MessageDigest
+- API版本9-11：SystemCapability.Security.CryptoFramework
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)&gt; | Promise对象，返回摘要计算结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
+
+**示例**
+
+参见 [digest](#digest)
+
 ## digestSync
 
 ```TypeScript
@@ -229,28 +215,12 @@ digestSync(): DataBlob
 
 **示例**
 
-ArkTS示例：
-
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function mdBySync() {
-  let md = cryptoFramework.createMd('SHA256');
-  md.updateSync({ data: new Uint8Array(buffer.from('mdTestMessage', 'utf-8').buffer) });
-  let mdOutput = md.digestSync();
-  console.info('[Sync]: MD result: ' + mdOutput.data);
-  console.info('[Sync]: MD len: ' + md.getMdLength());
-}
+ArkTS示例：
 ```
 
-JS示例：
-
 ```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto测试</text>
-    <input class="btn" @click="MdTestSync">Md同步测试</input>
-</div>
+JS示例：
 ```
 
 ```TypeScript

@@ -64,3 +64,63 @@ startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 | [9200015](../errorcode-enterpriseDeviceManager.md#9200015-组件不存在) | The ability does not exist. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**示例**
+
+```TypeScript
+需要在module.json5中配置被启动组件的信息。permissions为可选字段，需根据实际情况进行替换或者不填。
+```
+
+```TypeScript
+调用方应用需要在module.json5中申请对应的权限。启动其他应用中的组件时，调用方应用必须获取该组件所要求的权限。
+```
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { preferences } from '@kit.ArkData';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/**
+ * 企业设备管理扩展能力组件
+ */
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAdminEnabled() {
+    // 需根据实际情况进行替换
+    let admin: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EnterpriseAdminAbility'
+    };
+    // 需根据实际情况进行替换
+    let want: Want = {
+      bundleName: 'com.example.myotherapplication',
+      abilityName: 'MainAbility'
+    };
+    this.context.startAbilityByAdmin(admin, want).catch((err: BusinessError) => {
+      console.error(`Failed to start an ability. Code: ${err.code}, message: ${err.message}`);
+    });
+    
+    // 通过context获取到应用文件路径
+    let preferencesDir = this.context.preferencesDir;
+    console.info(`preferencesDir: ` + preferencesDir);
+    
+    // 通过context获取到preferences数据
+    let options: preferences.Options = {
+      // 需根据实际情况进行替换
+      name: "key"
+    };
+    try {
+      let preference = preferences.getPreferencesSync(this.context, options);
+      // 需根据实际情况进行替换
+      preference.putSync("key", "value");
+      preference.flushSync();
+    
+      // 需根据实际情况进行替换
+      let value: string = preference.getSync('key', 'default') as string;
+      console.info(`get preferences value: ${value}`);
+    } catch (error) {
+      console.error('get preference fail');
+    }
+  }
+}
+```

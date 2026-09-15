@@ -62,6 +62,18 @@ try {
 }
 ```
 
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+
+try {
+  // 参数需根据实际情况进行替换
+  systemManager.getAutoUnlockAfterReboot(null);
+  console.info('Succeeded in getting auto unlock after reboot.');
+} catch (err) {
+  console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## getAutoUnlockAfterReboot
 
@@ -102,14 +114,4 @@ function getAutoUnlockAfterReboot(admin: Want | null): boolean
 
 **示例**
 
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-
-try {
-  // 参数需根据实际情况进行替换
-  systemManager.getAutoUnlockAfterReboot(null);
-  console.info('Succeeded in getting auto unlock after reboot.');
-} catch (err) {
-  console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
-}
-```
+参见 [getAutoUnlockAfterReboot](#getautounlockafterreboot)

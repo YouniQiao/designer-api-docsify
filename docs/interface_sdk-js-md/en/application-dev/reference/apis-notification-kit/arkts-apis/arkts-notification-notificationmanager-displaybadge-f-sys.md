@@ -61,6 +61,19 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.displayBadge(bundle, false, displayBadgeCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+notificationManager.displayBadge(bundle, false).then(() => {
+    console.info("displayBadge success");
+}).catch((err: BusinessError) => {
+    console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## displayBadge
 
@@ -106,15 +119,4 @@ Sets whether to enable the notification badge for a specified application. This 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.displayBadge(bundle, false).then(() => {
-    console.info("displayBadge success");
-}).catch((err: BusinessError) => {
-    console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [displayBadge](#displaybadge)

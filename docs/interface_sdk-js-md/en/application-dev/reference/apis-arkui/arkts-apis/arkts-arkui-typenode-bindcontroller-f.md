@@ -31,53 +31,6 @@ Binds a [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) in
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  // Configure the TextController instance, which can be obtained from an external source.
-  controller: TextController = new TextController()
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create a Text node.
-    let text = typeNode.createNode(uiContext, 'Text');
-    text.initialize('Hello').fontColor(Color.Blue).fontSize(14);
-    typeNode.getAttribute(text, 'Text')?.fontWeight(FontWeight.Bold)
-    // Bind a TextController instance.
-    typeNode.bindController(text, this.controller, 'Text');
-    col.appendChild(text);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  @State line: number = 0
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Text bindController Sample')
-      NodeContainer(this.myNodeController)
-      Text(`Current line count: ${this.line}`)
-      Button(`Obtain Line Count`)
-        .onClick(() => {
-          this.line = this.myNodeController.controller.getLayoutManager().getLineCount()
-        })
-    }
-  }
-}
-```
-
 
 ## bindController
 
@@ -109,11 +62,6 @@ Binds a [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-
-**Examples**
-
-See the example for createNode('Swiper')12+.
-- simpleType:
 
 
 ## bindController
@@ -147,12 +95,6 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroller-c.md) to the [Scro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**Applicable version:** 15 - 24 |
 
-**Examples**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'Scroll');
-```
-
 
 ## bindController
 
@@ -184,12 +126,6 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
-
-**Examples**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'List');
-```
 
 
 ## bindController
@@ -223,46 +159,6 @@ Binds the [TextInputController](../arkts-components/arkts-arkui-textinputcontrol
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create and initialize TextInput. By default, the focus is obtained.
-    let textInput = typeNode.createNode(uiContext, 'TextInput');
-    textInput.initialize({ text: 'TextInput' })
-      .defaultFocus(true)
-    col.appendChild(textInput);
-    // Bind TextInputController and set the cursor position.
-    let controller: TextInputController = new TextInputController();
-    typeNode.bindController(textInput, controller, 'TextInput');
-    controller.caretPosition(3);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('TextInput bindController sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
-
 
 ## bindController
 
@@ -294,12 +190,6 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
-
-**Examples**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'WaterFlow');
-```
 
 
 ## bindController
@@ -333,46 +223,6 @@ Binds a [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
-**Examples**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// Implement a custom UI controller by extending NodeController.
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // Create and initialize a TextArea node. By default, the node is focused.
-    let textArea = typeNode.createNode(uiContext, 'TextArea');
-    textArea.initialize({ text: 'TextArea' })
-      .defaultFocus(true)
-    col.appendChild(textArea);
-    // Bind a TextAreaController instance and set the cursor position.
-    let controller: TextAreaController = new TextAreaController()
-    typeNode.bindController(textArea, controller, 'TextArea');
-    controller.caretPosition(3);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('TextArea bindController sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
-
 
 ## bindController
 
@@ -404,9 +254,3 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
-
-**Examples**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'Grid');
-```

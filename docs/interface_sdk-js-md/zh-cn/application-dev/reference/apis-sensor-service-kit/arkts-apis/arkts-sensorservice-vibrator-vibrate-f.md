@@ -43,7 +43,42 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 import { vibrator } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+vibrator.vibrate(1000).then(() => {
+  console.info('Succeed in vibrating');
+}, (error: BusinessError) => {
+  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 vibrator.vibrate(1000, (error: BusinessError) => {
+  if (error) {
+    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    console.info('Succeed in vibrating');
+  }
+})
+```
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
+  console.info('Succeed in vibrating');
+}, (error: BusinessError) => {
+  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
   if (error) {
     console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
   } else {
@@ -90,16 +125,7 @@ function vibrate(duration: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-vibrator.vibrate(1000).then(() => {
-  console.info('Succeed in vibrating');
-}, (error: BusinessError) => {
-  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [vibrate](#vibrate)
 
 
 ## vibrate
@@ -139,16 +165,7 @@ function vibrate(effectId: EffectId): Promise<void>
 
 **示例**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
-  console.info('Succeed in vibrating');
-}, (error: BusinessError) => {
-  console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-});
-```
+参见 [vibrate](#vibrate)
 
 
 ## vibrate
@@ -184,15 +201,4 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER, (error: BusinessError) => {
-  if (error) {
-    console.error(`Failed to vibrate. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    console.info('Succeed in vibrating');
-  }
-})
-```
+参见 [vibrate](#vibrate)

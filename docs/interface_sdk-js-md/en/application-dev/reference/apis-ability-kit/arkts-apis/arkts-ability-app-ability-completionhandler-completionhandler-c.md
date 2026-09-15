@@ -37,8 +37,9 @@ Called when the application fails to be launched.
 
 **Examples**
 
+```TypeScript
 See Usage of CompletionHandler.
-- simpleType:
+```
 
 ## onRequestSuccess
 
@@ -65,5 +66,6 @@ Called when the application is successfully launched.
 
 **Examples**
 
+```TypeScript
 See Usage of CompletionHandler.
-- simpleType:
+```

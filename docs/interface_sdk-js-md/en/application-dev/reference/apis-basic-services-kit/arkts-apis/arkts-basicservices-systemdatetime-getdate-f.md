@@ -53,6 +53,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemDateTime.getDate().then((date: Date) => {
+    console.info(`Succeeded in getting date : ${date}`);
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
+}
+```
+
 
 ## getDate
 
@@ -84,17 +99,4 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  systemDateTime.getDate().then((date: Date) => {
-    console.info(`Succeeded in getting date : ${date}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-  });
-} catch(e) {
-  let error = e as BusinessError;
-  console.error(`Failed to get date. message: ${error.message}, code: ${error.code}`);
-}
-```
+See [getDate](#getdate)

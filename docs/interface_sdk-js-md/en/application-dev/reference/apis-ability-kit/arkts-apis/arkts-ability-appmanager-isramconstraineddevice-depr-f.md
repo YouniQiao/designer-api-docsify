@@ -40,6 +40,18 @@ appManager.isRamConstrainedDevice().then((data) => {
 });
 ```
 
+```TypeScript
+import appManager from '@ohos.application.appManager';
+
+appManager.isRamConstrainedDevice((error, data) => {
+  if (error && error.code !== 0) {
+    console.error(`isRamConstrainedDevice fail, error: ${JSON.stringify(error)}`);
+  } else {
+    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## isRamConstrainedDevice
 
@@ -65,14 +77,4 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 **Examples**
 
-```TypeScript
-import appManager from '@ohos.application.appManager';
-
-appManager.isRamConstrainedDevice((error, data) => {
-  if (error && error.code !== 0) {
-    console.error(`isRamConstrainedDevice fail, error: ${JSON.stringify(error)}`);
-  } else {
-    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
-  }
-});
-```
+See [isRamConstrainedDevice](#isramconstraineddevice)

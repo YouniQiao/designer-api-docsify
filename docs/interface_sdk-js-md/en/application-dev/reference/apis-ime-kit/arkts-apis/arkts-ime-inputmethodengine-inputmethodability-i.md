@@ -72,6 +72,31 @@ class InputMethodExt extends InputMethodExtensionAbility {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
+import { Want } from '@kit.AbilityKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+class InputMethodExt extends InputMethodExtensionAbility {
+    onCreate(want: Want): void {
+        console.info(`onCreate, want: ${want.abilityName}`);
+        if (this.context) {
+            inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
+                .then((panel: inputMethodEngine.Panel) => {
+                console.info('Succeed in creating panel.');
+            }).catch((err: BusinessError) => {
+                console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+            })
+        }
+    }
+}
+```
+
 ## createPanel
 
 ```TypeScript
@@ -111,30 +136,7 @@ Creates an input method panel. This API can be called only by the input method a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { inputMethodEngine, InputMethodExtensionAbility } from '@kit.IMEKit';
-import { Want } from '@kit.AbilityKit';
-
-let panelInfo: inputMethodEngine.PanelInfo = {
-  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
-  flag: inputMethodEngine.PanelFlag.FLG_FIXED
-}
-
-class InputMethodExt extends InputMethodExtensionAbility {
-    onCreate(want: Want): void {
-        console.info(`onCreate, want: ${want.abilityName}`);
-        if (this.context) {
-            inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo)
-                .then((panel: inputMethodEngine.Panel) => {
-                console.info('Succeed in creating panel.');
-            }).catch((err: BusinessError) => {
-                console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
-            })
-        }
-    }
-}
-```
+See [createPanel](#createpanel)
 
 ## destroyPanel
 
@@ -195,6 +197,36 @@ if (inputPanel) {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let panelInfo: inputMethodEngine.PanelInfo = {
+  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
+  flag: inputMethodEngine.PanelFlag.FLG_FIXED
+}
+
+let inputPanel: inputMethodEngine.Panel | undefined = undefined;
+if (this.context) {
+  inputMethodEngine.getInputMethodAbility()
+    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+      if (err) {
+        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      inputPanel = panel;
+      console.info('Succeed in creating panel.');
+    })
+}
+
+if (inputPanel) {
+  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel).then(() => {
+    console.info('Succeed in destroying panel.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
+  });
+}
+```
+
 ## destroyPanel
 
 ```TypeScript
@@ -227,35 +259,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let panelInfo: inputMethodEngine.PanelInfo = {
-  type: inputMethodEngine.PanelType.SOFT_KEYBOARD,
-  flag: inputMethodEngine.PanelFlag.FLG_FIXED
-}
-
-let inputPanel: inputMethodEngine.Panel | undefined = undefined;
-if (this.context) {
-  inputMethodEngine.getInputMethodAbility()
-    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
-      if (err) {
-        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
-        return;
-      }
-      inputPanel = panel;
-      console.info('Succeed in creating panel.');
-    })
-}
-
-if (inputPanel) {
-  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel).then(() => {
-    console.info('Succeed in destroying panel.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
-  });
-}
-```
+See [destroyPanel](#destroypanel)
 
 ## getSecurityMode
 
@@ -307,12 +311,6 @@ Disables listening for the input method binding event. This API uses an asynchro
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('inputStart');
-```
-
 ## off('inputStop')
 
 ```TypeScript
@@ -331,14 +329,6 @@ Disables listening for the input method stop event. This API uses an asynchronou
 | --- | --- | --- | --- |
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
 | callback | () =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('inputStop', () => {
-  console.info('inputMethodAbility delete inputStop notification.');
-});
-```
 
 ## off('setCallingWindow')
 
@@ -359,14 +349,6 @@ Disables listening for the window invocation setting event. This API uses an asy
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
 | callback | (wid: number) =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('setCallingWindow', (wid: number) => {
-  console.info('inputMethodAbility delete setCallingWindow notification.');
-});
-```
-
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -386,17 +368,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('keyboardShow', () => {
-  console.info('InputMethodAbility delete keyboardShow notification.');
-});
-inputMethodEngine.getInputMethodAbility().off('keyboardHide', () => {
-  console.info('InputMethodAbility delete keyboardHide notification.');
-});
-```
-
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -415,10 +386,6 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | --- | --- | --- | --- |
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback used to return the result. |
-
-**Examples**
-
-See off
 
 ## off('setSubtype')
 
@@ -439,14 +406,6 @@ Disables listening for the input method subtype setting event. This API uses an 
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
 | callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('setSubtype', () => {
-  console.info('InputMethodAbility delete setSubtype notification.');
-});
-```
-
 ## off('securityModeChange')
 
 ```TypeScript
@@ -465,18 +424,6 @@ Disables listening for the security mode changes of the input method. This API u
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Examples**
-
-```TypeScript
-let securityChangeCallback: (securityMode: inputMethodEngine.SecurityMode) => void =
-  (securityMode: inputMethodEngine.SecurityMode) => {
-    console.info(`InputMethodAbility securityModeChange, security is ${securityMode}`);
-  };
-let inputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine.getInputMethodAbility();
-inputMethodAbility.on('securityModeChange', securityChangeCallback);
-inputMethodAbility.off('securityModeChange', securityChangeCallback);
-```
 
 ## off('privateCommand')
 
@@ -503,19 +450,6 @@ Disables listening for the private data event of the input method. This API uses
 | --- | --- |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
-**Examples**
-
-```TypeScript
-let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
-  (record: Record<string, inputMethodEngine.CommandDataType>) => {
-    for (let i: number = 0; i < record.length; i++) {
-      console.info(`private command key: ${i}, value: ${record[i]}`);
-    }
-  }
-
-inputMethodEngine.getInputMethodAbility().off('privateCommand', privateCommandCallback);
-```
-
 ## off('callingDisplayDidChange')
 
 ```TypeScript
@@ -534,14 +468,6 @@ Disables listening for changes of the screen ID of the window associated with th
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('callingDisplayDidChange', (num: number) => {
-  console.info('InputMethodAbility delete calling display  notification.');
-});
-```
 
 ## off('discardTypingText')
 
@@ -562,14 +488,6 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().off('discardTypingText', () => {
-  console.info('InputMethodAbility discard the typing text.');
-});
-```
-
 ## on('inputStart')
 
 ```TypeScript
@@ -588,17 +506,6 @@ Enables listening for the input method binding event. This API uses an asynchron
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
 | callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes | Callback used to return instances related to input method operations. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility()
-  .on('inputStart',
-    (kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
-      let keyboardController: inputMethodEngine.KeyboardController = kbController;
-      let inputClient: inputMethodEngine.InputClient = client;
-    });
-```
 
 ## on('inputStop')
 
@@ -619,14 +526,6 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().on('inputStop', () => {
-  console.info('inputMethodAbility inputStop');
-});
-```
-
 ## on('setCallingWindow')
 
 ```TypeScript
@@ -646,14 +545,6 @@ Enables listening for the window invocation setting event. This API uses an asyn
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
 | callback | (wid: number) =&gt; void | Yes | Callback used to return the window ID of the caller. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().on('setCallingWindow', (wid: number) => {
-  console.info('inputMethodAbility setCallingWindow');
-});
-```
-
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -673,17 +564,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().on('keyboardShow', () => {
-  console.info('InputMethodAbility keyboardShow.');
-});
-inputMethodEngine.getInputMethodAbility().on('keyboardHide', () => {
-  console.info('InputMethodAbility keyboardHide.');
-});
-```
-
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -702,10 +582,6 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | --- | --- | --- | --- |
 | type | 'keyboardShow' &#124; 'keyboardHide' | Yes | Event type.<br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
-
-**Examples**
-
-See on
 
 ## on('setSubtype')
 
@@ -726,16 +602,6 @@ Enables listening for the input method subtype setting event. This API uses an a
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
 | callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method subtype. |
 
-**Examples**
-
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-
-inputMethodEngine.getInputMethodAbility().on('setSubtype', (inputMethodSubtype: InputMethodSubtype) => {
-  console.info('InputMethodAbility setSubtype.');
-});
-```
-
 ## on('securityModeChange')
 
 ```TypeScript
@@ -754,15 +620,6 @@ Enables listening for the security mode changes of the input method. This API us
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility()
-  .on('securityModeChange', (securityMode: inputMethodEngine.SecurityMode) => {
-    console.info(`InputMethodAbility securityModeChange, security is ${securityMode}`);
-  });
-```
 
 ## on('privateCommand')
 
@@ -789,18 +646,6 @@ Enables listening for the private data event of the input method. This API uses 
 | --- | --- |
 | [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
-**Examples**
-
-```TypeScript
-let privateCommandCallback: (record: Record<string, inputMethodEngine.CommandDataType>) => void =
-  (record: Record<string, inputMethodEngine.CommandDataType>) => {
-    for (let i :number = 0; i < record.length; i++) {
-      console.info(`private command key: ${i}, value: ${record[i]}`);
-    }
-  }
-inputMethodEngine.getInputMethodAbility().on('privateCommand', privateCommandCallback);
-```
-
 ## on('callingDisplayDidChange')
 
 ```TypeScript
@@ -826,15 +671,6 @@ Enables listening for changes of the screen ID of the window associated with the
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
 
-**Examples**
-
-```TypeScript
-let callingDisplayDidChangeCallback: (num: number) => void = (num: number) => {
-  console.info(`display id: ${num}`);
-}
-inputMethodEngine.getInputMethodAbility().on('callingDisplayDidChange', callingDisplayDidChangeCallback);
-```
-
 ## on('discardTypingText')
 
 ```TypeScript
@@ -853,11 +689,3 @@ Subscribes to the event of discarding candidate words and sends the event to the
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**.<br> - **'discardTypingText'**: indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
-
-**Examples**
-
-```TypeScript
-inputMethodEngine.getInputMethodAbility().on('discardTypingText', () => {
-  console.info('InputMethodAbility discard the typing text.');
-});
-```

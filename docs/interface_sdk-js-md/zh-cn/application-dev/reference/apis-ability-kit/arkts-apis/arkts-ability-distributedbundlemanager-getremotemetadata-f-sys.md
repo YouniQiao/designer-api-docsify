@@ -47,3 +47,22 @@ function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+
+**示例**
+
+```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedBundleManager.getRemoteMetadata('1111', 'com.hap.myapplication').then((data) => {
+    console.info(`getRemoteMetadata succeed:` + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getRemoteMetadata failed: error code is ${err.code}  and error msg is ${err.message}`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`getRemoteMetadata failed: error code is ${code}  and error msg is ${message}`);
+}
+```

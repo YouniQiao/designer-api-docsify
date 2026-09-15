@@ -40,6 +40,16 @@ wallpaper.isOperationAllowed((error: BusinessError, data: Boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+wallpaper.isOperationAllowed().then((data: Boolean) => {
+    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`failed to isOperationAllowed because: ${JSON.stringify(error)}`);
+});
+```
+
 
 ## isOperationAllowed
 
@@ -63,12 +73,4 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-wallpaper.isOperationAllowed().then((data: Boolean) => {
-    console.info(`success to isOperationAllowed: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`failed to isOperationAllowed because: ${JSON.stringify(error)}`);
-});
-```
+See [isOperationAllowed](#isoperationallowed)

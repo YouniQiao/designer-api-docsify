@@ -11,11 +11,3 @@ Provides attribute names and value types of a node element. For details, see [El
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Type:** _ElementAttributeValues
-
-**Examples**
-
-```TypeScript
-import { ElementAttributeValues } from '@kit.AccessibilityKit';
-
-let elementAttributeValues: ElementAttributeValues;
-```

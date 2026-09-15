@@ -59,6 +59,21 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+
+  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  })
+});
+```
+
 
 ## getConnectionProperties
 
@@ -98,17 +113,4 @@ function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProper
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-
-  connection.getConnectionProperties(netHandle).then((data: connection.ConnectionProperties) => {
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  })
-});
-```
+参见 [getConnectionProperties](#getconnectionproperties)

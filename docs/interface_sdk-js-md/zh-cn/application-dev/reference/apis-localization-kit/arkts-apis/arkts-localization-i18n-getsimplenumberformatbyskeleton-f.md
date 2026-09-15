@@ -54,6 +54,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleDateTimeFormat.getSimpleNumberFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## getSimpleNumberFormatBySkeleton
 
@@ -94,15 +107,4 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: intl.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call SimpleDateTimeFormat.getSimpleNumberFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
+参见 [getSimpleNumberFormatBySkeleton](#getsimplenumberformatbyskeleton)

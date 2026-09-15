@@ -63,7 +63,7 @@ interface Data {
   if (socketType == "TCPSocket") {
     tcp.bind({address:"192.168.xxx.xxx",
               port:8080,
-              family:1} as socket.NetAddress, (error: BusinessError) => {
+              family:1} as socket.NetAddress, (error: Error) => {
       if (error) {
         console.error(`Failed to bind. Code:${error.code}, message:${error.message}`);
         return;
@@ -104,6 +104,61 @@ interface Data {
 })
 ```
 
+```TypeScript
+import { connection, socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+interface Data {
+  message: ArrayBuffer,
+  remoteInfo: socket.SocketRemoteInfo
+}
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let tcp : socket.TCPSocket = socket.constructTCPSocketInstance();
+  let udp : socket.UDPSocket = socket.constructUDPSocketInstance();
+  let socketType = "TCPSocket";
+  if (socketType == "TCPSocket") {
+    tcp.bind({address:"192.168.xxx.xxx",
+              port:8080,
+              family:1} as socket.NetAddress, (error: Error) => {
+      if (error) {
+        console.error('Failed to bind');
+        return;
+      }
+      netHandle.bindSocket(tcp).then(() => {
+        console.info("Succeeded to bind socket");
+      }).catch((error: BusinessError) => {
+        console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
+      });
+    });
+  } else {
+    let callback: (value: Data) => void = (value: Data) => {
+      console.info("on message, message:" + value.message + ", remoteInfo:" + value.remoteInfo);
+    }
+    udp.bind({address:"192.168.xxx.xxx",
+              port:8080,
+              family:1} as socket.NetAddress, (error: BusinessError) => {
+      if (error) {
+        console.error(`Failed to bind. Code:${error.code}, message:${error.message}`);
+        return;
+      }
+      udp.on('message', (data: Data) => {
+        console.info("Succeeded to get data: " + JSON.stringify(data));
+      });
+      netHandle.bindSocket(udp).then(() => {
+        console.info("Succeeded to bind socket");
+      }).catch((error: BusinessError) => {
+        console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
+      });
+    });
+  }
+});
+```
+
 ## bindSocket
 
 ```TypeScript
@@ -139,60 +194,7 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 **示例**
 
-```TypeScript
-import { connection, socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-interface Data {
-  message: ArrayBuffer,
-  remoteInfo: socket.SocketRemoteInfo
-}
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let tcp : socket.TCPSocket = socket.constructTCPSocketInstance();
-  let udp : socket.UDPSocket = socket.constructUDPSocketInstance();
-  let socketType = "TCPSocket";
-  if (socketType == "TCPSocket") {
-    tcp.bind({address:"192.168.xxx.xxx",
-              port:8080,
-              family:1} as socket.NetAddress, (error: BusinessError) => {
-      if (error) {
-        console.error('Failed to bind');
-        return;
-      }
-      netHandle.bindSocket(tcp).then(() => {
-        console.info("Succeeded to bind socket");
-      }).catch((error: BusinessError) => {
-        console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
-      });
-    });
-  } else {
-    let callback: (value: Data) => void = (value: Data) => {
-      console.info("on message, message:" + value.message + ", remoteInfo:" + value.remoteInfo);
-    }
-    udp.bind({address:"192.168.xxx.xxx",
-              port:8080,
-              family:1} as socket.NetAddress, (error: BusinessError) => {
-      if (error) {
-        console.error(`Failed to bind. Code:${error.code}, message:${error.message}`);
-        return;
-      }
-      udp.on('message', (data: Data) => {
-        console.info("Succeeded to get data: " + JSON.stringify(data));
-      });
-      netHandle.bindSocket(udp).then(() => {
-        console.info("Succeeded to bind socket");
-      }).catch((error: BusinessError) => {
-        console.error(`Failed to bind socket. Code:${error.code}, message:${error.message}`);
-      });
-    });
-  }
-});
-```
+参见 [bindSocket](#bindsocket)
 
 ## getAddressByName
 
@@ -247,6 +249,21 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
+
 ## getAddressByName
 
 ```TypeScript
@@ -285,20 +302,7 @@ getAddressByName(host: string): Promise<NetAddress>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-
-connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
-  if (netHandle.netId == 0) {
-    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
-    return;
-  }
-  let host = "www.example.com";
-  netHandle.getAddressByName(host).then((data: connection.NetAddress) => {
-    console.info("Succeeded to get data: " + JSON.stringify(data));
-  });
-});
-```
+参见 [getAddressByName](#getaddressbyname)
 
 ## getAddressesByName
 
@@ -355,6 +359,21 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host).then((data: connection.NetAddress[]) => {
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
+
 ## getAddressesByName
 
 ```TypeScript
@@ -394,6 +413,26 @@ getAddressesByName(host: string): Promise<Array<NetAddress>>
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
 **示例**
+
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // 当前没有已连接的网络时，netHandle的netId为0，属于异常场景。可根据实际情况添加处理机制。
+    return;
+  }
+  let host = "www.example.com";
+  netHandle.getAddressesByName(host, (error: BusinessError, data: connection.NetAddress[]) => {
+    if (error) {
+      console.error(`Failed to get addresses. Code:${error.code}, message:${error.message}`);
+      return;
+    }
+    console.info("Succeeded to get data: " + JSON.stringify(data));
+  });
+});
+```
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

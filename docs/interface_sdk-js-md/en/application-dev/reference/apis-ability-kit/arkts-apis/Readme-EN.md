@@ -1096,6 +1096,8 @@
   <!--Del-->
   - [getAllBundleInfoByDeveloperId(system api)](arkts-ability-bundlemanager-getallbundleinfobydeveloperid-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getAllBundleInfoInstances(system api)](arkts-ability-bundlemanager-getallbundleinfoinstances-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getAllBundleInstallInfo(system api)](arkts-ability-bundlemanager-getallbundleinstallinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getAllDynamicIconInfo(system api)](arkts-ability-bundlemanager-getalldynamiciconinfo-f-sys.md)<!--DelEnd-->

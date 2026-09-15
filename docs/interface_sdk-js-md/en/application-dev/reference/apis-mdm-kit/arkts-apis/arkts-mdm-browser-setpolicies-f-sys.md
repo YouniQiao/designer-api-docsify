@@ -70,6 +70,26 @@ browser.setPolicies(wantTemp, appId, policies, (err) => {
 });
 ```
 
+```TypeScript
+import { browser } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace the value of appId with the specified application ID of the browser.
+let appId: string = 'com.example.******_******/******5t5CoBM=';
+let policies: string = '{"InsecurePrivateNetworkRequestsAllowed":{"level":"mandatory","scope":"machine","source":"platform","value":true},"LegacySameSiteCookieBehaviorEnabledForDomainList":{"level":"mandatory","scope":"machine","source":"platform","value":["[*.]"]}}';
+browser.setPolicies(wantTemp, appId, policies).then(() => {
+  console.info('Succeeded in setting browser policies.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## setPolicies
 
@@ -119,22 +139,4 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace the value of appId with the specified application ID of the browser.
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-let policies: string = '{"InsecurePrivateNetworkRequestsAllowed":{"level":"mandatory","scope":"machine","source":"platform","value":true},"LegacySameSiteCookieBehaviorEnabledForDomainList":{"level":"mandatory","scope":"machine","source":"platform","value":["[*.]"]}}';
-browser.setPolicies(wantTemp, appId, policies).then(() => {
-  console.info('Succeeded in setting browser policies.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set browser policies. Code is ${err.code}, message is ${err.message}`);
-});
-```
+See [setPolicies](#setpolicies)

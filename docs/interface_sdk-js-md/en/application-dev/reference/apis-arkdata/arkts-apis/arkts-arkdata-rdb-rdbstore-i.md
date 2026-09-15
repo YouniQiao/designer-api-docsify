@@ -84,43 +84,12 @@ const valueBucket3: ValuesBucket = {
 let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
 rdbStore.batchInsert("EMPLOYEE", valueBuckets, (status: number, insertNum: number) => {
   if (status) {
-    console.log("batchInsert is failed, status = " + status);
+    console.error("batchInsert failed, status = " + status);
     return;
   }
-  console.log("batchInsert is successful, the number of values that were inserted = " + insertNum);
+  console.info("batchInsert is successful, the number of values that were inserted = " + insertNum);
 })
 ```
-
-## batchInsert
-
-```TypeScript
-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
-```
-
-Inserts a batch of data into a table. This API uses a promise to return the result.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
-
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| table | string | Yes | Name of the target table. |
-| values | Array&lt;[ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md)&gt; | Yes | An array of data to insert. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
-
-**Examples**
 
 ```TypeScript
 import { ValuesBucket } from '@ohos.data.ValuesBucket';
@@ -163,11 +132,44 @@ const valueBucket3: ValuesBucket = {
 let valueBuckets = new Array(valueBucket1, valueBucket2, valueBucket3);
 let promise: void = rdbStore.batchInsert("EMPLOYEE", valueBuckets);
 promise.then((insertNum: number) => {
-  console.log("batchInsert is successful, the number of values that were inserted = " + insertNum);
+  console.info("batchInsert is successful, the number of values that were inserted = " + insertNum);
 }).catch((status: number) => {
-  console.log("batchInsert is failed, status = " + status);
+  console.error("batchInsert failed, status = " + status);
 })
 ```
+
+## batchInsert
+
+```TypeScript
+batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
+```
+
+Inserts a batch of data into a table. This API uses a promise to return the result.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| table | string | Yes | Name of the target table. |
+| values | Array&lt;[ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md)&gt; | Yes | An array of data to insert. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+
+**Examples**
+
+See [batchInsert](#batchinsert)
 
 ## beginTransaction
 
@@ -289,10 +291,21 @@ let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.equalTo("NAME", "Lisa")
 rdbStore.delete(predicates, (err: BusinessError, rows: number) => {
   if (err) {
-    console.info("Delete failed, err: " + err)
+    console.error("Delete failed, err: " + err)
     return
   }
-  console.log("Delete rows: " + rows)
+  console.info("Delete rows: " + rows)
+})
+```
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+let promise: void = rdbStore.delete(predicates)
+promise.then((rows: number) => {
+  console.info("Delete rows: " + rows)
+}).catch((err: BusinessError) => {
+  console.error("Delete failed, err: " + err)
 })
 ```
 
@@ -326,16 +339,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 **Examples**
 
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-let promise: void = rdbStore.delete(predicates)
-promise.then((rows: number) => {
-  console.log("Delete rows: " + rows)
-}).catch((err: BusinessError) => {
-  console.info("Delete failed, err: " + err)
-})
-```
+See [delete](#delete)
 
 ## executeSql
 
@@ -367,10 +371,20 @@ Executes an SQL statement that contains specified arguments but returns no value
 const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = ?"
 rdbStore.executeSql(SQL_DELETE_TABLE, ['zhangsan'], (err: BusinessError) => {
   if (err) {
-    console.info("ExecuteSql failed, err: " + err)
+    console.error("ExecuteSql failed, err: " + err)
     return
   }
   console.info('Delete table done.')
+})
+```
+
+```TypeScript
+const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = 'zhangsan'"
+let promise = rdbStore.executeSql(SQL_DELETE_TABLE)
+promise.then(() => {
+  console.info('Delete table done.')
+}).catch((err: BusinessError) => {
+  console.error("ExecuteSql failed, err: " + err)
 })
 ```
 
@@ -405,15 +419,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 
 **Examples**
 
-```TypeScript
-const SQL_DELETE_TABLE = "DELETE FROM test WHERE name = 'zhangsan'"
-let promise = rdbStore.executeSql(SQL_DELETE_TABLE)
-promise.then(() => {
-  console.info('Delete table done.')
-}).catch((err: BusinessError) => {
-  console.info("ExecuteSql failed, err: " + err)
-})
-```
+See [executeSql](#executesql)
 
 ## insert
 
@@ -461,10 +467,36 @@ const valueBucket: ValuesBucket = {
 
 rdbStore.insert("EMPLOYEE", valueBucket, (status: number, rowId: number) => {
   if (status) {
-    console.log("Insert is failed");
+    console.error("Insert failed");
     return;
   }
-  console.log("Insert is successful, rowId = " + rowId);
+  console.info("Insert is successful, rowId = " + rowId);
+})
+```
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisi";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+
+let promise: void = rdbStore.insert("EMPLOYEE", valueBucket)
+promise.then((rowId: BusinessError) => {
+  console.info("Insert is successful, rowId = " + rowId);
+}).catch((status: number) => {
+  console.error("Insert failed");
 })
 ```
 
@@ -499,31 +531,7 @@ Inserts a row of data into a table. This API uses a promise to return the result
 
 **Examples**
 
-```TypeScript
-import { ValuesBucket } from '@ohos.data.ValuesBucket';
-
-let key1 = "NAME";
-let key2 = "AGE";
-let key3 = "SALARY";
-let key4 = "CODES";
-let value1 = "Lisi";
-let value2 = 18;
-let value3 = 100.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-const valueBucket: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-  key4: value4,
-};
-
-let promise: void = rdbStore.insert("EMPLOYEE", valueBucket)
-promise.then((rowId: BusinessError) => {
-  console.log("Insert is successful, rowId = " + rowId);
-}).catch((status: number) => {
-  console.log("Insert is failed");
-})
-```
+See [insert](#insert)
 
 ## obtainDistributedTableName
 
@@ -567,7 +575,7 @@ let dmInstance: Array<string>;
 
 deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
   if (err) {
-    console.log("create device manager failed, err=" + err);
+    console.error("create device manager failed, err=" + err);
     return;
   }
   dmInstance = manager;
@@ -577,10 +585,33 @@ deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: Business
 
 rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, tableName: String) {
   if (err) {
-    console.info('ObtainDistributedTableName failed, err: ' + err)
+    console.error('ObtainDistributedTableName failed, err: ' + err)
     return
   }
   console.info('ObtainDistributedTableName successfully, tableName=.' + tableName)
+})
+```
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  let deviceId: Array<string> = devices[0].deviceId;
+})
+
+let promise: void = rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE")
+promise.then((tableName: String) => {
+  console.info('ObtainDistributedTableName successfully, tableName= ' + tableName)
+}).catch((err: BusinessError) => {
+  console.error('ObtainDistributedTableName failed, err: ' + err)
 })
 ```
 
@@ -624,28 +655,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 **Examples**
 
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let dmInstance: Array<string>;
-
-deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
-  if (err) {
-    console.log("create device manager failed, err=" + err);
-    return;
-  }
-  dmInstance = manager;
-  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
-  let deviceId: Array<string> = devices[0].deviceId;
-})
-
-let promise: void = rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE")
-promise.then((tableName: String) => {
-  console.info('ObtainDistributedTableName successfully, tableName= ' + tableName)
-}).catch((err: BusinessError) => {
-  console.info('ObtainDistributedTableName failed, err: ' + err)
-})
-```
+See [obtainDistributedTableName](#obtaindistributedtablename)
 
 ## off
 
@@ -671,22 +681,6 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 | type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
 | observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
-**Examples**
-
-```TypeScript
-let devices: Array<string>;
-
-try {
-  rdbStore.off('dataChange', data_rdb.SubscribeType.SUBSCRIBE_TYPE_REMOTE, (storeObserver: Array<string>) => {
-    for (let i = 0; i < devices.length; i++) {
-      console.log('device=' + devices[i] + ' data changed')
-    }
-  })
-} catch (err) {
-  console.log('Unregister observer failed')
-}
-```
-
 ## on
 
 ```TypeScript
@@ -710,22 +704,6 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
 | type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
 | observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
-
-**Examples**
-
-```TypeScript
-let devices: Array<string>;
-
-try {
-  rdbStore.on('dataChange', data_rdb.SubscribeType.SUBSCRIBE_TYPE_REMOTE, (storeObserver: Array<string>) => {
-    for (let i = 0; i < devices.length; i++) {
-      console.log('device=' + devices[i] + ' data changed')
-    }
-  })
-} catch (err) {
-  console.log('Register observer failed')
-}
-```
 
 ## query
 
@@ -758,11 +736,23 @@ let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.equalTo("NAME", "Rose")
 rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], (err: BusinessError, resultSet: void) => {
   if (err) {
-    console.info("Query failed, err: " + err)
+    console.error("Query failed, err: " + err)
     return
   }
-  console.log("ResultSet column names: " + resultSet.columnNames)
-  console.log("ResultSet column count: " + resultSet.columnCount)
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+})
+```
+
+```TypeScript
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Rose")
+let promise: void = rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"])
+promise.then((resultSet: void) => {
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+}).catch((err: BusinessError) => {
+  console.error("Query failed, err: " + err)
 })
 ```
 
@@ -797,17 +787,7 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 
 **Examples**
 
-```TypeScript
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Rose")
-let promise: void = rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"])
-promise.then((resultSet: void) => {
-  console.log("ResultSet column names: " + resultSet.columnNames)
-  console.log("ResultSet column count: " + resultSet.columnCount)
-}).catch((err: BusinessError) => {
-  console.info("Query failed, err: " + err)
-})
-```
+See [query](#query)
 
 ## querySql
 
@@ -838,11 +818,21 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 ```TypeScript
 rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", ['sanguo'], (err: BusinessError, resultSet: void) => {
   if (err) {
-    console.info("Query failed, err: " + err)
+    console.error("Query failed, err: " + err)
     return
   }
-  console.log("ResultSet column names: " + resultSet.columnNames)
-  console.log("ResultSet column count: " + resultSet.columnCount)
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+})
+```
+
+```TypeScript
+let promise: void = rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'")
+promise.then((resultSet: void) => {
+  console.info("ResultSet column names: " + resultSet.columnNames)
+  console.info("ResultSet column count: " + resultSet.columnCount)
+}).catch((err: BusinessError) => {
+  console.error("Query failed, err: " + err)
 })
 ```
 
@@ -877,15 +867,7 @@ Queries data using the specified SQL statement. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-let promise: void = rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = 'sanguo'")
-promise.then((resultSet: void) => {
-  console.log("ResultSet column names: " + resultSet.columnNames)
-  console.log("ResultSet column count: " + resultSet.columnCount)
-}).catch((err: BusinessError) => {
-  console.info("Query failed, err: " + err)
-})
-```
+See [querySql](#querysql)
 
 ## rollBack
 
@@ -967,10 +949,19 @@ Sets distributed tables. This API uses an asynchronous callback to return the re
 ```TypeScript
 rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
   if (err) {
-    console.info('SetDistributedTables failed, err: ' + err)
+    console.error('SetDistributedTables failed, err: ' + err)
     return
   }
   console.info('SetDistributedTables successfully.')
+})
+```
+
+```TypeScript
+let promise: void = rdbStore.setDistributedTables(["EMPLOYEE"])
+promise.then(() => {
+  console.info("SetDistributedTables successfully.")
+}).catch((err: BusinessError) => {
+  console.error("SetDistributedTables failed, err: " + err)
 })
 ```
 
@@ -1006,14 +997,7 @@ Sets distributed tables. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let promise: void = rdbStore.setDistributedTables(["EMPLOYEE"])
-promise.then(() => {
-  console.info("SetDistributedTables successfully.")
-}).catch((err: BusinessError) => {
-  console.info("SetDistributedTables failed, err: " + err)
-})
-```
+See [setDistributedTables](#setdistributedtables)
 
 ## sync
 
@@ -1050,7 +1034,7 @@ let dmInstance: Array<string>;
 
 deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
   if (err) {
-    console.log("create device manager failed, err=" + err);
+    console.error("create device manager failed, err=" + err);
     return;
   }
   dmInstance = manager;
@@ -1064,13 +1048,43 @@ let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
 predicates.inDevices(deviceIds)
 rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates, (err: BusinessError, result: void) {
   if (err) {
-    console.log('Sync failed, err: ' + err)
+    console.error('Sync failed, err: ' + err)
     return
   }
-  console.log('Sync done.')
+  console.info('Sync done.')
   for (let i = 0; i < result.length; i++) {
-    console.log('device=' + result[i][0] + ' status=' + result[i][1])
+    console.info('device=' + result[i][0] + ' status=' + result[i][1])
   }
+})
+```
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+
+let dmInstance: Array<string>;
+
+deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
+  if (err) {
+    console.error("create device manager failed, err=" + err);
+    return;
+  }
+  dmInstance = manager;
+  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
+  for (let i = 0; i < devices.length; i++) {
+    let deviceIds: Array<string> = devices[i].deviceId;
+  }
+})
+
+let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
+predicates.inDevices(deviceIds)
+let promise: void = rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates)
+promise.then((result: void) =>{
+  console.info('Sync done.')
+  for (let i = 0; i < result.length; i++) {
+    console.info('device=' + result[i][0] + ' status=' + result[i][1])
+  }
+}).catch((err: BusinessError) => {
+  console.error('Sync failed')
 })
 ```
 
@@ -1107,35 +1121,7 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-
-let dmInstance: Array<string>;
-
-deviceManager.createDeviceManager("com.example.appdatamgrverify", (err: BusinessError, manager: void) => {
-  if (err) {
-    console.log("create device manager failed, err=" + err);
-    return;
-  }
-  dmInstance = manager;
-  let devices: Array<string> = dmInstance.getTrustedDeviceListSync();
-  for (let i = 0; i < devices.length; i++) {
-    let deviceIds: Array<string> = devices[i].deviceId;
-  }
-})
-
-let predicates = new data_rdb.RdbPredicates('EMPLOYEE')
-predicates.inDevices(deviceIds)
-let promise: void = rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates)
-promise.then((result: void) =>{
-  console.log('Sync done.')
-  for (let i = 0; i < result.length; i++) {
-    console.log('device=' + result[i][0] + ' status=' + result[i][1])
-  }
-}).catch((err: BusinessError) => {
-  console.log('Sync failed')
-})
-```
+See [sync](#sync)
 
 ## update
 
@@ -1185,10 +1171,38 @@ let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 predicates.equalTo("NAME", "Lisa")
 rdbStore.update(valueBucket, predicates, (err: BusinessError, rows: number) => {
   if (err) {
-    console.info("Updated failed, err: " + err)
+    console.error("Update failed, err: " + err)
     return
   }
-  console.log("Updated row count: " + rows)
+  console.info("Updated row count: " + rows)
+})
+```
+
+```TypeScript
+import { ValuesBucket } from '@ohos.data.ValuesBucket';
+
+let key1 = "NAME";
+let key2 = "AGE";
+let key3 = "SALARY";
+let key4 = "CODES";
+let value1 = "Lisa";
+let value2 = 18;
+let value3 = 100.5;
+let value4 = new Uint8Array([1, 2, 3, 4, 5]);
+
+const valueBucket: ValuesBucket = {
+  key1: value1,
+  key2: value2,
+  key3: value3,
+  key4: value4,
+};
+let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
+predicates.equalTo("NAME", "Lisa")
+let promise: void = rdbStore.update(valueBucket, predicates)
+promise.then(async (rows: number) => {
+  console.info("Updated row count: " + rows)
+}).catch((err: BusinessError) => {
+  console.error("Update failed, err: " + err)
 })
 ```
 
@@ -1223,30 +1237,4 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { ValuesBucket } from '@ohos.data.ValuesBucket';
-
-let key1 = "NAME";
-let key2 = "AGE";
-let key3 = "SALARY";
-let key4 = "CODES";
-let value1 = "Lisa";
-let value2 = 18;
-let value3 = 100.5;
-let value4 = new Uint8Array([1, 2, 3, 4, 5]);
-
-const valueBucket: ValuesBucket = {
-  key1: value1,
-  key2: value2,
-  key3: value3,
-  key4: value4,
-};
-let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
-predicates.equalTo("NAME", "Lisa")
-let promise: void = rdbStore.update(valueBucket, predicates)
-promise.then(async (rows: number) => {
-  console.log("Updated row count: " + rows)
-}).catch((err: BusinessError) => {
-  console.info("Updated failed, err: " + err)
-})
-```
+See [update](#update)

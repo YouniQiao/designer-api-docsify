@@ -120,17 +120,6 @@ Unsubscribes from the word selection panel destruction event. This API is used t
 | type | 'destroyed' | Yes | Type of the event to unsubscribe from. The value is fixed to **'destroyed'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
-**Examples**
-
-```TypeScript
-try {
-  // Unsubscribe from the word selection panel destruction event. selectionPanel is a Panel instance created by createPanel.
-  selectionPanel.off('destroyed');
-} catch (err) {
-  console.error(`Failed to unregister destroyed. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
-
 ## off('hidden')
 
 ```TypeScript
@@ -149,17 +138,6 @@ Unsubscribes from the word selection panel hiding event. This API is used togeth
 | --- | --- | --- | --- |
 | type | 'hidden' | Yes | Type of the event to unsubscribe from. The value is fixed to **'hidden'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
-
-**Examples**
-
-```TypeScript
-try {
-  // // Unsubscribe from the word selection panel hiding event. selectionPanel is a Panel instance created by createPanel.
-  selectionPanel.off('hidden');
-} catch (err) {
-  console.error(`Failed to unregister hidden. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## on('destroyed')
 
@@ -180,19 +158,6 @@ Subscribes to the word selection panel destruction event. This API is used toget
 | type | 'destroyed' | Yes | Event type, which is **'destroyed'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) is called to destroy the panel. |
 
-**Examples**
-
-```TypeScript
-try {
-  // Subscribe to the word selection panel destruction event. selectionPanel is a Panel instance created by createPanel.
-  selectionPanel.on('destroyed', () => {
-    console.info('Panel has been destroyed.');
-  });
-} catch (err) {
-  console.error(`Failed to register destroyed callback. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
-
 ## on('hidden')
 
 ```TypeScript
@@ -211,19 +176,6 @@ Subscribes to the word selection panel hiding event. This API is used together w
 | --- | --- | --- | --- |
 | type | 'hidden' | Yes | Event type, which is **'hidden'**. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when the panel is hidden. The panel can be hidden by calling [hide](#hide) or automatically hidden when it loses focus. |
-
-**Examples**
-
-```TypeScript
-try {
-  // Subscribe to the word selection panel hiding event. selectionPanel is a Panel instance created by createPanel.
-  selectionPanel.on('hidden', () => {
-    console.info('Panel has been hidden.');
-  });
-} catch (err) {
-  console.error(`Failed to register hidden callback. Error code: ${err.code}, error message: ${err.message}`);
-}
-```
 
 ## setUiContent
 

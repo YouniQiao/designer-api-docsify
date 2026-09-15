@@ -69,6 +69,25 @@ try {
 }
 ```
 
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
+  deviceManager.bindDevice(12345678, (error : BusinessError, data : number) => {
+    console.error(`Device is disconnected`);
+  }).then(data => {
+    console.info(`bindDevice success, Device_Id is ${data.deviceId}.
+    remote is ${data.remote != null ? data.remote.getDescriptor() : "null"}`);
+  }, (error: BusinessError) => {
+    console.error(`bindDevice async fail. Code is ${error.code}, message is ${error.message}`);
+  });
+} catch (error) {
+  console.error(`bindDevice fail. Code is ${error.code}, message is ${error.message}`);
+}
+```
+
 
 ## bindDevice
 
@@ -112,21 +131,4 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 **Examples**
 
-```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // For example, deviceId is 12345678. You can use queryDevices() to obtain the deviceId.
-  deviceManager.bindDevice(12345678, (error : BusinessError, data : number) => {
-    console.error(`Device is disconnected`);
-  }).then(data => {
-    console.info(`bindDevice success, Device_Id is ${data.deviceId}.
-    remote is ${data.remote != null ? data.remote.getDescriptor() : "null"}`);
-  }, (error: BusinessError) => {
-    console.error(`bindDevice async fail. Code is ${error.code}, message is ${error.message}`);
-  });
-} catch (error) {
-  console.error(`bindDevice fail. Code is ${error.code}, message is ${error.message}`);
-}
-```
+See [bindDevice](#binddevice)

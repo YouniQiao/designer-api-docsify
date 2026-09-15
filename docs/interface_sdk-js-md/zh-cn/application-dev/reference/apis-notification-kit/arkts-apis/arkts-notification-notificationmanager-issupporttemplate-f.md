@@ -50,6 +50,17 @@ let isSupportTemplateCallback = (err: BusinessError, data: boolean): void => {
 notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let templateName: string = 'downloadTemplate';
+notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
+  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## isSupportTemplate
 
@@ -86,13 +97,4 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let templateName: string = 'downloadTemplate';
-notificationManager.isSupportTemplate(templateName).then((data: boolean) => {
-  console.info(`isSupportTemplate success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`isSupportTemplate failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [isSupportTemplate](#issupporttemplate)

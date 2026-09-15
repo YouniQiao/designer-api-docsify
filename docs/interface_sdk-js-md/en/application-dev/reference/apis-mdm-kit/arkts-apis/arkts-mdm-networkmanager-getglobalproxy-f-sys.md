@@ -66,6 +66,24 @@ networkManager.getGlobalProxy(wantTemp, (err, result) => {
 });
 ```
 
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+networkManager.getGlobalProxy(wantTemp).then(() => {
+  console.info(`Succeeded in getting network global proxy`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get network global proxy. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## getGlobalProxy
 
@@ -113,20 +131,4 @@ Obtains the global network proxy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { networkManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-networkManager.getGlobalProxy(wantTemp).then(() => {
-  console.info(`Succeeded in getting network global proxy`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get network global proxy. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getGlobalProxy](#getglobalproxy)

@@ -62,6 +62,25 @@ try {
 }
 ```
 
+```TypeScript
+import { businessAbilityRouter } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
+
+try {
+  businessAbilityRouter.queryBusinessAbilityInfo(filter)
+    .then(() => {
+      console.info('queryBusinessAbilityInfo success');
+    }).catch((error: BusinessError) => {
+    console.error('queryBusinessAbilityInfo failed ' + error.message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('queryBusinessAbilityInfo failed ' + message);
+}
+```
+
 
 ## queryBusinessAbilityInfo
 
@@ -101,21 +120,4 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 
 **Examples**
 
-```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filter: businessAbilityRouter.BusinessAbilityFilter = { businessType: businessAbilityRouter.BusinessType.SHARE };
-
-try {
-  businessAbilityRouter.queryBusinessAbilityInfo(filter)
-    .then(() => {
-      console.info('queryBusinessAbilityInfo success');
-    }).catch((error: BusinessError) => {
-    console.error('queryBusinessAbilityInfo failed ' + error.message);
-  });
-} catch (error) {
-  let message = (error as BusinessError).message;
-  console.error('queryBusinessAbilityInfo failed ' + message);
-}
-```
+See [queryBusinessAbilityInfo](#querybusinessabilityinfo)

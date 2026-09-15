@@ -72,6 +72,34 @@ try {
 }
 ```
 
+```TypeScript
+import { abilityManager, missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
+    if (error.code) {
+      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
+      return;
+    }
+
+    let toHides = new Array<number>();
+    for (let missionInfo of missionInfos) {
+      if (missionInfo.abilityState == abilityManager.AbilityState.FOREGROUND) {
+        toHides.push(missionInfo.missionId);
+      }
+    }
+    missionManager.moveMissionsToBackground(toHides).then((hideRes: Array<number>) => {
+      console.info(`moveMissionsToBackground is called, res: ${JSON.stringify(hideRes)}`);
+    });
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error: ${code}, ${message} `);
+}
+```
+
 
 ## moveMissionsToBackground
 
@@ -112,30 +140,4 @@ function moveMissionsToBackground(missionIds: Array<number>): Promise<Array<numb
 
 **示例**
 
-```TypeScript
-import { abilityManager, missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  missionManager.getMissionInfos("", 10, (error: BusinessError, missionInfos: Array<missionManager.MissionInfo>) => {
-    if (error.code) {
-      console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}`);
-      return;
-    }
-
-    let toHides = new Array<number>();
-    for (let missionInfo of missionInfos) {
-      if (missionInfo.abilityState == abilityManager.AbilityState.FOREGROUND) {
-        toHides.push(missionInfo.missionId);
-      }
-    }
-    missionManager.moveMissionsToBackground(toHides).then((hideRes: Array<number>) => {
-      console.info(`moveMissionsToBackground is called, res: ${JSON.stringify(hideRes)}`);
-    });
-  });
-} catch (paramError) {
-  let code = (paramError as BusinessError).code;
-  let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message} `);
-}
-```
+参见 [moveMissionsToBackground](#movemissionstobackground)

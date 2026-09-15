@@ -55,6 +55,24 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  if (geoLocationManager.isCachedGnssServiceSupported()) {
+    geoLocationManager.flushCachedGnssLocations().then(() => {
+      console.info('promise, flushCachedGnssLocations success');
+    })
+      .catch((error: BusinessError) => {
+        console.error('promise, flushCachedGnssLocations: error=' + JSON.stringify(error));
+      });
+  }
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## flushCachedGnssLocations
 
@@ -88,20 +106,4 @@ function flushCachedGnssLocations(): Promise<void>
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  if (geoLocationManager.isCachedGnssServiceSupported()) {
-    geoLocationManager.flushCachedGnssLocations().then(() => {
-      console.info('promise, flushCachedGnssLocations success');
-    })
-      .catch((error: BusinessError) => {
-        console.error('promise, flushCachedGnssLocations: error=' + JSON.stringify(error));
-      });
-  }
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [flushCachedGnssLocations](#flushcachedgnsslocations)

@@ -57,6 +57,21 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let deviceDescriptor = "networkId";
+try {
+  cooperate.getCrossingSwitchState(deviceDescriptor).then((data: boolean) => {
+    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  }, (error: BusinessError) => {
+    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
 
 ## getCrossingSwitchState
 
@@ -97,17 +112,4 @@ function getCrossingSwitchState(networkId: string): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let deviceDescriptor = "networkId";
-try {
-  cooperate.getCrossingSwitchState(deviceDescriptor).then((data: boolean) => {
-    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
-  }, (error: BusinessError) => {
-    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-  });
-} catch (error) {
-  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
-}
-```
+参见 [getCrossingSwitchState](#getcrossingswitchstate)

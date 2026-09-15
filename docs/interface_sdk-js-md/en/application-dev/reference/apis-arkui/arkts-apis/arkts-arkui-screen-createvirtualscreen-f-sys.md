@@ -73,6 +73,37 @@ screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => 
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenClass: screen.Screen | null = null;
+class VirtualScreenOption {
+  name : string = '';
+  width : number =  0;
+  height : number = 0;
+  density : number = 0;
+  surfaceId : string = '';
+  supportsFocus ?: boolean = true;
+}
+
+let option: VirtualScreenOption = { 
+  name: 'screen01',
+  width: 1080,
+  height: 2340,
+  density: 2,
+  surfaceId: '',
+  supportsFocus: false
+}; // Create virtual screen parameters.
+
+// Create a virtual screen.
+screen.createVirtualScreen(option).then((data: screen.Screen) => {
+  screenClass = data;
+  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## createVirtualScreen
 
@@ -113,33 +144,4 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let screenClass: screen.Screen | null = null;
-class VirtualScreenOption {
-  name : string = '';
-  width : number =  0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let option: VirtualScreenOption = { 
-  name: 'screen01',
-  width: 1080,
-  height: 2340,
-  density: 2,
-  surfaceId: '',
-  supportsFocus: false
-}; // Create virtual screen parameters.
-
-// Create a virtual screen.
-screen.createVirtualScreen(option).then((data: screen.Screen) => {
-  screenClass = data;
-  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [createVirtualScreen](#createvirtualscreen)

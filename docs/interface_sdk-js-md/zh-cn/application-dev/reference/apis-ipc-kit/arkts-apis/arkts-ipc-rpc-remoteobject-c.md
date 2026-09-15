@@ -62,7 +62,7 @@ class TestRemoteObject extends rpc.RemoteObject {
     return true;
   }
 }
-let testRemoteObject = new TestRemoteObject("testObject");
+let testRemoteObject = new TestRemoteObject('testObject');
 ```
 
 ## constructor
@@ -130,7 +130,7 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
@@ -172,7 +172,7 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
@@ -221,7 +221,7 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testObject = new TestRemoteObject("ipcTest");
+  let testObject = new TestRemoteObject('ipcTest');
   let descriptor = testObject.getDescriptor();
   hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is ' + descriptor);
 } catch (error) {
@@ -271,7 +271,7 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let descriptor = testRemoteObject.getInterfaceDescriptor();
   hilog.info(0x0000, 'testTag', 'RpcServer: descriptor is: ' + descriptor);
 } catch (error) {
@@ -327,8 +327,8 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  testRemoteObject.getLocalInterface("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
+  testRemoteObject.getLocalInterface('testObject');
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
@@ -391,7 +391,7 @@ class TestRemoteObject extends rpc.RemoteObject {
     // 方法逻辑需开发者根据业务需要实现
   }
 }
-let testRemoteObject = new TestRemoteObject("testObject");
+let testRemoteObject = new TestRemoteObject('testObject');
 ```
 
 ## onRemoteMessageRequest
@@ -427,130 +427,6 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean &#124; Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。<br>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
-
-**示例**
-
-```TypeScript
-// 重写onRemoteMessageRequest方法同步处理请求
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-```TypeScript
-// 重写onRemoteMessageRequest方法异步处理请求
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  async onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    await new Promise((resolve: (data: rpc.RequestResult) => void) => {
-      setTimeout(resolve, 100);
-    })
-    return true;
-  }
-}
-```
-
-```TypeScript
-// 同时重写onRemoteMessageRequest和onRemoteRequest方法同步处理请求
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-     if (code === 1) {
-        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-        return true;
-     } else {
-        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-        return false;
-     }
-  }
-    // 同时调用仅会执行onRemoteMessageRequest
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    return true;
-  }
-}
-```
-
-## onRemoteMessageRequest
-
-```TypeScript
-onRemoteMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption,
-      callingInfo?: CallingInfo
-    ): boolean | Promise<boolean>
-```
-
-sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
-
-> **说明：** 
-> 
-> 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
-> 
-> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
-
-**起始版本：** 23
-
-**系统能力：** SystemCapability.Communication.IPC.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| code | number | 是 | 对端发送的服务请求码。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
-| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | 否 | 获取IPC上下文信息。不传此参数时，默认为undefined。当需要获取调用者的PID、UID、TokenId或设备ID等信息时传入此参数，可通过callingInfo.callerPid等方式获取。不传入时无法直接获取IPC上下文信息，需通过rpc.IPCSkeleton其他方法（如getCallingPid、getCallingUid等）获取。 |
 
 **返回值：**
 
@@ -644,6 +520,132 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 ```
+
+```TypeScript
+// 重写onRemoteMessageRequest方法同步处理请求
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+```TypeScript
+// 重写onRemoteMessageRequest方法异步处理请求
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  async onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+    await new Promise((resolve: (data: rpc.RequestResult) => void) => {
+      setTimeout(resolve, 100);
+    })
+    return true;
+  }
+}
+```
+
+```TypeScript
+// 同时重写onRemoteMessageRequest和onRemoteRequest方法同步处理请求
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+    // 同时调用仅会执行onRemoteMessageRequest
+  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+    return true;
+  }
+}
+```
+
+## onRemoteMessageRequest
+
+```TypeScript
+onRemoteMessageRequest(
+      code: number,
+      data: MessageSequence,
+      reply: MessageSequence,
+      options: MessageOption,
+      callingInfo?: CallingInfo
+    ): boolean | Promise<boolean>
+```
+
+sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
+
+> **说明：** 
+> 
+> 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> 
+> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+
+**起始版本：** 23
+
+**系统能力：** SystemCapability.Communication.IPC.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | number | 是 | 对端发送的服务请求码。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
+| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | 否 | 获取IPC上下文信息。不传此参数时，默认为undefined。当需要获取调用者的PID、UID、TokenId或设备ID等信息时传入此参数，可通过callingInfo.callerPid等方式获取。不传入时无法直接获取IPC上下文信息，需通过rpc.IPCSkeleton其他方法（如getCallingPid、getCallingUid等）获取。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean &#124; Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。<br>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
+
+**示例**
+
+参见 [onRemoteMessageRequest](#onremotemessagerequest)
 
 ## onRemoteRequest
 
@@ -744,8 +746,8 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
-  testRemoteObject.queryLocalInterface("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
+  testRemoteObject.queryLocalInterface('testObject');
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
@@ -806,12 +808,12 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let option = new rpc.MessageOption();
   let data = rpc.MessageSequence.create();
   let reply = rpc.MessageSequence.create();
   data.writeInt(1);
-  data.writeString("hello");
+  data.writeString('hello');
   testRemoteObject.sendMessageRequest(1, data, reply, option)
     .then((result: rpc.RequestResult) => {
       if (result.errCode === 0) {
@@ -886,12 +888,12 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let option = new rpc.MessageOption();
   let data = rpc.MessageSequence.create();
   let reply = rpc.MessageSequence.create();
   data.writeInt(1);
-  data.writeString("hello");
+  data.writeString('hello');
   testRemoteObject.sendMessageRequest(1, data, reply, option)
     .then((result: rpc.RequestResult) => {
       if (result.errCode === 0) {
@@ -953,7 +955,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
-class testRemoteObject extends rpc.RemoteObject {
+class TestRemoteObject extends rpc.RemoteObject {
   onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
     option: rpc.MessageOption): boolean {
     // 根据业务实际逻辑，进行相应处理
@@ -961,12 +963,12 @@ class testRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let option = new rpc.MessageOption();
   let data = rpc.MessageParcel.create();
   let reply = rpc.MessageParcel.create();
   data.writeInt(1);
-  data.writeString("hello");
+  data.writeString('hello');
   let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
   if (ret) {
     hilog.info(0x0000, 'testTag', 'sendRequest got result');
@@ -980,6 +982,50 @@ try {
   reply.reclaim();
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject('testObject');
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString('hello');
+  let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
+  let b = a as Promise<rpc.SendRequestResult>;
+  b.then((result: rpc.SendRequestResult) => {
+    if (result.errCode === 0) {
+      hilog.info(0x0000, 'testTag', 'sendRequest got result');
+      let num = result.reply.readInt();
+      let msg = result.reply.readString();
+      hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+      hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+    } else {
+      hilog.error(0x0000, 'testTag', 'sendRequest failed, errCode: ' + result.errCode);
+    }
+  }).catch((e: Error) => {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed, error: ' + JSON.stringify(e));
+  }).finally (() => {
+    hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+    data.reclaim();
+    reply.reclaim();
+  });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
 ```
 
@@ -1027,6 +1073,40 @@ import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 class TestRemoteObject extends rpc.RemoteObject {
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
+    option: rpc.MessageOption): boolean {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject('testObject');
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageParcel.create();
+  let reply = rpc.MessageParcel.create();
+  data.writeInt(1);
+  data.writeString('hello');
+  let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
+  if (ret) {
+    hilog.info(0x0000, 'testTag', 'sendRequest got result');
+    let msg = reply.readString();
+    hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+  } else {
+    hilog.error(0x0000, 'testTag', 'sendRequest failed');
+  }
+  hilog.info(0x0000, 'testTag', 'sendRequest ends, reclaim parcel');
+  data.reclaim();
+  reply.reclaim();
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error ' + error);
+}
+```
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
@@ -1036,12 +1116,12 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let option = new rpc.MessageOption();
   let data = rpc.MessageParcel.create();
   let reply = rpc.MessageParcel.create();
   data.writeInt(1);
-  data.writeString("hello");
+  data.writeString('hello');
   let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
   let b = a as Promise<rpc.SendRequestResult>;
   b.then((result: rpc.SendRequestResult) => {
@@ -1105,7 +1185,7 @@ sendRequest(
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
-class testRemoteObject extends rpc.RemoteObject {
+class TestRemoteObject extends rpc.RemoteObject {
   onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
     option: rpc.MessageOption): boolean {
     // 根据业务实际逻辑，进行相应处理
@@ -1113,12 +1193,12 @@ class testRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let option = new rpc.MessageOption();
   let data = rpc.MessageParcel.create();
   let reply = rpc.MessageParcel.create();
   data.writeInt(1);
-  data.writeString("hello");
+  data.writeString('hello');
   let ret: boolean = testRemoteObject.sendRequest(1, data, reply, option);
   if (ret) {
     hilog.info(0x0000, 'testTag', 'sendRequest got result');
@@ -1149,12 +1229,12 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 try {
-  let testRemoteObject = new TestRemoteObject("testObject");
+  let testRemoteObject = new TestRemoteObject('testObject');
   let option = new rpc.MessageOption();
   let data = rpc.MessageParcel.create();
   let reply = rpc.MessageParcel.create();
   data.writeInt(1);
-  data.writeString("hello");
+  data.writeString('hello');
   let a = testRemoteObject.sendRequest(1, data, reply, option) as Object;
   let b = a as Promise<rpc.SendRequestResult>;
   b.then((result: rpc.SendRequestResult) => {

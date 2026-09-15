@@ -68,6 +68,37 @@ policy.setNetQuotaPolicies(netQuotaPolicyList, (error: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let netQuotaPolicyList: Array<policy.NetQuotaPolicy> = [];
+let netQuotaPolicy: policy.NetQuotaPolicy = {
+  networkMatchRule: {
+    netType: connection.NetBearType.BEARER_CELLULAR,
+    identity: '',
+    simId: '1'
+  },
+  quotaPolicy: {
+    periodDuration: 'M1',
+    warningBytes: 40000,
+    limitBytes: 50000,
+    metered: true,
+    limitAction: policy.LimitAction.LIMIT_ACTION_NONE
+  }
+}
+netQuotaPolicyList.push(netQuotaPolicy);
+
+policy
+  .setNetQuotaPolicies(netQuotaPolicyList)
+  .then(() => {
+    console.info('setNetQuotaPolicies success');
+  })
+  .catch((error: BusinessError) => {
+    console.error(JSON.stringify(error));
+  });
+```
+
 
 ## setNetQuotaPolicies
 
@@ -110,33 +141,4 @@ Sets the metering network policy. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let netQuotaPolicyList: Array<policy.NetQuotaPolicy> = [];
-let netQuotaPolicy: policy.NetQuotaPolicy = {
-  networkMatchRule: {
-    netType: connection.NetBearType.BEARER_CELLULAR,
-    identity: '',
-    simId: '1'
-  },
-  quotaPolicy: {
-    periodDuration: 'M1',
-    warningBytes: 40000,
-    limitBytes: 50000,
-    metered: true,
-    limitAction: policy.LimitAction.LIMIT_ACTION_NONE
-  }
-}
-netQuotaPolicyList.push(netQuotaPolicy);
-
-policy
-  .setNetQuotaPolicies(netQuotaPolicyList)
-  .then(() => {
-    console.info('setNetQuotaPolicies success');
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
-```
+See [setNetQuotaPolicies](#setnetquotapolicies)

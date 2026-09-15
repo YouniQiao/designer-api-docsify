@@ -45,6 +45,18 @@ appManager.isRamConstrainedDevice().then((data) => {
 });
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+appManager.isRamConstrainedDevice((err, data) => {
+  if (err) {
+    console.error(`isRamConstrainedDevice fail, code: ${err.code}, msg:${err.message}`);
+  } else {
+    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
+  }
+});
+```
+
 
 ## isRamConstrainedDevice
 
@@ -75,14 +87,4 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 
 **示例**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-
-appManager.isRamConstrainedDevice((err, data) => {
-  if (err) {
-    console.error(`isRamConstrainedDevice fail, code: ${err.code}, msg:${err.message}`);
-  } else {
-    console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
-  }
-});
-```
+参见 [isRamConstrainedDevice](#isramconstraineddevice)

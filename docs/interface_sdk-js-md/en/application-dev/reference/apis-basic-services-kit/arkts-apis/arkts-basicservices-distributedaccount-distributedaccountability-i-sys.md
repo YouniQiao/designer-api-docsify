@@ -68,6 +68,24 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+try {
+  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
+  accountAbility.getOsAccountDistributedInfoByLocalId(localId).then((
+    data: distributedAccount.DistributedInfo) => {
+    console.info('distributed information: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## getOsAccountDistributedInfoByLocalId
 
 ```TypeScript
@@ -109,23 +127,7 @@ Obtains the distributed account information about an OS account. This API uses a
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-try {
-  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
-  accountAbility.getOsAccountDistributedInfoByLocalId(localId).then((
-    data: distributedAccount.DistributedInfo) => {
-    console.info('distributed information: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [getOsAccountDistributedInfoByLocalId](#getosaccountdistributedinfobylocalid)
 
 ## setOsAccountDistributedInfoByLocalId
 
@@ -187,6 +189,25 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
+let accountInfo: distributedAccount.DistributedInfo =
+  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
+try {
+  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
+  accountAbility.setOsAccountDistributedInfoByLocalId(localId, accountInfo).then(() => {
+    console.info('setOsAccountDistributedInfoByLocalId successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
 ## setOsAccountDistributedInfoByLocalId
 
 ```TypeScript
@@ -231,21 +252,4 @@ Sets the distributed account information about an OS account. This API uses a pr
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const accountAbility: distributedAccount.DistributedAccountAbility = distributedAccount.getDistributedAccountAbility();
-let accountInfo: distributedAccount.DistributedInfo =
-  { id: '12345', name: 'ZhangSan', event: 'Ohos.account.event.LOGIN' };
-try {
-  let localId: number = 100; // This is an example. Replace it with an actual OS account ID.
-  accountAbility.setOsAccountDistributedInfoByLocalId(localId, accountInfo).then(() => {
-    console.info('setOsAccountDistributedInfoByLocalId successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+See [setOsAccountDistributedInfoByLocalId](#setosaccountdistributedinfobylocalid)

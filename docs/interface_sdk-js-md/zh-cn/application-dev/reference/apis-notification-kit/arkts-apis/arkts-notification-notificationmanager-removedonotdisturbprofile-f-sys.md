@@ -65,6 +65,23 @@ notificationManager.removeDoNotDisturbProfile(templates).then(() => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userId : number = 100;
+let templates: Array<notificationManager.DoNotDisturbProfile> = [
+  {
+    id: 3,
+    name: '工作模式'
+  }
+]
+notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
+  console.info('removeDoNotDisturbProfile success.');
+}).catch((err: BusinessError) => {
+  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeDoNotDisturbProfile
 
@@ -112,19 +129,4 @@ function removeDoNotDisturbProfile(templates: Array<DoNotDisturbProfile>, userId
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let userId : number = 100;
-let templates: Array<notificationManager.DoNotDisturbProfile> = [
-  {
-    id: 3,
-    name: '工作模式'
-  }
-]
-notificationManager.removeDoNotDisturbProfile(templates, userId).then(() => {
-  console.info('removeDoNotDisturbProfile success.');
-}).catch((err: BusinessError) => {
-  console.error(`removeDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [removeDoNotDisturbProfile](#removedonotdisturbprofile)

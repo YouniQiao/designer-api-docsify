@@ -232,38 +232,6 @@ off(type: 'release', callback: OnReleaseCallback): void
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**示例**
-
-```TypeScript
-import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      let caller: Caller = obj;
-      try {
-        // 定义断开连接的回调函数
-        let onReleaseCallBack: OnReleaseCallback = (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        };
-        caller.on('release', onReleaseCallBack); // 注册断开连接的监听
-        caller.off('release', onReleaseCallBack); // 取消注册断开连接的监听
-      } catch (error) {
-        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
-
 ## off('release')
 
 ```TypeScript
@@ -289,39 +257,6 @@ off(type: 'release'): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { UIAbility, Caller, OnReleaseCallback } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let caller: Caller;
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: ''
-    }).then((obj) => {
-      caller = obj;
-      try {
-        let onReleaseCallBack: OnReleaseCallback = (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        };
-        caller.on('release', onReleaseCallBack);
-        caller.off('release'); // 取消注册所有断开连接的监听
-      } catch (error) {
-        console.error(`Caller.on or Caller.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
 
 ## on('release')
 
@@ -350,37 +285,6 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
-
-**示例**
-
-```TypeScript
-import { UIAbility, Caller } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let dstDeviceId: string = 'xxxx';
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: dstDeviceId
-    }).then((obj) => {
-      let caller: Caller = obj;
-      try {
-        // 注册release事件监听
-        caller.on('release', (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        });
-      } catch (error) {
-        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
 
 ## onRelease
 

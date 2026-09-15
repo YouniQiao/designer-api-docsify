@@ -46,44 +46,8 @@ constructor(settings?: RenderingContextSettings)
 
 **示例**
 
-以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
-
 ```TypeScript
-// xxx.ets
-import { LengthMetricsUnit } from '@kit.ArkUI'
-
-@Entry
-@Component
-struct LengthMetricsUnitDemo {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true);
-  private contextPX: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings, LengthMetricsUnit.PX);
-  private contextVP: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings);
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Canvas(this.contextPX)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          // 使用px单位模式绘制图形
-          this.contextPX.fillRect(10, 10, 100, 100)
-          this.contextPX.clearRect(10, 10, 50, 50)
-        })
-
-      Canvas(this.contextVP)
-        .width('100%')
-        .height(150)
-        .backgroundColor('#ffff00')
-        .onReady(() => {
-          this.contextVP.fillRect(10, 10, 100, 100)
-          this.contextVP.clearRect(10, 10, 50, 50)
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
+以下示例展示了配置CanvasRenderingContext2D对象的单位模式，默认单位模式为LengthMetricsUnit.DEFAULT，对应默认单位vp，配置后无法动态更改。详细说明见LengthMetricsUnit。
 ```
 
 ## constructor
@@ -241,99 +205,6 @@ off(type: 'onDetach', callback?: Callback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-**示例**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { FrameNode } from '@kit.ArkUI'
-
-// xxx.ets
-@Entry
-@Component
-struct AttachDetachExample {
-  private settings: RenderingContextSettings = new RenderingContextSettings(true)
-  private context: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.settings)
-  private scroller: Scroller = new Scroller()
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-  private node: FrameNode | null = null
-  attachCallback = () => {
-    console.info('CanvasRenderingContext2D attached to the canvas frame node.')
-    this.node = this.context.canvas
-  }
-  detachCallback = () => {
-    console.info('CanvasRenderingContext2D detach from the canvas frame node.')
-    this.node = null
-  }
-
-  aboutToAppear(): void {
-    try {
-      this.context.on('onAttach', this.attachCallback)
-      this.context.on('onDetach', this.detachCallback)
-    } catch (error) {
-      let e: BusinessError = error as BusinessError;
-      console.error(`Error code: ${e.code}, message: ${e.message}`);
-    }
-  }
-
-  aboutToDisappear(): void {
-    try {
-      this.context.off('onAttach')
-      this.context.off('onDetach')
-    } catch (error) {
-      let e: BusinessError = error as BusinessError;
-      console.error(`Error code: ${e.code}, message: ${e.message}`);
-    }
-  }
-
-  build() {
-    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Scroll(this.scroller) {
-        Flex({ direction: FlexDirection.Column }) {
-          ForEach(this.arr, (item: number) => {
-            Row() {
-              if (item == 3) {
-                Canvas(this.context)
-                  .width('100%')
-                  .height(150)
-                  .backgroundColor('rgb(213,213,213)')
-                  .onReady(() => {
-                    this.context.font = '30vp sans-serif'
-                    this.node?.commonEvent.setOnVisibleAreaApproximateChange(
-                      { ratios: [0, 1], expectedUpdateInterval: 10 },
-                      (isVisible: boolean, currentRatio: number) => {
-                        if (!isVisible && currentRatio <= 0.0) {
-                          console.info('Canvas is completely invisible.')
-                        }
-                        if (isVisible && currentRatio >= 1.0) {
-                          console.info('Canvas is fully visible.')
-                        }
-                      }
-                    )
-                  })
-              } else {
-                Text(item.toString())
-                  .width('100%')
-                  .height(150)
-                  .backgroundColor('rgb(39,135,217)')
-                  .borderRadius(15)
-                  .fontSize(16)
-                  .textAlign(TextAlign.Center)
-                  .margin({ top: 5 })
-              }
-            }
-          }, (item: number) => item.toString())
-        }
-      }
-      .width('90%')
-      .scrollBar(BarState.Off)
-      .scrollable(ScrollDirection.Vertical)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ## on('onAttach')
 

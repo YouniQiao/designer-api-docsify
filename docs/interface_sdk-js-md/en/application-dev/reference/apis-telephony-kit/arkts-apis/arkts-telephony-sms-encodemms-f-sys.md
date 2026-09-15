@@ -58,6 +58,26 @@ sms.encodeMms(mmsInformation, (err: BusinessError, data: number[]) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mmsAcknowledgeInd: sms.MmsAcknowledgeInd = {
+    transactionId: "100",
+    version: sms.MmsVersionType.MMS_VERSION_1_0,
+    reportAllowed: sms.ReportType.MMS_YES
+};
+let mmsInformation: sms.MmsInformation = {
+    messageType: sms.MessageType.TYPE_MMS_ACKNOWLEDGE_IND,
+    mmsType: mmsAcknowledgeInd
+};
+sms.encodeMms(mmsInformation).then((data: number[]) => {
+    console.info(`encodeMms success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`encodeMms failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## encodeMms
 
@@ -98,22 +118,4 @@ MMS message code. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let mmsAcknowledgeInd: sms.MmsAcknowledgeInd = {
-    transactionId: "100",
-    version: sms.MmsVersionType.MMS_VERSION_1_0,
-    reportAllowed: sms.ReportType.MMS_YES
-};
-let mmsInformation: sms.MmsInformation = {
-    messageType: sms.MessageType.TYPE_MMS_ACKNOWLEDGE_IND,
-    mmsType: mmsAcknowledgeInd
-};
-sms.encodeMms(mmsInformation).then((data: number[]) => {
-    console.info(`encodeMms success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`encodeMms failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [encodeMms](#encodemms)

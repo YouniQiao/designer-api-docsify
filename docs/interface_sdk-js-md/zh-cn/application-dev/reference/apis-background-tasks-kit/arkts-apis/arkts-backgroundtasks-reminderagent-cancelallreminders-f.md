@@ -39,6 +39,14 @@ reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
 })
 ```
 
+```TypeScript
+import reminderAgent from '@ohos.reminderAgent';
+
+reminderAgent.cancelAllReminders().then(() => {
+    console.info("cancelAllReminders promise")
+})
+```
+
 
 ## cancelAllReminders
 
@@ -64,10 +72,4 @@ function cancelAllReminders(): Promise<void>
 
 **示例**
 
-```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
-reminderAgent.cancelAllReminders().then(() => {
-    console.info("cancelAllReminders promise")
-})
-```
+参见 [cancelAllReminders](#cancelallreminders)

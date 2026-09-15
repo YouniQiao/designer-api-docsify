@@ -46,6 +46,14 @@ function createImageCreator(width: number, height: number, format: number, capac
 **示例**
 
 ```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let creator: image.ImageCreator = image.createImageCreator(size, image.ImageFormat.JPEG, 8);
+```
+
+```TypeScript
 let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.ImageFormat.JPEG, 8);
 ```
 
@@ -86,10 +94,4 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: number): 
 
 **示例**
 
-```TypeScript
-let size: image.Size = {
-  height: 8192,
-  width: 8192
-}
-let creator: image.ImageCreator = image.createImageCreator(size, image.ImageFormat.JPEG, 8);
-```
+参见 [createImageCreator](#createimagecreator)

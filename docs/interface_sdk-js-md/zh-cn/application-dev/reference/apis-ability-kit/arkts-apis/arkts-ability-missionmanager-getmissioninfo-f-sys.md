@@ -77,6 +77,26 @@ missionManager.getMissionInfos('', 10)
   });
 ```
 
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let testMissionId = 1;
+
+try {
+  missionManager.getMissionInfo('', testMissionId)
+    .then((data: missionManager.MissionInfo) => {
+      console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
+    })
+    .catch((error: BusinessError) => {
+      console.error(`getMissionInfo failed. Code: ${error.code}, message: ${error.message}`);
+    });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getMissionInfo failed. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## getMissionInfo
 
@@ -117,22 +137,4 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 **示例**
 
-```TypeScript
-import { missionManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let testMissionId = 1;
-
-try {
-  missionManager.getMissionInfo('', testMissionId)
-    .then((data: missionManager.MissionInfo) => {
-      console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
-    })
-    .catch((error: BusinessError) => {
-      console.error(`getMissionInfo failed. Code: ${error.code}, message: ${error.message}`);
-    });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`getMissionInfo failed. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [getMissionInfo](#getmissioninfo)

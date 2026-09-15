@@ -43,13 +43,3 @@ When the DLP management application exits or no longer needs to track sandbox st
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-
-**Examples**
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-
-dlpPermission.off('uninstallDLPSandbox', (info: dlpPermission.DLPSandboxState) => {
-  console.info('uninstallDLPSandbox event', info.appIndex, info.bundleName)
-}); // Unsubscribe from the DLP sandbox application uninstall event.
-```

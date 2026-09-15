@@ -41,8 +41,7 @@ function injectMouseEvent(mouseEvent: MouseEventData): void
 **示例**
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
-import { MouseEvent } from '@kit.InputKit';
+import { inputEventClient, MouseEvent } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry

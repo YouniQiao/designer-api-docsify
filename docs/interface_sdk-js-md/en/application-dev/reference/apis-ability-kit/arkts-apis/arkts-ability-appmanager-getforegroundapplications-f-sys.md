@@ -60,6 +60,17 @@ try {
 }
 ```
 
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+appManager.getForegroundApplications().then((data) => {
+  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
+});
+```
+
 
 ## getForegroundApplications
 
@@ -93,13 +104,4 @@ Obtains applications that are running in the foreground. The application informa
 
 **Examples**
 
-```TypeScript
-import { appManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-appManager.getForegroundApplications().then((data) => {
-  console.info(`getForegroundApplications success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`getForegroundApplications fail, err: ${JSON.stringify(err)}`);
-});
-```
+See [getForegroundApplications](#getforegroundapplications)

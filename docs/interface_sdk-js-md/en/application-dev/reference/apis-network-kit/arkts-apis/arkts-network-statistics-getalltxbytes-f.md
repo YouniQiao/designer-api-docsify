@@ -50,6 +50,14 @@ statistics.getAllTxBytes((error: BusinessError, stats: number) => {
 });
 ```
 
+```TypeScript
+import { statistics } from '@kit.NetworkKit';
+
+statistics.getAllTxBytes().then((stats: number) => {
+  console.info(JSON.stringify(stats));
+});
+```
+
 
 ## getAllTxBytes
 
@@ -82,10 +90,4 @@ Obtains the total uplink traffic (in bytes) of all NICs from the last startup to
 
 **Examples**
 
-```TypeScript
-import { statistics } from '@kit.NetworkKit';
-
-statistics.getAllTxBytes().then((stats: number) => {
-  console.info(JSON.stringify(stats));
-});
-```
+See [getAllTxBytes](#getalltxbytes)

@@ -40,6 +40,16 @@ power.isScreenOn((err: Error, data: boolean) => {
 })
 ```
 
+```TypeScript
+power.isScreenOn()
+.then((data: boolean) => {
+    console.info('screen on status is ' + data);
+})
+.catch((err: Error) => {
+    console.error('check screen status failed, err: ' + err);
+})
+```
+
 
 ## isScreenOn
 
@@ -65,12 +75,4 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 **Examples**
 
-```TypeScript
-power.isScreenOn()
-.then((data: boolean) => {
-    console.info('screen on status is ' + data);
-})
-.catch((err: Error) => {
-    console.error('check screen status failed, err: ' + err);
-})
-```
+See [isScreenOn](#isscreenon)

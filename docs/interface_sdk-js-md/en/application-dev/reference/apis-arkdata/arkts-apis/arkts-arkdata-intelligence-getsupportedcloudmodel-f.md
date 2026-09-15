@@ -25,3 +25,17 @@ Obtains the supported cloud embedding models.
 | Type | Description |
 | --- | --- |
 | Promise&lt;Array&lt;[CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)&gt;&gt; | The promise returned by the function. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+intelligence.getSupportedCloudModel()
+  .then((info: Array<intelligence.CloudModelInfo>) => {
+    console.info("Succeeded in getting CloudModelInfo");
+  })
+  .catch((err: BusinessError) => {
+    console.error(`Failed to get CloudModelInfo. Code: ${err.code}, message: ${err.message}`);
+  });
+```

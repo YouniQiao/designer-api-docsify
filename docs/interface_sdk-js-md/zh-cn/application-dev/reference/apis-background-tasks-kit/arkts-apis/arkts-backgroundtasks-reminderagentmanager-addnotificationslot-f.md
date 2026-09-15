@@ -51,6 +51,21 @@ reminderAgentManager.addNotificationSlot(mySlot, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let mySlot: notificationManager.NotificationSlot = {
+  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+}
+reminderAgentManager.addNotificationSlot(mySlot).then(() => {
+  console.info("addNotificationSlot promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
 
 ## addNotificationSlot
 
@@ -84,17 +99,4 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 **示例**
 
-```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let mySlot: notificationManager.NotificationSlot = {
-  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
-}
-reminderAgentManager.addNotificationSlot(mySlot).then(() => {
-  console.info("addNotificationSlot promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+参见 [addNotificationSlot](#addnotificationslot)

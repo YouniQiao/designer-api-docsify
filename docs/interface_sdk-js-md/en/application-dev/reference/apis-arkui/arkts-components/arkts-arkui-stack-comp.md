@@ -41,24 +41,8 @@ Stack(options?: StackOptions)
 
 ## Examples
 
-When the [alignContent](#aligncontent) attribute of the Stack component is set to Alignment.Bottom and [syncLoad](#syncload) is set to true, the child components are displayed horizontally centered at the bottom of the Stack component, and all child components are loaded within the same frame.
-The syncLoad attribute is added since API version 26.0.0.
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct StackExample {
-  build() {
-    // Set the child component to align at the bottom of the Stack container.
-    Stack({ alignContent: Alignment.Bottom }) {
-      // The first child component, displayed at the bottom.
-      Text('First child, show in bottom').width('90%').height('100%').backgroundColor(0xd2cab3).align(Alignment.Top)
-      // The second child component, displayed on the upper layer.
-      Text('Second child, show in top').width('70%').height('60%').backgroundColor(0xc1cbac).align(Alignment.Top)
-    }.width('100%').height(150).margin({ top: 5 })
-    // Since API version 26.0.0, the syncLoad attribute is added. Setting it to true means synchronously loading all child components in the Stack area.
-    .syncLoad(true)
-  }
-}
+When the [alignContent](#aligncontent) attribute of the Stack component is set to Alignment.Bottom and [syncLoad](#syncload) is set to true, the child components are displayed horizontally centered at the bottom of the Stack component, and all child components are loaded within the same frame.
+
+The syncLoad attribute is added since API version 26.0.0.
 ```

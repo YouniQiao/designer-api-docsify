@@ -41,29 +41,20 @@ Intercepts the HTTP processing and modifies it as required.
 
 **Examples**
 
-interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>
-Intercepts the HTTP processing and modifies it as required.
-Atomic service API: This API can be used in atomic services since API version 22.
-System capability: SystemCapability.Communication.NetStack
-Parameters
-Return value
-
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+### interceptorHandle
 
-// Create a custom interceptor.
-class CustomInterceptor implements http.HttpInterceptor {
-  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
+interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>
 
-  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
-    // Add the authentication header in the initial request phase.
-    reqContext.header['Authorization'] = 'Bearer token';
-    console.info('Interceptor: Added authorization header');
-    return true; // Continue to process the interceptor chain.
-  }
-}
+Intercepts the HTTP processing and modifies it as required.
 
-let customInterceptor = new CustomInterceptor();
+Atomic service API: This API can be used in atomic services since API version 22.
+
+System capability: SystemCapability.Communication.NetStack
+
+Parameters
+
+Return value
 ```
 
 ## interceptorType

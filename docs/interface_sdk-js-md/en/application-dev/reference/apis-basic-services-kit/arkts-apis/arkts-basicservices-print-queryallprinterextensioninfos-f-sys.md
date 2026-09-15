@@ -50,6 +50,18 @@ print.queryAllPrinterExtensionInfos((error: BusinessError, extensionInfos: print
 });
 ```
 
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
+    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
+    // ...
+}).catch((error: BusinessError) => {
+    console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 
 ## queryAllPrinterExtensionInfos
 
@@ -82,14 +94,4 @@ Obtains the information of all installed printer extensions. This API uses a pro
 
 **Examples**
 
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
-    console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
-    // ...
-}).catch((error: BusinessError) => {
-    console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
-});
-```
+See [queryAllPrinterExtensionInfos](#queryallprinterextensioninfos)

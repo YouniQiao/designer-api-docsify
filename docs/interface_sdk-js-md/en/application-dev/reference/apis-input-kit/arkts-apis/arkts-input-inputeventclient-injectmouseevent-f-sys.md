@@ -41,8 +41,7 @@ Injects a mouse/touchpad event.
 **Examples**
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
-import { MouseEvent } from '@kit.InputKit';
+import { inputEventClient, MouseEvent } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry

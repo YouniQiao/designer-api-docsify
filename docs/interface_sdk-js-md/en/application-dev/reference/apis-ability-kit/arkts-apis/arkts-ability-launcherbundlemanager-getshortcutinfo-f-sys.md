@@ -64,6 +64,24 @@ try {
 }
 ```
 
+```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  launcherBundleManager.getShortcutInfo("com.example.demo")
+    .then((data: launcherBundleManager.ShortcutInfo[]) => {
+      console.info('data is ' + JSON.stringify(data));
+    }).catch((errData: BusinessError) => {
+    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+  });
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
 
 ## getShortcutInfo
 
@@ -108,20 +126,4 @@ No permission is required for obtaining the caller's own information.
 
 **Examples**
 
-```TypeScript
-import { launcherBundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  launcherBundleManager.getShortcutInfo("com.example.demo")
-    .then((data: launcherBundleManager.ShortcutInfo[]) => {
-      console.info('data is ' + JSON.stringify(data));
-    }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  });
-} catch (errData) {
-  let code = (errData as BusinessError).code;
-  let message = (errData as BusinessError).message;
-  console.error(`errData is errCode:${code}  message:${message}`);
-}
-```
+See [getShortcutInfo](#getshortcutinfo)

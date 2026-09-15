@@ -88,6 +88,21 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
 });
 ```
 
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tokenID: number = 0; // Obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
+// Add permission usage record
+privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1, 0, (err: BusinessError, data: void) => {
+  if (err) {
+    console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('addPermissionUsedRecord success');
+  }
+});
+```
+
 
 ## addPermissionUsedRecord
 
@@ -141,17 +156,4 @@ The permission usage record is controlled by the toggle status set by [setPermis
 
 **Examples**
 
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tokenID: number = 0; // Obtained from the accessTokenId field of ApplicationInfo in the BundleInfo of the application.
-// Add permission usage record
-privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1, 0, (err: BusinessError, data: void) => {
-  if (err) {
-    console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info('addPermissionUsedRecord success');
-  }
-});
-```
+See [addPermissionUsedRecord](#addpermissionusedrecord)

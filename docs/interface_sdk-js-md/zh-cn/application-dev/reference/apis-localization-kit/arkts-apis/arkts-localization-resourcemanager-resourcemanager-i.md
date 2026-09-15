@@ -138,6 +138,27 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      let rawfile = this.context.resourceManager.getRawFdSync("test.txt");
+      // 根据实际业务场景，使用rawfile资源
+      this.context.resourceManager.closeRawFd("test.txt");
+      console.info(`closeRawFd test success.`);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise closeRawFd failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
 ## closeRawFd
 
 ```TypeScript
@@ -175,26 +196,7 @@ closeRawFd(path: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    try {
-      // "test.txt"仅作示例，请替换为实际使用的资源
-      let rawfile = this.context.resourceManager.getRawFdSync("test.txt");
-      // 根据实际业务场景，使用rawfile资源
-      this.context.resourceManager.closeRawFd("test.txt");
-      console.info(`closeRawFd test success.`);
-    } catch (error) {
-      let code = (error as BusinessError).code;
-      let message = (error as BusinessError).message;
-      console.error(`promise closeRawFd failed, error code: ${code}, message: ${message}.`);
-    }
-  }
-}
-```
+参见 [closeRawFd](#closerawfd)
 
 ## closeRawFdSync
 
@@ -288,6 +290,14 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.closeRawFileDescriptor("test.txt");
+});
+```
+
 ## closeRawFileDescriptor
 
 ```TypeScript
@@ -320,13 +330,7 @@ closeRawFileDescriptor(path: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.closeRawFileDescriptor("test.txt");
-});
-```
+参见 [closeRawFileDescriptor](#closerawfiledescriptor)
 
 ## getBoolean
 
@@ -397,6 +401,26 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.boolean.boolean_test').id
+};
+try {
+  let boolTest = this.context.resourceManager.getBoolean(resource);
+  console.info(`getBoolean, result: ${boolTest}`);
+  // 打印输出结果: getBoolean, result: true
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getBoolean
 
 ```TypeScript
@@ -440,37 +464,7 @@ getBoolean(resource: Resource): boolean
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/boolean.json
-{
-  "boolean": [
-    {
-      "name": "boolean_test",
-      "value": true
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.boolean.boolean_test').id
-};
-try {
-  let boolTest = this.context.resourceManager.getBoolean(resource);
-  console.info(`getBoolean, result: ${boolTest}`);
-  // 打印输出结果: getBoolean, result: true
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getBoolean](#getboolean)
 
 ## getBooleanByName
 
@@ -679,36 +673,7 @@ getColor(resId: number): Promise<number>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.color.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getColor($r('app.color.test').id)
-            .then((value: number) => {
-                console.info(`getColor, result: ${value}`);
-                // 打印输出结果: getColor, result: 4294967295
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getColor failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
+参见 [getColor](#getcolor)
 
 ## getColor
 
@@ -748,36 +713,7 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.color.test').id
-};
-this.context.resourceManager.getColor(resource, (error: BusinessError, value: number) => {
-  if (error != null) {
-    console.error(`callback getColor failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getColor, result: ${value}`);
-    // 打印输出结果: getColor, result: 4294967295
-  }
-});
-```
+参见 [getColor](#getcolor)
 
 ## getColor
 
@@ -822,36 +758,7 @@ getColor(resource: Resource): Promise<number>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.color.test').id
-};
-this.context.resourceManager.getColor(resource)
-  .then((value: number) => {
-    console.info(`getColor, result: ${value}`);
-    // 打印输出结果: getColor, result: 4294967295
-  })
-  .catch((error: BusinessError) => {
-    console.error(`promise getColor failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-```
+参见 [getColor](#getcolor)
 
 ## getColorByName
 
@@ -916,6 +823,25 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getColorByName("test")
+            .then((value: number) => {
+                console.info(`getColorByName, result: ${value}`);
+                // 打印输出结果: getColorByName, result: 4294967295
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
 ## getColorByName
 
 ```TypeScript
@@ -953,36 +879,7 @@ getColorByName(resName: string): Promise<number>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getColorByName("test")
-            .then((value: number) => {
-                console.info(`getColorByName, result: ${value}`);
-                // 打印输出结果: getColorByName, result: 4294967295
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
+参见 [getColorByName](#getcolorbyname)
 
 ## getColorByNameSync
 
@@ -1122,6 +1019,26 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.color.test').id
+};
+try {
+  let colorValue = this.context.resourceManager.getColorSync(resource);
+  console.info(`getColorSync, result: ${colorValue}`);
+  // 打印输出结果: getColorSync, result: 4294967295
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getColorSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getColorSync
 
 ```TypeScript
@@ -1165,37 +1082,7 @@ getColorSync(resource: Resource) : number
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.color.test').id
-};
-try {
-  let colorValue = this.context.resourceManager.getColorSync(resource);
-  console.info(`getColorSync, result: ${colorValue}`);
-  // 打印输出结果: getColorSync, result: 4294967295
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getColorSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getColorSync](#getcolorsync)
 
 ## getConfiguration
 
@@ -1242,6 +1129,27 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            this.context.resourceManager.getConfiguration().then((config: resourceManager.Configuration) => {
+                let direction = config.direction;
+                let locale = config.locale;
+            }).catch((error: BusinessError) => {
+                console.error("getConfiguration promise error is " + error);
+            });
+        } catch (error) {
+            console.error("getConfiguration promise error is " + error);
+        }
+    }
+}
+```
+
 ## getConfiguration
 
 ```TypeScript
@@ -1264,26 +1172,7 @@ getConfiguration(): Promise<Configuration>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getConfiguration().then((config: resourceManager.Configuration) => {
-                let direction = config.direction;
-                let locale = config.locale;
-            }).catch((error: BusinessError) => {
-                console.error("getConfiguration promise error is " + error);
-            });
-        } catch (error) {
-            console.error("getConfiguration promise error is " + error);
-        }
-    }
-}
-```
+参见 [getConfiguration](#getconfiguration)
 
 ## getConfigurationSync
 
@@ -1368,6 +1257,27 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            this.context.resourceManager.getDeviceCapability().then((value: resourceManager.DeviceCapability) => {
+                let screenDensity = value.screenDensity;
+                let deviceType = value.deviceType;
+            }).catch((error: BusinessError) => {
+                console.error("getDeviceCapability promise error is " + error);
+            });
+        } catch (error) {
+            console.error("getDeviceCapability promise error is " + error);
+        }
+    }
+}
+```
+
 ## getDeviceCapability
 
 ```TypeScript
@@ -1390,26 +1300,7 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getDeviceCapability().then((value: resourceManager.DeviceCapability) => {
-                let screenDensity = value.screenDensity;
-                let deviceType = value.deviceType;
-            }).catch((error: BusinessError) => {
-                console.error("getDeviceCapability promise error is " + error);
-            });
-        } catch (error) {
-            console.error("getDeviceCapability promise error is " + error);
-        }
-    }
-}
-```
+参见 [getDeviceCapability](#getdevicecapability)
 
 ## getDeviceCapabilitySync
 
@@ -1627,6 +1518,29 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.plural.format_test').id
+};
+
+try {
+  // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
+  // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
+  let pluralStr = this.context.resourceManager.getDoublePluralStringValueSync(resource, 2.1, 2, "basket", 0.6);
+  console.info(`getDoublePluralStringValueSync, result: ${pluralStr}`);
+  // 打印输出结果: getIntPluralStringValueSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getDoublePluralStringValueSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getDoublePluralStringValueSync
 
 ```TypeScript
@@ -1677,49 +1591,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "format_test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "There is %d apple in the %s, the total amount is %f kg."
-        },
-        {
-          "quantity": "other",
-          "value": "There are %d apples in the %s, the total amount is %f kg."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.plural.format_test').id
-};
-
-try {
-  // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
-  // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
-  let pluralStr = this.context.resourceManager.getDoublePluralStringValueSync(resource, 2.1, 2, "basket", 0.6);
-  console.info(`getDoublePluralStringValueSync, result: ${pluralStr}`);
-  // 打印输出结果: getIntPluralStringValueSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getDoublePluralStringValueSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getDoublePluralStringValueSync](#getdoublepluralstringvaluesync)
 
 ## getDrawableDescriptor
 
@@ -1794,6 +1666,39 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { DrawableDescriptor } from '@kit.ArkUI';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.icon').id
+};
+try {
+  let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor(resource);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+}
+try {
+  let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor(resource, 120);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+}
+try {
+  let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor(resource, 0, 1);
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getDrawableDescriptor
 
 ```TypeScript
@@ -1838,38 +1743,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { DrawableDescriptor } from '@kit.ArkUI';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.icon').id
-};
-try {
-  let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor(resource);
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
-}
-try {
-  let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor(resource, 120);
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
-}
-try {
-  let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor(resource, 0, 1);
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getDrawableDescriptor](#getdrawabledescriptor)
 
 ## getDrawableDescriptorByName
 
@@ -2122,6 +1996,29 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.plural.format_test').id
+};
+
+try {
+  // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+  // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+  let pluralStr = this.context.resourceManager.getIntPluralStringValueSync(resource, 1, 1, "basket", 0.3);
+  console.info(`getIntPluralStringValueSync, result: ${pluralStr}`);
+  // 打印输出结果: getIntPluralStringValueSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getIntPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getIntPluralStringValueSync
 
 ```TypeScript
@@ -2172,49 +2069,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "format_test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "There is %d apple in the %s, the total amount is %f kg."
-        },
-        {
-          "quantity": "other",
-          "value": "There are %d apples in the %s, the total amount is %f kg."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.plural.format_test').id
-};
-
-try {
-  // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-  // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-  let pluralStr = this.context.resourceManager.getIntPluralStringValueSync(resource, 1, 1, "basket", 0.3);
-  console.info(`getIntPluralStringValueSync, result: ${pluralStr}`);
-  // 打印输出结果: getIntPluralStringValueSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getIntPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getIntPluralStringValueSync](#getintpluralstringvaluesync)
 
 ## getLocales
 
@@ -2321,6 +2176,18 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getMedia($r('app.media.test').id).then((value: Uint8Array) => {
+        let media = value;
+    }).catch((error: BusinessError) => {
+        console.error("getMedia promise error is " + error);
+    });
+});
+```
+
 ## getMedia
 
 ```TypeScript
@@ -2351,17 +2218,7 @@ getMedia(resId: number): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getMedia($r('app.media.test').id).then((value: Uint8Array) => {
-        let media = value;
-    }).catch((error: BusinessError) => {
-        console.error("getMedia promise error is " + error);
-    });
-});
-```
+参见 [getMedia](#getmedia)
 
 ## getMediaBase64
 
@@ -2400,6 +2257,18 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getMediaBase64($r('app.media.test').id).then((value: string) => {
+        let media = value;
+    }).catch((error: BusinessError) => {
+        console.error("getMediaBase64 promise error is " + error);
+    });
+});
+```
+
 ## getMediaBase64
 
 ```TypeScript
@@ -2430,17 +2299,7 @@ getMediaBase64(resId: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getMediaBase64($r('app.media.test').id).then((value: string) => {
-        let media = value;
-    }).catch((error: BusinessError) => {
-        console.error("getMediaBase64 promise error is " + error);
-    });
-});
-```
+参见 [getMediaBase64](#getmediabase64)
 
 ## getMediaBase64ByName
 
@@ -2497,6 +2356,74 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaBase64ByName("test", 120, (error: BusinessError, value: string) => {
+                if (error != null) {
+                    console.error(`callback getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let media = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaBase64ByName("test").then((value: string) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error("getMediaBase64ByName promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaBase64ByName("test", 120).then((value: string) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
 ## getMediaBase64ByName
 
 ```TypeScript
@@ -2529,29 +2456,7 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test", 120, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error(`callback getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaBase64ByName](#getmediabase64byname)
 
 ## getMediaBase64ByName
 
@@ -2589,27 +2494,7 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test").then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaBase64ByName promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaBase64ByName](#getmediabase64byname)
 
 ## getMediaBase64ByName
 
@@ -2648,27 +2533,7 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test", 120).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaBase64ByName](#getmediabase64byname)
 
 ## getMediaBase64ByNameSync
 
@@ -2789,6 +2654,74 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaByName("test", 120, (error: BusinessError, value: Uint8Array) => {
+                if (error != null) {
+                    console.error(`callback getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let media = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaByName("test").then((value: Uint8Array) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error("getMediaByName promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaByName("test", 120).then((value: Uint8Array) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
 ## getMediaByName
 
 ```TypeScript
@@ -2821,29 +2754,7 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test", 120, (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error(`callback getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaByName](#getmediabyname)
 
 ## getMediaByName
 
@@ -2881,27 +2792,7 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test").then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaByName promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaByName](#getmediabyname)
 
 ## getMediaByName
 
@@ -2940,27 +2831,7 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test", 120).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaByName](#getmediabyname)
 
 ## getMediaByNameSync
 
@@ -3064,6 +2935,99 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 **示例**
 
 ```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id,
+                (error: BusinessError, value: Uint8Array) => {
+                    if (error != null) {
+                        console.error("error is " + error);
+                    } else {
+                        let media = value;
+                    }
+                });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError, value: Uint8Array) => {
+                if (error != null) {
+                    console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let media = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error("getMediaContent promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -3084,6 +3048,74 @@ try {
   let code = (error as BusinessError).code;
   let message = (error as BusinessError).message;
   console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContent(resource, 120, (error: BusinessError, value: Uint8Array) => {
+    if (error != null) {
+      console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+    } else {
+      let media = value;
+    }
+  });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContent(resource).then((value: Uint8Array) => {
+    let media = value;
+  }).catch((error: BusinessError) => {
+    console.error("getMediaContent promise error is " + error);
+  });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContent(resource, 120).then((value: Uint8Array) => {
+    let media = value;
+  }).catch((error: BusinessError) => {
+    console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
 }
 ```
 
@@ -3125,29 +3157,7 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContent(resource, 120, (error: BusinessError, value: Uint8Array) => {
-    if (error != null) {
-      console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
-    } else {
-      let media = value;
-    }
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContent
 
@@ -3191,27 +3201,7 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContent(resource).then((value: Uint8Array) => {
-    let media = value;
-  }).catch((error: BusinessError) => {
-    console.error("getMediaContent promise error is " + error);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContent
 
@@ -3256,27 +3246,7 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContent(resource, 120).then((value: Uint8Array) => {
-    let media = value;
-  }).catch((error: BusinessError) => {
-    console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContent
 
@@ -3309,30 +3279,7 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id,
-                (error: BusinessError, value: Uint8Array) => {
-                    if (error != null) {
-                        console.error("error is " + error);
-                    } else {
-                        let media = value;
-                    }
-                });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContent
 
@@ -3366,29 +3313,7 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContent
 
@@ -3426,27 +3351,7 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaContent promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContent
 
@@ -3485,27 +3390,7 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContent](#getmediacontent)
 
 ## getMediaContentBase64
 
@@ -3545,6 +3430,98 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 **示例**
 
 ```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError, value: string) => {
+                if (error != null) {
+                    console.error("error is " + error);
+                } else {
+                    let media = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError, value: string) => {
+                if (error != null) {
+                    console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    let media = value;
+                }
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error("getMediaContentBase64 promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.media.test'仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
+                let media = value;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -3565,6 +3542,74 @@ try {
   let code = (error as BusinessError).code;
   let message = (error as BusinessError).message;
   console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContentBase64(resource, 120, (error: BusinessError, value: string) => {
+    if (error != null) {
+      console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+    } else {
+      let media = value;
+    }
+  });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContentBase64(resource).then((value: string) => {
+    let media = value;
+  }).catch((error: BusinessError) => {
+    console.error("getMediaContentBase64 promise error is " + error);
+  });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContentBase64(resource, 120).then((value: string) => {
+    let media = value;
+  }).catch((error: BusinessError) => {
+    console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
 }
 ```
 
@@ -3606,29 +3651,7 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContentBase64(resource, 120, (error: BusinessError, value: string) => {
-    if (error != null) {
-      console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-    } else {
-      let media = value;
-    }
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64
 
@@ -3672,27 +3695,7 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContentBase64(resource).then((value: string) => {
-    let media = value;
-  }).catch((error: BusinessError) => {
-    console.error("getMediaContentBase64 promise error is " + error);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64
 
@@ -3737,27 +3740,7 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContentBase64(resource, 120).then((value: string) => {
-    let media = value;
-  }).catch((error: BusinessError) => {
-    console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64
 
@@ -3790,29 +3773,7 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64
 
@@ -3846,29 +3807,7 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64
 
@@ -3906,27 +3845,7 @@ getMediaContentBase64(resId: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaContentBase64 promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64
 
@@ -3965,27 +3884,7 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getMediaContentBase64](#getmediacontentbase64)
 
 ## getMediaContentBase64Sync
 
@@ -4051,6 +3950,32 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContentBase64Sync(resource); // 默认屏幕密度
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
+}
+
+try {
+  this.context.resourceManager.getMediaContentBase64Sync(resource, 120); // 指定屏幕密度
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getMediaContentBase64Sync
 
 ```TypeScript
@@ -4094,31 +4019,7 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContentBase64Sync(resource); // 默认屏幕密度
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
-}
-
-try {
-  this.context.resourceManager.getMediaContentBase64Sync(resource, 120); // 指定屏幕密度
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContentBase64Sync](#getmediacontentbase64sync)
 
 ## getMediaContentSync
 
@@ -4184,6 +4085,32 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.media.test').id
+};
+try {
+  this.context.resourceManager.getMediaContentSync(resource); // 默认屏幕密度
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
+}
+
+try {
+  this.context.resourceManager.getMediaContentSync(resource, 120); // 指定屏幕密度
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getMediaContentSync
 
 ```TypeScript
@@ -4227,31 +4154,7 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.media.test').id
-};
-try {
-  this.context.resourceManager.getMediaContentSync(resource); // 默认屏幕密度
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
-}
-
-try {
-  this.context.resourceManager.getMediaContentSync(resource, 120); // 指定屏幕密度
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getMediaContentSync](#getmediacontentsync)
 
 ## getNumber
 
@@ -4348,6 +4251,27 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.integer.integer_test').id
+};
+
+try {
+  let intValue = this.context.resourceManager.getNumber(resource);
+  console.info(`getNumber, int value: ${intValue}`);
+  // 打印输出结果: getNumber, int value: 100
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getNumber
 
 ```TypeScript
@@ -4391,38 +4315,7 @@ getNumber(resource: Resource): number
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/integer.json
-{
-  "integer": [
-    {
-      "name": "integer_test",
-      "value": 100
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.integer.integer_test').id
-};
-
-try {
-  let intValue = this.context.resourceManager.getNumber(resource);
-  console.info(`getNumber, int value: ${intValue}`);
-  // 打印输出结果: getNumber, int value: 100
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getNumber](#getnumber)
 
 ## getNumberByName
 
@@ -4653,6 +4546,18 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 **示例**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getPluralString($r("app.plural.test").id, 1).then((value: string) => {
+        let str = value;
+    }).catch((error: BusinessError) => {
+        console.error("getPluralString promise error is " + error);
+    });
+});
+```
+
+```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
 
 resourceManager.getResourceManager((error, mgr) => {
@@ -4702,17 +4607,7 @@ getPluralString(resId: number, num: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getPluralString($r("app.plural.test").id, 1).then((value: string) => {
-        let str = value;
-    }).catch((error: BusinessError) => {
-        console.error("getPluralString promise error is " + error);
-    });
-});
-```
+参见 [getPluralString](#getpluralstring)
 
 ## getPluralStringByName
 
@@ -4792,6 +4687,21 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+this.context.resourceManager.getPluralStringByName("test", 1)
+  .then((value: string) => {
+    console.info(`getPluralStringByName, result: ${value}`);
+    // 打印输出结果: getPluralStringByName, result: 1 apple
+  })
+  .catch((error: BusinessError) => {
+    console.error(`promise getPluralStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+  });
+```
+
 ## getPluralStringByName
 
 ```TypeScript
@@ -4839,41 +4749,7 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "%d apple"
-        },
-        {
-          "quantity": "other",
-          "value": "%d apples"
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-this.context.resourceManager.getPluralStringByName("test", 1)
-  .then((value: string) => {
-    console.info(`getPluralStringByName, result: ${value}`);
-    // 打印输出结果: getPluralStringByName, result: 1 apple
-  })
-  .catch((error: BusinessError) => {
-    console.error(`promise getPluralStringByName failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-```
+参见 [getPluralStringByName](#getpluralstringbyname)
 
 ## getPluralStringByNameSync
 
@@ -5025,6 +4901,37 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 ```
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
+  (error: BusinessError, value: string) => {
+    if (error != null) {
+      console.error(`callback getPluralStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+    } else {
+      console.info(`getPluralStringValue, result: ${value}`);
+      // 打印输出结果: getPluralStringValue, result: 1 apple
+    }
+  });
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
+  .then((value: string) => {
+    console.info(`getPluralStringValue, result: ${value}`);
+    // 打印输出结果: getPluralStringValue, result: 1 apple
+  })
+  .catch((error: BusinessError) => {
+    console.error(`promise getPluralStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+  });
+```
+
+```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -5043,6 +4950,27 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
       console.info(`getPluralStringValue, result: ${value}`);
       // 打印输出结果: getPluralStringValue, result: 1 apple
     }
+  });
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.plural.test').id
+};
+// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+this.context.resourceManager.getPluralStringValue(resource, 1)
+  .then((value: string) => {
+    console.info(`getPluralStringValue, result: ${value}`);
+    // 打印输出结果: getPluralStringValue, result: 1 apple
+  })
+  .catch((error: BusinessError) => {
+    console.error(`promise getPluralStringValue failed, error code: ${error.code}, message: ${error.message}.`);
   });
 ```
 
@@ -5095,47 +5023,7 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "%d apple"
-        },
-        {
-          "quantity": "other",
-          "value": "%d apples"
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.plural.test').id
-};
-// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-this.context.resourceManager.getPluralStringValue(resource, 1)
-  .then((value: string) => {
-    console.info(`getPluralStringValue, result: ${value}`);
-    // 打印输出结果: getPluralStringValue, result: 1 apple
-  })
-  .catch((error: BusinessError) => {
-    console.error(`promise getPluralStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-```
+参见 [getPluralStringValue](#getpluralstringvalue)
 
 ## getPluralStringValue
 
@@ -5179,42 +5067,7 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "%d apple"
-        },
-        {
-          "quantity": "other",
-          "value": "%d apples"
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
-  (error: BusinessError, value: string) => {
-    if (error != null) {
-      console.error(`callback getPluralStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-    } else {
-      console.info(`getPluralStringValue, result: ${value}`);
-      // 打印输出结果: getPluralStringValue, result: 1 apple
-    }
-  });
-```
+参见 [getPluralStringValue](#getpluralstringvalue)
 
 ## getPluralStringValue
 
@@ -5263,41 +5116,7 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "%d apple"
-        },
-        {
-          "quantity": "other",
-          "value": "%d apples"
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-// 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
-  .then((value: string) => {
-    console.info(`getPluralStringValue, result: ${value}`);
-    // 打印输出结果: getPluralStringValue, result: 1 apple
-  })
-  .catch((error: BusinessError) => {
-    console.error(`promise getPluralStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-```
+参见 [getPluralStringValue](#getpluralstringvalue)
 
 ## getPluralStringValueSync
 
@@ -5383,6 +5202,28 @@ try {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.plural.test').id
+};
+try {
+  // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+  // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+  let pluralValue = this.context.resourceManager.getPluralStringValueSync(resource, 1);
+  console.info(`getPluralStringValueSync, result: ${pluralValue}`);
+  // 打印输出结果: getPluralStringValueSync, result: 1 apple
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getPluralStringValueSync
 
 ```TypeScript
@@ -5432,48 +5273,7 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/plural.json
-{
-  "plural": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "quantity": "one",
-          "value": "%d apple"
-        },
-        {
-          "quantity": "other",
-          "value": "%d apples"
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.plural.test').id
-};
-try {
-  // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-  // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-  let pluralValue = this.context.resourceManager.getPluralStringValueSync(resource, 1);
-  console.info(`getPluralStringValueSync, result: ${pluralValue}`);
-  // 打印输出结果: getPluralStringValueSync, result: 1 apple
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getPluralStringValueSync](#getpluralstringvaluesync)
 
 ## getRawFd
 
@@ -5540,6 +5340,31 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
+                let fd = value.fd;
+                let offset = value.offset;
+                let length = value.length;
+            }).catch((error: BusinessError) => {
+                console.error(`promise getRawFd error error code: ${error.code}, message: ${error.message}.`);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
 ## getRawFd
 
 ```TypeScript
@@ -5583,30 +5408,7 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { resourceManager } from '@kit.LocalizationKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
-                let fd = value.fd;
-                let offset = value.offset;
-                let length = value.length;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getRawFd error error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getRawFd](#getrawfd)
 
 ## getRawFdSync
 
@@ -5710,6 +5512,18 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getRawFile("test.txt").then((value: Uint8Array) => {
+        let rawFile = value;
+    }).catch((error: BusinessError) => {
+        console.error("getRawFile promise error is " + error);
+    });
+});
+```
+
 ## getRawFile
 
 ```TypeScript
@@ -5742,17 +5556,7 @@ getRawFile(path: string): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getRawFile("test.txt").then((value: Uint8Array) => {
-        let rawFile = value;
-    }).catch((error: BusinessError) => {
-        console.error("getRawFile promise error is " + error);
-    });
-});
-```
+参见 [getRawFile](#getrawfile)
 
 ## getRawFileContent
 
@@ -5810,6 +5614,28 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test.txt"仅作示例，请替换为实际使用的资源
+            this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
+                let rawFile = value;
+            }).catch((error: BusinessError) => {
+                console.error("getRawFileContent promise error is " + error);
+            });
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
 ## getRawFileContent
 
 ```TypeScript
@@ -5847,27 +5673,7 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
-                let rawFile = value;
-            }).catch((error: BusinessError) => {
-                console.error("getRawFileContent promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getRawFileContent](#getrawfilecontent)
 
 ## getRawFileContentSync
 
@@ -5967,6 +5773,20 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getRawFileDescriptor("test.txt").then((value: resourceManager.RawFileDescriptor) => {
+        let fd = value.fd;
+        let offset = value.offset;
+        let length = value.length;
+    }).catch((error: BusinessError) => {
+        console.error("getRawFileDescriptor promise error is " + error);
+    });
+});
+```
+
 ## getRawFileDescriptor
 
 ```TypeScript
@@ -5999,19 +5819,7 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getRawFileDescriptor("test.txt").then((value: resourceManager.RawFileDescriptor) => {
-        let fd = value.fd;
-        let offset = value.offset;
-        let length = value.length;
-    }).catch((error: BusinessError) => {
-        console.error("getRawFileDescriptor promise error is " + error);
-    });
-});
-```
+参见 [getRawFileDescriptor](#getrawfiledescriptor)
 
 ## getRawFileList
 
@@ -6067,6 +5875,26 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+        this.context.resourceManager.getRawFileList("")
+            .then((value: Array<string>) => {
+                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+                // 打印输出结果: getRawFileList, result: ["test.txt"]
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
 ## getRawFileList
 
 ```TypeScript
@@ -6106,25 +5934,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-        this.context.resourceManager.getRawFileList("")
-            .then((value: Array<string>) => {
-                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
-                // 打印输出结果: getRawFileList, result: ["test.txt"]
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
+参见 [getRawFileList](#getrawfilelist)
 
 ## getRawFileListSync
 
@@ -6291,6 +6101,18 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+    mgr.getString($r('app.string.test').id).then((value: string) => {
+        let str = value;
+    }).catch((error: BusinessError) => {
+        console.error("getstring promise error is " + error);
+    });
+});
+```
+
 ## getString
 
 ```TypeScript
@@ -6321,17 +6143,7 @@ getString(resId: number): Promise<string>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-    mgr.getString($r('app.string.test').id).then((value: string) => {
-        let str = value;
-    }).catch((error: BusinessError) => {
-        console.error("getstring promise error is " + error);
-    });
-});
-```
+参见 [getString](#getstring)
 
 ## getStringArray
 
@@ -6370,6 +6182,18 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+resourceManager.getResourceManager((error, mgr) => {
+      mgr.getStringArray($r('app.strarray.test').id).then((value: Array<string>) => {
+        let strArray = value;
+    }).catch((error: BusinessError) => {
+        console.error("getStringArray promise error is " + error);
+    });
+});
+```
+
 ## getStringArray
 
 ```TypeScript
@@ -6400,17 +6224,7 @@ getStringArray(resId: number): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-resourceManager.getResourceManager((error, mgr) => {
-      mgr.getStringArray($r('app.strarray.test').id).then((value: Array<string>) => {
-        let strArray = value;
-    }).catch((error: BusinessError) => {
-        console.error("getStringArray promise error is " + error);
-    });
-});
-```
+参见 [getStringArray](#getstringarray)
 
 ## getStringArrayByName
 
@@ -6480,6 +6294,25 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayByName("test")
+            .then((value: Array<string>) => {
+                console.info(`getStringArrayByName, result: ${value[0]}`);
+                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
 ## getStringArrayByName
 
 ```TypeScript
@@ -6517,40 +6350,7 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayByName("test")
-            .then((value: Array<string>) => {
-                console.info(`getStringArrayByName, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
+参见 [getStringArrayByName](#getstringarraybyname)
 
 ## getStringArrayByNameSync
 
@@ -6680,6 +6480,45 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 ```
 
 ```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
+            (error: BusinessError, value: Array<string>) => {
+                if (error != null) {
+                    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+                } else {
+                    console.info(`getStringArrayValue, result: ${value[0]}`);
+                    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+                }
+            });
+    }
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
+            .then((value: Array<string>) => {
+                console.info(`getStringArrayValue, result: ${value[0]}`);
+                // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+            })
+            .catch((error: BusinessError) => {
+                console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+            });
+    }
+}
+```
+
+```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -6696,6 +6535,25 @@ this.context.resourceManager.getStringArrayValue(resource, (error: BusinessError
     // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
   }
 });
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.strarray.test').id
+};
+this.context.resourceManager.getStringArrayValue(resource)
+  .then((value: Array<string>) => {
+    console.info(`getStringArrayValue, result: ${value[0]}`);
+    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+  })
+  .catch((error: BusinessError) => {
+    console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+  });
 ```
 
 ## getStringArrayValue
@@ -6741,40 +6599,7 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.strarray.test').id
-};
-this.context.resourceManager.getStringArrayValue(resource)
-  .then((value: Array<string>) => {
-    console.info(`getStringArrayValue, result: ${value[0]}`);
-    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-  })
-  .catch((error: BusinessError) => {
-    console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-  });
-```
+参见 [getStringArrayValue](#getstringarrayvalue)
 
 ## getStringArrayValue
 
@@ -6808,41 +6633,7 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
-            (error: BusinessError, value: Array<string>) => {
-                if (error != null) {
-                    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    console.info(`getStringArrayValue, result: ${value[0]}`);
-                    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-                }
-            });
-    }
-}
-```
+参见 [getStringArrayValue](#getstringarrayvalue)
 
 ## getStringArrayValue
 
@@ -6881,40 +6672,7 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
-            .then((value: Array<string>) => {
-                console.info(`getStringArrayValue, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-    }
-}
-```
+参见 [getStringArrayValue](#getstringarrayvalue)
 
 ## getStringArrayValueSync
 
@@ -6989,6 +6747,26 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.strarray.test').id
+};
+try {
+  let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync(resource);
+  console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
+  // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getStringArrayValueSync
 
 ```TypeScript
@@ -7032,41 +6810,7 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/strarray.json
-{
-  "strarray": [
-    {
-      "name": "test",
-      "value": [
-        {
-          "value": "I'm one of the array's values."
-        }
-      ]
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.strarray.test').id
-};
-try {
-  let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync(resource);
-  console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
-  // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getStringArrayValueSync](#getstringarrayvaluesync)
 
 ## getStringByName
 
@@ -7131,6 +6875,23 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // "test"仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringByName("test").then((value: string) => {
+            console.info(`getStringByName, result: ${value}`);
+            // 打印输出结果: getStringByName, result: I'm a test string resource.
+        }).catch((error: BusinessError) => {
+            console.error(`promise getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    }
+}
+```
+
 ## getStringByName
 
 ```TypeScript
@@ -7168,34 +6929,7 @@ getStringByName(resName: string): Promise<string>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringByName("test").then((value: string) => {
-            console.info(`getStringByName, result: ${value}`);
-            // 打印输出结果: getStringByName, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
-        });
-    }
-}
-```
+参见 [getStringByName](#getstringbyname)
 
 ## getStringByNameSync
 
@@ -7266,6 +7000,38 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // "test"仅作示例，请替换为实际使用的资源
+            let testStr = this.context.resourceManager.getStringByNameSync("test", "format string", 10, 98.78);
+            console.info(`getStringByNameSync, result: ${testStr}`);
+            // 打印输出结果: getStringByNameSync, result: I'm a format string, format int: 10, format float: 98.78.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
 ## getStringByNameSync
 
 ```TypeScript
@@ -7305,37 +7071,7 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringByNameSync("test", "format string", 10, 98.78);
-            console.info(`getStringByNameSync, result: ${testStr}`);
-            // 打印输出结果: getStringByNameSync, result: I'm a format string, format int: 10, format float: 98.78.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getStringByNameSync](#getstringbynamesync)
 
 ## getStringSync
 
@@ -7406,6 +7142,78 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        try {
+            // 'app.string.test'仅作示例，请替换为实际使用的资源
+            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
+            console.info(`getStringSync, result: ${testStr}`);
+            // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
+        } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+        }
+    }
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+try {
+  let testStr = this.context.resourceManager.getStringSync(resource);
+  console.info(`getStringSync, result: ${testStr}`);
+  // 打印输出结果: getStringSync, result: I'm a test string resource.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('app.string.test').id
+};
+try {
+  let testStr = this.context.resourceManager.getStringSync(resource, "format string", 10, 98.78);
+  console.info(`getStringSync, result: ${testStr}`);
+  // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getStringSync
 
 ```TypeScript
@@ -7445,37 +7253,7 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
-            console.info(`getStringSync, result: ${testStr}`);
-            // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-        }
-    }
-}
-```
+参见 [getStringSync](#getstringsync)
 
 ## getStringSync
 
@@ -7520,37 +7298,7 @@ getStringSync(resource: Resource): string
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-try {
-  let testStr = this.context.resourceManager.getStringSync(resource);
-  console.info(`getStringSync, result: ${testStr}`);
-  // 打印输出结果: getStringSync, result: I'm a test string resource.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getStringSync](#getstringsync)
 
 ## getStringSync
 
@@ -7597,37 +7345,7 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a %1$s, format int: %2$d, format float: %3$f."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-try {
-  let testStr = this.context.resourceManager.getStringSync(resource, "format string", 10, 98.78);
-  console.info(`getStringSync, result: ${testStr}`);
-  // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getStringSync](#getstringsync)
 
 ## getStringValue
 
@@ -7676,6 +7394,23 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
       "value": "I'm a test string resource."
     }
   ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+        // 'app.string.test'仅作示例，请替换为实际使用的资源
+        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
+            console.info(`getStringValue, result: ${value}`);
+            // 打印输出结果: getStringValue, result: I'm a test string resource.
+        }).catch((error: BusinessError) => {
+            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    }
 }
 ```
 
@@ -7741,24 +7476,7 @@ getStringValue(resource: Resource): Promise<string>
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
-  if (error != null) {
-    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringValue, result: ${value}`);
-    // 打印输出结果: getStringValue, result: I'm a test string resource.
-  }
-});
-```
+参见 [getStringValue](#getstringvalue)
 
 ## getStringValue
 
@@ -7792,53 +7510,7 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.string.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
-            console.info(`getStringValue, result: ${value}`);
-            // 打印输出结果: getStringValue, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-        });
-    }
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
-  if (error != null) {
-    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringValue, result: ${value}`);
-    // 打印输出结果: getStringValue, result: I'm a test string resource.
-  }
-});
-```
+参见 [getStringValue](#getstringvalue)
 
 ## getStringValue
 
@@ -7877,34 +7549,7 @@ getStringValue(resId: number): Promise<string>
 
 **示例**
 
-```TypeScript
-// 资源文件路径: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.string.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
-            console.info(`getStringValue, result: ${value}`);
-            // 打印输出结果: getStringValue, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-        });
-    }
-}
-```
+参见 [getStringValue](#getstringvalue)
 
 ## getSymbol
 
@@ -7963,6 +7608,26 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resource: resourceManager.Resource = {
+  bundleName: "com.example.myapplication",
+  moduleName: "entry",
+  id: $r('sys.symbol.message').id
+};
+try {
+  let symbolValue = this.context.resourceManager.getSymbol(resource);
+  console.info(`getSymbol, result: ${symbolValue}`);
+  // 打印输出结果: getSymbol, result: 983183
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
+}
+```
+
 ## getSymbol
 
 ```TypeScript
@@ -8006,25 +7671,7 @@ getSymbol(resource: Resource) : number
 
 **示例**
 
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('sys.symbol.message').id
-};
-try {
-  let symbolValue = this.context.resourceManager.getSymbol(resource);
-  console.info(`getSymbol, result: ${symbolValue}`);
-  // 打印输出结果: getSymbol, result: 983183
-} catch (error) {
-  let code = (error as BusinessError).code;
-  let message = (error as BusinessError).message;
-  console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
-}
-```
+参见 [getSymbol](#getsymbol)
 
 ## getSymbolByName
 

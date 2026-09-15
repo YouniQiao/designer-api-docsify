@@ -30,8 +30,9 @@ onFailure(): void
 
 **示例**
 
+```TypeScript
 参见autoFillManager.requestAutoSave。
-- simpleType:
+```
 
 ## onSuccess
 
@@ -51,5 +52,6 @@ onSuccess(): void
 
 **示例**
 
+```TypeScript
 参见autoFillManager.requestAutoSave。
-- simpleType:
+```

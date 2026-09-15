@@ -56,6 +56,17 @@ sim.alterPin2(0, "1234", "0000", (err: BusinessError, data: sim.LockStatusRespon
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.alterPin2(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
+    console.info(`alterPin2 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`alterPin2 failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## alterPin2
 
@@ -103,13 +114,4 @@ Change Pin2 password.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.alterPin2(0, "1234", "0000").then((data: sim.LockStatusResponse) => {
-    console.info(`alterPin2 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`alterPin2 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [alterPin2](#alterpin2)

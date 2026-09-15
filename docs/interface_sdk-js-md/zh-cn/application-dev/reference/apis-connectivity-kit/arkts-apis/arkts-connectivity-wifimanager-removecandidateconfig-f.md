@@ -64,6 +64,19 @@ import { wifiManager } from '@kit.ConnectivityKit';
   }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let networkId = 0;
+    wifiManager.removeCandidateConfig(networkId,(error,result) => {
+    console.info("result:" + JSON.stringify(result));
+    });  
+  }catch(error){
+    console.error("failed:" + JSON.stringify(error));
+  }
+```
+
 
 ## removeCandidateConfig
 
@@ -103,15 +116,4 @@ function removeCandidateConfig(networkId: number, callback: AsyncCallback<void>)
 
 **示例**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let networkId = 0;
-    wifiManager.removeCandidateConfig(networkId,(error,result) => {
-    console.info("result:" + JSON.stringify(result));
-    });  
-  }catch(error){
-    console.error("failed:" + JSON.stringify(error));
-  }
-```
+参见 [removeCandidateConfig](#removecandidateconfig)

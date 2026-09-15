@@ -65,6 +65,33 @@ struct Index {
 }
 ```
 
+```TypeScript
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // Set the touchpad double-tap and drag switch state.
+            pointer.setTouchpadDoubleTapAndDragState(false).then(() => {
+              console.info(`Succeeded in setting touchpad double tap and drag state.`);
+            }).catch((error: BusinessError) => {
+              console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## setTouchpadDoubleTapAndDragState
 
@@ -101,29 +128,4 @@ Sets the touchpad double-tap and drag switch state. This API uses a promise to r
 
 **Examples**
 
-```TypeScript
-import { pointer } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // Set the touchpad double-tap and drag switch state.
-            pointer.setTouchpadDoubleTapAndDragState(false).then(() => {
-              console.info(`Succeeded in setting touchpad double tap and drag state.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set touchpad double tap and drag state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+See [setTouchpadDoubleTapAndDragState](#settouchpaddoubletapanddragstate)

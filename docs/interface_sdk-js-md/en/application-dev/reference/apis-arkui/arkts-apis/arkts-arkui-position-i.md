@@ -1,10 +1,8 @@
 # Position
 
-Defines the position.
+Defines the coordinates of a point.
 
-@interface Position
-
-**Since:** 11
+**Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,15 +12,17 @@ Defines the position.
 x?: Length
 ```
 
-Coordinate x of the Position.
+X-coordinate.
+
+Unit: vp
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,14 +32,16 @@ Coordinate x of the Position.
 y?: Length
 ```
 
-Coordinate y of the Position.
+Y-coordinate.
+
+Unit: vp
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

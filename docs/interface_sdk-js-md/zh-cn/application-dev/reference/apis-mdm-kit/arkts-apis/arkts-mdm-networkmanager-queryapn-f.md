@@ -69,6 +69,24 @@ try {
 }
 ```
 
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { networkManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let apnId: string = "1"; // 需根据实际情况进行替换
+try {
+  let queryResult: Record<string, string> = networkManager.queryApn(wantTemp, apnId);
+  console.info(`Succeeded in querying apn, result : ${JSON.stringify(queryResult)}`);
+} catch (err) {
+  console.error(`Failed to query apn. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 
 ## queryApn
 
@@ -109,20 +127,4 @@ function queryApn(admin: Want, apnId: string): Record<string, string>
 
 **示例**
 
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { networkManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let apnId: string = "1"; // 需根据实际情况进行替换
-try {
-  let queryResult: Record<string, string> = networkManager.queryApn(wantTemp, apnId);
-  console.info(`Succeeded in querying apn, result : ${JSON.stringify(queryResult)}`);
-} catch (err) {
-  console.error(`Failed to query apn. Code: ${err.code}, message: ${err.message}`);
-}
-```
+参见 [queryApn](#queryapn)

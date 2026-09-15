@@ -37,6 +37,6 @@ Stops the passive ranging broadcast and cleans up associated resources based on 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| 34900052 | The specified type of ranging service is not supported. |
-| 34900054 | The parameter value does not meet specifications. |
+| [34900052](../errorcode-fusionConnectivity.md#34900052-specified-ranging-service-unsupported) | The specified type of ranging service is not supported. |
+| [34900054](../errorcode-fusionConnectivity.md#34900054-invalid-parameters) | The parameter value does not meet specifications. |
 | [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |

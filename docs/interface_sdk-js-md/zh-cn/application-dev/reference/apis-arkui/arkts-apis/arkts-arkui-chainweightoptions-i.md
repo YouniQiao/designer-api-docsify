@@ -1,8 +1,6 @@
 # ChainWeightOptions
 
-Defines the ChainWeightOptions interface.
-
-@interface ChainWeightOptions
+链中组件的布局权重。
 
 **起始版本：** 14
 
@@ -14,7 +12,11 @@ Defines the ChainWeightOptions interface.
 horizontal?: number
 ```
 
-Horizontal ChainWeight.
+组件在水平方向的布局权重，设置大于0的数字时生效。
+
+默认值：0
+
+异常值：0
 
 **类型：** number
 
@@ -32,7 +34,11 @@ Horizontal ChainWeight.
 vertical?: number
 ```
 
-Vertical ChainWeight.
+组件在竖直方向的布局权重，设置大于0的数字时生效。
+
+默认值：0
+
+异常值：0
 
 **类型：** number
 

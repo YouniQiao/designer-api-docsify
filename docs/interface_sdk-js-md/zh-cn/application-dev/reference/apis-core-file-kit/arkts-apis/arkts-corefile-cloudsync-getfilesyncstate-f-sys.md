@@ -60,6 +60,35 @@ cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uris: Array<string> = ["file://uri"];
+cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
+  if (err) {
+    console.error(`get file sync state with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    for(let i = 0, len = syncStates.length; i < len; i++){
+      console.info("get file sync state successfully" + syncStates[i]);
+  }
+  }
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let path = "/data/storage/el2/cloud/1.txt";
+let uri = fileUri.getUriFromPath(path);
+try {
+  let state = cloudSync.getFileSyncState(uri);
+} catch (err) {
+  let error:BusinessError = err as BusinessError;
+  console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
+}
+```
+
 
 ## getFileSyncState
 
@@ -97,20 +126,7 @@ function getFileSyncState(uri: Array<string>, callback: AsyncCallback<Array<File
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let uris: Array<string> = ["file://uri"];
-cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSync.FileSyncState>) => {
-  if (err) {
-    console.error(`get file sync state with error message: ${err.message}, error code: ${err.code}`);
-  } else {
-    for(let i = 0, len = syncStates.length; i < len; i++){
-      console.info("get file sync state successfully" + syncStates[i]);
-  }
-  }
-});
-```
+参见 [getFileSyncState](#getfilesyncstate)
 
 
 ## getFileSyncState
@@ -155,16 +171,4 @@ function getFileSyncState(uri: string): FileSyncState
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
-
-let path = "/data/storage/el2/cloud/1.txt";
-let uri = fileUri.getUriFromPath(path);
-try {
-  let state = cloudSync.getFileSyncState(uri);
-} catch (err) {
-  let error:BusinessError = err as BusinessError;
-  console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
-}
-```
+参见 [getFileSyncState](#getfilesyncstate)

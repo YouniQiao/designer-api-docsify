@@ -54,6 +54,16 @@ call.isRinging((err: BusinessError, data: boolean) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+call.isRinging().then((data: boolean) => {
+    console.info(`isRinging success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isRinging fail, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## isRinging
 
@@ -89,12 +99,4 @@ Checks whether the ringtone is playing. This API uses a promise to return the re
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-call.isRinging().then((data: boolean) => {
-    console.info(`isRinging success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isRinging fail, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [isRinging](#isringing)

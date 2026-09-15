@@ -4,9 +4,7 @@
 declare type LengthMetricsUnit = import('../api/arkui/Graphics').LengthMetricsUnit
 ```
 
-Defines length metrics unit.
-
-@typedef { import('../api/arkui/Graphics').LengthMetricsUnit } LengthMetricsUnit
+定义长度属性单位。
 
 **起始版本：** 12
 

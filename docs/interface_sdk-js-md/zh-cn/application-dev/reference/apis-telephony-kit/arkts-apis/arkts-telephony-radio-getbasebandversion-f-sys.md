@@ -56,6 +56,17 @@ radio.getBasebandVersion(slotId, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+radio.getBasebandVersion(slotId).then((data: string) => {
+    console.info(`getBasebandVersion success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getBasebandVersion failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getBasebandVersion
 
@@ -99,13 +110,4 @@ Get the version of Baseband.
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-radio.getBasebandVersion(slotId).then((data: string) => {
-    console.info(`getBasebandVersion success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getBasebandVersion failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [getBasebandVersion](#getbasebandversion)

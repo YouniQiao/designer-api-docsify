@@ -199,6 +199,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// promise
+try {
+    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+    gattClient.connect();
+    let deviceName = gattClient.getDeviceName().then((data) => {
+        console.info('device name' + JSON.stringify(data));
+    })
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## getDeviceName
 
 ```TypeScript
@@ -237,19 +251,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// promise
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    gattClient.connect();
-    let deviceName = gattClient.getDeviceName().then((data) => {
-        console.info('device name' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+See [getDeviceName](#getdevicename)
 
 ## getRssiValue
 
@@ -303,6 +305,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// promise
+try {
+    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+    let rssi = gattClient.getRssiValue().then((data: number) => {
+        console.info('rssi' + JSON.stringify(data));
+    })
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## getRssiValue
 
 ```TypeScript
@@ -340,18 +355,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// promise
-try {
-    let gattClient = bluetoothManager.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
-    let rssi = gattClient.getRssiValue().then((data: number) => {
-        console.info('rssi' + JSON.stringify(data));
-    })
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+See [getRssiValue](#getrssivalue)
 
 ## getServices
 
@@ -415,6 +419,20 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// Promise
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.connect();
+    device.getServices().then(result => {
+        console.info("getServices successfully:" + JSON.stringify(result));
+    });
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## getServices
 
 ```TypeScript
@@ -453,19 +471,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-// Promise
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.connect();
-    device.getServices().then(result => {
-        console.info("getServices successfully:" + JSON.stringify(result));
-    });
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+See [getServices](#getservices)
 
 ## off('BLECharacteristicChange')
 
@@ -501,18 +507,6 @@ Unsubscribe characteristic value changed event. On API 10 and above, the permiss
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLECharacteristicChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -546,18 +540,6 @@ Unsubscribe client connection state changed event. On API 10 and above, the perm
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.off('BLEConnectionStateChange');
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## on('BLECharacteristicChange')
 
@@ -593,23 +575,6 @@ Subscribe characteristic value changed event. On API 10 and above, the permissio
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-function CharacteristicChange(characteristicChangeReq: ble.BLECharacteristic) {
-    let serviceUuid: string = characteristicChangeReq.serviceUuid;
-    let characteristicUuid: string = characteristicChangeReq.characteristicUuid;
-    let value: Uint8Array = new Uint8Array(characteristicChangeReq.characteristicValue);
-}
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLECharacteristicChange', CharacteristicChange);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
-
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -643,22 +608,6 @@ Subscribe client connection state changed event. On API 10 and above, the permis
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-
-**Examples**
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-function ConnectStateChanged(state: bluetoothManager.BLEConnectChangedState) {
-    console.info('bluetooth connect state changed');
-    let connectState: bluetoothManager.ProfileConnectionState = state.state;
-}
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.on('BLEConnectionStateChange', ConnectStateChanged);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
 
 ## readCharacteristicValue
 
@@ -735,6 +684,32 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    characteristicValue: bufferCCC, descriptors:descriptors};
+
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readCharacteristicValue(characteristic);
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## readCharacteristicValue
 
 ```TypeScript
@@ -780,31 +755,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let descriptors: Array<bluetoothManager.BLEDescriptor> = [];
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
-descriptors[0] = descriptor;
-
-let bufferCCC = new ArrayBuffer(8);
-let cccV = new Uint8Array(bufferCCC);
-cccV[0] = 1;
-let characteristic: bluetoothManager.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    characteristicValue: bufferCCC, descriptors:descriptors};
-
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readCharacteristicValue(characteristic);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+See [readCharacteristicValue](#readcharacteristicvalue)
 
 ## readDescriptorValue
 
@@ -873,6 +824,25 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@ohos.base';
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor: bluetoothManager.BLEDescriptor = {
+    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
+    descriptorValue: bufferDesc
+};
+try {
+    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.readDescriptorValue(descriptor);
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## readDescriptorValue
 
 ```TypeScript
@@ -918,24 +888,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@ohos.base';
-let bufferDesc = new ArrayBuffer(8);
-let descV = new Uint8Array(bufferDesc);
-descV[0] = 11;
-let descriptor: bluetoothManager.BLEDescriptor = {
-    serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
-    characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
-    descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB',
-    descriptorValue: bufferDesc
-};
-try {
-    let device = bluetoothManager.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
-    device.readDescriptorValue(descriptor);
-} catch (err) {
-    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
-}
-```
+See [readDescriptorValue](#readdescriptorvalue)
 
 ## setBLEMtuSize
 

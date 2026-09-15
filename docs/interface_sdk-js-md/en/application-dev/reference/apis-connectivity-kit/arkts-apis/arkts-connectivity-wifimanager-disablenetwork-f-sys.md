@@ -52,6 +52,18 @@ try {
 }
 ```
 
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+  try {
+    let netId = 0;
+    let blockDuration = 300;
+    wifiManager.disableNetwork(netId, blockDuration);
+  } catch (error) {
+    console.error(`failed: ${JSON.stringify(error)}`);
+  }
+```
+
 
 ## disableNetwork
 
@@ -88,14 +100,4 @@ Disable the specified DeviceConfig by networkId for a period of time. The disabl
 
 **Examples**
 
-```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-
-  try {
-    let netId = 0;
-    let blockDuration = 300;
-    wifiManager.disableNetwork(netId, blockDuration);
-  } catch (error) {
-    console.error(`failed: ${JSON.stringify(error)}`);
-  }
-```
+See [disableNetwork](#disablenetwork)

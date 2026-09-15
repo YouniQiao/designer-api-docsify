@@ -47,6 +47,17 @@ connection.getAppNet((error: BusinessError, data: connection.NetHandle) => {
 })
 ```
 
+```TypeScript
+import { connection } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+connection.getAppNet().then((data: connection.NetHandle) => {
+  console.info("Succeeded to get data: " + JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get request. Code:${error.code}, message:${error.message}`);
+});
+```
+
 
 ## getAppNet
 
@@ -75,13 +86,4 @@ function getAppNet(): Promise<NetHandle>
 
 **示例**
 
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-connection.getAppNet().then((data: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(data));
-}).catch((error: BusinessError) => {
-  console.error(`Failed to get request. Code:${error.code}, message:${error.message}`);
-});
-```
+参见 [getAppNet](#getappnet)

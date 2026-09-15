@@ -18,7 +18,7 @@
   - [DataMigrationProgress(system api)](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
   - [FontClientObserver](arkts-localization-fontmanager-fontclientobserver-i.md)
   - [FontScope](arkts-localization-fontmanager-fontscope-e.md)
-- [@ohos.i18n](arkts-localization-i18n.md)
+- [@ohos.i18n(Internationalization)](arkts-localization-i18n.md)
   - [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md)
   - [getCalendar](arkts-localization-i18n-getcalendar-f.md)
   - [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md)
@@ -95,7 +95,7 @@
   - [TemperatureType](arkts-localization-i18n-temperaturetype-e.md)
   - [UnitUsage](arkts-localization-i18n-unitusage-e.md)
   - [WeekDay](arkts-localization-i18n-weekday-e.md)
-- [@ohos.intl](arkts-localization-intl.md)
+- [@ohos.intl(Internationalization)](arkts-localization-intl.md)
   - [Collator](arkts-localization-intl-collator-c.md)
   - [DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
   - [Locale](arkts-localization-intl-locale-c.md)

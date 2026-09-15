@@ -53,6 +53,17 @@ sim.getSimGid1(0, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimGid1(0).then((data: string) => {
+    console.info(`getSimGid1 success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimGid1 failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSimGid1
 
@@ -97,13 +108,4 @@ Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimGid1(0).then((data: string) => {
-    console.info(`getSimGid1 success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimGid1 failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimGid1](#getsimgid1)

@@ -58,6 +58,18 @@ radio.getImsRegInfo(slotId, mode, (err: BusinessError, data: radio.ImsRegInfo) =
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let mode: radio.ImsServiceType = radio.ImsServiceType.TYPE_VIDEO;
+radio.getImsRegInfo(slotId, mode).then((data: radio.ImsRegInfo) => {
+    console.info(`getImsRegInfo success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getImsRegInfo failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getImsRegInfo
 
@@ -102,14 +114,4 @@ Get the IMS registration state info of specified IMS service type.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let mode: radio.ImsServiceType = radio.ImsServiceType.TYPE_VIDEO;
-radio.getImsRegInfo(slotId, mode).then((data: radio.ImsRegInfo) => {
-    console.info(`getImsRegInfo success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getImsRegInfo failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getImsRegInfo](#getimsreginfo)

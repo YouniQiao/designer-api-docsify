@@ -1,8 +1,6 @@
 # AccessibilityActionOptions
 
-Defines the struct of AccessibilityActionOptions that can affect operation under accessibility.
-
-@interface AccessibilityActionOptions
+Defines optional parameters for accessibility operations of a component, which is used to restrict or modify the operations initiated by accessibility apps such as the screen reader. This API is supported only by the Slider component. If this API is used on other components, compilation succeeds but the API does not take effect.
 
 **Since:** 23
 
@@ -14,7 +12,7 @@ Defines the struct of AccessibilityActionOptions that can affect operation under
 scrollStep?: number
 ```
 
-scrollStep - the step when the component is scrolled by accessibility.
+Operation step count for an accessibility scroll action triggered by an accessibility gesture. The default value is determined by the component. This setting does not take effect on unsupported components. Currently, the Slider component is supported. This API triggers sliding for the **Slider** component through swipe gestures after the component gains focus. Scrolling distance: scrollStep * [step](../arkts-components/arkts-arkui-slideroptions-i.md). The default value is **1**. Out-of-range values fall back to **1**. For non-integer values within the valid range, the value is rounded down to the nearest integer.
 
 **Type:** number
 

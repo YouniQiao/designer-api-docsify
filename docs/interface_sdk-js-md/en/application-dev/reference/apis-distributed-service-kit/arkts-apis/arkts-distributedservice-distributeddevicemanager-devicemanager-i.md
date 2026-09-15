@@ -126,6 +126,18 @@ try {
 }
 ```
 
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
+  console.info('get available device info: ' + JSON.stringify(data));
+  }).catch((err: BusinessError) => {
+    console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
+});
+```
+
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -155,17 +167,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-dmInstance.getAvailableDeviceList().then((data: Array<distributedDeviceManager.DeviceBasicInfo>) => {
-  console.info('get available device info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error('getAvailableDeviceList errCode:' + err.code + ',errMessage:' + err.message);
-});
-```
+See [getAvailableDeviceList](#getavailabledevicelist)
 
 ## getAvailableDeviceListSync
 
@@ -513,33 +515,6 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  action: distributedDeviceManager.DeviceStateChange = 0;
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceStateChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## off('discoverSuccess')
 
 ```TypeScript
@@ -567,32 +542,6 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverSuccess', (data: Data) => {
-    console.info('discoverSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverSuccess errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## off('deviceNameChange')
 
@@ -622,27 +571,6 @@ Unsubscribes from the device name changes. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceName: string = '';
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceNameChange', (data: Data) => {
-    console.info('deviceNameChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## off('discoverFailure')
 
 ```TypeScript
@@ -670,27 +598,6 @@ Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  reason: number = 0;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverFailure', (data: Data) => {
-    console.info('discoverFailure' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## off('serviceDie')
 
@@ -720,23 +627,6 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('serviceDie', () => {
-    console.info('serviceDie off');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('deviceStateChange')
 
 ```TypeScript
@@ -764,33 +654,6 @@ Subscribes to the device state changes. The application (identified by the bundl
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  action: distributedDeviceManager.DeviceStateChange = 0;
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceStateChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## on('discoverSuccess')
 
@@ -820,32 +683,6 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  device: distributedDeviceManager.DeviceBasicInfo = {
-    deviceId: '',
-    deviceName: '',
-    deviceType: '',
-    networkId: ''
-  };
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverSuccess', (data: Data) => {
-    console.info('discoverSuccess:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverSuccess errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('deviceNameChange')
 
 ```TypeScript
@@ -873,27 +710,6 @@ Subscribes to device name changes. The application will be notified when the nam
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceName: string = '';
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceNameChange', (data: Data) => {
-    console.info('deviceNameChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## on('discoverFailure')
 
@@ -923,27 +739,6 @@ Subscribes to the **'discoverFailure'** event. The application will be notified 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
 
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  reason: number = 0;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverFailure', (data: Data) => {
-    console.info('discoverFailure on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
 ## on('serviceDie')
 
 ```TypeScript
@@ -971,23 +766,6 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('serviceDie', () => {
-    console.info('serviceDie on');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## startDiscovering
 

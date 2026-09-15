@@ -4,9 +4,7 @@
 declare type ResponsiveFillType = PresetFillType
 ```
 
-定义一个响应式item填充模式，可以在WaterFlow、Grid、List和Swiper组件中使用。
-
-@typedef { PresetFillType } ResponsiveFillType
+响应式布局填充模式，用于WaterFlow、Grid、List、Swiper和LazyVWaterFlowLayout组件。LazyVWaterFlowLayout组件从API版本26.0.0开始支持。
 
 **起始版本：** 22
 

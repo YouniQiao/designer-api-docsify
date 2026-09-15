@@ -885,6 +885,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000);
+}
+```
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiDirection } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.fling(UiDirection.DOWN, 10000, 0);
+}
+```
+
 ## fling
 
 ```TypeScript
@@ -923,15 +943,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000);
-}
-```
+See [fling](#fling)
 
 ## fling
 
@@ -972,15 +984,7 @@ Simulates a fling operation on a specified display with the specified direction 
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, UiDirection } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.fling(UiDirection.DOWN, 10000, 0);
-}
-```
+See [fling](#fling)
 
 ## getDisplayDensity
 
@@ -1027,6 +1031,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let density = await driver.getDisplayDensity(0);
+}
+```
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1064,15 +1078,7 @@ Obtains the density of the specified display of the current device. This API use
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let density = await driver.getDisplayDensity(0);
-}
-```
+See [getDisplayDensity](#getdisplaydensity)
 
 ## getDisplayRotation
 
@@ -1119,6 +1125,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { DisplayRotation, Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
+}
+```
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1156,15 +1172,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { DisplayRotation, Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let rotation: DisplayRotation = await driver.getDisplayRotation(0);
-}
-```
+See [getDisplayRotation](#getdisplayrotation)
 
 ## getDisplaySize
 
@@ -1211,6 +1219,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let size = await driver.getDisplaySize(0);
+}
+```
+
 ## getDisplaySize
 
 ```TypeScript
@@ -1248,15 +1266,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  let size = await driver.getDisplaySize(0);
-}
-```
+See [getDisplaySize](#getdisplaysize)
 
 ## injectKnucklePointerAction
 
@@ -1493,6 +1503,26 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, '123', { paste: true, addition: false });
+}
+
+async function demoChinese() {
+  let driver: Driver = Driver.create();
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  let point = await text.getBoundsCenter();
+  await driver.inputText(point, 'Chinese&', { paste: false, addition: true });
+  // Copy and paste Chinese and a special character to the end of the specified text.
+}
+```
+
 ## inputText
 
 ```TypeScript
@@ -1532,6 +1562,22 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | [801](../../errorcode-universal.md#801-api-not-supported) |  |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  // Create a Driver object.
+  let driver: Driver = Driver.create();
+  // Search for the target TextInput component.
+  let text: Component = await driver.findComponent(ON.type('TextInput'));
+  // Obtain the coordinates of the component center point.
+  let point = await text.getBoundsCenter();
+  // Enter the text '123' at the coordinate point.
+  await driver.inputText(point, '123');
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -2056,6 +2102,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
+}
+```
+
 ## mouseDrag
 
 ```TypeScript
@@ -2096,15 +2152,7 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseDrag({ x: 100, y: 100 }, { x: 200, y: 200 }, 600, 2000);
-}
-```
+See [mouseDrag](#mousedrag)
 
 ## mouseDragWithOptions
 
@@ -2216,6 +2264,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver, MouseButton } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  // If the key code value is 2072, the Ctrl button is pressed with the long-click for 2,000 ms.
+  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
+}
+```
+
 ## mouseLongClick
 
 ```TypeScript
@@ -2257,16 +2316,7 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver, MouseButton } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  // If the key code value is 2072, the Ctrl button is pressed with the long-click for 2,000 ms.
-  await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
-}
-```
+See [mouseLongClick](#mouselongclick)
 
 ## mouseMoveTo
 
@@ -2415,6 +2465,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
+}
+```
+
 ## mouseScroll
 
 ```TypeScript
@@ -2457,15 +2517,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.mouseScroll({ x: 360, y: 640 }, true, 30, 2072, 20);
-}
-```
+See [mouseScroll](#mousescroll)
 
 ## penClick
 
@@ -2704,6 +2756,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack(0);
+}
+```
+
 ## pressBack
 
 ```TypeScript
@@ -2740,6 +2802,16 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressBack();
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -2791,6 +2863,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.pressHome(0);
+}
+```
+
 ## pressHome
 
 ```TypeScript
@@ -2828,15 +2910,7 @@ Injects an operation of returning to the home screen on the specified display. T
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.pressHome(0);
-}
-```
+See [pressHome](#presshome)
 
 ## screenCap
 
@@ -2885,6 +2959,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png', 0);
+}
+```
+
 ## screenCap
 
 ```TypeScript
@@ -2922,6 +3006,16 @@ Captures the specified screen and saves it as a PNG image to the given save path
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.screenCap('/data/storage/el2/base/cache/1.png');
+}
+```
 
 ```TypeScript
 // xxx.test.ets
@@ -3387,6 +3481,16 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
+}
+```
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3427,15 +3531,7 @@ Triggers a combination key event based on the specified key code values on the s
 
 **Examples**
 
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.triggerCombineKeys(2072, 2047, 2035, 0);
-}
-```
+See [triggerCombineKeys](#triggercombinekeys)
 
 ## triggerKey
 
@@ -3485,6 +3581,17 @@ async function demo() {
 }
 ```
 
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK, 0); // Back button
+}
+```
+
 ## triggerKey
 
 ```TypeScript
@@ -3522,6 +3629,17 @@ Triggers a key event by passing the key code value on the specified screen. This
 | [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Examples**
+
+```TypeScript
+// xxx.test.ets
+import { Driver } from '@kit.TestKit';
+import { KeyCode } from '@kit.InputKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // Back button
+}
+```
 
 ```TypeScript
 // xxx.test.ets

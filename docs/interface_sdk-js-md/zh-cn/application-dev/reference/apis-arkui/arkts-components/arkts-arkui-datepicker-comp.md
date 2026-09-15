@@ -47,144 +47,34 @@ DatePicker(options?: DatePickerOptions)
 
 ## 示例
 
+```TypeScript
+### 示例1（切换公历农历）
+
 该示例实现了日期选择器组件，点击按钮可以切换公历农历。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DatePickerExample {
-  @State isLunar: boolean = false;
-  private selectedDate: Date = new Date('2021-08-08');
 
-  build() {
-    Column() {
-      Button('切换公历农历')
-        .margin({ top: 30, bottom: 30 })
-        .onClick(() => {
-          this.isLunar = !this.isLunar;
-        })
-      DatePicker({
-        start: new Date('1970-1-1'),
-        end: new Date('2100-1-1'),
-        selected: this.selectedDate
-      })
-        .lunar(this.isLunar)
-        .onDateChange((value: Date) => {
-          this.selectedDate = value;
-          console.info('select current date is: ' + value.toString());
-        })
-
-    }.width('100%')
-  }
-}
 ```
+
+```TypeScript
+### 示例2（设置文本样式）
 
 该示例通过配置[disappearTextStyle](#disappeartextstyle10)、[textStyle](#textstyle10)、[selectedTextStyle](#selectedtextstyle10)设置文本样式。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DatePickerExample {
-  private selectedDate: Date = new Date('2021-08-08');
 
-  build() {
-    Column() {
-      DatePicker({
-        start: new Date('1970-1-1'),
-        end: new Date('2100-1-1'),
-        selected: this.selectedDate
-      })
-        .disappearTextStyle({ color: Color.Gray, font: { size: '16fp', weight: FontWeight.Bold } })
-        .textStyle({ color: '#ff182431', font: { size: '18fp', weight: FontWeight.Normal } })
-        .selectedTextStyle({ color: '#ff0000FF', font: { size: '26fp', weight: FontWeight.Regular, family: "HarmonyOS Sans", style: FontStyle.Normal } })
-        .onDateChange((value: Date) => {
-          this.selectedDate = value;
-          console.info('select current date is: ' + value.toString());
-        })
-
-    }.width('100%')
-  }
-}
 ```
+
+```TypeScript
+### 示例3（设置显示年、月和月、日列）
 
 该示例通过配置mode参数实现显示年、月和月、日列。
+
 从API version 18开始，新增了[DatePickerOptions](#datepickeroptions对象说明)的mode属性。
 
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DatePickerExample {
-  @State isLunar: boolean = false;
-  private selectedDate: Date = new Date('2025-01-15');
-  @State datePickerModeList: (DatePickerMode)[] = [
-    DatePickerMode.DATE,
-    DatePickerMode.YEAR_AND_MONTH,
-    DatePickerMode.MONTH_AND_DAY,
-  ];
-  @State datePickerModeIndex: number = 0;
 
-  build() {
-    Column() {
-      Button('切换公历农历')
-        .margin({ top: 30, bottom: 30 })
-        .onClick(() => {
-          this.isLunar = !this.isLunar;
-        })
-      DatePicker({
-        start: new Date('1970-1-1'),
-        end: new Date('2100-1-1'),
-        selected: this.selectedDate,
-        mode: this.datePickerModeList[this.datePickerModeIndex]
-      })
-        .lunar(this.isLunar)
-        .onDateChange((value: Date) => {
-          this.selectedDate = value;
-          console.info('select current date is: ' + value.toString());
-        })
-
-      Button('mode :' + this.datePickerModeIndex).margin({ top: 20 })
-        .onClick(() => {
-          this.datePickerModeIndex++;
-          if (this.datePickerModeIndex >= this.datePickerModeList.length) {
-            this.datePickerModeIndex = 0;
-          }
-        })
-    }.width('100%')
-  }
-}
 ```
 
-从API version 20开始，可以通过配置[canLoop](#canloop20)参数设置DatePicker是否循环滚动。
-
 ```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct DatePickerExample {
-  @State isLoop: boolean = true;
-  selectedDate: Date = new Date("2010-1-1");
+### 示例4（设置循环滚动）
 
-  build() {
-    Column() {
-      DatePicker({
-        selected: this.selectedDate,
-      })
-        .canLoop(this.isLoop)
-        .onDateChange((value: Date) => {
-            console.info("DatePicker:onDateChange()" + value.toString());
-        })
-
-      Row() {
-        Text('循环滚动').fontSize(20)
-        Toggle({ type: ToggleType.Switch, isOn: this.isLoop })
-          .onChange((isOn: boolean) => {
-            this.isLoop = isOn;
-          })
-      }.position({ x: '60%', y: '40%' })
-    }.width('100%')
-  }
-}
+从API version 20开始，可以通过配置[canLoop](#canloop20)参数设置DatePicker是否循环滚动。
 ```

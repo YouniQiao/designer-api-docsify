@@ -55,6 +55,17 @@ sim.getSimIccId(0, (err: BusinessError, data: string) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+sim.getSimIccId(0).then((data:string) => {
+    console.info(`getSimIccId success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`getSimIccId failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## getSimIccId
 
@@ -101,13 +112,4 @@ Obtains the ICCID of the SIM card in a specified slot.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.getSimIccId(0).then((data:string) => {
-    console.info(`getSimIccId success, promise: data->${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`getSimIccId failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+See [getSimIccId](#getsimiccid)

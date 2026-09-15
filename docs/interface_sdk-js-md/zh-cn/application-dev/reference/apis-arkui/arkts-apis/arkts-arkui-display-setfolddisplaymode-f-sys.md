@@ -48,6 +48,18 @@ try {
 }
 ```
 
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+try {
+  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
+  // 设置折叠显示模式为主屏幕显示并指定原因为“backSelfie”
+  display.setFoldDisplayMode(mode, 'backSelfie');
+} catch (exception) {
+  console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
 
 ## setFoldDisplayMode
 
@@ -79,14 +91,4 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 **示例**
 
-```TypeScript
-import { display } from '@kit.ArkUI';
-
-try {
-  let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
-  // 设置折叠显示模式为主屏幕显示并指定原因为“backSelfie”
-  display.setFoldDisplayMode(mode, 'backSelfie');
-} catch (exception) {
-  console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
+参见 [setFoldDisplayMode](#setfolddisplaymode)

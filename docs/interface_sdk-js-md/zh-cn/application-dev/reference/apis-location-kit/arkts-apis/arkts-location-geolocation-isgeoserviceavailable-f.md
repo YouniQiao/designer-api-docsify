@@ -44,6 +44,13 @@ geolocation.isGeoServiceAvailable((err, data) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+geolocation.isGeoServiceAvailable().then((result) => {
+    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
+});
+```
+
 
 ## isGeoServiceAvailable
 
@@ -71,9 +78,4 @@ function isGeoServiceAvailable(): Promise<boolean>
 
 **示例**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-geolocation.isGeoServiceAvailable().then((result) => {
-    console.info('promise, isGeoServiceAvailable: ' + JSON.stringify(result));
-});
-```
+参见 [isGeoServiceAvailable](#isgeoserviceavailable)

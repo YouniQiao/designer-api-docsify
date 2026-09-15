@@ -31,53 +31,6 @@ export function bindController(node: FrameNode, controller: TextController, node
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
-**示例**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// 继承NodeController实现自定义UI控制器
-class MyNodeController extends NodeController {
-  // 设置TextController，可以在外部获取
-  controller: TextController = new TextController()
-
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // 创建Text
-    let text = typeNode.createNode(uiContext, 'Text');
-    text.initialize('Hello').fontColor(Color.Blue).fontSize(14);
-    typeNode.getAttribute(text, 'Text')?.fontWeight(FontWeight.Bold)
-    // 绑定TextController
-    typeNode.bindController(text, this.controller, 'Text');
-    col.appendChild(text);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  @State line: number = 0
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('Text bindController Sample')
-      NodeContainer(this.myNodeController)
-      Text(`Text的行数, ${this.line}`)
-      Button(`点击获取行数`)
-        .onClick(() => {
-          this.line = this.myNodeController.controller.getLayoutManager().getLineCount()
-        })
-    }
-  }
-}
-```
-
 
 ## bindController
 
@@ -109,11 +62,6 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-
-**示例**
-
-请参考createNode('Swiper')12+示例。
-- simpleType:
 
 
 ## bindController
@@ -147,12 +95,6 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**适用版本：** 15 - 24 |
 
-**示例**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'Scroll');
-```
-
 
 ## bindController
 
@@ -184,12 +126,6 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
-
-**示例**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'List');
-```
 
 
 ## bindController
@@ -223,46 +159,6 @@ export function bindController(node: FrameNode, controller: TextInputController,
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
-**示例**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// 继承NodeController实现自定义UI控制器
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // 创建、初始化TextInput，默认获焦
-    let textInput = typeNode.createNode(uiContext, 'TextInput');
-    textInput.initialize({ text: 'TextInput' })
-      .defaultFocus(true)
-    col.appendChild(textInput);
-    // 绑定TextInputController，设置光标位置
-    let controller: TextInputController = new TextInputController();
-    typeNode.bindController(textInput, controller, 'TextInput');
-    controller.caretPosition(3);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('TextInput bindController sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
-
 
 ## bindController
 
@@ -294,12 +190,6 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
-
-**示例**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'WaterFlow');
-```
 
 
 ## bindController
@@ -333,46 +223,6 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
-**示例**
-
-```TypeScript
-import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
-
-// 继承NodeController实现自定义UI控制器
-class MyNodeController extends NodeController {
-  makeNode(uiContext: UIContext): FrameNode | null {
-    let node = new FrameNode(uiContext);
-    node.commonAttribute;
-    let col = typeNode.createNode(uiContext, 'Column');
-    col.initialize({ space: 5 });
-    node.appendChild(col);
-    // 创建、初始化TextArea，默认获焦
-    let textArea = typeNode.createNode(uiContext, 'TextArea');
-    textArea.initialize({ text: 'TextArea' })
-      .defaultFocus(true)
-    col.appendChild(textArea);
-    // 绑定TextAreaController，设置光标位置
-    let controller: TextAreaController = new TextAreaController()
-    typeNode.bindController(textArea, controller, 'TextArea');
-    controller.caretPosition(3);
-    return node;
-  }
-}
-
-@Entry
-@Component
-struct FrameNodeTypeTest {
-  private myNodeController: MyNodeController = new MyNodeController();
-
-  build() {
-    Column({ space: 5 }) {
-      Text('TextArea bindController sample');
-      NodeContainer(this.myNodeController);
-    }
-  }
-}
-```
-
 
 ## bindController
 
@@ -404,9 +254,3 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
-
-**示例**
-
-```TypeScript
-typeNode.bindController(node, scroller, 'Grid');
-```

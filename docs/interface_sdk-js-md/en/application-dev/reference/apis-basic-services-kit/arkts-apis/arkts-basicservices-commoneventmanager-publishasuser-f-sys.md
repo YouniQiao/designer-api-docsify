@@ -62,6 +62,32 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Information of the common event.
+let options: commonEventManager.CommonEventPublishData = {
+  code: 0,       // Initial code of the common event.
+  data: 'initial data', // Initial data of the common event.
+};
+
+// Specify the user to whom the common event will be published.
+let userId = 100;
+// Publish a common event.
+try {
+  commonEventManager.publishAsUser('event', userId, options, (err: BusinessError) => {
+    if (err) {
+      console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+      return;
+    }
+    console.info('publishAsUser');
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
 
 ## publishAsUser
 
@@ -104,28 +130,4 @@ Publishes a common event to a specified user and specifies the information to be
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Information of the common event.
-let options: commonEventManager.CommonEventPublishData = {
-  code: 0,       // Initial code of the common event.
-  data: 'initial data', // Initial data of the common event.
-};
-
-// Specify the user to whom the common event will be published.
-let userId = 100;
-// Publish a common event.
-try {
-  commonEventManager.publishAsUser('event', userId, options, (err: BusinessError) => {
-    if (err) {
-      console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('publishAsUser');
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
-}
-```
+See [publishAsUser](#publishasuser)

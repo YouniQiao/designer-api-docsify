@@ -119,6 +119,64 @@ struct OffscreenSnapshotExample {
 }
 ```
 
+```TypeScript
+import { componentSnapshot } from '@kit.ArkUI'
+import { image } from '@kit.ImageKit'
+
+@Entry
+@Component
+struct OffscreenSnapshotExample {
+  @State pixmap: image.PixelMap | undefined = undefined
+
+  @Builder
+  RandomBuilder() {
+    Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
+      Text('Test menu item 1')
+        .fontSize(20)
+        .width(100)
+        .height(50)
+        .textAlign(TextAlign.Center)
+      Divider().height(10)
+      Text('Test menu item 2')
+        .fontSize(20)
+        .width(100)
+        .height(50)
+        .textAlign(TextAlign.Center)
+    }
+    .width(100)
+    .id("builder")
+  }
+
+  build() {
+    Column() {
+      Button("click to generate offscreen UI snapshot")
+        .onClick(() => {
+          // 建议使用this.getUIContext().getComponentSnapshot().createFromBuilder()
+          componentSnapshot.createFromBuilder(() => {
+            this.RandomBuilder()
+          }, 320, true, { scale: 2, waitUntilRenderFinished: true })
+            .then((pixmap: image.PixelMap) => {
+              this.pixmap = pixmap
+              // 保存pixmap到文件中
+              // ....
+              // 获取组件大小和位置
+              let info = this.getUIContext().getComponentUtils().getRectangleById("builder")
+              console.info(`${info.size.width} ${info.size.height} ${info.localOffset.x} ${
+              info.localOffset.y} ${info.windowOffset.x} ${info.windowOffset.y}`)
+            }).catch((err: Error) => {
+            console.error(`error:${err}`)
+          })
+        })
+      Image(this.pixmap)
+        .margin(10)
+        .height(200)
+        .width(200)
+        .border({ color: Color.Black, width: 2 })
+    }.width('100%').margin({ left: 10, top: 5, bottom: 5 }).height(300)
+  }
+}
+```
+
 
 ## createFromBuilder
 
@@ -178,60 +236,4 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 
 **示例**
 
-```TypeScript
-import { componentSnapshot } from '@kit.ArkUI'
-import { image } from '@kit.ImageKit'
-
-@Entry
-@Component
-struct OffscreenSnapshotExample {
-  @State pixmap: image.PixelMap | undefined = undefined
-
-  @Builder
-  RandomBuilder() {
-    Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text('Test menu item 1')
-        .fontSize(20)
-        .width(100)
-        .height(50)
-        .textAlign(TextAlign.Center)
-      Divider().height(10)
-      Text('Test menu item 2')
-        .fontSize(20)
-        .width(100)
-        .height(50)
-        .textAlign(TextAlign.Center)
-    }
-    .width(100)
-    .id("builder")
-  }
-
-  build() {
-    Column() {
-      Button("click to generate offscreen UI snapshot")
-        .onClick(() => {
-          // 建议使用this.getUIContext().getComponentSnapshot().createFromBuilder()
-          componentSnapshot.createFromBuilder(() => {
-            this.RandomBuilder()
-          }, 320, true, { scale: 2, waitUntilRenderFinished: true })
-            .then((pixmap: image.PixelMap) => {
-              this.pixmap = pixmap
-              // 保存pixmap到文件中
-              // ....
-              // 获取组件大小和位置
-              let info = this.getUIContext().getComponentUtils().getRectangleById("builder")
-              console.info(`${info.size.width} ${info.size.height} ${info.localOffset.x} ${
-              info.localOffset.y} ${info.windowOffset.x} ${info.windowOffset.y}`)
-            }).catch((err: Error) => {
-            console.error(`error:${err}`)
-          })
-        })
-      Image(this.pixmap)
-        .margin(10)
-        .height(200)
-        .width(200)
-        .border({ color: Color.Black, width: 2 })
-    }.width('100%').margin({ left: 10, top: 5, bottom: 5 }).height(300)
-  }
-}
-```
+参见 [createFromBuilder](#createfrombuilder)

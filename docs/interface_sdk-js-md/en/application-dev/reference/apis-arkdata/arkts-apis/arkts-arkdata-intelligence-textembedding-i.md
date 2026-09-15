@@ -51,14 +51,38 @@ Obtains the embedding vector of the given text. The model can process up to 512 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-textEmbedding.loadModel();
-let text = 'text';
-textEmbedding.getEmbedding(text)
-  .then((data: Array<number>) => {
-    console.info("Succeeded in getting Embedding");
+// Obtain textEmbedding first via intelligence.getTextEmbeddingModel.
+textEmbedding.loadModel()
+  .then(() => {
+    let text = 'text';
+    textEmbedding.getEmbedding(text)
+      .then((data: Array<number>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
-  .catch((err: BusinessError) => {
-    console.error("Failed to get Embedding and code is " + err.code);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain textEmbedding by calling intelligence.getTextEmbeddingModel first.
+textEmbedding.loadModel()
+  .then(() => {
+    let batchTexts = ['text1', 'text2'];
+    textEmbedding.getEmbedding(batchTexts)
+      .then((data: Array<Array<number>>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
 
@@ -99,14 +123,38 @@ Obtains the embedding vector of a given batch of text. The model can process up 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-textEmbedding.loadModel();
-let batchTexts = ['text1', 'text2'];
-textEmbedding.getEmbedding(batchTexts)
-  .then((data: Array<Array<number>>) => {
-    console.info("Succeeded in getting Embedding");
+// Obtain textEmbedding first via intelligence.getTextEmbeddingModel.
+textEmbedding.loadModel()
+  .then(() => {
+    let text = 'text';
+    textEmbedding.getEmbedding(text)
+      .then((data: Array<number>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
-  .catch((err: BusinessError) => {
-    console.error("Failed to get Embedding and code is " + err.code);
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain textEmbedding by calling intelligence.getTextEmbeddingModel first.
+textEmbedding.loadModel()
+  .then(() => {
+    let batchTexts = ['text1', 'text2'];
+    textEmbedding.getEmbedding(batchTexts)
+      .then((data: Array<Array<number>>) => {
+        console.info("Succeeded in getting Embedding");
+      })
+      .catch((err: BusinessError) => {
+        console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+      })
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
 
@@ -140,12 +188,13 @@ Loads this text embedding model. If the loading fails, an error code is returned
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain textEmbedding first via intelligence.getTextEmbeddingModel.
 textEmbedding.loadModel()
   .then(() => {
     console.info("Succeeded in loading Model");
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to load Model and code is " + err.code);
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
 
@@ -179,11 +228,12 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// Obtain textEmbedding by calling intelligence.getTextEmbeddingModel first.
 textEmbedding.releaseModel()
   .then(() => {
     console.info("Succeeded in releasing Model");
   })
   .catch((err: BusinessError) => {
-    console.error("Failed to release Model and code is " + err.code);
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```

@@ -111,6 +111,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.getPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
+        console.info('authorization ' + authorization);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -154,17 +166,7 @@ Get the phone book access authorization.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.getPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX').then((authorization) => {
-        console.info('authorization ' + authorization);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getPhoneBookAccessAuthorization](#getphonebookaccessauthorization)
 
 ## getShareType
 
@@ -216,6 +218,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX').then((type) => {
+        console.info('getShareType ' + type);
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## getShareType
 
 ```TypeScript
@@ -259,17 +273,7 @@ Get the PBAP sharing type.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.getShareType('XX:XX:XX:XX:XX:XX').then((type) => {
-        console.info('getShareType ' + type);
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [getShareType](#getsharetype)
 
 ## setPhoneBookAccessAuthorization
 
@@ -326,6 +330,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.setPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setPhoneBookAccessAuthorization');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -370,17 +386,7 @@ Set the phone book access authorization.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.setPhoneBookAccessAuthorization('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setPhoneBookAccessAuthorization');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [setPhoneBookAccessAuthorization](#setphonebookaccessauthorization)
 
 ## setShareType
 
@@ -433,6 +439,18 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let pbapServerProfile = pbap.createPbapServerProfile();
+    pbapServerProfile.setShareType('XX:XX:XX:XX:XX:XX', 0).then(() => {
+        console.info('setShareType');
+    });
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## setShareType
 
 ```TypeScript
@@ -477,14 +495,4 @@ Set the PBAP sharing type.
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-try {
-    let pbapServerProfile = pbap.createPbapServerProfile();
-    pbapServerProfile.setShareType('XX:XX:XX:XX:XX:XX', 0).then(() => {
-        console.info('setShareType');
-    });
-} catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
-```
+See [setShareType](#setsharetype)

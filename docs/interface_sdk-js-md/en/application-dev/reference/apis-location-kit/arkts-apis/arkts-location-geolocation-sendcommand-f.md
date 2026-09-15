@@ -46,6 +46,14 @@ geolocation.sendCommand(requestInfo, (err, result) => {
 });
 ```
 
+```TypeScript
+import geolocation from '@ohos.geolocation';
+let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
+geolocation.sendCommand(requestInfo).then((result) => {
+    console.info('promise, sendCommand: ' + JSON.stringify(result));
+});
+```
+
 
 ## sendCommand
 
@@ -79,10 +87,4 @@ Send extended commands to location subsystem.
 
 **Examples**
 
-```TypeScript
-import geolocation from '@ohos.geolocation';
-let requestInfo:geolocation.LocationCommand = {'scenario': 0x301, 'command': "command_1"};
-geolocation.sendCommand(requestInfo).then((result) => {
-    console.info('promise, sendCommand: ' + JSON.stringify(result));
-});
-```
+See [sendCommand](#sendcommand)

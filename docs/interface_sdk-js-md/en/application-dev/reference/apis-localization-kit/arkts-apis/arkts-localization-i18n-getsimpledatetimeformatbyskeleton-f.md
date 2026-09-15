@@ -54,6 +54,19 @@ try {
 }
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## getSimpleDateTimeFormatBySkeleton
 
@@ -94,15 +107,4 @@ Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For d
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { i18n, intl } from '@kit.LocalizationKit';
-
-try {
-  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
-  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`call i18n.getSimpleDateTimeFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
-}
-```
+See [getSimpleDateTimeFormatBySkeleton](#getsimpledatetimeformatbyskeleton)

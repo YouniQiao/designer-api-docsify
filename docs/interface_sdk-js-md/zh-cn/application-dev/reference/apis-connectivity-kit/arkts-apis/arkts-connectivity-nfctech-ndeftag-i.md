@@ -373,6 +373,35 @@ function nfcTechDemo() {
 }
 ```
 
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 ndefTag
+
+function nfcTechDemo() {
+    // 如果没有连接Tag，请先连接
+    if (!ndefTag.isTagConnected()) {
+        if (!ndefTag.connectTag()) {
+            console.error("ndefTag connectTag failed.");
+            return;
+        }
+    }
+
+    try {
+        ndefTag.setReadOnly((err : BusinessError)=> {
+            if (err) {
+                console.error(`ndef setReadOnly AsyncCallback err Code: ${err.code}, message: ${err.message}`);
+            } else {
+                console.info("ndef setReadOnly AsyncCallback success.");
+            }
+        });
+    } catch (businessError) {
+        console.error(`ndef setReadOnly AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
+    }
+}
+```
+
 ## setReadOnly
 
 ```TypeScript
@@ -406,34 +435,7 @@ setReadOnly(callback: AsyncCallback<void>): void
 
 **示例**
 
-```TypeScript
-import { tag } from '@kit.ConnectivityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，获取正确的 ndefTag
-
-function nfcTechDemo() {
-    // 如果没有连接Tag，请先连接
-    if (!ndefTag.isTagConnected()) {
-        if (!ndefTag.connectTag()) {
-            console.error("ndefTag connectTag failed.");
-            return;
-        }
-    }
-
-    try {
-        ndefTag.setReadOnly((err : BusinessError)=> {
-            if (err) {
-                console.error(`ndef setReadOnly AsyncCallback err Code: ${err.code}, message: ${err.message}`);
-            } else {
-                console.info("ndef setReadOnly AsyncCallback success.");
-            }
-        });
-    } catch (businessError) {
-        console.error(`ndef setReadOnly AsyncCallback catch businessError Code: ${(businessError as BusinessError).code}, message: ${(businessError as BusinessError).message}`);
-    }
-}
-```
+参见 [setReadOnly](#setreadonly)
 
 ## writeNdef
 

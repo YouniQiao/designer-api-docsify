@@ -120,6 +120,72 @@ async function getName() {
 }
 ```
 
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
+async function getName() {
+  try {
+    cert.createX500DistinguishedName(nameStr)
+      .then((data) => {
+        console.info('createX500DistinguishedName result: success.');
+        console.info('createX500DistinguishedName getName: ' + data.getName("CN"));
+      })
+      .catch((err: BusinessError) => {
+        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      });
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let nameStr = '/CN=Shaanxi@Baoji/OU=IT Department/O=ACME Inc./L=San Francisco/ST=California/C=US/CN=ALN C/CN=XTS'
+async function getName() {
+  try {
+    cert.createX500DistinguishedName(nameStr)
+      .then((data) => {
+        console.info('createX500DistinguishedName result: success.');
+        console.info('createX500DistinguishedName getName: ' + data.getName(cert.EncodingType.ENCODING_UTF8));
+      })
+      .catch((err: BusinessError) => {
+        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      });
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=Test';
+async function getName() {
+  try {
+    cert.createX500DistinguishedName(nameStr)
+      .then((data) => {
+        console.info('createX500DistinguishedName result: success.');
+        console.info('createX500DistinguishedName getName: ' + data.getName("CN", cert.EncodingType.ENCODING_UTF8));
+      })
+      .catch((err: BusinessError) => {
+        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
+      });
+  } catch (error) {
+    let e: BusinessError = error as BusinessError;
+    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
+  }
+}
+```
+
 ## getName
 
 ```TypeScript
@@ -157,27 +223,7 @@ Obtains RDN strings based on the specified encoding format.
 
 **Examples**
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameStr = '/CN=Shaanxi@Baoji/OU=IT Department/O=ACME Inc./L=San Francisco/ST=California/C=US/CN=ALN C/CN=XTS'
-async function getName() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-        console.info('createX500DistinguishedName getName: ' + data.getName(cert.EncodingType.ENCODING_UTF8));
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
+See [getName](#getname)
 
 ## getName
 
@@ -216,27 +262,7 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 
 **Examples**
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=XTS';
-async function getName() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-        console.info('createX500DistinguishedName getName: ' + data.getName("CN"));
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
+See [getName](#getname)
 
 ## getName
 
@@ -278,24 +304,4 @@ Obtains an array of RDN strings based on the specified type and encoding format.
 
 **Examples**
 
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let nameStr = '/CN=Example CA/OU=test cert/O=test/L=XA/ST=SX/C=CN/CN=RSA CA/CN=Test';
-async function getName() {
-  try {
-    cert.createX500DistinguishedName(nameStr)
-      .then((data) => {
-        console.info('createX500DistinguishedName result: success.');
-        console.info('createX500DistinguishedName getName: ' + data.getName("CN", cert.EncodingType.ENCODING_UTF8));
-      })
-      .catch((err: BusinessError) => {
-        console.error(`createX500DistinguishedName failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`createX500DistinguishedName failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
+See [getName](#getname)

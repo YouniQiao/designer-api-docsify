@@ -61,6 +61,19 @@ let groupName: string = 'GroupName';
 notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
+let groupName: string = 'GroupName';
+
+notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
+    console.info('removeGroupByBundle success');
+}).catch((err: BusinessError) => {
+    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## removeGroupByBundle
 
@@ -105,15 +118,4 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleOption: notificationManager.BundleOption = { bundle: 'Bundle' };
-let groupName: string = 'GroupName';
-
-notificationManager.removeGroupByBundle(bundleOption, groupName).then(() => {
-    console.info('removeGroupByBundle success');
-}).catch((err: BusinessError) => {
-    console.error(`removeGroupByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+参见 [removeGroupByBundle](#removegroupbybundle)

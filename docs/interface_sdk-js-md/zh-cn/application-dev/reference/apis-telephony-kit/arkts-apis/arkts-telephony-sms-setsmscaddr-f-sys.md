@@ -55,6 +55,19 @@ sms.setSmscAddr(slotId, smscAddr, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let slotId: number = 0;
+let smscAddr: string = '+861xxxxxxxxxx';
+sms.setSmscAddr(slotId, smscAddr).then(() => {
+    console.info(`setSmscAddr success.`);
+}).catch((err: BusinessError) => {
+    console.error(`setSmscAddr failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
 
 ## setSmscAddr
 
@@ -99,15 +112,4 @@ function setSmscAddr(slotId: number, smscAddr: string): Promise<void>
 
 **示例**
 
-```TypeScript
-import { sms } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let slotId: number = 0;
-let smscAddr: string = '+861xxxxxxxxxx';
-sms.setSmscAddr(slotId, smscAddr).then(() => {
-    console.info(`setSmscAddr success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setSmscAddr failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+参见 [setSmscAddr](#setsmscaddr)

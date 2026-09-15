@@ -68,6 +68,32 @@ inputMethod.switchCurrentInputMethodSubtype({
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let extra: Record<string, string> = {}
+// 参考InputMethodSubtype参数说明
+inputMethod.switchCurrentInputMethodSubtype({
+  id: "ServiceExtAbility",
+  label: "",
+  name: "com.example.keyboard",
+  mode: "upper",
+  locale: "",
+  language: "",
+  icon: "",
+  iconId: 0,
+  extra: extra
+}).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching currentInputMethodSubtype.');
+  } else {
+    console.error('Failed to switchCurrentInputMethodSubtype.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## switchCurrentInputMethodSubtype
 
@@ -108,28 +134,4 @@ function switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise<bo
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let extra: Record<string, string> = {}
-// 参考InputMethodSubtype参数说明
-inputMethod.switchCurrentInputMethodSubtype({
-  id: "ServiceExtAbility",
-  label: "",
-  name: "com.example.keyboard",
-  mode: "upper",
-  locale: "",
-  language: "",
-  icon: "",
-  iconId: 0,
-  extra: extra
-}).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [switchCurrentInputMethodSubtype](#switchcurrentinputmethodsubtype)

@@ -47,6 +47,17 @@ try {
 }
 ```
 
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  hidebug.dumpJsHeapData("heapData", true);
+} catch (error) {
+  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
+}
+```
+
 
 ## dumpJsHeapData
 
@@ -77,13 +88,4 @@ function dumpJsHeapData(filename : string, needClean : boolean) : void
 
 **示例**
 
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  hidebug.dumpJsHeapData("heapData", true);
-} catch (error) {
-  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
-}
-```
+参见 [dumpJsHeapData](#dumpjsheapdata)

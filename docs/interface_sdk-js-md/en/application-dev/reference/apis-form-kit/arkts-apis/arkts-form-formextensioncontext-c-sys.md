@@ -170,6 +170,40 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// commRemote is the remote object returned in the onConnect() callback. The value null is meaningless and is only an example.
+let commRemote: rpc.IRemoteObject | null = null;
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onFormEvent(formId: string, message: string) {
+    // In actual use, connection is the return value of connectServiceExtensionAbility(). The value 1 is meaningless and is only an example.
+    let connection: number = 1;
+
+    try {
+      this.context.disconnectServiceExtensionAbility(connection)
+        .then(() => {
+          commRemote = null;
+          // Carry out normal service processing.
+          console.info('disconnectServiceExtensionAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          commRemote = null;
+          // Process service logic errors.
+          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      commRemote = null;
+      // Process input parameter errors.
+      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
+    }
+  }
+};
+```
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -208,39 +242,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 **Examples**
 
-```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
-import { rpc } from '@kit.IPCKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// commRemote is the remote object returned in the onConnect() callback. The value null is meaningless and is only an example.
-let commRemote: rpc.IRemoteObject | null = null;
-
-export default class MyFormExtensionAbility extends FormExtensionAbility {
-  onFormEvent(formId: string, message: string) {
-    // In actual use, connection is the return value of connectServiceExtensionAbility(). The value 1 is meaningless and is only an example.
-    let connection: number = 1;
-
-    try {
-      this.context.disconnectServiceExtensionAbility(connection)
-        .then(() => {
-          commRemote = null;
-          // Carry out normal service processing.
-          console.info('disconnectServiceExtensionAbility succeed');
-        })
-        .catch((error: BusinessError) => {
-          commRemote = null;
-          // Process service logic errors.
-          console.error(`disconnectServiceExtensionAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-        });
-    } catch (paramError) {
-      commRemote = null;
-      // Process input parameter errors.
-      console.error(`error.code: ${(paramError as BusinessError).code}, error.message: ${(paramError as BusinessError).message}`);
-    }
-  }
-};
-```
+See [disconnectServiceExtensionAbility](#disconnectserviceextensionability)
 
 ## startAbility
 
@@ -306,6 +308,32 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+```TypeScript
+import { FormExtensionAbility } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyFormExtensionAbility extends FormExtensionAbility {
+  onFormEvent(formId: string, message: string) {
+    // Call startAbility() when the message event is triggered.
+    console.info(`FormExtensionAbility onFormEvent, formId:${formId}, message:${message}`);
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.formstartability',
+      abilityName: 'EntryAbility',
+      parameters: {
+        'message': message
+      }
+    };
+    this.context.startAbility(want).then(() => {
+      console.info('StartAbility Success');
+    }).catch((error: BusinessError) => {
+      console.error(`StartAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  }
+};
+```
+
 ## startAbility
 
 ```TypeScript
@@ -347,28 +375,4 @@ Starts an ability. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
-import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MyFormExtensionAbility extends FormExtensionAbility {
-  onFormEvent(formId: string, message: string) {
-    // Call startAbility() when the message event is triggered.
-    console.info(`FormExtensionAbility onFormEvent, formId:${formId}, message:${message}`);
-    let want: Want = {
-      deviceId: '',
-      bundleName: 'com.example.formstartability',
-      abilityName: 'EntryAbility',
-      parameters: {
-        'message': message
-      }
-    };
-    this.context.startAbility(want).then(() => {
-      console.info('StartAbility Success');
-    }).catch((error: BusinessError) => {
-      console.error(`StartAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
-    });
-  }
-};
-```
+See [startAbility](#startability)

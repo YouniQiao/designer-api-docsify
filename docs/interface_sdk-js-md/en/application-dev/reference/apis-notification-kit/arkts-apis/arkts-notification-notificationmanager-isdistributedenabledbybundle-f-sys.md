@@ -65,6 +65,34 @@ let bundle: notificationManager.BundleOption = {
 notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+};
+notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
+    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundle: notificationManager.BundleOption = {
+    bundle: "bundleName1",
+    uid: 1
+};
+let deviceType: string = "phone";
+notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
+    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
 
 ## isDistributedEnabledByBundle
 
@@ -114,18 +142,7 @@ Checks whether distributed notification is enabled for a specified application. 
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-};
-notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)
 
 
 ## isDistributedEnabledByBundle
@@ -176,17 +193,4 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
-    uid: 1
-};
-let deviceType: string = "phone";
-notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
-    console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-    console.error(`isDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
-});
-```
+See [isDistributedEnabledByBundle](#isdistributedenabledbybundle)

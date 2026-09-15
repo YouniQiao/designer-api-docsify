@@ -54,6 +54,17 @@ data.isCellularDataEnabled((err: BusinessError, contextData: boolean) => {
 });
 ```
 
+```TypeScript
+import { data } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+data.isCellularDataEnabled().then((contextData: boolean) => {
+    console.info(`isCellularDataEnabled success, contextData: ${contextData}`);
+}).catch((err: BusinessError) => {
+    console.error(`isCellularDataEnabled fail. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## isCellularDataEnabled
 
@@ -88,13 +99,4 @@ Checks whether the cellular data service is enabled. This API uses a promise to 
 
 **Examples**
 
-```TypeScript
-import { data } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-data.isCellularDataEnabled().then((contextData: boolean) => {
-    console.info(`isCellularDataEnabled success, contextData: ${contextData}`);
-}).catch((err: BusinessError) => {
-    console.error(`isCellularDataEnabled fail. code: ${err.code}, message: ${err.message}`);
-});
-```
+See [isCellularDataEnabled](#iscellulardataenabled)

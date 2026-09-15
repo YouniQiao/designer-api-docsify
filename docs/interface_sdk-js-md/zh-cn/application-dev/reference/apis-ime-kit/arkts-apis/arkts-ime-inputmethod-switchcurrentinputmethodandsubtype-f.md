@@ -64,6 +64,23 @@ inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType, (err: Busi
 });
 ```
 
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
+let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
+inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
+  if (result) {
+    console.info('Succeeded in switching currentInputMethodAndSubtype.');
+  } else {
+    console.error('Failed to switchCurrentInputMethodAndSubtype.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
+});
+```
+
 
 ## switchCurrentInputMethodAndSubtype
 
@@ -108,19 +125,4 @@ function switchCurrentInputMethodAndSubtype(
 
 **示例**
 
-```TypeScript
-import { InputMethodSubtype } from '@kit.IMEKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
-let imSubType: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
-inputMethod.switchCurrentInputMethodAndSubtype(currentIme, imSubType).then((result: boolean) => {
-  if (result) {
-    console.info('Succeeded in switching currentInputMethodAndSubtype.');
-  } else {
-    console.error('Failed to switchCurrentInputMethodAndSubtype.');
-  }
-}).catch((err: BusinessError) => {
-  console.error(`Failed to switchCurrentInputMethodAndSubtype, code: ${err.code}, message: ${err.message}`);
-});
-```
+参见 [switchCurrentInputMethodAndSubtype](#switchcurrentinputmethodandsubtype)

@@ -38,23 +38,6 @@ function off(type: 'locatingRequiredDataChange', callback?: Callback<Array<Locat
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call &#36;{geoLocationManager.off('locatingRequiredDataChange')} due to limited device capabilities. |
 
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let callback = (code: Array<geoLocationManager.LocatingRequiredData>): void => {
-  console.info('locatingRequiredDataChange: ' + JSON.stringify(code));
-}
-let config: geoLocationManager.LocatingRequiredDataConfig = { 'type': 1, 'needStartScan': true, 'scanInterval': 10000 };
-try {
-  geoLocationManager.on('locatingRequiredDataChange', config, callback);
-  geoLocationManager.off('locatingRequiredDataChange', callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
-
 
 ## off('locationIconStatusChange')
 
@@ -85,19 +68,3 @@ function off(type: 'locationIconStatusChange', callback?: Callback<LocationIconS
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call &#36;{geoLocationManager.off('locationIconStatusChange')} due to limited device capabilities. |
 | [3301000](../errorcode-geoLocationManager.md#3301000-位置服务不可用) | The location service is unavailable. |
-
-**示例**
-
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-
-let callback = (code: geoLocationManager.LocationIconStatus): void => {
-  console.info('LocationIconStatus: ' + JSON.stringify(code));
-}
-try {
-  geoLocationManager.on('locationIconStatusChange', callback);
-  geoLocationManager.off('locationIconStatusChange', callback);
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```

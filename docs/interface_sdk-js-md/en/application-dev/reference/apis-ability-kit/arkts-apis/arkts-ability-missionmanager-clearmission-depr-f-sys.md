@@ -54,6 +54,24 @@ try {
 }
 ```
 
+```TypeScript
+import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
+
+let testMissionId = 2;
+try {
+  // Clear the specified mission.
+  missionManager.clearMission(testMissionId).then((data) => {
+    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
+  }).catch((error: BusinessError) => {
+    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
+  });
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`clearMission sync failed. Code: ${err.code}, message: ${err.message}.`);
+}
+```
+
 
 ## clearMission
 
@@ -89,20 +107,4 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 **Examples**
 
-```TypeScript
-import missionManager from '@ohos.application.missionManager';
-import { BusinessError } from '@ohos.base';
-
-let testMissionId = 2;
-try {
-  // Clear the specified mission.
-  missionManager.clearMission(testMissionId).then((data) => {
-    console.info(`clearMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`clearMission failed. Code: ${error.code}, message: ${error.message}.`);
-  });
-} catch (error) {
-  let err = error as BusinessError;
-  console.error(`clearMission sync failed. Code: ${err.code}, message: ${err.message}.`);
-}
-```
+See [clearMission](#clearmission)

@@ -49,6 +49,72 @@ let innerEvent: emitter.InnerEvent = {
 emitter.emit(innerEvent, eventData);
 ```
 
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
 
 ## emit
 
@@ -85,7 +151,78 @@ let eventData: emitter.EventData = {
   }
 };
 
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
 emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit('eventId', options, eventData);
 ```
 
 
@@ -117,6 +254,33 @@ function emit<T>(eventId: string, data?: GenericEventData<T>): void
 **示例**
 
 ```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
 @Sendable
 class Sample {
   constructor() {
@@ -132,6 +296,43 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter.emit('eventId', options, eventData);
 ```
 
 
@@ -171,8 +372,75 @@ let eventData: emitter.EventData = {
   }
 };
 
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
 let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
 };
 
 emitter.emit('eventId', options, eventData);
@@ -206,6 +474,66 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 
 **示例**
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1,
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit(innerEvent, eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+emitter.emit('eventId', eventData);
+```
+
+```TypeScript
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+
+emitter.emit('eventId', options, eventData);
+```
 
 ```TypeScript
 @Sendable

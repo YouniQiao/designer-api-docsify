@@ -40,19 +40,6 @@ function connect(sessionId: number): Promise<ConnectResult>
 
 **示例**
 
-设备A上创建协同会话成功并获得会话ID后，调用connect()方法启动UIAbility连接，并拉起设备B应用。
-
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let sessionId = 100;
-abilityConnectionManager.connect(sessionId).then((ConnectResult) => {
-  if (!ConnectResult.isConnected) {
-    hilog.info(0x0000, 'testTag', 'connect failed');
-    return;
-  }
-}).catch(() => {
-  hilog.error(0x0000, 'testTag', "connect failed");
-})
+设备A上创建协同会话成功并获得会话ID后，调用connect()方法启动UIAbility连接，并拉起设备B应用。
 ```

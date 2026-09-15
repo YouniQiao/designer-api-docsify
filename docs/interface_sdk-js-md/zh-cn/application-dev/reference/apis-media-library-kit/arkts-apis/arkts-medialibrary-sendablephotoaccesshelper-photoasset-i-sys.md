@@ -53,32 +53,8 @@ getAnalysisData(analysisType: photoAccessHelper.AnalysisType): Promise<string>
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { common } from '@kit.AbilityKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('getAnalysisDataDemo')
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: new dataSharePredicates.DataSharePredicates()
-    }
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> =
-      await phAccessHelper.getAssets(fetchOptions);
-    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    if (photoAsset != undefined) {
-      let analysisData: string = await photoAsset.getAnalysisData(
-        photoAccessHelper.AnalysisType.ANALYSIS_OCR);
-      console.info('get ocr result: ' + JSON.stringify(analysisData));
-    }
-    fetchResult.close();
-  } catch (err) {
-    console.error(`getAnalysisDataDemofailed with error: ${err.code}, ${err.message}`);
-  }
-}
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
 ```
 
 ## requestSource
@@ -113,30 +89,6 @@ requestSource(): Promise<number>
 
 **示例**
 
-phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
-
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-import { common } from '@kit.AbilityKit';
-
-async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
-  try {
-    console.info('requestSourcePromiseDemo')
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    if (fetchResult === undefined) {
-      console.error('requestSourcePromise fetchResult is undefined');
-      return;
-    }
-    let photoAsset: sendablePhotoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
-    let fd = await photoAsset.requestSource();
-    console.info('Source fd is ' + fd);
-  } catch (err) {
-    console.error(`requestSourcePromiseDemo failed with error: ${err.code}, ${err.message}`);
-  }
-}
+phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
 ```

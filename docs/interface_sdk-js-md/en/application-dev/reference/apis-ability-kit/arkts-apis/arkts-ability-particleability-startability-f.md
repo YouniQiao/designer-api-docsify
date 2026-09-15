@@ -61,6 +61,28 @@ particleAbility.startAbility(
 );
 ```
 
+```TypeScript
+import { particleAbility, wantConstant } from '@kit.AbilityKit';
+
+particleAbility.startAbility(
+  {
+    want:
+    {
+      action: 'ohos.want.action.home',
+      entities: ['entity.system.home'],
+      type: 'MIMETYPE',
+      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
+      deviceId: '',
+      bundleName: 'com.example.Data',
+      abilityName: 'com.example.Data.EntryAbility',
+      uri: ''
+    },
+  },
+).then(() => {
+  console.info('particleAbility startAbility');
+});
+```
+
 
 ## startAbility
 
@@ -95,24 +117,4 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { particleAbility, wantConstant } from '@kit.AbilityKit';
-
-particleAbility.startAbility(
-  {
-    want:
-    {
-      action: 'ohos.want.action.home',
-      entities: ['entity.system.home'],
-      type: 'MIMETYPE',
-      flags: wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION,
-      deviceId: '',
-      bundleName: 'com.example.Data',
-      abilityName: 'com.example.Data.EntryAbility',
-      uri: ''
-    },
-  },
-).then(() => {
-  console.info('particleAbility startAbility');
-});
-```
+See [startAbility](#startability)

@@ -116,15 +116,6 @@ off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 | type | "headerReceive" | 是 | 取消订阅的事件类型，'headerReceive'。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.off("headerReceive");
-```
-
 ## off("headersReceive")
 
 ```TypeScript
@@ -145,18 +136,6 @@ off(type: "headersReceive", callback?: Callback<Object>): void
 | --- | --- | --- | --- |
 | type | "headersReceive" | 是 | 取消订阅的事件类型：'headersReceive'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**适用版本：** 11 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
 
 ## off("dataReceive")
 
@@ -179,18 +158,6 @@ off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
 | type | "dataReceive" | 是 | 取消订阅的事件类型：'dataReceive'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
 ## off("dataEnd")
 
 ```TypeScript
@@ -211,18 +178,6 @@ off(type: "dataEnd", callback?: Callback<void>): void
 | --- | --- | --- | --- |
 | type | "dataEnd" | 是 | 取消订阅的事件类型：'dataEnd'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
 
 ## off('dataReceiveProgress')
 
@@ -245,18 +200,6 @@ off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): 
 | type | 'dataReceiveProgress' | 是 | 取消订阅的事件类型：'dataReceiveProgress'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 否 | 回调函数。 可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**适用版本：** 11 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
 ## off('dataSendProgress')
 
 ```TypeScript
@@ -277,18 +220,6 @@ off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | 是 | 取消订阅的事件类型：'dataSendProgress'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
 
 ## on("headerReceive")
 
@@ -313,18 +244,6 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 | type | "headerReceive" | 是 | 订阅的事件类型，'headerReceive'。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。当订阅成功，error为undefined，data为获取到HTTP响应头；否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headerReceive", (data: BusinessError) => {
-  console.error("error:" + JSON.stringify(data));
-});
-```
-
 ## on("headersReceive")
 
 ```TypeScript
@@ -345,18 +264,6 @@ on(type: "headersReceive", callback: Callback<Object>): void
 | --- | --- | --- | --- |
 | type | "headersReceive" | 是 | 订阅的事件类型：'headersReceive'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 | 回调函数，返回HTTP响应头对象。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-httpRequest.off("headersReceive");
-```
 
 ## on("dataReceive")
 
@@ -379,18 +286,6 @@ on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
 | type | "dataReceive" | 是 | 订阅的事件类型，'dataReceive'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数。当订阅成功时，err为undefined，data为获取到的HTTP流式数据接收数据，类型为ArrayBuffer；否则为错误对象。 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceive", (data: ArrayBuffer) => {
-  console.info("dataReceive length: " + JSON.stringify(data.byteLength));
-});
-httpRequest.off("dataReceive");
-```
-
 ## on("dataEnd")
 
 ```TypeScript
@@ -411,18 +306,6 @@ on(type: "dataEnd", callback: Callback<void>): void
 | --- | --- | --- | --- |
 | type | "dataEnd" | 是 | 订阅的事件类型，'dataEnd'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。当订阅成功时，err为undefined，否则为错误对象。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataEnd", () => {
-  console.info("Receive dataEnd !");
-});
-httpRequest.off("dataEnd");
-```
 
 ## on('dataReceiveProgress')
 
@@ -445,18 +328,6 @@ on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): vo
 | type | 'dataReceiveProgress' | 是 | 订阅的事件类型，'dataReceiveProgress'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)，订阅失败时为undefined。<br>**适用版本：** 11 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
-  console.info("dataReceiveProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataReceiveProgress");
-```
-
 ## on('dataSendProgress')
 
 ```TypeScript
@@ -478,18 +349,6 @@ on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
 | type | 'dataSendProgress' | 是 | 订阅的事件类型，'dataSendProgress'。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | 是 | 回调函数。当订阅成功时，回调内容是[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)，订阅失败时为undefined。 |
 
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
-  console.info("dataSendProgress:" + JSON.stringify(data));
-});
-httpRequest.off("dataSendProgress");
-```
-
 ## once("headersReceive")
 
 ```TypeScript
@@ -510,17 +369,6 @@ once(type: "headersReceive", callback: Callback<Object>): void
 | --- | --- | --- | --- |
 | type | "headersReceive" | 是 | 订阅事件，固定为'headersReceive'。headersReceive：响应头接收事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | 是 | 回调函数。返回HTTP响应头对象。 |
-
-**示例**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-httpRequest.once("headersReceive", (header: Object) => {
-  console.info("header: " + JSON.stringify(header));
-});
-```
 
 ## request
 
@@ -615,6 +463,79 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 });
 ```
 
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
+  // 推荐使用body字段传递请求体内容，具体格式与服务端协商确定。
+  body: 'data to send', // 自API 26开始支持。
+  // 推荐使用queryParams字段传递URL参数。可传string或对象。
+  queryParams: { scene: 'request-demo', page: 1 }, // 自API 26开始支持。
+    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
+    usingCache: true, // 可选，默认为true。
+    priority: 1, // 可选，默认为1。
+    // 开发者根据自身业务需要添加header字段。
+    header: new Header('application/json'),
+    readTimeout: 60000, // 可选，默认为60000ms。
+    connectTimeout: 60000, // 可选，默认为60000ms。
+    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
+    usingProxy: false, // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
+};
+
+httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
+  if (!err) {
+    console.info('Result:' + data.result);
+    console.info('code:' + data.responseCode);
+    console.info('type:' + JSON.stringify(data.resultType));
+    console.info('header:' + JSON.stringify(data.header));
+    console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
+  } else {
+    console.error('error:' + JSON.stringify(err));
+  }
+});
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.request("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data:http.HttpResponse) => {
+  console.info('Result:' + data.result);
+  console.info('code:' + data.responseCode);
+  console.info('type:' + JSON.stringify(data.resultType));
+  console.info('header:' + JSON.stringify(data.header));
+  console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
+  console.info('header.content-Type:' + data.header);
+  console.info('header.Status-Line:' + data.header);
+}).catch((err:Error) => {
+  console.error('error:' + JSON.stringify(err));
+});
+```
+
 ## request
 
 ```TypeScript
@@ -690,47 +611,7 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 **示例**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-  // 推荐使用body字段传递请求体内容，具体格式与服务端协商确定。
-  body: 'data to send', // 自API 26开始支持。
-  // 推荐使用queryParams字段传递URL参数。可传string或对象。
-  queryParams: { scene: 'request-demo', page: 1 }, // 自API 26开始支持。
-    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-    usingCache: true, // 可选，默认为true。
-    priority: 1, // 可选，默认为1。
-    // 开发者根据自身业务需要添加header字段。
-    header: new Header('application/json'),
-    readTimeout: 60000, // 可选，默认为60000ms。
-    connectTimeout: 60000, // 可选，默认为60000ms。
-    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-    usingProxy: false, // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-
-httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
-  if (!err) {
-    console.info('Result:' + data.result);
-    console.info('code:' + data.responseCode);
-    console.info('type:' + JSON.stringify(data.resultType));
-    console.info('header:' + JSON.stringify(data.header));
-    console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  } else {
-    console.error('error:' + JSON.stringify(err));
-  }
-});
-```
+参见 [request](#request)
 
 ## request
 
@@ -812,36 +693,7 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 **示例**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.request("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data:http.HttpResponse) => {
-  console.info('Result:' + data.result);
-  console.info('code:' + data.responseCode);
-  console.info('type:' + JSON.stringify(data.resultType));
-  console.info('header:' + JSON.stringify(data.header));
-  console.info('cookies:' + data.cookies); // 自API version 8开始支持cookie。
-  console.info('header.content-Type:' + data.header);
-  console.info('header.Status-Line:' + data.header);
-}).catch((err:Error) => {
-  console.error('error:' + JSON.stringify(err));
-});
-```
+参见 [request](#request)
 
 ## requestInStream
 
@@ -921,6 +773,67 @@ httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) =>
 })
 ```
 
+```TypeScript
+import { http } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let options: http.HttpRequestOptions = {
+    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
+    // 当使用POST请求时此字段用于传递请求体内容，具体格式与服务端协商确定。
+    extraData: 'data to send', // 自API version 26开始，推荐使用body字段传递请求体内容，具体格式与服务端协商确定。
+    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
+    usingCache: true, // 可选，默认为true。
+    priority: 1, // 可选，默认为1。
+    // 开发者根据自身业务需要添加header字段。
+    header: new Header('application/json'),
+    readTimeout: 60000, // 可选，默认为60000ms。
+    connectTimeout: 60000, // 可选，默认为60000ms。
+    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
+    usingProxy: false, // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
+};
+httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
+  if (!err) {
+    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
+  } else {
+    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+  }
+})
+```
+
+```TypeScript
+import { http } from '@kit.NetworkKit';
+
+class Header {
+  public contentType: string;
+
+  constructor(contentType: string) {
+    this.contentType = contentType;
+  }
+}
+
+let httpRequest = http.createHttp();
+let promise = httpRequest.requestInStream("EXAMPLE_URL", {
+  method: http.RequestMethod.GET,
+  connectTimeout: 60000,
+  readTimeout: 60000,
+  header: new Header('application/json')
+});
+promise.then((data: number) => {
+  console.info("requestInStream OK!" + data);
+}).catch((err: Error) => {
+  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
+});
+```
+
 ## requestInStream
 
 ```TypeScript
@@ -986,41 +899,7 @@ requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallbac
 
 **示例**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let options: http.HttpRequestOptions = {
-    method: http.RequestMethod.POST, // 可选，默认为http.RequestMethod.GET。
-    // 当使用POST请求时此字段用于传递请求体内容，具体格式与服务端协商确定。
-    extraData: 'data to send', // 自API version 26开始，推荐使用body字段传递请求体内容，具体格式与服务端协商确定。
-    expectDataType: http.HttpDataType.STRING, // 可选，指定返回数据的类型。
-    usingCache: true, // 可选，默认为true。
-    priority: 1, // 可选，默认为1。
-    // 开发者根据自身业务需要添加header字段。
-    header: new Header('application/json'),
-    readTimeout: 60000, // 可选，默认为60000ms。
-    connectTimeout: 60000, // 可选，默认为60000ms。
-    usingProtocol: http.HttpProtocol.HTTP1_1, // 可选，协议类型默认值由系统自动指定。
-    usingProxy: false, // 可选，默认使用系统代理，设置为false不使用代理，自API 10开始支持该属性。
-};
-httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , data: number) => {
-  if (!err) {
-    console.info("requestInStream OK! ResponseCode is " + JSON.stringify(data));
-  } else {
-    console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-  }
-})
-```
+参见 [requestInStream](#requestinstream)
 
 ## requestInStream
 
@@ -1092,30 +971,7 @@ requestInStream(url: string, options?: HttpRequestOptions): Promise<number>
 
 **示例**
 
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-class Header {
-  public contentType: string;
-
-  constructor(contentType: string) {
-    this.contentType = contentType;
-  }
-}
-
-let httpRequest = http.createHttp();
-let promise = httpRequest.requestInStream("EXAMPLE_URL", {
-  method: http.RequestMethod.GET,
-  connectTimeout: 60000,
-  readTimeout: 60000,
-  header: new Header('application/json')
-});
-promise.then((data: number) => {
-  console.info("requestInStream OK!" + data);
-}).catch((err: Error) => {
-  console.error("requestInStream ERROR : err = " + JSON.stringify(err));
-});
-```
+参见 [requestInStream](#requestinstream)
 
 ## requestSync
 

@@ -16,31 +16,6 @@ import { SplitLayout } from '@kit.ArkUI';
 
 ## 示例
 
-该示例通过SplitLayout实现了页面布局，并具备自适应能力。
-
 ```TypeScript
-import { SplitLayout } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State demoImage: Resource = $r('app.media.background');
-
-  build() {
-    Column() {
-      SplitLayout({
-        mainImage: this.demoImage,
-        primaryText: '新歌推荐',
-        secondaryText: '私人订制新歌精选站，为你推荐专属优质新歌;',
-        tertiaryText: '每日更新',
-      }) {
-        Text('示例：空白区域容器内可添加组件')
-          .margin({ top: 36 })
-      }
-    }
-    .justifyContent(FlexAlign.SpaceBetween)
-    .height('100%')
-    .width('100%')
-  }
-}
+该示例通过SplitLayout实现了页面布局，并具备自适应能力。
 ```

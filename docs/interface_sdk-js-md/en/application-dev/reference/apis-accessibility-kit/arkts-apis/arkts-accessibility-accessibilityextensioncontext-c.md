@@ -11,9 +11,9 @@ Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionCont
 ```ts
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
 class EntryAbility extends AccessibilityExtensionAbility {
-  onConnect(): void {
-    let axContext = this.context; 
-  } 
+ onConnect(): void {
+ let axContext = this.context; 
+ } 
 }
 ```
 
@@ -52,6 +52,38 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 **Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext is an instance of AccessibilityExtensionContext, obtained through this.context of an AccessibilityExtensionAbility subclass. See the usage instructions for details.
+axContext.getFocusElement().then((data: AccessibilityElement) => {
+  rootElement = data;
+  console.info(`succeeded in getting focus element,${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
+axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
+  if (err) {
+    console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  rootElement = data;
+  console.info(`succeeded in getting focus element, ${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -106,20 +138,7 @@ Obtains the focus element. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext is an instance of AccessibilityExtensionContext, obtained through this.context of an AccessibilityExtensionAbility subclass. See the usage instructions for details.
-axContext.getFocusElement().then((data: AccessibilityElement) => {
-  rootElement = data;
-  console.info(`succeeded in getting focus element,${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getFocusElement](#getfocuselement)
 
 ## getFocusElement
 
@@ -150,22 +169,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 **Examples**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
-axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to get focus element. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  rootElement = data;
-  console.info(`succeeded in getting focus element, ${JSON.stringify(data)}`);
-});
-```
+See [getFocusElement](#getfocuselement)
 
 ## getWindowRootElement
 
@@ -196,6 +200,38 @@ Obtains the root element of the specified window. This API uses an asynchronous 
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 **Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. See the usage instructions for details.
+axContext.getWindowRootElement().then((data: AccessibilityElement) => {
+  rootElement = data;
+  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let rootElement: AccessibilityElement;
+
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage guide.
+axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) => {
+  if (err) {
+    console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  rootElement = data;
+  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -250,20 +286,7 @@ Obtains the root element of the specified window. This API uses a promise to ret
 
 **Examples**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. See the usage instructions for details.
-axContext.getWindowRootElement().then((data: AccessibilityElement) => {
-  rootElement = data;
-  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getWindowRootElement](#getwindowrootelement)
 
 ## getWindowRootElement
 
@@ -294,22 +317,7 @@ Obtains the root element of the currently active window. This API uses an asynch
 
 **Examples**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let rootElement: AccessibilityElement;
-
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage guide.
-axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) => {
-  if (err) {
-    console.error(`Failed to get root element of the window. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  rootElement = data;
-  console.info(`succeeded in getting root element of the window, ${JSON.stringify(data)}`);
-});
-```
+See [getWindowRootElement](#getwindowrootelement)
 
 ## getWindows
 
@@ -340,6 +348,32 @@ Obtains all windows on the specified display. This API uses an asynchronous call
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 **Examples**
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
+axContext.getWindows().then((data: AccessibilityElement[]) => {
+  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. See usage instructions for details.
+axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
+  if (err) {
+    console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
+});
+```
 
 ```TypeScript
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -391,17 +425,7 @@ Obtains all windows on the specified display. This API uses a promise to return 
 
 **Examples**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
-axContext.getWindows().then((data: AccessibilityElement[]) => {
-  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [getWindows](#getwindows)
 
 ## getWindows
 
@@ -432,19 +456,7 @@ Obtains all windows on the default main display. This API uses an asynchronous c
 
 **Examples**
 
-```TypeScript
-import { AccessibilityElement } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. See usage instructions for details.
-axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
-  if (err) {
-    console.error(`Failed to get windows. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
-});
-```
+See [getWindows](#getwindows)
 
 ## injectGesture
 
@@ -477,6 +489,24 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 **Examples**
+
+```TypeScript
+import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gesturePath: GesturePath = new GesturePath(100);
+
+for (let i = 0; i < 10; i++) {
+  let gesturePoint = new GesturePoint(100, i * 200);
+  gesturePath.points.push(gesturePoint);
+}
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
+axContext.injectGesture(gesturePath).then(() => {
+  console.info(`Succeeded in injecting gesture,gesturePath is ${gesturePath}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to inject gesture. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ```TypeScript
 import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
@@ -534,23 +564,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 
 **Examples**
 
-```TypeScript
-import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gesturePath: GesturePath = new GesturePath(100);
-
-for (let i = 0; i < 10; i++) {
-  let gesturePoint = new GesturePoint(100, i * 200);
-  gesturePath.points.push(gesturePoint);
-}
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
-axContext.injectGesture(gesturePath).then(() => {
-  console.info(`Succeeded in injecting gesture,gesturePath is ${gesturePath}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to inject gesture. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [injectGesture](#injectgesture)
 
 ## injectGestureSync
 
@@ -626,6 +640,18 @@ Sets the bundle name of the concerned app. This API uses an asynchronous callbac
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let targetNames = ['com.ohos.xyz'];
+// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
+axContext.setTargetBundleName(targetNames).then(() => {
+  console.info(`succeeded in setting target bundle names, targetNames is ${targetNames}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set target bundle names. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetNames = ['com.ohos.xyz'];
 try {
   // axContext is an AccessibilityExtensionContext instance, obtained through this.context of the AccessibilityExtensionAbility subclass. For details, see the usage instructions.
   axContext.setTargetBundleName(targetNames, (err: BusinessError) => {
@@ -674,14 +700,4 @@ Sets the bundle name of the concerned app. This API uses a promise to return the
 
 **Examples**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let targetNames = ['com.ohos.xyz'];
-// axContext is an AccessibilityExtensionContext instance, obtained through this.context of an AccessibilityExtensionAbility subclass. For details, see the usage instructions.
-axContext.setTargetBundleName(targetNames).then(() => {
-  console.info(`succeeded in setting target bundle names, targetNames is ${targetNames}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set target bundle names. Code: ${err.code}, message: ${err.message}`);
-});
-```
+See [setTargetBundleName](#settargetbundlename)

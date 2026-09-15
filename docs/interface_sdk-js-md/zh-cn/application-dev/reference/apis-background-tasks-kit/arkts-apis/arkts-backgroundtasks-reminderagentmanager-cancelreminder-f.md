@@ -49,6 +49,18 @@ reminderAgentManager.cancelReminder(reminderId, (err: BusinessError) => {
 });
 ```
 
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: number = 1;
+reminderAgentManager.cancelReminder(reminderId).then(() => {
+  console.info("cancelReminder promise");
+}).catch((err: BusinessError) => {
+  console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
 
 ## cancelReminder
 
@@ -84,14 +96,4 @@ function cancelReminder(reminderId: number): Promise<void>
 
 **示例**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
-
-let reminderId: number = 1;
-reminderAgentManager.cancelReminder(reminderId).then(() => {
-  console.info("cancelReminder promise");
-}).catch((err: BusinessError) => {
-  console.error("promise err code:" + err.code + " message:" + err.message);
-});
-```
+参见 [cancelReminder](#cancelreminder)

@@ -57,6 +57,24 @@ try {
 }
 ```
 
+```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  if (geoLocationManager.isCachedGnssServiceSupported()) {
+    geoLocationManager.getCachedGnssLocationsSize().then((result) => {
+      console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
+    })
+      .catch((error: BusinessError) => {
+        console.error('promise, getCachedGnssLocationsSize: error=' + JSON.stringify(error));
+      });
+  }
+} catch (err) {
+  console.error("errCode:" + err.code + ", message:" + err.message);
+}
+```
+
 
 ## getCachedGnssLocationsSize
 
@@ -89,20 +107,4 @@ function getCachedGnssLocationsSize(): Promise<number>
 
 **示例**
 
-```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  if (geoLocationManager.isCachedGnssServiceSupported()) {
-    geoLocationManager.getCachedGnssLocationsSize().then((result) => {
-      console.info('promise, getCachedGnssLocationsSize: ' + JSON.stringify(result));
-    })
-      .catch((error: BusinessError) => {
-        console.error('promise, getCachedGnssLocationsSize: error=' + JSON.stringify(error));
-      });
-  }
-} catch (err) {
-  console.error("errCode:" + err.code + ", message:" + err.message);
-}
-```
+参见 [getCachedGnssLocationsSize](#getcachedgnsslocationssize)

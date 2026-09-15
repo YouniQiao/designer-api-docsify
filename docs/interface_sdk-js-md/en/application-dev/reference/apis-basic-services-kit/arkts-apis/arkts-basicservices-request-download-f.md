@@ -44,6 +44,16 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 ```TypeScript
 let downloadTask: request.DownloadTask;
 // Replace the URL with the HTTP address of the real server.
+request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+  downloadTask = data;
+}).catch((err: BusinessError) => {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
+```TypeScript
+let downloadTask: request.DownloadTask;
+// Replace the URL with the HTTP address of the real server.
 request.download({ url: 'https://xxxx/xxxxx.hap', 
 filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => {
   if (err) {
@@ -95,12 +105,4 @@ Downloads a file. This API uses a promise to return the result.
 
 **Examples**
 
-```TypeScript
-let downloadTask: request.DownloadTask;
-// Replace the URL with the HTTP address of the real server.
-request.download({ url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-  downloadTask = data;
-}).catch((err: BusinessError) => {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-})
-```
+See [download](#download)
