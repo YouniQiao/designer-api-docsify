@@ -18,7 +18,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 actualLength: number
 ```
 
-Actual length of the read or written data.Unit: bytes.
+Actual length of the read/write operation, in bytes.
 
 **Type:** number
 
@@ -32,7 +32,7 @@ Actual length of the read or written data.Unit: bytes.
 length: number
 ```
 
-Expected length of the read or written data.Unit: bytes.
+Expected length of the read/write operation, in bytes.
 
 **Type:** number
 
@@ -46,7 +46,7 @@ Expected length of the read or written data.Unit: bytes.
 status: UsbTransferStatus
 ```
 
-Status returned by callback.
+Status code of the isochronous transfer subpacket.
 
 **Type:** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 

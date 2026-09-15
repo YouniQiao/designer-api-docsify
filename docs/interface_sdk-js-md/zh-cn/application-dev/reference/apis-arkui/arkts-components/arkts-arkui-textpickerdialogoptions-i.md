@@ -74,8 +74,7 @@ onDidAppear?: () => void
 
 > **说明：** 
 > 
-> 1. 正常时序依次为：
-> onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
 > 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 > 
@@ -101,8 +100,7 @@ onDidDisappear?: () => void
 
 > **说明：** 
 > 
-> 1. 正常时序依次为：
-> onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **起始版本：** 12
 
@@ -122,8 +120,7 @@ onWillAppear?: () => void
 
 > **说明：** 
 > 
-> 1. 正常时序依次为：
-> onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
 > 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
@@ -145,8 +142,7 @@ onWillDisappear?: () => void
 
 > **说明：** 
 > 
-> 1. 正常时序依次为：
-> onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+> 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange/onScrollStop)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 > 
 > 2. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
 
@@ -168,10 +164,8 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 > **说明：** 
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
-> 保持默认值false。
-> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，保持默认值false。
+> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -218,8 +212,7 @@ backgroundBlurStyle?: BlurStyle
 
 > **说明：** 
 > 
-> 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
-> 否则显示的颜色将不符合预期效果。
+> 1. 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则显示的颜色将不符合预期效果。
 > 
 > 2. 从API版本26.0.0开始，设置systemMaterial后该属性不生效。
 
@@ -269,8 +262,7 @@ backgroundColor?: ResourceColor
 
 > **说明：** 
 > 
-> 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，不要设置backgroundBlurStyle为非NONE值，
-> 否则显示的颜色将不符合预期效果。
+> 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，不要设置backgroundBlurStyle为非NONE值，否则显示的颜色将不符合预期效果。
 > 
 > 2. 从API版本26.0.0开始，设置systemMaterial后该属性不生效。
 
@@ -319,11 +311,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 > **说明：** 
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
-> 保持默认值false。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，保持默认值false。
 > 
-> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 

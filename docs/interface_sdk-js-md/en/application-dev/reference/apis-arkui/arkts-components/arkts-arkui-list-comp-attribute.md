@@ -166,18 +166,13 @@ Sets whether to enable the chain linkage effect for the current **List** compone
 
 > **NOTE:** 
 > 
-> - The chain linkage effect refers to the interaction where, during finger swiping, the dragged **ListItem** acts
-> as the driving object, while adjacent items are driven objects. The driving object drives the linkage of the
-> driven objects, following a physics-based spring animation.
+> - The chain linkage effect refers to the interaction where, during finger swiping, the dragged **ListItem** acts as the driving object, while adjacent items are driven objects. The driving object drives the linkage of the driven objects, following a physics-based spring animation.
 > 
-> - The driving effect of the chain linkage effect is reflected in the spacing between **ListItem**s. The spacing
-> in the static state can be set by using the **space** parameter of the **List** component. If the **space**
-> parameter is not set and the chain linkage effect is enabled, the spacing is 20 vp by default.
+> - The driving effect of the chain linkage effect is reflected in the spacing between **ListItem**s. The spacing in the static state can be set by using the **space** parameter of the **List** component. If the **space**parameter is not set and the chain linkage effect is enabled, the spacing is 20 vp by default.
 > 
 > - After the chain linkage effect is enabled, the divider of the **List** component is not displayed.
 > 
-> - The chain linkage effect takes effect only when the **List** component is in single-column mode and the edge
-> effect is of the **EdgeEffect.Spring** type.
+> - The chain linkage effect takes effect only when the **List** component is in single-column mode and the edge effect is of the **EdgeEffect.Spring** type.
 
 **Since:** 7
 
@@ -203,25 +198,15 @@ Sets the size information of the child components of a **List** component along 
 
 > **NOTE:** 
 > 
-> - This attribute provides the **List** component with the size of all child components in the main-axis
-> direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in
-> scenarios such as varying main-axis sizes among child components, adding or removing child components, or using
-> [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex). In this way, scrollTo can accurately
-> jump to the specified position, currentOffset can obtain the accurate scroll
-> position, and the built-in scroll bar can be smoothly moved without jumps.
+> - This attribute provides the **List** component with the size of all child components in the main-axis direction. This ensures that the **List** component can maintain the accuracy of the scrolling position in scenarios such as varying main-axis sizes among child components, adding or removing child components, or using [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex). In this way, scrollTo can accurately jump to the specified position, currentOffset can obtain the accurate scroll position, and the built-in scroll bar can be smoothly moved without jumps.
 > 
-> - If a child component is **ListItemGroup**, the overall size of **ListItemGroup** in the main-axis direction
-> needs to be accurately calculated based on the column count of **ListItemGroup**, the spacing between list items
-> in **ListItemGroup** in the main-axis direction, and the size of the header, footer, and **ListItem** components
-> in **ListItemGroup**. This calculated size must then be passed to the **List** component.
+> - If a child component is **ListItemGroup**, the overall size of **ListItemGroup** in the main-axis direction needs to be accurately calculated based on the column count of **ListItemGroup**, the spacing between list items in **ListItemGroup** in the main-axis direction, and the size of the header, footer, and **ListItem** components in **ListItemGroup**. This calculated size must then be passed to the **List** component.
 > 
-> - If a child component contains **ListItemGroup** components, the
-> childrenMainSize attribute must be set for each
+> - If a child component contains **ListItemGroup** components, the childrenMainSize attribute must be set for each
 > **ListItemGroup** component. The **List** component and each **ListItemGroup** component must be bound to a
 > **ChildrenMainSize** object through the **childrenMainSize** attribute in one-to-one mode.
 > 
-> - For a multi-column list where child components are generated using **LazyForEach**, ensure that **LazyForEach**
-> generates either all **ListItemGroup** components or all **ListItem** components.
+> - For a multi-column list where child components are generated using **LazyForEach**, ensure that **LazyForEach**generates either all **ListItemGroup** components or all **ListItem** components.
 
 **Since:** 12
 

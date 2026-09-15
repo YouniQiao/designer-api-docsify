@@ -918,8 +918,7 @@ maxFontSize(maxSize: number | string | Resource): T
 
 Sets the maximum font size for text display.
 
-- When used in conjunction with [minFontSize](#minfontsize) and  
-[maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- When used in conjunction with [minFontSize](#minfontsize) and [maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
 - **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
 **minFontSize** will be treated as **maxFontSize**.  
 - When adaptive font size is effective, the **fontSize** setting does not take effect.  
@@ -1012,8 +1011,7 @@ minFontSize(minSize: number | string | Resource): T
 
 Sets the minimum font size for text display.
 
-- When used in conjunction with [maxFontSize](#maxfontsize) and  
-[maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- When used in conjunction with [maxFontSize](#maxfontsize) and [maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
 - **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
 **maxFontSize** is used instead.  
 - When **minFontSize** is less than or equal to 0, adaptive font size does not take effect.  

@@ -12,9 +12,9 @@ Defines a user gesture event.
 onDoubleClick?: Callback<GestureEvent>
 ```
 
-Callback for the double-click event, triggered when the user completes a double-click operation. The callback parameter is a [GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md) object that contains gesture event information.
+Callback for the double-click event, triggered when the user completes a double-click operation. The callback parameter is a [GestureEvent](arkts-arkui-gestureevent-i.md) object that contains gesture event information.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 14
 

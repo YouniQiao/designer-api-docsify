@@ -72,11 +72,11 @@ decorator or the object is converted by the [makeV1Observed](arkts-arkui-arkui-s
 and then passed to the V2 component.
 4. The V1 object is converted by the [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility) method
 and then passed to the V2 component, but is not used by the V2 component.
-5. The V2 object is decorated by the  
+5. The V2 object is decorated by the
 [@ObservedV2 or @Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorator.
 6. The V2 object is converted by the [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) method.
 7. The V2 object is of the Array, Map, Set, or Date type.
-8. The V2 object is decorated by the  
+8. The V2 object is decorated by the
 [@ObservedV2 or @Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorator, but is not used by the UI component.
 9. The V2 object is converted by the [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) method, but the object is not
 used by the UI component.

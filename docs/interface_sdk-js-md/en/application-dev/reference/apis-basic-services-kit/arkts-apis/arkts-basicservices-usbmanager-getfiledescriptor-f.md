@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getFileDescriptor(pipe: USBDevicePipe): number
 ```
 
-Obtains a file descriptor.
+Obtains a file descriptor. If the USB service is abnormal, an error code may be returned. Check whether the return value of the API is empty or check the error code.
 
 **Since:** 9
 
@@ -22,13 +22,13 @@ Obtains a file descriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus address and device address. You need to call [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns a file descriptor of the USB device if the operation is successful; returns an error code otherwise. The error codes are as follows:  - 88080486: The service is being initialized. Try again later.  - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) API to request authorization.  - -1: The driver is abnormal. |
+| number | Returns the file descriptor corresponding to the device. If the operation fails, one of the following error codes is returned: <br>- 88080486: The service is being initialized. Try again later. <br>- 88080488: No permission to access the device. Call [requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request authorization first. <br>- -1: The driver is abnormal. Possible causes: 1. The device connection is unstable or the device is disconnected. 2. The USB driver fails to be loaded. 3. The kernel USB module is abnormal. |
 
 **Error codes:**
 

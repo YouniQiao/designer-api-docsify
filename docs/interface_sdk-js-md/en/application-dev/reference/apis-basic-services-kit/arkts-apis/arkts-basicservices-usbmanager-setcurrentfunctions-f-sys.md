@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function setCurrentFunctions(funcs: FunctionType): Promise<void>
 ```
 
-Sets the current USB function list in Device mode. This API uses a promise to return the result.
+Sets the current USB function list in Device mode. This API uses a promise to return the result. After this API is successfully called, the USB functions of the device will be switched to the specified function list. This API is applicable to scenarios where the system app needs to dynamically switch the USB functions of the device and configure the working mode of the device.
 
 **Since:** 9
 
@@ -28,13 +28,13 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | Numeric mask of the function list. Multiple functions can be combined through bitwise operations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. If the API is called successfully, no value is returned. If the call fails, an exception is thrown. |
 
 **Error codes:**
 

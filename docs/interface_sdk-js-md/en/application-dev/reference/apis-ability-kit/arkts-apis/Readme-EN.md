@@ -1132,6 +1132,8 @@
   - [getBundleArchiveInfo(system api)](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getBundleArchiveInfoSync(system api)](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getBundleExtensionPolicyInfo(system api)](arkts-ability-bundlemanager-getbundleextensionpolicyinfo-f-sys.md)<!--DelEnd-->
   - [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md)
   - [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
   - [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md)
@@ -1225,6 +1227,8 @@
   - [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)
   <!--Del-->
   - [AppProvisionInfo(system api)](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BundleExtensionPolicyInfo(system api)](arkts-ability-bundlemanager-bundleextensionpolicyinfo-t-sys.md)<!--DelEnd-->
   - [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)
   <!--Del-->
   - [BundleOptions(system api)](arkts-ability-bundlemanager-bundleoptions-t-sys.md)<!--DelEnd-->
@@ -1269,6 +1273,10 @@
   - [ApplicationFlag(system api)](arkts-ability-bundlemanager-applicationflag-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ApplicationInfoFlag(system api)](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ApplicationReservedFlag(system api)](arkts-ability-bundlemanager-applicationreservedflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AppSandboxPolicy(system api)](arkts-ability-bundlemanager-appsandboxpolicy-e-sys.md)<!--DelEnd-->
   - [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
   <!--Del-->
   - [BundleFlag(system api)](arkts-ability-bundlemanager-bundleflag-e-sys.md)<!--DelEnd-->
@@ -1991,6 +1999,8 @@
     - [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md)
     <!--Del-->
     - [AppClonePreference(system api)](arkts-ability-bundleinfo-appclonepreference-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [BundleExtensionPolicyInfo(system api)](arkts-ability-bundleinfo-bundleextensionpolicyinfo-i-sys.md)<!--DelEnd-->
     - [BundleInfo](arkts-ability-bundleinfo-i.md)
     <!--Del-->
     - [BundleInfo(system api)](arkts-ability-bundleinfo-i-sys.md)<!--DelEnd-->
@@ -2041,6 +2051,8 @@
     - [DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)
     - [Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)
     - [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
+    <!--Del-->
+    - [HapModuleInfo(system api)](arkts-ability-hapmoduleinfo-i-sys.md)<!--DelEnd-->
     - [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)
     - [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)
   - [LauncherAbilityInfo](arkts-ability-launcherabilityinfo.md)

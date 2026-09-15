@@ -174,8 +174,7 @@ the application's UID in the bundle information. The value is a number.
 - **moduleName**: module name of the caller. The value is a string.  
 - **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of  
 the Boolean type.  
-- **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of  
-wantConstant.ShowMode.
+- **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of wantConstant.ShowMode.
 
 **NOTE:** 
 

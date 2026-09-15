@@ -6,8 +6,7 @@ A compound geometric path consisting of line segments, arcs, quadratic Bezier cu
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state transitions.
 
 **Since:** 11
 
@@ -212,14 +211,11 @@ Converts the existing path into an approximate path consisting of consecutive li
 
 > **NOTE:** 
 > 
-> - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
-> performance and memory usage.
+> - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting performance and memory usage.
 > 
-> - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially
-> distorting the original shape.
+> - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially distorting the original shape.
 > 
-> - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies
-> them to polygons by keeping just the start and end points of their Bezier curve segments.
+> - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies them to polygons by keeping just the start and end points of their Bezier curve segments.
 
 **Since:** 20
 

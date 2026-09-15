@@ -442,14 +442,9 @@ Triggered when an option enters the selection zone during text picker scrolling 
 
 > **NOTE:** 
 > 
-> - This event is triggered earlier than the [onChange]
-> [onChange](#onchange)
-> event.
+> - This event is triggered earlier than the [onChange](#onchange)event.
 > 
-> - In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason
-> is that it identifies nodes where items enter the divider area during scrolling. However, items that change in
-> response to the scrolling do not themselves scroll. As a result, the callback's return values will only reflect
-> changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.
+> - In scenarios where the picker contains linked columns, the use of this callback is not recommended. The reason is that it identifies nodes where items enter the divider area during scrolling. However, items that change in response to the scrolling do not themselves scroll. As a result, the callback's return values will only reflect changes for the currently scrolling column, while other non-scrolling columns will remain unchanged.
 > 
 > - This API cannot be called within attributeModifier.
 

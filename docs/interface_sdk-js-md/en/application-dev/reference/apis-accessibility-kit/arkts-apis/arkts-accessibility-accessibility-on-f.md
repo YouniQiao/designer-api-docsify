@@ -19,13 +19,9 @@ To obtain information about accessibility applications in the system, you are ad
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [accessibility.off('accessibilityStateChange')](arkts-accessibility-accessibility-off-f.md#offaccessibilitystatechange)
-> is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
-> lifecycle callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [accessibility.off('accessibilityStateChange')](arkts-accessibility-accessibility-off-f.md#offaccessibilitystatechange)is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 7
 
@@ -61,13 +57,9 @@ To obtain information about accessibility applications in the system, you are ad
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [accessibility.off('touchGuideStateChange')](arkts-accessibility-accessibility-off-f.md#offtouchguidestatechange)
-> is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
-> lifecycle callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [accessibility.off('touchGuideStateChange')](arkts-accessibility-accessibility-off-f.md#offtouchguidestatechange)is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 7
 
@@ -101,13 +93,9 @@ Subscribes to the state changes of screen reader mode. This API uses an asynchro
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [accessibility.off('screenReaderStateChange')](arkts-accessibility-accessibility-off-f.md#offscreenreaderstatechange)
-> is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
-> lifecycle callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [accessibility.off('screenReaderStateChange')](arkts-accessibility-accessibility-off-f.md#offscreenreaderstatechange)is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 18
 
@@ -141,13 +129,9 @@ Subscribes to the single-tap/double-tap operation mode change event in touch gui
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [accessibility.off('touchModeChange')](arkts-accessibility-accessibility-off-f.md#offtouchmodechange)
-> is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
-> lifecycle callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [accessibility.off('touchModeChange')](arkts-accessibility-accessibility-off-f.md#offtouchmodechange)is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 20
 

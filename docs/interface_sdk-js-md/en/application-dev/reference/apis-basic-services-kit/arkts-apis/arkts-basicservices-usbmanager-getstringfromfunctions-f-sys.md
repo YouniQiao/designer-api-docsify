@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getStringFromFunctions(funcs: FunctionType): string
 ```
 
-Converts the USB function list in the numeric mask format to a string in Device mode.
+Converts the USB function list in the numeric mask format to a string in Device mode. This API is applicable to scenarios where the USB function state needs to be displayed or saved as a string, for example, recording the current function configuration in logs or displaying the current function on the UI.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | Numeric mask of the function list. Multiple functions can be combined through bitwise operations. Some function values are not supported currently. For details, see [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md). |
 
 **Return value:**
 

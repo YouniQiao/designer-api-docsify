@@ -133,11 +133,9 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -173,11 +171,9 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -207,11 +203,9 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -242,16 +236,11 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 > 
-> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is
-> large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component
-> for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
-> function.
+> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this function.
 
 **Since:** 10
 
@@ -301,16 +290,11 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 > 
-> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is
-> large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component
-> for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
-> function.
+> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this function.
 
 **Since:** 10
 
@@ -354,16 +338,11 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 > 
-> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is
-> large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component
-> for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this
-> function.
+> - This function decodes all frames at once. If the number of frames is high or the size of individual frames is large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this function.
 
 **Since:** 10
 
@@ -443,11 +422,9 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 > 
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.
 > 
-> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call
-> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+> - Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 > 
-> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have
-> finished and the instance is no longer needed.
+> - Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 15
 
@@ -1029,16 +1006,11 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 > **NOTE:** 
 > 
-> - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format
-> and contain Exif information. (The supported formats may vary depending on the hardware.)
+> - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
 > 
-> - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and
-> ISO.
+> - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and ISO.
 > 
-> - This API operates synchronously and will block the current thread during execution. It should not be invoked
-> from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For
-> details, see
-> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
+> - This API operates synchronously and will block the current thread during execution. It should not be invoked from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For details, see [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 20
 
@@ -1115,16 +1087,9 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 > **NOTE:** 
 > 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a
-> file descriptor or an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by
-> passing a URI.
+> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a URI.
 > 
-> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more
-> efficient than
-> [modifyImageProperties](#modifyimageproperties)
-> .
+> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more efficient than [modifyImageProperties](#modifyimageproperties).
 > 
 > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
 
@@ -1207,9 +1172,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 > **NOTE:** 
 > 
-> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a
-> property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path
-> , but not an ImageSource instance created based on buffers.
+> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path , but not an ImageSource instance created based on buffers.
 
 **Since:** 9
 
@@ -1244,9 +1207,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 > **NOTE:** 
 > 
-> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a
-> property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path
-> , but not an ImageSource instance created based on buffers.
+> - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a property. Currently, you can call the API in an ImageSource instance created based on a file descriptor or path , but not an ImageSource instance created based on buffers.
 
 **Since:** 9
 
@@ -1285,11 +1246,9 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 > **ReferenceBlackWhite**, **XResolution**, **YResolution**, and **ResolutionUnit**: For these properties, values
 > related to the main image are returned.
 > 
-> - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the
-> specifications, an empty string is returned.
+> - **ImageUniqueID**: The value is verified based on the specifications. If the value fails to comply with the specifications, an empty string is returned.
 > 
-> - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an
-> error code is returned.
+> - **ExifVersion**, **FlashpixVersion**, and **ColorSpace**: If the image does not contain these properties, an error code is returned.
 > 
 > - **DNGVersion**: If the value is earlier than **1.0.0.0**, **1.0.0.0** is returned.
 > 
@@ -1297,32 +1256,23 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 > 
 > - **GPSAltitudeRef**: If **GPSAltitude** is not set, this property is set to **0xFFFFFFFF**.
 > 
-> - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the
-> recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are
-> used in sequence.
+> - **ISOSpeedRatings**: If its value is **0** or **65535**, the recommended exposure index is used first. If the recommended exposure index does not exist, the standard output sensitivity, ISO speed, and exposure index are used in sequence.
 > 
 > This API supports reading metadata in the following formats:
 > 
-> - Since API version 24, DNG metadata can be read. For details about the properties, see
-> [DngPropertyKey](arkts-image-image-dngpropertykey-e.md).
+> - Since API version 24, DNG metadata can be read. For details about the properties, see [DngPropertyKey](arkts-image-image-dngpropertykey-e.md).
 > 
-> - Since API version 24, HEIFS metadata can be read. For details about the properties, see
-> [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+> - Since API version 24, HEIFS metadata can be read. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 > 
-> - Since API version 26.0.0, PNG metadata can be read. For details about the properties, see
-> [PngPropertyKey](arkts-image-image-pngpropertykey-e.md).
+> - Since API version 26.0.0, PNG metadata can be read. For details about the properties, see [PngPropertyKey](arkts-image-image-pngpropertykey-e.md).
 > 
-> - Since API version 26.0.0, JFIF metadata can be read. For details about the properties, see
-> [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md).
+> - Since API version 26.0.0, JFIF metadata can be read. For details about the properties, see [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md).
 > 
-> - Since API version 26.0.0, TIFF metadata can be read. For details about the properties, see
-> [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md).
+> - Since API version 26.0.0, TIFF metadata can be read. For details about the properties, see [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md).
 > 
-> - Since API version 26.0.0, GIF metadata can be read. For details about the properties, see
-> [GifPropertyKey](arkts-image-image-gifpropertykey-e.md).
+> - Since API version 26.0.0, GIF metadata can be read. For details about the properties, see [GifPropertyKey](arkts-image-image-gifpropertykey-e.md).
 > 
-> - Since API version 26.0.0, XMP metadata of JPEG, PNG, GIF, DNG, and TIFF images can be read. For details about
-> how to operate XMP metadata, see [XMPMetadata](arkts-image-image-xmpmetadata-c.md).
+> - Since API version 26.0.0, XMP metadata of JPEG, PNG, GIF, DNG, and TIFF images can be read. For details about how to operate XMP metadata, see [XMPMetadata](arkts-image-image-xmpmetadata-c.md).
 > 
 > - Since API version 26.0.0, AVIS metadata can be read. For details about the properties, see [AvisPropertyKey](arkts-image-image-avispropertykey-e.md).
 
@@ -1371,29 +1321,21 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 > 
 > - If the input **MetadataType** does not match the image format, error code **7700102** will be returned.
 > 
-> - Since API version 24, DNG metadata can be read. For details about the properties, see
-> [DngPropertyKey](arkts-image-image-dngpropertykey-e.md).
+> - Since API version 24, DNG metadata can be read. For details about the properties, see [DngPropertyKey](arkts-image-image-dngpropertykey-e.md).
 > 
-> - Since API version 24, HEIFS metadata can be read. For details about the properties, see
-> [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+> - Since API version 24, HEIFS metadata can be read. For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 > 
-> - Since API version 26.0.0, PNG metadata can be read. For details about the properties, see
-> [PngPropertyKey](arkts-image-image-pngpropertykey-e.md).
+> - Since API version 26.0.0, PNG metadata can be read. For details about the properties, see [PngPropertyKey](arkts-image-image-pngpropertykey-e.md).
 > 
-> - Since API version 26.0.0, JFIF metadata can be read. For details about the properties, see
-> [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md).
+> - Since API version 26.0.0, JFIF metadata can be read. For details about the properties, see [JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md).
 > 
-> - Since API version 26.0.0, TIFF metadata can be read. For details about the properties, see
-> [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md).
+> - Since API version 26.0.0, TIFF metadata can be read. For details about the properties, see [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md).
 > 
-> - Since API version 26.0.0, GIF metadata can be read. For details about the properties, see
-> [GifPropertyKey](arkts-image-image-gifpropertykey-e.md).
+> - Since API version 26.0.0, GIF metadata can be read. For details about the properties, see [GifPropertyKey](arkts-image-image-gifpropertykey-e.md).
 > 
-> - Since API version 26.0.0, XMP metadata of JPEG, PNG, GIF, DNG, and TIFF images can be read. For details
-> about how to operate XMP metadata, see [XMPMetadata](arkts-image-image-xmpmetadata-c.md).
+> - Since API version 26.0.0, XMP metadata of JPEG, PNG, GIF, DNG, and TIFF images can be read. For details about how to operate XMP metadata, see [XMPMetadata](arkts-image-image-xmpmetadata-c.md).
 > 
-> - Since API version 26.0.0, AVIS metadata can be read. For details about the properties, see
-> [AvisPropertyKey](arkts-image-image-avispropertykey-e.md).
+> - Since API version 26.0.0, AVIS metadata can be read. For details about the properties, see [AvisPropertyKey](arkts-image-image-avispropertykey-e.md).
 
 **Since:** 24
 
@@ -1535,26 +1477,15 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 > **NOTE:** 
 > 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a
-> file descriptor or an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by
-> passing a URI.
+> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a URI.
 > 
-> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more
-> efficient than
-> [modifyImageProperties](#modifyimageproperties)
-> .
+> - This API modifies batch data in memory and writes the data to the file in a single operation. It is more efficient than [modifyImageProperties](#modifyimageproperties).
 > 
-> - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.
-> Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif
-> information read/write in HEIF format.
+> - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.Before modifying properties, use the **supportedFormats** property to check whether the device supports Exif information read/write in HEIF format.
 > 
-> - Since API version 26.0.0, XMP metadata of JPEG, PNG, and GIF images can be read. For details about how to
-> operate XMP metadata, see [XMPMetadata](arkts-image-image-xmpmetadata-c.md).
+> - Since API version 26.0.0, XMP metadata of JPEG, PNG, and GIF images can be read. For details about how to operate XMP metadata, see [XMPMetadata](arkts-image-image-xmpmetadata-c.md).
 > 
-> - When calling the **writeImageMetadata** API to modify the **Exif** field, ensure that the corresponding
-> image file has write permission. Otherwise, the field modification will fail.
+> - When calling the **writeImageMetadata** API to modify the **Exif** field, ensure that the corresponding image file has write permission. Otherwise, the field modification will fail.
 
 **Since:** 23
 

@@ -59,10 +59,8 @@ Subscribes to the NFC tag read event so that the tag can be preferentially dispa
 - The device enters the reader mode and disables card emulation.  
 - You can set the supported NFC tag technologies in **discTech** and set the interval for detecting whether a card  
 is present. The callback returns [TagInfo](arkts-connectivity-tag-taginfo-i.md) read.  
-- This API must be used with  
-[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) in pairs. If the NFC reader mode is enabled by **tag.on**, [tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) must be called when the application page exits the foreground or is destroyed.  
-- This API and  
-tag.on are mutually exclusive.
+- This API must be used with [tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) in pairs. If the NFC reader mode is enabled by **tag.on**, [tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) must be called when the application page exits the foreground or is destroyed.  
+- This API and tag.on are mutually exclusive.
 
 **Since:** 23
 

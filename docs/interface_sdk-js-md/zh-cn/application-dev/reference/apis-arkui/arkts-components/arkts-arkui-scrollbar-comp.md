@@ -20,8 +20,7 @@
 > 
 > - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。
 > 
-> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置
-> opacity属性不生效。
+> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置opacity属性不生效。
 
 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
 
@@ -48,40 +47,40 @@
 @Entry
 @Component
 struct ScrollBarExample {
- private scroller: Scroller = new Scroller();
- private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
- build() {
- Column() {
- Stack({ alignContent: Alignment.End }) {
- Scroll(this.scroller) {
- Flex({ direction: FlexDirection.Column }) {
- ForEach(this.arr, (item: number) =&gt; {
- Row() {
- Text(item.toString())
- .width('80%')
- .height(60)
- .backgroundColor('#3366CC')
- .borderRadius(15)
- .fontSize(16)
- .textAlign(TextAlign.Center)
- .margin({ top: 5 })
- }
- }, (item: number) =&gt; item.toString())
- }.margin({ right: 15 })
- }
- .width('90%')
- .scrollBar(BarState.Off)
- .scrollable(ScrollDirection.Vertical)
- ScrollBar({ scroller: this.scroller, direction: ScrollBarDirection.Vertical, state: BarState.Auto }) {
- Text()
- .width(20)
- .height(100)
- .borderRadius(10)
- .backgroundColor('#C0C0C0')
- }.width(20).backgroundColor('#ededed')
- }
- }
- }
+  private scroller: Scroller = new Scroller();
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  build() {
+    Column() {
+      Stack({ alignContent: Alignment.End }) {
+        Scroll(this.scroller) {
+          Flex({ direction: FlexDirection.Column }) {
+            ForEach(this.arr, (item: number) =&gt; {
+              Row() {
+                Text(item.toString())
+                  .width('80%')
+                  .height(60)
+                  .backgroundColor('#3366CC')
+                  .borderRadius(15)
+                  .fontSize(16)
+                  .textAlign(TextAlign.Center)
+                  .margin({ top: 5 })
+              }
+            }, (item: number) =&gt; item.toString())
+          }.margin({ right: 15 })
+        }
+        .width('90%')
+        .scrollBar(BarState.Off)
+        .scrollable(ScrollDirection.Vertical)
+        ScrollBar({ scroller: this.scroller, direction: ScrollBarDirection.Vertical, state: BarState.Auto }) {
+          Text()
+            .width(20)
+            .height(100)
+            .borderRadius(10)
+            .backgroundColor('#C0C0C0')
+        }.width(20).backgroundColor('#ededed')
+      }
+    }
+  }
 }
 ```
 
@@ -96,36 +95,36 @@ import { ColorMetrics } from '@kit.ArkUI'
 @Entry
 @Component
 struct ScrollBarExample {
- private scroller: Scroller = new Scroller();
- private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
- @State scrollBarColor: ColorMetrics = ColorMetrics.rgba(24, 35, 48, 0.4);
- build() {
- Column() {
- Stack({ alignContent: Alignment.End }) {
- Scroll(this.scroller) {
- Flex({ direction: FlexDirection.Column }) {
- ForEach(this.arr, (item: number) =&gt; {
- Row() {
- Text(item.toString())
- .width('80%')
- .height(60)
- .backgroundColor('#3366CC')
- .borderRadius(15)
- .fontSize(16)
- .textAlign(TextAlign.Center)
- .margin({ top: 5 })
- }
- }, (item: number) =&gt; item.toString())
- }.margin({ right: 15 })
- }
- .width('90%')
- .scrollBar(BarState.Off)
- .scrollable(ScrollDirection.Vertical)
- ScrollBar({ scroller: this.scroller, direction: ScrollBarDirection.Vertical, state: BarState.Auto })
- .scrollBarColor(this.scrollBarColor)
- }
- }
- }
+  private scroller: Scroller = new Scroller();
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  @State scrollBarColor: ColorMetrics = ColorMetrics.rgba(24, 35, 48, 0.4);
+  build() {
+    Column() {
+      Stack({ alignContent: Alignment.End }) {
+        Scroll(this.scroller) {
+          Flex({ direction: FlexDirection.Column }) {
+            ForEach(this.arr, (item: number) =&gt; {
+              Row() {
+                Text(item.toString())
+                  .width('80%')
+                  .height(60)
+                  .backgroundColor('#3366CC')
+                  .borderRadius(15)
+                  .fontSize(16)
+                  .textAlign(TextAlign.Center)
+                  .margin({ top: 5 })
+              }
+            }, (item: number) =&gt; item.toString())
+          }.margin({ right: 15 })
+        }
+        .width('90%')
+        .scrollBar(BarState.Off)
+        .scrollable(ScrollDirection.Vertical)
+        ScrollBar({ scroller: this.scroller, direction: ScrollBarDirection.Vertical, state: BarState.Auto })
+          .scrollBarColor(this.scrollBarColor)
+      }
+    }
+  }
 }
 ```
 
@@ -140,59 +139,59 @@ import { ColorMetrics } from '@kit.ArkUI'
 @Entry
 @Component
 struct StickyNestedScroll {
- listScroller: Scroller = new Scroller();
- @State array: number[] = [];
- @State scrollBarColor: ColorMetrics = ColorMetrics.rgba(24, 35, 48, 0.4);
- @Styles
- listCard() {
- .backgroundColor(Color.White)
- .height(72)
- .width('100%')
- .borderRadius(12)
- }
- build() {
- Stack() {
- Scroll() {
- Column() {
- Text('Scroll Area')
- .width('100%')
- .height('40%')
- .backgroundColor('#0080DC')
- .textAlign(TextAlign.Center)
- List({ space: 10, scroller: this.listScroller }) {
- ForEach(this.array, (item: number) =&gt; {
- ListItem() {
- Text('item' + item)
- .fontSize(16)
- }
- .listCard()
- }, (item: number) =&gt; item.toString())
- }
- .scrollBar(BarState.Off)
- .nestedScroll({
- scrollForward: NestedScrollMode.PARENT_FIRST,
- scrollBackward: NestedScrollMode.SELF_FIRST
- })
- .height('100%')
- }
- .width('100%')
- }
- .edgeEffect(EdgeEffect.Spring)
- .backgroundColor('#DCDCDC')
- .scrollBar(BarState.Off)
- .width('100%')
- .height('100%')
- ScrollBar({ scroller: this.listScroller })
- .position({ right: 0 })
- .enableNestedScroll(true)
- .scrollBarColor(this.scrollBarColor)
- }
- }
- aboutToAppear() {
- for (let i = 0; i &lt; 15; i++) {
- this.array.push(i);
- }
- }
+  listScroller: Scroller = new Scroller();
+  @State array: number[] = [];
+  @State scrollBarColor: ColorMetrics = ColorMetrics.rgba(24, 35, 48, 0.4);
+  @Styles
+  listCard() {
+    .backgroundColor(Color.White)
+    .height(72)
+    .width('100%')
+    .borderRadius(12)
+  }
+  build() {
+    Stack() {
+      Scroll() {
+        Column() {
+          Text('Scroll Area')
+            .width('100%')
+            .height('40%')
+            .backgroundColor('#0080DC')
+            .textAlign(TextAlign.Center)
+          List({ space: 10, scroller: this.listScroller }) {
+            ForEach(this.array, (item: number) =&gt; {
+              ListItem() {
+                Text('item' + item)
+                  .fontSize(16)
+              }
+              .listCard()
+            }, (item: number) =&gt; item.toString())
+          }
+          .scrollBar(BarState.Off)
+          .nestedScroll({
+            scrollForward: NestedScrollMode.PARENT_FIRST,
+            scrollBackward: NestedScrollMode.SELF_FIRST
+          })
+          .height('100%')
+        }
+        .width('100%')
+      }
+      .edgeEffect(EdgeEffect.Spring)
+      .backgroundColor('#DCDCDC')
+      .scrollBar(BarState.Off)
+      .width('100%')
+      .height('100%')
+      ScrollBar({ scroller: this.listScroller })
+        .position({ right: 0 })
+        .enableNestedScroll(true)
+        .scrollBarColor(this.scrollBarColor)
+    }
+  }
+  aboutToAppear() {
+    for (let i = 0; i &lt; 15; i++) {
+      this.array.push(i);
+    }
+  }
 }
 ```
 

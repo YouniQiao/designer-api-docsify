@@ -76,11 +76,7 @@ Sets the number of child components to be preloaded (cached), which are needed f
 > [Optimizing Frame Loss During Swiper Component Loading — Caching Data Items](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-swiper_high_performance_development_guide#section143504547145).
 > 
 > 
-> - This parameter takes effect only when used with
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the
-> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll
-> enabled. Child components outside the visible area and cache range will be released after this parameter takes
-> effect.
+> - This parameter takes effect only when used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. Child components outside the visible area and cache range will be released after this parameter takes effect.
 
 **Since:** 8
 
@@ -106,9 +102,7 @@ Sets the number of child components to be cached.
 
 > **NOTE:** 
 > 
-> - When the value of **isShown** is **true** and the value of **count** is too large, if there are insufficient
-> loadable nodes within the preload range, the same loadable node will only be laid out on one side in loop
-> scenarios.
+> - When the value of **isShown** is **true** and the value of **count** is too large, if there are insufficient loadable nodes within the preload range, the same loadable node will only be laid out on one side in loop scenarios.
 
 **Since:** 15
 
@@ -137,11 +131,7 @@ Sets the number of child components to be prloaded and configuration options.
 
 > **NOTE:** 
 > 
-> - When **independent** in options is set to **true**, the number of preloaded child components is calculated
-> based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of
-> [displayCount](#displaycount-1).
-> For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the
-> current child node are preloaded.
+> - When **independent** in options is set to **true**, the number of preloaded child components is calculated based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of [displayCount](#displaycount-1).For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the current child node are preloaded.
 > 
 > - If **swipeByGroup** of **displayCount** is set to **true** and **independent** of **options** is set to
 > **false** (default value), the number of child components to be preloaded is calculated by group. For example, if
@@ -149,10 +139,7 @@ Sets the number of child components to be prloaded and configuration options.
 > **displayCount** is **true**, two child components of the previous group and two child components of the next
 > group of the current group are preloaded.
 > 
-> - This parameter takes effect only when used with
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the
-> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll
-> enabled. Child components outside the cache range will be released after this parameter takes effect.
+> - This parameter takes effect only when used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. Child components outside the cache range will be released after this parameter takes effect.
 
 **Since:** 24
 
@@ -299,33 +286,34 @@ Sets the number of elements to display per page.
 > of child elements in the last group is less than the value of **displayCount**, placeholders are used, but they
 > show the **Swiper** background style directly and do not display any content.
 > 
-> - When **displayCount** is set to **'auto'** and **loop** is set to **false**, the position of the selected
-> navigation indicator aligns with the first page in the viewport. If the first page is only partially displayed in
-> the viewport after switching, the selected navigation indicator remains aligned with the page's position, between
-> two unselected indicators. In this case, you are advised to hide the navigation indicators.
+> - When **displayCount** is set to **'auto'** and **loop** is set to **false**, the position of the selected navigation indicator aligns with the first page in the viewport. If the first page is only partially displayed in the viewport after switching, the selected navigation indicator remains aligned with the page's position, between two unselected indicators. In this case, you are advised to hide the navigation indicators.
 > 
-> - If the navigation indicator is in dot style, the number of displayed navigation dots equals the number of child
-> elements when the number of child elements displayed in the viewport is 1 (single-page scenario) or
+> - If the navigation indicator is in dot style, the number of displayed navigation dots equals the number of child elements when the number of child elements displayed in the viewport is 1 (single-page scenario) or
 > **displayCount** is set to **'auto'**.
 > 
-> - If **displayCount** is set to **'auto'** and **swipeByGroup** is set to **true**, each child element will be
-> treated as a group for page switching, allowing only one page to be switched at a time. In this case, you are
-> advised not to set **swipeByGroup** or set **swipeByGroup** to **false**.
+> - If **displayCount** is set to **'auto'** and **swipeByGroup** is set to **true**, each child element will be treated as a group for page switching, allowing only one page to be switched at a time. In this case, you are advised not to set **swipeByGroup** or set **swipeByGroup** to **false**.
 > 
 > - This API can be called within attributeModifier since API version 18.
 
 When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)<!--RP1--><!--RP1End-->, the number of displayed navigation dots follows the rules below.
 
-| Total Children Count   
+| Total Children Count  
 > Visible Children Count|Swiping by Group Enabled|Loop Status|Number of Navigation
-Dots Displayed| Description|  
+Dots Displayed| Description|
+
 | ------------------------------------------ | ------------ | --------------- | -------------------------  
------------------------------------ | ---------------------------------------- |  
-| Yes | Yes | **loop** set to **true** | Equals the number of groups(calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.|  
-| Yes | Yes | **loop** set to **false**| Equals the number of groups (calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.|  
+----------------------------------- | ---------------------------------------- |
+
+| Yes | Yes | **loop** set to **true** | Equals the number of groups(calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.|
+
+| Yes | Yes | **loop** set to **false**| Equals the number of groups (calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.|
+
 | Yes | No | **loop** set to **true** | Equals the actual number of page turns available(that is, the total number of child elements).| —— |
+
 | Yes | No | **loop** set to **false**| Equals the actual number of page turns available(calculated as total number of child elements minus the number of visible child elements, plus 1).| Not effective when **displayCount** is set to **'auto'**.|
+
 | No (while the total number of child elements is greater than 0)| —— | —— | 1 |Not effective when **displayCount** is set to **'auto'**.|
+
 | No (while the total number of child elements is 0)| —— | —— | 0| —— |
 
 **Since:** 8
@@ -757,14 +745,10 @@ Triggered when the page transition animation starts.
 
 > **NOTE:** 
 > 
-> - When this callback is invoked, the page transition animation logic is executed in the rendering thread,
-> allowing the idle main thread to load resources required by child components. This reduces preloading time for
-> nodes within the **cachedCount** range. For best practices, see
-> [Optimizing Frame Loss During Swiper Component Loading — Preloading Data](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-swiper_high_performance_development_guide#section8783121513246).
+> - When this callback is invoked, the page transition animation logic is executed in the rendering thread,allowing the idle main thread to load resources required by child components. This reduces preloading time for nodes within the **cachedCount** range. For best practices, see [Optimizing Frame Loss During Swiper Component Loading — Preloading Data](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-swiper_high_performance_development_guide#section8783121513246).
 > 
 > 
-> - When the duration of the page transition animation is set to **0**, this callback is triggered only in the
-> following scenarios: swiping to turn pages, automatic playback, calling **SwiperController.showNext()** or
+> - When the duration of the page transition animation is set to **0**, this callback is triggered only in the following scenarios: swiping to turn pages, automatic playback, calling **SwiperController.showNext()** or
 > **SwiperController.showPrevious()**, and touching navigation indicators to navigate.
 
 **Since:** 9

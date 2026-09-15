@@ -20,8 +20,7 @@ Sets the URL of the Proxy Auto-Configuration Script (PAC) and enables the PAC pr
 > **Phone&lt;sup&gt;23+&lt;/sup&gt;**, **Tablet&lt;sup&gt;23+&lt;/sup&gt;** and **TV&lt;sup&gt;23+&lt;/sup&gt;** devices. For wearable devices, only
 > the script address is saved, and the PAC proxy capability is not enabled.
 
-> 2. This API does not verify the URL authenticity. If the URL is incorrect when the PAC proxy is enabled, the
-> proxy fails to be enabled and error code 2100002 is returned.
+> 2. This API does not verify the URL authenticity. If the URL is incorrect when the PAC proxy is enabled, the proxy fails to be enabled and error code 2100002 is returned.
 
 **Since:** 20
 

@@ -16,13 +16,9 @@ Listens for senior mode state change events of all apps. This API uses an asynch
 
 > **NOTE:** 
 > 
-> - The callback parameter for registration should use a named function instead of an anonymous function, otherwise
-> a new underlying object will be created each time it is called, causing memory leaks.
+> - The callback parameter for registration should use a named function instead of an anonymous function, otherwise a new underlying object will be created each time it is called, causing memory leaks.
 > 
-> - After calling this method, be sure to use
-> [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md)
-> to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle
-> ), otherwise crashes may occur.
+> - After calling this method, be sure to use [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md)to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle ), otherwise crashes may occur.
 
 **Since:** 26.0.0
 

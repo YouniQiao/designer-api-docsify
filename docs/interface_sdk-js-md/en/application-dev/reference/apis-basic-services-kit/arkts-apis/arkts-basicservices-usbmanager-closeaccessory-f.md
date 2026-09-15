@@ -12,7 +12,9 @@ import { usbManager } from '@kit.BasicServicesKit';
 function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 ```
 
-Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter.
+Closes the accessory file descriptor.
+
+You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list, and then call [usbManager.requestAccessoryRight](arkts-basicservices-usbmanager-requestaccessoryright-f.md) to request the permission to access the accessory. After the permission is granted, call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) to obtain the accessory handle. The obtained [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) is used as a parameter.
 
 **Since:** 14
 
@@ -22,7 +24,7 @@ Closes the accessory file descriptor. You need to call [usbManager.openAccessory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessoryHandle | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Yes | USB accessory handle, which is obtained through [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md). |
+| accessoryHandle | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Yes | USB accessory handle, which must be obtained through [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md). |
 
 **Error codes:**
 

@@ -16,17 +16,11 @@ Adds applications to the application running trustlist. Only applications in the
 
 > **NOTE:** 
 > 
-> 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM
-> application to the application running trustlist. Otherwise, the MDM application will be prohibited from running,
-> blocking the API call. For details about whether the API is open only to MDM applications, see the module
-> description.
+> 1. Most APIs provided by MDM Kit are available only to MDM applications. When using this API, add the MDM application to the application running trustlist. Otherwise, the MDM application will be prohibited from running,blocking the API call. For details about whether the API is open only to MDM applications, see the module description.
 > 
-> 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running
-> trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist
-> include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md).
+> 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md).
 > 
-> 3. This API only takes effect for third-party applications. System applications are not subject to this list and
-> are allowed to run by default.
+> 3. This API only takes effect for third-party applications. System applications are not subject to this list and are allowed to run by default.
 
 **Since:** 21
 

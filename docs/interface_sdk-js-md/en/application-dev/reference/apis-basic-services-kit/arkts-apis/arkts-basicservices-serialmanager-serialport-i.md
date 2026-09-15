@@ -18,7 +18,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 deviceName: string
 ```
 
-Serial port device name.
+Name of a serial port device, which is used to display and identify a specific serial port device. It can be used to display device information on the UI, helping users distinguish between different serial port devices.
 
 **Type:** string
 
@@ -32,7 +32,7 @@ Serial port device name.
 portId: number
 ```
 
-Port number.
+Serial port number, which uniquely identifies a serial port device. The value is obtained from the **SerialPort** object returned by **getPortList** and is used to specify the serial port device to be operated.
 
 **Type:** number
 

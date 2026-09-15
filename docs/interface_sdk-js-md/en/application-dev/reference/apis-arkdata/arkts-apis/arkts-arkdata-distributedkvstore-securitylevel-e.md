@@ -7,15 +7,11 @@ Enumerates the KV store security levels.
 > For the scenarios involving a single device, you can upgrade the security level of a KV store by modifying the
 > **securityLevel** parameter. When upgrading the database security level, observe the following:
 > 
-> * This operation does not apply to the databases that require cross-device sync. Data cannot be synced between
-> databases of different security levels. If you want to upgrade the security level of a database, you are advised
-> to create a database of a higher security level.
+> * This operation does not apply to the databases that require cross-device sync. Data cannot be synced between databases of different security levels. If you want to upgrade the security level of a database, you are advised to create a database of a higher security level.
 > 
-> * You need to close the database before modifying the **securityLevel** parameter, and open it after the security
-> level is upgraded.
+> * You need to close the database before modifying the **securityLevel** parameter, and open it after the security level is upgraded.
 > 
-> * You cannot downgrade the database security level. For example, you can change the database security level from
-> S2 to S3, but cannot change it from S3 to S2.
+> * You cannot downgrade the database security level. For example, you can change the database security level from S2 to S3, but cannot change it from S3 to S2.
 
 **Since:** 9
 

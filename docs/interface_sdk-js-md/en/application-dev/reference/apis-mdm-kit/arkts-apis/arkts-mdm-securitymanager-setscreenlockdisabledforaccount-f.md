@@ -20,12 +20,9 @@ Disables or enables swipe-to-unlock for the current user. When enabled, the user
 > 
 > 2. By default, swipe-to-unlock is enabled on the device.
 > 
-> 3. If a lock screen password exists on the device, attempting to disable swipe-to-unlock will fail and return
-> error code 9201021.
+> 3. If a lock screen password exists on the device, attempting to disable swipe-to-unlock will fail and return error code 9201021.
 > 
-> 4. After a policy to disable swipe-to-unlock is applied, if the user subsequently sets a device password, the
-> password will take effect and the device will require password verification before entering the home screen. In
-> this case, the previously applied policy will no longer take effect.
+> 4. After a policy to disable swipe-to-unlock is applied, if the user subsequently sets a device password, the password will take effect and the device will require password verification before entering the home screen. In this case, the previously applied policy will no longer take effect.
 
 **Since:** 26.0.0
 

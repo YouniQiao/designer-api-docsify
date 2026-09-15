@@ -100,10 +100,7 @@ Obtains the list of disallowed Bluetooth protocols for a specified user under a 
 
 > **NOTE:** 
 > 
-> 1. This API and
-> [getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-getdisallowedbluetoothprotocols-f.md) are
-> overloaded APIs. This API adds the **policy** parameter to query the disallowing configuration based on the
-> transfer policy.
+> 1. This API and [getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-getdisallowedbluetoothprotocols-f.md) are overloaded APIs. This API adds the **policy** parameter to query the disallowing configuration based on the transfer policy.
 
 **Since:** 26.0.0
 

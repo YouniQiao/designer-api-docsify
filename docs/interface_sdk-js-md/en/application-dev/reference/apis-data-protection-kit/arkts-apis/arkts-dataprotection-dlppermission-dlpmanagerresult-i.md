@@ -18,7 +18,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 resultCode: number
 ```
 
-Result code returned after the DLP manager application is started and exits. The value ranges from 0 to 3.
+Result code returned after the DLP manager application is started and exits. The value ranges from 0 to 3. The value **0** indicates success, while other values indicate failure.
 
 **Type:** number
 

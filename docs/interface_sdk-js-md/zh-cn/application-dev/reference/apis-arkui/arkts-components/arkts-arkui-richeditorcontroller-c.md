@@ -38,12 +38,9 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 > 
 > - 支持通过[bindSelectionMenu](arkts-arkui-richeditor-comp-attribute.md#bindselectionmenu)设置自定义菜单。
 > 
-> - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)，
-> [onSelect](arkts-arkui-richeditor-comp-attribute.md#onselect)，[aboutToDelete](arkts-arkui-richeditor-comp-attribute.md#abouttodelete)获取
-> builderSpan信息。
+> - 不支持通过[getSpans](#getspans)，[getSelection](#getselection)，[onSelect](arkts-arkui-richeditor-comp-attribute.md#onselect)，[aboutToDelete](arkts-arkui-richeditor-comp-attribute.md#abouttodelete)获取builderSpan信息。
 > 
-> - 不支持通过[updateSpanStyle](#updatespanstyle)，
-> [updateParagraphStyle](#updateparagraphstyle)等方式更新builder。
+> - 不支持通过[updateSpanStyle](#updatespanstyle)，[updateParagraphStyle](#updateparagraphstyle)等方式更新builder。
 > 
 > - 对此builder节点进行复制或粘贴不生效。
 > 
@@ -53,37 +50,7 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 > 
 > - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。
 > 
-> - 对[addBuilderSpan](#addbuilderspan)的节点文本，
-> [enableDataDetector](arkts-arkui-richeditor-comp-attribute.md#enabledatadetector)、
-> [dataDetectorConfig](arkts-arkui-richeditor-comp-attribute.md#datadetectorconfig)、
-> [enableSelectedDataDetector](arkts-arkui-richeditor-comp-attribute.md#enableselecteddatadetector)功能不会生效。
-> 通用属性仅支持size、padding、margin、
-> [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)、borderStyle、
-> borderWidth、borderColor、
-> borderRadius、
-> backgroundColor、
-> backgroundBlurStyle
-> 、opacity、
-> blur、
-> [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur)、
-> shadow、
-> grayscale、
-> brightness、[saturate](arkts-arkui-commonmethod-c.md#saturate)
-> 、contrast、
-> invert、
-> [sepia](arkts-arkui-commonmethod-c.md#sepia)、
-> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、
-> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、
-> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、
-> clip、mask、
-> [foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle)
-> 、accessibilityGroup、
-> accessibilityText、
-> accessibilityDescription、
-> accessibilityLevel、
-> [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect)、
-> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)。
+> - 对[addBuilderSpan](#addbuilderspan)的节点文本，[enableDataDetector](arkts-arkui-richeditor-comp-attribute.md#enabledatadetector)、[dataDetectorConfig](arkts-arkui-richeditor-comp-attribute.md#datadetectorconfig)、[enableSelectedDataDetector](arkts-arkui-richeditor-comp-attribute.md#enableselecteddatadetector)功能不会生效。通用属性仅支持size、padding、margin、[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)、borderStyle、borderWidth、borderColor、borderRadius、backgroundColor、backgroundBlurStyle、opacity、blur、[backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur)、shadow、grayscale、brightness、[saturate](arkts-arkui-commonmethod-c.md#saturate)、contrast、invert、[sepia](arkts-arkui-commonmethod-c.md#sepia)、[hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、[colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、[linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、clip、mask、[foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle)、accessibilityGroup、accessibilityText、accessibilityDescription、accessibilityLevel、[sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect)、[lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、[pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)。
 
 **起始版本：** 11
 
@@ -147,12 +114,9 @@ addRichEditorBuilderSpan(value: RichEditorBuilderSpan, info?: BuilderSpanInfo): 
 
 > **说明：** 
 > 
-> - BuilderSpan对象中的[onAttach](arkts-arkui-richeditorbuilderspan-i.md#onattach)和
-> [onDetach](arkts-arkui-richeditorbuilderspan-i.md#ondetach)回调接收一个[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)
-> 对象，包含span的id和offset。
+> - BuilderSpan对象中的[onAttach](arkts-arkui-richeditorbuilderspan-i.md#onattach)和[onDetach](arkts-arkui-richeditorbuilderspan-i.md#ondetach)回调接收一个[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)对象，包含span的id和offset。
 > 
-> - 当**RichEditor**组件使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构造时，
-> 不支持此接口。
+> - 当**RichEditor**组件使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构造时，不支持此接口。
 > 
 > - 撤销/重做不会还原BuilderSpan对象。通过撤销还原时，被移除的BuilderSpan会降级为空格文本Span。
 
@@ -331,14 +295,11 @@ getRichEditorBuilderSpans(value?: RichEditorRange): Array<BuilderSpanInfo>
 
 > **说明：** 
 > 
-> - 当**RichEditor**组件使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构造时，
-> 不支持此接口。
+> - 当**RichEditor**组件使用[RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md)构造时，不支持此接口。
 > 
-> - 通过接口[addBuilderSpan](#addbuilderspan)创建的BuilderSpan，
-> 返回的[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)中id为**undefined**（匿名）。
+> - 通过接口[addBuilderSpan](#addbuilderspan)创建的BuilderSpan，返回的[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)中id为**undefined**（匿名）。
 > 
-> - 返回的[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)中的**offset**字段反映当前实际偏移位置，
-> 随文本内容变化动态更新。
+> - 返回的[BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md)中的**offset**字段反映当前实际偏移位置，随文本内容变化动态更新。
 
 **起始版本：** 26.2.0
 

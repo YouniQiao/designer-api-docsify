@@ -17,7 +17,7 @@ function startRanging(params: RangingParams, callback: Callback<RangingResult>):
 该接口的执行流程取决于本端设备与目标设备的星闪连接状态：
 
 若本端设备已与目标设备建立了星闪连接，调用此接口会直接向目标设备发起测距。若本端设备与目标设备未建立星闪连接，该接口将执行以下流程：
-1. 融合测距服务内部先尝试与目标设备建立连接，连接成功后进行配对和加密操作。配对时需要用户主动在设备上操作授权。如果用户拒绝授权或者超时未授权，本次测距将会停止，停止状态会通过  
+1. 融合测距服务内部先尝试与目标设备建立连接，连接成功后进行配对和加密操作。配对时需要用户主动在设备上操作授权。如果用户拒绝授权或者超时未授权，本次测距将会停止，停止状态会通过
 [onRangingStateChange](arkts-connectivity-ranging-onrangingstatechange-f.md)接口注册的callback通知，停止后需在应用侧主动调用[stopRanging](arkts-connectivity-ranging-stopranging-f.md)接口停止测距并释放测距资源。
 2. 连接完成后，测距服务会先查询目标设备是否支持对应的测距服务UUID，确认服务支持后自动发起测距；如果在连接后，
 对端设备不支持测距服务UUID，融合测距服务内部会主动断开与对端设备已建立的连接，并通过回调通知测距停止。

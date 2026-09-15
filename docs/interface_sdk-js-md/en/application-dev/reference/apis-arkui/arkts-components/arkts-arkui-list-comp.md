@@ -9,7 +9,7 @@ range are laid out and rendered when needed. When a user swipes, the nodes that 
 - When **List** is used together with **LazyForEach**, all nodes within the screen range are created, laid out, and
 rendered at a time. When a user swipes, the nodes that are out of the screen range are removed from the tree, and the nodes that are within the screen range are created, laid out, and rendered.
 - When the **List** component is used together with **Repeat** with
-[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll), the lazy loading behavior is the same as that of **LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the lazy loading behavior is the same as that of **ForEach**.
+[virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll), the lazy loading behavior is the same as that of **LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the lazy loading behavior is the same as that of **ForEach**.
 
 If a scrollable component is nested in a **List** component, their scrolling directions are the same, and the main axis size is not set for the **List** component, the **List** component loads all child components. As a result, lazy loading does not take effect. In this scenario, you are advised to use the ListItemGroup component to optimize the performance.
 
@@ -20,7 +20,7 @@ child components within the visible area, child components within the range of *
 - When the **List** component is used together with **LazyForEach** and **cachedCount** is set, in addition to
 creating and laying out child components within the display area, child components within the range of **cachedCount** outside the display area are pre-created and pre-laid out during idle time.
 - When the **List** component is used together with **Repeat** with
-[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll), the preloading behavior is the same as that of **LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the preloading behavior is the same as that of **ForEach**.
+[virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll), the preloading behavior is the same as that of **LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the preloading behavior is the same as that of **ForEach**.
 
 > **NOTE**
 
@@ -46,23 +46,15 @@ Child components can be dynamically generated using rendering control types [if/
 > 
 > - The index increases in ascending order of child components.
 > 
-> - In the **if/else** statement, only the child components for which the condition evaluates to true participate in
-> the index calculation.
+> - In the **if/else** statement, only the child components for which the condition evaluates to true participate in the index calculation.
 > 
-> - In the **ForEach**, **LazyForEach**, or **Repeat** statement, the indexes of all expanded subnodes are
-> calculated.
+> - In the **ForEach**, **LazyForEach**, or **Repeat** statement, the indexes of all expanded subnodes are calculated.
 > 
-> - After changes occur in [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),
-> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md),
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and
-> [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated
-> accordingly for child components.
+> - After changes occur in [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md),[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated accordingly for child components.
 > 
-> - Each **ListItemGroup** component is taken as a whole and assigned an index, and the indexes of the list items
-> within are not included in the index calculation.
+> - Each **ListItemGroup** component is taken as a whole and assigned an index, and the indexes of the list items within are not included in the index calculation.
 > 
-> - Child components of **List** whose **visibility** attribute is set to **Hidden** or **None** are included in the
-> index calculation.
+> - Child components of **List** whose **visibility** attribute is set to **Hidden** or **None** are included in the index calculation.
 
 ## List
 

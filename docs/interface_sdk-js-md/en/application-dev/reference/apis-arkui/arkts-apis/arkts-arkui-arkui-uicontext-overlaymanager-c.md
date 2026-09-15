@@ -12,11 +12,9 @@ Provides the capability to draw overlays.
 > - The nodes on **OverlayManager** are above the page level, but below such components as created through
 > **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**.
 > 
-> - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the
-> page, and the keyboard avoidance method is also the same as that of the page.
+> - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the page, and the keyboard avoidance method is also the same as that of the page.
 > 
-> - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the
-> application to prevent changes in property values when switching pages, which could lead to service errors.
+> - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the application to prevent changes in property values when switching pages, which could lead to service errors.
 
 **Since:** 12
 

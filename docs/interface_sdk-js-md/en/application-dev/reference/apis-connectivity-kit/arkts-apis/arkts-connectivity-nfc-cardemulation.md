@@ -108,24 +108,24 @@ Before developing an application related to HCE, you must declare NFC-related at
 
 > **NOTE:** 
 > 
-   
+
 > 1. The **actions** field must contain **ohos.nfc.cardemulation.action.HOST_APDU_SERVICE** and cannot be changed.
 > 
-   
+
 > 2. When declaring an AID (in compliance with ISO/IEC 7816-4), ensure that **name** is set to **payment-aid** or
-   
+
 > **other-aid**. Incorrect setting will cause a parsing failure.
 > 
-   
+
 > 3. The **name** field of **requestPermissions** must be **ohos.permission.NFC_CARD_EMULATION** and cannot be
-   
+
 > changed.
 > 
-   
+
 > 4. Lite wearables support only the [FA Model](../../../application-models/ability-terminology.md#fa-model), with
-   
+
 > attribute configurations and API invocation methods differing from those of other device types. Refer to the
-   
+
 > example code for detailed implementations.
 
 ## Modules to Import

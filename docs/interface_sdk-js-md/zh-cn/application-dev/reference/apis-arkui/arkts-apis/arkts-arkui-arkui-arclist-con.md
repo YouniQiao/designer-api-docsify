@@ -22,15 +22,11 @@ export declare const ArcList: ArcListInterface
 > 
 > - 按子组件的顺序依次递增。
 > 
-> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)语句中，只有条件成立的分支内的子组件会参与索引值计算，条件不成立的分支内子组
-> 件不计算索引值。
+> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)语句中，只有条件成立的分支内的子组件会参与索引值计算，条件不成立的分支内子组件不计算索引值。
 > 
-> - [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)语句中，会计算展开所有子组件索引值。
+> - [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)语句中，会计算展开所有子组件索引值。
 > 
-> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)发生变化以后，会更新子组件索引值。
+> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)发生变化以后，会更新子组件索引值。
 > 
 > - ArcList子组件visibility属性设置为Hidden或None依然会计算索引值。
 
@@ -66,10 +62,7 @@ export declare const ArcListItem: ArcListItemInterface
 > 
 > - 该组件的父组件只能是ArcList。
 > 
-> - 当ArcListItem配合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，其子组件在
-> ArcListItem创建时创建；配合[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)或
-> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或直接作为
-> ArcList组件的子组件使用时，其子组件在ArcListItem布局时创建。
+> - 当ArcListItem配合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，其子组件在ArcListItem创建时创建；配合[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)或[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或直接作为ArcList组件的子组件使用时，其子组件在ArcListItem布局时创建。
 > 
 > - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
 

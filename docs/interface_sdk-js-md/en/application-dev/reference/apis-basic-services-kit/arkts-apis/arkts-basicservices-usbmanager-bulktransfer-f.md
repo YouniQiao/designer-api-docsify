@@ -17,15 +17,15 @@ function bulkTransfer(
   ): Promise<number>
 ```
 
-Performs bulk transfer. This API uses a promise to return the result.
+After the bulk transfer is complete, the size of the transferred or received data block is returned. This API uses a promise to return the result. Compared with **usbSubmitTransfer**, **bulkTransfer** is suitable for simple bulk transfer. It directly transfers data and endpoints through independent parameters and uses a promise to return the result. **usbSubmitTransfer** is suitable for scenarios that require more flexible control. It encapsulates parameters in the **UsbDataTransferParams** object, supports asynchronous callback, and allows you to cancel a transfer request using **usbCancelTransfer**.
 
 > **NOTE:** 
 > 
-> The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a
-> single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.
+> The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be
+> transferred in a single bulk transfer must be less than 200 KB. Otherwise, the transfer fails
+> and **-1** is returned.
 > 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+> Before calling this API, call the [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > API to claim a communication interface.
 
 **Since:** 9
@@ -36,16 +36,16 @@ Performs bulk transfer. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
-| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
-| buffer | Uint8Array | Yes | Buffer for writing or reading data. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. Set this parameter as required. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus address and device address. You need to call [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB port for data transfer. You need to call [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the device information list. In the **USBEndpoint** API, the **address** parameter indicates the endpoint address. The **direction** parameter indicates the transmission direction of the endpoint, the value **0** indicates output, and **128** indicates input. The **interfaceId** parameter identifies the interface to which the endpoint belongs. Currently, other attributes are not processed. |
+| buffer | Uint8Array | Yes | Buffer for writing or reading data. The array length indicates the buffer size. This parameter is used to write or read data during bulk transfer. |
+| timeout | number | No | Timeout interval, in milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. If a negative number is passed, a parameter error is thrown. Set this parameter as required. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result, which is the size of the transferred or received data block if the transfer is successful. If the API call fails, the following error codes are returned:  - -1: The driver is abnormal. |
+| Promise&lt;number&gt; | Promise used to return the result, which is the size of the transferred or received data block if the transfer is successful. If the API call fails, the following error codes are returned:<br>- -1: The driver is abnormal. Possible causes: 1. The device connection is unstable or the device is disconnected. 2. The USB driver fails to be loaded. 3. The kernel USB module is abnormal. |
 
 **Error codes:**
 

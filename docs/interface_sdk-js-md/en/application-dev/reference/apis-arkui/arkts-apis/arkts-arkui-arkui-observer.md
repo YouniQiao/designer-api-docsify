@@ -4,8 +4,7 @@ Provides APIs for listening for UI component behavior changes.
 
 > **NOTE:** 
 > 
-> - UIObserver can only listen for relevant information within the current process and does not support obtaining
-> information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
+> - UIObserver can only listen for relevant information within the current process and does not support obtaining information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
 
 **Since:** 11
 

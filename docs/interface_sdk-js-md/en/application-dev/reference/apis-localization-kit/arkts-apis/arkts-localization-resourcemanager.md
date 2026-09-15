@@ -12,8 +12,7 @@ region.
 and color mode.
 
 **How to Use**  
-- In the FA model, you need to import the module and then call  
-[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md) to obtain a **ResourceManager** object.  
+- In the FA model, you need to import the module and then call [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md) to obtain a **ResourceManager** object.  
 - Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object  
 through context without importing any module. For details about the context, see [application context](../../../application-models/application-context-stage.md).
 

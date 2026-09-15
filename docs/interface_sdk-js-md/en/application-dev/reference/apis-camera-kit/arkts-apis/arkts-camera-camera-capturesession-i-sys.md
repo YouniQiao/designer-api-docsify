@@ -77,7 +77,8 @@ function getBeauty(captureSession: camera.CaptureSession): number {
 getSupportedBeautyRange(type: BeautyType): Array<number>
 ```
 
-Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example.  
+Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example.
+
 | Input Parameter | Example Return Value | Return Value Description |  
 | ----------------| ---- | ---------|  
 | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |

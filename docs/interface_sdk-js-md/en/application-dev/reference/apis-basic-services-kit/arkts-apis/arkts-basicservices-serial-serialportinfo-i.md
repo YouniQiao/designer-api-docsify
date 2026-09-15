@@ -1,6 +1,6 @@
 # SerialPortInfo
 
-Serial port device information.
+Describes the serial port information.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ import { serial } from '@kit.BasicServicesKit';
 manufacturer?: string
 ```
 
-Manufacturer name of the USB virtual serial port device.
+Manufacturer name of the USB virtual serial port.
 
 **Type:** string
 
@@ -50,7 +50,7 @@ Port name.
 productId?: number
 ```
 
-Product ID of the USB virtual serial port device.
+Product ID of the USB virtual serial port.
 
 **Type:** number
 

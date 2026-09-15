@@ -18,11 +18,11 @@ Represents the callback used to set the parallel relationship between gestures o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
-| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizers of the same GestureType from other components with higher priority in the response chain. |
+| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the GestureType.PAN_GESTURE type is supported. |
+| others | Array&lt;[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizers of the same GestureType from other components with higher priority in the response chain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer that is bound in parallel with the current recognizer. |
+| [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer that is bound in parallel with the current recognizer. |

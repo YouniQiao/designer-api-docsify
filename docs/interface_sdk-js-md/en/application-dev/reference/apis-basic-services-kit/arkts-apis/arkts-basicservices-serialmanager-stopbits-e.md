@@ -1,6 +1,6 @@
 # StopBits
 
-Enumerates of the number of stop bits.
+Enumerates the number of stop bits, in bits.
 
 **Since:** 19
 

@@ -8,8 +8,7 @@ This module defines a struct for setting typeface arguments.
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state transitions.
 
 **Since:** 20
 

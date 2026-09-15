@@ -1,6 +1,6 @@
 # DataBits
 
-Data bits in serial port communication.
+Enumerates the number of data bits.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ Six data bits.
 SEVEN = 7
 ```
 
-7 data bits.
+Seven data bits.
 
 **Since:** 26.0.0
 

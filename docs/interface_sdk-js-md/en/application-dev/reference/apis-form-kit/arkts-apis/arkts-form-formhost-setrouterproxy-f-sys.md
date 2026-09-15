@@ -61,10 +61,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 
 > **NOTE:** 
 > 
-> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework
-> checks whether the destination is proper and whether the widget has the redirection permission, and then
-> triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,
-> in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
+> - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework checks whether the destination is proper and whether the widget has the redirection permission, and then triggers redirection accordingly. For a widget that is added to a widget host and has a router proxy configured,in the case of router-based redirection, the widget framework does not trigger redirection for the widget.
 > 
 > - Only one router proxy can be set for a widget. If multiple proxies are set, only the last proxy takes effect.
 

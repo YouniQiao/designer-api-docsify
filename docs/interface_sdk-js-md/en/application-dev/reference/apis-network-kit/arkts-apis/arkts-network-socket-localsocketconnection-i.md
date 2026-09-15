@@ -102,12 +102,9 @@ Obtains the file descriptor of a LocalSocketConnection connection. This API uses
 > 
 > - This method can be called only after a connection is set up.
 > 
-> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
-> close API is called).
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the close API is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the
-> [close](arkts-network-socket-localsocket-i.md#close) method to close the socket connection, instead of directly operating
-> the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the [close](arkts-network-socket-localsocket-i.md#close) method to close the socket connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 

@@ -12,7 +12,16 @@ import { serialManager } from '@kit.BasicServicesKit';
 function close(portId: number): void
 ```
 
-Closes the serial port device.
+Closes the serial port device. Call [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md) to request the permission and then call [open](arkts-basicservices-serialmanager-open-f.md) to open the serial port. Generally, this API is called when the application exits, the device is disconnected, or serial port resources need to be released. Closing the serial port does not remove the access permission. To remove the permission, call **cancelSerialRight**.
+
+**API called in pairs**  
+- This API must be used with open in pairs.  
+- After the serial port is opened, you must call this method to close the serial port and release resources.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.  
+- You have called requestSerialRight to request the access permission.  
+- You have called open to open the serial port.
 
 **Since:** 19
 
@@ -22,7 +31,7 @@ Closes the serial port device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
 
 **Error codes:**
 

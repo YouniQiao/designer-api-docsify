@@ -174,8 +174,7 @@ Sets whether to enable leading punctuation compression.
 > 
 > - Leading punctuation is not compressed by default.
 > 
-> - For the range of punctuation marks that support leading compression, see
-> [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> - For the range of punctuation marks that support leading compression, see [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -870,12 +869,9 @@ If the value is less than or equal to **0**, the line height is unrestricted and
 
 > **NOTE:** 
 > 
-> - If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as
-> clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and
-> line height to ensure proper layout rendering.
+> - If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and line height to ensure proper layout rendering.
 > 
-> - When the [password mode](../../../ui/arkts-common-components-text-input.md#password-mode) is set,
-> [lineHeight](#lineheight) set by this API does not take effect.
+> - When the [password mode](../../../ui/arkts-common-components-text-input.md#password-mode) is set,[lineHeight](#lineheight) set by this API does not take effect.
 
 **Since:** 12
 

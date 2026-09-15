@@ -20,7 +20,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): void
 ```
 
-创建输入法面板，仅支持输入法应用在[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使用callback异步回调。<br> <br>配对调用：<br> <br>- 调用createPanel()创建面板后，必须在使用完毕后调用[destroyPanel](#destroypanel)销毁面板以释放资源。<br>- 未调用destroyPanel()会导致面板资源泄漏，影响系统资源使用。<br>- 单个输入法应用仅允许创建一个软键盘类型和一个状态栏类型的面板。<br> <br>   
+创建输入法面板，仅支持输入法应用在[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使用callback异步回调。<br> <br>配对调用：<br> <br>- 调用createPanel()创建面板后，必须在使用完毕后调用[destroyPanel](#destroypanel)销毁面板以释放资源。<br>- 未调用destroyPanel()会导致面板资源泄漏，影响系统资源使用。<br>- 单个输入法应用仅允许创建一个软键盘类型和一个状态栏类型的面板。<br> <br>  
 > **说明：** <br>
 > <br>
 > 单个输入法应用仅允许创建一个[软键盘类型](arkts-ime-inputmethodengine-paneltype-e.md)和一个[状态栏类型](arkts-ime-inputmethodengine-paneltype-e.md)的面板。<br>
@@ -115,7 +115,7 @@ class InputMethodExt extends InputMethodExtensionAbility {
 createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
-创建输入法面板，仅支持输入法应用在[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异步回调。<br> <br>   
+创建输入法面板，仅支持输入法应用在[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 单个输入法应用仅允许创建一个[软键盘类型](arkts-ime-inputmethodengine-paneltype-e.md)和一个[状态栏类型](arkts-ime-inputmethodengine-paneltype-e.md)的面板。<br>

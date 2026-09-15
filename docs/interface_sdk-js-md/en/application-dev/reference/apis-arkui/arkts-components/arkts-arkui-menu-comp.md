@@ -22,13 +22,11 @@ Creates a fixed container for a menu. This API does not have any parameters.
 > 
 > 
 > 
-> - During the layout, the width of each menu item is expected to be the same. If a child component has its
-> width set, the size calculation rule prevails.
+> - During the layout, the width of each menu item is expected to be the same. If a child component has its width set, the size calculation rule prevails.
 > 
 > 
 > 
-> - If no width is set for the **Menu** component, it applies a default two-column width to the **MenuItem**
-> and **MenuItemGroup** child components. If a menu item's content area exceeds the two-column width, the
+> - If no width is set for the **Menu** component, it applies a default two-column width to the **MenuItem**and **MenuItemGroup** child components. If a menu item's content area exceeds the two-column width, the
 > **Menu** component automatically expands the menu item's content area.
 > 
 > 
@@ -40,8 +38,7 @@ Creates a fixed container for a menu. This API does not have any parameters.
 > 
 > - The minimum width is 64 vp.
 > 
-> - Universal attributes unsupported by **Menu**: outline attributes and the
-> shadow attribute
+> - Universal attributes unsupported by **Menu**: outline attributes and the shadow attribute
 
 **Since:** 9
 

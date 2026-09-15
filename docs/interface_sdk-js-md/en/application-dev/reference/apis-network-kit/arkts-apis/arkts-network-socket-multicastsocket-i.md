@@ -467,15 +467,11 @@ Obtains the file descriptor of the MulticastSocket. This API uses a promise to r
 
 > **NOTE:** 
 > 
-> - This API can be called only after
-> [bind](arkts-network-socket-udpsocket-i.md#bind) is successfully called.
+> - This API can be called only after [bind](arkts-network-socket-udpsocket-i.md#bind) is successfully called.
 > 
-> - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close
-> is called).
+> - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the
-> [close](arkts-network-socket-udpsocket-i.md#close) method to close the socket connection,
-> instead of directly operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the [close](arkts-network-socket-udpsocket-i.md#close) method to close the socket connection,instead of directly operating the file descriptor.
 
 **Since:** 23
 

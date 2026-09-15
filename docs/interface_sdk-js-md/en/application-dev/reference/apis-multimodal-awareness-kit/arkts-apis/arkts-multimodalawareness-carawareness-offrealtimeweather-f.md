@@ -33,4 +33,4 @@ Disables the real-time weather awareness function.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |
+| [34000001](../errorcode-carAwareness.md#34000001-service-exception) | Service exception. |

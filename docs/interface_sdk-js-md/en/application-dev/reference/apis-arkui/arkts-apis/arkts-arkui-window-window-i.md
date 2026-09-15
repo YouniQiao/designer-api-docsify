@@ -87,13 +87,14 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 
 Enables conversion between window orientation, screen orientation, and screen angle.
 
-Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.   
+Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3, corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the [Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE** indicates a landscape window orientation.  
 > **NOTE:** 
 > 
 > The following figure and table show the relationship between the window orientation, screen orientation, and
 > screen angle of a bar-type device.
 > 
 >  &gt;
+
 | Screen Angle| Screen Orientation| Window Orientation|  
 | ------- | ------- | ------- |  
 | 0 | [PORTRAIT](arkts-arkui-window-orientation-e.md) | [PORTRAIT](arkts-arkui-window-orientation-e.md) |
@@ -368,8 +369,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 Main window/Child window:
 
-- In the free-floating window mode under the  
-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
 - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
 of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
@@ -379,8 +379,7 @@ to obtain the calculated avoidance area only when the position and size of the c
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -407,8 +406,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 Main window/Child window:
 
-- In the free-floating window mode under the  
-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
 - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
 of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
@@ -418,8 +416,7 @@ to obtain the calculated avoidance area only when the position and size of the c
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -796,8 +793,7 @@ Obtains the avoid area of this window.
 
 Main window/Child window:
 
-- In the free-floating window mode under the  
-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
 - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
 of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
@@ -807,8 +803,7 @@ to obtain the calculated avoidance area only when the position and size of the c
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 This API is generally applicable to the following scenarios:
 
@@ -852,8 +847,7 @@ Obtains the avoid area of this application window, even if the avoid area is inv
 
 Main window/Child window:
 
-- When the main window is in the free-floating window mode under a non-  
-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- When the main window is in the free-floating window mode under a non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
 not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
 - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
@@ -861,8 +855,7 @@ to obtain the calculated avoidance area only when the position and size of the c
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 22
 
@@ -2220,19 +2213,13 @@ Moves this window. This API uses a promise to return the result. A value is retu
 > **window.WindowStatusType.FLOATING**, which you can check using
 > [getWindowStatus()](#getwindowstatus)). You are not advised to use it in other window modes.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
-> relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
-> the upper-left corner of its parent window.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to the upper-left corner of its parent window.
 > 
-> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
-> [moveWindowToGlobal()](#movewindowtoglobal)
-> .
+> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call [moveWindowToGlobal()](#movewindowtoglobal).
 > 
 > - This API does not work for the main window in non-freeform window mode.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 9
 
@@ -2275,19 +2262,13 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 > **window.WindowStatusType.FLOATING**, which can obtained using
 > [getWindowStatus()](#getwindowstatus)). You are advised not to use it in other window modes.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
-> relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
-> the upper-left corner of its parent window.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to the upper-left corner of its parent window.
 > 
-> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
-> [moveWindowToGlobal()](#movewindowtoglobal)
-> .
+> - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call [moveWindowToGlobal()](#movewindowtoglobal).
 > 
 > - This API does not work for the main window in non-freeform window mode.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 9
 
@@ -2323,9 +2304,7 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 12
 
@@ -2373,9 +2352,7 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 15
 
@@ -2418,12 +2395,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 13
 
@@ -2465,12 +2439,9 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 15
 
@@ -2513,15 +2484,11 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 > 
-> - After a window is moved, if it spans multiple screens, the window will belong to the screen with which it
-> has the largest overlapping area.
+> - After a window is moved, if it spans multiple screens, the window will belong to the screen with which it has the largest overlapping area.
 > 
-> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> if the title bar of the main window or a child window is moved out of the screen's visible area,
-> the system will automatically snap the window back to ensure the title bar is visible.
+> - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,if the title bar of the main window or a child window is moved out of the screen's visible area,the system will automatically snap the window back to ensure the title bar is visible.
 
 **Since:** 20
 
@@ -3543,8 +3510,7 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 
 Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
 
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
 - If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
 opaque degree), the lower-layer window will not be blocked and is visible.  
 - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
@@ -3640,8 +3606,7 @@ window mode, the calculated avoidance area of the child window is returned only 
 
 Global floating window, modal window, or system window:
 
-- The calculated avoidance area is returned only when the callback is triggered after  
-[setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
+- The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
 
 <!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
 
@@ -3875,8 +3840,7 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 
 Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
 
-- If the shadow area of a non-main window (  
-[setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
+- If the shadow area of a non-main window ([setWindowShadowEnabled](#setwindowshadowenabled) and [setWindowShadowRadius](#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
 - If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
 opaque degree), the lower-layer window will not be blocked and is visible.  
 - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
@@ -4695,8 +4659,7 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 9
 
@@ -4745,8 +4708,7 @@ If the window width or height is greater than the maximum width or height limit,
 
 > **NOTE:** 
 > 
-> - When the main window is in floating window mode, this API does not take effect or return an error if called
-> in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+> - When the main window is in floating window mode, this API does not take effect or return an error if called in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 9
 
@@ -4792,8 +4754,7 @@ This API takes effect only when the window is in floating window mode (**window.
 
 > **NOTE:** 
 > 
-> - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,
-> this API does not work for the main window.
+> - In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode,this API does not work for the main window.
 
 **Since:** 12
 
@@ -4899,17 +4860,13 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 > **NOTE:** 
 > 
-> - When the window size is set by using other APIs such as
-> [resize](#resize) and
-> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
+> - When the window size is set by using other APIs such as [resize](#resize) and [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
 > 
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
 > setting is valid in floating window mode even after the application is closed or the device is restarted.
 > 
-> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
-> main windows. If you need to set the aspect ratio for just one main window, use
-> [setContentAspectRatio](#setcontentaspectratio) instead.
+> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent main windows. If you need to set the aspect ratio for just one main window, use [setContentAspectRatio](#setcontentaspectratio) instead.
 
 **Since:** 10
 
@@ -4942,17 +4899,13 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 > **NOTE:** 
 > 
-> - When the window size is set by using other APIs such as
-> [resize](#resize) and
-> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
+> - When the window size is set by using other APIs such as [resize](#resize) and [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
 > 
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
 > setting is valid in floating window mode even after the application is closed or the device is restarted.
 > 
-> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
-> main windows. If you need to set the aspect ratio for just one main window, use
-> [setContentAspectRatio](#setcontentaspectratio) instead.
+> - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent main windows. If you need to set the aspect ratio for just one main window, use [setContentAspectRatio](#setcontentaspectratio) instead.
 
 **Since:** 10
 
@@ -5147,16 +5100,11 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 > **NOTE:** 
 > 
-> - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to
-> changes in the border decoration size or visibility.
+> - When you adjust the window width and height using the same **ratio** parameter, the window size adapts to changes in the border decoration size or visibility.
 > 
-> - When the window title bar is set to invisible by using
-> [setWindowDecorVisible](#setwindowdecorvisible), the window content area takes over the
-> space that was previously used by the title bar.
+> - When the window title bar is set to invisible by using [setWindowDecorVisible](#setwindowdecorvisible), the window content area takes over the space that was previously used by the title bar.
 > 
-> - When the window size is set by using other APIs such as
-> [resize](#resize) and
-> [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
+> - When the window size is set by using other APIs such as [resize](#resize) and [resizeAsync](#resizeasync), the window size is not restricted by **ratio**.
 > 
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode).

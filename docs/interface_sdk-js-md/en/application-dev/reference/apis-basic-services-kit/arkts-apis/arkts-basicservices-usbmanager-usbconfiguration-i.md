@@ -18,7 +18,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 attributes: number
 ```
 
-Configuration attributes.
+Configuration attributes, indicating features such as the power supply mode and remote wakeup capability. The value must comply with the USB configuration descriptor specifications.
 
 **Type:** number
 
@@ -46,7 +46,7 @@ Unique ID of the USB configuration.
 interfaces: Array<USBInterface>
 ```
 
-Supported interface attributes.
+List of supported interfaces.
 
 **Type:** Array&lt;[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)&gt;
 
@@ -60,7 +60,7 @@ Supported interface attributes.
 isRemoteWakeup: boolean
 ```
 
-Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false ** indicates the opposite.
+Whether remote wakeup is supported. **true** if supported, and **false** otherwise.
 
 **Type:** boolean
 
@@ -74,7 +74,7 @@ Whether remote wakeup is supported. The value **true** indicates that the remote
 isSelfPowered: boolean
 ```
 
-Whether an independent power supply is supported. The value **true** indicates that an independent power supply is supported, and **false** indicates the opposite.
+Whether an independent power supply is supported. **true** if supported, and **false** otherwise.
 
 **Type:** boolean
 
@@ -88,7 +88,7 @@ Whether an independent power supply is supported. The value **true** indicates t
 maxPower: number
 ```
 
-Maximum power consumption.Unit: mA.
+Maximum power consumption, in mA.
 
 **Type:** number
 
@@ -102,7 +102,7 @@ Maximum power consumption.Unit: mA.
 name: string
 ```
 
-Configuration name, which can be left empty.
+Configuration name, which can be an empty string.
 
 **Type:** string
 

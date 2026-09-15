@@ -16,9 +16,7 @@
 IDENTITY_KEY = 'ohos.extra.param.key.form_identity'
 ```
 
-Widget ID.
-
-This is a system API.
+卡片标识。
 
 **起始版本：** 8
 

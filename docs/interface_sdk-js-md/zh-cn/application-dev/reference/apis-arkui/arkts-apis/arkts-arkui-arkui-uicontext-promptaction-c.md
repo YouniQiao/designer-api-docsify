@@ -758,8 +758,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 > **说明：** 
 > 
-> - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、
-> aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
+> - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
 > 
 > - 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md)实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
 

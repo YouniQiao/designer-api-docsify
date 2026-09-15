@@ -20,16 +20,11 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 
 > **NOTE:** 
 > 
-> - After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a rule with **Action** set
-> to **DENY** is added by default to discard or intercept all network data packets that do not meet the **ALLOW**
-> rule.
+> - After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a rule with **Action** set to **DENY** is added by default to discard or intercept all network data packets that do not meet the **ALLOW**rule.
 > 
 > - After the device is restarted, the firewall rules are cleared.
 > 
-> - Rule matching order: Domain name filtering rules (added via
-> [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)) are matched first, followed by IP firewall rules
-> added by this API. Within both domain name rules and IP rules, matching is performed in the order of ALLOW, DENY,
-> and REJECT [actions](arkts-mdm-networkmanager-action-e.md).
+> - Rule matching order: Domain name filtering rules (added via [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)) are matched first, followed by IP firewall rules added by this API. Within both domain name rules and IP rules, matching is performed in the order of ALLOW, DENY,and REJECT [actions](arkts-mdm-networkmanager-action-e.md).
 
 **Since:** 12
 

@@ -11,16 +11,19 @@ Display mode of the navigation page. When **Navigation** is displayed in split-c
 | Developer-defined navBarWidth| calcNavBarWidth Value| Actual navBarWidth|  
 | --- | --- | --- |  
 | navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth |
-| navBarWidth   
+| navBarWidth  
 > maxNavBarWidth | calcNavBarWidth
 > maxNavBarWidth | maxNavBarWidth |
-| navBarWidth   
+
+| navBarWidth  
 > maxNavBarWidth | calcNavBarWidth &lt; minNavBarWidth | minNavBarWidth |
-| navBarWidth   
+
+| navBarWidth  
 > maxNavBarWidth | minNavBarWidth �� calcNavBarWidth �� maxNavBarWidth | calcNavBarWidth |
+
 | minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth �� minNavBarWidth | minNavBarWidth |  
 | minNavBarWidth �� navBarWidth �� maxNavBarWidth | minNavBarWidth &lt; calcNavBarWidth &lt;= navBarWidth | calcNavBarWidth |  
-| minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth   
+| minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth  
 > navBarWidth | navBarWidth |
 
 **Since:** 9

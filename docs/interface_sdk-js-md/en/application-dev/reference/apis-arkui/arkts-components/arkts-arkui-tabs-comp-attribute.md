@@ -800,7 +800,7 @@ This event is triggered when any of the following occurs:
 2. When the [changeIndex](arkts-arkui-tabscontroller-c.md#changeindex) API of [TabsController](arkts-arkui-tabscontroller-c.md)
 is called, triggering the switching animation.
 
-3. When the index of the active tab is changed through the bound  
+3. When the index of the active tab is changed through the bound
 [state variable](../../../ui/state-management/arkts-state.md).
 
 4. When a tab is tapped.

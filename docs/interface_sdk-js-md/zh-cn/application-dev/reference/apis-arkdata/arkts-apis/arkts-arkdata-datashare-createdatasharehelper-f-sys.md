@@ -12,7 +12,7 @@ import { dataShare } from '@kit.ArkData';
 function createDataShareHelper(context: Context, uri: string, callback: AsyncCallback<DataShareHelper>): void
 ```
 
-创建DataShareHelper实例。使用callback异步回调。<br>   
+创建DataShareHelper实例。使用callback异步回调。<br>  
 > **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -134,7 +134,7 @@ function createDataShareHelper(
   ): void
 ```
 
-创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。<br>   
+创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。<br>  
 > **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -179,7 +179,7 @@ function createDataShareHelper(
   ): Promise<DataShareHelper>
 ```
 
-创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。<br>   
+创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。<br>  
 > **说明：** 
 > 
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。

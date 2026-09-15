@@ -1,6 +1,6 @@
 # UsbDataTransferParams
 
-As a USB data transfer interface, it is required for a client to initiate a transfer request.
+Defines a USB data transfer parameter object, which contains all parameters required for USB data transfer. It is used by the **usbSubmitTransfer** and **usbCancelTransfer** APIs to initiate transfer requests.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ Buffer, which is used to store data for read or write requests.
 callback: AsyncCallback<SubmitTransferCallback>
 ```
 
-Information returned by the callback.
+Callback invoked when the transfer is complete. The signature is **(err: Error, data: SubmitTransferCallback) =&gt; void**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **data** contains information such as the transfer status and actual length.
 
 **Type:** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
@@ -46,7 +46,7 @@ Information returned by the callback.
 devPipe: USBDevicePipe
 ```
 
-USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)to obtain its value.
+USB device pipe, which is used to determine the bus address and device address. You need to call [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value.
 
 **Type:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
 
@@ -60,7 +60,7 @@ USB device pipe, which is used to determine the bus number and device address. Y
 endpoint: number
 ```
 
-Endpoint address, which is a positive integer.
+Endpoint address. The value is a positive integer within the range of [1, 255]. You need to call [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the device information, use the **address** attribute of the endpoint to determine the endpoint information, and use the **direction** attribute to determine the endpoint direction.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Endpoint address, which is a positive integer.
 flags: UsbTransferFlags
 ```
 
-USB transfer flag.
+USB transfer flag, which is used to control the transfer behavior. The options are as follows: **0**: Report short frames as errors; **1**: Automatically release the transfer buffer; **2**: Automatically release transfer resources after the callback is complete; **3**: Add an extra data packet to be transferred.
 
 **Type:** [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
 
@@ -88,7 +88,7 @@ USB transfer flag.
 isoPacketCount: number
 ```
 
-Number of data packets during real-time transfer, used only for I/Os with real-time transfer endpoints. The value must be a non-negative number.
+Number of data packets during real-time transfer, used only for I/Os with real-time transfer endpoints. The value must be a non-negative number in the range of [0, **INT_MAX**].
 
 **Type:** number
 
@@ -102,7 +102,7 @@ Number of data packets during real-time transfer, used only for I/Os with real-t
 length: number
 ```
 
-Length of the data buffer.Unit: bytes. The value must be a non-negative number (expected length).
+Expected length of the data buffer, in bytes. The value must be a non-negative number in the range of [0, **INT_MAX**].
 
 **Type:** number
 
@@ -116,7 +116,7 @@ Length of the data buffer.Unit: bytes. The value must be a non-negative number (
 timeout: number
 ```
 
-Timeout duration.Unit: milliseconds.
+Timeout interval, in milliseconds. If the transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. If a negative number is passed, a parameter error is thrown.
 
 **Type:** number
 
@@ -130,7 +130,7 @@ Timeout duration.Unit: milliseconds.
 type: UsbEndpointTransferType
 ```
 
-Transfer type.
+Transfer type, which specifies the USB data transfer mode. The options are as follows: **0x1**: real-time transfer, suitable for real-time data streams such as audio and video; **0x2**: bulk transfer, suitable for non-real-time transfer of a large amount of data; **0x3**: interrupt transfer, suitable for real-time transfer of a small amount of data.
 
 **Type:** [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
@@ -144,7 +144,7 @@ Transfer type.
 userData: Uint8Array
 ```
 
-User data.
+User context data, which is used to pass custom context information in the callback. The size and format are defined by the user and specified in the transfer request. The data is returned in the callback without any modification.
 
 **Type:** Uint8Array
 

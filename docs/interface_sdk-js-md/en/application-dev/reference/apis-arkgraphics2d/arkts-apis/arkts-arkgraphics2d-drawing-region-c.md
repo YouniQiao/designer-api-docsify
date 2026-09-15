@@ -8,8 +8,7 @@ Describes a region, which is used to describe the region where the shape can be 
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state transitions.
 
 **Since:** 12
 

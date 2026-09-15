@@ -3840,8 +3840,7 @@ Writes raw data to this **MessageSequence** object.
 > 
 > - This API cannot be called for multiple times in one parcel communication.
 > 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
-> pay attention to the SELinux configuration.
+> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,pay attention to the SELinux configuration.
 
 **Since:** 9
 
@@ -3895,8 +3894,7 @@ Writes raw data to this **MessageSequence** object.
 > 
 > - This API cannot be called for multiple times in one parcel communication.
 > 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
-> pay attention to the SELinux configuration.
+> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,pay attention to the SELinux configuration.
 
 **Since:** 11
 

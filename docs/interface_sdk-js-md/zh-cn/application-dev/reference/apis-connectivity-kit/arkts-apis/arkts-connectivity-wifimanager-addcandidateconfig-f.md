@@ -93,8 +93,7 @@ function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<nu
 
 添加候选网络配置，使用callback异步回调。
 
-- 将指定的Wi-Fi设备配置添加为候选网络，添加后的网络在没有连接记录的情况下无法触发自动回连，可以通过  
-[connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md)或[connectToCandidateConfigWithUserAction](arkts-connectivity-wifimanager-connecttocandidateconfigwithuseraction-f.md)方法实现候选网络连接，页面确认连接成功后，可实现自动回连。  
+- 将指定的Wi-Fi设备配置添加为候选网络，添加后的网络在没有连接记录的情况下无法触发自动回连，可以通过[connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md)或[connectToCandidateConfigWithUserAction](arkts-connectivity-wifimanager-connecttocandidateconfigwithuseraction-f.md)方法实现候选网络连接，页面确认连接成功后，可实现自动回连。  
 - 候选网络属于应用维度添加的网络配置，和系统网络配置是相互隔离的，在系统Wi-Fi页面不可见。
 
 **起始版本：** 9

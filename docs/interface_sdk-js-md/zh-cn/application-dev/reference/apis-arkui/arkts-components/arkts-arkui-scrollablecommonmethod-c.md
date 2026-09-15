@@ -761,9 +761,7 @@ onWillStartFling(handler: VoidCallback): T
 > 
 > - 如果惯性动效通过fling方法触发，则onWillStartFling不触发。
 > 
-> - 惯性动效的触发场景参考
-> flingSpeedLimit方法的
-> 说明。
+> - 惯性动效的触发场景参考flingSpeedLimit方法的说明。
 
 **起始版本：** 21
 

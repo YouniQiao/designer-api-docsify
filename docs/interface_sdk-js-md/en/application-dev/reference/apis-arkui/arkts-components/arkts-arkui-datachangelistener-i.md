@@ -195,11 +195,9 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 > **NOTE:** 
 > 
-> - This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataMove](#ondatamove) instead.
+> - This API is supported since API version 7 and deprecated since API version 8. Use [onDataMove](#ondatamove) instead.
 > 
-> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding
-> data must be called.
+> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data must be called.
 
 **Since:** 7
 

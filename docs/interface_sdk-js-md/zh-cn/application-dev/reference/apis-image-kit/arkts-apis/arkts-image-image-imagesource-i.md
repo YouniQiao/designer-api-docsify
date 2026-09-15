@@ -244,8 +244,7 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 > 
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 > 
-> - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时（如2000×3000像素的100帧GIF动图），会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接
-> 口少。
+> - 此接口会一次性解码全部帧，当帧数过多或单帧图像过大时（如2000×3000像素的100帧GIF动图），会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。
 
 **起始版本：** 10
 
@@ -573,8 +572,7 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 > 
 > - 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 > 
-> - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
-> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
+> - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考[耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 26.0.0
 
@@ -1054,8 +1052,7 @@ getImagePropertySync(key: PropertyKey): string
 > 
 > - Exif信息是图片的元数据，包含拍摄时间、相机型号、光圈、焦距、ISO等。
 > 
-> - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考
-> [耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
+> - 该方法为同步方法，调用时会阻塞当前线程，不建议在主线程中调用，否则可能导致应用卡顿、掉帧或响应延迟。具体场景参考[耗时任务并发场景简介](../../../arkts-utils/time-consuming-task-overview.md)。
 
 **起始版本：** 20
 
@@ -1093,8 +1090,7 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 > **说明：** 
 > 
-> - 调用modifyImageProperties修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperties会导致buffer内容覆盖，目前buffer创建的
-> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> - 调用modifyImageProperties修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperties会导致buffer内容覆盖，目前buffer创建的ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
 > - 调用modifyImageProperties接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1133,12 +1129,9 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 > **说明：** 
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例或通过传入的uri创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例。
 > 
-> - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
-> [modifyImageProperties](#modifyimageproperties)
-> 更高效。
+> - 该方法在内存中完成批量数据修改后会一次性写入文件，相比[modifyImageProperties](#modifyimageproperties)更高效。
 > 
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
 > 
@@ -1180,8 +1173,7 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 > **说明：** 
 > 
-> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的
-> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1224,11 +1216,9 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 > **说明：** 
 > 
-> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的
-> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
-> - 从API version 9开始支持，从API version 11废弃，建议使用
-> [modifyImageProperty](#modifyimageproperty)代替。
+> - 从API version 9开始支持，从API version 11废弃，建议使用[modifyImageProperty](#modifyimageproperty)代替。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1265,11 +1255,9 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 > **说明：** 
 > 
-> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的
-> ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
+> - 调用modifyImageProperty修改属性会改变属性字节长度，使用buffer创建的ImageSource调用modifyImageProperty会导致buffer内容覆盖，目前buffer创建的ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
-> - 从API version 9开始支持，从API version 11废弃，建议使用
-> [modifyImageProperty](#modifyimageproperty)代替。
+> - 从API version 9开始支持，从API version 11废弃，建议使用[modifyImageProperty](#modifyimageproperty)代替。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1303,9 +1291,7 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 > 
 > 读取DNG格式图片时，该接口对部分propertyKeys有特殊处理。以下字段的字符串取值请参考[PropertyKey](arkts-image-image-propertykey-e.md)中的值：
 > 
-> - NewSubfileType、ImageWidth、ImageLength、DefaultCropSize、Orientation、Compression、PhotometricInterpretation、
-> PlanarConfiguration、RowsPerStrip、StripOffsets、StripByteCounts、SamplesPerPixel、BitsPerSample、YCbCrCoefficients、
-> YCbCrSubSampling、YCbCrPositioning、ReferenceBlackWhite、XResolution、YResolution、ResolutionUnit字段：返回主图相关的字段值。
+> - NewSubfileType、ImageWidth、ImageLength、DefaultCropSize、Orientation、Compression、PhotometricInterpretation、PlanarConfiguration、RowsPerStrip、StripOffsets、StripByteCounts、SamplesPerPixel、BitsPerSample、YCbCrCoefficients、YCbCrSubSampling、YCbCrPositioning、ReferenceBlackWhite、XResolution、YResolution、ResolutionUnit字段：返回主图相关的字段值。
 > 
 > - ImageUniqueID字段：根据规范进行校验，不符合规范时会返回空字符串。
 > 
@@ -1333,8 +1319,7 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 > 
 > - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
 > 
-> - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
-> [XMPMetadata](arkts-image-image-xmpmetadata-c.md)。
+> - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考[XMPMetadata](arkts-image-image-xmpmetadata-c.md)。
 > 
 > - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
 
@@ -1395,8 +1380,7 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 > 
 > - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
 > 
-> - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
-> [XMPMetadata](arkts-image-image-xmpmetadata-c.md)。
+> - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考[XMPMetadata](arkts-image-image-xmpmetadata-c.md)。
 > 
 > - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
 
@@ -1536,17 +1520,13 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 > **说明：** 
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例或通过传入的uri创建[image.createImageSource](arkts-image-image-createimagesource-f.md)实例。
 > 
-> - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
-> [modifyImageProperties](#modifyimageproperties)
-> 更高效。
+> - 该方法在内存中完成批量数据修改后会一次性写入文件，相比[modifyImageProperties](#modifyimageproperties)更高效。
 > 
 > - 支持修改JPEG、PNG和HEIF文件类型的图片属性，图片需要包含Exif信息。修改属性前，先通过supportedFormats属性查询设备是否支持HEIF格式的Exif读写。
 > 
-> - 从API版本26.0.0开始，支持修改JPEG、PNG、GIF格式图片的XMP元数据。XMP元数据的操作方法可以参考
-> [XMPMetadata](arkts-image-image-xmpmetadata-c.md)。
+> - 从API版本26.0.0开始，支持修改JPEG、PNG、GIF格式图片的XMP元数据。XMP元数据的操作方法可以参考[XMPMetadata](arkts-image-image-xmpmetadata-c.md)。
 > 
 > - 调用writeImageMetadata接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 

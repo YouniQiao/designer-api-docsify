@@ -1,6 +1,6 @@
 # USBDeviceRequestParams
 
-Represents control transfer parameters.
+Describes control transfer parameters.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 bmRequestType: number
 ```
 
-Control request type.
+Request control type, which specifies the direction and type of the control transfer. The value must comply with the USB protocol specifications. Common values are as follows: **0x00**: standard request from the host to the device; **0x20**: class request from the host to the device; **0x40**: vendor request from the host to the device; 0x80: standard request from the device to the host.
 
 **Type:** number
 
@@ -32,7 +32,7 @@ Control request type.
 bRequest: number
 ```
 
-Request type.
+Request type, which indicates a specific USB control request command such as obtaining the descriptor or setting the address.
 
 **Type:** number
 
@@ -46,7 +46,7 @@ Request type.
 data: Uint8Array
 ```
 
-Buffer for writing or reading data.
+Buffer for writing or reading data. The array length must be equal to the number of data bytes specified by **wLength**. It is used to control data transmission or reception during data transfer.
 
 **Type:** Uint8Array
 
@@ -60,7 +60,7 @@ Buffer for writing or reading data.
 wIndex: number
 ```
 
-Index of the request parameter.
+Index value corresponding to the request parameter **wValue**, which is used to specify the target interface or endpoint of the control request.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Index of the request parameter.
 wLength: number
 ```
 
-Length of the requested data.Unit: bytes.
+Length of the request data, which is used to specify the number of data bytes expected to be received or sent during control transfer.
 
 **Type:** number
 
@@ -88,7 +88,7 @@ Length of the requested data.Unit: bytes.
 wValue: number
 ```
 
-Request parameter.
+Request parameter, which is used to transfer the parameters required by the control request to the USB device.
 
 **Type:** number
 

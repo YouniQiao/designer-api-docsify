@@ -21,7 +21,8 @@ Configures menu item information.
 | Placement.LeftTop or Placement.RightTop | The arrow is displayed vertically by default, with a distance from the top edge of the menu equal to the arrow's safe distance. |
 | Placement.LeftBottom or Placement.RightBottom| The arrow is displayed vertically by default, with a distance from the bottom edge of the menu equal to the arrow's safe distance. |
 
-**Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**  
+**Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**
+
 | API| Default Menu Position|  
 |------|-------------|  
 | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |
@@ -616,7 +617,7 @@ Callback invoked after the menu appears.
 
 **NOTE:** 
 
-1. The normal sequence is **aboutToAppear**   
+1. The normal sequence is **aboutToAppear**  
 > **onWillAppear**
 > **onAppear**
 > **onDidAppear**
@@ -648,7 +649,7 @@ Callback invoked after the menu disappears.
 
 **NOTE:** 
 
-1. The normal sequence is **aboutToAppear**   
+1. The normal sequence is **aboutToAppear**  
 > **onWillAppear**
 > **onAppear**
 > **onDidAppear**
@@ -678,7 +679,7 @@ Callback triggered when the menu is about to appear.
 
 **NOTE:** 
 
-1. The normal sequence is **aboutToAppear**   
+1. The normal sequence is **aboutToAppear**  
 > **onWillAppear**
 > **onAppear**
 > **onDidAppear**
@@ -708,7 +709,7 @@ Callback triggered when the menu is about to disappear.
 
 **NOTE:** 
 
-1. The normal sequence is **aboutToAppear**   
+1. The normal sequence is **aboutToAppear**  
 > **onWillAppear**
 > **onAppear**
 > **onDidAppear**

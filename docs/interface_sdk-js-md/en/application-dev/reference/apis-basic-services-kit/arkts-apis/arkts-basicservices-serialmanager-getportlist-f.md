@@ -12,7 +12,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getPortList(): Readonly<SerialPort>[]
 ```
 
-Obtains the serial port device list, including the device name and port number.
+Obtains the serial port device list, including the device name and port number. Generally, this API is called when the application is started, a device is connected, or available serial port devices need to be detected.
 
 **Since:** 19
 
@@ -22,7 +22,7 @@ Obtains the serial port device list, including the device name and port number.
 
 | Type | Description |
 | --- | --- |
-| Readonly&lt;[SerialPort](arkts-basicservices-serialmanager-serialport-i.md)&gt;[] | Serial port information list. |
+| Readonly&lt;[SerialPort](arkts-basicservices-serialmanager-serialport-i.md)&gt;[] | List of available serial port devices. Each element contains attributes such as the port number and device name of the serial port. This parameter can be used to obtain all serial port devices in the system, and users can choose one to operate. |
 
 **Examples**
 

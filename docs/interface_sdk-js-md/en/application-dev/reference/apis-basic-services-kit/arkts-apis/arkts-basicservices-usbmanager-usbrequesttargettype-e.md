@@ -12,7 +12,7 @@ Enumerates request target types.
 USB_REQUEST_TARGET_DEVICE = 0
 ```
 
-Device.
+The control request target is set to the USB device, which is used to control the entire device, for example, setting the device address or obtaining the device descriptor.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ Device.
 USB_REQUEST_TARGET_INTERFACE = 1
 ```
 
-Interface.
+The control request target is set to an interface of the USB device, which is used to control the interface, for example, setting the interface features or obtaining the interface descriptor.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Interface.
 USB_REQUEST_TARGET_ENDPOINT = 2
 ```
 
-Endpoint.
+The control request target is set to an endpoint of the USB device, which is used to control the endpoint, for example, clearing the endpoint stop state or obtaining the endpoint status.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Endpoint.
 USB_REQUEST_TARGET_OTHER = 3
 ```
 
-Other.
+The control request target is set to another unit, which is used to control the unit of a non-standard device, interface, or endpoint.
 
 **Since:** 9
 

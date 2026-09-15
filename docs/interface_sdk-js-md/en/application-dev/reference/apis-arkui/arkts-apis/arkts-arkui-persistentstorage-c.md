@@ -128,7 +128,7 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 
 The order for determining the type and value of a property is as follows:
 
-1. If the property with the specified key is found in the  
+1. If the property with the specified key is found in the
 [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
 
 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for
@@ -170,7 +170,7 @@ Persists the property corresponding to **key** from [AppStorage](../../../ui/sta
 
 The order for determining the type and value of a property is as follows:
 
-1. If the property with the specified key is found in the  
+1. If the property with the specified key is found in the
 [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
 
 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for

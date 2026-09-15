@@ -14,7 +14,7 @@ Shape组件的两种使用方式：
 
 ## 子组件
 
-包含Rect、Path、Circle、[Ellipse](../arkts-apis/arkts-arkui-canvaspath-c.md#ellipse)、Polyline、[Polygon](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-gnssfence-i-sys.md#polygon)、Image、Text、[Column](arkts-arkui-astcresource-i-sys.md#column)、Row和Shape子组件。
+包含Rect、Path、Circle、[Ellipse](arkts-arkui-canvaspath-c.md#ellipse)、Polyline、[Polygon](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-gnssfence-i-sys.md#polygon)、Image、Text、[Column](arkts-arkui-astcresource-i-sys.md#column)、Row和Shape子组件。
 
 ## Shape
 

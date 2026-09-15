@@ -121,15 +121,15 @@ The deletion is only successful if the property has no subscribers. If there is 
 
 The property subscribers include the following:
 
-1. Variables decorated by [\@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) or  
+1. Variables decorated by [\@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) or
 [\@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)
 
-2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) returned by  
+2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) returned by
 [link](#link), [prop](#prop), [setAndLink](#setandlink), or [setAndProp](#setandprop)
 
 To delete these subscribers:
 
-1. Remove the custom component containing \@StorageLink or \@StorageProp. For details, see  
+1. Remove the custom component containing \@StorageLink or \@StorageProp. For details, see
 [Custom Component Deletion](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#custom-component-deletion).
 
 2. Call the [aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted) API on instances of  

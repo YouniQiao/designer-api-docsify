@@ -57,8 +57,7 @@ data?: string | Array<FormItem>
 ```
 
 - 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。  
-- 上传时，data是表单项数组Array&lt;  
-[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
+- 上传时，data是表单项数组Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version 15开始，创建单个任务可以上传最多100个文件。默认为空。
 
 **类型：** string &#124; Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 

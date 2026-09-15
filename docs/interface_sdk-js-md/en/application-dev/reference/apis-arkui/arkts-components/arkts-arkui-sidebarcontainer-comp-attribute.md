@@ -134,8 +134,7 @@ when the component size is decreased, the content area is shrunk until its width
 
 until its width reaches the value defined by **minSideBarWidth**; if the component size is further decreased, then:
 
-- If [autoHide](#autohide) is set to **false**, while retaining the  
-[minSideBarWidth](#minsidebarwidth) and **minContentWidth** settings, the content area has its content clipped.  
+- If [autoHide](#autohide) is set to **false**, while retaining the [minSideBarWidth](#minsidebarwidth) and **minContentWidth** settings, the content area has its content clipped.  
 - If **autoHide** is set to **true**, the sidebar is hidden first, and then the content area is shrunk. After its  
 width reaches the value defined by **minContentWidth**, the content area has its content clipped.
 

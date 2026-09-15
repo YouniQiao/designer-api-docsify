@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getPortSupportModes(portId: number): PortModeType
 ```
 
-Obtains the mask combination for the supported mode list of a given USB port.
+Obtains the mask combination for the supported mode list of a given USB port. This method is applicable when the system app needs to query the USB-C port capabilities to determine whether a specific mode (such as UFP, DFP, or DRP) is supported. When the developer mode is disabled, **undefined** is returned if no device is connected. Check whether the return value of the API is empty. For details about the enumerated values, see [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md).
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number. |
+| portId | number | Yes | USB port number. The value can be obtained from the port list returned by [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md). |
 
 **Return value:**
 

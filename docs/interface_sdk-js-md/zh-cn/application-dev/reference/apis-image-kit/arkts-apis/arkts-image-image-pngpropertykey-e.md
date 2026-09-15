@@ -17,11 +17,13 @@
 - 0表示感知意图。  
 - 1表示相对比色意图。  
 - 2表示饱和度意图。  
-- 3绝对色度意图。 |  
+- 3绝对色度意图。 |
+
 | AUTHOR | 'PngAuthor' | PNG图像的作者。 |  
 | INTERLACE_TYPE | 'PngInterlaceType' | PNG图像的交错模式。  
 - 0表示无交错模式（图像按照从上到下、从左到右的顺序加载）。  
-- 1表示交错模式（通过多次扫描逐步显示图像，图像在加载过程中逐渐清晰）。 |  
+- 1表示交错模式（通过多次扫描逐步显示图像，图像在加载过程中逐渐清晰）。 |
+
 | WARNING | 'PngWarning' | PNG图像的警告信息。 |  
 | Y_PIXELS_PER_METER | 'PngYPixelsPerMeter' | PNG图像Y方向每米像素数。 |  
 | GAMMA | 'PngGamma' | PNG图像的系数伽马的值。 |

@@ -364,11 +364,9 @@ The **isolationProcess** field can be set to **true** in the [module.json5](../.
 
 > **NOTE:** 
 > 
-> - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting
-> from API version 20, a UIExtensionAbility can also be launched in the specified process.<!--DelEnd-->
+> - In API version 19 and earlier, only a UIAbility can be launched in the specified process. <!--Del-->Starting from API version 20, a UIExtensionAbility can also be launched in the specified process.<!--DelEnd-->
 > 
-> - Starting from API version 20, this callback is not executed when
-> [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
+> - Starting from API version 20, this callback is not executed when [AbilityStage.onNewProcessRequestAsync](#onnewprocessrequestasync) is implemented.
 
 **Since:** 11
 
@@ -463,12 +461,9 @@ Called when the application is closed by the user, allowing the user to choose b
 
 > **NOTE:** 
 > 
-> - The API is called only when the application exits under normal circumstances (for example, when the application
-> is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
-> called if the application is terminated forcibly.
+> - The API is called only when the application exits under normal circumstances (for example, when the application is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be called if the application is terminated forcibly.
 > 
-> - This API is not executed when
-> [AbilityStage.onPrepareTerminationAsync](#onprepareterminationasync) is implemented.
+> - This API is not executed when [AbilityStage.onPrepareTerminationAsync](#onprepareterminationasync) is implemented.
 
 **Since:** 15
 
@@ -509,12 +504,9 @@ Called when the application is closed by the user, allowing the user to choose b
 
 > **NOTE:** 
 > 
-> - The API is called only when the application exits under normal circumstances (for example, when the application
-> is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be
-> called if the application is terminated forcibly.
+> - The API is called only when the application exits under normal circumstances (for example, when the application is closed through the doc bar or tray, or when the application shuts down along with the device). It will not be called if the application is terminated forcibly.
 > 
-> - If an asynchronous callback crashes, it will be handled as a timeout. If the application does not respond
-> within 10 seconds, it will be terminated forcibly.
+> - If an asynchronous callback crashes, it will be handled as a timeout. If the application does not respond within 10 seconds, it will be terminated forcibly.
 
 **Since:** 15
 

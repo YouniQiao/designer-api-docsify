@@ -6,8 +6,7 @@ The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui
 
 > **NOTE:** 
 > 
-> - This module is deprecated since API version 21. You are advised to use
-> [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.
+> - This module is deprecated since API version 21. You are advised to use [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead.
 > 
 > - The APIs provided by this module are system APIs.
 > 

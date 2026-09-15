@@ -79,8 +79,7 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo>)
 
 > - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
 > 
-> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获
-> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
+> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
 > 
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -110,8 +109,7 @@ bindToScrollable(scrollers: Array<Scroller>)
 
 > - 只有NavDestination的标题栏或工具栏设置为可见时，联动效果才会生效。
 > 
-> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获
-> 得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
+> - 当多个可滚动容器组件绑定了同一个NavDestination组件时，滚动任何一个容器都会触发标题栏和工具栏的显示或隐藏效果。且当任何一个可滚动容器组件滑动到底部或顶部位置时，会立即触发标题栏和工具栏的显示动效。因此，为了获得最佳用户体验，不建议同时触发多个可滚动容器组件的滚动事件。
 > 
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -207,9 +205,7 @@ enableStatusBar(enabled: Optional<boolean>, animated?: boolean)
 > 
 > 4. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。
 > 
-> - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的
-> [setSpecificSystemBarEnabled](../arkts-apis/arkts-arkui-window-window-i.md#setspecificsystembarenabled)
-> 接口。
+> - 设置系统状态栏的实际效果依赖于具体的设备支持情况，具体参考窗口的[setSpecificSystemBarEnabled](../arkts-apis/arkts-arkui-window-window-i.md#setspecificsystembarenabled)接口。
 
 **起始版本：** 19
 
@@ -558,8 +554,7 @@ onNewParam(callback: Optional<Callback<ESObject>>)
 
 > **说明：** 
 
-> - replacePath、
-> [replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination)不会触发该回调。
+> - replacePath、[replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination)不会触发该回调。
 > 
 > - 从API version 22开始，该接口支持在attributeModifier中调用。
 
@@ -821,9 +816,7 @@ preferredOrientation(orientation: Optional<Orientation>)
 > 
 > 3. NavDestination类型为[NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD。
 > 
-> - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的
-> [setPreferredOrientation](../arkts-apis/arkts-arkui-window-window-i.md#setpreferredorientation)接
-> 口。
+> - 设置显示方向的实际效果依赖于具体的设备支持情况，具体参考窗口的[setPreferredOrientation](../arkts-apis/arkts-arkui-window-window-i.md#setpreferredorientation)接口。
 
 **起始版本：** 19
 

@@ -1,6 +1,7 @@
 # PanelFlag
 
-输入法面板状态类型枚举。<br>  
+输入法面板状态类型枚举。<br>
+
 | 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
 | [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) | 0 | 固定态面板类型。 |

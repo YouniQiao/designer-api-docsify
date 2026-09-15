@@ -77,7 +77,7 @@ Deletes the property corresponding to **propName** from [LocalStorage](../../../
 
 The property subscribers include the following:
 
-1. Variables decorated by  
+1. Variables decorated by
 [\@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink) or [\@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)
 
 2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)

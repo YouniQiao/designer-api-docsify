@@ -20,8 +20,7 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 > 
 > - 麦克风输入音频数据和回声参考信号会根据应用层设置的配置，被放入同一个缓冲区或多个独立缓冲区中。
 > 
-> - 仅允许使用[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT类型的音源输入
-> ，其他类型的音源输入将被系统拒绝。此外，当应用处于后台运行状态时，不允许创建该采集器实例。
+> - 仅允许使用[SourceType](arkts-audio-audio-sourcetype-e.md)为SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT类型的音源输入，其他类型的音源输入将被系统拒绝。此外，当应用处于后台运行状态时，不允许创建该采集器实例。
 
 **起始版本：** 23
 

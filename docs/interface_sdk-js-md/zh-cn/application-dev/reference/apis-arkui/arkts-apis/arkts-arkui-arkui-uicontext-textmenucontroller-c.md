@@ -35,13 +35,10 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 > - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)使用。
 > 
 > 
-> - 此接口调用后将影响文本组件的接口editMenuOptions，其回调方法
-> onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+> - 此接口调用后将影响文本组件的接口editMenuOptions，其回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 > 
 > 
-> - 涉及文本选择菜单的组件有 Text、TextArea
-> 、TextInput、Search、
-> RichEditor、Web。
+> - 涉及文本选择菜单的组件有 Text、TextArea、TextInput、Search、RichEditor、Web。
 > 
 > 
 > - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的复制、剪切、全选、粘贴以外的菜单项。

@@ -23,7 +23,7 @@ current: GestureRecognizer
 
 Gesture recognizer object. Detailed gesture information can be obtained from this object. However, avoid retaining this object locally as it may become invalid after the node is released.
 
-**Type:** [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**Type:** [GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md)
 
 **Since:** 20
 
@@ -59,7 +59,7 @@ event: GestureEvent
 
 Gesture event object.
 
-**Type:** [GestureEvent](arkts-arkui-gestureevent-i.md)
+**Type:** [GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md)
 
 **Since:** 20
 

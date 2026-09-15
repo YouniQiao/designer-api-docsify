@@ -18,14 +18,9 @@ Currently, the following distributed service type is supported: [collaboration s
 
 > **NOTE:** 
 > 
-> 1. Before calling this API to set the application list allowed to use a specific distributed service, you must
-> have already disabled one-way data transmission between devices (which is used for transferring data to other
-> devices) via
-> [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).
-> Otherwise, error code 9201043 is thrown.
+> 1. Before calling this API to set the application list allowed to use a specific distributed service, you must have already disabled one-way data transmission between devices (which is used for transferring data to other devices) via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md).Otherwise, error code 9201043 is thrown.
 
-> 2. When one-way data transmission between devices is re-enabled, the application list allowed to use the specific
-> distributed service that was set via this API is automatically cleared.
+> 2. When one-way data transmission between devices is re-enabled, the application list allowed to use the specific distributed service that was set via this API is automatically cleared.
 
 **Since:** 26.0.0
 

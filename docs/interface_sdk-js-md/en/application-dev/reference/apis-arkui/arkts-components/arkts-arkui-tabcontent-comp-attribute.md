@@ -96,14 +96,9 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 
 > **NOTE:** 
 > 
-> - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is
-> recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is
-> displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video,
-> Digital) of information apps and level-2 navigation scenarios of functional modules.
+> - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is recommended that the subtab be placed at the top or bottom. By default, the animation transition effect is displayed when a tab is switched. This style is applicable to the top categories (such as Following, Video,Digital) of information apps and level-2 navigation scenarios of functional modules.
 > 
-> - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation
-> transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an
-> app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set
+> - [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md): icon + text, without underline or board. By default, no animation transition effect is displayed when a tab is switched. Bottom tabs are usually used for the main navigation of an app (such as Home, Discover, and Recommended). Side tabs are applicable to wide-screen scenarios. You can set
 > **vertical(true)** to enable the vertical layout so that the tabs are displayed on the side. By default, the tabs
 > are displayed on the left.
 
@@ -156,14 +151,10 @@ Sets the default visibility of the tab.
 
 > **NOTE:** 
 > 
-> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.SIDEBAR**, the tab
-> is not displayed in the sidebar but remains visible in the bottom tab bar.
-> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.BOTTOM_TABBAR**, the
-> tab is not displayed in the bottom tab bar but remains visible in the sidebar.
-> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is not set, the tab is not displayed in
-> both display modes.
-> - Hidden tab content can still be switched and displayed using **TabsController.changeIndex()** or by modifying
-> the **index** state variable.
+> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.SIDEBAR**, the tab is not displayed in the sidebar but remains visible in the bottom tab bar.
+> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is **TabBarDisplayMode.BOTTOM_TABBAR**, the tab is not displayed in the bottom tab bar but remains visible in the sidebar.
+> - When **visibility** is **TabVisibility.HIDDEN** and **displayMode** is not set, the tab is not displayed in both display modes.
+> - Hidden tab content can still be switched and displayed using **TabsController.changeIndex()** or by modifying the **index** state variable.
 
 **Since:** 26.2.0
 

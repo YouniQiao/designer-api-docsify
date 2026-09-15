@@ -14,7 +14,7 @@ Enumerates USB port mode types.
 NONE = 0
 ```
 
-No function.
+None.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ No function.
 UFP = 1
 ```
 
-Upstream facing port, which functions as the sink of power supply
+Upstream facing port, which functions as the sink of power supply.
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ Upstream facing port, which functions as the sink of power supply
 DFP = 2
 ```
 
-Downstream facing port, which functions as the source of power supply
+Downstream facing port, which functions as the source of power supply.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP 
 NUM_MODES = 4
 ```
 
-Not supported currently
+Not supported currently.
 
 **Since:** 9
 

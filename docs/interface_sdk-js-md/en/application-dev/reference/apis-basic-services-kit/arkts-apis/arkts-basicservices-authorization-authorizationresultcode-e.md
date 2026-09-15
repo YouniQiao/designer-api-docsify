@@ -33,8 +33,7 @@ Possible causes: The user explicitly dismissed the authorization dialog (e.g., c
 > **NOTE:** 
 > Suggested solutions:
 > 1. Treat this as an expected human-driven workflow discontinuation rather than a system fault.
-> 2. Implement a non-intrusive UX notification or status fallback (e.g., smoothly roll back the UI
-> and update a status label to "Authorization Canceled" or "Action Dismissed").
+> 2. Implement a non-intrusive UX notification or status fallback (e.g., smoothly roll back the UI and update a status label to "Authorization Canceled" or "Action Dismissed").
 
 **Since:** 26.1.0
 
@@ -55,8 +54,7 @@ Possible causes: The authorization policy for the privilege is not met. For exam
 > **NOTE:** 
 > Suggested solutions:
 > 1. Check the authorization policy configurations for the target privilege.
-> 2. Implement appropriate fallback handling or graceful degradation(e.g., suggesting the user
-> switch to an administrative environment, or prompting that the feature is temporarily unavailable).
+> 2. Implement appropriate fallback handling or graceful degradation(e.g., suggesting the user switch to an administrative environment, or prompting that the feature is temporarily unavailable).
 
 **Since:** 26.1.0
 

@@ -6,13 +6,11 @@ The APIs provided by **DataSharePredicates** correspond to the filter criteria o
 
 **DataSharePredicates** applies to the following scenario:
 
-- It is used as a search criterion in the media file management service. For details, see  
-[FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) in the fetch options of the album management. In this scenario, you do not need to pay attention to the database type.
+- It is used as a search criterion in the media file management service. For details, see [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) in the fetch options of the album management. In this scenario, you do not need to pay attention to the database type.
 
 <!--Del-->
 
-- It is used as a search criterion when APIs of the  
-RDB store and KV store are called. In this scenario, use the corresponding predicate based on the database type.
+- It is used as a search criterion when APIs of the RDB store and KV store are called. In this scenario, use the corresponding predicate based on the database type.
 
 <!--DelEnd-->
 

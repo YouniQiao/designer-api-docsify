@@ -86,8 +86,7 @@ Creates a change request for the **Analysis** album.
 > 
 > - The album name string length ranges from 1 to 255.
 > 
-> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt;
-> | { } [ ]
+> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt;| { } [ ]
 
 **Since:** 23
 
@@ -287,7 +286,8 @@ setRelationship(relationship: string): Promise<void>
 
 Sets the relationships of a person in the portrait album.
 
-The supported relationship names include:  
+The supported relationship names include:
+
 | Unique ID | Description |  
 | ---------- | ------- |  
 | me | Me|

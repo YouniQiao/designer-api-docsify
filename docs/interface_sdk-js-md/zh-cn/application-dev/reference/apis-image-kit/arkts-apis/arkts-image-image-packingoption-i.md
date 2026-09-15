@@ -74,8 +74,7 @@ format: string
 
 - 当[输入为Picture](../../../media/image/image-picture-encoding.md)时，仅支持"image/jpeg"和"image/heic（或者image/heif）"&lt;sup&gt;  
 12+&lt;/sup&gt;。  
-- gif图片编码需要输入多个PixelMap，并指定format为"image/gif"，使用  
-[packToDataFromPixelmapSequence](arkts-image-image-imagepacker-i.md#packtodatafrompixelmapsequence)或[packToFileFromPixelmapSequence](arkts-image-image-imagepacker-i.md#packtofilefrompixelmapsequence)接口进行编码。
+- gif图片编码需要输入多个PixelMap，并指定format为"image/gif"，使用[packToDataFromPixelmapSequence](arkts-image-image-imagepacker-i.md#packtodatafrompixelmapsequence)或[packToFileFromPixelmapSequence](arkts-image-image-imagepacker-i.md#packtofilefrompixelmapsequence)接口进行编码。
 
 **说明：** 因为jpeg不支持透明通道，若使用带透明通道的数据编码jpeg格式，透明色将变为黑色。
 

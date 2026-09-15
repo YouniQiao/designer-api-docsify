@@ -2,14 +2,12 @@
 
 The module provides capabilities for image decoding, encoding, editing, metadata processing, and image receiving. This module contains the following classes:
 
-- [ImageSource](arkts-image-image-imagesource-i.md): provides the capabilities of obtaining  
-[image information](arkts-image-image-imageinfo-i.md), decoding images to PixelMaps or Pictures, and reading and modifying [image properties](arkts-image-image-propertykey-e.md). [Supported image formats for decoding](arkts-image-image-imagesource-i.md#supportedformats) include png, jpeg, bmp, gif, webp, dng, and heic&lt;sup&gt;12+&lt;/sup&gt;.
+- [ImageSource](arkts-image-image-imagesource-i.md): provides the capabilities of obtaining [image information](arkts-image-image-imageinfo-i.md), decoding images to PixelMaps or Pictures, and reading and modifying [image properties](arkts-image-image-propertykey-e.md). [Supported image formats for decoding](arkts-image-image-imagesource-i.md#supportedformats) include png, jpeg, bmp, gif, webp, dng, and heic&lt;sup&gt;12+&lt;/sup&gt;.
 
 - [ImagePacker](arkts-image-image-imagepacker-i.md): provides the capability of encoding images into  
 compressed data streams or files. Encoding requires the ImageSource, PixelMap, or Picture of an image as the input. [Supported image formats for encoding](arkts-image-image-imagepacker-i.md#supportedformats) include jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;.
 
-- [PixelMap](arkts-image-image-pixelmap-i.md): contains pixel data and  
-[image information](arkts-image-image-imageinfo-i.md). It can be used for reading/writing pixel data and performing operations such as cropping, scaling, translating, rotating, and mirroring. It can also be directly passed to the [Image component](arkts-image-image-image-i.md) for display. Additionally, it provides APIs for obtaining and setting the color gamut and HDR metadata of images.
+- [PixelMap](arkts-image-image-pixelmap-i.md): contains pixel data and [image information](arkts-image-image-imageinfo-i.md). It can be used for reading/writing pixel data and performing operations such as cropping, scaling, translating, rotating, and mirroring. It can also be directly passed to the [Image component](arkts-image-image-image-i.md) for display. Additionally, it provides APIs for obtaining and setting the color gamut and HDR metadata of images.
 
 - [Picture](arkts-image-image-picture-i.md): a multi-picture object composed of a main picture,  
 auxiliary pictures, and metadata. The main picture contains the primary image information; auxiliary pictures store additional information related to the main picture; metadata stores other information related to the image. Picture provides methods for obtaining the main picture, compositing HDR images, obtaining and setting auxiliary pictures, and obtaining and setting metadata.

@@ -72,7 +72,8 @@ compressHeadPunctuation?: boolean
 
 1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)中的"ss08"特性，否则无法压缩。
 2. 在行首标点压缩范围内的标点才在本特性作用范围内。
-行首压缩的标点范围:  
+行首压缩的标点范围:
+
 | 标点 | Unicode码位 | Unicode名称 |  
 |---------|---------|-------------|  
 | 「 | U+300C | LEFT CORNER BRACKET |

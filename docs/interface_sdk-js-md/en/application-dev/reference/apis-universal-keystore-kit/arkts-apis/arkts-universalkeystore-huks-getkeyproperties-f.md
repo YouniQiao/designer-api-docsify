@@ -18,8 +18,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md)( keyAlias: string, options: HuksOptions,
-   *     callback: AsyncCallback&lt;HuksReturnResult&gt; )
+**Substitutes:** [getKeyItemProperties](arkts-universalkeystore-huks-getkeyitemproperties-f.md)( keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;HuksReturnResult&gt; )
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

@@ -43,8 +43,7 @@ interactionContext?: Context
 用户交互上下文配置，默认为undefined。
 
 - 未指定上下文时，授权对话框以模态系统模式显示。  
-- 指定[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)或  
-[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)时，以模态应用模式显示。  
+- 指定[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)或[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)时，以模态应用模式显示。  
 - 未提供有效上下文时，授权对话框无法显示。
 
 **注意**：仅当isInteractionAllowed为true时生效。

@@ -21,8 +21,7 @@ Only enterprise applications signed with the **enterprise_normal** or **enterpri
 > A PC/2-in-1 enterprise device supports local installation of enterprise applications for the current user if any
 > of the following conditions is met:
 > 
-> 1. The offline installer has been enabled by calling
-> [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md).
+> 1. The offline installer has been enabled by calling [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md).
 > 
 > 2. Local installation of enterprise applications is enabled for the current user by calling this API.
 

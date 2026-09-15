@@ -4,8 +4,7 @@ The module provides a set of camera service APIs for you to easily develop a cam
 
 > **NOTE:** 
 > 
-> - This topic describes only system APIs provided by the module. For details about its public APIs, see
-> [@ohos.multimedia.camera (Camera Management)](arkts-camera-multimedia-camera.md).
+> - This topic describes only system APIs provided by the module. For details about its public APIs, see [@ohos.multimedia.camera (Camera Management)](arkts-camera-multimedia-camera.md).
 
 **Since:** 10
 
@@ -43,7 +42,7 @@ import { camera } from '@kit.CameraKit';
 | [AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md) | **AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch. |
 | [AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md) | Describes the information about the automatic camera switch status. |
 | [AutoExposure](arkts-camera-camera-autoexposure-i.md) | **AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md). |
-| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md) | AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  >  > - In this version, a compatibility change was made that preserved the initial version information of inner > elements. As a result, you might see outer element's |
+| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md) | AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  >  > - In this version, a compatibility change was made that preserved the initial version information of inner elements. As a result, you might see outer element's |
 | [CameraConcurrentInfo](arkts-camera-camera-cameraconcurrentinfo-i.md) | Describes the camera's concurrency information. |
 | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Describes the camera device information. |
 | [CameraInput](arkts-camera-camera-camerainput-i.md) | **CameraInput** defines the camera input object. |

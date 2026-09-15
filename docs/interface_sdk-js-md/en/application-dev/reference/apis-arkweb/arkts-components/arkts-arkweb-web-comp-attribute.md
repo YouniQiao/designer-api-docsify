@@ -40,17 +40,11 @@ Sets whether to allow a new window to automatically open through JavaScript.
 > 
 > - This API takes effect only when [javaScriptAccess](#javascriptaccess) is enabled.
 > 
-> - This API opens a new window when [multiWindowAccess](#multiwindowaccess) is enabled, and a
-> local window when it is disabled.
+> - This API opens a new window when [multiWindowAccess](#multiwindowaccess) is enabled, and a local window when it is disabled.
 > 
-> - The default value of **flag** is subject to the settings of the **persist.web.allowWindowOpenMethod.enabled**
-> system attribute. If this attribute is not set, the default value of **flag** is **false**.
+> - The default value of **flag** is subject to the settings of the **persist.web.allowWindowOpenMethod.enabled**system attribute. If this attribute is not set, the default value of **flag** is **false**.
 > 
-> - Run the **hdc shell param get persist.web.allowWindowOpenMethod.enabled** command to check whether the system
-> attribute **persist.web.allowWindowOpenMethod.enabled** is enabled. If the attribute value is **1**, the system
-> attribute is enabled. If the attribute value is **0** or does not exist, the system attribute is disabled. You
-> can run the **hdc shell param set persist.web.allowWindowOpenMethod.enabled 1** command to enable the system
-> attribute.
+> - Run the **hdc shell param get persist.web.allowWindowOpenMethod.enabled** command to check whether the system attribute **persist.web.allowWindowOpenMethod.enabled** is enabled. If the attribute value is **1**, the system attribute is enabled. If the attribute value is **0** or does not exist, the system attribute is disabled. You can run the **hdc shell param set persist.web.allowWindowOpenMethod.enabled 1** command to enable the system attribute.
 
 **Since:** 10
 
@@ -114,9 +108,7 @@ Sets the blank screen detection configuration, such as whether to enable the det
 
 > **NOTE:** 
 > 
-> - Based on the configuration of **detectConfig**,
-> [onDetectedBlankScreen](#ondetectedblankscreen) may be triggered when a blank screen or near-
-> blank screen is detected after a web page is loaded.
+> - Based on the configuration of **detectConfig**,[onDetectedBlankScreen](#ondetectedblankscreen) may be triggered when a blank screen or near-blank screen is detected after a web page is loaded.
 > 
 > - The setting takes effect in the next navigation.
 > 
@@ -271,9 +263,7 @@ Sets whether to enable the Web SQL Database storage API permission. If this perm
 
 > **NOTE:** 
 > 
-> - After the ArkWeb kernel is upgraded to M132, the API's control over the Web SQL Database becomes invalid
-> because the kernel discards Web SQL. For details about the ArkWeb kernel version, see
-> [Constraints](../../../web/web-component-overview.md#constraints).
+> - After the ArkWeb kernel is upgraded to M132, the API's control over the Web SQL Database becomes invalid because the kernel discards Web SQL. For details about the ArkWeb kernel version, see [Constraints](../../../web/web-component-overview.md#constraints).
 
 **Since:** 8
 
@@ -409,11 +399,9 @@ Sets a custom text selection menu for the **Web** component.
 > 
 > This API is similar to **bindSelectionMenu**, with the following differences:
 > 
-> - **editMenuOptions**: Adds extension items based on the system default menu style, with the trigger conditions
-> unchanged.
+> - **editMenuOptions**: Adds extension items based on the system default menu style, with the trigger conditions unchanged.
 > 
-> - [bindSelectionMenu](#bindselectionmenu): Fully customizes the menu style and trigger
-> conditions, as defined by the developer.
+> - [bindSelectionMenu](#bindselectionmenu): Fully customizes the menu style and trigger conditions, as defined by the developer.
 > 
 > It is not recommended to use both at the same time. Choose based on the degree of customization required.
 > You can use this attribute to customize a text menu.
@@ -507,11 +495,9 @@ Sets whether to enable the default right-click context menu. If this method is n
 
 > **NOTE:** 
 > 
-> - When the [onContextMenuShow](#oncontextmenushow) callback is set and returns **true** in the
-> callback, the setting of this API does not take effect.
+> - When the [onContextMenuShow](#oncontextmenushow) callback is set and returns **true** in the callback, the setting of this API does not take effect.
 > 
-> - The default menu items are controlled by [editMenuOptions](#editmenuoptions), through which
-> you can customize the menu options.
+> - The default menu items are controlled by [editMenuOptions](#editmenuoptions), through which you can customize the menu options.
 
 **Since:** 24
 
@@ -627,8 +613,7 @@ Sets whether to enable AI analysis of web page images. Currently, the image text
 > 
 > - The original width and height of the image are greater than or equal to 100 pixels.
 > 
-> - For [devices](../../../quick-start/module-configuration-file.md#devicetypes) other than 2-in-1 devices, the
-> image rendering width must exceed 80% of the web page width.
+> - For [devices](../../../quick-start/module-configuration-file.md#devicetypes) other than 2-in-1 devices, the image rendering width must exceed 80% of the web page width.
 
 **Since:** 23
 
@@ -824,13 +809,9 @@ When **layoutMode** is set to **WebLayoutMode.FIT_CONTENT**, the **enabled** par
 
 > **NOTE:** 
 > 
-> - This interface takes effect globally across all web components in the current application. When multiple web
-> components are set with different values, the value set for the first time will be used.
+> - This interface takes effect globally across all web components in the current application. When multiple web components are set with different values, the value set for the first time will be used.
 > 
-> - It is recommended that you use
-> [setScrollbarMode](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode) to set the scrollbar
-> mode for all web components currently applied. If the setScrollbarMode interface is invoked at the same time,
-> the setting of the forceDisplayScrollBar interface does not take effect.
+> - It is recommended that you use [setScrollbarMode](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setscrollbarmode) to set the scrollbar mode for all web components currently applied. If the setScrollbarMode interface is invoked at the same time,the setting of the forceDisplayScrollBar interface does not take effect.
 
 **Since:** 14
 
@@ -910,13 +891,9 @@ Sets whether to display the horizontal scrollbar, including the system default s
 
 > **NOTE:** 
 > 
-> - If an [@State](../../../ui/state-management/arkts-state.md) decorated variable is used to control the
-> visibility of the horizontal scrollbar,
-> [controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) must be called for the
-> settings to take effect.
+> - If an [@State](../../../ui/state-management/arkts-state.md) decorated variable is used to control the visibility of the horizontal scrollbar,[controller.refresh()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) must be called for the settings to take effect.
 > 
-> - When the [@State](../../../ui/state-management/arkts-state.md) decorated variable changes frequently and
-> dynamically, it is recommended to maintain a one-to-one correspondence between the toggle variable and the
+> - When the [@State](../../../ui/state-management/arkts-state.md) decorated variable changes frequently and dynamically, it is recommended to maintain a one-to-one correspondence between the toggle variable and the
 > **Web** component.
 
 **Since:** 9
@@ -1001,13 +978,11 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 
 > **NOTE:** 
 > 
-> - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at
-> that point.
+> - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at that point.
 > 
 > - The scripts are executed in lexicographic order, not in the order of the array.
 > 
-> - When scripts with identical content are injected multiple times, they are silently deduplicated without display
-> or notification, and the **scriptRules** from the first injection are used.
+> - When scripts with identical content are injected multiple times, they are silently deduplicated without display or notification, and the **scriptRules** from the first injection are used.
 > 
 > - This API does not support [UrlRegexRule](arkts-arkweb-urlregexrule-i.md).
 > 
@@ -1035,14 +1010,11 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 
 > **NOTE:** 
 > 
-> - The script is injected after the root element (HTML Element) of the web document is created but before any
-> other content is loaded.
+> - The script is injected after the root element (HTML Element) of the web document is created but before any other content is loaded.
 > 
-> - The scripts are executed in lexicographic order, not in the order of the array. If the original array order is
-> required, use the [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) API instead.
+> - The scripts are executed in lexicographic order, not in the order of the array. If the original array order is required, use the [runJavaScriptOnDocumentStart](#runjavascriptondocumentstart) API instead.
 > 
-> - When scripts with identical content are injected multiple times, they are silently deduplicated without display
-> or notification, and the **scriptRules** from the first injection are used.
+> - When scripts with identical content are injected multiple times, they are silently deduplicated without display or notification, and the **scriptRules** from the first injection are used.
 > 
 > - This API does not support [UrlRegexRule](arkts-arkweb-urlregexrule-i.md).
 > 
@@ -1160,23 +1132,19 @@ Sets the layout mode of the **Web** component. If this attribute is not explicit
 > 
 > - [blankScreenDetectionConfig](#blankscreendetectionconfig) does not take effect.
 > 
-> - If the width or height of the **Web** component exceeds 7680 px, specify the **RenderMode.SYNC_RENDER** mode
-> when creating the **Web** component. Otherwise, the entire screen will be blank.
+> - If the width or height of the **Web** component exceeds 7680 px, specify the **RenderMode.SYNC_RENDER** mode when creating the **Web** component. Otherwise, the entire screen will be blank.
 > 
 > - Dynamic switching of the **layoutMode** mode is not supported after the **Web** component is created.
 > 
-> - **Web** component size specifications: When **RenderMode.ASYNC_RENDER** is specified, the width and height must
-> not exceed 7680 px respectively.
+> - **Web** component size specifications: When **RenderMode.ASYNC_RENDER** is specified, the width and height must not exceed 7680 px respectively.
 > 
-> - Frequent changes to the page width and height will trigger re-layout of the **Web** component, affecting the
-> user experience.
+> - Frequent changes to the page width and height will trigger re-layout of the **Web** component, affecting the user experience.
 > 
 > - Waterfall layout web pages (loading more content when scrolling to the bottom) are not supported.
 > 
 > - Width adaptation is not supported; only height adaptation is supported.
 > 
-> - Because the height adapts to the web page height, you cannot modify the component height by changing the
-> component height attribute.
+> - Because the height adapts to the web page height, you cannot modify the component height by changing the component height attribute.
 
 **Since:** 11
 
@@ -1206,8 +1174,7 @@ Sets the web-based media playback policy, including the validity period for auto
 > 
 > - You are advised to set [audioExclusive](arkts-arkweb-webmediaoptions-i.md) to the same value for all **Web** components.
 > 
-> - Audio and video interruption takes effect within an application and between applications, and playback
-> resumption takes effect only between applications.
+> - Audio and video interruption takes effect within an application and between applications, and playback resumption takes effect only between applications.
 
 **Since:** 10
 
@@ -1251,10 +1218,7 @@ Sets whether the **viewport** attribute of the **meta** tag is enabled. When thi
 
 > **NOTE:** 
 > 
-> - Whether the **viewport** attribute of the **\&lt;meta&gt;** tag in the frontend HTML page is enabled is determined by
-> checking whether the User-Agent contains the "Mobile" field. When the User-Agent does not contain the "Mobile"
-> field, the **viewport** attribute in the **\&lt;meta&gt;** tag is disabled by default. In this case, you can explicitly
-> set the **metaViewport** attribute to **true** to override the disabled state.
+> - Whether the **viewport** attribute of the **\&lt;meta&gt;** tag in the frontend HTML page is enabled is determined by checking whether the User-Agent contains the "Mobile" field. When the User-Agent does not contain the "Mobile"field, the **viewport** attribute in the **\&lt;meta&gt;** tag is disabled by default. In this case, you can explicitly set the **metaViewport** attribute to **true** to override the disabled state.
 
 **Since:** 12
 
@@ -1387,17 +1351,13 @@ Sets nested scrolling options.
 
 > **NOTE:** 
 > 
-> - You can set the up, down, left, and right directions, or set the forward and backward nested scrolling modes to
-> implement scrolling linkage with the parent component.
+> - You can set the up, down, left, and right directions, or set the forward and backward nested scrolling modes to implement scrolling linkage with the parent component.
 > 
-> - Containers that support nested scrolling: Grid, List, Scroll,
-> Swiper, Tabs, WaterFlow, Refresh and
-> [bindSheet](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindsheet).
+> - Containers that support nested scrolling: Grid, List, Scroll,Swiper, Tabs, WaterFlow, Refresh and [bindSheet](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindsheet).
 > 
 > - Input sources that support nested scrolling: gestures, mouse device, and touchpad.
 > 
-> - In nested scrolling scenarios, since the **Web** component's over-scrolling to the edge will trigger the over-
-> scroll bounce effect first, it is recommended that you set [overScrollMode](#overscrollmode) to
+> - In nested scrolling scenarios, since the **Web** component's over-scrolling to the edge will trigger the over-scroll bounce effect first, it is recommended that you set [overScrollMode](#overscrollmode) to
 > **OverScrollMode.NEVER** to avoid undermining user experience.
 
 **Since:** 11
@@ -1422,8 +1382,7 @@ Triggered to check whether a bound **Web** instance exists based on the name whe
 
 > **NOTE:** 
 > 
-> - Binding a **Web** instance by name: Call the **event.handler.setWebController** method in the [onWindowNew] (#
-> onwindownew9) callback and transfer the controller of the new **Web** instance.
+> - Binding a **Web** instance by name: Call the **event.handler.setWebController** method in the [onWindowNew] (#onwindownew9) callback and transfer the controller of the new **Web** instance.
 > 
 > - The name must comply with the regular expression **[a-zA-Z0-9_]+**. When the name is used as the value of the
 > **target** attribute of the \&lt;a&gt; or \&lt;form&gt; tag, the bound **Web** instance also triggers this callback function.
@@ -1508,8 +1467,7 @@ Called when the page refresh is about to complete or the current page is closed.
 
 > **NOTE:** 
 > 
-> - If the current **Web** component does not have the focus, **onBeforeUnload** is not triggered when the page is
-> refreshed or closed.
+> - If the current **Web** component does not have the focus, **onBeforeUnload** is not triggered when the page is refreshed or closed.
 
 **Since:** 8
 
@@ -1561,13 +1519,9 @@ Triggered when an SSL client certificate request is received.
 
 > **NOTE:** 
 > 
-> - The **Web** component can respond with
-> [ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm),
-> [ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel), or
-> [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore).
+> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-clientauthenticationhandler-c.md#confirm),[ClientAuthenticationHandler.cancel](arkts-arkweb-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-clientauthenticationhandler-c.md#ignore).
 > 
-> - If **ClientAuthenticationHandler.confirm** or **ClientAuthenticationHandler.cancel** is called, the **Web**
-> component stores the authentication result in the memory (within the application lifecycle) and does not call
+> - If **ClientAuthenticationHandler.confirm** or **ClientAuthenticationHandler.cancel** is called, the **Web**component stores the authentication result in the memory (within the application lifecycle) and does not call
 > **onClientAuthenticationRequest()** again for the same host and port. If **onClientAuthenticationRequest.ignore**
 > is called, the **Web** component does not store the authentication result.
 
@@ -1717,9 +1671,7 @@ Called when the **Web** component detects a blank screen.
 
 > **NOTE:** 
 > 
-> - This method must be used with [blankScreenDetectionConfig](#blankscreendetectionconfig).
-> Otherwise, the blank screen detection is disabled by default, and the callback is not returned when a blank
-> screen is detected.
+> - This method must be used with [blankScreenDetectionConfig](#blankscreendetectionconfig).Otherwise, the blank screen detection is disabled by default, and the callback is not returned when a blank screen is detected.
 
 **Since:** 22
 
@@ -1863,21 +1815,13 @@ Triggered when the first screen paint of a web page is complete.
 
 > **NOTE:** 
 > 
-> - First Screen Paint (FSP) records the time taken to render images, texts, and videos in the viewport. It is a
-> core performance metric for measuring the duration from a page's initial load to the completion of rendering.
-> When no visible elements within the viewport extend beyond the historical rendering area for a certain period of
-> time, the moment when the maximum historical rendering of elements in the viewport is achieved is regarded as the
-> completion time of first screen paint.
+> - First Screen Paint (FSP) records the time taken to render images, texts, and videos in the viewport. It is a core performance metric for measuring the duration from a page's initial load to the completion of rendering.When no visible elements within the viewport extend beyond the historical rendering area for a certain period of time, the moment when the maximum historical rendering of elements in the viewport is achieved is regarded as the completion time of first screen paint.
 > 
-> - After the first screen is drawn, the API waits for a period of time and reports the callback when no new
-> rendering information needs to be processed. The callback time is different from the first screen paint
-> completion time.
+> - After the first screen is drawn, the API waits for a period of time and reports the callback when no new rendering information needs to be processed. The callback time is different from the first screen paint completion time.
 > 
-> - If the user performs input operations or scrolls the page while rendering is still in progress, the callback
-> function will be reported immediately.
+> - If the user performs input operations or scrolls the page while rendering is still in progress, the callback function will be reported immediately.
 > 
-> - This API is used to obtain the first screen rendering time in instant loading scenarios, but it will not
-> deliver the expected results if used in preloading or prerendering scenarios.
+> - This API is used to obtain the first screen rendering time in instant loading scenarios, but it will not deliver the expected results if used in preloading or prerendering scenarios.
 
 **Since:** 23
 
@@ -2161,11 +2105,9 @@ Triggered to notify the host application that the page has been loaded. This met
 > 
 > - Fragment navigation also triggers **onLoadFinished**, but **onPageEnd** is not triggered.
 > 
-> - If the main frame is automatically redirected before the page is fully loaded, **onLoadFinished** is triggered
-> only once. **onPageEnd** is triggered each time the main frame is navigated.
+> - If the main frame is automatically redirected before the page is fully loaded, **onLoadFinished** is triggered only once. **onPageEnd** is triggered each time the main frame is navigated.
 > 
-> - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is
-> simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure. &lt;b class=" &gt; + topic/ph hi-d/b " id="b145733136532"&gt;onPageBegin&lt;/b&gt; will not be simulated.
+> - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure. &lt;b class=" &gt; + topic/ph hi-d/b " id="b145733136532"&gt;onPageBegin&lt;/b&gt; will not be simulated.
 
 **Since:** 20
 
@@ -2207,8 +2149,7 @@ Triggered to notify the host application that the page loading starts. This meth
 
 > **NOTE:** 
 > 
-> - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is
-> simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure.
+> - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure.
 > **onPageBegin** will not be simulated.
 
 **Since:** 20
@@ -2418,12 +2359,9 @@ Triggered when the URL is about to be loaded in the current web page, allowing t
 > 
 > - POST requests do not trigger this callback.
 > 
-> - This callback is triggered when the iframe loads a non-HTTP(S) document. It is not triggered for HTTP(S)
-> documents, **about:blank**, or for any redirection that is started via **loadUrl(url: string)**.
+> - This callback is triggered when the iframe loads a non-HTTP(S) document. It is not triggered for HTTP(S)documents, **about:blank**, or for any redirection that is started via **loadUrl(url: string)**.
 > 
-> - Do not call **loadUrl(url: string)** with the same URL in the callback and return **true**. Doing so would
-> unnecessarily cancel the current loading and start an identical one. To continue loading the current request URL,
-> return **false** instead of calling **loadUrl(url: string)**.
+> - Do not call **loadUrl(url: string)** with the same URL in the callback and return **true**. Doing so would unnecessarily cancel the current loading and start an identical one. To continue loading the current request URL,return **false** instead of calling **loadUrl(url: string)**.
 
 **Since:** 12
 
@@ -2927,8 +2865,7 @@ Triggered to notify users when an SSL error occurs during the loading of main-fr
 > 
 > - Main resource: Entry file for the browser to load web pages, which is usually an HTML document.
 > 
-> - Subresource: Dependency file referenced by the main resource, which is loaded when a specific tag is
-> encountered during main resource parsing.
+> - Subresource: Dependency file referenced by the main resource, which is loaded when a specific tag is encountered during main resource parsing.
 
 **Since:** 12
 
@@ -2956,13 +2893,9 @@ To support errors for loading subframe resources, use the [OnSslErrorEvent](#ons
 > 
 > - Main resource: Entry file for the browser to load web pages, which is usually an HTML document.
 > 
-> - Subresource: Dependency file referenced by the main resource, which is loaded when a specific tag is
-> encountered during main resource parsing.
+> - Subresource: Dependency file referenced by the main resource, which is loaded when a specific tag is encountered during main resource parsing.
 > 
-> - The application needs to call [handler.handleCancel()](arkts-arkweb-sslerrorhandler-c.md#handlecancel) or
-> [handler.handleConfirm()](arkts-arkweb-sslerrorhandler-c.md#handleconfirm) to process the callback. Otherwise, resource
-> loading is canceled by default. The behavior of **handleConfirm()** or **handleCancel()** may be recorded to
-> respond to future SSL errors.
+> - The application needs to call [handler.handleCancel()](arkts-arkweb-sslerrorhandler-c.md#handlecancel) or [handler.handleConfirm()](arkts-arkweb-sslerrorhandler-c.md#handleconfirm) to process the callback. Otherwise, resource loading is canceled by default. The behavior of **handleConfirm()** or **handleCancel()** may be recorded to respond to future SSL errors.
 > 
 > - The application can display a custom error page or silently record the problem.
 
@@ -3014,8 +2947,7 @@ Triggered when the text selection of the **Web** component changes. This API use
 > 
 > - This callback is triggered when the selection ends.
 > 
-> - If the same selection is made using the same method as the previous one, this callback is not triggered. If the
-> same selection is made using a different method from the previous one, this callback is triggered.
+> - If the same selection is made using the same method as the previous one, this callback is not triggered. If the same selection is made using a different method from the previous one, this callback is triggered.
 
 **Since:** 23
 
@@ -3185,19 +3117,13 @@ Triggered to notify the user of a new window creation request when [multiWindowA
 
 > **NOTE:** 
 > 
-> - If the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is not called, the render process will
-> be blocked.
+> - If the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is not called, the render process will be blocked.
 > 
-> - If no new window is created, the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is called and
-> set to **null**, notifying the web page that no new window is created.
+> - If no new window is created, the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is called and set to **null**, notifying the web page that no new window is created.
 > 
-> - The new window cannot be directly overlaid on the original **Web** component, and its URL (for example, address
-> bar) must be clearly displayed in the same way as the main page to prevent confusion. If the URL display and
-> verification mechanism cannot be ensured to be reliable, you need to disable the creation of new windows.
+> - The new window cannot be directly overlaid on the original **Web** component, and its URL (for example, address bar) must be clearly displayed in the same way as the main page to prevent confusion. If the URL display and verification mechanism cannot be ensured to be reliable, you need to disable the creation of new windows.
 > 
-> - The source of a new window request cannot be reliably traced. The request may be initiated by a third-party
-> iframe. By default, the application needs to take defense measures such as sandbox isolation and permission
-> restriction to ensure security.
+> - The source of a new window request cannot be reliably traced. The request may be initiated by a third-party iframe. By default, the application needs to take defense measures such as sandbox isolation and permission restriction to ensure security.
 
 **Since:** 23
 
@@ -3372,13 +3298,11 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 
 > **NOTE:** 
 > 
-> - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at
-> that point.
+> - The script runs after any JavaScript code on the page, and the DOM tree has already been loaded and rendered at that point.
 > 
 > - The scripts are executed in the order of the array.
 > 
-> - When scripts with identical content are injected multiple times, they are silently deduplicated without display
-> or notification, and the **scriptRules** from the first injection are used.
+> - When scripts with identical content are injected multiple times, they are silently deduplicated without display or notification, and the **scriptRules** from the first injection are used.
 
 **Since:** 15
 
@@ -3400,13 +3324,11 @@ Injects a JavaScript script into the **Web** component. When the specified page 
 
 > **NOTE:** 
 > 
-> - The script is injected after the root element (HTML Element) of the web document is created but before any
-> other content is loaded.
+> - The script is injected after the root element (HTML Element) of the web document is created but before any other content is loaded.
 > 
 > - The scripts are executed in the order of the array.
 > 
-> - When scripts with identical content are injected multiple times, they are silently deduplicated without display
-> or notification, and the **scriptRules** from the first injection are used.
+> - When scripts with identical content are injected multiple times, they are silently deduplicated without display or notification, and the **scriptRules** from the first injection are used.
 
 **Since:** 15
 
@@ -3430,8 +3352,7 @@ Injects a JavaScript script into the **Web** component. When the **head** tag of
 > 
 > - This script is executed in the array order.
 > 
-> - If a script with the same content is injected for multiple times, the script is silently deduplicated, not
-> displayed, and no notification is displayed. The **scriptRules** of the first injection is used.
+> - If a script with the same content is injected for multiple times, the script is silently deduplicated, not displayed, and no notification is displayed. The **scriptRules** of the first injection is used.
 
 **Since:** 15
 
@@ -3622,11 +3543,9 @@ Sets whether to display the vertical scrollbar, including the system default scr
 
 > **NOTE:** 
 > 
-> - If an @State decorated variable is used to control the vertical scrollbar visibility, **controller.refresh()**
-> must be called for the settings to take effect.
+> - If an @State decorated variable is used to control the vertical scrollbar visibility, **controller.refresh()**must be called for the settings to take effect.
 > 
-> - If the vertical scrollbar visibility changes frequently through an @State decorated variable, it is recommended
-> that the variable correspond to the **Web** component one by one.
+> - If the vertical scrollbar visibility changes frequently through an @State decorated variable, it is recommended that the variable correspond to the **Web** component one by one.
 
 **Since:** 9
 

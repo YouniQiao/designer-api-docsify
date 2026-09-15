@@ -12,7 +12,15 @@ import { serialManager } from '@kit.BasicServicesKit';
 function cancelSerialRight(portId: number): void
 ```
 
-Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device.
+Cancels the permission to access the serial port device when the application is running. This API is used to close the enabled serial port device. Generally, this API is called to proactively release the permission, access another device, or for security purposes.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.  
+- You have called requestSerialRight to request the access permission.
+
+**Related methods**  
+- requestSerialRight: requests the access permission.  
+- hasSerialRight: checks whether the access permission is granted.
 
 **Since:** 19
 
@@ -22,7 +30,7 @@ Cancels the permission to access the serial port device when the application is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
 
 **Error codes:**
 

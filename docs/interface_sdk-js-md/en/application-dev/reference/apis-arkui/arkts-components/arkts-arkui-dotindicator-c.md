@@ -48,9 +48,7 @@ A constructor used to create a **DotIndicator** object.
 
 > **NOTE:** 
 > 
-> - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
-> distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
-> The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
+> - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
 > **selectedItemHeight**.
 > 
 > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the

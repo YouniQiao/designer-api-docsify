@@ -1177,12 +1177,9 @@ Obtains the file descriptor of a TLSSocketConnection connection. This API uses a
 > 
 > - Call this API only after the **TLSSocketServer** connection is successfully established.
 > 
-> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the
-> close API is called).
+> - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the close API is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the
-> [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket
-> connection, instead of directly operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the [close](arkts-network-socket-tcpsocketconnection-i.md#close) method to close the socket connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 

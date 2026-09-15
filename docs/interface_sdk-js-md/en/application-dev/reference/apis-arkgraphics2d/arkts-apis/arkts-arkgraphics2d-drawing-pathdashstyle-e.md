@@ -1,6 +1,7 @@
 # PathDashStyle
 
-Enumerates the drawing styles for path effects.  
+Enumerates the drawing styles for path effects.
+
 | Name | Value| Description |  
 | ------ | - | ------------------ |  
 | [TRANSLATE](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 0 | Translates only, not rotating with the path.|

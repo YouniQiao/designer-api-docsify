@@ -16,14 +16,11 @@ Disables the specified permission of the specified user. After the permission is
 
 > **NOTE:** 
 > 
-> 1. Only permissions with an
-> [APL level](../../../security/AccessToken/app-permission-mgmt-overview.md#basic-concepts-in-the-permission-mechanism)
-> of normal or system_basic can be disabled. Otherwise, error code 9201045 is returned.
+> 1. Only permissions with an [APL level](../../../security/AccessToken/app-permission-mgmt-overview.md#basic-concepts-in-the-permission-mechanism)of normal or system_basic can be disabled. Otherwise, error code 9201045 is returned.
 > 
 > 2. A maximum of 200 permissions can be disabled per user.
 > 
-> 3. After a permission is disabled, only applications (system and common applications) are affected. System SAs
-> can still use the permission.
+> 3. After a permission is disabled, only applications (system and common applications) are affected. System SAs can still use the permission.
 
 **Since:** 26.0.0
 

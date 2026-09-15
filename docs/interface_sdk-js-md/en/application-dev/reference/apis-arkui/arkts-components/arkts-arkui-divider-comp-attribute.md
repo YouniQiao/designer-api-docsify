@@ -30,7 +30,7 @@ Sets the color of the divider. This attribute can be dynamically set using attri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the divider. <br>Default value: **'#33182431'**<br>Invalid values are treated as the default value. <br>You can set a common divider color using [WithTheme](../arkts-apis/arkts-arkui-withtheme-con.md). |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the divider.<br>Default value: **'#33182431'**<br>Invalid values are treated as the default value. <br>You can set a common divider color using WithTheme. |
 
 ## lineCap
 

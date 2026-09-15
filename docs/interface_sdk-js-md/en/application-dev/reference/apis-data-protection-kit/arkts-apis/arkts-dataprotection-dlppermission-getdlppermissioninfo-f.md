@@ -16,6 +16,8 @@ Queries the permission information of the current DLP sandbox, including permiss
 
 When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
 
+You are advised to call [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md) first to check whether the current environment is a sandbox environment.
+
 **Since:** 10
 
 **System capability:** SystemCapability.Security.DataLossPrevention

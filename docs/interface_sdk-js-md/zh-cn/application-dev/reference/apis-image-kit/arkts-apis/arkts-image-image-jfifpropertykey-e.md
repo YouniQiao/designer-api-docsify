@@ -13,7 +13,8 @@
 - 1表示每英寸像素数（DPI）。  
 - 2表示每厘米像素数（DPC）。
 
-该值为正整数。 |  
+该值为正整数。 |
+
 | X_DENSITY | 'JfifXDensity' | JFIF图像X方向密度。 |  
 | Y_DENSITY | 'JfifYDensity' | JFIF图像Y方向密度。 |  
 | [VERSION](arkts-image-image-jfifpropertykey-e.md) | 'JfifVersion' | JFIF图像版本。 |

@@ -187,8 +187,7 @@ Sets the color of the symbol icon for the save button.
 - Before calling this method, you need to call [setIcon](#seticon) to configure a symbol-  
 style icon resource (i.e., **&#36;r('sys.symbol.xxx')**).  
 - If no symbol icon is set, the color set via this method does not take effect.  
-- It is recommended that you use this API together with  
-[symbolRenderingStrategy](#symbolrenderingstrategy) to achieve different rendering effects.
+- It is recommended that you use this API together with [symbolRenderingStrategy](#symbolrenderingstrategy) to achieve different rendering effects.
 
 **Since:** 26.0.0
 

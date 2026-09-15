@@ -12,7 +12,10 @@ import { serialManager } from '@kit.BasicServicesKit';
 function requestSerialRight(portId: number): Promise<boolean>
 ```
 
-Requests the permission for the application to access the serial port device. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again. This API uses a promise to return the result.
+Requests the permission for the app to access the serial port device. After the app exits, the access permission on the serial port device is automatically removed. After the app is restarted, the app needs to request the permission again. This API uses a promise to return the result. Generally, this API is called to request authorization from the user when the application attempts to access the serial port for the first time and detects that it does not have the permission. You can call [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md) to remove the permission.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.
 
 **Since:** 19
 
@@ -22,13 +25,13 @@ Requests the permission for the application to access the serial port device. Af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the permission is successfully requested, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** indicates that the permission is successfully requested, and **false** indicates the opposite. |
 
 **Error codes:**
 

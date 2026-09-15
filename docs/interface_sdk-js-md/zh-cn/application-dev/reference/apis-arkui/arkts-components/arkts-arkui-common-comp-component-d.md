@@ -12,8 +12,7 @@ declare const Component: ClassDecorator & ((options: ComponentOptions) => ClassD
 > 
 > - 从API version 11开始，\@Component可以接受一个可选的[ComponentOptions](arkts-arkui-componentoptions-i.md)类型参数。
 > 
-> - 从API版本26.0.0开始，ComponentOptions中可以接受可选参数`reusePool`和`poolAccepts`，用于配置全局复用池，
-> 开发指南参考：[全局复用：集中化的组件回收与复用](../../../ui/state-management/arkts-global-reuse-pool.md)。
+> - 从API版本26.0.0开始，ComponentOptions中可以接受可选参数`reusePool`和`poolAccepts`，用于配置全局复用池，开发指南参考：[全局复用：集中化的组件回收与复用](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 7
 

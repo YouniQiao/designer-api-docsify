@@ -12,12 +12,18 @@ import { usbManager } from '@kit.BasicServicesKit';
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-Resets a USB peripheral.
+Resets the USB device. This API is applicable to scenarios where the USB device needs to be restored due to communication exceptions. For example, the device needs to be reinitialized after a device firmware upgrade, the device status needs to be restored when it is abnormal, or the device status needs to be reset during debugging. After this API is successfully called, the device is reset to the initial state. The previously set configurations and interface settings are cleared, and the device needs to be reinitialized.
 
 > **NOTE:** 
 > 
-> Previous configurations and APIs will be reset. Ensure that the related services have been completed before
-> calling this API.
+> Previous configurations and interface settings will be reset after this API is called. Ensure
+> that the related services have been completed before calling this API.
+
+1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list.
+2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the device access
+permission.
+3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain **devicepipe** as an
+input parameter.
 
 **Since:** 20
 
@@ -27,7 +33,7 @@ Resets a USB peripheral.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus address and device address. You need to call [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
 
 **Return value:**
 

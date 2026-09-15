@@ -12,7 +12,12 @@ import { serialManager } from '@kit.BasicServicesKit';
 function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<number>
 ```
 
-Writes data to the serial port device asynchronously. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result.
+Writes data to the serial port device asynchronously. Before calling this API, call [open](arkts-basicservices-serialmanager-open-f.md) to open the serial port first. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. This API uses a promise to return the result. This API is applicable to scenarios such as sending control commands to devices, delivering configuration parameters, and transferring the collected data.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.  
+- You have called requestSerialRight to request the access permission.  
+- You have called open to open the serial port.
 
 **Since:** 19
 
@@ -22,15 +27,15 @@ Writes data to the serial port device asynchronously. The length of data written
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
-| buffer | Uint8Array | Yes | Buffer for writing data, with a maximum length of 4 KB. |
-| timeout | number | No | Timeout interval.Unit: milliseconds. Whether the buffer of the target port is writable within the specified time. If yes, the API is processed properly; otherwise, a timeout message is returned after the specified time. The default value **0** indicates that the API returns the result immediately when the target port is not writable. |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
+| buffer | Uint8Array | Yes | Buffer for writing data, including the binary data to be sent to the serial port device. The length of data written each time cannot exceed 4 KB; otherwise, data loss may occur. You are advised to write long data in multiple packets. |
+| timeout | number | No | Timeout interval, in milliseconds. When writing data, this API waits until the buffer is writable and returns the result after the specified time. The default value is **0**. If the default value is used or the parameter is not specified, it indicates that the API returns the result without waiting. If a negative number is passed, a parameter error is thrown. Set this parameter based on the device response speed and data volume. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the length of the data written. |
+| Promise&lt;number&gt; | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 

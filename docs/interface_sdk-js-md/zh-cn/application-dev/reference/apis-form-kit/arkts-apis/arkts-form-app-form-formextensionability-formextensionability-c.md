@@ -62,8 +62,7 @@ onAddForm(want: Want): formBindingData.FormBindingData
 
 卡片提供方接收创建卡片的通知接口。需要注意：FormExtensionAbility创建后10秒内无操作将会被清理，请避免在回调中执行耗时操作。
 
-- 必须调用  
-[formBindingData.createFormBindingData()](arkts-form-formbindingdata-createformbindingdata-f.md)创建卡片数据对象。  
+- 必须调用[formBindingData.createFormBindingData()](arkts-form-formbindingdata-createformbindingdata-f.md)创建卡片数据对象。  
 - 调用顺序：先创建数据对象（如dataObj1），再调用formBindingData.createFormBindingData(dataObj1)创建FormBindingData对象。  
 - 返回要求：必须返回FormBindingData对象，卡片要显示的数据通过参数传入。
 

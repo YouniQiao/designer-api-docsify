@@ -31,4 +31,4 @@ Returns the list of all capabilities.
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Car awareness not supported. Function can not work correctly due to limited device capabilities. |
-| [34000001](../errorcode-onScreen.md#34000001-service-exception) | Service exception. |
+| [34000001](../errorcode-carAwareness.md#34000001-service-exception) | Service exception. |

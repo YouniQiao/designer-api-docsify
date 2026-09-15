@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function setPortRoleTypes(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>
 ```
 
-Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result.
+Sets the role types of a specified port, including **powerRole** (for charging) and **dataRole** (for data transfer). This API uses a promise to return the result. After the API is successfully called, the power role and data transfer role of the port are switched to the specified roles. This API can be used to dynamically switch the role of a USB port. When developer mode is disabled, the operation may fail if no device is connected. In this case, an exception is thrown. For details about role constraints, see [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md).
 
 **Since:** 12
 
@@ -26,15 +26,15 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number. |
-| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | Yes | Role for charging. |
-| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes | Role for data transfer. |
+| portId | number | Yes | Port number. The value can be obtained from the port list returned by [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md). |
+| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | Yes | Power role type. The options are **NONE**, **SOURCE** (providing power), and **SINK** (requiring external power supply). |
+| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes | Data transfer role. The options are **NONE**, **HOST**, and **DEVICE**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. If the API is called successfully, no value is returned. If the call fails, an exception is thrown. |
 
 **Error codes:**
 

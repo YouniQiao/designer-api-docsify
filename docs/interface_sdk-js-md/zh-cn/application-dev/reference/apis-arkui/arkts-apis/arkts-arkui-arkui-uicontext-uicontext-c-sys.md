@@ -6,11 +6,7 @@ UIContext实例对象。
 
 > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
 > 
-> - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的
-> getUIContext()方法获取UIContext实例，第二种是通过自定
-> 义组件内置方法getUIContext()获取UIContext
-> 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中
-> UIContext对象以uiContext表示。
+> - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的getUIContext()方法获取UIContext实例，第二种是通过自定义组件内置方法getUIContext()获取UIContext 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中UIContext对象以uiContext表示。
 
 **起始版本：** 10
 

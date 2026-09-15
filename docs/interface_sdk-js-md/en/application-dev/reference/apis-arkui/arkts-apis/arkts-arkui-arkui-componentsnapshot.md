@@ -8,16 +8,9 @@ For typical use cases (for example, long screenshots) and best practices of comp
 
 > **NOTE:** 
 > 
-> - In scenarios where XComponent is used to, for example, display video or camera streams,
-> obtain images through
-> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md),
-> instead of through an API in this module.
+> - In scenarios where XComponent is used to, for example, display video or camera streams,obtain images through [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md),instead of through an API in this module.
 > 
-> - If the content of a component does not fill the entire area allocated for it, any remaining space in the snapshot
-> will be rendered as transparent pixels. In addition, if the component uses image effects or other
-> effect-related attributes, the resulting snapshot may not be as expected. To address these potential issues, check
-> whether the component's transparent content area needs to be filled, or use the window screenshot API
-> [snapshot](arkts-arkui-window-window-i.md#snapshot) instead.
+> - If the content of a component does not fill the entire area allocated for it, any remaining space in the snapshot will be rendered as transparent pixels. In addition, if the component uses image effects or other effect-related attributes, the resulting snapshot may not be as expected. To address these potential issues, check whether the component's transparent content area needs to be filled, or use the window screenshot API [snapshot](arkts-arkui-window-window-i.md#snapshot) instead.
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 

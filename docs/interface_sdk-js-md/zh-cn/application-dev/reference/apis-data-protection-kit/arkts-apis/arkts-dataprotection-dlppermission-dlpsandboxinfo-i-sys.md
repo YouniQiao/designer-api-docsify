@@ -36,7 +36,7 @@ appIndex: number
 bindAppIndex?: number
 ```
 
-表示被绑定的DLP沙箱应用的应用索引。默认不返回，仅当沙箱应用是预览时返回。
+表示被绑定的DLP沙箱应用的应用索引。默认不返回，仅当沙箱应用是文件预览（Preview）时返回。
 
 **类型：** number
 

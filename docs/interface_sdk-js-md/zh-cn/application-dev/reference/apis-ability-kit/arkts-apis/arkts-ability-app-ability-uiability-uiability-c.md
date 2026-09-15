@@ -95,15 +95,9 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 > 
 > - 该生命周期回调不支持[specified启动模式](../../../application-models/uiability-launch-type.md#specified启动模式)。
 > 
-> - 通过
-> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
-> 等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为
-> FLAG_ABILITY_ON_COLLABORATE。
+> - 通过[startAbility](arkts-ability-uiabilitycontext-c.md#startability)等方法拉起协同方应用时，需要在Want对象中设置协同标记[Flags](arkts-ability-wantconstant-flags-e.md)为FLAG_ABILITY_ON_COLLABORATE。
 > 
-> - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在
-> [onForeground](#onforeground)前或[onBackground](#onbackground)后调用；
-> [热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在
-> [onNewWant](#onnewwant)前调用。
+> - [冷启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability冷启动)时，该回调在[onForeground](#onforeground)前或[onBackground](#onbackground)后调用；[热启动](../../../application-models/uiability-intra-device-interaction.md#目标uiability热启动)时，该回调在[onNewWant](#onnewwant)前调用。
 
 **起始版本：** 18
 
@@ -467,15 +461,9 @@ onPrepareToTerminate(): boolean
 
 > **说明：** 
 > 
-> - 从API version 15开始，当[UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync)实现时，本回调函数将不执
-> 行。当
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
-> 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
-> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
+> - 从API version 15开始，当[UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync)实现时，本回调函数将不执行。当[AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
 > 
-> - 如果应用本身或者所使用的三方框架注册了
-> window.WindowStage.on
-> 监听，本回调函数将不执行。
+> - 如果应用本身或者所使用的三方框架注册了window.WindowStage.on监听，本回调函数将不执行。
 
 **起始版本：** 10
 
@@ -538,14 +526,9 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 > **说明：** 
 > 
-> - 当
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
-> 或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在
-> dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
+> - 当[AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)或[AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)实现时，在dock栏或系统托盘处右键点击关闭，本回调函数将不执行。
 > 
-> - 如果应用本身或者所使用的三方框架注册了
-> [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)
-> 监听，本回调函数将不执行。
+> - 如果应用本身或者所使用的三方框架注册了[window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)监听，本回调函数将不执行。
 > 
 > - 若异步回调内发生crash，按超时处理，执行等待超过10秒未响应，UIAbility将被强制关闭。
 

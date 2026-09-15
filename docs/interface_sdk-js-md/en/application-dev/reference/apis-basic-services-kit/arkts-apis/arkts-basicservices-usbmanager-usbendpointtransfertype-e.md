@@ -12,7 +12,7 @@ Enumerates USB transfer types.
 TRANSFER_TYPE_ISOCHRONOUS = 0x1
 ```
 
-Real-time transfer.
+Isochronous transfer.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ Real-time transfer.
 TRANSFER_TYPE_BULK = 0x2
 ```
 
-Performs bulk transfer.
+Bulk transfer.
 
 **Since:** 18
 

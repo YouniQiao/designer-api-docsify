@@ -64,8 +64,7 @@ Sets whether to enable the tap and slide operations of smart gestures.
 > 
 > - This API affects only the tap and slide smart gestures, not the wrist-turn gesture.
 > 
-> - When disabled, the [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut)
-> attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
+> - When disabled, the [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut)attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
 
 **Since:** 26.0.0
 
@@ -91,21 +90,15 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 
 > **NOTE:** 
 > 
-> - This API enables the application to receive the system's handling intent for the current smart gesture event
-> before it is processed by the system and apply custom intervention.
+> - This API enables the application to receive the system's handling intent for the current smart gesture event before it is processed by the system and apply custom intervention.
 > 
 > - Users can customize the behavior of the current smart gesture through this callback.
 > 
-> - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the
-> last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is,
-> when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md).isConsumed is **true**,
-> subsequent monitoring callbacks will not be executed.
+> - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is,when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md).isConsumed is **true**,subsequent monitoring callbacks will not be executed.
 > 
-> - If the same callback is registered repeatedly, only the first registration takes effect; duplicate
-> registrations are ignored.
+> - If the same callback is registered repeatedly, only the first registration takes effect; duplicate registrations are ignored.
 > 
-> - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)
-> instance; otherwise, the modification will not take effect.
+> - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)instance; otherwise, the modification will not take effect.
 
 **Since:** 26.0.0
 
@@ -131,13 +124,9 @@ Requests to set the specified component as the current smart gesture selected no
 
 > **NOTE:** 
 > 
-> - The request takes effect only when all the following conditions are met: the target component can respond to
-> smart gestures, the component is visible on the screen, and the component has an
-> onClick event bound or a
-> [TapGesture](arkts-arkui-gesture-con.md#tapgesture) gesture bound.
+> - The request takes effect only when all the following conditions are met: the target component can respond to smart gestures, the component is visible on the screen, and the component has an onClick event bound or a [TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture) gesture bound.
 > 
-> - Whether a component can respond to smart gestures is determined by **enabled** in
-> [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut).
+> - Whether a component can respond to smart gestures is determined by **enabled** in [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartgestureshortcut).
 
 **Since:** 26.0.0
 

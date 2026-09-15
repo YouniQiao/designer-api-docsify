@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-dataprotectionkit-->
 
-- [@ohos.dlpPermission(数据防泄漏)](arkts-dataprotection-dlppermission.md)
+- [@ohos.dlpPermission(数据防泄露)](arkts-dataprotection-dlppermission.md)
   - [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md)
   - [cleanSandboxAppConfig](arkts-dataprotection-dlppermission-cleansandboxappconfig-f.md)
   - [closeOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-closeopenedenterprisedlpfiles-f.md)
@@ -31,6 +31,7 @@
   - [on(系统接口)](arkts-dataprotection-dlppermission-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [openDLPFile(系统接口)](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md)<!--DelEnd-->
+  - [processPluginCommand](arkts-dataprotection-dlppermission-processplugincommand-f.md)
   - [queryDlpPolicy](arkts-dataprotection-dlppermission-querydlppolicy-f.md)
   - [queryOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-queryopenedenterprisedlpfiles-f.md)
   - [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md)
@@ -63,8 +64,9 @@
   - [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)
   <!--Del-->
   - [GatheringPolicyType(系统接口)](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)<!--DelEnd-->
+  - [PluginCmd](arkts-dataprotection-dlppermission-plugincmd-e.md)
 <!--Del-->
-- [@ohos.dlpSetDlpFeature(设置数据防泄漏入口)](arkts-dataprotection-dlpsetdlpfeature.md)<!--DelEnd-->
+- [@ohos.dlpSetDlpFeature(设置数据防泄露入口)](arkts-dataprotection-dlpsetdlpfeature.md)<!--DelEnd-->
   <!--Del-->
   - [setDlpFeature(系统接口)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md)<!--DelEnd-->
   <!--Del-->

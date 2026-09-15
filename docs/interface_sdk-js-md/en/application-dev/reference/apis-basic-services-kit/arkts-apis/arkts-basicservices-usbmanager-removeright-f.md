@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function removeRight(deviceName: string): boolean
 ```
 
-Removes the device access permission for the application. System applications are granted the device access permission by default, and calling this API will not revoke the permission.
+Removes the permission for an app to access the device. System apps are granted the device access permission by default, and calling this API will not revoke the permission.
 
 **Since:** 9
 
@@ -22,13 +22,13 @@ Removes the device access permission for the application. System applications ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md). |
+| deviceName | string | Yes | Device name, which is the name of the USBDevice in the device list obtained by [getDevices](arkts-basicservices-usbmanager-getdevices-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Permission removal result. The value **true** indicates that the access permission is removed successfully; and the value **false** indicates the opposite. |
+| boolean | Returns the result of permission removal. The value **true** indicates that the permission is removed successfully; the value **false** indicates that the permission removal fails. |
 
 **Error codes:**
 

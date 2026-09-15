@@ -16,9 +16,9 @@ Uninstalls the enterprise application re-signing certificate. After the enterpri
 
 Usage scenarios:
 
-1. Installing a new certificate: After a new certificate is installed via the  
+1. Installing a new certificate: After a new certificate is installed via the
 [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) API, applications re-signed using the new certificate can run properly. If the application corresponding to the old signing certificate is a super device administrator application, the application must be deactivated before the certificate can be uninstalled. Otherwise, after the certificate is uninstalled, the application cannot be uninstalled or run.
-2. Restoring a mistakenly deleted certificate: After a mistakenly deleted certificate is re-installed via the  
+2. Restoring a mistakenly deleted certificate: After a mistakenly deleted certificate is re-installed via the
 [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) API, re-signed applications can run normally without being affected.
 
 > **NOTE:** 

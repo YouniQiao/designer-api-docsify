@@ -1,6 +1,6 @@
 # MessageHandler
 
-Represents a custom communication object. <br> <br>   
+Represents a custom communication object. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > You can register this object to receive custom communication data sent by the input method application. When the custom communication data is received, the [onMessage](#onmessage) callback in this object is triggered. <br>

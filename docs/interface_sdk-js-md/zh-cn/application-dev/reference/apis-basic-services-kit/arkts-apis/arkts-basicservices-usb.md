@@ -1,4 +1,4 @@
-# @ohos.usb(USB Manager)
+# @ohos.usb(USB管理)
 
 本模块主要提供管理USB设备的相关功能，包括查询USB设备列表、批量数据传输、控制命令传输、权限控制等。
 

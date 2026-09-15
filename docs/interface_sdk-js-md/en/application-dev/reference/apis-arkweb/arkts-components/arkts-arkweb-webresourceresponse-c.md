@@ -206,8 +206,7 @@ Sets the response data.
 
 > **NOTE:** 
 > 
-> - This API supports obtaining HSP resources based on Resource objects, which [setResponseData](#setresponsedata) does not
-> support.
+> - This API supports obtaining HSP resources based on Resource objects, which [setResponseData](#setresponsedata) does not support.
 
 **Since:** 26.1.0
 
@@ -251,8 +250,7 @@ Sets the response data.
 
 > **NOTE:** 
 > 
-> - This API does not support obtaining HSP resources based on Resource objects. To obtain HSP resources,
-> use [setResponseBody](#setresponsebody) instead.
+> - This API does not support obtaining HSP resources based on Resource objects. To obtain HSP resources,use [setResponseBody](#setresponsebody) instead.
 
 **Since:** 9
 
@@ -316,12 +314,9 @@ Sets whether the resource response data is ready.
 
 > **NOTE:** 
 > 
-> - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType(
-> ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response
-> attributes. Finally, call setResponseIsReady(true) to trigger resource return.
+> - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType(), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response attributes. Finally, call setResponseIsReady(true) to trigger resource return.
 > 
-> - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData
-> () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.
+> - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return.
 > 
 > - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
 

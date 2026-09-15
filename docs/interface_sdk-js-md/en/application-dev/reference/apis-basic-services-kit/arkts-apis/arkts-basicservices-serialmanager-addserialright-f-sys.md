@@ -12,7 +12,12 @@ import { serialManager } from '@kit.BasicServicesKit';
 function addSerialRight(tokenId: number, portId: number): void
 ```
 
-Adds the permission to an application for accessing the serial port device. serialManager.requestSerialRight triggers a dialog box to request user authorization. addSerialRight does not trigger a dialog box but directly adds the device access permission for the application. After the application exits, the access permission on the serial port device is automatically removed. After the application is restarted, you need to request the permission again.
+Adds the permission to an app for accessing the serial port device. Before using this method, you need to call [getPortList](arkts-basicservices-serialmanager-getportlist-f.md) to obtain the serial port list and obtain a valid port ID from the list. If the call is successful, the app obtains the permission to access the specified serial port device and can perform operations such as opening, reading data, and writing data. If the call fails, an error code is returned, and the app cannot access the serial port device.
+
+**Use scenarios**  
+- This method is used by system apps when silent authorization is required while user confirmation is not  
+needed. Silent authorization enables system apps to directly obtain the permission to access serial port devices through system APIs without requiring user interaction. This is applicable to scenarios such as communication between internal components of the system and automatic connection between the background server and the serial port device. The system checks whether silent authorization is allowed based on **ohos.permission.MANAGE_USB_CONFIG** and grants the permission without requiring user confirmation.  
+- Unlike requestSerialRight,serialManager.requestSerialRight triggers a dialog box to request user authorization, which is applicable when explicit user authorization is required. addSerialRight does not trigger a dialog box but directly adds the permission for the app to access the device, which is applicable to automatic management of system apps. After the application exits, the system automatically removes the access permission on the serial port device. After the application is restarted, the application needs to request the permission again.
 
 **Since:** 19
 
@@ -26,8 +31,8 @@ Adds the permission to an application for accessing the serial port device. seri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | number | Yes | ID of the token that requires the access permission. |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| tokenId | number | Yes | App access token ID, which identifies the app that requires the permission to access the serial port device. It can be obtained using [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md). |
+| portId | number | Yes | Port number of the serial port device, which uniquely identifies the serial port device. A valid port number can be obtained using [serialManager.getPortList](arkts-basicservices-serialmanager-getportlist-f.md). Ensure that the port number exists. Otherwise, error code 31400003 will be returned. |
 
 **Error codes:**
 

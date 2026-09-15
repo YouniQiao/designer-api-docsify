@@ -149,11 +149,9 @@ Permanently deletes images or videos in batches by URI. The deleted images or vi
 
 > **NOTE:** 
 > 
-> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be
-> permanently deleted. The deleted assets are not stored in the recycle bin.
+> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be permanently deleted. The deleted assets are not stored in the recycle bin.
 > 
-> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this
-> operation.
+> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this operation.
 
 **Since:** 24
 
@@ -215,8 +213,7 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 > 
 > - If the assets are only in the cloud, they are moved directly to the trash.
 > 
-> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local
-> device, and the cloud copies are moved in the trash.
+> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local device, and the cloud copies are moved in the trash.
 
 **Since:** 22
 
@@ -414,8 +411,7 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 > 
 > - If the assets are only in the cloud, no changes are made.
 > 
-> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and
-> the local copies are moved in the trash.
+> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and the local copies are moved in the trash.
 
 **Since:** 22
 

@@ -16,16 +16,11 @@ Obtains the network handle used by the system by default, including the network 
 
 > **NOTE:** 
 > 
-> - Default network used by the system. The network must have the
-> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
+> - Default network used by the system. The network must have the [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
 > 
-> - The return value of this interface is determined by the system and is irrelevant to whether the application
-> specifies a network.
+> - The return value of this interface is determined by the system and is irrelevant to whether the application specifies a network.
 > 
-> - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)
-> Wi-Fi
-> Cellular. In special cases,
-> the actual return result prevails.
+> - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)Wi-Fi Cellular. In special cases,the actual return result prevails.
 > 
 > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available,
 > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more
@@ -89,16 +84,11 @@ Obtains the network handle used by the system by default, including the network 
 
 > **NOTE:** 
 > 
-> - Default network used by the system. The network must have the
-> [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
+> - Default network used by the system. The network must have the [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network.
 > 
-> - The return value of this interface is determined by the system and is irrelevant to whether the application
-> specifies a network.
+> - The return value of this interface is determined by the system and is irrelevant to whether the application specifies a network.
 > 
-> - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)
-> Wi-Fi
-> Cellular. In special cases,
-> the actual returned result prevails.
+> - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch)Wi-Fi Cellular. In special cases,the actual returned result prevails.
 > 
 > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available,
 > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more

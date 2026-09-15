@@ -6,18 +6,13 @@ CommonOptions定义日期时间选择器的通用选项。
 > 
 > - Date构造函数参数顺序为：年、月索引（0-11）、日、时、分、秒。注意：年份参数需大于99或小于0以避免1900年代映射。
 > 
-> - Date的使用请参考[TimePickerOptions](../arkts-components/arkts-arkui-timepickeroptions-i.md)，需要注意的是，当需要设置1-99的年份日期时，
-> 不可使用new Date(1, 0, 1)写法，因为JavaScript的new Date(year, month, day)构造函数对1-99的年份有特殊处理，会自动加上1900，
-> 即变为1901年，因此此时推荐使用new Date('0001-01-01')写法。
+> - Date的使用请参考[TimePickerOptions](../arkts-components/arkts-arkui-timepickeroptions-i.md)，需要注意的是，当需要设置1-99的年份日期时，不可使用new Date(1, 0, 1)写法，因为JavaScript的new Date(year, month, day)构造函数对1-99的年份有特殊处理，会自动加上1900，即变为1901年，因此此时推荐使用new Date('0001-01-01')写法。
 > 
-> - DatePickerComponent的文本字号根据显示的总列数变化，当列数大于等于6列时，字号为14vp，其他情况下为16vp，当组件宽度过窄时，可能出现文本
-> 显示截断的情况。
+> - DatePickerComponent的文本字号根据显示的总列数变化，当列数大于等于6列时，字号为14vp，其他情况下为16vp，当组件宽度过窄时，可能出现文本显示截断的情况。
 > 
 > - 参数缺省或者设置为undefined时，均保持默认值。
 > 
-> - 在[DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，
-> 在[TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。系统会根据配置的displayMode和对应的
-> Options类型，自动过滤Date对象的相应部分并应用约束。
+> - 在[DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，在[TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。系统会根据配置的displayMode和对应的Options类型，自动过滤Date对象的相应部分并应用约束。
 > **说明：** 
 > 
 > - onChange在用户选择日期或时间时触发，用于响应用户的选择操作。
@@ -77,8 +72,7 @@ enableHapticFeedback?: boolean
 > **说明：** 
 > 
 > 1. 设置为true后，其生效情况取决于系统的硬件是否支持。
-> 2. 启用触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置
-> requestPermissions字段以开启振动权限，配置如下：
+> 2. 启用触控反馈时，需要在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段以开启振动权限，配置如下：
 > 
 > "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 

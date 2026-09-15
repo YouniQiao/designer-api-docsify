@@ -126,7 +126,7 @@ static unregisterPlugin(): void
 
 Unregisters a callback from the SA.
 
-This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
+This API unregisters a callback and releases resources when an application exits.
 
 > **NOTE:** 
 > 

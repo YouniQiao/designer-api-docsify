@@ -6,7 +6,8 @@
 
 而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
 
-转换关系如下：  
+转换关系如下：
+
 | RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight |  
 | ---- | ----------------------------------- |  
 | 100 | 0 |

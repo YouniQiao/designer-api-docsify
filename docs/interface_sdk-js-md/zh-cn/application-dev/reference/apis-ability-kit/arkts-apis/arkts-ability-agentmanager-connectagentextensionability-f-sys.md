@@ -17,12 +17,7 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 
 > **说明：** 
 > 
-> - 当目标Agent的AgentCard为
-> [LOW_CODE](../../../reference/apis-ability-kit/js-apis-app-agent-agentConstant-sys.md#agentconstantagentcardtype)
-> 类型时，AgentExtensionAbility的
-> [onConnect](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md#onconnect)只在此类Agent连接
-> 成功时回调；后续连接的此类Agent，只回调
-> [onAgentInvoked](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility-sys.md#onagentinvoked)。
+> - 当目标Agent的AgentCard为[LOW_CODE](../../../reference/apis-ability-kit/js-apis-app-agent-agentConstant-sys.md#agentconstantagentcardtype)类型时，AgentExtensionAbility的[onConnect](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md#onconnect)只在此类Agent连接成功时回调；后续连接的此类Agent，只回调[onAgentInvoked](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility-sys.md#onagentinvoked)。
 > 
 > - 同一个AgentExtensionAbility中，最多只能同时运行100个LOW_CODE类型的Agent，否则会报35600003错误码。
 > 

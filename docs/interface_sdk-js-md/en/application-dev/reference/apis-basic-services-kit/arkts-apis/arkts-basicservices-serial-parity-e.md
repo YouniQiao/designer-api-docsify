@@ -1,6 +1,6 @@
 # Parity
 
-Parity bits in serial port communication.
+Enumerates the number of parity bits.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,7 @@ Parity bits in serial port communication.
 NONE = 'none'
 ```
 
-No parity bit.
+No parity.
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ Odd parity.
 MARK = 'mark'
 ```
 
-Mark parity. The parity bit is always 1.
+Mark parity. The parity bit is always **1**.
 
 **Since:** 26.0.0
 
@@ -68,7 +68,7 @@ Mark parity. The parity bit is always 1.
 SPACE = 'space'
 ```
 
-Space parity. The parity bit is always 0.
+Space parity. The parity bit is always **0**.
 
 **Since:** 26.0.0
 

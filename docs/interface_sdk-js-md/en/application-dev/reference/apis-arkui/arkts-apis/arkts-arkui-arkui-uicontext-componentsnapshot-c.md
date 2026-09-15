@@ -6,12 +6,9 @@ Provides APIs for obtaining component snapshots, including snapshots of componen
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
-> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
+> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.
 > 
-> - Transformation properties such as scaling, translation, and rotation only apply to the child components of the
-> target component. Applying these transformation properties directly to the target component itself has no effect;
-> the snapshot will still display the component as it appears before any transformations are applied.
+> - Transformation properties such as scaling, translation, and rotation only apply to the child components of the target component. Applying these transformation properties directly to the target component itself has no effect;the snapshot will still display the component as it appears before any transformations are applied.
 
 **Since:** 12
 
@@ -37,13 +34,9 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 > **NOTE:** 
 > 
-> - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in
-> the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
-> scenarios.
+> - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive scenarios.
 > 
-> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) or Web component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
-> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) or Web component that is loading online images, its loading may be still in progress when this API is called. In this case, the output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 12
 
@@ -84,13 +77,9 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 > **NOTE:** 
 > 
-> - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in
-> the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
-> scenarios.
+> - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive scenarios.
 > 
-> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) or Web component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
-> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-image-multimedia-image.md) or Web component that is loading online images, its loading may be still in progress when this API is called. In this case, the output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 12
 

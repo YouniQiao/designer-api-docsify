@@ -1,6 +1,6 @@
 # SerialConfigs
 
-Serial port communication configuration.
+Defines the communication parameters of the serial port.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ import { serial } from '@kit.BasicServicesKit';
 baudRate?: number
 ```
 
-Baud rate. The value must be an integer. Value constraint: standard baud rates. <br>Unit: bit/s <br>Default value: 115200
+Baud rate. The value must be a positive integer. Whether non-standard baud rates are supported depends on the hardware. Unit: bit/s. The default value is **115200**.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Baud rate. The value must be an integer. Value constraint: standard baud rates. 
 dataBits?: DataBits
 ```
 
-Data bits. <br>Default value: EIGHT
+Data bits. The default value is **EIGHT**, indicating 8 data bits for standard communication. Values **FIVE**, **SIX**, and **SEVEN** are used for old devices or special protocols.
 
 **Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
 
@@ -54,7 +54,7 @@ Data bits. <br>Default value: EIGHT
 parity?: Parity
 ```
 
-Parity bit. <br>Default value: NONE
+Parity bit. The default value is **NONE**, indicating no parity check. **EVEN** and **ODD** are used in scenarios that require high data accuracy. **MARK** and **SPACE** are used for special communication protocols.
 
 **Type:** [Parity](arkts-basicservices-serial-parity-e.md)
 
@@ -72,7 +72,7 @@ Parity bit. <br>Default value: NONE
 rtscts?: boolean
 ```
 
-Whether to enable hardware-based automatic flow control. <br>Default value: false.
+Whether to enable hardware-based automatic flow control via RTS/CTS. Hardware-based flow control via RTS/CTS is an automatic data flow control mechanism implemented through hardware signals. The RTS and CTS signal lines work together to prevent buffer overflow. If this flow control is enabled, the system automatically controls RTS and CTS signals to manage mobile data. The value **true** indicates this feature is enabled, and **false** indicates otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -90,9 +90,7 @@ Whether to enable hardware-based automatic flow control. <br>Default value: fals
 stopBits?: StopBits
 ```
 
-Stop bits.
-
-Default value: ONE
+Stop bits. The default value is **ONE**. One stop bit is used for standard communication. Two stop bits are used to enhance signal stability during low-speed communication or communication with old devices.
 
 **Type:** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 
@@ -110,7 +108,7 @@ Default value: ONE
 xany?: boolean
 ```
 
-Whether to enable XANY to control the flow. <br>Default value: false
+Whether to enable XANY (Any Character Resume) to control the flow. XANY is an extended mode in the software flow control protocol and takes effect only when XON or XOFF is enabled. When XANY is enabled, any character can be used as the signal to resume transmission, not just the XON character. If software flow control (XON/XOFF) is not enabled, the XANY setting is invalid. The value **true** indicates this feature is enabled, and **false** indicates otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -128,7 +126,7 @@ Whether to enable XANY to control the flow. <br>Default value: false
 xoff?: boolean
 ```
 
-Whether to enable XOFF to control the reception of flows. <br>Default value: false
+Whether to enable XOFF (Xmitter Off) to control the sending of flows. XOFF indicates transmitter off. XOFF is a control character (with the ASCII value of 19) in the software flow control protocol. When the receive buffer is about to overflow, XOFF is sent to instruct the sender to stop sending data. The value **true** indicates this feature is enabled, and **false** indicates otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -146,7 +144,7 @@ Whether to enable XOFF to control the reception of flows. <br>Default value: fal
 xon?: boolean
 ```
 
-Whether to enable XON to control the sending of flows. <br>Default value: false
+Whether to enable XON (Xmitter On) to control the sending of flows. XON indicates transmitter on. XON is a control character (with the ASCII value of 17) in the software flow control protocol. When there is space in the receive buffer, XON is sent to instruct the sender to resume data transmission. The value **true** indicates this feature is enabled, and **false** indicates otherwise. The default value is **false**.
 
 **Type:** boolean
 

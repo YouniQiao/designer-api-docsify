@@ -12,7 +12,12 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getAttribute(portId: number): Readonly<SerialAttribute>
 ```
 
-Obtains the configuration parameters of a specified serial port.
+Obtains the configuration parameters of a specified serial port. You need to call [open](arkts-basicservices-serialmanager-open-f.md) to open the serial port to obtain the configuration. Generally, this API is called to check the current communication parameter configuration and debug serial port communication issues after the device is initialized.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.  
+- You have called requestSerialRight to request the access permission.  
+- You have called open to open the serial port.
 
 **Since:** 19
 
@@ -22,13 +27,13 @@ Obtains the configuration parameters of a specified serial port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Readonly&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Configuration parameters of the serial port. |
+| Readonly&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Serial port configuration parameters, including the baud rate, data bit, parity bit, and stop bit. |
 
 **Error codes:**
 

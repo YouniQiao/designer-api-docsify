@@ -13,14 +13,13 @@ vibrator模块的核心能力围绕"启动振动"和"停止振动"两条主线�
 2. 调用[vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)
 启动振动，需同时指定振动效果（VibrateEffect）和振动属性（VibrateAttribute）。振动属性中的usage参数决定了振动的场景类型，不同场景类型受系统振动开关管控规则不同。停止振动流程：
 
-- 停止指定时长振动或预置效果振动：调用  
-[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（API version 9），传入对应的VibratorStopMode。  
+- 停止指定时长振动或预置效果振动：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（API version 9），传入对应的VibratorStopMode。  
 - 停止自定义振动（VibrateFromFile或VibrateFromPattern）：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（API version  
 10+，无参数版本）停止所有模式振动。  
-- 停止所有模式振动：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（无参数版本）或  
-[vibrator.stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md)（同步版本）。  
+- 停止所有模式振动：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（无参数版本）或[vibrator.stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md)（同步版本）。  
 - 停止指定设备的马达振动：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（API version 19+，传入  
-VibratorInfoParam）。多马达设备场景：从API version 19开始，支持多设备多马达场景。可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)查询马达信息，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange)监听马达上下线事件，以便动态选择合适的马达触发振动。振动效果类型对比：  
+VibratorInfoParam）。多马达设备场景：从API version 19开始，支持多设备多马达场景。可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)查询马达信息，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange)监听马达上下线事件，以便动态选择合适的马达触发振动。振动效果类型对比：
+
 | 振动效果类型 | 适用场景 | 个性化程度 | 推荐优先级 |  
 | --- | --- | --- | --- |  
 | VibratePreset | 交互反馈类的短振场景（点击、长按、滑动、拖拽等） | 低，使用系统预置效果 | 推荐，与系统整体振感反馈体验风格一致 |

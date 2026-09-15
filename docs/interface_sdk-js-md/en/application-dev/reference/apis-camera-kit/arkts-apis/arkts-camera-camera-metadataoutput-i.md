@@ -75,11 +75,9 @@ Locks a metadata object (such as a cat or dog face) for tracking.
 
 > **NOTE:** 
 > 
-> - This function tracks the object pointed to by **point**. If such object does not exist, this function does
-> not take effect.
+> - This function tracks the object pointed to by **point**. If such object does not exist, this function does not take effect.
 > 
-> - Locking for tracking is automatically canceled when the tracked object has left the viewfinder range for more
-> than three seconds or the object is unlocked.
+> - Locking for tracking is automatically canceled when the tracked object has left the viewfinder range for more than three seconds or the object is unlocked.
 
 **Since:** 26.0.0
 

@@ -20,7 +20,8 @@
 - 7表示"Right-bottom"，镜像水平翻转后再顺时针旋转90°。  
 - 8表示"Left-bottom"，顺时针旋转270°。
 
-若读到未定义值，会返回 `Unknown Value x`，其中 `x` 表示该标签的原始取值。 |  
+若读到未定义值，会返回 `Unknown Value x`，其中 `x` 表示该标签的原始取值。 |
+
 | RESOLUTION_UNIT | 'TiffResolutionUnit' | XResolution（水平分辨率）和YResolution（垂直分辨率）的单位，取值为英寸（Inch）或厘米（Centimeter）。 |  
 | COPYRIGHT | 'TiffCopyright' | 图像的版权信息。 |  
 | DATE_TIME | 'TiffDateTime' | 与图像关联的日期和时间（通常为最后修改时间）。 |
@@ -39,7 +40,8 @@
 - 1表示无压缩。  
 - 5表示LZW（基于字典的无损压缩算法）。  
 - 7表示JPEG基线。  
-- 8表示Deflate（基于LZ77+Huffman的无损压缩算法） |  
+- 8表示Deflate（基于LZ77+Huffman的无损压缩算法） |
+
 | SOFTWARE | 'TiffSoftware' | 用于生成图像的软件名称和版本。 |  
 | PRIMARY_CHROMATICITIES | 'TiffPrimaryChromaticities' | 图像中RGB三原色的色度坐标。 |  
 | ARTIST | 'TiffArtist' | 创建图像的用户名称。 |

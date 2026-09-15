@@ -24,8 +24,7 @@ getTarget(): RenderTarget
 > 
 > - 若未更改过渲染目标，将返回默认值[PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md)。
 > 
-> - 若调用此接口前，已经调用过[SetTarget](#settarget)，请确保
-> [SetTarget](#settarget)的Promise对象已成功解析，否则获取到的数值可能不准确。
+> - 若调用此接口前，已经调用过[SetTarget](#settarget)，请确保[SetTarget](#settarget)的Promise对象已成功解析，否则获取到的数值可能不准确。
 
 **起始版本：** 22
 
@@ -77,18 +76,13 @@ setTarget(target: RenderTarget): Promise<void>
 > 
 > - 该音频渲染器的device type为[SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md)。
 > 
-> - 调用[Start](arkts-audio-audio-audiorenderer-i.md#start)且audio
-> scene不为[AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md)时，将返回错误码6800301。
+> - 调用[Start](arkts-audio-audio-audiorenderer-i.md#start)且audio scene不为[AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md)时，将返回错误码6800301。
 > 
-> - 调用
-> [getAudioTime](arkts-audio-audio-audiorenderer-i.md#getaudiotime)或
-> [getAudioTimeSync](arkts-audio-audio-audiorenderer-i.md#getaudiotimesync)时，将返回错误码6800301。
+> - 调用[getAudioTime](arkts-audio-audio-audiorenderer-i.md#getaudiotime)或[getAudioTimeSync](arkts-audio-audio-audiorenderer-i.md#getaudiotimesync)时，将返回错误码6800301。
 > 
-> - 调用[getAudioTimestampInfo](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfo)或
-> [getAudioTimestampInfoSync](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfosync)时，将返回错误码6800301。
+> - 调用[getAudioTimestampInfo](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfo)或[getAudioTimestampInfoSync](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfosync)时，将返回错误码6800301。
 > 
-> - 调用[setDefaultOutputDevice](arkts-audio-audio-audiorenderer-i.md#setdefaultoutputdevice)时，将返回错
-> 误码6800301。
+> - 调用[setDefaultOutputDevice](arkts-audio-audio-audiorenderer-i.md#setdefaultoutputdevice)时，将返回错误码6800301。
 
 **起始版本：** 22
 

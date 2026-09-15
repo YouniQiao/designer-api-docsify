@@ -16,12 +16,9 @@ Sets a screen watermark policy, which takes effect for all users.
 
 > **NOTE:** 
 > 
-> 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image
-> with transparency to ensure that the device screen content remains visible.
+> 1. The screen watermark policy tiles the configured image across the entire screen. It is advised to use an image with transparency to ensure that the device screen content remains visible.
 > 
-> 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image
-> size is larger than the screen, the image will be compressed. This implementation differs from the repeated
-> tiling approach used for application-level watermarks.
+> 2. If the watermark image size is smaller than the screen, the image will be stretched. If the watermark image size is larger than the screen, the image will be compressed. This implementation differs from the repeated tiling approach used for application-level watermarks.
 
 **Since:** 26.0.0
 

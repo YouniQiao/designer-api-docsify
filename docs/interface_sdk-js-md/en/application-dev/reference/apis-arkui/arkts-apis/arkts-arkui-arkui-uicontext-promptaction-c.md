@@ -362,12 +362,9 @@ Opens a menu with the specified content. This API uses a promise to return the r
 > 
 > - If an invalid **target** is provided, the menu will not be displayed.
 > 
-> - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and
-> [closeMenu](#closemenu) rely to identify the target menu.
+> - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and [closeMenu](#closemenu) rely to identify the target menu.
 > 
-> - If your **wrapBuilder** includes other components (such as Popup or
-> Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)
-> constructor must include four parameters, and the **options** parameter must be
+> - If your **wrapBuilder** includes other components (such as Popup or Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 > 
 > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has
@@ -417,12 +414,9 @@ Creates and displays a popup with the specified content. This API uses a promise
 > 
 > - If an invalid **target** is provided, the popup will not be displayed.
 > 
-> - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and
-> [closePopup](#closepopup) rely to identify the target popup.
+> - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and [closePopup](#closepopup) rely to identify the target popup.
 > 
-> - If your **wrapBuilder** includes other components (such as Popup or
-> Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)
-> constructor must include four parameters, and the **options** parameter must be
+> - If your **wrapBuilder** includes other components (such as Popup or Chip), the [ComponentContent](arkts-arkui-componentcontent-c.md)constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
@@ -774,9 +768,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
 > **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.
 > 
-> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not
-> support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by
-> setting a boolean value.
+> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value.
 
 **Since:** 18
 

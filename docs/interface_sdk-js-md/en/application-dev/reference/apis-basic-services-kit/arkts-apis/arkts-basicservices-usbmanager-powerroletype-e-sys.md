@@ -14,7 +14,7 @@ Enumerates power role types.
 NONE = 0
 ```
 
-No function.
+None.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ No function.
 SOURCE = 1
 ```
 
-External power supply
+Power supply for external devices.
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ External power supply
 SINK = 2
 ```
 
-Internal power supply
+External power supply.
 
 **Since:** 9
 

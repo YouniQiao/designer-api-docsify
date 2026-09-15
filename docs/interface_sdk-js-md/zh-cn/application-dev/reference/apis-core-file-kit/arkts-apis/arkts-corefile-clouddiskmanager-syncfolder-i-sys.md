@@ -62,6 +62,24 @@ displayNameResId?: number
 
 **系统接口：** 此接口为系统接口。
 
+## isSupportPlaceHolder
+
+```TypeScript
+isSupportPlaceHolder?: boolean
+```
+
+同步根是否支持占位符。true：表示同步根支持占位符。 默认值：false，表示同步根不支持占位符。
+
+**类型：** boolean
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**系统接口：** 此接口为系统接口。
+
 ## path
 
 ```TypeScript

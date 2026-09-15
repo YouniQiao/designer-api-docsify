@@ -376,8 +376,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence,
-     *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+**替代接口：** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 

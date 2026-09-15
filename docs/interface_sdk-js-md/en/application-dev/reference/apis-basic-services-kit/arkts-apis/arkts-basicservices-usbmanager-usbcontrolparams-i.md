@@ -1,6 +1,6 @@
 # USBControlParams
 
-Represents control transfer parameters.
+Control transfer parameters.
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ Buffer for writing or reading data.
 index: number
 ```
 
-Index of the request parameter.
+Index value corresponding to the request parameter **value**, which is used to specify the target interface or endpoint of the control request.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Index of the request parameter.
 reqType: USBControlRequestType
 ```
 
-Control request type.
+Request control type.
 
 **Type:** [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md)
 
@@ -76,7 +76,7 @@ Control request type.
 request: number
 ```
 
-Request type.
+Request type, which indicates a specific USB control request command.
 
 **Type:** number
 
@@ -112,7 +112,7 @@ Request target type.
 value: number
 ```
 
-Request parameter.
+Request parameter, which is used to transfer the parameters required by the control request to the USB device.
 
 **Type:** number
 

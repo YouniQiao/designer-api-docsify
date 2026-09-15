@@ -6,8 +6,7 @@ PdfData is applicable to scenarios such as saving web page content offline and g
 
 > **NOTE:** 
 > 
-> - When a PDF file is generated on a web page, a data stream is returned, which is encapsulated by the **PdfData**
-> class.
+> - When a PDF file is generated on a web page, a data stream is returned, which is encapsulated by the **PdfData**class.
 
 **Since:** 14
 

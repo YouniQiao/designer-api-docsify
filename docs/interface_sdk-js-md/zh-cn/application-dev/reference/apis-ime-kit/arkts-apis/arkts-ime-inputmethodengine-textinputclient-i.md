@@ -1,6 +1,6 @@
 # TextInputClient
 
-下列API示例中都需使用[on('inputStart')](arkts-ime-inputmethodengine-inputmethodengine-i.md#oninputstart)回调获取到TextInputClient实例，再通过此实例调用对应方法。<br> <br>   
+下列API示例中都需使用[on('inputStart')](arkts-ime-inputmethodengine-inputmethodengine-i.md#oninputstart)回调获取到TextInputClient实例，再通过此实例调用对应方法。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -25,7 +25,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 ```
 
-删除光标后固定长度的文本。使用callback异步回调。<br> <br>使用场景：实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。<br> <br>使用后效果：成功时返回true，编辑框中光标后指定长度的文本被删除。<br> <br>   
+删除光标后固定长度的文本。使用callback异步回调。<br> <br>使用场景：实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。<br> <br>使用后效果：成功时返回true，编辑框中光标后指定长度的文本被删除。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -85,7 +85,7 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
 deleteBackward(length: number): Promise<boolean>
 ```
 
-删除光标后固定长度的文本。使用promise异步回调。<br> <br>   
+删除光标后固定长度的文本。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -150,7 +150,7 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
 deleteForward(length: number, callback: AsyncCallback<boolean>): void
 ```
 
-删除光标前固定长度的文本。使用callback异步回调。<br> <br>使用场景：实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。<br> <br> 使用后效果：成功时返回true，编辑框中光标前指定长度的文本被删除。<br> <br>   
+删除光标前固定长度的文本。使用callback异步回调。<br> <br>使用场景：实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。<br> <br> 使用后效果：成功时返回true，编辑框中光标前指定长度的文本被删除。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -210,7 +210,7 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 deleteForward(length: number): Promise<boolean>
 ```
 
-删除光标前固定长度的文本。使用promise异步回调。<br> <br>   
+删除光标前固定长度的文本。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -275,7 +275,7 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 getBackward(length: number, callback: AsyncCallback<string>): void
 ```
 
-获取光标后固定长度的文本。使用callback异步回调。<br> <br>   
+获取光标后固定长度的文本。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -327,7 +327,7 @@ textInputClient.getBackward(length).then((text: string) => {
 getBackward(length: number): Promise<string>
 ```
 
-获取光标后固定长度的文本。使用promise异步回调。<br> <br>   
+获取光标后固定长度的文本。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -384,7 +384,7 @@ textInputClient.getBackward(length).then((text: string) => {
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
 
-获取编辑框属性值。使用callback异步回调。<br> <br>使用场景：根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。<br> <br>使用后效果：返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。<br> <br>   
+获取编辑框属性值。使用callback异步回调。<br> <br>使用场景：根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。<br> <br>使用后效果：返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -437,7 +437,7 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 getEditorAttribute(): Promise<EditorAttribute>
 ```
 
-获取编辑框属性值。使用promise异步回调。<br> <br>   
+获取编辑框属性值。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -490,7 +490,7 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 getForward(length: number, callback: AsyncCallback<string>): void
 ```
 
-获取光标前固定长度的文本。使用callback异步回调。<br> <br>使用场景：分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。<br> <br>使用后效果：成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。<br> <br>   
+获取光标前固定长度的文本。使用callback异步回调。<br> <br>使用场景：分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。<br> <br>使用后效果：成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -542,7 +542,7 @@ textInputClient.getForward(length).then((text: string) => {
 getForward(length: number): Promise<string>
 ```
 
-获取光标前固定长度的文本。使用promise异步回调。<br> <br>   
+获取光标前固定长度的文本。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -599,7 +599,7 @@ textInputClient.getForward(length).then((text: string) => {
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-插入文本。使用callback异步回调。<br> <br>使用场景：插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。<br> <br>使用后效果：成功时返回true，文本已插入到编辑框光标位置。<br> <br>   
+插入文本。使用callback异步回调。<br> <br>使用场景：插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。<br> <br>使用后效果：成功时返回true，文本已插入到编辑框光标位置。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -657,7 +657,7 @@ textInputClient.insertText('test').then((result: boolean) => {
 insertText(text: string): Promise<boolean>
 ```
 
-插入文本。使用promise异步回调。<br> <br>   
+插入文本。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -720,7 +720,7 @@ textInputClient.insertText('test').then((result: boolean) => {
 sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 ```
 
-发送功能键。使用callback异步回调。<br> <br>   
+发送功能键。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -780,7 +780,7 @@ textInputClient.sendKeyFunction(action).then((result: boolean) => {
 sendKeyFunction(action: number): Promise<boolean>
 ```
 
-发送功能键。使用promise异步回调。<br> <br>   
+发送功能键。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。

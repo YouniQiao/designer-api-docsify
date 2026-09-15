@@ -174,7 +174,7 @@ Padding at the end of the title bar.
 
 Only supported in one of the following scenarios:
 
-1. Using a non-custom menu, that is, the  
+1. Using a non-custom menu, that is, the
 [menu value](arkts-arkui-navigation-comp-attribute.md#menus) is Array&lt;NavigationMenuItem&gt;
 2. Using a non-custom menu without a menu in the upper right corner, that is,
 the [title value](arkts-arkui-navigation-comp-attribute.md#title) type is **ResourceStr** or **NavigationCommonTitle**

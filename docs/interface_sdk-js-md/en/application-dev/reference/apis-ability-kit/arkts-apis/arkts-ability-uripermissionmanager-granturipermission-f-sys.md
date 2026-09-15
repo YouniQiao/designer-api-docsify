@@ -21,13 +21,9 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 > **NOTE:** 
 > 
-> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
-> of another application. If the application does not have this permission, it can grant only its own URI
-> permissions.
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs of another application. If the application does not have this permission, it can grant only its own URI permissions.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
-> system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -168,13 +164,9 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 > **NOTE:** 
 > 
-> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
-> of another application. If the application does not have this permission, it can grant only its own URI
-> permissions.
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs of another application. If the application does not have this permission, it can grant only its own URI permissions.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
-> system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -226,16 +218,11 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 > **NOTE:** 
 > 
-> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
-> of another application. If the application does not have this permission, it can grant only its own URI
-> permissions.
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs of another application. If the application does not have this permission, it can grant only its own URI permissions.
 > 
-> - This API can be used to grant URI access permission to a cloned application. You need to specify the
-> application bundle name and index of the cloned application.
+> - This API can be used to grant URI access permission to a cloned application. You need to specify the application bundle name and index of the cloned application.
 > 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the
-> system cannot guarantee their functions.
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API. For URIs combined by the application, the system cannot guarantee their functions.
 
 **Since:** 14
 

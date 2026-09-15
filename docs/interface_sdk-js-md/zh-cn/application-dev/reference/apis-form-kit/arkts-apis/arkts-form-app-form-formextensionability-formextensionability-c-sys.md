@@ -18,7 +18,7 @@ import { FormExtensionAbility } from '@kit.FormKit';
 onAcquireFormData?(formId: string): Record<string, Object>
 ```
 
-Called when the system acquire the form data.
+卡片提供方接收卡片请求自定义数据的通知接口。
 
 **起始版本：** 10
 
@@ -32,14 +32,14 @@ Called when the system acquire the form data.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| formId | string | 是 | Indicates the ID of the form. |
+| formId | string | 是 | 卡片标识。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| object | Returns the wantParams object.<br>**适用版本：** 10 |
-| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**适用版本：** 11 |
+| object | 卡片的自定义数据，由开发者自行决定传入的键值对。<br>**适用版本：** 10 |
+| Record&lt;string, Object&gt; | 卡片的自定义数据，由开发者自行决定传入的键值对。<br>**适用版本：** 11 |
 
 **示例**
 
@@ -64,7 +64,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onShareForm?(formId: string): Record<string, Object>
 ```
 
-Called when the system shares the form.
+卡片提供方接收卡片分享的通知接口。
 
 **起始版本：** 9
 
@@ -78,14 +78,14 @@ Called when the system shares the form.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| formId | string | 是 | Indicates the ID of the form. |
+| formId | string | 是 | 卡片标识。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| object | Returns the wantParams object.<br>**适用版本：** 9 - 10 |
-| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**适用版本：** 11 |
+| object | 卡片要分享的数据，由开发者自行决定传入的键值对。<br>**适用版本：** 9 - 10 |
+| Record&lt;string, Object&gt; | 卡片要分享的数据，由开发者自行决定传入的键值对。<br>**适用版本：** 11 |
 
 **示例**
 

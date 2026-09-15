@@ -1,6 +1,7 @@
 # PathDashStyle
 
-路径效果的绘制样式枚举。  
+路径效果的绘制样式枚举。
+
 | 名称 | 值 | 说明 |  
 | ------ | - | ------------------ |  
 | [TRANSLATE](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 0 | 不会随着路径旋转，只会平移。 |

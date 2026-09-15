@@ -17,12 +17,10 @@ Obtains an anonymous key certificate in offline mode. This API uses a promise to
 > **NOTE:** 
 > 
 > 
-> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
-> to update the offline certificate. Offline anonymous key attestation is recommended.
+> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API to update the offline certificate. Offline anonymous key attestation is recommended.
 > 
 > 
-> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to
-> verify the certificate expiration.
+> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to verify the certificate expiration.
 
 **Since:** 26.0.0
 

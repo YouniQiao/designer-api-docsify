@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function setDeviceFunctions(funcs: FunctionType): Promise<void>
 ```
 
-Sets the current USB function list in Device mode. This API uses a promise to return the result.
+Sets the current USB function list in Device mode. This API uses a promise to return the result. After this API is successfully called, the USB functions of the device will be switched to the specified function list. Some USB functions may not be supported by the current device. Before setting the USB functions, you are advised to query the list of functions supported by the device. When developer mode is disabled, the operation may fail if no device is connected. In this case, an exception is thrown. Function switching triggers re-enumeration of the USB devices, and the connected host may need to re-identify the device. Multiple functions can be set through bitwise operations. However, some functions may be mutually exclusive or have different priorities. For details about the restrictions, see the device specifications. The function setting may fail due to device incompatibility, insufficient permissions, or system restrictions. For details, see the error code description.
 
 **Since:** 12
 
@@ -26,13 +26,13 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
+| funcs | [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md) | Yes | Numeric mask of the function list. Multiple functions can be combined through bitwise operations. Some functions may not be supported by the current device. For details, see [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. If the API is called successfully, no value is returned. If the call fails, an exception is thrown. |
 
 **Error codes:**
 

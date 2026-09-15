@@ -8,9 +8,7 @@ When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanc
 > 
 > - The APIs of this module can be used only in the stage model.
 > 
-> - Exceptions may occur if some APIs are called by this module. For details, see
-> [Appendix](../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#appendix)
-> .
+> - Exceptions may occur if some APIs are called by this module. For details, see [Appendix](../../../reference/apis-performance-analysis-kit/js-apis-hiviewdfx-FaultLogExtensionAbility.md#appendix).
 
 **Since:** 21
 

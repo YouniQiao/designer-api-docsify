@@ -271,7 +271,7 @@
 - [@ohos.brightness(Screen Brightness)](arkts-basicservices-brightness.md)<!--DelEnd-->
   <!--Del-->
   - [setValue(system api)](arkts-basicservices-brightness-setvalue-f-sys.md)<!--DelEnd-->
-- [@ohos.busManager.serial](arkts-basicservices-busmanager-serial.md)
+- [@ohos.busManager.serial(Serial Port Management)](arkts-basicservices-busmanager-serial.md)
   <!--Del-->
   - [addPortAuthorization(system api)](arkts-basicservices-serial-addportauthorization-f-sys.md)<!--DelEnd-->
   - [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md)
@@ -1027,7 +1027,7 @@
   - [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
   - [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
   - [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
-- [@ohos.usbManager](arkts-basicservices-usbmanager.md)
+- [@ohos.usbManager(USB Manager)](arkts-basicservices-usbmanager.md)
   <!--Del-->
   - [addAccessoryRight(system api)](arkts-basicservices-usbmanager-addaccessoryright-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1116,7 +1116,7 @@
   - [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
   - [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
   - [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
-- [@ohos.usbManager.serial](arkts-basicservices-usbmanager-serial.md)
+- [@ohos.usbManager.serial(Serial Port Management)](arkts-basicservices-usbmanager-serial.md)
   <!--Del-->
   - [addSerialRight(system api)](arkts-basicservices-serialmanager-addserialright-f-sys.md)<!--DelEnd-->
   - [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md)

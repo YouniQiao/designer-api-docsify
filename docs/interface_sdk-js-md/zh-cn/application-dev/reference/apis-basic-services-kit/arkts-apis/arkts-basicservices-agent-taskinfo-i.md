@@ -53,8 +53,7 @@ readonly data?: string | Array<FormItem>
 
 任务值。
 
-- 通过[request.agent.show](arkts-basicservices-agent-show-f.md)、  
-[request.agent.touch](arkts-basicservices-agent-touch-f.md)进行查询。
+- 通过[request.agent.show](arkts-basicservices-agent-show-f.md)、[request.agent.touch](arkts-basicservices-agent-touch-f.md)进行查询。
 
 **类型：** string &#124; Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
@@ -289,8 +288,7 @@ readonly url?: string
 
 任务的url。
 
-- 通过[request.agent.show](arkts-basicservices-agent-show-f.md)、  
-[request.agent.touch](arkts-basicservices-agent-touch-f.md)进行查询。
+- 通过[request.agent.show](arkts-basicservices-agent-show-f.md)、[request.agent.touch](arkts-basicservices-agent-touch-f.md)进行查询。
 
 **类型：** string
 

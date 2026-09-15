@@ -168,8 +168,7 @@ static configCookie(url: string, value: string): Promise<void>
 > 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
-> - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
+> - cookie每30s周期性保存到磁盘中，也可以使用接口[saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -220,8 +219,7 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 > 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
-> - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
+> - cookie每30s周期性保存到磁盘中，也可以使用接口[saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -270,8 +268,7 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 > 
 > - configCookie中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
-> - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
+> - cookie每30s周期性保存到磁盘中，也可以使用接口[saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -317,8 +314,7 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 > 
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
-> - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
+> - cookie每30s周期性保存到磁盘中，也可以使用接口[saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -364,8 +360,7 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 > 
 > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。
 > 
-> - cookie每30s周期性保存到磁盘中，也可以使用接口
-> [saveCookieAsync](#savecookieasync-1)进行强制落盘。
+> - cookie每30s周期性保存到磁盘中，也可以使用接口[saveCookieAsync](#savecookieasync-1)进行强制落盘。
 > 
 > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以"; "分隔的cookie属性列表（例如"key=value; Max-Age=100"）。
 > 
@@ -828,8 +823,7 @@ static saveCookieAsync(): Promise<void>
 
 > **说明：** 
 > 
-> - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session
-> cookie写入磁盘。
+> - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session cookie写入磁盘。
 
 **起始版本：** 9
 
@@ -859,8 +853,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session
-> cookie写入磁盘。
+> - saveCookieAsync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieAsync，也不会将session cookie写入磁盘。
 
 **起始版本：** 9
 
@@ -890,8 +883,7 @@ static saveCookieSync(): void
 
 > **说明：** 
 > 
-> - saveCookieSync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieSync，也不会将session
-> cookie写入磁盘。
+> - saveCookieSync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieSync，也不会将session cookie写入磁盘。
 > 
 > - saveCookieSync将阻塞调用者直到操作完成，期间可能会执行I/O操作。
 
@@ -942,8 +934,7 @@ static setLazyInitializeWebEngine(lazy: boolean): void
 > 
 > - 该接口是全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。
 > 
-> - 该接口仅适用于调用后会初始化CookieManager的接口，比如本类WebCookieManager的其他接口。调用本接口设置为true后，再调用适用的接口，会在初始化CookieManager时跳过初始化
-> ArkWeb内核，后续需自行初始化ArkWeb内核。
+> - 该接口仅适用于调用后会初始化CookieManager的接口，比如本类WebCookieManager的其他接口。调用本接口设置为true后，再调用适用的接口，会在初始化CookieManager时跳过初始化ArkWeb内核，后续需自行初始化ArkWeb内核。
 
 **起始版本：** 22
 

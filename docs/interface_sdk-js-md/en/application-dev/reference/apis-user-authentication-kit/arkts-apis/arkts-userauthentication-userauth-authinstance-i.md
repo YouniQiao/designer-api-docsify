@@ -138,8 +138,7 @@ Subscribes to the user authentication events of the specified type.
 
 - **name**: indicates the authentication event type. The value **result** means that the callback returns the  
 authentication result, and the value **tip** means that the callback returns the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md).  
-- **callback**: callback used to return the authentication result or tip information. For details, see  
-[AuthEvent](arkts-userauthentication-userauth-authevent-i.md).
+- **callback**: callback used to return the authentication result or tip information. For details, see [AuthEvent](arkts-userauthentication-userauth-authevent-i.md).
 
 > **NOTE:** 
 > 

@@ -16,7 +16,7 @@ Sets the management policy for extensions from external sources. After the polic
 
 - DEFAULT:
 
-Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources** in **Settings**   
+Default policy with no restrictions applied. Users can enable or disable **Run extensions from external sources** in **Settings**  
 > **Privacy & security**
 > **Advanced option**.
 - DISALLOW:

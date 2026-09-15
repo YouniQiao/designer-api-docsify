@@ -186,11 +186,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 > **说明：** 
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
-> 保持默认值false。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，保持默认值false。
 > 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -333,11 +331,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 > **说明：** 
 > 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，
-> 保持默认值false。
+> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，如果同时设置为true，则primary字段不生效，保持默认值false。
 > 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
+> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形ROUNDED_RECTANGLE，呈现效果依然是胶囊型按钮Capsule。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -384,10 +380,8 @@ dateTimeOptions?: DateTimeOptions
 
 > 默认值：
 > 
-> - hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；
-> 12小时制默认为"numeric"，即没有前导0。可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
-> - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
-> 可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
+> - hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；12小时制默认为"numeric"，即没有前导0。可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
+> - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
 
 **类型：** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
 
@@ -778,14 +772,8 @@ systemMaterial?: SystemUiMaterial
 
 > **说明：** 
 > 
-> - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。
-> 不同的材质具有不同的效果。关于ImmersiveMaterial的详细说明，请参考[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)类型定义。
-> - 该接口影响背景色backgroundColor、背景模糊
-> backgroundBlurStyle
-> 、背景模糊效果[backgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)、背景效果
-> backgroundEffect、边框颜色
-> borderColor、边框宽度borderWidth、阴影
-> shadow，当设置系统材质时，上述接口不生效。
+> - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。不同的材质具有不同的效果。关于ImmersiveMaterial的详细说明，请参考[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)类型定义。
+> - 该接口影响背景色backgroundColor、背景模糊backgroundBlurStyle、背景模糊效果[backgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)、背景效果backgroundEffect、边框颜色borderColor、边框宽度borderWidth、阴影shadow，当设置系统材质时，上述接口不生效。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 

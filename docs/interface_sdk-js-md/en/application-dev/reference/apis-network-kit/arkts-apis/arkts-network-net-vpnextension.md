@@ -9,8 +9,7 @@ This module implements virtual private network (VPN) management, such as startin
 
 > - [@ohos.contact (Contacts)](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact.md)
 
-> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-location-geolocation.md),
-> [@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager.md)
+> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-location-geolocation.md),[@ohos.geoLocationManager (Geolocation Manager)](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager.md)
 
 > - [@ohos.multimedia.audio (Audio Management)](../../apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md)
 

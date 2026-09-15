@@ -874,8 +874,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 
 Opens an atomic service in an independent window. This API uses a promise to return the result. It can be called only on the main thread. After an atomic service is started, the following situations may occur:
 
-- Normally, the atomic service can call  
-[terminateSelfWithResult](#terminateselfwithresult) to terminate itself. The result is returned to the caller.  
+- Normally, the atomic service can call [terminateSelfWithResult](#terminateselfwithresult) to terminate itself. The result is returned to the caller.  
 - If an exception occurs, for example, the atomic service is killed, an exception result, in which **resultCode**  
 is **-1**, is returned to the caller.  
 - If the atomic service is started multiple times by different applications calling this API, when the atomic  
@@ -1628,20 +1627,11 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 
 > **NOTE:** 
 > 
-> - Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility
-> has been loaded (using the
-> loadContent API in the
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> - Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has been loaded (using the loadContent API in the [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 > 
-> - After this API is called, a new resource manager object is created. If a resource manager was previously cached
-> , it should be updated accordingly.
+> - After this API is called, a new resource manager object is created. If a resource manager was previously cached , it should be updated accordingly.
 > 
-> - The priority of the dark/light color mode is as follows: UIAbility dark/light color mode
-> Application dark/
-> light color mode (set via
-> [ApplicationContext.setColorMode](arkts-ability-applicationcontext-c.md#setcolormode))
-> System
-> dark/light color mode.
+> - The priority of the dark/light color mode is as follows: UIAbility dark/light color mode Application dark/light color mode (set via [ApplicationContext.setColorMode](arkts-ability-applicationcontext-c.md#setcolormode))System dark/light color mode.
 
 **Since:** 18
 
@@ -2525,22 +2515,15 @@ Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for c
 > 
 > - In cross-device scenarios, the caller and the callee must belong to the same application.
 > 
-> - In same-device scenarios, the caller and the callee must belong to different applications, and the caller must
-> have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission (available only for system applications).
+> - In same-device scenarios, the caller and the callee must belong to different applications, and the caller must have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission (available only for system applications).
 > 
-> - In addition, if the application needs to call this API in the background, the
-> ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - In addition, if the application needs to call this API in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications).For details about the startup rules for the components in the stage model, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 > 
 > **NOTE:** 
 > 
-> - For API version 10 and earlier, the permission ohos.permission.ABILITY_BACKGROUND_COMMUNICATION is required.
-> This permission is available only to system applications.
+> - For API version 10 and earlier, the permission ohos.permission.ABILITY_BACKGROUND_COMMUNICATION is required.This permission is available only to system applications.
 > 
-> - For API version 11 and later, only the permission ohos.permission.DISTRIBUTED_DATASYNC is required. This
-> permission is verified by the DSoftBus subsystem only when the link between applications is established. No
-> verification is conducted during the application launch phase.
+> - For API version 11 and later, only the permission ohos.permission.DISTRIBUTED_DATASYNC is required. This permission is verified by the DSoftBus subsystem only when the link between applications is established. No verification is conducted during the application launch phase.
 
 **Since:** 9
 
@@ -2755,8 +2738,7 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
 
-- Normally, you can call  
-[terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
+- Normally, you can call [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
 - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
 1**, is returned to the caller.  
 - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
@@ -2928,8 +2910,7 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
 
-- Normally, you can call  
-[terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
+- Normally, you can call [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
 - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
 1**, is returned to the caller.  
 - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
@@ -3000,8 +2981,7 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
 
-- Normally, you can call  
-[terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
+- Normally, you can call [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
 - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
 1**, is returned to the caller.  
 - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
@@ -3298,12 +3278,9 @@ Starts the application's own UIAbility within the current process. This API can 
 
 > **NOTE:** 
 > 
-> - The target UIAbility can only be cold-started. If an instance of the target UIAbility has already been
-> launched, the startup fails.
+> - The target UIAbility can only be cold-started. If an instance of the target UIAbility has already been launched, the startup fails.
 > 
-> - The UIAbility instance started through this API runs in the same process as the caller. Other process-related
-> policies for the target UIAbility (such as those specified via the **isolationProcess** or **isolationMode**
-> fields in the [module.json5](../../../quick-start/module-configuration-file.md) file) does not take effect.
+> - The UIAbility instance started through this API runs in the same process as the caller. Other process-related policies for the target UIAbility (such as those specified via the **isolationProcess** or **isolationMode**fields in the [module.json5](../../../quick-start/module-configuration-file.md) file) does not take effect.
 
 **Since:** 22
 

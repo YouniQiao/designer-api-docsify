@@ -77,13 +77,9 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [off('enableChange')](#offenablechange)
-> is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
-> lifecycle callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [off('enableChange')](#offenablechange)is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -114,13 +110,9 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [off('styleChange')](#offstylechange)
-> is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**
-> lifecycle callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [off('styleChange')](#offstylechange)is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear**lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 8
 

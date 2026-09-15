@@ -787,7 +787,7 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise<void>
 ```
 
-请求指定的焦点应用程序启动对应类型的UIExtensionAbility指定用户。焦点应用由**want.parameters**中的**bundleName**指定。如果**bundleName**   
+请求指定的焦点应用程序启动对应类型的UIExtensionAbility指定用户。焦点应用由**want.parameters**中的**bundleName**指定。如果**bundleName**  
 > **说明：** 
 > 
 > 

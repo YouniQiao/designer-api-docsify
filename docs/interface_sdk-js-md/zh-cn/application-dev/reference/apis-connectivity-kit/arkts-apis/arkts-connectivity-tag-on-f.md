@@ -58,10 +58,8 @@ function on(
 
 - 设备会进入读卡器模式，同时关闭卡模拟。  
 - 通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息，通过interval设置卡在位检测间隔。  
-- 需要与取消读卡器模式的  
-[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)。  
-- 与注册读卡器模式的  
-tag.on互斥使用。
+- 需要与取消读卡器模式的[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)。  
+- 与注册读卡器模式的tag.on互斥使用。
 
 **起始版本：** 23
 

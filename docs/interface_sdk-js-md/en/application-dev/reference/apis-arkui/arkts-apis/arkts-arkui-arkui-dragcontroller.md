@@ -4,9 +4,7 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 
 > **NOTE:** 
 > 
-> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
-> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
+> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 

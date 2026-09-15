@@ -155,5 +155,5 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100011](../errorcode-uiextension.md#100011-未注册同步回调) | 没有注册响应该请求的回调。 |
-| [100012](../errorcode-uiextension.md#100012-数据发送失败) | 传输数据失败。 |
+| [100011](../errorcode-uiextension.md#100011-未注册同步回调) | No callback has been registered to respond to this request. |
+| [100012](../errorcode-uiextension.md#100012-数据发送失败) | Transferring data failed. |

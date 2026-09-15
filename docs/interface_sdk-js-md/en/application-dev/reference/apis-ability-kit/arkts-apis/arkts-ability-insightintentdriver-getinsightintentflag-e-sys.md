@@ -4,11 +4,9 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 
 > **NOTE:** 
 > 
-> - For intents developed using a configuration file, the full and brief information queried through the preceding
-> APIs are the same.
+> - For intents developed using a configuration file, the full and brief information queried through the preceding APIs are the same.
 > 
-> - For intents developed using a decorator, the full and brief information queried through the preceding APIs are
-> different, as described below.
+> - For intents developed using a decorator, the full and brief information queried through the preceding APIs are different, as described below.
 > 
 > Table 1 Differences between full intent information and brief intent information
 > 

@@ -10,8 +10,7 @@
 
 > - [@ohos.contact (联系人)](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact.md)
 
-> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-location-geolocation.md)、
-> [@ohos.geoLocationManager (位置服务)](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager.md)
+> - [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-location-geolocation.md)、[@ohos.geoLocationManager (位置服务)](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager.md)
 
 > - [@ohos.multimedia.audio(音频管理)](../../apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md)
 

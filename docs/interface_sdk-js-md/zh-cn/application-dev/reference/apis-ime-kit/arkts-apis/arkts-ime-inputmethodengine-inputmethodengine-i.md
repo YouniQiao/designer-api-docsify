@@ -29,7 +29,7 @@ off(
     ): void
 ```
 
-取消订阅输入法绑定成功事件。<br> <br>   
+取消订阅输入法绑定成功事件。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从API version 8开始支持，API version 23开始废弃。
@@ -55,7 +55,7 @@ off(
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>   
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从API version 8开始支持，API version 23开始废弃。
@@ -81,7 +81,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 ```
 
-取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>   
+取消订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从API version 8开始支持，API version 23开始废弃。
@@ -110,7 +110,7 @@ on(
     ): void
 ```
 
-订阅输入法绑定成功事件。使用callback异步回调。<br> <br>   
+订阅输入法绑定成功事件。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从API version 8开始支持，API version 23开始废弃。
@@ -136,7 +136,7 @@ on(
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>   
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从API version 8开始支持，API version 23开始废弃。
@@ -162,7 +162,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 ```
 
-订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>   
+订阅输入法软键盘显示或隐藏事件。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从API version 8开始支持，API version 23开始废弃。

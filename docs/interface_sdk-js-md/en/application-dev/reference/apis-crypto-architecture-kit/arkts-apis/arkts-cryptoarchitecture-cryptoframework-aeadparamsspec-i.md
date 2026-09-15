@@ -9,9 +9,7 @@ Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher
 > When **AeadParamsSpec** is used for encryption in AES-CCM mode:
 > - If the tag length is specified during encryption, the same length must be passed during decryption.
 > 
-> - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and
-> [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can
-> be called only once.
+> - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) can be called for encryption or decryption, and each method can be called only once.
 
 **Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 

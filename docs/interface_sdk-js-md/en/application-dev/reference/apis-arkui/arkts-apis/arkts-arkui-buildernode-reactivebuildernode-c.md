@@ -294,25 +294,15 @@ Before calling this API, you need to convert the value of **event** to the corre
 
 > **NOTE:** 
 > 
-> - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform
-> such coordinate conversion.
+> - The passed coordinates must be converted to the unit of px. The sample code below demonstrates how to perform such coordinate conversion.
 > 
-> - When processing a mouse left-click event, the system converts the event to a touch event. When forwarding the
-> event, do not bind the touch event and mouse event at the outer layer at the same time, as this may cause
-> coordinate offsets. This is because [TouchType](arkts-arkui-touchtype-e.md) does not change during the event conversion. For
-> details about the specifications, see onTouch.
+> - When processing a mouse left-click event, the system converts the event to a touch event. When forwarding the event, do not bind the touch event and mouse event at the outer layer at the same time, as this may cause coordinate offsets. This is because [TouchType](arkts-arkui-touchtype-e.md) does not change during the event conversion. For details about the specifications, see onTouch.
 > 
-> - When an [axis event](../arkts-components/arkts-arkui-axisevent-i.md) event is injected, it cannot trigger
-> rotation gestures, because the axis event does not include rotation
-> axis information.
+> - When an [axis event](../arkts-components/arkts-arkui-axisevent-i.md) event is injected, it cannot trigger rotation gestures, because the axis event does not include rotation axis information.
 > 
-> - The forwarded event is posted to the target component and its child components for processing, and triggers the
-> corresponding gesture. You can use input parameters to control whether the gestures of the current component and
-> the target component are in a competitive relationship.
+> - The forwarded event is posted to the target component and its child components for processing, and triggers the corresponding gesture. You can use input parameters to control whether the gestures of the current component and the target component are in a competitive relationship.
 > 
-> - If the event is converted to a developer-constructed event, mandatory fields must be assigned values, for
-> example, the **touches** field of a touch event and the **scrollStep** field of an axis event. Ensure the
-> completeness of the event. For example, [TouchType](arkts-arkui-touchtype-e.md) of a touch event must contain both the
+> - If the event is converted to a developer-constructed event, mandatory fields must be assigned values, for example, the **touches** field of a touch event and the **scrollStep** field of an axis event. Ensure the completeness of the event. For example, [TouchType](arkts-arkui-touchtype-e.md) of a touch event must contain both the
 > **DOWN** and **UP** fields to prevent program exceptions or unexpected crashes.
 > 
 > - The same event can be forwarded multiple times.

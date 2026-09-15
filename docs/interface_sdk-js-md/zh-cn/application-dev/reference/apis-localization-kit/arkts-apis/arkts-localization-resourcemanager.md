@@ -13,8 +13,7 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 **使用说明**：
 
 - FA模型需要先导入模块，再调用[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md)接口获取资源管理对象。  
-- 从API version 9开始，Stage模型无需导入模块，支持通过Context获取资源管理resourceManager对象。Context的更多介绍请参考  
-[应用上下文Context](../../../application-models/application-context-stage.md)。
+- 从API version 9开始，Stage模型无需导入模块，支持通过Context获取资源管理resourceManager对象。Context的更多介绍请参考[应用上下文Context](../../../application-models/application-context-stage.md)。
 
  ```ts
  import { UIAbility } from '@kit.AbilityKit';

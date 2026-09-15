@@ -24,8 +24,7 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 > 
 > 2. 设备重启后，本接口设置的GWP-ASan参数将会失效。
 > 
-> 3. 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。可以通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)或
-> [@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md)开启异步线程，以避免应用卡顿。
+> 3. 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。可以通过[@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)或[@ohos.worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md)开启异步线程，以避免应用卡顿。
 
 **起始版本：** 20
 

@@ -4,20 +4,15 @@ PermissionRequest is an object used by the **Web** component to grant or deny pe
 
 > **NOTE:** 
 > 
-> - The [grant](#grant)() and [deny](#deny)() methods are mutually
-> exclusive. For the same PermissionRequest object, only one of them can be called.
+> - The [grant](#grant)() and [deny](#deny)() methods are mutually exclusive. For the same PermissionRequest object, only one of them can be called.
 > 
-> - After grant() or deny() is called, the PermissionRequest object has completed its response and cannot be called
-> again.
+> - After grant() or deny() is called, the PermissionRequest object has completed its response and cannot be called again.
 > 
-> - A PermissionRequest object that has not been responded to by calling any method will cause the permission request
-> to time out.
+> - A PermissionRequest object that has not been responded to by calling any method will cause the permission request to time out.
 > 
-> - The resources parameter of the grant() method typically uses the return value of the getAccessibleResource()
-> method.
+> - The resources parameter of the grant() method typically uses the return value of the getAccessibleResource()method.
 > 
-> - Typical usage flow: Call getAccessibleResource() to obtain the list of requested resources, select the resources
-> to be authorized, and then call grant() for authorization.
+> - Typical usage flow: Call getAccessibleResource() to obtain the list of requested resources, select the resources to be authorized, and then call grant() for authorization.
 
 **Since:** 9
 

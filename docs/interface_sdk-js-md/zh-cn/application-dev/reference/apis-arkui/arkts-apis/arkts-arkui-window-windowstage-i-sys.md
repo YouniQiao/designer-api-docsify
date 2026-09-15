@@ -62,7 +62,7 @@ export default class EntryAbility extends UIAbility {
 setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。  
 > **说明：** 
 > 
 > 调用该接口前，建议先通过loadContent方法或者setUIContent
@@ -136,7 +136,7 @@ export default class EntryAbility extends UIAbility {
 setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。   
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。  
 > **说明：** 
 > 
 > 调用该接口前，建议先通过loadContent方法或者setUIContent

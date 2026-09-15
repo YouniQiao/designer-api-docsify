@@ -21,7 +21,8 @@
 | Placement.LeftTop、Placement.RightTop | 箭头默认显示在垂直方向，且距离菜单上侧距离为箭头安全距离。 |
 | Placement.LeftBottom、Placement.RightBottom | 箭头默认显示在垂直方向，且距离菜单下侧距离为箭头安全距离。 |
 
-**表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**  
+**表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**
+
 | 接口 | 菜单默认位置 |  
 |------|-------------|  
 | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | [Placement.BottomLeft](../arkts-apis/arkts-arkui-placement-e.md) |

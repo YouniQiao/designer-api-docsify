@@ -10,8 +10,7 @@
 > 
 > - 本模块接口仅可在Stage模型下使用。
 
-> - 以下API需先使用UIContext中的[getContextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方法获取
-> ContextMenuController实例，再通过此实例调用对应方法。
+> - 以下API需先使用UIContext中的[getContextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方法获取ContextMenuController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 

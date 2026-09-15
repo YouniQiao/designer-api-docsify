@@ -1083,20 +1083,9 @@ Registers a listener for system environment changes. This API uses an asynchrono
 
 > **NOTE:** 
 > 
-> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to
-> listen for system environment changes. Unlike
-> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this
-> API offers greater flexibility. It can be used both within application components and pages. However, the
-> environment variables that can be subscribed to are different from those of
-> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this
-> API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the
-> description of each environment variable in
-> [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).
+> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to listen for system environment changes. Unlike [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this API offers greater flexibility. It can be used both within application components and pages. However, the environment variables that can be subscribed to are different from those of [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the description of each environment variable in [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).
 > 
-> - There are certain restrictions when this API is triggered. For example, if you set the application language by
-> calling [setLanguage](#setlanguage), the system does not trigger the
-> callback for the current API even if the system language changes. For details, see
-> [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+> - There are certain restrictions when this API is triggered. For example, if you set the application language by calling [setLanguage](#setlanguage), the system does not trigger the callback for the current API even if the system language changes. For details, see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -1580,16 +1569,11 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 
 > **NOTE:** 
 > 
-> - This API only sets the application to be ready for quick startup after caching. It does not mean that quick
-> startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup.
+> - This API only sets the application to be ready for quick startup after caching. It does not mean that quick startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup.
 > 
-> - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are
-> advised to call this API within the **onCreate()** callback of the
-> [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
+> - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are advised to call this API within the **onCreate()** callback of the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 > 
-> - If this API is called multiple times within the same process, the outcome of the final call is used. In cases
-> where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and
-> configured with the same value in each AbilityStage.
+> - If this API is called multiple times within the same process, the outcome of the final call is used. In cases where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and configured with the same value in each AbilityStage.
 
 **Since:** 12
 

@@ -9,8 +9,7 @@ Defines the type and style parameters of the chip.
 > **suffixSymbol** nor **suffixIcon** is provided with arguments, **allowClose** determines whether the deletion icon
 > is displayed.
 > 
-> 2. If **undefined** is assigned to **backgroundColor** or **activatedBackgroundColor**, the default background
-> color is used. If an invalid value is specified, the background color is transparent.
+> 2. If **undefined** is assigned to **backgroundColor** or **activatedBackgroundColor**, the default background color is used. If an invalid value is specified, the background color is transparent.
 > 
 > 3. Default font colors for **prefixSymbol** and **suffixSymbol**: **normalFontColor**:
 > **[&#36;r('sys.color.ohos_id_color_primary')]**; **activatedFontColor**:

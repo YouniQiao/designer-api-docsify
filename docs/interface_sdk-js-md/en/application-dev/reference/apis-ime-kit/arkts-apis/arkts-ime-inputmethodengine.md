@@ -1,6 +1,6 @@
 # @ohos.inputMethodEngine(Input Method Service)
 
-The **inputMethodEngine** module is oriented to input method applications (including system and third-party input method applications). With the APIs of this module, input method applications are able to create soft keyboard windows, insert or delete characters, select text, and listen for physical keyboard events. <br> <br>   
+The **inputMethodEngine** module is oriented to input method applications (including system and third-party input method applications). With the APIs of this module, input method applications are able to create soft keyboard windows, insert or delete characters, select text, and listen for physical keyboard events. <br> <br>  
 > **NOTE:** <br>
 > <br> &gt;The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
@@ -64,14 +64,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.<br> <br>  &#124; Name&#124; Value&#124; Description&#124;  &#124; -------- &#124; -- &#124; -------- &#124;  &#124; NONE &#124; 0 &#124; The first letter is not capitalized.&#124;  &#124; SENTENCES &#124; 1 &#124; The first letter of each sentence is capitalized.&#124;  &#124; WORDS &#124; 2 &#124; The first letter of each word is capitalized.&#124;  &#124; CHARACTERS &#124; 3 &#124; All letters are capitalized.&#124; |
+| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.<br> <br> |
 | [Direction](arkts-ime-inputmethodengine-direction-e.md) | Enumerates the directions of cursor movement of the input method. |
 | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Describes the type of the extended edit action on the text box. |
-| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | Enumerates the gradient modes of the input method.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE &#124; 0 &#124; The gradient mode is not used.&#124;  &#124; LINEAR_GRADIENT &#124; 1 &#124; Linear gradient.&#124; |
-| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Enumerates the immersive modes of the input method.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE_IMMERSIVE &#124; 0 &#124; The immersive mode is not used.&#124;  &#124; IMMERSIVE &#124; 1 &#124; The immersive mode is used. Its style is determined by the input method application.&#124;  &#124; LIGHT_IMMERSIVE &#124; 2 &#124; Immersive style in light mode.&#124;  &#124; DARK_IMMERSIVE &#124; 3 &#124; Immersive style in dark mode.&#124; |
-| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Enumerates the state types of the input method panel.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; FLG_FIXED &#124; 0 &#124; Fixed state type.&#124;  &#124; FLG_FLOATING &#124; 1 &#124; Floating state type.&#124;  &#124; FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; &#124; 2 &#124; Candidate state type.&#124; |
-| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | Enumerates the types of the input method panel.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; SOFT_KEYBOARD &#124; 0 &#124; Soft keyboard type.&#124;  &#124; STATUS_BAR &#124; 1 &#124; Status bar type.&#124; |
-| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | Enumerates the reasons for requesting keyboard input.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE &#124; 0 &#124; The keyboard request is triggered for no reason.&#124;  &#124; MOUSE &#124; 1 &#124; The keyboard request is triggered by a mouse operation.&#124;  &#124; TOUCH &#124; 2 &#124; The keyboard request is triggered by a touch operation.&#124;  &#124; OTHER &#124; 20 &#124; The keyboard request is triggered by other reasons.&#124; |
+| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | Enumerates the gradient modes of the input method.<br> <br> |
+| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Enumerates the immersive modes of the input method.<br> <br> |
+| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Enumerates the state types of the input method panel.<br> <br> |
+| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | Enumerates the types of the input method panel.<br> <br> |
+| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | Enumerates the reasons for requesting keyboard input.<br> <br> |
 | [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | Describes the security mode. |
 
 <!--Del-->
@@ -79,7 +79,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | Enumerates the fluid light modes of the input method.<br> <br>  &#124; Name &#124; Value&#124; Description &#124;  &#124; ------------ &#124; -- &#124; ------------------ &#124;  &#124; NONE &#124; 0 &#124; The fluid light mode is not used.&#124;  &#124; BACKGROUND_FLUID_LIGHT &#124; 1 &#124; When the background fluid light mode is enabled, the system panel turns transparent.The fluid light effect must be implemented by the host application of the edit box.&#124; |
+| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | Enumerates the fluid light modes of the input method.<br> <br> |
 <!--DelEnd-->
 
 ### Types

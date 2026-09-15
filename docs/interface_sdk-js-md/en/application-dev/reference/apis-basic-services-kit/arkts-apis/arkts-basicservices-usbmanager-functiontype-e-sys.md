@@ -28,7 +28,7 @@ No function.
 ACM = 1
 ```
 
-ACM function.
+Abstract control model (ACM) with serial port communication function, which is used to simulate serial port devices.
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ ACM function.
 ECM = 2
 ```
 
-ECM function.
+Ethernet control model (ECM) with Ethernet control function, which is used for network sharing.
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ ECM function.
 HDC = 4
 ```
 
-HDC function.
+HarmonyOS device connector (HDC).
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ HDC function.
 MTP = 8
 ```
 
-Media transmission.
+Media transfer protocol (MTP).
 
 **Since:** 9
 
@@ -84,7 +84,7 @@ Media transmission.
 PTP = 16
 ```
 
-Image transmission.
+Picture transfer protocol (PTP).
 
 **Since:** 9
 
@@ -98,7 +98,7 @@ Image transmission.
 RNDIS = 32
 ```
 
-Network sharing.
+Remote network driver interface specification (RNDIS), which is used for network sharing (not supported currently).
 
 **Since:** 9
 
@@ -112,7 +112,7 @@ Network sharing.
 MIDI = 64
 ```
 
-MIDI function.
+Musical instrument digital interface (MIDI), which is used for communication with MIDI devices (not supported currently).
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ MIDI function.
 AUDIO_SOURCE = 128
 ```
 
-Audio function.
+Audio source, which is used for audio data transfer (not supported currently).
 
 **Since:** 9
 
@@ -140,7 +140,7 @@ Audio function.
 NCM = 256
 ```
 
-NCM transmission.
+Network control model (NCM), which is used for high-speed network sharing (not supported currently).
 
 **Since:** 9
 

@@ -9,8 +9,7 @@ Provides APIs for listening for UI component behavior changes.
 > - In the following API examples, you must first use [getUIObserver()](arkts-arkui-arkui-uicontext-uicontext-c.md#getuiobserver) in
 > **UIContext** to obtain a **UIObserver** instance, and then call the APIs using the obtained instance.
 > 
-> - UIObserver can only listen for relevant information within the current process and does not support obtaining
-> information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
+> - UIObserver can only listen for relevant information within the current process and does not support obtaining information in cross-process scenarios<!--Del--> such as UIExtensionComponent<!-- > DelEnd-->.
 
 **Since:** 11
 
@@ -1175,7 +1174,7 @@ Listens for pan gesture onActionStart pre-execution events, executing the callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture onActionStart event. The registered callback is triggered before **onActionStart** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('beforePanEnd')
 
@@ -1198,7 +1197,7 @@ Listens for pan gesture onActionEnd pre-execution events, executing the callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture onActionEnd event. The registered callback is triggered before **onActionEnd** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('afterPanStart')
 
@@ -1221,7 +1220,7 @@ Listens for pan gesture onActionStart post-execution events, executing the callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture onActionStart event. The registered callback is triggered after **onActionStart** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('afterPanEnd')
 
@@ -1244,7 +1243,7 @@ Listens for pan gesture onActionEnd post-execution events, executing the callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch after the execution of the pan gesture onActionEnd event. The registered callback is triggered after **onActionEnd** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md), [GestureRecognizer](../arkts-components/arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('tabContentUpdate')
 

@@ -60,7 +60,7 @@ dlpFileAccess: DLPFileAccess
 permExpiryTime: number
 ```
 
-表示授权到期时间。取值范围大于等于0，超出此范围将被强转为非符号整数。单位：s。
+表示授权到期时间。取值范围大于等于0，超出此范围将被强转为无符号整数。单位：s。
 
 **类型：** number
 

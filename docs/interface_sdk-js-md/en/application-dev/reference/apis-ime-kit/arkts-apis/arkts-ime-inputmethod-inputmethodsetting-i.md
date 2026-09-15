@@ -211,7 +211,7 @@ try {
 getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>   
+Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
@@ -267,7 +267,7 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
 getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
-Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>   
+Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
@@ -308,7 +308,7 @@ See [getInputMethods](#getinputmethods)
 getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
-Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>   
+Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>

@@ -34,11 +34,11 @@ onClick?: Callback<ClickEvent>
 onLongPress?: Callback<GestureEvent>
 ```
 
-[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)为用户长按事件。
+[GestureEvent](arkts-arkui-gestureevent-i.md)为用户长按事件。
 
 长按完成时回调事件。
 
-**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 
 **起始版本：** 11
 

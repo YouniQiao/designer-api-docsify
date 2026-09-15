@@ -53,8 +53,7 @@ A constructor used to create an **AsyncRunner** instance. It constructs a global
 
 > **NOTE:** 
 > 
-> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when an asynchronous
-> queue with the same name is created.
+> - The bottom layer uses the singleton mode to ensure that the same instance is obtained when an asynchronous queue with the same name is created.
 > 
 > - The task execution concurrency and waiting capacity cannot be modified.
 

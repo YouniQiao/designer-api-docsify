@@ -133,15 +133,11 @@ Obtains the file descriptor bound to the LocalSocketServer listening port. This 
 
 > **NOTE:** 
 > 
-> - This method can be called only after the [listen](#listen) method is
-> successfully called.
+> - This method can be called only after the [listen](#listen) method is successfully called.
 > 
-> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
-> close is called).
+> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after close is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the
-> [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly
-> operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the [close](arkts-network-socket-tcpsocketserver-i.md#close) method to close the socket connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 

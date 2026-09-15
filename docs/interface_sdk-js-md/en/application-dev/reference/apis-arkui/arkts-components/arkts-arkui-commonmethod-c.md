@@ -887,10 +887,7 @@ Sets a property animation for the component.
 
 > **NOTE:** 
 > 
-> - When a single page contains a large number of components with animations, use
-> [renderGroup](#rendergroup) to minimize frame freezing and improve animation
-> performance. For best practices, see
-> [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
+> - When a single page contains a large number of components with animations, use [renderGroup](#rendergroup) to minimize frame freezing and improve animation performance. For best practices, see [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
 > 
 > 
 > - This API cannot be called within [attributeModifier](#attributemodifier).
@@ -2791,18 +2788,22 @@ constraintSize(value: ConstraintSizeOptions): T
 
 Sets the constraint size of the component, which is used to limit the size range during component layout. <br>Since API version 10, this API supports the calc calculation feature.
 
-**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height**  
+**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height**
+
 | Default Value | Result |  
 | ---------------------------------------- | ---------------------------------------- |  
 | \ | width=MAX(minWidth,MIN(maxWidth,width))<br>height=MAX(minHeight,MIN(maxHeight,height)) |
 | maxWidth, maxHeight| width=MAX(minWidth,width)<br>height=MAX(minHeight,height)  
 | minWidth, minHeight| width=MIN(maxWidth,width)<br>height=MIN(maxHeight,height) |  
 | width, height| If minWidth &lt; maxWidth, the layout logic of the component takes effect, and the value range of  
-**width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).<br>If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).|  
+**width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).<br>If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).|
+
 | width and maxWidth; height and maxHeight| width = minWidth<br>height = minHeight |  
 | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of  
-**width** cannot be greater than that of **maxWidth**.<br>The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.|  
-| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.<br>The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|  
+**width** cannot be greater than that of **maxWidth**.<br>The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.|
+
+| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.<br>The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|
+
 | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.|  
 | height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
 
@@ -3250,46 +3251,28 @@ Expands the safe area.
 
 > **NOTE:** 
 > 
-> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values
-> (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the
-> safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged
-> after safe area expansion.
+> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged after safe area expansion.
 > 
 > - The safe area does not restrict the layout or size of components inside, nor does it clip the components.
 > 
-> - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea**
-> attribute is set, but it can still trigger updates to the extension range of its child nodes that have
+> - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea**attribute is set, but it can still trigger updates to the extension range of its child nodes that have
 > **expandSafeArea** set.
 > 
-> - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])**
-> is used with empty arrays, the setting has no effect.
+> - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])**is used with empty arrays, the setting has no effect.
 > 
 > - Prerequisites for the **expandSafeArea** attribute to take effect:
-> 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the
-> component not avoiding the virtual keyboard.
-> 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the
-> safe area. For example, if the height of the status bar is 100, the absolute position of the component on the
-> screen must be 0 &lt;= y &lt;= 100 for the settings to take effect.
+> 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the component not avoiding the virtual keyboard.
+> 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the safe area. For example, if the height of the status bar is 100, the absolute position of the component on the screen must be 0 &lt;= y &lt;= 100 for the settings to take effect.
 > 
-> - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be
-> intercepted by the system. Built-in components like the status bar will be given priority to respond to these
-> events.
+> - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be intercepted by the system. Built-in components like the status bar will be given priority to respond to these events.
 > 
-> - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it,
-> you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable
-> ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may
-> become ineffective after scrolling.
+> - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it,you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may become ineffective after scrolling.
 > 
-> - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child
-> components. Therefore, all relevant components must be configured individually.
+> - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child components. Therefore, all relevant components must be configured individually.
 > 
-> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first,
-> followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other
-> rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if
-> their boundaries do not overlap with the non-safe area.
+> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first,followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if their boundaries do not overlap with the non-safe area.
 > 
-> - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the
-> safe area, you will need to manually adjust the component's coordinates.
+> - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the safe area, you will need to manually adjust the component's coordinates.
 
 **Since:** 10
 
@@ -3915,8 +3898,8 @@ Gesture to bind.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Type of the gesture to bind. |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md) | Yes | Type of the gesture to bind. |
+| mask | [GestureMask](arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
@@ -4312,20 +4295,13 @@ Ignores the safe area for component layout.
 
 > **NOTE:** 
 > 
-> - For a component that ignores layout safe area edges: If its width or height is set to
-> [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position
-> will change; otherwise, only its position will change.
+> - For a component that ignores layout safe area edges: If its width or height is set to [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position will change; otherwise, only its position will change.
 > 
-> - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all
-> detectable continuous safe areas.
+> - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all detectable continuous safe areas.
 > 
-> - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable
-> component itself and its parent components are not considered in the scrolling direction. Scrollable components
-> include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**.
+> - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable component itself and its parent components are not considered in the scrolling direction. Scrollable components include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**.
 > 
-> - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore
-> attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea**
-> takes effect on the basis of the former.
+> - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea**takes effect on the basis of the former.
 
 **Since:** 20
 
@@ -4994,21 +4970,15 @@ Applies a motion blur effect to the component being scaled or moved.
 
 > **NOTE:** 
 > 
-> - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,
-> or particle animations. Doing so may cause unexpected results.
+> - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,or particle animations. Doing so may cause unexpected results.
 > 
-> - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be
-> unexpected results during a cold start.
+> - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be unexpected results during a cold start.
 > 
-> - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter
-> must be set to **0** when the animation ends; otherwise, there may be unexpected results.
+> - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter must be set to **0** when the animation ends; otherwise, there may be unexpected results.
 > 
-> - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be
-> unexpected results. For example, if you frequently click the image in the example, the blur effect may not work
-> sometimes.
+> - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be unexpected results. For example, if you frequently click the image in the example, the blur effect may not work sometimes.
 > 
-> - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of
-> the animation scaling anchor point.
+> - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of the animation scaling anchor point.
 > 
 > - To avoid unexpected results, set the blur radius to a value less than 1.
 
@@ -5439,8 +5409,7 @@ Triggered when this component is mounted to the component tree. Due to the follo
 > 
 > - This callback is triggered before the component layout and rendering process.
 > 
-> - Modifying the component tree within the callback is prohibited, including initiating animations or altering the
-> component structure through conditional statements like **if-else**.
+> - Modifying the component tree within the callback is prohibited, including initiating animations or altering the component structure through conditional statements like **if-else**.
 
 **Since:** 12
 
@@ -6396,16 +6365,9 @@ Triggered when the component size changes due to layout updates.
 
 > **NOTE:** 
 > 
-> 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may
-> deviate slightly from the actual physical size.
+> 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may deviate slightly from the actual physical size.
 > 
-> 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state
-> variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically,
-> animations compare the layout state before the animation starts with the state after the animation closure is
-> executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the
-> changes made in this callback will be processed as part of the animation, along with the changes in the animation
-> closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or
-> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
+> 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically,animations compare the layout state before the animation starts with the state after the animation closure is executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the changes made in this callback will be processed as part of the animation, along with the changes in the animation closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
 > **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
@@ -6559,22 +6521,13 @@ Called when the visible area of the component changes. For details about the dev
 > 
 > - This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 > 
-> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor
-> nodes (up to the window boundary) and its own area.
+> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor nodes (up to the window boundary) and its own area.
 > 
-> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any
-> ancestor node, window-level occlusion, and component rotation. Examples include layouts using
-> [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and
-> [rotate](#rotate) transformations.
+> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any ancestor node, window-level occlusion, and component rotation. Examples include layouts using [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and [rotate](#rotate) transformations.
 > 
-> - It does not support visibility change calculations for nodes that are not in the component tree. For example,
-> preloaded nodes or custom nodes mounted using the
-> [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
+> - It does not support visibility change calculations for nodes that are not in the component tree. For example,preloaded nodes or custom nodes mounted using the [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - This API does not support the [scale](#scale) attribute. To enable
-> support for the [scale](#scale) attribute, use
-> [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange-1)
-> and set **measureFromViewport** to **true**.
+> - This API does not support the [scale](#scale) attribute. To enable support for the [scale](#scale) attribute, use [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange-1)and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -7071,8 +7024,8 @@ Gesture that can be recognized at once by the component and its child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
+| mask | [GestureMask](arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
@@ -7090,13 +7043,9 @@ Sets the pixel rounding policy for the current component in the specified direct
 
 > **NOTE:** 
 > 
-> - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5,
-> 0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to
-> disable pixel rounding for individual components.
+> - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5,0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to disable pixel rounding for individual components.
 > 
-> - This API can be called within
-> [attributeModifier](#attributemodifier)
-> since API version 12.
+> - This API can be called within [attributeModifier](#attributemodifier)since API version 12.
 
 In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right.
 
@@ -7195,9 +7144,8 @@ Sets the absolute positioning, which determines the position of a child componen
 
 **NOTE:** 
 - This API takes effect after the component's size measurement is complete.
-- When the parent container is Row,
-Column, or Flex, the child component with **position** set does not occupy any space.  
-- The Position type uses the upper left corner of the parent's content area as the  
+- When the parent container is Row,Column, or Flex, the child component with **position** set does not occupy any space.
+- The Position type uses the upper left corner of the parent's content area as the
 reference point. The Edges type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
 - This attribute is applicable to scenarios where the component's position in the parent container is fixed, for  
 example, where it is pinned to top or floating on the UI.  
@@ -7252,8 +7200,8 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
+| mask | [GestureMask](arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
@@ -8299,8 +8247,7 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 
 > **NOTE:** 
 > 
-> - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use
-> [nextFocus](#nextfocus).
+> - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use [nextFocus](#nextfocus).
 
 **Since:** 9
 
@@ -8864,7 +8811,7 @@ Sets the width of the component. By default, the width required to fully hold th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.<br>Unit: vp &gt; **NOTE:**  >  > - In the TextInput component, setting **width** to **auto** means that > the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.<br>Unit: vp &gt; **NOTE:**  >  > - In the TextInput component, setting **width** to **auto** means that the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto**means that the width adapts to the maximum width of index entries. |
 
 **Return value:**
 

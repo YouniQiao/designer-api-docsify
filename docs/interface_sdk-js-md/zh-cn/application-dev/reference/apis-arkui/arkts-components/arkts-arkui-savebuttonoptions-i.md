@@ -6,8 +6,7 @@
 > 
 > - 建议icon或text至少传入一个。
 > 
-> - 如果icon、text都不传入，SaveButton将使用默认样式创建，默认样式：SaveIconStyle默认样式为FULL_FILLED；
-> SaveDescription默认样式为DOWNLOAD；ButtonType默认样式为Capsule。
+> - 如果icon、text都不传入，SaveButton将使用默认样式创建，默认样式：SaveIconStyle默认样式为FULL_FILLED；SaveDescription默认样式为DOWNLOAD；ButtonType默认样式为Capsule。
 > 
 > - icon、text和buttonType不支持动态修改。
 

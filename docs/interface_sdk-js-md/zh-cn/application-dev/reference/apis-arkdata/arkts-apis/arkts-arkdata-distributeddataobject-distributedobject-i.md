@@ -1,6 +1,6 @@
 # DistributedObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。<br>   
+表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。<br>  
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，暂无替代接口。

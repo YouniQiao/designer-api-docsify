@@ -1,6 +1,6 @@
 # BaudRates
 
-Enumerates the baud rates.
+Enumerates the baud rates, in bit/s.
 
 **Since:** 19
 
@@ -12,7 +12,7 @@ Enumerates the baud rates.
 BAUDRATE_50 = 50
 ```
 
-The baud rate is 50 bit/s.
+The transmission baud rate is 50 bit/s.
 
 **Since:** 19
 
@@ -24,7 +24,7 @@ The baud rate is 50 bit/s.
 BAUDRATE_75 = 75
 ```
 
-The baud rate is 75 bit/s.
+The transmission baud rate is 75 bit/s.
 
 **Since:** 19
 
@@ -36,7 +36,7 @@ The baud rate is 75 bit/s.
 BAUDRATE_110 = 110
 ```
 
-The baud rate is 110 bit/s.
+The transmission baud rate is 110 bit/s.
 
 **Since:** 19
 
@@ -48,7 +48,7 @@ The baud rate is 110 bit/s.
 BAUDRATE_134 = 134
 ```
 
-The baud rate is 134 bit/s.
+The transmission baud rate is 134 bit/s.
 
 **Since:** 19
 
@@ -60,7 +60,7 @@ The baud rate is 134 bit/s.
 BAUDRATE_150 = 150
 ```
 
-The baud rate is 150 bit/s.
+The transmission baud rate is 150 bit/s.
 
 **Since:** 19
 
@@ -72,7 +72,7 @@ The baud rate is 150 bit/s.
 BAUDRATE_200 = 200
 ```
 
-The baud rate is 200 bit/s.
+The transmission baud rate is 200 bit/s.
 
 **Since:** 19
 
@@ -84,7 +84,7 @@ The baud rate is 200 bit/s.
 BAUDRATE_300 = 300
 ```
 
-The baud rate is 300 bit/s.
+The transmission baud rate is 300 bit/s.
 
 **Since:** 19
 
@@ -96,7 +96,7 @@ The baud rate is 300 bit/s.
 BAUDRATE_600 = 600
 ```
 
-The baud rate is 600 bit/s.
+The transmission baud rate is 600 bit/s.
 
 **Since:** 19
 
@@ -108,7 +108,7 @@ The baud rate is 600 bit/s.
 BAUDRATE_1200 = 1200
 ```
 
-The baud rate is 1200 bit/s.
+The transmission baud rate is 1200 bit/s.
 
 **Since:** 19
 
@@ -120,7 +120,7 @@ The baud rate is 1200 bit/s.
 BAUDRATE_1800 = 1800
 ```
 
-The baud rate is 1800 bit/s.
+The transmission baud rate is 1800 bit/s.
 
 **Since:** 19
 
@@ -132,7 +132,7 @@ The baud rate is 1800 bit/s.
 BAUDRATE_2400 = 2400
 ```
 
-The baud rate is 2400 bit/s.
+The transmission baud rate is 2400 bit/s.
 
 **Since:** 19
 
@@ -144,7 +144,7 @@ The baud rate is 2400 bit/s.
 BAUDRATE_4800 = 4800
 ```
 
-The baud rate is 4800 bit/s.
+The transmission baud rate is 4800 bit/s.
 
 **Since:** 19
 
@@ -156,7 +156,7 @@ The baud rate is 4800 bit/s.
 BAUDRATE_9600 = 9600
 ```
 
-The baud rate is 9600 bit/s.
+The transmission baud rate is 9600 bit/s.
 
 **Since:** 19
 
@@ -168,7 +168,7 @@ The baud rate is 9600 bit/s.
 BAUDRATE_19200 = 19200
 ```
 
-The baud rate is 19200 bit/s.
+The transmission baud rate is 19,200 bit/s.
 
 **Since:** 19
 
@@ -180,7 +180,7 @@ The baud rate is 19200 bit/s.
 BAUDRATE_38400 = 38400
 ```
 
-The baud rate is 38400 bit/s.
+The transmission baud rate is 38,400 bit/s.
 
 **Since:** 19
 
@@ -192,7 +192,7 @@ The baud rate is 38400 bit/s.
 BAUDRATE_57600 = 57600
 ```
 
-The baud rate is 57600 bit/s.
+The transmission baud rate is 57,600 bit/s.
 
 **Since:** 19
 
@@ -204,7 +204,7 @@ The baud rate is 57600 bit/s.
 BAUDRATE_115200 = 115200
 ```
 
-The baud rate is 115200 bit/s.
+The transmission baud rate is 115,200 bit/s.
 
 **Since:** 19
 
@@ -216,7 +216,7 @@ The baud rate is 115200 bit/s.
 BAUDRATE_230400 = 230400
 ```
 
-The baud rate is 230400 bit/s.
+The transmission baud rate is 230,400 bit/s.
 
 **Since:** 19
 
@@ -228,7 +228,7 @@ The baud rate is 230400 bit/s.
 BAUDRATE_460800 = 460800
 ```
 
-The baud rate is 460800 bit/s.
+The transmission baud rate is 460,800 bit/s.
 
 **Since:** 19
 
@@ -240,7 +240,7 @@ The baud rate is 460800 bit/s.
 BAUDRATE_500000 = 500000
 ```
 
-The baud rate is 500000 bit/s.
+The transmission baud rate is 500,000 bit/s.
 
 **Since:** 19
 
@@ -252,7 +252,7 @@ The baud rate is 500000 bit/s.
 BAUDRATE_576000 = 576000
 ```
 
-The baud rate is 576000 bit/s.
+The transmission baud rate is 576,000 bit/s.
 
 **Since:** 19
 
@@ -264,7 +264,7 @@ The baud rate is 576000 bit/s.
 BAUDRATE_921600 = 921600
 ```
 
-The baud rate is 921600 bit/s.
+The transmission baud rate is 921,600 bit/s.
 
 **Since:** 19
 
@@ -276,7 +276,7 @@ The baud rate is 921600 bit/s.
 BAUDRATE_1000000 = 1000000
 ```
 
-The baud rate is 1000000 bit/s.
+The transmission baud rate is 1,000,000 bit/s.
 
 **Since:** 19
 
@@ -288,7 +288,7 @@ The baud rate is 1000000 bit/s.
 BAUDRATE_1152000 = 1152000
 ```
 
-The baud rate is 1152000 bit/s.
+The transmission baud rate is 1,152,000 bit/s.
 
 **Since:** 19
 
@@ -300,7 +300,7 @@ The baud rate is 1152000 bit/s.
 BAUDRATE_1500000 = 1500000
 ```
 
-The baud rate is 1500000 bit/s.
+The transmission baud rate is 1,500,000 bit/s.
 
 **Since:** 19
 
@@ -312,7 +312,7 @@ The baud rate is 1500000 bit/s.
 BAUDRATE_2000000 = 2000000
 ```
 
-The baud rate is 2000000 bit/s.
+The transmission baud rate is 2,000,000 bit/s.
 
 **Since:** 19
 
@@ -324,7 +324,7 @@ The baud rate is 2000000 bit/s.
 BAUDRATE_2500000 = 2500000
 ```
 
-The baud rate is 2500000 bit/s.
+The transmission baud rate is 2,500,000 bit/s.
 
 **Since:** 19
 
@@ -336,7 +336,7 @@ The baud rate is 2500000 bit/s.
 BAUDRATE_3000000 = 3000000
 ```
 
-The baud rate is 3000000 bit/s.
+The transmission baud rate is 3,000,000 bit/s.
 
 **Since:** 19
 
@@ -348,7 +348,7 @@ The baud rate is 3000000 bit/s.
 BAUDRATE_3500000 = 3500000
 ```
 
-The baud rate is 3500000 bit/s.
+The transmission baud rate is 3,500,000 bit/s.
 
 **Since:** 19
 
@@ -360,7 +360,7 @@ The baud rate is 3500000 bit/s.
 BAUDRATE_4000000 = 4000000
 ```
 
-The baud rate is 4000000 bit/s.
+The transmission baud rate is 4,000,000 bit/s.
 
 **Since:** 19
 

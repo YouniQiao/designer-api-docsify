@@ -169,7 +169,7 @@ Connects the current point to a target position using a line.
 moveTo(x: number, y: number): void
 ```
 
-Moves a drawing path from the current position to a target position on the canvas.   
+Moves a drawing path from the current position to a target position on the canvas.  
 > **NOTE:** 
 > 
 > In versions earlier than API version 18, if the **moveTo** API is not called or invalid arguments

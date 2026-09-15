@@ -1,6 +1,7 @@
 # PanelFlag
 
-Enumerates the state types of the input method panel.<br> <br>  
+Enumerates the state types of the input method panel.<br> <br>
+
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) | 0 | Fixed state type.|

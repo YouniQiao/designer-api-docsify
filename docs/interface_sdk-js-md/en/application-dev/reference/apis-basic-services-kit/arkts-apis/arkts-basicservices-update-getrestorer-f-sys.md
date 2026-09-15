@@ -14,8 +14,7 @@ function getRestorer(): Restorer
 
 Obtains a **Restorer** object for restoring factory settings. After this API is called, the system returns the **Restorer** utility object. Three factory reset methods are provided:
 
-- **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode. For details, see  
-Upgrading Service Terms.  
+- **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode. For details, see Upgrading Service Terms.  
 - **forceFactoryReset**: Forcible factory reset. Both data in the user partition and file keys are cleared in this  
 mode. For details, see Upgrading Service Terms.  
 - **deepFactoryReset**: Deep factory reset. Data in the scope specified by **scope** is cleared in this mode.  
@@ -36,7 +35,7 @@ and **getDeepFactoryResetInfo**.
 - The **ohos.permission.FORCE_FACTORY_RESET** permission is required for calling **forceFactoryReset**.  
 - During the operation, the device automatically restarts. The app status needs to be saved.  
 - **deepFactoryReset** takes a long time (1 to 4 hours depending on the device storage capacity). Ensure that the  
-device has sufficient battery power (recommended battery level:   
+device has sufficient battery power (recommended battery level:  
 > 50%).
 - You are advised to perform the factory reset operation after clicking the confirmation button in the dialog box  
 or on the screen.

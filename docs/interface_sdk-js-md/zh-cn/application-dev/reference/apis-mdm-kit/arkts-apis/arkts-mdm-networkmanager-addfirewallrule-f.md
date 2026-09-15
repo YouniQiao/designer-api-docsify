@@ -24,8 +24,7 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 > 
 > - 设备重启，将会清空防火墙过滤规则。
 > 
-> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规
-> 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
+> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **起始版本：** 12
 

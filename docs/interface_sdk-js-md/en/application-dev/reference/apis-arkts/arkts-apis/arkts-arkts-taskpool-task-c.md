@@ -597,12 +597,9 @@ Sends data to the host thread and triggers the registered callback. Before calli
 > 
 > - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread.
 > 
-> - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host
-> thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function
-> is executed synchronously in the task.
+> - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function is executed synchronously in the task.
 > 
-> - Before calling this API, ensure that the callback function for processing data has been registered in the
-> host thread.
+> - Before calling this API, ensure that the callback function for processing data has been registered in the host thread.
 
 **Since:** 11
 

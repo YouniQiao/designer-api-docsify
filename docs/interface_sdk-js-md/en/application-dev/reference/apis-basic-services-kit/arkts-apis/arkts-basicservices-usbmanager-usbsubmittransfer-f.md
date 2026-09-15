@@ -12,14 +12,13 @@ import { usbManager } from '@kit.BasicServicesKit';
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Requests a USB data transfer.
+Submits an asynchronous transfer request. The result is returned immediately after this API is called. This API uses a callback to rerturn the actual read/write operation result. You can call [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md) to cancel an asynchronous transfer request.
 
 > **NOTE:** 
 > 
 > This API uses an asynchronous callback to return the result.
 > 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+> Before calling this API, call the [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > API to claim a communication interface.
 
 **Since:** 18
@@ -30,7 +29,7 @@ Requests a USB data transfer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | As a USB data transfer interface, it is required for a client to initiate a transfer request. Before calling this API, call the [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) API to claim a communication interface. |
 
 **Error codes:**
 

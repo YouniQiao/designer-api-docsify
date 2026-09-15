@@ -133,17 +133,11 @@ Obtains the file descriptor bound to the TCPSocketServer listening port. This AP
 
 > **NOTE:** 
 > 
-> - This method can be called only after the
-> [listen](#listen) method is
-> successfully called. When listen is called for multiple times, the file descriptor bound to the latest
-> listening port is obtained.
+> - This method can be called only after the [listen](#listen) method is successfully called. When listen is called for multiple times, the file descriptor bound to the latest listening port is obtained.
 > 
-> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after
-> close is called).
+> - This API returns **-1** in abnormal cases such as listening exceptions or socket closed (for example, after close is called).
 > 
-> - The lifecycle of the file descriptor is managed by the system. The application can use the
-> [close](#close) method to close the socket connection, instead of directly
-> operating the file descriptor.
+> - The lifecycle of the file descriptor is managed by the system. The application can use the [close](#close) method to close the socket connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 

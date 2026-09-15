@@ -12,7 +12,9 @@ import { usbManager } from '@kit.BasicServicesKit';
 function hasAccessoryRight(accessory: USBAccessory): boolean
 ```
 
-Checks whether the application has the permission to access the USB accessory. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
+Checks whether the app has the permission to access USB accessories.
+
+You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
 
 **Since:** 14
 
@@ -22,13 +24,13 @@ Checks whether the application has the permission to access the USB accessory. Y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md). |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which can be obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the application has the permission to access the USB accessory; * *false** indicates the opposite. |
+| boolean | The value **true** indicates that the app has the permission to access USB accessories; **false** indicates the opposite. |
 
 **Error codes:**
 

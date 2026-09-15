@@ -18,7 +18,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。<br> <br>   
+预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
@@ -116,7 +116,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
@@ -535,17 +535,14 @@ off(type: 'hide', callback?: () => void): void
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-取消监听当前面板大小变化，使用callback异步回调。<br> <br>   
+取消监听当前面板大小变化，使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
 > ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
 > <br>
-> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br>
-> <br>
-> - 从API version 15起，调用<br>
-> [adjustPanelRect](#adjustpanelrect-1)接口后，此<br>
-> 接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
+> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br><br>
+> - 从API version 15起，调用<br>[adjustPanelRect](#adjustpanelrect-1)接口后，此<br>接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
 **起始版本：** 12
 
@@ -602,17 +599,14 @@ on(type: 'hide', callback: () => void): void
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-监听当前面板大小变化，使用callback异步回调。<br> <br>   
+监听当前面板大小变化，使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过adjustPanelRect等接口对面板大小进行调节时，系统会根据一定规则校验计算出最终的数值（例如超出屏幕等场景<br>
 > ），输入法应用可通过该回调获取的真实面板大小，完成最终的面板布局刷新。<br>
 > <br>
-> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br>
-> <br>
-> - 从API version 15起，调用<br>
-> [adjustPanelRect](#adjustpanelrect-1)接口后，此<br>
-> 接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
+> - 从API version 12-14开始支持，此接口回调函数中仅包含[window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)类型的必选参数。<br><br>
+> - 从API version 15起，调用<br>[adjustPanelRect](#adjustpanelrect-1)接口后，此<br>接口回调函数增加[KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md)类型的可选参数。
 
 **起始版本：** 12
 
@@ -631,7 +625,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-改变当前输入法面板的大小，使用callback异步回调。<br> <br>   
+改变当前输入法面板的大小，使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。<br>
@@ -688,7 +682,7 @@ panel.resize(500, 1000).then(() => {
 resize(width: number, height: number): Promise<void>
 ```
 
-改变当前输入法面板的大小，使用Promise异步回调。<br> <br>   
+改变当前输入法面板的大小，使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 面板宽度不超出屏幕宽度，面板高度不高于屏幕高度的0.7倍。<br>
@@ -798,11 +792,10 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-设置屏幕常亮。使用Promise异步回调。<br> <br>   
+设置屏幕常亮。使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
-> - 当键盘拉起时设置常亮生效，键盘关闭则自动失效。<br>
-> <br>
+> - 当键盘拉起时设置常亮生效，键盘关闭则自动失效。<br><br>
 > - 规范使用该接口：必要场景（例如：语音输入）下，设置该属性为true；退出必要场景后，重置该属性为false；其他场景下，不使用该接口。
 
 **起始版本：** 20
@@ -1193,7 +1186,7 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小。使用Promise异步回调。<br> <br>   
+预设置输入法应用横竖屏大小。使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>
@@ -1293,7 +1286,7 @@ panel.updatePanelRect(panelFlag, panelRect);
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。<br> <br>   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。此接口兼容<br>
@@ -1343,7 +1336,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。<br> <br>   
+预设置输入法应用横竖屏大小。<br> <br>  
 > **说明：** <br>
 > <br>
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口<br>
@@ -1440,7 +1433,7 @@ panel.updatePanelRectSync(panelFlag, panelRect);
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。<br> <br>  
 > **说明：** <br>
 > <br>
 > 同步接口阻塞主线程，容易影响UI交互，需谨慎使用。建议优先使用对应的异步接口<br>
@@ -1487,7 +1480,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-更新当前状态下输入法面板内的热区。<br> <br>   
+更新当前状态下输入法面板内的热区。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。<br>

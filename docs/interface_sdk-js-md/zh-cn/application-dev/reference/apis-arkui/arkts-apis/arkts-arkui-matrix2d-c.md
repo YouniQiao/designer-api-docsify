@@ -1,6 +1,6 @@
 # Matrix2D
 
-用于画布绘制[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)、[OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)、CanvasPattern和[Path2D](arkts-arkui-path2d-c.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
+用于画布绘制[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md)、[OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-offscreencanvasrenderingcontext2d-c.md)、CanvasPattern和[Path2D](../arkts-components/arkts-arkui-path2d-c.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 8
 
@@ -46,7 +46,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。<br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md)。<br>异常值NaN和Infinity按默认值处理。<br>默认值：DEFAULT |
 
 ## identity
 

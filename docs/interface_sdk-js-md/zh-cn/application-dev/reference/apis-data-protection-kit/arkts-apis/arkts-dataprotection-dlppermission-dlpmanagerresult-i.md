@@ -18,7 +18,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 resultCode: number
 ```
 
-表示打开DLP权限管理应用并退出后返回的结果码。取值范围为0到3。
+表示打开DLP权限管理应用并退出后返回的结果码。取值范围为0到3。0表示成功，其它表示失败。
 
 **类型：** number
 

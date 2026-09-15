@@ -16,12 +16,9 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 > **NOTE:** 
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
-> object associated with the current UI context.
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)object associated with the current UI context.
 > 
-> - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+> - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 10
 
@@ -144,12 +141,9 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 > **NOTE:** 
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
-> object associated with the current UI context.
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)object associated with the current UI context.
 > 
-> - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+> - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 10
 

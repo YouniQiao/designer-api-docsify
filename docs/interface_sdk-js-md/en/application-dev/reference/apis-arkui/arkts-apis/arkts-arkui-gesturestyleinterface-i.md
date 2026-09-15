@@ -32,7 +32,7 @@ onLongPress?: Callback<GestureEvent>
 
 Callback for long press events.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](../arkts-components/arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 12
 

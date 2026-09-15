@@ -16,7 +16,7 @@ function setWallpaper(
   ): void
 ```
 
-将指定资源设置为指定类型的壁纸。使用callback异步回调。<br>   
+将指定资源设置为指定类型的壁纸。使用callback异步回调。<br>  
 > **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。
@@ -112,7 +112,7 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>
 ```
 
-将指定资源设置为指定类型的壁纸。使用Promise异步回调。<br>   
+将指定资源设置为指定类型的壁纸。使用Promise异步回调。<br>  
 > **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。

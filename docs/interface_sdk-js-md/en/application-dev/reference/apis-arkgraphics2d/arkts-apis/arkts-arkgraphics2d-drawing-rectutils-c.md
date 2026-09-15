@@ -11,8 +11,7 @@ This module provides tools for processing rectangles. Use scenarios:
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state transitions.
 
 **Since:** 20
 

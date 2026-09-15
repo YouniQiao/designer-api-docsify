@@ -103,18 +103,12 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 
 > **NOTE:** 
 > 
-> 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and
-> system applications.
+> 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and system applications.
 > 
 > 2. When the SPP protocol is passed, the value of the **policy** parameter can only be
 > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
 > 
-> 3. This API and
-> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-adddisallowedbluetoothprotocols-f.md) are
-> overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-
-> grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving,
-> or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be
-> combined and take effect.
+> 3. This API and [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-adddisallowedbluetoothprotocols-f.md) are overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving,or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be combined and take effect.
 
 **Since:** 26.0.0
 

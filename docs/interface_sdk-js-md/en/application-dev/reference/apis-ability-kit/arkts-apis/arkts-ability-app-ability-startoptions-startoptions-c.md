@@ -170,7 +170,7 @@ Process mode of the UIAbility after it is started.
 **Constraints**:
 
 1. This property takes effect only on 2-in-1 devices and tablets.
-2. This property takes effect only in  
+2. This property takes effect only in
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 3. **processMode** and **startupVisibility** must be set in pair.
 
@@ -209,7 +209,7 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 **Constraints**:
 
 1. This property takes effect only on 2-in-1 devices and tablets.
-2. This property takes effect only in  
+2. This property takes effect only in
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 3. **processMode** and **startupVisibility** must be set in pair.
 
@@ -233,8 +233,7 @@ Background color of the window for the UIAbility of the current application upon
 
 - This property does not take effect for the UIAbility of another application.  
 - This property takes effect only on 2-in-1 devices and tablets.  
-- This property takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
+- This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Type:** string
 
@@ -256,8 +255,7 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 
 - This property does not take effect for the UIAbility of another application.  
 - This property takes effect only on 2-in-1 devices and tablets.  
-- This property takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
+- This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
 - The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)

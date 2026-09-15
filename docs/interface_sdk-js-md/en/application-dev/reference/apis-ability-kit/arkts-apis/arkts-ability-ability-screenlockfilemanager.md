@@ -4,9 +4,7 @@ This module provides the capability to protect app sensitive data under the lock
 
 > **NOTE:** 
 > 
-> - To enable the sensitive data protection function under the lock screen for an app, you need to configure the
-> ohos.permission.PROTECT_SCREEN_LOCK_DATA permission in
-> [requestPermissions](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
+> - To enable the sensitive data protection function under the lock screen for an app, you need to configure the ohos.permission.PROTECT_SCREEN_LOCK_DATA permission in [requestPermissions](../../../security/AccessToken/declare-permissions.md#declaring-permissions-in-the-configuration-file).
 
 **Since:** 12
 

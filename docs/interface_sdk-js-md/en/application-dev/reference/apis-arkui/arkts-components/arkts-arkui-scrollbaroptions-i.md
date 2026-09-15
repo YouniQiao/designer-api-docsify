@@ -4,12 +4,9 @@ Parameters of the **ScrollBar** component.
 
 > **NOTE:** 
 > 
-> - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the
-> behavior style of the scrollbar.
+> - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the behavior style of the scrollbar.
 > 
-> - This component is bound to a scrollable component through **scroller**, and can be used to scroll the scrollable
-> component only when their directions are the same. The **ScrollBar** component can be bound to only one scrollable
-> component, and vice versa.
+> - This component is bound to a scrollable component through **scroller**, and can be used to scroll the scrollable component only when their directions are the same. The **ScrollBar** component can be bound to only one scrollable component, and vice versa.
 > 
 > - Since API version 12, the **ScrollBar** component displays a default scrollbar style when without child nodes.
 > 

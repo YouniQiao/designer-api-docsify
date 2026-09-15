@@ -14,7 +14,7 @@ Enumerates data role types.
 NONE = 0
 ```
 
-No function.
+None.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ No function.
 HOST = 1
 ```
 
-Host mode
+USB host.
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ Host mode
 DEVICE = 2
 ```
 
-Device mode
+USB device.
 
 **Since:** 9
 

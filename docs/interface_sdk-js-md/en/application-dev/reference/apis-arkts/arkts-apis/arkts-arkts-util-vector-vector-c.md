@@ -6,8 +6,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 
 > **NOTE:** 
 > 
-> - The APIs provided by this module are deprecated since API version 9. You are advised to use
-> [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md).
+> - The APIs provided by this module are deprecated since API version 9. You are advised to use [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md).
 
 **Since:** 8
 

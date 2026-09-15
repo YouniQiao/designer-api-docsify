@@ -22,13 +22,13 @@ Obtains a raw USB descriptor. If the USB service is abnormal, **undefined** may 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus address and device address. You need to call [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Returns a raw USB descriptor if the operation is successful; returns **undefined** otherwise. |
+| Uint8Array | Returns the obtained raw data; returns undefined on failure. |
 
 **Error codes:**
 

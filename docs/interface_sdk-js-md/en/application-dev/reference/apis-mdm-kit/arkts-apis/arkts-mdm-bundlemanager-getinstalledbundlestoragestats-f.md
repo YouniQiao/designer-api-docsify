@@ -18,15 +18,11 @@ Obtains the storage usage of installed applications of a specified user on a dev
 > 
 > 1. Only the storage usage of installed applications can be obtained.
 > 
-> 2. If **bundleNames** is empty or all bundle names passed are of uninstalled applications, error code 9200012
-> will be returned.
+> 2. If **bundleNames** is empty or all bundle names passed are of uninstalled applications, error code 9200012will be returned.
 > 
-> 3. If some of the applications specified in the **bundleNames** parameter are installed and some are not, the API
-> returns normally. For installed applications, their actual storage usage information is returned. For uninstalled
-> applications, **0** is returned as their storage usage.
+> 3. If some of the applications specified in the **bundleNames** parameter are installed and some are not, the API returns normally. For installed applications, their actual storage usage information is returned. For uninstalled applications, **0** is returned as their storage usage.
 > 
-> 4. This API supports cross-user queries. For example, user 100 can query the storage usage of some applications
-> of user 101.
+> 4. This API supports cross-user queries. For example, user 100 can query the storage usage of some applications of user 101.
 
 **Since:** 26.0.0
 

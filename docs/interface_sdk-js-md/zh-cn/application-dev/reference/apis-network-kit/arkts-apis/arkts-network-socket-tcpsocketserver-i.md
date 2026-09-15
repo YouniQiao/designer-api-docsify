@@ -132,8 +132,7 @@ getSocketFd(): Promise<number>
 
 > **说明：** 
 > 
-> - [listen](#listen)方法调用成功后，才可调用
-> 此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
+> - [listen](#listen)方法调用成功后，才可调用此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。
 > 
 > - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。
 > 

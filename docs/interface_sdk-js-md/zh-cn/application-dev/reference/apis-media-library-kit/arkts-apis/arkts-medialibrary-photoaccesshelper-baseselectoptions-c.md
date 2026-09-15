@@ -83,8 +83,7 @@ combinedMediaTypeFilter?: Array<string>
 
 - 第1段指定1个photoType，固定为image（图片）或video（视频）。  
 - 第2段指定1~N个photoSubType，多个photoSubType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N目前支持最大为1；可选的PhotoSubType包括movingPhoto或“*”（忽略）。  
-- 第3段指定1~N个mimeType，多个mimeType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N最大为10，格式类似于  
-[MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)。
+- 第3段指定1~N个mimeType，多个mimeType之间使用逗号隔开，之间为“或（OR）”的逻辑取并集；N最大为10，格式类似于[MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md)。
 
 三段过滤的组合取交集处理。
 

@@ -4,8 +4,7 @@ The **formInfo** module provides types and enums related to the widget informati
 
 > **NOTE:** 
 
-> - This module is deprecated since API version 9. You are advised to use
-> [formInfo](arkts-form-app-form-forminfo.md) instead.
+> - This module is deprecated since API version 9. You are advised to use [formInfo](arkts-form-app-form-forminfo.md) instead.
 
 **Since:** 8
 

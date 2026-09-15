@@ -4,18 +4,13 @@ CommonOptions defines common options for the date time picker.
 
 > **Description:**
 > 
-> - For Date usage, refer to
-> [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。
+> - For Date usage, refer to [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。
 > 
-> - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of
-> columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow,
-> text may be truncated.
+> - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow,text may be truncated.
 > 
 > - When parameters are omitted or set to undefined, default values are used.
 > 
-> - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part (year,
-> month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the time
-> part (hour, minute, second).
+> - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part (year,month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the time part (hour, minute, second).
 
 **Since:** 26.0.0
 
@@ -43,7 +38,7 @@ Default value: true
 **Description**:
 
 1. When set to true, its effectiveness depends on whether the system's hardware supports it.
-2. To enable haptic feedback, you need to configure the requestPermissions field in the project's  
+2. To enable haptic feedback, you need to configure the requestPermissions field in the project's
 [module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:
 
 "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]

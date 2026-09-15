@@ -38,7 +38,7 @@ Triggered when a long press event occurs.
 
 It is executed on completion of a long press.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 11
 

@@ -12,7 +12,7 @@ import { serial } from '@kit.BasicServicesKit';
 function getSerialPortList(): Promise<SerialPort[]>
 ```
 
-Obtains the serial port list. This API returns the result asynchronously through a promise.
+Obtains the serial port list. This API uses a promise to return the result, which is a list of [SerialPort](arkts-basicservices-serial-serialport-i.md) objects. This API is used to identify available serial port devices in scenarios such as industrial device connection, IoT device management, and embedded system debugging.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[SerialPort](arkts-basicservices-serial-serialport-i.md)[]&gt; | Promise used to return the list of serial port devices. |
+| Promise&lt;[SerialPort](arkts-basicservices-serial-serialport-i.md)[]&gt; | Promise that returns a list of serial ports. |
 
 **Error codes:**
 

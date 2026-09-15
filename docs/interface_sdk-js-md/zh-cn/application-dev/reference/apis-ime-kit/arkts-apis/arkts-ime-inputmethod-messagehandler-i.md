@@ -1,6 +1,6 @@
 # MessageHandler
 
-自定义通信对象。<br> <br>   
+自定义通信对象。<br> <br>  
 > **说明：** <br>
 > <br>
 > 开发者可通过注册此对象来接收输入法应用发送的自定义通信数据，接收到自定义通信数据时会触发此对象中<br>
@@ -26,7 +26,7 @@ import { inputMethod } from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-接收输入法应用发送的自定义数据回调函数。<br> <br>   
+接收输入法应用发送的自定义数据回调函数。<br> <br>  
 > **说明：** <br>
 > <br>
 > 当已注册的MessageHandler接收到来自输入法应用发送的自定义通信数据时，会触发该回调函数。<br>
@@ -66,7 +66,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-监听对象终止回调函数。<br> <br>   
+监听对象终止回调函数。<br> <br>  
 > **说明：** <br>
 > <br>
 > 当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的OnTerminated回调函数。<br>

@@ -18,3 +18,11 @@ The module defines the HAP module information. An application can obtain its own
 | [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md) | The module defines the HAP module information. |
 | [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md) | Describes the preloaded module information in the atomic service. |
 | [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md) | Describes the router table configuration of the module. |
+
+<!--Del-->
+### Interfaces(System API)
+
+| Name | Description |
+| --- | --- |
+| [HapModuleInfo](arkts-ability-hapmoduleinfo-i-sys.md) | The module defines the HAP module information. |
+<!--DelEnd-->

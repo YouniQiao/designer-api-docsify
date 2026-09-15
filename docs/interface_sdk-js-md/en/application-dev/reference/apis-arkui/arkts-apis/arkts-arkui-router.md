@@ -9,18 +9,9 @@ For routing management, it is recommended that you use the [Navigation](../../..
 > - Page routing APIs can be invoked only after page rendering is complete. Do not call these APIs in **onInit** and
 > **onReady** when the page is still in the rendering phase.
 > 
-> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
-> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
+> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
 > 
-> - When using
-> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
-> or
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)
-> with a callback to return the result, be aware that the stack information obtained through the callback using APIs
-> such as [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength) represents an intermediate state during the
-> navigation operation. This temporary state might differ from the final stack information available after the stack
-> operation is complete.
+> - When using [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)or [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)with a callback to return the result, be aware that the stack information obtained through the callback using APIs such as [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength) represents an intermediate state during the navigation operation. This temporary state might differ from the final stack information available after the stack operation is complete.
 
 **Since:** 8
 

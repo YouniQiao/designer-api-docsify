@@ -1,4 +1,4 @@
-# @ohos.web.WebNativeMessagingExtensionAbility
+# @ohos.web.WebNativeMessagingExtensionAbility(Web原生消息扩展能力)
 
 WebNativeMessagingExtensionAbility是ArkWeb提供的Web原生消息通信扩展基类，继承自ExtensionAbility（扩展能力基类），允许Web页面通过Native Messaging机制与系统原
  生服务建立安全、双向的管道通信通道。开发者通过继承该类并实现其生命周期回调（如[onConnectNative](arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#onconnectnative)、

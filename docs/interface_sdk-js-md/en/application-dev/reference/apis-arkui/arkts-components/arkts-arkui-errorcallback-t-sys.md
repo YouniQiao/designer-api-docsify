@@ -4,9 +4,9 @@
 declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback
 ```
 
-Defines the error callback type, which is used to receive exception information.
+Indicates error callback.
 
-**Since:** 26.0.0
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 

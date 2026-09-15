@@ -155,8 +155,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 
 Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate), [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
+- The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate), [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
 
 **Since:** 11
 

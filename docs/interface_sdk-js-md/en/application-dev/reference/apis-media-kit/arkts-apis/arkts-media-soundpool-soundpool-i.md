@@ -4,30 +4,22 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 
 > **NOTE:** 
 > 
-> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
-> status changes:
+> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain status changes:
 > 
-> - on('loadComplete'): listens for the
-> event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that
-> the audio is played after being loaded.
+> - on('loadComplete'): listens for the event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that the audio is played after being loaded.
 > 
 > -
 > on('playFinishedWithStreamId'):
 > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes
 > playing.
 > 
-> - on('playFinished'): listens
-> for the event indicating that the playback is finished.
+> - on('playFinished'): listens for the event indicating that the playback is finished.
 > 
 > - [on('error')](#onerror): listens for error events.
 > 
-> - [on('errorOccurred')](#onerroroccurred): listens for
-> error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).
+> - [on('errorOccurred')](#onerroroccurred): listens for error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).
 > 
-> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
-> skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
-> SoundPool, see
-> [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
+> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using SoundPool, see [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 10
 
@@ -47,12 +39,9 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 > **NOTE:** 
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to the player, do not use the resource handle or path description in read or write operations, including but not limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -87,12 +76,9 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 > **NOTE:** 
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to the player, do not use the resource handle or path description in read or write operations, including but not limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -130,12 +116,9 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 
 > **NOTE:** 
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to the player, do not use the resource handle or path description in read or write operations, including but not limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -170,12 +153,9 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 
 > **NOTE:** 
 > 
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to the player, do not use the resource handle or path description in read or write operations, including but not limited to transferring it to multiple players.
 > 
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
-> files at the same time, resulting in playback errors.
+> - Competition occurs when multiple players use the same resource handle or path description to read and write files at the same time, resulting in playback errors.
 
 **Since:** 10
 

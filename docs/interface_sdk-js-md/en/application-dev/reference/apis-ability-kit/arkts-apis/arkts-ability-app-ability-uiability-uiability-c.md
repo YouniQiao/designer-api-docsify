@@ -95,20 +95,11 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 > **NOTE:** 
 > 
-> - This callback does not support ability launch in
-> [specified mode](../../../application-models/uiability-launch-type.md#specified).
+> - This callback does not support ability launch in [specified mode](../../../application-models/uiability-launch-type.md#specified).
 > 
-> - When you use methods such as
-> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
-> to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in
-> [Flags](arkts-ability-wantconstant-flags-e.md) in the Want object.
+> - When you use methods such as [startAbility](arkts-ability-uiabilitycontext-c.md#startability)to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in [Flags](arkts-ability-wantconstant-flags-e.md) in the Want object.
 > 
-> - During a
-> [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this
-> callback must be invoked before [onForeground](#onforeground) or after
-> [onBackground](#onbackground). During a
-> [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this
-> callback must be invoked before [onNewWant](#onnewwant).
+> - During a [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this callback must be invoked before [onForeground](#onforeground) or after [onBackground](#onbackground). During a [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this callback must be invoked before [onNewWant](#onnewwant).
 
 **Since:** 18
 
@@ -237,12 +228,9 @@ This API returns the result synchronously or uses a promise to return the result
 
 > **NOTE:** 
 > 
-> - Once the **onDestroy** lifecycle callback completes, the application may exit. This can interrupt any pending
-> asynchronous operations (such as asynchronously writing data to a database), preventing them from finishing
-> successfully. In this case, you are advised to use a promise to return the result.
+> - Once the **onDestroy** lifecycle callback completes, the application may exit. This can interrupt any pending asynchronous operations (such as asynchronously writing data to a database), preventing them from finishing successfully. In this case, you are advised to use a promise to return the result.
 > 
-> - The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits
-> (for example, process termination due to low memory conditions).
+> - The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits (for example, process termination due to low memory conditions).
 
 **Since:** 9
 
@@ -476,16 +464,9 @@ Triggered by the system just before the UIAbility is about to close (for example
 
 > **NOTE:** 
 > 
-> - Starting from API version 15, this callback is not executed when
-> [UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync) is implemented. When
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
-> or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) is
-> implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the
-> UIAbility.
+> - Starting from API version 15, this callback is not executed when [UIAbility.onPrepareToTerminateAsync](#onpreparetoterminateasync) is implemented. When [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) is implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the UIAbility.
 > 
-> - Additionally, if the application or a third-party framework registers a listener for
-> window.WindowStage.on
-> , this callback function is not executed.
+> - Additionally, if the application or a third-party framework registers a listener for window.WindowStage.on, this callback function is not executed.
 
 **Since:** 10
 
@@ -548,18 +529,11 @@ You can return **true** to block the current closure attempt and then manually c
 
 > **NOTE:** 
 > 
-> - When
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
-> or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) is
-> implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the
-> UIAbility.
+> - When [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) is implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the UIAbility.
 > 
-> - Additionally, if the application or a third-party framework registers a listener for
-> [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)
-> , this callback function is not executed.
+> - Additionally, if the application or a third-party framework registers a listener for [window.WindowStage.on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose), this callback function is not executed.
 > 
-> - If an asynchronous callback crashes, it will be handled as a timeout. If the UIAbility does not respond within
-> 10 seconds, it will be terminated forcibly.
+> - If an asynchronous callback crashes, it will be handled as a timeout. If the UIAbility does not respond within 10 seconds, it will be terminated forcibly.
 
 **Since:** 15
 

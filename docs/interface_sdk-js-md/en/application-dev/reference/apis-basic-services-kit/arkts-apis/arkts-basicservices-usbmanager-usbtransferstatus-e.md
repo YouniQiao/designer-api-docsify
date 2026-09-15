@@ -36,7 +36,7 @@ Transfer failed.
 TRANSFER_TIMED_OUT = 2
 ```
 
-Transfer timeout.
+Transfer timed out.
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ Transfer canceled.
 TRANSFER_STALL = 4
 ```
 
-Transfer stalled (at bulk/interrupt endpoint).
+Stall detected (bulk/interrupt endpoint).
 
 **Since:** 18
 
@@ -84,7 +84,7 @@ Device disconnected.
 TRANSFER_OVERFLOW = 6
 ```
 
-Data overflow.
+Device sent more data than requested.
 
 **Since:** 18
 

@@ -12,7 +12,12 @@ import { serialManager } from '@kit.BasicServicesKit';
 function setAttribute(portId: number, attribute: SerialAttribute): void
 ```
 
-Sets the parameters of the serial port. If this method is not called, the default configuration parameters are used (baud rate: 9600 bit/s; data bit: 8; parity bit: 0; stop bit: 1).
+Sets the parameters of the specified serial port. You need to call [open](arkts-basicservices-serialmanager-open-f.md) to open the serial port to set parameters. The configuration parameters include **baudRate** (mandatory), **dataBits** (optional) whose default value is **8**, **parity** (optional) whose default value is **PARITY_NONE**, and **stopBits** (optional) whose default value is 1. Generally, this API is called when the device is initialized, the communication protocol is switched, or the device requires non-default configuration parameters.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.  
+- You have called requestSerialRight to request the access permission.  
+- You have called open to open the serial port.
 
 **Since:** 19
 
@@ -22,8 +27,8 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
-| attribute | [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | Yes | Configuration parameters of the serial port. |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
+| attribute | [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | Yes | Serial port configuration parameters. The parameters include **baudRate** (mandatory), **dataBits** (optional) whose default value is **8**, **parity** (optional) whose default value is **PARITY_NONE**, and **stopBits** (optional) whose default value is **1**. |
 
 **Error codes:**
 

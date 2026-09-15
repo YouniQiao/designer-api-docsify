@@ -152,7 +152,7 @@ Updates a continuous task. This API uses a promise to return the result. After a
 
 The following restrictions apply when updating a continuous task:
 
-1. This API can only update continuous tasks requested via  
+1. This API can only update continuous tasks requested via
 [startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md).
 2. If the main type and subtype of the background tasks are the same,
 only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated. If the types are different, the update fails.

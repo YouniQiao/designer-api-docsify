@@ -304,8 +304,7 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中区域的高亮颜色。
 > 
-> - Text子组件已显式设置selectedBackgroundColor时，优先使用Text子组件的配置；未设置时，使用
-> SelectionContainer的配置。
+> - Text子组件已显式设置selectedBackgroundColor时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -337,12 +336,9 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 > **说明：** 
 > 
-> - 该配置会影响[onWillCopy](#onwillcopy)、
-> [onCopy](#oncopy)、
-> [bindSelectionMenu](#bindselectionmenu)相关回调中返回的文本内容。
+> - 该配置会影响[onWillCopy](#onwillcopy)、[onCopy](#oncopy)、[bindSelectionMenu](#bindselectionmenu)相关回调中返回的文本内容。
 > 
-> - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置
-> 为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
+> - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
 
 **起始版本：** 26.0.0
 

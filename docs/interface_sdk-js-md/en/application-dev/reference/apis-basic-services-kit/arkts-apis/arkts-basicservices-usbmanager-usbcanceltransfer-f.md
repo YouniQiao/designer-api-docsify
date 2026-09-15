@@ -12,14 +12,14 @@ import { usbManager } from '@kit.BasicServicesKit';
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Cancels an asynchronous USB data transfer request.
+Cancels an asynchronous USB data transfer request. This API can be used to proactively terminate an ongoing USB data transfer, for example, when a user manually cancels a long-time data transfer, when an error occurs after a transfer times out, or when the current transfer needs to be terminated during an app switch.
 
 > **NOTE:** 
 > 
-> This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by
-> **usbSubmitTransfer**).
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+> This API can be used to proactively cancel an unfinished USB data transfer request, such as
+> the request submitted by usbSubmitTransfer.
+> 
+> Before calling this API, call the [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > API to claim a communication interface.
 
 **Since:** 18
@@ -30,7 +30,7 @@ Cancels an asynchronous USB data transfer request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | Only the [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) and [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) parameters should be specified in this API. |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | Parameter whose transfer is canceled. The value of this parameter is the same as that of the **transfer** parameter in the [usbManager.usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md) API. Before calling this API, call the [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) API to claim a communication interface. |
 
 **Error codes:**
 

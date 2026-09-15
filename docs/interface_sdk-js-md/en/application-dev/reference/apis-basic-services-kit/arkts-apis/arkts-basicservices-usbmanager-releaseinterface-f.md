@@ -16,8 +16,7 @@ Releases the claimed communication interface.
 
 > **NOTE:** 
 > 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+> Before calling this API, call the [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > API to claim a communication interface.
 
 **Since:** 9
@@ -28,14 +27,14 @@ Releases the claimed communication interface.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
-| iface | [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | Yes | USB interface. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain device information and identify the USB interface based on the ID. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus address and device address. You need to call [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain its value. |
+| iface | [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md) | Yes | USB interface whose control is to be released. You can use [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain device information and identify the interface based on its **id**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **0** if the USB interface is successfully released; returns an error code otherwise. The error codes are as follows:  - 88080389: The service is not started. Possible causes: 1. No device is inserted. 2. The service exits abnormally.  - 88080486: The service is being initialized. Try again later.  - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) API to request authorization.  - -1: The driver is abnormal. |
+| number | Returns **0** if the **release** interface is released successfully; returns an error code otherwise. The error codes are as follows: <br>- 88080389: The service is not started. Possible causes: 1. No device is inserted; 2. The service exits abnormally. <br>- 88080486: The service is being initialized. Try again later. <br>- 88080488: No permission to access the device. Call [requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request authorization first. <br>- -1: The driver is abnormal. Possible causes: 1. The device connection is unstable or the device is disconnected. 2. The USB driver fails to be loaded. 3. The kernel USB module is abnormal. |
 
 **Error codes:**
 

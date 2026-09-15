@@ -12,13 +12,14 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-Obtains the list of USB devices connected to the host.
+Obtains the list of USB devices connected to the host. After the API is called successfully, a list of connected devices is returned, including the device name, manufacturer, and product information.
 
 > **NOTE:** 
 > 
-> Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
-> request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)
-> and then initiate a control transfer to obtain it.
+> Third-party apps cannot directly obtain the device serial number from the **serial** field
+> through the **getDevices()** API. This field is unavailable to third-party apps. To obtain
+> the serial number, third-party apps need to request permissions to access the device and
+> then initiate a control transfer.
 
 **Since:** 9
 
@@ -28,7 +29,7 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)&gt;&gt; | USB device list. |
+| Array&lt;Readonly&lt;[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)&gt;&gt; | Device information list. |
 
 **Error codes:**
 

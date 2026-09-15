@@ -12,7 +12,10 @@ import { serialManager } from '@kit.BasicServicesKit';
 function hasSerialRight(portId: number): boolean
 ```
 
-Checks whether the application has the permission to access the serial port device. When an application is restarted after exits, you need to request the permission from the user again.
+Checks whether the app has the permission to access the serial port device. When an app is restarted after exiting, permission needs to be requested again. Generally, this API is called to check the permission status before a serial port device is opened or a serial port operation is performed.
+
+**Prerequisites**  
+- You have called getPortList to obtain the port number.
 
 **Since:** 19
 
@@ -22,13 +25,13 @@ Checks whether the application has the permission to access the serial port devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). |
+| portId | number | Yes | Port number, which is obtained from the [SerialPort](arkts-basicservices-serialmanager-serialport-i.md) object returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md). The value must be a valid port number returned by **getPortList**. If an invalid value is passed, error code 31400003 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the permission is authorized, and **false** indicates the opposite. |
+| boolean | The value **true** indicates that the permission is granted, and **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -1,4 +1,4 @@
-# @ohos.web.WebNativeMessagingExtensionContext
+# @ohos.web.WebNativeMessagingExtensionContext(Web原生消息扩展上下文)
 
 ## 导入模块
 

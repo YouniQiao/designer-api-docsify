@@ -73,8 +73,7 @@ off: (name: AuthEventKey) => void
 
 取消订阅特定类型的认证事件。
 
-- **name**: 表示认证事件类型，取值为"result"时，取消订阅认证结果；取值为"tip"时，取消订阅认证过程中的提示信息，类型为  
-[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。
+- **name**: 表示认证事件类型，取值为"result"时，取消订阅认证结果；取值为"tip"时，取消订阅认证过程中的提示信息，类型为[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。
 
 > **说明：** 
 > 
@@ -134,8 +133,7 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 
 订阅指定类型的用户认证事件。
 
-- **name**: 表示认证事件类型，取值为"result"时，回调函数返回认证结果；取值为"tip"时，回调函数返回认证过程中的提示信息，类型为  
-[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。  
+- **name**: 表示认证事件类型，取值为"result"时，回调函数返回认证结果；取值为"tip"时，回调函数返回认证过程中的提示信息，类型为[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。  
 - **callback**: 认证接口的回调函数，用于返回认证结果或认证过程中的提示信息，类型为[AuthEvent](arkts-userauthentication-userauth-authevent-i.md)。
 
 > **说明：** 

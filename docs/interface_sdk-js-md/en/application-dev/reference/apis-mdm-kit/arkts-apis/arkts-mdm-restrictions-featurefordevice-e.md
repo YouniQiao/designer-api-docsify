@@ -226,11 +226,11 @@ Device USB capability. Disabling this capability prohibits the use of external U
 
 If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported:
 
-1. A list of allowed USB devices has been configured via the  
+1. A list of allowed USB devices has been configured via the
 [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API.
-2. USB storage device access policy has been set to read-only or disabled via the  
+2. USB storage device access policy has been set to read-only or disabled via the
 [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md) API.
-3. Specific USB device types have been blocked via the  
+3. Specific USB device types have been blocked via the
 [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) API.
 4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.
 5. USB-to-serial conversion ([USB_SERIAL](arkts-mdm-restrictions-featurefordevice-e.md)) is disabled.
@@ -361,7 +361,7 @@ Samba server capability, currently supported only on PC/2-in-1 devices.
 BACKUP_AND_RESTORE = 24
 ```
 
-Backup and restore capability. If this feature is disabled, the **Settings**   
+Backup and restore capability. If this feature is disabled, the **Settings**  
 > **System**
 > **Backup & Restore** and **Settings**
 > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call [applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
@@ -606,7 +606,7 @@ USB_SERIAL = 41
 
 Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict:
 
-1. A list of allowed USB devices has been configured via the  
+1. A list of allowed USB devices has been configured via the
 [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API.
 2. The device ([USB](arkts-mdm-restrictions-featurefordevice-e.md)) capability has been disabled.
 

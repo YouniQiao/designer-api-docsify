@@ -376,8 +376,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence,
-     *     options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
+**Substitutes:** sendMessageRequest(code: number, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 **System capability:** SystemCapability.Communication.IPC.Core
 

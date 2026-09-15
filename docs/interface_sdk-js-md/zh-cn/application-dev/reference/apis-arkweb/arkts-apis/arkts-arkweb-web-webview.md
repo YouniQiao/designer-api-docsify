@@ -1,4 +1,4 @@
-# @ohos.web.webview
+# @ohos.web.webview(WebView控制)
 
 This module provides the capability to manage web modules.
 

@@ -32,8 +32,7 @@ enabling more complex scenarios.
 
 > **NOTE:** 
 > 
-> - Use [canIUse()](../../../reference/common/js-apis-syscap.md#caniuse) to check whether the device supports the
-> system capability SystemCapability.Window.SessionManager and the corresponding APIs.
+> - Use [canIUse()](../../../reference/common/js-apis-syscap.md#caniuse) to check whether the device supports the system capability SystemCapability.Window.SessionManager and the corresponding APIs.
 > 
 > - The APIs of this module can be used only in the stage model.
 

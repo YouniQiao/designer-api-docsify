@@ -1437,8 +1437,7 @@ Observe the following when using this API:
 ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
 - If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the  
 ohos.permission.START_INVISIBLE_ABILITY permission.  
-- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
-[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+- The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
 
@@ -1506,8 +1505,7 @@ ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_AC
 ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
 - If **exported** of the target ability is **false** in cross-application scenarios, the caller must have the  
 ohos.permission.START_INVISIBLE_ABILITY permission.  
-- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
-[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+- The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
 

@@ -7,11 +7,9 @@ Configures the annular emitter area.
 > - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as
 > 0.
 > 
-> - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius
-> and the larger value is used as the new outer radius.
+> - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius and the larger value is used as the new outer radius.
 > 
-> - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and
-> the larger value is used as the new end angle.
+> - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and the larger value is used as the new end angle.
 > 
 > 
 

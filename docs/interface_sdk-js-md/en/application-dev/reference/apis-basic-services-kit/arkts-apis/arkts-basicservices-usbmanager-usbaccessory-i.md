@@ -18,7 +18,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 description: string
 ```
 
-Description of an accessory.
+Description of an accessory, which is provided by the manufacturer to describe the functions, usage, or features of the accessory.
 
 **Type:** string
 

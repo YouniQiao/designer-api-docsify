@@ -85,24 +85,15 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 > **NOTE:** 
 > 
-> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
-> decryption process is started, **init()** must be called with a complete parameter list for initialization.
-> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
-> parameter must be set when **init** is called during decryption.
+> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and decryption process is started, **init()** must be called with a complete parameter list for initialization.Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**parameter must be set when **init** is called during decryption.
 > 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
 > **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
 > **GcmParamsSpec** for decryption.
-> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
-> before using the **.data** field to access the **doFinal()** result.
-> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
-> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
+> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**before using the **.data** field to access the **doFinal()** result.For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
 > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
 > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
 > result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
-> decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair.
-> The operations are similar for SM2 and RSA.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair.The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
@@ -213,24 +204,15 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 > **NOTE:** 
 > 
-> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
-> decryption process is started, **init()** must be called with a complete parameter list for initialization.
-> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
-> parameter must be set when **init** is called during decryption.
+> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and decryption process is started, **init()** must be called with a complete parameter list for initialization.Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**parameter must be set when **init** is called during decryption.
 > 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
 > **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
 > **GcmParamsSpec** for decryption.
-> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
-> before using the **.data** field to access the **doFinal()** result.
-> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
-> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
+> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**before using the **.data** field to access the **doFinal()** result.For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
 > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
 > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
 > result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
-> decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair.
-> The operations are similar for SM2 and RSA.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair.The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
@@ -288,8 +270,7 @@ The output of **doFinalSync()** varies with the symmetric block cipher mode in u
 
 - In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and  
 **doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is **null**, the result of **doFinalSync()** is **authTag**.  
-- During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or  
-[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
+- During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
 - For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
 of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.
 
@@ -634,14 +615,7 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 
 > **NOTE:** 
 > 
-> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
-> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
-> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
-> ciphertext or plaintext.
-> <br>For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
-> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
-> processed block data.
-> <br>That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
+> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete ciphertext or plaintext.<br>For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the data input by **update()** is an integer multiple of the block size, and **update()** returns the newly processed block data.<br>That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
 > **null** is returned and the data will be retained until a block is formed in the next **update()** or
 > **doFinal()**.
 > <br>In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
@@ -657,9 +631,7 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 > <br>For details about the sample code for passing data in multiple **update()** calls, see
 > Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode).
 > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
-> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
-> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
-> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
+> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
 > **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 9
@@ -699,14 +671,7 @@ Updates the data to encrypt or decrypt by segment. This API uses a promise to re
 
 > **NOTE:** 
 > 
-> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
-> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
-> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
-> ciphertext or plaintext.
-> <br>For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
-> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
-> processed block data.
-> <br>That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
+> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete ciphertext or plaintext.<br>For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the data input by **update()** is an integer multiple of the block size, and **update()** returns the newly processed block data.<br>That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
 > **null** is returned and the data will be retained until a block is formed in the next **update()** or
 > **doFinal()**.
 > <br>In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
@@ -722,9 +687,7 @@ Updates the data to encrypt or decrypt by segment. This API uses a promise to re
 > <br>For details about the sample code for passing data in multiple **update()** calls, see
 > Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode).
 > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
-> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
-> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
-> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
+> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
 > **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 9

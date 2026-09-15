@@ -35,64 +35,25 @@ Adds a custom layout (**BuilderSpan**) to **RichEditor**.
 > - When a placeholder span is added to the **RichEditor** component, the placeholder span calls the system
 > **measure** method to calculate its actual width, height, and position.
 > 
-> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of this builder
-> in **RichEditor** (one character counts as one unit).
+> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of this builder in **RichEditor** (one character counts as one unit).
 > 
-> - This placeholder span cannot be focused, supports dragging, and supports some universal attributes. Its
-> placeholder and deletion capabilities are equivalent to those of **ImageSpan**, and its length is regarded as one
-> character.
+> - This placeholder span cannot be focused, supports dragging, and supports some universal attributes. Its placeholder and deletion capabilities are equivalent to those of **ImageSpan**, and its length is regarded as one character.
 > 
 > - You can set a custom menu through [bindSelectionMenu](arkts-arkui-richeditor-comp-attribute.md#bindselectionmenu).
 > 
-> - The **builderSpan** information cannot be obtained through [getSpans](#getspans),
-> [getSelection](#getselection), [onSelect](arkts-arkui-richeditor-comp-attribute.md#onselect), or
-> [aboutToDelete](arkts-arkui-richeditor-comp-attribute.md#abouttodelete).
+> - The **builderSpan** information cannot be obtained through [getSpans](#getspans),[getSelection](#getselection), [onSelect](arkts-arkui-richeditor-comp-attribute.md#onselect), or [aboutToDelete](arkts-arkui-richeditor-comp-attribute.md#abouttodelete).
 > 
-> - The builder cannot be updated through [updateSpanStyle](#updatespanstyle) or
-> [updateParagraphStyle](#updateparagraphstyle).
+> - The builder cannot be updated through [updateSpanStyle](#updatespanstyle) or [updateParagraphStyle](#updateparagraphstyle).
 > 
 > - Copying or pasting this builder node does not take effect.
 > 
-> - The layout constraints of the builder are passed in by **RichEditor**. If the outermost component in the
-> builder does not have its size set, the size of **RichEditor** is used as the maxSize.
+> - The layout constraints of the builder are passed in by **RichEditor**. If the outermost component in the builder does not have its size set, the size of **RichEditor** is used as the maxSize.
 > 
-> - The gesture-related event mechanism of the builder is the same as that of universal gesture events. If pass-
-> through is not set in the builder, only the child components in the builder respond.
+> - The gesture-related event mechanism of the builder is the same as that of universal gesture events. If pass-through is not set in the builder, only the child components in the builder respond.
 > 
-> - If the component cursor is blinking, the cursor position is updated to after the newly inserted builder after
-> insertion.
+> - If the component cursor is blinking, the cursor position is updated to after the newly inserted builder after insertion.
 > 
-> - For the node text of [addBuilderSpan](#addbuilderspan), the
-> [enableDataDetector](arkts-arkui-richeditor-comp-attribute.md#enabledatadetector),
-> [dataDetectorConfig](arkts-arkui-richeditor-comp-attribute.md#datadetectorconfig), and
-> [enableSelectedDataDetector](arkts-arkui-richeditor-comp-attribute.md#enableselecteddatadetector) functions do not take effect.
-> Only the following universal attributes are supported: size,
-> padding, margin,
-> [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio), borderStyle,
-> borderWidth, borderColor,
-> borderRadius,
-> backgroundColor,
-> backgroundBlurStyle,
-> opacity, blur,
-> [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur),
-> shadow,
-> grayscale,
-> brightness,
-> [saturate](arkts-arkui-commonmethod-c.md#saturate), contrast,
-> invert,
-> [sepia](arkts-arkui-commonmethod-c.md#sepia),
-> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate),
-> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend),
-> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur),
-> clip, mask,
-> [foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle),
-> accessibilityGroup,
-> accessibilityText,
-> accessibilityDescription,
-> accessibilityLevel,
-> [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect),
-> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect),
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect).
+> - For the node text of [addBuilderSpan](#addbuilderspan), the [enableDataDetector](arkts-arkui-richeditor-comp-attribute.md#enabledatadetector),[dataDetectorConfig](arkts-arkui-richeditor-comp-attribute.md#datadetectorconfig), and [enableSelectedDataDetector](arkts-arkui-richeditor-comp-attribute.md#enableselecteddatadetector) functions do not take effect.Only the following universal attributes are supported: size,padding, margin,[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio), borderStyle,borderWidth, borderColor,borderRadius,backgroundColor,backgroundBlurStyle,opacity, blur,[backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur),shadow,grayscale,brightness,[saturate](arkts-arkui-commonmethod-c.md#saturate), contrast,invert,[sepia](arkts-arkui-commonmethod-c.md#sepia),[hueRotate](arkts-arkui-commonmethod-c.md#huerotate),[colorBlend](arkts-arkui-commonmethod-c.md#colorblend),[linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur),clip, mask,[foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle),accessibilityGroup,accessibilityText,accessibilityDescription,accessibilityLevel,[sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect),[lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect),[pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect).
 
 **Since:** 11
 
@@ -156,15 +117,11 @@ Adds a custom layout (BuilderSpan) in **RichEditor**, providing identity recogni
 
 > **NOTE:** 
 > 
-> - The [onAttach](arkts-arkui-richeditorbuilderspan-i.md#onattach) and
-> [onDetach](arkts-arkui-richeditorbuilderspan-i.md#ondetach) callbacks in the BuilderSpan object receive a
-> [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) object containing the span's id and offset.
+> - The [onAttach](arkts-arkui-richeditorbuilderspan-i.md#onattach) and [onDetach](arkts-arkui-richeditorbuilderspan-i.md#ondetach) callbacks in the BuilderSpan object receive a [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) object containing the span's id and offset.
 > 
-> - This interface is not supported when the **RichEditor** component is constructed with
-> [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).
+> - This interface is not supported when the **RichEditor** component is constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).
 > 
-> - Undo/redo does not restore BuilderSpan objects. When restored via undo, removed BuilderSpans
-> degrade to whitespace text Spans.
+> - Undo/redo does not restore BuilderSpan objects. When restored via undo, removed BuilderSpans degrade to whitespace text Spans.
 
 **Since:** 26.2.0
 
@@ -341,15 +298,11 @@ Obtains the identity and position information of BuilderSpans within the specifi
 
 > **NOTE:** 
 > 
-> - This interface is not supported when the **RichEditor** component is constructed with
-> [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).
+> - This interface is not supported when the **RichEditor** component is constructed with [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md).
 > 
-> - BuilderSpans created via the legacy [addBuilderSpan](#addbuilderspan)
-> interface have **undefined** as their id (anonymous) in the returned
-> [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md).
+> - BuilderSpans created via the legacy [addBuilderSpan](#addbuilderspan)interface have **undefined** as their id (anonymous) in the returned [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md).
 > 
-> - The **offset** field in the returned [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) reflects the current
-> actual offset position and is dynamically updated as text content changes.
+> - The **offset** field in the returned [BuilderSpanInfo](arkts-arkui-builderspaninfo-i.md) reflects the current actual offset position and is dynamically updated as text content changes.
 
 **Since:** 26.2.0
 

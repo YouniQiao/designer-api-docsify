@@ -18,7 +18,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
-通过Panel实例取消监听当前面板大小变化，停止callback异步回调。<br> <br>   
+通过Panel实例取消监听当前面板大小变化，停止callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。
@@ -42,7 +42,7 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
-通过Panel实例监听当前面板大小变化，在变化发生时通过callback异步回调。<br> <br>   
+通过Panel实例监听当前面板大小变化，在变化发生时通过callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 仅用于SOFT_KEYBOARD类型，状态为FLG_FIXED或FLG_FLOATING的面板。输入法通过[adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)等接口对面板大小进行调节时系统会根据一定规则校验计算出最终的数值（例如：超出屏幕等场景）。输入法应用可通过该回调获取最终的面板大小，完成最终的面板布局刷新。
@@ -66,7 +66,7 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 ```
 
-通过Panel实例设置输入法窗口阴影效果。<br> <br>   
+通过Panel实例设置输入法窗口阴影效果。<br> <br>  
 > **说明：** <br>
 > <br>
 > 不支持PanelType为SOFT_KEYBOARD类型且PanelFlag状态为FLG_FIXED的面板。

@@ -1,4 +1,4 @@
-# @ohos.web.netErrorList
+# @ohos.web.netErrorList(网络协议栈错误列表)
 
 ## 导入模块
 

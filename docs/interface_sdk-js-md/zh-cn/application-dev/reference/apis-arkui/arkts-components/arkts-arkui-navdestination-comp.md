@@ -11,9 +11,7 @@
 
 > **说明：** 
 > 
-> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
 > 
 > - 子组件个数：多个。
 

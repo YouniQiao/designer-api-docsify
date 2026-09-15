@@ -32,7 +32,7 @@ Bus address.
 clazz: number
 ```
 
-Device class.
+Device class code.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Device address.
 manufacturerName: string
 ```
 
-Device manufacturer.
+Manufacturer name.
 
 **Type:** string
 
@@ -144,7 +144,7 @@ Device protocol code.
 serial: string
 ```
 
-Sequence number.
+Serial number. Third-party apps cannot obtain the device serial number from this field. This field is unavailable to third-party apps. To obtain the serial number, third-party apps need to request permissions to access the device and then initiate a control transfer.
 
 **Type:** string
 
@@ -158,7 +158,7 @@ Sequence number.
 subClass: number
 ```
 
-Device subclass.
+Device subclass code.
 
 **Type:** number
 
@@ -186,7 +186,7 @@ Vendor ID.
 version: string
 ```
 
-Version number.
+Version.
 
 **Type:** string
 

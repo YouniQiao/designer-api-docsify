@@ -6,28 +6,18 @@ The **Image** component is usually used to display images in applications. It su
 
 > - This component supports the TIFF image format since API version 23.
 > 
-> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused
-> state. For instructions on how to set focus, see
-> [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a- component-is-focusable).
-> By default, the **Image** component is not focusable. To enable it to gain focus, set both the
-> focusable and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch) attributes to
+> - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused state. For instructions on how to set focus, see [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a- component-is-focusable).By default, the **Image** component is not focusable. To enable it to gain focus, set both the focusable and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch) attributes to
 > **true**.
 > 
 > - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags.
 > 
-> - For animated images, animation playback is disabled by default and depends on the visibility of the **Image**
-> component. When the component is visible, the animation is started through the callback. When the component is
-> invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the
+> - For animated images, animation playback is disabled by default and depends on the visibility of the **Image**component. When the component is visible, the animation is started through the callback. When the component is invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the
 > 
 > [onVisibleAreaChange]
 > [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)
 > event. If the value of **ratios** is greater than 0, the component is visible.
 > 
-> - For details about how to resolve white block issues during image loading, see
-> [Solution to White Image Blocks]
-> (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).
-> For details about how to address slow image loading, see
-> [Optimizing Preset Image Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-&gt; compression-improve-performance#section91526132216). &gt;
+> - For details about how to resolve white block issues during image loading, see [Solution to White Image Blocks](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).For details about how to address slow image loading, see [Optimizing Preset Image Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-&gt; compression-improve-performance#section91526132216). &gt;
 
 **Inheritance/Implementation:** ImageAttribute extends CommonMethod<ImageAttribute>
 

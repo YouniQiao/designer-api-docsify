@@ -1,12 +1,19 @@
 # USBEndpoint
 
-Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md).
+Defines a USB endpoint, which is used for data transfer between the host and the USB device. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md).
 
-> **NOTE:** 
+> **Note:** 
 > 
-> The host controller schedules the endpoint based on the endpoint type.
+> The host controller schedules endpoints based on their types. Different scheduling policies are
+> used for different types of endpoints. Bandwidth sharing scheduling is used for bulk endpoints,
+> which is suitable for non-real-time transmission of a large amount of data. Fixed polling
+> scheduling is used for interrupt endpoints, which is suitable for real-time transmission of a
+> small amount of data. Bandwidth reservation scheduling is used for isochronous endpoints, which
+> is suitable for real-time data streams such as audio and video.
 > 
-> The transmission characteristics are determined by the type during protocol layer packaging.
+> The transmission characteristics, including the data packet format, error processing mechanism,
+> and timeout policy, are determined based on the endpoint type during protocol layer packaging.
+> 
 
 **Since:** 9
 
@@ -38,7 +45,7 @@ Endpoint address.
 attributes: number
 ```
 
-Endpoint attributes.
+Endpoint attributes, indicating the transfer characteristics of the endpoint, including the transfer type (bulk, interrupt, or isochronous) and synchronization type. The value must comply with the USB endpoint descriptor specifications.
 
 **Type:** number
 
@@ -80,7 +87,7 @@ Unique ID of the interface to which the endpoint belongs.
 interval: number
 ```
 
-Endpoint interval.Unit: milliseconds.
+Endpoint interval, in milliseconds. This parameter indicates the interval for interrupt and isochronous endpoints. This field is not used for bulk endpoints.
 
 **Type:** number
 
@@ -94,7 +101,7 @@ Endpoint interval.Unit: milliseconds.
 maxPacketSize: number
 ```
 
-Maximum size of data packets on the endpoint.Unit: bytes.
+Maximum size of data packets on the endpoint, in bytes.
 
 **Type:** number
 

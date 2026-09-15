@@ -1192,8 +1192,7 @@ onRemoteUpdate(callback: UpdateCallback): void
 
 订阅跨设备剪贴板内容变化事件，当远端设备系统剪贴板中内容变化时触发用户程序的回调。
 
-- 订阅后必须在不再需要监听时调用  
-[offRemoteUpdate](#offremoteupdate)取消订阅。  
+- 订阅后必须在不再需要监听时调用[offRemoteUpdate](#offremoteupdate)取消订阅。  
 - 未取消订阅会导致回调函数持续监听远端变化，造成内存泄漏。  
 - 建议在组件/页面销毁时取消订阅。
 

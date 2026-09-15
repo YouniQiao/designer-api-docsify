@@ -414,13 +414,9 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 
 > **说明：** 
 > 
-> - 调用此接口前，应先调用
-> [isAudioSeparationEffectSupported](#isaudioseparationeffectsupported)
-> 确认设备是否支持音频分离效果。
+> - 调用此接口前，应先调用[isAudioSeparationEffectSupported](#isaudioseparationeffectsupported)确认设备是否支持音频分离效果。
 > 
-> - 当streamId参数没有传入时，根据uid控制整个应用的音频分离效果开关；当streamId参数传入时，根据streamId控制指定音频播放流的音频分离效果开关。播放应用可通过
-> [AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取
-> streamId。
+> - 当streamId参数没有传入时，根据uid控制整个应用的音频分离效果开关；当streamId参数传入时，根据streamId控制指定音频播放流的音频分离效果开关。播放应用可通过[AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取streamId。
 
 **起始版本：** 26.0.0
 

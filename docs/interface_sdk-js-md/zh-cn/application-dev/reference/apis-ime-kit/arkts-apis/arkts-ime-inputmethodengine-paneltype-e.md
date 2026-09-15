@@ -1,6 +1,7 @@
 # PanelType
 
-输入法面板类型枚举。<br>  
+输入法面板类型枚举。<br>
+
 | 名称 | 值 | 说明 |  
 | ------------ | -- | ------------------ |  
 | [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) | 0 | 软键盘类型。 |

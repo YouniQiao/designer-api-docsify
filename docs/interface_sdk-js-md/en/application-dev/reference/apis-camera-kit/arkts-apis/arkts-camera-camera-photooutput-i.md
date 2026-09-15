@@ -909,9 +909,7 @@ Subscribes to the events of returning full-quality images and uncompressed image
 
 > **NOTE:** 
 > 
-> - You cannot call
-> [offCapturePhotoAvailable](#offcapturephotoavailable)
-> to unregister the callback in the callback listened by this API.
+> - You cannot call [offCapturePhotoAvailable](#offcapturephotoavailable)to unregister the callback in the callback listened by this API.
 > 
 > - This API can be used to register listeners only when uncompressed images in the YUV format are captured.
 

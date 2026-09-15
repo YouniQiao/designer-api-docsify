@@ -4,18 +4,11 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 
 > **NOTE:** 
 > 
-> * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be
-> encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent
-> lifecycle between them.
+> * It is recommended that the **CanvasRenderingContext2D** object and the **Canvas** component be encapsulated into the same custom component, ensuring a one-to-one correspondence and consistent lifecycle between them.
 > 
-> * When you call drawing APIs in this module, the commands are stored in the associated **Canvas**
-> component's command queue. These commands are only executed when the current frame enters the rendering
-> phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** component is
-> invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent command queue
-> buildup and excessive memory usage.
+> * When you call drawing APIs in this module, the commands are stored in the associated **Canvas**component's command queue. These commands are only executed when the current frame enters the rendering phase and the associated **Canvas** component is visible. Therefore, when the **Canvas** component is invisible (for example, off-screen or hidden), avoid frequent drawing calls to prevent command queue buildup and excessive memory usage.
 > 
-> * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes
-> significant performance degradation.
+> * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes significant performance degradation.
 
 @extends CanvasPath
 
@@ -1164,8 +1157,7 @@ colors are not supported. For details about the color format, see the descriptio
 - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created  
 via the [createLinearGradient](#createlineargradient) API.
 
-- When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the  
-[createPattern](#createpattern) API.
+- When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the [createPattern](#createpattern) API.
 
 Default value: **'#000000'** (black)
 
@@ -1344,7 +1336,7 @@ Default value: **'source-over'**
 imageSmoothingEnabled: boolean
 ```
 
-Indicates whether to apply image smoothing adjustments when drawing images. The value **true** means to enable smoothing, and **false** means to disable it. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. Default value: **true**.   
+Indicates whether to apply image smoothing adjustments when drawing images. The value **true** means to enable smoothing, and **false** means to disable it. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. Default value: **true**.  
 > **NOTE:** 
 > 
 > The resources used in this example are not located in the **src**
@@ -1375,7 +1367,7 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 imageSmoothingQuality: ImageSmoothingQuality
 ```
 
-Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md). Default value: **"low"**   
+Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md). Default value: **"low"**  
 > **NOTE:** 
 > 
 > The resources used in this example are not located in the **src**

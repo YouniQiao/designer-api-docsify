@@ -75,7 +75,7 @@ Default value: **0**
 
 1. Single-column pickers: number
 2. Multi-column pickers: number[]
-3. Since API version 10, this parameter supports two-way binding through  
+3. Since API version 10, this parameter supports two-way binding through
 [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number &#124; number[]
@@ -100,7 +100,7 @@ Default value: value of the first item in the data list.
 
 **NOTE:** 
 
-1. Since API version 10, this parameter supports two-way binding through  
+1. Since API version 10, this parameter supports two-way binding through
 [&#36;&#36;](../../../ui/state-management/arkts-two-way-sync.md).
 2. The Resource type is supported since API version 20.
 3. This parameter works only when the picker contains text only.

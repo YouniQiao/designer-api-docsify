@@ -106,7 +106,7 @@ USB storage device write capability. Currently, it is supported only on enterpri
 Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict:
 
 1. The device USB capability ([FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md)) has been disabled.
-2. USB storage device access policy has been set to read-only or disabled via the  
+2. USB storage device access policy has been set to read-only or disabled via the
 [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md) API.
 3. Storage USB devices have been disabled via the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) API.
 

@@ -111,7 +111,7 @@ window.createWindow(config).then((windowClass) => {
 function startDLPManagerForResult(context: common.Context, want: Want, window: window.Window): Promise<DLPManagerResult>
 ```
 
-Starts the DLP manager application on the current page in borderless mode. This API uses a promise to return the result.
+Starts the DLP manager application in a specified window in borderless mode. This API uses a promise to return the result.
 
 This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
 

@@ -112,31 +112,18 @@ Adds transition animations for state changes in closure code.
 > 
 > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.
 > 
-> - When **animateTo** is called in
-> [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the
-> component's build method is not executed yet, and internal components are not created. This means the animation
-> has no initial values to work with and will not function as expected.
+> - When **animateTo** is called in [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the component's build method is not executed yet, and internal components are not created. This means the animation has no initial values to work with and will not function as expected.
 > 
-> - During execution of
-> [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear),
-> the component is being destroyed, so animations should not be used.
+> - During execution of [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear),the component is being destroyed, so animations should not be used.
 > 
-> - When a component appears or disappears, animation effects can be added through
-> [component transition](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md).
+> - When a component appears or disappears, animation effects can be added through [component transition](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-common.md).
 > 
-> - For properties that component transitions do not support, refer to
-> [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion),
-> which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes.
+> - For properties that component transitions do not support, refer to [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion),which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes.
 > 
-> - In certain scenarios, using animateTo with
-> [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may
-> produce unexpected results. For details, see
-> [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2).
+> - In certain scenarios, using animateTo with [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may produce unexpected results. For details, see [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2).
 > 
 > 
-> - When a UIAbility switches from the foreground to the background, any limited iteration animations that are
-> currently running will end immediately, thereby triggering the
-> [onFinish animation completion callback](../arkts-components/arkts-arkui-animateparam-i.md).
+> - When a UIAbility switches from the foreground to the background, any limited iteration animations that are currently running will end immediately, thereby triggering the [onFinish animation completion callback](../arkts-components/arkts-arkui-animateparam-i.md).
 > 
 > - If transition animations are turned off in Developer options, animations end on the current frame, and the
 > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this
@@ -1643,8 +1630,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set
 > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.
 > 
-> 2. Since [updateBindSheet](#updatebindsheet) and [closeBindSheet](#closebindsheet)
-> depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.
+> 2. Since [updateBindSheet](#updatebindsheet) and [closeBindSheet](#closebindsheet)depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.
 > 
 > 3. Setting **SheetOptions.UIContext** is not supported.
 
@@ -1884,11 +1870,9 @@ Obtains a UIContext instance along with its resolution strategy using a predefin
 > 
 > 2. If only one UI instance exists, its UIContext is returned.
 > 
-> 3. If a UI instance has switched to the focused state, and the most recently focused UI instance has not been
-> destroyed, the UIContext of that most recently focused instance is returned.
+> 3. If a UI instance has switched to the focused state, and the most recently focused UI instance has not been destroyed, the UIContext of that most recently focused instance is returned.
 > 
-> 4. If a UI instance has switched to the foreground state, and the most recently foreground UI instance has not
-> been destroyed, the UIContext of that most recently foreground instance is returned.
+> 4. If a UI instance has switched to the foreground state, and the most recently foreground UI instance has not been destroyed, the UIContext of that most recently foreground instance is returned.
 > 
 > 5. If multiple UI instances exist, the UIContext with the largest unique instance ID is returned.
 > 

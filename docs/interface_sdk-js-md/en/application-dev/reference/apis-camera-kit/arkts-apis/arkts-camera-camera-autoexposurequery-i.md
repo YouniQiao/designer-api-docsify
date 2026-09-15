@@ -1,9 +1,8 @@
 # AutoExposureQuery
 
-AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.   
+AutoExposureQuery provides APIs to query the automatic exposure feature of a camera device.  
 > 
-> - In this version, a compatibility change was made that preserved the initial version information of inner
-> elements. As a result, you might see outer element's
+> - In this version, a compatibility change was made that preserved the initial version information of inner elements. As a result, you might see outer element's
 
 **Since:** 12
 

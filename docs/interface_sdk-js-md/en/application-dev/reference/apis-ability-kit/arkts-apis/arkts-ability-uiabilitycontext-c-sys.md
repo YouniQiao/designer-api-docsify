@@ -1038,8 +1038,7 @@ ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_AC
 ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
 - If **exported** of the target UIAbility is **false** in cross-application scenarios, the caller must have the  
 ohos.permission.START_INVISIBLE_ABILITY permission.  
-- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
-[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+- The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
 
@@ -1782,20 +1781,13 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 > **NOTE:** 
 > 
-> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the
-> application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
+> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
 > 
-> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the
-> ohos.permission.START_INVISIBLE_ABILITY permission.
+> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission.
 > 
-> - If the specified UIAbility has multiple instances, the caller must have the
-> ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest
-> instance.
+> - If the specified UIAbility has multiple instances, the caller must have the ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest instance.
 > 
-> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
-> required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications).For details about the startup rules for the components in the stage model, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
 
@@ -1955,20 +1947,13 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 
 > **NOTE:** 
 > 
-> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the
-> application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
+> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
 > 
-> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the
-> ohos.permission.START_INVISIBLE_ABILITY permission.
+> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission.
 > 
-> - If the specified UIAbility has multiple instances, the caller must have the
-> ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest
-> instance.
+> - If the specified UIAbility has multiple instances, the caller must have the ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest instance.
 > 
-> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
-> required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications).For details about the startup rules for the components in the stage model, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
 
@@ -2031,20 +2016,13 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 
 > **NOTE:** 
 > 
-> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the
-> application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
+> - For a successful launch in cross-device scenarios, the caller and target must be the same application and the application must have the ohos.permission.DISTRIBUTED_DATASYNC permission.
 > 
-> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the
-> ohos.permission.START_INVISIBLE_ABILITY permission.
+> - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission.
 > 
-> - If the specified UIAbility has multiple instances, the caller must have the
-> ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest
-> instance.
+> - If the specified UIAbility has multiple instances, the caller must have the ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest instance.
 > 
-> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is
-> required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+> - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications).For details about the startup rules for the components in the stage model, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 9
 

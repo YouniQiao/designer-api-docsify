@@ -1363,8 +1363,7 @@ onWillChange(callback: Callback<EditableTextChangeValue, boolean>)
 > 
 > - onWillChange在文本变更前触发，返回false可拦截此次变更；onChange在变更后触发，仅用于通知，无法拦截
 > 
-> - 需要拦截控制时使用onWillChange，仅需获取变更结果时使用onChange
-> onWillChange的回调时序晚于onWillInsert、onWillDelete，早于onDidInsert、onDidDelete。
+> - 需要拦截控制时使用onWillChange，仅需获取变更结果时使用onChange onWillChange的回调时序晚于onWillInsert、onWillDelete，早于onDidInsert、onDidDelete。
 
 **起始版本：** 15
 

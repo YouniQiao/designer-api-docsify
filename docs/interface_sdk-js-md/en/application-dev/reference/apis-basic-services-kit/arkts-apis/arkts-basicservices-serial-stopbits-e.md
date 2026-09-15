@@ -1,6 +1,6 @@
 # StopBits
 
-Stop bits in serial port communication.
+Enumerates the number of stop bits.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ One stop bit.
 TWO = 2
 ```
 
-2 stop bits.
+Two stop bits.
 
 **Since:** 26.0.0
 

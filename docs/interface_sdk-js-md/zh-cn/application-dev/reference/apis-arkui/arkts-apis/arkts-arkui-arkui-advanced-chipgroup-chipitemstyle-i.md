@@ -8,8 +8,7 @@ ChipItemStyle定义了Chip的通用属性。
 > 
 > 2. backgroundColor、selectedBackgroundColor传入undefined时，显示默认背景颜色，传入非法值时，背景色透明。
 > 
-> 3. 从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用系统预定义的可反色颜色资源（如`&#36;r('sys.color.font_primary')`），颜色
-> 自动适配到材质背景色的反色。
+> 3. 从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用系统预定义的可反色颜色资源（如`&#36;r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。
 
 **起始版本：** 12
 

@@ -1,6 +1,7 @@
 # ImmersiveMode
 
-Enumerates the immersive modes of the input method.<br> <br>  
+Enumerates the immersive modes of the input method.<br> <br>
+
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
 | [NONE_IMMERSIVE](arkts-ime-inputmethodengine-immersivemode-e.md) | 0 | The immersive mode is not used.|

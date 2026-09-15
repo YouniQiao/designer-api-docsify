@@ -4,11 +4,9 @@ Provides the capability of accessing application resources and system resources.
 
 > **NOTE:** 
 > 
-> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative
-> development paradigm.
+> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative development paradigm.
 > 
-> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such
-> as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
+> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
 > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through
 > `&#36;r(*resource-address*).id`, for example, `&#36;r('app.string.test').id`.
 > 
@@ -19,10 +17,7 @@ Provides the capability of accessing application resources and system resources.
 > of the corresponding module and then call the API with **resName** or **resId** specified. For more information,
 > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 > 
-> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code
-> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate-
-> code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see
-> [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate-code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
 **Since:** 6
 
@@ -1358,11 +1353,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE:** 
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1448,11 +1441,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE:** 
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1561,8 +1552,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE:** 
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -1838,11 +1828,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE:** 
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1928,11 +1916,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE:** 
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 > 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -2041,8 +2027,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 > **NOTE:** 
 > 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 

@@ -108,8 +108,7 @@ Sets whether to enable leading punctuation compression.
 > 
 > - Leading punctuation is not compressed by default.
 > 
-> - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a
-> line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 

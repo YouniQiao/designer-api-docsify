@@ -148,8 +148,7 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 > 
 > - avoidHeight有效值区间为[0, Web组件高度]，超出有效值区间时取边界值。
 > 
-> - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的
-> 场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。
+> - 该接口高度设置为非0时，Web组件位置和尺寸不变，可视视口向上避让avoidHeight，表现为Web网页内容抬升avoidHeight。该接口一般用于应用自定义网页底部避让区，不建议和点击web网页可编辑区拉起键盘的场景同时使用。同时使用时，键盘弹起避让模式将使用OVERLAYS_CONTENT。
 > 
 > - 该接口高度设置为0时，Web网页内容可恢复，键盘弹起避让模式将使用keyboardAvoidMode()声明的模式。
 
@@ -754,8 +753,7 @@ static enableAdvancedSecurityMode(securityParams: SecurityParams): void
 > 
 > - 该接口为全局静态API，在整个APP生命周期中调用一次即可，不需要重复调用。
 > 
-> - 必须在[initializeWebEngine()](#initializewebengine)之前调用，否则设置无效。
-> 26.0.0
+> - 必须在[initializeWebEngine()](#initializewebengine)之前调用，否则设置无效。26.0.0
 
 **起始版本：** 26.0.0
 
@@ -897,13 +895,11 @@ executeAIPageCommand(command: string): Promise<string>
 
 > **说明：** 
 > 
-> - 不同命令的返回格式不同，详细说明请参见[AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)和
-> [AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。
+> - 不同命令的返回格式不同，详细说明请参见[AIPageCommand](../../../reference/apis-arkweb/arkts-apis-webview-AIPageCommand.md)和[AIPageInteraction](../../../reference/apis-arkweb/arkts-apis-webview-AIPageInteraction.md)。
 > 
 > - 当命令无法分发或无结果返回时，Promise可能返回空字符串。
 > 
-> - 返回值非空时为JSON字符串，应用可通过`JSON.parse`解析后使用。
-> 26.0.0
+> - 返回值非空时为JSON字符串，应用可通过`JSON.parse`解析后使用。26.0.0
 
 **起始版本：** 26.0.0
 
@@ -1027,18 +1023,15 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 > **说明：** 
 > 
-> - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。
-> 超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。
+> - 持久缓存容量：默认大小为30MB（约30页），可以通过接口[setBlanklessLoadingCacheCapacity](#setblanklessloadingcachecapacity)设置缓存容量，具体见该接口说明。超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。
 > 
 > - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)极低，请确认key值是否传递正确。
 > 
 > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。
 > 
-> - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。
-> 增加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。
+> - 启用无白屏加载的页面会带来一定的资源开销，开销的大小与Web组件的分辨率相关。假设分辨率的宽度和高度分别为：w, h。页面在打开阶段会增加峰值内存，增加约12 * w * h B，页面打开后内存回收，不影响稳态内存。增加固态应用缓存的大小，每个页面增加的缓存约w * h / 10 B，缓存位于应用缓存的位置。
 > 
-> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，
-> 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
 
@@ -2108,8 +2101,7 @@ data数据必须使用base64编码或将内容中的任何#字符编码为%23。
 > 
 > - 若html中的富文本中带有注入#等特殊字符，建议将baseUrl和historyUrl两个参数的值设置为"空格"。
 > 
-> - 加载文字场景，需主动设置`&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;`避免文本字体大小不
-> 一致。
+> - 加载文字场景，需主动设置`&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;`避免文本字体大小不一致。
 
 **起始版本：** 9
 
@@ -2502,8 +2494,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 > 
 > - prefetchPage有时间限制，500ms内不能多次预取。
 > 
-> - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟，
-> 则在使用之前会重新验证资源。
+> - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟，则在使用之前会重新验证资源。
 
 **起始版本：** 10
 
@@ -2541,8 +2532,7 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>, prefetchOptions?
 > 
 > - 先执行prefetchPage再加载页面时，已预取的资源将直接从缓存中加载。
 > 
-> - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟，
-> 则在使用之前会重新验证资源。
+> - prefetchPage会缓存所有资源，但具有Cache-Control: no-store标头的资源除外。如果存在Vary响应标头、Cache-Control: no-store标头，或者下载的页面资源已超过五分钟，则在使用之前会重新验证资源。
 
 **起始版本：** 21
 
@@ -2692,8 +2682,7 @@ registerJavaScriptProxy提供了应用与Web组件加载的网页之间强大的
 > 
 > - 同步函数列表和异步函数列表不可同时为空，否则此次调用接口注册失败。
 > 
-> - 异步的作用在于：H5线程将异步JavaScript任务提交给ETS主线程后，无需等待任务执行完成并返回结果，H5线程即可继续执行后续任务。这在执行耗时较长的JavaScript任务或ETS线程较为拥堵的情况下，可以有效
-> 减少H5线程因JavaScript任务而被阻塞的情况。然而，异步JavaScript任务无法返回值，且任务执行的顺序无法保证，因此需要根据具体情境判断是否使用同步或异步方式。
+> - 异步的作用在于：H5线程将异步JavaScript任务提交给ETS主线程后，无需等待任务执行完成并返回结果，H5线程即可继续执行后续任务。这在执行耗时较长的JavaScript任务或ETS线程较为拥堵的情况下，可以有效减少H5线程因JavaScript任务而被阻塞的情况。然而，异步JavaScript任务无法返回值，且任务执行的顺序无法保证，因此需要根据具体情境判断是否使用同步或异步方式。
 > 
 > - 注入的对象在页面下一次（重新）加载前不会出现在JavaScript中。
 
@@ -3402,8 +3391,7 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 > 
 > - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。
 > 
-> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，
-> 具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 20
 
@@ -3445,8 +3433,7 @@ setBlanklessLoadingWithParams(key: string,
 > 
 > - 当相似度较低时，系统将判定为跳变过大，启用插帧会失败。
 > 
-> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考
-> [在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+> - 请在module.json5中添加权限: ohos.permission.INTERNET和ohos.permission.GET_NETWORK_INFO，具体权限的添加方法请参考[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
 
 **起始版本：** 23
 
@@ -3509,8 +3496,7 @@ setCustomUserAgent(userAgent: string): void
 
 > **说明：** 
 > 
-> - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在
-> onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。
+> - 当Web组件src设置了URL时，建议在onControllerAttached回调中设置User-Agent。不要在onLoadIntercept回调中设置，否则可能会设置失败或导致不可预期的后果。
 > 
 > - 若未在onControllerAttached回调中设置User-Agent，再调用setCustomUserAgent方法时，可能会出现加载的页面与实际设置User-Agent不符的异常现象。
 > 
@@ -3603,13 +3589,9 @@ setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 > 
 > - 当enable设置为false时，无论includeSubframe取何值，mainframe和subframe的错误页功能均不启用。
 > 
-> - 当includeSubframe设置为false时，本接口行为与
-> [setErrorPageEnabled](#seterrorpageenabled)一致，即仅启用mainframe错误页功
-> 能，不启用subframe错误页功能。
+> - 当includeSubframe设置为false时，本接口行为与[setErrorPageEnabled](#seterrorpageenabled)一致，即仅启用mainframe错误页功能，不启用subframe错误页功能。
 > 
-> - 可通过errorPageEvent.request.isMainFrame()判断错误来源是mainframe还是subframe，以便在
-> onOverrideErrorPage回调中分别设置对应的自定义错误页。
-> 26.0.0
+> - 可通过errorPageEvent.request.isMainFrame()判断错误来源是mainframe还是subframe，以便在onOverrideErrorPage回调中分别设置对应的自定义错误页。26.0.0
 
 **起始版本：** 26.0.0
 
@@ -4138,8 +4120,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 
 设置是否启用无线网页调试功能，默认不开启。
 
-* 当没有指定端口port时，该接口等同于  
-[setWebDebuggingAccess](#setwebdebuggingaccess)接口，ArkWeb会启动一个本地domain socket监听。  
+* 当没有指定端口port时，该接口等同于[setWebDebuggingAccess](#setwebdebuggingaccess)接口，ArkWeb会启动一个本地domain socket监听。  
 * 当指定了端口port时，ArkWeb会启动一个tcp socket监听。这时可以无线调试网页。详情请参考[无线调试](../../../web/web-debugging-with-devtools.md#无线调试)。
 
 由于小于1024的端口号作为熟知或系统端口，在操作系统上需要特权才能开启，因此port的取值必须大于1024，否则该接口会抛出异常。

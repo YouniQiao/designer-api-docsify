@@ -531,8 +531,7 @@ Obtains the list of seekable time ranges. This API uses a promise to return the 
 
 > **NOTE:** 
 > 
-> - For local media resources and media resources that support segment-based requests, the time range is from 0
-> to the entire media duration.
+> - For local media resources and media resources that support segment-based requests, the time range is from 0to the entire media duration.
 > 
 > - For media resources that support only chunk-based transmission, there is no seekable time range.
 
@@ -1402,8 +1401,7 @@ Subscribes to playback position changes. It is used to refresh the current posit
 > 
 > - The **'timeUpdate'** event is not supported in live streaming scenarios.
 > 
-> - When a seek operation is performed, the progress bar can be updated based on the **'timeUpdate'** event only
-> after the seek operation is complete (**'seekdone'** received).
+> - When a seek operation is performed, the progress bar can be updated based on the **'timeUpdate'** event only after the seek operation is complete (**'seekdone'** received).
 > 
 > - In the **pause** state, the player reports the timeUpdate event when the buffering ends.
 
@@ -2958,8 +2956,7 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 
 **NOTE:** 
 
-- To set the playback URL, you need to declare the  
-[ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../errorcode-universal.md#201-permission-denied).  
+- To set the playback URL, you need to declare the [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../errorcode-universal.md#201-permission-denied).  
 - WebM is no longer supported since API version 11.  
 - After the resource handle (FD) is transferred to an AVPlayer instance, do not use the resource handle to  
 perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVPlayers use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.

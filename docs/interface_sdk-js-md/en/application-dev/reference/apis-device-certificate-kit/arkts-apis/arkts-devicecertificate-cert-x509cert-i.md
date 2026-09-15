@@ -815,10 +815,8 @@ Obtains the issuer name of this X.509 certificate.
 
 > **NOTE:** 
 > 
-> - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove
-> this terminator based on your business requirements.
-> - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name
-> string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
+> - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
+> - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
 
 **Since:** 9
 
@@ -2060,13 +2058,9 @@ Obtains the subject name of this X.509 certificate.
 
 > **NOTE:** 
 > 
-> - If the encodingType parameter is not set, the obtained certificate subject name ends with a
-> NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
-> - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When
-> converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to
-> separate relative distinguished names.
-> - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate
-> subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
+> - If the encodingType parameter is not set, the obtained certificate subject name ends with a NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
+> - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
+> - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
 
 **Since:** 9
 

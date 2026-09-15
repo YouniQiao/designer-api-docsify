@@ -167,8 +167,7 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 > - The given video resource is decoded first, and then image frames are extracted from each time point in the
 > **timesUs** array based on the provided **options** and **param**.
 > 
-> - When each image extraction is complete, the system calls the callback function and passes the extraction
-> result. Note that the execution order of the callback function may be inconsistent with the time points in the
+> - When each image extraction is complete, the system calls the callback function and passes the extraction result. Note that the execution order of the callback function may be inconsistent with the time points in the
 > **timesUs** array.
 
 **Since:** 23
@@ -211,12 +210,10 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 > - The given video resource is decoded first, and then image frames are extracted from each time point in the
 > **timesUs** array based on the provided **options** and **param**.
 > 
-> - When each image extraction is complete, the system calls the callback function and passes the extraction
-> result. Note that the execution order of the callback function may be inconsistent with the time points in the
+> - When each image extraction is complete, the system calls the callback function and passes the extraction result. Note that the execution order of the callback function may be inconsistent with the time points in the
 > **timesUs** array.
 > 
-> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not
-> the entire batch thumbnail extraction process.
+> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not the entire batch thumbnail extraction process.
 
 **Since:** 26.0.0
 

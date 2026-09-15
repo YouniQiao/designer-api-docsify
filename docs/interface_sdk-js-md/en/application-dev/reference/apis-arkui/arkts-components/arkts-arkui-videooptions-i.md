@@ -118,8 +118,7 @@ The string type can be used to load network images and local images.
 - URLs are supported for loading online images.  
 - Relative paths are supported for loading local images, for example, **previewUri: "common/test.jpg"**. When using  
 an image referenced using a relative path, the component cannot be called across bundles or modules.  
-- Strings with the **file://** prefix, that is,  
-[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
+- Strings with the **file://** prefix, that is,[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
 
 The Resource type allows cross-package and cross-module access to resource files.
 
@@ -157,8 +156,7 @@ The Resource type allows cross-package and cross-module access to resource files
 The string type is used for loading local videos and, more frequently, network videos.
 
 - Network video URLs are supported.  
-- Strings with the **file://** prefix, that is,  
-[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
+- Strings with the **file://** prefix, that is,[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
 
 The default value is an empty string.
 

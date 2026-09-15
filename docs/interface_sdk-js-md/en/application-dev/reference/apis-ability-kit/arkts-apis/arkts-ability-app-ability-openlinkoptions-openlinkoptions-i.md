@@ -22,8 +22,7 @@ Whether the UIAbility must be started using <!--RP1--> [App Linking](../../../ap
 
 - If this parameter is set to **true** and no UIAbility matches the URL in App Linking, the result is returned  
 directly.  
-- If this parameter is set to **false** and no UIAbility matches the URL in App Linking, App Linking falls back to  
-[Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**.
+- If this parameter is set to **false** and no UIAbility matches the URL in App Linking, App Linking falls back to [Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**.
 
 When the aa command is used to implicitly start an ability, you can set **--pb appLinkingOnly true** or **--pb appLinkingOnly false** to start the ability in App Linking mode.
 

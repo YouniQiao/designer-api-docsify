@@ -12,7 +12,11 @@ import { usbManager } from '@kit.BasicServicesKit';
 function addAccessoryRight(tokenId: number, accessory: USBAccessory): void
 ```
 
-Adds the permission to applications for accessing USB accessories. [usbManager.requestAccessoryRight]{(@link usbManager.requestAccessoryRight)} triggers a dialog box to request user authorization. **addAccessoryRight** does not trigger a dialog box but directly adds the device access permission for the application.
+Adds the permission to apps for accessing USB accessories. This API can be used by system apps to grant third-party apps the permission to access USB accessories. **usbManager.requestAccessoryRight** triggers a dialog box to request user authorization. **addAccessoryRight** does not trigger a dialog box but directly adds the device accessory access permission for the app. The authorization takes effect immediately and is stored persistently. It remains valid even after the device is rebooted. The authorization applies to the specified USB device accessory instance. Multiple apps can obtain the access permission for the same accessory at the same time. Unlike **requestAccessoryRight**, **addAccessoryRight** does not require user interaction and is suitable for scenarios where the system app automatically grants authorization.
+
+> **NOTE:** 
+> 
+> This API is supported since API version 14.
 
 **Since:** 14
 
@@ -26,8 +30,8 @@ Adds the permission to applications for accessing USB accessories. [usbManager.r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | number | Yes | Token ID of the application. |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory. |
+| tokenId | number | Yes | Unique ID of an app, which can be obtained using [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md). |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory object, including the accessory ID and attributes. You can obtain the accessory list by calling [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md). For details about the field definition, see [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md). |
 
 **Error codes:**
 

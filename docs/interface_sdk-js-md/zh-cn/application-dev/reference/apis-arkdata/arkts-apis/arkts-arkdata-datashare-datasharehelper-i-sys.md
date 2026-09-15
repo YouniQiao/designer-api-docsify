@@ -1359,8 +1359,7 @@ on(
 ```
 
 订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。<br> <br>配对调用：<br>  
-- 与  
-[off('rdbDataChange')](#offrdbdatachange)成对使用，用于取消订阅数据变更事件。<br>- 取消订阅时需确保type、uris、templateId和callback参数与订阅时一致。<br>- 如未及时取消订阅，可能导致内存泄漏和资源占用。
+- 与[off('rdbDataChange')](#offrdbdatachange)成对使用，用于取消订阅数据变更事件。<br>- 取消订阅时需确保type、uris、templateId和callback参数与订阅时一致。<br>- 如未及时取消订阅，可能导致内存泄漏和资源占用。
 
 **起始版本：** 10
 

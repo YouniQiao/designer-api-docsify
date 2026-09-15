@@ -6,7 +6,8 @@
 
 ## Constant
 
-<br><br>Provides the constants.<br>  
+<br><br>Provides the constants.<br>
+
  | Name| Type| Value| Description|  
  | -------- | -------- | -------- | -------- |  
 | MAX_TYPE_NUM&lt;sup&gt;8+&lt;/sup&gt; | number | 128 | Maximum number of supported input methods.|
@@ -86,7 +87,7 @@ import { inputMethod } from '@kit.IMEKit';
 | Name | Description |
 | --- | --- |
 | [AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md) | Enumerates the reasons for attachment failure. |
-| [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.<br>  &#124; Name&#124; Value&#124; Description&#124;  &#124; -------- &#124; -- &#124; -------- &#124;  &#124; NONE &#124; 0 &#124; The first letter is not capitalized.&#124;  &#124; SENTENCES &#124; 1 &#124; The first letter of each sentence is capitalized.&#124;  &#124; WORDS &#124; 2 &#124; The first letter of each word is capitalized.&#124;  &#124; CHARACTERS &#124; 3 &#124; All letters are capitalized.&#124; |
+| [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.<br> |
 | [Direction](arkts-ime-inputmethod-direction-e.md) | Enumerates the directions of cursor movement of the input method. |
 | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Indicates whether the input method is enabled. |
 | [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md) | Enumerates the function types represented by the Enter key of the input method. |

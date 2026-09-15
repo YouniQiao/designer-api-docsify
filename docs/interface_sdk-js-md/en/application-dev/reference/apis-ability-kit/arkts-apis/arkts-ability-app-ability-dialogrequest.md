@@ -6,9 +6,7 @@ A modal dialog box is a system-level dialog box that blocks interactions such as
 
 > **NOTE:** 
 > 
-> - The APIs provided by this module are used in ServiceExtensionAbilities. For a ServiceExtensionAbility that
-> implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and
-> return the request result.
+> - The APIs provided by this module are used in ServiceExtensionAbilities. For a ServiceExtensionAbility that implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and return the request result.
 
 **Since:** 9
 

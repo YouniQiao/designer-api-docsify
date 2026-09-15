@@ -301,7 +301,7 @@ try {
 getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty>
 ```
 
-获取指定用户已激活/未激活的输入法应用列表。同步接口。<br> <br>   
+获取指定用户已激活/未激活的输入法应用列表。同步接口。<br> <br>  
 > **说明：** <br>
 > <br>
 > 已激活输入法为使能的输入法应用。默认输入法默认使能，其他输入法可被设置为使能或非使能。<br>

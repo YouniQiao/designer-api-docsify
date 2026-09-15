@@ -8,8 +8,7 @@ When an **EnterpriseAdminExtensionAbility** component is instantiated, the syste
 > 
 > - The APIs of this module can be used only in the stage model.
 > 
-> - The APIs of this module can be called only by a device administrator application that is enabled. For details,
-> see [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+> - The APIs of this module can be called only by a device administrator application that is enabled. For details,see [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Inheritance/Implementation:** EnterpriseAdminExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 

@@ -72,16 +72,11 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 > **NOTE:** 
 > 
-> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
-> preloading in the onAppear lifecycle of **Tabs**.
+> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first preloading in the onAppear lifecycle of **Tabs**.
 > 
-> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
-> when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
-> calling this API.
+> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when calling this API.
 > 
-> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the
-> content displayed on the tab bar. For details, see
-> [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
+> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the content displayed on the tab bar. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
 
 **Since:** 12
 

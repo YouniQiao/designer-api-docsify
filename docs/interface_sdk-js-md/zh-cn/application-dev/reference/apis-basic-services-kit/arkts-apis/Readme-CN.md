@@ -815,7 +815,7 @@
   - [UpgradeAction(系统接口)](arkts-basicservices-update-upgradeaction-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpgradeStatus(系统接口)](arkts-basicservices-update-upgradestatus-e-sys.md)<!--DelEnd-->
-- [@ohos.usb(USB Manager)](arkts-basicservices-usb.md)
+- [@ohos.usb(USB管理)](arkts-basicservices-usb.md)
   - [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md)
   - [claimInterface](arkts-basicservices-usb-claiminterface-f.md)
   - [closePipe](arkts-basicservices-usb-closepipe-f.md)
@@ -953,7 +953,7 @@
   - [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
   - [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
   - [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
-- [@ohos.usbManager.serial](arkts-basicservices-usbmanager-serial.md)
+- [@ohos.usbManager.serial(串口通信管理)](arkts-basicservices-usbmanager-serial.md)
   <!--Del-->
   - [addSerialRight(系统接口)](arkts-basicservices-serialmanager-addserialright-f-sys.md)<!--DelEnd-->
   - [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md)

@@ -16,7 +16,7 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 当特性开关处于开启状态时，右键单击支持加密的文件，右键菜单中会显示“加密保护”选项。可加密类型包括：.txt，pdf，xls，xlsx，ppt，pptx，doc，docx。
 
-企业策略开启或关闭数据防泄漏功能时使用此接口。
+企业策略开启或关闭数据防泄露功能时使用此接口。
 
 **起始版本：** 26.0.0
 
@@ -43,6 +43,7 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because car not support DLP feature.<br>**适用版本：** 26.1.0+ |
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 

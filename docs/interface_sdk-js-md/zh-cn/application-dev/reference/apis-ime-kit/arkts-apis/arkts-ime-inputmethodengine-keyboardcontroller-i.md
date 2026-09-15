@@ -192,7 +192,7 @@ keyboardController.hide().then(() => {
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-隐藏输入法。使用callback异步回调。<br> <br>   
+隐藏输入法。使用callback异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。
@@ -241,7 +241,7 @@ keyboardController.hideKeyboard().then(() => {
 hideKeyboard(): Promise<void>
 ```
 
-隐藏输入法。使用promise异步回调。<br> <br>   
+隐藏输入法。使用promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
 > 从 API version 8开始支持，从API version 9开始废弃。

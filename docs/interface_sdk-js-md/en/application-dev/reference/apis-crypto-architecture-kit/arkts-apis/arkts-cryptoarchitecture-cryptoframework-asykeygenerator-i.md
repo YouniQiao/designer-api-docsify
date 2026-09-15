@@ -424,15 +424,9 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 > **NOTE:** 
 > 
-> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
-> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
-> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
-> encoding format.
-> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
-> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
-> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
-> Crypto framework, the system does not verify whether the specifications of the generated key object are the
-> same as the key specifications specified for the asymmetric key generator.
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM encoding format.
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the Crypto framework, the system does not verify whether the specifications of the generated key object are the same as the key specifications specified for the asymmetric key generator.
 
 **Since:** 12
 
@@ -546,15 +540,9 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 > **NOTE:** 
 > 
-> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
-> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
-> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
-> encoding format.
-> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
-> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
-> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
-> Crypto framework, the system does not verify whether the specifications of the generated key object are the
-> same as the key specifications specified for the asymmetric key generator.
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM encoding format.
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the Crypto framework, the system does not verify whether the specifications of the generated key object are the same as the key specifications specified for the asymmetric key generator.
 > 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
 
 **Since:** 18

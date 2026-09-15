@@ -32,9 +32,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 > **说明：** 
 > 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用
-> [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability)
-> 。
+> - 从API version 9开始支持，从API version 21开始废弃，推荐使用[UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability)。
 
 **起始版本：** 9
 
@@ -149,9 +147,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 > **说明：** 
 > 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用
-> [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability)
-> 。
+> - 从API version 9开始支持，从API version 21开始废弃，推荐使用[UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability)。
 
 **起始版本：** 9
 

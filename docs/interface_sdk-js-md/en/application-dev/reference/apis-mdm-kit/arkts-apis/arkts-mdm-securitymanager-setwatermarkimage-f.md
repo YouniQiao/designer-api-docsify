@@ -16,9 +16,7 @@ Sets a watermark policy for a specified application of a specified user. Current
 
 > **NOTE:** 
 > 
-> 1. This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the
-> risk of information leakage. You are not advised to set watermarks for system applications (such as the home
-> screen application), as unknown exceptions may occur.
+> 1. This API is intended for setting watermarks on third-party applications in enterprise scenarios to reduce the risk of information leakage. You are not advised to set watermarks for system applications (such as the home screen application), as unknown exceptions may occur.
 > 
 > 2. The watermark image will be tiled repeatedly to cover the entire application interface.
 

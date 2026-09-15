@@ -4,14 +4,9 @@ Data loss prevention (DLP) is a system solution provided to prevent data disclos
 
 > **NOTE:** 
 > 
-> - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a
-> superscript to indicate their earliest API version.
+> - The initial APIs of this module are supported since API version 10. Newly added APIs will be marked with a superscript to indicate their earliest API version.
 > 
-> - The kit to which **@ohos.dlpPermission** belongs has been changed from `DataLossPreventionKit` to `
-> DataProtectionKit`. You are advised to use the new module name `@
-> kit.DataProtectionKit` to import the module. If `@
-> kit.DataLossPreventionKit` is imported, only the APIs before the change can be called and the APIs after the change
-> cannot be used.
+> - The kit to which **@ohos.dlpPermission** belongs has been changed from `DataLossPreventionKit` to `DataProtectionKit`. You are advised to use the new module name `@kit.DataProtectionKit` to import the module. If `@kit.DataLossPreventionKit` is imported, only the APIs before the change can be called and the APIs after the change cannot be used.
 
 **Since:** 10
 
@@ -37,7 +32,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [generateDlpFileForEnterprise](arkts-dataprotection-dlppermission-generatedlpfileforenterprise-f.md) | Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by enterprise accounts. This API uses a promise to return the result. |
 | [getControlledAppLists](arkts-dataprotection-dlppermission-getcontrolledapplists-f.md) | Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result. |
 | [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md) | Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API can be called only in non-DLP sandbox applications. This API uses a promise to return the result. |
-| [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md) | Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API uses an asynchronous callback to return the result. |
+| [getDLPFileAccessRecords](arkts-dataprotection-dlppermission-getdlpfileaccessrecords-f.md) | Obtains the list of DLP files that are accessed recently. After the API is successfully called, the file access records are returned, which can be used to track and manage the usage of DLP files. This API can be called only in non-DLP sandbox applications. This API uses an asynchronous callback to return the result. |
 | [getDLPPermissionInfo](arkts-dataprotection-dlppermission-getdlppermissioninfo-f.md) | Queries the permission information of the current DLP sandbox, including permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API can be called only in DLP sandbox applications. This API uses a promise to return the result. |
 | [getDLPPermissionInfo](arkts-dataprotection-dlppermission-getdlppermissioninfo-f.md) | Obtains the permission information of this DLP file. The returned permission information includes permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API uses an asynchronous callback to return the result. |
 | [getDLPSuffix](arkts-dataprotection-dlppermission-getdlpsuffix-f.md) | Obtains the DLP file name extension. After the API is called successfully, the DLP file name extension (for example,dlp) is returned. This API returns the result synchronously. |
@@ -64,7 +59,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [setRetentionState](arkts-dataprotection-dlppermission-setretentionstate-f.md) | Sets the retention state for sandbox applications. By default, when a DLP file is opened, the system automatically creates a sandbox environment. After the file is closed, the sandbox is automatically destroyed. After the retention state is set, the sandbox environment is retained even if the DLP file is closed, allowing the system to quickly reopen the same DLP file. This is applicable to scenarios where the same DLP file needs to be frequently operated, improving the file opening efficiency. |
 | [setSandboxAppConfig](arkts-dataprotection-dlppermission-setsandboxappconfig-f.md) | Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result. This API can be called only in non-DLP sandbox applications. |
 | [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result. |
-| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application on the current page in borderless mode. This API uses a promise to return the result. |
+| [startDLPManagerForResult](arkts-dataprotection-dlppermission-startdlpmanagerforresult-f.md) | Starts the DLP manager application in a specified window in borderless mode. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -72,7 +67,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | Name | Description |
 | --- | --- |
 | [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) | Generates a **DLPFile** object, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. This API uses a promise to return the result. |
-| [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) | Generates a DLP file, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. Obtains a **DLPFile** object. This API uses an asynchronous callback to return the result. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage. |
+| [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) | Generates a DLP file, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. Obtains a **DLPFile** object. This API uses an asynchronous callback to return the result. After using the **DLPFile** object, call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile) to close the object to prevent resource leakage. |
 | [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md) | Obtains the DLP sandbox gathering policy. This API uses a promise to return the result. |
 | [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md) | Obtains the DLP sandbox gathering policy. This API uses an asynchronous callback to return the result. |
 | [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) | Installs a DLP sandbox application for an application. The DLP sandbox creates an independent running environment for protected DLP files, which is isolated from the original application process. This ensures that data is securely transferred within the authorized scope. The sandbox application inherits the functions of the original application but can access only authorized DLP files. This API uses a promise to return the result. |

@@ -603,7 +603,7 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 setAsset(assetKey: string, uri: string): Promise<void>
 ```
 
-设置分布式数据对象中的单个资产的属性信息，该接口必须在[setSessionId](#setsessionid-2)接口调用前使用。使用Promise异步回调。<br>   
+设置分布式数据对象中的单个资产的属性信息，该接口必须在[setSessionId](#setsessionid-2)接口调用前使用。使用Promise异步回调。<br>  
 > **注意：**
 > 
 > 在设置资产时必须保证assetKey存在且对应文件为资产类型文件，否则无法保证对端能接收到此次设置的资产。
@@ -692,7 +692,7 @@ class EntryAbility extends UIAbility {
 setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 ```
 
-设置分布式数据对象中的多个资产的属性信息，该接口必须在[setSessionId](#setsessionid-2)接口调用前使用。使用Promise异步回调。<br>   
+设置分布式数据对象中的多个资产的属性信息，该接口必须在[setSessionId](#setsessionid-2)接口调用前使用。使用Promise异步回调。<br>  
 > **注意：**
 > 
 > 在设置资产时必须保证assetsKey存在且对应文件为资产类型文件，否则无法保证对端能接收到此次设置的资产。

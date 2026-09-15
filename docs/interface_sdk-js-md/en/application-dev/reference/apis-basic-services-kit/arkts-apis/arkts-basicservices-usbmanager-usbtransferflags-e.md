@@ -36,7 +36,7 @@ Automatically releases the transfer buffer.
 USB_TRANSFER_FREE_TRANSFER = 2
 ```
 
-Automatically transfers after the callback is complete.
+Automatically releases transfer resources after the callback is complete.
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ Automatically transfers after the callback is complete.
 USB_TRANSFER_ADD_ZERO_PACKET = 3
 ```
 
-Adds an additional data packet to the transfer.
+Adds an additional data packet to be transferred.
 
 **Since:** 18
 

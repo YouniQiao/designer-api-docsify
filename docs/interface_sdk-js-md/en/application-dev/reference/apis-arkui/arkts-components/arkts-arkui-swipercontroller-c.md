@@ -88,20 +88,11 @@ Sets the drag distance of drag simulation.
 
 > **NOTE:** 
 > 
-> - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout,
-> so that the drag effect can be displayed after the current frame layout. If this API is called multiple times
-> before the layout, only the drag distance passed in the last call takes effect during the current frame layout.
+> - The drag distance of drag simulation depends on the layout. You are advised to call this API before the layout,so that the drag effect can be displayed after the current frame layout. If this API is called multiple times before the layout, only the drag distance passed in the last call takes effect during the current frame layout.
 > 
-> - In the loop scenario where [loop](arkts-arkui-swiper-comp-attribute.md#loop) is set to **true**, if the drag distance of drag
-> simulation is greater than the total layout length, the drag distance will be adjusted to the distance required
-> to drag just far enough to display the first child node (when dragging toward the start of the layout) or the
-> last child node (when dragging toward the end of the layout).
+> - In the loop scenario where [loop](arkts-arkui-swiper-comp-attribute.md#loop) is set to **true**, if the drag distance of drag simulation is greater than the total layout length, the drag distance will be adjusted to the distance required to drag just far enough to display the first child node (when dragging toward the start of the layout) or the last child node (when dragging toward the end of the layout).
 > 
-> - The [onGestureSwipe](arkts-arkui-swiper-comp-attribute.md#ongestureswipe) and
-> [onContentWillScroll](arkts-arkui-swiper-comp-attribute.md#oncontentwillscroll) events are not triggered during the drag. The
-> [customContentTransition](arkts-arkui-swiper-comp-attribute.md#customcontenttransition) event is triggered before the layout.
-> Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the
-> returned node display information may be inconsistent with the layout result when the event is triggered.
+> - The [onGestureSwipe](arkts-arkui-swiper-comp-attribute.md#ongestureswipe) and [onContentWillScroll](arkts-arkui-swiper-comp-attribute.md#oncontentwillscroll) events are not triggered during the drag. The [customContentTransition](arkts-arkui-swiper-comp-attribute.md#customcontenttransition) event is triggered before the layout.Since the actual drag distance may be adjusted during the layout, if the passed drag distance is too large, the returned node display information may be inconsistent with the layout result when the event is triggered.
 
 **Since:** 23
 

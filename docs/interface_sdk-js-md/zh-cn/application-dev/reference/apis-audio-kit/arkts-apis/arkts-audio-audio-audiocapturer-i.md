@@ -432,8 +432,7 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 > **说明：** 
 > 
-> - 当前仅使用[SourceType.SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md)创建的录音流会根据设备平台查询支持的降
-> 噪模式，其他录音流默认仅返回[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
+> - 当前仅使用[SourceType.SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md)创建的录音流会根据设备平台查询支持的降噪模式，其他录音流默认仅返回[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
 > 
 > - 返回结果仅考虑音频格式和设备平台，不考虑当前输入设备和录音并发情况。
 
@@ -948,9 +947,7 @@ setMuteHint(mute: boolean): Promise<void>
 > 
 > - 该接口仅在录音流处于运行态时允许调用，否则返回错误码6800103。
 > 
-> - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口
-> [AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setcapturermutehint)
-> 时，流级[setMuteHint](#setmutehint)优先级更高，数值以流级设置值为准。
+> - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口[AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setcapturermutehint)时，流级[setMuteHint](#setmutehint)优先级更高，数值以流级设置值为准。
 
 **起始版本：** 24
 
@@ -986,8 +983,7 @@ setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 
 > **说明：** 
 > 
-> - 当前仅支持使用[SourceType.SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md)创建的录音流进行降噪模式设置，其他
-> 录音流默认仅支持[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
+> - 当前仅支持使用[SourceType.SOURCE_TYPE_VOICE_MESSAGE](arkts-audio-audio-sourcetype-e.md)创建的录音流进行降噪模式设置，其他录音流默认仅支持[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
 > 
 > - 降噪效果受设备平台、音频设备和录音并发情况影响。存在多个录音流同时运行时，设置的降噪模式可能不生效。
 > 

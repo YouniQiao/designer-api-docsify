@@ -16,15 +16,11 @@ Adds applications to the notification trustlist. After the notification trustlis
 
 > **NOTE:** 
 > 
-> 1. If both the Kiosk mode and the notification trustlist policy are set, applications in the Kiosk mode and those
-> in the notification trustlist can send notifications.
+> 1. If both the Kiosk mode and the notification trustlist policy are set, applications in the Kiosk mode and those in the notification trustlist can send notifications.
 
-> 2. If the device notification capability has been disabled via
-> [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md), calling this API to
-> set the notification trustlist will trigger error code 9200010.
+> 2. If the device notification capability has been disabled via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md), calling this API to set the notification trustlist will trigger error code 9200010.
 
-> 3. The notification trustlist does not apply to system services, which can always send notifications. System
-> applications are controlled by the notification trustlist.
+> 3. The notification trustlist does not apply to system services, which can always send notifications. System applications are controlled by the notification trustlist.
 
 > 4. Cross-user settings are supported. The settings take effect immediately.
 

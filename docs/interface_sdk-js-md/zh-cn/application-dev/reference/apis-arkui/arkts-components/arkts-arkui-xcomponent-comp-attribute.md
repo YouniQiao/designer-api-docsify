@@ -18,7 +18,7 @@
 enableAnalyzer(enable: boolean)
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。本功能需要搭配XComponentController的startImageAnalyzer和stopImageAnalyzer一起使用。不能和overlay属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。AI分析功能依赖设备能力。   
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。本功能需要搭配XComponentController的startImageAnalyzer和stopImageAnalyzer一起使用。不能和overlay属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。AI分析功能依赖设备能力。  
 > **说明：** 
 > 
 > 仅type为SURFACE或TEXTURE时该功能有效。
@@ -43,7 +43,7 @@ enableAnalyzer(enable: boolean)
 enableSecure(isSecure: boolean)
 ```
 
-防止组件内自绘制内容被截屏、录屏。   
+防止组件内自绘制内容被截屏、录屏。  
 > **说明：** 
 > 
 > 仅type为SURFACE时有效。

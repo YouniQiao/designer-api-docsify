@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void
 ```
 
-订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。<br>   
+订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。<br>  
 > **说明：** 
 > 
 > 从 API version 7开始支持，从API version 9开始废弃。

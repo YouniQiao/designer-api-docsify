@@ -4,8 +4,7 @@ A non-linear data structure.
 
 > **NOTE:** 
 > 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> This section uses the following to identify the use of generics:
+> - This module can be imported only to ArkTS files (with the file name extension .ets).This section uses the following to identify the use of generics:
 
 - K: key.  
 - V: value.  
@@ -347,9 +346,7 @@ Adds or updates a key-value pair to this ArkTS map and returns the previous valu
 
 > **NOTE:** 
 > 
-> - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
-> key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
-> the key exists, so that you can distinguish the case of the returned **undefined**.
+> - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether the key exists, so that you can distinguish the case of the returned **undefined**.
 
 **Since:** 26.1.0
 
@@ -447,9 +444,7 @@ Removes the specified key and its corresponding value from this ArkTS map.
 
 > **NOTE:** 
 > 
-> - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the
-> key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether
-> the key exists, so that you can distinguish the case of the returned **undefined**.
+> - When **undefined** is returned, you cannot directly distinguish whether the key does not exist or the key exists but its value is **undefined**. Before calling this API, you can use **has** to check whether the key exists, so that you can distinguish the case of the returned **undefined**.
 
 **Since:** 26.1.0
 

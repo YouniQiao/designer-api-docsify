@@ -10,14 +10,9 @@
 > 
 > - FrameNode objects do not support JSON serialization.
 > 
-> - When the API of the [FrameNode](arkts-arkui-framenode-c.md) object is invoked in the scenario of
-> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the
-> [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of
-> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see
-> [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
+> - When the API of the [FrameNode](arkts-arkui-framenode-c.md) object is invoked in the scenario of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance).
 > 
-> - In the FrameNode APIs, only the mandatory parameters of the [Optional](../arkts-components/arkts-arkui-optional-t.md) type can be set to null or
-> undefined.
+> - In the FrameNode APIs, only the mandatory parameters of the [Optional](../arkts-components/arkts-arkui-optional-t.md) type can be set to null or undefined.
 
 **Since:** 11
 
@@ -534,13 +529,9 @@ Immediately releases the reference to the underlying FrameNode entity.
 
 > **NOTE:** 
 > 
-> - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In
-> this case, attempts to call certain query APIs, such as [getMeasuredSize](#getmeasuredsize) and
-> [getLayoutPosition](#getlayoutposition), will result in a JS crash in the application.
+> - After the **dispose** API is called, the FrameNode object no longer corresponds to any entity FrameNode. In this case, attempts to call certain query APIs, such as [getMeasuredSize](#getmeasuredsize) and [getLayoutPosition](#getlayoutposition), will result in a JS crash in the application.
 > 
-> - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use
-> [getUniqueId](#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is
-> associated with an entity FrameNode.
+> - To check whether the current FrameNode object corresponds to an entity FrameNode, you can use [getUniqueId](#getuniqueid) API. A **UniqueId** value greater than 0 indicates that the object is associated with an entity FrameNode.
 
 **Since:** 12
 

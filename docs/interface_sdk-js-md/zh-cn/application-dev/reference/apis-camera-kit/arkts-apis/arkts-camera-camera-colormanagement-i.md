@@ -66,8 +66,7 @@ P3广色域与HDR高动态范围成像：
 
 - 若应用不主动设置色彩空间，在拍照模式下，当预览输出格式为CAMERA_FORMAT_YUV_420_SP时，色彩空间默认为SRGB；当预览输出格式为CAMERA_FORMAT_YCRCB_P010/  
 CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。  
-- 若应用主动设置色彩空间，在拍照模式下，预览输出格式与色彩空间必须按照下列表格中的对应关系配置，若不满足则会在  
-[setColorSpace](#setcolorspace)或[commitConfig](arkts-camera-camera-session-i.md#commitconfig)时返回错误码。
+- 若应用主动设置色彩空间，在拍照模式下，预览输出格式与色彩空间必须按照下列表格中的对应关系配置，若不满足则会在[setColorSpace](#setcolorspace)或[commitConfig](arkts-camera-camera-session-i.md#commitconfig)时返回错误码。
 
 拍照模式：
 

@@ -341,8 +341,7 @@ onWillApplyTheme?(theme: Theme): void
 
 Invoked before the **build()** function of a new instance of the custom component is executed, to obtain the **Theme** object of the component context. You can change state variables in **onWillApplyTheme**. The change will take effect when you execute the **build()** function next time.
 
-> * * Note: * *
-> Since API version 18, this API can be used in the status management V2 component.
+> * * Note: * *Since API version 18, this API can be used in the status management V2 component.
 
 > **NOTE:** 
 

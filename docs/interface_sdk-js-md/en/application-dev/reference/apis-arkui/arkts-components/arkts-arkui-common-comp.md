@@ -20,6 +20,53 @@ Constructor
 
 ## Summary
 
+### Decorators
+
+| Name | Description |
+| --- | --- |
+| [@AnimatableExtend](arkts-arkui-common-comp-animatableextend-d.md) | The @AnimatableExtend decorator is used to customize animatable property methods. Functions defined within this decorator are called on a frame-by-frame basis during the animation process until the animation ends. |
+| [@Builder](arkts-arkui-common-comp-builder-d.md) | Defining Builder MethodDecorator |
+| [@BuilderParam](arkts-arkui-common-comp-builderparam-d.md) | Defining BuilderParam PropertyDecorator |
+| [@Component](arkts-arkui-common-comp-component-d.md) | Defining Component ClassDecorator Component is a ClassDecorator and it supports ComponentOptions as parameters. |
+| [@ComponentV2](arkts-arkui-common-comp-componentv2-d.md) | Defining ComponentV2 ClassDecorator ComponentV2 is a ClassDecorator and it supports ComponentOptions as parameters. |
+| [@Computed](arkts-arkui-common-comp-computed-d.md) | Defining Computed MethodDecorator. |
+| [@Concurrent](arkts-arkui-common-comp-concurrent-d.md) | Defining Concurrent MethodDecorator |
+| [@Consume](arkts-arkui-common-comp-consume-d.md) | Defining Consume PropertyDecorator. |
+| [@Consumer](arkts-arkui-common-comp-consumer-d.md) | Defining Consumer PropertyDecorator, aliasName is the only matching key and if aliasName is the default, the default attribute name is regarded as aliasName. And @Consumer will find the nearest @Provider. |
+| [@CustomDialog](arkts-arkui-common-comp-customdialog-d.md) | Defining CustomDialog ClassDecorator |
+| [@CustomEnv](arkts-arkui-common-comp-customenv-d.md) | Defines the custom environment PropertyDecorator. |
+| [@Entry](arkts-arkui-common-comp-entry-d.md) | Defines Entry ClassDecorator. |
+| [@Env](arkts-arkui-common-comp-env-d.md) | Defining Env PropertyDecorator. On API 26.0.0 and above, the parameter also supports the SystemEnvKey&lt;T&gt; type. |
+| [@Event](arkts-arkui-common-comp-event-d.md) | Defining Event PropertyDecorator. |
+| [@Extend](arkts-arkui-common-comp-extend-d.md) | Defining Extend MethodDecorator |
+| [@Link](arkts-arkui-common-comp-link-d.md) | Defining Link PropertyDecorator. |
+| [@Local](arkts-arkui-common-comp-local-d.md) | Defining Local PropertyDecorator. |
+| [@LocalBuilder](arkts-arkui-common-comp-localbuilder-d.md) | Defining LocalBuilder MethodDecorator |
+| [@LocalStorageLink](arkts-arkui-common-comp-localstoragelink-d.md) | Defining LocalStorageLink PropertyDecorator. |
+| [@LocalStorageProp](arkts-arkui-common-comp-localstorageprop-d.md) | Defining LocalStorageProp PropertyDecorator |
+| [@Monitor](arkts-arkui-common-comp-monitor-d.md) | Define Monitor MethodDecorator |
+| [@ObjectLink](arkts-arkui-common-comp-objectlink-d.md) | Defining ObjectLink PropertyDecorator. |
+| [@Observed](arkts-arkui-common-comp-observed-d.md) | Defining Observed ClassDecorator. |
+| [@ObservedV2](arkts-arkui-common-comp-observedv2-d.md) | Defining ObservedV2 ClassDecorator. |
+| [@Once](arkts-arkui-common-comp-once-d.md) | Defining Once PropertyDecorator. |
+| [@Param](arkts-arkui-common-comp-param-d.md) | Defining Param PropertyDecorator. |
+| [@Preview](arkts-arkui-common-comp-preview-d.md) | Defining Preview ClassDecorator. |
+| [@Prop](arkts-arkui-common-comp-prop-d.md) | Defining Prop PropertyDecorator. |
+| [@Provide](arkts-arkui-common-comp-provide-d.md) | Defining Provide PropertyDecorator. |
+| [@Provider](arkts-arkui-common-comp-provider-d.md) | Defining Provider PropertyDecorator, aliasName is the only matching key and if aliasName is the default, the default attribute name is regarded as aliasName. |
+| [@Require](arkts-arkui-common-comp-require-d.md) | Defining Require PropertyDecorator. |
+| [@Reusable](arkts-arkui-common-comp-reusable-d.md) | Defining Reusable ClassDecorator. |
+| [@ReusableV2](arkts-arkui-common-comp-reusablev2-d.md) | Defining ReusableV2 ClassDecorator that is used to decorate @ComponentV2. |
+| [@Sendable](arkts-arkui-common-comp-sendable-d.md) | Defining Sendable ClassDecorator The Sendable decorator can be used only for classes. A class with this decorator is marked as sendable, and the class object can be shared globally. Since 12, the Sendable decorator can be used for function and typeAlias also. A function with this decorator is marked as sendable, and the function can be an shareable property of sendable-class object. A typeAlias with this decorator is marked as sendable, and the typeAlias can be used to declare properties, variables, and arguments that need to be assigned with sendable-function. |
+| [@State](arkts-arkui-common-comp-state-d.md) | Defining State PropertyDecorator. |
+| [@StorageLink](arkts-arkui-common-comp-storagelink-d.md) | Defining StorageLink PropertyDecorator. |
+| [@StorageProp](arkts-arkui-common-comp-storageprop-d.md) | Defining StorageProp PropertyDecorator. |
+| [@Styles](arkts-arkui-common-comp-styles-d.md) | Defining Styles MethodDecorator |
+| [@SyncMonitor](arkts-arkui-common-comp-syncmonitor-d.md) | Define SyncMonitor MethodDecorator. Decorator path parameters are the same as defined for Monitor. The function decorator is functionally equivalent to the UIUtils.addMonitor API with isSynchronous enabled. SyncMonitor must contain at least one path item, with multiple path items separated by commas. Path items are either observed attribute names or array item indices.The path in SyncMonitor supports wildcard at the end of a path item, but path items must never appear at the beginning or in the middle of a path. All other paths using one or more wildcard are invalid. |
+| [@Trace](arkts-arkui-common-comp-trace-d.md) | Defining Trace PropertyDecorator. |
+| [@Track](arkts-arkui-common-comp-track-d.md) | Defining Track PropertyDecorator. |
+| [@Watch](arkts-arkui-common-comp-watch-d.md) | Defining Watch PropertyDecorator. |
+
 ### Interfaces
 
 | Name | Description |

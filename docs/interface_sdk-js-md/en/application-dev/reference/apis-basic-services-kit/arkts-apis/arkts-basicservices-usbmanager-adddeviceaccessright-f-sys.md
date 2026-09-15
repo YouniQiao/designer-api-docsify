@@ -12,7 +12,9 @@ import { usbManager } from '@kit.BasicServicesKit';
 function addDeviceAccessRight(tokenId: string, deviceName: string): boolean
 ```
 
-Adds the device access permission for the application. System applications are granted the device access permission by default, and calling this API will not revoke the permission. [usbManager.requestRight]{(@link usbManager.requestRight)} triggers a dialog box to request for user authorization, whereas addDeviceAccessRight adds the access permission directly without displaying a dialog box.
+Adds the authorization for the app to access the device. System applications are granted the device access permission by default, and calling this API will not revoke the permission. This API can be used by system settings apps or device management apps to grant third-party apps the permission to access USB devices. The authorization takes effect immediately and is stored persistently. It remains valid even after the device is rebooted. The authorization applies to the specified USB device instance. Multiple apps can obtain the access permission for the same device at the same time.
+
+[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) triggers a dialog box to request user authorization. **addDeviceAccessRight** does not trigger a dialog box but directly adds the device access permission for the app.
 
 **Since:** 12
 
@@ -26,8 +28,8 @@ Adds the device access permission for the application. System applications are g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | string | Yes | Token ID of the software package. |
-| deviceName | string | Yes | Device name. |
+| tokenId | string | Yes | Unique ID of an app, which can be obtained using [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md). |
+| deviceName | string | Yes | Device name, in the format of **bus-port**, for example, **1-1**. The value can be found in the device list obtained using the [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) API. |
 
 **Return value:**
 

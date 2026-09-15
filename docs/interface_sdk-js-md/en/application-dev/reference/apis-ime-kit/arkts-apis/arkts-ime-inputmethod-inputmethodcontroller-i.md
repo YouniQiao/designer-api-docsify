@@ -18,7 +18,7 @@ import { inputMethod } from '@kit.IMEKit';
 attach(showKeyboard: boolean, textConfig: TextConfig, callback: AsyncCallback<void>): void
 ```
 
-Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
@@ -102,7 +102,7 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 attach(showKeyboard: boolean, textConfig: TextConfig): Promise<void>
 ```
 
-Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
@@ -144,7 +144,7 @@ See [attach](#attach)
 attach(showKeyboard: boolean, textConfig: TextConfig, requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method. <br>
@@ -187,7 +187,7 @@ See [attach](#attach)
 attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?: AttachOptions): Promise<void>
 ```
 
-Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>   
+Attaches a self-drawing component to the input method. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > An input method can use the following features only when it has a self-drawing component attached to it: showing or hiding the keyboard, updating the cursor information, changing the selection range of the edit box, saving the configuration information, and listening for and processing the information or commands sent by the input method.
@@ -416,7 +416,7 @@ See [detach](#detach)
 discardTypingText(): Promise<void>
 ```
 
-Discards the text that is being typed. This API uses a promise to return the result. <br> <br>   
+Discards the text that is being typed. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called after the edit box is attached to an input method.
@@ -457,7 +457,7 @@ inputMethod.getController().discardTypingText().then(() => {
 hideSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Hides the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
+Hides the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
@@ -478,7 +478,7 @@ Hides the soft keyboard. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
@@ -523,7 +523,7 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 hideSoftKeyboard(): Promise<void>
 ```
 
-Hides the soft keyboard. This API uses a promise to return the result. <br> <br>   
+Hides the soft keyboard. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to hide the soft keyboard only when the edit box is focused.
@@ -544,7 +544,7 @@ Hides the soft keyboard. This API uses a promise to return the result. <br> <br>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
@@ -558,7 +558,7 @@ See [hideSoftKeyboard](#hidesoftkeyboard)
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
+Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > If the soft keyboard is displayed when this API is called, it will be hidden. <br>
@@ -613,7 +613,7 @@ inputMethod.getController().hideTextInput().then(() => {
 hideTextInput(): Promise<void>
 ```
 
-Exits the text editing mode. This API uses a promise to return the result. <br> <br>   
+Exits the text editing mode. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > If the soft keyboard is displayed when this API is called, it will be hidden. <br>
@@ -1224,7 +1224,7 @@ Enables listening for the event of obtaining the index of text at the cursor. Th
 on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 ```
 
-Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result. <br> <br>   
+Subscribes to the event for text preview operations in an input method application. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with [on('finishTextPreview')](#onfinishtextpreview).
@@ -1252,7 +1252,7 @@ Subscribes to the event for text preview operations in an input method applicati
 on(type: 'finishTextPreview', callback: Callback<void>): void
 ```
 
-Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result. <br> <br>   
+Subscribes to the event of finishing text preview. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > To use the text preview function, you need to subscribe to this event before calling [attach](#attach) and subscribe to this event together with [on('setPreviewText')](#onsetpreviewtext).
@@ -1280,7 +1280,7 @@ Subscribes to the event of finishing text preview. This API uses an asynchronous
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler. <br> <br>   
+Registers or unregisters MessageHandler. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > The [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) object is globally unique. After multiple registrations, only the last registered object is valid and retained, and the [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback of the penultimate registered object is triggered. <br>
@@ -1328,7 +1328,7 @@ inputMethodController.recvMessage();
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>   
+Sends the custom communication to the input method application. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method and enter the edit mode, and the input method application is in full experience mode. <br>
@@ -1383,7 +1383,7 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 setCallingWindow(windowId: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>   
+Sets the window to be avoided by the input method. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > After the window ID of the application bound to the input method is passed in the API, the input method window will not cover the window holding the application.
@@ -1440,7 +1440,7 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 setCallingWindow(windowId: number): Promise<void>
 ```
 
-Sets the window to be avoided by the input method. This API uses a promise to return the result. <br> <br>   
+Sets the window to be avoided by the input method. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > After the window ID of the application bound to the input method is passed in the API, the input method window will not cover the window holding the application.
@@ -1480,7 +1480,7 @@ See [setCallingWindow](#setcallingwindow)
 showSoftKeyboard(callback: AsyncCallback<void>): void
 ```
 
-Shows the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>   
+Shows the soft keyboard. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
@@ -1501,7 +1501,7 @@ Shows the soft keyboard. This API uses an asynchronous callback to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
@@ -1546,7 +1546,7 @@ inputMethod.getController().showSoftKeyboard(displayId).then(() => {
 showSoftKeyboard(): Promise<void>
 ```
 
-Shows the soft keyboard. This API uses a promise to return the result. <br> <br>   
+Shows the soft keyboard. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to show the soft keyboard only when the edit box is focused.
@@ -1567,7 +1567,7 @@ Shows the soft keyboard. This API uses a promise to return the result. <br> <br>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
@@ -1581,7 +1581,7 @@ See [showSoftKeyboard](#showsoftkeyboard)
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>   
+Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
@@ -1646,7 +1646,7 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 showTextInput(): Promise<void>
 ```
 
-Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
+Enters the text editing mode. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
@@ -1679,7 +1679,7 @@ See [showTextInput](#showtextinput)
 showTextInput(requestKeyboardReason: RequestKeyboardReason): Promise<void>
 ```
 
-Enters the text editing mode. This API uses a promise to return the result. <br> <br>   
+Enters the text editing mode. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter the text editing state.
@@ -1718,7 +1718,7 @@ See [showTextInput](#showtextinput)
 stopInput(callback: AsyncCallback<boolean>): void
 ```
 
-Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
@@ -1775,7 +1775,7 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 stopInput(): Promise<boolean>
 ```
 
-Ends this input session. This API uses a promise to return the result. <br> <br>   
+Ends this input session. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
@@ -1804,7 +1804,7 @@ See [stopInput](#stopinput)
 stopInputSession(callback: AsyncCallback<boolean>): void
 ```
 
-Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>   
+Ends this input session. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.
@@ -1864,7 +1864,7 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 stopInputSession(): Promise<boolean>
 ```
 
-Ends this input session. This API uses a promise to return the result. <br> <br>   
+Ends this input session. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to end the input session only when the edit box is focused.

@@ -90,11 +90,9 @@ Sets the styled string displayed in the **RichEditor** component.
 
 > **NOTE:** 
 > 
-> - When this API is called, the **StyledString** of the **RichEditor** component is fully replaced and re-
-> rendered.
+> - When this API is called, the **StyledString** of the **RichEditor** component is fully replaced and re-rendered.
 > 
-> - When the content exceeds the component area, the component automatically scrolls up until the end of the
-> content is visible.
+> - When the content exceeds the component area, the component automatically scrolls up until the end of the content is visible.
 
 **Since:** 12
 

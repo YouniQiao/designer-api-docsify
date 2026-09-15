@@ -52,6 +52,26 @@ Indicates the event callback for receiving tool events. If provided, auto-subscr
 
 **System API:** This is a system API.
 
+## challenge
+
+```TypeScript
+challenge?: string
+```
+
+Indicates the unique identifier obtained from the access token manager.
+
+**Type:** string
+
+**Default:** ""
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+**System API:** This is a system API.
+
 ## env
 
 ```TypeScript
@@ -63,6 +83,26 @@ Indicates the environment variables for the command.
 **Type:** Record&lt;string, string&gt;
 
 **Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+**System API:** This is a system API.
+
+## isShellCommand
+
+```TypeScript
+isShellCommand?: boolean
+```
+
+Indicates whether the command is executed as a shell command.
+
+**Type:** boolean
+
+**Default:** true
+
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

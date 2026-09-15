@@ -36,7 +36,7 @@ Unique identifier of a USB port.
 status: USBPortStatus
 ```
 
-USB port role.
+USB port role information. **currentMode** must be within the range of **supportedModes**.
 
 **Type:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
 
@@ -52,7 +52,7 @@ USB port role.
 supportedModes: PortModeType
 ```
 
-Numeric mask combination for the supported mode list.
+Numeric mask combination for the supported mode list. **status.currentMode** must be supported.
 
 **Type:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
 

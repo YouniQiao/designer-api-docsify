@@ -4,14 +4,11 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 
 > **NOTE:** 
 > 
-> - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
-> interaction is affected by the parent component's response region. Children outside the parent component's response
-> region won't respond to gestures or events.
+> - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component interaction is affected by the parent component's response region. Children outside the parent component's response region won't respond to gestures or events.
 > 
 > - If the input tool type, touch position, and size are not configured for a touch target, default values are used.
 > 
-> - Positive calculation results for x and y represent shifts to the right and down, respectively. Negative
-> calculation results represent shifts to the left and up, respectively.
+> - Positive calculation results for x and y represent shifts to the right and down, respectively. Negative calculation results represent shifts to the left and up, respectively.
 > 
 > - If the width and height are of the string type, the string must be in lowercase. Dynamic calculation with
 > **calc()** is supported. The format of the input string for **calc()** is Width/Height scaling ratio ± Width/Height

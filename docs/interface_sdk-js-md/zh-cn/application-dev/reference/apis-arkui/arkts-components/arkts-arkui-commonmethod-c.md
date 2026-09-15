@@ -848,15 +848,11 @@ animation(value: AnimateParam): T
 
 > **说明：** 
 > 
-> - 在单一页面上同时存在数十个及以上应用动效的组件时，可以使用[renderGroup](#rendergroup)方法来解决卡顿问题，从而提升动画性能。最佳
-> 实践请参考
-> [动画使用指导-使用renderGroup](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fair-use-animation#section1223162922415)。
+> - 在单一页面上同时存在数十个及以上应用动效的组件时，可以使用[renderGroup](#rendergroup)方法来解决卡顿问题，从而提升动画性能。最佳实践请参考[动画使用指导-使用renderGroup](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fair-use-animation#section1223162922415)。
 > 
 > - 该接口不支持在[attributeModifier](#attributemodifier)中调用，在attributeModifier中调用animation不会产生动画效果。如需在attributeModifier中实现 属性变化动画，请使用[显式动画](arkts-arkui-common-comp-animateto-f.md)替代。
 > 
-> - 仅对部分通用属性生效（包括width、height、backgroundColor、opacity、scale、rotate、translate等）。对于改变布局类属性（如宽高）的动画，组件内容（如文字或Canvas中的内
-> 容）通常会直接跳转到最终状态。如果希望内容跟随宽高变化平滑过渡，可以配合使用[renderFit](#renderfit)属性进行配置，建议将
-> renderFit设置为RenderFit.CENTER或RenderFit.TOP_LEFT等值，使内容在动画过程中随组件尺寸同步变化。
+> - 仅对部分通用属性生效（包括width、height、backgroundColor、opacity、scale、rotate、translate等）。对于改变布局类属性（如宽高）的动画，组件内容（如文字或Canvas中的内容）通常会直接跳转到最终状态。如果希望内容跟随宽高变化平滑过渡，可以配合使用[renderFit](#renderfit)属性进行配置，建议将renderFit设置为RenderFit.CENTER或RenderFit.TOP_LEFT等值，使内容在动画过程中随组件尺寸同步变化。
 
 **起始版本：** 7
 
@@ -1045,8 +1041,7 @@ background(content: CustomBuilder | ResourceColor, options?: BackgroundOptions):
 > 
 > - 不支持[onAppear](#onappear)和[onDisAppear](#ondisappear)等和节点挂载/卸载相关的事件。
 > 
-> - 从API version 20开始，该接口仅当content的入参类型为ResourceColor时支持在[attributeModifier](#attributemodifier)中
-> 调用。
+> - 从API version 20开始，该接口仅当content的入参类型为ResourceColor时支持在[attributeModifier](#attributemodifier)中调用。
 
 **起始版本：** 10
 
@@ -3261,9 +3256,7 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 > 
 > - 设置expandSafeArea()时，不传参，走默认值处理；设置expandSafeArea([],[])时，相当于入参是空数组，此时expandSafeArea属性设置无效。
 > 
-> - 组件设置expandSafeArea生效的条件为：
-> 1.type为SafeAreaType.KEYBOARD时默认生效，表现为组件不避让键盘。<br>
-> 2.设置其他type，组件的边界与安全区域重合时组件能够延伸到安全区域下。例如：设备顶部状态栏高度100，那么组件在屏幕中的绝对位置需要为0 &lt;= y &lt;= 100。
+> - 组件设置expandSafeArea生效的条件为：1.type为SafeAreaType.KEYBOARD时默认生效，表现为组件不避让键盘。<br>2.设置其他type，组件的边界与安全区域重合时组件能够延伸到安全区域下。例如：设备顶部状态栏高度100，那么组件在屏幕中的绝对位置需要为0 &lt;= y &lt;= 100。
 > 
 > - 组件延伸到避让区时，在避让区的事件如点击事件等可能会被系统拦截，优先给状态栏等系统组件响应。
 > 
@@ -3905,8 +3898,8 @@ gesture(gesture: GestureType, mask?: GestureMask): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势类型。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势类型。 |
+| mask | [GestureMask](arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 **返回值：**
 
@@ -5003,8 +4996,7 @@ motionBlur(value: MotionBlurOptions): T
 > 
 > - 该属性需要在组件初始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。
 > 
-> - 该属性需要与动画的[AnimateParam](arkts-arkui-animateparam-i.md)的
-> onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
+> - 该属性需要与动画的[AnimateParam](arkts-arkui-animateparam-i.md)的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
 > 
 > - 使用该属性时，不要频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。
 > 
@@ -5046,8 +5038,7 @@ motionBlur(motionBlur: Optional<MotionBlurOptions>): T
 > 
 > - 该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。
 > 
-> - 该属性需要与动画的[AnimateParam](arkts-arkui-animateparam-i.md)对象说明)的
-> onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
+> - 该属性需要与动画的[AnimateParam](arkts-arkui-animateparam-i.md)对象说明)的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
 > 
 > - 使用该属性时，不要频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。
 > 
@@ -5335,7 +5326,7 @@ onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback): T
 onAppear(event: () => void): T
 ```
 
-组件挂载后触发此回调。   
+组件挂载后触发此回调。  
 > **说明：** 
 > 
 > 回调的调用时机有可能发生在组件布局渲染后。
@@ -6400,11 +6391,7 @@ onSizeChange(event: SizeChangeCallback): T
 > 
 > 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。
 > 
-> 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么
-> onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的
-> [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md)或
-> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)，将UI处理逻辑
-> 延后至异步执行。
+> 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的[setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md)或[postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)，将UI处理逻辑延后至异步执行。
 
 **起始版本：** 12
 
@@ -6561,15 +6548,11 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 > 
 > - 仅提供自身节点相对于所有祖先节点（直到window边界）的相对裁切面积与自身面积的比值及其变化趋势。
 > 
-> - 不支持兄弟组件对自身节点的遮挡计算，不支持所有祖先的兄弟节点对自身节点的遮挡计算，不支持窗口遮挡计算，不支持组件旋转计算，如Stack、[Z序控制](#zindex)、
-> [rotate](#rotate)等。
+> - 不支持兄弟组件对自身节点的遮挡计算，不支持所有祖先的兄弟节点对自身节点的遮挡计算，不支持窗口遮挡计算，不支持组件旋转计算，如Stack、[Z序控制](#zindex)、[rotate](#rotate)等。
 > 
 > - 不支持非挂树节点的可见面积变化计算。例如，预加载的节点、通过[overlay](#overlay)能力挂载的自定义节点。
 > 
-> - 不支持[scale](#scale)属性，如果想要支持
-> [scale](#scale)，则需使用
-> [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange-1)
-> ，将measureFromViewport设置为true。
+> - 不支持[scale](#scale)属性，如果想要支持[scale](#scale)，则需使用[onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange-1)，将measureFromViewport设置为true。
 
 **起始版本：** 9
 
@@ -6989,9 +6972,7 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 > **说明：** 
 > 
 > - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。若需用户可操作下方组件，应在浮层builder的最外层组件上配置`.hitTestBehavior(HitTestMode.Transparent)`。 此配置在通过浮层实现水印时尤其重要，因为水印显示不应妨碍用户对下层组件的操作。
-> - 多次调用overlay接口时，如果同时传入string类型和
-> [CustomBuilder](arkts-arkui-custombuilder-t.md)类型，或者同时传入string类型和
-> [ComponentContent](arkts-arkui-componentcontent-t.md)类型，浮层内容会叠加显示。
+> - 多次调用overlay接口时，如果同时传入string类型和[CustomBuilder](arkts-arkui-custombuilder-t.md)类型，或者同时传入string类型和[ComponentContent](arkts-arkui-componentcontent-t.md)类型，浮层内容会叠加显示。
 
 **起始版本：** 7
 
@@ -7066,8 +7047,8 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势对象。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势对象。 |
+| mask | [GestureMask](arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 **返回值：**
 
@@ -7236,8 +7217,8 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势对象。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md) | 是 | 绑定的手势对象。 |
+| mask | [GestureMask](arkts-arkui-gesturemask-e.md) | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 **返回值：**
 
@@ -7943,8 +7924,7 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 
 > **说明：** 
 > 
-> - sharedTransition需与[PageTransitionEnter]PageTransitionEnter和
-> [PageTransitionExit](arkts-arkui-pagetransitionenter-comp-con.md#pagetransitionexit)配合使用，共同控制页面转场动画效果。
+> - sharedTransition需与[PageTransitionEnter]PageTransitionEnter和[PageTransitionExit](arkts-arkui-pagetransitionenter-comp-con.md#pagetransitionexit)配合使用，共同控制页面转场动画效果。
 > 
 > - 当PageTransitionEnter/PageTransitionExit设置type为RouteType.None、duration为0时，页面整体无转场动画，仅显示共享元素转场动效。
 > 
@@ -8263,24 +8243,15 @@ systemMaterial(material: SystemUiMaterial | undefined): T
 
 > **说明：** 
 > 
-> - [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)只有支持沉浸式材质的设备上设置才有效果，在不支持沉浸式材质的设备上
-> 可设置但无效果，可通过[isImmersiveMaterialSupported](../arkts-apis/arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断
-> 设备是否支持沉浸式材质。在不支持沉浸式材质的设备上，设置ImmersiveMaterial后，组件的样式仍由已设置的通用属性决定，ImmersiveMaterial不会覆盖任何通用属性。
+> - [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)只有支持沉浸式材质的设备上设置才有效果，在不支持沉浸式材质的设备上可设置但无效果，可通过[isImmersiveMaterialSupported](../arkts-apis/arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断设备是否支持沉浸式材质。在不支持沉浸式材质的设备上，设置ImmersiveMaterial后，组件的样式仍由已设置的通用属性决定，ImmersiveMaterial不会覆盖任何通用属性。
 > 
-> - 在同时设置了材质影响的通用属性发生冲突时，除阴影外，总体原则为后设置的生效，对于阴影属性取决于
-> [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)的applyShadow参数。
+> - 在同时设置了材质影响的通用属性发生冲突时，除阴影外，总体原则为后设置的生效，对于阴影属性取决于[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)的applyShadow参数。
 > 
-> - 先设置[backgroundColor](#backgroundcolor)属性后设置
-> [systemMaterial](#systemmaterial)属性：backgroundColor属性被覆盖。在支持沉浸式材质的高算力和中算力设备上，背景色属性被清空为透明色；在支持沉浸
-> 式材质的低算力设备上，材质自带的背景色效果覆盖了先设置的backgroundColor属性。开发者可通过
-> [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)的接口判断当前设备的算力档位。
+> - 先设置[backgroundColor](#backgroundcolor)属性后设置[systemMaterial](#systemmaterial)属性：backgroundColor属性被覆盖。在支持沉浸式材质的高算力和中算力设备上，背景色属性被清空为透明色；在支持沉浸式材质的低算力设备上，材质自带的背景色效果覆盖了先设置的backgroundColor属性。开发者可通过[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)的接口判断当前设备的算力档位。
 > 
-> - 先设置[systemMaterial](#systemmaterial)属性后设置
-> [backgroundColor](#backgroundcolor)属性：systemMaterial属性影响的背景色效果被覆盖，背景色属性生效
-> 为后设置的backgroundColor属性的颜色。
+> - 先设置[systemMaterial](#systemmaterial)属性后设置[backgroundColor](#backgroundcolor)属性：systemMaterial属性影响的背景色效果被覆盖，背景色属性生效为后设置的backgroundColor属性的颜色。
 > 
-> - 对于所有设备算力档位均需要材质颜色的场景，可以通过[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)的
-> materialColor参数承载，不再设置[backgroundColor](#backgroundcolor)属性。
+> - 对于所有设备算力档位均需要材质颜色的场景，可以通过[ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md)的materialColor参数承载，不再设置[backgroundColor](#backgroundcolor)属性。
 
 **起始版本：** 26.0.0
 

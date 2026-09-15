@@ -18,8 +18,7 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 > 
 > - You can subscribe to only the Down event of a key, or subscribe to both the Down and Up events of a key.
 > 
-> - If you subscribe to only the Up event of a key, the Down event may be consumed by the focus window, and the Up
-> event may not be closed. In this case, check whether the design and implementation are proper.
+> - If you subscribe to only the Up event of a key, the Down event may be consumed by the focus window, and the Up event may not be closed. In this case, check whether the design and implementation are proper.
 
 **Since:** 8
 

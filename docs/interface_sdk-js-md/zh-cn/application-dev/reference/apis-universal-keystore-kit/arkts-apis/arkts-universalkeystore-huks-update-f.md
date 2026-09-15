@@ -26,8 +26,7 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 **废弃版本：** 9
 
-**替代接口：** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)( handle: number, options: HuksOptions, token: Uint8Array,
-   *     callback: AsyncCallback&lt;HuksReturnResult&gt; )
+**替代接口：** [updateSession](arkts-universalkeystore-huks-updatesession-f.md)( handle: number, options: HuksOptions, token: Uint8Array, callback: AsyncCallback&lt;HuksReturnResult&gt; )
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

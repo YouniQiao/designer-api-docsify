@@ -4,19 +4,12 @@ This module provides system-related and enhanced [i18n](../../../internationaliz
 402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs
 are defined as follows:
 
-- Pattern string, which is a string consisting of  
-[Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks.  
-- Skeleton string: a string that consists of  
-[Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text.
+- Pattern string, which is a string consisting of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks.  
+- Skeleton string: a string that consists of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text.
 
 > **NOTE:** 
 > 
-> - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The
-> processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the
-> [date and time formatting API](arkts-localization-i18n-simplenumberformat-c.md) is used only for UI display. Do not hardcode the
-> return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API
-> version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data
-> changes, see the official CLDR documentation.
+> - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the [date and time formatting API](arkts-localization-i18n-simplenumberformat-c.md) is used only for UI display. Do not hardcode the return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data changes, see the official CLDR documentation.
 > 
 > - Since API version 11, some APIs of this module are supported in ArkTS widgets.
 

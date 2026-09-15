@@ -6,8 +6,7 @@ A carrier that carries the drawn content and drawing status.
 > 
 > - This module uses the physical pixel unit, px.
 > 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state transitions.
 > 
 > 
 > The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style

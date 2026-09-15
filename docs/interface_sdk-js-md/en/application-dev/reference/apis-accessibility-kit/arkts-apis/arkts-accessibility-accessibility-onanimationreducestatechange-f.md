@@ -17,13 +17,9 @@ Subscribes to the state changes of animation reduction mode. This API uses an as
 
 > **NOTE:** 
 > 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - After calling this method, ensure that
-> [accessibility.offAnimationReduceStateChange](arkts-accessibility-accessibility-offanimationreducestatechange-f.md) is used to
-> unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle
-> callback). Otherwise, a crash may occur.
+> - After calling this method, ensure that [accessibility.offAnimationReduceStateChange](arkts-accessibility-accessibility-offanimationreducestatechange-f.md) is used to unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle callback). Otherwise, a crash may occur.
 
 **Since:** 23
 

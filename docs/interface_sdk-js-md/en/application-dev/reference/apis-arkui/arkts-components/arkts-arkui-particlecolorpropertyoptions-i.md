@@ -56,7 +56,7 @@ updater?: ParticleColorUpdaterOptions<UPDATER>
 
 How the color property is updated. The available options of **type** are as follows:
 
-1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is  
+1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is
 [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE].
 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type
 is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM].

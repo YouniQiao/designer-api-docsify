@@ -71,8 +71,7 @@ require additional prerequisites. Currently only applies to location permissions
 before requesting permissions.  
 - 5: This permission does not support requesting via permission dialog; the request method may be restricted or  
 controlled by system policy. Please use the authorization method supported by this permission.  
-- 6: This permission is of the  
-[manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type and can only be authorized through the settings page. This reason code is supported starting from API version 21.  
+- 6: This permission is of the [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization) type and can only be authorized through the settings page. This reason code is supported starting from API version 21.  
 - 12: Service exception, please try again later.
 
 **Type:** Array&lt;number&gt;

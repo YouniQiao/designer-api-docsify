@@ -6,7 +6,7 @@ declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback
 
 错误回调类型，用于接收异常信息。
 
-**起始版本：** 26.0.0
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -75,7 +75,8 @@ Otherwise, compression cannot be performed.
 2. Only the punctuations within the punctuation compression range at the beginning of a line
 are in the scope of this feature.
 
-Punctuation range at the beginning of a line.  
+Punctuation range at the beginning of a line.
+
 | Punctuation| Unicode Code Point| Unicode Name|  
 |---------|---------|-------------|  
 | 「| U+300C | LEFT CORNER BRACKET |

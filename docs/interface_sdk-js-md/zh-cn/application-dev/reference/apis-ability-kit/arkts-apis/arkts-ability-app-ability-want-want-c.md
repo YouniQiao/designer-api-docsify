@@ -171,8 +171,7 @@ parameters?: Record<string, Object>
 - component.startup.newRules：表示是否启用新的管控规则，值为布尔类型。  
 - moduleName：表示被拉起方的moduleName，值为字符串类型。  
 - ohos.ability.params.abilityRecoveryRestart：表示当前Ability是否发生了故障恢复重启，值为布尔类型。  
-- ohos.extra.param.key.showMode：表示拉起原子化服务的展示模式，值为枚举类型  
-wantConstant.ShowMode。
+- ohos.extra.param.key.showMode：表示拉起原子化服务的展示模式，值为枚举类型wantConstant.ShowMode。
 
 **说明：** 
 

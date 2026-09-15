@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function requestRight(deviceName: string): Promise<boolean>
 ```
 
-Requests the temporary device access permission for the application. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately.
+Requests the temporary permission for the app to access the device. This API uses a promise to return the result. System apps are granted the device access permission by default, and you do not need to call this API to request the permission.
 
 **Since:** 9
 
@@ -22,13 +22,13 @@ Requests the temporary device access permission for the application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md). |
+| deviceName | string | Yes | Device name, which is the name of the USBDevice in the device list obtained by [getDevices](arkts-basicservices-usbmanager-getdevices-f.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the temporary device access permissions are granted; and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise object that returns the result of the temporary permission request. The value true indicates that the temporary permission request is successful; the value false indicates that the temporary permission request fails. |
 
 **Error codes:**
 

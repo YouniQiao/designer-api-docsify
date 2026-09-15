@@ -63,8 +63,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 > **说明：** 
 > 
-> - 仅设置edgeLight不会产生边缘流光效果，需结合[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animateto)更改position参数达到流光效果。可参考
-> [示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
+> - 仅设置edgeLight不会产生边缘流光效果，需结合[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animateto)更改position参数达到流光效果。可参考[示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
 > 
 > - 当position参数以对角线方式变更时（如从TOP_LEFT变更到BOTTOM_RIGHT），边缘流光将沿倾斜角45°的方式运行。
 

@@ -18,7 +18,7 @@ cachedCount(value: number)
 
 Number of items to be preloaded.
 
-This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll) enabled. **FlowItem** components that are outside the display and cache range will be released.
+This attribute takes effect only in [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](arkts-arkui-repeat-comp-attribute.md#virtualscroll) enabled. **FlowItem** components that are outside the display and cache range will be released.
 
 **Since:** 11
 

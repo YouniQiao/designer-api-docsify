@@ -402,12 +402,9 @@ Obtains the estimated latency of the current audio route.
 > 
 > - The estimated latency of a wireless audio device may be inaccurate. The result is for reference only.
 > 
-> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the
-> audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
+> - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
 > 
-> - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or
-> [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video
-> synchronization after the audio is output to the hardware.
+> - You are advised to use [getAudioTimestampInfo](#getaudiotimestampinfo) or [getAudioTimestampInfoSync](#getaudiotimestampinfosync) to implement audio and video synchronization after the audio is output to the hardware.
 
 **Since:** 23
 

@@ -168,16 +168,11 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 > 
 > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
-> - Cookies are periodically saved to the disk every 30 seconds. You can also use
-> [saveCookieAsync](#savecookieasync-1) for force
-> storage.
+> - Cookies are periodically saved to the disk every 30 seconds. You can also use [saveCookieAsync](#savecookieasync-1) for force storage.
 > 
-> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in
-> the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=
-> value; Max-Age=100").
+> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=value; Max-Age=100").
 > 
-> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie
-> to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
+> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
 > 
 > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ".
 > 
@@ -224,16 +219,11 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 > 
 > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
-> - Cookies are periodically saved to the disk every 30 seconds. You can also use
-> [saveCookieAsync](#savecookieasync-1) for force
-> storage.
+> - Cookies are periodically saved to the disk every 30 seconds. You can also use [saveCookieAsync](#savecookieasync-1) for force storage.
 > 
-> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in
-> the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=
-> value; Max-Age=100").
+> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=value; Max-Age=100").
 > 
-> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie
-> to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
+> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
 > 
 > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ".
 > 
@@ -278,16 +268,11 @@ Sets a single cookie value for a specified URL. This API uses an asynchronous ca
 > 
 > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
-> - Cookies are periodically saved to the disk every 30 seconds. You can also use
-> [saveCookieAsync](#savecookieasync-1) for force
-> storage.
+> - Cookies are periodically saved to the disk every 30 seconds. You can also use [saveCookieAsync](#savecookieasync-1) for force storage.
 > 
-> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in
-> the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=
-> value; Max-Age=100").
+> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=value; Max-Age=100").
 > 
-> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie
-> to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
+> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
 > 
 > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ".
 > 
@@ -329,16 +314,11 @@ Sets a cookie for the specified URL.
 > 
 > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
-> - Cookies are periodically saved to the disk every 30 seconds. You can also use
-> [saveCookieAsync](#savecookieasync-1) for force
-> storage.
+> - Cookies are periodically saved to the disk every 30 seconds. You can also use [saveCookieAsync](#savecookieasync-1) for force storage.
 > 
-> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in
-> the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=
-> value; Max-Age=100").
+> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=value; Max-Age=100").
 > 
-> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie
-> to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
+> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
 > 
 > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ".
 > 
@@ -380,16 +360,11 @@ Sets a single cookie value for a specified URL.
 > 
 > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie.
 > 
-> - Cookies are periodically saved to the disk every 30 seconds. You can also use
-> [saveCookieAsync](#savecookieasync-1) for force
-> storage.
+> - Cookies are periodically saved to the disk every 30 seconds. You can also use [saveCookieAsync](#savecookieasync-1) for force storage.
 > 
-> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in
-> the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=
-> value; Max-Age=100").
+> - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key=value; Max-Age=100").
 > 
-> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie
-> to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
+> - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie to set has expired, it will not be stored. To set multiple cookies, call this method multiple times.
 > 
 > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ".
 > 
@@ -635,13 +610,11 @@ Obtains the cookie value of the specified URL.
 
 > **NOTE:** 
 > 
-> - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites
-> the previous data.
+> - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites the previous data.
 > 
 > - To obtain a usable cookie value, you are advised to pass a complete URL to fetchCookieSync.
 > 
-> - fetchCookieSync is used to obtain all cookie values. Each cookie value is separated by "; ", but a specific
-> cookie value cannot be obtained individually.
+> - fetchCookieSync is used to obtain all cookie values. Each cookie value is separated by "; ", but a specific cookie value cannot be obtained individually.
 
 **Since:** 11
 
@@ -679,13 +652,11 @@ Obtains the cookies corresponding to a specified URL. The optional parameter inc
 
 > **NOTE:** 
 > 
-> - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites
-> the previous data.
+> - The system automatically deletes expired cookies. For data with the same key name, the new data overwrites the previous data.
 > 
 > - To obtain a usable cookie value, you are advised to pass a complete URL to fetchCookieSync.
 > 
-> - fetchCookieSync is used to obtain all cookie values. Each cookie value is separated by "; ", but a specific
-> cookie value cannot be obtained individually.
+> - fetchCookieSync is used to obtain all cookie values. Each cookie value is separated by "; ", but a specific cookie value cannot be obtained individually.
 
 **Since:** 26.0.0
 
@@ -850,9 +821,7 @@ Saves all cookies that can be obtained through fetchCookie and need to be persis
 
 > **NOTE:** 
 > 
-> - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are
-> not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not
-> written to the disk.
+> - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not written to the disk.
 
 **Since:** 9
 
@@ -882,9 +851,7 @@ Asynchronously saves all cookies (that can be obtained through **fetchCookie** a
 
 > **NOTE:** 
 > 
-> - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are
-> not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not
-> written to the disk.
+> - saveCookieAsync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are not persisted on PC/2-in-1 and tablet devices. Even if saveCookieAsync is called, session cookies are not written to the disk.
 
 **Since:** 9
 
@@ -914,12 +881,9 @@ Synchronously saves all cookies (that can be obtained through **fetchCookie** an
 
 > **NOTE:** 
 > 
-> - saveCookieSync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are
-> not persisted on PC/2-in-1 and tablet devices. Even if saveCookieSync is called, session cookies are not
-> written to the disk.
+> - saveCookieSync is used to forcibly write cookies that need to be persisted to the disk. Session cookies are not persisted on PC/2-in-1 and tablet devices. Even if saveCookieSync is called, session cookies are not written to the disk.
 > 
-> - saveCookieSync blocks the caller until the operation is complete, during which I/O operations may be
-> performed.
+> - saveCookieSync blocks the caller until the operation is complete, during which I/O operations may be performed.
 
 **Since:** 15
 
@@ -966,13 +930,9 @@ Sets whether to delay the initialization of the ArkWeb kernel. If this method is
 
 > **NOTE:** 
 > 
-> - This API is a global static method. It must be called before using ArkWeb components and initializing the
-> ArkWeb kernel. Otherwise, the setting does not take effect.
+> - This API is a global static method. It must be called before using ArkWeb components and initializing the ArkWeb kernel. Otherwise, the setting does not take effect.
 > 
-> - This API applies only to APIs that initialize CookieManager when called, such as other APIs of this class
-> WebCookieManager. After this API is called and set to **true**, calling applicable APIs skips the
-> initialization of the ArkWeb kernel when initializing CookieManager. You need to initialize the ArkWeb kernel
-> separately afterwards.
+> - This API applies only to APIs that initialize CookieManager when called, such as other APIs of this class WebCookieManager. After this API is called and set to **true**, calling applicable APIs skips the initialization of the ArkWeb kernel when initializing CookieManager. You need to initialize the ArkWeb kernel separately afterwards.
 
 **Since:** 22
 

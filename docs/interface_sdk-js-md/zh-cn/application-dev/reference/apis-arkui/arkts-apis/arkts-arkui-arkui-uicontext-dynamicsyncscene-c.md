@@ -10,9 +10,7 @@
 > 
 > - 本模块接口仅可在Stage模型下使用。
 > 
-> - 以下接口需先使用UIContext中的
-> [requireDynamicSyncScene](arkts-arkui-arkui-uicontext-uicontext-c.md#requiredynamicsyncscene)方法获取DynamicSyncScene对象，
-> 再通过此实例调用对应方法。
+> - 以下接口需先使用UIContext中的[requireDynamicSyncScene](arkts-arkui-arkui-uicontext-uicontext-c.md#requiredynamicsyncscene)方法获取DynamicSyncScene对象，再通过此实例调用对应方法。
 
 **起始版本：** 12
 

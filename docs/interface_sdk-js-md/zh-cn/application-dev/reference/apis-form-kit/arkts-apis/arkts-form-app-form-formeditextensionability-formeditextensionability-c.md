@@ -20,7 +20,7 @@ import { FormEditExtensionAbility } from '@kit.FormKit';
 context: FormEditExtensionContext
 ```
 
-FormEditExtensionAbility的上下文环境。
+FormEditExtensionAbility的上下文环境，FormEditExtensionContext继承自UIExtensionContext。提供拉起编辑页面的能力。
 
 **类型：** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
 

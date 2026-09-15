@@ -22,7 +22,7 @@ Use scenario: upload and download in non-hosting mode, for example, uploading or
 
 1. During data transfer, the application needs to update the progress.
 If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled.
-2. The notification type of the progress update must be live view. For details, see the example in  
+2. The notification type of the progress update must be live view. For details, see the example in
 [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md).
 
 **Since:** 21
@@ -169,7 +169,7 @@ Use scenarios: An application exports media files in the background or uses a th
 
 1. If an application needs to run in the background for a long time,
 it can request user authorization through the [requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser) API and check the authorization result via [checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth).
-2. Since API version 24, this capability is available only to applications that have obtainedthe ACL permission  
+2. Since API version 24, this capability is available only to applications that have obtainedthe ACL permission
 [ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario). For API version 23 and earlier, this capability is available only to applications that have obtained the ACL permission [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system). Applications that have obtained this permission are not affected for API version 24 and later.
 3. This task type must be used independently and notifications cannot be combined.
 Specifically, when you request or update a continuous task, it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type. Otherwise, an error is returned.

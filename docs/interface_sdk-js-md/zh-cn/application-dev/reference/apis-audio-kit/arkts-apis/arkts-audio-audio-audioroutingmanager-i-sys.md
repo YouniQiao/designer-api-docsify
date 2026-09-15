@@ -289,11 +289,13 @@ async function selectOutputDeviceByFilter(){
 off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消监听指定过滤条件下最高优先级输出设备变化事件。使用callback异步回调。  
+取消监听指定过滤条件下最高优先级输出设备变化事件。使用callback异步回调。
+
 | 参数名 | 类型 | 必填 | 说明  
 |  
 | -------- | -------------------------------------- | ---- | ----------------------------------------------------  
--------- |  
+-------- |
+
 | type | string | 是 | 事件回调类型，支持的事件为'preferredOutputDeviceChangeByFilter'，当取消监听指定过滤条件下最高优先级输出设备变化事件时，触发该事件。  
 |  
 | callback | Callback\&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 |回调函数，返回优先级最高的输出设备信息。 |
@@ -324,11 +326,13 @@ off(type: 'preferredOutputDeviceChangeByFilter', callback?: Callback<AudioDevice
 offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消监听指定过滤条件下最高优先级输入设备变化事件。使用callback异步回调。  
+取消监听指定过滤条件下最高优先级输入设备变化事件。使用callback异步回调。
+
 | 参数名 | 类型 | 必填 | 说明  
 |  
 | -------- | -------------------------------------- | ---- | ----------------------------------------------------  
--------- |  
+-------- |
+
 | callback | Callback\&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 |回调函数，返回优先级最高的输入设备信息。 |
 
 **起始版本：** 26.0.0

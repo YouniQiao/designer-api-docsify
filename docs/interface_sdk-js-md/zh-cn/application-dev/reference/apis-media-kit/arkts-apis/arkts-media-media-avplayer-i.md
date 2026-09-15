@@ -2224,10 +2224,7 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 > 
 > - 当播放处于prepared/playing/paused/completed/stopped状态时，可调用该接口。
 > 
-> - 调用此接口时，需确保已设置音频渲染信息AVPlayer.audioRendererInfo，audioRendererInfo的usage参数必须是
-> [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)、
-> [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)、
-> [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)其中之一。
+> - 调用此接口时，需确保已设置音频渲染信息AVPlayer.audioRendererInfo，audioRendererInfo的usage参数必须是[STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)、[STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)、[STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)其中之一。
 > 
 > - 该接口不支持高清通路的响度设置。
 > 
@@ -2924,8 +2921,7 @@ url?: string
 
 **说明：** 
 
-- 设置网络播放路径，需[声明权限](../../../security/AccessToken/declare-permissions.md)：  
-[ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet)，相关错误码: [201 权限校验失败](../../errorcode-universal.md#201-权限校验失败)。  
+- 设置网络播放路径，需[声明权限](../../../security/AccessToken/declare-permissions.md)：[ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet)，相关错误码: [201 权限校验失败](../../errorcode-universal.md#201-权限校验失败)。  
 - 从API version 11开始不支持webm。  
 - 将资源句柄（fd）传递给AVPlayer实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer / AVMetadataExtractor / AVImageGenerator  
 / AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致媒体播放器数据获取异常。

@@ -18,7 +18,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 baudRate: BaudRates
 ```
 
-Baud rate.
+Baud rate of the serial port, in bit/s. This parameter indicates the data transmission rate.
 
 **Type:** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
 
@@ -32,7 +32,7 @@ Baud rate.
 dataBits?: DataBits
 ```
 
-Data bits. The default value is **8**.
+Data bits of the serial port, in bits. The default value is **8**. This parameter indicates the number of valid data bits in a packet.
 
 **Type:** [DataBits](arkts-basicservices-serialmanager-databits-e.md)
 
@@ -48,7 +48,7 @@ Data bits. The default value is **8**.
 parity?: Parity
 ```
 
-Parity check. The default value is **None**, indicating that no parity check is performed.
+Parity check. The default value is **PARITY_NONE**, indicating that no parity check is performed. This parameter is used to detect data transmission errors.
 
 **Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
 
@@ -64,7 +64,7 @@ Parity check. The default value is **None**, indicating that no parity check is 
 stopBits?: StopBits
 ```
 
-Stop bits. The default value is **1**.
+Stop bits of the serial port, in bits. The default value is **1**. This parameter indicates the end of a packet.
 
 **Type:** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
 

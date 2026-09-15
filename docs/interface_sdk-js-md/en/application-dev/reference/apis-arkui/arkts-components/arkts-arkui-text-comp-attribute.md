@@ -110,8 +110,7 @@ Sets whether to enable leading punctuation compression.
 > 
 > - Leading punctuation is not compressed by default.
 > 
-> - For the range of punctuation marks that support leading compression, see
-> [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> - For the range of punctuation marks that support leading compression, see [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -159,8 +158,7 @@ Sets whether copy and paste operations are allowed.
 
 Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.
 
-- When the **Text** component contains child elements, only Span and  
-ImageSpan support HTML-formatted pasteboard content.  
+- When the **Text** component contains child elements, only Span and ImageSpan support HTML-formatted pasteboard content.  
 - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
 
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
@@ -362,8 +360,7 @@ The style of detected entities is as follows: the font color is changed to blue,
 > 
 > - This API takes effect only when the device has an underlying text detection capability.
 > 
-> - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity
-> detection is not performed.
+> - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity detection is not performed.
 
 <!--RP2--><!--RP2End-->
 
@@ -1766,12 +1763,9 @@ Sets the vertical alignment of the text.
 
 > **NOTE:** 
 > 
-> - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take
-> effect.
+> - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take effect.
 > 
-> - The effect of this attribute is noticeable only when the same font size is used in a paragraph and
-> [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph.
-> Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The
+> - The effect of this attribute is noticeable only when the same font size is used in a paragraph and [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph.Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The
 > **SuperscriptStyle** in TextStyle takes effect only when the value of
 > TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical
 > alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.

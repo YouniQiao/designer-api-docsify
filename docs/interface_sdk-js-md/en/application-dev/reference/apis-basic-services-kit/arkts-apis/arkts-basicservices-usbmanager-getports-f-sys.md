@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getPorts(): Array<USBPort>
 ```
 
-Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
+Obtains the list of all physical USB ports. This API can be used to enumerate USB ports, perform port management, diagnose the device connection status, or query the port configuration information. When the developer mode is disabled, **undefined** is returned if no device is connected. Check whether the return value of the API is empty.
 
 **Since:** 9
 

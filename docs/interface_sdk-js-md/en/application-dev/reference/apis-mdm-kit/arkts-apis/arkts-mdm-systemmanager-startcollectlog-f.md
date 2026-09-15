@@ -18,12 +18,9 @@ Starts to collect the fault logs of the [FaultType](../../apis-performance-analy
 the task is started. The task may fail due to system performance constraints.  
 - This API can be called by multiple MDM apps. Logs collected by different MDM apps under different users are saved  
 separately and do not affect each other. Only one MDM app can start a log collection task at a time. If this API is called before the task is complete, the error code 9201009 is returned, and other MDM apps may call the API only after the task finishes.  
-- Upon task completion, the MDM app is notified via the  
-[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback. The system mounts the collected log files to the MDM app sandbox path, enabling the MDM app to read the logs within the callback.  
-- If the log collection task takes more than 5 minutes, the  
-[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback returns a task execution failure message.  
-- After the app obtains the logs, you are advised to call  
-[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to remove the collected logs.
+- Upon task completion, the MDM app is notified via the [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback. The system mounts the collected log files to the MDM app sandbox path, enabling the MDM app to read the logs within the callback.  
+- If the log collection task takes more than 5 minutes, the [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected) callback returns a task execution failure message.  
+- After the app obtains the logs, you are advised to call [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to remove the collected logs.
 
 **Since:** 23
 

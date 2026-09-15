@@ -4,9 +4,7 @@
 
 > **NOTE:** 
 > 
-> - The [grant](#grant)() and [deny](#deny)() methods are
-> mutually exclusive. For the same request on the same **ScreenCaptureHandler** instance, only one of them can be
-> called.
+> - The [grant](#grant)() and [deny](#deny)() methods are mutually exclusive. For the same request on the same **ScreenCaptureHandler** instance, only one of them can be called.
 > 
 > - After calling one method, do not call the other method for the same request.
 

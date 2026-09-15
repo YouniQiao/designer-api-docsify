@@ -2,7 +2,7 @@
 
 Defines velocity options.
 
-*   
+*  
 > **NOTE:** 
 
 > 

@@ -18,7 +18,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 actualLength: number
 ```
 
-Actual length of the read or written data.Unit: bytes.
+Actual length of the read/write operation, in bytes.
 
 **Type:** number
 
@@ -32,7 +32,7 @@ Actual length of the read or written data.Unit: bytes.
 isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 ```
 
-Packet information transferred in real time.
+Packet information of the isochronous transfer.
 
 **Type:** Array&lt;Readonly&lt;[UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)&gt;&gt;
 
@@ -46,7 +46,7 @@ Packet information transferred in real time.
 status: UsbTransferStatus
 ```
 
-Status after reading or writing is complete.
+Status of the read/write operation.
 
 **Type:** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 
