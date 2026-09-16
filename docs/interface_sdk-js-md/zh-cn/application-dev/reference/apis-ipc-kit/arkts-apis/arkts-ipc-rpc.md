@@ -45,5 +45,5 @@ import { rpc } from '@kit.IPCKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ErrorCode](arkts-ipc-rpc-errorcode-e.md) | 从API version 9起，IPC支持异常返回功能。错误码对应数值及含义如下，详细说明请参见[ohos.rpc错误码](../errorcode-rpc.md)。 |
+| [ErrorCode](arkts-ipc-rpc-errorcode-e.md) | 从API version 9起，IPC支持异常返回功能。错误码对应数值及含义如下，详细说明请参见[ohos.rpc错误码](../../../reference/apis-ipc-kit/errorcode-rpc.md)。 |
 | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 从API version 12起，IPC新增[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writearraybuffer)和[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer)方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据的读写。类型码对应数值及含义如下。 |

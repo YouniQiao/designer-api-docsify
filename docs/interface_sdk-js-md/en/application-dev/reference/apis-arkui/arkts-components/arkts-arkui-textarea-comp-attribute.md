@@ -130,7 +130,7 @@ Sets whether to enable leading punctuation compression.
 contentType(contentType: ContentType)
 ```
 
-Sets the content type for autofill.<!--RP3--><!--RP3End-->
+Sets the content type for autofill.&lt;!--RP3--&gt;&lt;!--RP3End--&gt;
 
 **Since:** 12
 
@@ -188,7 +188,7 @@ By default, the custom keyboard is closed when the input component loses the foc
 
 When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-commonmethod-c.md#onkeypreime) event to prevent input from the physical keyboard.
 
-From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
+From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
 
 > **NOTE:** 
 > 
@@ -239,9 +239,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 Sets the extended options of the custom context menu on selection, including the text content, icon, and callback.
 
-When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or
+When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
 **Since:** 12
 
@@ -287,9 +287,9 @@ Sets the ellipsis position. For the settings to work, [textOverflow](#textoverfl
 enableAutoFill(value: boolean)
 ```
 
-Sets whether to enable autofill.<!--RP2--><!--RP2End-->
+Sets whether to enable autofill.&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
-<!--RP6--><!--RP6End-->
+&lt;!--RP6--&gt;&lt;!--RP6End--&gt;
 
 **Since:** 12
 

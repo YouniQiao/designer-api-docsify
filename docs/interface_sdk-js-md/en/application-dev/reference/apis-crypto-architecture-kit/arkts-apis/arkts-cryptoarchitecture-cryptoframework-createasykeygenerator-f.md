@@ -14,7 +14,7 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 Creates an **AsyKeyGenerator** instance based on the specified algorithm.
 
-<br>For details about the supported specifications, see Asymmetric Key Generation and Conversion Specifications.
+<br>For details about the supported specifications, see [Asymmetric Key Generation and Conversion Specifications](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md).
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ Creates an **AsyKeyGenerator** instance based on the specified algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | Algorithm used by the asymmetric keys. For details, see the string parameters in Asymmetric Key Generation and Conversion Specifications. |
+| algName | string | Yes | Algorithm used by the asymmetric keys. For details, see the string parameters in [Asymmetric Key Generation and Conversion Specifications](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md). |
 
 **Return value:**
 

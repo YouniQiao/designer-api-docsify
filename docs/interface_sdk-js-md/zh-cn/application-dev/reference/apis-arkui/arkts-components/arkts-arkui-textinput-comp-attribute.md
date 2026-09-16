@@ -194,7 +194,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 contentType(value: ContentType)
 ```
 
-设置自动填充类型。<!--RP7--><!--RP7End-->
+设置自动填充类型。&lt;!--RP7--&gt;&lt;!--RP7End--&gt;
 
 **起始版本：** 12
 
@@ -357,7 +357,7 @@ ellipsisMode(mode: Optional<EllipsisMode>)
 enableAutoFill(value: boolean)
 ```
 
-设置是否启用自动填充。未通过该接口设置时，默认启用自动填充。<!--RP6--><!--RP6End-->
+设置是否启用自动填充。未通过该接口设置时，默认启用自动填充。&lt;!--RP6--&gt;&lt;!--RP6End--&gt;
 
 **起始版本：** 11
 
@@ -1534,7 +1534,7 @@ passwordIcon(value: PasswordIcon)
 passwordRules(value: string)
 ```
 
-定义生成密码的规则。在触发自动填充时，所设置的密码规则会透传给密码保险箱，用于新密码的生成。<!--RP1--><!--RP1End-->
+定义生成密码的规则。在触发自动填充时，所设置的密码规则会透传给密码保险箱，用于新密码的生成。&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **起始版本：** 11
 

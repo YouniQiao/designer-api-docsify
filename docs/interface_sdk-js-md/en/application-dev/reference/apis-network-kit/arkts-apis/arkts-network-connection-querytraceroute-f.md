@@ -16,7 +16,7 @@ Queries the network route tracing information. This API uses a promise to return
 
 > **NOTE:** 
 > 
-> To call this API, the application needs to apply for the precise location permission. <!--RP1-->According to
+> To call this API, the application needs to apply for the precise location permission. &lt;!--RP1--&gt;According to
 > [Applying for Location Permissions (ArkTS)](../../../device/location/location-permission-guidelines.md)<!--RP1 > End-->, the caller needs to apply for both **ohos.permission.APPROXIMATELY_LOCATION** and
 > **ohos.permission.LOCATION**.
 

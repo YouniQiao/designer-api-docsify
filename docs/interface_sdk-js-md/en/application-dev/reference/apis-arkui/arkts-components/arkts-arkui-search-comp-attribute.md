@@ -148,7 +148,7 @@ By default, the custom keyboard is closed when the input component loses focus. 
 
 When setting a custom keyboard, you can bind the [onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime) event to prevent input from the physical keyboard.
 
-From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
+From API version 23, the [setCustomKeyboardContinueFeature](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23) API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards, the system changes the keyboard directly without triggering the close and open animations.
 
 > **NOTE:** 
 > 
@@ -221,9 +221,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 Sets the extended options of the custom menu, including the text content, icon, and callback.
 
-When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or
+When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
 **Since:** 12
 
@@ -1185,7 +1185,7 @@ The default icon size on wearable devices is 16 vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IconOptions](arkts-arkui-iconoptions-i.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Style of the search icon on the left.<!--RP1--><br>Default value in light mode:<br>{<br>size: '16vp',<br>color: '#99182431',<br>src: ' '<br>}<br>Default value in dark mode:<br>{<br>size: '16vp',<br>color: '#99ffffff',<br>src: ' '<br>} <!--RP1End--><br>**Since:** 12 |
+| value | [IconOptions](arkts-arkui-iconoptions-i.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Yes | Style of the search icon on the left.&lt;!--RP1--&gt;<br>Default value in light mode:<br>{<br>size: '16vp',<br>color: '#99182431',<br>src: ' '<br>}<br>Default value in dark mode:<br>{<br>size: '16vp',<br>color: '#99ffffff',<br>src: ' '<br>} &lt;!--RP1End--&gt;<br>**Since:** 12 |
 
 ## selectedBackgroundColor
 

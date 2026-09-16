@@ -58,14 +58,14 @@
 - [@ohos.file.BackupExtensionContext](arkts-corefile-file-backupextensioncontext.md)
   - [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 <!--Del-->
-- [@ohos.file.cloudDiskManager](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
+- [@ohos.file.cloudDiskManager(Cloud Disk Management)](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderAccessor(system api)](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolder(system api)](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderState(system api)](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)<!--DelEnd-->
-- [@ohos.file.cloudSync](arkts-corefile-file-cloudsync.md)
+- [@ohos.file.cloudSync(Device-Cloud Sync)](arkts-corefile-file-cloudsync.md)
   - [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md)
   <!--Del-->
   - [getFileSyncState(system api)](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md)<!--DelEnd-->
@@ -118,7 +118,7 @@
   - [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
   <!--Del-->
   - [UploadState(system api)](arkts-corefile-cloudsync-uploadstate-e-sys.md)<!--DelEnd-->
-- [@ohos.file.cloudSyncManager](arkts-corefile-file-cloudsyncmanager.md)
+- [@ohos.file.cloudSyncManager(Device-Cloud Sync Management)](arkts-corefile-file-cloudsyncmanager.md)
   <!--Del-->
   - [changeAppCloudSwitch(system api)](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -165,7 +165,7 @@
   - [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md)
   <!--Del-->
   - [getUserHomeDir(system api)](arkts-corefile-environment-getuserhomedir-f-sys.md)<!--DelEnd-->
-- [@ohos.file.fileAccess](arkts-corefile-file-fileaccess.md)
+- [@ohos.file.fileAccess(User File Access and Management)](arkts-corefile-file-fileaccess.md)
   <!--Del-->
   - [createFileAccessHelper(system api)](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -195,7 +195,7 @@
   <!--Del-->
   - [Constants(system api)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.fileExtensionInfo](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
+- [@ohos.file.fileExtensionInfo(User File Access and Management Attribute Information)](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
   - [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md)
     - [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md)
       <!--Del-->
@@ -320,10 +320,10 @@
   - [createHash](arkts-corefile-hash-createhash-f.md)
   - [hash](arkts-corefile-hash-f.md)
   - [HashStream](arkts-corefile-hash-hashstream-c.md)
-- [@ohos.file.keyManager](arkts-corefile-file-keymanager.md)
+- [@ohos.file.keyManager(User Key Management)](arkts-corefile-file-keymanager.md)
   <!--Del-->
   - [deactivateUserKey(system api)](arkts-corefile-keymanager-deactivateuserkey-f-sys.md)<!--DelEnd-->
-- [@ohos.file.picker](arkts-corefile-file-picker.md)
+- [@ohos.file.picker(Picker)](arkts-corefile-file-picker.md)
   - [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md)
   - [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md)
   - [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -343,7 +343,7 @@
   - [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
   - [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
 <!--Del-->
-- [@ohos.file.recent](arkts-corefile-file-recent.md)<!--DelEnd-->
+- [@ohos.file.recent(Latest Access List)](arkts-corefile-file-recent.md)<!--DelEnd-->
   <!--Del-->
   - [add(system api)](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -363,7 +363,7 @@
   - [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md)
   - [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md)
   - [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md)
-- [@ohos.file.storageStatistics](arkts-corefile-file-storagestatistics.md)
+- [@ohos.file.storageStatistics(Application Storage Statistics)](arkts-corefile-file-storagestatistics.md)
   <!--Del-->
   - [getAllExtBundleStats(system api)](arkts-corefile-storagestatistics-getallextbundlestats-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -404,7 +404,7 @@
   <!--Del-->
   - [GetBundleStatsFlag(system api)](arkts-corefile-storagestatistics-getbundlestatsflag-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.trash](arkts-corefile-file-trash.md)<!--DelEnd-->
+- [@ohos.file.trash(Trash)](arkts-corefile-file-trash.md)<!--DelEnd-->
   <!--Del-->
   - [completelyDelete(system api)](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -414,7 +414,7 @@
   <!--Del-->
   - [FileInfo(system api)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.volumeManager](arkts-corefile-file-volumemanager.md)<!--DelEnd-->
+- [@ohos.file.volumeManager(Volume Management)](arkts-corefile-file-volumemanager.md)<!--DelEnd-->
   <!--Del-->
   - [burn(system api)](arkts-corefile-volumemanager-burn-f-sys.md)<!--DelEnd-->
   <!--Del-->

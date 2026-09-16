@@ -70,7 +70,7 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 
 表示电池电量低的公共事件的动作。
 
-当电池电量低于设备设置的低电量百分比值时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备设置低电量百分比值请参考电量等级定制开发指导。<!--DelEnd-->
+当电池电量低于设备设置的低电量百分比值时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备设置低电量百分比值请参考[电量等级定制开发指导](../../../../../device-dev/subsystems/subsys-power-battery-level-customization.md)。<!--DelEnd-->
 
 **起始版本：** 9
 
@@ -154,7 +154,7 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 
 表示设备热状态的公共事件的动作。
 
-当设备热等级变化时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备热等级配置请参考热等级定制开发指导。<!--DelEnd-->
+当设备热等级变化时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备热等级配置请参考[热等级定制开发指导](../../../../../device-dev/subsystems/subsys-thermal_level.md)。<!--DelEnd-->
 
 **起始版本：** 9
 

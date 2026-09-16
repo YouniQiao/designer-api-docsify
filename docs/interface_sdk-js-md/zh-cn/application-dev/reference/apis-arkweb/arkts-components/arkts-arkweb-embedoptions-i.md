@@ -53,3 +53,27 @@ supportDefaultIntrinsicSize?: boolean
 **起始版本：** 16
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## supportTransformRotateAndSkew
+
+```TypeScript
+supportTransformRotateAndSkew?: boolean
+```
+
+同层渲染组件是否支持CSS变换旋转和倾斜。
+
+该属性仅在enableNatvieEmbedMode开关打开时生效，不支持动态修改。
+
+设置为**true**时，同层渲染组件可以正确处理CSS变换旋转/倾斜。
+
+设置为**false**或未设置时，保留原始行为。
+
+**类型：** boolean
+
+**默认值：** false
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Web.Webview.Core

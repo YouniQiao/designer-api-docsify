@@ -286,7 +286,7 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 
 **约束：**
 
-<!--RP1-->该功能仅在2in1和Tablet设备上生效。<!--RP1End-->
+&lt;!--RP1--&gt;该功能仅在2in1和Tablet设备上生效。&lt;!--RP1End--&gt;
 
 **类型：** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 
@@ -424,7 +424,7 @@ withAnimation?: boolean
 
 此参数不填时，默认为undefined，跟随系统默认动画效果。
 
-从<!--RP2-->OpenHarmony 6.1<!--RP2End-->开始支持。
+从&lt;!--RP2--&gt;OpenHarmony 6.1&lt;!--RP2End--&gt;开始支持。
 
 **类型：** boolean
 

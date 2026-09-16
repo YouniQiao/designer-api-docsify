@@ -53,3 +53,21 @@ Unit: px.
 **Since:** 16
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## supportTransformRotateAndSkew
+
+```TypeScript
+supportTransformRotateAndSkew?: boolean
+```
+
+Whether the same-layer rendering component supports CSS transform rotate and skew. This attribute takes effect only when enableNativeEmbedMode is enabled and cannot be dynamically modified. When set to **true**, the same-layer rendering component correctly handles CSS transform rotate/skew. When set to **false** or not set, retains the original behavior.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Web.Webview.Core

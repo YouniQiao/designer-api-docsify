@@ -698,7 +698,7 @@ COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 
 表示应用快捷方式发生变化的公共事件。
 
-在应用快捷方式的更改设置完成时（例如调用shortcutManager模块的[setShortcutVisibleForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md)成功时），会发送此公共事件。
+在应用快捷方式的更改设置完成时（例如调用shortcutManager模块的[setShortcutVisibleForSelf](../../../apis-ability-kit/js-apis-shortcutManager.md#shortcutmanagersetshortcutvisibleforself)成功时），会发送此公共事件。
 
 要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SHORTCUTS权限
 

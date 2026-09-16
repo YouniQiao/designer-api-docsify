@@ -20,7 +20,7 @@ enableNavigationBarAnimation?: boolean
 
 Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false** otherwise. The default value is **false**.
 
-<!--RP13--><!--RP13End-->
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** boolean
 
@@ -54,7 +54,7 @@ isNavigationBarLightIcon?: boolean
 
 Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise. The default value is **false**.
 
-<!--RP13--><!--RP13End-->
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** boolean
 
@@ -88,7 +88,7 @@ navigationBarColor?: string
 
 Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
 
-<!--RP13--><!--RP13End-->
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** string
 
@@ -106,7 +106,7 @@ navigationBarContentColor?: string
 
 Color of the text on the three-button navigation bar. After this property is set, the setting of **isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
 
-<!--RP13--><!--RP13End-->
+&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** string
 

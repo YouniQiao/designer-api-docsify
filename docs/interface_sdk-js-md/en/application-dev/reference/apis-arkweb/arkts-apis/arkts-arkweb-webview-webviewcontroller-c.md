@@ -493,7 +493,7 @@ Constructs a **WebviewController** object.
 > 
 > After the **Web** component is destroyed, it is unbound from WebViewController. Subsequently, calling non-
 > static methods of WebviewController will throw a
-> [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component)
+> [17100001](../../../reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component)
 > exception. Pay attention to the call timing and catch exceptions to prevent abnormal process exit.
 
 **Since:** 11
@@ -3506,7 +3506,7 @@ Sets a custom user agent, which will overwrite the default user agent.
 > 
 > - When **src** of the **Web** component is not set to a URL, it is recommended to call **setCustomUserAgent**to set **User-Agent** first, and then use **loadUrl** to load a specific page.
 > 
-> - For the definition and usage scenarios of the default **User-Agent**, see User-Agent Development Guide.
+> - For the definition and usage scenarios of the default **User-Agent**, see [User-Agent Development Guide](../../../web/web-default-user-agent.md).
 
 **Since:** 10
 

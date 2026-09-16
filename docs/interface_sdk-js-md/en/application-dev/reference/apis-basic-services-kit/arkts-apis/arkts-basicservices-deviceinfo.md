@@ -56,7 +56,7 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 | [distributionOSApiVersion](arkts-basicservices-deviceinfo-con.md#distributionosapiversion) | Distribution OS API version.<!--Del--> It is defined by the issuer.<!--DelEnd--> |
 | [distributionOSName](arkts-basicservices-deviceinfo-con.md#distributionosname) | Distribution OS name.<!--Del--> It is defined by the issuer.<!--DelEnd--> |
 | [distributionOSReleaseType](arkts-basicservices-deviceinfo-con.md#distributionosreleasetype) | Distribution OS release type.<!--Del--> It is defined by the issuer.<!--DelEnd--> |
-| [distributionOSVersion](arkts-basicservices-deviceinfo-con.md#distributionosversion) | Distribution OS version.<!--Del--> It is defined by the issuer.<!--DelEnd--><!--RP11--><!--RP11End--> |
+| [distributionOSVersion](arkts-basicservices-deviceinfo-con.md#distributionosversion) | Distribution OS version.<!--Del--> It is defined by the issuer.<!--DelEnd-->&lt;!--RP11--&gt;&lt;!--RP11End--&gt; |
 | [featureVersion](arkts-basicservices-deviceinfo-con.md#featureversion) | Feature version number. The value is the third digit in **osFullName**. You are advised to use **deviceInfo.featureVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement. |
 | [firstApiVersion](arkts-basicservices-deviceinfo-con.md#firstapiversion) | First API version. |
 | [hardwareModel](arkts-basicservices-deviceinfo-con.md#hardwaremodel) | Hardware model. |
@@ -66,7 +66,7 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 | [manufacture](arkts-basicservices-deviceinfo-con.md#manufacture) | Device manufacturer. |
 | [marketName](arkts-basicservices-deviceinfo-con.md#marketname) | Marketing name. |
 | [ODID](arkts-basicservices-deviceinfo-con.md#odid) | Open device identifier. |
-| [osFullName](arkts-basicservices-deviceinfo-con.md#osfullname) | System version. The version number is in the format of **<!--RP12-->OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. <!--RP12End-->To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended. |
+| [osFullName](arkts-basicservices-deviceinfo-con.md#osfullname) | System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended. |
 | [osReleaseType](arkts-basicservices-deviceinfo-con.md#osreleasetype) | OS release type. The options are as follows: |
 | [performanceClass](arkts-basicservices-deviceinfo-con.md#performanceclass) | Device capability level, which is evaluated based on factors such as CPU, memory, storage read/write performance, and screen resolution. |
 | [productModel](arkts-basicservices-deviceinfo-con.md#productmodel) | Product model. |

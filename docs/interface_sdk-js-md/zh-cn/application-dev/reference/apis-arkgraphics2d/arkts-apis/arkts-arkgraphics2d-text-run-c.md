@@ -195,11 +195,11 @@ getImageBounds(): common2D.Rect
 > 
 > 示意图展示了字符串为" a b "的图像边界。
 > 
-> 
+> ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
 > 
 > 示意图展示了字符串为"j"或"E"的图像边界。
 > 
-> 
+> ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
 
 **起始版本：** 18
 
@@ -528,7 +528,7 @@ getTypographicBounds(): TypographicBounds
 > 
 > 示意图展示了字符串为" a b "的排版边界。
 > 
-> 
+> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
 > 
 > 示意图展示了字符串为"j"或"E"的排版边界。
 > 

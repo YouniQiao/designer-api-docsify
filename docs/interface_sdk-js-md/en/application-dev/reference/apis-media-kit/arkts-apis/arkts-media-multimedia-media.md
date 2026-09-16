@@ -130,7 +130,7 @@ import { media } from '@kit.MediaKit';
 | [AudioEncoder](arkts-media-media-audioencoder-e.md) | Enumerates the audio encoding formats. |
 | [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md) | Enumerates the audio output formats. |
 | [AudioSourceType](arkts-media-media-audiosourcetype-e.md) | Enumerates the audio source types for video recording. |
-| [AVErrorCode](arkts-media-media-averrorcode-e.md) | Enumerates the types of [Media error codes](../errorcode-media.md). |
+| [AVErrorCode](arkts-media-media-averrorcode-e.md) | Enumerates the types of [Media error codes](../../../reference/apis-media-kit/errorcode-media.md). |
 | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Enumerates the relationship between the video frame and the time at which the video thumbnail is obtained. |
 | [AVMetricsEventType](arkts-media-media-avmetricseventtype-e.md) | Enumerates the metric events supported by the media service. |
 | [AVMimeTypes](arkts-media-media-avmimetypes-e.md) | Enumerates the MIME type, which is set by using [setMimeType](arkts-media-media-mediasource-i.md#setmimetype). |
@@ -164,7 +164,7 @@ import { media } from '@kit.MediaKit';
 
 | Name | Description |
 | --- | --- |
-| [AVErrorCode](arkts-media-media-averrorcode-e-sys.md) | Enumerates the types of [Media error codes](../errorcode-media.md). |
+| [AVErrorCode](arkts-media-media-averrorcode-e-sys.md) | Enumerates the types of [Media error codes](../../../reference/apis-media-kit/errorcode-media.md). |
 | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | Enumerates meta source type for recorder. |
 | [PixelFormat](arkts-media-media-pixelformat-e-sys.md) | Enumerates the color formats supported by the video thumbnail. |
 | [ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md) | Enumerates the states available for the system screen recorder. |

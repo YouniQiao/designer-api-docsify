@@ -728,7 +728,7 @@ COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 
 Indicates that the application shortcut has changed.
 
-This common event is sent when the shortcut is changed (for example, when [shortcutManager.setShortcutVisibleForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md) of the shortcutManager module is successfully called).
+This common event is sent when the shortcut is changed (for example, when [shortcutManager.setShortcutVisibleForSelf](../../../apis-ability-kit/js-apis-shortcutManager.md#shortcutmanagersetshortcutvisibleforself) of the shortcutManager module is successfully called).
 
 To subscribe to this common event, your application must have the ohos.permission.MANAGE_SHORTCUTS permission.
 

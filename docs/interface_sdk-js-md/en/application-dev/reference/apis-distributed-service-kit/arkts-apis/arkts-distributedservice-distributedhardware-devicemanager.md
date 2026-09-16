@@ -1,4 +1,4 @@
-# @ohos.distributedHardware.deviceManager
+# @ohos.distributedHardware.deviceManager(Device Management)
 
 The APIs of this module are deprecated. You are advised to use [@ohos.distributedDeviceManager](arkts-distributedservice-distributeddevicemanager.md). The **deviceManager** module provides APIs for distributed device management. System applications can call the APIs to do the following:
 

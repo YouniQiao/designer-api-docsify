@@ -851,7 +851,7 @@ Video URL. The video formats MP4, MPEG-TS, and MKV are supported.
 
 1. FD: fd://xx
 
-
+![](../../../reference/apis-media-kit/figures/en-us_image_url.png)
 
 2. HTTP: http://xx
 3. HTTPS: https://xx

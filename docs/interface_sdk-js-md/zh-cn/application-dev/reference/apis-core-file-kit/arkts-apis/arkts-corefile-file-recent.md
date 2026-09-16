@@ -1,4 +1,4 @@
-# @ohos.file.recent
+# @ohos.file.recent(最近访问列表)
 
 该模块提供最近访问列表插入、移除、查询等常用能力。
 

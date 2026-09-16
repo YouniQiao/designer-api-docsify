@@ -64,7 +64,7 @@ readonly appDistributionType: string
 readonly appIdentifier: string
 ```
 
-Unique ID of the application. For details, see What Is appIdentifier.
+Unique ID of the application. For details, see [What Is appIdentifier](../../../quick-start/common_problem_of_application.md#what-is-appidentifier).
 
 **Type:** string
 

@@ -10,7 +10,7 @@ In the avoid area, the application window content is obscured and does not respo
 > 
 > The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.
 > 
-> 
+> ![avoidArea](../../../reference/apis-arkui/figures/avoidArea.png)
 
 **Since:** 7
 

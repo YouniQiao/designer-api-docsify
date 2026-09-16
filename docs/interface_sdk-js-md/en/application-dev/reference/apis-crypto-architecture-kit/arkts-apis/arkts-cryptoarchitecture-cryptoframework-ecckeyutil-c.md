@@ -75,7 +75,7 @@ console.info('returnPoint: ' + returnPoint.x.toString(16));
 static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 ```
 
-Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see ECC and SM2.
+Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see [ECC](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#ecc) and [SM2](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#sm2).
 
 **Since:** 11
 

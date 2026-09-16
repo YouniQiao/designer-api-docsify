@@ -2,7 +2,7 @@
 
 This module provides APIs for managing the access and communication of serial port devices. It provides functions such as opening and closing devices, reading and writing data, setting parameters, and managing permissions. It addresses issues such as permission request, device configuration, and data transfer during communication between apps and serial port devices. This module simplifies the process of accessing serial port devices and improves development efficiency.
 
-**Process**
+**Process**![SerialManager](../../../reference/figures/SerialManager.png)
 
 **Use scenarios**
 

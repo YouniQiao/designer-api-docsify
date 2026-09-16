@@ -44,7 +44,7 @@ This module is mainly used in the following scenarios:
 - **[AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md):** Program access control management class, providing  
  capabilities such as permission verification, permission dialog box request, settings page authorization guidance,and permission status monitoring.
 
-
+![image_abilityAccessCtrl](../../../reference/apis-ability-kit/figures/accessAccessCtrl.png)
 
 ## Modules to Import
 

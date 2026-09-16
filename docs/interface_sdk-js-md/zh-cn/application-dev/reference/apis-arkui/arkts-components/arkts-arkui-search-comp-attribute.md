@@ -1253,7 +1253,7 @@ Wearable设备上默认图标大小为16vp。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [IconOptions](arkts-arkui-iconoptions-i.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 左侧搜索图标样式。如果与参数icon同时设置，本属性优先生效。<!--RP1--> <br>浅色模式默认值：<br>{<br>size: '16vp', <br>color: '#99182431', <br>src: ' '<br>} <br>深色模式默认值：<br>{<br>size: '16vp', <br>color: '#99ffffff', <br>src: ' '<br>} <!--RP1End--><br>**适用版本：** 12 |
+| value | [IconOptions](arkts-arkui-iconoptions-i.md) &#124; [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | 是 | 左侧搜索图标样式。如果与参数icon同时设置，本属性优先生效。&lt;!--RP1--&gt;<br>浅色模式默认值：<br>{<br>size: '16vp', <br>color: '#99182431', <br>src: ' '<br>} <br>深色模式默认值：<br>{<br>size: '16vp', <br>color: '#99ffffff', <br>src: ' '<br>} &lt;!--RP1End--&gt;<br>**适用版本：** 12 |
 
 ## selectedBackgroundColor
 

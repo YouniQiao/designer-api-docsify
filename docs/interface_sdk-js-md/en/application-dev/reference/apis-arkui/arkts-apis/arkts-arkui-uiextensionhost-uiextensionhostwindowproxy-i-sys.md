@@ -331,7 +331,7 @@ Sets whether to enable privacy protection for the UIExtension component during n
 > 
 > When privacy protection is enabled, neither
 > window.snapshot nor
-> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot)
+> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)
 > will capture the content of the current component (excluding subwindows created under this component).
 
 **Since:** 13

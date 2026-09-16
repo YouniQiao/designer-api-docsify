@@ -221,7 +221,7 @@ Query device identification by device IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | Array&lt;string&gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50. |
+| deviceIds | Array&lt;string&gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50.<br>The maximum length is 96 character and cannot be empty. |
 
 **Return value:**
 
@@ -233,8 +233,8 @@ Query device identification by device IDs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 

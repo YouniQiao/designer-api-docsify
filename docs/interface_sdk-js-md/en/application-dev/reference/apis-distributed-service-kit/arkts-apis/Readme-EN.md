@@ -42,7 +42,7 @@
   - [CooperateMsg(system api)](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CooperateState(system api)](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedDeviceManager](arkts-distributedservice-distributeddevicemanager.md)
+- [@ohos.distributedDeviceManager(Device Management)](arkts-distributedservice-distributeddevicemanager.md)
   - [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
   - [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md)
   - [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -66,7 +66,7 @@
   - [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
   <!--Del-->
   - [StrategyForHeartbeat(system api)](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedHardware.deviceManager](arkts-distributedservice-distributedhardware-devicemanager.md)
+- [@ohos.distributedHardware.deviceManager(Device Management)](arkts-distributedservice-distributedhardware-devicemanager.md)
   <!--Del-->
   - [createDeviceManager(system api)](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md)<!--DelEnd-->
   <!--Del-->

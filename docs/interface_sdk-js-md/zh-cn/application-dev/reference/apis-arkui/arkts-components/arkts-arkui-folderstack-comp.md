@@ -44,7 +44,7 @@ FolderStack(options?: FolderStackOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 当折叠状态改变时触发的回调<!--RP4-->，仅在横屏状态下生效<!--RP4End-->。 |
+| [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 当折叠状态改变时触发的回调&lt;!--RP4--&gt;，仅在横屏状态下生效&lt;!--RP4End--&gt;。 |
 | [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | 当前设备的悬停状态改变时触发的回调。 |
 | [WindowStatusType](arkts-arkui-windowstatustype-t.md) | 窗口模式枚举。 |
 

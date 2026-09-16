@@ -1132,7 +1132,7 @@ Call this API when the APIs of the PhotoAccessHelper instance are no longer used
 requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string>>
 ```
 
-<!--RP1--><!--RP1End-->Grants the read permission for unauthorized URIs, returning a list of URIs that have been created and granted the permission.
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;Grants the read permission for unauthorized URIs, returning a list of URIs that have been created and granted the permission.
 
 **Since:** 14
 

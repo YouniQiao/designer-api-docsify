@@ -58,14 +58,14 @@
 - [@ohos.file.BackupExtensionContext](arkts-corefile-file-backupextensioncontext.md)
   - [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 <!--Del-->
-- [@ohos.file.cloudDiskManager](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
+- [@ohos.file.cloudDiskManager(云盘管理)](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderAccessor(系统接口)](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolder(系统接口)](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderState(系统接口)](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)<!--DelEnd-->
-- [@ohos.file.cloudSync](arkts-corefile-file-cloudsync.md)
+- [@ohos.file.cloudSync(端云同步能力)](arkts-corefile-file-cloudsync.md)
   - [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md)
   <!--Del-->
   - [getFileSyncState(系统接口)](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md)<!--DelEnd-->
@@ -118,7 +118,7 @@
   - [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
   <!--Del-->
   - [UploadState(系统接口)](arkts-corefile-cloudsync-uploadstate-e-sys.md)<!--DelEnd-->
-- [@ohos.file.cloudSyncManager](arkts-corefile-file-cloudsyncmanager.md)
+- [@ohos.file.cloudSyncManager(端云同步管理能力)](arkts-corefile-file-cloudsyncmanager.md)
   <!--Del-->
   - [changeAppCloudSwitch(系统接口)](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -165,7 +165,7 @@
   - [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md)
   <!--Del-->
   - [getUserHomeDir(系统接口)](arkts-corefile-environment-getuserhomedir-f-sys.md)<!--DelEnd-->
-- [@ohos.file.fileAccess](arkts-corefile-file-fileaccess.md)
+- [@ohos.file.fileAccess(公共文件访问与管理)](arkts-corefile-file-fileaccess.md)
   <!--Del-->
   - [createFileAccessHelper(系统接口)](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -195,7 +195,7 @@
   <!--Del-->
   - [常量(系统接口)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.fileExtensionInfo](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
+- [@ohos.file.fileExtensionInfo(公共文件访问与管理属性信息)](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
   - [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md)
     - [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md)
       <!--Del-->
@@ -320,10 +320,10 @@
   - [createHash](arkts-corefile-hash-createhash-f.md)
   - [hash](arkts-corefile-hash-f.md)
   - [HashStream](arkts-corefile-hash-hashstream-c.md)
-- [@ohos.file.keyManager](arkts-corefile-file-keymanager.md)
+- [@ohos.file.keyManager(用户密钥管理)](arkts-corefile-file-keymanager.md)
   <!--Del-->
   - [deactivateUserKey(系统接口)](arkts-corefile-keymanager-deactivateuserkey-f-sys.md)<!--DelEnd-->
-- [@ohos.file.picker](arkts-corefile-file-picker.md)
+- [@ohos.file.picker(选择器)](arkts-corefile-file-picker.md)
   - [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-c.md)
   - [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-c.md)
   - [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
@@ -343,7 +343,7 @@
   - [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
   - [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
 <!--Del-->
-- [@ohos.file.recent](arkts-corefile-file-recent.md)<!--DelEnd-->
+- [@ohos.file.recent(最近访问列表)](arkts-corefile-file-recent.md)<!--DelEnd-->
   <!--Del-->
   - [add(系统接口)](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -363,7 +363,7 @@
   - [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md)
   - [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md)
   - [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md)
-- [@ohos.file.storageStatistics](arkts-corefile-file-storagestatistics.md)
+- [@ohos.file.storageStatistics(应用空间统计)](arkts-corefile-file-storagestatistics.md)
   <!--Del-->
   - [getAllExtBundleStats(系统接口)](arkts-corefile-storagestatistics-getallextbundlestats-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -400,7 +400,7 @@
   <!--Del-->
   - [UserdataDirInfo(系统接口)](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.trash](arkts-corefile-file-trash.md)<!--DelEnd-->
+- [@ohos.file.trash(回收站)](arkts-corefile-file-trash.md)<!--DelEnd-->
   <!--Del-->
   - [completelyDelete(系统接口)](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -410,7 +410,7 @@
   <!--Del-->
   - [FileInfo(系统接口)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.volumeManager](arkts-corefile-file-volumemanager.md)<!--DelEnd-->
+- [@ohos.file.volumeManager(卷管理)](arkts-corefile-file-volumemanager.md)<!--DelEnd-->
   <!--Del-->
   - [format(系统接口)](arkts-corefile-volumemanager-format-f-sys.md)<!--DelEnd-->
   <!--Del-->

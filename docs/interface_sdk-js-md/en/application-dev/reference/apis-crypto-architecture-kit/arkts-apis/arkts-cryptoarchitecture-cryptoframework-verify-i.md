@@ -1,6 +1,6 @@
 # Verify
 
-Signature verification interface, defining methods for verifying signatures using a public key. Before use, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
+Signature verification interface, defining methods for verifying signatures using a public key. Before use, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
 
 <br>The **Verify** class does not support repeated initialization. When a new key is used for signature verification, you must create a new **Verify** instance and call **init()** for initialization.
 
@@ -503,7 +503,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 > prevents too much memory from being requested at a time.
 > 
 > For details about the sample code for calling **update()** multiple times in signature verification, see
-> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
 > . The operations of other algorithms are similar.
 > 
 > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
@@ -558,7 +558,7 @@ Updates the data for signature verification. This API uses a promise to return t
 > prevents too much memory from being requested at a time.
 
 > For details about the sample code for calling **update()** multiple times in signature verification, see
-> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
 > . The operations of other algorithms are similar.
 
 > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in
@@ -618,7 +618,7 @@ Updates the data for signature verification. This API returns the result synchro
 > This prevents too much memory from being requested at a time.
 
 > For details about the sample code for calling **updateSync** multiple times in signature verification, see
-> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
 > . The operations of other algorithms are similar.
 
 > **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass

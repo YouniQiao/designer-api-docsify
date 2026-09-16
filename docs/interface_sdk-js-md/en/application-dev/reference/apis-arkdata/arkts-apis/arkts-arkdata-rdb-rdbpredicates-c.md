@@ -570,9 +570,9 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 > **NOTE:** 
 
-> The value of **devices** can be obtained by using <!--RP2-->
+> The value of **devices** can be obtained by using &lt;!--RP2--&gt;
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system
+> . &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 
 **Since:** 8

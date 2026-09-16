@@ -26,7 +26,7 @@
 
 - **[AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md)：** 程序访问控制管理类，提供权限校验、权限弹窗申请、设置页授权引导和权限状态监听等能力。
 
-
+![image_abilityAccessCtrl](../../../reference/apis-ability-kit/figures/abilityAccessCtrl.png)
 
 **起始版本：** 20
 
@@ -94,7 +94,7 @@ INVALID = 2
 RESTRICTED = 3
 ```
 
-表示受限。<!--RP2-->应用被禁止通过[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)接口请求用户授权。<!--RP2End-->
+表示受限。&lt;!--RP2--&gt;应用被禁止通过[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)接口请求用户授权。&lt;!--RP2End--&gt;
 
 **起始版本：** 20
 

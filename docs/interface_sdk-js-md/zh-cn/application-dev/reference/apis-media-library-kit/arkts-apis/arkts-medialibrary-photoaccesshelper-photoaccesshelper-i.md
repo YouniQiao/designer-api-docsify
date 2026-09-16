@@ -1141,7 +1141,7 @@ release(): Promise<void>
 requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string>>
 ```
 
-<!--RP1--><!--RP1End-->调用接口给未授权的URI进行授权，返回已创建并授予保存权限的URI列表。
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;调用接口给未授权的URI进行授权，返回已创建并授予保存权限的URI列表。
 
 **起始版本：** 14
 

@@ -553,7 +553,7 @@ Audio file URI. The mainstream audio formats (M4A, AAC, MP3, OGG, WAV, and AMR) 
 
 1. FD: fd://xx
 
-
+![](../../../reference/apis-media-kit/figures/en-us_image_url.png)
 
 2. HTTP: http://xx
 3. HTTPS: https://xx

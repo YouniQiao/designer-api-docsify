@@ -329,7 +329,7 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 > **说明：** 
 > 
 > 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图
-> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot)
+> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)
 > 将无法截取到当前组件的内容（不包括该组件下创建的子窗）。
 
 **起始版本：** 13

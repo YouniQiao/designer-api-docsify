@@ -14,7 +14,7 @@ Provides the widget error information.
 errcode: number
 ```
 
-[Error code](../../apis-form-kit/errorcode-form.md).
+[Error code](../../../reference/apis-form-kit/errorcode-form.md).
 
 **Type:** number
 

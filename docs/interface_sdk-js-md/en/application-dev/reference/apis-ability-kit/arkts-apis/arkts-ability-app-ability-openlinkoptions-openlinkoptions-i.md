@@ -18,7 +18,7 @@ import { OpenLinkOptions } from '@kit.AbilityKit';
 appLinkingOnly?: boolean
 ```
 
-Whether the UIAbility must be started using <!--RP1--> [App Linking](../../../application-models/app-linking-startup.md)<!--RP1End-->.
+Whether the UIAbility must be started using &lt;!--RP1--&gt; [App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP1End--&gt;.
 
 - If this parameter is set to **true** and no UIAbility matches the URL in App Linking, the result is returned  
 directly.  

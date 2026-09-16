@@ -200,7 +200,7 @@ const deviceType: string
 
 Device type. For details, see [deviceTypes tag](../../../quick-start/module-configuration-file.md#devicetypes).
 
-Example: <!--RP1-->wearable<!--RP1End-->
+Example: &lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
 
 **Type:** string
 
@@ -242,7 +242,7 @@ const displayVersion: string
 
 Product version.
 
-Example: <!--RP8-->XXX X.X.X.X<!--RP8End-->
+Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
 
 **Type:** string
 
@@ -318,7 +318,7 @@ Example: Release
 const distributionOSVersion: string
 ```
 
-Distribution OS version.<!--Del--> It is defined by the issuer.<!--DelEnd--><!--RP11--><!--RP11End-->
+Distribution OS version.<!--Del--> It is defined by the issuer.<!--DelEnd-->&lt;!--RP11--&gt;&lt;!--RP11End--&gt;
 
 Example: 5.0.0
 
@@ -368,7 +368,7 @@ const hardwareModel: string
 
 Hardware model.
 
-Example: <!--RP6-->TASA00CVN1<!--RP6End-->
+Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
 
 **Type:** string
 
@@ -452,7 +452,7 @@ const marketName: string
 
 Marketing name.
 
-Example: <!--RP2-->Mate XX<!--RP2End-->
+Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
 
 **Type:** string
 
@@ -504,9 +504,9 @@ Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 const osFullName: string
 ```
 
-System version. The version number is in the format of **<!--RP12-->OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. <!--RP12End-->To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
+System version. The version number is in the format of **&lt;!--RP12--&gt;OpenHarmony-x.x.x.x**, where **x** is a placeholder for digits. &lt;!--RP12End--&gt;To obtain the value of a segment in the version number, you are advised to use **majorVersion**, **seniorVersion**, **featureVersion**, or **buildVersion**, which can improve efficiency. Parsing **osFullName** is not recommended.
 
-Example: <!--RP10-->Openharmony-5.0.0.1<!--RP10End-->
+Example: &lt;!--RP10--&gt;Openharmony-5.0.0.1&lt;!--RP10End--&gt;
 
 **Type:** string
 
@@ -530,7 +530,7 @@ and may require tolerance of instability.
 of instability.  
 - **Release**: Official release open to all developers. This release promises that all APIs are stable.
 
-Example: <!--RP9-->Canary/Beta/Release<!--RP9End-->
+Example: &lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
 
 **Type:** string
 
@@ -562,7 +562,7 @@ const productModel: string
 
 Product model.
 
-Example: <!--RP4-->TAS-AL00<!--RP4End-->
+Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
 
 **Type:** string
 
@@ -598,7 +598,7 @@ const productSeries: string
 
 Product series.
 
-Example: <!--RP3-->TAS<!--RP3End-->
+Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
 
 **Type:** string
 
@@ -672,7 +672,7 @@ const securityPatchTag: string
 
 Security patch tag.
 
-Example: <!--RP7-->2021/01/01<!--RP7End-->
+Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
 
 **Type:** string
 
@@ -728,7 +728,7 @@ const softwareModel: string
 
 Software model.
 
-Example: <!--RP5-->TAS-AL00<!--RP5End-->
+Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
 
 **Type:** string
 

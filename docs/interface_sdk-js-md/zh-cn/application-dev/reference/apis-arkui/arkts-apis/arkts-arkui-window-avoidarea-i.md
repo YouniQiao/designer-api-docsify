@@ -10,7 +10,7 @@
 > 
 > 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。
 > 
-> 
+> ![avoidArea](../../../reference/apis-arkui/figures/avoidArea.png)
 
 **起始版本：** 7
 

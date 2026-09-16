@@ -407,7 +407,7 @@ The haptic feedback mode is only configurable for level-1 menus.
 
 This parameter takes effect only when the user enables the haptic feedback function and the **ohos.permission.VIBRATE** permission is added to the **requestPermissions** field in the [module.json5](../../../quick-start/module-configuration-file.md) file. The configuration is as follows:
 
-
+![menuEnableHapticFeedback](../../../reference/apis-arkui/arkui-ts/figures/menuEnableHapticFeedback.png)
 
 **Type:** [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md)
 

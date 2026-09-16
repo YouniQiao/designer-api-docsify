@@ -336,7 +336,7 @@ This feature does not take effect on the node text of [addBuilderSpan](arkts-ark
 
 When **copyOptions** is set to **CopyOptions.None**, the menu displayed after an entity is clicked does not provide the text selection or copy functionality.
 
-<!--RP1--><!--RP1End-->
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **Since:** 11
 

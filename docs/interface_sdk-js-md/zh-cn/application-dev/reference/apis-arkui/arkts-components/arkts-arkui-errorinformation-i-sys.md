@@ -14,7 +14,7 @@
 errcode: number
 ```
 
-[错误码](../../apis-form-kit/errorcode-form.md)。
+[错误码](../../../reference/apis-form-kit/errorcode-form.md)。
 
 **类型：** number
 

@@ -295,7 +295,7 @@ Sets the number of elements to display per page.
 > 
 > - This API can be called within attributeModifier since API version 18.
 
-When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)<!--RP1--><!--RP1End-->, the number of displayed navigation dots follows the rules below.
+When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)&lt;!--RP1--&gt;&lt;!--RP1End--&gt;, the number of displayed navigation dots follows the rules below.
 
 | Total Children Count  
 > Visible Children Count|Swiping by Group Enabled|Loop Status|Number of Navigation

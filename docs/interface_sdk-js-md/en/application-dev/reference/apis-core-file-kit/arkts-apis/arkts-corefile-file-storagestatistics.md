@@ -1,4 +1,4 @@
-# @ohos.file.storageStatistics
+# @ohos.file.storageStatistics(Application Storage Statistics)
 
 The **storageStatistics** module provides APIs for obtaining storage space information, including the space of built-in and plug-in memory cards, space occupied by different types of data, and space of application data.
 

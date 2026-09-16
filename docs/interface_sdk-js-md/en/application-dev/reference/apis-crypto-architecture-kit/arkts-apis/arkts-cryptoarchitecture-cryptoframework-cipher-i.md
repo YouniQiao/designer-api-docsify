@@ -2,7 +2,7 @@
 
 Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption. Before use, you must create a **Cipher** instance by using [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md). Call the [init()](#init-3), [update()](#update), and [doFinal()](#dofinal-1) APIs in this class as needed to complete encryption or decryption operations.
 
-<br>For details about the complete encryption and decryption process, see Encryption and Decryption Overview.
+<br>For details about the complete encryption and decryption process, see [Encryption and Decryption Overview](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).
 
 <br>A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process.
 
@@ -93,7 +93,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
 > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
 > result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair.The operations are similar for SM2 and RSA.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
@@ -212,7 +212,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 > **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
 > integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
 > result is **null**.
-> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and decryption, see Encryption and Decryption by Segment with an RSA Asymmetric Key Pair.The operations are similar for SM2 and RSA.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
@@ -629,7 +629,7 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 > large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
 > at once.
 > <br>For details about the sample code for passing data in multiple **update()** calls, see
-> Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode).
+> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
 > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
 > 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
 > **doFinal()** once to decrypt data and verify the tag.
@@ -685,7 +685,7 @@ Updates the data to encrypt or decrypt by segment. This API uses a promise to re
 > large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
 > at once.
 > <br>For details about the sample code for passing data in multiple **update()** calls, see
-> Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode).
+> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
 > 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
 > 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
 > **doFinal()** once to decrypt data and verify the tag.

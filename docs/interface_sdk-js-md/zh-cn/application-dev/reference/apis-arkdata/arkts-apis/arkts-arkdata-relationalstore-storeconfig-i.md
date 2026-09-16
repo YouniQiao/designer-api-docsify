@@ -94,7 +94,7 @@ customDir?: string
 dataGroupId?: string
 ```
 
-应用组ID，<!--RP1-->暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。<!--RP1End-->
+应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应的沙箱路径下创建RdbStore实例。&lt;!--RP1End--&gt;
 
 **模型约束：** 此属性仅在Stage模型下可用。
 

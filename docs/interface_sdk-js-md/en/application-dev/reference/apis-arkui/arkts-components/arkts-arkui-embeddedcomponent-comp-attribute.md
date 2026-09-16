@@ -40,7 +40,7 @@ Callback called when the EmbeddedUIExtensionAbility draw the first frame.
 onError(callback: import('../api/@ohos.base').ErrorCallback)
 ```
 
-Called when an error occurs during the running of the started EmbeddedUIExtensionAbility. Through the **code**, **name**, and **message** in the callback parameters, error information can be obtained and handled. For details about the error codes, see [UIExtension Error Codes](../errorcode-uiextension.md).
+Called when an error occurs during the running of the started EmbeddedUIExtensionAbility. Through the **code**, **name**, and **message** in the callback parameters, error information can be obtained and handled. For details about the error codes, see [UIExtension Error Codes](../../../reference/apis-arkui/errorcode-uiextension.md).
 
 > **NOTE:** 
 > 

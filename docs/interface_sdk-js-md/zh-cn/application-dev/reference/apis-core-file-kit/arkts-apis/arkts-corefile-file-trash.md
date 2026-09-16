@@ -1,4 +1,4 @@
-# @ohos.file.trash
+# @ohos.file.trash(回收站)
 
 该模块提供可以查询、还原或彻底删除最近删除（回收站）里的文件/文件夹的能力。当前仅支持本地文件目录。应用可通过FileAccess的删除操作将文件/文件夹移动到回收站，具体可参考[@ohos.file.fileAccess](arkts-corefile-file-fileaccess.md)。
 

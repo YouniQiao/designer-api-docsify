@@ -221,7 +221,7 @@ postInputEvent(event: InputEventType): boolean
 
 offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对于builderNode的偏移，offsetC为offsetA+offsetB，最终输入给postInputEvent当中。
 
-
+![接口坐标换算示例图](../../../reference/apis-arkui/figures/postInputEvent-point.png)
 
 > **说明：** 
 > 
@@ -281,7 +281,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 接口调用前需要将event转化为对应的事件，并对event中的window参数的坐标进行转化：offsetA表示ReactiveBuilderNode相对于父组件的偏移量，offsetB为命中位置相对于ReactiveBuilderNode的偏移量，offsetC是offsetA与offsetB之和，最终作为event中的window参数，传递给postInputEventWithStrategy方法，具体请参考示例。
 
-
+![接口坐标换算示例图](../../../reference/apis-arkui/figures/postInputEvent-point.png)
 
 > **说明：** 
 > 
@@ -334,7 +334,7 @@ postTouchEvent是从组件树的中间节点往下分发，需要变换到父组
 
 offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent)获取。offsetB为触点相对于builderNode的偏移量，可以通过TouchEvent获取。offsetC为offsetA与offsetB的和，是传给postTouchEvent的最终结果。
 
-
+![postTouchEvent](../../../reference/apis-arkui/figures/postTouchEvent.PNG)
 
 > **说明：** 
 > 

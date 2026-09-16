@@ -172,7 +172,7 @@ Sets whether to show or hide the system navigation bar when entering this **NavD
 > This attribute is effective only if the following conditions are all met:
 
 > The actual effect of setting the system navigation bar depends on the specific device support. For details, see
-> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
+> [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled11).
 
 **Since:** 19
 
@@ -208,7 +208,7 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 > 
 > 4. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.
 > 
-> - The actual effect of setting the system status bar depends on the specific device support. For details, see [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled).
+> - The actual effect of setting the system status bar depends on the specific device support. For details, see [setSpecificSystemBarEnabled](../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled11).
 
 **Since:** 19
 

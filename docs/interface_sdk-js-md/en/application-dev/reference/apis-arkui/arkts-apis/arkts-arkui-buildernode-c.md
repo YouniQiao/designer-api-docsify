@@ -367,7 +367,7 @@ Dispatches the specified input event to the target node.
 
 **offsetA** indicates the BuilderNode's offset relative to its parent component, **offsetB** the hit position's offset relative to the BuilderNode, **offsetC** the composite offset (offsetA + offsetB) passed to the window in **postInputEvent**.
 
-
+![Coordinate conversion example](../../../reference/apis-arkui/figures/postInputEvent-point.png)
 
 > **NOTE:** 
 > 
@@ -425,7 +425,7 @@ Posts an event containing a competition strategy to the target UI component node
 
 Before calling this API, you need to convert the value of **event** to the corresponding event and convert the coordinates in the **window** parameter in **event**. **offsetA** indicates the offset of the builderNode relative to the parent component, **offsetB** indicates the offset of the hit position relative to the builderNode, and **offsetC** is the sum of **offsetA** and **offsetB**. The value of **offsetC** is used as the value of the **window** parameter in **event** and passed to the **postInputEventWithStrategy** method. For details, see the following sample code.
 
-
+![Coordinate conversion example](../../../reference/apis-arkui/figures/postInputEvent-point.png)
 
 > **NOTE:** 
 > 
@@ -481,7 +481,7 @@ Posts a raw touch event to the FrameNode created by this BuilderNode.
 
 **OffsetA** indicates the offset of the BuilderNode relative to the parent component. You can obtain this offset by calling [getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent) in the FrameNode. **OffsetB** indicates the offset of the touch point relative to the BuilderNode. You can obtain this offset from the TouchEvent object. **OffsetC** is the sum of **OffsetA** and **OffsetB**. It represents the final offset that you need to pass to **postTouchEvent**.
 
-
+![postTouchEvent](../../../reference/apis-arkui/figures/postTouchEvent.PNG)
 
 > **NOTE:** 
 > 

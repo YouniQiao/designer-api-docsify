@@ -1,4 +1,4 @@
-# DeviceFlag
+# DeviceFlag(User File Access and Management Attribute Information)
 
 Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation.
 

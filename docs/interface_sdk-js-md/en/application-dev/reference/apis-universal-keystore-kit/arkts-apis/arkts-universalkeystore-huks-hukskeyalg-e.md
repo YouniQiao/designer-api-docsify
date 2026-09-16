@@ -44,7 +44,7 @@ ECC.
 HUKS_ALG_DSA = 3
 ```
 
-DSA<!--RP5--><!--RP5End-->.
+DSA&lt;!--RP5--&gt;&lt;!--RP5End--&gt;.
 
 **Since:** 8
 
@@ -234,7 +234,7 @@ SM4.
 HUKS_ALG_DES = 160
 ```
 
-DES (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version 12; supported for <!--RP5--> standard devices<!--RP5End--> since API version 18).
+DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
 
@@ -248,7 +248,7 @@ DES (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version 
 HUKS_ALG_3DES = 161
 ```
 
-3DES (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version 12; supported for <!--RP5--> standard devices<!--RP5End--> since API version 18).
+3DES (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
 
@@ -262,7 +262,7 @@ HUKS_ALG_3DES = 161
 HUKS_ALG_CMAC = 162
 ```
 
-CMAC (supported for <!--RP4-->lightweight devices<!--RP4End--> since API version 12; supported for <!--RP5--> standard devices<!--RP5End--> since API version 18).
+CMAC (supported for &lt;!--RP4--&gt;lightweight devices&lt;!--RP4End--&gt; since API version 12; supported for &lt;!--RP5--&gt; standard devices&lt;!--RP5End--&gt; since API version 18).
 
 **Since:** 12
 

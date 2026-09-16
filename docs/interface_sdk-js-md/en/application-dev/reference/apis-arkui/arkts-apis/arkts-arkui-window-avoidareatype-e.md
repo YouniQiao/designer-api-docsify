@@ -14,7 +14,7 @@ When adapting window content for an [immersive layout](../../../windowmanager/wi
 TYPE_SYSTEM = 0
 ```
 
-Default area of the system. <!--RP11-->It contains the status bar and three-button navigation bar.<!--RP11End-->
+Default area of the system. &lt;!--RP11--&gt;It contains the status bar and three-button navigation bar.&lt;!--RP11End--&gt;
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ Fixed soft keyboard area.
 TYPE_NAVIGATION_INDICATOR = 4
 ```
 
-Bottom navigation bar. <!--RP12-->OpenHarmony devices do not support this capability.<!--RP12End-->
+Bottom navigation bar. &lt;!--RP12--&gt;OpenHarmony devices do not support this capability.&lt;!--RP12End--&gt;
 
 **Since:** 11
 

@@ -432,13 +432,13 @@ enableAutoFill(value: boolean)
 
 Sets whether to enable web page autofill. By default, this feature is enabled.
 
-<!--RP1-->
+&lt;!--RP1--&gt;
 
 > **NOTE:** 
 > 
 > The autofill feature of this API depends on SmartFill service and Password Autofill Service.
 
-<!--RP1End-->
+&lt;!--RP1End--&gt;
 
 **Since:** 23
 

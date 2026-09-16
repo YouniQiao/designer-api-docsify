@@ -86,7 +86,7 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-<!--RP1--><!--RP1End-->ID for the menu item involving text enhancement features, such as polishing, summary extraction, and formatting, for selected text. It is a level-1 menu item. This menu item requires the large language model. If no large language model is available, this menu item does not take effect.
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;ID for the menu item involving text enhancement features, such as polishing, summary extraction, and formatting, for selected text. It is a level-1 menu item. This menu item requires the large language model. If no large language model is available, this menu item does not take effect.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -104,7 +104,7 @@ static readonly AI_WRITER: TextMenuItemId
 static readonly askAI: TextMenuItemId
 ```
 
-<!--RP2--><!--RP2End-->ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 

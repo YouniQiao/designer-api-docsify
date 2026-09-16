@@ -486,7 +486,7 @@ constructor(webTag?: string)
 > undefined，需要开发者判断返回值是否正常。
 > 
 > Web组件销毁后会解绑WebViewController，之后调用WebviewController的非静态方法会抛出
-> [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联)异常，应注意调
+> [17100001](../../../reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联)异常，应注意调
 > 用时机和捕获异常，防止进程异常退出。
 
 **起始版本：** 11

@@ -1,6 +1,6 @@
 # Sign
 
-Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode).
+Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md).
 
 <br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.
 
@@ -533,7 +533,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 > prevents too much memory from being requested at a time.
 > 
 > For details about the sample code for calling **update()** multiple times in signing, see
-> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
 > . The operations of other algorithms are similar.
 > 
 > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data.
@@ -587,7 +587,7 @@ Updates data to be signed. This API uses a promise to return the result.
 > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This
 > prevents too much memory from being requested at a time.
 > For details about the sample code for calling **update()** multiple times in signing, see
-> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
 > . The operations of other algorithms are similar.
 > 
 > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data.
@@ -646,7 +646,7 @@ Updates data to be signed. This API returns the result synchronously.
 > This prevents too much memory from being requested at a time.
 > 
 > For details about the sample code for calling **updateSync** multiple times in signing, see
-> Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)
+> [Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)
 > . The operations of other algorithms are similar.
 > 
 > **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in

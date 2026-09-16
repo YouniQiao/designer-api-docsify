@@ -302,7 +302,7 @@ getDeviceType(networkId: string): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | <!--RP2-->返回指定设备类型。<!--RP2End--> |
+| number | &lt;!--RP2--&gt;返回指定设备类型。&lt;!--RP2End--&gt; |
 
 **错误码：**
 
@@ -485,7 +485,7 @@ getLocalDeviceType(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | <!--RP1-->返回本地设备类型。<!--RP1End--> |
+| number | &lt;!--RP1--&gt;返回本地设备类型。&lt;!--RP1End--&gt; |
 
 **错误码：**
 

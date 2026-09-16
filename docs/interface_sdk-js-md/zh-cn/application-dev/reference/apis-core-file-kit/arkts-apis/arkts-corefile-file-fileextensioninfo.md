@@ -1,4 +1,4 @@
-# @ohos.file.fileExtensionInfo
+# @ohos.file.fileExtensionInfo(公共文件访问与管理属性信息)
 
 该模块提供公共文件访问和管理模块中RootInfo与FileInfo中部分属性值的定义。
 

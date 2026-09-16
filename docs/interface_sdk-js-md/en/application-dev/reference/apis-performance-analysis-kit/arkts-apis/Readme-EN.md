@@ -102,7 +102,7 @@
   - [OutputType](arkts-performanceanalysis-hilog-outputtype-e.md)
   - [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md)
 <!--Del-->
-- [@ohos.hiSysEvent](arkts-performanceanalysis-hisysevent.md)<!--DelEnd-->
+- [@ohos.hiSysEvent(System Event Logging)](arkts-performanceanalysis-hisysevent.md)<!--DelEnd-->
   <!--Del-->
   - [addWatcher(system api)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd-->
   <!--Del-->

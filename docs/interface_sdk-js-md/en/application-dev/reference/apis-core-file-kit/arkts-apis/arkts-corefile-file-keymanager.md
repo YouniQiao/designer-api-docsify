@@ -1,4 +1,4 @@
-# @ohos.file.keyManager
+# @ohos.file.keyManager(User Key Management)
 
 This module provides common features related to user key management, including user key uninstallation.
 

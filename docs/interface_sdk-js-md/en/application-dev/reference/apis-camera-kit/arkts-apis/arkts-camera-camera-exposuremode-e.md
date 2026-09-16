@@ -78,7 +78,7 @@ EXPOSURE_MODE_MANUAL = 3
 
 Manual exposure. The exposure duration can be set.
 
-In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration).
+In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration24).
 
 **Since:** 24
 

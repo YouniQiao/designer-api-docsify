@@ -104,7 +104,7 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 dataGroupId?: string
 ```
 
-Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--RP1End-->
+Application group ID. &lt;!--RP1--&gt;Currently, this parameter is not supported.&lt;!--RP1End--&gt;
 
 **Model restriction**: This parameter can be used only in the stage model.
 

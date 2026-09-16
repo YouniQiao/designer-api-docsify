@@ -2,7 +2,7 @@
 
 Enumerates the types of ExtensionAbility components.
 
-<!--RP2--><!--RP2End-->
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 **Since:** 9
 

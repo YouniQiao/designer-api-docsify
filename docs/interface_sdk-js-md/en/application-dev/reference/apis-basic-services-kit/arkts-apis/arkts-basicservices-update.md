@@ -8,7 +8,7 @@ There are two types of updates: local SD card update and OTA update.
 
 The design logic and use scenarios of each update type are as follows:
 
-- **Local SD card update:** For details, see Upgrading Service Terms
+- **Local SD card update:** For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 Use scenarios: The system needs to be updated from a local storage device.
 
@@ -16,7 +16,7 @@ Use scenarios: The system needs to be updated from a local storage device.
 
 This update mode applies to system update offline or with poor network connection when automatic update cannot be implemented. This mode does not depend on the upgrade package management server, reducing the update cost.
 
-- **Online update:** For details, see Upgrading Service Terms
+- **Online update:** For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md.)
 
 Use scenarios: The system needs to be automatically checked and updated by connecting to the network.
 
@@ -59,7 +59,7 @@ import { update } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [getLocalUpdater](arkts-basicservices-update-getlocalupdater-f-sys.md) | Obtains a **LocalUpdater** object, which is used to upgrade the system from a local storage device (such as the SD card). After this API is called, the system returns the **LocalUpdater** utility object, which provides functions such as verifying and installing the local upgrade package. |
-| [getOnlineUpdater](arkts-basicservices-update-getonlineupdater-f-sys.md) | Obtains an **OnlineUpdater** object, which can be used to check for new versions online, download update packages, and install update packages. This API can be used in scenarios such as OTA upgrade (for details, see Upgrading Service Terms) of client applications and online system upgrade. This API can help users obtain system updates in a timely manner, improving upgrade efficiency and user experience. |
+| [getOnlineUpdater](arkts-basicservices-update-getonlineupdater-f-sys.md) | Obtains an **OnlineUpdater** object, which can be used to check for new versions online, download update packages, and install update packages. This API can be used in scenarios such as OTA upgrade (for details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)) of client applications and online system upgrade. This API can help users obtain system updates in a timely manner, improving upgrade efficiency and user experience. |
 | [getRestorer](arkts-basicservices-update-getrestorer-f-sys.md) | Obtains a **Restorer** object for restoring factory settings. After this API is called, the system returns the **Restorer** utility object. Three factory reset methods are provided: |
 <!--DelEnd-->
 

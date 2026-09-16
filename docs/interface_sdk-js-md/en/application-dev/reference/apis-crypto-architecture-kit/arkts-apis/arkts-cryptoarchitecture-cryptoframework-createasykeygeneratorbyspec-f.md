@@ -26,7 +26,7 @@ Creates an **AsyKeyGeneratorBySpec** instance based on the specified key specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asyKeySpec | [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) | Yes | Key parameters. The **AsyKeyGeneratorBySpec** generates the public/private key based on the specified parameters.<br>For details about the supported specifications, see Asymmetric Key Generation and Conversion Specifications. |
+| asyKeySpec | [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) | Yes | Key parameters. The **AsyKeyGeneratorBySpec** generates the public/private key based on the specified parameters.<br>For details about the supported specifications, see [Asymmetric Key Generation and Conversion Specifications](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md). |
 
 **Return value:**
 

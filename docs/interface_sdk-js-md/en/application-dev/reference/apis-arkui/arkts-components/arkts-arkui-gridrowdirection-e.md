@@ -19,7 +19,7 @@ Grid element arrangement direction.
 > 
 > 
 > 
-> 
+> ![figures/gridRowOffsetToNextLine.png](../../../reference/apis-arkui/arkui-ts/figures/gridRowOffsetToNextLine.png)
 
 **Since:** 9
 

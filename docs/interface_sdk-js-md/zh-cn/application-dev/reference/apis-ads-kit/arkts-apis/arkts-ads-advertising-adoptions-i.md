@@ -20,7 +20,7 @@ import { advertising } from '@kit.AdsKit';
 
 自定义参数。
 
-<!--RP1--><!--RP1End-->
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **类型：** number &#124; boolean &#124; string &#124; undefined
 

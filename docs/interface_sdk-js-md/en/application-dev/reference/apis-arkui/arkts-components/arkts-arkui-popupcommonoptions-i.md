@@ -1,6 +1,6 @@
 # PopupCommonOptions
 
-Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) is called.
+Configures the parameters of a popup. You can use the [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object, and then call the attributes of **options** when [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18) or [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) is called.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Represents the callback invoked when the popup state changes.
 
 **NOTE:** 
 
-[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
 **Since:** 18
 
@@ -373,7 +373,7 @@ Default value: **false**
 
 **NOTE:** 
 
-[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
 **Type:** boolean
 
@@ -489,7 +489,7 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 **NOTE:** 
 
 1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
-2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
 **Type:** boolean &#124; [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
@@ -650,7 +650,7 @@ Default value: **false**
 
 **NOTE:** 
 
-[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
 **Type:** boolean
 
@@ -717,7 +717,7 @@ Transition animations for the entrance and exit of the popup.
 1. If this parameter is not set, the default effect is used.
 2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.
 3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive.
-4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup) cannot be used for update.
+4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 

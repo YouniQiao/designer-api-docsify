@@ -20,7 +20,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 ```
 
-Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see DH.
+Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see [DH](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh).
 
 **Since:** 11
 

@@ -24,7 +24,7 @@ appId or appIdentifier of the target application. Identical appId and appIdentif
 
 **NOTE:** 
 
-**appId** is also the unique identifier of an app. For details, see What is appIdentifier. For details about how to obtain **appIdentifier**, see How do I obtain appIdentifier from application information.
+**appId** is also the unique identifier of an app. For details, see [What is appIdentifier](../../../quick-start/common_problem_of_application.md#what-is-appidentifier). For details about how to obtain **appIdentifier**, see [How do I obtain appIdentifier from application information](../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appidentifier-from-application-information).
 
 **Type:** string
 

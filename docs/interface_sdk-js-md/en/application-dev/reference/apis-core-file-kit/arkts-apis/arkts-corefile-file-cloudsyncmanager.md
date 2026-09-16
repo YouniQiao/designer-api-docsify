@@ -1,4 +1,4 @@
-# @ohos.file.cloudSyncManager
+# @ohos.file.cloudSyncManager(Device-Cloud Sync Management)
 
 The **cloudSyncManager** module provides APIs for managing device-cloud sync for applications. You can use the APIs to manage the full download state, the reason why the full download stops, and number of local and cloud files.
 

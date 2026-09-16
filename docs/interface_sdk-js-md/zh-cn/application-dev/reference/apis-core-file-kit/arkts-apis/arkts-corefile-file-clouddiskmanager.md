@@ -1,4 +1,4 @@
-# @ohos.file.cloudDiskManager
+# @ohos.file.cloudDiskManager(云盘管理)
 
 本模块是为系统文件管理应用提供获取三方网盘注册的同步根信息的能力。
 

@@ -1,4 +1,4 @@
-# @ohos.file.cloudSync
+# @ohos.file.cloudSync(Device-Cloud Sync)
 
 The **cloudSync** module provides the device-cloud sync capabilities for applications. You can use the APIs to start or stop device-cloud sync and start or stop the download of images.
 

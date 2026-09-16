@@ -94,7 +94,7 @@
   - [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md)
   - [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md)
 <!--Del-->
-- [@ohos.hiSysEvent](arkts-performanceanalysis-hisysevent.md)<!--DelEnd-->
+- [@ohos.hiSysEvent(系统事件打点)](arkts-performanceanalysis-hisysevent.md)<!--DelEnd-->
   <!--Del-->
   - [addWatcher(系统接口)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -199,7 +199,7 @@
     - [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)
     - [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)
     - [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md)
-- [@ohos.hiviewdfx.hiRetrieval](arkts-performanceanalysis-hiviewdfx-hiretrieval.md)
+- [@ohos.hiviewdfx.hiRetrieval(应用灰度)](arkts-performanceanalysis-hiviewdfx-hiretrieval.md)
   - [getCurrentConfig](arkts-performanceanalysis-hiretrieval-getcurrentconfig-f.md)
   - [getLastParticipationTimestamp](arkts-performanceanalysis-hiretrieval-getlastparticipationtimestamp-f.md)
   - [init](arkts-performanceanalysis-hiretrieval-init-f.md)

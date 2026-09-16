@@ -1,4 +1,4 @@
-# DeviceFlag
+# DeviceFlag(公共文件访问与管理属性信息)
 
 组成RootInfo中的deviceFlags字段，通过与运算判断是否具备某种能力。
 

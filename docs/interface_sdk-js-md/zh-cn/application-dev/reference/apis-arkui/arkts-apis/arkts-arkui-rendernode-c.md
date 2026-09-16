@@ -2193,7 +2193,7 @@ set markNodeGroup(isNodeGroup: boolean)
 
 标记是否优先绘制节点及其子节点。若设置为true，则透明度等属性将在节点绘制完毕后再进行合成，适用于多个半透明节点重叠且需要正确合成透明度效果的场景。设置效果如下：
 
-
+![markNodeGroup](../../../reference/apis-arkui/figures/renderNode-markNodeGroup.png)
 
 **类型：** boolean
 

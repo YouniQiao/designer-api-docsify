@@ -1,4 +1,4 @@
-# @ohos.file.cloudDiskManager
+# @ohos.file.cloudDiskManager(Cloud Disk Management)
 
 This module enables the File Manager to obtain the sync root information registered by third-party cloud disks.
 

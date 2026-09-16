@@ -68,7 +68,7 @@ The permission is invalid. The application does not [declare permissions](../../
 RESTRICTED = 3
 ```
 
-Indicates restricted. <!--RP2-->The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API. <!--RP2End-->
+Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) API. &lt;!--RP2End--&gt;
 
 **Since:** 20
 

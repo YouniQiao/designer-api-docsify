@@ -13,7 +13,7 @@ Defines a USB endpoint, which is used for data transfer between the host and the
 > 
 > The transmission characteristics, including the data packet format, error processing mechanism,
 > and timeout policy, are determined based on the endpoint type during protocol layer packaging.
-> 
+> ![USBEndpoint](../../../reference/figures/USBEndpoint.png)
 
 **Since:** 9
 

@@ -2002,7 +2002,7 @@ Sets the avoidance mode for the virtual keyboard.
 > **setKeyboardAvoidMode** only affects page layouts. It does not apply to popup components, including the
 > following: **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, **Toast**, **OverlayManager**.
 > For details about the avoidance mode of popup components, see
-> CustomDialogControllerOptions.
+> [CustomDialogControllerOptions](../../../reference/arkui-ts/ts-methods-custom-dialog-box.md).
 
 **Since:** 11
 

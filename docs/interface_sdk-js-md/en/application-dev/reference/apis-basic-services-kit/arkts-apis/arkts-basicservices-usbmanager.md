@@ -18,7 +18,7 @@ as an input parameter.
 
 Call [usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md) to disable the USB connection channel.
 
-
+![usbManager](../../../reference/figures/usbManager.png)
 
 **Since:** 9
 

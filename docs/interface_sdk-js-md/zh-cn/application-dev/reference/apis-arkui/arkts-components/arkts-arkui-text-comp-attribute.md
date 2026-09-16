@@ -369,7 +369,7 @@ enableDataDetector(enable: boolean)
 > 
 > - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。
 
-<!--RP2--><!--RP2End-->
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 **起始版本：** 11
 
@@ -717,7 +717,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontvariations)属性的优先级高于本属性，同时设置时以fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。
 
-仅Text组件生效，其子组件不生效。<!--RP4--><!--RP4End-->
+仅Text组件生效，其子组件不生效。&lt;!--RP4--&gt;&lt;!--RP4End--&gt;
 
 **起始版本：** 12
 
@@ -1700,7 +1700,7 @@ textOverflow(options: TextOverflowOptions)
 字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。  
 - 折行规则参考[lineBreakStrategy](#linebreakstrategy)。该属性在[wordBreak](#wordbreak)不等  
 于WordBreak.BREAK_ALL的时候生效，不支持连词符。  
-- 从API version 11开始，建议优先组合[textOverflow](#textoverflow)和[wordBreak](#wordbreak)属性来设置截断方式，具体详见示例4（设置文本断行及折行）<!--RP1--><!--RP1 End-->。
+- 从API version 11开始，建议优先组合[textOverflow](#textoverflow)和[wordBreak](#wordbreak)属性来设置截断方式，具体详见示例4（设置文本断行及折行）&lt;!--RP1--&gt;<!--RP1 End-->。
 
 当TextOverflowOptions设置为TextOverflow.MARQUEE时：
 

@@ -2,9 +2,9 @@
 
 Enumerates the device types.
 
-<!--RP1-->
+&lt;!--RP1--&gt;
 
-<!--RP1End-->
+&lt;!--RP1End--&gt;
 
 **Since:** 6
 

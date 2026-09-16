@@ -42,7 +42,7 @@
   - [CooperateMsg(系统接口)](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CooperateState(系统接口)](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedDeviceManager](arkts-distributedservice-distributeddevicemanager.md)
+- [@ohos.distributedDeviceManager(设备管理)](arkts-distributedservice-distributeddevicemanager.md)
   - [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
   - [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md)
   - [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
@@ -66,7 +66,7 @@
   - [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
   <!--Del-->
   - [StrategyForHeartbeat(系统接口)](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedHardware.deviceManager](arkts-distributedservice-distributedhardware-devicemanager.md)
+- [@ohos.distributedHardware.deviceManager(设备管理)](arkts-distributedservice-distributedhardware-devicemanager.md)
   <!--Del-->
   - [createDeviceManager(系统接口)](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -1,4 +1,4 @@
-# @ohos.file.cloudSyncManager
+# @ohos.file.cloudSyncManager(端云同步管理能力)
 
 该模块向云盘管理应用提供端云同步管理能力：包括全量下载的状态和停止原因，以及应用本地和云端文件数量信息。
 

@@ -9,11 +9,11 @@ Describes the typographic boundaries of a text line. These boundaries depend on 
 > spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest
 > point of the current line), and next line top (the highest point of the next line).
 > 
-> 
+> ![Typographic.png](../../../reference/apis-arkgraphics2d/figures/Typographic.png)
 > 
 > The figure shows the typesetting boundaries for the string " a b ".
 > 
-> 
+> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
 > 
 > The figure shows the typesetting boundaries for the string "j" or "E".
 > 

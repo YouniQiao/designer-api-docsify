@@ -11,7 +11,7 @@ Configures the annular emitter area.
 > 
 > - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and the larger value is used as the new end angle.
 > 
-> 
+> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
 
 @interface ParticleAnnulusRegion
 

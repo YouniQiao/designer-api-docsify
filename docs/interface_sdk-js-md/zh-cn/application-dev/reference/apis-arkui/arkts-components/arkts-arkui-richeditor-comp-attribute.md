@@ -336,7 +336,7 @@ enableDataDetector(enable: boolean)
 
 当copyOptions设置为CopyOptions.None时，点击实体弹出的菜单没有选择文本和复制功能。
 
-<!--RP1--><!--RP1End-->
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **起始版本：** 11
 

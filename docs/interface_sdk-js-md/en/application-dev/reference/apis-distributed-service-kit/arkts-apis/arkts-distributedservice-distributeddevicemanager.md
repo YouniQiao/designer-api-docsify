@@ -1,4 +1,4 @@
-# @ohos.distributedDeviceManager
+# @ohos.distributedDeviceManager(Device Management)
 
 The **distributedDeviceManager** module provides APIs for distributed device management. Applications can call the APIs to:
 

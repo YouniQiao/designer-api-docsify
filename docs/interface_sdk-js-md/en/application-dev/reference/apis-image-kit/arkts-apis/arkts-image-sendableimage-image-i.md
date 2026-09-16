@@ -130,7 +130,7 @@ Image area to be cropped.
 readonly format: number
 ```
 
-Image format. For details, see OH_NativeBuffer_Format.
+Image format. For details, see [OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/c-apis/capi-buffer-common-h.md#oh_nativebuffer_format).
 
 **Type:** number
 

@@ -20,7 +20,7 @@ import { advertising } from '@kit.AdsKit';
 
 Custom parameters.
 
-<!--RP1--><!--RP1End-->
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
 **Type:** number &#124; boolean &#124; string &#124; undefined
 

@@ -54,7 +54,7 @@ colorFilter(filter: ColorFilter | DrawingColorFilter)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | 是 | 1. 给图像设置颜色滤镜效果，入参为一个4x5的RGBA转换矩阵。<br>矩阵第一行用于计算R'（新的红色分量），第二行用于计算G'（新的绿色分量），第三行用于计算B'（新的蓝色分量），第四行用于计算A'（新的透明度分量），4行分别代表不同的RGBA的分量。<br>当矩阵对角线值为1，其余值为0时，保持图片原有色彩。<br> **计算规则：** <br>如果输入的滤镜矩阵为：<br> <br>像素点为[R, G, B, A]，色值的范围[0, 255] <br>则过滤后的颜色为 [R’, G’, B’, A’] <br> <br>2. 支持@ohos.graphics.drawing的ColorFilter类型作为入参。<br>**说明：** <br>该接口中的DrawingColorFilter类型支持在原子化服务中使用。其中，svg类型的图源只对stroke属性生效。*@ohos.graphics.drawing** can be used as the input parameter.<br>**NOTE:** <br>The DrawingColorfilter type can be used in atomic services. The SVG image source takes effect only for the stroke attribute. |
+| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | 是 | 1. 给图像设置颜色滤镜效果，入参为一个4x5的RGBA转换矩阵。<br>矩阵第一行用于计算R'（新的红色分量），第二行用于计算G'（新的绿色分量），第三行用于计算B'（新的蓝色分量），第四行用于计算A'（新的透明度分量），4行分别代表不同的RGBA的分量。<br>当矩阵对角线值为1，其余值为0时，保持图片原有色彩。<br> **计算规则：** <br>如果输入的滤镜矩阵为：<br>![image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png) <br>像素点为[R, G, B, A]，色值的范围[0, 255] <br>则过滤后的颜色为 [R’, G’, B’, A’] <br>![image-matrix-2](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_2.png) <br>2. 支持@ohos.graphics.drawing的ColorFilter类型作为入参。<br>**说明：** <br>该接口中的DrawingColorFilter类型支持在原子化服务中使用。其中，svg类型的图源只对stroke属性生效。*@ohos.graphics.drawing** can be used as the input parameter.<br>**NOTE:** <br>The DrawingColorfilter type can be used in atomic services. The SVG image source takes effect only for the stroke attribute. |
 
 ## objectFit
 

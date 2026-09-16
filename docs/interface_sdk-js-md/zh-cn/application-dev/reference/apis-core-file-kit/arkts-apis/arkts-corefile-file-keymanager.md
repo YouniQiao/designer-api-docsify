@@ -1,4 +1,4 @@
-# @ohos.file.keyManager
+# @ohos.file.keyManager(用户密钥管理)
 
 该模块提供用户密钥管理相关的常用功能：包括用户密钥卸载等。
 

@@ -130,7 +130,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 contentType(contentType: ContentType)
 ```
 
-设置自动填充类型。<!--RP3--><!--RP3End-->
+设置自动填充类型。&lt;!--RP3--&gt;&lt;!--RP3End--&gt;
 
 **起始版本：** 12
 
@@ -297,9 +297,9 @@ EllipsisMode.START和EllipsisMode.CENTER仅在[maxLines](#maxlines)设置为1生
 enableAutoFill(value: boolean)
 ```
 
-设置是否启用自动填充。<!--RP2--><!--RP2End-->未通过该接口设置时，默认启用自动填充。
+设置是否启用自动填充。&lt;!--RP2--&gt;&lt;!--RP2End--&gt;未通过该接口设置时，默认启用自动填充。
 
-<!--RP6--><!--RP6End-->
+&lt;!--RP6--&gt;&lt;!--RP6End--&gt;
 
 **起始版本：** 12
 

@@ -39,7 +39,7 @@
 
 - **privacyManager:** Provides the core class for privacy management.
 
-
+![image_privacyManager](../../../reference/apis-ability-kit/figures/privacyManager.png)
 
 ## 导入模块
 

@@ -1,4 +1,4 @@
-# @ohos.file.recent
+# @ohos.file.recent(Latest Access List)
 
 The **file.recent** module provides APIs for managing the list of recently accessed files.
 

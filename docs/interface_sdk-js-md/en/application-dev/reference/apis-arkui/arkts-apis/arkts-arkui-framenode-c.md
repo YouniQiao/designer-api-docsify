@@ -1,6 +1,6 @@
 # FrameNode
 
-**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End-->
+**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 > **NOTE:** 
 > 
@@ -1525,7 +1525,7 @@ See Example of Node Operations.
 getInspectorInfo(): Object
 ```
 
-Obtains the structure information of the node, which is consistent with what is found in DevEco Studio's built-in <!--RP1-->ArkUI Inspector <!--RP1End-->tool.
+Obtains the structure information of the node, which is consistent with what is found in DevEco Studio's built-in &lt;!--RP1--&gt;ArkUI Inspector &lt;!--RP1End--&gt;tool.
 
 > **NOTE:** 
 > 

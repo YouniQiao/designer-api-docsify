@@ -14,7 +14,7 @@ function createCipher(transformation: string): Cipher
 
 Creates a **Cipher** instance.
 
-<br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications.
+<br>For details about the supported specifications, see[Encryption and Decryption Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).
 
 > **NOTE:** 
 > 
@@ -33,7 +33,7 @@ Creates a **Cipher** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.<br>For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications. |
+| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.<br>For details about the supported specifications, see [Symmetric Key Encryption and Decryption Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md) and [Asymmetric Key Encryption and Decryption Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md). |
 
 **Return value:**
 

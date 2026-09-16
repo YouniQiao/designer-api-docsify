@@ -2,7 +2,7 @@
 
 Defines the resizable image options.
 
-**Figure 1** Effect of Setting EdgeWidths
+**Figure 1** Effect of Setting EdgeWidths![edgewidths](../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
 
 **Since:** 11
 

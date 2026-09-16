@@ -1,4 +1,4 @@
-# @ohos.distributedDeviceManager
+# @ohos.distributedDeviceManager(设备管理)
 
 本模块提供分布式设备管理能力，包括设备的发现、认证、状态监听和信息查询等功能。设备管理基于设备信任模型，通过发现周边设备并进行认证绑定来建立可信连接，已认证的可信设备可用于分布式业务。
 

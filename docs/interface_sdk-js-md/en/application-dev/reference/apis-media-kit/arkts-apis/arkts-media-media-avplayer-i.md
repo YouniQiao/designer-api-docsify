@@ -1290,7 +1290,7 @@ Subscribes to the event to check whether the volume is successfully set.
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-Subscribes to the event that indicates the end of the stream being played. If **[loop](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md) = true** is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If **loop** is not set, the completed state is reported through the [stateChange](#onstatechange) event.
+Subscribes to the event that indicates the end of the stream being played. If **[loop](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties) = true** is set, the AVPlayer seeks to the beginning of the stream and plays the stream again. If **loop** is not set, the completed state is reported through the [stateChange](#onstatechange) event.
 
 **Since:** 9
 
@@ -2135,7 +2135,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeMs | number | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
+| timeMs | number | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
 | mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback.** |
 
 ## seekToDefaultPosition
@@ -2948,7 +2948,7 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 
 1. FD: fd://xx
 
-
+![](../../../reference/apis-media-kit/figures/en-us_image_url.png)
 
 2. HTTP: http://xx
 3. HTTPS: https://xx
@@ -2956,7 +2956,7 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 
 **NOTE:** 
 
-- To set the playback URL, you need to declare the [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../errorcode-universal.md#201-permission-denied).  
+- To set the playback URL, you need to declare the [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet) permission. The related error code is [201 Permission Denied](../../../reference/errorcode-universal.md#201-permission-denied).  
 - WebM is no longer supported since API version 11.  
 - After the resource handle (FD) is transferred to an AVPlayer instance, do not use the resource handle to  
 perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVPlayers use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.

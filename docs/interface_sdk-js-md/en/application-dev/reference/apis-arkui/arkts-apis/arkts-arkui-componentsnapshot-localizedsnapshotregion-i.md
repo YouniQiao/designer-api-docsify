@@ -8,7 +8,7 @@ Defines the rectangular region for capturing the component snapshot, with coordi
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a
 > **UIContext** instance using **getUIContext()**, and then obtain the associated **componentSnapshot** object
 > using
-> [getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot).
+> [getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12).
 
 **Since:** 15
 

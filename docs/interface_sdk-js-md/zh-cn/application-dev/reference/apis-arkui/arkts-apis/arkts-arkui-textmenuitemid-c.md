@@ -86,7 +86,7 @@ static readonly address: TextMenuItemId
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-<!--RP1--><!--RP1End-->可对选中的文本进行润色、摘要提取、排版等，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;可对选中的文本进行润色、摘要提取、排版等，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
 
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -104,7 +104,7 @@ static readonly AI_WRITER: TextMenuItemId
 static readonly askAI: TextMenuItemId
 ```
 
-<!--RP2--><!--RP2End-->对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
 
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 

@@ -417,7 +417,7 @@ hapticFeedbackMode?: HapticFeedbackMode
 
 仅当用户启用系统触感反馈且在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启ohos.permission.VIBRATE振动权限时，方可生效。配置如下：
 
-
+![menuEnableHapticFeedback](../../../reference/apis-arkui/arkui-ts/figures/menuEnableHapticFeedback.png)
 
 **类型：** [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md)
 

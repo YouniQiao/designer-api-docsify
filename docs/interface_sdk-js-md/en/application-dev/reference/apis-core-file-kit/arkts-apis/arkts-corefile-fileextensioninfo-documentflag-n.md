@@ -1,4 +1,4 @@
-# DocumentFlag
+# DocumentFlag(User File Access and Management Attribute Information)
 
 Defines the values of **mode** used in **FileInfo**.
 

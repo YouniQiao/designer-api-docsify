@@ -283,7 +283,7 @@ When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](.
 
 **Constraints**:
 
-<!--RP1-->This property takes effect only on 2-in-1 devices and tablets.<!--RP1End-->
+&lt;!--RP1--&gt;This property takes effect only on 2-in-1 devices and tablets.&lt;!--RP1End--&gt;
 
 **Type:** Array&lt;[bundleManager.SupportWindowMode](arkts-ability-bundlemanager-supportwindowmode-e.md)&gt;
 

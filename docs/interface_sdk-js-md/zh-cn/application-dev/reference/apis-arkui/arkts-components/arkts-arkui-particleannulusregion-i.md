@@ -10,7 +10,7 @@
 > 
 > - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。
 > 
-> 
+> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
 
 **起始版本：** 20
 

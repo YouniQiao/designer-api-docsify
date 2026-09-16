@@ -130,7 +130,7 @@ import { media } from '@kit.MediaKit';
 | [AudioEncoder](arkts-media-media-audioencoder-e.md) |  |
 | [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md) |  |
 | [AudioSourceType](arkts-media-media-audiosourcetype-e.md) | 表示视频录制中音频源类型的枚举。 |
-| [AVErrorCode](arkts-media-media-averrorcode-e.md) | [Media错误码](../errorcode-media.md)类型枚举。 |
+| [AVErrorCode](arkts-media-media-averrorcode-e.md) | [Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。 |
 | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 需要获取的缩略图时间点与视频帧的对应关系。 |
 | [AVMetricsEventType](arkts-media-media-avmetricseventtype-e.md) | 表示媒体服务支持的指标事件的枚举。 |
 | [AVMimeTypes](arkts-media-media-avmimetypes-e.md) | 媒体MIME类型，通过[setMimeType](arkts-media-media-mediasource-i.md#setmimetype)设置。 |
@@ -164,7 +164,7 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AVErrorCode](arkts-media-media-averrorcode-e-sys.md) | [Media错误码](../errorcode-media.md)类型枚举。 |
+| [AVErrorCode](arkts-media-media-averrorcode-e-sys.md) | [Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。 |
 | [MetaSourceType](arkts-media-media-metasourcetype-e-sys.md) | 录制的元数据源类型枚举。 |
 | [PixelFormat](arkts-media-media-pixelformat-e-sys.md) | 获取视频缩略图时，输出的缩略图采用的颜色格式枚举。 |
 | [ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md) | Enumerates the states available for the system screen recorder. |

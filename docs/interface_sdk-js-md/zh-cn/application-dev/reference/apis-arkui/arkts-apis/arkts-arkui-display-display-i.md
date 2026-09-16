@@ -431,7 +431,7 @@ SystemCapability.WindowManager.WindowManager.Core
 densityPixels: number
 ```
 
-显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：
+显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：![densityPixels](../../../reference/apis-arkui/figures/densityPixels.jpg)
 
 该参数为浮点数，受densityDPI范围限制，取值范围在[0.5，4.0]。一般取值1.0、3.0等，实际取值取决于不同设备提供的densityDPI。
 

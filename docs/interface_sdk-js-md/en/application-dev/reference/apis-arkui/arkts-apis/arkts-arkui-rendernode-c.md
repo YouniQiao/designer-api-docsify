@@ -2195,7 +2195,7 @@ set markNodeGroup(isNodeGroup: boolean)
 
 Sets whether to enable drawing priority for this node and its child nodes. When this feature is enabled, visual attributes like opacity are applied during composition after drawing completes. The configuration result is as follows.
 
-
+![markNodeGroup](../../../reference/apis-arkui/figures/renderNode-markNodeGroup.png)
 
 **Type:** boolean
 

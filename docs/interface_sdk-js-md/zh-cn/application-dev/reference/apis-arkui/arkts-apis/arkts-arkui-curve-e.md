@@ -1,6 +1,6 @@
 # Curve
 
-插值曲线，动效请参考<!--RP1-->[贝塞尔曲线](arkts-arkui-curves.md)<!--RP1End-->。
+插值曲线，动效请参考&lt;!--RP1--&gt;[贝塞尔曲线](arkts-arkui-curves.md)&lt;!--RP1End--&gt;。
 
 **起始版本：** 7
 

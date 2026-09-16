@@ -272,9 +272,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 Sets the extended options for the custom menu, including the text content, icon, and callback.
 
-When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or
+When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
 > **NOTE:** 
 > 
@@ -362,7 +362,7 @@ The style of detected entities is as follows: the font color is changed to blue,
 > 
 > - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity detection is not performed.
 
-<!--RP2--><!--RP2End-->
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
 **Since:** 11
 
@@ -703,7 +703,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 Sets the text font weight, with support for font settings.
 
-It is only effective for the **Text** component, not for its child components.<!--RP4--><!--RP4End-->
+It is only effective for the **Text** component, not for its child components.&lt;!--RP4--&gt;&lt;!--RP4End--&gt;
 
 **Since:** 12
 
@@ -1674,7 +1674,7 @@ When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **Tex
 - Line wrapping behavior is governed by [lineBreakStrategy](#linebreakstrategy) which takes  
 effect only when [wordBreak](#wordbreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported.  
 - Since API version 11, it is recommended that you configure both [textOverflow](#textoverflow)  
-and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->.
+and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) &lt;!--RP1--&gt;&lt;!--RP1End--&gt;.
 
 When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:
 
