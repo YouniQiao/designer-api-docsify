@@ -23,8 +23,8 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md) | Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data. |
 | [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md) | Deletes data from the UDMF public data channel. This API uses an asynchronous callback to return the result. |
 | [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md) | Deletes data from the UDMF public data channel. This API uses a promise to return the result. |
-| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md) | Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique identifier of the data inserted. |
-| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md) | Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data inserted. |
+| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md) | Writes data to the public data channel of the UDMF and generates a unique identifier for the data. This API uses an asynchronous callback to return the result. |
+| [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md) | Writes data to the public data channel of UDMF and generates a unique identifier for the data. This API uses a promise to return the result asynchronously. |
 | [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md) | Queries data in the UDMF public data channel. This API uses an asynchronous callback to return the result. |
 | [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md) | Queries data in the UDMF public data channel. This API uses a promise to return the result. |
 | [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md) | Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md). |
@@ -74,7 +74,7 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md) | Enumerates the status codes returned when data is obtained from the UDMF. |
 | [ProgressIndicator](arkts-arkdata-unifieddatachannel-progressindicator-e.md) | Enumerates the progress indicator options. |
 | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Enumerates the options for using **UnifiedData** in a device. |
-| [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) | Defines URI permissions for drag intention. |
+| [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) | URI authorization policy in drag-and-drop scenarios. |
 | [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md) | Enumerates the data visibility levels. |
 
 ### Types

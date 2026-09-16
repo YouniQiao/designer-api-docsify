@@ -260,7 +260,7 @@
   <!--Del-->
   - [Support(系统接口)](arkts-basicservices-commoneventmanager-support-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.configPolicy](arkts-basicservices-configpolicy.md)<!--DelEnd-->
+- [@ohos.configPolicy(配置策略)](arkts-basicservices-configpolicy.md)<!--DelEnd-->
   <!--Del-->
   - [getCfgDirList(系统接口)](arkts-basicservices-configpolicy-getcfgdirlist-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -275,7 +275,7 @@
   - [getOneCfgFileSync(系统接口)](arkts-basicservices-configpolicy-getonecfgfilesync-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FollowXMode(系统接口)](arkts-basicservices-configpolicy-followxmode-e-sys.md)<!--DelEnd-->
-- [@ohos.customization.customConfig](arkts-basicservices-customization-customconfig.md)
+- [@ohos.customization.customConfig(定制配置)](arkts-basicservices-customization-customconfig.md)
   - [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md)
 - [@ohos.deviceInfo](arkts-basicservices-deviceinfo.md)
   - [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md)

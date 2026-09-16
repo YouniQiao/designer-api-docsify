@@ -106,7 +106,7 @@ Timestamp when [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddatapropert
 uriAuthorizationPolicies?: Array<UriPermission>
 ```
 
-Defines URI authorization policies for drag intention.
+URI authorization policies for the drag-and-drop scenario. The default value is READ+WRITE+PERSIST. This field takes effect only for a single data operation and has a lower priority. For details about the policies, see [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md).
 
 **Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
 

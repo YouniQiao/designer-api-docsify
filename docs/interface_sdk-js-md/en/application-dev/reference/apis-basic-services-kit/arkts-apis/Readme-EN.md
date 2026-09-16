@@ -314,7 +314,7 @@
   <!--Del-->
   - [Support(system api)](arkts-basicservices-commoneventmanager-support-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.configPolicy](arkts-basicservices-configpolicy.md)<!--DelEnd-->
+- [@ohos.configPolicy(Configuration Policy)](arkts-basicservices-configpolicy.md)<!--DelEnd-->
   <!--Del-->
   - [getCfgDirList(system api)](arkts-basicservices-configpolicy-getcfgdirlist-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -329,7 +329,7 @@
   - [getOneCfgFileSync(system api)](arkts-basicservices-configpolicy-getonecfgfilesync-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FollowXMode(system api)](arkts-basicservices-configpolicy-followxmode-e-sys.md)<!--DelEnd-->
-- [@ohos.customization.customConfig](arkts-basicservices-customization-customconfig.md)
+- [@ohos.customization.customConfig(Custom Configurations)](arkts-basicservices-customization-customconfig.md)
   - [getChannelId](arkts-basicservices-customconfig-getchannelid-f.md)
 - [@ohos.deviceAttest](arkts-basicservices-deviceattest.md)
   <!--Del-->

@@ -18,7 +18,7 @@ import { webview } from '@kit.ArkWeb';
 constructor()
 ```
 
-Constructs a **BackForwardCacheSupportedFeatures** object.
+BackForwardCacheSupportedFeatures的构造函数。
 
 **起始版本：** 12
 

@@ -40,7 +40,7 @@ ERR_IO_PENDING = -1
 ERR_FAILED = -2
 ```
 
-一般性的错误。
+一般性的错误，网页加载失败请参考[定位网页加载问题](../../../web/web-page-loading.md)。
 
 **起始版本：** 12
 

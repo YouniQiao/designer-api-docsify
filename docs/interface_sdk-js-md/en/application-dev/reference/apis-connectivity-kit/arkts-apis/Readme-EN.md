@@ -76,7 +76,10 @@
     - [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md)
     - [SppType](arkts-connectivity-bluetooth-spptype-e.md)
 - [@ohos.bluetooth.a2dp](arkts-connectivity-bluetooth-a2dp.md)
+  - [createA2dpSnkProfile](arkts-connectivity-a2dp-createa2dpsnkprofile-f.md)
   - [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md)
+  <!--Del-->
+  - [A2dpSinkProfile(system api)](arkts-connectivity-a2dp-a2dpsinkprofile-i-sys.md)<!--DelEnd-->
   - [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md)
   <!--Del-->
   - [A2dpSourceProfile(system api)](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md)<!--DelEnd-->
@@ -383,14 +386,21 @@
   - [PanProfile(system api)](arkts-connectivity-pan-panprofile-i-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-pan-baseprofile-t.md)
 - [@ohos.bluetooth.pbap](arkts-connectivity-bluetooth-pbap.md)
+  - [createPbapClientProfile](arkts-connectivity-pbap-createpbapclientprofile-f.md)
   - [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md)
   <!--Del-->
+  - [PbapClientProfile(system api)](arkts-connectivity-pbap-pbapclientprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [PbapServerProfile(system api)](arkts-connectivity-pbap-pbapserverprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SyncStateChangeParam(system api)](arkts-connectivity-pbap-syncstatechangeparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AccessAuthorization(system api)](arkts-connectivity-pbap-accessauthorization-t-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
   <!--Del-->
   - [ShareType(system api)](arkts-connectivity-pbap-sharetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SyncStateType(system api)](arkts-connectivity-pbap-syncstatetype-e-sys.md)<!--DelEnd-->
 - [@ohos.bluetooth.socket](arkts-connectivity-bluetooth-socket.md)
   - [getDeviceId](arkts-connectivity-socket-getdeviceid-f.md)
   - [getL2capPsm](arkts-connectivity-socket-getl2cappsm-f.md)

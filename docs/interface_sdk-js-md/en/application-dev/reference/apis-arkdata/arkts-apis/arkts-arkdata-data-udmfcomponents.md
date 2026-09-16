@@ -12,13 +12,13 @@ import { ContentFormCard, FormType } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) | Defines a content form card. |
+| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) | Defines the information of a content card component that is displayed in an application, including the title, description, content image, application information, and the like. It is applicable to scenarios such as content distribution, social updates, and message notifications. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) | Enumerates the form card types. |
+| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) | Enumerates content card types, including large, medium, and small. |
 
 ## Examples
 

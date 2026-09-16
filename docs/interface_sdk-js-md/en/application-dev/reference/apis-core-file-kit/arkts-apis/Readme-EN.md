@@ -618,7 +618,7 @@
 - [@ohos.statfs(statfs)](arkts-corefile-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)
-- [@system.file](arkts-corefile-system-file.md)
+- [@system.file(File interface)](arkts-corefile-system-file.md)
   - [File](arkts-corefile-system-file-file-depr-c.md)
   - [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md)
   - [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md)

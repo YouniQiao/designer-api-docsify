@@ -14,5 +14,5 @@ Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-web
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | String type. [since 11] |
-| string | Binary type. [since 11] |
+| ArrayBuffer | Binary type. [since 11] |
+| string | String type. [since 11] |

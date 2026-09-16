@@ -1,6 +1,6 @@
 # ContentFormCard
 
-Defines a content form card.
+Defines the information of a content card component that is displayed in an application, including the title, description, content image, application information, and the like. It is applicable to scenarios such as content distribution, social updates, and message notifications.
 
 **Since:** 20
 

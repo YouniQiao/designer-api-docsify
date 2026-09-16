@@ -43,6 +43,6 @@ Register type descriptors into the system.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [20400002](../errorcode-udmf.md#20400002-invalid-utd-format) | The format of one or more typeDescriptors are invalid. |
 | [20400003](../errorcode-udmf.md#20400003-invalid-utd-content) | The content of one or more typeDescriptors violate rules. |

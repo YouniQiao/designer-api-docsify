@@ -24,6 +24,8 @@ targetTimestamp: number
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
@@ -37,5 +39,7 @@ timestamp: number
 **类型：** number
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

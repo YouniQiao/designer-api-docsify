@@ -1,4 +1,4 @@
-# @ohos.customization.customConfig
+# @ohos.customization.customConfig(定制配置)
 
 本模块接口为应用提供定制配置的获取能力，如渠道号等。
 

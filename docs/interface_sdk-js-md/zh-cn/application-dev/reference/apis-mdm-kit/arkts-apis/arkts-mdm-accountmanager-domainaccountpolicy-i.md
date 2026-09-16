@@ -67,3 +67,19 @@ passwordValidityPeriod?: number
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## supportUKeyAuthentication
+
+```TypeScript
+supportUKeyAuthentication?: boolean
+```
+
+域账号是否支持USB key认证。设置为**true**，表示域账号支持USB key登录；设置为**false**，表示域帐户不支持USB key身份验证。默认值：false。
+
+**类型：** boolean
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager

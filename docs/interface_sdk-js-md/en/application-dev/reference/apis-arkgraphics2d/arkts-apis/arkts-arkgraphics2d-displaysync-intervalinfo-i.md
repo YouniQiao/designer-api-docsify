@@ -24,6 +24,8 @@ Expected arrival time of the next frame, in nanoseconds.
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## timestamp
@@ -37,5 +39,7 @@ Time when the current frame arrives, in nanoseconds.
 **Type:** number
 
 **Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

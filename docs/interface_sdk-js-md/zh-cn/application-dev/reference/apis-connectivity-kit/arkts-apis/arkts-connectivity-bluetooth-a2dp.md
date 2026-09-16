@@ -18,6 +18,7 @@ import { a2dp } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [createA2dpSnkProfile](arkts-connectivity-a2dp-createa2dpsnkprofile-f.md) | 创建a2dp sink实例。 |
 | [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md) | 创建蓝牙媒体A2DP Source实例。通过该实例，可以使用本端作为A2DP Source设备时提供的各项方法，如：获取和其他设备间的蓝牙媒体音频播放状态。 |
 
 ### 接口
@@ -33,6 +34,7 @@ import { a2dp } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [A2dpSinkProfile](arkts-connectivity-a2dp-a2dpsinkprofile-i-sys.md) | 管理a2dp sink业务。 |
 | [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md) | 该实例表示蓝牙媒体音频中的A2DP Source角色。 |
 <!--DelEnd-->
 

@@ -1,4 +1,4 @@
-# @ohos.customization.customConfig
+# @ohos.customization.customConfig(Custom Configurations)
 
 This module provides APIs for applications to obtain custom configurations, such as channel IDs.
 

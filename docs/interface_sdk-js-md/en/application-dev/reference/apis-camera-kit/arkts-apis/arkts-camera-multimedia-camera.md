@@ -135,6 +135,8 @@ import { camera } from '@kit.CameraKit';
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i-sys.md) | Describes the camera output capability. |
 | [CameraSharedStatusInfo](arkts-camera-camera-camerasharedstatusinfo-i-sys.md) | Camera shared status info. |
 | [CaptureSession](arkts-camera-camera-capturesession-i-sys.md) | **CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording. |
+| [ColorControls](arkts-camera-camera-colorcontrols-i-sys.md) | Implements color controls. It inherits from [ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md). |
+| [ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md) | Color controls query object. |
 | [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md) | ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) Provides the APIs to obtain and set the lens color effect. |
 | [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) | Provides the API to obtain the color effects supported. |
 | [ColorReservation](arkts-camera-camera-colorreservation-i-sys.md) | ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md) Provides API for obtaining and setting a color reservation type. |
@@ -185,6 +187,7 @@ import { camera } from '@kit.CameraKit';
 | [ProfessionalVideoSession](arkts-camera-camera-professionalvideosession-i-sys.md) | ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture Implements a professional video session, which sets the parameters of the professional video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
 | [QuickShotPhotoSession](arkts-camera-camera-quickshotphotosession-i-sys.md) | Quick shot photo session object. |
 | [QuickThumbnail](arkts-camera-camera-quickthumbnail-i-sys.md) | Quick thumbnail object |
+| [RGBBias](arkts-camera-camera-rgbbias-i-sys.md) | RGB bias values. |
 | [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md) | Provides the scene detection capability. It inherits from [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md). |
 | [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md) | Provides the scene detection and query capabilities. |
 | [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) | Describes the scene feature detection result. |
@@ -200,9 +203,6 @@ import { camera } from '@kit.CameraKit';
 | [VideoOutput](arkts-camera-camera-videooutput-i-sys.md) | VideoOutput implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md). |
 | [VideoSession](arkts-camera-camera-videosession-i-sys.md) | VideoSession inherits from [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Stabilization](arkts-camera-camera-stabilization-i.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md), [Macro](arkts-camera-camera-macro-i.md), [ControlCenter](arkts-camera-camera-controlcenter-i.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i.md), [ManualIso](arkts-camera-camera-manualiso-i.md), [OIS](arkts-camera-camera-ois-i.md), and [Aperture](arkts-camera-camera-aperture-i.md). |
 | [VideoSessionForSys](arkts-camera-camera-videosessionforsys-i-sys.md) | Implements a video session for system applications, which sets the parameters of the normal video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [WhiteBalance](arkts-camera-camera-whitebalance-i-sys.md) | **WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md). |
-| [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | RGB white balance gain values. |
-| [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i-sys.md) | WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance mode range supported. |
 | [Zoom](arkts-camera-camera-zoom-i-sys.md) | **Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md). |
 | [ZoomQuery](arkts-camera-camera-zoomquery-i-sys.md) | ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range. |
 <!--DelEnd-->

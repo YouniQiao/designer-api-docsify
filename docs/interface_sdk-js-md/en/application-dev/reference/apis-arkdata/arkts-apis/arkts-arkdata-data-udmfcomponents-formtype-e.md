@@ -1,6 +1,6 @@
 # FormType
 
-Enumerates the form card types.
+Enumerates content card types, including large, medium, and small.
 
 **Since:** 20
 
@@ -12,7 +12,7 @@ Enumerates the form card types.
 TYPE_BIG = 0
 ```
 
-Big form card, with fixed size of 4 x 4.
+4 × 4. The default card width is 200 vp, and the default height is 200 vp.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ Big form card, with fixed size of 4 x 4.
 TYPE_MID = 1
 ```
 
-Medium-sized form card, with fixed size of 4 x 2.
+4 × 2. The default card width is 200 vp, and the default height is 100 vp.
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ Medium-sized form card, with fixed size of 4 x 2.
 TYPE_SMALL = 2
 ```
 
-Small form card, with fixed size of 2 x 1.
+2 x 1. The default card width is 137 vp, and the default height is 83 vp.
 
 **Since:** 20
 

@@ -22,6 +22,8 @@ Unsubscribes from change events of each frame.
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -41,6 +43,8 @@ Subscribes to change events of each frame.
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
@@ -59,6 +63,8 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 Sets the expected frame rate range.
 
 **Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,6 +107,8 @@ Starts callback for each frame.
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Examples**
@@ -142,6 +150,8 @@ stop(): void
 Stops callback for each frame.
 
 **Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

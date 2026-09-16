@@ -48,6 +48,10 @@
   - [CaptureSession(system api)](arkts-camera-camera-capturesession-i-sys.md)<!--DelEnd-->
   - [CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)
   <!--Del-->
+  - [ColorControls(system api)](arkts-camera-camera-colorcontrols-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ColorControlsQuery(system api)](arkts-camera-camera-colorcontrolsquery-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [ColorEffect(system api)](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ColorEffectQuery(system api)](arkts-camera-camera-coloreffectquery-i-sys.md)<!--DelEnd-->
@@ -194,6 +198,8 @@
   - [QuickThumbnail(system api)](arkts-camera-camera-quickthumbnail-i-sys.md)<!--DelEnd-->
   - [Rect](arkts-camera-camera-rect-i.md)
   <!--Del-->
+  - [RGBBias(system api)](arkts-camera-camera-rgbbias-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SceneDetection(system api)](arkts-camera-camera-scenedetection-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SceneDetectionQuery(system api)](arkts-camera-camera-scenedetectionquery-i-sys.md)<!--DelEnd-->
@@ -234,13 +240,7 @@
   <!--Del-->
   - [VideoSessionForSys(system api)](arkts-camera-camera-videosessionforsys-i-sys.md)<!--DelEnd-->
   - [WhiteBalance](arkts-camera-camera-whitebalance-i.md)
-  <!--Del-->
-  - [WhiteBalance(system api)](arkts-camera-camera-whitebalance-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [WhiteBalanceGains(system api)](arkts-camera-camera-whitebalancegains-i-sys.md)<!--DelEnd-->
   - [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
-  <!--Del-->
-  - [WhiteBalanceQuery(system api)](arkts-camera-camera-whitebalancequery-i-sys.md)<!--DelEnd-->
   - [Zoom](arkts-camera-camera-zoom-i.md)
   <!--Del-->
   - [Zoom(system api)](arkts-camera-camera-zoom-i-sys.md)<!--DelEnd-->

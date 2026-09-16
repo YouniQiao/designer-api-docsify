@@ -1,14 +1,12 @@
-# WhiteBalance
+# ColorControlsQuery (System API)
 
-**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md).
+Color controls query object.
 
-It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
-
-**Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
-
-**Since:** 20
+**Since:** 26.1.0
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -16,13 +14,13 @@ It provides APIs to process white balance, including obtaining and setting the w
 import { camera } from '@kit.CameraKit';
 ```
 
-## getWhiteBalanceGains
+## isRGBBiasSupported
 
 ```TypeScript
-getWhiteBalanceGains(): WhiteBalanceGains
+isRGBBiasSupported(): boolean
 ```
 
-Gets RGB white balance gain values.
+Checks whether the RGB bias is supported.
 
 **Since:** 26.1.0
 
@@ -36,7 +34,7 @@ Gets RGB white balance gain values.
 
 | Type | Description |
 | --- | --- |
-| [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | The current RGB white balance gain values. |
+| boolean | Check result for the support of the RGB bias. **true** is supported, **false** is otherwise. |
 
 **Error codes:**
 
@@ -45,13 +43,13 @@ Gets RGB white balance gain values.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-## setWhiteBalanceGains
+## isSaturationSupported
 
 ```TypeScript
-setWhiteBalanceGains(gains: WhiteBalanceGains): void
+isSaturationSupported(): boolean
 ```
 
-Sets RGB white balance gain values.
+Checks whether the saturation is supported.
 
 **Since:** 26.1.0
 
@@ -61,11 +59,11 @@ Sets RGB white balance gain values.
 
 **System API:** This is a system API.
 
-**Parameters:**
+**Return value:**
 
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| gains | [WhiteBalanceGains](arkts-camera-camera-whitebalancegains-i-sys.md) | Yes | RGB white balance gain values. |
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of the saturation. **true** is supported, **false** is otherwise. |
 
 **Error codes:**
 

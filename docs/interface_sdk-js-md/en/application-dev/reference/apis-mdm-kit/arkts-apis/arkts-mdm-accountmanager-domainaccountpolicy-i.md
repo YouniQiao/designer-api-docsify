@@ -67,3 +67,21 @@ The default value is **-1**, indicating that the domain account password is perm
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## supportUKeyAuthentication
+
+```TypeScript
+supportUKeyAuthentication?: boolean
+```
+
+Whether the domain account supports USB key authentication.
+
+If set to **true**, the domain account supports USB key authentication for login.If set to **false**, the domain account does not support USB key authentication. Default value: false.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager

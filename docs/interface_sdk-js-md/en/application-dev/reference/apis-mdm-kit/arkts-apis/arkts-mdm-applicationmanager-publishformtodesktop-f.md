@@ -42,6 +42,7 @@ Publishes the form to the desktop.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
 | 9201047 | Form count limit reached or insufficient home screen space to add forms. |
 | 9201049 | The form does not exist. |
 | 9201050 | The form type is not supported. |

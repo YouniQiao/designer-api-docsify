@@ -76,7 +76,10 @@
     - [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md)
     - [SppType](arkts-connectivity-bluetooth-spptype-e.md)
 - [@ohos.bluetooth.a2dp(蓝牙a2dp模块)](arkts-connectivity-bluetooth-a2dp.md)
+  - [createA2dpSnkProfile](arkts-connectivity-a2dp-createa2dpsnkprofile-f.md)
   - [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md)
+  <!--Del-->
+  - [A2dpSinkProfile(系统接口)](arkts-connectivity-a2dp-a2dpsinkprofile-i-sys.md)<!--DelEnd-->
   - [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md)
   <!--Del-->
   - [A2dpSourceProfile(系统接口)](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md)<!--DelEnd-->
@@ -383,14 +386,21 @@
   - [PanProfile(系统接口)](arkts-connectivity-pan-panprofile-i-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-pan-baseprofile-t.md)
 - [@ohos.bluetooth.pbap(蓝牙pbap模块)](arkts-connectivity-bluetooth-pbap.md)
+  - [createPbapClientProfile](arkts-connectivity-pbap-createpbapclientprofile-f.md)
   - [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md)
   <!--Del-->
+  - [PbapClientProfile(系统接口)](arkts-connectivity-pbap-pbapclientprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [PbapServerProfile(系统接口)](arkts-connectivity-pbap-pbapserverprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SyncStateChangeParam(系统接口)](arkts-connectivity-pbap-syncstatechangeparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AccessAuthorization(系统接口)](arkts-connectivity-pbap-accessauthorization-t-sys.md)<!--DelEnd-->
   - [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
   <!--Del-->
   - [ShareType(系统接口)](arkts-connectivity-pbap-sharetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SyncStateType(系统接口)](arkts-connectivity-pbap-syncstatetype-e-sys.md)<!--DelEnd-->
 - [@ohos.bluetooth.socket(蓝牙socket模块)](arkts-connectivity-bluetooth-socket.md)
   - [getDeviceId](arkts-connectivity-socket-getdeviceid-f.md)
   - [getL2capPsm](arkts-connectivity-socket-getl2cappsm-f.md)

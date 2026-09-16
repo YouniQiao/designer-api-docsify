@@ -12,7 +12,9 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function insertData(options: Options, data: UnifiedData, callback: AsyncCallback<string>): void
 ```
 
-Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique identifier of the data inserted.
+Writes data to the public data channel of the UDMF and generates a unique identifier for the data. This API uses an asynchronous callback to return the result.
+
+Implementation mechanism After receiving the UnifiedData object, the system verifies data integrity and serializes the data for storage. It routes the data to the corresponding storage space based on the intention value and generates a unique identifier key. The validity period of the data in the public data channel is managed by the system, and the default policy is to automatically clear the data after the application exits.
 
 **Since:** 10
 
@@ -101,7 +103,7 @@ try {
 function insertData(options: Options, data: UnifiedData): Promise<string>
 ```
 
-Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data inserted.
+Writes data to the public data channel of UDMF and generates a unique identifier for the data. This API uses a promise to return the result asynchronously.
 
 **Since:** 10
 

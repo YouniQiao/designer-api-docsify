@@ -22,6 +22,8 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -41,6 +43,8 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数：**
@@ -59,6 +63,8 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 设置期望的帧率范围。设置的期望帧率范围将作为系统调度的参考，系统会尽量在此范围内调整绘制帧率。未调用该方法或传入ExpectedFrameRateRange(0, 0, 0)时将跟随应用当前运行的帧率。建议在调用start前设置，以便立即生效；调用start之后设置也可生效但可能存在延迟。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -101,6 +107,8 @@ start(): void
 
 **起始版本：** 11
 
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **示例**
@@ -142,6 +150,8 @@ stop(): void
 关闭期望帧率范围并且停止每帧回调。需在调用start后使用，停止后DisplaySync的配置（如期望帧率范围、回调函数）仍然保留，可随时通过start重新启动。stop方法会解除DisplaySync与UI上下文和窗口的关联，通常无需特定的UI上下文。
 
 **起始版本：** 11
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

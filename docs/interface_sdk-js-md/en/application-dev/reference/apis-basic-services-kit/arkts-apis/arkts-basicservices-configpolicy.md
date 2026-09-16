@@ -1,4 +1,4 @@
-# @ohos.configPolicy
+# @ohos.configPolicy(Configuration Policy)
 
 The **configPolicy** module provides APIs for obtaining the corresponding directory and file path based on the predefined custom configuration level.
 

@@ -16,6 +16,8 @@ Creates a **DisplaySync** object, through which you can set the frame rate of th
 
 **Since:** 11
 
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**

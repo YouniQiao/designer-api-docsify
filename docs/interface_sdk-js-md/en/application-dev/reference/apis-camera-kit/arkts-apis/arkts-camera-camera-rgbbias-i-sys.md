@@ -1,6 +1,6 @@
-# WhiteBalanceGains (System API)
+# RGBBias (System API)
 
-RGB white balance gain values.
+RGB bias values.
 
 **Since:** 26.1.0
 
@@ -14,13 +14,13 @@ RGB white balance gain values.
 import { camera } from '@kit.CameraKit';
 ```
 
-## blueGain
+## blueBias
 
 ```TypeScript
-blueGain: number
+blueBias: number
 ```
 
-The blue gain component of the white balance value.
+The blue bias.
 
 **Type:** number
 
@@ -32,13 +32,13 @@ The blue gain component of the white balance value.
 
 **System API:** This is a system API.
 
-## greenGain
+## greenBias
 
 ```TypeScript
-greenGain: number
+greenBias: number
 ```
 
-The green gain component of the white balance value.
+The green bias.
 
 **Type:** number
 
@@ -50,13 +50,13 @@ The green gain component of the white balance value.
 
 **System API:** This is a system API.
 
-## redGain
+## redBias
 
 ```TypeScript
-redGain: number
+redBias: number
 ```
 
-The red gain component of the white balance value.
+The red bias.
 
 **Type:** number
 

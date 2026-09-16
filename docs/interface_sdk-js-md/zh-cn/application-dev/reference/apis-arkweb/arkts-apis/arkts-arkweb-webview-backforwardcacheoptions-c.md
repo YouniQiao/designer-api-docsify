@@ -56,6 +56,8 @@ timeToLive: number
 
 默认值：600。
 
+单位：秒。
+
 **类型：** number
 
 **起始版本：** 12
