@@ -22,6 +22,10 @@ surface 的 id，用于同层渲染的 NativeImage 的 surfaceId。
 
 详见[NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md)。
 
+只读：否
+
+可选：否
+
 **类型：** string
 
 **起始版本：** 12
@@ -37,6 +41,10 @@ rect: RectEvent
 ```
 
 surface 的位置信息，用于指定同层渲染时 surface 的显示位置和尺寸。
+
+只读：否
+
+可选：否
 
 **类型：** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 

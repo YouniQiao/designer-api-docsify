@@ -46,6 +46,24 @@ titleBuilder?: SubHeaderV2TitleBuilder
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## endIcon
+
+```TypeScript
+readonly endIcon?: SubHeaderV2IconType
+```
+
+标题尾部图标设置项，用于为标题添加尾部图标标识。当title使用primaryTitle或secondaryTitle属性时，设置endIcon属性才会生效。默认值：undefined。
+
+**类型：** [SubHeaderV2IconType](arkts-arkui-subheaderv2icontype-t.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## icon
 
 ```TypeScript
@@ -74,7 +92,7 @@ readonly icon?: SubHeaderV2IconType
 readonly operationItems?: SubHeaderV2OperationItem[]
 ```
 
-操作区的设置项，用于配置子标题右侧的操作按钮。
+操作区的设置项，用于配置子标题尾部的操作按钮。
 
 默认值：undefined
 
@@ -96,7 +114,7 @@ readonly operationItems?: SubHeaderV2OperationItem[]
 readonly operationType?: SubHeaderV2OperationType
 ```
 
-操作区元素样式，用于定义子标题右侧操作按钮的显示形式。
+操作区元素样式，用于定义子标题尾部操作按钮的显示形式。
 
 默认值：SubHeaderV2OperationType.BUTTON
 

@@ -544,6 +544,43 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+## requestFullDataDonation
+
+```TypeScript
+requestFullDataDonation(tables: Array<string>): Promise<void>
+```
+
+请求指定分布式表的全量数据捐赠。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tables | Array&lt;string&gt; | 是 | 需要全量赋值的分布式表名列表。不能为空。<br>最大长度为20且不能为空。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 不返回任何值的Promise。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限被拒绝。非系统应用试图调用系统API。 |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | 无效参数。参数超出范围或表列表为空。 |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | RdbStore或ResultSet已经关闭。 |
+| 14800043 | 数据库不支持该场景。 |
+
 ## restore
 
 ```TypeScript

@@ -42,6 +42,24 @@ Default value: **() =&gt; void**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## endIcon
+
+```TypeScript
+readonly endIcon?: SubHeaderV2IconType
+```
+
+End icon of the title. The **endIcon** attribute takes effect only when **primaryTitle** or **secondaryTitle** is used for **title**. Default value: **undefined**.
+
+**Type:** [SubHeaderV2IconType](arkts-arkui-subheaderv2icontype-t.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## icon
 
 ```TypeScript

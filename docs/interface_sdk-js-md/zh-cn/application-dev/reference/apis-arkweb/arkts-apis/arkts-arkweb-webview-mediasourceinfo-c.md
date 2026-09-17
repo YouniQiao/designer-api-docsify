@@ -20,6 +20,10 @@ format: string
 
 媒体源格式，可能为空，需要开发者自行判断格式。
 
+只读：否
+
+可选：否
+
 **类型：** string
 
 **起始版本：** 12
@@ -36,6 +40,10 @@ source: string
 
 媒体源地址。
 
+只读：否
+
+可选：否
+
 **类型：** string
 
 **起始版本：** 12
@@ -51,6 +59,10 @@ type: SourceType
 ```
 
 媒体源的类型。
+
+只读：否
+
+可选：否
 
 **类型：** [SourceType](arkts-arkweb-webview-sourcetype-e.md)
 

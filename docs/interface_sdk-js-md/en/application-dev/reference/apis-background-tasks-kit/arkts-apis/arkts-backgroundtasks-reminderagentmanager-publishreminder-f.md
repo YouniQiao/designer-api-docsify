@@ -38,7 +38,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1700001](../errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
 | [1700002](../errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 
@@ -116,7 +116,7 @@ Publishes a reminder. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1700001](../errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
 | [1700002](../errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
 

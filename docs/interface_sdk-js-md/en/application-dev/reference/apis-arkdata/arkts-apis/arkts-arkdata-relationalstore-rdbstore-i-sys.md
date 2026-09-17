@@ -526,6 +526,43 @@ Obtains sharing resource of rows corresponding to the predicates.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
+## requestFullDataDonation
+
+```TypeScript
+requestFullDataDonation(tables: Array<string>): Promise<void>
+```
+
+Requests full data donation for specified distributed tables.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tables | Array&lt;string&gt; | Yes | Indicates the list of distributed table names to be fully donated. Must not be empty.<br>The maximum length is 20. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-parameter) | Invalid arguments. Parameter out of range or empty table list. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| 14800043 | The database does not support this scenario. |
+
 ## restore
 
 ```TypeScript

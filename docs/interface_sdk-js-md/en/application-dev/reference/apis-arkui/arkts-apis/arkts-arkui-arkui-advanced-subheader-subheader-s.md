@@ -100,6 +100,46 @@ If a secondary title, with or without an icon, is displayed on the left:
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## endIcon
+
+```TypeScript
+endIcon?: ResourceStr
+```
+
+End icon of the title. The **endIcon** attribute takes effect only when the **primaryTitle** or **secondaryTitle** attribute is used. Default value: **undefined**, indicating that no end icon is displayed.
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+
+**Since:** 26.1.0
+
+**Decorator:** @Prop
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## endIconSymbolOptions
+
+```TypeScript
+endIconSymbolOptions?: SymbolOptions
+```
+
+End icon symbol options. This parameter is available when **endIcon** is set to a symbol glyph.
+
+Default value: **undefined**, indicating that no end icon symbol style is set.
+
+**Type:** [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## icon
 
 ```TypeScript

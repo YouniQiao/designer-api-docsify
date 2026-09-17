@@ -112,6 +112,46 @@ contentPadding?: LocalizedPadding
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## endIcon
+
+```TypeScript
+endIcon?: ResourceStr
+```
+
+标题尾部图标资源。当使用primaryTitle或secondaryTitle属性时，设置endIcon属性才会生效。默认值：undefined，表示不显示标题尾部图标。
+
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+
+**起始版本：** 26.1.0
+
+**装饰器类型：** @Prop
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## endIconSymbolOptions
+
+```TypeScript
+endIconSymbolOptions?: SymbolOptions
+```
+
+endIcon为SymbolGlyph时的设置项。
+
+默认值：undefined，表示不设置标题尾部Symbol图标样式。
+
+**类型：** [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## icon
 
 ```TypeScript
