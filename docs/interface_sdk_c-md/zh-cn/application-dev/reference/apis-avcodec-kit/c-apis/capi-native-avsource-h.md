@@ -28,14 +28,14 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)](#oh_avsource_createwithdatasource) | 为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。 |
-| [OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource, void *userData)](#oh_avsource_createwithdatasourceext) | 为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。回调支持通过userData传递用户自定义数据。参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。 |
-| [OH_AVSource *OH_AVSource_CreateWithURI(char *uri)](#oh_avsource_createwithuri) | 为统一资源标识符对应的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。该接口仅支持HTTP渐进式流媒体，不支持HLS/DASH的流媒体；对于HLS/DASH的流媒体播放，推荐使用AVPlayer组件进行开发。 |
-| [OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)](#oh_avsource_createwithfd) | 为文件描述符对应的资源对象创建OH_AVSource实例。可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。接口如果传入offset不为文件起始位置，或size不为文件大小时，可能会因数据获取不完整导致 OH_AVSource创建失败、后续解封装失败等未定义错误。 |
-| [OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)](#oh_avsource_destroy) | 销毁OH_AVSource实例并清理内部资源。同一实例只能被销毁一次。销毁的实例在被重新创建之前不能再被使用。建议实例销毁成功后将指针置为NULL。 |
-| [OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)](#oh_avsource_getsourceformat) | 获取媒体资源文件的基础信息。需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。 |
-| [OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex)](#oh_avsource_gettrackformat) | 获取轨道的基础信息。需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。 |
-| [OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)](#oh_avsource_getcustommetadataformat) | 获取自定义元数据的基础信息。需要注意的是，指向的OH_AVFormat实例在生命周期结束时需开发者通过调用接口{@link OH_AVFormat_Destroy}释放。 |
+| [OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)](#oh_avsource_createwithdatasource) | 为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。 |
+| [OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource, void *userData)](#oh_avsource_createwithdatasourceext) | 为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 回调支持通过userData传递用户自定义数据。<br> 参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。 |
+| [OH_AVSource *OH_AVSource_CreateWithURI(char *uri)](#oh_avsource_createwithuri) | 为统一资源标识符对应的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 该接口仅支持HTTP渐进式流媒体，不支持HLS/DASH的流媒体；对于HLS/DASH的流媒体播放，推荐使用AVPlayer组件进行开发。 |
+| [OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)](#oh_avsource_createwithfd) | 为文件描述符对应的资源对象创建OH_AVSource实例。可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 接口如果传入offset不为文件起始位置，或size不为文件大小时，可能会因数据获取不完整导致 OH_AVSource创建失败、后续解封装失败等未定义错误。 |
+| [OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)](#oh_avsource_destroy) | 销毁OH_AVSource实例并清理内部资源。<br> 同一实例只能被销毁一次。销毁的实例在被重新创建之前不能再被使用。建议实例销毁成功后将指针置为NULL。 |
+| [OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)](#oh_avsource_getsourceformat) | 获取媒体资源文件的基础信息。<br> 需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。 |
+| [OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex)](#oh_avsource_gettrackformat) | 获取轨道的基础信息。<br> 需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。 |
+| [OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)](#oh_avsource_getcustommetadataformat) | 获取自定义元数据的基础信息。<br> 需要注意的是，指向的OH_AVFormat实例在生命周期结束时需开发者通过调用接口{@link OH_AVFormat_Destroy}释放。 |
 
 ## 函数说明
 
@@ -47,7 +47,7 @@ OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)
 
 **描述：**
 
-为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。
+为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。
 
 **起始版本：** 12
 
@@ -57,7 +57,7 @@ OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)
 | -- | -- |
 | OH_AVDataSource *dataSource | 用户自定义数据源。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -71,7 +71,7 @@ OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource,
 
 **描述：**
 
-为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。回调支持通过userData传递用户自定义数据。参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。
+为用户自定义数据源的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 回调支持通过userData传递用户自定义数据。<br> 参数dataSource生命周期需与返回的指针OH_AVSource *保持一致。
 
 **起始版本：** 20
 
@@ -82,7 +82,7 @@ OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource,
 | OH_AVDataSourceExt *dataSource | 指向数据源结构体的指针，该结构体可用于获取输入数据。 |
 | void *userData | 指向用户自定义数据的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -96,7 +96,7 @@ OH_AVSource *OH_AVSource_CreateWithURI(char *uri)
 
 **描述：**
 
-为统一资源标识符对应的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。该接口仅支持HTTP渐进式流媒体，不支持HLS/DASH的流媒体；对于HLS/DASH的流媒体播放，推荐使用AVPlayer组件进行开发。
+为统一资源标识符对应的资源对象创建OH_AVSource实例，可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 该接口仅支持HTTP渐进式流媒体，不支持HLS/DASH的流媒体；对于HLS/DASH的流媒体播放，推荐使用AVPlayer组件进行开发。
 
 **起始版本：** 10
 
@@ -106,7 +106,7 @@ OH_AVSource *OH_AVSource_CreateWithURI(char *uri)
 | -- | -- |
 | char *uri | 远程媒体资源的统一资源标识符。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -120,7 +120,7 @@ OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)
 
 **描述：**
 
-为文件描述符对应的资源对象创建OH_AVSource实例。可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。接口如果传入offset不为文件起始位置，或size不为文件大小时，可能会因数据获取不完整导致 OH_AVSource创建失败、后续解封装失败等未定义错误。
+为文件描述符对应的资源对象创建OH_AVSource实例。可以通过调用[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy)接口释放实例。<br> 接口如果传入offset不为文件起始位置，或size不为文件大小时，可能会因数据获取不完整导致 OH_AVSource创建失败、后续解封装失败等未定义错误。
 
 **起始版本：** 10
 
@@ -132,7 +132,7 @@ OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)
 | int64_t offset | 开始读取数据的位置。 |
 | int64_t size | 文件的字节数大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -146,7 +146,7 @@ OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)
 
 **描述：**
 
-销毁OH_AVSource实例并清理内部资源。同一实例只能被销毁一次。销毁的实例在被重新创建之前不能再被使用。建议实例销毁成功后将指针置为NULL。
+销毁OH_AVSource实例并清理内部资源。<br> 同一实例只能被销毁一次。销毁的实例在被重新创建之前不能再被使用。建议实例销毁成功后将指针置为NULL。
 
 **起始版本：** 10
 
@@ -156,7 +156,7 @@ OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)
 | -- | -- |
 | [OH_AVSource](capi-avsource-oh-avsource.md) *source | 指向OH_AVSource实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -170,7 +170,7 @@ OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)
 
 **描述：**
 
-获取媒体资源文件的基础信息。需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。
+获取媒体资源文件的基础信息。<br> 需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。
 
 **起始版本：** 10
 
@@ -180,7 +180,7 @@ OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)
 | -- | -- |
 | [OH_AVSource](capi-avsource-oh-avsource.md) *source | 指向OH_AVSource实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -194,7 +194,7 @@ OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex
 
 **描述：**
 
-获取轨道的基础信息。需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。
+获取轨道的基础信息。<br> 需要注意的是，指向的OH_AVFormat实例在生命周期结束时需调用者通过调用接口{@link OH_AVFormat_Destroy}释放。
 
 **起始版本：** 10
 
@@ -205,7 +205,7 @@ OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex
 | [OH_AVSource](capi-avsource-oh-avsource.md) *source | 指向OH_AVSource实例的指针。 |
 | uint32_t trackIndex | 需要获取信息的轨道的索引。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -219,7 +219,7 @@ OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)
 
 **描述：**
 
-获取自定义元数据的基础信息。需要注意的是，指向的OH_AVFormat实例在生命周期结束时需开发者通过调用接口{@link OH_AVFormat_Destroy}释放。
+获取自定义元数据的基础信息。<br> 需要注意的是，指向的OH_AVFormat实例在生命周期结束时需开发者通过调用接口{@link OH_AVFormat_Destroy}释放。
 
 **起始版本：** 18
 
@@ -229,7 +229,7 @@ OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)
 | -- | -- |
 | [OH_AVSource](capi-avsource-oh-avsource.md) *source | 指向OH_AVSource实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

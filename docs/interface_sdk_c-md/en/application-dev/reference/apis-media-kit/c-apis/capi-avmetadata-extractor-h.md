@@ -22,21 +22,27 @@ The file declares the AVMetadataExtractor APIs. You can use the APIs to obtain m
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AVFormat *OH_AVMetadataExtractor_GetTrackDescription(OH_AVMetadataExtractor *extractor, uint32_t index)](#oh_avmetadataextractor_gettrackdescription) | - | Obtains the track description of a specified index from the media source. This function must be used afterresources are set. |
+| [OH_AVFormat *OH_AVMetadataExtractor_GetTrackDescription(OH_AVMetadataExtractor *extractor, uint32_t index)](#oh_avmetadataextractor_gettrackdescription) | - | Obtains the track description of a specified index from the media source. This function must be used after resources are set. |
 | [OH_AVFormat *OH_AVMetadataExtractor_GetCustomInfo(OH_AVMetadataExtractor *extractor)](#oh_avmetadataextractor_getcustominfo) | - | Obtains custom metadata from the media source. This function must be used after resources are set. |
 | [OH_AVErrCode OH_AVMetadataExtractor_SetMediaSource(OH_AVMetadataExtractor *extractor, OH_AVMediaSource *source)](#oh_avmetadataextractor_setmediasource) | - | Sets the media source for the extractor. |
 | [OH_AVMetadataExtractor* OH_AVMetadataExtractor_Create(void)](#oh_avmetadataextractor_create) | - | Creates an **OH_AVMetadataExtractor** instance. |
 | [OH_AVErrCode OH_AVMetadataExtractor_SetFDSource(OH_AVMetadataExtractor* extractor, int32_t fd, int64_t offset, int64_t size)](#oh_avmetadataextractor_setfdsource) | - | Sets a data source based on the media file descriptor. |
-| [OH_AVErrCode OH_AVMetadataExtractor_FetchMetadata(OH_AVMetadataExtractor* extractor, OH_AVFormat* avMetadata)](#oh_avmetadataextractor_fetchmetadata) | - | Obtains metadata from a media asset.This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource). |
-| [OH_AVErrCode OH_AVMetadataExtractor_FetchAlbumCover(OH_AVMetadataExtractor* extractor, OH_PixelmapNative** pixelMap)](#oh_avmetadataextractor_fetchalbumcover) | - | Obtains the cover of an audio album.This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource). |
-| [OH_AVErrCode OH_AVMetadataExtractor_FetchFrameByTime(OH_AVMetadataExtractor *extractor, int64_t timeUs, OH_AVMedia_SeekMode seekMode, const OH_AVMetadataExtractor_OutputParam* outputParam, OH_PixelmapNative** pixelMap)](#oh_avmetadataextractor_fetchframebytime) | - | Extracts an image at a specified time point from the video source. This function must be used after resourcesare set. |
-| [typedef void (\*OH_AVMetadataExtractor_OnFrameFetched)(OH_AVMetadataExtractor *extractor, const OH_AVMetadataExtractor_FrameInfo* frameInfo, OH_AVErrCode code, void *userData)](#oh_avmetadataextractor_onframefetched) | OH_AVMetadataExtractor_OnFrameFetched | Defines a callback used to obtain the frames captured by **AVMetadataExtractor**. Note: **frameInfo** isautomatically released after the callback. However, you need to use {@link OH_PixelmapNative_Destroy} to release frameInfo.image** to avoid memory leaks. |
-| [OH_AVErrCode OH_AVMetadataExtractor_FetchFramesByTimes(OH_AVMetadataExtractor *extractor, int64_t timesUs[], uint16_t timesUsSize, OH_AVMedia_SeekMode seekMode, const OH_AVMetadataExtractor_OutputParam* outputParam, OH_AVMetadataExtractor_OnFrameFetched onFrameInfoCallback, void* userData)](#oh_avmetadataextractor_fetchframesbytimes) | - | Extracts images at multiple specified time points from the video source asynchronously. This function must beused after resources are set. |
-| [void OH_AVMetadataExtractor_CancelAllFetchFrames(OH_AVMetadataExtractor *extractor)](#oh_avmetadataextractor_cancelallfetchframes) | - | Cancels all batch image obtaining operations initiated by [OH_AVMetadataExtractor_FetchFramesByTimes](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_fetchframesbytimes). If this function is called, the pending fetch operation is canceled and the result is marked as canceled in the [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched)callback. |
+| [OH_AVErrCode OH_AVMetadataExtractor_FetchMetadata(OH_AVMetadataExtractor* extractor, OH_AVFormat* avMetadata)](#oh_avmetadataextractor_fetchmetadata) | - | Obtains metadata from a media asset. This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource). |
+| [OH_AVErrCode OH_AVMetadataExtractor_FetchAlbumCover(OH_AVMetadataExtractor* extractor, OH_PixelmapNative** pixelMap)](#oh_avmetadataextractor_fetchalbumcover) | - | Obtains the cover of an audio album. This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource). |
+| [OH_AVErrCode OH_AVMetadataExtractor_FetchFrameByTime(OH_AVMetadataExtractor *extractor, int64_t timeUs, OH_AVMedia_SeekMode seekMode, const OH_AVMetadataExtractor_OutputParam* outputParam, OH_PixelmapNative** pixelMap)](#oh_avmetadataextractor_fetchframebytime) | - | Extracts an image at a specified time point from the video source. This function must be used after resources are set. |
+| [typedef void (\*OH_AVMetadataExtractor_OnFrameFetched)(OH_AVMetadataExtractor *extractor, const OH_AVMetadataExtractor_FrameInfo* frameInfo, OH_AVErrCode code, void *userData)](#oh_avmetadataextractor_onframefetched) | OH_AVMetadataExtractor_OnFrameFetched | Defines a callback used to obtain the frames captured by **AVMetadataExtractor**. Note: **frameInfo** is automatically released after the callback. However, you need to use {@link OH_PixelmapNative_Destroy} to release **<br>frameInfo.image** to avoid memory leaks. |
+| [OH_AVErrCode OH_AVMetadataExtractor_FetchFramesByTimes(OH_AVMetadataExtractor *extractor, int64_t timesUs[], uint16_t timesUsSize, OH_AVMedia_SeekMode seekMode, const OH_AVMetadataExtractor_OutputParam* outputParam, OH_AVMetadataExtractor_OnFrameFetched onFrameInfoCallback, void* userData)](#oh_avmetadataextractor_fetchframesbytimes) | - | Extracts images at multiple specified time points from the video source asynchronously. This function must be used after resources are set. |
+| [void OH_AVMetadataExtractor_CancelAllFetchFrames(OH_AVMetadataExtractor *extractor)](#oh_avmetadataextractor_cancelallfetchframes) | - | Cancels all batch image obtaining operations initiated by [OH_AVMetadataExtractor_FetchFramesByTimes](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_fetchframesbytimes). If this function is called, the pending fetch operation is canceled and the result is marked as canceled in the [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched) callback. |
 | [OH_AVErrCode OH_AVMetadataExtractor_Release(OH_AVMetadataExtractor* extractor)](#oh_avmetadataextractor_release) | - | Releases the resources used by the **OH_AVMetadataExtractor** instance and destroys the instance. |
 | [OH_AVMetadataExtractor_OutputParam* OH_AVMetadataExtractor_OutputParam_Create()](#oh_avmetadataextractor_outputparam_create) | - | Creates an **OH_AVMetadataExtractor_OutputParam** instance. |
 | [void OH_AVMetadataExtractor_OutputParam_Destroy(OH_AVMetadataExtractor_OutputParam* outputParam)](#oh_avmetadataextractor_outputparam_destroy) | - | Releases the **OH_AVMetadataExtractor_OutputParam** instance. |
-| [bool OH_AVMetadataExtractor_OutputParam_SetSize(OH_AVMetadataExtractor_OutputParam* outputParam, int32_t width, int32_t height)](#oh_avmetadataextractor_outputparam_setsize) | - | Sets the expected output size of the **OH_AVMetadataExtractor_OutputParam** instance. If **width** or height** is less than 0, the original width or height is used. If **width** or **height** is 0, the aspect ratio ismaintained and the image is scaled proportionally. If both **width** and **height** are greater than 0, they areused to scale the image. |
+| [bool OH_AVMetadataExtractor_OutputParam_SetSize(OH_AVMetadataExtractor_OutputParam* outputParam, int32_t width, int32_t height)](#oh_avmetadataextractor_outputparam_setsize) | - | Sets the expected output size of the **OH_AVMetadataExtractor_OutputParam** instance. If **width** or **<br>height** is less than 0, the original width or height is used. If **width** or **height** is 0, the aspect ratio is maintained and the image is scaled proportionally. If both **width** and **height** are greater than 0, they are used to scale the image. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_AVMetadataExtractor_OnFrameFetched)(OH_AVMetadataExtractor *extractor, const OH_AVMetadataExtractor_FrameInfo* frameInfo, OH_AVErrCode code, void *userData) | Defines a callback used to obtain the frames captured by **AVMetadataExtractor**. Note: **frameInfo** is automatically released after the callback. However, you need to use {@link OH_PixelmapNative_Destroy} to release **<br>frameInfo.image** to avoid memory leaks.<br>**Since**: 23 |
 
 ## Function description
 
@@ -48,7 +54,7 @@ OH_AVFormat *OH_AVMetadataExtractor_GetTrackDescription(OH_AVMetadataExtractor *
 
 **Description**
 
-Obtains the track description of a specified index from the media source. This function must be used afterresources are set.
+Obtains the track description of a specified index from the media source. This function must be used after resources are set.
 
 **Since**: 23
 
@@ -112,7 +118,7 @@ Sets the media source for the extractor.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input source is invalid. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input source is invalid. |
 
 ### OH_AVMetadataExtractor_Create()
 
@@ -157,7 +163,7 @@ Sets a data source based on the media file descriptor.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.  {@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.<br>{@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
 
 ### OH_AVMetadataExtractor_FetchMetadata()
 
@@ -167,7 +173,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchMetadata(OH_AVMetadataExtractor* extrac
 
 **Description**
 
-Obtains metadata from a media asset.This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource).
+Obtains metadata from a media asset. This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource).
 
 **Since**: 18
 
@@ -182,7 +188,7 @@ Obtains metadata from a media asset.This function must be called after [OH_AVMet
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.  {@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.  {@link AV_ERR_NO_MEMORY}: internal memory allocation failed.  {@link AV_ERR_IO_CLEARTEXT_NOT_PERMITTED}: http cleartext traffic is not permitted. Add since api 23. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.<br>{@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.<br>{@link AV_ERR_NO_MEMORY}: internal memory allocation failed.<br>{@link AV_ERR_IO_CLEARTEXT_NOT_PERMITTED}: http cleartext traffic is not permitted. Add since api 23. |
 
 ### OH_AVMetadataExtractor_FetchAlbumCover()
 
@@ -192,7 +198,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchAlbumCover(OH_AVMetadataExtractor* extr
 
 **Description**
 
-Obtains the cover of an audio album.This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource).
+Obtains the cover of an audio album. This function must be called after [OH_AVMetadataExtractor_SetFDSource](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_setfdsource).
 
 **Since**: 18
 
@@ -207,7 +213,7 @@ Obtains the cover of an audio album.This function must be called after [OH_AVMet
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.  {@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.  {@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.<br>{@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.<br>{@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
 
 ### OH_AVMetadataExtractor_FetchFrameByTime()
 
@@ -217,7 +223,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFrameByTime(OH_AVMetadataExtractor *ext
 
 **Description**
 
-Extracts an image at a specified time point from the video source. This function must be used after resourcesare set.
+Extracts an image at a specified time point from the video source. This function must be used after resources are set.
 
 **Since**: 23
 
@@ -227,15 +233,15 @@ Extracts an image at a specified time point from the video source. This function
 | -- | -- |
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md) *extractor | Pointer to the **OH_AVMetadataExtractor** instance. |
 | int64_t timeUs | Time (in microseconds) at which an image is extracted from the video resource. |
-| OH_AVMedia_SeekMode seekMode | Seek mode that defines the relationship between the specified time and the key frame. For details,see {@link OH_AVMedia_SeekMode}. |
-| const OH_AVMetadataExtractor_OutputParam* outputParam | Output parameter of the image, for example, the height or width of the image. For details, see {@link OH_AVMetadataExtractor_OutputParam}.If this parameter is a null pointer, the original size of the video is used. Note: You need to use {@link OH_PixelmapNative_Destroy}to release the pixel map after using it. |
+| OH_AVMedia_SeekMode seekMode | Seek mode that defines the relationship between the specified time and the key frame. For details, see {@link OH_AVMedia_SeekMode}. |
+| const OH_AVMetadataExtractor_OutputParam* outputParam | Output parameter of the image, for example, the height or width of the image. For details, see {@link OH_AVMetadataExtractor_OutputParam}.<br>If this parameter is a null pointer, the original size of the video is used. Note: You need to use {@link OH_PixelmapNative_Destroy} to release the pixel map after using it. |
 | OH_PixelmapNative** pixelMap | Used to receive images extracted from the video source. For details, see {@link OH_PixelmapNative}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: the input param is invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.  {@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.  {@link AV_ERR_SERVICE_DIED}: the service died.  {@link AV_ERR_IO_CLEARTEXT_NOT_PERMITTED}: http cleartext traffic is not permitted. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: the input param is invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.<br>{@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.<br>{@link AV_ERR_SERVICE_DIED}: the service died.<br>{@link AV_ERR_IO_CLEARTEXT_NOT_PERMITTED}: http cleartext traffic is not permitted. |
 
 ### OH_AVMetadataExtractor_OnFrameFetched()
 
@@ -245,7 +251,7 @@ typedef void (*OH_AVMetadataExtractor_OnFrameFetched)(OH_AVMetadataExtractor *ex
 
 **Description**
 
-Defines a callback used to obtain the frames captured by **AVMetadataExtractor**. Note: **frameInfo** isautomatically released after the callback. However, you need to use {@link OH_PixelmapNative_Destroy} to release frameInfo.image** to avoid memory leaks.
+Defines a callback used to obtain the frames captured by **AVMetadataExtractor**. Note: **frameInfo** is automatically released after the callback. However, you need to use {@link OH_PixelmapNative_Destroy} to release **<br>frameInfo.image** to avoid memory leaks.
 
 **Since**: 23
 
@@ -257,7 +263,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFramesByTimes(OH_AVMetadataExtractor *e
 
 **Description**
 
-Extracts images at multiple specified time points from the video source asynchronously. This function must beused after resources are set.
+Extracts images at multiple specified time points from the video source asynchronously. This function must be used after resources are set.
 
 **Since**: 23
 
@@ -268,8 +274,8 @@ Extracts images at multiple specified time points from the video source asynchro
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md) *extractor | Pointer to the **OH_AVMetadataExtractor** instance. |
 | int64_t timesUs[] | The times array expected to fetch picture from the video resource. The unit is microsecond(us). |
 | uint16_t timesUsSize | Length of the time point array. |
-| OH_AVMedia_SeekMode seekMode | Seek mode that defines the relationship between the specified time and the key frame. For details,see {@link OH_AVMedia_SeekMode}. |
-| const OH_AVMetadataExtractor_OutputParam* outputParam | Output parameter of the image, for example, the height or width of the image. For details, see {@link OH_AVMetadataExtractor_OutputParam}.If this parameter is a null pointer, the original video size is used for the obtained frame. |
+| OH_AVMedia_SeekMode seekMode | Seek mode that defines the relationship between the specified time and the key frame. For details, see {@link OH_AVMedia_SeekMode}. |
+| const OH_AVMetadataExtractor_OutputParam* outputParam | Output parameter of the image, for example, the height or width of the image. For details, see {@link OH_AVMetadataExtractor_OutputParam}. If this parameter is a null pointer, the original video size is used for the obtained frame. |
 | [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched) onFrameInfoCallback | Callback function invoked after each frame is extracted or fails to be extracted. |
 | void* userData | Pointer to the user-defined data passed to the callback function. |
 
@@ -277,7 +283,7 @@ Extracts images at multiple specified time points from the video source asynchro
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK} if the execution is successful.  {@link AV_ERR_INVALID_VAL}: the input param is invalid.  {@link AV_ERR_SERVICE_DIED}: the service died.  {@link AV_ERR_IO_CLEARTEXT_NOT_PERMITTED}: http cleartext traffic is not permitted.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed. Returned by onFrameInfoCallback.  {@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported. Returned by onFrameInfoCallback.  {@link AV_ERR_TIMEOUT}: the execution is times out. Returned by onFrameInfoCallback. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK} if the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: the input param is invalid.<br>{@link AV_ERR_SERVICE_DIED}: the service died.<br>{@link AV_ERR_IO_CLEARTEXT_NOT_PERMITTED}: http cleartext traffic is not permitted.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed. Returned by onFrameInfoCallback.<br>{@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported. Returned by onFrameInfoCallback.<br>{@link AV_ERR_TIMEOUT}: the execution is times out. Returned by onFrameInfoCallback. |
 
 ### OH_AVMetadataExtractor_CancelAllFetchFrames()
 
@@ -287,7 +293,7 @@ void OH_AVMetadataExtractor_CancelAllFetchFrames(OH_AVMetadataExtractor *extract
 
 **Description**
 
-Cancels all batch image obtaining operations initiated by [OH_AVMetadataExtractor_FetchFramesByTimes](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_fetchframesbytimes). If this function is called, the pending fetch operation is canceled and the result is marked as canceled in the [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched)callback.
+Cancels all batch image obtaining operations initiated by [OH_AVMetadataExtractor_FetchFramesByTimes](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_fetchframesbytimes). If this function is called, the pending fetch operation is canceled and the result is marked as canceled in the [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched) callback.
 
 **Since**: 23
 
@@ -319,7 +325,7 @@ Releases the resources used by the **OH_AVMetadataExtractor** instance and destr
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input extractor is nullptr or input param is invalid. |
 
 ### OH_AVMetadataExtractor_OutputParam_Create()
 
@@ -365,7 +371,7 @@ bool OH_AVMetadataExtractor_OutputParam_SetSize(OH_AVMetadataExtractor_OutputPar
 
 **Description**
 
-Sets the expected output size of the **OH_AVMetadataExtractor_OutputParam** instance. If **width** or height** is less than 0, the original width or height is used. If **width** or **height** is 0, the aspect ratio ismaintained and the image is scaled proportionally. If both **width** and **height** are greater than 0, they areused to scale the image.
+Sets the expected output size of the **OH_AVMetadataExtractor_OutputParam** instance. If **width** or **<br>height** is less than 0, the original width or height is used. If **width** or **height** is 0, the aspect ratio is maintained and the image is scaled proportionally. If both **width** and **height** are greater than 0, they are used to scale the image.
 
 **Since**: 23
 

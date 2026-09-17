@@ -20,6 +20,12 @@ Declares the APIs for obtaining the time zone information.
 | -- | -- | -- |
 | [TimeService_ErrCode](#timeservice_errcode) | TimeService_ErrCode | Enumerates the error codes. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| TIME_SERVICE_H | Declares the APIs for obtaining the time zone information.<br>**Since**: 12<br>**System capability**: SystemCapability.MiscServices.Time |
+
 ### Function
 
 | Name | Description |
@@ -67,8 +73,8 @@ Obtains the current system time zone.
 
 | Parameter | Description |
 | -- | -- |
-| char *timeZone | Pointer to the buffer for one time zone ID string. If the time zone is obtained, its ID is written.Otherwise, an empty string is written. The string ends with **\0**. |
-| uint32_t len | Capacity of the buffer pointed to by **timeZone**, in bytes, including the end character **\0**.There is no maximum limit. You are advised to allocate at least 31 bytes. |
+| char *timeZone | Pointer to the buffer for one time zone ID string. If the time zone is obtained, its ID is written. Otherwise, an empty string is written. The string ends with **\0**. |
+| uint32_t len | Capacity of the buffer pointed to by **timeZone**, in bytes, including the end character **\0**. There is no maximum limit. You are advised to allocate at least 31 bytes. |
 
 **Returns**:
 

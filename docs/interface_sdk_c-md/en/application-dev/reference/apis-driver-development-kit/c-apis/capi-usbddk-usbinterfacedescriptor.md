@@ -6,7 +6,7 @@ typedef struct UsbInterfaceDescriptor {...} __attribute__((packed)) UsbInterface
 
 ## Overview
 
-Defines standard interface descriptors, which correspond to **Standard Interface Descriptor** in the USBprotocol.
+Defines standard interface descriptors, which correspond to **Standard Interface Descriptor** in the USB protocol.
 
 **Since**: 10
 
@@ -27,7 +27,7 @@ Defines standard interface descriptors, which correspond to **Standard Interface
 | uint8_t bNumEndpoints | Number of endpoints (excluding endpoint 0) used by the interface. |
 | uint8_t bInterfaceClass | Interface class code allocated by the USB-IF. |
 | uint8_t bInterfaceSubClass | Interface subclass code allocated by the USB-IF. The value is limited by that of **bInterfaceClass**. |
-| uint8_t bInterfaceProtocol | Interface protocol code allocated by the USB-IF. The value is limited by that of **bInterfaceClass** and**bInterfaceSubClass**. |
+| uint8_t bInterfaceProtocol | Interface protocol code allocated by the USB-IF. The value is limited by that of **bInterfaceClass** and **bInterfaceSubClass**. |
 | uint8_t iInterface | Index of the string descriptor that describes the interface. |
 
 

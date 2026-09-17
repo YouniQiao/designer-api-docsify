@@ -27,7 +27,9 @@ Defines the context, a logical connection between a CA and a TEE.
 | union | Union for either shared buffer or implementation data.<br>**Since**: 20 |
 | struct | Shared buffer used for data exchange and synchronization.<br>**Since**: 20 |
 | void *buffer | Pointer to the shared buffer. |
-| sem_t buffer_barrier; } share_buffer | Semaphore for synchronization of the shared buffer. |
-| uint64_t imp; } | Implementation-specific data. |
+| sem_t buffer_barrier;
+ } share_buffer | Semaphore for synchronization of the shared buffer. |
+| uint64_t imp;
+ } | Implementation-specific data. |
 
 

@@ -6,7 +6,7 @@ typedef struct Input_CursorConfig Input_CursorConfig
 
 ## Overview
 
-Defines custom mouse cursor configuration, which is used to define and manage the display style andinteraction behavior of the mouse cursor in an application. It supports different cursor styles (such as default,hand, and text input), providing users with more intuitive operation feedback and enhancing user experience.
+Defines custom mouse cursor configuration, which is used to define and manage the display style and interaction behavior of the mouse cursor in an application. It supports different cursor styles (such as default, hand, and text input), providing users with more intuitive operation feedback and enhancing user experience.
 
 **Since**: 22
 

@@ -34,7 +34,7 @@ Provides the custom dialog box APIs for the native side.
 | [int32_t (\*setGridColumnCount)(ArkUI_NativeDialogHandle handle, int32_t gridCount)](#setgridcolumncount) | Sets the number of grid columns occupied by a custom dialog box. |
 | [int32_t (\*enableCustomStyle)(ArkUI_NativeDialogHandle handle, bool enableCustomStyle)](#enablecustomstyle) | Specifies whether to use a custom style for the custom dialog box. |
 | [int32_t (\*enableCustomAnimation)(ArkUI_NativeDialogHandle handle, bool enableCustomAnimation)](#enablecustomanimation) | Specifies whether to use a custom animation for a custom dialog box. |
-| [int32_t (\*registerOnWillDismiss)(ArkUI_NativeDialogHandle handle, ArkUI_OnWillDismissEvent eventHandler)](#registeronwilldismiss) | Registers a callback for a custom dialog box so that the user can decide whether to close the dialog boxafter they touch the Back button or press the Esc key. |
+| [int32_t (\*registerOnWillDismiss)(ArkUI_NativeDialogHandle handle, ArkUI_OnWillDismissEvent eventHandler)](#registeronwilldismiss) | Registers a callback for a custom dialog box so that the user can decide whether to close the dialog box after they touch the Back button or press the Esc key. |
 | [int32_t (\*show)(ArkUI_NativeDialogHandle handle, bool showInSubWindow)](#show) | Shows a custom dialog box. |
 | [int32_t (\*close)(ArkUI_NativeDialogHandle handle)](#close) | Closes a custom dialog box. If the dialog box has been closed, this API does not take effect. |
 | [int32_t (\*registerOnWillDismissWithUserData)(ArkUI_NativeDialogHandle handle, void* userData, void (\*callback)(ArkUI_DialogDismissEvent* event))](#registeronwilldismisswithuserdata) | Registers a listener for the dismiss event of the custom dialog box. |
@@ -102,7 +102,7 @@ Attaches the content of a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### removeContent()
 
@@ -128,7 +128,7 @@ Detaches the content of a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setContentAlignment()
 
@@ -157,7 +157,7 @@ Sets the alignment mode for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### resetContentAlignment()
 
@@ -183,7 +183,7 @@ Resets the alignment mode of a custom dialog box to its default settings.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setModalMode()
 
@@ -204,13 +204,13 @@ Sets the modal mode for a custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  bool isModal | Specifies whether the custom dialog box is a modal, which has a mask applied. The value<b>true</b> means that the custom dialog box is a modal, and <b>false</b> means the opposite. |
+|  bool isModal | Specifies whether the custom dialog box is a modal, which has a mask applied. The value <b>true</b> means that the custom dialog box is a modal, and <b>false</b> means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setAutoCancel()
 
@@ -231,13 +231,13 @@ Specifies whether to allow users to touch the mask to dismiss the custom dialog 
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  bool autoCancel | Specifies whether to allow users to touch the mask to dismiss the dialog box.The value <b>true</b> means to allow users to do so, and <b>false</b> means the opposite. |
+|  bool autoCancel | Specifies whether to allow users to touch the mask to dismiss the dialog box. The value <b>true</b> means to allow users to do so, and <b>false</b> means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setMask()
 
@@ -259,13 +259,13 @@ Sets the mask for a custom dialog box.
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
 |  uint32_t maskColor | Indicates the mask color, in 0xARGB format. |
-|  const ArkUI_Rect* maskRect | Indicates the pointer to the mask area. Events outside the mask area are transparentlytransmitted, and events within the mask area are not. The parameter type is {@link ArkUI_Rect}. |
+|  const ArkUI_Rect* maskRect | Indicates the pointer to the mask area. Events outside the mask area are transparently transmitted, and events within the mask area are not. The parameter type is {@link ArkUI_Rect}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setBackgroundColor()
 
@@ -292,7 +292,7 @@ Sets the background color for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setCornerRadius()
 
@@ -322,7 +322,7 @@ Sets the background corner radius for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setGridColumnCount()
 
@@ -343,13 +343,13 @@ Sets the number of grid columns occupied by a custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  int32_t gridCount | Indicates the number of grid columns occupied by the dialog box. The default value is subject tothe window size, and the maximum value is the maximum number of columns supported by the system. |
+|  int32_t gridCount | Indicates the number of grid columns occupied by the dialog box. The default value is subject to the window size, and the maximum value is the maximum number of columns supported by the system. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### enableCustomStyle()
 
@@ -370,13 +370,13 @@ Specifies whether to use a custom style for the custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  bool enableCustomStyle | Specifies whether to use a custom style for the dialog box.<b>true</b>: The dialog box automatically adapts its width to the child components; the rounded corner is 0;the background color is transparent.<b>false</b>: The dialog box automatically adapts its width to the grid system and its height to the childcomponents; the rounded corner is 24 vp. |
+|  bool enableCustomStyle | Specifies whether to use a custom style for the dialog box. <b>true</b>: The dialog box automatically adapts its width to the child components; the rounded corner is 0; the background color is transparent. <b>false</b>: The dialog box automatically adapts its width to the grid system and its height to the child components; the rounded corner is 24 vp. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### enableCustomAnimation()
 
@@ -397,13 +397,13 @@ Specifies whether to use a custom animation for a custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  bool enableCustomAnimation | Specifies whether to use a custom animation. The value <b>true</b> means to use acustom animation, and <b>false</b> means to use the default animation. |
+|  bool enableCustomAnimation | Specifies whether to use a custom animation. The value <b>true</b> means to use a custom animation, and <b>false</b> means to use the default animation. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### registerOnWillDismiss()
 
@@ -413,7 +413,7 @@ int32_t (*registerOnWillDismiss)(ArkUI_NativeDialogHandle handle, ArkUI_OnWillDi
 
 **Description**
 
-Registers a callback for a custom dialog box so that the user can decide whether to close the dialog boxafter they touch the Back button or press the Esc key.
+Registers a callback for a custom dialog box so that the user can decide whether to close the dialog box after they touch the Back button or press the Esc key.
 
 > **Note**:
 >
@@ -430,7 +430,7 @@ Registers a callback for a custom dialog box so that the user can decide whether
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### show()
 
@@ -453,7 +453,7 @@ Shows a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### close()
 
@@ -475,7 +475,7 @@ Closes a custom dialog box. If the dialog box has been closed, this API does not
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### registerOnWillDismissWithUserData()
 
@@ -499,6 +499,6 @@ Registers a listener for the dismiss event of the custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.             Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.             Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

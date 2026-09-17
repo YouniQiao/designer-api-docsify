@@ -2,13 +2,13 @@
 
 ## Overview
 
-Declares functions that access the image rectangle, size, format, and component data.Need link <b>libimagendk.z.so</b>
+Declares functions that access the image rectangle, size, format, and component data. Need link <b>libimagendk.z.so</b>
 
 **Library**: libimage_ndk.z.so
 
 **System capability**: SystemCapability.Multimedia.Image.Core
 
-**Since**: 10
+**Since**: 8
 
 **Related module**: [Image](capi-image.md)
 
@@ -38,7 +38,7 @@ Declares functions that access the image rectangle, size, format, and component 
 | [int32_t OH_Image_Size(const ImageNative* native, struct OhosImageSize* size)](#oh_image_size) | Obtains {@link OhosImageSize} of an [ImageNative](capi-image-imagenative-.md) object at the native layer. |
 | [int32_t OH_Image_Format(const ImageNative* native, int32_t* format)](#oh_image_format) | Obtains the image format of an [ImageNative](capi-image-imagenative-.md) object at the native layer. |
 | [int32_t OH_Image_GetComponent(const ImageNative* native, int32_t componentType, struct OhosImageComponent* componentNative)](#oh_image_getcomponent) | Obtains [OhosImageComponent](capi-image-ohosimagecomponent.md) of an [ImageNative](capi-image-imagenative-.md) object at the native layer. |
-| [int32_t OH_Image_Release(ImageNative* native)](#oh_image_release) | Releases an [ImageNative](capi-image-imagenative-.md) object at the native layer.Note: This API is not used to release a JavaScript native API <b>Image</b> object.It is used to release the object [ImageNative](capi-image-imagenative-.md) at the native layerparsed by calling [OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative). |
+| [int32_t OH_Image_Release(ImageNative* native)](#oh_image_release) | Releases an [ImageNative](capi-image-imagenative-.md) object at the native layer. Note: This API is not used to release a JavaScript native API <b>Image</b> object. It is used to release the object [ImageNative](capi-image-imagenative-.md) at the native layer parsed by calling [OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative). |
 
 ## Enum type description
 
@@ -134,7 +134,7 @@ Obtains [OhosImageRect](capi-image-ohosimagerect.md) of an [ImageNative](capi-im
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -164,7 +164,7 @@ Obtains {@link OhosImageSize} of an [ImageNative](capi-image-imagenative-.md) ob
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -194,7 +194,7 @@ Obtains the image format of an [ImageNative](capi-image-imagenative-.md) object 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -225,7 +225,7 @@ Obtains [OhosImageComponent](capi-image-ohosimagecomponent.md) of an [ImageNativ
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -240,7 +240,7 @@ int32_t OH_Image_Release(ImageNative* native)
 
 **Description**
 
-Releases an [ImageNative](capi-image-imagenative-.md) object at the native layer.Note: This API is not used to release a JavaScript native API <b>Image</b> object.It is used to release the object [ImageNative](capi-image-imagenative-.md) at the native layerparsed by calling [OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative).
+Releases an [ImageNative](capi-image-imagenative-.md) object at the native layer. Note: This API is not used to release a JavaScript native API <b>Image</b> object. It is used to release the object [ImageNative](capi-image-imagenative-.md) at the native layer parsed by calling [OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative).
 
 **Since**: 10
 
@@ -254,7 +254,7 @@ Releases an [ImageNative](capi-image-imagenative-.md) object at the native layer
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 

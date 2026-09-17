@@ -8,7 +8,7 @@ Declare the common types for the context AbilityRuntime.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since**: 24
+**Since**: 13
 
 **Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
@@ -60,13 +60,13 @@ Obtain the cache directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get cache directory from. |
 | char* buffer | A pointer to a buffer that receives the cache directory of the context. |
 | int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetTempDir()
 
@@ -87,13 +87,13 @@ Obtain the temp directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get temp directory from. |
 | char* buffer | A pointer to a buffer that receives the temp directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetFilesDir()
 
@@ -114,13 +114,13 @@ Obtain the files directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get files directory from. |
 | char* buffer | A pointer to a buffer that receives the files directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetDatabaseDir()
 
@@ -141,13 +141,13 @@ Obtain the database directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get database directory from. |
 | char* buffer | A pointer to a buffer that receives the database directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetPreferencesDir()
 
@@ -168,13 +168,13 @@ Obtain the preferences directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get preferences directory from. |
 | char* buffer | A pointer to a buffer that receives the preferences directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetBundleCodeDir()
 
@@ -195,13 +195,13 @@ Obtain the bundle code directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get bundle code directory from. |
 | char* buffer | A pointer to a buffer that receives the bundle code directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetDistributedFilesDir()
 
@@ -222,13 +222,13 @@ Obtain the distributed files directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get distributed files directory from. |
 | char* buffer | A pointer to a buffer that receives the distributed files directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetResourceDir()
 
@@ -249,13 +249,13 @@ Obtain the resource directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get resource directory from. |
 | char* buffer | A pointer to a buffer that receives the resource directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetCloudFileDir()
 
@@ -276,13 +276,13 @@ Obtain the cloud file directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get cloud file directory from. |
 | char* buffer | A pointer to a buffer that receives the cloud file directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetAreaMode()
 
@@ -307,7 +307,7 @@ Obtain the area mode of the context.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the areaMode is null.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the areaMode is null.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_SetAreaMode()
 
@@ -332,7 +332,7 @@ Set the area mode of the context.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the areaMode is null.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the areaMode is null.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetLogFileDir()
 
@@ -353,13 +353,13 @@ Obtain the log file directory of the context.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get log file directory from. |
 | char* buffer | A pointer to a buffer that receives the log file directory of the context. |
 | const int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 ### OH_AbilityRuntime_Context_GetProcessName()
 
@@ -380,12 +380,12 @@ Obtain the process name.
 | [AbilityRuntime_ContextHandle](capi-abilityruntime-abilityruntime-context8h.md) context | The context to get the process name from. |
 | char* buffer | A pointer to a buffer that receives the process name. |
 | int32_t bufferSize | The length of the buffer. |
-| int32_t* writeLength | The string length actually written to the buffer,when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
+| int32_t* writeLength | The string length actually written to the buffer, when returning {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,          or the buffer size is less than the minimum buffer size.          {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the buffer or writeLength is null,<br>        or the buffer size is less than the minimum buffer size.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_CONTEXT_NOT_EXIST} if the context does not exist. |
 
 

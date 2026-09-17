@@ -1189,7 +1189,7 @@
 - [@ohos.WallpaperExtensionAbility(WallpaperExtensionAbility)](arkts-basicservices-wallpaperextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [WallpaperExtensionAbility(system api)](arkts-basicservices-wallpaperextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.zlib](arkts-basicservices-zlib.md)
+- [@ohos.zlib(Zip)](arkts-basicservices-zlib.md)
   - [compressFile](arkts-basicservices-zlib-compressfile-f.md)
   - [compressFiles](arkts-basicservices-zlib-compressfiles-f.md)
   - [createChecksum](arkts-basicservices-zlib-createchecksum-f.md)

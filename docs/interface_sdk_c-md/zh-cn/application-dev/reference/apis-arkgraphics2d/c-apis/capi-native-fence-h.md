@@ -43,7 +43,7 @@ bool OH_NativeFence_IsValid(int fenceFd)
 | -- | -- |
 | int fenceFd | 表示一个文件描述符，用于定时同步。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -68,7 +68,7 @@ bool OH_NativeFence_Wait(int fenceFd, uint32_t timeout)
 | int fenceFd | 表示一个文件描述符，用于定时同步。 |
 | uint32_t timeout | 表示等待时间。单位为毫秒，0表示接口立即返回。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -92,7 +92,7 @@ bool OH_NativeFence_WaitForever(int fenceFd)
 | -- | -- |
 | int fenceFd | 表示一个文件描述符，用于定时同步。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

@@ -18,12 +18,12 @@ Declares the condition variable interfaces in C.
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_cond_init(ffrt_cond_t* cond, const ffrt_condattr_t* attr)](#ffrt_cond_init) | Initializes a condition variable.The condition variable must later be destroyed by [ffrt_cond_destroy](capi-condition-variable-h.md#ffrt_cond_destroy) when no longer in use. |
+| [FFRT_C_API int ffrt_cond_init(ffrt_cond_t* cond, const ffrt_condattr_t* attr)](#ffrt_cond_init) | Initializes a condition variable.<br> The condition variable must later be destroyed by [ffrt_cond_destroy](capi-condition-variable-h.md#ffrt_cond_destroy) when no longer in use. |
 | [FFRT_C_API int ffrt_cond_signal(ffrt_cond_t* cond)](#ffrt_cond_signal) | Unblocks at least one of the threads that are blocked on a condition variable. |
 | [FFRT_C_API int ffrt_cond_broadcast(ffrt_cond_t* cond)](#ffrt_cond_broadcast) | Unblocks all threads currently blocked on a condition variable. |
-| [FFRT_C_API int ffrt_cond_wait(ffrt_cond_t* cond, ffrt_mutex_t* mutex)](#ffrt_cond_wait) | Blocks the calling thread on a condition variable.The mutex must be held by the calling thread on entry. It is atomically releasedwhile the thread is blocked, and re-acquired before the function returns, so thecaller regains ownership of the mutex on wakeup. The thread is unblocked by acall to [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) from another thread.The caller is responsible for re-checking the predicate after wakeup to guardagainst spurious wakeups. |
-| [FFRT_C_API int ffrt_cond_timedwait(ffrt_cond_t* cond, ffrt_mutex_t* mutex, const struct timespec* time_point)](#ffrt_cond_timedwait) | Blocks the calling thread until a given time point.If [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) is not called to unblock the threadbefore `time_point` is reached, the thread is automatically unblocked. |
-| [FFRT_C_API int ffrt_cond_destroy(ffrt_cond_t* cond)](#ffrt_cond_destroy) | Destroys a condition variable.The condition variable must have been initialized by [ffrt_cond_init](capi-condition-variable-h.md#ffrt_cond_init) andmust not be referenced by any thread on entry. |
+| [FFRT_C_API int ffrt_cond_wait(ffrt_cond_t* cond, ffrt_mutex_t* mutex)](#ffrt_cond_wait) | Blocks the calling thread on a condition variable.<br> The mutex must be held by the calling thread on entry. It is atomically released while the thread is blocked, and re-acquired before the function returns, so the caller regains ownership of the mutex on wakeup. The thread is unblocked by a call to [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) from another thread. The caller is responsible for re-checking the predicate after wakeup to guard against spurious wakeups. |
+| [FFRT_C_API int ffrt_cond_timedwait(ffrt_cond_t* cond, ffrt_mutex_t* mutex, const struct timespec* time_point)](#ffrt_cond_timedwait) | Blocks the calling thread until a given time point.<br> If [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) is not called to unblock the thread before `time_point` is reached, the thread is automatically unblocked. |
+| [FFRT_C_API int ffrt_cond_destroy(ffrt_cond_t* cond)](#ffrt_cond_destroy) | Destroys a condition variable.<br> The condition variable must have been initialized by [ffrt_cond_init](capi-condition-variable-h.md#ffrt_cond_init) and must not be referenced by any thread on entry. |
 
 ## Function description
 
@@ -35,7 +35,7 @@ FFRT_C_API int ffrt_cond_init(ffrt_cond_t* cond, const ffrt_condattr_t* attr)
 
 **Description**
 
-Initializes a condition variable.The condition variable must later be destroyed by [ffrt_cond_destroy](capi-condition-variable-h.md#ffrt_cond_destroy) when no longer in use.
+Initializes a condition variable.<br> The condition variable must later be destroyed by [ffrt_cond_destroy](capi-condition-variable-h.md#ffrt_cond_destroy) when no longer in use.
 
 **Since**: 10
 
@@ -118,7 +118,7 @@ FFRT_C_API int ffrt_cond_wait(ffrt_cond_t* cond, ffrt_mutex_t* mutex)
 
 **Description**
 
-Blocks the calling thread on a condition variable.The mutex must be held by the calling thread on entry. It is atomically releasedwhile the thread is blocked, and re-acquired before the function returns, so thecaller regains ownership of the mutex on wakeup. The thread is unblocked by acall to [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) from another thread.The caller is responsible for re-checking the predicate after wakeup to guardagainst spurious wakeups.
+Blocks the calling thread on a condition variable.<br> The mutex must be held by the calling thread on entry. It is atomically released while the thread is blocked, and re-acquired before the function returns, so the caller regains ownership of the mutex on wakeup. The thread is unblocked by a call to [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) from another thread. The caller is responsible for re-checking the predicate after wakeup to guard against spurious wakeups.
 
 **Since**: 10
 
@@ -150,7 +150,7 @@ FFRT_C_API int ffrt_cond_timedwait(ffrt_cond_t* cond, ffrt_mutex_t* mutex, const
 
 **Description**
 
-Blocks the calling thread until a given time point.If [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) is not called to unblock the threadbefore `time_point` is reached, the thread is automatically unblocked.
+Blocks the calling thread until a given time point.<br> If [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) is not called to unblock the thread before `time_point` is reached, the thread is automatically unblocked.
 
 **Since**: 10
 
@@ -183,7 +183,7 @@ FFRT_C_API int ffrt_cond_destroy(ffrt_cond_t* cond)
 
 **Description**
 
-Destroys a condition variable.The condition variable must have been initialized by [ffrt_cond_init](capi-condition-variable-h.md#ffrt_cond_init) andmust not be referenced by any thread on entry.
+Destroys a condition variable.<br> The condition variable must have been initialized by [ffrt_cond_init](capi-condition-variable-h.md#ffrt_cond_init) and must not be referenced by any thread on entry.
 
 **Since**: 10
 

@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Stream ContentEmbed_Stream
 
 ## Overview
 
-Declares the stream structure type of an OE document. Similar to a file in the file system, a streamcan be read or written. A stream object can exist only in the storage object.
+Declares the stream structure type of an OE document. Similar to a file in the file system, a stream can be read or written. A stream object can exist only in the storage object.
 
 **Since**: 24
 

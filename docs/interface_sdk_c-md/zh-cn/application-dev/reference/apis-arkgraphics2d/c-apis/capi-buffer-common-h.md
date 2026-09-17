@@ -27,7 +27,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_NativeBuffer_ColorSpace](#oh_nativebuffer_colorspace) | OH_NativeBuffer_ColorSpace | OH_NativeBuffer的颜色空间。Move from native_buffer.h to native_common.h |
+| [OH_NativeBuffer_ColorSpace](#oh_nativebuffer_colorspace) | OH_NativeBuffer_ColorSpace | OH_NativeBuffer的颜色空间。 Move from native_buffer.h to native_common.h |
 | [OH_NativeBuffer_MetadataKey](#oh_nativebuffer_metadatakey) | OH_NativeBuffer_MetadataKey | 表示OH_NativeBuffer的描述信息的键值，如HDR元数据，ROI元数据等。 |
 | [OH_NativeBuffer_Format](#oh_nativebuffer_format) | OH_NativeBuffer_Format | OH_NativeBuffer格式的枚举。 |
 | [OH_NativeBuffer_TransformType](#oh_nativebuffer_transformtype) | OH_NativeBuffer_TransformType | OH_NativeBuffer转换类型的枚举。 |
@@ -44,7 +44,7 @@ enum OH_NativeBuffer_ColorSpace
 
 **描述：**
 
-OH_NativeBuffer的颜色空间。Move from native_buffer.h to native_common.h
+OH_NativeBuffer的颜色空间。 Move from native_buffer.h to native_common.h
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
 

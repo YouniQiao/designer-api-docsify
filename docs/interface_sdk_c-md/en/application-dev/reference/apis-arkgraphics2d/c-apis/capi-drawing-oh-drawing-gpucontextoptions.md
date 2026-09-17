@@ -22,6 +22,6 @@ This struct describes the options about the GPU context.
 
 | Name | Description |
 | -- | -- |
-| bool allowPathMaskCaching | Whether to allow path mask textures to be cached. The value **true** means to allow the path mask textures to becached, and **false** means the opposite. |
+| bool allowPathMaskCaching | Whether to allow path mask textures to be cached. The value **true** means to allow the path mask textures to be cached, and **false** means the opposite. |
 
 

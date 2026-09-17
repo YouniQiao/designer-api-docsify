@@ -8,7 +8,7 @@ This file declares the functions related to the shader effect in the drawing mod
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -25,15 +25,15 @@ This file declares the functions related to the shader effect in the drawing mod
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateColorShader(const uint32_t color)](#oh_drawing_shadereffectcreatecolorshader) | Creates an **OH_Drawing_ShaderEffect** object with a single color. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateLinearGradient(const OH_Drawing_Point* startPt, const OH_Drawing_Point* endPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode)](#oh_drawing_shadereffectcreatelineargradient) | Creates a **ShaderEffect** object that generates a linear gradient between two points.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateLinearGradientWithLocalMatrix(const OH_Drawing_Point2D* startPt, const OH_Drawing_Point2D* endPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatelineargradientwithlocalmatrix) | Creates a **ShaderEffect** object that generates a linear gradient between two points.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateRadialGradient(const OH_Drawing_Point* centerPt, float radius, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode)](#oh_drawing_shadereffectcreateradialgradient) | Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radiusof a circle.The radial gradient transitions colors from the center to the ending shape in a radial manner.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateRadialGradientWithLocalMatrix(const OH_Drawing_Point2D* centerPt, float radius, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreateradialgradientwithlocalmatrix) | Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radiusof a circle.The radial gradient transitions colors from the center to the ending shape in a radial manner.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateSweepGradientWithLocalMatrix(const OH_Drawing_Point* centerPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatesweepgradientwithlocalmatrix) | Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the matrixtransformation at the given center.A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateSweepGradient(const OH_Drawing_Point* centerPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode)](#oh_drawing_shadereffectcreatesweepgradient) | Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the center.A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateImageShader(OH_Drawing_Image* image, OH_Drawing_TileMode tileX, OH_Drawing_TileMode tileY, const OH_Drawing_SamplingOptions* samplingOptions, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreateimageshader) | Creates an **OH_Drawing_ShaderEffect** object for an image shader. You are advised not to use the functionfor the canvas of the capture type because it affects the performance.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **image** or **samplingOptions** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If either **tileX** or **tileY** is not set to one of the enumerated values, OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateLinearGradient(const OH_Drawing_Point* startPt, const OH_Drawing_Point* endPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode)](#oh_drawing_shadereffectcreatelineargradient) | Creates a **ShaderEffect** object that generates a linear gradient between two points. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateLinearGradientWithLocalMatrix(const OH_Drawing_Point2D* startPt, const OH_Drawing_Point2D* endPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatelineargradientwithlocalmatrix) | Creates a **ShaderEffect** object that generates a linear gradient between two points. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateRadialGradient(const OH_Drawing_Point* centerPt, float radius, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode)](#oh_drawing_shadereffectcreateradialgradient) | Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radius of a circle. The radial gradient transitions colors from the center to the ending shape in a radial manner. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateRadialGradientWithLocalMatrix(const OH_Drawing_Point2D* centerPt, float radius, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreateradialgradientwithlocalmatrix) | Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radius of a circle. The radial gradient transitions colors from the center to the ending shape in a radial manner. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateSweepGradientWithLocalMatrix(const OH_Drawing_Point* centerPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatesweepgradientwithlocalmatrix) | Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the matrix transformation at the given center. A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateSweepGradient(const OH_Drawing_Point* centerPt, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode)](#oh_drawing_shadereffectcreatesweepgradient) | Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the center. A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateImageShader(OH_Drawing_Image* image, OH_Drawing_TileMode tileX, OH_Drawing_TileMode tileY, const OH_Drawing_SamplingOptions* samplingOptions, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreateimageshader) | Creates an **OH_Drawing_ShaderEffect** object for an image shader. You are advised not to use the function for the canvas of the capture type because it affects the performance. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **image** or **samplingOptions** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If either **tileX** or **tileY** is not set to one of the enumerated values, **<br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
 | [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreatePixelMapShader(OH_Drawing_PixelMap* pixelMap, OH_Drawing_TileMode tileX, OH_Drawing_TileMode tileY, const OH_Drawing_SamplingOptions* samplingOptions, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatepixelmapshader) | Creates a PixelMap shader object. |
-| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateTwoPointConicalGradient(const OH_Drawing_Point2D* startPt, float startRadius, const OH_Drawing_Point2D* endPt, float endRadius, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatetwopointconicalgradient) | Creates an **OH_Drawing_ShaderEffect** object that generates a gradient between two given circles.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateTwoPointConicalGradient(const OH_Drawing_Point2D* startPt, float startRadius, const OH_Drawing_Point2D* endPt, float endRadius, const uint32_t* colors, const float* pos, uint32_t size, OH_Drawing_TileMode tileMode, const OH_Drawing_Matrix* matrix)](#oh_drawing_shadereffectcreatetwopointconicalgradient) | Creates an **OH_Drawing_ShaderEffect** object that generates a gradient between two given circles. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
 | [OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateCompose(OH_Drawing_ShaderEffect* dst, OH_Drawing_ShaderEffect* src, OH_Drawing_BlendMode mode)](#oh_drawing_shadereffectcreatecompose) | Creates a shader by blending two existing shaders in a certain way. |
 | [void OH_Drawing_ShaderEffectDestroy(OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_shadereffectdestroy) | Destroys an **OH_Drawing_ShaderEffect** object and reclaims the memory occupied by the object. |
 
@@ -93,7 +93,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateLinearGradient(const OH_Dr
 
 **Description**
 
-Creates a **ShaderEffect** object that generates a linear gradient between two points.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates a **ShaderEffect** object that generates a linear gradient between two points. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 11
 
@@ -104,9 +104,9 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 | const OH_Drawing_Point* startPt | Start point. |
 | const OH_Drawing_Point* endPt | End point. |
 | const uint32_t* colors | Colors to distribute between the two points. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed between the start point and end point. |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed between the start point and end point. |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 
 **Returns**:
 
@@ -122,7 +122,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateLinearGradientWithLocalMat
 
 **Description**
 
-Creates a **ShaderEffect** object that generates a linear gradient between two points.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates a **ShaderEffect** object that generates a linear gradient between two points. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -133,9 +133,9 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 | const OH_Drawing_Point2D* startPt | Start point. |
 | const OH_Drawing_Point2D* endPt | End point. |
 | const uint32_t* colors | Colors to distribute between the two points. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed between the start point and end point. |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed between the start point and end point. |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 | const OH_Drawing_Matrix* matrix | Matrix applied on the shader effect. If **matrix** is NULL, an identity matrix is applied by default. |
 
 **Returns**:
@@ -152,7 +152,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateRadialGradient(const OH_Dr
 
 **Description**
 
-Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radiusof a circle.The radial gradient transitions colors from the center to the ending shape in a radial manner.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radius of a circle. The radial gradient transitions colors from the center to the ending shape in a radial manner. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 11
 
@@ -163,9 +163,9 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient b
 | const OH_Drawing_Point* centerPt | Center of the circle. |
 | float radius | Radius of the gradient. The value should be a non-negative number. |
 | const uint32_t* colors | Colors to distribute in the radial direction. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed in the radial direction. |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed in the radial direction. |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 
 **Returns**:
 
@@ -181,7 +181,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateRadialGradientWithLocalMat
 
 **Description**
 
-Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radiusof a circle.The radial gradient transitions colors from the center to the ending shape in a radial manner.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient based on the center and radius of a circle. The radial gradient transitions colors from the center to the ending shape in a radial manner. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -192,9 +192,9 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a radial gradient b
 | const OH_Drawing_Point2D* centerPt | Center of the circle. |
 | float radius | Radius of the gradient. |
 | const uint32_t* colors | Colors to distribute in the radial direction. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed in the radial direction. |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed in the radial direction. |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 | const OH_Drawing_Matrix* matrix | Matrix applied on the shader effect. If **matrix** is NULL, an identity matrix is applied by default. |
 
 **Returns**:
@@ -211,7 +211,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateSweepGradientWithLocalMatr
 
 **Description**
 
-Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the matrixtransformation at the given center.A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°.
+Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the matrix transformation at the given center. A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°.
 
 **Since**: 20
 
@@ -221,9 +221,9 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient ba
 | -- | -- |
 | const OH_Drawing_Point* centerPt | Center of the circle. |
 | const uint32_t* colors | Colors to distribute between the two points. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed between the start angle (0°) and end angle (360°). |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed between the start angle (0°) and end angle (360°). |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 | const OH_Drawing_Matrix* matrix | Matrix applied on the shader effect. If **matrix** is NULL, an identity matrix is applied by default. |
 
 **Returns**:
@@ -240,7 +240,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateSweepGradient(const OH_Dra
 
 **Description**
 
-Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the center.A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient based on the center. A sweep gradient paints a gradient in a sweeping arc ranging from 0° to 360°. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **centerPt** or **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 11
 
@@ -250,9 +250,9 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a sweep gradient ba
 | -- | -- |
 | const OH_Drawing_Point* centerPt | Center of the circle. |
 | const uint32_t* colors | Colors to distribute between the two points. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed between the start angle (0°) and end angle (360°). |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed between the start angle (0°) and end angle (360°). |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 
 **Returns**:
 
@@ -268,7 +268,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateImageShader(OH_Drawing_Ima
 
 **Description**
 
-Creates an **OH_Drawing_ShaderEffect** object for an image shader. You are advised not to use the functionfor the canvas of the capture type because it affects the performance.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **image** or **samplingOptions** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If either **tileX** or **tileY** is not set to one of the enumerated values, OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates an **OH_Drawing_ShaderEffect** object for an image shader. You are advised not to use the function for the canvas of the capture type because it affects the performance. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **image** or **samplingOptions** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If either **tileX** or **tileY** is not set to one of the enumerated values, **<br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -277,10 +277,10 @@ Creates an **OH_Drawing_ShaderEffect** object for an image shader. You are advis
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Image* image | Pointer to the {@link OH_Drawing_Image} object. |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileX | Tile mode of the shader effect in the horizontal direction. For details about the available options,see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileY | Tile mode of the shader effect in the vertical direction. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileX | Tile mode of the shader effect in the horizontal direction. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileY | Tile mode of the shader effect in the vertical direction. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 | const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. |
-| const OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. If the pointer array is empty, the identity matrix ispassed in. |
+| const OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. If the pointer array is empty, the identity matrix is passed in. |
 
 **Returns**:
 
@@ -305,10 +305,10 @@ Creates a PixelMap shader object.
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_PixelMap* pixelMap | Pointer to the {@link OH_Drawing_PixelMap} object. |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileX | Tile mode of the shader effect in the horizontal direction. For details about the available options,see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileY | Tile mode of the shader effect in the vertical direction. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileX | Tile mode of the shader effect in the horizontal direction. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileY | Tile mode of the shader effect in the vertical direction. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 | const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. |
-| const OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. If the pointer array is empty, the identity matrix ispassed in. |
+| const OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. If the pointer array is empty, the identity matrix is passed in. |
 
 **Returns**:
 
@@ -324,7 +324,7 @@ OH_Drawing_ShaderEffect* OH_Drawing_ShaderEffectCreateTwoPointConicalGradient(co
 
 **Description**
 
-Creates an **OH_Drawing_ShaderEffect** object that generates a gradient between two given circles.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Creates an **OH_Drawing_ShaderEffect** object that generates a gradient between two given circles. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **startPt**, **endPt**, and **colors** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **tileMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -337,9 +337,9 @@ Creates an **OH_Drawing_ShaderEffect** object that generates a gradient between 
 | const OH_Drawing_Point2D* endPt | Pointer to the center of the end circle. |
 | float endRadius | End radius of the gradient. The value should be a non-negative number. |
 | const uint32_t* colors | Colors to distribute between the two circles. |
-| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*. If **pos** is NULL, colors are evenly distributed between the two circles. |
+| const float* pos | Relative position of each color in the color array. The array length must be the same as that of **colors*<br>*. If **pos** is NULL, colors are evenly distributed between the two circles. |
 | uint32_t size | Number of colors and positions (if **pos** is not NULL). |
-| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see[OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode). |
+| [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) tileMode | Tile mode of the shader effect. For details about the available options, see [OH_Drawing_TileMode](capi-drawing-shader-effect-h.md#oh_drawing_tilemode) . |
 | const OH_Drawing_Matrix* matrix | Matrix applied on the shader effect. If **matrix** is NULL, an identity matrix is applied by default. |
 
 **Returns**:

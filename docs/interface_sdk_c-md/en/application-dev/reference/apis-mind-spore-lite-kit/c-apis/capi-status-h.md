@@ -16,8 +16,14 @@ Provides the status codes of MindSpore Lite.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AI_CompCode](#oh_ai_compcode) | - | Defines the component code enumeration for MindSpore Lite.Used to identify the component module to which a status code belongs.Each status code contains a component code part.Component codes are used to distinguish error codes from different modules. |
-| [OH_AI_Status](#oh_ai_status) | OH_AI_Status | Defines the status code enumeration for MindSpore Lite.Used to indicate the return status of MindSpore Lite API calls, including success and various error conditions.Status codes are divided into different ranges, each corresponding to a specific type of error or status.Common error code ranges: (-100,-1] for general errors, (-200,-100] for executor errors, (-300,-200] for grapherrors, (-400,-300] for operator errors, (-500,-400] for tensor errors, (-600,-500] for shape inference errors,(-700,-600] for user input parameter errors, (-800,-700] for AIPP module errors. |
+| [OH_AI_CompCode](#oh_ai_compcode) | - | Defines the component code enumeration for MindSpore Lite.<br> Used to identify the component module to which a status code belongs. Each status code contains a component code part. Component codes are used to distinguish error codes from different modules. |
+| [OH_AI_Status](#oh_ai_status) | OH_AI_Status | Defines the status code enumeration for MindSpore Lite.<br> Used to indicate the return status of MindSpore Lite API calls, including success and various error conditions. Status codes are divided into different ranges, each corresponding to a specific type of error or status. Common error code ranges: (-100,-1] for general errors, (-200,-100] for executor errors, (-300,-200] for graph errors, (-400,-300] for operator errors, (-500,-400] for tensor errors, (-600,-500] for shape inference errors, (-700,-600] for user input parameter errors, (-800,-700] for AIPP module errors. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| MINDSPORE_INCLUDE_C_API_STATUS_C_H | Provides the status codes of MindSpore Lite.<br>**Since**: 9 |
 
 ## Enum type description
 
@@ -29,7 +35,7 @@ enum OH_AI_CompCode
 
 **Description**
 
-Defines the component code enumeration for MindSpore Lite.Used to identify the component module to which a status code belongs.Each status code contains a component code part.Component codes are used to distinguish error codes from different modules.
+Defines the component code enumeration for MindSpore Lite.<br> Used to identify the component module to which a status code belongs. Each status code contains a component code part. Component codes are used to distinguish error codes from different modules.
 
 **Since**: 9
 
@@ -49,7 +55,7 @@ enum OH_AI_Status
 
 **Description**
 
-Defines the status code enumeration for MindSpore Lite.Used to indicate the return status of MindSpore Lite API calls, including success and various error conditions.Status codes are divided into different ranges, each corresponding to a specific type of error or status.Common error code ranges: (-100,-1] for general errors, (-200,-100] for executor errors, (-300,-200] for grapherrors, (-400,-300] for operator errors, (-500,-400] for tensor errors, (-600,-500] for shape inference errors,(-700,-600] for user input parameter errors, (-800,-700] for AIPP module errors.
+Defines the status code enumeration for MindSpore Lite.<br> Used to indicate the return status of MindSpore Lite API calls, including success and various error conditions. Status codes are divided into different ranges, each corresponding to a specific type of error or status. Common error code ranges: (-100,-1] for general errors, (-200,-100] for executor errors, (-300,-200] for graph errors, (-400,-300] for operator errors, (-500,-400] for tensor errors, (-600,-500] for shape inference errors, (-700,-600] for user input parameter errors, (-800,-700] for AIPP module errors.
 
 **Since**: 9
 

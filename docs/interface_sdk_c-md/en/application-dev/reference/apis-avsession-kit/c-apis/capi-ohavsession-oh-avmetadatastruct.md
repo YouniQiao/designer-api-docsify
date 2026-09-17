@@ -6,7 +6,7 @@ typedef struct OH_AVMetadataStruct OH_AVMetadata
 
 ## Overview
 
-Declaring the avmetadata.The instance of avmetadata set by application for current resource.
+Declaring the avmetadata. The instance of avmetadata set by application for current resource.
 
 **Since**: 13
 

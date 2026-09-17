@@ -1,4 +1,4 @@
-# @ohos.ability.featureAbility
+# @ohos.ability.featureAbility(FeatureAbility Module)
 
 The FeatureAbility module provides APIs that enable user interaction. You can use the APIs to start or terminate an ability, obtain a dataAbilityHelper object, obtain the window corresponding to the current ability, and connect to or disconnect from a ServiceAbility.
 

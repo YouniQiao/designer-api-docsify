@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides Base DDK APIs, including creating the shared memory, mapping the shared memory,<br> unmapping the shared memory, and destroying the shared memory.
+Provides Base DDK APIs, including creating the shared memory, mapping the shared memory, unmapping the shared memory, and destroying the shared memory.
 
 **Since**: 12
 

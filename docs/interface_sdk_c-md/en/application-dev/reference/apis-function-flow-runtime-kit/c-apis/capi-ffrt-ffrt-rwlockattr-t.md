@@ -20,6 +20,6 @@ Defines the rwlock attribute structure used to store rwlock attribute informatio
 
 | Name | Description |
 | -- | -- |
-| long storage | Internal storage backing the rwlock attribute. Do not access directly; direct access maycause the rwlock attribute to become invalid. |
+| long storage | Internal storage backing the rwlock attribute. Do not access directly; direct access may cause the rwlock attribute to become invalid. |
 
 

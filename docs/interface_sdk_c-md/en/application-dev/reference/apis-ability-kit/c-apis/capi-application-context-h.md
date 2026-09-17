@@ -32,12 +32,12 @@ The file declares the APIs related to the application-level context.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbility(AbilityBase_Want *want)](#oh_abilityruntime_startselfuiability) | Starts the UIAbility of the current application. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbilityWithStartOptions(AbilityBase_Want *want, AbilityRuntime_StartOptions *options)](#oh_abilityruntime_startselfuiabilitywithstartoptions) | Starts the UIAbility of the current application using **StartOptions**. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetVersionCode(int64_t* versionCode)](#oh_abilityruntime_applicationcontextgetversioncode) | Obtains the application version code. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLaunchParameter(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlaunchparameter) | Obtains **WantParams** passed for the initial launch of the UIAbility of the current application. For detailsabout **WantParams**, see {@link parameters in Want}. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLatestParameter(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlatestparameter) | Obtains **WantParams** passed for the mose recent launch of the UIAbility of the current application. Fordetails about **WantParams**, see {@link parameters in Want}. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbilityWithPidResult(AbilityBase_Want *want, AbilityRuntime_StartOptions *options, int32_t *targetPid)](#oh_abilityruntime_startselfuiabilitywithpidresult) | Starts the UIAbility of the current application using **StartOptions** and obtains the process ID of thetarget UIAbility. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLaunchParameter(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlaunchparameter) | Obtains **WantParams** passed for the initial launch of the UIAbility of the current application. For details about **WantParams**, see {@link parameters in Want}. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLatestParameter(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlatestparameter) | Obtains **WantParams** passed for the mose recent launch of the UIAbility of the current application. For details about **WantParams**, see {@link parameters in Want}. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbilityWithPidResult(AbilityBase_Want *want, AbilityRuntime_StartOptions *options, int32_t *targetPid)](#oh_abilityruntime_startselfuiabilitywithpidresult) | Starts the UIAbility of the current application using **StartOptions** and obtains the process ID of the target UIAbility. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLogFileDir(char* buffer, const int32_t bufferSize, int32_t* writeLength)](#oh_abilityruntime_applicationcontextgetlogfiledir) | Obtains the application-level log file directory of the application. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextNotifyPageChanged(const char* targetPageName, int32_t targetPageNameLength, int32_t windowId)](#oh_abilityruntime_applicationcontextnotifypagechanged) | This API can be called only from third-party frameworks. Each time a third-party framework switches pages, itnotifies the system of the target page information (including the target page path, the length of the target pagepath, and the window ID corresponding to the target page). The system can adjust or recover the page according toproduct policies. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)](#oh_abilityruntime_acquireuiabilitychildprocessinfos) | Acquires UIAbility child process infos of the current application.Includes child processes created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextNotifyPageChanged(const char* targetPageName, int32_t targetPageNameLength, int32_t windowId)](#oh_abilityruntime_applicationcontextnotifypagechanged) | This API can be called only from third-party frameworks. Each time a third-party framework switches pages, it notifies the system of the target page information (including the target page path, the length of the target page path, and the window ID corresponding to the target page). The system can adjust or recover the page according to product policies. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_AbilityRuntime_ChildProcessInfosHandle* infos, uint32_t* count)](#oh_abilityruntime_acquireuiabilitychildprocessinfos) | Acquires UIAbility child process infos of the current application.<br> Includes child processes created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT. |
 
 ## Function description
 
@@ -57,9 +57,9 @@ Obtains the application-level cache directory of the application.
 
 | Parameter | Description |
 | -- | -- |
-| char* buffer | Pointer to the buffer, which is used to receive the application-level cache directory of theapplication. |
+| char* buffer | Pointer to the buffer, which is used to receive the application-level cache directory of the application. |
 | int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -109,7 +109,7 @@ Obtains the bundle name of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the bundle name. |
 | int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -135,7 +135,7 @@ Obtains the application-level temporary file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the temporary file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -161,7 +161,7 @@ Obtains the application-level common file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the common file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -187,7 +187,7 @@ Obtains the application-level database file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the database file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -213,7 +213,7 @@ Obtains the application-level preferences file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the preferences file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -239,7 +239,7 @@ Obtains the application-level installation file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the installation file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -265,7 +265,7 @@ Obtains the application-level distributed file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the distributed file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -291,7 +291,7 @@ Obtains the application-level cloud file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the cloud file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -318,7 +318,7 @@ Obtains the application-level resource directory of the application.
 | const char* moduleName | Pointer to the module name. |
 | char* buffer | Pointer to the buffer, which is used to receive the resource directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -371,7 +371,7 @@ Starts the UIAbility of the current application using **StartOptions**.
 | Parameter | Description |
 | -- | -- |
 | AbilityBase_Want *want | Pointer to the Want information required for starting the UIAbility. |
-| AbilityRuntime_StartOptions *options | Pointer to **StartOptions** required for starting the UIAbility.If the value of {@link startVisibility}is not null, ensure that the current application has been added to the status bar.Otherwise, the {@link ABILITY_RUNTIME_ERROR_VISIBILITY_SETTING_DISABLED} error code is returned. |
+| AbilityRuntime_StartOptions *options | Pointer to **StartOptions** required for starting the UIAbility. If the value of {@link startVisibility}<br>     is not null, ensure that the current application has been added to the status bar.<br>     Otherwise, the {@link ABILITY_RUNTIME_ERROR_VISIBILITY_SETTING_DISABLED} error code is returned. |
 
 **Returns**:
 
@@ -411,7 +411,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLaunchParameter(
 
 **Description**
 
-Obtains **WantParams** passed for the initial launch of the UIAbility of the current application. For detailsabout **WantParams**, see {@link parameters in Want}.
+Obtains **WantParams** passed for the initial launch of the UIAbility of the current application. For details about **WantParams**, see {@link parameters in Want}.
 
 **Since**: 21
 
@@ -421,7 +421,7 @@ Obtains **WantParams** passed for the initial launch of the UIAbility of the cur
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive **WantParams**. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -437,7 +437,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextGetLatestParameter(
 
 **Description**
 
-Obtains **WantParams** passed for the mose recent launch of the UIAbility of the current application. Fordetails about **WantParams**, see {@link parameters in Want}.
+Obtains **WantParams** passed for the mose recent launch of the UIAbility of the current application. For details about **WantParams**, see {@link parameters in Want}.
 
 **Since**: 21
 
@@ -447,7 +447,7 @@ Obtains **WantParams** passed for the mose recent launch of the UIAbility of the
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive **WantParams**. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -463,7 +463,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_StartSelfUIAbilityWithPidResult(Abili
 
 **Description**
 
-Starts the UIAbility of the current application using **StartOptions** and obtains the process ID of thetarget UIAbility.
+Starts the UIAbility of the current application using **StartOptions** and obtains the process ID of the target UIAbility.
 
 **Required permission**: ohos.permission.NDK_START_SELF_UI_ABILITY
 
@@ -474,7 +474,7 @@ Starts the UIAbility of the current application using **StartOptions** and obtai
 | Parameter | Description |
 | -- | -- |
 | AbilityBase_Want *want | Pointer to the Want information required for starting the UIAbility. |
-| AbilityRuntime_StartOptions *options | Pointer to **StartOptions** required for starting the UIAbility.If the value of {@link startVisibility} is not null, ensure that the current application has been addedto the status bar. Otherwise, the {@link ABILITY_RUNTIME_ERROR_VISIBILITY_SETTING_DISABLED}error code is returned. |
+| AbilityRuntime_StartOptions *options | Pointer to **StartOptions** required for starting the UIAbility. If the value of {@link startVisibility} is not null, ensure that the current application has been added<br>     to the status bar. Otherwise, the {@link ABILITY_RUNTIME_ERROR_VISIBILITY_SETTING_DISABLED} error code is returned. |
 | int32_t *targetPid | Pointer to the process ID of the target UIAbility. |
 
 **Returns**:
@@ -501,7 +501,7 @@ Obtains the application-level log file directory of the application.
 | -- | -- |
 | char* buffer | Pointer to the buffer, which is used to receive the log file directory. |
 | const int32_t bufferSize | Buffer size, in bytes. |
-| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes)when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
+| int32_t* writeLength | Pointer to the length of the string written to the buffer (measured in bytes) when {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} is returned. |
 
 **Returns**:
 
@@ -517,7 +517,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ApplicationContextNotifyPageChanged(c
 
 **Description**
 
-This API can be called only from third-party frameworks. Each time a third-party framework switches pages, itnotifies the system of the target page information (including the target page path, the length of the target pagepath, and the window ID corresponding to the target page). The system can adjust or recover the page according toproduct policies.
+This API can be called only from third-party frameworks. Each time a third-party framework switches pages, it notifies the system of the target page information (including the target page path, the length of the target page path, and the window ID corresponding to the target page). The system can adjust or recover the page according to product policies.
 
 **Since**: 23
 
@@ -543,7 +543,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_AcquireUIAbilityChildProcessInfos(OH_
 
 **Description**
 
-Acquires UIAbility child process infos of the current application.Includes child processes created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT.
+Acquires UIAbility child process infos of the current application.<br> Includes child processes created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT.
 
 **Since**: 26.1.0
 
@@ -551,13 +551,13 @@ Acquires UIAbility child process infos of the current application.Includes child
 
 | Parameter | Description |
 | -- | -- |
-| OH_AbilityRuntime_ChildProcessInfosHandle* infos | [out] Pointer to child process info collection. It must not be NULL.When no child processes exist, the dereferenced value of the pointer **infos** is set to nullptr. |
+| OH_AbilityRuntime_ChildProcessInfosHandle* infos | [out] Pointer to child process info collection. It must not be NULL. When no child processes exist, the dereferenced value of the pointer **infos** is set to nullptr. |
 | uint32_t* count | [out] Pointer to the number of child processes. It must not be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the call is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if an internal error occurs,       such as connect system service failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the call is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if an internal error occurs,       such as connect system service failed.</li>       </ul> |
 
 

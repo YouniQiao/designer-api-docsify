@@ -8,7 +8,7 @@ Declare common types and interfaces for modular object dispatcher.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since**: 26.0.0
+**Since**: 13
 
 **Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
@@ -18,7 +18,7 @@ Declare common types and interfaces for modular object dispatcher.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) | OH_AbilityRuntime_ModObjDispatcher_TypeInfo | Defines the parameter type descriptor for modular object dispatcher.Describes the type of a parameter or return value using a tagged union.for array types, use u.arrayType.pElementType and u.arrayType.size;for vector/set types, use u.pElementType;for struct/proxy/stub/enum types, use u.idlType. |
+| [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) | OH_AbilityRuntime_ModObjDispatcher_TypeInfo | Defines the parameter type descriptor for modular object dispatcher.<br> Describes the type of a parameter or return value using a tagged union. for array types, use u.arrayType.pElementType and u.arrayType.size; for vector/set types, use u.pElementType; for struct/proxy/stub/enum types, use u.idlType. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md) | OH_AbilityRuntime_ModObjDispatcher_Variant | Defines a variant structure using union + type tag for ABI compatibility. |
 | [OH_AbilityRuntime_ModObjDispatcher_InputParams](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-inputparams.md) | OH_AbilityRuntime_ModObjDispatcher_InputParams | Defines a parameter structure for method invocation. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typedescriptorhandle.md) | - | Defines a pointer to OH_AbilityRuntime_ModularObjectDispatcher_TypeDescriptor. |
@@ -33,15 +33,17 @@ Declare common types and interfaces for modular object dispatcher.
 
 | Name | Description |
 | -- | -- |
-| [void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDispatcher_TypeInfo* pTypeInfo)](#oh_abilityruntime_modobjdispatcher_typeinfoclear) | Clear TypeInfo resources.Recursively release any heap resources held by a TypeInfo struct(idlType strings, child TypeInfo nodes for map/array/vector/set types).After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed(it is typically stack-allocated by the caller).TypeInfoClear must NOT be called on a shallow copy of another TypeInfo.If TypeInfo t2 = t1 is performed, only clear one of them. |
-| [void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDispatcher_Variant* pVariant)](#oh_abilityruntime_modobjdispatcher_variantclear) | Clear variant resources.Release any resources held by the variant (strings, container handles, etc.).After clearing, the variant is reset to VT_EMPTY with all fields zeroed.Ownership rules:- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the functionperforms a deep copy. The caller retains ownership of the original Variant andis responsible for freeing its own resources (e.g. free(bstrVal) for strings,Release for container handles).- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod),the function performs a deep copy and the caller owns the returned Variant.The caller must call VariantClear exactly once to release the resources.- Simple types (bool, i32, f64, etc.) do not hold heap resources and do notrequire VariantClear, though calling it is harmless.- VariantClear must NOT be called on a shallow copy of another Variant.If Variant v2 = v1 is performed, only clear one of them. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceInstance(OHIPCRemoteProxy* remoteProxy, OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_createmainserviceinstance) | Create a modular object dispatcher instance from an IPC remote proxy for the main service interface.The type library metadata will be lazily loaded from the remote service on the first callthat requires it, such as HasTypeDescriptor, QueryMainServiceInterfaceMemIDsOfNames, or CallMethod. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance(OH_AbilityRuntime_ModObjDispatcherHandle mainServiceDispatcher, OHIPCRemoteProxy* subProxy, OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_createsubinstance) | Create a sub-instance dispatcher bound to a mainService dispatcher.The sub-instance shares the mainService dispatcher's metadata but uses its ownIPC proxy. When CallMethod is invoked on the sub-instance, method metadata isresolved from the mainService dispatcher and the call is sent through subProxy. |
+| [void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDispatcher_TypeInfo* pTypeInfo)](#oh_abilityruntime_modobjdispatcher_typeinfoclear) | Clear TypeInfo resources.<br> Recursively release any heap resources held by a TypeInfo struct (idlType strings, child TypeInfo nodes for map/array/vector/set types). After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed (it is typically stack-allocated by the caller).<br> TypeInfoClear must NOT be called on a shallow copy of another TypeInfo. If TypeInfo t2 = t1 is performed, only clear one of them. |
+| [void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDispatcher_Variant* pVariant)](#oh_abilityruntime_modobjdispatcher_variantclear) | Clear variant resources.<br> Release any resources held by the variant (strings, container handles, etc.). After clearing, the variant is reset to VT_EMPTY with all fields zeroed.<br> Ownership rules: - When a Variant is passed to a function (e.g. Array_Set, Map_Put), the function performs a deep copy. The caller retains ownership of the original Variant and is responsible for freeing its own resources (e.g. free(bstrVal) for strings, Release for container handles). - When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod), the function performs a deep copy and the caller owns the returned Variant. The caller must call VariantClear exactly once to release the resources. - Simple types (bool, i32, f64, etc.) do not hold heap resources and do not require VariantClear, though calling it is harmless. - VariantClear must NOT be called on a shallow copy of another Variant. If Variant v2 = v1 is performed, only clear one of them. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceInstance(OHIPCRemoteProxy* remoteProxy, OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_createmainserviceinstance) | Create a modular object dispatcher instance from an IPC remote proxy for the main service interface.<br> The type library metadata will be lazily loaded from the remote service on the first call that requires it, such as HasTypeDescriptor, QueryMainServiceInterfaceMemIDsOfNames, or CallMethod. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance(OH_AbilityRuntime_ModObjDispatcherHandle mainServiceDispatcher, OHIPCRemoteProxy* subProxy, OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_createsubinstance) | Create a sub-instance dispatcher bound to a mainService dispatcher.<br> The sub-instance shares the mainService dispatcher's metadata but uses its own IPC proxy. When CallMethod is invoked on the sub-instance, method metadata is resolved from the mainService dispatcher and the call is sent through subProxy. |
 | [void OH_AbilityRuntime_ModObjDispatcher_Release(OH_AbilityRuntime_ModObjDispatcherHandle* ppModObjDispatcher)](#oh_abilityruntime_modobjdispatcher_release) | Release modular object dispatcher instance. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_HasTypeDescriptor(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, uint32_t* pctinfo)](#oh_abilityruntime_modobjdispatcher_hastypedescriptor) | Check if the type library metadata is available from the remote service. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle* ppTypeDescriptor)](#oh_abilityruntime_modobjdispatcher_gettypedescriptor) | Get type descriptor for querying interface metadata information.The type descriptor provides access to type library metadata including interfaces,methods, enums, and structs defined in the remote service's type library.Must call [OH_AbilityRuntime_TypeDescriptor_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_release) to release the handle when no longer needed. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInterfaceMemIDsOfNames(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, const char** rgszNames, uint32_t cNames, uint32_t* pMemID)](#oh_abilityruntime_modobjdispatcher_querymainserviceinterfacememidsofnames) | Query member IDs of method names in the main service interface.The returned member IDs can be used as the memID parameter in[OH_AbilityRuntime_ModObjDispatcher_CallMethod](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_callmethod). |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CallMethod(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, uint32_t memID, OH_AbilityRuntime_ModObjDispatcher_InputParams* pInputParams, OH_AbilityRuntime_ModObjDispatcher_Variant* pResult, int32_t* pMethodErrCode) // ========== TypeDescriptor Interfaces ==========](#oh_abilityruntime_modobjdispatcher_callmethod) | Call a method. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle* ppTypeDescriptor)](#oh_abilityruntime_modobjdispatcher_gettypedescriptor) | Get type descriptor for querying interface metadata information.<br> The type descriptor provides access to type library metadata including interfaces, methods, enums, and structs defined in the remote service's type library. Must call [OH_AbilityRuntime_TypeDescriptor_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_release) to release the handle when no longer needed. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInterfaceMemIDsOfNames(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, const char** rgszNames, uint32_t cNames, uint32_t* pMemID)](#oh_abilityruntime_modobjdispatcher_querymainserviceinterfacememidsofnames) | Query member IDs of method names in the main service interface.<br> The returned member IDs can be used as the memID parameter in [OH_AbilityRuntime_ModObjDispatcher_CallMethod](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_callmethod). |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CallMethod(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, uint32_t memID, OH_AbilityRuntime_ModObjDispatcher_InputParams* pInputParams, OH_AbilityRuntime_ModObjDispatcher_Variant* pResult, int32_t* pMethodErrCode)
+
+// ========== TypeDescriptor Interfaces ==========](#oh_abilityruntime_modobjdispatcher_callmethod) | Call a method. |
 | [void OH_AbilityRuntime_TypeDescriptor_Release(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle *pTypeDescriptor)](#oh_abilityruntime_typedescriptor_release) | Release TypeDescriptor instance. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetVersion(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, char* pbstrVersion, uint32_t cMaxVersion)](#oh_abilityruntime_typedescriptor_getversion) | Get version of the type library. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, uint32_t* pcInterfaces)](#oh_abilityruntime_typedescriptor_getinterfacecount) | Get total number of interfaces. |
@@ -54,7 +56,9 @@ Declare common types and interfaces for modular object dispatcher.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodReturnType(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, OH_AbilityRuntime_ModObjDispatcher_TypeInfo* pReturnType)](#oh_abilityruntime_typedescriptor_getmethodreturntype) | Get method return type by name from interface. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamCount(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, uint32_t* pcParams)](#oh_abilityruntime_typedescriptor_getmethodparamcount) | Get method parameter count by name from interface. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamType(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, uint32_t iParamIndex, OH_AbilityRuntime_ModObjDispatcher_TypeInfo* pParamType)](#oh_abilityruntime_typedescriptor_getmethodparamtype) | Get method parameter type by name and index from interface. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamName(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, uint32_t iParamIndex, char* pbstrName, uint32_t cMaxName) // ========== Enum Queries ==========](#oh_abilityruntime_typedescriptor_getmethodparamname) | Get method parameter name by name and index from interface. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamName(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, uint32_t iParamIndex, char* pbstrName, uint32_t cMaxName)
+
+// ========== Enum Queries ==========](#oh_abilityruntime_typedescriptor_getmethodparamname) | Get method parameter name by name and index from interface. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumCount(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, uint32_t* pcEnums)](#oh_abilityruntime_typedescriptor_getenumcount) | Get enum count. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumName(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, uint32_t index, char* pbstrName, uint32_t cMaxName)](#oh_abilityruntime_typedescriptor_getenumname) | Get enum name by index. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValueCount(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrEnumName, uint32_t* pcValues)](#oh_abilityruntime_typedescriptor_getenumvaluecount) | Get enum value count by enum name. |
@@ -84,7 +88,7 @@ Declare common types and interfaces for modular object dispatcher.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetRemove(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, const OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_setremove) | Remove an element from set. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetContains(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, const OH_AbilityRuntime_ModObjDispatcher_Variant* pValue, bool* pExists)](#oh_abilityruntime_modobjdispatcher_setcontains) | Check if an element exists in set. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetSize(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, uint32_t* pSize)](#oh_abilityruntime_modobjdispatcher_setgetsize) | Get set size. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_setgetat) | Get a set element value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_setgetat) | Get a set element value by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetClear(OH_AbilityRuntime_ModObjDispatcher_SetHandle pSet)](#oh_abilityruntime_modobjdispatcher_setclear) | Clear set. |
 | [void OH_AbilityRuntime_ModObjDispatcher_SetRelease(OH_AbilityRuntime_ModObjDispatcher_SetHandle* ppSet)](#oh_abilityruntime_modobjdispatcher_setrelease) | Release set instance. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapCreate(OH_AbilityRuntime_ModObjDispatcher_ValueType keyType, OH_AbilityRuntime_ModObjDispatcher_TypeInfo *valueType, OH_AbilityRuntime_ModObjDispatcher_MapHandle* ppMap)](#oh_abilityruntime_modobjdispatcher_mapcreate) | Create a map instance. |
@@ -95,8 +99,8 @@ Declare common types and interfaces for modular object dispatcher.
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapRemove(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, const OH_AbilityRuntime_ModObjDispatcher_Variant* pKey)](#oh_abilityruntime_modobjdispatcher_mapremove) | Remove a key-value pair from map. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapContainsKey(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, const OH_AbilityRuntime_ModObjDispatcher_Variant* pKey, bool* pExists)](#oh_abilityruntime_modobjdispatcher_mapcontainskey) | Check if a key exists in map. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetSize(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t* pSize)](#oh_abilityruntime_modobjdispatcher_mapgetsize) | Get map size. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pKey)](#oh_abilityruntime_modobjdispatcher_mapgetkeyat) | Get a map key by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
-| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_mapgetvalueat) | Get a map value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pKey)](#oh_abilityruntime_modobjdispatcher_mapgetkeyat) | Get a map key by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
+| [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap, uint32_t index, OH_AbilityRuntime_ModObjDispatcher_Variant* pValue)](#oh_abilityruntime_modobjdispatcher_mapgetvalueat) | Get a map value by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapClear(OH_AbilityRuntime_ModObjDispatcher_MapHandle pMap)](#oh_abilityruntime_modobjdispatcher_mapclear) | Clear map. |
 | [void OH_AbilityRuntime_ModObjDispatcher_MapRelease(OH_AbilityRuntime_ModObjDispatcher_MapHandle* ppMap)](#oh_abilityruntime_modobjdispatcher_maprelease) | Release map instance. |
 | [AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructCreate(const char* structName, OH_AbilityRuntime_ModObjDispatcher_StructHandle* ppStruct)](#oh_abilityruntime_modobjdispatcher_structcreate) | Create a struct instance. |
@@ -115,7 +119,7 @@ void OH_AbilityRuntime_ModObjDispatcher_TypeInfoClear(OH_AbilityRuntime_ModObjDi
 
 **Description**
 
-Clear TypeInfo resources.Recursively release any heap resources held by a TypeInfo struct(idlType strings, child TypeInfo nodes for map/array/vector/set types).After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed(it is typically stack-allocated by the caller).TypeInfoClear must NOT be called on a shallow copy of another TypeInfo.If TypeInfo t2 = t1 is performed, only clear one of them.
+Clear TypeInfo resources.<br> Recursively release any heap resources held by a TypeInfo struct (idlType strings, child TypeInfo nodes for map/array/vector/set types). After clearing, all pointers are set to NULL but the TypeInfo struct itself is not freed (it is typically stack-allocated by the caller).<br> TypeInfoClear must NOT be called on a shallow copy of another TypeInfo. If TypeInfo t2 = t1 is performed, only clear one of them.
 
 **Since**: 26.0.0
 
@@ -133,7 +137,7 @@ void OH_AbilityRuntime_ModObjDispatcher_VariantClear(OH_AbilityRuntime_ModObjDis
 
 **Description**
 
-Clear variant resources.Release any resources held by the variant (strings, container handles, etc.).After clearing, the variant is reset to VT_EMPTY with all fields zeroed.Ownership rules:- When a Variant is passed to a function (e.g. Array_Set, Map_Put), the functionperforms a deep copy. The caller retains ownership of the original Variant andis responsible for freeing its own resources (e.g. free(bstrVal) for strings,Release for container handles).- When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod),the function performs a deep copy and the caller owns the returned Variant.The caller must call VariantClear exactly once to release the resources.- Simple types (bool, i32, f64, etc.) do not hold heap resources and do notrequire VariantClear, though calling it is harmless.- VariantClear must NOT be called on a shallow copy of another Variant.If Variant v2 = v1 is performed, only clear one of them.
+Clear variant resources.<br> Release any resources held by the variant (strings, container handles, etc.). After clearing, the variant is reset to VT_EMPTY with all fields zeroed.<br> Ownership rules: - When a Variant is passed to a function (e.g. Array_Set, Map_Put), the function performs a deep copy. The caller retains ownership of the original Variant and is responsible for freeing its own resources (e.g. free(bstrVal) for strings, Release for container handles). - When a Variant is returned from a function (e.g. Array_Get, Map_Get, CallMethod), the function performs a deep copy and the caller owns the returned Variant. The caller must call VariantClear exactly once to release the resources. - Simple types (bool, i32, f64, etc.) do not hold heap resources and do not require VariantClear, though calling it is harmless. - VariantClear must NOT be called on a shallow copy of another Variant. If Variant v2 = v1 is performed, only clear one of them.
 
 **Since**: 26.0.0
 
@@ -151,7 +155,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceIns
 
 **Description**
 
-Create a modular object dispatcher instance from an IPC remote proxy for the main service interface.The type library metadata will be lazily loaded from the remote service on the first callthat requires it, such as HasTypeDescriptor, QueryMainServiceInterfaceMemIDsOfNames, or CallMethod.
+Create a modular object dispatcher instance from an IPC remote proxy for the main service interface.<br> The type library metadata will be lazily loaded from the remote service on the first call that requires it, such as HasTypeDescriptor, QueryMainServiceInterfaceMemIDsOfNames, or CallMethod.
 
 **Since**: 26.0.0
 
@@ -166,7 +170,7 @@ Create a modular object dispatcher instance from an IPC remote proxy for the mai
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if remoteProxy or ppModObjDispatcher is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if remoteProxy or ppModObjDispatcher is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance()
 
@@ -176,7 +180,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance(OH
 
 **Description**
 
-Create a sub-instance dispatcher bound to a mainService dispatcher.The sub-instance shares the mainService dispatcher's metadata but uses its ownIPC proxy. When CallMethod is invoked on the sub-instance, method metadata isresolved from the mainService dispatcher and the call is sent through subProxy.
+Create a sub-instance dispatcher bound to a mainService dispatcher.<br> The sub-instance shares the mainService dispatcher's metadata but uses its own IPC proxy. When CallMethod is invoked on the sub-instance, method metadata is resolved from the mainService dispatcher and the call is sent through subProxy.
 
 **Since**: 26.0.0
 
@@ -192,7 +196,7 @@ Create a sub-instance dispatcher bound to a mainService dispatcher.The sub-insta
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if mainServiceDispatcher or subProxy       or ppModObjDispatcher is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if mainServiceDispatcher or subProxy<br>     or ppModObjDispatcher is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_Release()
 
@@ -210,7 +214,7 @@ Release modular object dispatcher instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md)* ppModObjDispatcher | Indicates a pointer to modular object dispatcher handle to release.After release, handle will be set to NULL. |
+| [OH_AbilityRuntime_ModObjDispatcherHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher8h.md)* ppModObjDispatcher | Indicates a pointer to modular object dispatcher handle to release. After release, handle will be set to NULL. |
 
 ### OH_AbilityRuntime_ModObjDispatcher_HasTypeDescriptor()
 
@@ -235,7 +239,7 @@ Check if the type library metadata is available from the remote service.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or pctinfo is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded from the remote service.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or pctinfo is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded from the remote service.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor()
 
@@ -245,7 +249,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor(OH
 
 **Description**
 
-Get type descriptor for querying interface metadata information.The type descriptor provides access to type library metadata including interfaces,methods, enums, and structs defined in the remote service's type library.Must call [OH_AbilityRuntime_TypeDescriptor_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_release) to release the handle when no longer needed.
+Get type descriptor for querying interface metadata information.<br> The type descriptor provides access to type library metadata including interfaces, methods, enums, and structs defined in the remote service's type library. Must call [OH_AbilityRuntime_TypeDescriptor_Release](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_release) to release the handle when no longer needed.
 
 **Since**: 26.0.0
 
@@ -260,7 +264,7 @@ Get type descriptor for querying interface metadata information.The type descrip
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or ppTypeDescriptor is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or ppTypeDescriptor is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInterfaceMemIDsOfNames()
 
@@ -270,7 +274,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInte
 
 **Description**
 
-Query member IDs of method names in the main service interface.The returned member IDs can be used as the memID parameter in[OH_AbilityRuntime_ModObjDispatcher_CallMethod](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_callmethod).
+Query member IDs of method names in the main service interface.<br> The returned member IDs can be used as the memID parameter in [OH_AbilityRuntime_ModObjDispatcher_CallMethod](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_callmethod).
 
 **Since**: 26.0.0
 
@@ -287,12 +291,14 @@ Query member IDs of method names in the main service interface.The returned memb
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or rgszNames or pMemID is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if name not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded from the remote service.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or rgszNames or pMemID is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if name not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded from the remote service.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_CallMethod()
 
 ```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CallMethod(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, uint32_t memID, OH_AbilityRuntime_ModObjDispatcher_InputParams* pInputParams, OH_AbilityRuntime_ModObjDispatcher_Variant* pResult, int32_t* pMethodErrCode) // ========== TypeDescriptor Interfaces ==========
+AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CallMethod(OH_AbilityRuntime_ModObjDispatcherHandle pModObjDispatcher, uint32_t memID, OH_AbilityRuntime_ModObjDispatcher_InputParams* pInputParams, OH_AbilityRuntime_ModObjDispatcher_Variant* pResult, int32_t* pMethodErrCode)
+
+// ========== TypeDescriptor Interfaces ==========
 ```
 
 **Description**
@@ -309,13 +315,13 @@ Call a method.
 | uint32_t memID | Indicates method member ID (MemberID). |
 | [OH_AbilityRuntime_ModObjDispatcher_InputParams](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-inputparams.md)* pInputParams | Indicates parameter structure containing arguments. |
 | [OH_AbilityRuntime_ModObjDispatcher_Variant](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-variant.md)* pResult | Indicates pointer to receive result variant. |
-| pMethodErrCode | Indicates a pointer to receive the error code returned by the remote method.0 if the method executed successfully, non-zero if the method returned an error.This is independent of the framework-level return value.This parameter can be NULL if the caller does not need the method-level error code. |
+| pMethodErrCode | Indicates a pointer to receive the error code returned by the remote method. 0 if the method executed successfully, non-zero if the method returned an error. This is independent of the framework-level return value. This parameter can be NULL if the caller does not need the method-level error code. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if IPC call is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or pInputParams or       pResult is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if method not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if parameter type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed       when copying parameter or result.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if IPC call is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pModObjDispatcher or pInputParams or<br>     pResult is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if method not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if parameter type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} if send request failed.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} if type library metadata is invalid.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed       when copying parameter or result.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_Release()
 
@@ -359,7 +365,7 @@ Get version of the type library.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or       pbstrVersion is null, or cMaxVersion is 0.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or<br>     pbstrVersion is null, or cMaxVersion is 0.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount()
 
@@ -384,7 +390,7 @@ Get total number of interfaces.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pcInterfaces is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pcInterfaces is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceName()
 
@@ -403,7 +409,7 @@ Get interface name by index.
 | Parameter | Description |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typedescriptorhandle.md) pTypeDescriptor | Indicates TypeDescriptor handle. |
-| uint32_t index | Indicates interface index, ranging from 0 to(interface count - 1) obtained from [OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_getinterfacecount). |
+| uint32_t index | Indicates interface index, ranging from 0 to (interface count - 1) obtained from [OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_getinterfacecount). |
 | char* pbstrName | Indicates a buffer to receive interface name. |
 | uint32_t cMaxName | Indicates size of buffer in bytes, including the null terminator. |
 
@@ -411,7 +417,7 @@ Get interface name by index.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null,       or cMaxName is 0, or index is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null,<br>     or cMaxName is 0, or index is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceIsCallback()
 
@@ -437,7 +443,7 @@ Check if interface is a callback type.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName or       pIsCallback is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface not found.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName or<br>     pIsCallback is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface not found.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMainServiceInterfaceName()
 
@@ -463,7 +469,7 @@ Get main service interface name.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null,       or cMaxName is 0.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null,<br>     or cMaxName is 0.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodCount()
 
@@ -489,7 +495,7 @@ Get method count from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or       pbstrInterfaceName or pcMethods is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface not found.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or<br>     pbstrInterfaceName or pcMethods is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface not found.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodName()
 
@@ -509,7 +515,7 @@ Get method name by index from interface.
 | -- | -- |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typedescriptorhandle.md) pTypeDescriptor | Indicates TypeDescriptor handle. |
 | const char* pbstrInterfaceName | Indicates interface name. |
-| uint32_t index | Indicates method index, ranging from 0 to (method count - 1)obtained from [OH_AbilityRuntime_TypeDescriptor_GetMethodCount](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_getmethodcount). |
+| uint32_t index | Indicates method index, ranging from 0 to (method count - 1) obtained from [OH_AbilityRuntime_TypeDescriptor_GetMethodCount](capi-modular-object-dispatcher-h.md#oh_abilityruntime_typedescriptor_getmethodcount). |
 | char* pbstrName | Indicates a buffer to receive method name. |
 | uint32_t cMaxName | Indicates size of buffer in bytes, including the null terminator. |
 
@@ -517,7 +523,7 @@ Get method name by index from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or       pbstrName is null, or cMaxName is 0, or index is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or<br>     pbstrName is null, or cMaxName is 0, or index is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodMemberId()
 
@@ -544,7 +550,7 @@ Get method MemberID by name from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or       pbstrMethodName or pMemID is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or<br>     pbstrMethodName or pMemID is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodReturnType()
 
@@ -571,7 +577,7 @@ Get method return type by name from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or       pbstrMethodName or pReturnType is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or<br>     pbstrMethodName or pReturnType is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamCount()
 
@@ -598,7 +604,7 @@ Get method parameter count by name from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or       pbstrMethodName or pcParams is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or<br>     pbstrMethodName or pcParams is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamType()
 
@@ -626,12 +632,14 @@ Get method parameter type by name and index from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or       pbstrMethodName or pParamType is null, or iParamIndex is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or<br>     pbstrMethodName or pParamType is null, or iParamIndex is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamName()
 
 ```c
-AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamName(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, uint32_t iParamIndex, char* pbstrName, uint32_t cMaxName) // ========== Enum Queries ==========
+AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamName(OH_AbilityRuntime_ModObjDispatcher_TypeDescriptorHandle pTypeDescriptor, const char* pbstrInterfaceName, const char* pbstrMethodName, uint32_t iParamIndex, char* pbstrName, uint32_t cMaxName)
+
+// ========== Enum Queries ==========
 ```
 
 **Description**
@@ -655,7 +663,7 @@ Get method parameter name by name and index from interface.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or       pbstrMethodName or pbstrName is null, or iParamIndex is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrInterfaceName or<br>     pbstrMethodName or pbstrName is null, or iParamIndex is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if interface or method not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumCount()
 
@@ -680,7 +688,7 @@ Get enum count.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pcEnums is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pcEnums is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumName()
 
@@ -707,7 +715,7 @@ Get enum name by index.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null,       or cMaxName is 0, or index is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null,<br>     or cMaxName is 0, or index is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValueCount()
 
@@ -733,7 +741,7 @@ Get enum value count by enum name.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrEnumName or       pcValues is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if enum not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrEnumName or<br>     pcValues is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if enum not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValueName()
 
@@ -761,7 +769,7 @@ Get enum value name by enum name and value index.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrEnumName or pbstrValueName       is null, or iValueIndex is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if enum not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrEnumName or pbstrValueName<br>     is null, or iValueIndex is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if enum not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValue()
 
@@ -788,7 +796,7 @@ Get enum value by enum name and value name.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrEnumName or       pbstrValueName or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if enum value not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrEnumName or<br>     pbstrValueName or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if enum value not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructCount()
 
@@ -813,7 +821,7 @@ Get struct count.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pcStructs is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pcStructs is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructName()
 
@@ -840,7 +848,7 @@ Get struct name by index.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null, or cMaxName is 0,       or index is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrName is null, or cMaxName is 0,<br>     or index is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldCount()
 
@@ -866,7 +874,7 @@ Get struct field count by struct name.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrStructName or       pcFields is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if struct not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrStructName or<br>     pcFields is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if struct not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldName()
 
@@ -894,7 +902,7 @@ Get struct field name by struct name and field index.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrStructName or       pbstrFieldName is null, or iFieldIndex is out of range.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if struct not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrStructName or<br>     pbstrFieldName is null, or iFieldIndex is out of range.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if struct not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded, or memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldType()
 
@@ -921,7 +929,7 @@ Get struct field type by struct name and field name.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrStructName or       pbstrFieldName or pFieldType is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if field not found.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pTypeDescriptor or pbstrStructName or<br>     pbstrFieldName or pFieldType is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if field not found.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if metadata is not loaded.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayCreate()
 
@@ -947,7 +955,7 @@ Create an array instance.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if elementType or ppArray is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if elementType or ppArray is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGetElementType()
 
@@ -972,7 +980,7 @@ Get array element type.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pElementType is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal element type info is not available.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pElementType is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal element type info is not available.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArraySet()
 
@@ -998,7 +1006,7 @@ Set an array element value.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pValue is null,       or index is out of bounds.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pValue is null,<br>     or index is out of bounds.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGet()
 
@@ -1024,7 +1032,7 @@ Get an array element value.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pValue is null,       or index is out of bounds.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pValue is null,<br>     or index is out of bounds.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGetSize()
 
@@ -1049,7 +1057,7 @@ Get array size.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pSize is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pArray or pSize is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayRelease()
 
@@ -1092,7 +1100,7 @@ Create a vector instance.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if elementType or ppVector is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if elementType or ppVector is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGetElementType()
 
@@ -1117,7 +1125,7 @@ Get vector element type.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pElementType is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal element type info is not available.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pElementType is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal element type info is not available.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorAdd()
 
@@ -1142,7 +1150,7 @@ Add an element to vector.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGet()
 
@@ -1168,7 +1176,7 @@ Get a vector element value.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pValue is null,       or index is out of bounds.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pValue is null,<br>     or index is out of bounds.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGetSize()
 
@@ -1193,7 +1201,7 @@ Get vector size.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pSize is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector or pSize is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorClear()
 
@@ -1217,7 +1225,7 @@ Clear vector.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pVector is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorRelease()
 
@@ -1260,7 +1268,7 @@ Create a set instance.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if elementType or ppSet is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if elementType or ppSet is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetElementType()
 
@@ -1285,7 +1293,7 @@ Get set element type.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pElementType is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal element type info is not available.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pElementType is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal element type info is not available.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetAdd()
 
@@ -1310,7 +1318,7 @@ Add an element to set.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetRemove()
 
@@ -1335,7 +1343,7 @@ Remove an element from set.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if element is not found in set.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if element is not found in set.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetContains()
 
@@ -1361,7 +1369,7 @@ Check if an element exists in set.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue or pExists is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue or pExists is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if element type mismatches.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetSize()
 
@@ -1386,7 +1394,7 @@ Get set size.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pSize is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pSize is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetAt()
 
@@ -1396,7 +1404,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityR
 
 **Description**
 
-Get a set element value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
+Get a set element value by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
 **Since**: 26.0.0
 
@@ -1412,7 +1420,7 @@ Get a set element value by index.The returned variant is a deep copy owned by th
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue is null, or index is out of bounds.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet or pValue is null, or index is out of bounds.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetClear()
 
@@ -1436,7 +1444,7 @@ Clear set.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pSet is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetRelease()
 
@@ -1472,7 +1480,7 @@ Create a map instance.
 
 | Parameter | Description |
 | -- | -- |
-| OH_AbilityRuntime_ModObjDispatcher_ValueType keyType | Indicates key type. Only basic types are supported, such as{@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_BOOL},{@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_I32},{@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_STRING},and {@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_ENUM}.Container types (ARRAY, VECTOR, SET, MAP) and complex types(STRUCT, IPC_REMOTE_PROXY, IPC_REMOTE_STUB) are not supported. |
+| OH_AbilityRuntime_ModObjDispatcher_ValueType keyType | Indicates key type. Only basic types are supported, such as {@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_BOOL},<br>              {@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_I32},<br>              {@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_STRING},<br>              and {@link OH_ABILITY_RUNTIME_MOD_OBJ_DISPATCHER_VT_ENUM}. Container types (ARRAY, VECTOR, SET, MAP) and complex types (STRUCT, IPC_REMOTE_PROXY, IPC_REMOTE_STUB) are not supported. |
 | [OH_AbilityRuntime_ModObjDispatcher_TypeInfo](capi-abilityruntime-oh-abilityruntime-modobjdispatcher-typeinfo.md) *valueType | Indicates value type. |
 | [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md)* ppMap | Indicates a pointer to receive map handle. |
 
@@ -1480,7 +1488,7 @@ Create a map instance.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if valueType or ppMap is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if valueType or ppMap is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetKeyType()
 
@@ -1505,7 +1513,7 @@ Get map key type.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKeyType is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKeyType is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetValueType()
 
@@ -1530,7 +1538,7 @@ Get map value type.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pValueType is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal value type info is not available.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pValueType is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if internal value type info is not available.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapPut()
 
@@ -1556,7 +1564,7 @@ Put a key-value pair into map.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key or value type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key or value type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGet()
 
@@ -1582,7 +1590,7 @@ Get a value from map by key.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if key is not found in map.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if key is not found in map.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapRemove()
 
@@ -1607,7 +1615,7 @@ Remove a key-value pair from map.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if key is not found in map.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if key is not found in map.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapContainsKey()
 
@@ -1633,7 +1641,7 @@ Check if a key exists in map.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey or pExists is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key type mismatches.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey or pExists is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if key type mismatches.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetSize()
 
@@ -1658,7 +1666,7 @@ Get map size.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pSize is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pSize is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt()
 
@@ -1668,7 +1676,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_Abili
 
 **Description**
 
-Get a map key by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
+Get a map key by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
 **Since**: 26.0.0
 
@@ -1684,7 +1692,7 @@ Get a map key by index.The returned variant is a deep copy owned by the caller.C
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey is null, or index is out of bounds.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pKey is null, or index is out of bounds.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt()
 
@@ -1694,7 +1702,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_Abi
 
 **Description**
 
-Get a map value by index.The returned variant is a deep copy owned by the caller.Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
+Get a map value by index.<br> The returned variant is a deep copy owned by the caller. Caller must call [OH_AbilityRuntime_ModObjDispatcher_VariantClear](capi-modular-object-dispatcher-h.md#oh_abilityruntime_modobjdispatcher_variantclear) to release it.
 
 **Since**: 26.0.0
 
@@ -1710,7 +1718,7 @@ Get a map value by index.The returned variant is a deep copy owned by the caller
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pValue is null, or index is out of bounds.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap or pValue is null, or index is out of bounds.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapClear()
 
@@ -1734,7 +1742,7 @@ Clear map.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap is null.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pMap is null.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapRelease()
 
@@ -1777,7 +1785,7 @@ Create a struct instance.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if structName or ppStruct is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if struct name is not found       in type metadata.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if structName or ppStruct is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if struct name is not found<br>     in type metadata.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructGetName()
 
@@ -1803,7 +1811,7 @@ Get struct name.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pStruct or pbstrName is null,       or cMaxName is 0 or too small for struct name.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed or string copy failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pStruct or pbstrName is null,<br>     or cMaxName is 0 or too small for struct name.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed or string copy failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructSetField()
 
@@ -1829,7 +1837,7 @@ Set a struct field value.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pStruct or szName or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if field is not found in struct.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if field type mismatches.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pStruct or szName or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if field is not found in struct.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} if field type mismatches.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructGetField()
 
@@ -1855,7 +1863,7 @@ Get a struct field value.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pStruct or szName or pValue is null.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if field is not found in struct.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if pStruct or szName or pValue is null.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} if field is not found in struct.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if memory allocation failed when copying variant value.</li>       </ul> |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructRelease()
 

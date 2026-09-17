@@ -6,7 +6,7 @@ typedef struct OH_AudioRoutingManager OH_AudioRoutingManager
 
 ## Overview
 
-Declaring the audio routing manager.The handle of audio routing manager used for routing and device related functions.
+Declaring the audio routing manager. The handle of audio routing manager used for routing and device related functions.
 
 **Since**: 12
 

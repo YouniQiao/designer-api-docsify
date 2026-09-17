@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides TEE log APIs.Reference of TEE log APIs and internal definitions.
+Provides TEE log APIs.<br> Reference of TEE log APIs and internal definitions.
 
 **Library**: NA
 
@@ -30,50 +30,28 @@ Provides TEE log APIs.Reference of TEE log APIs and internal definitions.
 | TA_LOG_LEVEL_DEBUG   3 | Defines the DEBUG level of the TA log.<br>**Since**: 20 |
 | TA_LOG_LEVEL_VERBO   4 | Defines the VERBO level of the TA log.<br>**Since**: 20 |
 | TA_LOG_LEVEL_DEFAULT  TA_LOG_LEVEL_INFO | Defines the default level of the TA log.<br>**Since**: 20 |
-| TA_LOG_LEVEL TA_LOG_LEVEL_DEFAULT | Defines the default level of the TA log.{@code TA_LOG_LEVEL} can be redefined by TA developers<br>**Since**: 20 |
+| TA_LOG_LEVEL TA_LOG_LEVEL_DEFAULT | Defines the default level of the TA log. {@code TA_LOG_LEVEL} can be redefined by TA developers<br>**Since**: 20 |
 | TAG_VERB  "[verb]" | Defines the tag of the VERBO level TA log.<br>**Since**: 20 |
 | TAG_DEBUG "[debug]" | Defines the tag of the DEBUG level TA log.<br>**Since**: 20 |
 | TAG_INFO  "[info]" | Defines the tag of the INFO level TA log.<br>**Since**: 20 |
 | TAG_WARN  "[warn]" | Defines the tag of the WARNING level TA log.<br>**Since**: 20 |
 | TAG_ERROR "[error]" | Defines the tag of the ERROR level TA log.<br>**Since**: 20 |
-| tlogv(fmt, args...)<br>tee_print_driver(LOG_LEVEL_VERBO, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_VERB, \_\_LINE\_\_, ##args)
-#else | Defines the API to print TEE log at the VERBO level.<br>**Since**: 20 |
-| tlogv(fmt, args...) tee_print(LOG_LEVEL_VERBO, "%s %d:" fmt "", TAG_VERB, \_\_LINE\_\_, ##args)
- /* DRIVER_LOG_TAG */
-#else | Defines the API to print TEE log at the VERBO level.<br>**Since**: 20 |
-| tlogv(fmt, args...)<br>do {<br>} while (0)
- /* TA_LOG_LEVEL >= TA_LOG_LEVEL_VERBO */ | Defines the API to print TEE log at the VERBO level.<br>**Since**: 20 |
-| tlogd(fmt, args...)<br>tee_print_driver(LOG_LEVEL_DEBUG, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_DEBUG, \_\_LINE\_\_, ##args)
-#else | Defines the API to print TEE log at the DEBUG level.<br>**Since**: 20 |
-| tlogd(fmt, args...) tee_print(LOG_LEVEL_DEBUG, "%s %d:" fmt "", TAG_DEBUG, \_\_LINE\_\_, ##args)
- /* DRIVER_LOG_TAG */
-#else | Defines the API to print TEE log at the DEBUG level.<br>**Since**: 20 |
-| tlogd(fmt, args...)<br>do {<br>} while (0)
- /* TA_LOG_LEVEL >= TA_LOG_LEVEL_DEBUG */ | Defines the API to print TEE log at the DEBUG level.<br>**Since**: 20 |
-| tlogi(fmt, args...)<br>tee_print_driver(LOG_LEVEL_INFO, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_INFO, \_\_LINE\_\_, ##args)
-#else | Defines the API to print TEE log at the INFO level.<br>**Since**: 20 |
-| tlogi(fmt, args...) tee_print(LOG_LEVEL_INFO, "%s %d:" fmt "", TAG_INFO, \_\_LINE\_\_, ##args)
- /* DRIVER_LOG_TAG */
-#else | Defines the API to print TEE log at the INFO level.<br>**Since**: 20 |
-| tlogi(fmt, args...)<br>do {<br>} while (0)
- /* TA_LOG_LEVEL >= TA_LOG_LEVEL_INFO */ | Defines the API to print TEE log at the INFO level.<br>**Since**: 20 |
-| tlogw(fmt, args...)<br>tee_print_driver(LOG_LEVEL_WARN, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_WARN, \_\_LINE\_\_, ##args)
-#else | Defines the API to print TEE log at the WARNING level.<br>**Since**: 20 |
-| tlogw(fmt, args...) tee_print(LOG_LEVEL_WARN, "%s %d:" fmt "", TAG_WARN, \_\_LINE\_\_, ##args)
- /* DRIVER_LOG_TAG */
-#else | Defines the API to print TEE log at the WARNING level.<br>**Since**: 20 |
-| tlogw(fmt, args...)<br>do {<br>} while (0)
- /* TA_LOG_LEVEL >= TA_LOG_LEVEL_WARNING */ | Defines the API to print TEE log at the WARNING level.<br>**Since**: 20 |
-| tloge(fmt, args...)<br>tee_print_driver(LOG_LEVEL_ERROR, DRIVER_LOG_TAG, "%s %d:" fmt " ", TAG_ERROR, \_\_LINE\_\_, ##args)
-#else | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
-| tloge(fmt, args...) tee_print(LOG_LEVEL_ERROR, "%s %d:" fmt " ", TAG_ERROR, \_\_LINE\_\_, ##args)
- /* DRIVER_LOG_TAG */
-#else | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
-| tloge(fmt, args...) printf("[%s] %s %d:" fmt " ", g_debug_prefix, TAG_ERROR, \_\_LINE\_\_, ##args)
- /* TLOGE_NO_TIMESTAMP */
-#else | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
-| tloge(fmt, args...)<br>do {<br>} while (0)
- /* TA_LOG_LEVEL >= TA_LOG_LEVEL_ERROR */ | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
+| tlogv(fmt, args...)  tee_print_driver(LOG_LEVEL_VERBO, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_VERB, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the VERBO level.<br>**Since**: 20 |
+| tlogv(fmt, args...) tee_print(LOG_LEVEL_VERBO, "%s %d:" fmt "", TAG_VERB, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the VERBO level.<br>**Since**: 20 |
+| tlogv(fmt, args...)  do {                     } while (0) | Defines the API to print TEE log at the VERBO level.<br>**Since**: 20 |
+| tlogd(fmt, args...)  tee_print_driver(LOG_LEVEL_DEBUG, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_DEBUG, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the DEBUG level.<br>**Since**: 20 |
+| tlogd(fmt, args...) tee_print(LOG_LEVEL_DEBUG, "%s %d:" fmt "", TAG_DEBUG, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the DEBUG level.<br>**Since**: 20 |
+| tlogd(fmt, args...)  do {                     } while (0) | Defines the API to print TEE log at the DEBUG level.<br>**Since**: 20 |
+| tlogi(fmt, args...)  tee_print_driver(LOG_LEVEL_INFO, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_INFO, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the INFO level.<br>**Since**: 20 |
+| tlogi(fmt, args...) tee_print(LOG_LEVEL_INFO, "%s %d:" fmt "", TAG_INFO, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the INFO level.<br>**Since**: 20 |
+| tlogi(fmt, args...)  do {                     } while (0) | Defines the API to print TEE log at the INFO level.<br>**Since**: 20 |
+| tlogw(fmt, args...)  tee_print_driver(LOG_LEVEL_WARN, DRIVER_LOG_TAG, "%s %d:" fmt "", TAG_WARN, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the WARNING level.<br>**Since**: 20 |
+| tlogw(fmt, args...) tee_print(LOG_LEVEL_WARN, "%s %d:" fmt "", TAG_WARN, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the WARNING level.<br>**Since**: 20 |
+| tlogw(fmt, args...)  do {                     } while (0) | Defines the API to print TEE log at the WARNING level.<br>**Since**: 20 |
+| tloge(fmt, args...)  tee_print_driver(LOG_LEVEL_ERROR, DRIVER_LOG_TAG, "%s %d:" fmt " ", TAG_ERROR, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
+| tloge(fmt, args...) tee_print(LOG_LEVEL_ERROR, "%s %d:" fmt " ", TAG_ERROR, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
+| tloge(fmt, args...) printf("[%s] %s %d:" fmt " ", g_debug_prefix, TAG_ERROR, \_\_LINE\_\_, ##args) | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
+| tloge(fmt, args...)  do {                     } while (0) | Defines the API to print TEE log at the ERROR level.<br>**Since**: 20 |
 
 ### Function
 
@@ -83,7 +61,9 @@ Provides TEE log APIs.Reference of TEE log APIs and internal definitions.
 | [void uart_printf_func(const char *fmt, ...)](#uart_printf_func) | Provides to print UART logs. |
 | [void tee_print(LOG_LEVEL log_level, const char *fmt, ...)](#tee_print) | Provides to print TEE logs. |
 | [void tee_print_driver(LOG_LEVEL log_level, const char *log_tag, const char *fmt, ...)](#tee_print_driver) | Provides to print TEE driver logs. |
-| [extern const char *g_debug_prefix #if (TA_LOG_LEVEL >= TA_LOG_LEVEL_VERBO)](#) | Defines the debug prefix string. |
+| [extern const char *g_debug_prefix
+
+#if (TA_LOG_LEVEL >= TA_LOG_LEVEL_VERBO)](#) | Defines the debug prefix string. |
 
 ### Variable
 
@@ -195,7 +175,9 @@ Provides to print TEE driver logs.
 ### ()
 
 ```c
-extern const char *g_debug_prefix #if (TA_LOG_LEVEL >= TA_LOG_LEVEL_VERBO)
+extern const char *g_debug_prefix
+
+#if (TA_LOG_LEVEL >= TA_LOG_LEVEL_VERBO)
 ```
 
 **Description**

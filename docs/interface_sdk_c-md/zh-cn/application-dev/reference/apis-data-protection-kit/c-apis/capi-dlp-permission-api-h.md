@@ -96,9 +96,9 @@ DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t 
 | 参数项 | 描述 |
 | -- | -- |
 | [DLP_FileAccess](capi-dlp-permission-api-h.md#dlp_fileaccess) *dlpFileAccess | [out] 表示DLP文件针对用户的授权类型，例如：只读。 |
-| uint32_t *flags | [out] 表示DLP文件的详细操作权限，具体含义为：<br>0x00000000-表示无文件权限。<br>0x00000001-表示文件的查看权限。<br>0x00000002-表示文件的保存权限。<br>0x00000004-表示文件的另存为权限。<br>0x00000008-表示文件的编辑权限。<br>0x00000010-表示文件的截屏权限。<br>0x00000020-表示文件的共享屏幕权限。<br>0x00000040-表示文件的录屏权限。<br>0x00000080-表示文件的复制权限。<br>0x00000100-表示文件的打印权限。<br>0x00000200-表示文件的导出权限。<br>0x00000400-表示文件的修改文件权限。 |
+| uint32_t *flags | [out] 表示DLP文件的详细操作权限，具体含义为： <br>0x00000000-表示无文件权限。 <br>0x00000001-表示文件的查看权限。 <br>0x00000002-表示文件的保存权限。 <br>0x00000004-表示文件的另存为权限。 <br>0x00000008-表示文件的编辑权限。 <br>0x00000010-表示文件的截屏权限。 <br>0x00000020-表示文件的共享屏幕权限。 <br>0x00000040-表示文件的录屏权限。 <br>0x00000080-表示文件的复制权限。 <br>0x00000100-表示文件的打印权限。 <br>0x00000200-表示文件的导出权限。 <br>0x00000400-表示文件的修改文件权限。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -123,7 +123,7 @@ DLP_ErrCode OH_DLP_GetOriginalFileName(const char *fileName, char **originalFile
 | const char *fileName | [in] 指定要查询的文件名。长度不超过256字节。 |
 | char **originalFileName | [out] DLP文件的原始文件名。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -147,7 +147,7 @@ DLP_ErrCode OH_DLP_IsInSandbox(bool *isInSandbox)
 | -- | -- |
 | bool *isInSandbox | [out] true表示当前应用运行在DLP沙箱环境，false表示当前应用不是运行在DLP沙箱环境。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -171,7 +171,7 @@ DLP_ErrCode OH_DLP_SetSandboxAppConfig(const char *configInfo)
 | -- | -- |
 | const char *configInfo | [in] 沙箱应用配置信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -195,7 +195,7 @@ DLP_ErrCode OH_DLP_GetSandboxAppConfig(char **configInfo)
 | -- | -- |
 | char **configInfo | [out] 沙箱应用配置信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -213,7 +213,7 @@ DLP_ErrCode OH_DLP_CleanSandboxAppConfig()
 
 **起始版本：** 14
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

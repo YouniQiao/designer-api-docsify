@@ -6,7 +6,7 @@ typedef struct OH_AudioSuiteEngineStruct OH_AudioSuiteEngine
 
 ## Overview
 
-Declare the audio engine.The handle of audio suite engine is used for audio suite engine related functions.
+Declare the audio engine. The handle of audio suite engine is used for audio suite engine related functions.
 
 **Since**: 22
 

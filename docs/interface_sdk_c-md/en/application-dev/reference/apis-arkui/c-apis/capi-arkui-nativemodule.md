@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides UI capabilities of ArkUI on the native side, such as UI component creation and destruction,tree node operations, attribute setting, and event listening.
+Provides UI capabilities of ArkUI on the native side, such as UI component creation and destruction, tree node operations, attribute setting, and event listening.
 
 **Since**: 26.0.0
 
@@ -12,23 +12,23 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | -- | -- |
 | [native_material.h](capi-native-material-h.md) | Declares the immersive material types and APIs for ArkUI on the native side. |
 | [native_gesture.h](capi-native-gesture-h.md) | Declares the APIs of **NativeGesture**. |
-| [native_animate.h](capi-native-animate-h.md) | Defines a set of animation APIs of ArkUI on the native side. The APIs in **native_animate.h** must be calledin the main thread. |
+| [native_animate.h](capi-native-animate-h.md) | Defines a set of animation APIs of ArkUI on the native side. The APIs in **native_animate.h** must be called in the main thread. |
 | [native_type_visual.h](capi-native-type-visual-h.md) | Defines the visual effect types for the native module. |
 | [native_node.h](capi-native-node-h.md) | Provides type definitions for <b>NativeNode</b> APIs. |
-| [native_node_ani.h](capi-native-node-ani-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects onthe native side. |
+| [native_node_ani.h](capi-native-node-ani-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side. |
 | [native_key_event.h](capi-native-key-event-h.md) | Declares the APIs of **NativeKeyEvent**. |
 | [drag_and_drop.h](capi-drag-and-drop-h.md) | Declares the APIs of **NativeDrag**. |
 | [native_interface.h](capi-native-interface-h.md) | Provides a unified entry for the native module APIs. |
-| [native_interface_focus.h](capi-native-interface-focus-h.md) | Declares APIs for focus management, mainly used for actively transferring focus, managing the default focustransfer behavior, and controlling the focus activation state. |
+| [native_interface_focus.h](capi-native-interface-focus-h.md) | Declares APIs for focus management, mainly used for actively transferring focus, managing the default focus transfer behavior, and controlling the focus activation state. |
 | [native_type.h](capi-native-type-h.md) | Defines the common types for the native module. |
 | [native_dialog.h](capi-native-dialog-h.md) | Defines a set of custom dialog box APIs of ArkUI on the native side. |
 | [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |
 | [common_type.h](capi-common-type-h.md) | Defines the common types for ArkUI native APIs. |
 | [drawable_descriptor.h](capi-drawable-descriptor-h.md) | Declares the APIs of **NativeDrawableDescriptor**. |
-| [native_node_napi.h](capi-native-node-napi-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects onthe native side. |
-| [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose {@link type} is set to **ARKUI_NODE_TEXTon the native side. |
+| [native_node_napi.h](capi-native-node-napi-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side. |
+| [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose {@link type} is set to **ARKUI_NODE_TEXT**<br>on the native side. |
 | [custom_span.h](capi-custom-span-h.md) | Defines a set of CustomSpan enum and interface. |
-| [water_flow.h](capi-water-flow-h.md) | Provides WaterFlow-related type and function definitions for<b>NativeNode</b> APIs. |
+| [water_flow.h](capi-water-flow-h.md) | Provides WaterFlow-related type and function definitions for <b>NativeNode</b> APIs. |
 | [swiper.h](capi-swiper-h.md) | Defines a set of Swiper enum and interface. |
 | [common_attributes.h](capi-common-attributes-h.md) | Defines the common property and method types for the native module. |
 | [navigation_router.h](capi-navigation-router-h.md) | Defines a set of navigation or router enum and interface. |

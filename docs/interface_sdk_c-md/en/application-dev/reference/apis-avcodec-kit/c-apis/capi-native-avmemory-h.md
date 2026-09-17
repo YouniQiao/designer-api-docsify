@@ -141,6 +141,6 @@ Releases an OH_AVMemory instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The release operation is successful.      <br>{@link AV_ERR_INVALID_VAL}:      <br>1. The value of mem is nullptr.      <br>2. The value of mem fails parameter structure verification.      <br>3. The value of mem is not created by the caller. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The release operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}:      <br>1. The value of mem is nullptr.      <br>2. The value of mem fails parameter structure verification.      <br>3. The value of mem is not created by the caller. |
 
 

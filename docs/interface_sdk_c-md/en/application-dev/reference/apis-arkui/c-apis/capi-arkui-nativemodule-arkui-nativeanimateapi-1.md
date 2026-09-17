@@ -47,14 +47,14 @@ Defines an explicit animation.
 | -- | -- |
 | ArkUI_ContextHandle context | **UIContext** instance. |
 |  [ArkUI_AnimateOption](capi-arkui-nativemodule-arkui-animateoption.md)* option | Defines the animation configuration. |
-|  ArkUI_ContextCallback* update | Closure function for the animation. The system automatically inserts the transition animation ifthe state changes in the closure function.<br>Note: Make sure the component attributes to be set in the closure function have been set before. |
+|  ArkUI_ContextCallback* update | Closure function for the animation. The system automatically inserts the transition animation if the state changes in the closure function. <br>Note: Make sure the component attributes to be set in the closure function have been set before. |
 | [ArkUI_AnimateCompleteCallback](capi-arkui-nativemodule-arkui-animatecompletecallback.md)* complete | Callback invoked when the animation playback is complete. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul>               <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>              <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>              </ul> |
+| int32_t | <ul>               <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>        <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>              </ul> |
 
 ### keyframeAnimateTo()
 
@@ -77,7 +77,7 @@ Defines a keyframe animation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul>               <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>              <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>              </ul> |
+| int32_t | <ul>               <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>        <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>              </ul> |
 
 ### createAnimator()
 

@@ -42,7 +42,7 @@ The file declares the native APIs used to set decryption parameters.
 | Name | Description |
 | -- | -- |
 | [OH_AVCencInfo *OH_AVCencInfo_Create()](#oh_avcencinfo_create) | Creates an OH_AVCencInfo instance for setting the CENC information. |
-| [OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)](#oh_avcencinfo_destroy) | Destroys an OH_AVCencInfo instance and clears internal resources.An instance can be destroyed only once. Do not use the instance until it is created again. You are advised to setthe instance pointer to nullptr once the instance is destroyed. |
+| [OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)](#oh_avcencinfo_destroy) | Destroys an OH_AVCencInfo instance and clears internal resources.<br> An instance can be destroyed only once. Do not use the instance until it is created again. You are advised to set the instance pointer to nullptr once the instance is destroyed. |
 | [OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlgorithm algo)](#oh_avcencinfo_setalgorithm) | Sets an encryption algorithm of the CENC information. |
 | [OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId, uint32_t keyIdLen, uint8_t *iv, uint32_t ivLen)](#oh_avcencinfo_setkeyidandiv) | Sets the key ID and IV in the CENC information. |
 | [OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t encryptedBlockCount, uint32_t skippedBlockCount, uint32_t firstEncryptedOffset, uint32_t subsampleCount, DrmSubsample *subsamples)](#oh_avcencinfo_setsubsampleinfo) | Sets the subsample information in the CENC information. |
@@ -118,7 +118,7 @@ OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)
 
 **Description**
 
-Destroys an OH_AVCencInfo instance and clears internal resources.An instance can be destroyed only once. Do not use the instance until it is created again. You are advised to setthe instance pointer to nullptr once the instance is destroyed.
+Destroys an OH_AVCencInfo instance and clears internal resources.<br> An instance can be destroyed only once. Do not use the instance until it is created again. You are advised to set the instance pointer to nullptr once the instance is destroyed.
 
 **Since**: 12
 
@@ -132,7 +132,7 @@ Destroys an OH_AVCencInfo instance and clears internal resources.An instance can
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null. |
 
 ### OH_AVCencInfo_SetAlgorithm()
 
@@ -157,7 +157,7 @@ Sets an encryption algorithm of the CENC information.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null. |
 
 ### OH_AVCencInfo_SetKeyIdAndIv()
 
@@ -185,7 +185,7 @@ Sets the key ID and IV in the CENC information.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo, keyId, or iv is null,      keyIdLen is not equal to DRM_KEY_ID_SIZE, ivLen is not equal to DRM_KEY_IV_SIZE,      the key ID or IV fails to be copied. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo, keyId, or iv is null,      keyIdLen is not equal to DRM_KEY_ID_SIZE, ivLen is not equal to DRM_KEY_IV_SIZE,      the key ID or IV fails to be copied. |
 
 ### OH_AVCencInfo_SetSubsampleInfo()
 
@@ -214,7 +214,7 @@ Sets the subsample information in the CENC information.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null, subsampleCount is greater than      DRM_KEY_MAX_SUB_SAMPLE_NUM, or subsamples is null. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null, subsampleCount is greater than      DRM_KEY_MAX_SUB_SAMPLE_NUM, or subsamples is null. |
 
 ### OH_AVCencInfo_SetMode()
 
@@ -239,7 +239,7 @@ Sets the CENC information mode.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo is null. |
 
 ### OH_AVCencInfo_SetAVBuffer()
 
@@ -264,6 +264,6 @@ Sets the CENC information to an AVBuffer.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo, buffer, buffer->buffer_,      or buffer->buffer_->meta_ is null. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of cencInfo, buffer, buffer->buffer_,      or buffer->buffer_->meta_ is null. |
 
 

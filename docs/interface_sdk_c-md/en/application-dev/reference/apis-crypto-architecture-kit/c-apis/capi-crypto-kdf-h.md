@@ -84,14 +84,14 @@ Creates KDF parameters.
 
 | Parameter | Description |
 | -- | -- |
-| const char *algoName | [in] KDF parameter algorithm name. Cannot be NULL. Values:- "HKDF", "PBKDF2", "SCRYPT" supported since API version 20.- "X963KDF" supported since API version 22. |
+| const char *algoName | [in] KDF parameter algorithm name. Cannot be NULL. Values: - "HKDF", "PBKDF2", "SCRYPT" supported since API version 20. - "X963KDF" supported since API version 22. |
 | [OH_CryptoKdfParams](capi-cryptokdfapi-oh-cryptokdfparams.md) **params | [out] Pointer to the KDF parameters pointer. params cannot be NULL, *params must be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or params is NULL,              algoName is not a supported KDF type.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or params is NULL,<br>            algoName is not a supported KDF type.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -116,13 +116,13 @@ Sets KDF parameters.
 | -- | -- |
 | [OH_CryptoKdfParams](capi-cryptokdfapi-oh-cryptokdfparams.md) *params | [in] KDF parameters. Cannot be NULL. |
 | [CryptoKdf_ParamType](capi-crypto-kdf-h.md#cryptokdf_paramtype) type | [in] KDF parameter type. |
-| Crypto_DataBlob *value | [in] KDF parameter value. This function performs a deep copy of the data in value.The caller can release value immediately after the function returns. Cannot be NULL. |
+| Crypto_DataBlob *value | [in] KDF parameter value. This function performs a deep copy of the data in value. The caller can release value immediately after the function returns. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if params or value is NULL,             value->data is NULL, or type is not valid for the KDF algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for param copy fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if params or value is NULL,<br>           value->data is NULL, or type is not valid for the KDF algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for param copy fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoKdfParams_Destroy()
 
@@ -158,14 +158,14 @@ Creates a KDF context based on the given algorithm name.
 
 | Parameter | Description |
 | -- | -- |
-| const char *algoName | [in] KDF algorithm name. Cannot be NULL. Format: "KDFType|DigestAlgorithm". Values:- "PBKDF2|SHA1", "PBKDF2|SHA224", "PBKDF2|SHA256", "PBKDF2|SHA384", "PBKDF2|SHA512","PBKDF2|SM3" supported since API version 20."PBKDF2|SHA3-256", "PBKDF2|SHA3-384", "PBKDF2|SHA3-512" supported since API version 26.0.0.- "HKDF|SHA1", "HKDF|SHA224", "HKDF|SHA256", "HKDF|SHA384", "HKDF|SHA512", "HKDF|SM3"supported since API version 20. HKDF supports an optional third parameter to specify the mode:"EXTRACT_AND_EXPAND" (default), "EXTRACT_ONLY", "EXPAND_ONLY", e.g. "HKDF|SHA256|EXTRACT_ONLY"."HKDF|SHA3-256", "HKDF|SHA3-384", "HKDF|SHA3-512" supported since API version 26.0.0.- "SCRYPT" supported since API version 20.- "X963KDF|SHA1", "X963KDF|SHA224", "X963KDF|SHA256", "X963KDF|SHA384", "X963KDF|SHA512"supported since API version 22."X963KDF|SHA3-256", "X963KDF|SHA3-384", "X963KDF|SHA3-512" supported since API version 26.0.0. |
+| const char *algoName | [in] KDF algorithm name. Cannot be NULL. Format: "KDFType\|DigestAlgorithm". Values: - "PBKDF2\|SHA1", "PBKDF2\|SHA224", "PBKDF2\|SHA256", "PBKDF2\|SHA384", "PBKDF2\|SHA512", "PBKDF2\|SM3" supported since API version 20. "PBKDF2\|SHA3-256", "PBKDF2\|SHA3-384", "PBKDF2\|SHA3-512" supported since API version 26.0.0. - "HKDF\|SHA1", "HKDF\|SHA224", "HKDF\|SHA256", "HKDF\|SHA384", "HKDF\|SHA512", "HKDF\|SM3" supported since API version 20. HKDF supports an optional third parameter to specify the mode: "EXTRACT_AND_EXPAND" (default), "EXTRACT_ONLY", "EXPAND_ONLY", e.g. "HKDF\|SHA256\|EXTRACT_ONLY". "HKDF\|SHA3-256", "HKDF\|SHA3-384", "HKDF\|SHA3-512" supported since API version 26.0.0. - "SCRYPT" supported since API version 20. - "X963KDF\|SHA1", "X963KDF\|SHA224", "X963KDF\|SHA256", "X963KDF\|SHA384", "X963KDF\|SHA512" supported since API version 22. "X963KDF\|SHA3-256", "X963KDF\|SHA3-384", "X963KDF\|SHA3-512" supported since API version 26.0.0. |
 | [OH_CryptoKdf](capi-cryptokdfapi-oh-cryptokdf.md) **ctx | [out] Pointer to the KDF context pointer. ctx cannot be NULL, *ctx must be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if algoName or ctx is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -191,13 +191,13 @@ Derives a key.
 | [OH_CryptoKdf](capi-cryptokdfapi-oh-cryptokdf.md) *ctx | [in] KDF context. Cannot be NULL. |
 | [const OH_CryptoKdfParams](capi-cryptokdfapi-oh-cryptokdfparams.md) *params | [in] KDF parameters. Cannot be NULL. |
 | int keyLen | [in] Byte length of the derived key. |
-| Crypto_DataBlob *key | [out] Pointer to the Crypto_DataBlob structure for storing the derived key. Cannot be NULL. Initialize keyto {0} before calling. Do not pre-allocate key->data. |
+| Crypto_DataBlob *key | [out] Pointer to the Crypto_DataBlob structure for storing the derived key. Cannot be NULL. Initialize key to {0} before calling. Do not pre-allocate key->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, params, or key is NULL,             or keyLen is less than or equal to 0, or required             parameters are missing (e.g. HKDF key, Scrypt password or salt).</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if the key derivation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx, params, or key is NULL,<br>           or keyLen is less than or equal to 0, or required<br>           parameters are missing (e.g. HKDF key, Scrypt password or salt).</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if the key derivation fails.</li>          </ul> |
 
 ### OH_CryptoKdf_Destroy()
 

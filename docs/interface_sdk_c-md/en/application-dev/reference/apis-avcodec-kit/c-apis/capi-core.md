@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Core module provides basic backbone capabilities for media frameworks,including functions such as memory, error codes, and media data structures.
+The Core module provides basic backbone capabilities for media frameworks, including functions such as memory, error codes, and media data structures.
 
 **System capability**: SystemCapability.Multimedia.Media.Core
 

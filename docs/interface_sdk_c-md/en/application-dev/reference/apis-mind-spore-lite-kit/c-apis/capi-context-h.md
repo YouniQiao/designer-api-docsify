@@ -6,11 +6,17 @@ Provides **Context** APIs for configuring runtime information.
 
 **Library**: libmindspore_lite_ndk.so
 
-**Since**: 9
+**Since**: 13
 
 **Related module**: [MindSpore](capi-mindspore.md)
 
 ## Summary
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| MINDSPORE_INCLUDE_C_API_CONTEXT_C_H | Provides **Context** APIs for configuring runtime information.<br>**Since**: 9 |
 
 ### Function
 
@@ -22,7 +28,7 @@ Provides **Context** APIs for configuring runtime information.
 | [OH_AI_API int32_t OH_AI_ContextGetThreadNum(const OH_AI_ContextHandle context)](#oh_ai_contextgetthreadnum) | Obtain the current thread number setting. |
 | [OH_AI_API void OH_AI_ContextSetThreadAffinityMode(OH_AI_ContextHandle context, int mode)](#oh_ai_contextsetthreadaffinitymode) | Set the thread affinity to CPU cores. |
 | [OH_AI_API int OH_AI_ContextGetThreadAffinityMode(const OH_AI_ContextHandle context)](#oh_ai_contextgetthreadaffinitymode) | Obtain the thread affinity of CPU cores. |
-| [OH_AI_API void OH_AI_ContextSetThreadAffinityCoreList(OH_AI_ContextHandle context, const int32_t *core_list, size_t core_num)](#oh_ai_contextsetthreadaffinitycorelist) | Set the thread lists to CPU cores.If core_list and mode are set by OH_AI_ContextSetThreadAffinityMode at the same time,the core_list is effective, but the mode is not effective. <br> |
+| [OH_AI_API void OH_AI_ContextSetThreadAffinityCoreList(OH_AI_ContextHandle context, const int32_t *core_list, size_t core_num)](#oh_ai_contextsetthreadaffinitycorelist) | Set the thread lists to CPU cores.<br> If core_list and mode are set by OH_AI_ContextSetThreadAffinityMode at the same time, the core_list is effective, but the mode is not effective. |
 | [OH_AI_API const int32_t *OH_AI_ContextGetThreadAffinityCoreList(const OH_AI_ContextHandle context, size_t *core_num)](#oh_ai_contextgetthreadaffinitycorelist) | Obtain the thread lists of CPU cores. |
 | [OH_AI_API void OH_AI_ContextSetEnableParallel(OH_AI_ContextHandle context, bool is_parallel)](#oh_ai_contextsetenableparallel) | Set the status whether to perform model inference or training in parallel. |
 | [OH_AI_API bool OH_AI_ContextGetEnableParallel(const OH_AI_ContextHandle context)](#oh_ai_contextgetenableparallel) | Obtain the status whether to perform model inference or training in parallel. |
@@ -186,7 +192,7 @@ OH_AI_API void OH_AI_ContextSetThreadAffinityCoreList(OH_AI_ContextHandle contex
 
 **Description**
 
-Set the thread lists to CPU cores.If core_list and mode are set by OH_AI_ContextSetThreadAffinityMode at the same time,the core_list is effective, but the mode is not effective. <br>
+Set the thread lists to CPU cores.<br> If core_list and mode are set by OH_AI_ContextSetThreadAffinityMode at the same time, the core_list is effective, but the mode is not effective.
 
 **Since**: 9
 
@@ -497,7 +503,7 @@ Set the NPU frequency, Only valid for NPU.
 | Parameter | Description |
 | -- | -- |
 | OH_AI_DeviceInfoHandle device_info | Device info object handle. |
-| int frequency | Can be set to 0 (automatic adjustment), 1 (low power consumption), 2 (balanced), 3 (highperformance), 4 (extreme performance), default as 3. |
+| int frequency | Can be set to 0 (automatic adjustment), 1 (low power consumption), 2 (balanced), 3 (high performance), 4 (extreme performance), default as 3. |
 
 ### OH_AI_DeviceInfoGetFrequency()
 

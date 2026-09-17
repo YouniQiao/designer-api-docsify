@@ -1,4 +1,4 @@
-# ApplicationStateObserver
+# ApplicationStateObserver(ApplicationStateObserver)
 
 ## Summary
 

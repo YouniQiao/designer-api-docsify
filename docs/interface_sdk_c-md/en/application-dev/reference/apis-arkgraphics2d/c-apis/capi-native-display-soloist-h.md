@@ -26,11 +26,17 @@ Defines the functions for obtaining and using a native displaySoloist.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [typedef void (\*OH_DisplaySoloist_FrameCallback)(long long timestamp, long long targetTimestamp, void* data)](#oh_displaysoloist_framecallback) | OH_DisplaySoloist_FrameCallback | Defines the pointer to an OH_DisplaySoloist callback function. |
-| [OH_DisplaySoloist* OH_DisplaySoloist_Create(bool useExclusiveThread)](#oh_displaysoloist_create) | - | Creates an **OH_DisplaySoloist** instance. A new **OH_DisplaySoloist** instance is created each time this APIis called. |
+| [OH_DisplaySoloist* OH_DisplaySoloist_Create(bool useExclusiveThread)](#oh_displaysoloist_create) | - | Creates an **OH_DisplaySoloist** instance. A new **OH_DisplaySoloist** instance is created each time this API is called. |
 | [int32_t OH_DisplaySoloist_Destroy(OH_DisplaySoloist* displaySoloist)](#oh_displaysoloist_destroy) | - | Destroys an **OH_DisplaySoloist** object and reclaims the memory occupied. |
 | [int32_t OH_DisplaySoloist_Start(OH_DisplaySoloist* displaySoloist, OH_DisplaySoloist_FrameCallback callback, void* data)](#oh_displaysoloist_start) | - | Sets a callback function for each frame. The callback function is triggered each time a VSync signal arrives. |
 | [int32_t OH_DisplaySoloist_Stop(OH_DisplaySoloist* displaySoloist)](#oh_displaysoloist_stop) | - | Stops requesting the next VSync signal and triggering the callback function. |
 | [int32_t OH_DisplaySoloist_SetExpectedFrameRateRange(OH_DisplaySoloist* displaySoloist, DisplaySoloist_ExpectedRateRange* range)](#oh_displaysoloist_setexpectedframeraterange) | - | Sets the expected frame rate range. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_DisplaySoloist_FrameCallback)(long long timestamp, long long targetTimestamp, void* data) | Defines the pointer to an OH_DisplaySoloist callback function.<br>**Since**: 12 |
 
 ## Function description
 
@@ -62,7 +68,7 @@ OH_DisplaySoloist* OH_DisplaySoloist_Create(bool useExclusiveThread)
 
 **Description**
 
-Creates an **OH_DisplaySoloist** instance. A new **OH_DisplaySoloist** instance is created each time this APIis called.
+Creates an **OH_DisplaySoloist** instance. A new **OH_DisplaySoloist** instance is created each time this API is called.
 
 **Since**: 12
 
@@ -70,7 +76,7 @@ Creates an **OH_DisplaySoloist** instance. A new **OH_DisplaySoloist** instance 
 
 | Parameter | Description |
 | -- | -- |
-| bool useExclusiveThread | Whether the **OH_DisplaySoloist** instance is an exclusive thread. **true** means yes; false** otherwise. |
+| bool useExclusiveThread | Whether the **OH_DisplaySoloist** instance is an exclusive thread. **true** means yes; **<br>false** otherwise. |
 
 **Returns**:
 

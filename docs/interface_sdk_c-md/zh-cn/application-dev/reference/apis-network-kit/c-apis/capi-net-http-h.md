@@ -44,7 +44,7 @@ Http_Headers *OH_Http_CreateHeaders(void)
 
 **起始版本：** 20
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -92,7 +92,7 @@ uint32_t OH_Http_SetHeaderValue(struct Http_Headers *headers, const char *name, 
 | const char *name | 键值。 |
 | const char *value | 键值对应的值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -119,7 +119,7 @@ Http_HeaderValue *OH_Http_GetHeaderValue(Http_Headers *headers, const char *name
 | Http_Headers *headers | 指向要获取值的Http_Headers的指针。 |
 | const char *name | 键值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -145,7 +145,7 @@ Http_HeaderEntry *OH_Http_GetHeaderEntries(Http_Headers *headers)
 | -- | -- |
 | Http_Headers *headers | 指向要获取值的Http_Headers的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -191,7 +191,7 @@ Http_Request *OH_Http_CreateRequest(const char *url)
 | -- | -- |
 | const char *url | 请求URL。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -221,7 +221,7 @@ int OH_Http_Request(Http_Request *request, Http_ResponseCallback callback, Http_
 | Http_ResponseCallback callback | 请求的响应，指向Http_ResponseCallback。 |
 | Http_EventsHandler handler | 监听不同HTTP事件的回调函数，指向Http_EventsHandler。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

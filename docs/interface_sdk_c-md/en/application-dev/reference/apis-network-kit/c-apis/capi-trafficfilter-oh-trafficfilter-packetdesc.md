@@ -6,7 +6,7 @@ typedef struct OH_TrafficFilter_PacketDesc {...} OH_TrafficFilter_PacketDesc
 
 ## Overview
 
-Packet descriptorContains five-tuple information and packet data
+Packet descriptor<br> Contains five-tuple information and packet data
 
 **Since**: 26.1.0
 

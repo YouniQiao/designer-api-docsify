@@ -30,9 +30,9 @@ Declared predicate related functions and enumerations.
 
 | Name | Description |
 | -- | -- |
-| [int OH_Predicates_NotLike(OH_Predicates *predicates, const char *field, const char *pattern)](#oh_predicates_notlike) | Sets the OH_Predicates to match the field whose data type is string and value is not like the specified value.This method is similar to "Not like" of the SQL statement. |
-| [int OH_Predicates_Glob(OH_Predicates *predicates, const char *field, const char *pattern)](#oh_predicates_glob) | Sets the OH_Predicates to match the specified field whose data type is string and the value containsa wildcard. Different from like, the input parameters of this method are case-sensitive. |
-| [int OH_Predicates_NotGlob(OH_Predicates *predicates, const char *field, const char *pattern)](#oh_predicates_notglob) | Sets the OH_Predicates to not match the specified field whose data type is string and the value containsa wildcard. Different from not like, the input parameters of this method are case-sensitive. |
+| [int OH_Predicates_NotLike(OH_Predicates *predicates, const char *field, const char *pattern)](#oh_predicates_notlike) | Sets the OH_Predicates to match the field whose data type is string and value is not like the specified value. This method is similar to "Not like" of the SQL statement. |
+| [int OH_Predicates_Glob(OH_Predicates *predicates, const char *field, const char *pattern)](#oh_predicates_glob) | Sets the OH_Predicates to match the specified field whose data type is string and the value contains a wildcard. Different from like, the input parameters of this method are case-sensitive. |
+| [int OH_Predicates_NotGlob(OH_Predicates *predicates, const char *field, const char *pattern)](#oh_predicates_notglob) | Sets the OH_Predicates to not match the specified field whose data type is string and the value contains a wildcard. Different from not like, the input parameters of this method are case-sensitive. |
 | [int OH_Predicates_Having(OH_Predicates *predicates, const char *conditions, const OH_Data_Values *values)](#oh_predicates_having) | Sets the OH_Predicates to specify conditions to filter grouped results that will appear in the final result. |
 
 ## Enum type description
@@ -65,7 +65,7 @@ int OH_Predicates_NotLike(OH_Predicates *predicates, const char *field, const ch
 
 **Description**
 
-Sets the OH_Predicates to match the field whose data type is string and value is not like the specified value.This method is similar to "Not like" of the SQL statement.
+Sets the OH_Predicates to match the field whose data type is string and value is not like the specified value. This method is similar to "Not like" of the SQL statement.
 
 **Since**: 20
 
@@ -81,7 +81,7 @@ Sets the OH_Predicates to match the field whose data type is string and value is
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Predicates_Glob()
 
@@ -91,7 +91,7 @@ int OH_Predicates_Glob(OH_Predicates *predicates, const char *field, const char 
 
 **Description**
 
-Sets the OH_Predicates to match the specified field whose data type is string and the value containsa wildcard. Different from like, the input parameters of this method are case-sensitive.
+Sets the OH_Predicates to match the specified field whose data type is string and the value contains a wildcard. Different from like, the input parameters of this method are case-sensitive.
 
 **Since**: 20
 
@@ -107,7 +107,7 @@ Sets the OH_Predicates to match the specified field whose data type is string an
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Predicates_NotGlob()
 
@@ -117,7 +117,7 @@ int OH_Predicates_NotGlob(OH_Predicates *predicates, const char *field, const ch
 
 **Description**
 
-Sets the OH_Predicates to not match the specified field whose data type is string and the value containsa wildcard. Different from not like, the input parameters of this method are case-sensitive.
+Sets the OH_Predicates to not match the specified field whose data type is string and the value contains a wildcard. Different from not like, the input parameters of this method are case-sensitive.
 
 **Since**: 20
 
@@ -133,7 +133,7 @@ Sets the OH_Predicates to not match the specified field whose data type is strin
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Predicates_Having()
 
@@ -159,6 +159,6 @@ Sets the OH_Predicates to specify conditions to filter grouped results that will
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 

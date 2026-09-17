@@ -2,7 +2,7 @@
 
 ## 概述
 
-文件中定义了与坐标点相关的功能函数，支持创建、获取、设置、取反、偏移及销毁坐标点对象等操作，便于在2D图形绘制中对坐标点进行管理与变换。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+文件中定义了与坐标点相关的功能函数，支持创建、获取、设置、取反、偏移及销毁坐标点对象等操作， 便于在2D图形绘制中对坐标点进行管理与变换。 <br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **库：** libnative_drawing.so
 
@@ -47,7 +47,7 @@ OH_Drawing_Point* OH_Drawing_PointCreate(float x, float y)
 | float x | 表示坐标点的x轴坐标，单位为物理像素px。 |
 | float y | 表示坐标点的y轴坐标，单位为物理像素px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -72,7 +72,7 @@ OH_Drawing_ErrorCode OH_Drawing_PointGetX(const OH_Drawing_Point* point, float* 
 | const OH_Drawing_Point* point | 指向坐标点对象{@link OH_Drawing_Point}的指针。 |
 | float* x | 输出参数，用于接收坐标点的x轴坐标值，单位为物理像素px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -97,7 +97,7 @@ OH_Drawing_ErrorCode OH_Drawing_PointGetY(const OH_Drawing_Point* point, float* 
 | const OH_Drawing_Point* point | 指向坐标点对象{@link OH_Drawing_Point}的指针。 |
 | float* y | 输出参数，用于接收坐标点的y轴坐标值，单位为物理像素px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -123,7 +123,7 @@ OH_Drawing_ErrorCode OH_Drawing_PointSet(OH_Drawing_Point* point, float x, float
 | float x | 表示坐标点的x轴坐标，单位为物理像素px。 |
 | float y | 表示坐标点的y轴坐标，单位为物理像素px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -147,7 +147,7 @@ OH_Drawing_ErrorCode OH_Drawing_PointNegate(OH_Drawing_Point* point)
 | -- | -- |
 | OH_Drawing_Point* point | 指向坐标点对象{@link OH_Drawing_Point}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -173,7 +173,7 @@ OH_Drawing_ErrorCode OH_Drawing_PointOffset(OH_Drawing_Point* point, float dx, f
 | float dx | 表示在x轴上的偏移量，单位为物理像素px。正数表示往x轴正方向平移，负数表示往x轴负方向平移。 |
 | float dy | 表示在y轴上的偏移量，单位为物理像素px。正数表示往y轴正方向平移，负数表示往y轴负方向平移。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

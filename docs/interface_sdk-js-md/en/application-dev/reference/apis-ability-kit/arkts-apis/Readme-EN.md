@@ -8,14 +8,14 @@
   - [DataAbilityResult](arkts-ability-ability-dataabilityresult-t.md)
   - [PacMap](arkts-ability-ability-pacmap-t.md)
   - [StartAbilityParameter](arkts-ability-ability-startabilityparameter-t.md)
-- [@ohos.ability.dataUriUtils](arkts-ability-ability-datauriutils.md)
+- [@ohos.ability.dataUriUtils(DataUriUtils Module)](arkts-ability-ability-datauriutils.md)
   - [attachId](arkts-ability-datauriutils-attachid-depr-f.md)
   - [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md)
   - [getId](arkts-ability-datauriutils-getid-depr-f.md)
   - [updateId](arkts-ability-datauriutils-updateid-depr-f.md)
 - [@ohos.ability.errorCode](arkts-ability-ability-errorcode.md)
   - [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md)
-- [@ohos.ability.featureAbility](arkts-ability-ability-featureability.md)
+- [@ohos.ability.featureAbility(FeatureAbility Module)](arkts-ability-ability-featureability.md)
   - [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md)
   - [connectAbility](arkts-ability-featureability-connectability-f.md)
   - [disconnectAbility](arkts-ability-featureability-disconnectability-f.md)
@@ -34,7 +34,7 @@
   - [AbilityWindowConfiguration](arkts-ability-featureability-abilitywindowconfiguration-e.md)
   - [DataAbilityOperationType](arkts-ability-featureability-dataabilityoperationtype-e.md)
   - [ErrorCode](arkts-ability-featureability-errorcode-e.md)
-- [@ohos.ability.particleAbility](arkts-ability-ability-particleability.md)
+- [@ohos.ability.particleAbility(ParticleAbility Module)](arkts-ability-ability-particleability.md)
   - [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md)
   - [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md)
   - [connectAbility](arkts-ability-particleability-connectability-f.md)
@@ -233,9 +233,9 @@
   - [getAppPreloadType](arkts-ability-application-getapppreloadtype-f.md)
   - [promoteCurrentToCandidateMasterProcess](arkts-ability-application-promotecurrenttocandidatemasterprocess-f.md)
   - [AppPreloadType](arkts-ability-application-apppreloadtype-e.md)
-- [@ohos.app.ability.ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback.md)
+- [@ohos.app.ability.ApplicationStateChangeCallback(Application Process State Change Listener)](arkts-ability-app-ability-applicationstatechangecallback.md)
   - [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md)
-- [@ohos.app.ability.appManager](arkts-ability-app-ability-appmanager.md)
+- [@ohos.app.ability.appManager(Application Management)](arkts-ability-app-ability-appmanager.md)
   <!--Del-->
   - [clearUpAppData(system api)](arkts-ability-appmanager-clearupappdata-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -324,7 +324,7 @@
   <!--Del-->
   - [PreloadMode(system api)](arkts-ability-appmanager-preloadmode-e-sys.md)<!--DelEnd-->
   - [ProcessState](arkts-ability-appmanager-processstate-e.md)
-- [@ohos.app.ability.appMemoryOptimizer](arkts-ability-app-ability-appmemoryoptimizer.md)
+- [@ohos.app.ability.appMemoryOptimizer(Application Memory Optimizer)](arkts-ability-app-ability-appmemoryoptimizer.md)
   - [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md)
   - [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md)
 - [@ohos.app.ability.appRecovery(Application Recovery)](arkts-ability-app-ability-apprecovery.md)
@@ -335,7 +335,7 @@
   - [RestartFlag](arkts-ability-apprecovery-restartflag-e.md)
   - [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md)
   - [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md)
-- [@ohos.app.ability.AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability.md)
+- [@ohos.app.ability.AppServiceExtensionAbility(ExtensionAbility for Application Background Services)](arkts-ability-app-ability-appserviceextensionability.md)
   - [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 - [@ohos.app.ability.AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions.md)
   - [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
@@ -370,7 +370,7 @@
   <!--Del-->
   - [UpdateRequest(system api)](arkts-ability-autofillmanager-updaterequest-t-sys.md)<!--DelEnd-->
   - [ViewData](arkts-ability-autofillmanager-viewdata-t.md)
-- [@ohos.app.ability.autoStartupManager](arkts-ability-app-ability-autostartupmanager.md)
+- [@ohos.app.ability.autoStartupManager(Auto-Startup Management)](arkts-ability-app-ability-autostartupmanager.md)
   <!--Del-->
   - [cancelApplicationAutoStartup(system api)](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md)<!--DelEnd-->
   - [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md)
@@ -383,11 +383,11 @@
   - [queryAllAutoStartupApplications(system api)](arkts-ability-autostartupmanager-queryallautostartupapplications-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setApplicationAutoStartup(system api)](arkts-ability-autostartupmanager-setapplicationautostartup-f-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.ChildProcess](arkts-ability-app-ability-childprocess.md)
+- [@ohos.app.ability.ChildProcess(Child Process Base Class)](arkts-ability-app-ability-childprocess.md)
   - [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md)
-- [@ohos.app.ability.ChildProcessArgs](arkts-ability-app-ability-childprocessargs.md)
+- [@ohos.app.ability.ChildProcessArgs(Child Process Arguments)](arkts-ability-app-ability-childprocessargs.md)
   - [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md)
-- [@ohos.app.ability.childProcessManager](arkts-ability-app-ability-childprocessmanager.md)
+- [@ohos.app.ability.childProcessManager(Child Process Management)](arkts-ability-app-ability-childprocessmanager.md)
   - [getChildProcessInfos](arkts-ability-childprocessmanager-getchildprocessinfos-f.md)
   - [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md)
   - [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md)
@@ -396,7 +396,7 @@
   - [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md)
   - [ChildProcessInformation](arkts-ability-childprocessmanager-childprocessinformation-t.md)
   - [StartMode](arkts-ability-childprocessmanager-startmode-e.md)
-- [@ohos.app.ability.ChildProcessOptions](arkts-ability-app-ability-childprocessoptions.md)
+- [@ohos.app.ability.ChildProcessOptions(Child Process Startup Options)](arkts-ability-app-ability-childprocessoptions.md)
   - [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md)
 - [@ohos.app.ability.common(Ability Common Module)](arkts-ability-app-ability-common.md)
   - [AbilityResult](arkts-ability-common-abilityresult-t.md)
@@ -482,7 +482,7 @@
   - [on](arkts-ability-continuemanager-on-f.md)
   - [ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)
   - [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md)
-- [@ohos.app.ability.dataUriUtils](arkts-ability-app-ability-datauriutils.md)
+- [@ohos.app.ability.dataUriUtils(DataUriUtils Module)](arkts-ability-app-ability-datauriutils.md)
   - [attachId](arkts-ability-datauriutils-attachid-f.md)
   - [deleteId](arkts-ability-datauriutils-deleteid-f.md)
   - [getId](arkts-ability-datauriutils-getid-f.md)
@@ -527,9 +527,9 @@
   - [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md)
   - [InstanceType](arkts-ability-errormanager-instancetype-e.md)
   - [ResourceType](arkts-ability-errormanager-resourcetype-e.md)
-- [@ohos.app.ability.ExtensionAbility](arkts-ability-app-ability-extensionability.md)
+- [@ohos.app.ability.ExtensionAbility(ExtensionAbility Base Class)](arkts-ability-app-ability-extensionability.md)
   - [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
-- [@ohos.app.ability.hyperSnapManager](arkts-ability-app-ability-hypersnapmanager.md)
+- [@ohos.app.ability.hyperSnapManager(Application Quick Startup Management)](arkts-ability-app-ability-hypersnapmanager.md)
   - [getLastError](arkts-ability-hypersnapmanager-getlasterror-f.md)
   - [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md)
   - [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md)
@@ -706,7 +706,7 @@
   - [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md)
   - [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md)
 <!--Del-->
-- [@ohos.app.ability.ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability.md)<!--DelEnd-->
+- [@ohos.app.ability.ServiceExtensionAbility(ServiceExtensionAbility)](arkts-ability-app-ability-serviceextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [ServiceExtensionAbility(system api)](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.ShareExtensionAbility(ExtensionAbility for Share Detail Page Integration)](arkts-ability-app-ability-shareextensionability.md)
@@ -832,13 +832,13 @@
   - [updateAgentCard(system api)](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
 - [@ohos.app.agent.AgentUIExtensionAbility(UI-based Agent Extension Component)](arkts-ability-app-agent-agentuiextensionability.md)
   - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
-- [@ohos.app.appstartup.StartupConfig](arkts-ability-app-appstartup-startupconfig.md)
+- [@ohos.app.appstartup.StartupConfig(AppStartup Configuration)](arkts-ability-app-appstartup-startupconfig.md)
   - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
-- [@ohos.app.appstartup.StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry.md)
+- [@ohos.app.appstartup.StartupConfigEntry(AppStartup Configuration Entry)](arkts-ability-app-appstartup-startupconfigentry.md)
   - [StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md)
-- [@ohos.app.appstartup.StartupListener](arkts-ability-app-appstartup-startuplistener.md)
+- [@ohos.app.appstartup.StartupListener(AppStartup Task Listener)](arkts-ability-app-appstartup-startuplistener.md)
   - [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md)
-- [@ohos.app.appstartup.startupManager](arkts-ability-app-appstartup-startupmanager.md)
+- [@ohos.app.appstartup.startupManager(AppStartup Management)](arkts-ability-app-appstartup-startupmanager.md)
   - [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md)
   - [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md)
   - [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md)
@@ -904,7 +904,7 @@
   - [updateConfiguration(system api)](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AbilityState(system api)](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.application.appManager](arkts-ability-application-appmanager.md)
+- [@ohos.application.appManager(appManager)](arkts-ability-application-appmanager.md)
   <!--Del-->
   - [clearUpApplicationData(system api)](arkts-ability-appmanager-clearupapplicationdata-depr-f-sys.md)<!--DelEnd-->
   - [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md)
@@ -1640,19 +1640,19 @@
     - [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)
   - [connectOptions](arkts-ability-connectoptions.md)
     - [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md)
-  - [dataAbilityHelper](arkts-ability-dataabilityhelper.md)
+  - [dataAbilityHelper(DataAbilityHelper)](arkts-ability-dataabilityhelper.md)
     - [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md)
     - [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)
-  - [dataAbilityOperation](arkts-ability-dataabilityoperation.md)
+  - [dataAbilityOperation(DataAbilityOperation)](arkts-ability-dataabilityoperation.md)
     - [DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)
-  - [dataAbilityResult](arkts-ability-dataabilityresult.md)
+  - [dataAbilityResult(DataAbilityResult)](arkts-ability-dataabilityresult.md)
     - [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)
   - [startAbilityParameter](arkts-ability-startabilityparameter.md)
     - [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md)
   - [want(Want)](arkts-ability-want.md)
     - [Want](arkts-ability-want-want-i.md)
 - app<!--arkts-abilitykit-app-->
-  - [appVersionInfo](arkts-ability-appversioninfo.md)
+  - [appVersionInfo(AppVersionInfo)](arkts-ability-appversioninfo.md)
     - [AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)
   - [context(Context Base Class of the FA Model)](arkts-ability-context.md)
     - [Context](arkts-ability-context-context-depr-i.md)
@@ -1708,17 +1708,17 @@
     <!--Del-->
     - [AgentProxy(system api)](arkts-ability-agentproxy-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver.md)<!--DelEnd-->
+  - [AppForegroundStateObserver(AppForegroundStateObserver)](arkts-ability-appforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AppForegroundStateObserver(system api)](arkts-ability-appforegroundstateobserver-c-sys.md)<!--DelEnd-->
   - [ApplicationContext(Application Context)](arkts-ability-applicationcontext.md)
     - [ApplicationContext](arkts-ability-applicationcontext-c.md)
     <!--Del-->
     - [ApplicationContext(system api)](arkts-ability-applicationcontext-c-sys.md)<!--DelEnd-->
-  - [ApplicationStateObserver](arkts-ability-applicationstateobserver.md)
+  - [ApplicationStateObserver(ApplicationStateObserver)](arkts-ability-applicationstateobserver.md)
     - [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md)
     - [ProcessData](arkts-ability-processdata-t.md)
-  - [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext.md)
+  - [AppServiceExtensionContext(ExtensionAbility Context for Application Background Services)](arkts-ability-appserviceextensioncontext.md)
     - [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
   - [AppStateData(AppStateData)](arkts-ability-appstatedata.md)
     - [AppStateData](arkts-ability-appstatedata-c.md)
@@ -1757,11 +1757,11 @@
     <!--Del-->
     - [AutoFillType(system api)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AutoStartupCallback](arkts-ability-autostartupcallback.md)<!--DelEnd-->
+  - [AutoStartupCallback(AutoStartupCallback)](arkts-ability-autostartupcallback.md)<!--DelEnd-->
     <!--Del-->
     - [AutoStartupCallback(system api)](arkts-ability-autostartupcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AutoStartupInfo](arkts-ability-autostartupinfo.md)<!--DelEnd-->
+  - [AutoStartupInfo(AutoStartupInfo)](arkts-ability-autostartupinfo.md)<!--DelEnd-->
     <!--Del-->
     - [AutoStartupInfo(system api)](arkts-ability-autostartupinfo-i-sys.md)<!--DelEnd-->
   - [BaseContext(BaseContext)](arkts-ability-basecontext.md)
@@ -1813,7 +1813,7 @@
   - [ExtensionContext(ExtensionContext)](arkts-ability-extensioncontext.md)
     - [ExtensionContext](arkts-ability-extensioncontext-c.md)
   <!--Del-->
-  - [ExtensionRunningInfo](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
+  - [ExtensionRunningInfo(ExtensionRunningInfo)](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
     <!--Del-->
     - [ExtensionRunningInfo(system api)](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1867,11 +1867,11 @@
     - [PageNodeInfo(system api)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
   - [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext.md)
     - [PhotoEditorExtensionContext](arkts-ability-photoeditorextensioncontext-c.md)
-  - [ProcessData](arkts-ability-processdata.md)
+  - [ProcessData(ProcessData)](arkts-ability-processdata.md)
     - [ProcessData](arkts-ability-processdata-c.md)
-  - [ProcessInformation](arkts-ability-processinformation.md)
+  - [ProcessInformation(ProcessInformation)](arkts-ability-processinformation.md)
     - [ProcessInformation](arkts-ability-processinformation-i.md)
-  - [ProcessRunningInfo](arkts-ability-processrunninginfo.md)
+  - [ProcessRunningInfo(ProcessRunningInfo)](arkts-ability-processrunninginfo.md)
     - [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)
   <!--Del-->
   - [RunningAppClone](arkts-ability-runningappclone.md)<!--DelEnd-->
@@ -1888,7 +1888,7 @@
   - [SendableContext](arkts-ability-sendablecontext.md)
     - [SendableContext](arkts-ability-sendablecontext-i.md)
   <!--Del-->
-  - [ServiceExtensionContext](arkts-ability-serviceextensioncontext.md)<!--DelEnd-->
+  - [ServiceExtensionContext(ServiceExtensionContext)](arkts-ability-serviceextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [ServiceExtensionContext(system api)](arkts-ability-serviceextensioncontext-c-sys.md)<!--DelEnd-->
   - [shellCmdResult(ShellCmdResult)](arkts-ability-shellcmdresult.md)

@@ -6,7 +6,7 @@ typedef struct OH_NN_Tensor {...} OH_NN_Tensor
 
 ## Overview
 
-Defines the tensor structure.It is usually used to construct data nodes and operator parameters in a model graph. When constructing a tensor,you need to specify the data type, number of dimensions, dimension information, and quantization information.
+Defines the tensor structure.<br> It is usually used to construct data nodes and operator parameters in a model graph. When constructing a tensor, you need to specify the data type, number of dimensions, dimension information, and quantization information.
 
 **Since**: 9
 

@@ -44,9 +44,7 @@ Defines the enums, structs, and error codes used in the asset store service.
 
 | 名称 | 描述 |
 | -- | -- |
-| ASSET_TAG_TYPE_MASK (0xF << 28)
-#ifdef \_\_cplusplus
-} | 用于获取关键资产属性类型的掩码。<br>**起始版本：** 11 |
+| ASSET_TAG_TYPE_MASK (0xF << 28) | 用于获取关键资产属性类型的掩码。<br>**起始版本：** 11 |
 
 ## 枚举类型说明
 
@@ -91,7 +89,7 @@ enum Asset_Tag
 | ASSET_TAG_AUTH_CHALLENGE = ASSET_TYPE_BYTES \| 0x07 | 表示认证时防重放用的挑战值，其值为bytes类型。 |
 | ASSET_TAG_AUTH_TOKEN = ASSET_TYPE_BYTES \| 0x08 | 表示用户认证后获取到的认证令牌，其值为bytes类型。 |
 | ASSET_TAG_SYNC_TYPE = ASSET_TYPE_NUMBER \| 0x10 | 表示关键资产的同步类型，其值为uint32_t类型。 |
-| ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11 | 表示关键资产是否需持久化存储，其值为bool类型。true表示应用卸载时保留关键资产，false表示不保留关键资产。在调用OH_Asset_Add函数时传入该属性需要校验权限ohos.permission.STORE_PERSISTENT_DATA，申请方式请参考声明权限。 |
+| ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11 | 表示关键资产是否需持久化存储，其值为bool类型。true表示应用卸载时保留关键资产，false表示不保留关键资产。 在调用OH_Asset_Add函数时传入该属性需要校验权限ohos.permission.STORE_PERSISTENT_DATA，申请方式请参考声明权限。 |
 | ASSET_TAG_DATA_LABEL_CRITICAL_1 = ASSET_TYPE_BYTES \| 0x20 | 表示一个用户可自定义传入的字段，该字段不可被更新，其值为bytes类型。 |
 | ASSET_TAG_DATA_LABEL_CRITICAL_2 = ASSET_TYPE_BYTES \| 0x21 | 表示一个用户可自定义传入的字段，该字段不可被更新，其值为bytes类型。 |
 | ASSET_TAG_DATA_LABEL_CRITICAL_3 = ASSET_TYPE_BYTES \| 0x22 | 表示一个用户可自定义传入的字段，该字段不可被更新，其值为bytes类型。 |

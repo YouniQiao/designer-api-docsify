@@ -8,7 +8,7 @@ This file declares the functions related to the text blob in the drawing module.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -25,13 +25,13 @@ This file declares the functions related to the text blob in the drawing module.
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_TextBlobBuilder* OH_Drawing_TextBlobBuilderCreate(void)](#oh_drawing_textblobbuildercreate) | Creates an **OH_Drawing_TextBlobBuilder** object. |
-| [OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromText(const void* text, size_t byteLength, const OH_Drawing_Font* font, OH_Drawing_TextEncoding textEncoding)](#oh_drawing_textblobcreatefromtext) | Creates an **OH_Drawing_TextBlob** object from the text.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **text** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned. |
-| [OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromPosText(const void* text, size_t byteLength, OH_Drawing_Point2D* point2D, const OH_Drawing_Font* font, OH_Drawing_TextEncoding textEncoding)](#oh_drawing_textblobcreatefrompostext) | Creates an **OH_Drawing_TextBlob** object from the text. The coordinates of each character in the OH_Drawing_TextBlob** object are determined by the coordinate information in the **OH_Drawing_Point2D** array.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **text**, **point2D**, and **font** is NULL or **byteLength** is **0**, OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned. |
-| [OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromString(const char* str, const OH_Drawing_Font* font, OH_Drawing_TextEncoding textEncoding)](#oh_drawing_textblobcreatefromstring) | Creates an **OH_Drawing_TextBlob** object from a string.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **str** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned. |
-| [void OH_Drawing_TextBlobGetBounds(OH_Drawing_TextBlob* textBlob, OH_Drawing_Rect* rect)](#oh_drawing_textblobgetbounds) | Obtains the bounds of an **OH_Drawing_TextBlob** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **textBlob** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint32_t OH_Drawing_TextBlobUniqueID(const OH_Drawing_TextBlob* textBlob)](#oh_drawing_textblobuniqueid) | Obtains the unique identifier of a text blob. The identifier is a non-zero value.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [const OH_Drawing_RunBuffer* OH_Drawing_TextBlobBuilderAllocRunPos(OH_Drawing_TextBlobBuilder* textBlobBuilder, const OH_Drawing_Font* font, int32_t count, const OH_Drawing_Rect* rect)](#oh_drawing_textblobbuilderallocrunpos) | Allocates a run to store glyphs and positions. The pointer returned does not need to be managed by the caller.It can no longer be used after [OH_Drawing_TextBlobBuilderMake](capi-drawing-text-blob-h.md#oh_drawing_textblobbuildermake) is called.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **textBlobBuilder** or **font** is NULL or **count** is less than or equal to 0, OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_TextBlob* OH_Drawing_TextBlobBuilderMake(OH_Drawing_TextBlobBuilder* textBlobBuilder)](#oh_drawing_textblobbuildermake) | Makes an **OH_Drawing_TextBlob** object from an **OH_Drawing_TextBlobBuilder**.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **textBlobBuilder** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromText(const void* text, size_t byteLength, const OH_Drawing_Font* font, OH_Drawing_TextEncoding textEncoding)](#oh_drawing_textblobcreatefromtext) | Creates an **OH_Drawing_TextBlob** object from the text. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **text** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromPosText(const void* text, size_t byteLength, OH_Drawing_Point2D* point2D, const OH_Drawing_Font* font, OH_Drawing_TextEncoding textEncoding)](#oh_drawing_textblobcreatefrompostext) | Creates an **OH_Drawing_TextBlob** object from the text. The coordinates of each character in the **<br>OH_Drawing_TextBlob** object are determined by the coordinate information in the **OH_Drawing_Point2D** array. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **text**, **point2D**, and **font** is NULL or **byteLength** is **0**, **<br>OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromString(const char* str, const OH_Drawing_Font* font, OH_Drawing_TextEncoding textEncoding)](#oh_drawing_textblobcreatefromstring) | Creates an **OH_Drawing_TextBlob** object from a string. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **str** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_TextBlobGetBounds(OH_Drawing_TextBlob* textBlob, OH_Drawing_Rect* rect)](#oh_drawing_textblobgetbounds) | Obtains the bounds of an **OH_Drawing_TextBlob** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **textBlob** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint32_t OH_Drawing_TextBlobUniqueID(const OH_Drawing_TextBlob* textBlob)](#oh_drawing_textblobuniqueid) | Obtains the unique identifier of a text blob. The identifier is a non-zero value. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [const OH_Drawing_RunBuffer* OH_Drawing_TextBlobBuilderAllocRunPos(OH_Drawing_TextBlobBuilder* textBlobBuilder, const OH_Drawing_Font* font, int32_t count, const OH_Drawing_Rect* rect)](#oh_drawing_textblobbuilderallocrunpos) | Allocates a run to store glyphs and positions. The pointer returned does not need to be managed by the caller. It can no longer be used after [OH_Drawing_TextBlobBuilderMake](capi-drawing-text-blob-h.md#oh_drawing_textblobbuildermake) is called. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **textBlobBuilder** or **font** is NULL or **count** is less than or equal to 0, **<br>OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_TextBlob* OH_Drawing_TextBlobBuilderMake(OH_Drawing_TextBlobBuilder* textBlobBuilder)](#oh_drawing_textblobbuildermake) | Makes an **OH_Drawing_TextBlob** object from an **OH_Drawing_TextBlobBuilder**. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **textBlobBuilder** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_TextBlobDestroy(OH_Drawing_TextBlob* textBlob)](#oh_drawing_textblobdestroy) | Destroys an **OH_Drawing_TextBlob** object and reclaims the memory occupied by the object. |
 | [void OH_Drawing_TextBlobBuilderDestroy(OH_Drawing_TextBlobBuilder* textBlobBuilder)](#oh_drawing_textblobbuilderdestroy) | Destroys an **OH_Drawing_TextBlobBuilder** object and reclaims the memory occupied by the object. |
 
@@ -63,7 +63,7 @@ OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromText(const void* text, size_t 
 
 **Description**
 
-Creates an **OH_Drawing_TextBlob** object from the text.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **text** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned.
+Creates an **OH_Drawing_TextBlob** object from the text. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **text** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -90,7 +90,7 @@ OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromPosText(const void* text, size
 
 **Description**
 
-Creates an **OH_Drawing_TextBlob** object from the text. The coordinates of each character in the OH_Drawing_TextBlob** object are determined by the coordinate information in the **OH_Drawing_Point2D** array.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **text**, **point2D**, and **font** is NULL or **byteLength** is **0**, OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned.
+Creates an **OH_Drawing_TextBlob** object from the text. The coordinates of each character in the **<br>OH_Drawing_TextBlob** object are determined by the coordinate information in the **OH_Drawing_Point2D** array. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **text**, **point2D**, and **font** is NULL or **byteLength** is **0**, **<br>OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -100,7 +100,7 @@ Creates an **OH_Drawing_TextBlob** object from the text. The coordinates of each
 | -- | -- |
 | const void* text | Pointer to the text. |
 | size_t byteLength | Length of the text, in bytes. |
-| OH_Drawing_Point2D* point2D | Pointer to the start address of the  {@link OH_Drawing_Point2D}array. The number of entries in the array is determined by  {@link OH_Drawing_FontCountText}. |
+| OH_Drawing_Point2D* point2D | Pointer to the start address of the  {@link OH_Drawing_Point2D}<br> array. The number of entries in the array is determined by  {@link OH_Drawing_FontCountText} . |
 | const OH_Drawing_Font* font | Pointer to the {@link OH_Drawing_Font} object. |
 | OH_Drawing_TextEncoding textEncoding | Text encoding type {@link OH_Drawing_TextEncoding}. |
 
@@ -118,7 +118,7 @@ OH_Drawing_TextBlob* OH_Drawing_TextBlobCreateFromString(const char* str, const 
 
 **Description**
 
-Creates an **OH_Drawing_TextBlob** object from a string.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **str** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned.
+Creates an **OH_Drawing_TextBlob** object from a string. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **str** or **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **textEncoding** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -144,7 +144,7 @@ void OH_Drawing_TextBlobGetBounds(OH_Drawing_TextBlob* textBlob, OH_Drawing_Rect
 
 **Description**
 
-Obtains the bounds of an **OH_Drawing_TextBlob** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **textBlob** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the bounds of an **OH_Drawing_TextBlob** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **textBlob** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -153,7 +153,7 @@ Obtains the bounds of an **OH_Drawing_TextBlob** object.This API may return an e
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_TextBlob* textBlob | Pointer to the {@link OH_Drawing_TextBlob} object. |
-| OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. You can call {@link OH_Drawing_Rect} to create arectangle object. |
+| OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. You can call {@link OH_Drawing_Rect} to create a rectangle object. |
 
 ### OH_Drawing_TextBlobUniqueID()
 
@@ -163,7 +163,7 @@ uint32_t OH_Drawing_TextBlobUniqueID(const OH_Drawing_TextBlob* textBlob)
 
 **Description**
 
-Obtains the unique identifier of a text blob. The identifier is a non-zero value.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the unique identifier of a text blob. The identifier is a non-zero value. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -187,7 +187,7 @@ const OH_Drawing_RunBuffer* OH_Drawing_TextBlobBuilderAllocRunPos(OH_Drawing_Tex
 
 **Description**
 
-Allocates a run to store glyphs and positions. The pointer returned does not need to be managed by the caller.It can no longer be used after [OH_Drawing_TextBlobBuilderMake](capi-drawing-text-blob-h.md#oh_drawing_textblobbuildermake) is called.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **textBlobBuilder** or **font** is NULL or **count** is less than or equal to 0, OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Allocates a run to store glyphs and positions. The pointer returned does not need to be managed by the caller. It can no longer be used after [OH_Drawing_TextBlobBuilderMake](capi-drawing-text-blob-h.md#oh_drawing_textblobbuildermake) is called. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **textBlobBuilder** or **font** is NULL or **count** is less than or equal to 0, **<br>OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -214,7 +214,7 @@ OH_Drawing_TextBlob* OH_Drawing_TextBlobBuilderMake(OH_Drawing_TextBlobBuilder* 
 
 **Description**
 
-Makes an **OH_Drawing_TextBlob** object from an **OH_Drawing_TextBlobBuilder**.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **textBlobBuilder** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Makes an **OH_Drawing_TextBlob** object from an **OH_Drawing_TextBlobBuilder**. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **textBlobBuilder** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 

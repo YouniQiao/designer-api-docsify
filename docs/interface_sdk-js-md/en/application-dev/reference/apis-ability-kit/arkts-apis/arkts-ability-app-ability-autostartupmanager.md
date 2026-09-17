@@ -1,4 +1,4 @@
-# @ohos.app.ability.autoStartupManager
+# @ohos.app.ability.autoStartupManager(Auto-Startup Management)
 
 The autoStartupManager module provides APIs for an application to query whether it is configured to start automatically at boot time.
 

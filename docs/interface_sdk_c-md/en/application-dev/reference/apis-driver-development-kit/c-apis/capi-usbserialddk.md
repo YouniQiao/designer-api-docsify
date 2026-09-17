@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides USB SERIAL DDK types and declares the macros, enumerated variables, anddata structures required by the USB SERIAL DDK APIs.
+Provides USB SERIAL DDK types and declares the macros, enumerated variables, and data structures required by the USB SERIAL DDK APIs.
 
 **Since**: 18
 

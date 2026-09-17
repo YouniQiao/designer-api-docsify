@@ -18,9 +18,9 @@ Declares the APIs used to obtain details of specific certificates.
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_CertManager_GetUkeyCertificate(const OH_CM_Blob *keyUri, const OH_CM_UkeyInfo *ukeyInfo, OH_CM_CredentialDetailList *certificateList)](#oh_certmanager_getukeycertificate) | Obtains the detail list of USB certificate credentials. After the call is complete,call OH_CertManager_FreeUkeyCertificate to release the certificateList memory. |
-| [int32_t OH_CertManager_GetPrivateCertificate(const OH_CM_Blob *keyUri, OH_CM_Credential *certificate)](#oh_certmanager_getprivatecertificate) | Obtains the details of a private certificate credential of a specific application.After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory. |
-| [int32_t OH_CertManager_GetPublicCertificate(const OH_CM_Blob *keyUri, OH_CM_Credential *certificate)](#oh_certmanager_getpubliccertificate) | Obtains the details of a public certificate credential of a specific user.After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory. |
+| [int32_t OH_CertManager_GetUkeyCertificate(const OH_CM_Blob *keyUri, const OH_CM_UkeyInfo *ukeyInfo, OH_CM_CredentialDetailList *certificateList)](#oh_certmanager_getukeycertificate) | Obtains the detail list of USB certificate credentials. After the call is complete, call OH_CertManager_FreeUkeyCertificate to release the certificateList memory. |
+| [int32_t OH_CertManager_GetPrivateCertificate(const OH_CM_Blob *keyUri, OH_CM_Credential *certificate)](#oh_certmanager_getprivatecertificate) | Obtains the details of a private certificate credential of a specific application. After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory. |
+| [int32_t OH_CertManager_GetPublicCertificate(const OH_CM_Blob *keyUri, OH_CM_Credential *certificate)](#oh_certmanager_getpubliccertificate) | Obtains the details of a public certificate credential of a specific user. After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory. |
 | [void OH_CertManager_FreeUkeyCertificate(OH_CM_CredentialDetailList *certificateList)](#oh_certmanager_freeukeycertificate) | Destroys the certificate detail list. |
 | [void OH_CertManager_FreeCredential(OH_CM_Credential *certificate)](#oh_certmanager_freecredential) | Destroys the certificate details. |
 
@@ -34,7 +34,7 @@ int32_t OH_CertManager_GetUkeyCertificate(const OH_CM_Blob *keyUri, const OH_CM_
 
 **Description**
 
-Obtains the detail list of USB certificate credentials. After the call is complete,call OH_CertManager_FreeUkeyCertificate to release the certificateList memory.
+Obtains the detail list of USB certificate credentials. After the call is complete, call OH_CertManager_FreeUkeyCertificate to release the certificateList memory.
 
 **Required permission**: ohos.permission.ACCESS_CERT_MANAGER
 
@@ -62,7 +62,7 @@ int32_t OH_CertManager_GetPrivateCertificate(const OH_CM_Blob *keyUri, OH_CM_Cre
 
 **Description**
 
-Obtains the details of a private certificate credential of a specific application.After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory.
+Obtains the details of a private certificate credential of a specific application. After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory.
 
 **Required permission**: ohos.permission.ACCESS_CERT_MANAGER
 
@@ -89,7 +89,7 @@ int32_t OH_CertManager_GetPublicCertificate(const OH_CM_Blob *keyUri, OH_CM_Cred
 
 **Description**
 
-Obtains the details of a public certificate credential of a specific user.After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory.
+Obtains the details of a public certificate credential of a specific user. After the call is complete, call OH_CertManager_FreeCredential to release the certificate memory.
 
 **Required permission**: ohos.permission.ACCESS_CERT_MANAGER
 

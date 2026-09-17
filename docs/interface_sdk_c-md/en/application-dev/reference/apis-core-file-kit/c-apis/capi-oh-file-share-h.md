@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides URI-based file and directory authorization and persistence, permission activation, permission query,and other methods.
+Provides URI-based file and directory authorization and persistence, permission activation, permission query, and other methods.
 
 **Library**: libohfileshare.so
 
@@ -18,8 +18,8 @@ Provides URI-based file and directory authorization and persistence, permission 
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) | FileShare_PolicyErrorResult | Define the FileShare_PolicyErrorResult structure type.Failed policy result on URI. |
-| [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) | FileShare_PolicyInfo | Define the FileShare_PolicyInfo structure type.Policy information to manager permissions on a URI. |
+| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) | FileShare_PolicyErrorResult | Define the FileShare_PolicyErrorResult structure type.<br> Failed policy result on URI. |
+| [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) | FileShare_PolicyInfo | Define the FileShare_PolicyInfo structure type.<br> Policy information to manager permissions on a URI. |
 
 ### Enum
 
@@ -100,14 +100,14 @@ Set persistent permissions for the URI.
 | -- | -- |
 | [const FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) *policies | Input a pointer to an [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) instance. |
 | unsigned int policyNum | Indicates the size of the policies array. |
-| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please useOH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
+| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please use OH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
 | unsigned int *resultNum | Output the size of the result array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.          {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.          {@link ERR_EPERM} 13900001 - operation not permitted.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>        {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.<br>        {@link ERR_EPERM} 13900001 - operation not permitted.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileShare_RevokePermission()
 
@@ -129,14 +129,14 @@ Revoke persistent permissions for the URI.
 | -- | -- |
 | [const FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) *policies | Input a pointer to an [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) instance. |
 | unsigned int policyNum | Indicates the size of the policies array. |
-| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please useOH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
+| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please use OH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
 | unsigned int *resultNum | Output the size of the result array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.          {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.          {@link ERR_EPERM} 13900001 - operation not permitted.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>        {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.<br>        {@link ERR_EPERM} 13900001 - operation not permitted.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileShare_ActivatePermission()
 
@@ -158,14 +158,14 @@ Enable the URI that have been permanently authorized.
 | -- | -- |
 | [const FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) *policies | Input a pointer to an [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) instance. |
 | unsigned int policyNum | Indicates the size of the policies array. |
-| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please useOH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
+| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please use OH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
 | unsigned int *resultNum | Output the size of the result array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.          {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.          {@link ERR_EPERM} 13900001 - operation not permitted.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>        {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.<br>        {@link ERR_EPERM} 13900001 - operation not permitted.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileShare_DeactivatePermission()
 
@@ -187,14 +187,14 @@ Stop the authorized URI that has been enabled.
 | -- | -- |
 | [const FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) *policies | Input a pointer to an [FileShare_PolicyInfo](capi-fileshare-fileshare-policyinfo.md) instance. |
 | unsigned int policyNum | Indicates the size of the policies array. |
-| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please useOH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
+| [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) **result | Output a pointer to an [FileShare_PolicyErrorResult](capi-fileshare-fileshare-policyerrorresult.md) instance. Please use OH_FileShare_ReleasePolicyErrorResult() to clear Resource. |
 | unsigned int *resultNum | Output the size of the result array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.          {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.          {@link ERR_EPERM} 13900001 - operation not permitted.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>        {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.<br>        {@link ERR_EPERM} 13900001 - operation not permitted.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileShare_CheckPersistentPermission()
 
@@ -223,7 +223,7 @@ Check persistent permissions for the URI.
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.          {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.          {@link ERR_EPERM} 13900001 - operation not permitted.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_DEVICE_NOT_SUPPORTED} 801 - Device not supported.<br>        {@link ERR_PERMISSION_ERROR} 201 - No permission to perform this operation.<br>        {@link ERR_EPERM} 13900001 - operation not permitted.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileShare_ReleasePolicyErrorResult()
 

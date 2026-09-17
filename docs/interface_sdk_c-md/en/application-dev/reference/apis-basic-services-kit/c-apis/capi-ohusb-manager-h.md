@@ -20,9 +20,9 @@ Declares the C APIs for USB device management.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_UsbManager_UsbEndpoint](capi-usbmanager-oh-usbmanager-usbendpoint.md) | OH_UsbManager_UsbEndpoint | Defines the USB endpoint from which data is sent or received. An endpoint<br>is obtained from [OH_UsbManager_UsbInterface](capi-usbmanager-oh-usbmanager-usbinterface.md). |
-| [OH_UsbManager_UsbInterface](capi-usbmanager-oh-usbmanager-usbinterface.md) | OH_UsbManager_UsbInterface | Defines a USB interface. One [OH_UsbManager_UsbConfig](capi-usbmanager-oh-usbmanager-usbconfig.md) can contain<br>multiple OH_UsbManager_UsbInterface instances, each providing a specific function. |
-| [OH_UsbManager_UsbConfig](capi-usbmanager-oh-usbmanager-usbconfig.md) | OH_UsbManager_UsbConfig | Defines a USB configuration. One [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) can contain multiple<br>*OH_UsbManager_UsbConfig** instances. |
+| [OH_UsbManager_UsbEndpoint](capi-usbmanager-oh-usbmanager-usbendpoint.md) | OH_UsbManager_UsbEndpoint | Defines the USB endpoint from which data is sent or received. An endpoint <br>is obtained from [OH_UsbManager_UsbInterface](capi-usbmanager-oh-usbmanager-usbinterface.md). |
+| [OH_UsbManager_UsbInterface](capi-usbmanager-oh-usbmanager-usbinterface.md) | OH_UsbManager_UsbInterface | Defines a USB interface. One [OH_UsbManager_UsbConfig](capi-usbmanager-oh-usbmanager-usbconfig.md) can contain <br>multiple OH_UsbManager_UsbInterface instances, each providing a specific function. |
+| [OH_UsbManager_UsbConfig](capi-usbmanager-oh-usbmanager-usbconfig.md) | OH_UsbManager_UsbConfig | Defines a USB configuration. One [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) can contain multiple <br>**OH_UsbManager_UsbConfig** instances. |
 | [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) | OH_UsbManager_UsbDevice | Defines a flat representation of a USB device. |
 | [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) | OH_UsbManager_UsbPipe | Defines the USB device pipe used to communicate with an opened device. |
 
@@ -37,14 +37,20 @@ Declares the C APIs for USB device management.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_UsbManager_ErrorCode OH_UsbManager_GetUsbDeviceList(OH_UsbManager_UsbDevice **devices, uint32_t *deviceCount)](#oh_usbmanager_getusbdevicelist) | - | Obtains the list of all connected USB devices. The caller must release the<br>returned array by calling [OH_UsbManager_FreeUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_freeusbdevicelist). |
-| [void OH_UsbManager_FreeUsbDeviceList(OH_UsbManager_UsbDevice *devices, uint32_t deviceCount)](#oh_usbmanager_freeusbdevicelist) | - | Frees a device array previously returned by [OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist).<br>After this call, the pointer is invalid and must not be used. Passing null or a<br>count of 0 is a safe no-op. |
-| [OH_UsbManager_ErrorCode OH_UsbManager_ConnectDevice(const OH_UsbManager_UsbDevice *device, OH_UsbManager_UsbPipe *pipe)](#oh_usbmanager_connectdevice) | - | Connects to a USB device and opens a pipe for communication. The returned pipe must be closed by calling<br>[OH_UsbManager_ClosePipe](capi-ohusb-manager-h.md#oh_usbmanager_closepipe) to avoid resource leaks.<br>Only the **busNum** and **devAddress** fields in the device structure are required. Other fields are ignored. |
+| [OH_UsbManager_ErrorCode OH_UsbManager_GetUsbDeviceList(OH_UsbManager_UsbDevice **devices, uint32_t *deviceCount)](#oh_usbmanager_getusbdevicelist) | - | Obtains the list of all connected USB devices. The caller must release the <br>returned array by calling [OH_UsbManager_FreeUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_freeusbdevicelist). |
+| [void OH_UsbManager_FreeUsbDeviceList(OH_UsbManager_UsbDevice *devices, uint32_t deviceCount)](#oh_usbmanager_freeusbdevicelist) | - | Frees a device array previously returned by [OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist).<br> <br>After this call, the pointer is invalid and must not be used. Passing null or a <br>count of 0 is a safe no-op. |
+| [OH_UsbManager_ErrorCode OH_UsbManager_ConnectDevice(const OH_UsbManager_UsbDevice *device, OH_UsbManager_UsbPipe *pipe)](#oh_usbmanager_connectdevice) | - | Connects to a USB device and opens a pipe for communication. The returned pipe must be closed by calling <br>[OH_UsbManager_ClosePipe](capi-ohusb-manager-h.md#oh_usbmanager_closepipe) to avoid resource leaks.<br> <br>Only the **busNum** and **devAddress** fields in the device structure are required. Other fields are ignored. |
 | [OH_UsbManager_ErrorCode OH_UsbManager_HasPermission(const char *deviceName, bool *result)](#oh_usbmanager_haspermission) | - | Checks whether the application has permission to access the specified device. |
-| [typedef void (\*OH_UsbManager_PermissionCallback)(OH_UsbManager_ErrorCode errorCode, bool result, void *userContext)](#oh_usbmanager_permissioncallback) | OH_UsbManager_PermissionCallback | Defines the callback type used to return the result of<br>[OH_UsbManager_RequestPermission](capi-ohusb-manager-h.md#oh_usbmanager_requestpermission). |
-| [OH_UsbManager_ErrorCode OH_UsbManager_RequestPermission(const char *deviceName, OH_UsbManager_PermissionCallback callback, void *userContext)](#oh_usbmanager_requestpermission) | - | Requests permission to access the specified USB device asynchronously.<br>This may trigger a system dialog asking the user for permission. The function<br>returns immediately and the result is delivered via the callback. |
-| [OH_UsbManager_ErrorCode OH_UsbManager_GetFileDescriptor(const OH_UsbManager_UsbPipe *pipe, int32_t *fd)](#oh_usbmanager_getfiledescriptor) | - | Obtains the file descriptor for the opened USB device pipe. The fd can be<br>used for low-level ioctl-based USB transfers. |
-| [OH_UsbManager_ErrorCode OH_UsbManager_ClosePipe(const OH_UsbManager_UsbPipe *pipe)](#oh_usbmanager_closepipe) | - | Closes the USB device pipe and releases the underlying resources.<br>The pipe must be obtained from [OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice). |
+| [typedef void (\*OH_UsbManager_PermissionCallback)(OH_UsbManager_ErrorCode errorCode, bool result, void *userContext)](#oh_usbmanager_permissioncallback) | OH_UsbManager_PermissionCallback | Defines the callback type used to return the result of <br>[OH_UsbManager_RequestPermission](capi-ohusb-manager-h.md#oh_usbmanager_requestpermission). |
+| [OH_UsbManager_ErrorCode OH_UsbManager_RequestPermission(const char *deviceName, OH_UsbManager_PermissionCallback callback, void *userContext)](#oh_usbmanager_requestpermission) | - | Requests permission to access the specified USB device asynchronously. <br>This may trigger a system dialog asking the user for permission. The function <br>returns immediately and the result is delivered via the callback. |
+| [OH_UsbManager_ErrorCode OH_UsbManager_GetFileDescriptor(const OH_UsbManager_UsbPipe *pipe, int32_t *fd)](#oh_usbmanager_getfiledescriptor) | - | Obtains the file descriptor for the opened USB device pipe. The fd can be <br>used for low-level ioctl-based USB transfers. |
+| [OH_UsbManager_ErrorCode OH_UsbManager_ClosePipe(const OH_UsbManager_UsbPipe *pipe)](#oh_usbmanager_closepipe) | - | Closes the USB device pipe and releases the underlying resources. <br>The pipe must be obtained from [OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice). |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_UsbManager_PermissionCallback)(OH_UsbManager_ErrorCode errorCode, bool result, void *userContext) | Defines the callback type used to return the result of <br>[OH_UsbManager_RequestPermission](capi-ohusb-manager-h.md#oh_usbmanager_requestpermission).<br>**Since**: 26.1.0 |
 
 ## Enum type description
 
@@ -98,7 +104,7 @@ OH_UsbManager_ErrorCode OH_UsbManager_GetUsbDeviceList(OH_UsbManager_UsbDevice *
 
 **Description**
 
-Obtains the list of all connected USB devices. The caller must release the<br>returned array by calling [OH_UsbManager_FreeUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_freeusbdevicelist).
+Obtains the list of all connected USB devices. The caller must release the <br>returned array by calling [OH_UsbManager_FreeUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_freeusbdevicelist).
 
 **Since**: 26.1.0
 
@@ -106,8 +112,8 @@ Obtains the list of all connected USB devices. The caller must release the<br>re
 
 | Parameter | Description |
 | -- | -- |
-| [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) **devices | [out] Double pointer to the array of [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md). On success,<br>the function allocates the array and all internal string buffers. The caller<br>must NOT free individual fields; use [OH_UsbManager_FreeUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_freeusbdevicelist) instead.<br>Must not be null. |
-| uint32_t *deviceCount | [out] Pointer to the number of devices returned. On success, this is<br>set to the number of elements in the array. Zero indicates no devices present.<br>Must not be null. |
+| [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) **devices | [out] Double pointer to the array of [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md). On success, <br>the function allocates the array and all internal string buffers. The caller <br>must NOT free individual fields; use [OH_UsbManager_FreeUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_freeusbdevicelist) instead. <br>Must not be null. |
+| uint32_t *deviceCount | [out] Pointer to the number of devices returned. On success, this is <br>set to the number of elements in the array. Zero indicates no devices present. <br>Must not be null. |
 
 **Returns**:
 
@@ -123,7 +129,7 @@ void OH_UsbManager_FreeUsbDeviceList(OH_UsbManager_UsbDevice *devices, uint32_t 
 
 **Description**
 
-Frees a device array previously returned by [OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist).<br>After this call, the pointer is invalid and must not be used. Passing null or a<br>count of 0 is a safe no-op.
+Frees a device array previously returned by [OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist).<br> <br>After this call, the pointer is invalid and must not be used. Passing null or a <br>count of 0 is a safe no-op.
 
 **Since**: 26.1.0
 
@@ -132,7 +138,7 @@ Frees a device array previously returned by [OH_UsbManager_GetUsbDeviceList](cap
 | Parameter | Description |
 | -- | -- |
 | [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) *devices | [in] Pointer to the array returned by [OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist). |
-| uint32_t deviceCount | [in] Number of elements in the array, as returned by<br>[OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist). |
+| uint32_t deviceCount | [in] Number of elements in the array, as returned by <br>[OH_UsbManager_GetUsbDeviceList](capi-ohusb-manager-h.md#oh_usbmanager_getusbdevicelist). |
 
 ### OH_UsbManager_ConnectDevice()
 
@@ -142,7 +148,7 @@ OH_UsbManager_ErrorCode OH_UsbManager_ConnectDevice(const OH_UsbManager_UsbDevic
 
 **Description**
 
-Connects to a USB device and opens a pipe for communication. The returned pipe must be closed by calling<br>[OH_UsbManager_ClosePipe](capi-ohusb-manager-h.md#oh_usbmanager_closepipe) to avoid resource leaks.<br>Only the **busNum** and **devAddress** fields in the device structure are required. Other fields are ignored.
+Connects to a USB device and opens a pipe for communication. The returned pipe must be closed by calling <br>[OH_UsbManager_ClosePipe](capi-ohusb-manager-h.md#oh_usbmanager_closepipe) to avoid resource leaks.<br> <br>Only the **busNum** and **devAddress** fields in the device structure are required. Other fields are ignored.
 
 **Since**: 26.1.0
 
@@ -150,8 +156,8 @@ Connects to a USB device and opens a pipe for communication. The returned pipe m
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) *device | [in] Pointer to the [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) to connect. This is an input<br>parameter. This parameter cannot be left empty. |
-| [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) *pipe | [out] Pointer to the [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md), which is used to receive the handle<br>upon successful operation.<br>This is an output parameter. This parameter cannot be left empty. |
+| [const OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) *device | [in] Pointer to the [OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md) to connect. This is an input <br>parameter. This parameter cannot be left empty. |
+| [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) *pipe | [out] Pointer to the [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md), which is used to receive the handle <br>upon successful operation. <br>This is an output parameter. This parameter cannot be left empty. |
 
 **Returns**:
 
@@ -176,7 +182,7 @@ Checks whether the application has permission to access the specified device.
 | Parameter | Description |
 | -- | -- |
 | const char *deviceName | [in] Device name, in the format of <bus number>-<device address>. Must not be null. |
-| bool *result | [out] Pointer to receive the result. true if the application has been<br>granted permission to access the device; false if permission has not been<br>granted or has not been requested. Must not be null. |
+| bool *result | [out] Pointer to receive the result. true if the application has been <br>granted permission to access the device; false if permission has not been <br>granted or has not been requested. Must not be null. |
 
 **Returns**:
 
@@ -192,7 +198,7 @@ typedef void (*OH_UsbManager_PermissionCallback)(OH_UsbManager_ErrorCode errorCo
 
 **Description**
 
-Defines the callback type used to return the result of<br>[OH_UsbManager_RequestPermission](capi-ohusb-manager-h.md#oh_usbmanager_requestpermission).
+Defines the callback type used to return the result of <br>[OH_UsbManager_RequestPermission](capi-ohusb-manager-h.md#oh_usbmanager_requestpermission).
 
 **Since**: 26.1.0
 
@@ -200,8 +206,8 @@ Defines the callback type used to return the result of<br>[OH_UsbManager_Request
 
 | Parameter | Description |
 | -- | -- |
-| [OH_UsbManager_ErrorCode](capi-ohusb-manager-h.md#oh_usbmanager_errorcode) errorCode | [out] Error code of the request. [OH_USBMANAGER_SUCCESS](capi-ohusb-manager-h.md#oh_usbmanager_errorcode) means the<br>request completed normally; other values indicate a service exception. |
-| bool result | [out] true if the permission is granted; false if the user denied the request.<br>This parameter is meaningful only when errorCode is [OH_USBMANAGER_SUCCESS](capi-ohusb-manager-h.md#oh_usbmanager_errorcode). |
+| [OH_UsbManager_ErrorCode](capi-ohusb-manager-h.md#oh_usbmanager_errorcode) errorCode | [out] Error code of the request. [OH_USBMANAGER_SUCCESS](capi-ohusb-manager-h.md#oh_usbmanager_errorcode) means the <br>request completed normally; other values indicate a service exception. |
+| bool result | [out] true if the permission is granted; false if the user denied the request. <br>This parameter is meaningful only when errorCode is [OH_USBMANAGER_SUCCESS](capi-ohusb-manager-h.md#oh_usbmanager_errorcode). |
 | void \*userContext | [out] User context passed through from [OH_UsbManager_RequestPermission](capi-ohusb-manager-h.md#oh_usbmanager_requestpermission). |
 
 ### OH_UsbManager_RequestPermission()
@@ -212,7 +218,7 @@ OH_UsbManager_ErrorCode OH_UsbManager_RequestPermission(const char *deviceName, 
 
 **Description**
 
-Requests permission to access the specified USB device asynchronously.<br>This may trigger a system dialog asking the user for permission. The function<br>returns immediately and the result is delivered via the callback.
+Requests permission to access the specified USB device asynchronously. <br>This may trigger a system dialog asking the user for permission. The function <br>returns immediately and the result is delivered via the callback.
 
 **Since**: 26.1.0
 
@@ -221,7 +227,7 @@ Requests permission to access the specified USB device asynchronously.<br>This m
 | Parameter | Description |
 | -- | -- |
 | const char *deviceName | [in] Device name, in the format of <bus number>-<device address>. Must not be null. |
-| [OH_UsbManager_PermissionCallback](capi-ohusb-manager-h.md#oh_usbmanager_permissioncallback) callback | [in] [OH_UsbManager_PermissionCallback](capi-ohusb-manager-h.md#oh_usbmanager_permissioncallback) invoked when the request completes.<br>Must not be null. |
+| [OH_UsbManager_PermissionCallback](capi-ohusb-manager-h.md#oh_usbmanager_permissioncallback) callback | [in] [OH_UsbManager_PermissionCallback](capi-ohusb-manager-h.md#oh_usbmanager_permissioncallback) invoked when the request completes. <br>Must not be null. |
 | void *userContext | [in] User context pointer passed to the callback. May be null. |
 
 **Returns**:
@@ -238,7 +244,7 @@ OH_UsbManager_ErrorCode OH_UsbManager_GetFileDescriptor(const OH_UsbManager_UsbP
 
 **Description**
 
-Obtains the file descriptor for the opened USB device pipe. The fd can be<br>used for low-level ioctl-based USB transfers.
+Obtains the file descriptor for the opened USB device pipe. The fd can be <br>used for low-level ioctl-based USB transfers.
 
 **Since**: 26.1.0
 
@@ -246,7 +252,7 @@ Obtains the file descriptor for the opened USB device pipe. The fd can be<br>use
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) *pipe | [in] Pointer to the [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) obtained from<br>[OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice). Must not be null. |
+| [const OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) *pipe | [in] Pointer to the [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) obtained from <br>[OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice). Must not be null. |
 | int32_t *fd | [out] Pointer to receive the file descriptor on success. Must not be null. |
 
 **Returns**:
@@ -263,7 +269,7 @@ OH_UsbManager_ErrorCode OH_UsbManager_ClosePipe(const OH_UsbManager_UsbPipe *pip
 
 **Description**
 
-Closes the USB device pipe and releases the underlying resources.<br>The pipe must be obtained from [OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice).
+Closes the USB device pipe and releases the underlying resources. <br>The pipe must be obtained from [OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice).
 
 **Since**: 26.1.0
 
@@ -271,7 +277,7 @@ Closes the USB device pipe and releases the underlying resources.<br>The pipe mu
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) *pipe | [in] Pointer to the [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) obtained from<br>[OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice) to close. Must not be null. |
+| [const OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) *pipe | [in] Pointer to the [OH_UsbManager_UsbPipe](capi-usbmanager-oh-usbmanager-usbpipe.md) obtained from <br>[OH_UsbManager_ConnectDevice](capi-ohusb-manager-h.md#oh_usbmanager_connectdevice) to close. Must not be null. |
 
 **Returns**:
 

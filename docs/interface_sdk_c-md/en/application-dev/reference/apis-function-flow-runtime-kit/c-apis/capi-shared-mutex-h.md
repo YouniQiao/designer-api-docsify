@@ -8,7 +8,7 @@ Declares the shared mutex interfaces in C.
 
 **System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
-**Since**: 18
+**Since**: 10
 
 **Related module**: [FFRT](capi-ffrt.md)
 
@@ -18,13 +18,13 @@ Declares the shared mutex interfaces in C.
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_rwlock_init(ffrt_rwlock_t* rwlock, const ffrt_rwlockattr_t* attr)](#ffrt_rwlock_init) | Initializes a rwlock.The rwlock must later be destroyed by [ffrt_rwlock_destroy](capi-shared-mutex-h.md#ffrt_rwlock_destroy). |
-| [FFRT_C_API int ffrt_rwlock_wrlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_wrlock) | Locks a write lock.Blocks the calling thread if the lock is unavailable. On success, the callingthread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).The write lock is exclusive: no read locks can be held concurrently. |
-| [FFRT_C_API int ffrt_rwlock_trywrlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_trywrlock) | Attempts to lock a write lock.Does not block the calling thread. On success, the calling thread holds theexclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). |
-| [FFRT_C_API int ffrt_rwlock_rdlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_rdlock) | Locks a read lock.Blocks the calling thread if the lock is unavailable. On success, the callingthread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).Multiple readers may hold the lock concurrently, but no writer may hold it. |
-| [FFRT_C_API int ffrt_rwlock_tryrdlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_tryrdlock) | Attempts to lock a read lock.Does not block the calling thread. On success, the calling thread holds aread lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). |
-| [FFRT_C_API int ffrt_rwlock_unlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_unlock) | Unlocks a rwlock.The rwlock must be held by the calling thread, having been previously locked by[ffrt_rwlock_rdlock](capi-shared-mutex-h.md#ffrt_rwlock_rdlock), [ffrt_rwlock_tryrdlock](capi-shared-mutex-h.md#ffrt_rwlock_tryrdlock), [ffrt_rwlock_wrlock](capi-shared-mutex-h.md#ffrt_rwlock_wrlock),or [ffrt_rwlock_trywrlock](capi-shared-mutex-h.md#ffrt_rwlock_trywrlock). |
-| [FFRT_C_API int ffrt_rwlock_destroy(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_destroy) | Destroys a rwlock.The rwlock must have been initialized by [ffrt_rwlock_init](capi-shared-mutex-h.md#ffrt_rwlock_init) and no threadmay hold a read or write lock on entry. |
+| [FFRT_C_API int ffrt_rwlock_init(ffrt_rwlock_t* rwlock, const ffrt_rwlockattr_t* attr)](#ffrt_rwlock_init) | Initializes a rwlock.<br> The rwlock must later be destroyed by [ffrt_rwlock_destroy](capi-shared-mutex-h.md#ffrt_rwlock_destroy). |
+| [FFRT_C_API int ffrt_rwlock_wrlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_wrlock) | Locks a write lock.<br> Blocks the calling thread if the lock is unavailable. On success, the calling thread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). The write lock is exclusive: no read locks can be held concurrently. |
+| [FFRT_C_API int ffrt_rwlock_trywrlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_trywrlock) | Attempts to lock a write lock.<br> Does not block the calling thread. On success, the calling thread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). |
+| [FFRT_C_API int ffrt_rwlock_rdlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_rdlock) | Locks a read lock.<br> Blocks the calling thread if the lock is unavailable. On success, the calling thread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). Multiple readers may hold the lock concurrently, but no writer may hold it. |
+| [FFRT_C_API int ffrt_rwlock_tryrdlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_tryrdlock) | Attempts to lock a read lock.<br> Does not block the calling thread. On success, the calling thread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). |
+| [FFRT_C_API int ffrt_rwlock_unlock(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_unlock) | Unlocks a rwlock.<br> The rwlock must be held by the calling thread, having been previously locked by [ffrt_rwlock_rdlock](capi-shared-mutex-h.md#ffrt_rwlock_rdlock), [ffrt_rwlock_tryrdlock](capi-shared-mutex-h.md#ffrt_rwlock_tryrdlock), [ffrt_rwlock_wrlock](capi-shared-mutex-h.md#ffrt_rwlock_wrlock), or [ffrt_rwlock_trywrlock](capi-shared-mutex-h.md#ffrt_rwlock_trywrlock). |
+| [FFRT_C_API int ffrt_rwlock_destroy(ffrt_rwlock_t* rwlock)](#ffrt_rwlock_destroy) | Destroys a rwlock.<br> The rwlock must have been initialized by [ffrt_rwlock_init](capi-shared-mutex-h.md#ffrt_rwlock_init) and no thread may hold a read or write lock on entry. |
 
 ## Function description
 
@@ -36,7 +36,7 @@ FFRT_C_API int ffrt_rwlock_init(ffrt_rwlock_t* rwlock, const ffrt_rwlockattr_t* 
 
 **Description**
 
-Initializes a rwlock.The rwlock must later be destroyed by [ffrt_rwlock_destroy](capi-shared-mutex-h.md#ffrt_rwlock_destroy).
+Initializes a rwlock.<br> The rwlock must later be destroyed by [ffrt_rwlock_destroy](capi-shared-mutex-h.md#ffrt_rwlock_destroy).
 
 **Since**: 18
 
@@ -45,7 +45,7 @@ Initializes a rwlock.The rwlock must later be destroyed by [ffrt_rwlock_destroy]
 | Parameter | Description |
 | -- | -- |
 | ffrt_rwlock_t* rwlock | Indicates a pointer to the rwlock. |
-| const ffrt_rwlockattr_t* attr | Indicates a pointer to the rwlock attribute.Currently, only the default mode is supported, set to null pointer. |
+| const ffrt_rwlockattr_t* attr | Indicates a pointer to the rwlock attribute. Currently, only the default mode is supported, set to null pointer. |
 
 **Returns**:
 
@@ -61,7 +61,7 @@ FFRT_C_API int ffrt_rwlock_wrlock(ffrt_rwlock_t* rwlock)
 
 **Description**
 
-Locks a write lock.Blocks the calling thread if the lock is unavailable. On success, the callingthread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).The write lock is exclusive: no read locks can be held concurrently.
+Locks a write lock.<br> Blocks the calling thread if the lock is unavailable. On success, the calling thread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). The write lock is exclusive: no read locks can be held concurrently.
 
 **Since**: 18
 
@@ -91,7 +91,7 @@ FFRT_C_API int ffrt_rwlock_trywrlock(ffrt_rwlock_t* rwlock)
 
 **Description**
 
-Attempts to lock a write lock.Does not block the calling thread. On success, the calling thread holds theexclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).
+Attempts to lock a write lock.<br> Does not block the calling thread. On success, the calling thread holds the exclusive write lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).
 
 **Since**: 18
 
@@ -120,7 +120,7 @@ FFRT_C_API int ffrt_rwlock_rdlock(ffrt_rwlock_t* rwlock)
 
 **Description**
 
-Locks a read lock.Blocks the calling thread if the lock is unavailable. On success, the callingthread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).Multiple readers may hold the lock concurrently, but no writer may hold it.
+Locks a read lock.<br> Blocks the calling thread if the lock is unavailable. On success, the calling thread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock). Multiple readers may hold the lock concurrently, but no writer may hold it.
 
 **Since**: 18
 
@@ -150,7 +150,7 @@ FFRT_C_API int ffrt_rwlock_tryrdlock(ffrt_rwlock_t* rwlock)
 
 **Description**
 
-Attempts to lock a read lock.Does not block the calling thread. On success, the calling thread holds aread lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).
+Attempts to lock a read lock.<br> Does not block the calling thread. On success, the calling thread holds a read lock until a matching call to [ffrt_rwlock_unlock](capi-shared-mutex-h.md#ffrt_rwlock_unlock).
 
 **Since**: 18
 
@@ -179,7 +179,7 @@ FFRT_C_API int ffrt_rwlock_unlock(ffrt_rwlock_t* rwlock)
 
 **Description**
 
-Unlocks a rwlock.The rwlock must be held by the calling thread, having been previously locked by[ffrt_rwlock_rdlock](capi-shared-mutex-h.md#ffrt_rwlock_rdlock), [ffrt_rwlock_tryrdlock](capi-shared-mutex-h.md#ffrt_rwlock_tryrdlock), [ffrt_rwlock_wrlock](capi-shared-mutex-h.md#ffrt_rwlock_wrlock),or [ffrt_rwlock_trywrlock](capi-shared-mutex-h.md#ffrt_rwlock_trywrlock).
+Unlocks a rwlock.<br> The rwlock must be held by the calling thread, having been previously locked by [ffrt_rwlock_rdlock](capi-shared-mutex-h.md#ffrt_rwlock_rdlock), [ffrt_rwlock_tryrdlock](capi-shared-mutex-h.md#ffrt_rwlock_tryrdlock), [ffrt_rwlock_wrlock](capi-shared-mutex-h.md#ffrt_rwlock_wrlock), or [ffrt_rwlock_trywrlock](capi-shared-mutex-h.md#ffrt_rwlock_trywrlock).
 
 **Since**: 18
 
@@ -203,7 +203,7 @@ FFRT_C_API int ffrt_rwlock_destroy(ffrt_rwlock_t* rwlock)
 
 **Description**
 
-Destroys a rwlock.The rwlock must have been initialized by [ffrt_rwlock_init](capi-shared-mutex-h.md#ffrt_rwlock_init) and no threadmay hold a read or write lock on entry.
+Destroys a rwlock.<br> The rwlock must have been initialized by [ffrt_rwlock_init](capi-shared-mutex-h.md#ffrt_rwlock_init) and no thread may hold a read or write lock on entry.
 
 **Since**: 18
 

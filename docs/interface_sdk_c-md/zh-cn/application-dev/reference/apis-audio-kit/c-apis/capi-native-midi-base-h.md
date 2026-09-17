@@ -36,6 +36,12 @@
 | [OH_MIDIDeviceType](#oh_mididevicetype) | OH_MIDIDeviceType | MIDI设备类型枚举。定义MIDI设备的连接类型。 |
 | [OH_MIDIDeviceChangeAction](#oh_mididevicechangeaction) | OH_MIDIDeviceChangeAction | 设备连接状态变化操作枚举。用于标识设备的连接和断开事件。 |
 
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| NATIVE_MIDI_BASE_H | 声明MIDI模块的基础数据结构。定义MIDI接口的基础类型、枚举、结构体和回调函数。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Multimedia.Audio.MIDI |
+
 ### 函数
 
 | 名称 | typedef关键字 | 描述 |
@@ -44,6 +50,15 @@
 | [typedef void (\*OH_MIDIDevice_OnReceived)(void *userData, const OH_MIDIEvent *events, size_t eventCount)](#oh_mididevice_onreceived) | OH_MIDIDevice_OnReceived | 接收MIDI数据的回调（批量处理）。 |
 | [typedef void (\*OH_MIDICallback_OnError)(void *userData, OH_MIDIStatusCode code)](#oh_midicallback_onerror) | OH_MIDICallback_OnError | 处理客户端级别错误的回调。当MIDI服务发生关键错误（如服务崩溃）时调用。应用可能需要重新创建客户端。 |
 | [typedef void (\*OH_MIDIClient_OnDeviceOpened)(void *userData, bool opened, OH_MIDIDevice *device, OH_MIDIDeviceInformation info)](#oh_midiclient_ondeviceopened) | OH_MIDIClient_OnDeviceOpened | 异步打开BLE设备的结果回调。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_MIDICallback_OnDeviceChange)( void *userData, OH_MIDIDeviceChangeAction action, OH_MIDIDeviceInformation deviceInfo) | 监控设备连接/断开连接的回调。<br>**起始版本：** 24 |
+| void (*OH_MIDIDevice_OnReceived)(void *userData, const OH_MIDIEvent *events, size_t eventCount) | 接收MIDI数据的回调（批量处理）。<br>**起始版本：** 24 |
+| void (*OH_MIDICallback_OnError)(void *userData, OH_MIDIStatusCode code) | 处理客户端级别错误的回调。当MIDI服务发生关键错误（如服务崩溃）时调用。应用可能需要重新创建客户端。<br>**起始版本：** 24 |
+| void (*OH_MIDIClient_OnDeviceOpened)(void *userData, bool opened, OH_MIDIDevice *device, OH_MIDIDeviceInformation info) | 异步打开BLE设备的结果回调。<br>**起始版本：** 24 |
 
 ## 枚举类型说明
 
@@ -113,8 +128,8 @@ MIDI协议版本枚举，用于指定端口使用的MIDI协议行为。
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_MIDI_PROTOCOL_1_0 = 1 | 传统MIDI 1.0语义。<br>在此协议下，MIDI系统服务期望接收以下UMP消息类型：<br>- 严格遵循MIDI 1.0协议规范的UMP数据包。<br>- MT 0x0：实用消息（例如时间戳）。<br>- MT 0x1：系统实时和系统公共消息。<br>- MT 0x2：MIDI 1.0通道声音消息（32位）。<br>- MT 0x3：数据消息（64位），用于SysEx（7位载荷）。<br>- 如果目标硬件是MIDI 1.0：服务将UMP转换回字节流（F0...F7）。<br>- 如果目标硬件是MIDI 2.0：服务直接发送未经转换的UMP包（封装的MIDI 1.0）。<br>**起始版本：** 24 |
-| OH_MIDI_PROTOCOL_2_0 = 2 | MIDI 2.0语义。<br>在此协议下，MIDI系统服务期望接收以下UMP消息类型：<br>- 利用MIDI 2.0功能特性的UMP数据包。<br>- MT 0x4：MIDI 2.0通道声音消息（64位，高分辨率）。<br>- MT 0x0：实用消息（时间戳）。<br>- MT 0xD：Flex数据消息（128位，例如文本、歌词）。<br>- MT 0xF：UMP流消息（128位，端点发现、功能块）。<br>- MT 0x3 / MT 0x5：数据消息（64位或128位）。<br>**起始版本：** 24 |
+| OH_MIDI_PROTOCOL_1_0 = 1 | 传统MIDI 1.0语义。 <br>在此协议下，MIDI系统服务期望接收以下UMP消息类型： <br>- 严格遵循MIDI 1.0协议规范的UMP数据包。 <br>- MT 0x0：实用消息（例如时间戳）。 <br>- MT 0x1：系统实时和系统公共消息。 <br>- MT 0x2：MIDI 1.0通道声音消息（32位）。 <br>- MT 0x3：数据消息（64位），用于SysEx（7位载荷）。 <br>- 如果目标硬件是MIDI 1.0：服务将UMP转换回字节流（F0...F7）。 <br>- 如果目标硬件是MIDI 2.0：服务直接发送未经转换的UMP包（封装的MIDI 1.0）。<br>**起始版本：** 24 |
+| OH_MIDI_PROTOCOL_2_0 = 2 | MIDI 2.0语义。 <br>在此协议下，MIDI系统服务期望接收以下UMP消息类型： <br>- 利用MIDI 2.0功能特性的UMP数据包。 <br>- MT 0x4：MIDI 2.0通道声音消息（64位，高分辨率）。 <br>- MT 0x0：实用消息（时间戳）。 <br>- MT 0xD：Flex数据消息（128位，例如文本、歌词）。 <br>- MT 0xF：UMP流消息（128位，端点发现、功能块）。 <br>- MT 0x3 / MT 0x5：数据消息（64位或128位）。<br>**起始版本：** 24 |
 
 ### OH_MIDIDeviceType
 
@@ -233,8 +248,8 @@ typedef void (*OH_MIDIClient_OnDeviceOpened)(void *userData, bool opened, OH_MID
 | 参数项 | 描述 |
 | -- | -- |
 | void \*userData | The user context pointer passed to {@link #OH_MIDIClient_OpenBLEDevice}. |
-| bool opened | 设备是否成功打开。<br>true表示设备成功打开，设备句柄有效；false表示设备打开失败，设备句柄为NULL。 |
-| [OH_MIDIDevice](capi-ohmidi-oh-mididevicestruct.md) \*device | The handle of the opened device.If opened is true, the application MUST close this handle using{@link #OH_MIDIClient_CloseDevice} when it is no longer needed.If opened is false, this parameter is NULL. |
-| [OH_MIDIDeviceInformation](capi-ohmidi-oh-midideviceinformation.md) info | 已打开设备的信息。<br>*注意：** 此对象仅在此回调范围内有效。如需持久化特定属性（如ID或名称），请对该设备信息进行复制。 |
+| bool opened | 设备是否成功打开。 <br>true表示设备成功打开，设备句柄有效；false表示设备打开失败，设备句柄为NULL。 |
+| [OH_MIDIDevice](capi-ohmidi-oh-mididevicestruct.md) \*device | The handle of the opened device. If opened is true, the application MUST close this handle using {@link #OH_MIDIClient_CloseDevice} when it is no longer needed. If opened is false, this parameter is NULL. |
+| [OH_MIDIDeviceInformation](capi-ohmidi-oh-midideviceinformation.md) info | 已打开设备的信息。 <br>**注意：** 此对象仅在此回调范围内有效。如需持久化特定属性（如ID或名称），请对该设备信息进行复制。 |
 
 

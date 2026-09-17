@@ -20,7 +20,7 @@
 | -- | -- | -- |
 | [OH_AudioCommon_Result](#oh_audiocommon_result) | OH_AudioCommon_Result | 音频错误码。 |
 | [OH_AudioScene](#oh_audioscene) | OH_AudioScene | 定义音频场景。 |
-| [OH_AudioRingerMode](#oh_audioringermode) | OH_AudioRingerMode | 定义铃声模式。<b>设备行为差异：<\b> 当该接口在无振动器件设备中被设置为振动模式时，将不会产生振动效果。 |
+| [OH_AudioRingerMode](#oh_audioringermode) | OH_AudioRingerMode | 定义铃声模式。<br> <b>设备行为差异：<\b> 当该接口在无振动器件设备中被设置为振动模式时，将不会产生振动效果。 |
 | [OH_AudioNoiseReductionMode](#oh_audionoisereductionmode) | OH_AudioNoiseReductionMode | 定义录音降噪模式。 |
 
 ## 枚举类型说明
@@ -75,7 +75,7 @@ enum OH_AudioRingerMode
 
 **描述：**
 
-定义铃声模式。<b>设备行为差异：<\b> 当该接口在无振动器件设备中被设置为振动模式时，将不会产生振动效果。
+定义铃声模式。<br> <b>设备行为差异：<\b> 当该接口在无振动器件设备中被设置为振动模式时，将不会产生振动效果。
 
 **起始版本：** 20
 

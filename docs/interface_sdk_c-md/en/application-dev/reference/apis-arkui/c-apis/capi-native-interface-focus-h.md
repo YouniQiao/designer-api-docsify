@@ -2,13 +2,13 @@
 
 ## Overview
 
-Declares APIs for focus management, mainly used for actively transferring focus, managing the default focustransfer behavior, and controlling the focus activation state.
+Declares APIs for focus management, mainly used for actively transferring focus, managing the default focus transfer behavior, and controlling the focus activation state.
 
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 15
+**Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
@@ -74,7 +74,7 @@ Requests focus for a specific node.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.      <br>Returns {@link ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE} if the node cannot receive focus.      <br>Returns {@link ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE_ANCESTOR} if the ancestor node cannot receive focus.      <br>Returns {@link ARKUI_ERROR_CODE_FOCUS_NON_EXISTENT} if the node does not exist. |
+| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE} if the node cannot receive focus.<br>    <br>Returns {@link ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE_ANCESTOR} if the ancestor node cannot receive focus.<br>    <br>Returns {@link ARKUI_ERROR_CODE_FOCUS_NON_EXISTENT} if the node does not exist. |
 
 ### OH_ArkUI_FocusClear()
 
@@ -111,8 +111,8 @@ Sets the focus activation state for the current page. When activated, the focuse
 | Parameter | Description |
 | -- | -- |
 | ArkUI_ContextHandle uiContext | UI instance object pointer. |
-| bool isActive | Whether to enter or exit the focus activation state. The value **true** means to enter the focusactivation state, and **false** means to exit the focus activation state. |
-| bool isAutoInactive | Whether to automatically exit the focus active state on touch or mouse down events. **true**:Automatically exit the focus active state. **false**: Maintain the current state until the corresponding settingAPI is called. |
+| bool isActive | Whether to enter or exit the focus activation state. The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
+| bool isAutoInactive | Whether to automatically exit the focus active state on touch or mouse down events. **true**: Automatically exit the focus active state. **false**: Maintain the current state until the corresponding setting API is called. |
 
 ### OH_ArkUI_FocusSetAutoTransfer()
 
@@ -131,7 +131,7 @@ Configures the focus transfer behavior when pages are switched.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_ContextHandle uiContext | UI instance object pointer. |
-| bool autoTransfer | Whether to automatically transfer focus when pages are switched. The value **true** means toautomatically transfer focus when pages are switched, and **false** means the opposite. |
+| bool autoTransfer | Whether to automatically transfer focus when pages are switched. The value **true** means to automatically transfer focus when pages are switched, and **false** means the opposite. |
 
 ### OH_ArkUI_FocusSetKeyProcessingMode()
 

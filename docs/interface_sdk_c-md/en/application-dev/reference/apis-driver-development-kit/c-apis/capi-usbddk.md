@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides USB DDK types and declares the macros, enumerated variables, anddata structures required by the USB DDK APIs.
+Provides USB DDK types and declares the macros, enumerated variables, and data structures required by the USB DDK APIs.
 
 **System capability**: SystemCapability.Driver.USB.Extension
 

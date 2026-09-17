@@ -18,7 +18,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typography)](#oh_drawing_typographygettextlines) | - | 获取排版对象的文本行数组。文本行数组中包含一个或多个文本行对象。不再需要{@link OH_Drawing_Array}时，请使用[OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines)接口释放该对象的指针。 |
+| [OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typography)](#oh_drawing_typographygettextlines) | - | 获取排版对象的文本行数组。文本行数组中包含一个或多个文本行对象。不再需要{@link OH_Drawing_Array}时，请使用[OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) 接口释放该对象的指针。 |
 | [void OH_Drawing_DestroyTextLines(OH_Drawing_Array* lines)](#oh_drawing_destroytextlines) | - | 释放文本行数组的内存。 |
 | [void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)](#oh_drawing_destroytextline) | - | 释放单个文本行对象的内存。只能释放单独申请内存的文本行对象，不能释放通过[OH_Drawing_GetTextLineByIndex](capi-drawing-text-line-h.md#oh_drawing_gettextlinebyindex)从文本行数组中获取的文本行对象的内存。 |
 | [OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size_t index)](#oh_drawing_gettextlinebyindex) | - | 获取文本行数组指定索引处的文本行对象。 |
@@ -29,14 +29,20 @@
 | [OH_Drawing_Run* OH_Drawing_GetRunByIndex(OH_Drawing_Array* runs, size_t index)](#oh_drawing_getrunbyindex) | - | 获取文本渲染单元数组指定索引处的文本渲染单元对象。 |
 | [void OH_Drawing_TextLinePaint(OH_Drawing_TextLine* line, OH_Drawing_Canvas* canvas, double x, double y)](#oh_drawing_textlinepaint) | - | 在画布上以坐标点 (x, y) 为左上角位置绘制文本行。 |
 | [OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine* line, double width, int mode, const char* ellipsis)](#oh_drawing_textlinecreatetruncatedline) | - | 创建一个截断的文本行对象。根据传入的宽度、截断类型和截断标记字符串，对原始文本行进行截断处理，在截断位置插入指定的标记字符串，生成并返回一个新的独立文本行对象，原始文本不受影响。 |
-| [double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double* ascent, double* descent, double* leading)](#oh_drawing_textlinegettypographicbounds) | - | 获取文本行对象的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。<br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。<br>可通过height = ascent + descent + leading来计算文本高度。 |
-| [OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)](#oh_drawing_textlinegetimagebounds) | - | 获取文本行对象的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。<br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括行首和末尾空格的边界。<br>例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。 |
+| [double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double* ascent, double* descent, double* leading)](#oh_drawing_textlinegettypographicbounds) | - | 获取文本行对象的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。 <br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。 <br>可通过height = ascent + descent + leading来计算文本高度。 |
+| [OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)](#oh_drawing_textlinegetimagebounds) | - | 获取文本行对象的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。 <br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括行首和末尾空格的边界。 <br>例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。 |
 | [double OH_Drawing_TextLineGetTrailingSpaceWidth(OH_Drawing_TextLine* line)](#oh_drawing_textlinegettrailingspacewidth) | - | 获取文本行对象尾部空白字符的宽度。 |
 | [int32_t OH_Drawing_TextLineGetStringIndexForPosition(OH_Drawing_TextLine* line, OH_Drawing_Point* point)](#oh_drawing_textlinegetstringindexforposition) | - | 获取文本行对象中指定位置处的字符串索引。 |
 | [double OH_Drawing_TextLineGetOffsetForStringIndex(OH_Drawing_TextLine* line, int32_t index)](#oh_drawing_textlinegetoffsetforstringindex) | - | 获取文本行对象中指定字符串索引处的偏移量。 |
 | [typedef bool (\*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge)](#drawing_caretoffsetscallback) | Drawing_CaretOffsetsCallback | 用户自定义的回调函数。将文本行对象中每个字符的偏移量、索引值作为参数传递给用户自定义的回调函数。 |
 | [void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing_CaretOffsetsCallback callback)](#oh_drawing_textlineenumeratecaretoffsets) | - | 枚举文本行对象中每个字符的偏移量和索引值，传递给用户自定义的回调函数，用户可以使用偏移量和索引值进行其他操作。 |
 | [double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double alignmentFactor, double alignmentWidth)](#oh_drawing_textlinegetalignmentoffset) | - | 获取文本行对象根据对齐因子和对齐宽度计算对齐后所需的偏移量。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge) | 用户自定义的回调函数。将文本行对象中每个字符的偏移量、索引值作为参数传递给用户自定义的回调函数。<br>**起始版本：** 18<br>**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing |
 
 ## 函数说明
 
@@ -48,7 +54,7 @@ OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typog
 
 **描述：**
 
-获取排版对象的文本行数组。文本行数组中包含一个或多个文本行对象。不再需要{@link OH_Drawing_Array}时，请使用[OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines)接口释放该对象的指针。
+获取排版对象的文本行数组。文本行数组中包含一个或多个文本行对象。不再需要{@link OH_Drawing_Array}时，请使用[OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) 接口释放该对象的指针。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -60,7 +66,7 @@ OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typog
 | -- | -- |
 | OH_Drawing_Typography* typography | 指向排版对象{@link OH_Drawing_Typography}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -127,7 +133,7 @@ OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size
 | OH_Drawing_Array* lines | 指向文本行数组{@link OH_Drawing_Array}的指针。 |
 | size_t index | 指定的文本行数组的索引。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -153,7 +159,7 @@ double OH_Drawing_TextLineGetGlyphCount(OH_Drawing_TextLine* line)
 | -- | -- |
 | OH_Drawing_TextLine* line | 指向文本行对象{@link OH_Drawing_TextLine}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -201,7 +207,7 @@ OH_Drawing_Array* OH_Drawing_TextLineGetGlyphRuns(OH_Drawing_TextLine* line)
 | -- | -- |
 | OH_Drawing_TextLine* line | 指向文本行对象{@link OH_Drawing_TextLine}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -248,7 +254,7 @@ OH_Drawing_Run* OH_Drawing_GetRunByIndex(OH_Drawing_Array* runs, size_t index)
 | OH_Drawing_Array* runs | 指向文本渲染单元{@link OH_Drawing_Run}数组{@link OH_Drawing_Array}的指针。 |
 | size_t index | 文本渲染单元数组的索引。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -300,7 +306,7 @@ OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine*
 | int mode | 截断的类型，取值对应为 {@link OH_Drawing_EllipsisModal} 枚举，当前仅支持头部截断ELLIPSIS_MODAL_HEAD和尾部截断ELLIPSIS_MODAL_TAIL。 |
 | const char* ellipsis | 截断的标记字符串。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -314,7 +320,7 @@ double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double
 
 **描述：**
 
-获取文本行对象的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。<br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。<br>可通过height = ascent + descent + leading来计算文本高度。
+获取文本行对象的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。 <br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。 <br>可通过height = ascent + descent + leading来计算文本高度。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -329,7 +335,7 @@ double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double
 | double* descent | 指向文本行对象下降高度的指针，单位为物理像素px。 |
 | double* leading | 指向文本行对象行间距的指针，单位为物理像素px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -343,7 +349,7 @@ OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)
 
 **描述：**
 
-获取文本行对象的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。<br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括行首和末尾空格的边界。<br>例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。
+获取文本行对象的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。 <br>例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括行首和末尾空格的边界。 <br>例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -355,11 +361,11 @@ OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)
 | -- | -- |
 | OH_Drawing_TextLine* line | 指向文本行对象{@link OH_Drawing_TextLine}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_Drawing_Rect* | 指向文本行对象的图像边界{@link OH_Drawing_Rect}的指针，传入的line为NULL时返回NULL，不再需要{@link OH_Drawing_Rect}时，请使用      {@link OH_Drawing_RectDestroy}接口释放该对象的指针。 |
+| OH_Drawing_Rect* | 指向文本行对象的图像边界{@link OH_Drawing_Rect}的指针，传入的line为NULL时返回NULL，不再需要{@link OH_Drawing_Rect}时，请使用<br>    {@link OH_Drawing_RectDestroy}接口释放该对象的指针。 |
 
 ### OH_Drawing_TextLineGetTrailingSpaceWidth()
 
@@ -381,7 +387,7 @@ double OH_Drawing_TextLineGetTrailingSpaceWidth(OH_Drawing_TextLine* line)
 | -- | -- |
 | OH_Drawing_TextLine* line | 指向文本行对象{@link OH_Drawing_TextLine}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -408,7 +414,7 @@ int32_t OH_Drawing_TextLineGetStringIndexForPosition(OH_Drawing_TextLine* line, 
 | OH_Drawing_TextLine* line | 指向文本行对象{@link OH_Drawing_TextLine}的指针。 |
 | OH_Drawing_Point* point | 指向要查找索引的位置{@link OH_Drawing_Point}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -435,7 +441,7 @@ double OH_Drawing_TextLineGetOffsetForStringIndex(OH_Drawing_TextLine* line, int
 | OH_Drawing_TextLine* line | 指向文本行对象{@link OH_Drawing_TextLine}的指针。 |
 | int32_t index | 要获取偏移量的字符串索引。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -463,7 +469,7 @@ typedef bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool 
 | int32_t index | 文本行对象中每个字符的索引值。 |
 | bool leadingEdge | 光标是否位于字符的前缘。true表示位于字符前缘，即偏移量不包含该字符宽度，false表示位于字符后缘，即偏移量包含该字符宽度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -512,7 +518,7 @@ double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double a
 | double alignmentFactor | 对齐因子。小于等于0.0表示左对齐，大于0.0小于0.5表示偏左对齐，0.5表示居中对齐，大于0.5小于1.0表示偏右对齐，大于等于1.0表示右对齐。 |
 | double alignmentWidth | 对齐宽度，即最终偏移后的文本行对象右下角相对于起始位置的偏移值，单位为物理像素px。如果指定对齐宽度小于文本行对象的实际宽度，则返回0。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

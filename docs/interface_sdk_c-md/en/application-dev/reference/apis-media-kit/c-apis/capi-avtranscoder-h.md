@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the native APIs provided by the AVTranscoder. You can use the APIs to transcode a sourcevideo file into a new video file.
+The file declares the native APIs provided by the AVTranscoder. You can use the APIs to transcode a source video file into a new video file.
 
 **Library**: libavtranscoder.so
 
@@ -17,26 +17,26 @@ The file declares the native APIs provided by the AVTranscoder. You can use the 
 | Name | Description |
 | -- | -- |
 | [OH_AVTranscoder_Config *OH_AVTranscoderConfig_Create()](#oh_avtranscoderconfig_create) | Creates an instance of the transcoding configuration parameters. |
-| [OH_AVErrCode OH_AVTranscoderConfig_Release(OH_AVTranscoder_Config* config)](#oh_avtranscoderconfig_release) | Releases the resources of the transcoding configuration parameters.After a successful call, the instance specified by **config** is released and set to nullptr. |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetSrcFD(OH_AVTranscoder_Config *config, int32_t srcFd, int64_t srcOffset, int64_t length)](#oh_avtranscoderconfig_setsrcfd) | Sets the file descriptor of the source video for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstFD(OH_AVTranscoder_Config *config, int32_t dstFd)](#oh_avtranscoderconfig_setdstfd) | Sets the file descriptor of the output video for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoType(OH_AVTranscoder_Config *config, const char *mimeType)](#oh_avtranscoderconfig_setdstvideotype) | Sets the encoding format of the output video for transcoding.Currently, only AVC and HEVC are supported. If the source video is in HEVC format, the default value is **HEVC**.Otherwise, the default value is **AVC**.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioType(OH_AVTranscoder_Config *config, const char *mimeType)](#oh_avtranscoderconfig_setdstaudiotype) | Sets the encoding format of the output audio for transcoding.Currently, only AAC is supported. If this parameter is not set, AAC is used by default.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstFileType(OH_AVTranscoder_Config *config, OH_AVOutputFormat mimeType)](#oh_avtranscoderconfig_setdstfiletype) | Sets the container format of the output video file for transcoding.Currently, only MP4 is supported.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioBitrate(OH_AVTranscoder_Config *config, int32_t bitrate)](#oh_avtranscoderconfig_setdstaudiobitrate) | Sets the bit rate of the output audio for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoBitrate(OH_AVTranscoder_Config *config, int32_t bitrate)](#oh_avtranscoderconfig_setdstvideobitrate) | Sets the bit rate of the output video for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
-| [OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoResolution(OH_AVTranscoder_Config *config, int32_t width, int32_t height)](#oh_avtranscoderconfig_setdstvideoresolution) | Sets the resolution of the output video for transcoding, in px, where **width** is the width of the outputvideo frame and **height** is the height of the output video frame.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_Release(OH_AVTranscoder_Config* config)](#oh_avtranscoderconfig_release) | Releases the resources of the transcoding configuration parameters. After a successful call, the instance specified by **config** is released and set to nullptr. |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetSrcFD(OH_AVTranscoder_Config *config, int32_t srcFd, int64_t srcOffset, int64_t length)](#oh_avtranscoderconfig_setsrcfd) | Sets the file descriptor of the source video for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstFD(OH_AVTranscoder_Config *config, int32_t dstFd)](#oh_avtranscoderconfig_setdstfd) | Sets the file descriptor of the output video for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoType(OH_AVTranscoder_Config *config, const char *mimeType)](#oh_avtranscoderconfig_setdstvideotype) | Sets the encoding format of the output video for transcoding. Currently, only AVC and HEVC are supported. If the source video is in HEVC format, the default value is **HEVC**. Otherwise, the default value is **AVC**. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioType(OH_AVTranscoder_Config *config, const char *mimeType)](#oh_avtranscoderconfig_setdstaudiotype) | Sets the encoding format of the output audio for transcoding. Currently, only AAC is supported. If this parameter is not set, AAC is used by default. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstFileType(OH_AVTranscoder_Config *config, OH_AVOutputFormat mimeType)](#oh_avtranscoderconfig_setdstfiletype) | Sets the container format of the output video file for transcoding. Currently, only MP4 is supported. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioBitrate(OH_AVTranscoder_Config *config, int32_t bitrate)](#oh_avtranscoderconfig_setdstaudiobitrate) | Sets the bit rate of the output audio for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoBitrate(OH_AVTranscoder_Config *config, int32_t bitrate)](#oh_avtranscoderconfig_setdstvideobitrate) | Sets the bit rate of the output video for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
+| [OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoResolution(OH_AVTranscoder_Config *config, int32_t width, int32_t height)](#oh_avtranscoderconfig_setdstvideoresolution) | Sets the resolution of the output video for transcoding, in px, where **width** is the width of the output video frame and **height** is the height of the output video frame. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). |
 | [OH_AVTranscoder *OH_AVTranscoder_Create(void)](#oh_avtranscoder_create) | Creates an AVTranscoder instance. |
-| [OH_AVErrCode OH_AVTranscoder_Prepare(OH_AVTranscoder *transcoder, OH_AVTranscoder_Config *config)](#oh_avtranscoder_prepare) | Sets the parameters for video transcoding and prepares for transcoding.This function must be called before [OH_AVTranscoder_Start](capi-avtranscoder-h.md#oh_avtranscoder_start). Upon a successful call to this function, theAVTranscoder enters the AVTRANSCODER_PREPARED state. |
-| [OH_AVErrCode OH_AVTranscoder_Start(OH_AVTranscoder *transcoder)](#oh_avtranscoder_start) | Starts transcoding.This function must be called after a successful call to [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). Upon a successful call tothis function, the AVTranscoder enters the AVTRANSCODER_STARTED state. |
-| [OH_AVErrCode OH_AVTranscoder_Pause(OH_AVTranscoder *transcoder)](#oh_avtranscoder_pause) | Pauses transcoding.This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED state. Upon a successful call tothis function, the AVTranscoder enters the AVTRANSCODER_PAUSED state. |
-| [OH_AVErrCode OH_AVTranscoder_Resume(OH_AVTranscoder *transcoder)](#oh_avtranscoder_resume) | Resumes transcoding.This function must be called when the AVTranscoder is in the AVTRANSCODER_PAUSED state. Upon a successful call tothis function, the AVTranscoder enters the AVTRANSCODER_STARTED state again. |
-| [OH_AVErrCode OH_AVTranscoder_Cancel(OH_AVTranscoder *transcoder)](#oh_avtranscoder_cancel) | Cancels transcoding.This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED or AVTRANSCODER_PAUSED state. Upona successful call to this function, the AVTranscoder enters the AVTRANSCODER_CANCELLED state. |
+| [OH_AVErrCode OH_AVTranscoder_Prepare(OH_AVTranscoder *transcoder, OH_AVTranscoder_Config *config)](#oh_avtranscoder_prepare) | Sets the parameters for video transcoding and prepares for transcoding. This function must be called before [OH_AVTranscoder_Start](capi-avtranscoder-h.md#oh_avtranscoder_start). Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_PREPARED state. |
+| [OH_AVErrCode OH_AVTranscoder_Start(OH_AVTranscoder *transcoder)](#oh_avtranscoder_start) | Starts transcoding. This function must be called after a successful call to [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_STARTED state. |
+| [OH_AVErrCode OH_AVTranscoder_Pause(OH_AVTranscoder *transcoder)](#oh_avtranscoder_pause) | Pauses transcoding. This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED state. Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_PAUSED state. |
+| [OH_AVErrCode OH_AVTranscoder_Resume(OH_AVTranscoder *transcoder)](#oh_avtranscoder_resume) | Resumes transcoding. This function must be called when the AVTranscoder is in the AVTRANSCODER_PAUSED state. Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_STARTED state again. |
+| [OH_AVErrCode OH_AVTranscoder_Cancel(OH_AVTranscoder *transcoder)](#oh_avtranscoder_cancel) | Cancels transcoding. This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED or AVTRANSCODER_PAUSED state. Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_CANCELLED state. |
 | [OH_AVErrCode OH_AVTranscoder_Release(OH_AVTranscoder *transcoder)](#oh_avtranscoder_release) | Releases an AVTranscoder instance. |
-| [OH_AVErrCode OH_AVTranscoder_SetStateCallback(OH_AVTranscoder *transcoder, OH_AVTranscoder_OnStateChange callback, void *userData)](#oh_avtranscoder_setstatecallback) | Registers a callback for transcoding state change events.This callback is invoked when the state of the transcoding process changes.An application can subscribe to only one transcoding state change event. When the application initiates multiplesubscriptions to this event, the last subscription is applied.The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called. |
-| [OH_AVErrCode OH_AVTranscoder_SetErrorCallback(OH_AVTranscoder *transcoder, OH_AVTranscoder_OnError callback, void *userData)](#oh_avtranscoder_seterrorcallback) | Registers a callback for transcoding error events.This callback is invoked when an error occurs during the transcoding process.If this event is reported, call [OH_AVTranscoder_Release](capi-avtranscoder-h.md#oh_avtranscoder_release) to exit the transcoding.An application can subscribe to only one transcoding error event. When the application initiates multiplesubscriptions to this event, the last subscription is applied.The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called. |
-| [OH_AVErrCode OH_AVTranscoder_SetProgressUpdateCallback(OH_AVTranscoder *transcoder, OH_AVTranscoder_OnProgressUpdate callback, void *userData)](#oh_avtranscoder_setprogressupdatecallback) | Registers a callback for transcoding progress update events.This callback is invoked when the progress of the transcoding process is updated.An application can subscribe to only one transcoding error event. When the application initiates multiplesubscriptions to this event, the last subscription is applied.The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called. |
-| [OH_AVErrCode OH_AVTranscoderConfig_EnableBFrame(OH_AVTranscoder_Config *config, bool enabled)](#oh_avtranscoderconfig_enablebframe) | Enables B-frame encoding for the output video during transcoding.For details about the constraints on B-frame video encoding, see {@link Constraints in B-Frame Video Encoding}.If the current environment does not meet these constraints, B-frames will be skipped, and encoding will proceed asif B-frame video encoding were not enabled. |
+| [OH_AVErrCode OH_AVTranscoder_SetStateCallback(OH_AVTranscoder *transcoder, OH_AVTranscoder_OnStateChange callback, void *userData)](#oh_avtranscoder_setstatecallback) | Registers a callback for transcoding state change events. This callback is invoked when the state of the transcoding process changes. An application can subscribe to only one transcoding state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called. |
+| [OH_AVErrCode OH_AVTranscoder_SetErrorCallback(OH_AVTranscoder *transcoder, OH_AVTranscoder_OnError callback, void *userData)](#oh_avtranscoder_seterrorcallback) | Registers a callback for transcoding error events. This callback is invoked when an error occurs during the transcoding process. If this event is reported, call [OH_AVTranscoder_Release](capi-avtranscoder-h.md#oh_avtranscoder_release) to exit the transcoding. An application can subscribe to only one transcoding error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called. |
+| [OH_AVErrCode OH_AVTranscoder_SetProgressUpdateCallback(OH_AVTranscoder *transcoder, OH_AVTranscoder_OnProgressUpdate callback, void *userData)](#oh_avtranscoder_setprogressupdatecallback) | Registers a callback for transcoding progress update events. This callback is invoked when the progress of the transcoding process is updated. An application can subscribe to only one transcoding error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called. |
+| [OH_AVErrCode OH_AVTranscoderConfig_EnableBFrame(OH_AVTranscoder_Config *config, bool enabled)](#oh_avtranscoderconfig_enablebframe) | Enables B-frame encoding for the output video during transcoding. For details about the constraints on B-frame video encoding, see {@link Constraints in B-Frame Video Encoding}. If the current environment does not meet these constraints, B-frames will be skipped, and encoding will proceed as if B-frame video encoding were not enabled. |
 
 ## Function description
 
@@ -66,7 +66,7 @@ OH_AVErrCode OH_AVTranscoderConfig_Release(OH_AVTranscoder_Config* config)
 
 **Description**
 
-Releases the resources of the transcoding configuration parameters.After a successful call, the instance specified by **config** is released and set to nullptr.
+Releases the resources of the transcoding configuration parameters. After a successful call, the instance specified by **config** is released and set to nullptr.
 
 **Since**: 20
 
@@ -80,7 +80,7 @@ Releases the resources of the transcoding configuration parameters.After a succe
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The release operation is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The release operation is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr. |
 
 ### OH_AVTranscoderConfig_SetSrcFD()
 
@@ -90,7 +90,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetSrcFD(OH_AVTranscoder_Config *config, int3
 
 **Description**
 
-Sets the file descriptor of the source video for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the file descriptor of the source video for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -107,7 +107,7 @@ Sets the file descriptor of the source video for transcoding.This function must 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the parameters related to the source video  file are incorrect. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the parameters related to the source video  file are incorrect. |
 
 ### OH_AVTranscoderConfig_SetDstFD()
 
@@ -117,7 +117,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstFD(OH_AVTranscoder_Config *config, int3
 
 **Description**
 
-Sets the file descriptor of the output video for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the file descriptor of the output video for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -132,7 +132,7 @@ Sets the file descriptor of the output video for transcoding.This function must 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the output video file descriptor is invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the output video file descriptor is invalid. |
 
 ### OH_AVTranscoderConfig_SetDstVideoType()
 
@@ -142,7 +142,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoType(OH_AVTranscoder_Config *confi
 
 **Description**
 
-Sets the encoding format of the output video for transcoding.Currently, only AVC and HEVC are supported. If the source video is in HEVC format, the default value is **HEVC**.Otherwise, the default value is **AVC**.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the encoding format of the output video for transcoding. Currently, only AVC and HEVC are supported. If the source video is in HEVC format, the default value is **HEVC**. Otherwise, the default value is **AVC**. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -157,7 +157,7 @@ Sets the encoding format of the output video for transcoding.Currently, only AVC
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of mimeType is not allowed. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of mimeType is not allowed. |
 
 ### OH_AVTranscoderConfig_SetDstAudioType()
 
@@ -167,7 +167,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioType(OH_AVTranscoder_Config *confi
 
 **Description**
 
-Sets the encoding format of the output audio for transcoding.Currently, only AAC is supported. If this parameter is not set, AAC is used by default.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the encoding format of the output audio for transcoding. Currently, only AAC is supported. If this parameter is not set, AAC is used by default. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -182,7 +182,7 @@ Sets the encoding format of the output audio for transcoding.Currently, only AAC
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of mimeType is not allowed. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of mimeType is not allowed. |
 
 ### OH_AVTranscoderConfig_SetDstFileType()
 
@@ -192,7 +192,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstFileType(OH_AVTranscoder_Config *config
 
 **Description**
 
-Sets the container format of the output video file for transcoding.Currently, only MP4 is supported.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the container format of the output video file for transcoding. Currently, only MP4 is supported. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -207,7 +207,7 @@ Sets the container format of the output video file for transcoding.Currently, on
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of mimeType is invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of mimeType is invalid. |
 
 ### OH_AVTranscoderConfig_SetDstAudioBitrate()
 
@@ -217,7 +217,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioBitrate(OH_AVTranscoder_Config *co
 
 **Description**
 
-Sets the bit rate of the output audio for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the bit rate of the output audio for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -232,7 +232,7 @@ Sets the bit rate of the output audio for transcoding.This function must be call
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of bitrate is invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of bitrate is invalid. |
 
 ### OH_AVTranscoderConfig_SetDstVideoBitrate()
 
@@ -242,7 +242,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoBitrate(OH_AVTranscoder_Config *co
 
 **Description**
 
-Sets the bit rate of the output video for transcoding.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the bit rate of the output video for transcoding. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -257,7 +257,7 @@ Sets the bit rate of the output video for transcoding.This function must be call
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of bitrate is invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of bitrate is invalid. |
 
 ### OH_AVTranscoderConfig_SetDstVideoResolution()
 
@@ -267,7 +267,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoResolution(OH_AVTranscoder_Config 
 
 **Description**
 
-Sets the resolution of the output video for transcoding, in px, where **width** is the width of the outputvideo frame and **height** is the height of the output video frame.This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
+Sets the resolution of the output video for transcoding, in px, where **width** is the width of the output video frame and **height** is the height of the output video frame. This function must be called before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare).
 
 **Since**: 20
 
@@ -283,7 +283,7 @@ Sets the resolution of the output video for transcoding, in px, where **width** 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of width or height is  invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr, or the value of width or height is  invalid. |
 
 ### OH_AVTranscoder_Create()
 
@@ -311,7 +311,7 @@ OH_AVErrCode OH_AVTranscoder_Prepare(OH_AVTranscoder *transcoder, OH_AVTranscode
 
 **Description**
 
-Sets the parameters for video transcoding and prepares for transcoding.This function must be called before [OH_AVTranscoder_Start](capi-avtranscoder-h.md#oh_avtranscoder_start). Upon a successful call to this function, theAVTranscoder enters the AVTRANSCODER_PREPARED state.
+Sets the parameters for video transcoding and prepares for transcoding. This function must be called before [OH_AVTranscoder_Start](capi-avtranscoder-h.md#oh_avtranscoder_start). Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_PREPARED state.
 
 **Since**: 20
 
@@ -320,13 +320,13 @@ Sets the parameters for video transcoding and prepares for transcoding.This func
 | Parameter | Description |
 | -- | -- |
 | OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance,see {@link OH_AVTranscoder_Config} |
+| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance, see {@link OH_AVTranscoder_Config} |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The video transcoding parameters are set successfully, and the AVTranscoder enters the  AVTRANSCODER_PREPARED state.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Prepare operation fails.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The Prepare operation is not allowed in the current state, or the format is not  supported.  AV_ERR_IO: An I/O access error occurs.  {@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The video transcoding parameters are set successfully, and the AVTranscoder enters the<br>AVTRANSCODER_PREPARED state.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Prepare operation fails.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The Prepare operation is not allowed in the current state, or the format is not<br>supported.<br>AV_ERR_IO: An I/O access error occurs.<br>{@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
 
 ### OH_AVTranscoder_Start()
 
@@ -336,7 +336,7 @@ OH_AVErrCode OH_AVTranscoder_Start(OH_AVTranscoder *transcoder)
 
 **Description**
 
-Starts transcoding.This function must be called after a successful call to [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). Upon a successful call tothis function, the AVTranscoder enters the AVTRANSCODER_STARTED state.
+Starts transcoding. This function must be called after a successful call to [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare). Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_STARTED state.
 
 **Since**: 20
 
@@ -350,7 +350,7 @@ Starts transcoding.This function must be called after a successful call to [OH_A
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding starts successfully, and the AVTranscoder enters the AVTRANSCODER_STARTED state.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Start operation fails.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The Start operation is not allowed in the current state.  AV_ERR_IO: An I/O access error occurs.  {@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
+| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding starts successfully, and the AVTranscoder enters the AVTRANSCODER_STARTED state.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Start operation fails.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The Start operation is not allowed in the current state.<br>AV_ERR_IO: An I/O access error occurs.<br>{@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
 
 ### OH_AVTranscoder_Pause()
 
@@ -360,7 +360,7 @@ OH_AVErrCode OH_AVTranscoder_Pause(OH_AVTranscoder *transcoder)
 
 **Description**
 
-Pauses transcoding.This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED state. Upon a successful call tothis function, the AVTranscoder enters the AVTRANSCODER_PAUSED state.
+Pauses transcoding. This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED state. Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_PAUSED state.
 
 **Since**: 20
 
@@ -374,7 +374,7 @@ Pauses transcoding.This function must be called when the AVTranscoder is in the 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding is paused successfully, and the AVTranscoder enters the AVTRANSCODER_PAUSED state.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Pause operation fails.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The Pause operation is not allowed in the current state.  AV_ERR_IO: An I/O access error occurs.  {@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
+| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding is paused successfully, and the AVTranscoder enters the AVTRANSCODER_PAUSED state.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Pause operation fails.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The Pause operation is not allowed in the current state.<br>AV_ERR_IO: An I/O access error occurs.<br>{@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
 
 ### OH_AVTranscoder_Resume()
 
@@ -384,7 +384,7 @@ OH_AVErrCode OH_AVTranscoder_Resume(OH_AVTranscoder *transcoder)
 
 **Description**
 
-Resumes transcoding.This function must be called when the AVTranscoder is in the AVTRANSCODER_PAUSED state. Upon a successful call tothis function, the AVTranscoder enters the AVTRANSCODER_STARTED state again.
+Resumes transcoding. This function must be called when the AVTranscoder is in the AVTRANSCODER_PAUSED state. Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_STARTED state again.
 
 **Since**: 20
 
@@ -398,7 +398,7 @@ Resumes transcoding.This function must be called when the AVTranscoder is in the
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding is resumed successfully, and the AVTranscoder enters the AVTRANSCODER_STARTED  state.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Resume operation fails.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The Resume operation is not allowed in the current state.  AV_ERR_IO: An I/O access error occurs.  {@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
+| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding is resumed successfully, and the AVTranscoder enters the AVTRANSCODER_STARTED<br>state.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Resume operation fails.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The Resume operation is not allowed in the current state.<br>AV_ERR_IO: An I/O access error occurs.<br>{@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
 
 ### OH_AVTranscoder_Cancel()
 
@@ -408,7 +408,7 @@ OH_AVErrCode OH_AVTranscoder_Cancel(OH_AVTranscoder *transcoder)
 
 **Description**
 
-Cancels transcoding.This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED or AVTRANSCODER_PAUSED state. Upona successful call to this function, the AVTranscoder enters the AVTRANSCODER_CANCELLED state.
+Cancels transcoding. This function must be called when the AVTranscoder is in the AVTRANSCODER_STARTED or AVTRANSCODER_PAUSED state. Upon a successful call to this function, the AVTranscoder enters the AVTRANSCODER_CANCELLED state.
 
 **Since**: 20
 
@@ -422,7 +422,7 @@ Cancels transcoding.This function must be called when the AVTranscoder is in the
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding is canceled successfully, and the AVTranscoder enters the AVTRANSCODER_CANCELLED  state.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Cancel operation fails.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The Cancel operation is not allowed in the current state.  AV_ERR_IO: An I/O access error occurs.  {@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
+| OH_AVErrCode | {@link AV_ERR_OK}: Transcoding is canceled successfully, and the AVTranscoder enters the AVTRANSCODER_CANCELLED<br>state.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Cancel operation fails.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The Cancel operation is not allowed in the current state.<br>AV_ERR_IO: An I/O access error occurs.<br>{@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
 
 ### OH_AVTranscoder_Release()
 
@@ -446,7 +446,7 @@ Releases an AVTranscoder instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK: The AVTranscoder instance is successfully released.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Release operation fails.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The Release operation is not allowed in the current state.  AV_ERR_IO: An I/O access error occurs.  {@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
+| OH_AVErrCode | AV_ERR_OK: The AVTranscoder instance is successfully released.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder is nullptr, or the Release operation fails.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The Release operation is not allowed in the current state.<br>AV_ERR_IO: An I/O access error occurs.<br>{@link AV_ERR_SERVICE_DIED}: The media service is stopped. |
 
 ### OH_AVTranscoder_SetStateCallback()
 
@@ -456,7 +456,7 @@ OH_AVErrCode OH_AVTranscoder_SetStateCallback(OH_AVTranscoder *transcoder, OH_AV
 
 **Description**
 
-Registers a callback for transcoding state change events.This callback is invoked when the state of the transcoding process changes.An application can subscribe to only one transcoding state change event. When the application initiates multiplesubscriptions to this event, the last subscription is applied.The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called.
+Registers a callback for transcoding state change events. This callback is invoked when the state of the transcoding process changes. An application can subscribe to only one transcoding state change event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called.
 
 **Since**: 20
 
@@ -472,7 +472,7 @@ Registers a callback for transcoding state change events.This callback is invoke
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The registration is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder or callback is nullptr. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The registration is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder or callback is nullptr. |
 
 ### OH_AVTranscoder_SetErrorCallback()
 
@@ -482,7 +482,7 @@ OH_AVErrCode OH_AVTranscoder_SetErrorCallback(OH_AVTranscoder *transcoder, OH_AV
 
 **Description**
 
-Registers a callback for transcoding error events.This callback is invoked when an error occurs during the transcoding process.If this event is reported, call [OH_AVTranscoder_Release](capi-avtranscoder-h.md#oh_avtranscoder_release) to exit the transcoding.An application can subscribe to only one transcoding error event. When the application initiates multiplesubscriptions to this event, the last subscription is applied.The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called.
+Registers a callback for transcoding error events. This callback is invoked when an error occurs during the transcoding process. If this event is reported, call [OH_AVTranscoder_Release](capi-avtranscoder-h.md#oh_avtranscoder_release) to exit the transcoding. An application can subscribe to only one transcoding error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called.
 
 **Since**: 20
 
@@ -498,7 +498,7 @@ Registers a callback for transcoding error events.This callback is invoked when 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The registration is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder or callback is nullptr. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The registration is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder or callback is nullptr. |
 
 ### OH_AVTranscoder_SetProgressUpdateCallback()
 
@@ -508,7 +508,7 @@ OH_AVErrCode OH_AVTranscoder_SetProgressUpdateCallback(OH_AVTranscoder *transcod
 
 **Description**
 
-Registers a callback for transcoding progress update events.This callback is invoked when the progress of the transcoding process is updated.An application can subscribe to only one transcoding error event. When the application initiates multiplesubscriptions to this event, the last subscription is applied.The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called.
+Registers a callback for transcoding progress update events. This callback is invoked when the progress of the transcoding process is updated. An application can subscribe to only one transcoding error event. When the application initiates multiple subscriptions to this event, the last subscription is applied. The callback must be registered before [OH_AVTranscoder_Prepare](capi-avtranscoder-h.md#oh_avtranscoder_prepare) is called.
 
 **Since**: 20
 
@@ -517,14 +517,14 @@ Registers a callback for transcoding progress update events.This callback is inv
 | Parameter | Description |
 | -- | -- |
 | OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnProgressUpdate callback | Uri callback function,see {@link OH_AVTranscoder_OnProgressUpdate} |
+| OH_AVTranscoder_OnProgressUpdate callback | Uri callback function, see {@link OH_AVTranscoder_OnProgressUpdate} |
 | void *userData | Pointer to user specific data |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The registration is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter transcoder or callback is nullptr. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The registration is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter transcoder or callback is nullptr. |
 
 ### OH_AVTranscoderConfig_EnableBFrame()
 
@@ -534,7 +534,7 @@ OH_AVErrCode OH_AVTranscoderConfig_EnableBFrame(OH_AVTranscoder_Config *config, 
 
 **Description**
 
-Enables B-frame encoding for the output video during transcoding.For details about the constraints on B-frame video encoding, see {@link Constraints in B-Frame Video Encoding}.If the current environment does not meet these constraints, B-frames will be skipped, and encoding will proceed asif B-frame video encoding were not enabled.
+Enables B-frame encoding for the output video during transcoding. For details about the constraints on B-frame video encoding, see {@link Constraints in B-Frame Video Encoding}. If the current environment does not meet these constraints, B-frames will be skipped, and encoding will proceed as if B-frame video encoding were not enabled.
 
 **Since**: 20
 
@@ -549,6 +549,6 @@ Enables B-frame encoding for the output video during transcoding.For details abo
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.  {@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The setting is successful.<br>{@link AV_ERR_INVALID_VAL}: The input parameter config is nullptr. |
 
 

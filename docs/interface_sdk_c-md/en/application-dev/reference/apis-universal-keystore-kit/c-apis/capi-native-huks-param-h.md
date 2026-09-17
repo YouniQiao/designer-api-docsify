@@ -20,9 +20,9 @@ Provides APIs for constructing, using, and destroying a parameter set.
 
 | Name | Description |
 | -- | -- |
-| [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | Initializes a parameter set. No parameter information is required, and the default available memory space isallocated to the parameter set. The initialized parameter set needs to be released by using[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset). To add parameters to a parameter set, you need to use [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) to addparameters and use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct the parameter set. |
-| [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | Adds parameters to a parameter set. After the parameters are added, use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) toconstruct a parameter set. |
-| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset) is called to initialize the parameter set and[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) is called to add parameters, serialize the parameter set and copy the data of the BLOBtype to the adjacent memory area at the end of the **paramSet** structure. |
+| [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | Initializes a parameter set. No parameter information is required, and the default available memory space is allocated to the parameter set. The initialized parameter set needs to be released by using [OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset). To add parameters to a parameter set, you need to use [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) to add parameters and use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct the parameter set. |
+| [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | Adds parameters to a parameter set. After the parameters are added, use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct a parameter set. |
+| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset) is called to initialize the parameter set and [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) is called to add parameters, serialize the parameter set and copy the data of the BLOB type to the adjacent memory area at the end of the **paramSet** structure. |
 | [void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_freeparamset) | Frees a parameter set. This function frees the memory allocated by [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset). |
 | [struct OH_Huks_Result OH_Huks_CopyParamSet(const struct OH_Huks_ParamSet *fromParamSet, uint32_t fromParamSetSize, struct OH_Huks_ParamSet **paramSet)](#oh_huks_copyparamset) | Copies a parameter set (deep copy). |
 | [struct OH_Huks_Result OH_Huks_GetParam(const struct OH_Huks_ParamSet *paramSet, uint32_t tag, struct OH_Huks_Param **param)](#oh_huks_getparam) | Obtains a parameter from a parameter set. |
@@ -42,7 +42,7 @@ struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **Description**
 
-Initializes a parameter set. No parameter information is required, and the default available memory space isallocated to the parameter set. The initialized parameter set needs to be released by using[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset). To add parameters to a parameter set, you need to use [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) to addparameters and use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct the parameter set.
+Initializes a parameter set. No parameter information is required, and the default available memory space is allocated to the parameter set. The initialized parameter set needs to be released by using [OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset). To add parameters to a parameter set, you need to use [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) to add parameters and use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct the parameter set.
 
 **Since**: 9
 
@@ -66,7 +66,7 @@ struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const
 
 **Description**
 
-Adds parameters to a parameter set. After the parameters are added, use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) toconstruct a parameter set.
+Adds parameters to a parameter set. After the parameters are added, use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct a parameter set.
 
 **Since**: 9
 
@@ -74,7 +74,7 @@ Adds parameters to a parameter set. After the parameters are added, use [OH_Huks
 
 | Parameter | Description |
 | -- | -- |
-| struct OH_Huks_ParamSet *paramSet | Pointer to the parameter set to which parameters are to be added. This parameter needs to beinitialized by using [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset). |
+| struct OH_Huks_ParamSet *paramSet | Pointer to the parameter set to which parameters are to be added. This parameter needs to be initialized by using [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset). |
 | const struct OH_Huks_Param *params | Pointer to an array of parameters to add. |
 | uint32_t paramCnt | Number of parameters to add. |
 
@@ -92,7 +92,7 @@ struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **Description**
 
-Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset) is called to initialize the parameter set and[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) is called to add parameters, serialize the parameter set and copy the data of the BLOBtype to the adjacent memory area at the end of the **paramSet** structure.
+Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset) is called to initialize the parameter set and [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) is called to add parameters, serialize the parameter set and copy the data of the BLOB type to the adjacent memory area at the end of the **paramSet** structure.
 
 **Since**: 9
 
@@ -195,7 +195,7 @@ Refreshes the {@link OH_Huks_Blob} data in the parameter set.
 | Parameter | Description |
 | -- | -- |
 | struct OH_Huks_ParamSet *paramSet | Pointer to the parameter set to check. |
-| bool isCopy | If the value is **true**, the address of the {@link OH_Huks_Blob} data is refreshed and copied to theparameter set. If the value is **false**, only the address of the {@link OH_Huks_Blob} data is refreshed. |
+| bool isCopy | If the value is **true**, the address of the {@link OH_Huks_Blob} data is refreshed and copied to the<br>    parameter set. If the value is **false**, only the address of the {@link OH_Huks_Blob} data is refreshed. |
 
 **Returns**:
 

@@ -1,4 +1,4 @@
-# ringtonePlayer
+# ringtonePlayer(Ringtone Player)
 
 The ringtonePlayer module provides APIs for playing, configuring, and obtaining ringtones.
 

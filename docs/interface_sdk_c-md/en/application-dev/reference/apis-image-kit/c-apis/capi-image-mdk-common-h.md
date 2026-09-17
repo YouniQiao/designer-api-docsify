@@ -8,7 +8,7 @@ Declares the common enums and structs used by the image interface.
 
 **System capability**: SystemCapability.Multimedia.Image.Core
 
-**Since**: 10
+**Since**: 8
 
 **Related module**: [Image](capi-image.md)
 

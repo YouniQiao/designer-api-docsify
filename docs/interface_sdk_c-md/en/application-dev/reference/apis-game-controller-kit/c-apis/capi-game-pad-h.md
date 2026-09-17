@@ -87,7 +87,7 @@ Registers a callback for Left Shoulder button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -134,7 +134,7 @@ Registers a callback for Right Shoulder button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -181,7 +181,7 @@ Registers a callback for Left Trigger button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -228,7 +228,7 @@ Registers a callback for Left Trigger axis events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>      <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>      <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -275,7 +275,7 @@ Registers a callback for Right Trigger button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>      <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>      <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -322,7 +322,7 @@ Registers a callback for Right Trigger axis events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -369,7 +369,7 @@ Registers a callback for Menu button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -416,7 +416,7 @@ Registers a callback for Home button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -463,7 +463,7 @@ Registers a callback for A button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -510,7 +510,7 @@ Registers a callback for B button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -557,7 +557,7 @@ Registers a callback for X button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -604,7 +604,7 @@ Registers a callback for Y button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -651,7 +651,7 @@ Registers a callback for C button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -698,7 +698,7 @@ Registers a callback for D-pad Left button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -745,7 +745,7 @@ Registers a callback for D-pad Right button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -792,7 +792,7 @@ Registers a callback for D-pad Up button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -839,7 +839,7 @@ Registers a callback for D-pad Down button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -886,7 +886,7 @@ Registers a callback for D-pad axis events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -933,7 +933,7 @@ Registers a callback for Left Thumbstick button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -980,7 +980,7 @@ Registers a callback for Left Thumbstick axis events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -1027,7 +1027,7 @@ Registers a callback for Right Thumbstick button events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -1074,7 +1074,7 @@ Registers a callback for Right Thumbstick axis events.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    inputMonitorCallback is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 

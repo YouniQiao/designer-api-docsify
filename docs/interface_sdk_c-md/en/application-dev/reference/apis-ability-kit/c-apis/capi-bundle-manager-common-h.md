@@ -8,7 +8,7 @@ The file declares the error codes defined by BundleManager.
 
 **System capability**: SystemCapability.BundleManager.BundleFramework.Core
 
-**Since**: 21
+**Since**: 9
 
 **Related module**: [Native_Bundle](capi-native-bundle.md)
 

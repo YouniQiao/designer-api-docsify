@@ -24,7 +24,7 @@ The file declares the camera manager concepts.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, Camera_StatusInfo* status)](#oh_cameramanager_statuscallback) | OH_CameraManager_StatusCallback | Defines the callback defined in the [CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md) struct and used to report the cameramanager status. |
+| [typedef void (\*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, Camera_StatusInfo* status)](#oh_cameramanager_statuscallback) | OH_CameraManager_StatusCallback | Defines the callback defined in the [CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md) struct and used to report the camera manager status. |
 | [typedef void (\*OH_CameraManager_TorchStatusCallback)(Camera_Manager* cameraManager, Camera_TorchStatusInfo* status)](#oh_cameramanager_torchstatuscallback) | OH_CameraManager_TorchStatusCallback | Defines the callback to listen for flashlight status changes. |
 | [typedef void (\*OH_CameraManager_OnFoldStatusInfoChange)(Camera_Manager* cameraManager, Camera_FoldStatusInfo* foldStatusInfo)](#oh_cameramanager_onfoldstatusinfochange) | OH_CameraManager_OnFoldStatusInfoChange | Defines the callback to listen for fold status changes of the camera manager. |
 | [Camera_ErrorCode OH_CameraManager_RegisterCallback(Camera_Manager* cameraManager, CameraManager_Callbacks* callback)](#oh_cameramanager_registercallback) | - | Registers a callback to listen for camera status changes. |
@@ -37,7 +37,7 @@ The file declares the camera manager concepts.
 | [Camera_ErrorCode OH_CameraManager_DeleteSupportedCameras(Camera_Manager* cameraManager, Camera_Device* cameras, uint32_t size)](#oh_cameramanager_deletesupportedcameras) | - | Deletes supported cameras. |
 | [Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapability(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_OutputCapability** cameraOutputCapability)](#oh_cameramanager_getsupportedcameraoutputcapability) | - | Obtains the output capability supported by a camera. |
 | [Camera_ErrorCode OH_CameraManager_GetSupportedCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)](#oh_cameramanager_getsupportedcameraoutputcapabilitywithscenemode) | - | Obtains the output capability supported by a camera in the specified mode. |
-| [Camera_ErrorCode OH_CameraManager_GetSupportedFullCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)](#oh_cameramanager_getsupportedfullcameraoutputcapabilitywithscenemode) | - | Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV,HEIF, and HDR. Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the completeoutput capabilities are obtained. |
+| [Camera_ErrorCode OH_CameraManager_GetSupportedFullCameraOutputCapabilityWithSceneMode(Camera_Manager* cameraManager, const Camera_Device* camera, Camera_SceneMode sceneMode, Camera_OutputCapability** cameraOutputCapability)](#oh_cameramanager_getsupportedfullcameraoutputcapabilitywithscenemode) | - | Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR. Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output capabilities are obtained. |
 | [Camera_ErrorCode OH_CameraManager_DeleteSupportedCameraOutputCapability(Camera_Manager* cameraManager, Camera_OutputCapability* cameraOutputCapability)](#oh_cameramanager_deletesupportedcameraoutputcapability) | - | Deletes the output capability supported by a camera. |
 | [Camera_ErrorCode OH_CameraManager_IsCameraMuted(Camera_Manager* cameraManager, bool* isCameraMuted)](#oh_cameramanager_iscameramuted) | - | Checks whether a camera is muted. |
 | [Camera_ErrorCode OH_CameraManager_CreateCaptureSession(Camera_Manager* cameraManager, Camera_CaptureSession** captureSession)](#oh_cameramanager_createcapturesession) | - | Creates a **CaptureSession** instance. |
@@ -45,8 +45,8 @@ The file declares the camera manager concepts.
 | [Camera_ErrorCode OH_CameraManager_CreateCameraInput_WithPositionAndType(Camera_Manager* cameraManager, Camera_Position position, Camera_Type type, Camera_Input** cameraInput)](#oh_cameramanager_createcamerainput_withpositionandtype) | - | Creates a **Camera_Input** instance with the specified camera position and type. |
 | [Camera_ErrorCode OH_CameraManager_CreatePreviewOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PreviewOutput** previewOutput)](#oh_cameramanager_createpreviewoutput) | - | Creates a **PreviewOutput** instance. |
 | [Camera_ErrorCode OH_CameraManager_CreatePreviewOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_PreviewOutput** previewOutput)](#oh_cameramanager_createpreviewoutputusedinpreconfig) | - | Creates a **PreviewOutput** instance to be used in a preconfiguration stream. |
-| [Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manager* cameraManager, const Camera_Profile* profile, Camera_PreviewOutput** previewOutput)](#oh_cameramanager_createdeferredpreviewoutput) | - | Create a defer preview output instance.The caller must call {@link OH_PreviewOutput_Release}to free the memory of the output. |
-| [Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PhotoOutput** photoOutput)](#oh_cameramanager_createphotooutput) | - | Creates a **PhotoOutput** instance. This API can only be used to create a **PhotoOutput** object in JPEGformat. |
+| [Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manager* cameraManager, const Camera_Profile* profile, Camera_PreviewOutput** previewOutput)](#oh_cameramanager_createdeferredpreviewoutput) | - | Create a defer preview output instance.The caller must call {@link OH_PreviewOutput_Release} to free the memory of the output. |
+| [Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManager, const Camera_Profile* profile, const char* surfaceId, Camera_PhotoOutput** photoOutput)](#oh_cameramanager_createphotooutput) | - | Creates a **PhotoOutput** instance. This API can only be used to create a **PhotoOutput** object in JPEG format. |
 | [Camera_ErrorCode OH_CameraManager_CreatePhotoOutputUsedInPreconfig(Camera_Manager* cameraManager, const char* surfaceId, Camera_PhotoOutput** photoOutput)](#oh_cameramanager_createphotooutputusedinpreconfig) | - | Creates a **PhotoOutput** instance to be used in a preconfiguration stream. |
 | [Camera_ErrorCode OH_CameraManager_CreatePhotoOutputWithoutSurface(Camera_Manager *cameraManager, const Camera_Profile *profile, Camera_PhotoOutput **photoOutput)](#oh_cameramanager_createphotooutputwithoutsurface) | - | Creates a **PhotoOutput** instance. **surfaceId** is not required in this function. |
 | [Camera_ErrorCode OH_CameraManager_CreateVideoOutput(Camera_Manager* cameraManager, const Camera_VideoProfile* profile, const char* surfaceId, Camera_VideoOutput** videoOutput)](#oh_cameramanager_createvideooutput) | - | Creates a **VideoOutput** instance. |
@@ -61,9 +61,17 @@ The file declares the camera manager concepts.
 | [Camera_ErrorCode OH_CameraManager_IsTorchLevelControlSupported(const Camera_Manager* cameraManager, bool* isTorchLevelControlSupported)](#oh_cameramanager_istorchlevelcontrolsupported) | - | Checks whether the device supports flashlight brightness control. |
 | [Camera_ErrorCode OH_CameraManager_SetTorchModeOnWithLevel(Camera_Manager* cameraManager, double torchLevel)](#oh_cameramanager_settorchmodeonwithlevel) | - | Turns on the flashlight and sets the brightness level. |
 | [Camera_ErrorCode OH_CameraManager_GetCameraDevice(Camera_Manager* cameraManager, Camera_Position position, Camera_Type type, Camera_Device* camera)](#oh_cameramanager_getcameradevice) | - | Queries a specified device based on position and type. |
-| [Camera_ErrorCode OH_CameraManager_GetCameraDevices(Camera_Manager* cameraManager, Camera_DeviceQueryInfo* deviceQueryInfo, uint32_t* cameraSize, Camera_Device** cameras)](#oh_cameramanager_getcameradevices) | - | Obtains the list of cameras that meet the search criteria based on the camera position, camera types, andconnection type. |
+| [Camera_ErrorCode OH_CameraManager_GetCameraDevices(Camera_Manager* cameraManager, Camera_DeviceQueryInfo* deviceQueryInfo, uint32_t* cameraSize, Camera_Device** cameras)](#oh_cameramanager_getcameradevices) | - | Obtains the list of cameras that meet the search criteria based on the camera position, camera types, and connection type. |
 | [Camera_ErrorCode OH_CameraManager_DeleteCameraDevices(Camera_Manager* cameraManager, Camera_Device* cameras)](#oh_cameramanager_deletecameradevices) | - | Deletes the specified camera. |
 | [Camera_ErrorCode OH_CameraManager_GetCameraConcurrentInfos(Camera_Manager* cameraManager, const Camera_Device* camera, uint32_t deviceSize, Camera_ConcurrentInfo** cameraConcurrentInfo, uint32_t* infoSize)](#oh_cameramanager_getcameraconcurrentinfos) | - | Obtains the concurrent information of specified cameras, the empty return means concurrency is not supported. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, Camera_StatusInfo* status) | Defines the callback defined in the [CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md) struct and used to report the camera manager status.<br>**Since**: 11 |
+| void (*OH_CameraManager_TorchStatusCallback)(Camera_Manager* cameraManager, Camera_TorchStatusInfo* status) | Defines the callback to listen for flashlight status changes.<br>**Since**: 12 |
+| void (*OH_CameraManager_OnFoldStatusInfoChange)(Camera_Manager* cameraManager, Camera_FoldStatusInfo* foldStatusInfo) | Defines the callback to listen for fold status changes of the camera manager.<br>**Since**: 13 |
 
 ## Function description
 
@@ -75,7 +83,7 @@ typedef void (*OH_CameraManager_StatusCallback)(Camera_Manager* cameraManager, C
 
 **Description**
 
-Defines the callback defined in the [CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md) struct and used to report the cameramanager status.
+Defines the callback defined in the [CameraManager_Callbacks](capi-oh-camera-cameramanager-callbacks.md) struct and used to report the camera manager status.
 
 **Since**: 11
 
@@ -291,7 +299,7 @@ Obtains the supported cameras.
 | Parameter | Description |
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
-| Camera_Device** cameras | Double pointer to the list of cameras, which are defined in the Camera_Device struct, if the functionis successfully called. |
+| Camera_Device** cameras | Double pointer to the list of cameras, which are defined in the Camera_Device struct, if the function is successfully called. |
 | uint32_t* size | Pointer to the size of the list of cameras. |
 
 **Returns**:
@@ -344,7 +352,7 @@ Obtains the output capability supported by a camera.
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | cameras | the {@link Camera_Device} to be queried. |
-| Camera_OutputCapability** cameraOutputCapability | Double pointer to the output capability, which is defined in theCamera_OutputCapability struct, if the function is successfully called. |
+| Camera_OutputCapability** cameraOutputCapability | Double pointer to the output capability, which is defined in the Camera_OutputCapability struct, if the function is successfully called. |
 
 **Returns**:
 
@@ -371,7 +379,7 @@ Obtains the output capability supported by a camera in the specified mode.
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_Device* camera | Pointer to the **Camera_Device** instance. |
 | Camera_SceneMode sceneMode | Scene mode. |
-| Camera_OutputCapability** cameraOutputCapability | Double pointer to output capability, which is defined in the **Camera_OutputCapability* struct, if the function is successfully called. |
+| Camera_OutputCapability** cameraOutputCapability | Double pointer to output capability, which is defined in the **Camera_OutputCapability*<br> struct, if the function is successfully called. |
 
 **Returns**:
 
@@ -387,7 +395,7 @@ Camera_ErrorCode OH_CameraManager_GetSupportedFullCameraOutputCapabilityWithScen
 
 **Description**
 
-Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV,HEIF, and HDR. Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the completeoutput capabilities are obtained.
+Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR. Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output capabilities are obtained.
 
 **Since**: 23
 
@@ -398,7 +406,7 @@ Obtains the complete output capabilities supported by a specified camera in a sp
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_Device* camera | Pointer to the **Camera_Device** instance. |
 | Camera_SceneMode sceneMode | Scene mode. |
-| Camera_OutputCapability** cameraOutputCapability | Double pointer to output capability, which is defined in the **Camera_OutputCapability* struct, if the function is successfully called. |
+| Camera_OutputCapability** cameraOutputCapability | Double pointer to output capability, which is defined in the **Camera_OutputCapability*<br> struct, if the function is successfully called. |
 
 **Returns**:
 
@@ -423,7 +431,7 @@ Deletes the output capability supported by a camera.
 | Parameter | Description |
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
-| Camera_OutputCapability* cameraOutputCapability | Pointer to the output capability, which is defined in the **Camera_OutputCapabilitystruct. |
+| Camera_OutputCapability* cameraOutputCapability | Pointer to the output capability, which is defined in the **Camera_OutputCapability**<br>struct. |
 
 **Returns**:
 
@@ -448,7 +456,7 @@ Checks whether a camera is muted.
 | Parameter | Description |
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
-| bool* isCameraMuted | Pointer to the check result for whether the camera is muted, if the function is successfullycalled. **true** if muted, **false** otherwise. |
+| bool* isCameraMuted | Pointer to the check result for whether the camera is muted, if the function is successfully called. **true** if muted, **false** otherwise. |
 
 **Returns**:
 
@@ -473,7 +481,7 @@ Creates a **CaptureSession** instance.
 | Parameter | Description |
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
-| Camera_CaptureSession** captureSession | Double pointer to the **Camera_CaptureSession** instance created, if the function issuccessfully called. |
+| Camera_CaptureSession** captureSession | Double pointer to the **Camera_CaptureSession** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -557,7 +565,7 @@ Creates a **PreviewOutput** instance.
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_Profile* profile | Pointer to the profile used for creating the **Camera_PreviewOutput** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PreviewOutput** instance. |
-| Camera_PreviewOutput** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function issuccessfully called. |
+| Camera_PreviewOutput** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -583,7 +591,7 @@ Creates a **PreviewOutput** instance to be used in a preconfiguration stream.
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PreviewOutput** instance. |
-| Camera_PreviewOutput** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function issuccessfully called. |
+| Camera_PreviewOutput** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -599,7 +607,7 @@ Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manag
 
 **Description**
 
-Create a defer preview output instance.The caller must call {@link OH_PreviewOutput_Release}to free the memory of the output.
+Create a defer preview output instance.The caller must call {@link OH_PreviewOutput_Release} to free the memory of the output.
 
 **Since**: 24
 
@@ -615,7 +623,7 @@ Create a defer preview output instance.The caller must call {@link OH_PreviewOut
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the method call succeeds.          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
+| Camera_ErrorCode | {@link CAMERA_OK} if the method call succeeds.<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
 
 ### OH_CameraManager_CreatePhotoOutput()
 
@@ -625,7 +633,7 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManage
 
 **Description**
 
-Creates a **PhotoOutput** instance. This API can only be used to create a **PhotoOutput** object in JPEGformat.
+Creates a **PhotoOutput** instance. This API can only be used to create a **PhotoOutput** object in JPEG format.
 
 **Since**: 11
 
@@ -636,7 +644,7 @@ Creates a **PhotoOutput** instance. This API can only be used to create a **Phot
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_Profile* profile | Pointer to the profile used for creating the **Camera_PhotoOutput** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PhotoOutput** instance. |
-| Camera_PhotoOutput** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
+| Camera_PhotoOutput** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -662,7 +670,7 @@ Creates a **PhotoOutput** instance to be used in a preconfiguration stream.
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PhotoOutput** instance. |
-| Camera_PhotoOutput** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
+| Camera_PhotoOutput** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -688,7 +696,7 @@ Creates a **PhotoOutput** instance. **surfaceId** is not required in this functi
 | -- | -- |
 | Camera_Manager *cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_Profile *profile | Pointer to the profile used for creating the **Camera_PhotoOutput** instance. |
-| Camera_PhotoOutput **photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
+| Camera_PhotoOutput **photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -715,7 +723,7 @@ Creates a **VideoOutput** instance.
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_VideoProfile* profile | Pointer to the profile for creating the **Camera_VideoOutput** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_VideoOutput** instance. |
-| Camera_VideoOutput** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfullycalled. |
+| Camera_VideoOutput** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -741,7 +749,7 @@ Creates a **VideoOutput** instance to be used in a preconfiguration stream.
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_VideoOutput** instance. |
-| Camera_VideoOutput** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfullycalled. |
+| Camera_VideoOutput** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -767,7 +775,7 @@ Creates a **MetadataOutput** instance.
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const Camera_MetadataObjectType* profile | Pointer to the metadata object type used for creating the **Camera_MetadataOutput** instance. |
-| Camera_MetadataOutput** metadataOutput | Double pointer to the **Camera_MetadataOutput** instance created, if the function issuccessfully called. |
+| Camera_MetadataOutput** metadataOutput | Double pointer to the **Camera_MetadataOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -792,9 +800,9 @@ Creates a **metadataOutput** instance using an array of metadata object types.
 | Parameter | Description |
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
-| const Camera_MetadataObjectType* metadataObjectTypes | Pointer to the metadata object types used for creating the **Camera_MetadataOutputinstance. |
+| const Camera_MetadataObjectType* metadataObjectTypes | Pointer to the metadata object types used for creating the **Camera_MetadataOutput**<br>instance. |
 | uint32_t size | Length of the metadata object type array. |
-| Camera_MetadataOutput** metadataOutput | Double pointer to the **Camera_MetadataOutput** instance created, if the function issuccessfully called. |
+| Camera_MetadataOutput** metadataOutput | Double pointer to the **Camera_MetadataOutput** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -819,7 +827,7 @@ Obtains the scene modes supported by a camera.
 | Parameter | Description |
 | -- | -- |
 | Camera_Device* camera | Pointer to the **Camera_Device** instance. |
-| Camera_SceneMode** sceneModes | Double pointer to the list of scene modes, which are defined in the Camera_SceneMode struct, ifthe function is successfully called. |
+| Camera_SceneMode** sceneModes | Double pointer to the list of scene modes, which are defined in the Camera_SceneMode struct, if the function is successfully called. |
 | uint32_t* size | Pointer to the size of the list of scene modes. |
 
 **Returns**:
@@ -870,7 +878,7 @@ Checks whether the device supports the flashlight.
 | Parameter | Description |
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
-| bool* isTorchSupported | Pointer to the check result for the support of the flashlight. **true** if supported, false** otherwise. |
+| bool* isTorchSupported | Pointer to the check result for the support of the flashlight. **true** if supported, **<br>false** otherwise. |
 
 **Returns**:
 
@@ -896,7 +904,7 @@ Checks whether the device supports the specified flashlight mode.
 | -- | -- |
 | Camera_Manager* cameraManager | Pointer to the **Camera_Manager** instance. |
 | Camera_TorchMode torchMode | Flashlight mode to check. |
-| bool* isTorchSupported | Pointer to the check result for the support of the flashlight mode. **true** if supported, false** otherwise. |
+| bool* isTorchSupported | Pointer to the check result for the support of the flashlight mode. **true** if supported, **<br>false** otherwise. |
 
 **Returns**:
 
@@ -1004,7 +1012,7 @@ Queries a specified device based on position and type.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.          {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.          {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
+| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.<br>        {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.<br>        {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
 
 ### OH_CameraManager_GetCameraDevices()
 
@@ -1014,7 +1022,7 @@ Camera_ErrorCode OH_CameraManager_GetCameraDevices(Camera_Manager* cameraManager
 
 **Description**
 
-Obtains the list of cameras that meet the search criteria based on the camera position, camera types, andconnection type.
+Obtains the list of cameras that meet the search criteria based on the camera position, camera types, and connection type.
 
 **Since**: 23
 
@@ -1084,6 +1092,6 @@ Obtains the concurrent information of specified cameras, the empty return means 
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.          {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.          {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
+| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.<br>        {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.<br>        {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
 
 

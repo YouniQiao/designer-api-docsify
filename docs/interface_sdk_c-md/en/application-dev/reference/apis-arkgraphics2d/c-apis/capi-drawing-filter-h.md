@@ -8,7 +8,7 @@ This file declares the functions related to the filter in the drawing module.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -19,10 +19,10 @@ This file declares the functions related to the filter in the drawing module.
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_Filter* OH_Drawing_FilterCreate(void)](#oh_drawing_filtercreate) | Creates an **OH_Drawing_Filter** object. |
-| [void OH_Drawing_FilterSetImageFilter(OH_Drawing_Filter* filter, OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_filtersetimagefilter) | Sets an **OH_Drawing_ImageFilter** object for an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_FilterSetMaskFilter(OH_Drawing_Filter* filter, OH_Drawing_MaskFilter* maskFilter)](#oh_drawing_filtersetmaskfilter) | Sets an **OH_Drawing_MaskFilter** object for an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_FilterSetColorFilter(OH_Drawing_Filter* filter, OH_Drawing_ColorFilter* colorFilter)](#oh_drawing_filtersetcolorfilter) | Sets an **OH_Drawing_ColorFilter** object for an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_FilterGetColorFilter(OH_Drawing_Filter* filter, OH_Drawing_ColorFilter* colorFilter)](#oh_drawing_filtergetcolorfilter) | Obtains an **OH_Drawing_ColorFilter** object from an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **filter** or **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_FilterSetImageFilter(OH_Drawing_Filter* filter, OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_filtersetimagefilter) | Sets an **OH_Drawing_ImageFilter** object for an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_FilterSetMaskFilter(OH_Drawing_Filter* filter, OH_Drawing_MaskFilter* maskFilter)](#oh_drawing_filtersetmaskfilter) | Sets an **OH_Drawing_MaskFilter** object for an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_FilterSetColorFilter(OH_Drawing_Filter* filter, OH_Drawing_ColorFilter* colorFilter)](#oh_drawing_filtersetcolorfilter) | Sets an **OH_Drawing_ColorFilter** object for an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_FilterGetColorFilter(OH_Drawing_Filter* filter, OH_Drawing_ColorFilter* colorFilter)](#oh_drawing_filtergetcolorfilter) | Obtains an **OH_Drawing_ColorFilter** object from an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **filter** or **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_FilterDestroy(OH_Drawing_Filter* filter)](#oh_drawing_filterdestroy) | Destroys an **OH_Drawing_Filter** object and reclaims the memory occupied by the object. |
 
 ## Function description
@@ -53,7 +53,7 @@ void OH_Drawing_FilterSetImageFilter(OH_Drawing_Filter* filter, OH_Drawing_Image
 
 **Description**
 
-Sets an **OH_Drawing_ImageFilter** object for an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets an **OH_Drawing_ImageFilter** object for an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -62,7 +62,7 @@ Sets an **OH_Drawing_ImageFilter** object for an **OH_Drawing_Filter** object.Th
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Filter* filter | Pointer to an {@link OH_Drawing_Filter} object. |
-| OH_Drawing_ImageFilter* imageFilter | Pointer to an {@link OH_Drawing_ImageFilter} object. If NULL is passed in, the image filtereffect of the object will be cleared. |
+| OH_Drawing_ImageFilter* imageFilter | Pointer to an {@link OH_Drawing_ImageFilter} object. If NULL is passed in, the image filter effect of the object will be cleared. |
 
 ### OH_Drawing_FilterSetMaskFilter()
 
@@ -72,7 +72,7 @@ void OH_Drawing_FilterSetMaskFilter(OH_Drawing_Filter* filter, OH_Drawing_MaskFi
 
 **Description**
 
-Sets an **OH_Drawing_MaskFilter** object for an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets an **OH_Drawing_MaskFilter** object for an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -81,7 +81,7 @@ Sets an **OH_Drawing_MaskFilter** object for an **OH_Drawing_Filter** object.Thi
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Filter* filter | Pointer to an {@link OH_Drawing_Filter} object. |
-| OH_Drawing_MaskFilter* maskFilter | Pointer to an {@link OH_Drawing_ColorFilter} object. If NULL is passed in, the mask filter effectof the object will be cleared. |
+| OH_Drawing_MaskFilter* maskFilter | Pointer to an {@link OH_Drawing_ColorFilter} object. If NULL is passed in, the mask filter effect of the object will be cleared. |
 
 ### OH_Drawing_FilterSetColorFilter()
 
@@ -91,7 +91,7 @@ void OH_Drawing_FilterSetColorFilter(OH_Drawing_Filter* filter, OH_Drawing_Color
 
 **Description**
 
-Sets an **OH_Drawing_ColorFilter** object for an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets an **OH_Drawing_ColorFilter** object for an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -100,7 +100,7 @@ Sets an **OH_Drawing_ColorFilter** object for an **OH_Drawing_Filter** object.Th
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Filter* filter | Pointer to an {@link OH_Drawing_Filter} object. |
-| OH_Drawing_ColorFilter* colorFilter | Pointer to an {@link OH_Drawing_ColorFilter} object. If NULL is passed in, the color filtereffect of the object will be cleared. |
+| OH_Drawing_ColorFilter* colorFilter | Pointer to an {@link OH_Drawing_ColorFilter} object. If NULL is passed in, the color filter effect of the object will be cleared. |
 
 ### OH_Drawing_FilterGetColorFilter()
 
@@ -110,7 +110,7 @@ void OH_Drawing_FilterGetColorFilter(OH_Drawing_Filter* filter, OH_Drawing_Color
 
 **Description**
 
-Obtains an **OH_Drawing_ColorFilter** object from an **OH_Drawing_Filter** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **filter** or **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains an **OH_Drawing_ColorFilter** object from an **OH_Drawing_Filter** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **filter** or **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 

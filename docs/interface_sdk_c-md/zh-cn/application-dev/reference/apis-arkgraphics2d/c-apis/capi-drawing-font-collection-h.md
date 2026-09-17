@@ -46,7 +46,7 @@ OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)
 
 **替代接口：** OH_Drawing_CreateSharedFontCollection
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -130,7 +130,7 @@ OH_Drawing_FontCollection* OH_Drawing_CreateSharedFontCollection(void)
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -170,7 +170,7 @@ OH_Drawing_FontCollection* OH_Drawing_GetFontCollectionGlobalInstance(void)
 
 **起始版本：** 14
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

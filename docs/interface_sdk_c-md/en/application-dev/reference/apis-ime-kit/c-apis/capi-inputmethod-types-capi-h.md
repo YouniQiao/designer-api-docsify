@@ -29,6 +29,12 @@ Provides the input method types.
 | [InputMethod_ErrorCode](#inputmethod_errorcode) | InputMethod_ErrorCode | Enumerates the input method error codes. |
 | [InputMethod_RequestKeyboardReason](#inputmethod_requestkeyboardreason) | InputMethod_RequestKeyboardReason | Enumerates the reasons for requesting the keyboard. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| OHOS_INPUTMETHOD_TYPES_CAPI_H | Provides the input method types.<br>**Since**: 12<br>**System capability**: SystemCapability.MiscServices.InputMethodFramework |
+
 ## Enum type description
 
 ### InputMethod_KeyboardStatus
@@ -181,7 +187,7 @@ Enumerates the input method error codes.
 | IME_ERR_PACKAGEMANAGER = 12800001 | The error code when the bundle manager error. |
 | IME_ERR_IMENGINE = 12800002 | The error code when input method engine error. |
 | IME_ERR_IMCLIENT = 12800003 | The error code when input method client error. |
-| IME_ERR_CONFIG_PERSIST = 12800005 | The error code when configuration persistence error.This error code is reported when the configuration fails to be saved. |
+| IME_ERR_CONFIG_PERSIST = 12800005 | The error code when configuration persistence error. This error code is reported when the configuration fails to be saved. |
 | IME_ERR_CONTROLLER = 12800006 | The error code when input method controller error. |
 | IME_ERR_SETTINGS = 12800007 | The error code when input method setting error. |
 | IME_ERR_IMMS = 12800008 | The error code when input method manager service error. |

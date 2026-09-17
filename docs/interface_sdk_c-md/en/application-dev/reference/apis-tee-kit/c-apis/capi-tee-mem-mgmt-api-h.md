@@ -40,8 +40,8 @@ Provides APIs for memory management.
 | [void TEE_MemFill(void *buffer, uint8_t x, size_t size)](#tee_memfill) | Fills <b>x</b> into the first <b>size</b> bytes of the buffer. |
 | [void TEE_MemMove(void *dest, const void *src, size_t size)](#tee_memmove) | Copies bytes. |
 | [void *TEE_Malloc(size_t size, uint32_t hint)](#tee_malloc) | Allocates space of the specified size for an object. |
-| [void TEE_Free(void *buffer)](#tee_free) | Releases the memory allocated by <b>TEE_Malloc</b>.If the buffer is a <b>NULL</b> pointer, <b>TEE_Free</b> does nothing.The buffer to be released must have been allocated by <b>TEE_Malloc</b> or <b>TEE_Realloc</b> and cannot bereleased repeatedly. Otherwise, unexpected result may be caused. |
-| [void *TEE_Realloc(void *buffer, size_t new_size)](#tee_realloc) | Reallocates memory.If <b>new_size</b> is greater than the old size, the content of the original memory does not changeand the space in excess of the old size contains unspecified content.If the new size of the memory object requires movement of the object, the space for the previousinstantiation of the object is deallocated.If the space cannot be allocated, the original object remains allocated and this functionreturns a <b>NULL</b> pointer.If the buffer is <b>NULL</b>, this function is equivalent to <b>TEE_Malloc</b>. |
+| [void TEE_Free(void *buffer)](#tee_free) | Releases the memory allocated by <b>TEE_Malloc</b>.<br> If the buffer is a <b>NULL</b> pointer, <b>TEE_Free</b> does nothing. The buffer to be released must have been allocated by <b>TEE_Malloc</b> or <b>TEE_Realloc</b> and cannot be released repeatedly. Otherwise, unexpected result may be caused. |
+| [void *TEE_Realloc(void *buffer, size_t new_size)](#tee_realloc) | Reallocates memory.<br> If <b>new_size</b> is greater than the old size, the content of the original memory does not change and the space in excess of the old size contains unspecified content. If the new size of the memory object requires movement of the object, the space for the previous instantiation of the object is deallocated. If the space cannot be allocated, the original object remains allocated and this function returns a <b>NULL</b> pointer. If the buffer is <b>NULL</b>, this function is equivalent to <b>TEE_Malloc</b>. |
 | [int32_t TEE_MemCompare(const void *buffer1, const void *buffer2, size_t size)](#tee_memcompare) | Compares memory content from the beginning. |
 | [TEE_Result TEE_CheckMemoryAccessRights(uint32_t accessFlags, const void *buffer, size_t size)](#tee_checkmemoryaccessrights) | Checks whether this TA has the requested permissions to access a buffer. |
 | [void TEE_SetInstanceData(void *instanceData)](#tee_setinstancedata) | Sets the TA instance data pointer. |
@@ -140,7 +140,7 @@ Allocates space of the specified size for an object.
 | Parameter | Description |
 | -- | -- |
 | size_t size | Indicates the size of the memory to be allocated. |
-| uint32_t hint | Indicates a hint to the allocator. The value <b>0</b> indicates that the memory blockreturned is filled with "\0". |
+| uint32_t hint | Indicates a hint to the allocator. The value <b>0</b> indicates that the memory block returned is filled with "\0". |
 
 **Returns**:
 
@@ -156,7 +156,7 @@ void TEE_Free(void *buffer)
 
 **Description**
 
-Releases the memory allocated by <b>TEE_Malloc</b>.If the buffer is a <b>NULL</b> pointer, <b>TEE_Free</b> does nothing.The buffer to be released must have been allocated by <b>TEE_Malloc</b> or <b>TEE_Realloc</b> and cannot bereleased repeatedly. Otherwise, unexpected result may be caused.
+Releases the memory allocated by <b>TEE_Malloc</b>.<br> If the buffer is a <b>NULL</b> pointer, <b>TEE_Free</b> does nothing. The buffer to be released must have been allocated by <b>TEE_Malloc</b> or <b>TEE_Realloc</b> and cannot be released repeatedly. Otherwise, unexpected result may be caused.
 
 **Since**: 20
 
@@ -174,7 +174,7 @@ void *TEE_Realloc(void *buffer, size_t new_size)
 
 **Description**
 
-Reallocates memory.If <b>new_size</b> is greater than the old size, the content of the original memory does not changeand the space in excess of the old size contains unspecified content.If the new size of the memory object requires movement of the object, the space for the previousinstantiation of the object is deallocated.If the space cannot be allocated, the original object remains allocated and this functionreturns a <b>NULL</b> pointer.If the buffer is <b>NULL</b>, this function is equivalent to <b>TEE_Malloc</b>.
+Reallocates memory.<br> If <b>new_size</b> is greater than the old size, the content of the original memory does not change and the space in excess of the old size contains unspecified content. If the new size of the memory object requires movement of the object, the space for the previous instantiation of the object is deallocated. If the space cannot be allocated, the original object remains allocated and this function returns a <b>NULL</b> pointer. If the buffer is <b>NULL</b>, this function is equivalent to <b>TEE_Malloc</b>.
 
 **Since**: 20
 

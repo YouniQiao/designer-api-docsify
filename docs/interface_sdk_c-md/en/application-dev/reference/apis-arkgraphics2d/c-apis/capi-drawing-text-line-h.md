@@ -2,13 +2,13 @@
 
 ## Overview
 
-This file declares the capabilities for obtaining the character position in a text line, obtaining the runinformation, and truncating text by line.
+This file declares the capabilities for obtaining the character position in a text line, obtaining the run information, and truncating text by line.
 
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 18
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -18,9 +18,9 @@ This file declares the capabilities for obtaining the character position in a te
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typography)](#oh_drawing_typographygettextlines) | - | Obtains the array of text lines in a typography object. This array contains one or more text line objects.Release this pointer by calling [OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) when this object is no longer needed. |
+| [OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typography)](#oh_drawing_typographygettextlines) | - | Obtains the array of text lines in a typography object. This array contains one or more text line objects. Release this pointer by calling [OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) when this object is no longer needed. |
 | [void OH_Drawing_DestroyTextLines(OH_Drawing_Array* lines)](#oh_drawing_destroytextlines) | - | Releases the memory occupied by a text line array. |
-| [void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)](#oh_drawing_destroytextline) | - | Releases the memory of a single text line object. Only the memory of a text line object that is independentlyallocated can be released. The memory of a text line object obtained from a line array through[OH_Drawing_GetTextLineByIndex](capi-drawing-text-line-h.md#oh_drawing_gettextlinebyindex) cannot be released. |
+| [void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)](#oh_drawing_destroytextline) | - | Releases the memory of a single text line object. Only the memory of a text line object that is independently allocated can be released. The memory of a text line object obtained from a line array through [OH_Drawing_GetTextLineByIndex](capi-drawing-text-line-h.md#oh_drawing_gettextlinebyindex) cannot be released. |
 | [OH_Drawing_TextLine* OH_Drawing_GetTextLineByIndex(OH_Drawing_Array* lines, size_t index)](#oh_drawing_gettextlinebyindex) | - | Obtains the text line object with the specified index in a text line array. |
 | [double OH_Drawing_TextLineGetGlyphCount(OH_Drawing_TextLine* line)](#oh_drawing_textlinegetglyphcount) | - | Obtains the number of glyphs in a text line object. |
 | [void OH_Drawing_TextLineGetTextRange(OH_Drawing_TextLine* line, size_t* start, size_t* end)](#oh_drawing_textlinegettextrange) | - | Obtains the range of the text in a text line object in the entire paragraph. |
@@ -28,15 +28,21 @@ This file declares the capabilities for obtaining the character position in a te
 | [void OH_Drawing_DestroyRuns(OH_Drawing_Array* runs)](#oh_drawing_destroyruns) | - | Releases the memory occupied by a glyph run array. |
 | [OH_Drawing_Run* OH_Drawing_GetRunByIndex(OH_Drawing_Array* runs, size_t index)](#oh_drawing_getrunbyindex) | - | Obtains the glyph run object with the specified index in a glyph run array. |
 | [void OH_Drawing_TextLinePaint(OH_Drawing_TextLine* line, OH_Drawing_Canvas* canvas, double x, double y)](#oh_drawing_textlinepaint) | - | Paints a text line on the canvas with the coordinate point (x, y) as the upper left corner. |
-| [OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine* line, double width, int mode, const char* ellipsis)](#oh_drawing_textlinecreatetruncatedline) | - | Creates a truncated text line object. Truncates the original text line based on the specified width,truncation type, and truncation mark string, inserts the specified mark string at the truncation position, andgenerates and returns a new independent text line object. The original text is not affected. |
-| [double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double* ascent, double* descent, double* leading)](#oh_drawing_textlinegettypographicbounds) | - | Obtains the typographic bounds of the text line object. The typographic bounds of a text line are related tothe typographic font and typographic font size, and are independent of the characters themselves.<br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the 'b' character, the typographic bounds include the bounds of the leading and trailing spaces. For example, for thestring "j" or "E", the typographic bounds are the same, i.e., independent of the characters themselves.<br>The text height can be calculated using height = ascent + descent + leading. |
-| [OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)](#oh_drawing_textlinegetimagebounds) | - | Obtains the image bounds of the text line object. The image bounds of a text line are related to thetypographic font, typographic font size, and the characters themselves, and are equivalent to the visual bounds.<br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the 'b' character, the user can only see "a b" on the UI, and the image bounds are the bounds excluding the leading andtrailing spaces.<br>For example, for the string "j" or "E", the visual bounds are different, i.e., related to the charactersthemselves. The visual bounds width of the string "j" is smaller than that of the string "E", and the visual boundsheight of the string "j" is greater than that of the string "E". |
+| [OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine* line, double width, int mode, const char* ellipsis)](#oh_drawing_textlinecreatetruncatedline) | - | Creates a truncated text line object. Truncates the original text line based on the specified width, truncation type, and truncation mark string, inserts the specified mark string at the truncation position, and generates and returns a new independent text line object. The original text is not affected. |
+| [double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double* ascent, double* descent, double* leading)](#oh_drawing_textlinegettypographicbounds) | - | Obtains the typographic bounds of the text line object. The typographic bounds of a text line are related to the typographic font and typographic font size, and are independent of the characters themselves. <br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the ' b' character, the typographic bounds include the bounds of the leading and trailing spaces. For example, for the string "j" or "E", the typographic bounds are the same, i.e., independent of the characters themselves. <br>The text height can be calculated using height = ascent + descent + leading. |
+| [OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)](#oh_drawing_textlinegetimagebounds) | - | Obtains the image bounds of the text line object. The image bounds of a text line are related to the typographic font, typographic font size, and the characters themselves, and are equivalent to the visual bounds. <br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the ' b' character, the user can only see "a b" on the UI, and the image bounds are the bounds excluding the leading and trailing spaces. <br>For example, for the string "j" or "E", the visual bounds are different, i.e., related to the characters themselves. The visual bounds width of the string "j" is smaller than that of the string "E", and the visual bounds height of the string "j" is greater than that of the string "E". |
 | [double OH_Drawing_TextLineGetTrailingSpaceWidth(OH_Drawing_TextLine* line)](#oh_drawing_textlinegettrailingspacewidth) | - | Obtains the width of the spaces at the end of a text line object. |
 | [int32_t OH_Drawing_TextLineGetStringIndexForPosition(OH_Drawing_TextLine* line, OH_Drawing_Point* point)](#oh_drawing_textlinegetstringindexforposition) | - | Obtains the string index at the specified position in the text line object. |
 | [double OH_Drawing_TextLineGetOffsetForStringIndex(OH_Drawing_TextLine* line, int32_t index)](#oh_drawing_textlinegetoffsetforstringindex) | - | Obtains the offset of a character with the specified index in a text line object. |
-| [typedef bool (\*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge)](#drawing_caretoffsetscallback) | Drawing_CaretOffsetsCallback | Defines a custom callback used to receive the offset and index of each character in a text line objectas its parameters. |
-| [void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing_CaretOffsetsCallback callback)](#oh_drawing_textlineenumeratecaretoffsets) | - | Enumerates the offset and index of each character in a text line object and passes them to a custom callbackfunction. You can use the offset and index array for other operations. |
+| [typedef bool (\*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge)](#drawing_caretoffsetscallback) | Drawing_CaretOffsetsCallback | Defines a custom callback used to receive the offset and index of each character in a text line object as its parameters. |
+| [void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing_CaretOffsetsCallback callback)](#oh_drawing_textlineenumeratecaretoffsets) | - | Enumerates the offset and index of each character in a text line object and passes them to a custom callback function. You can use the offset and index array for other operations. |
 | [double OH_Drawing_TextLineGetAlignmentOffset(OH_Drawing_TextLine* line, double alignmentFactor, double alignmentWidth)](#oh_drawing_textlinegetalignmentoffset) | - | Obtains the offset of a text line object after alignment based on the alignment factor and alignment width. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool leadingEdge) | Defines a custom callback used to receive the offset and index of each character in a text line object as its parameters.<br>**Since**: 18<br>**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing |
 
 ## Function description
 
@@ -48,7 +54,7 @@ OH_Drawing_Array* OH_Drawing_TypographyGetTextLines(OH_Drawing_Typography* typog
 
 **Description**
 
-Obtains the array of text lines in a typography object. This array contains one or more text line objects.Release this pointer by calling [OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) when this object is no longer needed.
+Obtains the array of text lines in a typography object. This array contains one or more text line objects. Release this pointer by calling [OH_Drawing_DestroyTextLines](capi-drawing-text-line-h.md#oh_drawing_destroytextlines) when this object is no longer needed.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -94,7 +100,7 @@ void OH_Drawing_DestroyTextLine(OH_Drawing_TextLine* line)
 
 **Description**
 
-Releases the memory of a single text line object. Only the memory of a text line object that is independentlyallocated can be released. The memory of a text line object obtained from a line array through[OH_Drawing_GetTextLineByIndex](capi-drawing-text-line-h.md#oh_drawing_gettextlinebyindex) cannot be released.
+Releases the memory of a single text line object. Only the memory of a text line object that is independently allocated can be released. The memory of a text line object obtained from a line array through [OH_Drawing_GetTextLineByIndex](capi-drawing-text-line-h.md#oh_drawing_gettextlinebyindex) cannot be released.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -205,7 +211,7 @@ Obtains the array of text rendering units {@link OH_Drawing_Run} in the text lin
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_Array* | Pointer to the {@link OH_Drawing_Array} array of text rendering units {@link OH_Drawing_Run}. When the      {@link OH_Drawing_Array} is no longer needed, please use the [OH_Drawing_DestroyRuns](capi-drawing-text-line-h.md#oh_drawing_destroyruns) API to release the      pointer of the object. |
+| OH_Drawing_Array* | Pointer to the {@link OH_Drawing_Array} array of text rendering units {@link OH_Drawing_Run}. When the<br>    {@link OH_Drawing_Array} is no longer needed, please use the [OH_Drawing_DestroyRuns](capi-drawing-text-line-h.md#oh_drawing_destroyruns) API to release the      pointer of the object. |
 
 ### OH_Drawing_DestroyRuns()
 
@@ -285,7 +291,7 @@ OH_Drawing_TextLine* OH_Drawing_TextLineCreateTruncatedLine(OH_Drawing_TextLine*
 
 **Description**
 
-Creates a truncated text line object. Truncates the original text line based on the specified width,truncation type, and truncation mark string, inserts the specified mark string at the truncation position, andgenerates and returns a new independent text line object. The original text is not affected.
+Creates a truncated text line object. Truncates the original text line based on the specified width, truncation type, and truncation mark string, inserts the specified mark string at the truncation position, and generates and returns a new independent text line object. The original text is not affected.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -297,7 +303,7 @@ Creates a truncated text line object. Truncates the original text line based on 
 | -- | -- |
 | OH_Drawing_TextLine* line | Pointer to the {@link OH_Drawing_TextLine} object. |
 | double width | Width of the truncated line, in physical pixels (px). |
-| int mode | Truncation type. The value is an enumerated value of {@link OH_Drawing_EllipsisModal}. Currently, only ELLIPSIS_MODAL_HEAD** and **ELLIPSIS_MODAL_TAIL** are supported. |
+| int mode | Truncation type. The value is an enumerated value of {@link OH_Drawing_EllipsisModal}. Currently, only **<br>ELLIPSIS_MODAL_HEAD** and **ELLIPSIS_MODAL_TAIL** are supported. |
 | const char* ellipsis | Pointer to the string used to mark a truncation. |
 
 **Returns**:
@@ -314,7 +320,7 @@ double OH_Drawing_TextLineGetTypographicBounds(OH_Drawing_TextLine* line, double
 
 **Description**
 
-Obtains the typographic bounds of the text line object. The typographic bounds of a text line are related tothe typographic font and typographic font size, and are independent of the characters themselves.<br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the 'b' character, the typographic bounds include the bounds of the leading and trailing spaces. For example, for thestring "j" or "E", the typographic bounds are the same, i.e., independent of the characters themselves.<br>The text height can be calculated using height = ascent + descent + leading.
+Obtains the typographic bounds of the text line object. The typographic bounds of a text line are related to the typographic font and typographic font size, and are independent of the characters themselves. <br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the ' b' character, the typographic bounds include the bounds of the leading and trailing spaces. For example, for the string "j" or "E", the typographic bounds are the same, i.e., independent of the characters themselves. <br>The text height can be calculated using height = ascent + descent + leading.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -343,7 +349,7 @@ OH_Drawing_Rect* OH_Drawing_TextLineGetImageBounds(OH_Drawing_TextLine* line)
 
 **Description**
 
-Obtains the image bounds of the text line object. The image bounds of a text line are related to thetypographic font, typographic font size, and the characters themselves, and are equivalent to the visual bounds.<br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the 'b' character, the user can only see "a b" on the UI, and the image bounds are the bounds excluding the leading andtrailing spaces.<br>For example, for the string "j" or "E", the visual bounds are different, i.e., related to the charactersthemselves. The visual bounds width of the string "j" is smaller than that of the string "E", and the visual boundsheight of the string "j" is greater than that of the string "E".
+Obtains the image bounds of the text line object. The image bounds of a text line are related to the typographic font, typographic font size, and the characters themselves, and are equivalent to the visual bounds. <br>For example, for the string " a b ", where there is one space before the 'a' character and one space after the ' b' character, the user can only see "a b" on the UI, and the image bounds are the bounds excluding the leading and trailing spaces. <br>For example, for the string "j" or "E", the visual bounds are different, i.e., related to the characters themselves. The visual bounds width of the string "j" is smaller than that of the string "E", and the visual bounds height of the string "j" is greater than that of the string "E".
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -359,7 +365,7 @@ Obtains the image bounds of the text line object. The image bounds of a text lin
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_Rect* | Pointer to the image bounds {@link OH_Drawing_Rect} of the text line object. <br>Returns NULL when the      passed-in line is NULL. <br>When the {@link OH_Drawing_Rect} is no longer needed, please use the      {@link OH_Drawing_RectDestroy} API to release the pointer of the object. |
+| OH_Drawing_Rect* | Pointer to the image bounds {@link OH_Drawing_Rect} of the text line object. <br>Returns NULL when the<br>    passed-in line is NULL. <br>When the {@link OH_Drawing_Rect} is no longer needed, please use the<br>    {@link OH_Drawing_RectDestroy} API to release the pointer of the object. |
 
 ### OH_Drawing_TextLineGetTrailingSpaceWidth()
 
@@ -449,7 +455,7 @@ typedef bool (*Drawing_CaretOffsetsCallback)(double offset, int32_t index, bool 
 
 **Description**
 
-Defines a custom callback used to receive the offset and index of each character in a text line objectas its parameters.
+Defines a custom callback used to receive the offset and index of each character in a text line object as its parameters.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -461,7 +467,7 @@ Defines a custom callback used to receive the offset and index of each character
 | -- | -- |
 | double offset | Offset of each character in the text line object. |
 | int32_t index | Index of each character in the text line object. |
-| bool leadingEdge | Whether the cursor is located at the leading edge of a character. **true** means that thecursor is located at the front of the character, that is, the offset does not contain the character width.**false** means that the cursor is located at the rear of the character, that is, the offset contains thecharacter width. |
+| bool leadingEdge | Whether the cursor is located at the leading edge of a character. **true** means that the cursor is located at the front of the character, that is, the offset does not contain the character width. **false** means that the cursor is located at the rear of the character, that is, the offset contains the character width. |
 
 **Returns**:
 
@@ -477,7 +483,7 @@ void OH_Drawing_TextLineEnumerateCaretOffsets(OH_Drawing_TextLine* line, Drawing
 
 **Description**
 
-Enumerates the offset and index of each character in a text line object and passes them to a custom callbackfunction. You can use the offset and index array for other operations.
+Enumerates the offset and index of each character in a text line object and passes them to a custom callback function. You can use the offset and index array for other operations.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -509,8 +515,8 @@ Obtains the offset of a text line object after alignment based on the alignment 
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_TextLine* line | Pointer to the {@link OH_Drawing_TextLine} object. |
-| double alignmentFactor | Alignment factor. A value less than or equal to 0.0 indicates left alignment, greater than 0.0 and less than 0.5 indicates left-biased alignment, 0.5 indicates center alignment, greater than 0.5 and lessthan 1.0 indicates right-biased alignment, and greater than or equal to 1.0 indicates right alignment. |
-| double alignmentWidth | Alignment width, i.e., the offset of the bottom-right corner of the text line object relativeto the starting position after final offset, in physical pixels (px). If the specified alignment width is lessthan the actual width of the text line object, 0 is returned. |
+| double alignmentFactor | Alignment factor. A value less than or equal to 0.0 indicates left alignment, greater than 0. 0 and less than 0.5 indicates left-biased alignment, 0.5 indicates center alignment, greater than 0.5 and less than 1.0 indicates right-biased alignment, and greater than or equal to 1.0 indicates right alignment. |
+| double alignmentWidth | Alignment width, i.e., the offset of the bottom-right corner of the text line object relative to the starting position after final offset, in physical pixels (px). If the specified alignment width is less than the actual width of the text line object, 0 is returned. |
 
 **Returns**:
 

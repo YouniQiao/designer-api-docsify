@@ -34,7 +34,7 @@ bool OH_Notification_IsNotificationEnabled(void)
 
 **起始版本：** 13
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

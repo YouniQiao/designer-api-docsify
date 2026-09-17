@@ -49,7 +49,7 @@ Provides certificate chain verification APIs for external systems.
 | Parameter | Description |
 | -- | -- |
 | const struct NetStack_CertBlob *cert | Certificate to be verified. |
-| const struct NetStack_CertBlob *caCert | Certificate specified by the user. If this parameter is left blank, the preset certificate is used forverification. |
+| const struct NetStack_CertBlob *caCert | Certificate specified by the user. If this parameter is left blank, the preset certificate is used for verification. |
 
 **Returns**:
 
@@ -149,7 +149,7 @@ Boolean value indicating whether plaintext HTTP is allowed.
 
 | Parameter | Description |
 | -- | -- |
-| bool *isCleartextPermitted | Boolean value indicating whether plaintext HTTP is allowed. The value **true** meansthat plaintext HTTP is allowed, and the value **false** means the opposite. |
+| bool *isCleartextPermitted | Boolean value indicating whether plaintext HTTP is allowed. The value **true** means that plaintext HTTP is allowed, and the value **false** means the opposite. |
 
 **Returns**:
 
@@ -176,7 +176,7 @@ Boolean value indicating whether host name–based plaintext HTTP is allowed.
 | Parameter | Description |
 | -- | -- |
 | const char *hostname | Host name. |
-| bool *isCleartextPermitted | Boolean value indicating whether host name–based plaintext HTTP is allowed. The value true** means that host name–based plaintext HTTP is allowed, and the value **false** means the opposite. |
+| bool *isCleartextPermitted | Boolean value indicating whether host name–based plaintext HTTP is allowed. The value **<br>true** means that host name–based plaintext HTTP is allowed, and the value **false** means the opposite. |
 
 **Returns**:
 
@@ -201,7 +201,7 @@ Checks whether plaintext HTTP interception is enabled.
 | Parameter | Description |
 | -- | -- |
 | const char *component | Component name. The following components are supported: Network Kit and ArkWeb. |
-| bool *componentCfg | Output parameter, which indicates whether plaintext HTTP interception is enabled. The value true** indicates that plaintext HTTP interception is enabled, and the value **false** indicates the opposite. |
+| bool *componentCfg | Output parameter, which indicates whether plaintext HTTP interception is enabled. The value **<br>true** indicates that plaintext HTTP interception is enabled, and the value **false** indicates the opposite. |
 
 **Returns**:
 
@@ -233,7 +233,7 @@ Creates and verifies a sorted certificate chain.
 | size_t certCount | Certificate number of param cert. |
 | const struct NetStack_CertBlob *caCert | CA certificate specified by the user. If NULL, the preset certificate is used. |
 | const char *hostname | The expected server hostname. |
-| struct NetStack_CertBlob **outSortedChain | Pointer to receive the sorted certificate chain.Can be NULL if the caller does not need the chain data.Valid only if return value is 0.Allocated memory must be freed using OH_NetStack_FreeCertChain. |
+| struct NetStack_CertBlob **outSortedChain | Pointer to receive the sorted certificate chain. Can be NULL if the caller does not need the chain data. Valid only if return value is 0. Allocated memory must be freed using OH_NetStack_FreeCertChain. |
 | size_t *outSortedCount | Pointer to receive the count of sorted certificates. |
 
 **Returns**:
@@ -258,7 +258,7 @@ Frees the certificate chain allocated by OH_NetStack_CreateAndVerifySortedCertCh
 
 | Parameter | Description |
 | -- | -- |
-| struct NetStack_CertBlob *certChain | The certificate chain pointer received from outSortedChain.If NULL, this function does nothing. |
+| struct NetStack_CertBlob *certChain | The certificate chain pointer received from outSortedChain. If NULL, this function does nothing. |
 | size_t certCount | The number of certificates in the chain. |
 
 

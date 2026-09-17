@@ -60,13 +60,13 @@ Enumerates the error codes used by the media framework.
 | AV_ERR_IO_NO_PERMISSION = 5411005 | network permission dennied.<br>**Since**: 14 |
 | AV_ERR_IO_NETWORK_ACCESS_DENIED = 5411006 | the client request parameters are incorrect or exceed the processing capacity.<br>**Since**: 14 |
 | AV_ERR_IO_RESOURCE_NOT_FOUND = 5411007 | cannot find available network resources.<br>**Since**: 14 |
-| AV_ERR_IO_SSL_CLIENT_CERT_NEEDED = 5411008 | the server failed to verify the client certificate because the certificate is not carried,the certificate is invalid, or the certificate is expired.<br>**Since**: 14 |
-| AV_ERR_IO_SSL_CONNECT_FAIL = 5411009 | the client failed to verify the server certificate because the certificate is not carried,the certificate is invalid, or the certificate is expired.<br>**Since**: 14 |
+| AV_ERR_IO_SSL_CLIENT_CERT_NEEDED = 5411008 | the server failed to verify the client certificate because the certificate is not carried, the certificate is invalid, or the certificate is expired.<br>**Since**: 14 |
+| AV_ERR_IO_SSL_CONNECT_FAIL = 5411009 | the client failed to verify the server certificate because the certificate is not carried, the certificate is invalid, or the certificate is expired.<br>**Since**: 14 |
 | AV_ERR_IO_SSL_SERVER_CERT_UNTRUSTED = 5411010 | SSL server cert untrusted.<br>**Since**: 14 |
 | AV_ERR_IO_UNSUPPORTED_REQUEST = 5411011 | unsupported request due to network protocols.<br>**Since**: 14 |
 | AV_ERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012 | Http clear text not permitted.<br>**Since**: 23 |
-| AV_ERR_STREAM_CHANGED = 5410005 | Signals a stream format change in synchronous mode.Required follow-up actions:- For video encoders: Call {@link OH_VideoEncoder_GetOutputDescription}- For video decoders: Call {@link OH_VideoDecoder_GetOutputDescription}- For audio decoders : Call {@link OH_AudioCodec_GetOutputDescription}to retrieve updated stream configuration.<br>**Since**: 20 |
-| AV_ERR_TRY_AGAIN_LATER = 5410006 | Indicates temporary buffer query failure in synchronous mode,it's recommended to wait and retry the operation after a short interval.<br>**Since**: 20 |
+| AV_ERR_STREAM_CHANGED = 5410005 | Signals a stream format change in synchronous mode. Required follow-up actions: - For video encoders: Call {@link OH_VideoEncoder_GetOutputDescription}<br> - For video decoders: Call {@link OH_VideoDecoder_GetOutputDescription}<br> - For audio decoders : Call {@link OH_AudioCodec_GetOutputDescription} to retrieve updated stream configuration.<br>**Since**: 20 |
+| AV_ERR_TRY_AGAIN_LATER = 5410006 | Indicates temporary buffer query failure in synchronous mode, it's recommended to wait and retry the operation after a short interval.<br>**Since**: 20 |
 | AV_ERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003 | Super-resolution unsupported.<br>**Since**: 23 |
 | AV_ERR_SUPER_RESOLUTION_NOT_ENABLED = 5410004 | No PlaybackStrategy set to enable super-resolution feature.<br>**Since**: 23 |
 

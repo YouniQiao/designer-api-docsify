@@ -192,8 +192,8 @@ enum AVSession_AVCastCategory
 
 | 枚举项 | 描述 |
 | -- | -- |
-| CATEGORY_LOCAL = 0 | 默认投播类别是本地。默认投屏类型为本地。媒体本地路由支持内置扬声器、音频插孔、A2DP（Advanced Audio Distribution Profile）设备。 |
-| CATEGORY_REMOTE = 1 | 远程类别。表示媒体正在远程设备上展示，应用需要一个{@link OH_AVCastController}来控制远程播放。 |
+| CATEGORY_LOCAL = 0 | 默认投播类别是本地。 默认投屏类型为本地。媒体本地路由支持内置扬声器、音频插孔、A2DP（Advanced Audio Distribution Profile）设备。 |
+| CATEGORY_REMOTE = 1 | 远程类别。 表示媒体正在远程设备上展示，应用需要一个{@link OH_AVCastController}来控制远程播放。 |
 
 ### AVSession_DeviceType
 
@@ -232,12 +232,12 @@ enum AVSession_ProtocolType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| * @since 23 | 默认为本地设备。包括设备本身的内置扬声器或音频插孔，A2DP（Advanced Audio Distribution Profile）设备。 |
-| TYPE_LOCAL = 0 | 默认为本地设备。包括设备本身的内置扬声器或音频插孔，A2DP（Advanced Audio Distribution Profile）设备。<br>**起始版本：** 23 |
-| * @since 23 | Cast+的Stream模式。表示媒体正在其他设备上展示，应用需要一个AVCastController来控制远程播放。 |
-| TYPE_CAST_PLUS_STREAM = 2 | Cast+的Stream模式。表示媒体正在其他设备上展示，应用需要一个AVCastController来控制远程播放。<br>**起始版本：** 23 |
-| * @since 23 | DLNA（DIGITAL LIVING NETWORK ALLIANCE）协议。表示设备支持DLNA协议，应用需要一个AVCastController来控制远程播放。 |
-| TYPE_DLNA = 4 | DLNA（DIGITAL LIVING NETWORK ALLIANCE）协议。表示设备支持DLNA协议，应用需要一个AVCastController来控制远程播放。<br>**起始版本：** 23 |
+| * @since 23 | 默认为本地设备。 包括设备本身的内置扬声器或音频插孔，A2DP（Advanced Audio Distribution Profile）设备。 |
+| TYPE_LOCAL = 0 | 默认为本地设备。 包括设备本身的内置扬声器或音频插孔，A2DP（Advanced Audio Distribution Profile）设备。<br>**起始版本：** 23 |
+| * @since 23 | Cast+的Stream模式。 表示媒体正在其他设备上展示，应用需要一个AVCastController来控制远程播放。 |
+| TYPE_CAST_PLUS_STREAM = 2 | Cast+的Stream模式。 表示媒体正在其他设备上展示，应用需要一个AVCastController来控制远程播放。<br>**起始版本：** 23 |
+| * @since 23 | DLNA（DIGITAL LIVING NETWORK ALLIANCE）协议。 表示设备支持DLNA协议，应用需要一个AVCastController来控制远程播放。 |
+| TYPE_DLNA = 4 | DLNA（DIGITAL LIVING NETWORK ALLIANCE）协议。 表示设备支持DLNA协议，应用需要一个AVCastController来控制远程播放。<br>**起始版本：** 23 |
 | * @since 23 | 表示该设备支持高清晰度的音频投播，以获得更好的音质。 |
 | TYPE_CAST_PLUS_AUDIO = 8 | 表示该设备支持高清晰度的音频投播，以获得更好的音质。<br>**起始版本：** 23 |
 

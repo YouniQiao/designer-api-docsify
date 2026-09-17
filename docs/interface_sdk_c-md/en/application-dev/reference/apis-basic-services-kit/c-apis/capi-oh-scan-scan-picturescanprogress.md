@@ -22,6 +22,6 @@ Defines the progress of scanning a picture by the scanner.
 | -- | -- |
 | int32_t progress | Picture scanning progress, in percentage. The value ranges from 0 to 100. |
 | int32_t fd | Scanner file handle. |
-| bool isFinal | Whether the picture is the last one to be scanned. The value **true** indicates that the picture is the last oneto be scanned, and **false** indicates the opposite. |
+| bool isFinal | Whether the picture is the last one to be scanned. The value **true** indicates that the picture is the last one to be scanned, and **false** indicates the opposite. |
 
 

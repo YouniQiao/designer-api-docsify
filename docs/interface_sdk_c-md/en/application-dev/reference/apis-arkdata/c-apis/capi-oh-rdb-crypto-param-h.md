@@ -8,7 +8,7 @@ Provides functions and enumerations related to cryptographic parameters of the r
 
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Since**: 20
+**Since**: 10
 
 **Related module**: [RDB](capi-rdb.md)
 
@@ -145,7 +145,7 @@ Destroys an OH_Rdb_CryptoParam instance object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetEncryptionKey()
 
@@ -171,7 +171,7 @@ Sets key data to the OH_Rdb_CryptoParam object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetIteration()
 
@@ -196,7 +196,7 @@ Sets the number of KDF iterations used when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetEncryptionAlgo()
 
@@ -221,7 +221,7 @@ Sets the encryption algorithm when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetHmacAlgo()
 
@@ -246,7 +246,7 @@ Sets the HMAC algorithm when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetKdfAlgo()
 
@@ -271,7 +271,7 @@ Sets the KDF algorithm when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Crypto_SetCryptoPageSize()
 
@@ -296,6 +296,6 @@ Sets the page size used when opening an encrypted database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 

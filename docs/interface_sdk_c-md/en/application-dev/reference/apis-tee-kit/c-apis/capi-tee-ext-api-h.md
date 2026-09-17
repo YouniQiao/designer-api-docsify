@@ -38,7 +38,7 @@ Provides extended interfaces.
 | Name | Description |
 | -- | -- |
 | [TEE_Result tee_ext_get_caller_info(caller_info *caller_info_data, uint32_t length)](#tee_ext_get_caller_info) | Get caller info of current session, refer caller_info struct for more details. |
-| [TEE_Result AddCaller_CA(const uint8_t *cainfo_hash, uint32_t length)](#addcaller_ca) | Adds information about a caller that can invoke this TA.This API applies to the client applications (CAs) in the native CA and HAP format. |
+| [TEE_Result AddCaller_CA(const uint8_t *cainfo_hash, uint32_t length)](#addcaller_ca) | Adds information about a caller that can invoke this TA. This API applies to the client applications (CAs) in the native CA and HAP format. |
 | [TEE_Result AddCaller_TA_all(void)](#addcaller_ta_all) | TA call this API allow others TA open session with itself. |
 | [uint32_t tee_get_session_type(void)](#tee_get_session_type) | Obtains the session type. |
 
@@ -77,7 +77,7 @@ TEE_Result AddCaller_CA(const uint8_t *cainfo_hash, uint32_t length)
 
 **Description**
 
-Adds information about a caller that can invoke this TA.This API applies to the client applications (CAs) in the native CA and HAP format.
+Adds information about a caller that can invoke this TA. This API applies to the client applications (CAs) in the native CA and HAP format.
 
 **Since**: 20
 

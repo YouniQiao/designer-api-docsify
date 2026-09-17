@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the capabilities of OpenHarmony Universal KeyStore (HUKS) parameter sets.The HUKS APIs can be used to perform parameter set lifecycle management,including initializing a parameter set, adding parameters to a parameter set, constructinga parameter set, and destroying a parameter set.They can also be used to obtain parameters, copy parameter sets, and check parameter validity.
+Defines the capabilities of OpenHarmony Universal KeyStore (HUKS) parameter sets. The HUKS APIs can be used to perform parameter set lifecycle management, including initializing a parameter set, adding parameters to a parameter set, constructing a parameter set, and destroying a parameter set. They can also be used to obtain parameters, copy parameter sets, and check parameter validity.
 
 **Since**: 9
 

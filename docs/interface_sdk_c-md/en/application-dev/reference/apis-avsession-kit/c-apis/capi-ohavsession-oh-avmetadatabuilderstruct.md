@@ -6,7 +6,7 @@ typedef struct OH_AVMetadataBuilderStruct OH_AVMetadataBuilder
 
 ## Overview
 
-Declaring the avmetadata builder.The instance of builder is used for creating avmetadata.
+Declaring the avmetadata builder. The instance of builder is used for creating avmetadata.
 
 **Since**: 13
 

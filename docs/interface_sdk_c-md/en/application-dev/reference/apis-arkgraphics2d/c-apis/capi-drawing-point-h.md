@@ -8,7 +8,7 @@ This file declares the functions related to the coordinate point in the drawing 
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -151,7 +151,7 @@ Negates the point's coordinates.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.          Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if point is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.<br>        Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if point is nullptr. |
 
 ### OH_Drawing_PointOffset()
 
@@ -177,7 +177,7 @@ Offsets the point's coordinates by dx, dy.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.          Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if point is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.<br>        Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if point is nullptr. |
 
 ### OH_Drawing_PointDestroy()
 

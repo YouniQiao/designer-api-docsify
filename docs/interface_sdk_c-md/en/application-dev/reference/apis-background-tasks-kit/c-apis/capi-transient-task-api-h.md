@@ -44,14 +44,14 @@ Requests a transient task.
 | Parameter | Description |
 | -- | -- |
 | const char* reason | Reason for requesting the transient task. |
-| TransientTask_Callback callback | Callback used to notify the application that the transient task is about to time out. Generally, thecallback is invoked 6 seconds before the timeout. |
+| TransientTask_Callback callback | Callback used to notify the application that the transient task is about to time out. Generally, the callback is invoked 6 seconds before the timeout. |
 | TransientTask_DelaySuspendInfo *info | Indicates the info of delay request. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li>      <li>{@link ERR_TRANSIENT_TASK_INVALID_PARAM} 401 - Invalid parameter.</li>      <li>{@link ERR_TRANSIENT_TASK_PARCEL_FAILED} 9800002 - Parcelable failed.</li>      <li>{@link ERR_TRANSIENT_TASK_TRANSACTION_FAILED} 9800003 - Transact failed.</li>      <li>{@link ERR_TRANSIENT_TASK_SYS_NOT_READY} 9800004 - System service not ready.</li>      <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li>      <li>{@link ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED} 9900002 - Transient task verification failed.</li>      </ul> |
+| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li><br>    <li>{@link ERR_TRANSIENT_TASK_INVALID_PARAM} 401 - Invalid parameter.</li><br>    <li>{@link ERR_TRANSIENT_TASK_PARCEL_FAILED} 9800002 - Parcelable failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_TRANSACTION_FAILED} 9800003 - Transact failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SYS_NOT_READY} 9800004 - System service not ready.</li><br>    <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED} 9900002 - Transient task verification failed.</li>      </ul> |
 
 ### OH_BackgroundTaskManager_GetRemainingDelayTime()
 
@@ -78,7 +78,7 @@ Obtains the remaining time of a transient task.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li>      <li>{@link ERR_TRANSIENT_TASK_INVALID_PARAM} 401 - Invalid parameter.</li>      <li>{@link ERR_TRANSIENT_TASK_PARCEL_FAILED} 9800002 - Parcelable failed.</li>      <li>{@link ERR_TRANSIENT_TASK_TRANSACTION_FAILED} 9800003 - Transact failed.</li>      <li>{@link ERR_TRANSIENT_TASK_SYS_NOT_READY} 9800004 - System service not ready.</li>      <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li>      <li>{@link ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED} 9900002 - Transient task verification failed.</li>      </ul> |
+| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li><br>    <li>{@link ERR_TRANSIENT_TASK_INVALID_PARAM} 401 - Invalid parameter.</li><br>    <li>{@link ERR_TRANSIENT_TASK_PARCEL_FAILED} 9800002 - Parcelable failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_TRANSACTION_FAILED} 9800003 - Transact failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SYS_NOT_READY} 9800004 - System service not ready.</li><br>    <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED} 9900002 - Transient task verification failed.</li>      </ul> |
 
 ### OH_BackgroundTaskManager_CancelSuspendDelay()
 
@@ -104,7 +104,7 @@ Cancels a transient task.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li>      <li>{@link ERR_TRANSIENT_TASK_INVALID_PARAM} 401 - Invalid parameter.</li>      <li>{@link ERR_TRANSIENT_TASK_PARCEL_FAILED} 9800002 - Parcelable failed.</li>      <li>{@link ERR_TRANSIENT_TASK_TRANSACTION_FAILED} 9800003 - Transact failed.</li>      <li>{@link ERR_TRANSIENT_TASK_SYS_NOT_READY} 9800004 - System service not ready.</li>      <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li>      <li>{@link ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED} 9900002 - Transient task verification failed.</li>      </ul> |
+| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li><br>    <li>{@link ERR_TRANSIENT_TASK_INVALID_PARAM} 401 - Invalid parameter.</li><br>    <li>{@link ERR_TRANSIENT_TASK_PARCEL_FAILED} 9800002 - Parcelable failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_TRANSACTION_FAILED} 9800003 - Transact failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SYS_NOT_READY} 9800004 - System service not ready.</li><br>    <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SERVICE_VERIFICATION_FAILED} 9900002 - Transient task verification failed.</li>      </ul> |
 
 ### OH_BackgroundTaskManager_GetTransientTaskInfo()
 
@@ -122,12 +122,12 @@ Obtains all information about a transient task, including the remaining quota of
 
 | Parameter | Description |
 | -- | -- |
-| TransientTask_TransientTaskInfo *transientTaskInfo | All information about a transient task. For details, see{@link TransientTask_TransientTaskInfo}. |
+| TransientTask_TransientTaskInfo *transientTaskInfo | All information about a transient task. For details, see {@link TransientTask_TransientTaskInfo}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li>      <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li>      <li>{@link ERR_TRANSIENT_TASK_PARCELABLE_FAILED} 9900003 - Failed to write data into parcel.</li>      <li>{@link ERR_TRANSIENT_TASK_SERVICE_NOT_READY} 9900004 - System service operation failed.</li>      </ul> |
+| int32_t | <ul><li>{@link ERR_TRANSIENT_TASK_OK} 0 - Success.</li><br>    <li>{@link ERR_TRANSIENT_TASK_CLIENT_INFO_VERIFICATION_FAILED} 9900001 - uid or pid info verify failed.</li><br>    <li>{@link ERR_TRANSIENT_TASK_PARCELABLE_FAILED} 9900003 - Failed to write data into parcel.</li><br>    <li>{@link ERR_TRANSIENT_TASK_SERVICE_NOT_READY} 9900004 - System service operation failed.</li>      </ul> |
 
 

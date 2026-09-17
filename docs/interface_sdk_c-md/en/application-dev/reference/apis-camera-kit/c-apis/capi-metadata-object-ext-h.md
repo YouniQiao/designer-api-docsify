@@ -8,7 +8,7 @@ The file declares the metadata object ext concepts.
 
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
-**Since**: 26.0.0
+**Since**: 11
 
 **Related module**: [OH_Camera](capi-oh-camera.md)
 

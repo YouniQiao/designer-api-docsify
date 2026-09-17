@@ -1,4 +1,4 @@
-# @ohos.app.ability.ChildProcessOptions
+# @ohos.app.ability.ChildProcessOptions(子进程启动选项)
 
 ## 导入模块
 

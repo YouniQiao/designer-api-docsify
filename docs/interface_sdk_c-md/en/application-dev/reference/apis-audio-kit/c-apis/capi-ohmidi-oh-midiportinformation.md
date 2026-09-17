@@ -6,7 +6,7 @@ typedef struct OH_MIDIPortInformation {...} OH_MIDIPortInformation
 
 ## Overview
 
-Port Information (detailed).Used for enumeration (contains display names).
+Port Information (detailed). Used for enumeration (contains display names).
 
 **Since**: 24
 

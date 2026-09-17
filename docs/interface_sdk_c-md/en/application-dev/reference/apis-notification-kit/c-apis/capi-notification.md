@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Notification** module provides the notification services for applications,including querying the enabling status of the application's notification.
+The **Notification** module provides the notification services for applications, including querying the enabling status of the application's notification.
 
 **Since**: 13
 

@@ -38,8 +38,8 @@ Provides APIs for operating big integers.
 | [int32_t TEE_BigIntCmpS32(const TEE_BigInt *op, int32_t shortVal)](#tee_bigintcmps32) | Checks whether op > shortVal, op == shortVal, or op < shortVal. |
 | [void TEE_BigIntShiftRight(TEE_BigInt *dest, const TEE_BigInt *op, size_t bits)](#tee_bigintshiftright) | Computes \|dest\| = \|op\| >> bits. |
 | [bool TEE_BigIntGetBit(const TEE_BigInt *src, uint32_t bitIndex)](#tee_bigintgetbit) | Obtains the <b>bitIndex</b> bit of the natural binary representation of \|src\|. |
-| [uint32_t TEE_BigIntGetBitCount(const TEE_BigInt *src)](#tee_bigintgetbitcount) | Obtains the number of bits in the natural binary representation of \|src\|,that is, the magnitude of <b>src</b>. |
-| [TEE_Result TEE_BigIntSetBit(TEE_BigInt *op, uint32_t bitIndex, bool value)](#tee_bigintsetbit) | Sets the first bit of <b>bitIndex</b> in the natural binary representation of <b>op</b> to<b>1</b> or <b>0</b>. |
+| [uint32_t TEE_BigIntGetBitCount(const TEE_BigInt *src)](#tee_bigintgetbitcount) | Obtains the number of bits in the natural binary representation of \|src\|, that is, the magnitude of <b>src</b>. |
+| [TEE_Result TEE_BigIntSetBit(TEE_BigInt *op, uint32_t bitIndex, bool value)](#tee_bigintsetbit) | Sets the first bit of <b>bitIndex</b> in the natural binary representation of <b>op</b> to <b>1</b> or <b>0</b>. |
 | [TEE_Result TEE_BigIntAssign(TEE_BigInt *dest, const TEE_BigInt *src)](#tee_bigintassign) | Assigns the value of <b>src</b> to <b>dest</b>. |
 | [TEE_Result TEE_BigIntAbs(TEE_BigInt *dest, const TEE_BigInt *src)](#tee_bigintabs) | Assigns the value of <b>src</b> to <b>dest</b>. |
 | [void TEE_BigIntAdd(TEE_BigInt *dest, const TEE_BigInt *op1, const TEE_BigInt *op2)](#tee_bigintadd) | Computes dest = op1 + op2. |
@@ -58,9 +58,17 @@ Provides APIs for operating big integers.
 | [void TEE_BigIntComputeExtendedGcd(TEE_BigInt *gcd, TEE_BigInt *u, TEE_BigInt *v, const TEE_BigInt *op1, const TEE_BigInt *op2)](#tee_bigintcomputeextendedgcd) | Computes the greatest common divisor of <b>op1</b> and <b>op2</b>. |
 | [int32_t TEE_BigIntIsProbablePrime(const TEE_BigInt *op, uint32_t confidenceLevel)](#tee_bigintisprobableprime) | Performs a probabilistic primality test on <b>op</b>. |
 | [void TEE_BigIntConvertToFMM(TEE_BigIntFMM *dest, const TEE_BigInt *src, const TEE_BigInt *n, const TEE_BigIntFMMContext *context)](#tee_bigintconverttofmm) | Converts <b>src</b> into a representation suitable for doing fast modular multiplication. |
-| [void TEE_BigIntConvertFromFMM(TEE_BigInt *dest, const TEE_BigIntFMM *src, const TEE_BigInt *n, const TEE_BigIntFMMContext *context)](#tee_bigintconvertfromfmm) | Converts <b>src</b> in the fast modular multiplication representation back to a<b>TEE_BigInt</b> representation. |
+| [void TEE_BigIntConvertFromFMM(TEE_BigInt *dest, const TEE_BigIntFMM *src, const TEE_BigInt *n, const TEE_BigIntFMMContext *context)](#tee_bigintconvertfromfmm) | Converts <b>src</b> in the fast modular multiplication representation back to a <b>TEE_BigInt</b> representation. |
 | [void TEE_BigIntComputeFMM(TEE_BigIntFMM *dest, const TEE_BigIntFMM *op1, const TEE_BigIntFMM *op2, const TEE_BigInt *n, const TEE_BigIntFMMContext *context)](#tee_bigintcomputefmm) | Computes dest = op1* op2 in the fast modular multiplication representation. |
 | [TEE_Result TEE_BigIntExpMod(TEE_BigInt *des, TEE_BigInt *op1, const TEE_BigInt *op2, const TEE_BigInt *n, TEE_BigIntFMMContext *context)](#tee_bigintexpmod) | Computes dest = (op1 ^ op2)(mod n). |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| uint32_t TEE_BigInt | Defines the handle type representing a big integer.<br>**Since**: 20 |
+| uint32_t TEE_BigIntFMM | Defines the handle of a big integer for Fast Modular Multiplication (FMM).<br>**Since**: 20 |
+| uint32_t TEE_BigIntFMMContext | Defines the handle of a context container for FMM operations.<br>**Since**: 20 |
 
 ## Function description
 
@@ -239,7 +247,7 @@ Converts the absolute value of an integer in <b>TEE_BigInt</b> format into an oc
 
 | Parameter | Description |
 | -- | -- |
-| void *buffer | Indicates the pointer to the output buffer that holds the converted octet string representationof the integer. |
+| void *buffer | Indicates the pointer to the output buffer that holds the converted octet string representation of the integer. |
 | size_t *bufferLen | Indicates the pointer to the buffer length, in bytes. |
 | const TEE_BigInt *bigInt | Indicates the pointer to the integer to convert. |
 
@@ -396,7 +404,7 @@ uint32_t TEE_BigIntGetBitCount(const TEE_BigInt *src)
 
 **Description**
 
-Obtains the number of bits in the natural binary representation of \|src\|,that is, the magnitude of <b>src</b>.
+Obtains the number of bits in the natural binary representation of \|src\|, that is, the magnitude of <b>src</b>.
 
 **Since**: 20
 
@@ -420,7 +428,7 @@ TEE_Result TEE_BigIntSetBit(TEE_BigInt *op, uint32_t bitIndex, bool value)
 
 **Description**
 
-Sets the first bit of <b>bitIndex</b> in the natural binary representation of <b>op</b> to<b>1</b> or <b>0</b>.
+Sets the first bit of <b>bitIndex</b> in the natural binary representation of <b>op</b> to <b>1</b> or <b>0</b>.
 
 **Since**: 20
 
@@ -430,7 +438,7 @@ Sets the first bit of <b>bitIndex</b> in the natural binary representation of <b
 | -- | -- |
 | TEE_BigInt *op | Indicates the pointer to the integer. |
 | uint32_t bitIndex | Indicates the offset of the bit to set, starting from offset <b>0</b> of the least significant bit. |
-| bool value | Indicates the bit value to set. The value <b>true</b> represents a <b>1</b>, and the value <b>false</b>represents a <b>0</b>. |
+| bool value | Indicates the bit value to set. The value <b>true</b> represents a <b>1</b>, and the value <b>false</b> represents a <b>0</b>. |
 
 **Returns**:
 
@@ -524,7 +532,7 @@ Computes dest = op1 – op2.
 
 | Parameter | Description |
 | -- | -- |
-| TEE_BigInt *dest | Indicates the pointer to the <b>TEE_BigInt</b> that holds the difference between <b>op1</b>and <b>op2</b>. |
+| TEE_BigInt *dest | Indicates the pointer to the <b>TEE_BigInt</b> that holds the difference between <b>op1</b> and <b>op2</b>. |
 | const TEE_BigInt *op1 | Indicates the pointer to the first operand. |
 | const TEE_BigInt *op2 | Indicates the pointer to the second operand. |
 
@@ -771,7 +779,7 @@ Computes the greatest common divisor of <b>op1</b> and <b>op2</b>.
 
 | Parameter | Description |
 | -- | -- |
-| TEE_BigInt *gcd | Indicates the pointer to the <b>TEE_BigInt</b> that holds the greatest common divisor of <b>op1</b>and <b>op2</b>. |
+| TEE_BigInt *gcd | Indicates the pointer to the <b>TEE_BigInt</b> that holds the greatest common divisor of <b>op1</b> and <b>op2</b>. |
 | TEE_BigInt *u | Indicates the pointer to the <b>TEE_BigInt</b> that holds the first coefficient. |
 | TEE_BigInt *v | Indicates the pointer to the <b>TEE_BigInt</b> that holds the second coefficient. |
 | const TEE_BigInt *op1 | Indicates the pointer to the first operand. |
@@ -821,7 +829,7 @@ Converts <b>src</b> into a representation suitable for doing fast modular multip
 | TEE_BigIntFMM *dest | Indicates the pointer to an initialized <b>TEE_BigIntFMM</b> memory area. |
 | const TEE_BigInt *src | Indicates the pointer to the <b>TEE_BigInt</b> to convert. |
 | const TEE_BigInt *n | Indicates the pointer to the modulus. |
-| const TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using[TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1). |
+| const TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using [TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1). |
 
 ### TEE_BigIntConvertFromFMM()
 
@@ -831,7 +839,7 @@ void TEE_BigIntConvertFromFMM(TEE_BigInt *dest, const TEE_BigIntFMM *src, const 
 
 **Description**
 
-Converts <b>src</b> in the fast modular multiplication representation back to a<b>TEE_BigInt</b> representation.
+Converts <b>src</b> in the fast modular multiplication representation back to a <b>TEE_BigInt</b> representation.
 
 **Since**: 20
 
@@ -840,9 +848,9 @@ Converts <b>src</b> in the fast modular multiplication representation back to a<
 | Parameter | Description |
 | -- | -- |
 | TEE_BigInt *dest | Indicates the pointer to an initialized <b>TEE_BigIntFMM</b> memory area to store the converted result. |
-| const TEE_BigIntFMM *src | Indicates the pointer to a <b>TEE_BigIntFMM</b> holding the value in the fast modular multiplicationrepresentation. |
+| const TEE_BigIntFMM *src | Indicates the pointer to a <b>TEE_BigIntFMM</b> holding the value in the fast modular multiplication representation. |
 | const TEE_BigInt *n | Indicates the pointer to the modulus. |
-| const TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using[TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1). |
+| const TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using [TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1). |
 
 ### TEE_BigIntComputeFMM()
 
@@ -864,7 +872,7 @@ Computes dest = op1* op2 in the fast modular multiplication representation.
 | const TEE_BigIntFMM *op1 | Indicates the pointer to the first operand. |
 | const TEE_BigIntFMM *op2 | Indicates the pointer to the second operand. |
 | const TEE_BigInt *n | Indicates the pointer to the modulus. |
-| const TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using[TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1). |
+| const TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using [TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1). |
 
 ### TEE_BigIntExpMod()
 
@@ -886,7 +894,7 @@ Computes dest = (op1 ^ op2)(mod n).
 | TEE_BigInt *op1 | Indicates the pointer to the first operand. |
 | const TEE_BigInt *op2 | Indicates the pointer to the second operand. |
 | const TEE_BigInt *n | Indicates the pointer to the modulus. |
-| TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using[TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1) or initialized to null. |
+| TEE_BigIntFMMContext *context | Indicates the pointer to the context that is previously initialized using [TEE_BigIntInitFMMContext1](capi-tee-arith-api-h.md#tee_bigintinitfmmcontext1) or initialized to null. |
 
 **Returns**:
 

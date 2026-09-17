@@ -29,6 +29,12 @@ Provides APIs for managing trusted application (TA) sessions.
 | [void TEE_CloseTASession(TEE_TASessionHandle session)](#tee_closetasession) | Closes a client session. |
 | [TEE_Result TEE_InvokeTACommand(TEE_TASessionHandle session, uint32_t cancellationRequestTimeout, uint32_t commandID, uint32_t paramTypes, TEE_Param params[TEE_PARAMS_NUM], uint32_t *returnOrigin)](#tee_invoketacommand) | Invokes a command in a session opened between this client TA instance and a target TA instance. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| uint32_t TEE_TASessionHandle | Defines the handle of TA session.<br>**Since**: 20 |
+
 ## Function description
 
 ### TEE_Panic()
@@ -65,8 +71,8 @@ Opens a new session with a TA.
 
 | Parameter | Description |
 | -- | -- |
-| const TEE_UUID *destination | Indicates the pointer to the <b>TEE_UUID</b> structure that containsthe Universal Unique Identifier (UUID) of the target TA. |
-| uint32_t cancellationRequestTimeout | Indicates the timeout period in milliseconds or a special valueif there is no timeout. |
+| const TEE_UUID *destination | Indicates the pointer to the <b>TEE_UUID</b> structure that contains the Universal Unique Identifier (UUID) of the target TA. |
+| uint32_t cancellationRequestTimeout | Indicates the timeout period in milliseconds or a special value if there is no timeout. |
 | uint32_t paramTypes | Indicates the types of all parameters passed in the operation. |
 | params | Indicates the parameters passed in the operation. |
 | TEE_TASessionHandle *session | Indicates the pointer to the variable that will receive the client session handle. |
@@ -113,7 +119,7 @@ Invokes a command in a session opened between this client TA instance and a targ
 | Parameter | Description |
 | -- | -- |
 | TEE_TASessionHandle session | Indicates the handle of the opened session. |
-| uint32_t cancellationRequestTimeout | Indicates the timeout period in milliseconds or a special valueif there is no timeout. |
+| uint32_t cancellationRequestTimeout | Indicates the timeout period in milliseconds or a special value if there is no timeout. |
 | uint32_t commandID | Indicates the identifier of the command to invoke. |
 | uint32_t paramTypes | Indicates the types of all parameters passed in the operation. |
 | params | Indicates the parameters passed in the operation. |

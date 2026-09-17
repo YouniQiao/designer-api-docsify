@@ -6,7 +6,7 @@ typedef struct OH_AudioRendererStruct OH_AudioRenderer
 
 ## Overview
 
-Declaring the audio renderer stream.The instance of renderer stream is used for playing audio data.
+Declaring the audio renderer stream. The instance of renderer stream is used for playing audio data.
 
 **Since**: 10
 

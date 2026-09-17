@@ -6,7 +6,7 @@ typedef struct OH_NativeXComponent_ExtraMouseEventInfo OH_NativeXComponent_Extra
 
 ## Overview
 
-Provides an encapsulated <b>OH_NativeXComponent_ExtraMouseEventInfo</b>instance which has extra info compared to OH_NativeXComponent_MouseEvent.
+Provides an encapsulated <b>OH_NativeXComponent_ExtraMouseEventInfo</b> instance which has extra info compared to OH_NativeXComponent_MouseEvent.
 
 **Since**: 20
 

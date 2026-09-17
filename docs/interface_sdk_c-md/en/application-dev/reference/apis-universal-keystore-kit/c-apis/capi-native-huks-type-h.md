@@ -44,11 +44,22 @@ Defines enums, structs, macros, and error codes in HUKS.
 | [OH_Huks_CipherMode](#oh_huks_ciphermode) | OH_Huks_CipherMode | Cipher mode. |
 | [OH_Huks_KeySize](#oh_huks_keysize) | OH_Huks_KeySize | Enumerates the key sizes of different algorithms. |
 | [OH_Huks_KeyAlg](#oh_huks_keyalg) | OH_Huks_KeyAlg | Enumerates the algorithms for keys. |
-| [OH_Huks_AlgSuite](#oh_huks_algsuite) | OH_Huks_AlgSuite | Enumerates the algorithm suites that can be used for importing of a key in ciphertext.<br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**: \| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**: \| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**: \| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc |
+| [OH_Huks_AlgSuite](#oh_huks_algsuite) | OH_Huks_AlgSuite | Enumerates the algorithm suites that can be used for importing of a key in ciphertext. <br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**:
+\| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**:
+\| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**:
+\| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc |
 | [OH_Huks_KeyGenerateType](#oh_huks_keygeneratetype) | OH_Huks_KeyGenerateType | Enumerates the types of the key generated. |
 | [OH_Huks_KeyFlag](#oh_huks_keyflag) | OH_Huks_KeyFlag | Enumerates the key generation types. |
 | [OH_Huks_KeyStorageType](#oh_huks_keystoragetype) | OH_Huks_KeyStorageType | Enumerates the key storage types. |
-| [OH_Huks_ImportKeyType](#oh_huks_importkeytype) | OH_Huks_ImportKeyType | Enumerates the types of the key to import. By default, a public key is imported. This field is not requiredwhen a symmetric key is imported. |
+| [OH_Huks_ImportKeyType](#oh_huks_importkeytype) | OH_Huks_ImportKeyType | Enumerates the types of the key to import. By default, a public key is imported. This field is not required when a symmetric key is imported. |
 | [OH_Huks_RsaPssSaltLenType](#oh_huks_rsapsssaltlentype) | OH_Huks_RsaPssSaltLenType | Enumerates the length types of the salt value in PSS padding mode of the RSA algorithm. |
 | [OH_Huks_ErrCode](#oh_huks_errcode) | OH_Huks_ErrCode | Enumerates error codes. |
 | [OH_Huks_TagType](#oh_huks_tagtype) | OH_Huks_TagType | Enumerates parameter types. |
@@ -61,7 +72,7 @@ Defines enums, structs, macros, and error codes in HUKS.
 | [OH_Huks_SecureSignType](#oh_huks_securesigntype) | OH_Huks_SecureSignType | Enumerates the signature types of the key generated or imported. |
 | [OH_Huks_KeyClassType](#oh_huks_keyclasstype) | OH_Huks_KeyClassType | Key type. |
 | [OH_Huks_KeyWrapType](#oh_huks_keywraptype) | OH_Huks_KeyWrapType |  |
-| [OH_Huks_Tag](#oh_huks_tag) | OH_Huks_Tag | Enumerates the tags contained in a parameter set.<br>1 to 200: key parameter tag values.<br>301 to 500: tag values related to access control and authentication of key usage.<br>501 to 600: tag values related to key authentication.<br>601 to 1000: reserved values for other types of tag values.<br>1001 to 9999: extended tag values.<br>11000 to 12000: reserved values.<br>20001 to N: reserved tag values. |
+| [OH_Huks_Tag](#oh_huks_tag) | OH_Huks_Tag | Enumerates the tags contained in a parameter set. <br>1 to 200: key parameter tag values. <br>301 to 500: tag values related to access control and authentication of key usage. <br>501 to 600: tag values related to key authentication. <br>601 to 1000: reserved values for other types of tag values. <br>1001 to 9999: extended tag values. <br>11000 to 12000: reserved values. <br>20001 to N: reserved tag values. |
 
 ### Macro
 
@@ -256,15 +267,26 @@ enum OH_Huks_AlgSuite
 
 **Description**
 
-Enumerates the algorithm suites that can be used for importing of a key in ciphertext.<br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**: \| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**: \| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad \| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag \| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad \| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag \| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**: \| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc
+Enumerates the algorithm suites that can be used for importing of a key in ciphertext. <br>Key material format for **OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING**:
+\| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>Key material format for **OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING**:
+\| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>Key material format for **OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING**:
+\| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc
 
 **Since**: 9
 
 | Enum item | Description |
 | -- | -- |
-| OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1 | Key material in Length-Value format, using X25519 for key agreement and AES-256-GCM for encryption anddecryption. For details about the material format, see the preceding description. |
-| OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2 | Key material in Length-Value format, using ECDH-p256 for key agreement and AES-256-GCM for encryption anddecryption. For details about the material format, see the preceding description. |
-| OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5 | Key material in Length-Value format, using the temporary SM4 key to encrypt the imported key and usingthe SM2 key that has been imported to HUKS to encrypt the SM4 key. For details about the material format, seethe preceding description.<br>**Since**: 23 |
+| OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING = 1 | Key material in Length-Value format, using X25519 for key agreement and AES-256-GCM for encryption and decryption. For details about the material format, see the preceding description. |
+| OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING = 2 | Key material in Length-Value format, using ECDH-p256 for key agreement and AES-256-GCM for encryption and decryption. For details about the material format, see the preceding description. |
+| OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING = 5 | Key material in Length-Value format, using the temporary SM4 key to encrypt the imported key and using the SM2 key that has been imported to HUKS to encrypt the SM4 key. For details about the material format, see the preceding description.<br>**Since**: 23 |
 
 ### OH_Huks_KeyGenerateType
 
@@ -330,7 +352,7 @@ enum OH_Huks_ImportKeyType
 
 **Description**
 
-Enumerates the types of the key to import. By default, a public key is imported. This field is not requiredwhen a symmetric key is imported.
+Enumerates the types of the key to import. By default, a public key is imported. This field is not required when a symmetric key is imported.
 
 **Since**: 9
 
@@ -514,7 +536,7 @@ Enumerates the types of the challenge generated when a key is used.
 | Enum item | Description |
 | -- | -- |
 | OH_HUKS_CHALLENGE_TYPE_NORMAL = 0 | Normal challenge, which is of 32 bytes by default. |
-| OH_HUKS_CHALLENGE_TYPE_CUSTOM = 1 | Custom challenge, which supports one-time authentication for multiple keys. The valid value of a customchallenge is of 8 bytes. |
+| OH_HUKS_CHALLENGE_TYPE_CUSTOM = 1 | Custom challenge, which supports one-time authentication for multiple keys. The valid value of a custom challenge is of 8 bytes. |
 | OH_HUKS_CHALLENGE_TYPE_NONE = 2 | Challenge is not required. |
 
 **Reference**:
@@ -555,7 +577,7 @@ Enumerates the signature types of the key generated or imported.
 
 | Enum item | Description |
 | -- | -- |
-| OH_HUKS_SECURE_SIGN_WITH_AUTHINFO = 1 | The signature carries authentication information. This field is specified when a key is generated or imported.When the key is used for signing, the data will be added with the authentication information and then be signed.Note: The carried authentication information includes identity information. You need to describe the purpose,retention policy, and destruction method of the identity information in the privacy statement. |
+| OH_HUKS_SECURE_SIGN_WITH_AUTHINFO = 1 | The signature carries authentication information. This field is specified when a key is generated or imported. When the key is used for signing, the data will be added with the authentication information and then be signed. Note: The carried authentication information includes identity information. You need to describe the purpose, retention policy, and destruction method of the identity information in the privacy statement. |
 
 ### OH_Huks_KeyClassType
 
@@ -594,7 +616,7 @@ enum OH_Huks_Tag
 
 **Description**
 
-Enumerates the tags contained in a parameter set.<br>1 to 200: key parameter tag values.<br>301 to 500: tag values related to access control and authentication of key usage.<br>501 to 600: tag values related to key authentication.<br>601 to 1000: reserved values for other types of tag values.<br>1001 to 9999: extended tag values.<br>11000 to 12000: reserved values.<br>20001 to N: reserved tag values.
+Enumerates the tags contained in a parameter set. <br>1 to 200: key parameter tag values. <br>301 to 500: tag values related to access control and authentication of key usage. <br>501 to 600: tag values related to key authentication. <br>601 to 1000: reserved values for other types of tag values. <br>1001 to 9999: extended tag values. <br>11000 to 12000: reserved values. <br>20001 to N: reserved tag values.
 
 **Since**: 9
 
@@ -622,15 +644,15 @@ Enumerates the tags contained in a parameter set.<br>1 to 200: key parameter tag
 | OH_HUKS_TAG_DERIVE_KEY_SIZE = OH_HUKS_TAG_TYPE_UINT \| 24 | Size of the derived key, in bytes. |
 | OH_HUKS_TAG_IMPORT_KEY_TYPE = OH_HUKS_TAG_TYPE_UINT \| 25 | Type of the imported key. For details, see [OH_Huks_ImportKeyType](capi-native-huks-type-h.md#oh_huks_importkeytype). |
 | OH_HUKS_TAG_UNWRAP_ALGORITHM_SUITE = OH_HUKS_TAG_TYPE_UINT \| 26 | Suite of the imported encryption key. For details, see [OH_Huks_AlgSuite](capi-native-huks-type-h.md#oh_huks_algsuite). |
-| OH_HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = OH_HUKS_TAG_TYPE_UINT \| 29 | Storage type of the derived key or key produced after key agreement. For details, see[OH_Huks_KeyStorageType](capi-native-huks-type-h.md#oh_huks_keystoragetype). |
-| OH_HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = OH_HUKS_TAG_TYPE_UINT \| 30 | Salt length type when the padding mode of the RSA algorithm is PSS. For details, see[OH_Huks_RsaPssSaltLenType](capi-native-huks-type-h.md#oh_huks_rsapsssaltlentype). |
+| OH_HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = OH_HUKS_TAG_TYPE_UINT \| 29 | Storage type of the derived key or key produced after key agreement. For details, see [OH_Huks_KeyStorageType](capi-native-huks-type-h.md#oh_huks_keystoragetype). |
+| OH_HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = OH_HUKS_TAG_TYPE_UINT \| 30 | Salt length type when the padding mode of the RSA algorithm is PSS. For details, see [OH_Huks_RsaPssSaltLenType](capi-native-huks-type-h.md#oh_huks_rsapsssaltlentype). |
 | OH_HUKS_TAG_ALL_USERS = OH_HUKS_TAG_TYPE_BOOL \| 301 | All users in the multi-user scenario. |
 | OH_HUKS_TAG_USER_ID = OH_HUKS_TAG_TYPE_UINT \| 302 | Multi-user ID. |
 | OH_HUKS_TAG_NO_AUTH_REQUIRED = OH_HUKS_TAG_TYPE_BOOL \| 303 | Whether key access control is required. |
 | OH_HUKS_TAG_USER_AUTH_TYPE = OH_HUKS_TAG_TYPE_UINT \| 304 | User authentication mode in key access control. For details, see [OH_Huks_UserAuthType](capi-native-huks-type-h.md#oh_huks_userauthtype). |
 | OH_HUKS_TAG_AUTH_TIMEOUT = OH_HUKS_TAG_TYPE_UINT \| 305 | Timeout duration for key access in key access control, in seconds. |
 | OH_HUKS_TAG_AUTH_TOKEN = OH_HUKS_TAG_TYPE_BYTES \| 306 | Authentication token for the key. |
-| OH_HUKS_TAG_KEY_AUTH_ACCESS_TYPE = OH_HUKS_TAG_TYPE_UINT \| 307 | Key access control type, which must be set together with the user authentication type. For details, see[OH_Huks_AuthAccessType](capi-native-huks-type-h.md#oh_huks_authaccesstype). |
+| OH_HUKS_TAG_KEY_AUTH_ACCESS_TYPE = OH_HUKS_TAG_TYPE_UINT \| 307 | Key access control type, which must be set together with the user authentication type. For details, see [OH_Huks_AuthAccessType](capi-native-huks-type-h.md#oh_huks_authaccesstype). |
 | OH_HUKS_TAG_KEY_SECURE_SIGN_TYPE = OH_HUKS_TAG_TYPE_UINT \| 308 | Signature type of the key generated or imported. |
 | OH_HUKS_TAG_CHALLENGE_TYPE = OH_HUKS_TAG_TYPE_UINT \| 309 | Challenge type. For details, see [OH_Huks_ChallengeType](capi-native-huks-type-h.md#oh_huks_challengetype). |
 | OH_HUKS_TAG_CHALLENGE_POS = OH_HUKS_TAG_TYPE_UINT \| 310 | Position of the 8-byte valid value in a custom challenge. For details, see [OH_Huks_ChallengePosition](capi-native-huks-type-h.md#oh_huks_challengeposition). |
@@ -644,7 +666,7 @@ Enumerates the tags contained in a parameter set.<br>1 to 200: key parameter tag
 | OH_HUKS_TAG_ATTESTATION_ID_VERSION_INFO = OH_HUKS_TAG_TYPE_BYTES \| 515 | Version information used in key attestation. |
 | OH_HUKS_TAG_KEY_OVERRIDE = OH_HUKS_TAG_TYPE_BOOL \| 520 | Whether to overwrite the key with the same name.<br>**Since**: 20 |
 | OH_HUKS_TAG_AE_TAG_LEN = OH_HUKS_TAG_TYPE_UINT \| 521 | Length of the specified AEAD in CCM mode.<br>**Since**: 22 |
-| OH_HUKS_TAG_KEY_CLASS = OH_HUKS_TAG_TYPE_UINT \| 522 | Key type, which is used to distinguish the key managed by HUKS on the device from the key stored in anexternal device.<br>**Since**: 22 |
+| OH_HUKS_TAG_KEY_CLASS = OH_HUKS_TAG_TYPE_UINT \| 522 | Key type, which is used to distinguish the key managed by HUKS on the device from the key stored in an external device.<br>**Since**: 22 |
 | OH_HUKS_TAG_KEY_ACCESS_GROUP = OH_HUKS_TAG_TYPE_BYTES \| 523 | Group ID. Keys can be shared among the same group of developers with the same developer ID.<br>**Since**: 23 |
 | OH_HUKS_TAG_IS_KEY_ALIAS = OH_HUKS_TAG_TYPE_BOOL \| 1001 | Whether it is a key alias. |
 | OH_HUKS_TAG_KEY_STORAGE_FLAG = OH_HUKS_TAG_TYPE_UINT \| 1002 | Key storage mode. For details, see [OH_Huks_KeyStorageType](capi-native-huks-type-h.md#oh_huks_keystoragetype). |

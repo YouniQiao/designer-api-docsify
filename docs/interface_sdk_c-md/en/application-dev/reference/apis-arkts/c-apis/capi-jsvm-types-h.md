@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides the JSVM API type define.Provides API to Provide independent, standard, and complete JavaScript engine capabilities for developers,including managing the engine lifecycle, compiling and running JS code, implementing JS/C++ cross language calls,and taking snapshots.
+Provides the JSVM API type define.<br> Provides API to Provide independent, standard, and complete JavaScript engine capabilities for developers, including managing the engine lifecycle, compiling and running JS code, implementing JS/C++ cross language calls, and taking snapshots.
 
 **Library**: libjsvm.so
 
@@ -25,27 +25,27 @@ Provides the JSVM API type define.Provides API to Provide independent, standard,
 | [JSVM_VMInfo](capi-jsvm-jsvm-vminfo.md) | JSVM_VMInfo | JavaScript VM info. |
 | [JSVM_PropertyDescriptor](capi-jsvm-jsvm-propertydescriptor.md) | JSVM_PropertyDescriptor | Property descriptor. |
 | [JSVM_ExtendedErrorInfo](capi-jsvm-jsvm-extendederrorinfo.md) | JSVM_ExtendedErrorInfo | JSVM-API uses both return values and JavaScript exceptions for error handling |
-| [JSVM_TypeTag](capi-jsvm-jsvm-typetag.md) | JSVM_TypeTag | A 128-bit value stored as two unsigned 64-bit integers.It serves as a UUID with which JavaScript objects or externals can be "tagged"in order to ensure that they are of a certain type. |
-| [JSVM_PropertyHandlerConfigurationStruct](capi-jsvm-jsvm-propertyhandlerconfigurationstruct.md) | JSVM_PropertyHandlerConfigurationStruct | When the object's getter, setter, deleter, and enumerator operations are performed, the correspondingcallback will be triggered. |
+| [JSVM_TypeTag](capi-jsvm-jsvm-typetag.md) | JSVM_TypeTag | A 128-bit value stored as two unsigned 64-bit integers. It serves as a UUID with which JavaScript objects or externals can be "tagged" in order to ensure that they are of a certain type. |
+| [JSVM_PropertyHandlerConfigurationStruct](capi-jsvm-jsvm-propertyhandlerconfigurationstruct.md) | JSVM_PropertyHandlerConfigurationStruct | When the object's getter, setter, deleter, and enumerator operations are performed, the corresponding callback will be triggered. |
 | [JSVM_ScriptOrigin](capi-jsvm-jsvm-scriptorigin.md) | JSVM_ScriptOrigin | Source code information. |
 | [JSVM_CompileOptions](capi-jsvm-jsvm-compileoptions.md) | JSVM_CompileOptions | Compile Options |
 | [JSVM_CodeCache](capi-jsvm-jsvm-codecache.md) | JSVM_CodeCache | code cache passed with JSVM_COMPILE_CODE_CACHE |
 | [JSVM_DefineClassOptions](capi-jsvm-jsvm-defineclassoptions.md) | JSVM_DefineClassOptions | DefineClass options. |
 | [JSVM_PropertyHandler](capi-jsvm-jsvm-propertyhandler.md) | JSVM_PropertyHandler | The property-handler used to define class. |
-| [JSVM_VM__*](capi-jsvm-jsvm-vm--8h.md) | JSVM_VM | To represent a JavaScript VM instance. |
-| [JSVM_VMScope__*](capi-jsvm-jsvm-vmscope--8h.md) | JSVM_VMScope | To represent a JavaScript VM scope. |
-| [JSVM_EnvScope__*](capi-jsvm-jsvm-envscope--8h.md) | JSVM_EnvScope | To represent a JavaScript VM environment scope. |
-| [JSVM_Script__*](capi-jsvm-jsvm-script--8h.md) | JSVM_Script | To represent a JavaScript code. |
-| [JSVM_Env__*](capi-jsvm-jsvm-env--8h.md) | JSVM_Env | To represent a JavaScript VM instance. |
-| [JSVM_CpuProfiler__*](capi-jsvm-jsvm-cpuprofiler--8h.md) | JSVM_CpuProfiler | To represent a JavaScript profiler. |
-| [JSVM_Value__*](capi-jsvm-jsvm-value--8h.md) | JSVM_Value | To represent a JavaScript VM environment. |
-| [JSVM_Ref__*](capi-jsvm-jsvm-ref--8h.md) | JSVM_Ref | To represent a JavaScript value references. |
-| [JSVM_HandleScope__*](capi-jsvm-jsvm-handlescope--8h.md) | JSVM_HandleScope | To represent a JavaScript VM handle scope. |
-| [JSVM_EscapableHandleScope__*](capi-jsvm-jsvm-escapablehandlescope--8h.md) | JSVM_EscapableHandleScope | To represent a JavaScript VM escapable handle scope. |
-| [JSVM_CallbackInfo__*](capi-jsvm-jsvm-callbackinfo--8h.md) | JSVM_CallbackInfo | To represent a JavaScript VM callback additional information. |
-| [JSVM_Deferred__*](capi-jsvm-jsvm-deferred--8h.md) | JSVM_Deferred | To represent a JavaScript VM value deferred. |
-| [JSVM_Data__*](capi-jsvm-jsvm-data--8h.md) | JSVM_Data | To represent a JavaScript Data type. |
-| [JSVM_DeserializeResult__*](capi-jsvm-jsvm-deserializeresult--8h.md) | JSVM_DeserializeResult | To represent a JavaScript background deserialize result. |
+| [JSVM_VM\_\_*](capi-jsvm-jsvm-vm--8h.md) | JSVM_VM | To represent a JavaScript VM instance. |
+| [JSVM_VMScope\_\_*](capi-jsvm-jsvm-vmscope--8h.md) | JSVM_VMScope | To represent a JavaScript VM scope. |
+| [JSVM_EnvScope\_\_*](capi-jsvm-jsvm-envscope--8h.md) | JSVM_EnvScope | To represent a JavaScript VM environment scope. |
+| [JSVM_Script\_\_*](capi-jsvm-jsvm-script--8h.md) | JSVM_Script | To represent a JavaScript code. |
+| [JSVM_Env\_\_*](capi-jsvm-jsvm-env--8h.md) | JSVM_Env | To represent a JavaScript VM instance. |
+| [JSVM_CpuProfiler\_\_*](capi-jsvm-jsvm-cpuprofiler--8h.md) | JSVM_CpuProfiler | To represent a JavaScript profiler. |
+| [JSVM_Value\_\_*](capi-jsvm-jsvm-value--8h.md) | JSVM_Value | To represent a JavaScript VM environment. |
+| [JSVM_Ref\_\_*](capi-jsvm-jsvm-ref--8h.md) | JSVM_Ref | To represent a JavaScript value references. |
+| [JSVM_HandleScope\_\_*](capi-jsvm-jsvm-handlescope--8h.md) | JSVM_HandleScope | To represent a JavaScript VM handle scope. |
+| [JSVM_EscapableHandleScope\_\_*](capi-jsvm-jsvm-escapablehandlescope--8h.md) | JSVM_EscapableHandleScope | To represent a JavaScript VM escapable handle scope. |
+| [JSVM_CallbackInfo\_\_*](capi-jsvm-jsvm-callbackinfo--8h.md) | JSVM_CallbackInfo | To represent a JavaScript VM callback additional information. |
+| [JSVM_Deferred\_\_*](capi-jsvm-jsvm-deferred--8h.md) | JSVM_Deferred | To represent a JavaScript VM value deferred. |
+| [JSVM_Data\_\_*](capi-jsvm-jsvm-data--8h.md) | JSVM_Data | To represent a JavaScript Data type. |
+| [JSVM_DeserializeResult\_\_*](capi-jsvm-jsvm-deserializeresult--8h.md) | JSVM_DeserializeResult | To represent a JavaScript background deserialize result. |
 | [JSVM_CallbackStruct*](capi-jsvm-jsvm-callbackstruct8h.md) | JSVM_Callback | Function pointer type for user-provided native function which are to exposed to js via JSVM-API. |
 | [JSVM_PropertyHandlerConfigurationStruct*](capi-jsvm-jsvm-propertyhandlerconfigurationstruct8h.md) | JSVM_PropertyHandlerCfg | The pointer type of the structure which contains the property handlers. |
 
@@ -82,8 +82,8 @@ Provides the JSVM API type define.Provides API to Provide independent, standard,
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [typedef void(JSVM_CDECL* JSVM_Finalize)(JSVM_Env env, void* finalizeData, void* finalizeHint)](#jsvm_cdecl-jsvm_finalize) | JSVM_CDECL* JSVM_Finalize | Function pointer type for add-on provided function that allow the user to be notified. |
-| [typedef void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeData, void* finalizeHint, bool copied)](#jsvm_cdecl-jsvm_finalizearraybuffer) | JSVM_CDECL* JSVM_FinalizeArrayBuffer | Finalize callback for ArrayBuffers created from external memory.Similar to JSVM_Finalize, but includes a copied parameter indicating whether theengine copied the external data into an internal buffer (true) or used zero-copy (false).When copied is true, the engine does not hold a reference to the original external data,so the caller may free it immediately after the API call returns. When copied is false,finalizeData points to the original external memory that the engine is releasing — thecallback should free it. |
-| [typedef bool(JSVM_CDECL* JSVM_OutputStream)(const char* data, int size, void* streamData)](#jsvm_cdecl-jsvm_outputstream) | JSVM_CDECL* JSVM_OutputStream | Function pointer type for callback of output stream. The first parameter data is the data pointer.And the second parameter size is the data size to output. A null data pointer indicates the end of the stream.The third parameter streamData is the pointer passed in together with the callback to the API functions thatgenerate data to the output stream. The callback returns true to indicate the stream can continue to acceptdata. Otherwise, it will abort the stream. |
+| [typedef void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeData, void* finalizeHint, bool copied)](#jsvm_cdecl-jsvm_finalizearraybuffer) | JSVM_CDECL* JSVM_FinalizeArrayBuffer | Finalize callback for ArrayBuffers created from external memory.<br> Similar to JSVM_Finalize, but includes a copied parameter indicating whether the engine copied the external data into an internal buffer (true) or used zero-copy (false). When copied is true, the engine does not hold a reference to the original external data, so the caller may free it immediately after the API call returns. When copied is false, finalizeData points to the original external memory that the engine is releasing — the callback should free it. |
+| [typedef bool(JSVM_CDECL* JSVM_OutputStream)(const char* data, int size, void* streamData)](#jsvm_cdecl-jsvm_outputstream) | JSVM_CDECL* JSVM_OutputStream | Function pointer type for callback of output stream. The first parameter data is the data pointer. And the second parameter size is the data size to output. A null data pointer indicates the end of the stream. The third parameter streamData is the pointer passed in together with the callback to the API functions that generate data to the output stream. The callback returns true to indicate the stream can continue to accept data. Otherwise, it will abort the stream. |
 | [typedef void(JSVM_CDECL* JSVM_HandlerForOOMError)(const char* location, const char* detail, bool isHeapOOM)](#jsvm_cdecl-jsvm_handlerforoomerror) | JSVM_CDECL* JSVM_HandlerForOOMError | Function pointer type of OOM-Error callback. |
 | [typedef void(JSVM_CDECL* JSVM_HandlerForFatalError)(const char* location, const char* message)](#jsvm_cdecl-jsvm_handlerforfatalerror) | JSVM_CDECL* JSVM_HandlerForFatalError | Function pointer type of Fatal-Error callback. |
 | [typedef void(JSVM_CDECL* JSVM_HandlerForPromiseReject)(JSVM_Env env, JSVM_PromiseRejectEvent rejectEvent, JSVM_Value rejectInfo)](#jsvm_cdecl-jsvm_handlerforpromisereject) | JSVM_CDECL* JSVM_HandlerForPromiseReject | Function pointer type of Promise-Reject callback. |
@@ -97,6 +97,17 @@ Provides the JSVM API type define.Provides API to Provide independent, standard,
 | int *profile | profile pointer. |
 | size_t length | length. |
 | JSVM_CompileProfile  |  |
+| JSVM_CallbackStruct* JSVM_Callback | Function pointer type for user-provided native function which are to exposed to js via JSVM-API.<br>**Since**: 11 |
+| void(JSVM_CDECL* JSVM_Finalize)(JSVM_Env env, void* finalizeData, void* finalizeHint) | Function pointer type for add-on provided function that allow the user to be notified.<br>**Since**: 11 |
+| void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeData, void* finalizeHint, bool copied) | Finalize callback for ArrayBuffers created from external memory.<br> Similar to JSVM_Finalize, but includes a copied parameter indicating whether the engine copied the external data into an internal buffer (true) or used zero-copy (false). When copied is true, the engine does not hold a reference to the original external data, so the caller may free it immediately after the API call returns. When copied is false, finalizeData points to the original external memory that the engine is releasing — the callback should free it.<br>**Since**: 26.0.0 |
+| bool(JSVM_CDECL* JSVM_OutputStream)(const char* data, int size, void* streamData) | Function pointer type for callback of output stream. The first parameter data is the data pointer. And the second parameter size is the data size to output. A null data pointer indicates the end of the stream. The third parameter streamData is the pointer passed in together with the callback to the API functions that generate data to the output stream. The callback returns true to indicate the stream can continue to accept data. Otherwise, it will abort the stream.<br>**Since**: 12 |
+| JSVM_PropertyHandlerConfigurationStruct* JSVM_PropertyHandlerCfg | The pointer type of the structure which contains the property handlers.<br>**Since**: 12 |
+| const struct { /** profile pointer. */ int *profile | compile profile passed with JSVM_COMPILE_COMPILE_PROFILE<br>**Since**: 12 |
+| void(JSVM_CDECL* JSVM_HandlerForOOMError)(const char* location, const char* detail, bool isHeapOOM) | Function pointer type of OOM-Error callback.<br>**Since**: 18 |
+| void(JSVM_CDECL* JSVM_HandlerForFatalError)(const char* location, const char* message) | Function pointer type of Fatal-Error callback.<br>**Since**: 18 |
+| void(JSVM_CDECL* JSVM_HandlerForPromiseReject)(JSVM_Env env, JSVM_PromiseRejectEvent rejectEvent, JSVM_Value rejectInfo) | Function pointer type of Promise-Reject callback.<br>**Since**: 18 |
+| void(JSVM_CDECL* JSVM_HandlerForGC)(JSVM_VM vm, JSVM_GCType gcType, JSVM_GCCallbackFlags flags, void* data) | Function pointer type of GC callback.<br>**Since**: 18 |
+| void(JSVM_CDECL* JSVM_HandlerForHeapThreshold)(JSVM_VM vm, uint64_t threshold, void* data) | Function pointer type for heap threshold callback.<br>**Since**: 26.0.0 |
 
 ## Enum type description
 
@@ -118,7 +129,7 @@ JSVM_PropertyAttributes are flag used to control the behavior of properties set 
 | JSVM_WRITABLE = 1 << 0 | The property is writable. |
 | JSVM_ENUMERABLE = 1 << 1 | The property is enumeable. |
 | JSVM_CONFIGURABLE = 1 << 2 | The property is configurable. |
-| JSVM_NO_RECEIVER_CHECK = 1 << 3 | Used to mark the receiver of a native method need not be checked.If JSVM_NO_RECEIVER_CHECK is not set, the method only accept instance of the defined class as receiver,Otherwise Exception "Type Error: Illegal Ivocation" will be throw into JSVM. |
+| JSVM_NO_RECEIVER_CHECK = 1 << 3 | Used to mark the receiver of a native method need not be checked. If JSVM_NO_RECEIVER_CHECK is not set, the method only accept instance of the defined class as receiver, Otherwise Exception "Type Error: Illegal Ivocation" will be throw into JSVM. |
 | JSVM_STATIC = 1 << 10 | Used with OH_JSVM_DefineClass to distinguish static properties from instance properties. |
 | JSVM_DEFAULT_METHOD = JSVM_WRITABLE \| JSVM_CONFIGURABLE | Default for class methods. |
 | JSVM_METHOD_NO_RECEIVER_CHECK = JSVM_DEFAULT_METHOD \| JSVM_NO_RECEIVER_CHECK | Class method with no receiver check |
@@ -424,7 +435,7 @@ Microtask policies of JSVM.
 | Enum item | Description |
 | -- | -- |
 | JSVM_MICROTASK_EXPLICIT = 0 | Microtasks are invoked with the OH_JSVM_PerformMicrotaskCheckpoint() method. |
-| JSVM_MICROTASK_AUTO | Microtasks are invoked when the script call depth decrements to zero.Default mode. |
+| JSVM_MICROTASK_AUTO | Microtasks are invoked when the script call depth decrements to zero. Default mode. |
 
 ### JSVM_TraceCategory
 
@@ -606,7 +617,7 @@ typedef void(JSVM_CDECL* JSVM_FinalizeArrayBuffer)(JSVM_Env env, void* finalizeD
 
 **Description**
 
-Finalize callback for ArrayBuffers created from external memory.Similar to JSVM_Finalize, but includes a copied parameter indicating whether theengine copied the external data into an internal buffer (true) or used zero-copy (false).When copied is true, the engine does not hold a reference to the original external data,so the caller may free it immediately after the API call returns. When copied is false,finalizeData points to the original external memory that the engine is releasing — thecallback should free it.
+Finalize callback for ArrayBuffers created from external memory.<br> Similar to JSVM_Finalize, but includes a copied parameter indicating whether the engine copied the external data into an internal buffer (true) or used zero-copy (false). When copied is true, the engine does not hold a reference to the original external data, so the caller may free it immediately after the API call returns. When copied is false, finalizeData points to the original external memory that the engine is releasing — the callback should free it.
 
 **Since**: 26.0.0
 
@@ -618,7 +629,7 @@ typedef bool(JSVM_CDECL* JSVM_OutputStream)(const char* data, int size, void* st
 
 **Description**
 
-Function pointer type for callback of output stream. The first parameter data is the data pointer.And the second parameter size is the data size to output. A null data pointer indicates the end of the stream.The third parameter streamData is the pointer passed in together with the callback to the API functions thatgenerate data to the output stream. The callback returns true to indicate the stream can continue to acceptdata. Otherwise, it will abort the stream.
+Function pointer type for callback of output stream. The first parameter data is the data pointer. And the second parameter size is the data size to output. A null data pointer indicates the end of the stream. The third parameter streamData is the pointer passed in together with the callback to the API functions that generate data to the output stream. The callback returns true to indicate the stream can continue to accept data. Otherwise, it will abort the stream.
 
 **Since**: 12
 
@@ -679,7 +690,7 @@ Function pointer type of Promise-Reject callback.
 | -- | -- |
 | [JSVM_Env](capi-jsvm-jsvm-env--8h.md) env | The environment that the function is invoked under. |
 | [JSVM_PromiseRejectEvent](capi-jsvm-types-h.md#jsvm_promiserejectevent) rejectEvent | The promise-reject event. |
-| [JSVM_Value](capi-jsvm-jsvm-value--8h.md) rejectInfo | An JS-object containing two properties: 'promise' and 'value'.The 'promise' represents a reference to the Promise object that was rejected.The 'value' represents the rejection reason associated with that promise. |
+| [JSVM_Value](capi-jsvm-jsvm-value--8h.md) rejectInfo | An JS-object containing two properties: 'promise' and 'value'. The 'promise' represents a reference to the Promise object that was rejected. The 'value' represents the rejection reason associated with that promise. |
 
 ### JSVM_CDECL* JSVM_HandlerForGC()
 

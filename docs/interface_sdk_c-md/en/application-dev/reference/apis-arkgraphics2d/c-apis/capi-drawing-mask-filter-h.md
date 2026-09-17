@@ -8,7 +8,7 @@ This file declares the functions related to the mask filter in the drawing modul
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -69,7 +69,7 @@ Creates an **OH_Drawing_MaskFilter** object with a blur type.
 | -- | -- |
 | [OH_Drawing_BlurType](capi-drawing-mask-filter-h.md#oh_drawing_blurtype) blurType | Blur type. |
 | float sigma | Standard deviation of the Gaussian blur to apply. The value must be greater than 0. |
-| bool respectCTM | Whether the blur standard deviation is modified by the current transformation matrix (CTM). Thedefault value is **true**. **true**: The blur standard deviation is affected by the CTM. **false**: The blurstandard deviation is fixed and not affected by the CTM. |
+| bool respectCTM | Whether the blur standard deviation is modified by the current transformation matrix (CTM). The default value is **true**. **true**: The blur standard deviation is affected by the CTM. **false**: The blur standard deviation is fixed and not affected by the CTM. |
 
 **Returns**:
 

@@ -6,7 +6,7 @@ typedef struct OH_UsbManager_UsbConfig {...} OH_UsbManager_UsbConfig
 
 ## 概述
 
-定义USB配置。一个[OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md)可以包含多个<br>OH_UsbManager_UsbConfig实例。
+定义USB配置。一个[OH_UsbManager_UsbDevice](capi-usbmanager-oh-usbmanager-usbdevice.md)可以包含多个 <br>OH_UsbManager_UsbConfig实例。
 
 **起始版本：** 26.1.0
 

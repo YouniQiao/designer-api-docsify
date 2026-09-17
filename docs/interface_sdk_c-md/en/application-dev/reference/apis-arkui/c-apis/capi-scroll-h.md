@@ -18,7 +18,7 @@ Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_EdgeEffect](#arkui_edgeeffect) | ArkUI_EdgeEffect | Enumerates the effects used at the edges of the component when the boundary of the scrollable content isreached. The default value is **ARKUI_EDGE_EFFECT_NONE** for the **Grid**, **Scroll**, and **WaterFlow** components,and **ARKUI_EDGE_EFFECT_SPRING** for the **List** component. |
+| [ArkUI_EdgeEffect](#arkui_edgeeffect) | ArkUI_EdgeEffect | Enumerates the effects used at the edges of the component when the boundary of the scrollable content is reached. The default value is **ARKUI_EDGE_EFFECT_NONE** for the **Grid**, **Scroll**, and **WaterFlow** components, and **ARKUI_EDGE_EFFECT_SPRING** for the **List** component. |
 | [ArkUI_BarState](#arkui_barstate) | ArkUI_BarState | Enumerates the text control scrollbar states. |
 | [ArkUI_EffectEdge](#arkui_effectedge) | ArkUI_EffectEdge | Enumerates the edges for which the effect takes effect when the boundary of the scrollable content is reached. |
 | [ArkUI_ScrollDirection](#arkui_scrolldirection) | ArkUI_ScrollDirection | Enumerates the scrolling directions of the {@link Scroll} component. |
@@ -42,13 +42,13 @@ enum ArkUI_EdgeEffect
 
 **Description**
 
-Enumerates the effects used at the edges of the component when the boundary of the scrollable content isreached. The default value is **ARKUI_EDGE_EFFECT_NONE** for the **Grid**, **Scroll**, and **WaterFlow** components,and **ARKUI_EDGE_EFFECT_SPRING** for the **List** component.
+Enumerates the effects used at the edges of the component when the boundary of the scrollable content is reached. The default value is **ARKUI_EDGE_EFFECT_NONE** for the **Grid**, **Scroll**, and **WaterFlow** components, and **ARKUI_EDGE_EFFECT_SPRING** for the **List** component.
 
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_EDGE_EFFECT_SPRING = 0 | Spring effect. When at one of the edges, the component can move beyond the bounds based on the initial speed orthrough touches, and produces a bounce effect when the user releases their finger. |
+| ARKUI_EDGE_EFFECT_SPRING = 0 | Spring effect. When at one of the edges, the component can move beyond the bounds based on the initial speed or through touches, and produces a bounce effect when the user releases their finger. |
 | ARKUI_EDGE_EFFECT_FADE | Fade effect. When at one of the edges, the component produces a fade effect. |
 | ARKUI_EDGE_EFFECT_NONE | No effect when the component is at one of the edges. |
 
@@ -193,9 +193,9 @@ Enumerates nested scrolling modes.
 | Enum item | Description |
 | -- | -- |
 | ARKUI_SCROLL_NESTED_MODE_SELF_ONLY = 0 | The scrolling is contained within the component, and no scroll chaining occurs, that is, the parent component |
-| ARKUI_SCROLL_NESTED_MODE_SELF_FIRST | The component scrolls first, and when it hits the boundary, the parent component scrolls. When the parentcomponent hits the boundary, its edge effect is displayed. If no edge effect is specified for the parentcomponent, the edge effect of the child component is displayed instead. |
-| ARKUI_SCROLL_NESTED_MODE_PARENT_FIRST | The parent component scrolls first, and when it hits the boundary, the component scrolls. When the componenthits the boundary, its edge effect is displayed. If no edge effect is specified for the component, the edgeeffect of the parent component is displayed instead. |
-| ARKUI_SCROLL_NESTED_MODE_PARALLEL | The component and its parent component scroll at the same time. When both the component and its parent componenthit the boundary, the edge effect of the component is displayed. If no edge effect is specified for the |
+| ARKUI_SCROLL_NESTED_MODE_SELF_FIRST | The component scrolls first, and when it hits the boundary, the parent component scrolls. When the parent component hits the boundary, its edge effect is displayed. If no edge effect is specified for the parent component, the edge effect of the child component is displayed instead. |
+| ARKUI_SCROLL_NESTED_MODE_PARENT_FIRST | The parent component scrolls first, and when it hits the boundary, the component scrolls. When the component hits the boundary, its edge effect is displayed. If no edge effect is specified for the component, the edge effect of the parent component is displayed instead. |
+| ARKUI_SCROLL_NESTED_MODE_PARALLEL | The component and its parent component scroll at the same time. When both the component and its parent component hit the boundary, the edge effect of the component is displayed. If no edge effect is specified for the |
 
 ### ArkUI_ScrollEdge
 
@@ -233,7 +233,7 @@ Defines how the list item to scroll to is aligned with the container.
 | ARKUI_SCROLL_ALIGNMENT_START = 0 | The start edge of the list item is flush with the start edge of the container. |
 | ARKUI_SCROLL_ALIGNMENT_CENTER | The list item is centered along the main axis of the container. |
 | ARKUI_SCROLL_ALIGNMENT_END | The end edge of the list item is flush with the end edge of the container. |
-| ARKUI_SCROLL_ALIGNMENT_AUTO | The list item is automatically aligned. If the item is fully contained within the display area, no adjustment isperformed. Otherwise, the item is aligned so that its start or end edge is flush with the start or end edge ofthe container, whichever requires a shorter scrolling distance. |
+| ARKUI_SCROLL_ALIGNMENT_AUTO | The list item is automatically aligned. If the item is fully contained within the display area, no adjustment is performed. Otherwise, the item is aligned so that its start or end edge is flush with the start or end edge of the container, whichever requires a shorter scrolling distance. |
 
 ### ArkUI_ScrollState
 
@@ -249,9 +249,9 @@ Enumerates the scrolling states.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_SCROLL_STATE_IDLE = 0 | Idle. The container enters this state when an API in the controller is used to scroll the container or when thescrollbar is dragged. |
+| ARKUI_SCROLL_STATE_IDLE = 0 | Idle. The container enters this state when an API in the controller is used to scroll the container or when the scrollbar is dragged. |
 | ARKUI_SCROLL_STATE_SCROLL | Scrolling. The container enters this state when the user drags the container to scroll. |
-| ARKUI_SCROLL_STATE_FLING | Inertial scrolling. The container enters this state when inertial scrolling occurs or when the container bouncesback after being released from a fling. |
+| ARKUI_SCROLL_STATE_FLING | Inertial scrolling. The container enters this state when inertial scrolling occurs or when the container bounces back after being released from a fling. |
 
 ### ArkUI_ScrollSource
 

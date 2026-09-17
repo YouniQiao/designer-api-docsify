@@ -6,7 +6,7 @@ typedef struct OH_AudioDataArray {...} OH_AudioDataArray
 
 ## Overview
 
-Define the audio data array structure.This structure is used to get the processed audio data after acquisition processing during multi-channel rendering.
+Define the audio data array structure. This structure is used to get the processed audio data after acquisition processing during multi-channel rendering.
 
 **Since**: 22
 
@@ -22,6 +22,6 @@ Define the audio data array structure.This structure is used to get the processe
 | -- | -- |
 | void **audioDataArray | Pointer to the array of audio data pointers.<br>**Since**: 22 |
 | int32_t arraySize | Audio arraySize.<br>**Since**: 22 |
-| int32_t requestFrameSize | The memory size pointed to by each address in the audioDataArray array, in bytes.It should be ensured that the memory size pointed to by each address is requestFrameSize bytes.<br>**Since**: 22 |
+| int32_t requestFrameSize | The memory size pointed to by each address in the audioDataArray array, in bytes. It should be ensured that the memory size pointed to by each address is requestFrameSize bytes.<br>**Since**: 22 |
 
 

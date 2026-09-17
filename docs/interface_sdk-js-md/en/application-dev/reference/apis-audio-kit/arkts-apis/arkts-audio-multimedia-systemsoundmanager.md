@@ -1,4 +1,4 @@
-# @ohos.multimedia.systemSoundManager
+# @ohos.multimedia.systemSoundManager(System Sound Management)
 
 This module provides basic capabilities for managing system sound effects, including defining system sound effect types and obtaining system sound effect players.
 

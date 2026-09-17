@@ -1,4 +1,4 @@
-# @ohos.app.ability.ApplicationStateChangeCallback
+# @ohos.app.ability.ApplicationStateChangeCallback(Application Process State Change Listener)
 
 ## Modules to Import
 

@@ -35,11 +35,17 @@ Provides archive APIs.
 | [OH_Archive_ProgressType](#oh_archive_progresstype) | OH_Archive_ProgressType | Archive progress type enumeration. |
 | [OH_Archive_StreamChecksumAlg](#oh_archive_streamchecksumalg) | OH_Archive_StreamChecksumAlg | Hash algorithm used for checksum. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| FILE_MANAGEMENT_ARCHIVE_OH_ARCHIVE_H | Provides archive APIs.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.FileManagement.File.FileIO |
+
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef OH_Archive_ProgressType (\*OH_Archive_ProgressHandlerWithData)(int32_t progress, void *userData)](#oh_archive_progresshandlerwithdata) | OH_Archive_ProgressHandlerWithData | Defines a function pointer type OH_Archive_ProgressHandlerWithData forspecifying the progress display handler. |
+| [typedef OH_Archive_ProgressType (\*OH_Archive_ProgressHandlerWithData)(int32_t progress, void *userData)](#oh_archive_progresshandlerwithdata) | OH_Archive_ProgressHandlerWithData | Defines a function pointer type OH_Archive_ProgressHandlerWithData for specifying the progress display handler. |
 | [typedef uint64_t (\*OH_Archive_Stream_OutputHandler)(const void* data, uint64_t size, void* userData)](#oh_archive_stream_outputhandler) | OH_Archive_Stream_OutputHandler | Function pointer type for user-defined callback function to handle compressed data. |
 | [OH_Archive_Reader_Ctx OH_Archive_Reader_OpenFile(const char *infile)](#oh_archive_reader_openfile) | - | Opens an archive file for reading. |
 | [OH_Archive_ErrCode OH_Archive_Reader_SetProgressHandlerWithData(OH_Archive_Reader_Ctx arc, OH_Archive_ProgressHandlerWithData progressHandler, void *userData)](#oh_archive_reader_setprogresshandlerwithdata) | - | Sets the progress callback function with user data for the archive reader. |
@@ -49,7 +55,7 @@ Provides archive APIs.
 | [OH_Archive_ErrCode OH_Archive_Writer_SetCompressMethod(OH_Archive_Writer_Ctx arc, OH_Archive_CompressMethod method, int32_t compressLevel)](#oh_archive_writer_setcompressmethod) | - | Set the compression method for the archive file |
 | [OH_Archive_ErrCode OH_Archive_Writer_SetProgressHandlerWithData(OH_Archive_Writer_Ctx arc, OH_Archive_ProgressHandlerWithData progressHandler, void *userData)](#oh_archive_writer_setprogresshandlerwithdata) | - | Set the compression progress function for the archive file. |
 | [OH_Archive_ErrCode OH_Archive_Writer_Add(OH_Archive_Writer_Ctx arc, const char **infiles, uint64_t fileNum)](#oh_archive_writer_add) | - | Adds a list of files to the archive. |
-| [OH_Archive_ErrCode OH_Archive_Writer_Close(OH_Archive_Writer_Ctx arc)](#oh_archive_writer_close) | - | Closes the archive writer.This function finalizes the archive writing process, flushes any buffered data to the output,and releases the resources associated with the archive context. |
+| [OH_Archive_ErrCode OH_Archive_Writer_Close(OH_Archive_Writer_Ctx arc)](#oh_archive_writer_close) | - | Closes the archive writer. This function finalizes the archive writing process, flushes any buffered data to the output, and releases the resources associated with the archive context. |
 | [uint64_t OH_Archive_BufferWriteCompressBound(OH_Archive_CompressMethod method, uint64_t sourceLen)](#oh_archive_bufferwritecompressbound) | - | Calculates the maximum compressed data size for a given source length. |
 | [OH_Archive_ErrCode OH_Archive_BufferWrite(uint8_t *dstBuffer, uint64_t *dstSize, const uint8_t *srcBuffer, uint64_t srcSize, OH_Archive_CompressMethod method, int32_t compressLevel)](#oh_archive_bufferwrite) | - | Writes data to buffer and compresses it. |
 | [OH_Archive_ErrCode OH_Archive_BufferRead(uint8_t *dstBuffer, uint64_t *dstSize, const uint8_t *srcBuffer, uint64_t srcSize, OH_Archive_CompressMethod method)](#oh_archive_bufferread) | - | Reads data from buffer and decompresses it. |
@@ -66,6 +72,13 @@ Provides archive APIs.
 | [OH_Archive_ErrCode OH_Archive_StreamRead_Update(OH_Archive_StreamRead_Ctx ctx, const uint8_t* data, uint64_t size)](#oh_archive_streamread_update) | - | Submit decompression data. This interface will block when the memory pool is full |
 | [OH_Archive_ErrCode OH_Archive_StreamRead_End(OH_Archive_StreamRead_Ctx ctx, OH_Archive_StreamInfo *streamInfo)](#oh_archive_streamread_end) | - | End the decompression, flush all remaining data, and clean up memory |
 | [void OH_Archive_StreamRead_Destroy(OH_Archive_StreamRead_Ctx ctx)](#oh_archive_streamread_destroy) | - | Destroy the decompression instance and release associated resources |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| OH_Archive_ProgressType (*OH_Archive_ProgressHandlerWithData)(int32_t progress, void *userData) | Defines a function pointer type OH_Archive_ProgressHandlerWithData for specifying the progress display handler.<br>**Since**: 26.0.0 |
+| uint64_t (*OH_Archive_Stream_OutputHandler)(const void* data, uint64_t size, void* userData) | Function pointer type for user-defined callback function to handle compressed data.<br>**Since**: 26.0.0 |
 
 ## Enum type description
 
@@ -163,7 +176,7 @@ typedef OH_Archive_ProgressType (*OH_Archive_ProgressHandlerWithData)(int32_t pr
 
 **Description**
 
-Defines a function pointer type OH_Archive_ProgressHandlerWithData forspecifying the progress display handler.
+Defines a function pointer type OH_Archive_ProgressHandlerWithData for specifying the progress display handler.
 
 **Since**: 26.0.0
 
@@ -258,7 +271,7 @@ Sets the progress callback function with user data for the archive reader.
 
 | Type | Description |
 | -- | -- |
-| OH_Archive_ErrCode | Returns the error code. Returns OH_ARCHIVE_OK if successful.          {@link OH_ARCHIVE_OK} - Execution successful          {@link OH_ARCHIVE_PARAM_ERROR} - Invalid input parameters. |
+| OH_Archive_ErrCode | Returns the error code. Returns OH_ARCHIVE_OK if successful.          {@link OH_ARCHIVE_OK} - Execution successful<br>        {@link OH_ARCHIVE_PARAM_ERROR} - Invalid input parameters. |
 
 ### OH_Archive_Reader_ExtractAllFile()
 
@@ -357,13 +370,13 @@ Set the compression method for the archive file
 | -- | -- |
 | OH_Archive_Writer_Ctx arc | Handle to the archive writer context. |
 | [OH_Archive_CompressMethod](capi-oh-archive-h.md#oh_archive_compressmethod) method | Compression method. |
-| int32_t compressLevel | Compression level. The value -1 indicates the default compression level.For OH_ARCHIVE_COMPRESS_DEFLATE, compression level is between 0 and 9. 1 gives best speed,9 gives best compression, 0 gives no compression, and 6 is default. |
+| int32_t compressLevel | Compression level. The value -1 indicates the default compression level. For OH_ARCHIVE_COMPRESS_DEFLATE, compression level is between 0 and 9. 1 gives best speed, 9 gives best compression, 0 gives no compression, and 6 is default. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Archive_ErrCode | Returns the error code. Returns ARCHIVE_OK if successful.          {@link OH_ARCHIVE_OK} - Execution successful.          {@link OH_ARCHIVE_PARAM_ERROR} - Invalid input parameters. |
+| OH_Archive_ErrCode | Returns the error code. Returns ARCHIVE_OK if successful.          {@link OH_ARCHIVE_OK} - Execution successful.<br>        {@link OH_ARCHIVE_PARAM_ERROR} - Invalid input parameters. |
 
 ### OH_Archive_Writer_SetProgressHandlerWithData()
 
@@ -389,7 +402,7 @@ Set the compression progress function for the archive file.
 
 | Type | Description |
 | -- | -- |
-| OH_Archive_ErrCode | Returns the error code. Returns OH_ARCHIVE_OK if successful.          {@link OH_ARCHIVE_OK} - Execution successful          {@link OH_ARCHIVE_PARAM_ERROR} - Invalid input parameters. |
+| OH_Archive_ErrCode | Returns the error code. Returns OH_ARCHIVE_OK if successful.          {@link OH_ARCHIVE_OK} - Execution successful<br>        {@link OH_ARCHIVE_PARAM_ERROR} - Invalid input parameters. |
 
 ### OH_Archive_Writer_Add()
 
@@ -425,7 +438,7 @@ OH_Archive_ErrCode OH_Archive_Writer_Close(OH_Archive_Writer_Ctx arc)
 
 **Description**
 
-Closes the archive writer.This function finalizes the archive writing process, flushes any buffered data to the output,and releases the resources associated with the archive context.
+Closes the archive writer. This function finalizes the archive writing process, flushes any buffered data to the output, and releases the resources associated with the archive context.
 
 **Since**: 26.0.0
 
@@ -487,7 +500,7 @@ Writes data to buffer and compresses it.
 | const uint8_t *srcBuffer | Pointer to the source buffer containing data to be compressed. |
 | uint64_t srcSize | Size of the source buffer data. |
 | [OH_Archive_CompressMethod](capi-oh-archive-h.md#oh_archive_compressmethod) method | Compression method type. |
-| int32_t compressLevel | Compression level. The value -1 indicates the default compression level.For OH_ARCHIVE_COMPRESS_DEFLATE, compression level is between 0 and 9. 1 gives best speed,9 gives best compression, 0 gives no compression, and 6 is default. |
+| int32_t compressLevel | Compression level. The value -1 indicates the default compression level. For OH_ARCHIVE_COMPRESS_DEFLATE, compression level is between 0 and 9. 1 gives best speed, 9 gives best compression, 0 gives no compression, and 6 is default. |
 
 **Returns**:
 
@@ -565,7 +578,7 @@ Starts a compression task, initializing user callback function and user data.
 | -- | -- |
 | OH_Archive_StreamWrite_Ctx ctx | Compression context. |
 | [OH_Archive_Stream_OutputHandler](capi-oh-archive-h.md#oh_archive_stream_outputhandler) outputHandler | Callback function for compressed data, user-defined. |
-| void* userData | User-defined context that will be passed back in the callback. The userData is ownedby the caller and must remain valid until OH_Archive_StreamWrite_End is complete. |
+| void* userData | User-defined context that will be passed back in the callback. The userData is owned by the caller and must remain valid until OH_Archive_StreamWrite_End is complete. |
 
 **Returns**:
 
@@ -590,7 +603,7 @@ Sets the compression level for StreamCompress.
 | Parameter | Description |
 | -- | -- |
 | OH_Archive_StreamWrite_Ctx ctx | Compression context. |
-| int32_t compressLevel | Compression level. For OH_ARCHIVE_COMPRESS_DEFLATE, compression level is between 0 and 9.1 gives best speed, 9 gives best compression, 0 gives no compression, and 6 is default. |
+| int32_t compressLevel | Compression level. For OH_ARCHIVE_COMPRESS_DEFLATE, compression level is between 0 and 9. 1 gives best speed, 9 gives best compression, 0 gives no compression, and 6 is default. |
 
 **Returns**:
 
@@ -733,7 +746,7 @@ Start a decompression task, initialize user callback function and user data
 | -- | -- |
 | OH_Archive_StreamRead_Ctx ctx | Decompression context |
 | [OH_Archive_Stream_OutputHandler](capi-oh-archive-h.md#oh_archive_stream_outputhandler) outputHandler | User-defined callback function for handling decompressed data |
-| void* userData | User-defined context data that will be passed back in the callback. The userData is owned bythe caller and must remain valid until OH_Archive_StreamRead_End is complete. |
+| void* userData | User-defined context data that will be passed back in the callback. The userData is owned by the caller and must remain valid until OH_Archive_StreamRead_End is complete. |
 
 **Returns**:
 

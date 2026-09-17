@@ -112,7 +112,7 @@ const char *OH_PreferencesPair_GetKey(const OH_PreferencesPair *pairs, uint32_t 
 | [const OH_PreferencesPair](capi-preferences-oh-preferencespair.md) *pairs | 目标键值对数据[OH_PreferencesPair](capi-preferences-oh-preferencespair.md)的指针。 |
 | uint32_t index | 目标键值对数据[OH_PreferencesPair](capi-preferences-oh-preferencespair.md)的索引值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -142,7 +142,7 @@ const OH_PreferencesValue *OH_PreferencesPair_GetPreferencesValue(const OH_Prefe
 | [const OH_PreferencesPair](capi-preferences-oh-preferencespair.md) *pairs | 目标键值对数据[OH_PreferencesPair](capi-preferences-oh-preferencespair.md)的指针。 |
 | uint32_t index | 目标键值对数据[OH_PreferencesPair](capi-preferences-oh-preferencespair.md)的索引值，取值范围[0, count-1]（count为pairs数组长度）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -195,7 +195,7 @@ Preference_ValueType OH_PreferencesValue_GetValueType(const OH_PreferencesValue 
 | -- | -- |
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 对象[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -225,7 +225,7 @@ int OH_PreferencesValue_GetInt(const OH_PreferencesValue *object, int *value)
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 对象[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)的指针。 |
 | int *value | 该参数作为出参使用，表示指向获取到的整型值的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -255,7 +255,7 @@ int OH_PreferencesValue_GetBool(const OH_PreferencesValue *object, bool *value)
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 对象[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)的指针。 |
 | bool *value | 该参数作为出参使用，表示指向获取到的布尔值的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -286,7 +286,7 @@ int OH_PreferencesValue_GetString(const OH_PreferencesValue *object, char **valu
 | char **value | 该参数作为出参使用，表示指向获取到的字符串的二级指针，使用完毕后需要调用释放函数{@link OH_Preferences_FreeString}释放内存。 |
 | uint32_t *valueLen | 该参数作为出参使用，表示指向获取到的字符串长度的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -309,7 +309,7 @@ OH_PreferencesValue* OH_PreferencesValue_Create(void)
 
 **起始版本：** 23
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -362,7 +362,7 @@ int OH_PreferencesValue_SetInt(const OH_PreferencesValue *object, int value)
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | int value | 需要设置的整型值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -392,7 +392,7 @@ int OH_PreferencesValue_SetBool(const OH_PreferencesValue *object, bool value)
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | bool value | 需要设置的布尔值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -422,7 +422,7 @@ int OH_PreferencesValue_SetString(const OH_PreferencesValue *object, const char 
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | const char *value | 需要设置的字符串值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -452,7 +452,7 @@ int OH_PreferencesValue_SetInt64(const OH_PreferencesValue *object, int64_t valu
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | int64_t value | 需要设置的int64值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -482,7 +482,7 @@ int OH_PreferencesValue_GetInt64(const OH_PreferencesValue *object, int64_t *val
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | int64_t *value | 指向获取到的int64值的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -512,7 +512,7 @@ int OH_PreferencesValue_SetDouble(const OH_PreferencesValue *object, double valu
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | double value | 需要设置的double值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -542,7 +542,7 @@ int OH_PreferencesValue_GetDouble(const OH_PreferencesValue *object, double *val
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | 指向目标[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的指针。 |
 | double *value | 指向获取到的double值的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -573,7 +573,7 @@ int OH_PreferencesValue_SetIntArray(const OH_PreferencesValue *object, const int
 | const int *value | 需要设置的整型数组值。 |
 | uint32_t count | 需要设置的数组大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -604,7 +604,7 @@ int OH_PreferencesValue_GetIntArray(const OH_PreferencesValue *object, int **val
 | int **value | 指向获取到的整型数组值的二级指针。 |
 | uint32_t *count | 指向获取到的数组大小的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -635,7 +635,7 @@ int OH_PreferencesValue_SetBoolArray(const OH_PreferencesValue *object, const bo
 | const bool *value | 需要设置的布尔数组值。 |
 | uint32_t count | 需要设置的数组大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -666,7 +666,7 @@ int OH_PreferencesValue_GetBoolArray(const OH_PreferencesValue *object, bool **v
 | bool **value | 指向获取到的布尔数组值的二级指针。 |
 | uint32_t *count | 指向获取到的数组大小的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -697,7 +697,7 @@ int OH_PreferencesValue_SetStringArray(const OH_PreferencesValue *object, const 
 | const char **value | 需要设置的字符串数组值。 |
 | uint32_t count | 需要设置的数组大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -728,7 +728,7 @@ int OH_PreferencesValue_GetStringArray(const OH_PreferencesValue *object, char *
 | char ***value | 指向获取到的字符串数组值的三级指针。 |
 | uint32_t *count | 指向获取到的数组大小的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -759,7 +759,7 @@ int OH_PreferencesValue_SetInt64Array(const OH_PreferencesValue *object, const i
 | const int64_t *value | 需要设置的int64数组值。 |
 | uint32_t count | 需要设置的数组大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -790,7 +790,7 @@ int OH_PreferencesValue_GetInt64Array(const OH_PreferencesValue *object, int64_t
 | int64_t **value | 指向获取到的int64数组值的二级指针。 |
 | uint32_t *count | 指向获取到的数组大小的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -821,7 +821,7 @@ int OH_PreferencesValue_SetDoubleArray(const OH_PreferencesValue *object, const 
 | const double *value | 需要设置的double数组值。 |
 | uint32_t count | 需要设置的数组大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -852,7 +852,7 @@ int OH_PreferencesValue_GetDoubleArray(const OH_PreferencesValue *object, double
 | double **value | 指向获取到的double数组值的二级指针。 |
 | uint32_t *count | 指向获取到的数组大小的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -883,7 +883,7 @@ int OH_PreferencesValue_SetBlob(const OH_PreferencesValue *object, const uint8_t
 | const uint8_t *value | 需要设置的二进制值。 |
 | uint32_t count | 指向需要设置的二进制数据大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -914,7 +914,7 @@ int OH_PreferencesValue_GetBlob(const OH_PreferencesValue *object, uint8_t **val
 | uint8_t **value | 指向获取到的二进制值的二级指针。 |
 | uint32_t *count | 指向获取到的二进制大小的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

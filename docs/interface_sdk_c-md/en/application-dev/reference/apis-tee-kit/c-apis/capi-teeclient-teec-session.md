@@ -25,7 +25,8 @@ Defines the session between a CA and a TA.
 | uint32_t ops_cnt | The number of operations associated with the session. |
 | union | Union for either a linked list head or implementation-specific data.<br>**Since**: 20 |
 | struct [ListNode](capi-teeclient-listnode.md) head | Linked list head for session-related data. |
-| uint64_t imp; } | Implementation-specific data. |
+| uint64_t imp;
+ } | Implementation-specific data. |
 | [TEEC_Context](capi-teeclient-teec-context.md) *context | Pointer to the TEEC context associated with the session. |
 
 

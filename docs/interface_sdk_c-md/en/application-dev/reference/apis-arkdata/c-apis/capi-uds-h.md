@@ -308,7 +308,7 @@ Get details from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -338,7 +338,7 @@ Set content to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -368,7 +368,7 @@ Set abstract to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -398,7 +398,7 @@ Set details to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -561,7 +561,7 @@ Get details from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -591,7 +591,7 @@ Set url to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -621,7 +621,7 @@ Set description to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -651,7 +651,7 @@ Set details to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -814,7 +814,7 @@ Get details from the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -844,7 +844,7 @@ Set content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -874,7 +874,7 @@ Set plain content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -904,7 +904,7 @@ Set details to the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -934,7 +934,7 @@ Set the authorization policy to [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1213,7 +1213,7 @@ Get details from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1243,7 +1243,7 @@ Set application id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1273,7 +1273,7 @@ Set application name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1303,7 +1303,7 @@ Set application icon id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1333,7 +1333,7 @@ Set application label id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1363,7 +1363,7 @@ Set bundle name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1393,7 +1393,7 @@ Set ability name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1423,7 +1423,7 @@ Set details to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1586,7 +1586,7 @@ Get details from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1616,7 +1616,7 @@ Set file uri to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1646,7 +1646,7 @@ Set file type to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1676,7 +1676,7 @@ Set details to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1706,7 +1706,7 @@ Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1835,7 +1835,7 @@ Get details from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1865,7 +1865,7 @@ Set pixel map to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1895,7 +1895,7 @@ Set details to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1947,7 +1947,7 @@ Destroy a pointer that points to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybu
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1978,7 +1978,7 @@ Set array buffer data to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md)
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2009,7 +2009,7 @@ Get array buffer data from the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.m
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2115,7 +2115,7 @@ Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -2204,7 +2204,7 @@ Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -2293,7 +2293,7 @@ Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2323,7 +2323,7 @@ Set description to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2353,7 +2353,7 @@ Set title to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2384,7 +2384,7 @@ Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2414,7 +2414,7 @@ Set app name to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2444,7 +2444,7 @@ Set link uri to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2520,7 +2520,7 @@ Determine whether the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) contain the sp
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the status code of the execution.          {@code false} Represents The details do not contain the key.          {@code true} Represents The details contain the key. |
+| bool | Returns the status code of the execution.          {@code false} Represents The details do not contain the key.<br>        {@code true} Represents The details contain the key. |
 
 **Reference**:
 
@@ -2550,7 +2550,7 @@ Remove the value corresponding to this key from the [OH_UdsDetails](capi-udmf-oh
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2579,7 +2579,7 @@ Clear all data in the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -2610,7 +2610,7 @@ Set key-value data to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 

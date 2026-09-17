@@ -6,7 +6,7 @@ typedef struct ArkWeb_WebMessagePort* ArkWeb_WebMessagePortPtr
 
 ## Overview
 
-ArkWeb_WebMessagePort is a web message port struct that represents one of the two ports of a MessageChannel,used to send and receive messages. This struct supports bidirectional message communication between native code andweb pages.
+ArkWeb_WebMessagePort is a web message port struct that represents one of the two ports of a MessageChannel, used to send and receive messages. This struct supports bidirectional message communication between native code and web pages.
 
 **Since**: 12
 

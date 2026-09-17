@@ -27,28 +27,28 @@ Define the OH_Predicates structure type.
 
 | Name | Description |
 | -- | -- |
-| [OH_Predicates *(\*equalTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#equalto) | Function pointer. Restricts the value of the field to be equal to the specified value to the predicates.This method is similar to = of the SQL statement. |
-| [OH_Predicates *(\*notEqualTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#notequalto) | Function pointer.Restricts the value of the field to be not equal to the specified value to the predicates.This method is similar to != of the SQL statement. |
-| [OH_Predicates *(\*beginWrap)(OH_Predicates *predicates)](#beginwrap) | Function pointer. Add left parenthesis to predicate.This method is similar to ( of the SQL statement. |
-| [OH_Predicates *(\*endWrap)(OH_Predicates *predicates)](#endwrap) | Function pointer. Add right parenthesis to predicate.This method is similar to ) of the SQL statement. |
-| [OH_Predicates *(\*orOperate)(OH_Predicates *predicates)](#oroperate) | Function pointer. Adds an or condition to the predicates.This method is similar to OR of the SQL statement. |
-| [OH_Predicates *(\*andOperate)(OH_Predicates *predicates)](#andoperate) | Function pointer. Adds an and condition to the predicates.This method is similar to AND of the SQL statement. |
-| [OH_Predicates *(\*isNull)(OH_Predicates *predicates, const char *field)](#isnull) | Function pointer. Restricts the value of the field which is null to the predicates.This method is similar to IS NULL of the SQL statement. |
-| [OH_Predicates *(\*isNotNull)(OH_Predicates *predicates, const char *field)](#isnotnull) | Function pointer. Restricts the value of the field which is not null to the predicates.This method is similar to IS NOT NULL of the SQL statement. |
-| [OH_Predicates *(\*like)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#like) | Function pointer. Restricts the value of the field to be like the specified value to the predicates.This method is similar to LIKE of the SQL statement. |
-| [OH_Predicates *(\*between)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#between) | Function pointer. Restricts the value of the field to be between the specified value to the predicates.This method is similar to BETWEEN of the SQL statement. |
-| [OH_Predicates *(\*notBetween)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#notbetween) | Function pointer.Restricts the value of the field to be not between the specified value to the predicates.This method is similar to NOT BETWEEN of the SQL statement. |
-| [OH_Predicates *(\*greaterThan)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#greaterthan) | Function pointer.Restricts the value of the field to be greater than the specified value to the predicates.This method is similar to > of the SQL statement. |
-| [OH_Predicates *(\*lessThan)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#lessthan) | Function pointer.Restricts the value of the field to be less than the specified value to the predicates.This method is similar to < of the SQL statement. |
-| [OH_Predicates *(\*greaterThanOrEqualTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#greaterthanorequalto) | Function pointer.Restricts the value of the field to be greater than or equal to the specified value to the predicates.This method is similar to >= of the SQL statement. |
-| [OH_Predicates *(\*lessThanOrEqualTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#lessthanorequalto) | Function pointer.Restricts the value of the field to be less than or equal to the specified value to the predicates.This method is similar to <= of the SQL statement. |
-| [OH_Predicates *(\*orderBy)(OH_Predicates *predicates, const char *field, OH_OrderType type)](#orderby) | Function pointer. Restricts the ascending or descending order of the return list.When there are several orders, the one close to the head has the highest priority.This method is similar ORDER BY the SQL statement. |
-| [OH_Predicates *(\*distinct)(OH_Predicates *predicates)](#distinct) | Function pointer. Configure predicates to filter duplicate records and retain only one of them.This method is similar DISTINCT the SQL statement. |
-| [OH_Predicates *(\*limit)(OH_Predicates *predicates, unsigned int value)](#limit) | Function pointer. Predicate for setting the maximum number of data records.This method is similar LIMIT the SQL statement. |
-| [OH_Predicates *(\*offset)(OH_Predicates *predicates, unsigned int rowOffset)](#offset) | Function pointer. Configure the predicate to specify the starting position of the returned result.This method is similar OFFSET the SQL statement. |
-| [OH_Predicates *(\*groupBy)(OH_Predicates *predicates, char const *const *fields, int length)](#groupby) | Function pointer. Configure predicates to group query results by specified columns.This method is similar GROUP BY the SQL statement. |
-| [OH_Predicates *(\*in)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#in) | Function pointer.Configure the predicate to match the specified field and the value within the given array range.This method is similar IN the SQL statement. |
-| [OH_Predicates *(\*notIn)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#notin) | Function pointer.Configure the predicate to match the specified field and the value not within the given array range.This method is similar NOT IN the SQL statement. |
+| [OH_Predicates *(\*equalTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#equalto) | Function pointer. Restricts the value of the field to be equal to the specified value to the predicates.<br> This method is similar to = of the SQL statement. |
+| [OH_Predicates *(\*notEqualTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#notequalto) | Function pointer. Restricts the value of the field to be not equal to the specified value to the predicates.<br> This method is similar to != of the SQL statement. |
+| [OH_Predicates *(\*beginWrap)(OH_Predicates *predicates)](#beginwrap) | Function pointer. Add left parenthesis to predicate.<br> This method is similar to ( of the SQL statement. |
+| [OH_Predicates *(\*endWrap)(OH_Predicates *predicates)](#endwrap) | Function pointer. Add right parenthesis to predicate.<br> This method is similar to ) of the SQL statement. |
+| [OH_Predicates *(\*orOperate)(OH_Predicates *predicates)](#oroperate) | Function pointer. Adds an or condition to the predicates.<br> This method is similar to OR of the SQL statement. |
+| [OH_Predicates *(\*andOperate)(OH_Predicates *predicates)](#andoperate) | Function pointer. Adds an and condition to the predicates.<br> This method is similar to AND of the SQL statement. |
+| [OH_Predicates *(\*isNull)(OH_Predicates *predicates, const char *field)](#isnull) | Function pointer. Restricts the value of the field which is null to the predicates.<br> This method is similar to IS NULL of the SQL statement. |
+| [OH_Predicates *(\*isNotNull)(OH_Predicates *predicates, const char *field)](#isnotnull) | Function pointer. Restricts the value of the field which is not null to the predicates.<br> This method is similar to IS NOT NULL of the SQL statement. |
+| [OH_Predicates *(\*like)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#like) | Function pointer. Restricts the value of the field to be like the specified value to the predicates.<br> This method is similar to LIKE of the SQL statement. |
+| [OH_Predicates *(\*between)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#between) | Function pointer. Restricts the value of the field to be between the specified value to the predicates.<br> This method is similar to BETWEEN of the SQL statement. |
+| [OH_Predicates *(\*notBetween)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#notbetween) | Function pointer. Restricts the value of the field to be not between the specified value to the predicates.<br> This method is similar to NOT BETWEEN of the SQL statement. |
+| [OH_Predicates *(\*greaterThan)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#greaterthan) | Function pointer. Restricts the value of the field to be greater than the specified value to the predicates.<br> This method is similar to > of the SQL statement. |
+| [OH_Predicates *(\*lessThan)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#lessthan) | Function pointer. Restricts the value of the field to be less than the specified value to the predicates.<br> This method is similar to < of the SQL statement. |
+| [OH_Predicates *(\*greaterThanOrEqualTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#greaterthanorequalto) | Function pointer. Restricts the value of the field to be greater than or equal to the specified value to the predicates.<br> This method is similar to >= of the SQL statement. |
+| [OH_Predicates *(\*lessThanOrEqualTo)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#lessthanorequalto) | Function pointer. Restricts the value of the field to be less than or equal to the specified value to the predicates.<br> This method is similar to <= of the SQL statement. |
+| [OH_Predicates *(\*orderBy)(OH_Predicates *predicates, const char *field, OH_OrderType type)](#orderby) | Function pointer. Restricts the ascending or descending order of the return list. When there are several orders, the one close to the head has the highest priority.<br> This method is similar ORDER BY the SQL statement. |
+| [OH_Predicates *(\*distinct)(OH_Predicates *predicates)](#distinct) | Function pointer. Configure predicates to filter duplicate records and retain only one of them.<br> This method is similar DISTINCT the SQL statement. |
+| [OH_Predicates *(\*limit)(OH_Predicates *predicates, unsigned int value)](#limit) | Function pointer. Predicate for setting the maximum number of data records.<br> This method is similar LIMIT the SQL statement. |
+| [OH_Predicates *(\*offset)(OH_Predicates *predicates, unsigned int rowOffset)](#offset) | Function pointer. Configure the predicate to specify the starting position of the returned result.<br> This method is similar OFFSET the SQL statement. |
+| [OH_Predicates *(\*groupBy)(OH_Predicates *predicates, char const *const *fields, int length)](#groupby) | Function pointer. Configure predicates to group query results by specified columns.<br> This method is similar GROUP BY the SQL statement. |
+| [OH_Predicates *(\*in)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#in) | Function pointer. Configure the predicate to match the specified field and the value within the given array range.<br> This method is similar IN the SQL statement. |
+| [OH_Predicates *(\*notIn)(OH_Predicates *predicates, const char *field, OH_VObject *valueObject)](#notin) | Function pointer. Configure the predicate to match the specified field and the value not within the given array range.<br> This method is similar NOT IN the SQL statement. |
 | [OH_Predicates *(\*clear)(OH_Predicates *predicates)](#clear) | Function pointer. Initialize OH_Predicates object. |
 | [int (\*destroy)(OH_Predicates *predicates)](#destroy) | Destroy the [OH_Predicates](capi-rdb-oh-predicates.md) object and reclaim the memory occupied by the object. |
 
@@ -62,7 +62,7 @@ OH_Predicates *(*equalTo)(OH_Predicates *predicates, const char *field, OH_VObje
 
 **Description**
 
-Function pointer. Restricts the value of the field to be equal to the specified value to the predicates.This method is similar to = of the SQL statement.
+Function pointer. Restricts the value of the field to be equal to the specified value to the predicates.<br> This method is similar to = of the SQL statement.
 
 **Since**: 10
 
@@ -93,7 +93,7 @@ OH_Predicates *(*notEqualTo)(OH_Predicates *predicates, const char *field, OH_VO
 
 **Description**
 
-Function pointer.Restricts the value of the field to be not equal to the specified value to the predicates.This method is similar to != of the SQL statement.
+Function pointer. Restricts the value of the field to be not equal to the specified value to the predicates.<br> This method is similar to != of the SQL statement.
 
 **Since**: 10
 
@@ -124,7 +124,7 @@ OH_Predicates *(*beginWrap)(OH_Predicates *predicates)
 
 **Description**
 
-Function pointer. Add left parenthesis to predicate.This method is similar to ( of the SQL statement.
+Function pointer. Add left parenthesis to predicate.<br> This method is similar to ( of the SQL statement.
 
 **Since**: 10
 
@@ -153,7 +153,7 @@ OH_Predicates *(*endWrap)(OH_Predicates *predicates)
 
 **Description**
 
-Function pointer. Add right parenthesis to predicate.This method is similar to ) of the SQL statement.
+Function pointer. Add right parenthesis to predicate.<br> This method is similar to ) of the SQL statement.
 
 **Since**: 10
 
@@ -182,7 +182,7 @@ OH_Predicates *(*orOperate)(OH_Predicates *predicates)
 
 **Description**
 
-Function pointer. Adds an or condition to the predicates.This method is similar to OR of the SQL statement.
+Function pointer. Adds an or condition to the predicates.<br> This method is similar to OR of the SQL statement.
 
 **Since**: 10
 
@@ -211,7 +211,7 @@ OH_Predicates *(*andOperate)(OH_Predicates *predicates)
 
 **Description**
 
-Function pointer. Adds an and condition to the predicates.This method is similar to AND of the SQL statement.
+Function pointer. Adds an and condition to the predicates.<br> This method is similar to AND of the SQL statement.
 
 **Since**: 10
 
@@ -240,7 +240,7 @@ OH_Predicates *(*isNull)(OH_Predicates *predicates, const char *field)
 
 **Description**
 
-Function pointer. Restricts the value of the field which is null to the predicates.This method is similar to IS NULL of the SQL statement.
+Function pointer. Restricts the value of the field which is null to the predicates.<br> This method is similar to IS NULL of the SQL statement.
 
 **Since**: 10
 
@@ -270,7 +270,7 @@ OH_Predicates *(*isNotNull)(OH_Predicates *predicates, const char *field)
 
 **Description**
 
-Function pointer. Restricts the value of the field which is not null to the predicates.This method is similar to IS NOT NULL of the SQL statement.
+Function pointer. Restricts the value of the field which is not null to the predicates.<br> This method is similar to IS NOT NULL of the SQL statement.
 
 **Since**: 10
 
@@ -300,7 +300,7 @@ OH_Predicates *(*like)(OH_Predicates *predicates, const char *field, OH_VObject 
 
 **Description**
 
-Function pointer. Restricts the value of the field to be like the specified value to the predicates.This method is similar to LIKE of the SQL statement.
+Function pointer. Restricts the value of the field to be like the specified value to the predicates.<br> This method is similar to LIKE of the SQL statement.
 
 **Since**: 10
 
@@ -331,7 +331,7 @@ OH_Predicates *(*between)(OH_Predicates *predicates, const char *field, OH_VObje
 
 **Description**
 
-Function pointer. Restricts the value of the field to be between the specified value to the predicates.This method is similar to BETWEEN of the SQL statement.
+Function pointer. Restricts the value of the field to be between the specified value to the predicates.<br> This method is similar to BETWEEN of the SQL statement.
 
 **Since**: 10
 
@@ -362,7 +362,7 @@ OH_Predicates *(*notBetween)(OH_Predicates *predicates, const char *field, OH_VO
 
 **Description**
 
-Function pointer.Restricts the value of the field to be not between the specified value to the predicates.This method is similar to NOT BETWEEN of the SQL statement.
+Function pointer. Restricts the value of the field to be not between the specified value to the predicates.<br> This method is similar to NOT BETWEEN of the SQL statement.
 
 **Since**: 10
 
@@ -393,7 +393,7 @@ OH_Predicates *(*greaterThan)(OH_Predicates *predicates, const char *field, OH_V
 
 **Description**
 
-Function pointer.Restricts the value of the field to be greater than the specified value to the predicates.This method is similar to > of the SQL statement.
+Function pointer. Restricts the value of the field to be greater than the specified value to the predicates.<br> This method is similar to > of the SQL statement.
 
 **Since**: 10
 
@@ -424,7 +424,7 @@ OH_Predicates *(*lessThan)(OH_Predicates *predicates, const char *field, OH_VObj
 
 **Description**
 
-Function pointer.Restricts the value of the field to be less than the specified value to the predicates.This method is similar to < of the SQL statement.
+Function pointer. Restricts the value of the field to be less than the specified value to the predicates.<br> This method is similar to < of the SQL statement.
 
 **Since**: 10
 
@@ -455,7 +455,7 @@ OH_Predicates *(*greaterThanOrEqualTo)(OH_Predicates *predicates, const char *fi
 
 **Description**
 
-Function pointer.Restricts the value of the field to be greater than or equal to the specified value to the predicates.This method is similar to >= of the SQL statement.
+Function pointer. Restricts the value of the field to be greater than or equal to the specified value to the predicates.<br> This method is similar to >= of the SQL statement.
 
 **Since**: 10
 
@@ -486,7 +486,7 @@ OH_Predicates *(*lessThanOrEqualTo)(OH_Predicates *predicates, const char *field
 
 **Description**
 
-Function pointer.Restricts the value of the field to be less than or equal to the specified value to the predicates.This method is similar to <= of the SQL statement.
+Function pointer. Restricts the value of the field to be less than or equal to the specified value to the predicates.<br> This method is similar to <= of the SQL statement.
 
 **Since**: 10
 
@@ -517,7 +517,7 @@ OH_Predicates *(*orderBy)(OH_Predicates *predicates, const char *field, OH_Order
 
 **Description**
 
-Function pointer. Restricts the ascending or descending order of the return list.When there are several orders, the one close to the head has the highest priority.This method is similar ORDER BY the SQL statement.
+Function pointer. Restricts the ascending or descending order of the return list. When there are several orders, the one close to the head has the highest priority.<br> This method is similar ORDER BY the SQL statement.
 
 **Since**: 10
 
@@ -548,7 +548,7 @@ OH_Predicates *(*distinct)(OH_Predicates *predicates)
 
 **Description**
 
-Function pointer. Configure predicates to filter duplicate records and retain only one of them.This method is similar DISTINCT the SQL statement.
+Function pointer. Configure predicates to filter duplicate records and retain only one of them.<br> This method is similar DISTINCT the SQL statement.
 
 **Since**: 10
 
@@ -577,7 +577,7 @@ OH_Predicates *(*limit)(OH_Predicates *predicates, unsigned int value)
 
 **Description**
 
-Function pointer. Predicate for setting the maximum number of data records.This method is similar LIMIT the SQL statement.
+Function pointer. Predicate for setting the maximum number of data records.<br> This method is similar LIMIT the SQL statement.
 
 **Since**: 10
 
@@ -607,7 +607,7 @@ OH_Predicates *(*offset)(OH_Predicates *predicates, unsigned int rowOffset)
 
 **Description**
 
-Function pointer. Configure the predicate to specify the starting position of the returned result.This method is similar OFFSET the SQL statement.
+Function pointer. Configure the predicate to specify the starting position of the returned result.<br> This method is similar OFFSET the SQL statement.
 
 **Since**: 10
 
@@ -637,7 +637,7 @@ OH_Predicates *(*groupBy)(OH_Predicates *predicates, char const *const *fields, 
 
 **Description**
 
-Function pointer. Configure predicates to group query results by specified columns.This method is similar GROUP BY the SQL statement.
+Function pointer. Configure predicates to group query results by specified columns.<br> This method is similar GROUP BY the SQL statement.
 
 **Since**: 10
 
@@ -668,7 +668,7 @@ OH_Predicates *(*in)(OH_Predicates *predicates, const char *field, OH_VObject *v
 
 **Description**
 
-Function pointer.Configure the predicate to match the specified field and the value within the given array range.This method is similar IN the SQL statement.
+Function pointer. Configure the predicate to match the specified field and the value within the given array range.<br> This method is similar IN the SQL statement.
 
 **Since**: 10
 
@@ -699,7 +699,7 @@ OH_Predicates *(*notIn)(OH_Predicates *predicates, const char *field, OH_VObject
 
 **Description**
 
-Function pointer.Configure the predicate to match the specified field and the value not within the given array range.This method is similar NOT IN the SQL statement.
+Function pointer. Configure the predicate to match the specified field and the value not within the given array range.<br> This method is similar NOT IN the SQL statement.
 
 **Since**: 10
 

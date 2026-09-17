@@ -18,7 +18,7 @@ The file declares the APIs used to obtain image data from the native layer.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_ImageReceiverNative](capi-image-nativemodule-oh-imagereceivernative.md) | - | The OH_ImageReceiverNative struct describes the image receiver, which is encapsulated at the native layer.The struct cannot be directly operated. Instead, functions must be called to create and release the struct andoperate the fields in the struct. |
+| [OH_ImageReceiverNative](capi-image-nativemodule-oh-imagereceivernative.md) | - | The OH_ImageReceiverNative struct describes the image receiver, which is encapsulated at the native layer. The struct cannot be directly operated. Instead, functions must be called to create and release the struct and operate the fields in the struct. |
 | [OH_ImageReceiverOptions](capi-image-nativemodule-oh-imagereceiveroptions.md) | - | The struct describes the data type name of the image receiver options. |
 
 ### Function
@@ -44,7 +44,14 @@ The file declares the APIs used to obtain image data from the native layer.
 | [Image_ErrorCode OH_ImageReceiverNative_Release(OH_ImageReceiverNative* receiver)](#oh_imagereceivernative_release) | - | Releases an OH_ImageReceiverNative object. |
 | [Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback, void *userData)](#oh_imagereceivernative_onimagearrive) | - |  |
 | [Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback)](#oh_imagereceivernative_offimagearrive) | - |  |
-| [Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNative* receiver, const char *name, uint32_t size)](#oh_imagereceivernative_setmemoryname) | - | Sets the memory name for an OH_ImageReceiverNative object.Only visible ASCII characters are supported. Spaces, newlines, tabs, and other controlcharacters will be filtered out. If the filtered result consists entirely of digits,a prefix "ImageReceiver:" will be automatically prepended. The filtered size must notexceed 256 bytes (including the null terminator). |
+| [Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNative* receiver, const char *name, uint32_t size)](#oh_imagereceivernative_setmemoryname) | - | Sets the memory name for an OH_ImageReceiverNative object.<br> Only visible ASCII characters are supported. Spaces, newlines, tabs, and other control characters will be filtered out. If the filtered result consists entirely of digits, a prefix "ImageReceiver:" will be automatically prepended. The filtered size must not exceed 256 bytes (including the null terminator). |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_ImageReceiver_OnCallback)(OH_ImageReceiverNative *receiver) | Defines the callbacks for the image receiver at the native layer.<br>**Since**: 12 |
+| void (*OH_ImageReceiver_ImageArriveCallback)(OH_ImageReceiverNative *receiver, void *userData) | Defines the callback for the ImageArrive event.<br>**Since**: 20 |
 
 ## Function description
 
@@ -94,7 +101,7 @@ Creates an OH_ImageReceiverOptions object at the application layer.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.      <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.<br>    <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
 
 ### OH_ImageReceiverOptions_GetSize()
 
@@ -119,7 +126,7 @@ Obtains the image size of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_SetSize()
 
@@ -144,7 +151,7 @@ Sets the image size of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_GetCapacity()
 
@@ -169,7 +176,7 @@ Obtains the image cache capacity of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_SetCapacity()
 
@@ -194,7 +201,7 @@ Sets the image cache capacity of an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 ### OH_ImageReceiverOptions_Release()
 
@@ -218,7 +225,7 @@ Releases an OH_ImageReceiverOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -248,7 +255,7 @@ Creates an OH_ImageReceiverNative object at the application layer.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.      <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.<br>    <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
 
 ### OH_ImageReceiverNative_GetReceivingSurfaceId()
 
@@ -273,7 +280,7 @@ Obtains the surface ID through an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.      <br>{@link Image_ErrorCode} IMAGE_UNKNOWN_ERROR - inner unknown error. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.<br>    <br>{@link Image_ErrorCode} IMAGE_UNKNOWN_ERROR - inner unknown error. |
 
 **Reference**:
 
@@ -303,7 +310,7 @@ Obtains the latest image through an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.      <br>{@link Image_ErrorCode} IMAGE_UNKNOWN_ERROR - inner unknown error.      <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.<br>    <br>{@link Image_ErrorCode} IMAGE_UNKNOWN_ERROR - inner unknown error.<br>    <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
 
 **Reference**:
 
@@ -333,7 +340,7 @@ Obtains the next image through an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.      <br>{@link Image_ErrorCode} IMAGE_UNKNOWN_ERROR - inner unknown error.      <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter.<br>    <br>{@link Image_ErrorCode} IMAGE_UNKNOWN_ERROR - inner unknown error.<br>    <br>{@link Image_ErrorCode} IMAGE_ALLOC_FAILED - if alloc failed. |
 
 **Reference**:
 
@@ -363,7 +370,7 @@ Registers the [OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh_i
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -392,7 +399,7 @@ Unregisters the [OH_ImageReceiver_OnCallback](capi-image-receiver-native-h.md#oh
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -422,7 +429,7 @@ Obtains the size of an **ImageReceiver** using **OH_ImageReceiverNative**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -452,7 +459,7 @@ Obtains the capacity of an **OH_ImageReceiverNative**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -481,7 +488,7 @@ Releases an OH_ImageReceiverNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER - if bad parameter. |
 
 **Reference**:
 
@@ -510,7 +517,7 @@ Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* rec
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS is returned if the operation is successful.      <br>{@link Image_ErrorCode} IMAGE_RECEIVER_INVALID_PARAMETER is returned if receiver or callback is null. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS is returned if the operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_RECEIVER_INVALID_PARAMETER is returned if receiver or callback is null. |
 
 ### OH_ImageReceiverNative_OffImageArrive()
 
@@ -533,7 +540,7 @@ Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* re
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - Operation succeeded.      <br>{@link Image_ErrorCode} IMAGE_RECEIVER_INVALID_PARAMETER - <b>receiver</b> is empty or <b>callback</b> is not registered. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS - Operation succeeded.<br>    <br>{@link Image_ErrorCode} IMAGE_RECEIVER_INVALID_PARAMETER - <b>receiver</b> is empty or <b>callback</b> is not registered. |
 
 ### OH_ImageReceiverNative_SetMemoryName()
 
@@ -543,7 +550,7 @@ Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNativ
 
 **Description**
 
-Sets the memory name for an OH_ImageReceiverNative object.Only visible ASCII characters are supported. Spaces, newlines, tabs, and other controlcharacters will be filtered out. If the filtered result consists entirely of digits,a prefix "ImageReceiver:" will be automatically prepended. The filtered size must notexceed 256 bytes (including the null terminator).
+Sets the memory name for an OH_ImageReceiverNative object.<br> Only visible ASCII characters are supported. Spaces, newlines, tabs, and other control characters will be filtered out. If the filtered result consists entirely of digits, a prefix "ImageReceiver:" will be automatically prepended. The filtered size must not exceed 256 bytes (including the null terminator).
 
 **Since**: 26.1.0
 
@@ -552,13 +559,13 @@ Sets the memory name for an OH_ImageReceiverNative object.Only visible ASCII cha
 | Parameter | Description |
 | -- | -- |
 | [const OH_ImageReceiverNative](capi-image-nativemodule-oh-imagereceivernative.md)* receiver | [in] Pointer to an OH_ImageReceiverNative object. It must not be NULL. |
-| const char *name | [in] Pointer to the memory name string to set. It must not be NULL.The string must be null-terminated. |
-| uint32_t size | [in] The size of the name string in bytes, including the null terminator.The value must be greater than 0. |
+| const char *name | [in] Pointer to the memory name string to set. It must not be NULL. The string must be null-terminated. |
+| uint32_t size | [in] The size of the name string in bytes, including the null terminator. The value must be greater than 0. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>           <li>{@link IMAGE_SUCCESS} if the operation is successful.</li>          <li>{@link IMAGE_RECEIVER_INVALID_PARAMETER} if receiver or name is NULL, or size is 0,              or name contains no visible characters after filtering, or filtered size exceeds 256 bytes.</li>          </ul> |
+| Image_ErrorCode | <ul>           <li>{@link IMAGE_SUCCESS} if the operation is successful.</li><br>        <li>{@link IMAGE_RECEIVER_INVALID_PARAMETER} if receiver or name is NULL, or size is 0,              or name contains no visible characters after filtering, or filtered size exceeds 256 bytes.</li>          </ul> |
 
 

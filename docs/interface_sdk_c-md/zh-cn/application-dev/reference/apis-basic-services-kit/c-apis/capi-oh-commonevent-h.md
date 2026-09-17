@@ -2,7 +2,7 @@
 
 ## 概述
 
-本模块定义了发布、订阅/取消订阅公共事件、事件回调数据访问、有序事件控制等关键操作函数，以及错误码枚举与核心数据类型定义。
+本模块定义了发布、订阅/取消订阅公共事件、事件回调数据访问、有序事件控制等关键操作 函数，以及错误码枚举与核心数据类型定义。
 
 **库：** libohcommonevent.so
 
@@ -18,9 +18,9 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [CommonEvent_SubscribeInfo](capi-oh-commonevent-commonevent-subscribeinfo.md) | CommonEvent_SubscribeInfo | 提供公共事件订阅者信息结构体声明。该结构体用于描述订阅者的配置信息，在调用创建订阅者接口时作为参数传入。 |
-| [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md) | CommonEvent_PublishInfo | 发布公共事件时使用的公共事件属性对象。该对象封装了发布公共事件所需的各项属性配置，适用于应用需要发布自定义公共事件并指定发布参数的场景。 |
-| [CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md) | CommonEvent_RcvData | 提供公共事件回调数据结构体声明，当公共事件触发回调时，通过该结构体向开发者传递接收到的事件数据。 |
+| [CommonEvent_SubscribeInfo](capi-oh-commonevent-commonevent-subscribeinfo.md) | CommonEvent_SubscribeInfo | 提供公共事件订阅者信息结构体声明。该结构体用于描述订阅者的配置信息，在调用创建订阅者 接口时作为参数传入。 |
+| [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md) | CommonEvent_PublishInfo | 发布公共事件时使用的公共事件属性对象。该对象封装了发布公共事件所需的各项属性配置， 适用于应用需要发布自定义公共事件并指定发布参数的场景。 |
+| [CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md) | CommonEvent_RcvData | 提供公共事件回调数据结构体声明，当公共事件触发回调时，通过该结构体向开发者传递接收到 的事件数据。 |
 
 ### 枚举
 
@@ -87,6 +87,14 @@
 | [bool OH_CommonEvent_SetCodeToSubscriber(CommonEvent_Subscriber* subscriber, int32_t code)](#oh_commonevent_setcodetosubscriber) | - | 设置有序公共事件传递的数据，整数类型。 |
 | [const char* OH_CommonEvent_GetDataFromSubscriber(const CommonEvent_Subscriber* subscriber)](#oh_commonevent_getdatafromsubscriber) | - | 获取有序公共事件传递的数据，字符串类型。 |
 | [bool OH_CommonEvent_SetDataToSubscriber(CommonEvent_Subscriber* subscriber, const char* data, size_t length)](#oh_commonevent_setdatatosubscriber) | - | 设置有序公共事件传递的数据，字符串类型。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void CommonEvent_Subscriber | 提供CommonEvent_Subscriber订阅者声明。<br>**起始版本：** 12 |
+| void CommonEvent_Parameters | 提供CommonEvent_Parameters公共事件附加信息声明。<br>**起始版本：** 12 |
+| void (*CommonEvent_ReceiveCallback)(const CommonEvent_RcvData *data) | 提供CommonEvent_ReceiveCallback回调函数声明。<br>**起始版本：** 12 |
 
 ## 枚举类型说明
 
@@ -155,7 +163,7 @@ CommonEvent_SubscribeInfo* OH_CommonEvent_CreateSubscribeInfo(const char* events
 | const char* events[] | 订阅的公共事件，实际订阅的数量为`eventsNum`与`events`数组长度的最小值。 |
 | int32_t eventsNum | 订阅的公共事件数量，非负整数，取值为`events`数组长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -178,9 +186,9 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublisherPermission(CommonEvent_SubscribeI
 | 参数项 | 描述 |
 | -- | -- |
 | [CommonEvent_SubscribeInfo](capi-oh-commonevent-commonevent-subscribeinfo.md)* info | 待设置发布方权限的订阅者信息对象。 |
-| const char* permission | 权限名称。取值为系统已定义的权限名，订阅方将只能接收到具有该权限的发送方发布的事件。不设置时，可接收所有发送方发布的事件。 |
+| const char* permission | 权限名称。取值为系统已定义的权限名，订阅方将只能接收到具有该权限的发送方 发布的事件。不设置时，可接收所有发送方发布的事件。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -203,9 +211,9 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublisherBundleName(CommonEvent_SubscribeI
 | 参数项 | 描述 |
 | -- | -- |
 | [CommonEvent_SubscribeInfo](capi-oh-commonevent-commonevent-subscribeinfo.md)* info | 待设置发布方权限的订阅者信息对象。 |
-| const char* bundleName | 包名称。用于限制订阅方只接收该bundleName的发布者发布的公共事件。不设置时，可接收所有应用发布的公共事件。 |
+| const char* bundleName | 包名称。用于限制订阅方只接收该bundleName的发布者发布的公共事件。不设置时， 可接收所有应用发布的公共事件。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -248,7 +256,7 @@ CommonEvent_Subscriber* OH_CommonEvent_CreateSubscriber(const CommonEvent_Subscr
 | [const CommonEvent_SubscribeInfo](capi-oh-commonevent-commonevent-subscribeinfo.md)* info | 订阅者信息。 |
 | [CommonEvent_ReceiveCallback](capi-oh-commonevent-h.md#commonevent_receivecallback) callback | 公共事件回调函数。当公共事件订阅成功后，事件触发时通过data返回公共事件数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -290,7 +298,7 @@ CommonEvent_ErrCode OH_CommonEvent_Subscribe(const CommonEvent_Subscriber* subsc
 | -- | -- |
 | const CommonEvent_Subscriber* subscriber | 订阅者。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -314,7 +322,7 @@ CommonEvent_ErrCode OH_CommonEvent_UnSubscribe(const CommonEvent_Subscriber* sub
 | -- | -- |
 | const CommonEvent_Subscriber* subscriber | 订阅者。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -338,7 +346,7 @@ const char* OH_CommonEvent_GetEventFromRcvData(const CommonEvent_RcvData* rcvDat
 | -- | -- |
 | [const CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md)* rcvData | 公共事件回调数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -362,7 +370,7 @@ int32_t OH_CommonEvent_GetCodeFromRcvData(const CommonEvent_RcvData* rcvData)
 | -- | -- |
 | [const CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md)* rcvData | 公共事件回调数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -386,7 +394,7 @@ const char* OH_CommonEvent_GetDataStrFromRcvData(const CommonEvent_RcvData* rcvD
 | -- | -- |
 | [const CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md)* rcvData | 公共事件回调数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -410,7 +418,7 @@ const char* OH_CommonEvent_GetBundleNameFromRcvData(const CommonEvent_RcvData* r
 | -- | -- |
 | [const CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md)* rcvData | 公共事件回调数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -434,7 +442,7 @@ const CommonEvent_Parameters* OH_CommonEvent_GetParametersFromRcvData(const Comm
 | -- | -- |
 | [const CommonEvent_RcvData](capi-oh-commonevent-commonevent-rcvdata.md)* rcvData | 公共事件回调数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -456,9 +464,9 @@ CommonEvent_PublishInfo* OH_CommonEvent_CreatePublishInfo(bool ordered)
 
 | 参数项 | 描述 |
 | -- | -- |
-| bool ordered | 是否为有序公共事件。<br>- true：有序公共事件。<br>- false：无序公共事件。 |
+| bool ordered | 是否为有序公共事件。 <br>- true：有序公共事件。 <br>- false：无序公共事件。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -501,7 +509,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublishInfoBundleName(CommonEvent_PublishI
 | [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)* info | 公共事件属性对象。 |
 | const char* bundleName | 设置的订阅者包名称。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -524,10 +532,10 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublishInfoPermissions(CommonEvent_Publish
 | 参数项 | 描述 |
 | -- | -- |
 | [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)* info | 公共事件属性对象。 |
-| const char* permissions[] | 订阅者权限名称数组，只有具备这些权限的订阅者才能收到该公共事件。生效数量为`num`与`permissions`数组长度的最小值。 |
+| const char* permissions[] | 订阅者权限名称数组，只有具备这些权限的订阅者才能收到该公共事件。生效数量 为`num`与`permissions`数组长度的最小值。 |
 | int32_t num | 权限名称的数量，取值为`permissions`数组长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -552,7 +560,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublishInfoCode(CommonEvent_PublishInfo* i
 | [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)* info | 公共事件属性对象。 |
 | int32_t code | 公共事件传递的数据，整数类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -575,10 +583,10 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublishInfoData(CommonEvent_PublishInfo* i
 | 参数项 | 描述 |
 | -- | -- |
 | [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)* info | 公共事件属性对象。 |
-| const char* data | 公共事件传递的数据，字符串类型，实际有效数据长度为`length`与`data`字符串长度的最小值。 |
+| const char* data | 公共事件传递的数据，字符串类型，实际有效数据长度为`length`与`data`字符串长度的 最小值。 |
 | size_t length | 结果数据的长度，取值为`data`数据字符串长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -603,7 +611,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetPublishInfoParameters(CommonEvent_PublishI
 | [CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)* info | 公共事件属性对象。 |
 | CommonEvent_Parameters* param | 设置的附加信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -621,7 +629,7 @@ CommonEvent_Parameters* OH_CommonEvent_CreateParameters()
 
 **起始版本：** 18
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -664,7 +672,7 @@ bool OH_CommonEvent_HasKeyInParameters(const CommonEvent_Parameters* para, const
 | const CommonEvent_Parameters* para | 公共事件附加信息。 |
 | const char* key | 数据键。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -690,7 +698,7 @@ int OH_CommonEvent_GetIntFromParameters(const CommonEvent_Parameters* para, cons
 | const char* key | 数据键。 |
 | const int defaultValue | 默认值，当指定key不存在时返回此默认值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -716,7 +724,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetIntToParameters(CommonEvent_Parameters* pa
 | const char* key | 数据键。 |
 | int value | 设置的int类型内容。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -740,9 +748,9 @@ int32_t OH_CommonEvent_GetIntArrayFromParameters(const CommonEvent_Parameters* p
 | -- | -- |
 | const CommonEvent_Parameters* para | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| int** array | 输出参数，用于接收查询到的int数组数据。该数组内存由函数内部分配，调用者无需预先分配。 |
+| int** array | 输出参数，用于接收查询到的int数组数据。该数组内存由函数内部分配，调用者无需 预先分配。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -766,10 +774,10 @@ CommonEvent_ErrCode OH_CommonEvent_SetIntArrayToParameters(CommonEvent_Parameter
 | -- | -- |
 | CommonEvent_Parameters* param | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| const int* value | 设置的int数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有越界访问风险。 |
+| const int* value | 设置的int数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有 越界访问风险。 |
 | size_t num | 设置的int数组内容中元素的个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -795,7 +803,7 @@ long OH_CommonEvent_GetLongFromParameters(const CommonEvent_Parameters* para, co
 | const char* key | 数据键。 |
 | const long defaultValue | 默认值，当指定key不存在时返回此默认值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -821,7 +829,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetLongToParameters(CommonEvent_Parameters* p
 | const char* key | 数据键。 |
 | long value | 设置的long类型内容。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -845,9 +853,9 @@ int32_t OH_CommonEvent_GetLongArrayFromParameters(const CommonEvent_Parameters* 
 | -- | -- |
 | const CommonEvent_Parameters* para | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| long** array | 输出参数，用于接收查询到的long数组数据。该数组内存由函数内部分配，调用者无需预先分配。 |
+| long** array | 输出参数，用于接收查询到的long数组数据。该数组内存由函数内部分配，调用者无需 预先分配。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -871,10 +879,10 @@ CommonEvent_ErrCode OH_CommonEvent_SetLongArrayToParameters(CommonEvent_Paramete
 | -- | -- |
 | CommonEvent_Parameters* param | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| const long* value | 设置的long数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有越界访问风险。 |
+| const long* value | 设置的long数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有 越界访问风险。 |
 | size_t num | 设置的long数组内容中元素的个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -900,7 +908,7 @@ bool OH_CommonEvent_GetBoolFromParameters(const CommonEvent_Parameters* para, co
 | const char* key | 数据键。 |
 | const bool defaultValue | 默认值，当指定key不存在时返回此默认值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -926,7 +934,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetBoolToParameters(CommonEvent_Parameters* p
 | const char* key | 数据键。 |
 | bool value | 设置的布尔类型内容。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -950,9 +958,9 @@ int32_t OH_CommonEvent_GetBoolArrayFromParameters(const CommonEvent_Parameters* 
 | -- | -- |
 | const CommonEvent_Parameters* para | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| bool** array | 输出参数，用于接收查询到的bool数组数据。该数组内存由函数内部分配，调用者无需预先分配。 |
+| bool** array | 输出参数，用于接收查询到的bool数组数据。该数组内存由函数内部分配，调用者无需 预先分配。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -976,10 +984,10 @@ CommonEvent_ErrCode OH_CommonEvent_SetBoolArrayToParameters(CommonEvent_Paramete
 | -- | -- |
 | CommonEvent_Parameters* param | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| const bool* value | 设置的布尔数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有越界访问风险。 |
+| const bool* value | 设置的布尔数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有 越界访问风险。 |
 | size_t num | 设置的布尔数组内容中元素的个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1005,7 +1013,7 @@ char OH_CommonEvent_GetCharFromParameters(const CommonEvent_Parameters* para, co
 | const char* key | 数据键。 |
 | const char defaultValue | 默认值，当指定key不存在时返回此默认值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1031,7 +1039,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetCharToParameters(CommonEvent_Parameters* p
 | const char* key | 数据键。 |
 | char value | 设置的字符类型内容。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1055,9 +1063,9 @@ int32_t OH_CommonEvent_GetCharArrayFromParameters(const CommonEvent_Parameters* 
 | -- | -- |
 | const CommonEvent_Parameters* para | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| char** array | 输出参数，用于接收查询到的char数组数据。该数组内存由函数内部分配，调用者无需预先分配。 |
+| char** array | 输出参数，用于接收查询到的char数组数据。该数组内存由函数内部分配，调用者无需 预先分配。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1084,7 +1092,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetCharArrayToParameters(CommonEvent_Paramete
 | const char* value | 设置的字符数组内容。实际设置的数量为`num`与`value`数组长度的最小值。 |
 | size_t num | 设置的字符数组内容中元素的个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1110,7 +1118,7 @@ double OH_CommonEvent_GetDoubleFromParameters(const CommonEvent_Parameters* para
 | const char* key | 数据键。 |
 | const double defaultValue | 默认值，当指定key不存在时返回此默认值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1136,7 +1144,7 @@ CommonEvent_ErrCode OH_CommonEvent_SetDoubleToParameters(CommonEvent_Parameters*
 | const char* key | 数据键。 |
 | double value | 设置的double类型内容。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1160,9 +1168,9 @@ int32_t OH_CommonEvent_GetDoubleArrayFromParameters(const CommonEvent_Parameters
 | -- | -- |
 | const CommonEvent_Parameters* para | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| double** array | 输出参数，用于接收查询到的double数组数据。该数组内存由函数内部分配，调用者无需预先分配。 |
+| double** array | 输出参数，用于接收查询到的double数组数据。该数组内存由函数内部分配，调用者 无需预先分配。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1186,10 +1194,10 @@ CommonEvent_ErrCode OH_CommonEvent_SetDoubleArrayToParameters(CommonEvent_Parame
 | -- | -- |
 | CommonEvent_Parameters* param | 公共事件附加信息。 |
 | const char* key | 数据键。 |
-| const double* value | 设置的double数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有越界访问风险。 |
+| const double* value | 设置的double数组内容。实际设置的数量为`num`，value数组长度需大于`num`，否则会有 越界访问风险。 |
 | size_t num | 设置的double数组内容中元素的个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1213,7 +1221,7 @@ CommonEvent_ErrCode OH_CommonEvent_Publish(const char* event)
 | -- | -- |
 | const char* event | 公共事件名称。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1238,7 +1246,7 @@ CommonEvent_ErrCode OH_CommonEvent_PublishWithInfo(const char* event, const Comm
 | const char* event | 公共事件名称。 |
 | [const CommonEvent_PublishInfo](capi-oh-commonevent-commonevent-publishinfo.md)* info | 设置的公共事件属性。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1262,7 +1270,7 @@ bool OH_CommonEvent_IsOrderedCommonEvent(const CommonEvent_Subscriber* subscribe
 | -- | -- |
 | const CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1286,7 +1294,7 @@ bool OH_CommonEvent_FinishCommonEvent(CommonEvent_Subscriber* subscriber)
 | -- | -- |
 | CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1310,7 +1318,7 @@ bool OH_CommonEvent_GetAbortCommonEvent(const CommonEvent_Subscriber* subscriber
 | -- | -- |
 | const CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1334,7 +1342,7 @@ bool OH_CommonEvent_AbortCommonEvent(CommonEvent_Subscriber* subscriber)
 | -- | -- |
 | CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1358,7 +1366,7 @@ bool OH_CommonEvent_ClearAbortCommonEvent(CommonEvent_Subscriber* subscriber)
 | -- | -- |
 | CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1382,7 +1390,7 @@ int32_t OH_CommonEvent_GetCodeFromSubscriber(const CommonEvent_Subscriber* subsc
 | -- | -- |
 | const CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1407,7 +1415,7 @@ bool OH_CommonEvent_SetCodeToSubscriber(CommonEvent_Subscriber* subscriber, int3
 | CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 | int32_t code | 有序公共事件传递的数据，整数类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1431,7 +1439,7 @@ const char* OH_CommonEvent_GetDataFromSubscriber(const CommonEvent_Subscriber* s
 | -- | -- |
 | const CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -1454,10 +1462,10 @@ bool OH_CommonEvent_SetDataToSubscriber(CommonEvent_Subscriber* subscriber, cons
 | 参数项 | 描述 |
 | -- | -- |
 | CommonEvent_Subscriber* subscriber | 公共事件的订阅者对象。 |
-| const char* data | 有序公共事件传递的数据，字符串类型，实际有效数据长度为`length`与`data`字符串长度的最小值。 |
+| const char* data | 有序公共事件传递的数据，字符串类型，实际有效数据长度为`length`与`data`字符串长度 的最小值。 |
 | size_t length | 传递的数据字节长度，取值为`data`字符串长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

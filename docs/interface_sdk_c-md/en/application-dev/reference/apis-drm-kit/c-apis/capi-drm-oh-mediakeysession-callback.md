@@ -6,7 +6,7 @@ typedef struct OH_MediaKeySession_Callback {...} OH_MediaKeySession_Callback
 
 ## Overview
 
-The OH_MediaKeySession_Callback struct describes the callbacks for media key session events such as keyexpiration and key changes. It provides a MediaKeySession instance, making it suitable for multi-session decryptionscenarios.
+The OH_MediaKeySession_Callback struct describes the callbacks for media key session events such as key expiration and key changes. It provides a MediaKeySession instance, making it suitable for multi-session decryption scenarios.
 
 **Since**: 12
 

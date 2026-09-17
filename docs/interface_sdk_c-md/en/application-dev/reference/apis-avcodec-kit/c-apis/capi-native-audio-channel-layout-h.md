@@ -10,7 +10,7 @@ The file declares the functions related to the speaker layout during recording a
 
 **System capability**: SystemCapability.Multimedia.Media.Core
 
-**Since**: 11
+**Since**: 9
 
 **Related module**: [Core](capi-core.md)
 
@@ -20,9 +20,9 @@ The file declares the functions related to the speaker layout during recording a
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AudioChannelSet](#oh_audiochannelset) | OH_AudioChannelSet | Enumerates the audio channels.Each channel is mapped to a variable of uint64_t. |
-| [OH_AmbAttributeSet](#oh_ambattributeset) | OH_AmbAttributeSet | Ambisonic attribute set.A set of 64-bit integers indicate the ambisonic attributes. |
-| [OH_AudioChannelLayout](#oh_audiochannellayout) | OH_AudioChannelLayout | Enumerates the layouts of audio channels.Int64 integers are used to indicate the appearance and sequence of speakers during recording or playback. |
+| [OH_AudioChannelSet](#oh_audiochannelset) | OH_AudioChannelSet | Enumerates the audio channels.<br> Each channel is mapped to a variable of uint64_t. |
+| [OH_AmbAttributeSet](#oh_ambattributeset) | OH_AmbAttributeSet | Ambisonic attribute set.<br> A set of 64-bit integers indicate the ambisonic attributes. |
+| [OH_AudioChannelLayout](#oh_audiochannellayout) | OH_AudioChannelLayout | Enumerates the layouts of audio channels.<br> Int64 integers are used to indicate the appearance and sequence of speakers during recording or playback. |
 
 ## Enum type description
 
@@ -34,7 +34,7 @@ enum OH_AudioChannelSet
 
 **Description**
 
-Enumerates the audio channels.Each channel is mapped to a variable of uint64_t.
+Enumerates the audio channels.<br> Each channel is mapped to a variable of uint64_t.
 
 **Since**: 11
 
@@ -79,7 +79,7 @@ enum OH_AmbAttributeSet
 
 **Description**
 
-Ambisonic attribute set.A set of 64-bit integers indicate the ambisonic attributes.
+Ambisonic attribute set.<br> A set of 64-bit integers indicate the ambisonic attributes.
 
 **Since**: 11
 
@@ -102,7 +102,7 @@ enum OH_AudioChannelLayout
 
 **Description**
 
-Enumerates the layouts of audio channels.Int64 integers are used to indicate the appearance and sequence of speakers during recording or playback.
+Enumerates the layouts of audio channels.<br> Int64 integers are used to indicate the appearance and sequence of speakers during recording or playback.
 
 **Since**: 11
 

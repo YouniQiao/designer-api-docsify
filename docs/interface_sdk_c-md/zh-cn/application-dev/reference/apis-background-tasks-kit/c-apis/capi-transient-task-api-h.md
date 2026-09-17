@@ -2,7 +2,7 @@
 
 ## 概述
 
-提供短时任务申请、查询、取消功能。短时任务允许应用在后台获得有限的时间延长以完成关键操作。系统为每个应用分配每日配额限制，超时前通过回调通知应用，超时后系统会挂起应用。
+提供短时任务申请、查询、取消功能。<br> 短时任务允许应用在后台获得有限的时间延长以完成关键操作。 系统为每个应用分配每日配额限制，超时前通过回调通知应用，超时后系统会挂起应用。
 
 **引用文件：** <transient_task/transient_task_api.h>
 
@@ -47,7 +47,7 @@ int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, Transie
 | TransientTask_Callback callback | 短时任务即将超时的回调，一般在超时前6秒，通过此回调通知应用。 |
 | TransientTask_DelaySuspendInfo *info | 返回短时任务信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -69,10 +69,10 @@ int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t requestId | 短时任务的请求ID。为[OH_BackgroundTaskManager_RequestSuspendDelay][OH_BackgroundTaskManager_RequestSuspendDelay](capi-transient-task-api-h.md#oh_backgroundtaskmanager_requestsuspenddelay)成功返回的requestId。 |
+| int32_t requestId | 短时任务的请求ID。 为[OH_BackgroundTaskManager_RequestSuspendDelay][OH_BackgroundTaskManager_RequestSuspendDelay](capi-transient-task-api-h.md#oh_backgroundtaskmanager_requestsuspenddelay)成功返回的requestId。 |
 | int32_t *delayTime | 短时任务的剩余时间，单位：ms。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -94,9 +94,9 @@ int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t requestId | 短时任务的请求ID。为[OH_BackgroundTaskManager_RequestSuspendDelay][OH_BackgroundTaskManager_RequestSuspendDelay](capi-transient-task-api-h.md#oh_backgroundtaskmanager_requestsuspenddelay)成功返回的requestId。 |
+| int32_t requestId | 短时任务的请求ID。 为[OH_BackgroundTaskManager_RequestSuspendDelay][OH_BackgroundTaskManager_RequestSuspendDelay](capi-transient-task-api-h.md#oh_backgroundtaskmanager_requestsuspenddelay)成功返回的requestId。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -118,9 +118,9 @@ int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTas
 
 | 参数项 | 描述 |
 | -- | -- |
-| TransientTask_TransientTaskInfo *transientTaskInfo | 所有短时任务信息，具体请参考[TransientTask_TransientTaskInfo](capi-transienttask-transienttask-transienttaskinfo.md)。 |
+| TransientTask_TransientTaskInfo *transientTaskInfo | 所有短时任务信息， 具体请参考[TransientTask_TransientTaskInfo](capi-transienttask-transienttask-transienttaskinfo.md)。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

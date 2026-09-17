@@ -6,7 +6,7 @@ typedef struct OH_AudioConverterStruct OH_AudioConverter
 
 ## Overview
 
-Declare the audio converter.The handle of audio converter is used for audio converter related functions.
+Declare the audio converter. The handle of audio converter is used for audio converter related functions.
 
 **Since**: 26.0.0
 

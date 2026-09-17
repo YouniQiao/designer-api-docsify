@@ -2,7 +2,7 @@
 
 ## 概述
 
-声明与绘图模块中的对象相关的函数。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+声明与绘图模块中的对象相关的函数。 <br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **库：** libnative_drawing.so
 
@@ -24,7 +24,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)](#oh_drawing_maskfiltercreateblur) | 创建具有模糊效果的蒙版滤波器。常用于为图形、文本等绘制内容添加模糊视觉效果。创建的蒙版滤波器对象使用完毕后，必须调用[OH_Drawing_MaskFilterDestroy](capi-drawing-mask-filter-h.md#oh_drawing_maskfilterdestroy)销毁并释放内存。 |
+| [OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurType, float sigma, bool respectCTM)](#oh_drawing_maskfiltercreateblur) | 创建具有模糊效果的蒙版滤波器。常用于为图形、文本等绘制内容添加模糊视觉效果。创建的蒙版滤波器对象使用完毕后， 必须调用[OH_Drawing_MaskFilterDestroy](capi-drawing-mask-filter-h.md#oh_drawing_maskfilterdestroy)销毁并释放内存。 |
 | [void OH_Drawing_MaskFilterDestroy(OH_Drawing_MaskFilter* maskFilter)](#oh_drawing_maskfilterdestroy) | 销毁蒙版滤波器对象，并收回该对象占用的内存。 |
 
 ## 枚举类型说明
@@ -59,7 +59,7 @@ OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurT
 
 **描述：**
 
-创建具有模糊效果的蒙版滤波器。常用于为图形、文本等绘制内容添加模糊视觉效果。创建的蒙版滤波器对象使用完毕后，必须调用[OH_Drawing_MaskFilterDestroy](capi-drawing-mask-filter-h.md#oh_drawing_maskfilterdestroy)销毁并释放内存。
+创建具有模糊效果的蒙版滤波器。常用于为图形、文本等绘制内容添加模糊视觉效果。创建的蒙版滤波器对象使用完毕后， 必须调用[OH_Drawing_MaskFilterDestroy](capi-drawing-mask-filter-h.md#oh_drawing_maskfilterdestroy)销毁并释放内存。
 
 **起始版本：** 11
 
@@ -69,9 +69,9 @@ OH_Drawing_MaskFilter* OH_Drawing_MaskFilterCreateBlur(OH_Drawing_BlurType blurT
 | -- | -- |
 | [OH_Drawing_BlurType](capi-drawing-mask-filter-h.md#oh_drawing_blurtype) blurType | 表示模糊类型，用于指定蒙版滤波器的模糊操作方式。 |
 | float sigma | 表示要应用的高斯模糊的标准差，单位为px。必须大于0。 |
-| bool respectCTM | 表示模糊标准差值是否受CTM（当前变换矩阵）影响。传入true表示受CTM影响，传入false表示不受CTM影响，标准差值固定。 |
+| bool respectCTM | 表示模糊标准差值是否受CTM（当前变换矩阵）影响。传入true表示受CTM影响，传入false表示不受CTM影响， 标准差值固定。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

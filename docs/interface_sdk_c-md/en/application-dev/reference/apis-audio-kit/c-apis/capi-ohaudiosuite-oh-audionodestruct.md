@@ -6,7 +6,7 @@ typedef struct OH_AudioNodeStruct OH_AudioNode
 
 ## Overview
 
-Declare the audio node.The handle of audio suite node is used for audio suite node related functions.
+Declare the audio node. The handle of audio suite node is used for audio suite node related functions.
 
 **Since**: 22
 

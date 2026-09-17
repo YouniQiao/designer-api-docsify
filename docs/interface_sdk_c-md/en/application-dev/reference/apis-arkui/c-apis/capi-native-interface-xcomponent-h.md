@@ -27,7 +27,7 @@ Declares APIs for accessing a Native XComponent.
 | [OH_NativeXComponent_ExpectedRateRange](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-expectedraterange.md) | OH_NativeXComponent_ExpectedRateRange | Defines the expected frame rate range struct. |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md) | OH_NativeXComponent | Provides an encapsulated <b>OH_NativeXComponent</b> instance. |
 | [OH_NativeXComponent_KeyEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-keyevent.md) | OH_NativeXComponent_KeyEvent | Provides an encapsulated <b>OH_NativeXComponent_KeyEvent</b> instance. |
-| [OH_NativeXComponent_ExtraMouseEventInfo](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-extramouseeventinfo.md) | OH_NativeXComponent_ExtraMouseEventInfo | Provides an encapsulated <b>OH_NativeXComponent_ExtraMouseEventInfo</b>instance which has extra info compared to OH_NativeXComponent_MouseEvent. |
+| [OH_NativeXComponent_ExtraMouseEventInfo](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-extramouseeventinfo.md) | OH_NativeXComponent_ExtraMouseEventInfo | Provides an encapsulated <b>OH_NativeXComponent_ExtraMouseEventInfo</b> instance which has extra info compared to OH_NativeXComponent_MouseEvent. |
 | [OH_ArkUI_SurfaceHolder](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfaceholder.md) | OH_ArkUI_SurfaceHolder | Provides an encapsulated <b>OH_ArkUI_SurfaceHolder</b> instance. |
 | [OH_ArkUI_SurfaceCallback](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfacecallback.md) | OH_ArkUI_SurfaceCallback | Define the surface lifecycle callback. |
 | [NativeWindow](capi-oh-nativexcomponent-native-xcomponent-nativewindow.md) | OHNativeWindow | Forward declaration of OHNativeWindow. |
@@ -57,10 +57,10 @@ Declares APIs for accessing a Native XComponent.
 | [int32_t OH_NativeXComponent_GetTouchPointToolType(OH_NativeXComponent* component, uint32_t pointIndex, OH_NativeXComponent_TouchPointToolType* toolType)](#oh_nativexcomponent_gettouchpointtooltype) | Obtains the touch pointer tool type by the ArkUI XComponent. |
 | [int32_t OH_NativeXComponent_GetTouchPointTiltX(OH_NativeXComponent* component, uint32_t pointIndex, float* tiltX)](#oh_nativexcomponent_gettouchpointtiltx) | Obtains the touch pointer tiltX by the ArkUI XComponent. |
 | [int32_t OH_NativeXComponent_GetTouchPointTiltY(OH_NativeXComponent* component, uint32_t pointIndex, float* tiltY)](#oh_nativexcomponent_gettouchpointtilty) | Obtains the touch pointer tiltX by the ArkUI XComponent. |
-| [int32_t OH_NativeXComponent_GetTouchPointWindowX(OH_NativeXComponent* component, uint32_t pointIndex, float* windowX)](#oh_nativexcomponent_gettouchpointwindowx) | Obtains the x coordinate of a specific touch point relative to the upper left corner of<br> the current application window from the ArkUI XComponent. |
-| [int32_t OH_NativeXComponent_GetTouchPointWindowY(OH_NativeXComponent* component, uint32_t pointIndex, float* windowY)](#oh_nativexcomponent_gettouchpointwindowy) | Obtains the y coordinate of a specific touch point relative to the upper left corner of<br> the current application window from the ArkUI XComponent. |
-| [int32_t OH_NativeXComponent_GetTouchPointDisplayX(OH_NativeXComponent* component, uint32_t pointIndex, float* displayX)](#oh_nativexcomponent_gettouchpointdisplayx) | Obtains the x coordinate of a specific touch point relative to the upper left corner of<br> the current screen from the ArkUI XComponent. |
-| [int32_t OH_NativeXComponent_GetTouchPointDisplayY(OH_NativeXComponent* component, uint32_t pointIndex, float* displayY)](#oh_nativexcomponent_gettouchpointdisplayy) | Obtains the y coordinate of a specific touch point relative to the upper left corner of<br> the current screen from the ArkUI XComponent. |
+| [int32_t OH_NativeXComponent_GetTouchPointWindowX(OH_NativeXComponent* component, uint32_t pointIndex, float* windowX)](#oh_nativexcomponent_gettouchpointwindowx) | Obtains the x coordinate of a specific touch point relative to the upper left corner of the current application window from the ArkUI XComponent. |
+| [int32_t OH_NativeXComponent_GetTouchPointWindowY(OH_NativeXComponent* component, uint32_t pointIndex, float* windowY)](#oh_nativexcomponent_gettouchpointwindowy) | Obtains the y coordinate of a specific touch point relative to the upper left corner of the current application window from the ArkUI XComponent. |
+| [int32_t OH_NativeXComponent_GetTouchPointDisplayX(OH_NativeXComponent* component, uint32_t pointIndex, float* displayX)](#oh_nativexcomponent_gettouchpointdisplayx) | Obtains the x coordinate of a specific touch point relative to the upper left corner of the current screen from the ArkUI XComponent. |
+| [int32_t OH_NativeXComponent_GetTouchPointDisplayY(OH_NativeXComponent* component, uint32_t pointIndex, float* displayY)](#oh_nativexcomponent_gettouchpointdisplayy) | Obtains the y coordinate of a specific touch point relative to the upper left corner of the current screen from the ArkUI XComponent. |
 | [int32_t OH_NativeXComponent_GetHistoricalPoints(OH_NativeXComponent* component, const void* window, int32_t* size, OH_NativeXComponent_HistoricalPoint** historicalPoints)](#oh_nativexcomponent_gethistoricalpoints) | Obtains the touch event dispatched by the ArkUI XComponent. |
 | [int32_t OH_NativeXComponent_GetMouseEvent(OH_NativeXComponent* component, const void* window, OH_NativeXComponent_MouseEvent* mouseEvent)](#oh_nativexcomponent_getmouseevent) | Obtains the mouse event dispatched by the ArkUI XComponent. |
 | [int32_t OH_NativeXComponent_RegisterCallback(OH_NativeXComponent* component, OH_NativeXComponent_Callback* callback)](#oh_nativexcomponent_registercallback) | Registers a callback for this <b>OH_NativeXComponent</b> instance. |
@@ -87,15 +87,15 @@ Declares APIs for accessing a Native XComponent.
 | [int32_t OH_NativeXComponent_DetachNativeRootNode(OH_NativeXComponent* component, ArkUI_NodeHandle root)](#oh_nativexcomponent_detachnativerootnode) | Detaches the native component of ArkUI from this <b>OH_NativeXComponent</b> instance.(Deprecated in API20) |
 | [int32_t OH_NativeXComponent_RegisterSurfaceShowCallback(OH_NativeXComponent* component, void (\*callback)(OH_NativeXComponent* component, void* window))](#oh_nativexcomponent_registersurfaceshowcallback) | Registers a callback for this <b>OH_NativeXComponent</b> instance. |
 | [int32_t OH_NativeXComponent_RegisterSurfaceHideCallback(OH_NativeXComponent* component, void (\*callback)(OH_NativeXComponent* component, void* window))](#oh_nativexcomponent_registersurfacehidecallback) | Registers a callback for this <b>OH_NativeXComponent</b> instance. |
-| [int32_t OH_NativeXComponent_RegisterUIInputEventCallback(OH_NativeXComponent* component, void (\*callback)(OH_NativeXComponent* component, ArkUI_UIInputEvent* event, ArkUI_UIInputEvent_Type type), ArkUI_UIInputEvent_Type type)](#oh_nativexcomponent_registeruiinputeventcallback) | Registers a UI input event callback for an <b>OH_NativeXComponent</b> instance and enables the callback to beinvoked when a UI input event is received. Currently, only axis events are supported. |
+| [int32_t OH_NativeXComponent_RegisterUIInputEventCallback(OH_NativeXComponent* component, void (\*callback)(OH_NativeXComponent* component, ArkUI_UIInputEvent* event, ArkUI_UIInputEvent_Type type), ArkUI_UIInputEvent_Type type)](#oh_nativexcomponent_registeruiinputeventcallback) | Registers a UI input event callback for an <b>OH_NativeXComponent</b> instance and enables the callback to be invoked when a UI input event is received. Currently, only axis events are supported. |
 | [int32_t OH_NativeXComponent_SetNeedSoftKeyboard(OH_NativeXComponent* component, bool needSoftKeyboard)](#oh_nativexcomponent_setneedsoftkeyboard) | Set whether the <b>OH_NativeXComponent</b> instance needs soft keyboard. |
-| [int32_t OH_NativeXComponent_RegisterOnTouchInterceptCallback(OH_NativeXComponent* component, HitTestMode (\*callback)(OH_NativeXComponent* component, ArkUI_UIInputEvent* event))](#oh_nativexcomponent_registerontouchinterceptcallback) | Registers a custom event intercept callback for an <b>OH_NativeXComponent</b> instance.This enables the specified during hit testing.UI input-related operations are not supported on event objects received through this callback.For full functionality, use the <b>NODE_ON_TOUCH_INTERCEPT</b> event on native nodes instead. |
+| [int32_t OH_NativeXComponent_RegisterOnTouchInterceptCallback(OH_NativeXComponent* component, HitTestMode (\*callback)(OH_NativeXComponent* component, ArkUI_UIInputEvent* event))](#oh_nativexcomponent_registerontouchinterceptcallback) | Registers a custom event intercept callback for an <b>OH_NativeXComponent</b> instance. This enables the specified during hit testing. UI input-related operations are not supported on event objects received through this callback. For full functionality, use the <b>NODE_ON_TOUCH_INTERCEPT</b> event on native nodes instead. |
 | [int32_t OH_NativeXComponent_GetTouchEventSourceType(OH_NativeXComponent* component, int32_t pointId, OH_NativeXComponent_EventSourceType* sourceType)](#oh_nativexcomponent_gettoucheventsourcetype) | Obtains the touch event's source type dispatched by the ArkUI XComponent. |
-| [OH_NativeXComponent* OH_NativeXComponent_GetNativeXComponent(ArkUI_NodeHandle node)](#oh_nativexcomponent_getnativexcomponent) | Obtains the pointer to an <b>OH_NativeXComponent</b> instance based on the specified componentinstance created by the native API. |
-| [int32_t OH_NativeXComponent_GetNativeAccessibilityProvider(OH_NativeXComponent* component, ArkUI_AccessibilityProvider** handle)](#oh_nativexcomponent_getnativeaccessibilityprovider) | Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b>instance of this <b>OH_NativeXComponent</b> instance. |
+| [OH_NativeXComponent* OH_NativeXComponent_GetNativeXComponent(ArkUI_NodeHandle node)](#oh_nativexcomponent_getnativexcomponent) | Obtains the pointer to an <b>OH_NativeXComponent</b> instance based on the specified component instance created by the native API. |
+| [int32_t OH_NativeXComponent_GetNativeAccessibilityProvider(OH_NativeXComponent* component, ArkUI_AccessibilityProvider** handle)](#oh_nativexcomponent_getnativeaccessibilityprovider) | Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b> instance of this <b>OH_NativeXComponent</b> instance. |
 | [int32_t OH_NativeXComponent_RegisterKeyEventCallbackWithResult(OH_NativeXComponent* component, bool (\*callback)(OH_NativeXComponent* component, void* window))](#oh_nativexcomponent_registerkeyeventcallbackwithresult) | Registers a callback for this <b>OH_NativeXComponent</b> instance. |
-| [int32_t OH_ArkUI_XComponent_StartImageAnalyzer(ArkUI_NodeHandle node, void* userData, void (\*callback)(ArkUI_NodeHandle node, ArkUI_XComponent_ImageAnalyzerState statusCode, void* userData))](#oh_arkui_xcomponent_startimageanalyzer) | Start image analyzer for the specified XComponentinstance created by the native API. |
-| [int32_t OH_ArkUI_XComponent_StopImageAnalyzer(ArkUI_NodeHandle node)](#oh_arkui_xcomponent_stopimageanalyzer) | Stop image analyzer for the specified XComponentinstance created by the native API. |
+| [int32_t OH_ArkUI_XComponent_StartImageAnalyzer(ArkUI_NodeHandle node, void* userData, void (\*callback)(ArkUI_NodeHandle node, ArkUI_XComponent_ImageAnalyzerState statusCode, void* userData))](#oh_arkui_xcomponent_startimageanalyzer) | Start image analyzer for the specified XComponent instance created by the native API. |
+| [int32_t OH_ArkUI_XComponent_StopImageAnalyzer(ArkUI_NodeHandle node)](#oh_arkui_xcomponent_stopimageanalyzer) | Stop image analyzer for the specified XComponent instance created by the native API. |
 | [OH_ArkUI_SurfaceHolder* OH_ArkUI_SurfaceHolder_Create(ArkUI_NodeHandle node)](#oh_arkui_surfaceholder_create) | Create a <b>OH_ArkUI_SurfaceHolder</b> object from an XComponent node. |
 | [void OH_ArkUI_SurfaceHolder_Dispose(OH_ArkUI_SurfaceHolder* surfaceHolder)](#oh_arkui_surfaceholder_dispose) | Disposes of a <b>OH_ArkUI_SurfaceHolder</b> object. |
 | [int32_t OH_ArkUI_SurfaceHolder_SetUserData(OH_ArkUI_SurfaceHolder* surfaceHolder, void* userData)](#oh_arkui_surfaceholder_setuserdata) | Saves custom data on the <b>OH_ArkUI_SurfaceHolder</b> instance. |
@@ -106,7 +106,7 @@ Declares APIs for accessing a Native XComponent.
 | [void OH_ArkUI_SurfaceCallback_SetSurfaceChangedEvent(OH_ArkUI_SurfaceCallback* callback, void (\*onSurfaceChanged)(OH_ArkUI_SurfaceHolder* surfaceHolder, uint64_t width, uint64_t height))](#oh_arkui_surfacecallback_setsurfacechangedevent) | Set the surface changed event of the surface callback. |
 | [void OH_ArkUI_SurfaceCallback_SetSurfaceDestroyedEvent(OH_ArkUI_SurfaceCallback* callback, void (\*onSurfaceDestroyed)(OH_ArkUI_SurfaceHolder* surfaceHolder))](#oh_arkui_surfacecallback_setsurfacedestroyedevent) | Set the surface destroyed event of the surface callback. |
 | [int32_t OH_ArkUI_SurfaceHolder_AddSurfaceCallback(OH_ArkUI_SurfaceHolder* surfaceHolder, OH_ArkUI_SurfaceCallback* callback)](#oh_arkui_surfaceholder_addsurfacecallback) | Adds a surface lifecycle callback for this <b>OH_ArkUI_SurfaceHolder</b> instance. |
-| [int32_t OH_ArkUI_SurfaceHolder_RemoveSurfaceCallback(OH_ArkUI_SurfaceHolder* surfaceHolder, OH_ArkUI_SurfaceCallback* callback)](#oh_arkui_surfaceholder_removesurfacecallback) | Removes a previously added surface lifecycle callbackfrom this <b>OH_ArkUI_SurfaceHolder</b> instance. |
+| [int32_t OH_ArkUI_SurfaceHolder_RemoveSurfaceCallback(OH_ArkUI_SurfaceHolder* surfaceHolder, OH_ArkUI_SurfaceCallback* callback)](#oh_arkui_surfaceholder_removesurfacecallback) | Removes a previously added surface lifecycle callback from this <b>OH_ArkUI_SurfaceHolder</b> instance. |
 | [OHNativeWindow* OH_ArkUI_XComponent_GetNativeWindow(OH_ArkUI_SurfaceHolder* surfaceHolder)](#oh_arkui_xcomponent_getnativewindow) | Obtains the nativeWindow associated with a <b>OH_ArkUI_SurfaceHolder</b> instance. |
 | [int32_t OH_ArkUI_XComponent_SetAutoInitialize(ArkUI_NodeHandle node, bool autoInitialize)](#oh_arkui_xcomponent_setautoinitialize) | Set whether the XComponent node needs to initialize automatically. |
 | [int32_t OH_ArkUI_XComponent_Initialize(ArkUI_NodeHandle node)](#oh_arkui_xcomponent_initialize) | Initialize the XComponent node. |
@@ -122,7 +122,7 @@ Declares APIs for accessing a Native XComponent.
 | [void OH_ArkUI_SurfaceCallback_SetSurfaceHideEvent(OH_ArkUI_SurfaceCallback* callback, void (\*onSurfaceHide)(OH_ArkUI_SurfaceHolder* surfaceHolder))](#oh_arkui_surfacecallback_setsurfacehideevent) | Set the surface hide event of the surface callback. |
 | [ArkUI_XComponentSurfaceConfig* OH_ArkUI_XComponentSurfaceConfig_Create()](#oh_arkui_xcomponentsurfaceconfig_create) | Create an <b>ArkUI_XComponentSurfaceConfig</b> object. |
 | [void OH_ArkUI_XComponentSurfaceConfig_Dispose(ArkUI_XComponentSurfaceConfig* config)](#oh_arkui_xcomponentsurfaceconfig_dispose) | Dispose of an <b>ArkUI_XComponentSurfaceConfig</b> object. |
-| [void OH_ArkUI_XComponentSurfaceConfig_SetIsOpaque(ArkUI_XComponentSurfaceConfig* config, bool isOpaque)](#oh_arkui_xcomponentsurfaceconfig_setisopaque) | Set whether the surface held by XComponent needs to be considered opaque,even if the surface has translucent pixel. |
+| [void OH_ArkUI_XComponentSurfaceConfig_SetIsOpaque(ArkUI_XComponentSurfaceConfig* config, bool isOpaque)](#oh_arkui_xcomponentsurfaceconfig_setisopaque) | Set whether the surface held by XComponent needs to be considered opaque, even if the surface has translucent pixel. |
 | [int32_t OH_ArkUI_SurfaceHolder_SetSurfaceConfig(OH_ArkUI_SurfaceHolder *surfaceHolder, ArkUI_XComponentSurfaceConfig *config)](#oh_arkui_surfaceholder_setsurfaceconfig) | Set surface config for this <b>OH_ArkUI_SurfaceHolder</b> instance. |
 
 ### Variable
@@ -303,7 +303,7 @@ Obtains the ID of the ArkUI XComponent.
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | Indicates the pointer to this <b>OH_NativeXComponent</b> instance. |
-| char* id | Indicates the char buffer to keep the ID of this <b>OH_NativeXComponent</b> instance.<br>        Notice that a null-terminator will be appended to the char buffer, so the size of the<br>        char buffer should be at least as large as the size of the real id length plus 1.<br>        It is recommended that the size of the char buffer be [OH_XCOMPONENT_ID_LEN_MAX + 1]. |
+| char* id | Indicates the char buffer to keep the ID of this <b>OH_NativeXComponent</b> instance. Notice that a null-terminator will be appended to the char buffer, so the size of the char buffer should be at least as large as the size of the real id length plus 1. It is recommended that the size of the char buffer be [OH_XCOMPONENT_ID_LEN_MAX + 1]. |
 | uint64_t* size | Indicates the pointer to the length of <b>id</b>, which you can receive. |
 
 **Returns**:
@@ -478,7 +478,7 @@ int32_t OH_NativeXComponent_GetTouchPointWindowX(OH_NativeXComponent* component,
 
 **Description**
 
-Obtains the x coordinate of a specific touch point relative to the upper left corner of<br> the current application window from the ArkUI XComponent.
+Obtains the x coordinate of a specific touch point relative to the upper left corner of the current application window from the ArkUI XComponent.
 
 **Since**: 12
 
@@ -504,7 +504,7 @@ int32_t OH_NativeXComponent_GetTouchPointWindowY(OH_NativeXComponent* component,
 
 **Description**
 
-Obtains the y coordinate of a specific touch point relative to the upper left corner of<br> the current application window from the ArkUI XComponent.
+Obtains the y coordinate of a specific touch point relative to the upper left corner of the current application window from the ArkUI XComponent.
 
 **Since**: 12
 
@@ -530,7 +530,7 @@ int32_t OH_NativeXComponent_GetTouchPointDisplayX(OH_NativeXComponent* component
 
 **Description**
 
-Obtains the x coordinate of a specific touch point relative to the upper left corner of<br> the current screen from the ArkUI XComponent.
+Obtains the x coordinate of a specific touch point relative to the upper left corner of the current screen from the ArkUI XComponent.
 
 **Since**: 12
 
@@ -556,7 +556,7 @@ int32_t OH_NativeXComponent_GetTouchPointDisplayY(OH_NativeXComponent* component
 
 **Description**
 
-Obtains the y coordinate of a specific touch point relative to the upper left corner of<br> the current screen from the ArkUI XComponent.
+Obtains the y coordinate of a specific touch point relative to the upper left corner of the current screen from the ArkUI XComponent.
 
 **Since**: 12
 
@@ -700,7 +700,7 @@ Obtains the extra mouse event dispatched by the ArkUI XComponent.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_GetMouseEventModifierKeyStates()
 
@@ -719,13 +719,13 @@ Obtains the state of the modifier keys of the mouse event.
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent_ExtraMouseEventInfo](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-extramouseeventinfo.md)* extraMouseEventInfo | Indicates the pointer to this <b>OH_NativeXComponent_ExtraMouseEventInfo</b> instance. |
-| uint64_t* keys | Pointer to a variable where the current combination of pressed modifier keys will be returned.The application can use bitwise operations to determine the state of each modifier key.Modifier keys can be referred to {@link ArkUI_ModifierKeyName}. |
+| uint64_t* keys | Pointer to a variable where the current combination of pressed modifier keys will be returned. The application can use bitwise operations to determine the state of each modifier key. Modifier keys can be referred to {@link ArkUI_ModifierKeyName}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_RegisterFocusEventCallback()
 
@@ -969,13 +969,13 @@ Obtains the state of the modifier keys of the key event.
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent_KeyEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-keyevent.md)* keyEvent | Indicates the pointer to this <b>OH_NativeXComponent_KeyEvent</b> instance. |
-| uint64_t* keys | Pointer to a variable where the current combination of pressed modifier keys will be returned.The application can use bitwise operations to determine the state of each modifier key.Modifier keys can be referred to {@link ArkUI_ModifierKeyName}. |
+| uint64_t* keys | Pointer to a variable where the current combination of pressed modifier keys will be returned. The application can use bitwise operations to determine the state of each modifier key. Modifier keys can be referred to {@link ArkUI_ModifierKeyName}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_GetKeyEventNumLockState()
 
@@ -1000,7 +1000,7 @@ Obtains the Num Lock state of the key event.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_GetKeyEventCapsLockState()
 
@@ -1025,7 +1025,7 @@ Obtains the Caps Lock state of the key event.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_GetKeyEventScrollLockState()
 
@@ -1050,7 +1050,7 @@ Obtains the Scroll Lock state of the key event.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_SetExpectedFrameRateRange()
 
@@ -1242,7 +1242,7 @@ int32_t OH_NativeXComponent_RegisterUIInputEventCallback(OH_NativeXComponent* co
 
 **Description**
 
-Registers a UI input event callback for an <b>OH_NativeXComponent</b> instance and enables the callback to beinvoked when a UI input event is received. Currently, only axis events are supported.
+Registers a UI input event callback for an <b>OH_NativeXComponent</b> instance and enables the callback to be invoked when a UI input event is received. Currently, only axis events are supported.
 
 **Since**: 12
 
@@ -1258,7 +1258,7 @@ Registers a UI input event callback for an <b>OH_NativeXComponent</b> instance a
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_SetNeedSoftKeyboard()
 
@@ -1277,7 +1277,7 @@ Set whether the <b>OH_NativeXComponent</b> instance needs soft keyboard.
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | Indicates the pointer to this <b>OH_NativeXComponent</b> instance. |
-| bool needSoftKeyboard | Indicates whether the <b>OH_NativeXComponent</b> instance needs soft keyboard or not.Default value is false. |
+| bool needSoftKeyboard | Indicates whether the <b>OH_NativeXComponent</b> instance needs soft keyboard or not. Default value is false. |
 
 **Returns**:
 
@@ -1293,7 +1293,7 @@ int32_t OH_NativeXComponent_RegisterOnTouchInterceptCallback(OH_NativeXComponent
 
 **Description**
 
-Registers a custom event intercept callback for an <b>OH_NativeXComponent</b> instance.This enables the specified during hit testing.UI input-related operations are not supported on event objects received through this callback.For full functionality, use the <b>NODE_ON_TOUCH_INTERCEPT</b> event on native nodes instead.
+Registers a custom event intercept callback for an <b>OH_NativeXComponent</b> instance. This enables the specified during hit testing. UI input-related operations are not supported on event objects received through this callback. For full functionality, use the <b>NODE_ON_TOUCH_INTERCEPT</b> event on native nodes instead.
 
 **Since**: 12
 
@@ -1308,7 +1308,7 @@ Registers a custom event intercept callback for an <b>OH_NativeXComponent</b> in
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_NativeXComponent_GetTouchEventSourceType()
 
@@ -1344,7 +1344,7 @@ OH_NativeXComponent* OH_NativeXComponent_GetNativeXComponent(ArkUI_NodeHandle no
 
 **Description**
 
-Obtains the pointer to an <b>OH_NativeXComponent</b> instance based on the specified componentinstance created by the native API.
+Obtains the pointer to an <b>OH_NativeXComponent</b> instance based on the specified component instance created by the native API.
 
 **Since**: 12
 
@@ -1368,7 +1368,7 @@ int32_t OH_NativeXComponent_GetNativeAccessibilityProvider(OH_NativeXComponent* 
 
 **Description**
 
-Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b>instance of this <b>OH_NativeXComponent</b> instance.
+Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b> instance of this <b>OH_NativeXComponent</b> instance.
 
 **Since**: 13
 
@@ -1418,7 +1418,7 @@ int32_t OH_ArkUI_XComponent_StartImageAnalyzer(ArkUI_NodeHandle node, void* user
 
 **Description**
 
-Start image analyzer for the specified XComponentinstance created by the native API.
+Start image analyzer for the specified XComponent instance created by the native API.
 
 **Since**: 18
 
@@ -1434,7 +1434,7 @@ Start image analyzer for the specified XComponentinstance created by the native 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.\n          {@link ARKUI_ERROR_CODE_PARAM_INVALID} component is nullptr or callback is nullptr,          or the type of node is not XComponent.\n |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.\n<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} component is nullptr or callback is nullptr,          or the type of node is not XComponent.\n |
 
 ### OH_ArkUI_XComponent_StopImageAnalyzer()
 
@@ -1444,7 +1444,7 @@ int32_t OH_ArkUI_XComponent_StopImageAnalyzer(ArkUI_NodeHandle node)
 
 **Description**
 
-Stop image analyzer for the specified XComponentinstance created by the native API.
+Stop image analyzer for the specified XComponent instance created by the native API.
 
 **Since**: 18
 
@@ -1458,7 +1458,7 @@ Stop image analyzer for the specified XComponentinstance created by the native A
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.\n          {@link ARKUI_ERROR_CODE_PARAM_INVALID} component is nullptr or the type of node is not XComponent.\n |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.\n<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} component is nullptr or the type of node is not XComponent.\n |
 
 ### OH_ArkUI_SurfaceHolder_Create()
 
@@ -1518,14 +1518,14 @@ Saves custom data on the <b>OH_ArkUI_SurfaceHolder</b> instance.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_SurfaceHolder](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfaceholder.md)* surfaceHolder | Indicates the <b>OH_ArkUI_SurfaceHolder</b> instanceon which the custom data will be saved. |
+| [OH_ArkUI_SurfaceHolder](capi-oh-nativexcomponent-native-xcomponent-oh-arkui-surfaceholder.md)* surfaceHolder | Indicates the <b>OH_ArkUI_SurfaceHolder</b> instance on which the custom data will be saved. |
 | void* userData | Indicates the custom data to be saved. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_SurfaceHolder_GetUserData()
 
@@ -1604,7 +1604,7 @@ Set the surface created event of the surface callback.
 | Parameter | Description |
 | -- | -- |
 | H_ArkUI_SurfaceCallback\* callback | Indicated the pointer to the surface callback. |
-| void (\*onSurfaceCreated)(OH_ArkUI_SurfaceHolder\* surfaceHolder) | Indicates the surface created callback eventwhich will called when the surface is created. |
+| void (\*onSurfaceCreated)(OH_ArkUI_SurfaceHolder\* surfaceHolder) | Indicates the surface created callback event which will called when the surface is created. |
 
 ### OH_ArkUI_SurfaceCallback_SetSurfaceChangedEvent()
 
@@ -1623,7 +1623,7 @@ Set the surface changed event of the surface callback.
 | Parameter | Description |
 | -- | -- |
 | H_ArkUI_SurfaceCallback\* callback | Indicated the pointer to the surface callback. |
-| void (\*onSurfaceChanged)(OH_ArkUI_SurfaceHolder\* surfaceHolder | Indicates the surface changed callback eventwhich will called when the surface is changed. |
+| void (\*onSurfaceChanged)(OH_ArkUI_SurfaceHolder\* surfaceHolder | Indicates the surface changed callback event which will called when the surface is changed. |
 
 ### OH_ArkUI_SurfaceCallback_SetSurfaceDestroyedEvent()
 
@@ -1642,7 +1642,7 @@ Set the surface destroyed event of the surface callback.
 | Parameter | Description |
 | -- | -- |
 | H_ArkUI_SurfaceCallback\* callback | Indicated the pointer to the surface callback. |
-| void (\*onSurfaceDestroyed)(OH_ArkUI_SurfaceHolder\* surfaceHolder) | Indicates the surface destroyed callback eventwhich will called when the surface is destroyed. |
+| void (\*onSurfaceDestroyed)(OH_ArkUI_SurfaceHolder\* surfaceHolder) | Indicates the surface destroyed callback event which will called when the surface is destroyed. |
 
 ### OH_ArkUI_SurfaceHolder_AddSurfaceCallback()
 
@@ -1667,7 +1667,7 @@ Adds a surface lifecycle callback for this <b>OH_ArkUI_SurfaceHolder</b> instanc
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_SurfaceHolder_RemoveSurfaceCallback()
 
@@ -1677,7 +1677,7 @@ int32_t OH_ArkUI_SurfaceHolder_RemoveSurfaceCallback(OH_ArkUI_SurfaceHolder* sur
 
 **Description**
 
-Removes a previously added surface lifecycle callbackfrom this <b>OH_ArkUI_SurfaceHolder</b> instance.
+Removes a previously added surface lifecycle callback from this <b>OH_ArkUI_SurfaceHolder</b> instance.
 
 **Since**: 19
 
@@ -1692,7 +1692,7 @@ Removes a previously added surface lifecycle callbackfrom this <b>OH_ArkUI_Surfa
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_XComponent_GetNativeWindow()
 
@@ -1735,13 +1735,13 @@ Set whether the XComponent node needs to initialize automatically.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
-| bool autoInitialize | Indicates whether the XComponent node needs to initialize automatically or not.If the value is true, OnSurfaceCreated will be called when the node is mounted andOnSurfaceDestroyed will be called when the node is unmounted.Default value is true. |
+| bool autoInitialize | Indicates whether the XComponent node needs to initialize automatically or not. If the value is true, OnSurfaceCreated will be called when the node is mounted and OnSurfaceDestroyed will be called when the node is unmounted. Default value is true. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid. |
 
 ### OH_ArkUI_XComponent_Initialize()
 
@@ -1765,7 +1765,7 @@ Initialize the XComponent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid.          {@link ARKUI_ERROR_CODE_XCOMPONENT_STATE_INVALID} if the node has initialized. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid.<br>        {@link ARKUI_ERROR_CODE_XCOMPONENT_STATE_INVALID} if the node has initialized. |
 
 ### OH_ArkUI_XComponent_Finalize()
 
@@ -1789,7 +1789,7 @@ Finalize the XComponent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid.          {@link ARKUI_ERROR_CODE_XCOMPONENT_STATE_INVALID} if the node has finalized. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid.<br>        {@link ARKUI_ERROR_CODE_XCOMPONENT_STATE_INVALID} if the node has finalized. |
 
 ### OH_ArkUI_XComponent_IsInitialized()
 
@@ -1814,7 +1814,7 @@ Obtains whether the XComponent node has initialized or not.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node is invalid. |
 
 ### OH_ArkUI_XComponent_SetExpectedFrameRateRange()
 
@@ -1839,7 +1839,7 @@ Set the Expected FrameRateRange for the XComponent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_XComponent_RegisterOnFrameCallback()
 
@@ -1864,7 +1864,7 @@ Registers an onFrame callback for the XComponent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_XComponent_UnregisterOnFrameCallback()
 
@@ -1888,7 +1888,7 @@ UnRegister the onFrame callback for the XComponent node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_XComponent_SetNeedSoftKeyboard()
 
@@ -1907,13 +1907,13 @@ Set whether the XComponent node needs soft keyboard when focused.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | Indicates the pointer to the XComponent node. |
-| bool needSoftKeyboard | Indicates whether the XComponent node needs soft keyboard or not.Default value is false. |
+| bool needSoftKeyboard | Indicates whether the XComponent node needs soft keyboard or not. Default value is false. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_AccessibilityProvider_Create()
 
@@ -2039,7 +2039,7 @@ void OH_ArkUI_XComponentSurfaceConfig_SetIsOpaque(ArkUI_XComponentSurfaceConfig*
 
 **Description**
 
-Set whether the surface held by XComponent needs to be considered opaque,even if the surface has translucent pixel.
+Set whether the surface held by XComponent needs to be considered opaque, even if the surface has translucent pixel.
 
 **Since**: 22
 
@@ -2048,7 +2048,7 @@ Set whether the surface held by XComponent needs to be considered opaque,even if
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_XComponentSurfaceConfig](capi-oh-nativexcomponent-native-xcomponent-arkui-xcomponentsurfaceconfig.md)* config | A pointer to the object of the XComponent's surface config. |
-| bool isOpaque | Indicates whether the surface held by XComponent needs to be considered opaque,True means needing to be considered opaque, false otherwise. |
+| bool isOpaque | Indicates whether the surface held by XComponent needs to be considered opaque, True means needing to be considered opaque, false otherwise. |
 
 ### OH_ArkUI_SurfaceHolder_SetSurfaceConfig()
 
@@ -2073,6 +2073,6 @@ Set surface config for this <b>OH_ArkUI_SurfaceHolder</b> instance.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the status code of the execution.          {@link ARKUI_ERROR_CODE_NO_ERROR} the execution is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

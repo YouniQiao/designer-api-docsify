@@ -2,7 +2,7 @@
 
 ## 概述
 
-Declares APIs for discovering and connecting to printers, printingfiles, and querying the list of added printers and printer information.
+Declares APIs for discovering and connecting to printers, printing files, and querying the list of added printers and printer information.
 
 **库：** libohprint.so
 
@@ -77,6 +77,17 @@ Declares APIs for discovering and connecting to printers, printingfiles, and que
 | [Print_ErrorCode OH_Print_StartPrintByNative(const char *printJobName, Print_PrintDocCallback printDocCallback, void *context)](#oh_print_startprintbynative) | - | 此 API 提供启动打印对话框的能力。 |
 | [typedef void(\*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state)](#oh_print_onjobstatechanged) | OH_Print_OnJobStateChanged | 打印任务状态回调。 |
 | [Print_ErrorCode OH_Print_StartPrintWithJobStateCallback(const Print_PrintJob *printJob, OH_Print_OnJobStateChanged jobStateChangedCb)](#oh_print_startprintwithjobstatecallback) | - | 此API下发打印任务，并附带任务状态变更回调功能。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void(*Print_WriteResultCallback)(const char *jobId, uint32_t code) | 写文件结果回调。<br>**起始版本：** 13 |
+| void(*Print_OnStartLayoutWrite)(const char *jobId, uint32_t fd, const Print_PrintAttributes *oldAttrs, const Print_PrintAttributes *newAttrs, Print_WriteResultCallback writeCallback) | 打印开始布局回调。<br>**起始版本：** 13 |
+| void(*Print_OnJobStateChanged)(const char *jobId, uint32_t state) | 打印任务状态回调。<br>**起始版本：** 13 |
+| void (*Print_PrinterDiscoveryCallback)(Print_DiscoveryEvent event, const Print_PrinterInfo *printerInfo) | 打印机发现回调。<br>**起始版本：** 12 |
+| void (*Print_PrinterChangeCallback)(Print_PrinterEvent event, const Print_PrinterInfo *printerInfo) | 打印机变更回调。<br>**起始版本：** 12 |
+| void(*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state) | 打印任务状态回调。<br>**起始版本：** 24 |
 
 ## 枚举类型说明
 
@@ -412,7 +423,7 @@ Print_ErrorCode OH_Print_Init()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -430,7 +441,7 @@ Print_ErrorCode OH_Print_Release()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -456,7 +467,7 @@ Print_ErrorCode OH_Print_StartPrinterDiscovery(Print_PrinterDiscoveryCallback ca
 | -- | -- |
 | [Print_PrinterDiscoveryCallback](capi-ohprint-h.md#print_printerdiscoverycallback) callback | 打印机发现事件的 [Print_PrinterDiscoveryCallback](capi-ohprint-h.md#print_printerdiscoverycallback)。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -476,7 +487,7 @@ Print_ErrorCode OH_Print_StopPrinterDiscovery()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -502,7 +513,7 @@ Print_ErrorCode OH_Print_ConnectPrinter(const char *printerId)
 | -- | -- |
 | const char *printerId | 待连接的打印机 ID。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -528,7 +539,7 @@ Print_ErrorCode OH_Print_StartPrintJob(const Print_PrintJob *printJob)
 | -- | -- |
 | [const Print_PrintJob](capi-print-print-printjob.md) *printJob | 指向指定打印任务信息的 [Print_PrintJob](capi-print-print-printjob.md) 实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -554,7 +565,7 @@ Print_ErrorCode OH_Print_RegisterPrinterChangeListener(Print_PrinterChangeCallba
 | -- | -- |
 | [Print_PrinterChangeCallback](capi-ohprint-h.md#print_printerchangecallback) callback | 待注册的 [Print_PrinterChangeCallback](capi-ohprint-h.md#print_printerchangecallback)。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -594,7 +605,7 @@ Print_ErrorCode OH_Print_QueryPrinterList(Print_StringList *printerIdList)
 | -- | -- |
 | [Print_StringList](capi-print-print-stringlist.md) *printerIdList | 用于存储查询到的打印机 ID 列表的 [Print_StringList](capi-print-print-stringlist.md) 实例指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -639,7 +650,7 @@ Print_ErrorCode OH_Print_QueryPrinterInfo(const char *printerId, Print_PrinterIn
 | const char *printerId | 待查询的打印机 ID。 |
 | [Print_PrinterInfo](capi-print-print-printerinfo.md) **printerInfo | 用于存储打印机信息的 [Print_PrinterInfo](capi-print-print-printerinfo.md) 指针的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -675,7 +686,7 @@ Print_ErrorCode OH_Print_LaunchPrinterManager()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -703,7 +714,7 @@ Print_ErrorCode OH_Print_QueryPrinterProperties(const char *printerId, const Pri
 | [const Print_StringList](capi-print-print-stringlist.md) *propertyKeyList | 待查询的属性关键字列表。 |
 | [Print_PropertyList](capi-print-print-propertylist.md) *propertyList | 查询到的打印机属性值列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -748,7 +759,7 @@ Print_ErrorCode OH_Print_UpdatePrinterProperties(const char *printerId, const Pr
 | const char *printerId | 待设置的打印机 ID。 |
 | [const Print_PropertyList](capi-print-print-propertylist.md) *propertyList | 待设置的打印机属性值列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -775,7 +786,7 @@ Print_ErrorCode OH_Print_RestorePrinterProperties(const char *printerId, const P
 | const char *printerId | 待恢复的打印机 ID。 |
 | [const Print_StringList](capi-print-print-stringlist.md) *propertyKeyList | 待恢复的属性关键字列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -803,7 +814,7 @@ Print_ErrorCode OH_Print_StartPrintByNative(const char *printJobName, Print_Prin
 | [Print_PrintDocCallback](capi-print-print-printdoccallback.md) printDocCallback | 打印文档状态回调。 |
 | void *context | 调用方应用的上下文。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -849,10 +860,10 @@ Print_ErrorCode OH_Print_StartPrintWithJobStateCallback(const Print_PrintJob *pr
 | [const Print_PrintJob](capi-print-print-printjob.md) *printJob | 打印任务结构体。 |
 | [OH_Print_OnJobStateChanged](capi-ohprint-h.md#oh_print_onjobstatechanged) jobStateChangedCb | 打印任务状态回调。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode) 表示执行成功。      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode) 表示需要 {@link ohos.permission.PRINT} 权限。      <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode) jobStateChangedCb为NULL。      <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode) 表示无法复制回调函数。      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode) 表示无法连接到打印服务。      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode) 表示打印服务中无法创建打印任务结构体。      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode) 无法在已连接的打印机列表中找到该打印机。      <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode) 表示无法在任务队列中找到该任务。 |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode) 表示执行成功。<br>    <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode) 表示需要 {@link ohos.permission.PRINT} 权限。<br>    <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode) jobStateChangedCb为NULL。<br>    <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode) 表示无法复制回调函数。<br>    <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode) 表示无法连接到打印服务。<br>    <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode) 表示打印服务中无法创建打印任务结构体。<br>    <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode) 无法在已连接的打印机列表中找到该打印机。<br>    <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode) 表示无法在任务队列中找到该任务。 |
 
 

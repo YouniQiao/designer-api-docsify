@@ -40,13 +40,13 @@ Check whether the location switch is enabled.
 
 | Parameter | Description |
 | -- | -- |
-| bool* enabled | - It is a boolean pointer used to receive location switch status values.<br> Equal to true indicates that the location switch is turned on, false indicates that<br> the location switch is turned off.<br> The caller needs to pass in a non empty boolean pointer, otherwise an error will be returned. |
+| bool* enabled | - It is a boolean pointer used to receive location switch status values. Equal to true indicates that the location switch is turned on, false indicates that the location switch is turned off. The caller needs to pass in a non empty boolean pointer, otherwise an error will be returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Location_ResultCode | Location functions result code.\n      For a detailed definition, please refer to {@link Location_ResultCode}.\n      {@link LOCAION_SUCCESS} Successfully obtained the location switch status.\n      {@link LOCATION_INVALID_PARAM} The input parameter enabled is a null pointer.\n      {@link LOCATION_SERVICE_UNAVAILABLE} Abnormal startup of location services.\n |
+| Location_ResultCode | Location functions result code.\n      For a detailed definition, please refer to {@link Location_ResultCode}.\n<br>    {@link LOCAION_SUCCESS} Successfully obtained the location switch status.\n<br>    {@link LOCATION_INVALID_PARAM} The input parameter enabled is a null pointer.\n<br>    {@link LOCATION_SERVICE_UNAVAILABLE} Abnormal startup of location services.\n |
 
 ### OH_Location_StartLocating()
 
@@ -66,13 +66,13 @@ Start locating and subscribe location changed.
 
 | Parameter | Description |
 | -- | -- |
-| const Location_RequestConfig* requestConfig | - Pointer to the locating request parameters.<br> For details, see {@link Location_RequestConfig}.<br> You can use {@link OH_Location_CreateRequestConfig} to create an instance. |
+| const Location_RequestConfig* requestConfig | - Pointer to the locating request parameters. For details, see {@link Location_RequestConfig}.<br>You can use {@link OH_Location_CreateRequestConfig} to create an instance. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Location_ResultCode | Location functions result code.\n      For a detailed definition, please refer to {@link Location_ResultCode}.\n      {@link LOCAION_SUCCESS} Successfully start locating.\n      {@link LOCATION_INVALID_PARAM} The input parameter requestConfig is a null pointer.\n      {@link LOCATION_PERMISSION_DENIED} Permission verification failed. The application does not have the\n          permission required to call the API.\n      {@link LOCATION_NOT_SUPPORTED} Capability not supported.\n          Failed to call function due to limited device capabilities.\n      {@link LOCATION_SERVICE_UNAVAILABLE} Abnormal startup of location services.\n      {@link LOCATION_SWITCH_OFF} The location switch is off.\n |
+| Location_ResultCode | Location functions result code.\n      For a detailed definition, please refer to {@link Location_ResultCode}.\n<br>    {@link LOCAION_SUCCESS} Successfully start locating.\n<br>    {@link LOCATION_INVALID_PARAM} The input parameter requestConfig is a null pointer.\n<br>    {@link LOCATION_PERMISSION_DENIED} Permission verification failed. The application does not have the\n<br>        permission required to call the API.\n<br>    {@link LOCATION_NOT_SUPPORTED} Capability not supported.\n<br>        Failed to call function due to limited device capabilities.\n<br>    {@link LOCATION_SERVICE_UNAVAILABLE} Abnormal startup of location services.\n<br>    {@link LOCATION_SWITCH_OFF} The location switch is off.\n |
 
 ### OH_Location_StopLocating()
 
@@ -92,12 +92,12 @@ Stop locating and unsubscribe location changed.
 
 | Parameter | Description |
 | -- | -- |
-| const Location_RequestConfig* requestConfig | - Pointer to the locating request parameters.<br> For details, see {@link Location_RequestConfig}.<br> This parameter needs to be the same as the requestConfig pointer passed in<br> [OH_Location_StartLocating](capi-oh-location-h.md#oh_location_startlocating). |
+| const Location_RequestConfig* requestConfig | - Pointer to the locating request parameters. For details, see {@link Location_RequestConfig}. This parameter needs to be the same as the requestConfig pointer passed in [OH_Location_StartLocating](capi-oh-location-h.md#oh_location_startlocating). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Location_ResultCode | Location functions result code.\n      For a detailed definition, please refer to {@link Location_ResultCode}.\n      {@link LOCAION_SUCCESS} Successfully stop locationg.\n      {@link LOCATION_INVALID_PARAM} 1.The input parameter is a null pointer.\n          2.Different from the requestConfig pointer passed from [OH_Location_StartLocating](capi-oh-location-h.md#oh_location_startlocating).\n      {@link LOCATION_PERMISSION_DENIED} Permission verification failed. The application does not have the\n          permission required to call the API.\n      {@link LOCATION_NOT_SUPPORTED} Capability not supported.\n          Failed to call function due to limited device capabilities.\n      {@link LOCATION_SERVICE_UNAVAILABLE} Possible reasons: 1. Abnormal startup of location services.\n      {@link LOCATION_SWITCH_OFF} The location switch is off.\n |
+| Location_ResultCode | Location functions result code.\n      For a detailed definition, please refer to {@link Location_ResultCode}.\n<br>    {@link LOCAION_SUCCESS} Successfully stop locationg.\n<br>    {@link LOCATION_INVALID_PARAM} 1.The input parameter is a null pointer.\n<br>        2.Different from the requestConfig pointer passed from [OH_Location_StartLocating](capi-oh-location-h.md#oh_location_startlocating).\n<br>    {@link LOCATION_PERMISSION_DENIED} Permission verification failed. The application does not have the\n<br>        permission required to call the API.\n<br>    {@link LOCATION_NOT_SUPPORTED} Capability not supported.\n<br>        Failed to call function due to limited device capabilities.\n<br>    {@link LOCATION_SERVICE_UNAVAILABLE} Possible reasons: 1. Abnormal startup of location services.\n<br>    {@link LOCATION_SWITCH_OFF} The location switch is off.\n |
 
 

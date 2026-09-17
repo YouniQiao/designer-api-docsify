@@ -1,4 +1,4 @@
-# @ohos.zlib
+# @ohos.zlib(Zip)
 
 The **Zip** module provides APIs for file compression and decompression.
 

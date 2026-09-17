@@ -51,7 +51,7 @@ int OH_Cursor_GetFloatVectorCount(OH_Cursor *cursor, int32_t columnIndex, size_t
 | int32_t columnIndex | 表示结果集中指定列的索引，索引值从0开始。 |
 | size_t *length | 该参数是输出参数，结果集中指定列的浮点数数组大小会写入该变量。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -79,7 +79,7 @@ int OH_Cursor_GetFloatVector(OH_Cursor *cursor, int32_t columnIndex, float *val,
 | size_t inLen | 表示申请的浮点数数组大小。 |
 | size_t *outLen | 该参数是输出参数，表示实际浮点数数组的大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

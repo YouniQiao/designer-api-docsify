@@ -20,6 +20,12 @@ Provides model-related APIs for model creation and inference.
 | [OH_AI_ShapeInfo](capi-mindspore-oh-ai-shapeinfo.md) |  |
 | [OH_AI_CallBackParam](capi-mindspore-oh-ai-callbackparam.md) |  |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| MINDSPORE_INCLUDE_C_API_MODEL_C_H | Provides model-related APIs for model creation and inference.<br>**Since**: 9 |
+
 ### Function
 
 | Name | Description |
@@ -55,6 +61,12 @@ Provides model-related APIs for model creation and inference.
 | [OH_AI_API OH_AI_Status OH_AI_ExportWeightsCollaborateWithMicro(OH_AI_ModelHandle model, OH_AI_ModelType model_type, const char *weight_file, bool is_inference, bool enable_fp16, char **changeable_weights_name, size_t num)](#oh_ai_exportweightscollaboratewithmicro) | Export model's weights, which can be used in micro only. Only valid for Lite Train. |
 | [OH_AI_API OH_AI_Status OH_AI_ModelLoadConfig(OH_AI_ModelHandle model, const char *config_path)](#oh_ai_modelloadconfig) | Load the config file of the model. |
 | [OH_AI_API OH_AI_Status OH_AI_ModelPredictWithConfig(OH_AI_ModelHandle model, const OH_AI_TensorHandleArray inputs, OH_AI_TensorHandleArray *outputs, const char *config, const OH_AI_KernelCallBack before, const OH_AI_KernelCallBack after)](#oh_ai_modelpredictwithconfig) | Run model inference with configuration. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void *OH_AI_TrainCfgHandle | Defines a pointer to a training configuration object.<br>**Since**: 11 |
 
 ## Function description
 
@@ -702,7 +714,7 @@ Export training model from file. Only valid for Lite Train.
 | const char *model_file | The exported model file. |
 | OH_AI_QuantizationType quantization_type | The quantification type. |
 | bool export_inference_only | Whether to export a reasoning only model. |
-| char **output_tensor_name | The set the name of the output tensor of the exported reasoning model, default asempty, and export the complete reasoning model. |
+| char **output_tensor_name | The set the name of the output tensor of the exported reasoning model, default as empty, and export the complete reasoning model. |
 | size_t num | The number of output_tensor_name. |
 
 **Returns**:
@@ -733,7 +745,7 @@ Export training model from buffer. Only valid for Lite Train.
 | size_t *data_size | The exported model buffer size. |
 | OH_AI_QuantizationType quantization_type | The quantification type. |
 | bool export_inference_only | Whether to export a reasoning only model. |
-| char **output_tensor_name | The set the name of the output tensor of the exported reasoning model, default asempty, and export the complete reasoning model. |
+| char **output_tensor_name | The set the name of the output tensor of the exported reasoning model, default as empty, and export the complete reasoning model. |
 | size_t num | The number of output_tensor_name. |
 
 **Returns**:

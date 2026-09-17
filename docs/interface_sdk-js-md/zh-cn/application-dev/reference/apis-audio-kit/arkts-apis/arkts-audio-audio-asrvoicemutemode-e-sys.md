@@ -39,7 +39,7 @@ INPUT_MUTE = 1
 ## TTS_MUTE
 
 ```TypeScript
-TTS_MUTE  = 2
+TTS_MUTE = 2
 ```
 
 应用下发的媒体音频本地静音。

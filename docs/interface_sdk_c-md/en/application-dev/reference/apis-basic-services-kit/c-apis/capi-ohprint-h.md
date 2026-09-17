@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares APIs for discovering and connecting to printers, printingfiles, and querying the list of added printers and printer information.
+Declares APIs for discovering and connecting to printers, printing files, and querying the list of added printers and printer information.
 
 **Library**: libohprint.so
 
@@ -77,6 +77,17 @@ Declares APIs for discovering and connecting to printers, printingfiles, and que
 | [Print_ErrorCode OH_Print_StartPrintByNative(const char *printJobName, Print_PrintDocCallback printDocCallback, void *context)](#oh_print_startprintbynative) | - | Starts the printing dialog box. |
 | [typedef void(\*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state)](#oh_print_onjobstatechanged) | OH_Print_OnJobStateChanged | Defines a callback to be invoked when the print job state changes. |
 | [Print_ErrorCode OH_Print_StartPrintWithJobStateCallback(const Print_PrintJob *printJob, OH_Print_OnJobStateChanged jobStateChangedCb)](#oh_print_startprintwithjobstatecallback) | - | Starts a print job with the callback to be invoked when the print job state changes. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void(*Print_WriteResultCallback)(const char *jobId, uint32_t code) | Defines a callback used to return the file write-back result.<br>**Since**: 13 |
+| void(*Print_OnStartLayoutWrite)(const char *jobId, uint32_t fd, const Print_PrintAttributes *oldAttrs, const Print_PrintAttributes *newAttrs, Print_WriteResultCallback writeCallback) | Defines a callback to be invoked when the file write-back starts.<br>**Since**: 13 |
+| void(*Print_OnJobStateChanged)(const char *jobId, uint32_t state) | Defines a callback to be invoked when the print job state changes.<br>**Since**: 13 |
+| void (*Print_PrinterDiscoveryCallback)(Print_DiscoveryEvent event, const Print_PrinterInfo *printerInfo) | Defines a callback used to return the discovered printers.<br>**Since**: 12 |
+| void (*Print_PrinterChangeCallback)(Print_PrinterEvent event, const Print_PrinterInfo *printerInfo) | Defines a callback to be invoked when a printer is changed.<br>**Since**: 12 |
+| void(*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState state) | Defines a callback to be invoked when the print job state changes.<br>**Since**: 24 |
 
 ## Enum type description
 
@@ -853,6 +864,6 @@ Starts a print job with the callback to be invoked when the print job state chan
 
 | Type | Description |
 | -- | -- |
-| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.      <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The {@link ohos.permission.PRINT} permission is required.      <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): The jobStateChangedCb is null.      <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): The callback function cannot be copied.      <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.      <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): The print job struct cannot be created in the print service.      <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find the specified printer in the list of connected printers.      <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode): Print job cannot be found in the job queue. |
+| [Print_ErrorCode](capi-ohprint-h.md#print_errorcode) | [PRINT_ERROR_NONE](capi-ohprint-h.md#print_errorcode): Operation is successful.<br>    <br>[PRINT_ERROR_NO_PERMISSION](capi-ohprint-h.md#print_errorcode): The {@link ohos.permission.PRINT} permission is required.<br>    <br>[PRINT_ERROR_INVALID_PARAMETER](capi-ohprint-h.md#print_errorcode): The jobStateChangedCb is null.<br>    <br>[PRINT_ERROR_GENERIC_FAILURE](capi-ohprint-h.md#print_errorcode): The callback function cannot be copied.<br>    <br>[PRINT_ERROR_RPC_FAILURE](capi-ohprint-h.md#print_errorcode): Failed to connect to the print service.<br>    <br>[PRINT_ERROR_SERVER_FAILURE](capi-ohprint-h.md#print_errorcode): The print job struct cannot be created in the print service.<br>    <br>[PRINT_ERROR_INVALID_PRINTER](capi-ohprint-h.md#print_errorcode): Failed to find the specified printer in the list of connected printers.<br>    <br>[PRINT_ERROR_INVALID_PRINT_JOB](capi-ohprint-h.md#print_errorcode): Print job cannot be found in the job queue. |
 
 

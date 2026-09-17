@@ -41,42 +41,42 @@ Defines the functions for obtaining and using a native window.
 | Name | Description |
 | -- | -- |
 | [OHNativeWindow* OH_NativeWindow_CreateNativeWindow(void* pSurface)](#oh_nativewindow_createnativewindow) | Creates a <b>OHNativeWindow</b> instance. A new <b>OHNativeWindow</b> instance is created each time this function is called.(Deprecated in API12) |
-| [void OH_NativeWindow_DestroyNativeWindow(OHNativeWindow* window)](#oh_nativewindow_destroynativewindow) | Decreases the reference count of a <b>OHNativeWindow</b> instance by 1,and when the reference count reaches 0, destroys the instance.<br> This interface is a non-thread-safe type interface.<br> |
+| [void OH_NativeWindow_DestroyNativeWindow(OHNativeWindow* window)](#oh_nativewindow_destroynativewindow) | Decreases the reference count of a <b>OHNativeWindow</b> instance by 1, and when the reference count reaches 0, destroys the instance. This interface is a non-thread-safe type interface. |
 | [OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromSurfaceBuffer(void* pSurfaceBuffer)](#oh_nativewindow_createnativewindowbufferfromsurfacebuffer) | Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called.(Deprecated in API12) |
-| [OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(OH_NativeBuffer* nativeBuffer)](#oh_nativewindow_createnativewindowbufferfromnativebuffer) | Creates a <b>OHNativeWindowBuffer</b> instance.<br> A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindowBuffer</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br> |
-| [void OH_NativeWindow_DestroyNativeWindowBuffer(OHNativeWindowBuffer* buffer)](#oh_nativewindow_destroynativewindowbuffer) | Decreases the reference count of a <b>OHNativeWindowBuffer</b> instance by 1 and,when the reference count reaches 0, destroys the instance.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeWindowRequestBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd)](#oh_nativewindow_nativewindowrequestbuffer) | Requests a <b>OHNativeWindowBuffer</b> through a <b>OHNativeWindow</b> instance for content production.<br> Before calling this interface, you need to set the width and height of<b>OHNativeWindow</b> through <b>SET_BUFFER_GEOMETRY</b>.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowFlushBuffer</b>,otherwise buffer will be exhausted.<br> When the fenceFd is used up, you need to close it.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeWindowFlushBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer, int fenceFd, Region region)](#oh_nativewindow_nativewindowflushbuffer) | Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queuethrough a <b>OHNativeWindow</b> instance for content consumption.<br> The fenceFd will be close by system.<br> This interface is a non-thread-safe type interface.<br> |
+| [OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(OH_NativeBuffer* nativeBuffer)](#oh_nativewindow_createnativewindowbufferfromnativebuffer) | Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindowBuffer</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface. |
+| [void OH_NativeWindow_DestroyNativeWindowBuffer(OHNativeWindowBuffer* buffer)](#oh_nativewindow_destroynativewindowbuffer) | Decreases the reference count of a <b>OHNativeWindowBuffer</b> instance by 1 and, when the reference count reaches 0, destroys the instance. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeWindowRequestBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd)](#oh_nativewindow_nativewindowrequestbuffer) | Requests a <b>OHNativeWindowBuffer</b> through a <b>OHNativeWindow</b> instance for content production. Before calling this interface, you need to set the width and height of <b>OHNativeWindow</b> through <b>SET_BUFFER_GEOMETRY</b>. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowFlushBuffer</b>, otherwise buffer will be exhausted. When the fenceFd is used up, you need to close it. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeWindowFlushBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer, int fenceFd, Region region)](#oh_nativewindow_nativewindowflushbuffer) | Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through a <b>OHNativeWindow</b> instance for content consumption. The fenceFd will be close by system. This interface is a non-thread-safe type interface. |
 | [int32_t OH_NativeWindow_GetLastFlushedBuffer(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])](#oh_nativewindow_getlastflushedbuffer) | Get the last flushed <b>OHNativeWindowBuffer</b> from a <b>OHNativeWindow</b> instance.(Deprecated in API12) |
-| [int32_t OH_NativeWindow_NativeWindowAbortBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)](#oh_nativewindow_nativewindowabortbuffer) | Returns the <b>OHNativeWindowBuffer</b> to the buffer queue through a <b>OHNativeWindow</b> instance,without filling in any content. The <b>OHNativeWindowBuffer</b> can be used for another request.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeWindowHandleOpt(OHNativeWindow *window, int code, ...)](#oh_nativewindow_nativewindowhandleopt) | Sets or obtains the attributes of a native window, including the width, height, and content format.<br> This interface is a non-thread-safe type interface.<br> <p><strong>API Note</strong><strong>Performance Note</strong><p>By default, the window buffer in the current operating system is accessed via the CPU. If an applicationdoes not need to access the window buffer data using the CPU, it can proactively disable CPU access toenhance energy efficiency and reduce power consumption.</p><p>For details about how to optimize power consumption for data read/write operations in data buffers,see [How do I proactively disable CPU access to window buffers to reduce power consumption?]{@link https://developer.huawei.com/consumer/en/doc/harmonyos-faqs/faqs-arkgraphics-2d-14}.</p></p> |
-| [BufferHandle *OH_NativeWindow_GetBufferHandleFromNative(OHNativeWindowBuffer *buffer)](#oh_nativewindow_getbufferhandlefromnative) | Obtains the pointer to a <b>BufferHandle</b> of a <b>OHNativeWindowBuffer</b> instance.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeObjectReference(void *obj)](#oh_nativewindow_nativeobjectreference) | Adds the reference count of a native object.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeObjectUnreference(void *obj)](#oh_nativewindow_nativeobjectunreference) | Decreases the reference count of a native object and,when the reference count reaches 0, destroys this object.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_GetNativeObjectMagic(void *obj)](#oh_nativewindow_getnativeobjectmagic) | Obtains the magic ID of a native object.<br> This interface is a non-thread-safe type interface.<br> |
+| [int32_t OH_NativeWindow_NativeWindowAbortBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)](#oh_nativewindow_nativewindowabortbuffer) | Returns the <b>OHNativeWindowBuffer</b> to the buffer queue through a <b>OHNativeWindow</b> instance, without filling in any content. The <b>OHNativeWindowBuffer</b> can be used for another request. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeWindowHandleOpt(OHNativeWindow *window, int code, ...)](#oh_nativewindow_nativewindowhandleopt) | Sets or obtains the attributes of a native window, including the width, height, and content format. This interface is a non-thread-safe type interface.<br> <p><strong>API Note</strong><br> <strong>Performance Note</strong> <p>By default, the window buffer in the current operating system is accessed via the CPU. If an application does not need to access the window buffer data using the CPU, it can proactively disable CPU access to enhance energy efficiency and reduce power consumption. </p> <p>For details about how to optimize power consumption for data read/write operations in data buffers, see [How do I proactively disable CPU access to window buffers to reduce power consumption?]{@link https://developer.huawei.com/consumer/en/doc/harmonyos-faqs/faqs-arkgraphics-2d-14}.</p> </p> |
+| [BufferHandle *OH_NativeWindow_GetBufferHandleFromNative(OHNativeWindowBuffer *buffer)](#oh_nativewindow_getbufferhandlefromnative) | Obtains the pointer to a <b>BufferHandle</b> of a <b>OHNativeWindowBuffer</b> instance. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeObjectReference(void *obj)](#oh_nativewindow_nativeobjectreference) | Adds the reference count of a native object. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeObjectUnreference(void *obj)](#oh_nativewindow_nativeobjectunreference) | Decreases the reference count of a native object and, when the reference count reaches 0, destroys this object. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_GetNativeObjectMagic(void *obj)](#oh_nativewindow_getnativeobjectmagic) | Obtains the magic ID of a native object. This interface is a non-thread-safe type interface. |
 | [int32_t OH_NativeWindow_NativeWindowSetScalingMode(OHNativeWindow *window, uint32_t sequence, OHScalingMode scalingMode)](#oh_nativewindow_nativewindowsetscalingmode) | Sets scalingMode of a native window.(Deprecated in API10) |
 | [int32_t OH_NativeWindow_NativeWindowSetMetaData(OHNativeWindow *window, uint32_t sequence, int32_t size, const OHHDRMetaData *metaData)](#oh_nativewindow_nativewindowsetmetadata) | Sets metaData of a native window.(Deprecated in API10) |
 | [int32_t OH_NativeWindow_NativeWindowSetMetaDataSet(OHNativeWindow *window, uint32_t sequence, OHHDRMetadataKey key, int32_t size, const uint8_t *metaData)](#oh_nativewindow_nativewindowsetmetadataset) | Sets metaDataSet of a native window.(Deprecated in API10) |
 | [int32_t OH_NativeWindow_NativeWindowSetTunnelHandle(OHNativeWindow *window, const OHExtDataHandle *handle)](#oh_nativewindow_nativewindowsettunnelhandle) | Sets tunnel handle of a native window.(Deprecated in API10) |
-| [int32_t OH_NativeWindow_NativeWindowAttachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)](#oh_nativewindow_nativewindowattachbuffer) | Attach a buffer to an <b>OHNativeWindow</b> instance.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowDetachBuffer</b>,otherwise buffer management will be chaotic.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeWindowDetachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)](#oh_nativewindow_nativewindowdetachbuffer) | Detach a buffer from an <b>OHNativeWindow</b> instance.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_GetSurfaceId(OHNativeWindow *window, uint64_t *surfaceId)](#oh_nativewindow_getsurfaceid) | Get surfaceId from native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_CreateNativeWindowFromSurfaceId(uint64_t surfaceId, OHNativeWindow **window)](#oh_nativewindow_createnativewindowfromsurfaceid) | Creates an <b>OHNativeWindow</b> instance.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindow</b>,otherwise memory leaks will occur.<br> If there is a concurrent destroy OHNativeWindow, you need to add once and decrement once to theOHNativeWindow reference count through <b>OH_NativeWindow_NativeObjectReference</b> and<b>OH_NativeWindow_NativeObjectUnreference</b>.<br> If the surface obtained through surfaceId is created in this process, the surface cannot be obtainedacross processes.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_NativeWindowSetScalingModeV2(OHNativeWindow *window, OHScalingModeV2 scalingMode)](#oh_nativewindow_nativewindowsetscalingmodev2) | Sets scalingMode of a native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [void OH_NativeWindow_SetBufferHold(OHNativeWindow *window)](#oh_nativewindow_setbufferhold) | Set native window buffer hold.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_WriteToParcel(OHNativeWindow *window, OHIPCParcel *parcel)](#oh_nativewindow_writetoparcel) | Write an OHNativeWindow to an OHIPCParcel.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_ReadFromParcel(OHIPCParcel *parcel, OHNativeWindow **window)](#oh_nativewindow_readfromparcel) | Read an OHNativeWindow from an OHIPCParcel.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_GetLastFlushedBufferV2(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])](#oh_nativewindow_getlastflushedbufferv2) | Get the last flushed <b>OHNativeWindowBuffer</b> from an <b>OHNativeWindow</b> instance.<br> When the fenceFd is used up, you need to close it.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_SetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace colorSpace)](#oh_nativewindow_setcolorspace) | Set the color space of the native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_GetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace *colorSpace)](#oh_nativewindow_getcolorspace) | Get the color space of the native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_SetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativewindow_setmetadatavalue) | Set the metadata type of the native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_GetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativewindow_getmetadatavalue) | Set the metadata type of the native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_CleanCache(OHNativeWindow *window)](#oh_nativewindow_cleancache) | Clean all <b>OHNativeWindowBuffer</b> caches of this <b>OHNativeWindow</b>This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBufferCnt)](#oh_nativewindow_preallocbuffers) | PreAlloc <b>OHNativeWindowBuffer</b> of this <b>OHNativeWindow</b>This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNativeWindowBuffer** buffer)](#oh_nativewindow_lockbuffer) | Requests an <b>OHNativeWindowBuffer</b> through an <b>OHNativeWindow</b> instance for content production,<br> and lock the <b>OHNativeWindowBuffer</b>, the interface needs to be paired with<br> <b>OH_NativeWindow_UnlockAndFlushBuffer</b> for use, after lock, it must be unlocked in order to relock,<br> repeatedly lock or unlock will return an illegal operation error code, the interface supports rendering images<br> directly through memory read and write on the CPU.This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)](#oh_nativewindow_unlockandflushbuffer) | Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through an <br> <b>OHNativeWindow</b> instance for content consumption, and unlock the <b>OHNativeWindowBuffer</b>.This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativewindow_set3dmetadatavalue) | Set the 3D metadata of the native window.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativewindow_get3dmetadatavalue) | Get the 3D metadata of the native window.<br> This interface is a non-thread-safe type interface.<br> |
+| [int32_t OH_NativeWindow_NativeWindowAttachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)](#oh_nativewindow_nativewindowattachbuffer) | Attach a buffer to an <b>OHNativeWindow</b> instance. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowDetachBuffer</b>, otherwise buffer management will be chaotic. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeWindowDetachBuffer(OHNativeWindow *window, OHNativeWindowBuffer *buffer)](#oh_nativewindow_nativewindowdetachbuffer) | Detach a buffer from an <b>OHNativeWindow</b> instance. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_GetSurfaceId(OHNativeWindow *window, uint64_t *surfaceId)](#oh_nativewindow_getsurfaceid) | Get surfaceId from native window. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_CreateNativeWindowFromSurfaceId(uint64_t surfaceId, OHNativeWindow **window)](#oh_nativewindow_createnativewindowfromsurfaceid) | Creates an <b>OHNativeWindow</b> instance. This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindow</b>, otherwise memory leaks will occur. If there is a concurrent destroy OHNativeWindow, you need to add once and decrement once to the OHNativeWindow reference count through <b>OH_NativeWindow_NativeObjectReference</b> and <b>OH_NativeWindow_NativeObjectUnreference</b>. If the surface obtained through surfaceId is created in this process, the surface cannot be obtained across processes. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_NativeWindowSetScalingModeV2(OHNativeWindow *window, OHScalingModeV2 scalingMode)](#oh_nativewindow_nativewindowsetscalingmodev2) | Sets scalingMode of a native window. This interface is a non-thread-safe type interface. |
+| [void OH_NativeWindow_SetBufferHold(OHNativeWindow *window)](#oh_nativewindow_setbufferhold) | Set native window buffer hold. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_WriteToParcel(OHNativeWindow *window, OHIPCParcel *parcel)](#oh_nativewindow_writetoparcel) | Write an OHNativeWindow to an OHIPCParcel. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_ReadFromParcel(OHIPCParcel *parcel, OHNativeWindow **window)](#oh_nativewindow_readfromparcel) | Read an OHNativeWindow from an OHIPCParcel. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_GetLastFlushedBufferV2(OHNativeWindow *window, OHNativeWindowBuffer **buffer, int *fenceFd, float matrix[16])](#oh_nativewindow_getlastflushedbufferv2) | Get the last flushed <b>OHNativeWindowBuffer</b> from an <b>OHNativeWindow</b> instance. When the fenceFd is used up, you need to close it. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_SetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace colorSpace)](#oh_nativewindow_setcolorspace) | Set the color space of the native window. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_GetColorSpace(OHNativeWindow *window, OH_NativeBuffer_ColorSpace *colorSpace)](#oh_nativewindow_getcolorspace) | Get the color space of the native window. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_SetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativewindow_setmetadatavalue) | Set the metadata type of the native window. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_GetMetadataValue(OHNativeWindow *window, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativewindow_getmetadatavalue) | Set the metadata type of the native window. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_CleanCache(OHNativeWindow *window)](#oh_nativewindow_cleancache) | Clean all <b>OHNativeWindowBuffer</b> caches of this <b>OHNativeWindow</b> This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBufferCnt)](#oh_nativewindow_preallocbuffers) | PreAlloc <b>OHNativeWindowBuffer</b> of this <b>OHNativeWindow</b> This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNativeWindowBuffer** buffer)](#oh_nativewindow_lockbuffer) | Requests an <b>OHNativeWindowBuffer</b> through an <b>OHNativeWindow</b> instance for content production, and lock the <b>OHNativeWindowBuffer</b>, the interface needs to be paired with <b>OH_NativeWindow_UnlockAndFlushBuffer</b> for use, after lock, it must be unlocked in order to relock, repeatedly lock or unlock will return an illegal operation error code, the interface supports rendering images directly through memory read and write on the CPU. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)](#oh_nativewindow_unlockandflushbuffer) | Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through an <b>OHNativeWindow</b> instance for content consumption, and unlock the <b>OHNativeWindowBuffer</b>. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativewindow_set3dmetadatavalue) | Set the 3D metadata of the native window. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativewindow_get3dmetadatavalue) | Get the 3D metadata of the native window. This interface is a non-thread-safe type interface. |
 
 ## Enum type description
 
@@ -94,23 +94,23 @@ Indicates the operation code in the function OH_NativeWindow_NativeWindowHandleO
 
 | Enum item | Description |
 | -- | -- |
-| SET_BUFFER_GEOMETRY | set native window buffer geometry,variable parameter in function is[in] int32_t width, [in] int32_t height |
-| GET_BUFFER_GEOMETRY | get native window buffer geometry,variable parameter in function is[out] int32_t *height, [out] int32_t *width |
-| GET_FORMAT | get native window buffer format,variable parameter in function is[out] int32_t *format, the enumeration value refers to {@link OH_NativeBuffer_Format}. |
-| SET_FORMAT | set native window buffer format,variable parameter in function is[in] int32_t format, the enumeration value refers to {@link OH_NativeBuffer_Format}. |
-| GET_USAGE | get native window buffer usage,variable parameter in function is[out] uint64_t *usage, the enumeration value refers to {@link OH_NativeBuffer_Usage}. |
-| SET_USAGE | set native window buffer usage,variable parameter in function is[in] uint64_t usage, the enumeration value refers to {@link OH_NativeBuffer_Usage}. |
+| SET_BUFFER_GEOMETRY | set native window buffer geometry, variable parameter in function is [in] int32_t width, [in] int32_t height |
+| GET_BUFFER_GEOMETRY | get native window buffer geometry, variable parameter in function is [out] int32_t *height, [out] int32_t *width |
+| GET_FORMAT | get native window buffer format, variable parameter in function is [out] int32_t *format, the enumeration value refers to {@link OH_NativeBuffer_Format}. |
+| SET_FORMAT | set native window buffer format, variable parameter in function is [in] int32_t format, the enumeration value refers to {@link OH_NativeBuffer_Format}. |
+| GET_USAGE | get native window buffer usage, variable parameter in function is [out] uint64_t *usage, the enumeration value refers to {@link OH_NativeBuffer_Usage}. |
+| SET_USAGE | set native window buffer usage, variable parameter in function is [in] uint64_t usage, the enumeration value refers to {@link OH_NativeBuffer_Usage}. |
 | SET_STRIDE |  |
 | GET_STRIDE |  |
-| SET_SWAP_INTERVAL | set native window buffer swap interval,variable parameter in function is[in] int32_t interval. |
-| GET_SWAP_INTERVAL | get native window buffer swap interval,variable parameter in function is[out] int32_t *interval. |
-| SET_TIMEOUT | set the timeout in milliseconds when the native window requests a buffer,the default value is 3000 milliseconds when not set,variable parameter in function is[in] int32_t timeout, in milliseconds. |
-| GET_TIMEOUT | get the timeout in milliseconds when the native window requests a buffer,the default value is 3000 milliseconds when not set,variable parameter in function is[out] int32_t *timeout, in milliseconds. |
-| SET_COLOR_GAMUT | set native window buffer colorGamut,variable parameter in function is[in] int32_t colorGamut, the enumeration value refers to {@link OH_NativeBuffer_ColorGamut}. |
-| GET_COLOR_GAMUT | get native window buffer colorGamut,variable parameter in function is[out] int32_t *colorGamut, the enumeration value refers to {@link OH_NativeBuffer_ColorGamut}. |
-| SET_TRANSFORM | set native window buffer transform,variable parameter in function is[in] int32_t transform, the enumeration value refers to {@link OH_NativeBuffer_TransformType}. |
-| GET_TRANSFORM | get native window buffer transform,variable parameter in function is[out] int32_t *transform, the enumeration value refers to {@link OH_NativeBuffer_TransformType}. |
-| SET_UI_TIMESTAMP | set native window buffer uiTimestamp,variable parameter in function is[in] uint64_t uiTimestamp. |
+| SET_SWAP_INTERVAL | set native window buffer swap interval, variable parameter in function is [in] int32_t interval. |
+| GET_SWAP_INTERVAL | get native window buffer swap interval, variable parameter in function is [out] int32_t *interval. |
+| SET_TIMEOUT | set the timeout in milliseconds when the native window requests a buffer, the default value is 3000 milliseconds when not set, variable parameter in function is [in] int32_t timeout, in milliseconds. |
+| GET_TIMEOUT | get the timeout in milliseconds when the native window requests a buffer, the default value is 3000 milliseconds when not set, variable parameter in function is [out] int32_t *timeout, in milliseconds. |
+| SET_COLOR_GAMUT | set native window buffer colorGamut, variable parameter in function is [in] int32_t colorGamut, the enumeration value refers to {@link OH_NativeBuffer_ColorGamut}. |
+| GET_COLOR_GAMUT | get native window buffer colorGamut, variable parameter in function is [out] int32_t *colorGamut, the enumeration value refers to {@link OH_NativeBuffer_ColorGamut}. |
+| SET_TRANSFORM | set native window buffer transform, variable parameter in function is [in] int32_t transform, the enumeration value refers to {@link OH_NativeBuffer_TransformType}. |
+| GET_TRANSFORM | get native window buffer transform, variable parameter in function is [out] int32_t *transform, the enumeration value refers to {@link OH_NativeBuffer_TransformType}. |
+| SET_UI_TIMESTAMP | set native window buffer uiTimestamp, variable parameter in function is [in] uint64_t uiTimestamp. |
 | GET_BUFFERQUEUE_SIZE |  |
 | SET_SOURCE_TYPE |  |
 | GET_SOURCE_TYPE |  |
@@ -139,10 +139,10 @@ Indicates Scaling Mode.
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCALING_MODE_FREEZE = 0 | the window content is not updated until a buffer ofthe window size is received |
+| OH_SCALING_MODE_FREEZE = 0 | the window content is not updated until a buffer of the window size is received |
 | OH_SCALING_MODE_SCALE_TO_WINDOW | the buffer is scaled in two dimensions to match the window size |
-| OH_SCALING_MODE_SCALE_CROP | the buffer is uniformly scaled so that the smaller size ofthe buffer matches the window size |
-| OH_SCALING_MODE_NO_SCALE_CROP | the window is clipped to the size of the buffer's clipping rectanglepixels outside the clipping rectangle are considered fully transparent. |
+| OH_SCALING_MODE_SCALE_CROP | the buffer is uniformly scaled so that the smaller size of the buffer matches the window size |
+| OH_SCALING_MODE_NO_SCALE_CROP | the window is clipped to the size of the buffer's clipping rectangle pixels outside the clipping rectangle are considered fully transparent. |
 
 ### OHScalingModeV2
 
@@ -158,11 +158,11 @@ Indicates Scaling Mode.
 
 | Enum item | Description |
 | -- | -- |
-| OH_SCALING_MODE_FREEZE_V2 = 0 | the window content is not updated until a buffer ofthe window size is received |
+| OH_SCALING_MODE_FREEZE_V2 = 0 | the window content is not updated until a buffer of the window size is received |
 | OH_SCALING_MODE_SCALE_TO_WINDOW_V2 | the buffer is scaled in two dimensions to match the window size |
-| OH_SCALING_MODE_SCALE_CROP_V2 | the buffer is uniformly scaled so that the smaller size ofthe buffer matches the window size |
-| OH_SCALING_MODE_NO_SCALE_CROP_V2 | the window is clipped to the size of the buffer's clipping rectanglepixels outside the clipping rectangle are considered fully transparent. |
-| OH_SCALING_MODE_SCALE_FIT_V2 | Adapt to the buffer and scale proportionally to the buffer size. Prioritize displaying all buffer content.If the size is not the same as the window size, fill the unfilled area of the window with a background color. |
+| OH_SCALING_MODE_SCALE_CROP_V2 | the buffer is uniformly scaled so that the smaller size of the buffer matches the window size |
+| OH_SCALING_MODE_NO_SCALE_CROP_V2 | the window is clipped to the size of the buffer's clipping rectangle pixels outside the clipping rectangle are considered fully transparent. |
+| OH_SCALING_MODE_SCALE_FIT_V2 | Adapt to the buffer and scale proportionally to the buffer size. Prioritize displaying all buffer content. If the size is not the same as the window size, fill the unfilled area of the window with a background color. |
 
 ### OHHDRMetadataKey
 
@@ -240,7 +240,7 @@ void OH_NativeWindow_DestroyNativeWindow(OHNativeWindow* window)
 
 **Description**
 
-Decreases the reference count of a <b>OHNativeWindow</b> instance by 1,and when the reference count reaches 0, destroys the instance.<br> This interface is a non-thread-safe type interface.<br>
+Decreases the reference count of a <b>OHNativeWindow</b> instance by 1, and when the reference count reaches 0, destroys the instance. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -290,7 +290,7 @@ OHNativeWindowBuffer* OH_NativeWindow_CreateNativeWindowBufferFromNativeBuffer(O
 
 **Description**
 
-Creates a <b>OHNativeWindowBuffer</b> instance.<br> A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindowBuffer</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br>
+Creates a <b>OHNativeWindowBuffer</b> instance. A new <b>OHNativeWindowBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindowBuffer</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -316,7 +316,7 @@ void OH_NativeWindow_DestroyNativeWindowBuffer(OHNativeWindowBuffer* buffer)
 
 **Description**
 
-Decreases the reference count of a <b>OHNativeWindowBuffer</b> instance by 1 and,when the reference count reaches 0, destroys the instance.<br> This interface is a non-thread-safe type interface.<br>
+Decreases the reference count of a <b>OHNativeWindowBuffer</b> instance by 1 and, when the reference count reaches 0, destroys the instance. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -336,7 +336,7 @@ int32_t OH_NativeWindow_NativeWindowRequestBuffer(OHNativeWindow *window, OHNati
 
 **Description**
 
-Requests a <b>OHNativeWindowBuffer</b> through a <b>OHNativeWindow</b> instance for content production.<br> Before calling this interface, you need to set the width and height of<b>OHNativeWindow</b> through <b>SET_BUFFER_GEOMETRY</b>.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowFlushBuffer</b>,otherwise buffer will be exhausted.<br> When the fenceFd is used up, you need to close it.<br> This interface is a non-thread-safe type interface.<br>
+Requests a <b>OHNativeWindowBuffer</b> through a <b>OHNativeWindow</b> instance for content production. Before calling this interface, you need to set the width and height of <b>OHNativeWindow</b> through <b>SET_BUFFER_GEOMETRY</b>. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowFlushBuffer</b>, otherwise buffer will be exhausted. When the fenceFd is used up, you need to close it. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -364,7 +364,7 @@ int32_t OH_NativeWindow_NativeWindowFlushBuffer(OHNativeWindow *window, OHNative
 
 **Description**
 
-Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queuethrough a <b>OHNativeWindow</b> instance for content consumption.<br> The fenceFd will be close by system.<br> This interface is a non-thread-safe type interface.<br>
+Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through a <b>OHNativeWindow</b> instance for content consumption. The fenceFd will be close by system. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -426,7 +426,7 @@ int32_t OH_NativeWindow_NativeWindowAbortBuffer(OHNativeWindow *window, OHNative
 
 **Description**
 
-Returns the <b>OHNativeWindowBuffer</b> to the buffer queue through a <b>OHNativeWindow</b> instance,without filling in any content. The <b>OHNativeWindowBuffer</b> can be used for another request.<br> This interface is a non-thread-safe type interface.<br>
+Returns the <b>OHNativeWindowBuffer</b> to the buffer queue through a <b>OHNativeWindow</b> instance, without filling in any content. The <b>OHNativeWindowBuffer</b> can be used for another request. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -453,7 +453,7 @@ int32_t OH_NativeWindow_NativeWindowHandleOpt(OHNativeWindow *window, int code, 
 
 **Description**
 
-Sets or obtains the attributes of a native window, including the width, height, and content format.<br> This interface is a non-thread-safe type interface.<br> <p><strong>API Note</strong><strong>Performance Note</strong><p>By default, the window buffer in the current operating system is accessed via the CPU. If an applicationdoes not need to access the window buffer data using the CPU, it can proactively disable CPU access toenhance energy efficiency and reduce power consumption.</p><p>For details about how to optimize power consumption for data read/write operations in data buffers,see [How do I proactively disable CPU access to window buffers to reduce power consumption?]{@link https://developer.huawei.com/consumer/en/doc/harmonyos-faqs/faqs-arkgraphics-2d-14}.</p></p>
+Sets or obtains the attributes of a native window, including the width, height, and content format. This interface is a non-thread-safe type interface.<br> <p><strong>API Note</strong><br> <strong>Performance Note</strong> <p>By default, the window buffer in the current operating system is accessed via the CPU. If an application does not need to access the window buffer data using the CPU, it can proactively disable CPU access to enhance energy efficiency and reduce power consumption. </p> <p>For details about how to optimize power consumption for data read/write operations in data buffers, see [How do I proactively disable CPU access to window buffers to reduce power consumption?]{@link https://developer.huawei.com/consumer/en/doc/harmonyos-faqs/faqs-arkgraphics-2d-14}.</p> </p>
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -481,7 +481,7 @@ BufferHandle *OH_NativeWindow_GetBufferHandleFromNative(OHNativeWindowBuffer *bu
 
 **Description**
 
-Obtains the pointer to a <b>BufferHandle</b> of a <b>OHNativeWindowBuffer</b> instance.<br> This interface is a non-thread-safe type interface.<br>
+Obtains the pointer to a <b>BufferHandle</b> of a <b>OHNativeWindowBuffer</b> instance. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -507,7 +507,7 @@ int32_t OH_NativeWindow_NativeObjectReference(void *obj)
 
 **Description**
 
-Adds the reference count of a native object.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br>
+Adds the reference count of a native object. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -533,7 +533,7 @@ int32_t OH_NativeWindow_NativeObjectUnreference(void *obj)
 
 **Description**
 
-Decreases the reference count of a native object and,when the reference count reaches 0, destroys this object.<br> This interface is a non-thread-safe type interface.<br>
+Decreases the reference count of a native object and, when the reference count reaches 0, destroys this object. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -559,7 +559,7 @@ int32_t OH_NativeWindow_GetNativeObjectMagic(void *obj)
 
 **Description**
 
-Obtains the magic ID of a native object.<br> This interface is a non-thread-safe type interface.<br>
+Obtains the magic ID of a native object. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -709,7 +709,7 @@ int32_t OH_NativeWindow_NativeWindowAttachBuffer(OHNativeWindow *window, OHNativ
 
 **Description**
 
-Attach a buffer to an <b>OHNativeWindow</b> instance.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowDetachBuffer</b>,otherwise buffer management will be chaotic.<br> This interface is a non-thread-safe type interface.<br>
+Attach a buffer to an <b>OHNativeWindow</b> instance. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeWindowDetachBuffer</b>, otherwise buffer management will be chaotic. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -736,7 +736,7 @@ int32_t OH_NativeWindow_NativeWindowDetachBuffer(OHNativeWindow *window, OHNativ
 
 **Description**
 
-Detach a buffer from an <b>OHNativeWindow</b> instance.<br> This interface is a non-thread-safe type interface.<br>
+Detach a buffer from an <b>OHNativeWindow</b> instance. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -763,7 +763,7 @@ int32_t OH_NativeWindow_GetSurfaceId(OHNativeWindow *window, uint64_t *surfaceId
 
 **Description**
 
-Get surfaceId from native window.<br> This interface is a non-thread-safe type interface.<br>
+Get surfaceId from native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -790,7 +790,7 @@ int32_t OH_NativeWindow_CreateNativeWindowFromSurfaceId(uint64_t surfaceId, OHNa
 
 **Description**
 
-Creates an <b>OHNativeWindow</b> instance.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindow</b>,otherwise memory leaks will occur.<br> If there is a concurrent destroy OHNativeWindow, you need to add once and decrement once to theOHNativeWindow reference count through <b>OH_NativeWindow_NativeObjectReference</b> and<b>OH_NativeWindow_NativeObjectUnreference</b>.<br> If the surface obtained through surfaceId is created in this process, the surface cannot be obtainedacross processes.<br> This interface is a non-thread-safe type interface.<br>
+Creates an <b>OHNativeWindow</b> instance. This interface needs to be used in conjunction with <b>OH_NativeWindow_DestroyNativeWindow</b>, otherwise memory leaks will occur. If there is a concurrent destroy OHNativeWindow, you need to add once and decrement once to the OHNativeWindow reference count through <b>OH_NativeWindow_NativeObjectReference</b> and <b>OH_NativeWindow_NativeObjectUnreference</b>. If the surface obtained through surfaceId is created in this process, the surface cannot be obtained across processes. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -817,7 +817,7 @@ int32_t OH_NativeWindow_NativeWindowSetScalingModeV2(OHNativeWindow *window, OHS
 
 **Description**
 
-Sets scalingMode of a native window.<br> This interface is a non-thread-safe type interface.<br>
+Sets scalingMode of a native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -844,7 +844,7 @@ void OH_NativeWindow_SetBufferHold(OHNativeWindow *window)
 
 **Description**
 
-Set native window buffer hold.<br> This interface is a non-thread-safe type interface.<br>
+Set native window buffer hold. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -864,7 +864,7 @@ int32_t OH_NativeWindow_WriteToParcel(OHNativeWindow *window, OHIPCParcel *parce
 
 **Description**
 
-Write an OHNativeWindow to an OHIPCParcel.<br> This interface is a non-thread-safe type interface.<br>
+Write an OHNativeWindow to an OHIPCParcel. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -881,7 +881,7 @@ Write an OHNativeWindow to an OHIPCParcel.<br> This interface is a non-thread-sa
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel is NULL or window is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel is NULL or window is NULL. |
 
 ### OH_NativeWindow_ReadFromParcel()
 
@@ -891,7 +891,7 @@ int32_t OH_NativeWindow_ReadFromParcel(OHIPCParcel *parcel, OHNativeWindow **win
 
 **Description**
 
-Read an OHNativeWindow from an OHIPCParcel.<br> This interface is a non-thread-safe type interface.<br>
+Read an OHNativeWindow from an OHIPCParcel. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -908,7 +908,7 @@ Read an OHNativeWindow from an OHIPCParcel.<br> This interface is a non-thread-s
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel is NULL or parcel does not contain the window. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel is NULL or parcel does not contain the window. |
 
 ### OH_NativeWindow_GetLastFlushedBufferV2()
 
@@ -918,7 +918,7 @@ int32_t OH_NativeWindow_GetLastFlushedBufferV2(OHNativeWindow *window, OHNativeW
 
 **Description**
 
-Get the last flushed <b>OHNativeWindowBuffer</b> from an <b>OHNativeWindow</b> instance.<br> When the fenceFd is used up, you need to close it.<br> This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br>
+Get the last flushed <b>OHNativeWindowBuffer</b> from an <b>OHNativeWindow</b> instance. When the fenceFd is used up, you need to close it. This interface needs to be used in conjunction with <b>OH_NativeWindow_NativeObjectUnreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -937,7 +937,7 @@ Get the last flushed <b>OHNativeWindowBuffer</b> from an <b>OHNativeWindow</b> i
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL or buffer is NULL or fenceFd is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - buffer state is wrong. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL or buffer is NULL or fenceFd is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - buffer state is wrong. |
 
 ### OH_NativeWindow_SetColorSpace()
 
@@ -947,7 +947,7 @@ int32_t OH_NativeWindow_SetColorSpace(OHNativeWindow *window, OH_NativeBuffer_Co
 
 **Description**
 
-Set the color space of the native window.<br> This interface is a non-thread-safe type interface.<br>
+Set the color space of the native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -964,7 +964,7 @@ Set the color space of the native window.<br> This interface is a non-thread-saf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
 
 ### OH_NativeWindow_GetColorSpace()
 
@@ -974,7 +974,7 @@ int32_t OH_NativeWindow_GetColorSpace(OHNativeWindow *window, OH_NativeBuffer_Co
 
 **Description**
 
-Get the color space of the native window.<br> This interface is a non-thread-safe type interface.<br>
+Get the color space of the native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -991,7 +991,7 @@ Get the color space of the native window.<br> This interface is a non-thread-saf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
 
 ### OH_NativeWindow_SetMetadataValue()
 
@@ -1001,7 +1001,7 @@ int32_t OH_NativeWindow_SetMetadataValue(OHNativeWindow *window, OH_NativeBuffer
 
 **Description**
 
-Set the metadata type of the native window.<br> This interface is a non-thread-safe type interface.<br>
+Set the metadata type of the native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1020,7 +1020,7 @@ Set the metadata type of the native window.<br> This interface is a non-thread-s
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or metadata is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or metadata is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>    {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeWindow_GetMetadataValue()
 
@@ -1030,7 +1030,7 @@ int32_t OH_NativeWindow_GetMetadataValue(OHNativeWindow *window, OH_NativeBuffer
 
 **Description**
 
-Set the metadata type of the native window.<br> This interface is a non-thread-safe type interface.<br>
+Set the metadata type of the native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1049,7 +1049,7 @@ Set the metadata type of the native window.<br> This interface is a non-thread-s
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window, metadata, or size is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window, metadata, or size is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>    {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeWindow_CleanCache()
 
@@ -1059,7 +1059,7 @@ int32_t OH_NativeWindow_CleanCache(OHNativeWindow *window)
 
 **Description**
 
-Clean all <b>OHNativeWindowBuffer</b> caches of this <b>OHNativeWindow</b>This interface is a non-thread-safe type interface.<br>
+Clean all <b>OHNativeWindowBuffer</b> caches of this <b>OHNativeWindow</b> This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1075,7 +1075,7 @@ Clean all <b>OHNativeWindowBuffer</b> caches of this <b>OHNativeWindow</b>This i
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.      {@link NATIVE_ERROR_CONSUMER_DISCONNECTED} 41211000 - the consumer is disconnected.      {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.<br>    {@link NATIVE_ERROR_CONSUMER_DISCONNECTED} 41211000 - the consumer is disconnected.<br>    {@link NATIVE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
 
 ### OH_NativeWindow_PreAllocBuffers()
 
@@ -1085,7 +1085,7 @@ int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBu
 
 **Description**
 
-PreAlloc <b>OHNativeWindowBuffer</b> of this <b>OHNativeWindow</b>This interface is a non-thread-safe type interface.<br>
+PreAlloc <b>OHNativeWindowBuffer</b> of this <b>OHNativeWindow</b> This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1112,7 +1112,7 @@ int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNati
 
 **Description**
 
-Requests an <b>OHNativeWindowBuffer</b> through an <b>OHNativeWindow</b> instance for content production,<br> and lock the <b>OHNativeWindowBuffer</b>, the interface needs to be paired with<br> <b>OH_NativeWindow_UnlockAndFlushBuffer</b> for use, after lock, it must be unlocked in order to relock,<br> repeatedly lock or unlock will return an illegal operation error code, the interface supports rendering images<br> directly through memory read and write on the CPU.This interface is a non-thread-safe type interface.<br>
+Requests an <b>OHNativeWindowBuffer</b> through an <b>OHNativeWindow</b> instance for content production, and lock the <b>OHNativeWindowBuffer</b>, the interface needs to be paired with <b>OH_NativeWindow_UnlockAndFlushBuffer</b> for use, after lock, it must be unlocked in order to relock, repeatedly lock or unlock will return an illegal operation error code, the interface supports rendering images directly through memory read and write on the CPU. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1130,7 +1130,7 @@ Requests an <b>OHNativeWindowBuffer</b> through an <b>OHNativeWindow</b> instanc
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or buffer is NULL.      {@link NATIVE_ERROR_UNKNOWN} 50002000 - surface of window is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or buffer is NULL.<br>    {@link NATIVE_ERROR_UNKNOWN} 50002000 - surface of window is NULL. |
 
 ### OH_NativeWindow_UnlockAndFlushBuffer()
 
@@ -1140,7 +1140,7 @@ int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)
 
 **Description**
 
-Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through an <br> <b>OHNativeWindow</b> instance for content consumption, and unlock the <b>OHNativeWindowBuffer</b>.This interface is a non-thread-safe type interface.<br>
+Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer queue through an <b>OHNativeWindow</b> instance for content consumption, and unlock the <b>OHNativeWindowBuffer</b>. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1156,7 +1156,7 @@ Flushes the <b>OHNativeWindowBuffer</b> filled with the content to the buffer qu
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.      {@link NATIVE_ERROR_UNKNOWN} 50002000 - surface of window is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window is NULL.<br>    {@link NATIVE_ERROR_UNKNOWN} 50002000 - surface of window is NULL. |
 
 ### OH_NativeWindow_Set3DMetadataValue()
 
@@ -1166,7 +1166,7 @@ int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuff
 
 **Description**
 
-Set the 3D metadata of the native window.<br> This interface is a non-thread-safe type interface.<br>
+Set the 3D metadata of the native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1185,7 +1185,7 @@ Set the 3D metadata of the native window.<br> This interface is a non-thread-saf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or metadata is NULL.      {@link NATIVE_ERROR_UNKNOWN} 50002000 - set 3D metadata failed.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window or metadata is NULL.<br>    {@link NATIVE_ERROR_UNKNOWN} 50002000 - set 3D metadata failed.<br>    {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - unsupported metadata key. |
 
 ### OH_NativeWindow_Get3DMetadataValue()
 
@@ -1195,7 +1195,7 @@ int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuff
 
 **Description**
 
-Get the 3D metadata of the native window.<br> This interface is a non-thread-safe type interface.<br>
+Get the 3D metadata of the native window. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
@@ -1214,6 +1214,6 @@ Get the 3D metadata of the native window.<br> This interface is a non-thread-saf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window, metadata, or size is NULL.      {@link NATIVE_ERROR_UNKNOWN} 50002000 - copy or allocate memory failed, otherwise get 3D metadata failed.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - window, metadata, or size is NULL.<br>    {@link NATIVE_ERROR_UNKNOWN} 50002000 - copy or allocate memory failed, otherwise get 3D metadata failed.<br>    {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - unsupported metadata key. |
 
 

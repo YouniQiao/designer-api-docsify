@@ -45,7 +45,7 @@ OH_Drawing_LineTypography* OH_Drawing_CreateLineTypography(OH_Drawing_Typography
 | -- | -- |
 | OH_Drawing_TypographyCreate* handler | 指向{@link OH_Drawing_TypographyCreate}对象的指针，由{@link OH_Drawing_CreateTypographyHandler}获取。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -93,7 +93,7 @@ size_t OH_Drawing_LineTypographyGetLineBreak(OH_Drawing_LineTypography* lineTypo
 | size_t startIndex | 开始计算排版的起始位置（包括起始位置）。取值范围为[0, 文本字符总数）的整数。 |
 | double width | 换行宽度，大于0的浮点数，单位为物理像素px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -119,9 +119,9 @@ OH_Drawing_TextLine* OH_Drawing_LineTypographyCreateLine(OH_Drawing_LineTypograp
 | -- | -- |
 | OH_Drawing_LineTypography* lineTypography | 指向排版行对象{@link OH_Drawing_LineTypography}的指针，由[OH_Drawing_CreateLineTypography](capi-drawing-text-linetypography-h.md#oh_drawing_createlinetypography)获取。 |
 | size_t startIndex | 表示计算排版的起始位置，整数，取值范围为[0, 文本字符总数)。 |
-| size_t count | 表示从指定排版起始位置开始进行排版的字符个数，取值为[0, 文本字符总数)的整数，startIndex和count之和不能大于文本字符总数。<br>可以先使用[OH_Drawing_LineTypographyGetLineBreak](capi-drawing-text-linetypography-h.md#oh_drawing_linetypographygetlinebreak)获得合理的可用于进行排版的字符总数。如果该值设置为0，则返回自startIndex开始到文本末尾的内容。 |
+| size_t count | 表示从指定排版起始位置开始进行排版的字符个数，取值为[0, 文本字符总数)的整数，startIndex和count之和不能大于文本字符总数。 <br>可以先使用[OH_Drawing_LineTypographyGetLineBreak](capi-drawing-text-linetypography-h.md#oh_drawing_linetypographygetlinebreak)获得合理的可用于进行排版的字符总数。如果该值设置为0，则返回自startIndex开始到文本末尾的内容。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

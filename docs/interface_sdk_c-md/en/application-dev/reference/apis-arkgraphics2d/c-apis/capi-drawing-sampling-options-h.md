@@ -2,13 +2,13 @@
 
 ## Overview
 
-This file declares the functions related to sampling in the drawing module. It is used for image or texturesampling.
+This file declares the functions related to sampling in the drawing module. It is used for image or texture sampling.
 
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -25,7 +25,7 @@ This file declares the functions related to sampling in the drawing module. It i
 
 | Name | Description |
 | -- | -- |
-| [OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCreate(OH_Drawing_FilterMode filterMode, OH_Drawing_MipmapMode mipmapMode)](#oh_drawing_samplingoptionscreate) | Creates an **OH_Drawing_SamplingOptions** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **mipmapMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned. |
+| [OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCreate(OH_Drawing_FilterMode filterMode, OH_Drawing_MipmapMode mipmapMode)](#oh_drawing_samplingoptionscreate) | Creates an **OH_Drawing_SamplingOptions** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **mipmapMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
 | [OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCopy(OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_samplingoptionscopy) | Creates a copy of an {@link OH_Drawing_SamplingOptions} object. |
 | [void OH_Drawing_SamplingOptionsDestroy(OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_samplingoptionsdestroy) | Destroys an **OH_Drawing_SamplingOptions** object and reclaims the memory occupied by the object. |
 
@@ -77,7 +77,7 @@ OH_Drawing_SamplingOptions* OH_Drawing_SamplingOptionsCreate(OH_Drawing_FilterMo
 
 **Description**
 
-Creates an **OH_Drawing_SamplingOptions** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **mipmapMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** isreturned.
+Creates an **OH_Drawing_SamplingOptions** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **mipmapMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 

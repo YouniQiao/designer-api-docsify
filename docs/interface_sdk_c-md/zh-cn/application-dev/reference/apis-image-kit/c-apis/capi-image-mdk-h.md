@@ -35,10 +35,10 @@
 | -- | -- |
 | [ImageNative* OH_Image_InitImageNative(napi_env env, napi_value source)](#oh_image_initimagenative) | 从输入的JavaScript Native API图像对象中解析native ImageNative对象。 |
 | [int32_t OH_Image_ClipRect(const ImageNative* native, struct OhosImageRect* rect)](#oh_image_cliprect) | 获取native ImageNative对象OhosImageRect信息。 |
-| [int32_t OH_Image_Size(const ImageNative* native, struct OhosImageSize* size)](#oh_image_size) | 获取native ImageNative对象的OhosImageSize信息。<br>如果ImageNative对象所存储的是相机预览流数据，即YUV图像数据，那么获取到的OhosImageSize中的宽高分别对应YUV图像的宽高；如果ImageNative对象所存储的是相机拍照流数据，即JPEG图像，由于已经是编码后的数据，OhosImageSize中的宽等于JPEG数据大小，高等于1。<br>ImageNative对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId传给相机的previewOutput还是captureOutput。相机预览与拍照最佳实践请参考{@link 预览流二次处理(C/C++)}与{@link 拍照(C/C++)}。 |
+| [int32_t OH_Image_Size(const ImageNative* native, struct OhosImageSize* size)](#oh_image_size) | 获取native ImageNative对象的OhosImageSize信息。 <br>如果ImageNative对象所存储的是相机预览流数据，即YUV图像数据，那么获取到的OhosImageSize中的宽高分别对应YUV图像的宽高；如果ImageNative对象所存储的是相机拍照流数据，即JPEG图像， 由于已经是编码后的数据，OhosImageSize中的宽等于JPEG数据大小，高等于1。 <br>ImageNative对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId传给相机的previewOutput还是captureOutput。相机预览与拍照最佳实践请参考 {@link 预览流二次处理(C/C++)}与{@link 拍照(C/C++)}。 |
 | [int32_t OH_Image_Format(const ImageNative* native, int32_t* format)](#oh_image_format) | 获取native ImageNative对象的图像格式。 |
 | [int32_t OH_Image_GetComponent(const ImageNative* native, int32_t componentType, struct OhosImageComponent* componentNative)](#oh_image_getcomponent) | 从native ImageNative对象中获取OhosImageComponent。 |
-| [int32_t OH_Image_Release(ImageNative* native)](#oh_image_release) | 释放ImageNative native对象。<br>这个方法无法释放JavaScript Native API Image对象，而是释放被[OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative)解析的ImageNative native对象。 |
+| [int32_t OH_Image_Release(ImageNative* native)](#oh_image_release) | 释放ImageNative native对象。 <br>这个方法无法释放JavaScript Native API Image对象，而是释放被[OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative)解析的ImageNative native对象。 |
 
 ## 枚举类型说明
 
@@ -100,7 +100,7 @@ ImageNative* OH_Image_InitImageNative(napi_env env, napi_value source)
 | napi_env env | 表示指向JNI环境的指针。 |
 | napi_value source | 表示JavaScript Native API图像对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -130,7 +130,7 @@ int32_t OH_Image_ClipRect(const ImageNative* native, struct OhosImageRect* rect)
 | [const ImageNative](capi-image-imagenative-.md)* native | 表示指向ImageNative native层对象的指针。 |
 | [struct OhosImageRect](capi-image-ohosimagerect.md)* rect | 表示作为转换结果的OhosImageRect对象指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -149,7 +149,7 @@ int32_t OH_Image_Size(const ImageNative* native, struct OhosImageSize* size)
 
 **描述：**
 
-获取native ImageNative对象的OhosImageSize信息。<br>如果ImageNative对象所存储的是相机预览流数据，即YUV图像数据，那么获取到的OhosImageSize中的宽高分别对应YUV图像的宽高；如果ImageNative对象所存储的是相机拍照流数据，即JPEG图像，由于已经是编码后的数据，OhosImageSize中的宽等于JPEG数据大小，高等于1。<br>ImageNative对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId传给相机的previewOutput还是captureOutput。相机预览与拍照最佳实践请参考{@link 预览流二次处理(C/C++)}与{@link 拍照(C/C++)}。
+获取native ImageNative对象的OhosImageSize信息。 <br>如果ImageNative对象所存储的是相机预览流数据，即YUV图像数据，那么获取到的OhosImageSize中的宽高分别对应YUV图像的宽高；如果ImageNative对象所存储的是相机拍照流数据，即JPEG图像， 由于已经是编码后的数据，OhosImageSize中的宽等于JPEG数据大小，高等于1。 <br>ImageNative对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId传给相机的previewOutput还是captureOutput。相机预览与拍照最佳实践请参考 {@link 预览流二次处理(C/C++)}与{@link 拍照(C/C++)}。
 
 **起始版本：** 10
 
@@ -160,7 +160,7 @@ int32_t OH_Image_Size(const ImageNative* native, struct OhosImageSize* size)
 | [const ImageNative](capi-image-imagenative-.md)* native | 表示ImageNative native对象的指针。 |
 | struct OhosImageSize* size | 表示作为转换结果的OhosImageSize对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -190,7 +190,7 @@ int32_t OH_Image_Format(const ImageNative* native, int32_t* format)
 | [const ImageNative](capi-image-imagenative-.md)* native | 表示ImageNative native对象的指针。 |
 | int32_t* format | 表示作为转换结果的图像格式对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -221,7 +221,7 @@ int32_t OH_Image_GetComponent(const ImageNative* native, int32_t componentType, 
 | int32_t componentType | 表示所需组件的组件类型。 |
 | [struct OhosImageComponent](capi-image-ohosimagecomponent.md)* componentNative | 表示转换结果的OhosImageComponent对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -240,7 +240,7 @@ int32_t OH_Image_Release(ImageNative* native)
 
 **描述：**
 
-释放ImageNative native对象。<br>这个方法无法释放JavaScript Native API Image对象，而是释放被[OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative)解析的ImageNative native对象。
+释放ImageNative native对象。 <br>这个方法无法释放JavaScript Native API Image对象，而是释放被[OH_Image_InitImageNative](capi-image-mdk-h.md#oh_image_initimagenative)解析的ImageNative native对象。
 
 **起始版本：** 10
 
@@ -250,7 +250,7 @@ int32_t OH_Image_Release(ImageNative* native)
 | -- | -- |
 | [ImageNative](capi-image-imagenative-.md)* native | 表示ImageNative native对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

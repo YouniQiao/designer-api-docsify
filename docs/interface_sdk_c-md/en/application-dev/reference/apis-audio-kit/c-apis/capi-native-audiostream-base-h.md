@@ -21,9 +21,9 @@ Declare the underlying data structure.
 | [OH_AudioStreamInfo](capi-ohaudio-oh-audiostreaminfo.md) | OH_AudioStreamInfo | Define the audio stream info structure, used to describe basic audio format. |
 | [OH_AudioRenderer_Callbacks_Struct](capi-ohaudio-oh-audiorenderer-callbacks-struct.md) | OH_AudioRenderer_Callbacks | Declaring the callback struct for renderer stream. |
 | [OH_AudioCapturer_Callbacks_Struct](capi-ohaudio-oh-audiocapturer-callbacks-struct.md) | OH_AudioCapturer_Callbacks | Declaring the callback struct for capturer stream. |
-| [OH_AudioStreamBuilderStruct](capi-ohaudio-oh-audiostreambuilderstruct.md) | OH_AudioStreamBuilder | Declaring the audio stream builder.The instance of builder is used for creating audio stream. |
-| [OH_AudioRendererStruct](capi-ohaudio-oh-audiorendererstruct.md) | OH_AudioRenderer | Declaring the audio renderer stream.The instance of renderer stream is used for playing audio data. |
-| [OH_AudioCapturerStruct](capi-ohaudio-oh-audiocapturerstruct.md) | OH_AudioCapturer | Declaring the audio capturer stream.The instance of renderer stream is used for capturing audio data. |
+| [OH_AudioStreamBuilderStruct](capi-ohaudio-oh-audiostreambuilderstruct.md) | OH_AudioStreamBuilder | Declaring the audio stream builder. The instance of builder is used for creating audio stream. |
+| [OH_AudioRendererStruct](capi-ohaudio-oh-audiorendererstruct.md) | OH_AudioRenderer | Declaring the audio renderer stream. The instance of renderer stream is used for playing audio data. |
+| [OH_AudioCapturerStruct](capi-ohaudio-oh-audiocapturerstruct.md) | OH_AudioCapturer | Declaring the audio capturer stream. The instance of renderer stream is used for capturing audio data. |
 
 ### Enum
 
@@ -33,7 +33,7 @@ Declare the underlying data structure.
 | [OH_AudioStream_Type](#oh_audiostream_type) | OH_AudioStream_Type | Define the audio stream type. |
 | [OH_AudioStream_SampleFormat](#oh_audiostream_sampleformat) | OH_AudioStream_SampleFormat | Define the audio stream sample format. |
 | [OH_AudioStream_EncodingType](#oh_audiostream_encodingtype) | OH_AudioStream_EncodingType | Define the audio encoding type. |
-| [OH_AudioStream_Usage](#oh_audiostream_usage) | OH_AudioStream_Usage | Define the audio stream usage.Audio stream usage is used to describe what work scenariothe current stream is used for. |
+| [OH_AudioStream_Usage](#oh_audiostream_usage) | OH_AudioStream_Usage | Define the audio stream usage. Audio stream usage is used to describe what work scenario the current stream is used for. |
 | [OH_AudioStream_LatencyMode](#oh_audiostream_latencymode) | OH_AudioStream_LatencyMode | Define the audio latency mode. |
 | [OH_AudioStream_DirectPlaybackMode](#oh_audiostream_directplaybackmode) | OH_AudioStream_DirectPlaybackMode | Enumerates audio direct playback modes. |
 | [OH_AudioStream_Event](#oh_audiostream_event) | OH_AudioStream_Event | Define the audio event.(Deprecated in API20) |
@@ -49,7 +49,7 @@ Declare the underlying data structure.
 | [OH_AudioData_Callback_Result](#oh_audiodata_callback_result) | OH_AudioData_Callback_Result | Defines enumeration of audio data callback result. |
 | [OH_AudioStream_VolumeMode](#oh_audiostream_volumemode) | OH_AudioStream_VolumeMode | Define the audio stream volume mode. |
 | [OH_AudioStream_LatencyType](#oh_audiostream_latencytype) | OH_AudioStream_LatencyType | Defines audio latency types. |
-| [OH_AudioStream_PlaybackCaptureMode](#oh_audiostream_playbackcapturemode) | OH_AudioStream_PlaybackCaptureMode | Defines mode for playback capture, each mode means different targetstreams to capture. |
+| [OH_AudioStream_PlaybackCaptureMode](#oh_audiostream_playbackcapturemode) | OH_AudioStream_PlaybackCaptureMode | Defines mode for playback capture, each mode means different target streams to capture. |
 
 ### Function
 
@@ -57,8 +57,17 @@ Declare the underlying data structure.
 | -- | -- | -- |
 | [typedef void (\*OH_AudioRenderer_OutputDeviceChangeCallback)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_DeviceChangeReason reason)](#oh_audiorenderer_outputdevicechangecallback) | OH_AudioRenderer_OutputDeviceChangeCallback | Callback when the output device of an audio renderer changed. |
 | [typedef void (\*OH_AudioRenderer_OnMarkReachedCallback)(OH_AudioRenderer* renderer, uint32_t samplePos, void* userData)](#oh_audiorenderer_onmarkreachedcallback) | OH_AudioRenderer_OnMarkReachedCallback | Callback when the mark position reached. |
-| [typedef int32_t (\*OH_AudioRenderer_WriteDataWithMetadataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize, void* metadata, int32_t metadataSize)](#oh_audiorenderer_writedatawithmetadatacallback) | OH_AudioRenderer_WriteDataWithMetadataCallback | This function pointer will point to the callback function thatis used to write audio data with metadata |
-| [typedef OH_AudioData_Callback_Result (\*OH_AudioRenderer_OnWriteDataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize)](#oh_audiorenderer_onwritedatacallback) | OH_AudioRenderer_OnWriteDataCallback | Callback function of write data.This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the returnvalue. The return result of this function indicates whether the data filled in the buffer is valid or invalid. Ifresult is invalid, the data filled by user will not be played. |
+| [typedef int32_t (\*OH_AudioRenderer_WriteDataWithMetadataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize, void* metadata, int32_t metadataSize)](#oh_audiorenderer_writedatawithmetadatacallback) | OH_AudioRenderer_WriteDataWithMetadataCallback | This function pointer will point to the callback function that is used to write audio data with metadata |
+| [typedef OH_AudioData_Callback_Result (\*OH_AudioRenderer_OnWriteDataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize)](#oh_audiorenderer_onwritedatacallback) | OH_AudioRenderer_OnWriteDataCallback | Callback function of write data.<br> This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the return value. The return result of this function indicates whether the data filled in the buffer is valid or invalid. If result is invalid, the data filled by user will not be played. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_AudioRenderer_OutputDeviceChangeCallback)(OH_AudioRenderer* renderer, void* userData, OH_AudioStream_DeviceChangeReason reason) | Callback when the output device of an audio renderer changed.<br>**Since**: 11 |
+| void (*OH_AudioRenderer_OnMarkReachedCallback)(OH_AudioRenderer* renderer, uint32_t samplePos, void* userData) | Callback when the mark position reached.<br>**Since**: 12 |
+| int32_t (*OH_AudioRenderer_WriteDataWithMetadataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize, void* metadata, int32_t metadataSize) | This function pointer will point to the callback function that is used to write audio data with metadata<br>**Since**: 12 |
+| OH_AudioData_Callback_Result (*OH_AudioRenderer_OnWriteDataCallback)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize) | Callback function of write data.<br> This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the return value. The return result of this function indicates whether the data filled in the buffer is valid or invalid. If result is invalid, the data filled by user will not be played.<br>**Since**: 12 |
 
 ## Enum type description
 
@@ -147,7 +156,7 @@ enum OH_AudioStream_Usage
 
 **Description**
 
-Define the audio stream usage.Audio stream usage is used to describe what work scenariothe current stream is used for.
+Define the audio stream usage. Audio stream usage is used to describe what work scenario the current stream is used for.
 
 **Since**: 10
 
@@ -460,7 +469,7 @@ enum OH_AudioStream_PlaybackCaptureMode
 
 **Description**
 
-Defines mode for playback capture, each mode means different targetstreams to capture.
+Defines mode for playback capture, each mode means different target streams to capture.
 
 **Since**: 23
 
@@ -521,7 +530,7 @@ typedef int32_t (*OH_AudioRenderer_WriteDataWithMetadataCallback)(OH_AudioRender
 
 **Description**
 
-This function pointer will point to the callback function thatis used to write audio data with metadata
+This function pointer will point to the callback function that is used to write audio data with metadata
 
 **Since**: 12
 
@@ -550,7 +559,7 @@ typedef OH_AudioData_Callback_Result (*OH_AudioRenderer_OnWriteDataCallback)(OH_
 
 **Description**
 
-Callback function of write data.This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the returnvalue. The return result of this function indicates whether the data filled in the buffer is valid or invalid. Ifresult is invalid, the data filled by user will not be played.
+Callback function of write data.<br> This function is similar with OH_AudioRenderer_Callbacks_Struct.OH_AudioRenderer_OnWriteData instead of the return value. The return result of this function indicates whether the data filled in the buffer is valid or invalid. If result is invalid, the data filled by user will not be played.
 
 **Since**: 12
 

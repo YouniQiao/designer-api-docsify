@@ -22,7 +22,7 @@
 | [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithUri(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ResourceType resourceType, char* fileUri)](#oh_mediaassetchangerequest_addresourcewithuri) | 通过文件uri添加资源。 |
 | [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithBuffer(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ResourceType resourceType, uint8_t* buffer, uint32_t length)](#oh_mediaassetchangerequest_addresourcewithbuffer) | 通过ArrayBuffer数据添加资源。 |
 | [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_GetWriteCacheHandler(OH_MediaAssetChangeRequest* changeRequest, int32_t* fd)](#oh_mediaassetchangerequest_getwritecachehandler) | 获取临时文件写句柄。 |
-| [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ImageFileType imageFileType)](#oh_mediaassetchangerequest_savecameraphoto) | 拍照场景下，使用该接口保存相机拍摄的照片资源。<br>非YUV拍摄模式下，照片资源保存的编码格式与{@link Camera_Format}中的编码格式保持一致。<br>YUV拍摄模式下，该接口根据{@link MediaLibrary_ImageFileType}将YUV对象编码保存为指定格式。<br>当该接口与[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer)组合使用时，照片资源保存的编码格式与[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer)添加资源的编码格式保持一致。 |
+| [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetChangeRequest* changeRequest, MediaLibrary_ImageFileType imageFileType)](#oh_mediaassetchangerequest_savecameraphoto) | 拍照场景下，使用该接口保存相机拍摄的照片资源。 <br>非YUV拍摄模式下，照片资源保存的编码格式与{@link Camera_Format}中的编码格式保持一致。<br><br>YUV拍摄模式下，该接口根据{@link MediaLibrary_ImageFileType}将YUV对象编码保存为指定格式。 <br>当该接口与[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或<br>[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer)组合使用时，照片资源保存的编码格式与<br>[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer) 添加资源的编码格式保持一致。 |
 | [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_DiscardCameraPhoto(OH_MediaAssetChangeRequest* changeRequest)](#oh_mediaassetchangerequest_discardcameraphoto) | 丢弃相机拍摄的照片资源。 |
 | [MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_Release(OH_MediaAssetChangeRequest* changeRequest)](#oh_mediaassetchangerequest_release) | 释放{@link OH_MediaAssetChangeRequest}实例。 |
 
@@ -46,7 +46,7 @@ OH_MediaAssetChangeRequest* OH_MediaAssetChangeRequest_Create(OH_MediaAsset* med
 | -- | -- |
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -72,7 +72,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithUri(OH_MediaAss
 | MediaLibrary_ResourceType resourceType | 要添加的资源的{@link MediaLibrary_ResourceType}。 |
 | char* fileUri | 文件uri。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -99,7 +99,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_AddResourceWithBuffer(OH_Media
 | uint8_t* buffer | 要添加的数据缓冲区。 |
 | uint32_t length | 数据缓冲区的长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -126,7 +126,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_GetWriteCacheHandler(OH_MediaA
 | OH_MediaAssetChangeRequest* changeRequest | {@link OH_MediaAssetChangeRequest}实例。 |
 | int32_t* fd | 临时文件写句柄。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -140,7 +140,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetC
 
 **描述：**
 
-拍照场景下，使用该接口保存相机拍摄的照片资源。<br>非YUV拍摄模式下，照片资源保存的编码格式与{@link Camera_Format}中的编码格式保持一致。<br>YUV拍摄模式下，该接口根据{@link MediaLibrary_ImageFileType}将YUV对象编码保存为指定格式。<br>当该接口与[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer)组合使用时，照片资源保存的编码格式与[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer)添加资源的编码格式保持一致。
+拍照场景下，使用该接口保存相机拍摄的照片资源。 <br>非YUV拍摄模式下，照片资源保存的编码格式与{@link Camera_Format}中的编码格式保持一致。<br><br>YUV拍摄模式下，该接口根据{@link MediaLibrary_ImageFileType}将YUV对象编码保存为指定格式。 <br>当该接口与[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或<br>[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer)组合使用时，照片资源保存的编码格式与<br>[OH_MediaAssetChangeRequest_AddResourceWithUri](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithuri)或[OH_MediaAssetChangeRequest_AddResourceWithBuffer](capi-media-asset-change-request-capi-h.md#oh_mediaassetchangerequest_addresourcewithbuffer) 添加资源的编码格式保持一致。
 
 **起始版本：** 12
 
@@ -151,7 +151,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_SaveCameraPhoto(OH_MediaAssetC
 | OH_MediaAssetChangeRequest* changeRequest | {@link OH_MediaAssetChangeRequest}实例。 |
 | MediaLibrary_ImageFileType imageFileType | 要保存的照片的图像文件类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -175,7 +175,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_DiscardCameraPhoto(OH_MediaAss
 | -- | -- |
 | OH_MediaAssetChangeRequest* changeRequest | {@link OH_MediaAssetChangeRequest}实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -199,7 +199,7 @@ MediaLibrary_ErrorCode OH_MediaAssetChangeRequest_Release(OH_MediaAssetChangeReq
 | -- | -- |
 | OH_MediaAssetChangeRequest* changeRequest | {@link OH_MediaAssetChangeRequest}实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

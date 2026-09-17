@@ -22,7 +22,7 @@ Defines the OpenHarmony Universal KeyStore (HUKS) APIs for external key manageme
 | -- | -- |
 | [struct OH_Huks_Result OH_Huks_RegisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_registerprovider) | Registers an external key management extension provider. |
 | [struct OH_Huks_Result OH_Huks_UnregisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_unregisterprovider) | Unregisters an external key management extension provider. |
-| [struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_openresource) | Opens a resource based on the specified resource ID.<br>Note: The opened resource must be closed using [OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource). |
+| [struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_openresource) | Opens a resource based on the specified resource ID. <br>Note: The opened resource must be closed using [OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource). |
 | [struct OH_Huks_Result OH_Huks_CloseResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_closeresource) | Closes a resource based on the specified resource ID. |
 | [struct OH_Huks_Result OH_Huks_GetUkeyPinAuthState(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet, OH_Huks_ExternalPinAuthState *authState)](#oh_huks_getukeypinauthstate) | Obtains the PIN authorization state of the specified UKey resource ID. |
 | [struct OH_Huks_Result OH_Huks_GetProperty(const struct OH_Huks_Blob *resourceId, const struct OH_Huks_Blob *propertyId, const OH_Huks_ExternalCryptoParamSet *paramSetIn, OH_Huks_ExternalCryptoParamSet **paramSetOut)](#oh_huks_getproperty) | Obtains the property information of the external key management capability extension provider. |
@@ -96,7 +96,7 @@ struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId
 
 **Description**
 
-Opens a resource based on the specified resource ID.<br>Note: The opened resource must be closed using [OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource).
+Opens a resource based on the specified resource ID. <br>Note: The opened resource must be closed using [OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource).
 
 **Since**: 22
 
@@ -183,7 +183,7 @@ Obtains the property information of the external key management capability exten
 | const struct OH_Huks_Blob *resourceId | Pointer to the resource ID of the specified provider. |
 | const struct OH_Huks_Blob *propertyId | Pointer to the name of the property function defined by GMT 0016-2023. |
 | const OH_Huks_ExternalCryptoParamSet *paramSetIn | Pointer to the input operation parameters. |
-| OH_Huks_ExternalCryptoParamSet **paramSetOut | Double pointer to the output parameters, which must contain the OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA** parameter. |
+| OH_Huks_ExternalCryptoParamSet **paramSetOut | Double pointer to the output parameters, which must contain the **<br>OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA** parameter. |
 
 **Returns**:
 

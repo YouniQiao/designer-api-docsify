@@ -19,7 +19,7 @@ Defines basic data types and data structures.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ListNode](capi-teeclient-listnode.md) | - | Defines the linked list type. |
-| [TEEC_UUID](capi-teeclient-teec-uuid.md) | TEEC_UUID | Defines the universally unique identifier (UUID) as defined in RFC4122 [2].The UUIDs are used to identify TAs. |
+| [TEEC_UUID](capi-teeclient-teec-uuid.md) | TEEC_UUID | Defines the universally unique identifier (UUID) as defined in RFC4122 [2]. The UUIDs are used to identify TAs. |
 | [TEEC_Context](capi-teeclient-teec-context.md) | TEEC_Context | Defines the context, a logical connection between a CA and a TEE. |
 | [TEEC_Session](capi-teeclient-teec-session.md) | TEEC_Session | Defines the session between a CA and a TA. |
 | [TEEC_SharedMemory](capi-teeclient-teec-sharedmemory.md) | TEEC_SharedMemory | Defines a shared memory block, which can be registered or allocated. |

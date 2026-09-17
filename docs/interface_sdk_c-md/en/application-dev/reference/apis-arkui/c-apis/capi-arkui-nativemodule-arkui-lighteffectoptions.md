@@ -6,7 +6,7 @@ typedef struct ArkUI_LightEffectOptions ArkUI_LightEffectOptions
 
 ## Overview
 
-Defines the light effect options for immersive material.The object is created with a default white color.
+Defines the light effect options for immersive material. The object is created with a default white color.
 
 **Since**: 26.0.0
 

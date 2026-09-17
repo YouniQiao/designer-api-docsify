@@ -2,13 +2,13 @@
 
 ## Overview
 
-Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects onthe native side.
+Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side.
 
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 23
+**Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
@@ -18,12 +18,12 @@ Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>Ar
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object frameNode, ArkUI_NodeHandle* handle)](#oh_arkui_nativemodule_getnodehandlefromanivalue) | Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on thenative side. |
-| [int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object context, ArkUI_ContextHandle* handle)](#oh_arkui_nativemodule_getcontextfromanivalue) | Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on thenative side. |
-| [int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_object nodeContent, ArkUI_NodeContentHandle *content)](#oh_arkui_nativemodule_getnodecontentfromanivalue) | Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b>object on the native side. |
+| [int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object frameNode, ArkUI_NodeHandle* handle)](#oh_arkui_nativemodule_getnodehandlefromanivalue) | Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on the native side. |
+| [int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object context, ArkUI_ContextHandle* handle)](#oh_arkui_nativemodule_getcontextfromanivalue) | Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on the native side. |
+| [int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_object nodeContent, ArkUI_NodeContentHandle *content)](#oh_arkui_nativemodule_getnodecontentfromanivalue) | Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b> object on the native side. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetNavDestinationAniParam(ArkUI_NodeHandle node, ani_env* env, ani_value* param)](#oh_arkui_nativemodule_getnavdestinationaniparam) | Obtains the parameters of the NavDestination component where the node is located. |
-| [int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, ani_object drawable, ArkUI_DrawableDescriptor **drawableDescriptor)](#oh_arkui_nativemodule_getdrawabledescriptorfromanivalue) | Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptro</b> object on the native side. |
-| [int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env *env, ani_object resource, ArkUI_DrawableDescriptor **drawableDescriptor)](#oh_arkui_nativemodule_getdrawabledescriptorfromresourceanivalue) | Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptro</b> object on the native side. |
+| [int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, ani_object drawable, ArkUI_DrawableDescriptor **drawableDescriptor)](#oh_arkui_nativemodule_getdrawabledescriptorfromanivalue) | Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptro</b> object on the native side. |
+| [int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env *env, ani_object resource, ArkUI_DrawableDescriptor **drawableDescriptor)](#oh_arkui_nativemodule_getdrawabledescriptorfromresourceanivalue) | Obtains a <b>Resource</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptro</b> object on the native side. |
 
 ## Function description
 
@@ -35,7 +35,7 @@ int32_t OH_ArkUI_NativeModule_GetNodeHandleFromAniValue(ani_env* env, ani_object
 
 **Description**
 
-Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on thenative side.
+Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on the native side.
 
 **Since**: 23
 
@@ -51,7 +51,7 @@ Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_N
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_GetContextFromAniValue()
 
@@ -61,7 +61,7 @@ int32_t OH_ArkUI_NativeModule_GetContextFromAniValue(ani_env* env, ani_object co
 
 **Description**
 
-Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on thenative side.
+Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on the native side.
 
 **Since**: 23
 
@@ -77,7 +77,7 @@ Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_C
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_GetNodeContentFromAniValue()
 
@@ -87,7 +87,7 @@ int32_t OH_ArkUI_NativeModule_GetNodeContentFromAniValue(ani_env *env, ani_objec
 
 **Description**
 
-Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b>object on the native side.
+Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b> object on the native side.
 
 **Since**: 23
 
@@ -103,7 +103,7 @@ Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.           Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.           Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.           Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_GetNavDestinationAniParam()
 
@@ -129,7 +129,7 @@ Obtains the parameters of the NavDestination component where the node is located
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          Returns {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in NavDestination. |
+| ArkUI_ErrorCode | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>        Returns {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in NavDestination. |
 
 ### OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue()
 
@@ -139,7 +139,7 @@ int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromAniValue(ani_env *env, an
 
 **Description**
 
-Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptro</b> object on the native side.
+Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptro</b> object on the native side.
 
 **Since**: 23
 
@@ -155,7 +155,7 @@ Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue()
 
@@ -165,7 +165,7 @@ int32_t OH_ArkUI_NativeModule_GetDrawableDescriptorFromResourceAniValue(ani_env 
 
 **Description**
 
-Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptro</b> object on the native side.
+Obtains a <b>Resource</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptro</b> object on the native side.
 
 **Since**: 23
 
@@ -181,6 +181,6 @@ Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_Dra
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

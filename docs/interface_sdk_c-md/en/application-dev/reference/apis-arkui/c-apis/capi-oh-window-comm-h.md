@@ -25,7 +25,7 @@ The file declares the common enums and definitions of the window manager.
 | [WindowManager_AvoidArea](capi-windowmanager-windowmanager-avoidarea.md) | WindowManager_AvoidArea | The struct describes the avoid area. |
 | [struct](capi-windowmanager-struct.md) | OH_PixelmapNative | Describes the pixel image information. |
 | [OH_WindowManager_FrameMetrics](capi-windowmanager-oh-windowmanager-framemetrics.md) | OH_WindowManager_FrameMetrics | Defines a frame metric data object. |
-| [OH_WindowManager_DensityInfo](capi-windowmanager-oh-windowmanager-densityinfo.md) | OH_WindowManager_DensityInfo | Window density information, including the system display size scaling factor, system default display sizescaling factor, and custom display size scaling factor of the screen where the window is located. |
+| [OH_WindowManager_DensityInfo](capi-windowmanager-oh-windowmanager-densityinfo.md) | OH_WindowManager_DensityInfo | Window density information, including the system display size scaling factor, system default display size scaling factor, and custom display size scaling factor of the screen where the window is located. |
 
 ### Enum
 
@@ -41,6 +41,13 @@ The file declares the common enums and definitions of the window manager.
 | -- | -- | -- |
 | [typedef void (\*OH_WindowManager_FrameMetricsMeasuredCallback)(int32_t windowId, const OH_WindowManager_FrameMetrics* metrics)](#oh_windowmanager_framemetricsmeasuredcallback) | OH_WindowManager_FrameMetricsMeasuredCallback | Frame metrics callback type. |
 | [typedef void (\*OH_WindowManager_DensityInfoCallback)(int32_t windowId, const OH_WindowManager_DensityInfo* info)](#oh_windowmanager_densityinfocallback) | OH_WindowManager_DensityInfoCallback | Density info callback type. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_WindowManager_FrameMetricsMeasuredCallback)( int32_t windowId, const OH_WindowManager_FrameMetrics* metrics) | Frame metrics callback type.<br>**Since**: 26.0.0 |
+| void (*OH_WindowManager_DensityInfoCallback)(int32_t windowId, const OH_WindowManager_DensityInfo* info) | Density info callback type.<br>**Since**: 24 |
 
 ## Enum type description
 

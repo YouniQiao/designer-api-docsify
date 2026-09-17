@@ -6,7 +6,7 @@ typedef struct Ability_ChildProcessConfigs Ability_ChildProcessConfigs
 
 ## Overview
 
-The struct describes the configuration information about a child process, including the child process nameand the sharing mode of the data sandbox and network environment.
+The struct describes the configuration information about a child process, including the child process name and the sharing mode of the data sandbox and network environment.
 
 **Since**: 20
 

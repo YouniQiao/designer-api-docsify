@@ -85,7 +85,7 @@ Defines a set of Swiper enum and interface.
 | [float OH_ArkUI_SwiperDigitIndicator_GetSelectedFontSize(ArkUI_SwiperDigitIndicator* indicator)](#oh_arkui_swiperdigitindicator_getselectedfontsize) | Gets the font size of selected index in the digital indicator. |
 | [void OH_ArkUI_SwiperDigitIndicator_Destroy(ArkUI_SwiperDigitIndicator *indicator)](#oh_arkui_swiperdigitindicator_destroy) | Destroys the digital indicator. |
 | [void OH_ArkUI_SwiperDigitIndicator_SetIgnoreSizeOfBottom(ArkUI_SwiperDigitIndicator* indicator, int32_t ignoreSize)](#oh_arkui_swiperdigitindicator_setignoresizeofbottom) | Sets whether to ignore the size of the indicator for [OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-swiper-h.md#oh_arkui_swiperdigitindicator_setbottomposition). |
-| [int32_t OH_ArkUI_SwiperDigitIndicator_GetIgnoreSizeOfBottom(ArkUI_SwiperDigitIndicator* indicator)](#oh_arkui_swiperdigitindicator_getignoresizeofbottom) | Obtains whether to ignore the size of the indicator for[OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-swiper-h.md#oh_arkui_swiperdigitindicator_setbottomposition). |
+| [int32_t OH_ArkUI_SwiperDigitIndicator_GetIgnoreSizeOfBottom(ArkUI_SwiperDigitIndicator* indicator)](#oh_arkui_swiperdigitindicator_getignoresizeofbottom) | Obtains whether to ignore the size of the indicator for [OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-swiper-h.md#oh_arkui_swiperdigitindicator_setbottomposition). |
 | [ArkUI_SwiperArrowStyle *OH_ArkUI_SwiperArrowStyle_Create()](#oh_arkui_swiperarrowstyle_create) | Creates a arrow style for swiper. |
 | [void OH_ArkUI_SwiperArrowStyle_SetShowBackground(ArkUI_SwiperArrowStyle *arrowStyle, int32_t showBackground)](#oh_arkui_swiperarrowstyle_setshowbackground) | Sets whether to show the background for the arrow. |
 | [int32_t OH_ArkUI_SwiperArrowStyle_GetShowBackground(ArkUI_SwiperArrowStyle* arrowStyle)](#oh_arkui_swiperarrowstyle_getshowbackground) | Gets whether to show the background for the arrow. |
@@ -731,7 +731,7 @@ Sets the number of maxDisplayCount for the dot navigation indicator.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link ARKUI_ERROR_CODE_NO_ERROR} Success.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} indicator is null or maxDisplayCount less then 6 or          maxDisplayCount more then 9 |
+| int32_t | {@link ARKUI_ERROR_CODE_NO_ERROR} Success.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} indicator is null or maxDisplayCount less then 6 or          maxDisplayCount more then 9 |
 
 ### OH_ArkUI_SwiperIndicator_GetMaxDisplayCount()
 
@@ -774,7 +774,7 @@ Sets whether to ignore the size of the indicator for [OH_ArkUI_SwiperIndicator_S
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md)* indicator | Indicates the pointer to the indicator. |
-| int32_t ignoreSize | Whether to ignore the size of the indicator. The value 1 means to ignore, and 0 means the opposite.The default value is 0. |
+| int32_t ignoreSize | Whether to ignore the size of the indicator. The value 1 means to ignore, and 0 means the opposite. The default value is 0. |
 
 ### OH_ArkUI_SwiperIndicator_GetIgnoreSizeOfBottom()
 
@@ -1240,7 +1240,7 @@ Sets whether to ignore the size of the indicator for [OH_ArkUI_SwiperDigitIndica
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
-| int32_t ignoreSize | Whether to ignore the size of the indicator. The value 1 means to ignore, and 0 means the opposite.The default value is 0. |
+| int32_t ignoreSize | Whether to ignore the size of the indicator. The value 1 means to ignore, and 0 means the opposite. The default value is 0. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetIgnoreSizeOfBottom()
 
@@ -1250,7 +1250,7 @@ int32_t OH_ArkUI_SwiperDigitIndicator_GetIgnoreSizeOfBottom(ArkUI_SwiperDigitInd
 
 **Description**
 
-Obtains whether to ignore the size of the indicator for[OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-swiper-h.md#oh_arkui_swiperdigitindicator_setbottomposition).
+Obtains whether to ignore the size of the indicator for [OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-swiper-h.md#oh_arkui_swiperdigitindicator_setbottomposition).
 
 **Since**: 19
 
@@ -1301,7 +1301,7 @@ Sets whether to show the background for the arrow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) *arrowStyle | The pointer to the arrow style. |
-| int32_t showBackground | whether to show the background for the arrow.The value <b>1</b> means to show the background, and <b>0</b> means the opposite.The default value is <b>0</b>. |
+| int32_t showBackground | whether to show the background for the arrow. The value <b>1</b> means to show the background, and <b>0</b> means the opposite. The default value is <b>0</b>. |
 
 ### OH_ArkUI_SwiperArrowStyle_GetShowBackground()
 
@@ -1344,7 +1344,7 @@ Sets the display position of the arrow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md)* arrowStyle | The pointer to the arrow style. |
-| int32_t showSidebarMiddle | the display position of the arrow.The value <b>1</b> means to display on boths sides of the swiper,and <b>0</b> means display on boths sides of the swiper indicator.The default value is <b>0</b>. |
+| int32_t showSidebarMiddle | the display position of the arrow. The value <b>1</b> means to display on boths sides of the swiper, and <b>0</b> means display on boths sides of the swiper indicator. The default value is <b>0</b>. |
 
 ### OH_ArkUI_SwiperArrowStyle_GetShowSidebarMiddle()
 
@@ -1387,7 +1387,7 @@ Sets the background size of the arrow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md)* arrowStyle | The pointer to the arrow style. |
-| float backgroundSize | the background size of the arrow. The unit is vp.The default value is <b>24</b> when the arrow displays on both sides of the swiper indicator.The default value is <b>32</b> when the arrow displays on both sides of the swiper. |
+| float backgroundSize | the background size of the arrow. The unit is vp. The default value is <b>24</b> when the arrow displays on both sides of the swiper indicator. The default value is <b>32</b> when the arrow displays on both sides of the swiper. |
 
 ### OH_ArkUI_SwiperArrowStyle_GetBackgroundSize()
 
@@ -1448,7 +1448,7 @@ Sets the background color of the arrow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) *arrowStyle | The pointer to the arrow style. |
-| uint32_t backgroundColor | the background color of the arrow, in 0xARGB format.The default value is <b>0x00000000</b> when the arrow displays on both sides of the swiper indicator.The default value is <b>0x19182431</b> when the arrow displays on both sides of the swiper. |
+| uint32_t backgroundColor | the background color of the arrow, in 0xARGB format. The default value is <b>0x00000000</b> when the arrow displays on both sides of the swiper indicator. The default value is <b>0x19182431</b> when the arrow displays on both sides of the swiper. |
 
 ### OH_ArkUI_SwiperArrowStyle_GetBackgroundColor()
 
@@ -1491,7 +1491,7 @@ Sets the size of the arrow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md)* arrowStyle | The pointer to the arrow style. |
-| float arrowSize | the size of the arrow. The unit is vp.The default value is <b>18</b> when the arrow displays on both sides of the swiper indicator.The default value is <b>24</b> when the arrow displays on both sides of the swiper.The arrow size is fixed to 3/4 of the background size when the background is shown. |
+| float arrowSize | the size of the arrow. The unit is vp. The default value is <b>18</b> when the arrow displays on both sides of the swiper indicator. The default value is <b>24</b> when the arrow displays on both sides of the swiper. The arrow size is fixed to 3/4 of the background size when the background is shown. |
 
 ### OH_ArkUI_SwiperArrowStyle_GetArrowSize()
 

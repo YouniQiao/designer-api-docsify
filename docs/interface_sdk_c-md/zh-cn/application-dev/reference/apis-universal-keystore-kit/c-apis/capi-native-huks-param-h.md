@@ -20,9 +20,9 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | 初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。 |
+| [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | 初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。 添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。 |
 | [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | 添加参数到参数集里面。添加完成之后需要使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。 |
-| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | 构造参数集，在调用[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化参数集和[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数操作之后，序列化参数集，将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。 |
+| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | 构造参数集，在调用[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化参数集和[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数操作之后，序列化参数集， 将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。 |
 | [void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_freeparamset) | 销毁参数集。销毁由[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)分配的内存空间。 |
 | [struct OH_Huks_Result OH_Huks_CopyParamSet(const struct OH_Huks_ParamSet *fromParamSet, uint32_t fromParamSetSize, struct OH_Huks_ParamSet **paramSet)](#oh_huks_copyparamset) | 复制参数集（深拷贝）。 |
 | [struct OH_Huks_Result OH_Huks_GetParam(const struct OH_Huks_ParamSet *paramSet, uint32_t tag, struct OH_Huks_Param **param)](#oh_huks_getparam) | 从参数集中获取参数。 |
@@ -42,7 +42,7 @@ struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **描述：**
 
-初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。
+初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。 添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)
 | -- | -- |
 | struct OH_Huks_ParamSet **paramSet | 指向要初始化的参数集的指针地址。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -78,7 +78,7 @@ struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const
 | const struct OH_Huks_Param *params | 指向要添加的参数数组的指针。 |
 | uint32_t paramCnt | 待添加参数数组的参数个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -92,7 +92,7 @@ struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **描述：**
 
-构造参数集，在调用[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化参数集和[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数操作之后，序列化参数集，将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。
+构造参数集，在调用[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化参数集和[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数操作之后，序列化参数集， 将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。
 
 **起始版本：** 9
 
@@ -102,7 +102,7 @@ struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)
 | -- | -- |
 | struct OH_Huks_ParamSet **paramSet | 指向要被正式构造的参数集的指针地址。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -146,7 +146,7 @@ struct OH_Huks_Result OH_Huks_CopyParamSet(const struct OH_Huks_ParamSet *fromPa
 | uint32_t fromParamSetSize | 被复制的参数集占用内存的大小，单位：Byte。 |
 | struct OH_Huks_ParamSet **paramSet | 指向生成新的参数集的指针地址。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -172,7 +172,7 @@ struct OH_Huks_Result OH_Huks_GetParam(const struct OH_Huks_ParamSet *paramSet, 
 | uint32_t tag | 要获取的对应参数的值。 |
 | struct OH_Huks_Param **param | 指向获取到的参数的指针地址。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -197,7 +197,7 @@ struct OH_Huks_Result OH_Huks_FreshParamSet(struct OH_Huks_ParamSet *paramSet, b
 | struct OH_Huks_ParamSet *paramSet | 指向参数集的指针。 |
 | bool isCopy | 如果为true，刷新{@link OH_Huks_Blob}类型数据的地址并复制到参数集。如果为false，只会刷新{@link OH_Huks_Blob}类型数据的地址。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -221,7 +221,7 @@ struct OH_Huks_Result OH_Huks_IsParamSetTagValid(const struct OH_Huks_ParamSet *
 | -- | -- |
 | const struct OH_Huks_ParamSet *paramSet | 指向参数集的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -246,7 +246,7 @@ struct OH_Huks_Result OH_Huks_IsParamSetValid(const struct OH_Huks_ParamSet *par
 | const struct OH_Huks_ParamSet *paramSet | 指向参数集的指针。 |
 | uint32_t size | 参数集占用的内存大小，单位：Byte。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -271,7 +271,7 @@ struct OH_Huks_Result OH_Huks_CheckParamMatch(const struct OH_Huks_Param *basePa
 | const struct OH_Huks_Param *baseParam | 指向被比较的参数的指针。 |
 | const struct OH_Huks_Param *param | 指向比较的参数的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

@@ -1,4 +1,4 @@
-# @ohos.app.appstartup.StartupConfigEntry
+# @ohos.app.appstartup.StartupConfigEntry(启动框架配置)
 
 ## 导入模块
 

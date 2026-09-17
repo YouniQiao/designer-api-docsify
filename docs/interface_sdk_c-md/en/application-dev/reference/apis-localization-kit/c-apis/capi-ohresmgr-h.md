@@ -14,6 +14,12 @@ Provides the capability of obtaining resources in the resource management native
 
 ## Summary
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| GLOBAL_OH_RESMGR_H | Provides the capability of obtaining resources in the resource management native layer.<br>**Since**: 12<br>**System capability**: SystemCapability.Global.ResourceManager |
+
 ### Function
 
 | Name | Description |
@@ -26,28 +32,28 @@ Provides the capability of obtaining resources in the resource management native
 | [ResourceManager_ErrorCode OH_ResourceManager_GetMediaData(const NativeResourceManager *mgr, uint32_t resId, uint8_t **resultValue, uint64_t *resultLen, uint32_t density)](#oh_resourcemanager_getmediadata) | Obtains the binary data of the media resource by the specified resource ID and screen density. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetMediaByName(const NativeResourceManager *mgr, const char *resName, uint8_t **resultValue, uint64_t *resultLen, uint32_t density = 0)](#oh_resourcemanager_getmediabyname) | Obtains the binary data of the media resource by the specified resource name and screen density. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetMediaDataByName(const NativeResourceManager *mgr, const char *resName, uint8_t **resultValue, uint64_t *resultLen, uint32_t density)](#oh_resourcemanager_getmediadatabyname) | Obtains the binary data of the media resource by the specified resource name and screen density. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptor(const NativeResourceManager *mgr, uint32_t resId, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density = 0, uint32_t type = 0)](#oh_resourcemanager_getdrawabledescriptor) | Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, andicon type. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorData(const NativeResourceManager *mgr, uint32_t resId, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density, uint32_t type)](#oh_resourcemanager_getdrawabledescriptordata) | Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, andicon type. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorByName(const NativeResourceManager *mgr, const char *resName, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density = 0, uint32_t type = 0)](#oh_resourcemanager_getdrawabledescriptorbyname) | Obtains the DrawableDescriptor object of the icon resource by the specified resource name, screen density,and icon type. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptor(const NativeResourceManager *mgr, uint32_t resId, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density = 0, uint32_t type = 0)](#oh_resourcemanager_getdrawabledescriptor) | Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, and icon type. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorData(const NativeResourceManager *mgr, uint32_t resId, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density, uint32_t type)](#oh_resourcemanager_getdrawabledescriptordata) | Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, and icon type. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorByName(const NativeResourceManager *mgr, const char *resName, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density = 0, uint32_t type = 0)](#oh_resourcemanager_getdrawabledescriptorbyname) | Obtains the DrawableDescriptor object of the icon resource by the specified resource name, screen density, and icon type. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorDataByName(const NativeResourceManager *mgr, const char *resName, ArkUI_DrawableDescriptor **drawableDescriptor, uint32_t density, uint32_t type)](#oh_resourcemanager_getdrawabledescriptordatabyname) | Obtains the DrawableDescriptor object of the icon resource by the specified resource name and screen density. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetSymbol(const NativeResourceManager *mgr, uint32_t resId, uint32_t *resultValue)](#oh_resourcemanager_getsymbol) | Obtains the Unicode encoding of the symbol icon corresponding to the specified resource ID. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetSymbolByName(const NativeResourceManager *mgr, const char *resName, uint32_t *resultValue)](#oh_resourcemanager_getsymbolbyname) | Obtains the Unicode encoding of the symbol icon corresponding to the specified resource name. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetLocales(const NativeResourceManager *mgr, char ***resultValue, uint32_t *resultLen, bool includeSystem = false)](#oh_resourcemanager_getlocales) | Obtains the list of languages supported by an application. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetLocalesData(const NativeResourceManager *mgr, char ***resultValue, uint32_t *resultLen, bool includeSystem)](#oh_resourcemanager_getlocalesdata) | Obtains the list of languages supported by an application. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetConfiguration(const NativeResourceManager *mgr, ResourceManager_Configuration *configuration)](#oh_resourcemanager_getconfiguration) | Obtains the configuration information of a device, such as the screen orientation, language and region,device type, screen density, and color mode.(Deprecated in API20) |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetResourceConfiguration(const NativeResourceManager *mgr, ResourceManager_Configuration *configuration)](#oh_resourcemanager_getresourceconfiguration) | Obtains the configuration information of a device, such as the screen orientation, language and region, devicetype, screen density, and color mode. |
-| [ResourceManager_ErrorCode OH_ResourceManager_ReleaseConfiguration(ResourceManager_Configuration *configuration)](#oh_resourcemanager_releaseconfiguration) | Releases the memory requested through the [OH_ResourceManager_GetConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getconfiguration) or[OH_ResourceManager_GetResourceConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getresourceconfiguration) function. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetConfiguration(const NativeResourceManager *mgr, ResourceManager_Configuration *configuration)](#oh_resourcemanager_getconfiguration) | Obtains the configuration information of a device, such as the screen orientation, language and region, device type, screen density, and color mode.(Deprecated in API20) |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetResourceConfiguration(const NativeResourceManager *mgr, ResourceManager_Configuration *configuration)](#oh_resourcemanager_getresourceconfiguration) | Obtains the configuration information of a device, such as the screen orientation, language and region, device type, screen density, and color mode. |
+| [ResourceManager_ErrorCode OH_ResourceManager_ReleaseConfiguration(ResourceManager_Configuration *configuration)](#oh_resourcemanager_releaseconfiguration) | Releases the memory requested through the [OH_ResourceManager_GetConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getconfiguration) or [OH_ResourceManager_GetResourceConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getresourceconfiguration) function. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetString(const NativeResourceManager *mgr, uint32_t resId, char **resultValue, ...)](#oh_resourcemanager_getstring) | Obtains a plain or formatted string based on the specified resource ID. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetStringByName(const NativeResourceManager *mgr, const char *resName, char **resultValue, ...)](#oh_resourcemanager_getstringbyname) | Obtains a plain or formatted string based on the specified resource name. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetStringArray(const NativeResourceManager *mgr, uint32_t resId, char ***resultValue, uint32_t *resultLen)](#oh_resourcemanager_getstringarray) | Obtains the string array based on the specified resource ID. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetStringArrayByName(const NativeResourceManager *mgr, const char *resName, char ***resultValue, uint32_t *resultLen)](#oh_resourcemanager_getstringarraybyname) | Obtains the string array based on the specified resource name. |
 | [ResourceManager_ErrorCode OH_ResourceManager_ReleaseStringArray(char ***resValue, uint32_t len)](#oh_resourcemanager_releasestringarray) | Releases the memory of the string array. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetPluralString(const NativeResourceManager *mgr, uint32_t resId, uint32_t num, char **resultValue)](#oh_resourcemanager_getpluralstring) | Obtains the plural string based on the specified resource ID.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.(Deprecated in API16) |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetPluralStringByName(const NativeResourceManager *mgr, const char *resName, uint32_t num, char **resultValue)](#oh_resourcemanager_getpluralstringbyname) | Obtains the plural string based on the specified resource name.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.(Deprecated in API16) |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralString(const NativeResourceManager *mgr, uint32_t resId, uint32_t num, char **resultValue, ...)](#oh_resourcemanager_getintpluralstring) | Obtains the corresponding plural string and formats it based on the specified resource ID, integer quantity,and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralStringByName(const NativeResourceManager *mgr, const char *resName, uint32_t num, char **resultValue, ...)](#oh_resourcemanager_getintpluralstringbyname) | Obtains the corresponding plural string and formats it based on the specified resource name, integer quantity,and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralString(const NativeResourceManager *mgr, uint32_t resId, double num, char **resultValue, ...)](#oh_resourcemanager_getdoublepluralstring) | Obtains the corresponding plural string and formats it based on the specified resource ID, floating-pointquantity, and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
-| [ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralStringByName(const NativeResourceManager *mgr, const char *resName, double num, char **resultValue, ...)](#oh_resourcemanager_getdoublepluralstringbyname) | Obtains the corresponding plural string and formats it based on the specified resource name, floating-pointquantity, and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetPluralString(const NativeResourceManager *mgr, uint32_t resId, uint32_t num, char **resultValue)](#oh_resourcemanager_getpluralstring) | Obtains the plural string based on the specified resource ID. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.(Deprecated in API16) |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetPluralStringByName(const NativeResourceManager *mgr, const char *resName, uint32_t num, char **resultValue)](#oh_resourcemanager_getpluralstringbyname) | Obtains the plural string based on the specified resource name. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.(Deprecated in API16) |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralString(const NativeResourceManager *mgr, uint32_t resId, uint32_t num, char **resultValue, ...)](#oh_resourcemanager_getintpluralstring) | Obtains the corresponding plural string and formats it based on the specified resource ID, integer quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralStringByName(const NativeResourceManager *mgr, const char *resName, uint32_t num, char **resultValue, ...)](#oh_resourcemanager_getintpluralstringbyname) | Obtains the corresponding plural string and formats it based on the specified resource name, integer quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralString(const NativeResourceManager *mgr, uint32_t resId, double num, char **resultValue, ...)](#oh_resourcemanager_getdoublepluralstring) | Obtains the corresponding plural string and formats it based on the specified resource ID, floating-point quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
+| [ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralStringByName(const NativeResourceManager *mgr, const char *resName, double num, char **resultValue, ...)](#oh_resourcemanager_getdoublepluralstringbyname) | Obtains the corresponding plural string and formats it based on the specified resource name, floating-point quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetColor(const NativeResourceManager *mgr, uint32_t resId, uint32_t *resultValue)](#oh_resourcemanager_getcolor) | Obtains the color resource value based on the specified resource ID. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetColorByName(const NativeResourceManager *mgr, const char *resName, uint32_t *resultValue)](#oh_resourcemanager_getcolorbyname) | Obtains the color resource value based on the specified resource name. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetInt(const NativeResourceManager *mgr, uint32_t resId, int *resultValue)](#oh_resourcemanager_getint) | Obtains the integer resource value based on the specified resource ID. |
@@ -56,8 +62,8 @@ Provides the capability of obtaining resources in the resource management native
 | [ResourceManager_ErrorCode OH_ResourceManager_GetFloatByName(const NativeResourceManager *mgr, const char *resName, float *resultValue)](#oh_resourcemanager_getfloatbyname) | Obtains the floating-point resource value based on the specified resource name. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetBool(const NativeResourceManager *mgr, uint32_t resId, bool *resultValue)](#oh_resourcemanager_getbool) | Obtains the Boolean resource value based on the specified resource ID. |
 | [ResourceManager_ErrorCode OH_ResourceManager_GetBoolByName(const NativeResourceManager *mgr, const char *resName, bool *resultValue)](#oh_resourcemanager_getboolbyname) | Obtains the Boolean resource value based on the specified resource name. |
-| [ResourceManager_ErrorCode OH_ResourceManager_AddResource(const NativeResourceManager *mgr, const char *path)](#oh_resourcemanager_addresource) | Dynamically loads overlay resources during application runtime to implement theme switching or resourceoverriding. |
-| [ResourceManager_ErrorCode OH_ResourceManager_RemoveResource(const NativeResourceManager *mgr, const char *path)](#oh_resourcemanager_removeresource) | Removes the specified overlay resource during application runtime and restores the original resource beforethe override. |
+| [ResourceManager_ErrorCode OH_ResourceManager_AddResource(const NativeResourceManager *mgr, const char *path)](#oh_resourcemanager_addresource) | Dynamically loads overlay resources during application runtime to implement theme switching or resource overriding. |
+| [ResourceManager_ErrorCode OH_ResourceManager_RemoveResource(const NativeResourceManager *mgr, const char *path)](#oh_resourcemanager_removeresource) | Removes the specified overlay resource during application runtime and restores the original resource before the override. |
 
 ## Function description
 
@@ -77,11 +83,11 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
+| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
-| density | Input parameter, which is optional. Screen density. For details about the value range, see{@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
+| density | Input parameter, which is optional. Screen density. For details about the value range, see {@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
 
 **Returns**:
 
@@ -105,11 +111,11 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
+| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
-| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
+| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. The value **0** indicates that the current system screen density is used. If no specific density is required, set this parameter to **0**. |
 
 **Returns**:
 
@@ -133,11 +139,11 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
+| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
-| density | Input parameter, which is optional. Screen density. For details about the value range, see{@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
+| density | Input parameter, which is optional. Screen density. For details about the value range, see {@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
 
 **Returns**:
 
@@ -161,11 +167,11 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** andmust be released via **free()** after use. |
+| char **resultValue | Output parameter. Pointer to the Base64-encoded string, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Length of the Base64 string, in bytes. |
-| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
+| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. The value **0** indicates that the current system screen density is used. If no specific density is required, set this parameter to **0**. |
 
 **Returns**:
 
@@ -189,11 +195,11 @@ Obtains the binary data of the media resource by the specified resource ID and s
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
+| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
-| density | Input parameter, which is optional. Screen density. For details about the value range, see{@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
+| density | Input parameter, which is optional. Screen density. For details about the value range, see {@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
 
 **Returns**:
 
@@ -217,11 +223,11 @@ Obtains the binary data of the media resource by the specified resource ID and s
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
+| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
-| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
+| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. The value **0** indicates that the current system screen density is used. If no specific density is required, set this parameter to **0**. |
 
 **Returns**:
 
@@ -245,11 +251,11 @@ Obtains the binary data of the media resource by the specified resource name and
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
+| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
-| density | Input parameter, which is optional. Screen density. For details about the value range, see{@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
+| density | Input parameter, which is optional. Screen density. For details about the value range, see {@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
 
 **Returns**:
 
@@ -273,11 +279,11 @@ Obtains the binary data of the media resource by the specified resource name and
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must bereleased via **free()** after use. |
+| uint8_t **resultValue | Output parameter. Pointer to the media data, which is allocated by **malloc()** and must be released via **free()** after use. |
 | uint64_t *resultLen | Output parameter. Data length, in bytes. |
-| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
+| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. The value **0** indicates that the current system screen density is used. If no specific density is required, set this parameter to **0**. |
 
 **Returns**:
 
@@ -293,7 +299,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptor(const NativeR
 
 **Description**
 
-Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, andicon type.
+Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, and icon type.
 
 **Since**: 12
 
@@ -301,11 +307,11 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
-| density | Input parameter, which is optional. Screen density. For details about the value range, see{@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
-| type | Input parameter, which is optional. Icon type. The default value is **0**.<br>*0**: application icon.<br>*1**: application theme icon. |
+| density | Input parameter, which is optional. Screen density. For details about the value range, see {@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
+| type | Input parameter, which is optional. Icon type. The default value is **0**. <br>**0**: application icon. <br>**1**: application theme icon. |
 
 **Returns**:
 
@@ -321,7 +327,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorData(const Nat
 
 **Description**
 
-Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, andicon type.
+Obtains the DrawableDescriptor object of the icon resource by the specified resource ID, screen density, and icon type.
 
 **Since**: 12
 
@@ -329,11 +335,11 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
-| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
-| uint32_t type | Input parameter. Icon type. If no specific icon type is required, set this parameter to **0**.<br>*0**: application icon.<br>*1**: application theme icon. |
+| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. The value **0** indicates that the current system screen density is used. If no specific density is required, set this parameter to **0**. |
+| uint32_t type | Input parameter. Icon type. If no specific icon type is required, set this parameter to **0**. <br>**0**: application icon. <br>**1**: application theme icon. |
 
 **Returns**:
 
@@ -349,7 +355,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorByName(const N
 
 **Description**
 
-Obtains the DrawableDescriptor object of the icon resource by the specified resource name, screen density,and icon type.
+Obtains the DrawableDescriptor object of the icon resource by the specified resource name, screen density, and icon type.
 
 **Since**: 12
 
@@ -357,11 +363,11 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
-| density | Input parameter, which is optional. Screen density. For details about the value range, see{@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
-| type | Input parameter, which is optional. Icon type. The default value is **0**.<br>*0**: application icon.<br>*1**: application theme icon.<br>*2**: dynamic icon. |
+| density | Input parameter, which is optional. Screen density. For details about the value range, see {@link ScreenDensity}. The default value is **0**, indicating that the current system screen density is used. |
+| type | Input parameter, which is optional. Icon type. The default value is **0**. <br>**0**: application icon. <br>**1**: application theme icon. <br>**2**: dynamic icon. |
 
 **Returns**:
 
@@ -385,11 +391,11 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | ArkUI_DrawableDescriptor **drawableDescriptor | Output parameter. Pointer to the DrawableDescriptor object. |
-| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. Thevalue **0** indicates that the current system screen density is used. If no specific density is required, setthis parameter to **0**. |
-| uint32_t type | Input parameter. Icon type. If no specific icon type is required, set this parameter to **0**.<br>*0**: application icon.<br>*1**: application theme icon.<br>*2**: dynamic icon. |
+| uint32_t density | Input parameter. Screen density. For details about the value range, see {@link ScreenDensity}. The value **0** indicates that the current system screen density is used. If no specific density is required, set this parameter to **0**. |
+| uint32_t type | Input parameter. Icon type. If no specific icon type is required, set this parameter to **0**. <br>**0**: application icon. <br>**1**: application theme icon. <br>**2**: dynamic icon. |
 
 **Returns**:
 
@@ -413,7 +419,7 @@ Obtains the Unicode encoding of the symbol icon corresponding to the specified r
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint32_t *resultValue | Output parameter. Unicode encoding of the symbol icon. |
 
@@ -439,7 +445,7 @@ Obtains the Unicode encoding of the symbol icon corresponding to the specified r
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | uint32_t *resultValue | Output parameter. Unicode encoding of the symbol icon. |
 
@@ -465,10 +471,10 @@ Obtains the list of languages supported by an application.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
-| char ***resultValue | Output parameter. Pointer to the language list array. The memory is allocated by this functionand must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
+| char ***resultValue | Output parameter. Pointer to the language list array. The memory is allocated by this function and must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the language list. |
-| includeSystem | Input parameter, which is optional.This parameter indicates whether to include system resources.The value **true** indicates yes, and the value **false** indicates no. The default value is **false**.<br>When the system resource manager object is used to obtain the language list, the system resource languagelist is returned. |
+| includeSystem | Input parameter, which is optional.This parameter indicates whether to include system resources. The value **true** indicates yes, and the value **false** indicates no. The default value is **false**. <br>When the system resource manager object is used to obtain the language list, the system resource language list is returned. |
 
 **Returns**:
 
@@ -492,10 +498,10 @@ Obtains the list of languages supported by an application.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
-| char ***resultValue | Output parameter. Pointer to the language list array. The memory is allocated by this functionand must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
+| char ***resultValue | Output parameter. Pointer to the language list array. The memory is allocated by this function and must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the language list. |
-| bool includeSystem | Input parameter. This parameter indicates whether to include system resources. The value**true** indicates yes, and the value **false** indicates no.<br>When the system resource manager object is used to obtain the language list, the system resource languagelist is returned. |
+| bool includeSystem | Input parameter. This parameter indicates whether to include system resources. The value **true** indicates yes, and the value **false** indicates no. <br>When the system resource manager object is used to obtain the language list, the system resource language list is returned. |
 
 **Returns**:
 
@@ -511,7 +517,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetConfiguration(const NativeResour
 
 **Description**
 
-Obtains the configuration information of a device, such as the screen orientation, language and region,device type, screen density, and color mode.
+Obtains the configuration information of a device, such as the screen orientation, language and region, device type, screen density, and color mode.
 
 **Since**: 12
 
@@ -523,8 +529,8 @@ Obtains the configuration information of a device, such as the screen orientatio
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
-| ResourceManager_Configuration *configuration | Output parameter. Device configuration information, where **screenDensity** is the devicescreen density (in dpi) divided by 160 and rounded to an integer.<br>The memory for the locale string in **configuration** is allocated by this function, and must be releasedthrough [OH_ResourceManager_ReleaseConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_releaseconfiguration) after use. If the memory for **configuration** isallocated by **malloc()**, it must be released via **free()**. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
+| ResourceManager_Configuration *configuration | Output parameter. Device configuration information, where **screenDensity** is the device screen density (in dpi) divided by 160 and rounded to an integer. <br>The memory for the locale string in **configuration** is allocated by this function, and must be released through [OH_ResourceManager_ReleaseConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_releaseconfiguration) after use. If the memory for **configuration** is allocated by **malloc()**, it must be released via **free()**. |
 
 **Returns**:
 
@@ -540,7 +546,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetResourceConfiguration(const Nati
 
 **Description**
 
-Obtains the configuration information of a device, such as the screen orientation, language and region, devicetype, screen density, and color mode.
+Obtains the configuration information of a device, such as the screen orientation, language and region, device type, screen density, and color mode.
 
 **Since**: 20
 
@@ -548,7 +554,7 @@ Obtains the configuration information of a device, such as the screen orientatio
 
 | Parameter | Description |
 | -- | -- |
-| {NativeResourceManager} | mgr Indicates the pointer to {@link NativeResourceManager}{@link OH_ResourceManager_InitNativeResourceManager}. |
+| {NativeResourceManager} | mgr Indicates the pointer to {@link NativeResourceManager}<br>    {@link OH_ResourceManager_InitNativeResourceManager}. |
 | {ResourceManager_Configuration} | configuration the result write to ResourceManager_Configuration. |
 
 **Returns**:
@@ -565,7 +571,7 @@ ResourceManager_ErrorCode OH_ResourceManager_ReleaseConfiguration(ResourceManage
 
 **Description**
 
-Releases the memory requested through the [OH_ResourceManager_GetConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getconfiguration) or[OH_ResourceManager_GetResourceConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getresourceconfiguration) function.
+Releases the memory requested through the [OH_ResourceManager_GetConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getconfiguration) or [OH_ResourceManager_GetResourceConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getresourceconfiguration) function.
 
 **Since**: 12
 
@@ -573,7 +579,7 @@ Releases the memory requested through the [OH_ResourceManager_GetConfiguration](
 
 | Parameter | Description |
 | -- | -- |
-| ResourceManager_Configuration *configuration | Input parameter. Pointer to the {@link ResourceManager_Configuration} object whose memory needsto be deallocated. |
+| ResourceManager_Configuration *configuration | Input parameter. Pointer to the {@link ResourceManager_Configuration} object whose memory needs to be deallocated. |
 
 **Returns**:
 
@@ -597,10 +603,10 @@ Obtains a plain or formatted string based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| char **resultValue | Output parameter. Pointer to the string, which is allocated by **malloc()** and must be releasedvia **free()** after use. |
-| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetString(mgr, resId, resultValue, 10, "format", 10.10)**. |
+| char **resultValue | Output parameter. Pointer to the string, which is allocated by **malloc()** and must be released via **free()** after use. |
+| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. The following types are supported: const char*, int, and float. <br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain a formatted string. The variable parameters must be passed in the order corresponding to the placeholders in the string. The number and types of the parameters must match the placeholders in the string. For example, if the string contains three placeholders %d, %s, and %f, the API should be called as follows: **OH_ResourceManager_GetString(mgr, resId, resultValue, 10, "format", 10.10)**. |
 
 **Returns**:
 
@@ -624,10 +630,10 @@ Obtains a plain or formatted string based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| char **resultValue | Output parameter. Pointer to the string, which is allocated by **malloc()** and must be releasedvia **free()** after use. |
-| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetStringByName(mgr, resName, resultValue, 10, "format", 10.10)**. |
+| char **resultValue | Output parameter. Pointer to the string, which is allocated by **malloc()** and must be released via **free()** after use. |
+| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. The following types are supported: const char*, int, and float. <br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain a formatted string. The variable parameters must be passed in the order corresponding to the placeholders in the string. The number and types of the parameters must match the placeholders in the string. For example, if the string contains three placeholders %d, %s, and %f, the API should be called as follows: **OH_ResourceManager_GetStringByName(mgr, resName, resultValue, 10, "format", 10.10)**. |
 
 **Returns**:
 
@@ -651,9 +657,9 @@ Obtains the string array based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| char ***resultValue | Output parameter. Pointer to the string array. The memory is allocated by this function and mustbe released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
+| char ***resultValue | Output parameter. Pointer to the string array. The memory is allocated by this function and must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the string array. |
 
 **Returns**:
@@ -678,9 +684,9 @@ Obtains the string array based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| char ***resultValue | Output parameter. Pointer to the string array. The memory is allocated by this function and mustbe released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
+| char ***resultValue | Output parameter. Pointer to the string array. The memory is allocated by this function and must be released through [OH_ResourceManager_ReleaseStringArray](capi-ohresmgr-h.md#oh_resourcemanager_releasestringarray) after use. |
 | uint32_t *resultLen | Output parameter. Length of the string array. |
 
 **Returns**:
@@ -722,7 +728,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetPluralString(const NativeResourc
 
 **Description**
 
-Obtains the plural string based on the specified resource ID.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
+Obtains the plural string based on the specified resource ID. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
 
 **Since**: 12
 
@@ -734,10 +740,10 @@ Obtains the plural string based on the specified resource ID.<br>The Chinese lan
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| uint32_t num | Input parameter. Quantity value, which is used to obtain the corresponding plural string based on theplural rules of the current language. |
-| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
+| uint32_t num | Input parameter. Quantity value, which is used to obtain the corresponding plural string based on the plural rules of the current language. |
+| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must be released via **free()**. |
 
 **Returns**:
 
@@ -753,7 +759,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetPluralStringByName(const NativeR
 
 **Description**
 
-Obtains the plural string based on the specified resource name.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
+Obtains the plural string based on the specified resource name. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
 
 **Since**: 12
 
@@ -765,10 +771,10 @@ Obtains the plural string based on the specified resource name.<br>The Chinese l
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| uint32_t num | Input parameter. Quantity value, which is used to obtain the corresponding plural string based on theplural rules of the current language. |
-| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
+| uint32_t num | Input parameter. Quantity value, which is used to obtain the corresponding plural string based on the plural rules of the current language. |
+| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must be released via **free()**. |
 
 **Returns**:
 
@@ -784,7 +790,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralString(const NativeReso
 
 **Description**
 
-Obtains the corresponding plural string and formats it based on the specified resource ID, integer quantity,and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
+Obtains the corresponding plural string and formats it based on the specified resource ID, integer quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
 
 **Since**: 18
 
@@ -792,11 +798,11 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| uint32_t num | Input parameter. Quantity value (integer), which is used to obtain the corresponding plural string basedon the plural rules of the current language. |
-| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
-| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetIntPluralString(mgr, resId, 10, resultValue, 10, "format", 10.10)**. |
+| uint32_t num | Input parameter. Quantity value (integer), which is used to obtain the corresponding plural string based on the plural rules of the current language. |
+| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must be released via **free()**. |
+| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. The following types are supported: const char*, int, and float. <br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain a formatted string. The variable parameters must be passed in the order corresponding to the placeholders in the string. The number and types of the parameters must match the placeholders in the string. For example, if the string contains three placeholders %d, %s, and %f, the API should be called as follows: **OH_ResourceManager_GetIntPluralString(mgr, resId, 10, resultValue, 10, "format", 10.10)**. |
 
 **Returns**:
 
@@ -812,7 +818,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralStringByName(const Nati
 
 **Description**
 
-Obtains the corresponding plural string and formats it based on the specified resource name, integer quantity,and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
+Obtains the corresponding plural string and formats it based on the specified resource name, integer quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
 
 **Since**: 18
 
@@ -820,11 +826,11 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| uint32_t num | Input parameter. Quantity value (integer), which is used to obtain the corresponding plural string basedon the plural rules of the current language. |
-| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
-| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetIntPluralStringByName(mgr, resName, 10, resultValue, 10, "format", 10.10)**. |
+| uint32_t num | Input parameter. Quantity value (integer), which is used to obtain the corresponding plural string based on the plural rules of the current language. |
+| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must be released via **free()**. |
+| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. The following types are supported: const char*, int, and float. <br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain a formatted string. The variable parameters must be passed in the order corresponding to the placeholders in the string. The number and types of the parameters must match the placeholders in the string. For example, if the string contains three placeholders %d, %s, and %f, the API should be called as follows: **OH_ResourceManager_GetIntPluralStringByName(mgr, resName, 10, resultValue, 10, "format", 10.10)**. |
 
 **Returns**:
 
@@ -840,7 +846,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralString(const NativeR
 
 **Description**
 
-Obtains the corresponding plural string and formats it based on the specified resource ID, floating-pointquantity, and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
+Obtains the corresponding plural string and formats it based on the specified resource ID, floating-point quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
 
 **Since**: 18
 
@@ -848,11 +854,11 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
-| double num | Input parameter. Quantity value (floating-point), which is used to obtain the corresponding plural stringbased on the plural rules of the current language. |
-| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
-| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetDoublePluralString(mgr, resId, 1.1, resultValue, 10, "format", 10.10)**. |
+| double num | Input parameter. Quantity value (floating-point), which is used to obtain the corresponding plural string based on the plural rules of the current language. |
+| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must be released via **free()**. |
+| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. The following types are supported: const char*, int, and float. <br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain a formatted string. The variable parameters must be passed in the order corresponding to the placeholders in the string. The number and types of the parameters must match the placeholders in the string. For example, if the string contains three placeholders %d, %s, and %f, the API should be called as follows: **OH_ResourceManager_GetDoublePluralString(mgr, resId, 1.1, resultValue, 10, "format", 10.10)**. |
 
 **Returns**:
 
@@ -868,7 +874,7 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralStringByName(const N
 
 **Description**
 
-Obtains the corresponding plural string and formats it based on the specified resource name, floating-pointquantity, and variable parameters.<br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languagesdo. For details about the specific rules, see {@link language plural rules}.<br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) andordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
+Obtains the corresponding plural string and formats it based on the specified resource name, floating-point quantity, and variable parameters. <br>The Chinese language does not distinguish between singular and plural forms in strings, whereas other languages do. For details about the specific rules, see {@link language plural rules}. <br>In languages such as English and German, plural categories include cardinal forms (for example, 1, 2, 3) and ordinal forms (for example, 1st, 2nd, 3rd). This function applies only to cardinal forms.
 
 **Since**: 18
 
@@ -876,11 +882,11 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
-| double num | Input parameter. Quantity value (floating-point), which is used to obtain the corresponding plural stringbased on the plural rules of the current language. |
-| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must bereleased via **free()**. |
-| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. Thefollowing types are supported: const char*, int, and float.<br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain aformatted string. The variable parameters must be passed in the order corresponding to the placeholders in thestring. The number and types of the parameters must match the placeholders in the string. For example, if thestring contains three placeholders %d, %s, and %f, the API should be called as follows:**OH_ResourceManager_GetDoublePluralStringByName(mgr, resName, 1.1, resultValue, 10, "format", 10.10)**. |
+| double num | Input parameter. Quantity value (floating-point), which is used to obtain the corresponding plural string based on the plural rules of the current language. |
+| char **resultValue | Output parameter. Pointer to the string. The memory is allocated by **malloc()**, and must be released via **free()**. |
+| [](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#).[](capi-ohresmgr-h.md#) | Input parameter, which is optional. Variable parameter list, which is used for string formatting. The following types are supported: const char*, int, and float. <br>You do not need to set this parameter when obtaining a plain string. This parameter is mandatory to obtain a formatted string. The variable parameters must be passed in the order corresponding to the placeholders in the string. The number and types of the parameters must match the placeholders in the string. For example, if the string contains three placeholders %d, %s, and %f, the API should be called as follows: **OH_ResourceManager_GetDoublePluralStringByName(mgr, resName, 1.1, resultValue, 10, "format", 10.10)**. |
 
 **Returns**:
 
@@ -904,7 +910,7 @@ Obtains the color resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | uint32_t *resultValue | Output parameter. Color resource value. |
 
@@ -930,7 +936,7 @@ Obtains the color resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | uint32_t *resultValue | Output parameter. Color resource value. |
 
@@ -956,7 +962,7 @@ Obtains the integer resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | int *resultValue | Output parameter. Integer resource value. |
 
@@ -982,7 +988,7 @@ Obtains the integer resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | int *resultValue | Output parameter. Integer resource value. |
 
@@ -1008,7 +1014,7 @@ Obtains the floating-point resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | float *resultValue | Output parameter. Floating-point resource value. |
 
@@ -1034,7 +1040,7 @@ Obtains the floating-point resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | float *resultValue | Output parameter. Floating-point resource value. |
 
@@ -1060,7 +1066,7 @@ Obtains the Boolean resource value based on the specified resource ID.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | uint32_t resId | Input parameter. Resource ID. |
 | bool *resultValue | Output parameter. Boolean resource value. |
 
@@ -1086,7 +1092,7 @@ Obtains the Boolean resource value based on the specified resource name.
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *resName | Input parameter. Resource name. |
 | bool *resultValue | Output parameter. Boolean resource value. |
 
@@ -1104,7 +1110,7 @@ ResourceManager_ErrorCode OH_ResourceManager_AddResource(const NativeResourceMan
 
 **Description**
 
-Dynamically loads overlay resources during application runtime to implement theme switching or resourceoverriding.
+Dynamically loads overlay resources during application runtime to implement theme switching or resource overriding.
 
 **Since**: 12
 
@@ -1112,7 +1118,7 @@ Dynamically loads overlay resources during application runtime to implement them
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *path | Input parameter. Absolute path of the HSP or HAP resource package to be loaded. |
 
 **Returns**:
@@ -1129,7 +1135,7 @@ ResourceManager_ErrorCode OH_ResourceManager_RemoveResource(const NativeResource
 
 **Description**
 
-Removes the specified overlay resource during application runtime and restores the original resource beforethe override.
+Removes the specified overlay resource during application runtime and restores the original resource before the override.
 
 **Since**: 12
 
@@ -1137,7 +1143,7 @@ Removes the specified overlay resource during application runtime and restores t
 
 | Parameter | Description |
 | -- | -- |
-| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through{@link OH_ResourceManager_InitNativeResourceManager}. |
+| const NativeResourceManager *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through {@link OH_ResourceManager_InitNativeResourceManager}. |
 | const char *path | Input parameter. Absolute path of the HSP or HAP resource package to be removed. |
 
 **Returns**:

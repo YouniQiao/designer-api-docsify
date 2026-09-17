@@ -6,7 +6,7 @@ typedef struct OH_AVSession_AVQueueItem {...} OH_AVSession_AVQueueItem
 
 ## Overview
 
-Declaring the avqueue item.The instance of AVQueueItem.
+Declaring the avqueue item. The instance of AVQueueItem.
 
 **Since**: 23
 

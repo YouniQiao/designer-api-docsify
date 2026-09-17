@@ -20,7 +20,7 @@ The file declares the common enums and definitions of the display.
 | -- | -- | -- |
 | [NativeDisplayManager_Rect](capi-oh-displaymanager-nativedisplaymanager-rect.md) | NativeDisplayManager_Rect | The struct describes a rectangle. |
 | [NativeDisplayManager_WaterfallDisplayAreaRects](capi-oh-displaymanager-nativedisplaymanager-waterfalldisplayarearects.md) | NativeDisplayManager_WaterfallDisplayAreaRects | The struct describes the curved area on a waterfall display. |
-| [NativeDisplayManager_CutoutInfo](capi-oh-displaymanager-nativedisplaymanager-cutoutinfo.md) | NativeDisplayManager_CutoutInfo | The struct describes the unusable area of a display, including punch hole, notch, and curved area of awaterfall display. |
+| [NativeDisplayManager_CutoutInfo](capi-oh-displaymanager-nativedisplaymanager-cutoutinfo.md) | NativeDisplayManager_CutoutInfo | The struct describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display. |
 | [NativeDisplayManager_DisplayHdrFormat](capi-oh-displaymanager-nativedisplaymanager-displayhdrformat.md) | NativeDisplayManager_DisplayHdrFormat | The struct describes all the HDR formats supported by a display. |
 | [NativeDisplayManager_DisplayColorSpace](capi-oh-displaymanager-nativedisplaymanager-displaycolorspace.md) | NativeDisplayManager_DisplayColorSpace | The struct describes all the color spaces supported by a display. |
 | [NativeDisplayManager_DisplayInfo](capi-oh-displaymanager-nativedisplaymanager-displayinfo.md) | NativeDisplayManager_DisplayInfo | The struct describes the information about a display. |

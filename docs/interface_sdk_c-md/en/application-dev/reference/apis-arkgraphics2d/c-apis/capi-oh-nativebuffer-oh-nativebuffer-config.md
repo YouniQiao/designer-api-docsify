@@ -6,7 +6,7 @@ typedef struct OH_NativeBuffer_Config {...} OH_NativeBuffer_Config
 
 ## Overview
 
-<b>OH_NativeBuffer</b> config. <br> Used to allocating new <b>OH_NativeBuffer</b> and query parameters if existing ones.
+<b>OH_NativeBuffer</b> config. Used to allocating new <b>OH_NativeBuffer</b> and query parameters if existing ones.
 
 **Since**: 9
 

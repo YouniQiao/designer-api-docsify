@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides APIs for managing the purgeable memory.<br>For example, you can create a purgeable memory, start or end the memory reading/writing, and rebuild the memory.<br>Link to the **libpurgeable_memory_ndk.z.so** file when you use the API.
+Provides APIs for managing the purgeable memory. <br>For example, you can create a purgeable memory, start or end the memory reading/writing, and rebuild the memory. <br>Link to the **libpurgeable_memory_ndk.z.so** file when you use the API.
 
 **Library**: libpurgeable_memory_ndk.z.so
 
@@ -24,16 +24,22 @@ Provides APIs for managing the purgeable memory.<br>For example, you can create 
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef bool (\*OH_PurgeableMemory_ModifyFunc)(void *, size_t, void *)](#oh_purgeablememory_modifyfunc) | OH_PurgeableMemory_ModifyFunc | function pointer, it points to a function which is used to build content of a PurgMem obj. |
-| [OH_PurgeableMemory *OH_PurgeableMemory_Create(size_t size, OH_PurgeableMemory_ModifyFunc func, void *funcPara)](#oh_purgeablememory_create) | - | create a PurgMem obj. |
-| [bool OH_PurgeableMemory_Destroy(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_destroy) | - | destroy a PurgMem obj. |
-| [bool OH_PurgeableMemory_BeginRead(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_beginread) | - | begin read a PurgMem obj. |
-| [void OH_PurgeableMemory_EndRead(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_endread) | - | end read a PurgMem obj. |
-| [bool OH_PurgeableMemory_BeginWrite(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_beginwrite) | - | begin write a PurgMem obj. |
-| [void OH_PurgeableMemory_EndWrite(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_endwrite) | - | end write a PurgMem obj. |
-| [void *OH_PurgeableMemory_GetContent(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_getcontent) | - | get content ptr of a PurgMem obj. |
-| [size_t OH_PurgeableMemory_ContentSize(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_contentsize) | - | get content size of a PurgMem obj. |
-| [bool OH_PurgeableMemory_AppendModify(OH_PurgeableMemory *purgObj, OH_PurgeableMemory_ModifyFunc func, void *funcPara)](#oh_purgeablememory_appendmodify) | - | append a modify to a PurgMem obj. |
+| [typedef bool (\*OH_PurgeableMemory_ModifyFunc)(void *, size_t, void *)](#oh_purgeablememory_modifyfunc) | OH_PurgeableMemory_ModifyFunc | function pointer, it points to a function which is used to build content of a PurgMem obj.<br> * |
+| [OH_PurgeableMemory *OH_PurgeableMemory_Create(size_t size, OH_PurgeableMemory_ModifyFunc func, void *funcPara)](#oh_purgeablememory_create) | - | create a PurgMem obj.<br> * |
+| [bool OH_PurgeableMemory_Destroy(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_destroy) | - | destroy a PurgMem obj.<br> * |
+| [bool OH_PurgeableMemory_BeginRead(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_beginread) | - | begin read a PurgMem obj.<br> * |
+| [void OH_PurgeableMemory_EndRead(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_endread) | - | end read a PurgMem obj.<br> * |
+| [bool OH_PurgeableMemory_BeginWrite(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_beginwrite) | - | begin write a PurgMem obj.<br> * |
+| [void OH_PurgeableMemory_EndWrite(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_endwrite) | - | end write a PurgMem obj.<br> * |
+| [void *OH_PurgeableMemory_GetContent(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_getcontent) | - | get content ptr of a PurgMem obj.<br> * |
+| [size_t OH_PurgeableMemory_ContentSize(OH_PurgeableMemory *purgObj)](#oh_purgeablememory_contentsize) | - | get content size of a PurgMem obj.<br> * |
+| [bool OH_PurgeableMemory_AppendModify(OH_PurgeableMemory *purgObj, OH_PurgeableMemory_ModifyFunc func, void *funcPara)](#oh_purgeablememory_appendmodify) | - | append a modify to a PurgMem obj.<br> * |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| bool (*OH_PurgeableMemory_ModifyFunc)(void *, size_t, void *) | function pointer, it points to a function which is used to build content of a PurgMem obj.<br> *<br>**Since**: 10 |
 
 ## Function description
 
@@ -45,7 +51,7 @@ typedef bool (*OH_PurgeableMemory_ModifyFunc)(void *, size_t, void *)
 
 **Description**
 
-function pointer, it points to a function which is used to build content of a PurgMem obj.
+function pointer, it points to a function which is used to build content of a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -71,7 +77,7 @@ OH_PurgeableMemory *OH_PurgeableMemory_Create(size_t size, OH_PurgeableMemory_Mo
 
 **Description**
 
-create a PurgMem obj.
+create a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -97,7 +103,7 @@ bool OH_PurgeableMemory_Destroy(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-destroy a PurgMem obj.
+destroy a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -121,7 +127,7 @@ bool OH_PurgeableMemory_BeginRead(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-begin read a PurgMem obj.
+begin read a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -145,7 +151,7 @@ void OH_PurgeableMemory_EndRead(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-end read a PurgMem obj.
+end read a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -153,7 +159,7 @@ end read a PurgMem obj.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_PurgeableMemory](capi-memory-purgmem.md) *purgObj | Pointer to the purgeable memory object. When this function ends, the OS may reclaim the memory of thecontent of the purgeable memory object later. |
+| [OH_PurgeableMemory](capi-memory-purgmem.md) *purgObj | Pointer to the purgeable memory object. When this function ends, the OS may reclaim the memory of the content of the purgeable memory object later. |
 
 ### OH_PurgeableMemory_BeginWrite()
 
@@ -163,7 +169,7 @@ bool OH_PurgeableMemory_BeginWrite(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-begin write a PurgMem obj.
+begin write a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -187,7 +193,7 @@ void OH_PurgeableMemory_EndWrite(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-end write a PurgMem obj.
+end write a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -195,7 +201,7 @@ end write a PurgMem obj.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_PurgeableMemory](capi-memory-purgmem.md) *purgObj | Pointer to the purgeable memory object. When this function ends, the OS may reclaim the memory of thecontent of the purgeable memory object later. |
+| [OH_PurgeableMemory](capi-memory-purgmem.md) *purgObj | Pointer to the purgeable memory object. When this function ends, the OS may reclaim the memory of the content of the purgeable memory object later. |
 
 ### OH_PurgeableMemory_GetContent()
 
@@ -205,7 +211,7 @@ void *OH_PurgeableMemory_GetContent(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-get content ptr of a PurgMem obj.
+get content ptr of a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -229,7 +235,7 @@ size_t OH_PurgeableMemory_ContentSize(OH_PurgeableMemory *purgObj)
 
 **Description**
 
-get content size of a PurgMem obj.
+get content size of a PurgMem obj.<br> *
 
 **Since**: 10
 
@@ -253,7 +259,7 @@ bool OH_PurgeableMemory_AppendModify(OH_PurgeableMemory *purgObj, OH_PurgeableMe
 
 **Description**
 
-append a modify to a PurgMem obj.
+append a modify to a PurgMem obj.<br> *
 
 **Since**: 10
 

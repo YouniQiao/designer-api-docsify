@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Unified Data Management Framework(UDMF) aims to define various standardsfor data across applications, devices, and platforms, providing a unified OpenHarmonydata language and standardized data access and reading paths.
+The Unified Data Management Framework(UDMF) aims to define various standards for data across applications, devices, and platforms, providing a unified OpenHarmony data language and standardized data access and reading paths.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

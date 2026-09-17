@@ -6,7 +6,7 @@ typedef struct RawFileDescriptor64 {...} RawFileDescriptor64
 
 ## Overview
 
-Provides the rawfile file descriptor information, including the file descriptor, start position within theHAP, and file length. Large files larger than 2 GB are supported.<br>This information is obtained through[OH_ResourceManager_GetRawFileDescriptor64](capi-raw-file-h.md#oh_resourcemanager_getrawfiledescriptor64), and must be released through[OH_ResourceManager_ReleaseRawFileDescriptor64](capi-raw-file-h.md#oh_resourcemanager_releaserawfiledescriptor64) after use.
+Provides the rawfile file descriptor information, including the file descriptor, start position within the HAP, and file length. Large files larger than 2 GB are supported.<br>This information is obtained through [OH_ResourceManager_GetRawFileDescriptor64](capi-raw-file-h.md#oh_resourcemanager_getrawfiledescriptor64), and must be released through [OH_ResourceManager_ReleaseRawFileDescriptor64](capi-raw-file-h.md#oh_resourcemanager_releaserawfiledescriptor64) after use.
 
 **Since**: 11
 

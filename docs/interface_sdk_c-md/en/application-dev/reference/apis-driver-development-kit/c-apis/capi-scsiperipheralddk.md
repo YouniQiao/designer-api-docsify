@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provide ScsiPeripheral DDK interface, including initializing DDK, releasing DDK, opening devices, reading andwriting devices, etc.
+Provide ScsiPeripheral DDK interface, including initializing DDK, releasing DDK, opening devices, reading and writing devices, etc.
 
 **Since**: 18
 

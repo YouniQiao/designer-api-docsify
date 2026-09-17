@@ -6,7 +6,7 @@ typedef struct ArkWeb_WebMessagePortAPI {...} ArkWeb_WebMessagePortAPI
 
 ## 概述
 
-ArkWeb_WebMessagePortAPI是Web消息端口相关Native API结构体。该结构体提供了消息端口的创建、关闭、消息发送和消息接收回调注册等功能。此API是postMessage桥接的核心组件，支持在Native代码和Web页面之间建立持久的双向通信通道。适用于需要在原生应用与Web页面之间进行数据交互的场景，解决了跨语言通信的难题，提升了应用的扩展能力和开发效率。<br>Web消息端口相关接口需在UI线程中调用OH_ArkWeb_GetNativeAPI方法获取，调用前建议通过{@link ARKWEB_MEMBER_MISSING}校验函数指针的可用性，避免SDK与设备ROM不匹配导致崩溃。
+ArkWeb_WebMessagePortAPI是Web消息端口相关Native API结构体。该结构体提供了消息端口的创建、关闭、消息发送和消息接收回调注册等功能。此API是postMessage桥接的核心组件， 支持在Native代码和Web页面之间建立持久的双向通信通道。适用于需要在原生应用与Web页面之间进行数据交互的场景，解决了跨语言通信的难题，提升了应用的扩展能力和开发效率。<br> Web消息端口相关接口需在UI线程中调用OH_ArkWeb_GetNativeAPI方法获取，调用前建议通过{@link ARKWEB_MEMBER_MISSING}校验函数指针的可用性，避免SDK与设备ROM不匹配导致崩溃。
 
 **起始版本：** 12
 
@@ -51,11 +51,11 @@ ArkWeb_ErrorCode (*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, c
 |  const char* webTag | Web组件名称，用于标识要操作的Web组件。必须是与Web组件绑定的唯一标识符，如果未找到与webTag绑定的Web组件将返回初始化失败错误。 |
 |  const [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | 需要发送的消息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkWeb_ErrorCode | Result code.          <br>{@link ARKWEB_SUCCESS} 执行成功。          <br>{@link ARKWEB_INVALID_PARAM} 参数无效。               <br>可能原因：          <br>- webMessagePort或webMessage参数为空。          <br>- 参数类型不正确。               <br>解决措施：          <br>- 检查参数是否为空指针。          <br>- 确认参数类型是否符合接口要求。               <br>{@link ARKWEB_INIT_ERROR}: 初始化失败，没有找到与webTag绑定的Web组件。               <br>可能原因：          <br>- Web组件未正确初始化。          <br>- webTag参数与实际Web组件名称不匹配。               <br>解决措施：          <br>- 确认Web组件已完成初始化。          <br>- 检查webTag参数是否与Web组件名称一致。 |
+| ArkWeb_ErrorCode | Result code.          <br>{@link ARKWEB_SUCCESS} 执行成功。<br>    <br>{@link ARKWEB_INVALID_PARAM} 参数无效。<br>    <br>可能原因：<br>    <br>- webMessagePort或webMessage参数为空。<br>    <br>- 参数类型不正确。<br>    <br>解决措施：<br>    <br>- 检查参数是否为空指针。<br>    <br>- 确认参数类型是否符合接口要求。<br>    <br>{@link ARKWEB_INIT_ERROR}: 初始化失败，没有找到与webTag绑定的Web组件。               <br>可能原因：          <br>- Web组件未正确初始化。          <br>- webTag参数与实际Web组件名称不匹配。               <br>解决措施：          <br>- 确认Web组件已完成初始化。          <br>- 检查webTag参数是否与Web组件名称一致。 |
 
 ### close()
 

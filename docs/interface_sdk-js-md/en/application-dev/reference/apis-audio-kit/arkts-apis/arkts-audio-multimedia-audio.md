@@ -1,4 +1,4 @@
-# @ohos.multimedia.audio
+# @ohos.multimedia.audio(Audio Renderer, Capturer And Management)
 
 The module provides basic audio control capabilities, including volume adjustment, device management, data capture, and rendering.
 

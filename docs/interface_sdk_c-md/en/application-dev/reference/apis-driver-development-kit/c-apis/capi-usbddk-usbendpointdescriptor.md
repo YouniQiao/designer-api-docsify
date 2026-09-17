@@ -6,7 +6,7 @@ typedef struct UsbEndpointDescriptor {...} __attribute__((packed)) UsbEndpointDe
 
 ## Overview
 
-Defines standard endpoint descriptors, which correspond to **Standard Endpoint Descriptor** in the USBprotocol.
+Defines standard endpoint descriptors, which correspond to **Standard Endpoint Descriptor** in the USB protocol.
 
 **Since**: 10
 

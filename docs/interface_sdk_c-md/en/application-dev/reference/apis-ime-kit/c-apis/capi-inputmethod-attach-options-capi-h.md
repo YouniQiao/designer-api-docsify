@@ -20,7 +20,7 @@ Provides methods for creating, destroying, reading, and writing the option objec
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) | InputMethod_AttachOptions | Options for binding the input method.The options when attaching input method. |
+| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) | InputMethod_AttachOptions | Options for binding the input method.<br> The options when attaching input method. |
 
 ### Function
 
@@ -50,7 +50,7 @@ Create a new [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachopti
 
 | Parameter | Description |
 | -- | -- |
-| bool showKeyboard | Pointer to whether to display the keyboard during binding.true: The keyboard is displayed after the binding is complete.false: The keyboard is hidden after the binding is complete. |
+| bool showKeyboard | Pointer to whether to display the keyboard during binding. true: The keyboard is displayed after the binding is complete. false: The keyboard is hidden after the binding is complete. |
 
 **Returns**:
 
@@ -118,13 +118,13 @@ Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputme
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | Represents a pointer to an [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance which will be get value from. |
-| bool *showKeyboard |  Represents showKeyboard value.true - need to show keyboard.false - no need to show keyboard. |
+| bool *showKeyboard |  Represents showKeyboard value. true - need to show keyboard. false - no need to show keyboard. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_AttachOptions_GetRequestKeyboardReason()
 
@@ -149,6 +149,6 @@ Obtains the reason that triggers the input method from [InputMethod_AttachOption
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer. If options is NULL, or requestKeyboardReason is NULL.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer. If options is NULL, or requestKeyboardReason is NULL.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 

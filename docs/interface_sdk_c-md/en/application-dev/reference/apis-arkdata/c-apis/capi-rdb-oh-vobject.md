@@ -53,7 +53,7 @@ Convert the int64 input parameter to a value of type [OH_VObject](capi-rdb-oh-vo
 | -- | -- |
 | [OH_VObject](capi-rdb-oh-vobject.md) *valueObject | Represents a pointer to an [OH_VObject](capi-rdb-oh-vobject.md) instance. |
 |  int64_t *value | Represents a pointer to an int64_t input parameter or the array of type int64_t. |
-|  uint32_t count | If value is a pointer to a single numerical value, count = 1;if value is a pointer to an array, count is the size of the array. |
+|  uint32_t count | If value is a pointer to a single numerical value, count = 1; if value is a pointer to an array, count is the size of the array. |
 
 **Returns**:
 
@@ -84,7 +84,7 @@ Convert the double input parameter to a value of type [OH_VObject](capi-rdb-oh-v
 | -- | -- |
 | [OH_VObject](capi-rdb-oh-vobject.md) *valueObject | Represents a pointer to an [OH_VObject](capi-rdb-oh-vobject.md) instance. |
 |  double *value | Represents a pointer to an double input parameter or the array of type double. |
-|  uint32_t count | If value is a pointer to a single numerical value, count = 1;if value is a pointer to an array, count is the size of the array. |
+|  uint32_t count | If value is a pointer to a single numerical value, count = 1; if value is a pointer to an array, count is the size of the array. |
 
 **Returns**:
 

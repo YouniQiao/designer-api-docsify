@@ -8,7 +8,7 @@ This file declares the functions related to the image filter in the drawing modu
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -20,7 +20,7 @@ This file declares the functions related to the image filter in the drawing modu
 | -- | -- |
 | [OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateBlur(float sigmaX, float sigmaY, OH_Drawing_TileMode tileMode, OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_imagefiltercreateblur) | Creates an image filter with a given blur effect. |
 | [OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateBlurWithCrop(float sigmaX, float sigmaY, OH_Drawing_TileMode tileMode, OH_Drawing_ImageFilter* input, const OH_Drawing_Rect* rect)](#oh_drawing_imagefiltercreateblurwithcrop) | Creates an image filter with a given blur effect. |
-| [OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateFromColorFilter(OH_Drawing_ColorFilter* colorFilter, OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_imagefiltercreatefromcolorfilter) | Creates an **OH_Drawing_ImageFilter** object with a color filter effect. This API may return an error code.For details, call {@link OH_Drawing_ErrorCodeGet}. If **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETERis returned. |
+| [OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateFromColorFilter(OH_Drawing_ColorFilter* colorFilter, OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_imagefiltercreatefromcolorfilter) | Creates an **OH_Drawing_ImageFilter** object with a color filter effect. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER**<br>is returned. |
 | [OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateOffset(float x, float y, OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_imagefiltercreateoffset) | Creates an offset filter to translate the input filter based on the specified vector. |
 | [OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateFromShaderEffect(OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_imagefiltercreatefromshadereffect) | Creates an **ImageFilter** object based on a shader. |
 | [void OH_Drawing_ImageFilterDestroy(OH_Drawing_ImageFilter* imageFilter)](#oh_drawing_imagefilterdestroy) | Destroys an **OH_Drawing_ImageFilter** object and reclaims the memory occupied by the object. |
@@ -45,8 +45,8 @@ Creates an image filter with a given blur effect.
 | -- | -- |
 | float sigmaX | Standard deviation of the Gaussian blur to apply along the X axis. The value must be greater than 0. |
 | float sigmaY | Standard deviation of the Gaussian blur to apply along the Y axis. The value must be greater than 0. |
-| OH_Drawing_TileMode tileMode | Tile mode of the shader effect. For details about the available options, see{@link OH_Drawing_TileMode}. |
-| OH_Drawing_ImageFilter* imageFilter | Pointer to the filter to which the image filter will be applied. If NULL is passed in, the imagefilter is directly applied to the original image. |
+| OH_Drawing_TileMode tileMode | Tile mode of the shader effect. For details about the available options, see {@link OH_Drawing_TileMode} . |
+| OH_Drawing_ImageFilter* imageFilter | Pointer to the filter to which the image filter will be applied. If NULL is passed in, the image filter is directly applied to the original image. |
 
 **Returns**:
 
@@ -72,9 +72,9 @@ Creates an image filter with a given blur effect.
 | -- | -- |
 | float sigmaX | Standard deviation of the Gaussian blur to apply along the X axis. The value must be greater than 0.0. |
 | float sigmaY | Standard deviation of the Gaussian blur to apply along the Y axis. The value must be greater than 0.0. |
-| OH_Drawing_TileMode tileMode | Tile mode of the shader effect. For details about the available options, see{@link OH_Drawing_TileMode}. |
-| OH_Drawing_ImageFilter* input | Pointer to the filter to which the image filter will be applied. If NULL is passed in, the image filteris directly applied to the original image. |
-| const OH_Drawing_Rect* rect | Pointer to the rectangular region to be cropped. If NULL is passed in, the blur effect is directlyapplied to the entire image. |
+| OH_Drawing_TileMode tileMode | Tile mode of the shader effect. For details about the available options, see {@link OH_Drawing_TileMode} . |
+| OH_Drawing_ImageFilter* input | Pointer to the filter to which the image filter will be applied. If NULL is passed in, the image filter is directly applied to the original image. |
+| const OH_Drawing_Rect* rect | Pointer to the rectangular region to be cropped. If NULL is passed in, the blur effect is directly applied to the entire image. |
 
 **Returns**:
 
@@ -90,7 +90,7 @@ OH_Drawing_ImageFilter* OH_Drawing_ImageFilterCreateFromColorFilter(OH_Drawing_C
 
 **Description**
 
-Creates an **OH_Drawing_ImageFilter** object with a color filter effect. This API may return an error code.For details, call {@link OH_Drawing_ErrorCodeGet}. If **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETERis returned.
+Creates an **OH_Drawing_ImageFilter** object with a color filter effect. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **colorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER**<br>is returned.
 
 **Since**: 12
 
@@ -99,7 +99,7 @@ Creates an **OH_Drawing_ImageFilter** object with a color filter effect. This AP
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_ColorFilter* colorFilter | Pointer to an {@link OH_Drawing_ColorFilter} object. |
-| OH_Drawing_ImageFilter* imageFilter | Pointer to the filter to which the image filter will be applied. If NULL is passed in, the imagefilter is directly applied to the original image. |
+| OH_Drawing_ImageFilter* imageFilter | Pointer to the filter to which the image filter will be applied. If NULL is passed in, the image filter is directly applied to the original image. |
 
 **Returns**:
 
@@ -125,7 +125,7 @@ Creates an offset filter to translate the input filter based on the specified ve
 | -- | -- |
 | float x | Distance to translate on the X axis. |
 | float y | Distance to translate on the Y axis. |
-| OH_Drawing_ImageFilter* imageFilter | Filter to be translated. If NULL is passed in, the drawing result without the filtering effect istranslated. |
+| OH_Drawing_ImageFilter* imageFilter | Filter to be translated. If NULL is passed in, the drawing result without the filtering effect is translated. |
 
 **Returns**:
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.AppServiceExtensionAbility
+# @ohos.app.ability.AppServiceExtensionAbility(ExtensionAbility for Application Background Services)
 
 ## Modules to Import
 

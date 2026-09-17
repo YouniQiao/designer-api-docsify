@@ -25,6 +25,7 @@ Port match condition
 | union | Match rule<br>**Since**: 26.0.0 |
 | uint16_t single | Single port, used when type is OH_TRAFFICFILTER_PORT_MATCH_SINGLE<br>**Since**: 26.0.0 |
 | [OH_TrafficFilter_PortRange](capi-trafficfilter-oh-trafficfilter-portrange.md) range | Port range match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_RANGE<br>**Since**: 26.0.0 |
-| OH_TrafficFilter_PortMulti multi; } value | Multi-port match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_MULTI<br>**Since**: 26.0.0 |
+| OH_TrafficFilter_PortMulti multi;
+ } value | Multi-port match value, used when type is OH_TRAFFICFILTER_PORT_MATCH_MULTI<br>**Since**: 26.0.0 |
 
 

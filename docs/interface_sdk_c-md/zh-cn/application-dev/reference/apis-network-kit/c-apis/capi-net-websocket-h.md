@@ -50,7 +50,7 @@ WebSocket客户端的构造函数。
 | WebSocket_OnErrorCallback onError | 客户端定义的错误消息的回调函数。 |
 | WebSocket_OnCloseCallback onclose | 客户端定义的关闭消息的回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -77,7 +77,7 @@ int OH_WebSocketClient_AddHeader(struct WebSocket *client, struct WebSocket_Head
 | struct WebSocket *client | 客户端指针。 |
 | struct WebSocket_Header header | Header头信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -107,7 +107,7 @@ int OH_WebSocketClient_Connect(struct WebSocket *client, const char *url, struct
 | const char *url | 客户端要连接到服务端的地址。 |
 | struct WebSocket_RequestOptions options | 发起连接的可选参数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -137,7 +137,7 @@ int OH_WebSocketClient_Send(struct WebSocket *client, char *data, size_t length)
 | char *data | Data sent by the 客户端。 |
 | size_t length | Length of the data sent by the 客户端。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -166,7 +166,7 @@ Closes the connection on the 客户端。
 | struct WebSocket *client | 客户端。 |
 | struct WebSocket_CloseOption options | 发起关闭连接的可选参数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -194,7 +194,7 @@ int OH_WebSocketClient_Destroy(struct WebSocket *client)
 | -- | -- |
 | struct WebSocket *client | 客户端。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

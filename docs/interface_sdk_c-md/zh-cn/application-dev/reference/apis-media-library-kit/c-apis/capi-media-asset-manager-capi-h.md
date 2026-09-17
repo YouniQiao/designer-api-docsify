@@ -41,7 +41,7 @@ OH_MediaAssetManager* OH_MediaAssetManager_Create(void)
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -71,7 +71,7 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetMan
 | const char* destPath | 请求资源的目标地址。 |
 | OH_MediaLibrary_OnDataPrepared callback | 媒体资源处理器，当所请求的媒体资源准备完成时会触发回调。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -101,7 +101,7 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetMan
 | const char* destPath | 请求资源的目标地址。 |
 | OH_MediaLibrary_OnDataPrepared callback | 媒体资源处理器，当所请求的媒体资源准备完成时会触发回调。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -128,7 +128,7 @@ bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const Med
 | OH_MediaAssetManager* manager | 指向OH_MediaAssetManager实例的指针。 |
 | const MediaLibrary_RequestId requestId | 待取消的请求Id。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -158,7 +158,7 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetMana
 | MediaLibrary_RequestId* requestId | 请求的{@link MediaLibrary_RequestId}，出参。 |
 | OH_MediaLibrary_OnMovingPhotoDataPrepared callback | 当请求的动态照片准备就绪时调用{@link OH_MediaLibrary_OnMovingPhotoDataPrepared}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -188,7 +188,7 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* m
 | MediaLibrary_RequestId* requestId | 请求的{@link MediaLibrary_RequestId}，出参。 |
 | OH_MediaLibrary_OnImageDataPrepared callback | 当请求的图像源准备就绪时调用{@link OH_MediaLibrary_OnImageDataPrepared}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -218,7 +218,7 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManag
 | MediaLibrary_RequestId* requestId | 请求的MediaLibrary_RequestId，该参数为输出参数。 |
 | OH_MediaLibrary_OnQuickImageDataPrepared callback | 当请求的源数据准备就绪时，将会调用OH_MediaLibrary_OnQuickImageDataPrepared方法。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -242,7 +242,7 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manage
 | -- | -- |
 | OH_MediaAssetManager* manager | 要释放的{@link OH_MediaAssetManager}实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

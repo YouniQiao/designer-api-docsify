@@ -6,7 +6,7 @@ typedef struct Input_InterceptorEventCallback {...} Input_InterceptorEventCallba
 
 ## Overview
 
-Defines the interceptor callback event structure, which is used to define the callback functiontypes required for input event interception. Mouse interception events, touch input events, key events,and axis events are supported.
+Defines the interceptor callback event structure, which is used to define the callback function types required for input event interception. Mouse interception events, touch input events, key events, and axis events are supported.
 
 **Since**: 12
 

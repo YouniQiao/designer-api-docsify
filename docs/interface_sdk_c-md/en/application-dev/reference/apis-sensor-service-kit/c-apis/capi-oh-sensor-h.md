@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **oh_sensor.h** file declares the APIs for operating sensors, including obtaining sensor information andsubscribing to and unsubscribing from sensor data.
+The **oh_sensor.h** file declares the APIs for operating sensors, including obtaining sensor information and subscribing to and unsubscribing from sensor data.
 
 **Library**: libohsensor.so
 
@@ -19,8 +19,8 @@ The **oh_sensor.h** file declares the APIs for operating sensors, including obta
 | Name | Description |
 | -- | -- |
 | [Sensor_Result OH_Sensor_GetInfos(Sensor_Info **infos, uint32_t *count)](#oh_sensor_getinfos) | Obtains information about all sensors on the device. |
-| [Sensor_Result OH_Sensor_Subscribe(const Sensor_SubscriptionId *id, const Sensor_SubscriptionAttribute *attribute, const Sensor_Subscriber *subscriber)](#oh_sensor_subscribe) | Subscribes to sensor data. The system will report sensor data to the subscriber at the specified frequency.To subscribe to data of acceleration sensors, request the **ohos.permission.ACCELEROMETER** permission. To subscribeto data of gyroscope sensors, request the **ohos.permission.GYROSCOPE** permission. To subscribe to data ofpedometer-related sensors, request the **ohos.permission.ACTIVITY_MOTION** permission. To subscribe to data ofhealth-related sensors, such as heart rate sensors, request the **ohos.permission.READ_HEALTH_DATA** permission.Otherwise, the subscription fails. You do not need to request any permission to subscribe to data of other types ofsensors. |
-| [Sensor_Result OH_Sensor_Unsubscribe(const Sensor_SubscriptionId *id, const Sensor_Subscriber *subscriber)](#oh_sensor_unsubscribe) | Unsubscribes from sensor data. To unsubscribe from data of acceleration sensors, request the **ohos.permission.ACCELEROMETER** permission. To unsubscribe from data of gyroscope sensors, request the **ohos.permission.GYROSCOPE** permission. To unsubscribe from data of pedometer-related sensors, request the **ohos.permission.ACTIVITY_MOTION** permission. To unsubscribe from data of health-related sensors, request the **ohos.permission.READ_HEALTH_DATA** permission. Otherwise, the unsubscription fails. You do not need to request any permission tounsubscribe from data of other types of sensors. |
+| [Sensor_Result OH_Sensor_Subscribe(const Sensor_SubscriptionId *id, const Sensor_SubscriptionAttribute *attribute, const Sensor_Subscriber *subscriber)](#oh_sensor_subscribe) | Subscribes to sensor data. The system will report sensor data to the subscriber at the specified frequency. To subscribe to data of acceleration sensors, request the **ohos.permission.ACCELEROMETER** permission. To subscribe to data of gyroscope sensors, request the **ohos.permission.GYROSCOPE** permission. To subscribe to data of pedometer-related sensors, request the **ohos.permission.ACTIVITY_MOTION** permission. To subscribe to data of health-related sensors, such as heart rate sensors, request the **ohos.permission.READ_HEALTH_DATA** permission. Otherwise, the subscription fails. You do not need to request any permission to subscribe to data of other types of sensors. |
+| [Sensor_Result OH_Sensor_Unsubscribe(const Sensor_SubscriptionId *id, const Sensor_Subscriber *subscriber)](#oh_sensor_unsubscribe) | Unsubscribes from sensor data. To unsubscribe from data of acceleration sensors, request the **ohos. permission.ACCELEROMETER** permission. To unsubscribe from data of gyroscope sensors, request the **ohos.permission. GYROSCOPE** permission. To unsubscribe from data of pedometer-related sensors, request the **ohos.permission. ACTIVITY_MOTION** permission. To unsubscribe from data of health-related sensors, request the **ohos.permission. READ_HEALTH_DATA** permission. Otherwise, the unsubscription fails. You do not need to request any permission to unsubscribe from data of other types of sensors. |
 
 ## Function description
 
@@ -47,7 +47,7 @@ Obtains information about all sensors on the device.
 
 | Type | Description |
 | -- | -- |
-| Sensor_Result | SENSOR_SUCCESS if the operation is successful; an error code defined in {@link Sensor_Result} otherwise.  The error code can be:  - {@link SENSOR_PARAMETER_ERROR} if the parameter verification fails. For example, the parameter is invalid or the  parameter type is incorrect.  - {@link SENSOR_SERVICE_EXCEPTION} if the sensor service is abnormal. |
+| Sensor_Result | SENSOR_SUCCESS if the operation is successful; an error code defined in {@link Sensor_Result} otherwise.<br>The error code can be:<br>- {@link SENSOR_PARAMETER_ERROR} if the parameter verification fails. For example, the parameter is invalid or the<br>parameter type is incorrect.<br>- {@link SENSOR_SERVICE_EXCEPTION} if the sensor service is abnormal. |
 
 ### OH_Sensor_Subscribe()
 
@@ -57,7 +57,7 @@ Sensor_Result OH_Sensor_Subscribe(const Sensor_SubscriptionId *id, const Sensor_
 
 **Description**
 
-Subscribes to sensor data. The system will report sensor data to the subscriber at the specified frequency.To subscribe to data of acceleration sensors, request the **ohos.permission.ACCELEROMETER** permission. To subscribeto data of gyroscope sensors, request the **ohos.permission.GYROSCOPE** permission. To subscribe to data ofpedometer-related sensors, request the **ohos.permission.ACTIVITY_MOTION** permission. To subscribe to data ofhealth-related sensors, such as heart rate sensors, request the **ohos.permission.READ_HEALTH_DATA** permission.Otherwise, the subscription fails. You do not need to request any permission to subscribe to data of other types ofsensors.
+Subscribes to sensor data. The system will report sensor data to the subscriber at the specified frequency. To subscribe to data of acceleration sensors, request the **ohos.permission.ACCELEROMETER** permission. To subscribe to data of gyroscope sensors, request the **ohos.permission.GYROSCOPE** permission. To subscribe to data of pedometer-related sensors, request the **ohos.permission.ACTIVITY_MOTION** permission. To subscribe to data of health-related sensors, such as heart rate sensors, request the **ohos.permission.READ_HEALTH_DATA** permission. Otherwise, the subscription fails. You do not need to request any permission to subscribe to data of other types of sensors.
 
 **Required permission**: ohos.permission.ACCELEROMETER or ohos.permission.GYROSCOPE or ohos.permission.ACTIVITY_MOTION or ohos.permission.READ_HEALTH_DATA
 
@@ -68,14 +68,14 @@ Subscribes to sensor data. The system will report sensor data to the subscriber 
 | Parameter | Description |
 | -- | -- |
 | const Sensor_SubscriptionId *id | Pointer to the sensor subscription ID. For details, see {@link Sensor_SubscriptionId}. |
-| const Sensor_SubscriptionAttribute *attribute | Pointer to the subscription attribute, which is used to specify the data reporting frequency. Fordetails, see {@link Sensor_SubscriptionAttribute}. |
-| const Sensor_Subscriber *subscriber | Pointer to the subscriber information, which is used by the callback function to report sensordata. For details, see {@link Sensor_Subscriber}. |
+| const Sensor_SubscriptionAttribute *attribute | Pointer to the subscription attribute, which is used to specify the data reporting frequency. For details, see {@link Sensor_SubscriptionAttribute}. |
+| const Sensor_Subscriber *subscriber | Pointer to the subscriber information, which is used by the callback function to report sensor data. For details, see {@link Sensor_Subscriber}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Sensor_Result | SENSOR_SUCCESS if the operation is successful; an error code defined in {@link Sensor_Result} otherwise.  The error code can be:  - {@link SENSOR_PERMISSION_DENIED} if the permission verification fails.  - {@link SENSOR_PARAMETER_ERROR} if the parameter verification fails. For example, the parameter is invalid or the  parameter type is incorrect.  - {@link SENSOR_SERVICE_EXCEPTION} if the sensor service is abnormal. |
+| Sensor_Result | SENSOR_SUCCESS if the operation is successful; an error code defined in {@link Sensor_Result} otherwise.<br>The error code can be:<br>- {@link SENSOR_PERMISSION_DENIED} if the permission verification fails.<br>- {@link SENSOR_PARAMETER_ERROR} if the parameter verification fails. For example, the parameter is invalid or the<br>parameter type is incorrect.<br>- {@link SENSOR_SERVICE_EXCEPTION} if the sensor service is abnormal. |
 
 ### OH_Sensor_Unsubscribe()
 
@@ -85,7 +85,7 @@ Sensor_Result OH_Sensor_Unsubscribe(const Sensor_SubscriptionId *id, const Senso
 
 **Description**
 
-Unsubscribes from sensor data. To unsubscribe from data of acceleration sensors, request the **ohos.permission.ACCELEROMETER** permission. To unsubscribe from data of gyroscope sensors, request the **ohos.permission.GYROSCOPE** permission. To unsubscribe from data of pedometer-related sensors, request the **ohos.permission.ACTIVITY_MOTION** permission. To unsubscribe from data of health-related sensors, request the **ohos.permission.READ_HEALTH_DATA** permission. Otherwise, the unsubscription fails. You do not need to request any permission tounsubscribe from data of other types of sensors.
+Unsubscribes from sensor data. To unsubscribe from data of acceleration sensors, request the **ohos. permission.ACCELEROMETER** permission. To unsubscribe from data of gyroscope sensors, request the **ohos.permission. GYROSCOPE** permission. To unsubscribe from data of pedometer-related sensors, request the **ohos.permission. ACTIVITY_MOTION** permission. To unsubscribe from data of health-related sensors, request the **ohos.permission. READ_HEALTH_DATA** permission. Otherwise, the unsubscription fails. You do not need to request any permission to unsubscribe from data of other types of sensors.
 
 **Required permission**: ohos.permission.ACCELEROMETER or ohos.permission.GYROSCOPE or ohos.permission.ACTIVITY_MOTION or ohos.permission.READ_HEALTH_DATA
 
@@ -96,12 +96,12 @@ Unsubscribes from sensor data. To unsubscribe from data of acceleration sensors,
 | Parameter | Description |
 | -- | -- |
 | const Sensor_SubscriptionId *id | Pointer to the sensor subscription ID. For details, see {@link Sensor_SubscriptionId}. |
-| const Sensor_Subscriber *subscriber | Pointer to the subscriber information, which is used by the callback function to report sensordata. For details, see {@link Sensor_Subscriber}. |
+| const Sensor_Subscriber *subscriber | Pointer to the subscriber information, which is used by the callback function to report sensor data. For details, see {@link Sensor_Subscriber}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Sensor_Result | SENSOR_SUCCESS if the operation is successful; an error code defined in {@link Sensor_Result} otherwise.  The error code can be:  - {@link SENSOR_PERMISSION_DENIED} if the permission verification fails.  - {@link SENSOR_PARAMETER_ERROR} if the parameter verification fails. For example, the parameter is invalid or the  parameter type is incorrect.  - {@link SENSOR_SERVICE_EXCEPTION} if the sensor service is abnormal. |
+| Sensor_Result | SENSOR_SUCCESS if the operation is successful; an error code defined in {@link Sensor_Result} otherwise.<br>The error code can be:<br>- {@link SENSOR_PERMISSION_DENIED} if the permission verification fails.<br>- {@link SENSOR_PARAMETER_ERROR} if the parameter verification fails. For example, the parameter is invalid or the<br>parameter type is incorrect.<br>- {@link SENSOR_SERVICE_EXCEPTION} if the sensor service is abnormal. |
 
 

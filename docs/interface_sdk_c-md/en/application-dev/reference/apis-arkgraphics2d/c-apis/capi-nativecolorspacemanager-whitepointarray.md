@@ -6,7 +6,7 @@ typedef struct WhitePointArray {...} WhitePointArray
 
 ## Overview
 
-Provides a white point array structure. The white point is the coordinate that represents white in thecurrent color space.
+Provides a white point array structure. The white point is the coordinate that represents white in the current color space.
 
 **Since**: 13
 

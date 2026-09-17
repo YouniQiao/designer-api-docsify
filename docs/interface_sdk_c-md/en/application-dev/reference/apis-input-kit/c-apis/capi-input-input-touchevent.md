@@ -6,7 +6,7 @@ typedef struct Input_TouchEvent Input_TouchEvent
 
 ## Overview
 
-Defines the touchscreen input event object, which is used to represent detailed information about touchscreeninput, including the touch point position, touch state, and timestamp.
+Defines the touchscreen input event object, which is used to represent detailed information about touchscreen input, including the touch point position, touch state, and timestamp.
 
 **Since**: 12
 

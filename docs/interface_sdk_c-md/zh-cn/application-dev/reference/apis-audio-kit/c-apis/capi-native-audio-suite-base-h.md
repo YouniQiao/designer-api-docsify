@@ -19,11 +19,9 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_AudioFormat](capi-ohaudiosuite-oh-audioformat.md) | OH_AudioFormat | 定义音频编创的音频流信息，用于描述基本音频格式。 |
-| [OH_AudioSuite_SystemNodeFormat](capi-ohaudiosuite-oh-audiosuite-systemnodeformat.md) | OH_AudioSuite_SystemNodeFormat | 定义音频格式信息结构，用于描述系统节点的基本音频格式。 |
 | [OH_AudioDataArray](capi-ohaudiosuite-oh-audiodataarray.md) | OH_AudioDataArray | 定义多路输出渲染接口的输出数据描述。当管线中存在多输出效果节点时，通过多输出渲染接口获取处理过后的音频数据。 |
-| [OH_AudioSuite_MetaFrame](capi-ohaudiosuite-oh-audiosuite-metaframe.md) | OH_AudioSuite_MetaFrame | 定义音频元数据帧结构。该结构用于将音频数据和元数据一起传递。 |
 | [OH_EqualizerFrequencyBandGains](capi-ohaudiosuite-oh-equalizerfrequencybandgains.md) | OH_EqualizerFrequencyBandGains | 定义音频编创均衡器效果节点配置参数。 |
-| [OH_AudioSuite_SpaceRenderPositionParams](capi-ohaudiosuite-oh-audiosuite-spacerenderpositionparams.md) | OH_AudioSuite_SpaceRenderPositionParams | 定义3D空间渲染效果节点固定摆位模式的配置参数。<br>左手坐标系：伸出左手，用拇指和食指形成一个“L”形。拇指指向右侧，食指向上，其余手指指向前。此时形成了一个3D的左手坐标系。在这个坐标系中，拇指、食指和其他手指分别代表x轴、y轴和z轴的正方向。 |
+| [OH_AudioSuite_SpaceRenderPositionParams](capi-ohaudiosuite-oh-audiosuite-spacerenderpositionparams.md) | OH_AudioSuite_SpaceRenderPositionParams | 定义3D空间渲染效果节点固定摆位模式的配置参数。<br>左手坐标系：伸出左手，用拇指和食指形成一个“L”形。拇指指向右侧，食指向上，其余手指指向前。此时形成了一个3D的左手坐标系。在这个坐标系中，拇指、 食指和其他手指分别代表x轴、y轴和z轴的正方向。 |
 | [OH_AudioSuite_SpaceRenderRotationParams](capi-ohaudiosuite-oh-audiosuite-spacerenderrotationparams.md) | OH_AudioSuite_SpaceRenderRotationParams | 定义空间渲染效果节点旋转模式配置参数。 |
 | [OH_AudioSuite_SpaceRenderExtensionParams](capi-ohaudiosuite-oh-audiosuite-spacerenderextensionparams.md) | OH_AudioSuite_SpaceRenderExtensionParams | 定义空间渲染效果节点扩展模式配置参数。 |
 | [OH_AudioSuite_PureVoiceChangeOption](capi-ohaudiosuite-oh-audiosuite-purevoicechangeoption.md) | OH_AudioSuite_PureVoiceChangeOption | 定义音频编创传统变声选项。 |
@@ -37,7 +35,6 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_AudioNode_Type](#oh_audionode_type) | OH_AudioNode_Type | 定义音频编创节点类型。 |
-| [OH_AudioSuite_SystemNodeType](#oh_audiosuite_systemnodetype) | OH_AudioSuite_SystemNodeType | 定义音频节点系统类型。 |
 | [OH_AudioSuite_PipelineWorkMode](#oh_audiosuite_pipelineworkmode) | OH_AudioSuite_PipelineWorkMode | 定义音频编创管线工作模式。 |
 | [OH_AudioSuite_PipelineState](#oh_audiosuite_pipelinestate) | OH_AudioSuite_PipelineState | 定义音频编创管线运行状态。 |
 | [OH_AudioSuite_Result](#oh_audiosuite_result) | OH_AudioSuite_Result | 音频编创错误码。 |
@@ -104,23 +101,6 @@ enum OH_AudioNode_Type
 | EFFECT_NODE_TYPE_TEMPO_PITCH = 211 |  |
 | EFFECT_NODE_TYPE_HOA_SPACE_RENDER = 212 |  |
 
-### OH_AudioSuite_SystemNodeType
-
-```c
-enum OH_AudioSuite_SystemNodeType
-```
-
-**描述：**
-
-定义音频节点系统类型。
-
-**起始版本：** 26.0.0
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_DIALOGUE_ENHANCE = 301 |  |
-| OH_AUDIOSUITE_EFFECT_NODE_SYSTEM_TYPE_VOICE_BEAUTIFIER = 302 |  |
-
 ### OH_AudioSuite_PipelineWorkMode
 
 ```c
@@ -169,20 +149,20 @@ enum OH_AudioSuite_Result
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AUDIOSUITE_SUCCESS = 0 | 调用成功。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_INVALID_PARAM = 1 | 输入参数无效。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_INVALID_STATE = 2 | 非法状态。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_SYSTEM = 3 | 系统通用错误。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_UNSUPPORTED_FORMAT = 4 | 不支持的音频格式，如不支持的编码类型、采样格式等。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_ENGINE_NOT_EXIST = 5 | 引擎不存在。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_PIPELINE_NOT_EXIST = 6 | 管线不存在。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_NODE_NOT_EXIST = 7 | 节点不存在。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_UNSUPPORTED_CONNECT = 8 | 节点之间不支持连接。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION = 9 | 不支持的操作。例如，效果节点不支持设置音频格式。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_CREATED_EXCEED_SYSTEM_LIMITS = 10 | 创建管线或者节点超过系统最大数量限制。具体情况如下：<br> 引擎最多支持创建10条管线（其中，实时预览管线最多创建1条）。<br> 每一个管线中，输出节点的数量不超过1个，混音节点的数量不超过3个，音源分离节点的数量不超过1个。<br> 在API version 24之前，每一个管线中，输入节点的数量不超过5个，其余效果节点的数量不超过5个；在API version 24及以后，每一个管线中，输入节点的数量不超过15个，其余效果节点的数量不超过15个。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_REQUIRED_PARAMETERS_MISSING = 11 | 参数缺少必要参数。例如，输入节点未设置回调函数、输出节点未设置音频格式。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_TIMEOUT = 12 | 操作超时。<br>**起始版本：** 22 |
-| AUDIOSUITE_ERROR_MEMORY_ALLOC_FAILED = 13 | 内存申请失败。<br>**起始版本：** 22 |
+| AUDIOSUITE_SUCCESS = 0 |  调用成功。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_INVALID_PARAM = 1 |  输入参数无效。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_INVALID_STATE = 2 |  非法状态。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_SYSTEM = 3 |  系统通用错误。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_UNSUPPORTED_FORMAT = 4 |  不支持的音频格式，如不支持的编码类型、采样格式等。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_ENGINE_NOT_EXIST = 5 |  引擎不存在。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_PIPELINE_NOT_EXIST = 6 |  管线不存在。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_NODE_NOT_EXIST = 7 |  节点不存在。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_UNSUPPORTED_CONNECT = 8 |  节点之间不支持连接。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_UNSUPPORTED_OPERATION = 9 |  不支持的操作。例如，效果节点不支持设置音频格式。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_CREATED_EXCEED_SYSTEM_LIMITS = 10 |  创建管线或者节点超过系统最大数量限制。具体情况如下：<br> 引擎最多支持创建10条管线（其中，实时预览管线最多创建1条）。<br> 每一个管线中，输出节点的数量不超过1个，混音节点的数量不超过3个， 音源分离节点的数量不超过1个。<br> 在API version 24之前，每一个管线中，输入节点的数量不超过5个，其余效果节点的数量不超过5个；在API version 24及以后，每一个管线中，输入节点的数量不超过15个， 其余效果节点的数量不超过15个。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_REQUIRED_PARAMETERS_MISSING = 11 |  参数缺少必要参数。例如，输入节点未设置回调函数、输出节点未设置音频格式。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_TIMEOUT = 12 |  操作超时。<br>**起始版本：** 22 |
+| AUDIOSUITE_ERROR_MEMORY_ALLOC_FAILED = 13 |  内存申请失败。<br>**起始版本：** 22 |
 
 ### OH_Audio_SampleFormat
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This file declares the functions related to the canvas in the drawing module.By default, the canvas has a black brush with anti-aliasing enabled and without any other style. This brush takeseffect only when no brush or pen is proactively set in the canvas.
+This file declares the functions related to the canvas in the drawing module. By default, the canvas has a black brush with anti-aliasing enabled and without any other style. This brush takes effect only when no brush or pen is proactively set in the canvas.
 
 **Library**: libnative_drawing.so
 
@@ -19,7 +19,7 @@ This file declares the functions related to the canvas in the drawing module.By 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_Drawing_SrcRectConstraint](#oh_drawing_srcrectconstraint) | OH_Drawing_SrcRectConstraint | Enumerates the constraint types of the source rectangle. |
-| [OH_Drawing_PointMode](#oh_drawing_pointmode) | OH_Drawing_PointMode | Enumerates the modes of drawing multiple points. The modes include discrete points, line segments, and openpolygons. |
+| [OH_Drawing_PointMode](#oh_drawing_pointmode) | OH_Drawing_PointMode | Enumerates the modes of drawing multiple points. The modes include discrete points, line segments, and open polygons. |
 | [OH_Drawing_CanvasClipOp](#oh_drawing_canvasclipop) | OH_Drawing_CanvasClipOp | Enumerates the canvas clipping modes. |
 | [OH_Drawing_CanvasShadowFlags](#oh_drawing_canvasshadowflags) | OH_Drawing_CanvasShadowFlags | Enumerates the shadow flags. |
 | [OH_Drawing_VertexMode](#oh_drawing_vertexmode) | OH_Drawing_VertexMode | Enumerates the modes of interpreting the geometry of a given vertex. |
@@ -29,71 +29,74 @@ This file declares the functions related to the canvas in the drawing module.By 
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_Canvas* OH_Drawing_CanvasCreate(void)](#oh_drawing_canvascreate) | Creates an **OH_Drawing_Canvas** object. |
-| [OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixelMap)](#oh_drawing_canvascreatewithpixelmap) | Binds a pixel map to a canvas so that the content drawn on the canvas is output to the pixel map. (Thisprocess is called CPU rendering.) A canvas bound to a pixel map is a non-recording canvas.You should unbind the pixel map object by calling {@link OH_Drawing_PixelMapDissolve} after the canvas object isdestroyed. |
+| [OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixelMap)](#oh_drawing_canvascreatewithpixelmap) | Binds a pixel map to a canvas so that the content drawn on the canvas is output to the pixel map. (This process is called CPU rendering.) A canvas bound to a pixel map is a non-recording canvas. You should unbind the pixel map object by calling {@link OH_Drawing_PixelMapDissolve} after the canvas object is destroyed. |
 | [void OH_Drawing_CanvasDestroy(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdestroy) | Destroys an **OH_Drawing_Canvas** object and reclaims the memory occupied by the object. |
-| [void OH_Drawing_CanvasBind(OH_Drawing_Canvas* canvas, OH_Drawing_Bitmap* bitmap)](#oh_drawing_canvasbind) | Binds a bitmap to a canvas so that the content drawn on the canvas is output to the bitmap. (This process iscalled CPU rendering.) A canvas bound to a bitmap is a non-recording canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasAttachPen(OH_Drawing_Canvas* canvas, const OH_Drawing_Pen* pen)](#oh_drawing_canvasattachpen) | Attaches a pen to a canvas so that the canvas can use the style and color of the pen to outline a shape. Ifthe pen effect changes after this function is called, you must call the function again to use the new effect in thesubsequent drawing.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDetachPen(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdetachpen) | Detaches the pen from a canvas so that the canvas can no longer use the style and color of the pen to outlinea shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasAttachBrush(OH_Drawing_Canvas* canvas, const OH_Drawing_Brush* brush)](#oh_drawing_canvasattachbrush) | Attaches a brush to a canvas so that the canvas can use the style and color of the brush to fill in a shape.If the brush effect changes after this function is called, you must call the function again to use the new effect inthe subsequent drawing.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDetachBrush(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdetachbrush) | Detaches the brush from a canvas so that the canvas can no longer use the previously set brush to fill in ashape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasSave(OH_Drawing_Canvas* canvas)](#oh_drawing_canvassave) | Saves the current canvas status (canvas matrix) to the top of the stack. This function works with[OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore).This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, const OH_Drawing_Brush* brush)](#oh_drawing_canvassavelayer) | Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call[OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded,and the bitmap is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasRestore(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasrestore) | Restores the canvas status (canvas matrix) saved on the top of the stack.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint32_t OH_Drawing_CanvasGetSaveCount(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetsavecount) | Obtains the number of canvas statuses (canvas matrices) saved in the stack.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasRestoreToCount(OH_Drawing_Canvas* canvas, uint32_t saveCount)](#oh_drawing_canvasrestoretocount) | Restores to a given number of canvas statuses (canvas matrices).This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawLine(OH_Drawing_Canvas* canvas, float x1, float y1, float x2, float y2)](#oh_drawing_canvasdrawline) | Draws a line segment.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path)](#oh_drawing_canvasdrawpath) | Draws a path.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapMesh(OH_Drawing_Canvas* cCanvas, OH_Drawing_PixelMap* pixelMap, uint32_t meshWidth, uint32_t meshHeight, const float* vertices, uint32_t verticesSize, uint32_t vertOffset, const uint32_t* colors, uint32_t colorsSize, uint32_t colorOffset)](#oh_drawing_canvasdrawpixelmapmesh) | Draws a PixelMap based on a mesh, where mesh vertices are evenly distributed across the PixelMap. (This APIworks with brushes but not pens.) |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapNine(OH_Drawing_Canvas* canvas, OH_Drawing_PixelMap* pixelMap, const OH_Drawing_Rect* center, const OH_Drawing_Rect* dst, OH_Drawing_FilterMode mode)](#oh_drawing_canvasdrawpixelmapnine) | Splits a pixel map into nine sections using two horizontal and two vertical lines: four edge sections, fourcorner sections, and a central section.If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectanglewithout scaling. Otherwise, they will be scaled to fit the target rectangle.Any remaining space will be filled by stretching or compressing the other five sections to cover the entire targetrectangle. |
-| [void OH_Drawing_CanvasDrawPixelMapRect(OH_Drawing_Canvas* canvas, OH_Drawing_PixelMap* pixelMap, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_canvasdrawpixelmaprect) | Draws a portion of a pixel map onto a specified area of the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **pixelMap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasBind(OH_Drawing_Canvas* canvas, OH_Drawing_Bitmap* bitmap)](#oh_drawing_canvasbind) | Binds a bitmap to a canvas so that the content drawn on the canvas is output to the bitmap. (This process is called CPU rendering.) A canvas bound to a bitmap is a non-recording canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasAttachPen(OH_Drawing_Canvas* canvas, const OH_Drawing_Pen* pen)](#oh_drawing_canvasattachpen) | Attaches a pen to a canvas so that the canvas can use the style and color of the pen to outline a shape. If the pen effect changes after this function is called, you must call the function again to use the new effect in the subsequent drawing. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDetachPen(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdetachpen) | Detaches the pen from a canvas so that the canvas can no longer use the style and color of the pen to outline a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasAttachBrush(OH_Drawing_Canvas* canvas, const OH_Drawing_Brush* brush)](#oh_drawing_canvasattachbrush) | Attaches a brush to a canvas so that the canvas can use the style and color of the brush to fill in a shape. If the brush effect changes after this function is called, you must call the function again to use the new effect in the subsequent drawing. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDetachBrush(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasdetachbrush) | Detaches the brush from a canvas so that the canvas can no longer use the previously set brush to fill in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasSave(OH_Drawing_Canvas* canvas)](#oh_drawing_canvassave) | Saves the current canvas status (canvas matrix) to the top of the stack. This function works with [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore). This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, const OH_Drawing_Brush* brush)](#oh_drawing_canvassavelayer) | Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded, and the bitmap is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasRestore(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasrestore) | Restores the canvas status (canvas matrix) saved on the top of the stack. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint32_t OH_Drawing_CanvasGetSaveCount(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetsavecount) | Obtains the number of canvas statuses (canvas matrices) saved in the stack. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasRestoreToCount(OH_Drawing_Canvas* canvas, uint32_t saveCount)](#oh_drawing_canvasrestoretocount) | Restores to a given number of canvas statuses (canvas matrices). This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawLine(OH_Drawing_Canvas* canvas, float x1, float y1, float x2, float y2)](#oh_drawing_canvasdrawline) | Draws a line segment. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path)](#oh_drawing_canvasdrawpath) | Draws a path. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapMesh(OH_Drawing_Canvas* cCanvas, OH_Drawing_PixelMap* pixelMap, uint32_t meshWidth, uint32_t meshHeight, const float* vertices, uint32_t verticesSize, uint32_t vertOffset, const uint32_t* colors, uint32_t colorsSize, uint32_t colorOffset)](#oh_drawing_canvasdrawpixelmapmesh) | Draws a PixelMap based on a mesh, where mesh vertices are evenly distributed across the PixelMap. (This API works with brushes but not pens.) |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapNine(OH_Drawing_Canvas* canvas, OH_Drawing_PixelMap* pixelMap, const OH_Drawing_Rect* center, const OH_Drawing_Rect* dst, OH_Drawing_FilterMode mode)](#oh_drawing_canvasdrawpixelmapnine) | Splits a pixel map into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle. |
+| [void OH_Drawing_CanvasDrawPixelMapRect(OH_Drawing_Canvas* canvas, OH_Drawing_PixelMap* pixelMap, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_canvasdrawpixelmaprect) | Draws a portion of a pixel map onto a specified area of the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **pixelMap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapRectConstraint(OH_Drawing_Canvas* canvas, OH_Drawing_PixelMap* pixelMap, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions, OH_Drawing_SrcRectConstraint constraint)](#oh_drawing_canvasdrawpixelmaprectconstraint) | Draws a portion of a pixel map onto a specified area of the canvas. |
-| [void OH_Drawing_CanvasDrawBackground(OH_Drawing_Canvas* canvas, const OH_Drawing_Brush* brush)](#oh_drawing_canvasdrawbackground) | Draws a background filled with a brush.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawRegion(OH_Drawing_Canvas* canvas, const OH_Drawing_Region* region)](#oh_drawing_canvasdrawregion) | Draws a region.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **region** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawBackground(OH_Drawing_Canvas* canvas, const OH_Drawing_Brush* brush)](#oh_drawing_canvasdrawbackground) | Draws a background filled with a brush. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawRegion(OH_Drawing_Canvas* canvas, const OH_Drawing_Region* region)](#oh_drawing_canvasdrawregion) | Draws a region. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **region** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPoint(OH_Drawing_Canvas* canvas, const OH_Drawing_Point2D* point)](#oh_drawing_canvasdrawpoint) | Draws a point. |
-| [void OH_Drawing_CanvasDrawPoints(OH_Drawing_Canvas* canvas, OH_Drawing_PointMode mode, uint32_t count, const OH_Drawing_Point2D* point2D)](#oh_drawing_canvasdrawpoints) | Draws multiple points. You can draw a single point, a line segment, or an open polygon.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **point2D** is NULL, or **count** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** isreturned. If **mode** is not within the enumerated range, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [void OH_Drawing_CanvasDrawBitmap(OH_Drawing_Canvas* canvas, const OH_Drawing_Bitmap* bitmap, float left, float top)](#oh_drawing_canvasdrawbitmap) | Draws a bitmap. A bitmap, also referred to as a dot matrix image, a pixel map image, or a grid image,includes single points called pixels (image elements).This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawBitmapRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Bitmap* bitmap, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_canvasdrawbitmaprect) | Draws a portion of a bitmap onto a specified area of the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **bitmap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect)](#oh_drawing_canvasdrawrect) | Draws a rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **OH_Drawing_Rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawCircle(OH_Drawing_Canvas* canvas, const OH_Drawing_Point* point, float radius)](#oh_drawing_canvasdrawcircle) | Draws a circle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. Ifeither **canvas** or **point** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **radius** is less than or equal to 0, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_CanvasDrawPoints(OH_Drawing_Canvas* canvas, OH_Drawing_PointMode mode, uint32_t count, const OH_Drawing_Point2D* point2D)](#oh_drawing_canvasdrawpoints) | Draws multiple points. You can draw a single point, a line segment, or an open polygon. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **point2D** is NULL, or **count** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **mode** is not within the enumerated range, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_CanvasDrawBitmap(OH_Drawing_Canvas* canvas, const OH_Drawing_Bitmap* bitmap, float left, float top)](#oh_drawing_canvasdrawbitmap) | Draws a bitmap. A bitmap, also referred to as a dot matrix image, a pixel map image, or a grid image, includes single points called pixels (image elements). This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawBitmapRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Bitmap* bitmap, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_canvasdrawbitmaprect) | Draws a portion of a bitmap onto a specified area of the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **bitmap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect)](#oh_drawing_canvasdrawrect) | Draws a rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **OH_Drawing_Rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawCircle(OH_Drawing_Canvas* canvas, const OH_Drawing_Point* point, float radius)](#oh_drawing_canvasdrawcircle) | Draws a circle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **point** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **radius** is less than or equal to 0, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawColor(OH_Drawing_Canvas* canvas, uint32_t color, OH_Drawing_BlendMode blendMode)](#oh_drawing_canvasdrawcolor) | Fills the entire canvas with the specified color and blend mode. |
-| [void OH_Drawing_CanvasDrawOval(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect)](#oh_drawing_canvasdrawoval) | Draws an oval. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. Ifeither **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawArc(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, float startAngle, float sweepAngle)](#oh_drawing_canvasdrawarc) | Draws an arc. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawArcWithCenter(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, float startAngle, float sweepAngle, bool useCenter)](#oh_drawing_canvasdrawarcwithcenter) | Draws an arc. It enables you to define the start angle, sweep angle, and whether the arc's endpoints shouldconnect to its center. |
-| [void OH_Drawing_CanvasDrawRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* roundRect)](#oh_drawing_canvasdrawroundrect) | Draws a rounded rectangle. This API may return an error code. For details, call{@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **roundRect** is NULL,**OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawNestedRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* outer, const OH_Drawing_RoundRect* inner)](#oh_drawing_canvasdrawnestedroundrect) | Draws two nested rounded rectangles. The outer rectangle boundary must contain the inner rectangle boundary.Otherwise, there is no drawing effect. |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacter(OH_Drawing_Canvas* canvas, const char* str, const OH_Drawing_Font* font, float x, float y)](#oh_drawing_canvasdrawsinglecharacter) | Draws a single character. If the typeface of the current font does not support the character to draw, thesystem typeface is used to draw the character. |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacterWithFeatures(OH_Drawing_Canvas* canvas, const char* str, const OH_Drawing_Font* font, float x, float y, OH_Drawing_FontFeatures* fontFeatures)](#oh_drawing_canvasdrawsinglecharacterwithfeatures) | Draws a single character with font features. If the typeface of the current font does not support thecharacter to draw, the system typeface is used to draw the character. |
-| [void OH_Drawing_CanvasDrawTextBlob(OH_Drawing_Canvas* canvas, const OH_Drawing_TextBlob* textBlob, float x, float y)](#oh_drawing_canvasdrawtextblob) | Draws a text blob. If the typeface used to construct **OH_Drawing_TextBlob** does not support a character,that character will not be drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawOval(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect)](#oh_drawing_canvasdrawoval) | Draws an oval. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawArc(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, float startAngle, float sweepAngle)](#oh_drawing_canvasdrawarc) | Draws an arc. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawArcWithCenter(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, float startAngle, float sweepAngle, bool useCenter)](#oh_drawing_canvasdrawarcwithcenter) | Draws an arc. It enables you to define the start angle, sweep angle, and whether the arc's endpoints should connect to its center. |
+| [void OH_Drawing_CanvasDrawRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* roundRect)](#oh_drawing_canvasdrawroundrect) | Draws a rounded rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **roundRect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawNestedRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* outer, const OH_Drawing_RoundRect* inner)](#oh_drawing_canvasdrawnestedroundrect) | Draws two nested rounded rectangles. The outer rectangle boundary must contain the inner rectangle boundary. Otherwise, there is no drawing effect. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacter(OH_Drawing_Canvas* canvas, const char* str, const OH_Drawing_Font* font, float x, float y)](#oh_drawing_canvasdrawsinglecharacter) | Draws a single character. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacterWithFeatures(OH_Drawing_Canvas* canvas, const char* str, const OH_Drawing_Font* font, float x, float y, OH_Drawing_FontFeatures* fontFeatures)](#oh_drawing_canvasdrawsinglecharacterwithfeatures) | Draws a single character with font features. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character. |
+| [void OH_Drawing_CanvasDrawTextBlob(OH_Drawing_Canvas* canvas, const OH_Drawing_TextBlob* textBlob, float x, float y)](#oh_drawing_canvasdrawtextblob) | Draws a text blob. If the typeface used to construct **OH_Drawing_TextBlob** does not support a character, that character will not be drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawGlyphs(const OH_Drawing_Canvas* canvas, const int* glyphIds, int glyphIdCount, int glyphIdOffset, const OH_Drawing_Point2D* positions, int positionCount, int positionOffset, int glyphCount, const OH_Drawing_Font* font)](#oh_drawing_canvasdrawglyphs) | Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is smaller than or equals to 0. |
-| [void OH_Drawing_CanvasClipRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvascliprect) | Clips a rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [void OH_Drawing_CanvasClipRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* roundRect, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvascliproundrect) | Clips a rounded rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **roundRect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [void OH_Drawing_CanvasClipPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvasclippath) | Clips a path.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_CanvasClipRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvascliprect) | Clips a rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_CanvasClipRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_RoundRect* roundRect, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvascliproundrect) | Clips a rounded rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **roundRect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_CanvasClipPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path, OH_Drawing_CanvasClipOp clipOp, bool doAntiAlias)](#oh_drawing_canvasclippath) | Clips a path. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasClipRegion(OH_Drawing_Canvas* canvas, const OH_Drawing_Region* region, OH_Drawing_CanvasClipOp clipOp)](#oh_drawing_canvasclipregion) | Clips a rectangle. |
-| [void OH_Drawing_CanvasRotate(OH_Drawing_Canvas* canvas, float degrees, float px, float py)](#oh_drawing_canvasrotate) | Rotates a canvas by a given angle. A positive value indicates a clockwise rotation, and a negative valueindicates a counterclockwise rotation.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasTranslate(OH_Drawing_Canvas* canvas, float dx, float dy)](#oh_drawing_canvastranslate) | Translates a canvas by a given distance.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasScale(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasscale) | Scales a canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasSkew(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasskew) | Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix andapplies the resulting matrix to the canvas. The skew transformation matrix is as follows: \|1 sx 0\| \|sy 1 0\| \|0 0 1\|This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [int32_t OH_Drawing_CanvasGetWidth(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetwidth) | Obtains the canvas width.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [int32_t OH_Drawing_CanvasGetHeight(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetheight) | Obtains the canvas height.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasGetLocalClipBounds(OH_Drawing_Canvas* canvas, OH_Drawing_Rect* rect)](#oh_drawing_canvasgetlocalclipbounds) | Obtains the bounds of the cropping region of the canvas. This function cannot be used for a canvas of therecording type.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasGetTotalMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* matrix)](#oh_drawing_canvasgettotalmatrix) | Obtains the 3x3 matrix of a canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasConcatMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* matrix)](#oh_drawing_canvasconcatmatrix) | Preconcats the existing matrix of the canvas with the passed-in matrix. The drawing operation triggeredbefore this API is called is not affected.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawShadow(OH_Drawing_Canvas* canvas, OH_Drawing_Path* path, OH_Drawing_Point3D planeParams, OH_Drawing_Point3D devLightPos, float lightRadius, uint32_t ambientColor, uint32_t spotColor, OH_Drawing_CanvasShadowFlags flag)](#oh_drawing_canvasdrawshadow) | Draws a spot shadow and uses a given path to outline the ambient shadow.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **flag** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [void OH_Drawing_CanvasClear(OH_Drawing_Canvas* canvas, uint32_t color)](#oh_drawing_canvasclear) | Clears a canvas by using a given color.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasSetMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* matrix)](#oh_drawing_canvassetmatrix) | Sets the matrix status for a canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasResetMatrix(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasresetmatrix) | Resets the matrix of this canvas to an identity matrix.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasRotate(OH_Drawing_Canvas* canvas, float degrees, float px, float py)](#oh_drawing_canvasrotate) | Rotates a canvas by a given angle. A positive value indicates a clockwise rotation, and a negative value indicates a counterclockwise rotation. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasTranslate(OH_Drawing_Canvas* canvas, float dx, float dy)](#oh_drawing_canvastranslate) | Translates a canvas by a given distance. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasScale(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasscale) | Scales a canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasSkew(OH_Drawing_Canvas* canvas, float sx, float sy)](#oh_drawing_canvasskew) | Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix and applies the resulting matrix to the canvas. The skew transformation matrix is as follows:
+\|1 sx 0\|
+\|sy 1 0\|
+\|0 0 1\| This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [int32_t OH_Drawing_CanvasGetWidth(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetwidth) | Obtains the canvas width. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [int32_t OH_Drawing_CanvasGetHeight(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasgetheight) | Obtains the canvas height. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasGetLocalClipBounds(OH_Drawing_Canvas* canvas, OH_Drawing_Rect* rect)](#oh_drawing_canvasgetlocalclipbounds) | Obtains the bounds of the cropping region of the canvas. This function cannot be used for a canvas of the recording type. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasGetTotalMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* matrix)](#oh_drawing_canvasgettotalmatrix) | Obtains the 3x3 matrix of a canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasConcatMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* matrix)](#oh_drawing_canvasconcatmatrix) | Preconcats the existing matrix of the canvas with the passed-in matrix. The drawing operation triggered before this API is called is not affected. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawShadow(OH_Drawing_Canvas* canvas, OH_Drawing_Path* path, OH_Drawing_Point3D planeParams, OH_Drawing_Point3D devLightPos, float lightRadius, uint32_t ambientColor, uint32_t spotColor, OH_Drawing_CanvasShadowFlags flag)](#oh_drawing_canvasdrawshadow) | Draws a spot shadow and uses a given path to outline the ambient shadow. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **flag** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_CanvasClear(OH_Drawing_Canvas* canvas, uint32_t color)](#oh_drawing_canvasclear) | Clears a canvas by using a given color. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasSetMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* matrix)](#oh_drawing_canvassetmatrix) | Sets the matrix status for a canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasResetMatrix(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasresetmatrix) | Resets the matrix of this canvas to an identity matrix. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasResetClip(OH_Drawing_Canvas* canvas)](#oh_drawing_canvasresetclip) | Reset the clip status. |
-| [void OH_Drawing_CanvasDrawImageRectWithSrc(OH_Drawing_Canvas* canvas, const OH_Drawing_Image* image, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions, OH_Drawing_SrcRectConstraint srcRectConstraint)](#oh_drawing_canvasdrawimagerectwithsrc) | Draws a portion of an image onto a specified area of the canvas. The area selected by the source rectangle isscaled and translated to the destination rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **image**, **src**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawImageRect(OH_Drawing_Canvas* canvas, OH_Drawing_Image* image, OH_Drawing_Rect* rect, OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_canvasdrawimagerect) | Draws an image onto a specified area of the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **image**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_CanvasDrawVertices(OH_Drawing_Canvas* canvas, OH_Drawing_VertexMode vertexMmode, int32_t vertexCount, const OH_Drawing_Point2D* positions, const OH_Drawing_Point2D* texs, const uint32_t* colors, int32_t indexCount, const uint16_t* indices, OH_Drawing_BlendMode mode)](#oh_drawing_canvasdrawvertices) | Draws a triangular grid described by a vertex array.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **positions** is NULL, **vertexCount** is less than 3, or **indexCount** is less than 3 butnot 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If either **vertexMmode** or **mode** is not set to one of the enumerated values, OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [bool OH_Drawing_CanvasReadPixels(OH_Drawing_Canvas* canvas, OH_Drawing_Image_Info* imageInfo, void* dstPixels, uint32_t dstRowBytes, int32_t srcX, int32_t srcY)](#oh_drawing_canvasreadpixels) | Copies pixel data from a canvas to a specified address. This function cannot be used for a canvas of therecording type.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **imageInfo**, or **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [bool OH_Drawing_CanvasReadPixelsToBitmap(OH_Drawing_Canvas* canvas, OH_Drawing_Bitmap* bitmap, int32_t srcX, int32_t srcY)](#oh_drawing_canvasreadpixelstobitmap) | Copies pixel data from a canvas to an image. This function cannot be used for a canvas of the recording type.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawImageRectWithSrc(OH_Drawing_Canvas* canvas, const OH_Drawing_Image* image, const OH_Drawing_Rect* src, const OH_Drawing_Rect* dst, const OH_Drawing_SamplingOptions* samplingOptions, OH_Drawing_SrcRectConstraint srcRectConstraint)](#oh_drawing_canvasdrawimagerectwithsrc) | Draws a portion of an image onto a specified area of the canvas. The area selected by the source rectangle is scaled and translated to the destination rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **image**, **src**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawImageRect(OH_Drawing_Canvas* canvas, OH_Drawing_Image* image, OH_Drawing_Rect* rect, OH_Drawing_SamplingOptions* samplingOptions)](#oh_drawing_canvasdrawimagerect) | Draws an image onto a specified area of the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **image**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_CanvasDrawVertices(OH_Drawing_Canvas* canvas, OH_Drawing_VertexMode vertexMmode, int32_t vertexCount, const OH_Drawing_Point2D* positions, const OH_Drawing_Point2D* texs, const uint32_t* colors, int32_t indexCount, const uint16_t* indices, OH_Drawing_BlendMode mode)](#oh_drawing_canvasdrawvertices) | Draws a triangular grid described by a vertex array. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **positions** is NULL, **vertexCount** is less than 3, or **indexCount** is less than 3 but not 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If either **vertexMmode** or **mode** is not set to one of the enumerated values, **<br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [bool OH_Drawing_CanvasReadPixels(OH_Drawing_Canvas* canvas, OH_Drawing_Image_Info* imageInfo, void* dstPixels, uint32_t dstRowBytes, int32_t srcX, int32_t srcY)](#oh_drawing_canvasreadpixels) | Copies pixel data from a canvas to a specified address. This function cannot be used for a canvas of the recording type. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **imageInfo**, or **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [bool OH_Drawing_CanvasReadPixelsToBitmap(OH_Drawing_Canvas* canvas, OH_Drawing_Bitmap* bitmap, int32_t srcX, int32_t srcY)](#oh_drawing_canvasreadpixelstobitmap) | Copies pixel data from a canvas to an image. This function cannot be used for a canvas of the recording type. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasIsClipEmpty(OH_Drawing_Canvas* canvas, bool* isClipEmpty)](#oh_drawing_canvasisclipempty) | Checks whether the region that can be drawn is empty after clipping. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasGetImageInfo(OH_Drawing_Canvas* canvas, OH_Drawing_Image_Info* imageInfo)](#oh_drawing_canvasgetimageinfo) | Obtains the image information of a canvas. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawRecordCmd(OH_Drawing_Canvas* canvas, OH_Drawing_RecordCmd* recordCmd)](#oh_drawing_canvasdrawrecordcmd) | Draws an **OH_Drawing_RecordCmd** object. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasDrawRecordCmdNesting(OH_Drawing_Canvas* canvas, OH_Drawing_RecordCmd* recordCmd)](#oh_drawing_canvasdrawrecordcmdnesting) | Draws an **OH_Drawing_RecordCmd** object. This API supports nesting. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasQuickRejectPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path* path, bool* quickReject)](#oh_drawing_canvasquickrejectpath) | Checks whether the path is not intersecting with the canvas area. The canvas area includes its boundaries. |
-| [OH_Drawing_ErrorCode OH_Drawing_CanvasQuickRejectRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, bool* quickReject)](#oh_drawing_canvasquickrejectrect) | Checks whether the rectangle is not intersecting with the canvas area. The canvas area includes itsboundaries. |
+| [OH_Drawing_ErrorCode OH_Drawing_CanvasQuickRejectRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* rect, bool* quickReject)](#oh_drawing_canvasquickrejectrect) | Checks whether the rectangle is not intersecting with the canvas area. The canvas area includes its boundaries. |
 | [OH_Drawing_ErrorCode OH_Drawing_CanvasIsOpaque(const OH_Drawing_Canvas* canvas, bool* isOpaque)](#oh_drawing_canvasisopaque) | Checks if the current layer that drawn into the device is opaque. |
 
 ## Enum type description
@@ -123,7 +126,7 @@ enum OH_Drawing_PointMode
 
 **Description**
 
-Enumerates the modes of drawing multiple points. The modes include discrete points, line segments, and openpolygons.
+Enumerates the modes of drawing multiple points. The modes include discrete points, line segments, and open polygons.
 
 **Since**: 12
 
@@ -183,9 +186,9 @@ Enumerates the modes of interpreting the geometry of a given vertex.
 
 | Enum item | Description |
 | -- | -- |
-| VERTEX_MODE_TRIANGLES | Draws a triangle list. Specifically, a list of isolated triangles are drawn using every three vertices. If thenumber of vertices is not a multiple of 3, the extra vertices will be ignored. |
-| VERTEX_MODE_TRIANGLES_STRIP | Draws a triangle strip. Specifically, the first triangle is drawn between the first 3 vertices, and allsubsequent triangles use the previous 2 vertices plus the next additional vertex. |
-| VERTEX_MODE_TRIANGLE_FAN | Draws a triangle fan. A triangle fan is similar to a triangle strip, except that all the triangles share onevertex (the first vertex). |
+| VERTEX_MODE_TRIANGLES | Draws a triangle list. Specifically, a list of isolated triangles are drawn using every three vertices. If the number of vertices is not a multiple of 3, the extra vertices will be ignored. |
+| VERTEX_MODE_TRIANGLES_STRIP | Draws a triangle strip. Specifically, the first triangle is drawn between the first 3 vertices, and all subsequent triangles use the previous 2 vertices plus the next additional vertex. |
+| VERTEX_MODE_TRIANGLE_FAN | Draws a triangle fan. A triangle fan is similar to a triangle strip, except that all the triangles share one vertex (the first vertex). |
 
 
 ## Function description
@@ -216,7 +219,7 @@ OH_Drawing_Canvas* OH_Drawing_CanvasCreateWithPixelMap(OH_Drawing_PixelMap* pixe
 
 **Description**
 
-Binds a pixel map to a canvas so that the content drawn on the canvas is output to the pixel map. (Thisprocess is called CPU rendering.) A canvas bound to a pixel map is a non-recording canvas.You should unbind the pixel map object by calling {@link OH_Drawing_PixelMapDissolve} after the canvas object isdestroyed.
+Binds a pixel map to a canvas so that the content drawn on the canvas is output to the pixel map. (This process is called CPU rendering.) A canvas bound to a pixel map is a non-recording canvas. You should unbind the pixel map object by calling {@link OH_Drawing_PixelMapDissolve} after the canvas object is destroyed.
 
 **Since**: 20
 
@@ -258,7 +261,7 @@ void OH_Drawing_CanvasBind(OH_Drawing_Canvas* canvas, OH_Drawing_Bitmap* bitmap)
 
 **Description**
 
-Binds a bitmap to a canvas so that the content drawn on the canvas is output to the bitmap. (This process iscalled CPU rendering.) A canvas bound to a bitmap is a non-recording canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Binds a bitmap to a canvas so that the content drawn on the canvas is output to the bitmap. (This process is called CPU rendering.) A canvas bound to a bitmap is a non-recording canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -277,7 +280,7 @@ void OH_Drawing_CanvasAttachPen(OH_Drawing_Canvas* canvas, const OH_Drawing_Pen*
 
 **Description**
 
-Attaches a pen to a canvas so that the canvas can use the style and color of the pen to outline a shape. Ifthe pen effect changes after this function is called, you must call the function again to use the new effect in thesubsequent drawing.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Attaches a pen to a canvas so that the canvas can use the style and color of the pen to outline a shape. If the pen effect changes after this function is called, you must call the function again to use the new effect in the subsequent drawing. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -296,7 +299,7 @@ void OH_Drawing_CanvasDetachPen(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Detaches the pen from a canvas so that the canvas can no longer use the style and color of the pen to outlinea shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Detaches the pen from a canvas so that the canvas can no longer use the style and color of the pen to outline a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -314,7 +317,7 @@ void OH_Drawing_CanvasAttachBrush(OH_Drawing_Canvas* canvas, const OH_Drawing_Br
 
 **Description**
 
-Attaches a brush to a canvas so that the canvas can use the style and color of the brush to fill in a shape.If the brush effect changes after this function is called, you must call the function again to use the new effect inthe subsequent drawing.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Attaches a brush to a canvas so that the canvas can use the style and color of the brush to fill in a shape. If the brush effect changes after this function is called, you must call the function again to use the new effect in the subsequent drawing. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -333,7 +336,7 @@ void OH_Drawing_CanvasDetachBrush(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Detaches the brush from a canvas so that the canvas can no longer use the previously set brush to fill in ashape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Detaches the brush from a canvas so that the canvas can no longer use the previously set brush to fill in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -351,7 +354,7 @@ void OH_Drawing_CanvasSave(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Saves the current canvas status (canvas matrix) to the top of the stack. This function works with[OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore).This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Saves the current canvas status (canvas matrix) to the top of the stack. This function works with [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore). This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -369,7 +372,7 @@ void OH_Drawing_CanvasSaveLayer(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect
 
 **Description**
 
-Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call[OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded,and the bitmap is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Saves the matrix and cropping region, and allocates a bitmap for subsequent drawing. If you call [OH_Drawing_CanvasRestore](capi-drawing-canvas-h.md#oh_drawing_canvasrestore), changes made to the matrix and clipping region are discarded, and the bitmap is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -378,8 +381,8 @@ Saves the matrix and cropping region, and allocates a bitmap for subsequent draw
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| const OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object, which is used to limit the layer size. A null pointermeans no limit. |
-| const OH_Drawing_Brush* brush | Pointer to an {@link OH_Drawing_Brush} object. The alpha value, filter effect, and blend mode of thebrush are applied when the bitmap is drawn. If NULL is passed in, no effect is applied. |
+| const OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object, which is used to limit the layer size. A null pointer means no limit. |
+| const OH_Drawing_Brush* brush | Pointer to an {@link OH_Drawing_Brush} object. The alpha value, filter effect, and blend mode of the brush are applied when the bitmap is drawn. If NULL is passed in, no effect is applied. |
 
 ### OH_Drawing_CanvasRestore()
 
@@ -389,7 +392,7 @@ void OH_Drawing_CanvasRestore(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Restores the canvas status (canvas matrix) saved on the top of the stack.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Restores the canvas status (canvas matrix) saved on the top of the stack. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -407,7 +410,7 @@ uint32_t OH_Drawing_CanvasGetSaveCount(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Obtains the number of canvas statuses (canvas matrices) saved in the stack.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the number of canvas statuses (canvas matrices) saved in the stack. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -431,7 +434,7 @@ void OH_Drawing_CanvasRestoreToCount(OH_Drawing_Canvas* canvas, uint32_t saveCou
 
 **Description**
 
-Restores to a given number of canvas statuses (canvas matrices).This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Restores to a given number of canvas statuses (canvas matrices). This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -440,7 +443,7 @@ Restores to a given number of canvas statuses (canvas matrices).This API may ret
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
-| uint32_t saveCount | Number of canvas statuses (canvas matrices). If the value is less than or equal to 1, the canvas isrestored to the initial state. If the value is greater than the number of canvas statuses that have been saved, nooperation is performed. |
+| uint32_t saveCount | Number of canvas statuses (canvas matrices). If the value is less than or equal to 1, the canvas is restored to the initial state. If the value is greater than the number of canvas statuses that have been saved, no operation is performed. |
 
 ### OH_Drawing_CanvasDrawLine()
 
@@ -450,7 +453,7 @@ void OH_Drawing_CanvasDrawLine(OH_Drawing_Canvas* canvas, float x1, float y1, fl
 
 **Description**
 
-Draws a line segment.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a line segment. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -472,7 +475,7 @@ void OH_Drawing_CanvasDrawPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path*
 
 **Description**
 
-Draws a path.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a path. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -491,7 +494,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapMesh(OH_Drawing_Canvas* cCanva
 
 **Description**
 
-Draws a PixelMap based on a mesh, where mesh vertices are evenly distributed across the PixelMap. (This APIworks with brushes but not pens.)
+Draws a PixelMap based on a mesh, where mesh vertices are evenly distributed across the PixelMap. (This API works with brushes but not pens.)
 
 **Since**: 23
 
@@ -504,10 +507,10 @@ Draws a PixelMap based on a mesh, where mesh vertices are evenly distributed acr
 | uint32_t meshWidth | Number of columns in the mesh. The value is an integer greater than 0. |
 | uint32_t meshHeight | Number of rows in the mesh. The value is an integer greater than 0. |
 | const float* vertices | Pointer to the mesh vertex array. |
-| uint32_t verticesSize | Size of the mesh vertex array. The value must be ((meshWidth + 1) * (meshHeight + 1) +vertoffset) * 2. |
+| uint32_t verticesSize | Size of the mesh vertex array. The value must be ((meshWidth + 1) * (meshHeight + 1) + vertoffset) * 2. |
 | uint32_t vertOffset | Number of vertices to skip before drawing. The value is an integer greater than or equal to 0. |
 | const uint32_t* colors | Pointer to the mesh color array, which can be null. |
-| uint32_t colorsSize | Size of the mesh color array. If the array exists, the size must be (meshWidth + 1) * (meshHeight +1) + colorOffset. |
+| uint32_t colorsSize | Size of the mesh color array. If the array exists, the size must be (meshWidth + 1) * (meshHeight + 1) + colorOffset. |
 | uint32_t colorOffset | Number of colors to skip before drawing. The value is an integer greater than or equal to 0. |
 
 **Returns**:
@@ -524,7 +527,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawPixelMapNine(OH_Drawing_Canvas* canvas
 
 **Description**
 
-Splits a pixel map into nine sections using two horizontal and two vertical lines: four edge sections, fourcorner sections, and a central section.If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectanglewithout scaling. Otherwise, they will be scaled to fit the target rectangle.Any remaining space will be filled by stretching or compressing the other five sections to cover the entire targetrectangle.
+Splits a pixel map into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
 
 **Since**: 18
 
@@ -534,7 +537,7 @@ Splits a pixel map into nine sections using two horizontal and two vertical line
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
 | OH_Drawing_PixelMap* pixelMap | Pointer to the {@link OH_Drawing_PixelMap} object. |
-| const OH_Drawing_Rect* center | Pointer to the {@link OH_Drawing_Rect} object, which indicates the central rectangle splitting thepixel map. It divides the image into nine sections by extending its four edges. |
+| const OH_Drawing_Rect* center | Pointer to the {@link OH_Drawing_Rect} object, which indicates the central rectangle splitting the pixel map. It divides the image into nine sections by extending its four edges. |
 | const OH_Drawing_Rect* dst | Pointer to the {@link OH_Drawing_Rect} object, which indicates the target region on the canvas. |
 | OH_Drawing_FilterMode mode | Enumeration of filter modes. |
 
@@ -552,7 +555,7 @@ void OH_Drawing_CanvasDrawPixelMapRect(OH_Drawing_Canvas* canvas, OH_Drawing_Pix
 
 **Description**
 
-Draws a portion of a pixel map onto a specified area of the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **pixelMap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a portion of a pixel map onto a specified area of the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **pixelMap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -564,7 +567,7 @@ Draws a portion of a pixel map onto a specified area of the canvas.This API may 
 | OH_Drawing_PixelMap* pixelMap | Pointer to the {@link OH_Drawing_PixelMap} object. |
 | const OH_Drawing_Rect* src | Pointer to a rectangle on the pixel map. If NULL is passed in, it refers to the entire pixel map. |
 | const OH_Drawing_Rect* dst | Pointer to a rectangle on the canvas. |
-| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that thedefault sampling options are used. |
+| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that the default sampling options are used. |
 
 ### OH_Drawing_CanvasDrawPixelMapRectConstraint()
 
@@ -586,7 +589,7 @@ Draws a portion of a pixel map onto a specified area of the canvas.
 | OH_Drawing_PixelMap* pixelMap | Pointer to the {@link OH_Drawing_PixelMap} object. |
 | const OH_Drawing_Rect* src | Pointer to a rectangle on the pixel map. If NULL is passed in, it refers to the entire pixel map. |
 | const OH_Drawing_Rect* dst | Pointer to a rectangle on the canvas. |
-| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that thedefault sampling options are used. |
+| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that the default sampling options are used. |
 | [OH_Drawing_SrcRectConstraint](capi-drawing-canvas-h.md#oh_drawing_srcrectconstraint) constraint | Constraint type. For details about the available options, see [OH_Drawing_SrcRectConstraint](capi-drawing-canvas-h.md#oh_drawing_srcrectconstraint). |
 
 **Returns**:
@@ -603,7 +606,7 @@ void OH_Drawing_CanvasDrawBackground(OH_Drawing_Canvas* canvas, const OH_Drawing
 
 **Description**
 
-Draws a background filled with a brush.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a background filled with a brush. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -622,7 +625,7 @@ void OH_Drawing_CanvasDrawRegion(OH_Drawing_Canvas* canvas, const OH_Drawing_Reg
 
 **Description**
 
-Draws a region.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **region** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a region. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **region** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -666,7 +669,7 @@ void OH_Drawing_CanvasDrawPoints(OH_Drawing_Canvas* canvas, OH_Drawing_PointMode
 
 **Description**
 
-Draws multiple points. You can draw a single point, a line segment, or an open polygon.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **point2D** is NULL, or **count** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** isreturned. If **mode** is not within the enumerated range, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Draws multiple points. You can draw a single point, a line segment, or an open polygon. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **point2D** is NULL, or **count** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **mode** is not within the enumerated range, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -687,7 +690,7 @@ void OH_Drawing_CanvasDrawBitmap(OH_Drawing_Canvas* canvas, const OH_Drawing_Bit
 
 **Description**
 
-Draws a bitmap. A bitmap, also referred to as a dot matrix image, a pixel map image, or a grid image,includes single points called pixels (image elements).This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a bitmap. A bitmap, also referred to as a dot matrix image, a pixel map image, or a grid image, includes single points called pixels (image elements). This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -708,7 +711,7 @@ void OH_Drawing_CanvasDrawBitmapRect(OH_Drawing_Canvas* canvas, const OH_Drawing
 
 **Description**
 
-Draws a portion of a bitmap onto a specified area of the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **bitmap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a portion of a bitmap onto a specified area of the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **bitmap**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -720,7 +723,7 @@ Draws a portion of a bitmap onto a specified area of the canvas.This API may ret
 | const OH_Drawing_Bitmap* bitmap | Pointer to the {@link OH_Drawing_Bitmap} object. |
 | const OH_Drawing_Rect* src | Pointer to a rectangle on the bitmap. If NULL is passed in, it refers to the entire bitmap. |
 | const OH_Drawing_Rect* dst | Pointer to a rectangle on the canvas. |
-| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that thedefault sampling options are used. |
+| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that the default sampling options are used. |
 
 ### OH_Drawing_CanvasDrawRect()
 
@@ -730,7 +733,7 @@ void OH_Drawing_CanvasDrawRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect*
 
 **Description**
 
-Draws a rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **OH_Drawing_Rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **OH_Drawing_Rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -749,7 +752,7 @@ void OH_Drawing_CanvasDrawCircle(OH_Drawing_Canvas* canvas, const OH_Drawing_Poi
 
 **Description**
 
-Draws a circle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. Ifeither **canvas** or **point** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **radius** is less than or equal to 0, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Draws a circle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **point** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **radius** is less than or equal to 0, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 11
 
@@ -795,7 +798,7 @@ void OH_Drawing_CanvasDrawOval(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect*
 
 **Description**
 
-Draws an oval. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. Ifeither **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws an oval. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -814,7 +817,7 @@ void OH_Drawing_CanvasDrawArc(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect* 
 
 **Description**
 
-Draws an arc. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws an arc. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -824,8 +827,8 @@ Draws an arc. If the absolute value of the sweep angle exceeds 360 degrees, an e
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
 | const OH_Drawing_Rect* rect | Pointer to an **OH_Drawing_Rect** object. |
-| float startAngle | Start angle. When the degree is 0, the start point is located at the right end of the oval. Apositive number indicates that the start point is placed clockwise, and a negative number indicates that the startpoint is placed counterclockwise. |
-| float sweepAngle | Angle to sweep, in degrees. A positive number indicates a clockwise sweep, and a negative valueindicates a counterclockwise swipe. The valid range is from -360 degrees to 360 degrees. If the absolute value ofthe sweep angle exceeds 360 degrees, an ellipse is drawn. |
+| float startAngle | Start angle. When the degree is 0, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
+| float sweepAngle | Angle to sweep, in degrees. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The valid range is from -360 degrees to 360 degrees. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn. |
 
 ### OH_Drawing_CanvasDrawArcWithCenter()
 
@@ -835,7 +838,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawArcWithCenter(OH_Drawing_Canvas* canva
 
 **Description**
 
-Draws an arc. It enables you to define the start angle, sweep angle, and whether the arc's endpoints shouldconnect to its center.
+Draws an arc. It enables you to define the start angle, sweep angle, and whether the arc's endpoints should connect to its center.
 
 **Since**: 18
 
@@ -845,9 +848,9 @@ Draws an arc. It enables you to define the start angle, sweep angle, and whether
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
 | const OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. |
-| float startAngle | Start angle, in degrees. The value is a floating point number. When the degree is 0, the startpoint is located at the right end of the oval. A positive number indicates that the start point is placed clockwise,and a negative number indicates that the start point is placed counterclockwise. |
-| float sweepAngle | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates aclockwise sweep, and a negative value indicates a counterclockwise swipe. The swipe angle can exceed 360 degrees,and a complete ellipse is drawn. |
-| bool useCenter | Whether the start point and end point of the arc are connected to its center. The value **truemeans that they are connected to the center; the value **false** means the opposite. |
+| float startAngle | Start angle, in degrees. The value is a floating point number. When the degree is 0, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
+| float sweepAngle | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The swipe angle can exceed 360 degrees, and a complete ellipse is drawn. |
+| bool useCenter | Whether the start point and end point of the arc are connected to its center. The value **true**<br>means that they are connected to the center; the value **false** means the opposite. |
 
 **Returns**:
 
@@ -863,7 +866,7 @@ void OH_Drawing_CanvasDrawRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_
 
 **Description**
 
-Draws a rounded rectangle. This API may return an error code. For details, call{@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **roundRect** is NULL,**OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a rounded rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **roundRect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -882,7 +885,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawNestedRoundRect(OH_Drawing_Canvas* can
 
 **Description**
 
-Draws two nested rounded rectangles. The outer rectangle boundary must contain the inner rectangle boundary.Otherwise, there is no drawing effect.
+Draws two nested rounded rectangles. The outer rectangle boundary must contain the inner rectangle boundary. Otherwise, there is no drawing effect.
 
 **Since**: 18
 
@@ -908,7 +911,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacter(OH_Drawing_Canvas* can
 
 **Description**
 
-Draws a single character. If the typeface of the current font does not support the character to draw, thesystem typeface is used to draw the character.
+Draws a single character. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
 
 **Since**: 12
 
@@ -917,7 +920,7 @@ Draws a single character. If the typeface of the current font does not support t
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| const char* str | Pointer to the single character to draw. A string can be passed in, but only the first character in thestring is parsed and drawn in UTF-8 encoding. |
+| const char* str | Pointer to the single character to draw. A string can be passed in, but only the first character in the string is parsed and drawn in UTF-8 encoding. |
 | const OH_Drawing_Font* font | Pointer to the {@link OH_Drawing_Font} object. |
 | float x | X coordinate of the left point of the character baseline. |
 | float y | Y coordinate of the left point of the character baseline. |
@@ -936,7 +939,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasDrawSingleCharacterWithFeatures(OH_Drawing
 
 **Description**
 
-Draws a single character with font features. If the typeface of the current font does not support thecharacter to draw, the system typeface is used to draw the character.
+Draws a single character with font features. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
 
 **Since**: 20
 
@@ -945,11 +948,11 @@ Draws a single character with font features. If the typeface of the current font
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| const char* str | Pointer to the single character to draw. A string can be passed in, but only the first character in thestring is parsed and drawn in UTF-8 encoding. |
+| const char* str | Pointer to the single character to draw. A string can be passed in, but only the first character in the string is parsed and drawn in UTF-8 encoding. |
 | const OH_Drawing_Font* font | Pointer to the {@link OH_Drawing_Font} object. |
 | float x | X coordinate of the left point of the character baseline. |
 | float y | Y coordinate of the left point of the character baseline. |
-| OH_Drawing_FontFeatures* fontFeatures | Pointer to the {@link OH_Drawing_FontFeatures} object. If no font feature is set, the presetfont feature in the TrueType fonts (TTF) file is used. |
+| OH_Drawing_FontFeatures* fontFeatures | Pointer to the {@link OH_Drawing_FontFeatures} object. If no font feature is set, the preset font feature in the TrueType fonts (TTF) file is used. |
 
 **Returns**:
 
@@ -965,7 +968,7 @@ void OH_Drawing_CanvasDrawTextBlob(OH_Drawing_Canvas* canvas, const OH_Drawing_T
 
 **Description**
 
-Draws a text blob. If the typeface used to construct **OH_Drawing_TextBlob** does not support a character,that character will not be drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a text blob. If the typeface used to construct **OH_Drawing_TextBlob** does not support a character, that character will not be drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **textBlob** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -1008,7 +1011,7 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.  Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.  Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if any of canvas, glyphIds, positions and font is nullptr.  Returns {@link OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE} if glyphIdOffset or positionOffset is less than 0, or if  glyphIdCount is less than (glyphIdOffset + glyphCount) or positionCount is less than (positionOffset + glyphCount). |
+| OH_Drawing_ErrorCode | Returns the error code.  Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.<br>Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if any of canvas, glyphIds, positions and font is nullptr.<br>Returns {@link OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE} if glyphIdOffset or positionOffset is less than 0, or if  glyphIdCount is less than (glyphIdOffset + glyphCount) or positionCount is less than (positionOffset + glyphCount). |
 
 ### OH_Drawing_CanvasClipRect()
 
@@ -1018,7 +1021,7 @@ void OH_Drawing_CanvasClipRect(OH_Drawing_Canvas* canvas, const OH_Drawing_Rect*
 
 **Description**
 
-Clips a rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Clips a rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 11
 
@@ -1029,7 +1032,7 @@ Clips a rectangle.This API may return an error code. For details, call {@link OH
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
 | const OH_Drawing_Rect* rect | Pointer to an **OH_Drawing_Rect** object. |
 | [OH_Drawing_CanvasClipOp](capi-drawing-canvas-h.md#oh_drawing_canvasclipop) clipOp | Clip mode. For details about the available options, see [OH_Drawing_CanvasClipOp](capi-drawing-canvas-h.md#oh_drawing_canvasclipop). |
-| bool doAntiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **falsemeans the opposite. |
+| bool doAntiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false**<br>means the opposite. |
 
 ### OH_Drawing_CanvasClipRoundRect()
 
@@ -1039,7 +1042,7 @@ void OH_Drawing_CanvasClipRoundRect(OH_Drawing_Canvas* canvas, const OH_Drawing_
 
 **Description**
 
-Clips a rounded rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **roundRect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Clips a rounded rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **roundRect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -1050,7 +1053,7 @@ Clips a rounded rectangle.This API may return an error code. For details, call {
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
 | const OH_Drawing_RoundRect* roundRect | Pointer to an **OH_Drawing_RoundRect** object. |
 | [OH_Drawing_CanvasClipOp](capi-drawing-canvas-h.md#oh_drawing_canvasclipop) clipOp | Clip mode. For details about the available options, see [OH_Drawing_CanvasClipOp](capi-drawing-canvas-h.md#oh_drawing_canvasclipop). |
-| bool doAntiAlias | Whether to perform anti-aliasing. The value **true** means to perform anti-aliasing, and **falsemeans the opposite. |
+| bool doAntiAlias | Whether to perform anti-aliasing. The value **true** means to perform anti-aliasing, and **false**<br>means the opposite. |
 
 ### OH_Drawing_CanvasClipPath()
 
@@ -1060,7 +1063,7 @@ void OH_Drawing_CanvasClipPath(OH_Drawing_Canvas* canvas, const OH_Drawing_Path*
 
 **Description**
 
-Clips a path.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Clips a path. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **clipOp** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 11
 
@@ -1071,7 +1074,7 @@ Clips a path.This API may return an error code. For details, call {@link OH_Draw
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
 | const OH_Drawing_Path* path | Pointer to an **OH_Drawing_Path** object. |
 | [OH_Drawing_CanvasClipOp](capi-drawing-canvas-h.md#oh_drawing_canvasclipop) clipOp | Clip mode. For details about the available options, see [OH_Drawing_CanvasClipOp](capi-drawing-canvas-h.md#oh_drawing_canvasclipop). |
-| bool doAntiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **falsemeans the opposite. |
+| bool doAntiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false**<br>means the opposite. |
 
 ### OH_Drawing_CanvasClipRegion()
 
@@ -1107,7 +1110,7 @@ void OH_Drawing_CanvasRotate(OH_Drawing_Canvas* canvas, float degrees, float px,
 
 **Description**
 
-Rotates a canvas by a given angle. A positive value indicates a clockwise rotation, and a negative valueindicates a counterclockwise rotation.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Rotates a canvas by a given angle. A positive value indicates a clockwise rotation, and a negative value indicates a counterclockwise rotation. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -1128,7 +1131,7 @@ void OH_Drawing_CanvasTranslate(OH_Drawing_Canvas* canvas, float dx, float dy)
 
 **Description**
 
-Translates a canvas by a given distance.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Translates a canvas by a given distance. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -1148,7 +1151,7 @@ void OH_Drawing_CanvasScale(OH_Drawing_Canvas* canvas, float sx, float sy)
 
 **Description**
 
-Scales a canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Scales a canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -1168,7 +1171,10 @@ void OH_Drawing_CanvasSkew(OH_Drawing_Canvas* canvas, float sx, float sy)
 
 **Description**
 
-Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix andapplies the resulting matrix to the canvas. The skew transformation matrix is as follows: \|1 sx 0\| \|sy 1 0\| \|0 0 1\|This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Skews a canvas. This function premultiplies the current canvas matrix by a skew transformation matrix and applies the resulting matrix to the canvas. The skew transformation matrix is as follows:
+\|1 sx 0\|
+\|sy 1 0\|
+\|0 0 1\| This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1177,8 +1183,8 @@ Skews a canvas. This function premultiplies the current canvas matrix by a skew 
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
-| float sx | Amount of tilt on the X axis. A positive number tilts the drawing rightwards along the positive directionof the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
-| float sy | Amount of tilt on the Y axis. A positive number tilts the drawing downwards along the positive directionof the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| float sx | Amount of tilt on the X axis. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| float sy | Amount of tilt on the Y axis. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
 
 ### OH_Drawing_CanvasGetWidth()
 
@@ -1188,7 +1194,7 @@ int32_t OH_Drawing_CanvasGetWidth(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Obtains the canvas width.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the canvas width. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1212,7 +1218,7 @@ int32_t OH_Drawing_CanvasGetHeight(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Obtains the canvas height.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the canvas height. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1236,7 +1242,7 @@ void OH_Drawing_CanvasGetLocalClipBounds(OH_Drawing_Canvas* canvas, OH_Drawing_R
 
 **Description**
 
-Obtains the bounds of the cropping region of the canvas. This function cannot be used for a canvas of therecording type.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the bounds of the cropping region of the canvas. This function cannot be used for a canvas of the recording type. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **rect** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1245,7 +1251,7 @@ Obtains the bounds of the cropping region of the canvas. This function cannot be
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. You can call {@link OH_Drawing_RectCreate} to create arectangle object. |
+| OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. You can call {@link OH_Drawing_RectCreate} to create a rectangle object. |
 
 ### OH_Drawing_CanvasGetTotalMatrix()
 
@@ -1255,7 +1261,7 @@ void OH_Drawing_CanvasGetTotalMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matri
 
 **Description**
 
-Obtains the 3x3 matrix of a canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the 3x3 matrix of a canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1264,7 +1270,7 @@ Obtains the 3x3 matrix of a canvas.This API may return an error code. For detail
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. You can call {@link OH_Drawing_MatrixCreate} tocreate a matrix object. |
+| OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. You can call {@link OH_Drawing_MatrixCreate} to create a matrix object. |
 
 ### OH_Drawing_CanvasConcatMatrix()
 
@@ -1274,7 +1280,7 @@ void OH_Drawing_CanvasConcatMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix*
 
 **Description**
 
-Preconcats the existing matrix of the canvas with the passed-in matrix. The drawing operation triggeredbefore this API is called is not affected.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Preconcats the existing matrix of the canvas with the passed-in matrix. The drawing operation triggered before this API is called is not affected. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1293,7 +1299,7 @@ void OH_Drawing_CanvasDrawShadow(OH_Drawing_Canvas* canvas, OH_Drawing_Path* pat
 
 **Description**
 
-Draws a spot shadow and uses a given path to outline the ambient shadow.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **flag** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Draws a spot shadow and uses a given path to outline the ambient shadow. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **flag** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -1318,7 +1324,7 @@ void OH_Drawing_CanvasClear(OH_Drawing_Canvas* canvas, uint32_t color)
 
 **Description**
 
-Clears a canvas by using a given color.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Clears a canvas by using a given color. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -1337,7 +1343,7 @@ void OH_Drawing_CanvasSetMatrix(OH_Drawing_Canvas* canvas, OH_Drawing_Matrix* ma
 
 **Description**
 
-Sets the matrix status for a canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the matrix status for a canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1346,7 +1352,7 @@ Sets the matrix status for a canvas.This API may return an error code. For detai
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. You can call {@link OH_Drawing_MatrixCreate} tocreate a matrix object. |
+| OH_Drawing_Matrix* matrix | Pointer to the {@link OH_Drawing_Matrix} object. You can call {@link OH_Drawing_MatrixCreate} to create a matrix object. |
 
 ### OH_Drawing_CanvasResetMatrix()
 
@@ -1356,7 +1362,7 @@ void OH_Drawing_CanvasResetMatrix(OH_Drawing_Canvas* canvas)
 
 **Description**
 
-Resets the matrix of this canvas to an identity matrix.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Resets the matrix of this canvas to an identity matrix. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **canvas** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1388,7 +1394,7 @@ Reset the clip status.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.          Returns {@link OH_DRAWING_ERROR_INVALID_PARAMETER} if canvas is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.<br>        Returns {@link OH_DRAWING_ERROR_INVALID_PARAMETER} if canvas is nullptr. |
 
 ### OH_Drawing_CanvasDrawImageRectWithSrc()
 
@@ -1398,7 +1404,7 @@ void OH_Drawing_CanvasDrawImageRectWithSrc(OH_Drawing_Canvas* canvas, const OH_D
 
 **Description**
 
-Draws a portion of an image onto a specified area of the canvas. The area selected by the source rectangle isscaled and translated to the destination rectangle.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **image**, **src**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws a portion of an image onto a specified area of the canvas. The area selected by the source rectangle is scaled and translated to the destination rectangle. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **image**, **src**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1410,8 +1416,8 @@ Draws a portion of an image onto a specified area of the canvas. The area select
 | const OH_Drawing_Image* image | Pointer to the {@link OH_Drawing_Image} object. |
 | const OH_Drawing_Rect* src | Pointer to the {@link OH_Drawing_Rect} object. |
 | const OH_Drawing_Rect* dst | Pointer to the {@link OH_Drawing_Rect} object. |
-| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that thedefault sampling options are used. |
-| [OH_Drawing_SrcRectConstraint](capi-drawing-canvas-h.md#oh_drawing_srcrectconstraint) srcRectConstraint | Constraint type. For details about the available options, see[OH_Drawing_SrcRectConstraint](capi-drawing-canvas-h.md#oh_drawing_srcrectconstraint). |
+| const OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that the default sampling options are used. |
+| [OH_Drawing_SrcRectConstraint](capi-drawing-canvas-h.md#oh_drawing_srcrectconstraint) srcRectConstraint | Constraint type. For details about the available options, see [OH_Drawing_SrcRectConstraint](capi-drawing-canvas-h.md#oh_drawing_srcrectconstraint). |
 
 ### OH_Drawing_CanvasDrawImageRect()
 
@@ -1421,7 +1427,7 @@ void OH_Drawing_CanvasDrawImageRect(OH_Drawing_Canvas* canvas, OH_Drawing_Image*
 
 **Description**
 
-Draws an image onto a specified area of the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **image**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Draws an image onto a specified area of the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **image**, or **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1432,7 +1438,7 @@ Draws an image onto a specified area of the canvas.This API may return an error 
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
 | OH_Drawing_Image* image | Pointer to the {@link OH_Drawing_Image} object. |
 | OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. |
-| OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that thedefault sampling options are used. |
+| OH_Drawing_SamplingOptions* samplingOptions | Pointer to the {@link OH_Drawing_SamplingOptions} object. A null pointer means that the default sampling options are used. |
 
 ### OH_Drawing_CanvasDrawVertices()
 
@@ -1442,7 +1448,7 @@ void OH_Drawing_CanvasDrawVertices(OH_Drawing_Canvas* canvas, OH_Drawing_VertexM
 
 **Description**
 
-Draws a triangular grid described by a vertex array.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **positions** is NULL, **vertexCount** is less than 3, or **indexCount** is less than 3 butnot 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If either **vertexMmode** or **mode** is not set to one of the enumerated values, OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Draws a triangular grid described by a vertex array. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **positions** is NULL, **vertexCount** is less than 3, or **indexCount** is less than 3 but not 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If either **vertexMmode** or **mode** is not set to one of the enumerated values, **<br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -1451,13 +1457,13 @@ Draws a triangular grid described by a vertex array.This API may return an error
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to an **OH_Drawing_Canvas** object. |
-| [OH_Drawing_VertexMode](capi-drawing-canvas-h.md#oh_drawing_vertexmode) vertexMmode | Mode for drawing vertices. For details about the available options, see[OH_Drawing_VertexMode](capi-drawing-canvas-h.md#oh_drawing_vertexmode). |
+| [OH_Drawing_VertexMode](capi-drawing-canvas-h.md#oh_drawing_vertexmode) vertexMmode | Mode for drawing vertices. For details about the available options, see [OH_Drawing_VertexMode](capi-drawing-canvas-h.md#oh_drawing_vertexmode). |
 | int32_t vertexCount | Number of elements in the vertex array. The value must be greater than or equal to 3. |
-| const OH_Drawing_Point2D* positions | Pointer to the array that holds the position of every vertex. The array cannot be null and itslength must be equal to the value of **vertexCount**. |
-| const OH_Drawing_Point2D* texs | Pointer to the array that holds the texture space coordinate corresponding to each vertex. The array canbe null. If the array is not null, its length must be equal to the value of **vertexCount**. |
-| const uint32_t* colors | Pointer to the array that holds the color corresponding to each vertex. It is used for interpolationin a triangle. The array can be null. If the array is not null, its length must be equal to the value of vertexCount**. |
+| const OH_Drawing_Point2D* positions | Pointer to the array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
+| const OH_Drawing_Point2D* texs | Pointer to the array that holds the texture space coordinate corresponding to each vertex. The array can be null. If the array is not null, its length must be equal to the value of **vertexCount**. |
+| const uint32_t* colors | Pointer to the array that holds the color corresponding to each vertex. It is used for interpolation in a triangle. The array can be null. If the array is not null, its length must be equal to the value of **<br>vertexCount**. |
 | int32_t indexCount | Number of indices. The value can be 0 or a value greater than or equal to 3. |
-| const uint16_t* indices | Pointer to the array that holds the index of each vertex. The array can be null. If the array is notnull, its length must be equal to the value of **indexCount**. |
+| const uint16_t* indices | Pointer to the array that holds the index of each vertex. The array can be null. If the array is not null, its length must be equal to the value of **indexCount**. |
 | OH_Drawing_BlendMode mode | Enumeration of blend modes. For details about the available options, see {@link OH_Drawing_BlendMode}. |
 
 ### OH_Drawing_CanvasReadPixels()
@@ -1468,7 +1474,7 @@ bool OH_Drawing_CanvasReadPixels(OH_Drawing_Canvas* canvas, OH_Drawing_Image_Inf
 
 **Description**
 
-Copies pixel data from a canvas to a specified address. This function cannot be used for a canvas of therecording type.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If one of **canvas**, **imageInfo**, or **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Copies pixel data from a canvas to a specified address. This function cannot be used for a canvas of the recording type. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If one of **canvas**, **imageInfo**, or **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1497,7 +1503,7 @@ bool OH_Drawing_CanvasReadPixelsToBitmap(OH_Drawing_Canvas* canvas, OH_Drawing_B
 
 **Description**
 
-Copies pixel data from a canvas to an image. This function cannot be used for a canvas of the recording type.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Copies pixel data from a canvas to an image. This function cannot be used for a canvas of the recording type. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **canvas** or **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -1533,7 +1539,7 @@ Checks whether the region that can be drawn is empty after clipping.
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
-| bool* isClipEmpty | Pointer to the variable that specifies whether the region is empty. The value **true** means thatthe region is empty, and **false** means the opposite. |
+| bool* isClipEmpty | Pointer to the variable that specifies whether the region is empty. The value **true** means that the region is empty, and **false** means the opposite. |
 
 **Returns**:
 
@@ -1634,7 +1640,7 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
 | const OH_Drawing_Path* path | Pointer to the {@link OH_Drawing_Path} object. |
-| bool* quickReject | Pointer to the check result. The value **true** means that the path is not intersecting with thecanvas area, and **false** means the opposite. |
+| bool* quickReject | Pointer to the check result. The value **true** means that the path is not intersecting with the canvas area, and **false** means the opposite. |
 
 **Returns**:
 
@@ -1650,7 +1656,7 @@ OH_Drawing_ErrorCode OH_Drawing_CanvasQuickRejectRect(OH_Drawing_Canvas* canvas,
 
 **Description**
 
-Checks whether the rectangle is not intersecting with the canvas area. The canvas area includes itsboundaries.
+Checks whether the rectangle is not intersecting with the canvas area. The canvas area includes its boundaries.
 
 **Since**: 18
 
@@ -1660,7 +1666,7 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 | -- | -- |
 | OH_Drawing_Canvas* canvas | Pointer to the {@link OH_Drawing_Canvas} object. |
 | const OH_Drawing_Rect* rect | Pointer to the {@link OH_Drawing_Rect} object. |
-| bool* quickReject | Pointer to the check result. The value **true** means that the rectangle is not intersecting withthe canvas area, and **false** means the opposite. |
+| bool* quickReject | Pointer to the check result. The value **true** means that the rectangle is not intersecting with the canvas area, and **false** means the opposite. |
 
 **Returns**:
 
@@ -1691,6 +1697,6 @@ Checks if the current layer that drawn into the device is opaque.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.          Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if canvas or isOpaque is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.<br>        Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if canvas or isOpaque is nullptr. |
 
 

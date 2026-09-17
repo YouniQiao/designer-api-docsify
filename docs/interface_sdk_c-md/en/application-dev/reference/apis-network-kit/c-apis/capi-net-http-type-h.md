@@ -8,7 +8,7 @@ Defines the data structures for the C APIs of the HTTP request module.
 
 **System capability**: SystemCapability.Communication.NetStack
 
-**Since**: 20
+**Since**: 11
 
 **Related module**: [netstack](capi-netstack.md)
 
@@ -21,7 +21,7 @@ Defines the data structures for the C APIs of the HTTP request module.
 | [Http_Buffer](capi-netstack-http-buffer.md) | Http_Buffer | Defines the HTTP buffer structure. |
 | [Http_HeaderValue](capi-netstack-http-headervalue.md) | Http_HeaderValue | Defines the type of a mapped value in a request or response header. |
 | [Http_HeaderEntry](capi-netstack-http-headerentry.md) | Http_HeaderEntry | Defines all key-value pairs in the request or response header. |
-| [Http_ClientCert](capi-netstack-http-clientcert.md) | Http_ClientCert | Defines the client certificate sent to a remote server, which will be used by the server to verify theidentity of the client. |
+| [Http_ClientCert](capi-netstack-http-clientcert.md) | Http_ClientCert | Defines the client certificate sent to a remote server, which will be used by the server to verify the identity of the client. |
 | [Http_CustomProxy](capi-netstack-http-customproxy.md) | Http_CustomProxy | Defines the custom proxy configuration. |
 | [Http_Proxy](capi-netstack-http-proxy.md) | Http_Proxy | Defines the proxy configuration structure. |
 | [Http_PerformanceTiming](capi-netstack-http-performancetiming.md) | Http_PerformanceTiming | Defines the HTTP response timing information, which will be collected via [Http_Response](capi-netstack-http-response.md). |
@@ -67,6 +67,16 @@ Defines the data structures for the C APIs of the HTTP request module.
 | [typedef void (\*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize)](#http_onprogresscallback) | Http_OnProgressCallback | Callback function invoked during request/response data transmission. |
 | [typedef void (\*Http_OnHeaderReceiveCallback)(Http_Headers *headers)](#http_onheaderreceivecallback) | Http_OnHeaderReceiveCallback | Callback called when header are received. |
 | [typedef void (\*Http_OnVoidCallback)(void)](#http_onvoidcallback) | Http_OnVoidCallback | Empty callback function for requested DataEnd or Canceled event callback. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode) | Callback function that is invoked when response is received.<br>**Since**: 20 |
+| void (*Http_OnDataReceiveCallback)(const char *data, size_t length) | Callback function that is invoked when a response body is received.<br>**Since**: 20 |
+| void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize) | Callback function invoked during request/response data transmission.<br>**Since**: 20 |
+| void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers) | Callback called when header are received.<br>**Since**: 20 |
+| void (*Http_OnVoidCallback)(void) | Empty callback function for requested DataEnd or Canceled event callback.<br>**Since**: 20 |
 
 ## Enum type description
 
@@ -142,7 +152,7 @@ Defines http response code.
 | OH_HTTP_RESET = 205 | @brief Reset the content. |
 | OH_HTTP_PARTIAL = 206 | @brief Partial content. The server successfully processed some GET requests. |
 | OH_HTTP_MULTI_CHOICE = 300 | @brief Multiple options. |
-| OH_HTTP_MOVED_PERM = 301 | Permanently move. The requested resource has been permanently moved to a new URI,and the returned information will include the new URI. The browser will automatically redirect to the new URI. |
+| OH_HTTP_MOVED_PERM = 301 | Permanently move. The requested resource has been permanently moved to a new URI, and the returned information will include the new URI. The browser will automatically redirect to the new URI. |
 | OH_HTTP_MOVED_TEMP = 302 | @brief Temporary movement. |
 | OH_HTTP_SEE_OTHER = 303 | @brief View other addresses. |
 | OH_HTTP_NOT_MODIFIED = 304 | @brief Not modified. |
@@ -156,7 +166,7 @@ Defines http response code.
 | OH_HTTP_NOT_ACCEPTABLE = 406 | @brief The server unabled to complete request based on the content characteristics requested by the client. |
 | OH_HTTP_PROXY_AUTH = 407 | @brief Request authentication of the proxy's identity. |
 | OH_HTTP_CLIENT_TIMEOUT = 408 | @brief The request took too long and timed out. |
-| OH_HTTP_CONFLICT = 409 | The server may have returned this code when completing the client's PUT request,as there was a conflict when the server was processing the request. |
+| OH_HTTP_CONFLICT = 409 | The server may have returned this code when completing the client's PUT request, as there was a conflict when the server was processing the request. |
 | OH_HTTP_GONE = 410 | @brief The resource requested by the client no longer exists. |
 | OH_HTTP_LENGTH_REQUIRED = 411 | @brief The server is unable to process request information sent by the client without Content Length. |
 | OH_HTTP_PRECON_FAILED = 412 | @brief The prerequisite for requesting information from the client is incorrect. |

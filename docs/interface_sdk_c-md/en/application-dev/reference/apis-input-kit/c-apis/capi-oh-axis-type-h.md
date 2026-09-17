@@ -39,8 +39,8 @@ Defines the axis type of an input device.
 | Enum item | Description |
 | -- | -- |
 | AXIS_TYPE_UNKNOWN = 0 | Unknown axis type, which is usually used as the initial value.<br>**Since**: 12 |
-| AXIS_TYPE_SCROLL_VERTICAL = 1 | Vertical scroll axis. When you scroll the mouse wheel or slide with one or two fingers on the touchpad,thestatus of the vertical scroll axis changes.<br>**Since**: 12 |
-| AXIS_TYPE_SCROLL_HORIZONTAL = 2 | Horizontal scroll axis. When you scroll the mouse wheel or slide with two fingers on the touchpad, thestatus ofthe horizontal scroll axis changes.<br>**Since**: 12 |
+| AXIS_TYPE_SCROLL_VERTICAL = 1 | Vertical scroll axis. When you scroll the mouse wheel or slide with one or two fingers on the touchpad, the status of the vertical scroll axis changes.<br>**Since**: 12 |
+| AXIS_TYPE_SCROLL_HORIZONTAL = 2 | Horizontal scroll axis. When you scroll the mouse wheel or slide with two fingers on the touchpad, the status of the horizontal scroll axis changes.<br>**Since**: 12 |
 | AXIS_TYPE_PINCH = 3 | Pinch axis, which is used to describe a two-finger pinch gesture on the touchpad.<br>**Since**: 12 |
 | AXIS_TYPE_ROTATE = 4 | Rotation axis, which is used to describe a two-finger rotation gesture on the touchpad.<br>**Since**: 12 |
 
@@ -58,8 +58,8 @@ Event type of the input device.
 
 | Enum item | Description |
 | -- | -- |
-| AXIS_EVENT_TYPE_PINCH = 1 | Two-finger pinch event. The value can be **AXIS_TYPE_PINCH** or **AXIS_TYPE_ROTATE**, both of which areof the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type.<br>**Since**: 12 |
-| AXIS_EVENT_TYPE_SCROLL = 2 | Scroll event. The value can be **AXIS_TYPE_SCROLL_VERTICAL** or **AXIS_TYPE_SCROLL_HORIZONTAL**, both ofwhich are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type. For a mouse wheel event, only **AXIS_TYPE_SCROLL_VERTICALis supported.<br>**Since**: 12 |
+| AXIS_EVENT_TYPE_PINCH = 1 | Two-finger pinch event. The value can be **AXIS_TYPE_PINCH** or **AXIS_TYPE_ROTATE**, both of which are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type.<br>**Since**: 12 |
+| AXIS_EVENT_TYPE_SCROLL = 2 | Scroll event. The value can be **AXIS_TYPE_SCROLL_VERTICAL** or **AXIS_TYPE_SCROLL_HORIZONTAL**, both of which are of the [InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype) type. For a mouse wheel event, only **AXIS_TYPE_SCROLL_VERTICAL**<br>is supported.<br>**Since**: 12 |
 
 ### InputEvent_AxisAction
 

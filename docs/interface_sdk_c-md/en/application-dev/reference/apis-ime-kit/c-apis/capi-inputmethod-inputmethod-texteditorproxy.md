@@ -6,7 +6,7 @@ typedef struct InputMethod_TextEditorProxy InputMethod_TextEditorProxy
 
 ## Overview
 
-Define the InputMethod_TextEditorProxy structure type.Provides methods for getting requests and notifications from input method.<br> When input method sends request or notification to editor, the methods will be called.<br>
+Define the InputMethod_TextEditorProxy structure type.<br> Provides methods for getting requests and notifications from input method. When input method sends request or notification to editor, the methods will be called.
 
 **Since**: 12
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.AppServiceExtensionAbility
+# @ohos.app.ability.AppServiceExtensionAbility(应用后台服务扩展组件)
 
 AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后台服务的创建、销毁、连接、断开等生命周期回调。适用于需要长时间执行后台任务或维持后台连接的场景，
  例如后台流量监控行为，能够帮助应用提升后台服务的持续运行能力。

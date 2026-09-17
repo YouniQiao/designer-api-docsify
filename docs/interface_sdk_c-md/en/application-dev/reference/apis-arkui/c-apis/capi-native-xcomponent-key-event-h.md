@@ -8,7 +8,7 @@ Declares enums for key event of Native XComponent.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 10
+**Since**: 8
 
 **Related module**: [OH_NativeXComponent Native XComponent](capi-oh-nativexcomponent-native-xcomponent.md)
 

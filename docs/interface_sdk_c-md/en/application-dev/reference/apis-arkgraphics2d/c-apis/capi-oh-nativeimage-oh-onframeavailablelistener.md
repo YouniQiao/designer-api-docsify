@@ -6,7 +6,7 @@ typedef struct OH_OnFrameAvailableListener {...} OH_OnFrameAvailableListener
 
 ## Overview
 
-A listener for native image, use <b>OH_NativeImage_SetOnFrameAvailableListener</b> to register <br> the listener object to <b>OH_NativeImage</b>, the callback will be triggered when there is available frame
+A listener for native image, use <b>OH_NativeImage_SetOnFrameAvailableListener</b> to register the listener object to <b>OH_NativeImage</b>, the callback will be triggered when there is available frame
 
 **Since**: 11
 

@@ -18,7 +18,7 @@ Provides the enum variables, structures, and macros used in USB Serial DDK APIs.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [UsbSerial_Params](capi-usbserialddk-usbserial-params.md) | __attribute__((aligned(8))) UsbSerial_Params | Defines the USB serial port parameters for the USB Serial DDK. |
+| [UsbSerial_Params](capi-usbserialddk-usbserial-params.md) | \_\_attribute\_\_((aligned(8))) UsbSerial_Params | Defines the USB serial port parameters for the USB Serial DDK. |
 | [UsbSerial_Device](capi-usbserialddk-usbserial-device.md) | UsbSerial_Device | Defines the data structures (opaque) for the USB serial port device. |
 
 ### Enum
@@ -51,7 +51,7 @@ Defines the return codes used by the USB Serial DDK.
 | USB_SERIAL_DDK_INVALID_OPERATION = 31600001 | Invalid operation. |
 | USB_SERIAL_DDK_INIT_ERROR = 31600002 | Initialization error. |
 | USB_SERIAL_DDK_SERVICE_ERROR = 31600003 | Service error. |
-| USB_SERIAL_DDK_MEMORY_ERROR = 31600004 | Memory-related errors, such as insufficient memory, memory data replication failure,or memory application fault. |
+| USB_SERIAL_DDK_MEMORY_ERROR = 31600004 | Memory-related errors, such as insufficient memory, memory data replication failure, or memory application fault. |
 | USB_SERIAL_DDK_IO_ERROR = 31600005 | I/O error. |
 | USB_SERIAL_DDK_DEVICE_NOT_FOUND = 31600006 | Device not found. |
 

@@ -37,8 +37,8 @@ Indicates the running mode of the native event loop in an asynchronous native th
 
 | Enum item | Description |
 | -- | -- |
-| napi_event_mode_default = 0 | In this mode, the current asynchronous thread will be blocked and events of native event loop willbe processed. |
-| napi_event_mode_nowait = 1 | In this mode, the current asynchronous thread will not be blocked. If there are events in the event loop,only one event will be processed and then the event loop will stop. If there are no events in the loop,the event loop will stop immediately. |
+| napi_event_mode_default = 0 | In this mode, the current asynchronous thread will be blocked and events of native event loop will be processed. |
+| napi_event_mode_nowait = 1 | In this mode, the current asynchronous thread will not be blocked. If there are events in the event loop, only one event will be processed and then the event loop will stop. If there are no events in the loop, the event loop will stop immediately. |
 
 ### napi_task_priority
 

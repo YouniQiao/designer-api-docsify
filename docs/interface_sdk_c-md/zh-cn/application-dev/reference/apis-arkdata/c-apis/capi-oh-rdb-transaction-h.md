@@ -40,7 +40,7 @@
 | [int OH_RdbTrans_Rollback(OH_Rdb_Transaction *trans)](#oh_rdbtrans_rollback) | 回滚事务。 |
 | [int OH_RdbTrans_Insert(OH_Rdb_Transaction *trans, const char *table, const OH_VBucket *row, int64_t *rowId)](#oh_rdbtrans_insert) | 将一行数据插入到目标表中。 |
 | [int OH_RdbTrans_InsertWithConflictResolution(OH_Rdb_Transaction *trans, const char *table, const OH_VBucket *row, Rdb_ConflictResolution resolution, int64_t *rowId)](#oh_rdbtrans_insertwithconflictresolution) | 将一行数据插入到目标表中，支持冲突解决。 |
-| [int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, int64_t *changes)](#oh_rdbtrans_batchinsert) | 将一组数据批量插入到目标表中。<br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。<br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。<br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。 |
+| [int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, int64_t *changes)](#oh_rdbtrans_batchinsert) | 将一组数据批量插入到目标表中。 <br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。 |
 | [int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, int64_t *changes)](#oh_rdbtrans_update) | 根据指定的条件更新数据库中的数据。 |
 | [int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdbtrans_updatewithconflictresolution) | 根据指定条件更新数据库中的数据，并支持冲突解决。 |
 | [int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, int64_t *changes)](#oh_rdbtrans_delete) | 根据指定条件从数据库中删除数据。 |
@@ -48,10 +48,10 @@
 | [OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)](#oh_rdbtrans_querywithoutrowcount) | 根据指定的条件查询数据库中的数据，不计算行数。 |
 | [OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)](#oh_rdbtrans_querysql) | 根据SQL语句查询数据库中的数据。 |
 | [OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)](#oh_rdbtrans_querysqlwithoutrowcount) | 根据SQL语句查询数据库中的数据，不计算行数。 |
-| [int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args, OH_Data_Value **result)](#oh_rdbtrans_execute) | 执行包含指定参数的SQL语句。<br>不支持开头包含注释的语句。 |
+| [int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args, OH_Data_Value **result)](#oh_rdbtrans_execute) | 执行包含指定参数的SQL语句。 <br>不支持开头包含注释的语句。 |
 | [int OH_RdbTrans_Destroy(OH_Rdb_Transaction *trans)](#oh_rdbtrans_destroy) | 销毁事务对象。 |
-| [int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdbtrans_batchinsert) | 将一组数据批量插入到目标表中。<br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。<br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。<br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。 |
-| [int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdbtrans_batchinsertwithreturning) | 将批量数据插入目标表，并将变更信息输出到上下文中。<br>一次最多可以插入32766个参数。如果参数数量超过上限，则返回错误代码RDB_E_INVALID_ARGS。<br>参数数量计算方式为插入数据条数乘以插入数据时所有字段的并集大小。<br>例如：插入数据的所有字段的并集大小为10则最多可以插入3276条数据（3276*10=32760）。<br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。 |
+| [int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdbtrans_batchinsert) | 将一组数据批量插入到目标表中。 <br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。 |
+| [int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdbtrans_batchinsertwithreturning) | 将批量数据插入目标表，并将变更信息输出到上下文中。 <br>一次最多可以插入32766个参数。如果参数数量超过上限，则返回错误代码RDB_E_INVALID_ARGS。 <br>参数数量计算方式为插入数据条数乘以插入数据时所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。 |
 | [int OH_RdbTrans_UpdateWithReturning(OH_Rdb_Transaction *trans, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdbtrans_updatewithreturning) | 根据指定条件更新数据库中的数据并输出更改信息到上下文。 |
 | [int OH_RdbTrans_DeleteWithReturning(OH_Rdb_Transaction *trans, OH_Predicates *predicates, OH_RDB_ReturningContext *context)](#oh_rdbtrans_deletewithreturning) | 根据指定条件从数据库中删除数据并输出更改信息到上下文。 |
 
@@ -73,7 +73,7 @@ enum OH_RDB_TransType
 | -- | -- |
 | RDB_TRANS_DEFERRED = 0 | 在首次访问数据库之前，事务默认设置不会启动。 |
 | RDB_TRANS_IMMEDIATE | 数据库连接立即开始新的写入，而无需等待写入语句。 |
-| RDB_TRANS_EXCLUSIVE | 与RDB_TRANS_IMMEDIATE类型相似，写事务会立即启动。<br>RDB_TRANS_EXCLUSIVE和RDB_TRANS_IMMEDIATE类型在WAL模式下相同，但在其他日志模式下，RDB_TRANS_EXCLUSIVE会阻止其他数据库连接在事务进行时读取数据库。 |
+| RDB_TRANS_EXCLUSIVE | 与RDB_TRANS_IMMEDIATE类型相似，写事务会立即启动。 <br>RDB_TRANS_EXCLUSIVE和RDB_TRANS_IMMEDIATE类型在WAL模式下相同，但在其他日志模式下，RDB_TRANS_EXCLUSIVE会阻止其他数据库连接在事务进行时读取数据库。 |
 | RDB_TRANS_BUTT | RDB事务类型的最大值。 |
 
 
@@ -91,7 +91,7 @@ OH_RDB_TransOptions *OH_RdbTrans_CreateOptions(void)
 
 **起始版本：** 18
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -120,7 +120,7 @@ int OH_RdbTrans_DestroyOptions(OH_RDB_TransOptions *options)
 | -- | -- |
 | [OH_RDB_TransOptions](capi-rdb-oh-rdb-transoptions.md) *options | 指向[OH_RDB_TransOptions](capi-rdb-oh-rdb-transoptions.md)实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -145,7 +145,7 @@ int OH_RdbTransOption_SetType(OH_RDB_TransOptions *options, OH_RDB_TransType typ
 | [OH_RDB_TransOptions](capi-rdb-oh-rdb-transoptions.md) *options | 指向[OH_RDB_TransOptions](capi-rdb-oh-rdb-transoptions.md)实例的指针。 |
 | [OH_RDB_TransType](capi-oh-rdb-transaction-h.md#oh_rdb_transtype) type | 表示关系型数据库事务类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -169,7 +169,7 @@ int OH_RdbTrans_Commit(OH_Rdb_Transaction *trans)
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -193,7 +193,7 @@ int OH_RdbTrans_Rollback(OH_Rdb_Transaction *trans)
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -220,7 +220,7 @@ int OH_RdbTrans_Insert(OH_Rdb_Transaction *trans, const char *table, const OH_VB
 | const OH_VBucket *row | 要插入到表中的数据行。 |
 | int64_t *rowId | 输出参数，表示插入后返回的行号。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -248,7 +248,7 @@ int OH_RdbTrans_InsertWithConflictResolution(OH_Rdb_Transaction *trans, const ch
 | Rdb_ConflictResolution resolution | 表示发生冲突时的解决策略。 |
 | int64_t *rowId | 输出参数，表示插入成功后返回的行号。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -262,7 +262,7 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 
 **描述：**
 
-将一组数据批量插入到目标表中。<br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。<br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。<br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+将一组数据批量插入到目标表中。 <br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **起始版本：** 18
 
@@ -275,7 +275,7 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 | const OH_Data_VBuckets *rows | 表示要插入到表中的一组数据。 |
 | int64_t *changes | 输出参数，表示插入成功的次数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -302,7 +302,7 @@ int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const O
 | const OH_Predicates *predicates | 表示{@link OH_Predicates}指定的更新条件。 |
 | int64_t *changes | 输出参数，表示更新成功的行数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -330,7 +330,7 @@ int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH
 | Rdb_ConflictResolution resolution | 表示发生冲突时的解决策略。 |
 | int64_t *changes | 输出参数，表示更新成功的行数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -356,7 +356,7 @@ int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicate
 | const OH_Predicates *predicates | 表示{@link OH_Predicates}指定的删除条件。 |
 | int64_t *changes | 输出参数，表示删除成功的次数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -383,7 +383,7 @@ OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *pre
 | const char *columns[] | 表示要查询的列。如果值为空数组，则查询适用于所有列。 |
 | int len | 传入的columns数组的长度。若len大于columns数组的实际长度，则会访问越界。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -410,7 +410,7 @@ OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_
 | const char *const columns[] | 要查询的列，如果传入空值，则查询所有列。 |
 | int len | 传入的columns数组的长度。若len大于columns数组的实际长度，则会访问越界。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -436,7 +436,7 @@ OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, cons
 | const char *sql | 表示要执行的SQL语句。 |
 | const OH_Data_Values *args | 指向{@link OH_Data_Values}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -462,7 +462,7 @@ OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const 
 | const char *sql | 要执行的SQL语句。 |
 | const OH_Data_Values *args | 指向{@link OH_Data_Values}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -476,7 +476,7 @@ int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Dat
 
 **描述：**
 
-执行包含指定参数的SQL语句。<br>不支持开头包含注释的语句。
+执行包含指定参数的SQL语句。 <br>不支持开头包含注释的语句。
 
 **起始版本：** 18
 
@@ -489,7 +489,7 @@ int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Dat
 | const OH_Data_Values *args | SQL语句中包含的参数。 |
 | OH_Data_Value **result | 执行成功时指向{@link OH_Data_Value}实例的指针。使用完成后，必须通过{@link OH_Value_Destroy}接口释放内存。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -518,7 +518,7 @@ int OH_RdbTrans_Destroy(OH_Rdb_Transaction *trans)
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -532,7 +532,7 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 
 **描述：**
 
-将一组数据批量插入到目标表中。<br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。<br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。<br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+将一组数据批量插入到目标表中。 <br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **起始版本：** 18
 
@@ -546,7 +546,7 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 | Rdb_ConflictResolution resolution | 表示发生冲突时的解决策略。 |
 | int64_t *changes | 输出参数，表示插入成功的次数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -560,7 +560,7 @@ int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *
 
 **描述：**
 
-将批量数据插入目标表，并将变更信息输出到上下文中。<br>一次最多可以插入32766个参数。如果参数数量超过上限，则返回错误代码RDB_E_INVALID_ARGS。<br>参数数量计算方式为插入数据条数乘以插入数据时所有字段的并集大小。<br>例如：插入数据的所有字段的并集大小为10则最多可以插入3276条数据（3276*10=32760）。<br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+将批量数据插入目标表，并将变更信息输出到上下文中。 <br>一次最多可以插入32766个参数。如果参数数量超过上限，则返回错误代码RDB_E_INVALID_ARGS。 <br>参数数量计算方式为插入数据条数乘以插入数据时所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
 
 **起始版本：** 23
 
@@ -571,10 +571,10 @@ int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 | const char *table | 要插入的目标表名。 |
 | const OH_Data_VBuckets *rows | 要插入到表中的行数据。 |
-| Rdb_ConflictResolution resolution | 发生冲突时的解决策略{@link Rdb_ConflictResolution}，不建议使用RDB_CONFLICT_FAIL，因为失败时会抛异常，<br>无法正常获取实际的变更数据。 |
+| Rdb_ConflictResolution resolution | 发生冲突时的解决策略{@link Rdb_ConflictResolution}，不建议使用RDB_CONFLICT_FAIL，因为失败时会抛异常， <br>无法正常获取实际的变更数据。 |
 | OH_RDB_ReturningContext *context | 指向{@link OH_RDB_ReturningContext}实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -604,10 +604,10 @@ int OH_RdbTrans_UpdateWithReturning(OH_Rdb_Transaction *trans, OH_VBucket *row, 
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | 指向[OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md)实例的指针。 |
 | OH_VBucket *row | 要更新到表中的行数据。 |
 | OH_Predicates *predicates | 指向{@link OH_Predicates}实例的指针。 |
-| Rdb_ConflictResolution resolution | 发生冲突时的解决策略{@link Rdb_ConflictResolution}，不建议使用RDB_CONFLICT_FAIL，因为失败时会抛异常，<br>无法正常获取实际的变更数据。 |
+| Rdb_ConflictResolution resolution | 发生冲突时的解决策略{@link Rdb_ConflictResolution}，不建议使用RDB_CONFLICT_FAIL，因为失败时会抛异常， <br>无法正常获取实际的变更数据。 |
 | OH_RDB_ReturningContext *context | 指向{@link OH_RDB_ReturningContext}实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -638,7 +638,7 @@ int OH_RdbTrans_DeleteWithReturning(OH_Rdb_Transaction *trans, OH_Predicates *pr
 | OH_Predicates *predicates | 指向{@link OH_Predicates}实例的指针。 |
 | OH_RDB_ReturningContext *context | 指向{@link OH_RDB_ReturningContext}实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

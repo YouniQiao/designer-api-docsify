@@ -32,7 +32,7 @@ Defines the gesture APIs.
 | [ArkUI_GestureRecognizer* (\*createPanGesture)(int32_t fingersNum, ArkUI_GestureDirectionMask directions, double distanceNum)](#createpangesture) | Creates a swipe gesture. |
 | [ArkUI_GestureRecognizer* (\*createPinchGesture)(int32_t fingersNum, double distanceNum)](#createpinchgesture) | Creates a pinch gesture. |
 | [ArkUI_GestureRecognizer* (\*createRotationGesture)(int32_t fingersNum, double angleNum)](#createrotationgesture) | Creates a rotation gesture. |
-| [ArkUI_GestureRecognizer* (\*createSwipeGesture)(int32_t fingersNum, ArkUI_GestureDirectionMask directions, double speedNum)](#createswipegesture) | Creates a swipe gesture.This API is used to implement a swipe gesture, which can be recognized when theswipe speed (px/s) is higher than that specified by **speedNum**. |
+| [ArkUI_GestureRecognizer* (\*createSwipeGesture)(int32_t fingersNum, ArkUI_GestureDirectionMask directions, double speedNum)](#createswipegesture) | Creates a swipe gesture.This API is used to implement a swipe gesture, which can be recognized when the swipe speed (px/s) is higher than that specified by **speedNum**. |
 | [ArkUI_GestureRecognizer* (\*createGroupGesture)(ArkUI_GroupGestureMode gestureMode)](#creategroupgesture) | Creates a gesture group. |
 | [void (\*dispose)(ArkUI_GestureRecognizer* recognizer)](#dispose) | Disposes of a gesture to release resources. |
 | [int32_t (\*addChildGesture)(ArkUI_GestureRecognizer* group, ArkUI_GestureRecognizer* child)](#addchildgesture) | Adds a gesture to a gesture group. |
@@ -61,8 +61,8 @@ Creates a tap gesture.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t countNum | Number of consecutive taps. If the value is less than 1 or is not set, the default value **1** isused. |
-|  int32_t fingersNum | Number of fingers required to trigger the tap gesture. The value ranges from 1 to 10. If thevalue is less than 1 or is not set, the default value **1** is used. |
+| int32_t countNum | Number of consecutive taps. If the value is less than 1 or is not set, the default value **1** is used. |
+|  int32_t fingersNum | Number of fingers required to trigger the tap gesture. The value ranges from 1 to 10. If the value is less than 1 or is not set, the default value **1** is used. |
 
 **Returns**:
 
@@ -84,9 +84,9 @@ Creates a long press gesture.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t fingersNum | Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. Ifthe value is out of the range, the default value **1** is used. |
-|  bool repeatResult | Whether to continuously trigger the event callback.<br>The value **true** means to continuously trigger event callbacks, and **false** means the opposite. |
-|  int32_t durationNum | Minimum hold-down time, in ms. If the value is less than or equal to 0, the default value 500** is used. |
+| int32_t fingersNum | Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. If the value is out of the range, the default value **1** is used. |
+|  bool repeatResult | Whether to continuously trigger the event callback. <br>The value **true** means to continuously trigger event callbacks, and **false** means the opposite. |
+|  int32_t durationNum | Minimum hold-down time, in ms. If the value is less than or equal to 0, the default value **<br>500** is used. |
 
 **Returns**:
 
@@ -108,9 +108,9 @@ Creates a swipe gesture.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t fingersNum | Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10. If the valueis less than 1 or is not set, the default value **1** is used. |
+| int32_t fingersNum | Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10. If the value is less than 1 or is not set, the default value **1** is used. |
 |  ArkUI_GestureDirectionMask directions | Pan direction. The value supports the AND (&) and OR (\|) operations. |
-|  double distanceNum | Minimum pan distance to trigger the gesture, in px. If this parameter is set to a value lessthan or equal to 0, the default value **5px** is used. |
+|  double distanceNum | Minimum pan distance to trigger the gesture, in px. If this parameter is set to a value less than or equal to 0, the default value **5px** is used. |
 
 **Returns**:
 
@@ -132,8 +132,8 @@ Creates a pinch gesture.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t fingersNum | Minimum number of fingers required to trigger the pinch gesture. The value ranges from 2 to 5.If the value is out of the range, the default value **2** is used. |
-|  double distanceNum | Minimum recognition distance, in px. If this parameter is set to a value less than or equal to0, the default value **5px** is used. |
+| int32_t fingersNum | Minimum number of fingers required to trigger the pinch gesture. The value ranges from 2 to 5. If the value is out of the range, the default value **2** is used. |
+|  double distanceNum | Minimum recognition distance, in px. If this parameter is set to a value less than or equal to 0, the default value **5px** is used. |
 
 **Returns**:
 
@@ -155,8 +155,8 @@ Creates a rotation gesture.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t fingersNum | Minimum number of fingers required to trigger the rotation gesture. The value ranges from 2 to5. If the value is out of the range, the default value **2** is used. |
-|  double angleNum | Minimum angle change required to trigger the rotation gesture, in degrees (deg). The defaultvalue is **1**. If this parameter is set to a value less than or equal to 0 or greater than 360, the defaultvalue **1** is used. |
+| int32_t fingersNum | Minimum number of fingers required to trigger the rotation gesture. The value ranges from 2 to 5. If the value is out of the range, the default value **2** is used. |
+|  double angleNum | Minimum angle change required to trigger the rotation gesture, in degrees (deg). The default value is **1**. If this parameter is set to a value less than or equal to 0 or greater than 360, the default value **1** is used. |
 
 **Returns**:
 
@@ -172,7 +172,7 @@ ArkUI_GestureRecognizer* (*createSwipeGesture)(int32_t fingersNum, ArkUI_Gesture
 
 **Description**
 
-Creates a swipe gesture.This API is used to implement a swipe gesture, which can be recognized when theswipe speed (px/s) is higher than that specified by **speedNum**.
+Creates a swipe gesture.This API is used to implement a swipe gesture, which can be recognized when the swipe speed (px/s) is higher than that specified by **speedNum**.
 
 **Parameters**:
 
@@ -180,7 +180,7 @@ Creates a swipe gesture.This API is used to implement a swipe gesture, which can
 | -- | -- |
 | int32_t fingersNum | Minimum number of fingers required to trigger the swipe gesture. The value ranges from 1 to 10. |
 |  ArkUI_GestureDirectionMask directions | Directions in which the swipe gesture can be recognized. |
-|  double speedNum | Minimum speed required to recognize the swipe gesture, in px/s. If this parameter is set to avalue less than or equal to 0, the default value **100px/s** is used. |
+|  double speedNum | Minimum speed required to recognize the swipe gesture, in px/s. If this parameter is set to a value less than or equal to 0, the default value **100px/s** is used. |
 
 **Returns**:
 
@@ -247,7 +247,7 @@ Adds a gesture to a gesture group.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs, for example, attempting to          add a gesture to an object that is not a gesture group. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs, for example, attempting to          add a gesture to an object that is not a gesture group. |
 
 ### removeChildGesture()
 
@@ -270,7 +270,7 @@ Removes a gesture from a gesture group.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setGestureEventTarget()
 
@@ -287,15 +287,15 @@ Registers a callback for gestures.
 | Parameter | Description |
 | -- | -- |
 | recognizer | Pointer to a gesture recognizer. |
-| actionTypeMask | Gesture event types. Multiple callbacks can be registered at once, with the callback eventtypes distinguished in the callbacks. Example: actionTypeMask = GESTURE_EVENT_ACTION_ACCEPT \|GESTURE_EVENT_ACTION_UPDATE; |
+| actionTypeMask | Gesture event types. Multiple callbacks can be registered at once, with the callback event types distinguished in the callbacks. Example: actionTypeMask = GESTURE_EVENT_ACTION_ACCEPT \| GESTURE_EVENT_ACTION_UPDATE; |
 |  void* extraParams | Context passed in the **targetReceiver** callback. |
-| targetReceiver | Callback to register for processing the gesture event types. **event** indicates thegesture callback data. |
+| targetReceiver | Callback to register for processing the gesture event types. **event** indicates the gesture callback data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### addGestureToNode()
 
@@ -320,7 +320,7 @@ Adds a gesture to a UI component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### removeGestureFromNode()
 
@@ -343,7 +343,7 @@ Removes a gesture from a node.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setGestureInterrupterToNode()
 
@@ -360,13 +360,13 @@ Sets a gesture interruption callback for a node.
 | Parameter | Description |
 | -- | -- |
 | node | Pointer to the ArkUI node for which you want to set a gesture interruption callback. |
-| interrupter | Indicates the gesture interruption callback to set.<b>info</b> indicates the gesture interruption data. If <b>interrupter</b> returns<b>GESTURE_INTERRUPT_RESULT_CONTINUE</b>, the gesture recognition process continues. If it returns<b>GESTURE_INTERRUPT_RESULT_REJECT</b>, the gesture recognition process is paused. |
+| interrupter | Indicates the gesture interruption callback to set. <b>info</b> indicates the gesture interruption data. If <b>interrupter</b> returns <b>GESTURE_INTERRUPT_RESULT_CONTINUE</b>, the gesture recognition process continues. If it returns <b>GESTURE_INTERRUPT_RESULT_REJECT</b>, the gesture recognition process is paused. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### getGestureType()
 
@@ -404,15 +404,15 @@ Sets the callback function for the parallel internal gesture event.
 
 | Parameter | Description |
 | -- | -- |
-| node | Pointer to the ArkUI node for which you want to set the callback of the parallel internal gestureevent. |
+| node | Pointer to the ArkUI node for which you want to set the callback of the parallel internal gesture event. |
 | userData | Custom data. |
-| parallelInnerGesture | Parallel internal gesture event. **event** returns the data of the parallel internalgesture event. **parallelInnerGesture** returns the pointer to the gesture recognizer that requires parallelrecognition. |
+| parallelInnerGesture | Parallel internal gesture event. **event** returns the data of the parallel internal gesture event. **parallelInnerGesture** returns the pointer to the gesture recognizer that requires parallel recognition. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### createTapGestureWithDistanceThreshold()
 
@@ -428,9 +428,9 @@ Creates a tap gesture that is subject to distance restrictions.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t countNum | Number of consecutive taps. If the value is less than 1 or is not set, the default value **1** isused. |
-|  int32_t fingersNum | Number of fingers required to trigger the tap gesture. The value ranges from 1 to 10. If thevalue is less than 1 or is not set, the default value **1** is used. |
-|  double distanceThreshold | Allowed moving distance of a finger. If the value is less than 0 or is not set, it willbe converted to the default value of infinity. |
+| int32_t countNum | Number of consecutive taps. If the value is less than 1 or is not set, the default value **1** is used. |
+|  int32_t fingersNum | Number of fingers required to trigger the tap gesture. The value ranges from 1 to 10. If the value is less than 1 or is not set, the default value **1** is used. |
+|  double distanceThreshold | Allowed moving distance of a finger. If the value is less than 0 or is not set, it will be converted to the default value of infinity. |
 
 **Returns**:
 

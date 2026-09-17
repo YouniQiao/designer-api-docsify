@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides WaterFlow-related type and function definitions for<b>NativeNode</b> APIs.
+Provides WaterFlow-related type and function definitions for <b>NativeNode</b> APIs.
 
 **Library**: libace_ndk.z.so
 
@@ -36,17 +36,17 @@ Provides WaterFlow-related type and function definitions for<b>NativeNode</b> AP
 | [void OH_ArkUI_WaterFlowSectionOption_SetSize(ArkUI_WaterFlowSectionOption* option, int32_t size)](#oh_arkui_waterflowsectionoption_setsize) | Sets the array length for a water flow section configuration. |
 | [int32_t OH_ArkUI_WaterFlowSectionOption_GetSize(ArkUI_WaterFlowSectionOption* option)](#oh_arkui_waterflowsectionoption_getsize) | Obtains the length of the {@link FlowItem} section configuration array. |
 | [void OH_ArkUI_WaterFlowSectionOption_SetItemCount(ArkUI_WaterFlowSectionOption* option, int32_t index, int32_t itemCount)](#oh_arkui_waterflowsectionoption_setitemcount) | Sets the number of {@link water flow items} in the section. |
-| [int32_t OH_ArkUI_WaterFlowSectionOption_GetItemCount(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getitemcount) | Obtains the number of {@link water flow items} at the corresponding index based on the {@link FlowItem}section configuration. |
-| [void OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex(ArkUI_WaterFlowSectionOption* option, int32_t index, float (\*callback)(int32_t itemIndex))](#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindex) | Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem}section configuration. To use custom data in the callback, call[OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithUserData](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindexwithuserdata). |
-| [void OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithUserData(ArkUI_WaterFlowSectionOption* option, int32_t index, void* userData, float (\*callback)(int32_t itemIndex, void* userData))](#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindexwithuserdata) | Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem}section configuration. The difference between this API and[OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindex) is that this API allows you to passcustom data (**userData**) and receive the data in the callback function. |
+| [int32_t OH_ArkUI_WaterFlowSectionOption_GetItemCount(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getitemcount) | Obtains the number of {@link water flow items} at the corresponding index based on the {@link FlowItem} section configuration. |
+| [void OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex(ArkUI_WaterFlowSectionOption* option, int32_t index, float (\*callback)(int32_t itemIndex))](#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindex) | Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem} section configuration. To use custom data in the callback, call [OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithUserData](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindexwithuserdata). |
+| [void OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithUserData(ArkUI_WaterFlowSectionOption* option, int32_t index, void* userData, float (\*callback)(int32_t itemIndex, void* userData))](#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindexwithuserdata) | Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem} section configuration. The difference between this API and [OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindex) is that this API allows you to pass custom data (**userData**) and receive the data in the callback function. |
 | [void OH_ArkUI_WaterFlowSectionOption_SetCrossCount(ArkUI_WaterFlowSectionOption* option, int32_t index, int32_t crossCount)](#oh_arkui_waterflowsectionoption_setcrosscount) | Sets the number of columns (in a vertical layout) or rows (in a horizontal layout) of a water flow. |
-| [int32_t OH_ArkUI_WaterFlowSectionOption_GetCrossCount(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getcrosscount) | Obtains the number of layout grids at the corresponding index based on the {@link FlowItem} sectionconfiguration. |
+| [int32_t OH_ArkUI_WaterFlowSectionOption_GetCrossCount(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getcrosscount) | Obtains the number of layout grids at the corresponding index based on the {@link FlowItem} section configuration. |
 | [void OH_ArkUI_WaterFlowSectionOption_SetColumnGap(ArkUI_WaterFlowSectionOption* option, int32_t index, float columnGap)](#oh_arkui_waterflowsectionoption_setcolumngap) | Sets the gap between columns in the specified water flow section. |
 | [float OH_ArkUI_WaterFlowSectionOption_GetColumnGap(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getcolumngap) | Obtains the gap between columns in the water flow section that matches the specified index. |
 | [void OH_ArkUI_WaterFlowSectionOption_SetRowGap(ArkUI_WaterFlowSectionOption* option, int32_t index, float rowGap)](#oh_arkui_waterflowsectionoption_setrowgap) | Sets the gap between rows in the **FlowItem** section. |
-| [float OH_ArkUI_WaterFlowSectionOption_GetRowGap(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getrowgap) | Obtains the gap between rows in the section at the corresponding index based on the {@link FlowItem} sectionconfiguration. |
+| [float OH_ArkUI_WaterFlowSectionOption_GetRowGap(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getrowgap) | Obtains the gap between rows in the section at the corresponding index based on the {@link FlowItem} section configuration. |
 | [void OH_ArkUI_WaterFlowSectionOption_SetMargin(ArkUI_WaterFlowSectionOption* option, int32_t index, float marginTop, float marginRight, float marginBottom, float marginLeft)](#oh_arkui_waterflowsectionoption_setmargin) | Sets the margins for the specified water flow section. |
-| [ArkUI_Margin OH_ArkUI_WaterFlowSectionOption_GetMargin(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getmargin) | Obtains the top margin of the section at the corresponding index based on the {@link FlowItem} sectionconfiguration. |
+| [ArkUI_Margin OH_ArkUI_WaterFlowSectionOption_GetMargin(ArkUI_WaterFlowSectionOption* option, int32_t index)](#oh_arkui_waterflowsectionoption_getmargin) | Obtains the top margin of the section at the corresponding index based on the {@link FlowItem} section configuration. |
 
 ## Enum type description
 
@@ -64,8 +64,8 @@ Enumerates the layout modes of the {@link WaterFlow} component.
 
 | Enum item | Description |
 | -- | -- |
-| ARKUI_WATER_FLOW_LAYOUT_MODE_ALWAYS_TOP_DOWN = 0 | Layout from top to bottom. In scenarios where column switching occurs, the layout starts from the first{@link water flow item} to the currently displayed {@link water flow item}. |
-| ARKUI_WATER_FLOW_LAYOUT_MODE_SLIDING_WINDOW | Sliding window layout. In scenarios where column switching occurs, only the range of {@link water flow items}currently on display is re-laid out. As the user scrolls down with their finger, {@link water flow items} thatenter the display range from above are subsequently laid out. |
+| ARKUI_WATER_FLOW_LAYOUT_MODE_ALWAYS_TOP_DOWN = 0 | Layout from top to bottom. In scenarios where column switching occurs, the layout starts from the first {@link water flow item} to the currently displayed {@link water flow item}. |
+| ARKUI_WATER_FLOW_LAYOUT_MODE_SLIDING_WINDOW | Sliding window layout. In scenarios where column switching occurs, only the range of {@link water flow items}<br>currently on display is re-laid out. As the user scrolls down with their finger, {@link water flow items} that enter the display range from above are subsequently laid out. |
 
 
 ## Function description
@@ -177,7 +177,7 @@ int32_t OH_ArkUI_WaterFlowSectionOption_GetItemCount(ArkUI_WaterFlowSectionOptio
 
 **Description**
 
-Obtains the number of {@link water flow items} at the corresponding index based on the {@link FlowItem}section configuration.
+Obtains the number of {@link water flow items} at the corresponding index based on the {@link FlowItem} section configuration.
 
 **Since**: 12
 
@@ -202,7 +202,7 @@ void OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex(ArkU
 
 **Description**
 
-Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem}section configuration. To use custom data in the callback, call[OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithUserData](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindexwithuserdata).
+Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem} section configuration. To use custom data in the callback, call [OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithUserData](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindexwithuserdata).
 
 **Since**: 12
 
@@ -222,7 +222,7 @@ void OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndexWithU
 
 **Description**
 
-Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem}section configuration. The difference between this API and[OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindex) is that this API allows you to passcustom data (**userData**) and receive the data in the callback function.
+Obtains the main axis size of a specified water flow item based on **itemIndex** in the {@link FlowItem} section configuration. The difference between this API and [OH_ArkUI_WaterFlowSectionOption_RegisterGetItemMainSizeCallbackByIndex](capi-water-flow-h.md#oh_arkui_waterflowsectionoption_registergetitemmainsizecallbackbyindex) is that this API allows you to pass custom data (**userData**) and receive the data in the callback function.
 
 **Since**: 12
 
@@ -233,7 +233,7 @@ Obtains the main axis size of a specified water flow item based on **itemIndex**
 | rkUI_WaterFlowSectionOption\* option | Pointer to the {@link FlowItem} section configuration. |
 | int32_t index | Index of the target water flow section. |
 | void\* userData | Pointer to user-defined data, which will be passed back to the user in the callback. |
-| float (\*callback)(int32_t itemIndex | Callback used to return the result. **itemIndex**: index of the {@link water flow item}; **userData: user-defined data. |
+| float (\*callback)(int32_t itemIndex | Callback used to return the result. **itemIndex**: index of the {@link water flow item}; **userData**<br>: user-defined data. |
 
 ### OH_ArkUI_WaterFlowSectionOption_SetCrossCount()
 
@@ -263,7 +263,7 @@ int32_t OH_ArkUI_WaterFlowSectionOption_GetCrossCount(ArkUI_WaterFlowSectionOpti
 
 **Description**
 
-Obtains the number of layout grids at the corresponding index based on the {@link FlowItem} sectionconfiguration.
+Obtains the number of layout grids at the corresponding index based on the {@link FlowItem} section configuration.
 
 **Since**: 12
 
@@ -353,7 +353,7 @@ float OH_ArkUI_WaterFlowSectionOption_GetRowGap(ArkUI_WaterFlowSectionOption* op
 
 **Description**
 
-Obtains the gap between rows in the section at the corresponding index based on the {@link FlowItem} sectionconfiguration.
+Obtains the gap between rows in the section at the corresponding index based on the {@link FlowItem} section configuration.
 
 **Since**: 12
 
@@ -401,7 +401,7 @@ ArkUI_Margin OH_ArkUI_WaterFlowSectionOption_GetMargin(ArkUI_WaterFlowSectionOpt
 
 **Description**
 
-Obtains the top margin of the section at the corresponding index based on the {@link FlowItem} sectionconfiguration.
+Obtains the top margin of the section at the corresponding index based on the {@link FlowItem} section configuration.
 
 **Since**: 12
 

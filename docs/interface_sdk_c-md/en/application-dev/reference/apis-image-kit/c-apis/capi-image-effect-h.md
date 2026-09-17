@@ -24,7 +24,7 @@ Declares the functions for rendering image.
 
 | Name | Description |
 | -- | -- |
-| [OH_ImageEffect *OH_ImageEffect_Create(const char *name)](#oh_imageeffect_create) | Create an OH_ImageEffect instance. It should be noted that the life cycle of the OH_ImageEffect instancepointed to by the return value * needs to be manually released by [OH_ImageEffect_Release](capi-image-effect-h.md#oh_imageeffect_release) |
+| [OH_ImageEffect *OH_ImageEffect_Create(const char *name)](#oh_imageeffect_create) | Create an OH_ImageEffect instance. It should be noted that the life cycle of the OH_ImageEffect instance pointed to by the return value * needs to be manually released by [OH_ImageEffect_Release](capi-image-effect-h.md#oh_imageeffect_release) |
 | [OH_EffectFilter *OH_ImageEffect_AddFilter(OH_ImageEffect *imageEffect, const char *filterName)](#oh_imageeffect_addfilter) | Create and add the OH_EffectFilter to the OH_ImageEffect |
 | [ImageEffect_ErrorCode OH_ImageEffect_AddFilterByFilter(OH_ImageEffect *imageEffect, OH_EffectFilter *filter)](#oh_imageeffect_addfilterbyfilter) | Add the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance pointer |
 | [OH_EffectFilter *OH_ImageEffect_InsertFilter(OH_ImageEffect *imageEffect, uint32_t index, const char *filterName)](#oh_imageeffect_insertfilter) | Create and add the OH_EffectFilter to the OH_ImageEffect by specified position |
@@ -38,13 +38,13 @@ Declares the functions for rendering image.
 | [ImageEffect_ErrorCode OH_ImageEffect_Configure(OH_ImageEffect *imageEffect, const char *key, const ImageEffect_Any *value)](#oh_imageeffect_configure) | Set configuration information to the OH_ImageEffect |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetOutputSurface(OH_ImageEffect *imageEffect, OHNativeWindow *nativeWindow)](#oh_imageeffect_setoutputsurface) | Set the Surface to the image effect, this interface must be called before |
 | [ImageEffect_ErrorCode OH_ImageEffect_GetInputSurface(OH_ImageEffect *imageEffect, OHNativeWindow **nativeWindow)](#oh_imageeffect_getinputsurface) | Get the input Surface from the image effect, this interface must be called after |
-| [ImageEffect_ErrorCode OH_ImageEffect_SetInputPixelmap(OH_ImageEffect *imageEffect, OH_PixelmapNative *pixelmap)](#oh_imageeffect_setinputpixelmap) | Set input pixelmap that contains the image information. It should be noted that the input pixel map will bedirectly rendered and modified if the output is not set |
+| [ImageEffect_ErrorCode OH_ImageEffect_SetInputPixelmap(OH_ImageEffect *imageEffect, OH_PixelmapNative *pixelmap)](#oh_imageeffect_setinputpixelmap) | Set input pixelmap that contains the image information. It should be noted that the input pixel map will be directly rendered and modified if the output is not set |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetOutputPixelmap(OH_ImageEffect *imageEffect, OH_PixelmapNative *pixelmap)](#oh_imageeffect_setoutputpixelmap) | Set output pixelmap that contains the image information |
-| [ImageEffect_ErrorCode OH_ImageEffect_SetInputNativeBuffer(OH_ImageEffect *imageEffect, OH_NativeBuffer *nativeBuffer)](#oh_imageeffect_setinputnativebuffer) | Set input NativeBuffer that contains the image information. It should be noted that the input NativeBufferwill be directly rendered and modified if the output is not set |
+| [ImageEffect_ErrorCode OH_ImageEffect_SetInputNativeBuffer(OH_ImageEffect *imageEffect, OH_NativeBuffer *nativeBuffer)](#oh_imageeffect_setinputnativebuffer) | Set input NativeBuffer that contains the image information. It should be noted that the input NativeBuffer will be directly rendered and modified if the output is not set |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetOutputNativeBuffer(OH_ImageEffect *imageEffect, OH_NativeBuffer *nativeBuffer)](#oh_imageeffect_setoutputnativebuffer) | Set output NativeBuffer that contains the image information |
-| [ImageEffect_ErrorCode OH_ImageEffect_SetInputUri(OH_ImageEffect *imageEffect, const char *uri)](#oh_imageeffect_setinputuri) | Set input URI of the image. It should be noted that the image resource will be directly rendered and modifiedif the output is not set |
+| [ImageEffect_ErrorCode OH_ImageEffect_SetInputUri(OH_ImageEffect *imageEffect, const char *uri)](#oh_imageeffect_setinputuri) | Set input URI of the image. It should be noted that the image resource will be directly rendered and modified if the output is not set |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetOutputUri(OH_ImageEffect *imageEffect, const char *uri)](#oh_imageeffect_setoutputuri) | Set output URI of the image |
-| [ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect, OH_PictureNative *picture)](#oh_imageeffect_setinputpicture) | Set input picture that contains the image information. It should be noted that the input picture will bedirectly rendered and modified if the output is not set |
+| [ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect, OH_PictureNative *picture)](#oh_imageeffect_setinputpicture) | Set input picture that contains the image information. It should be noted that the input picture will be directly rendered and modified if the output is not set |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetOutputPicture(OH_ImageEffect *imageEffect, OH_PictureNative *picture)](#oh_imageeffect_setoutputpicture) | Set output picture that contains the image information |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetInputTextureId(OH_ImageEffect *imageEffect, int32_t textureId, int32_t colorSpace)](#oh_imageeffect_setinputtextureid) | Sets the ID of the input texture that contains the image information. |
 | [ImageEffect_ErrorCode OH_ImageEffect_SetOutputTextureId(OH_ImageEffect *imageEffect, int32_t textureId)](#oh_imageeffect_setoutputtextureid) | Sets the ID of the output texture that contains the rendered image information. |
@@ -64,7 +64,7 @@ OH_ImageEffect *OH_ImageEffect_Create(const char *name)
 
 **Description**
 
-Create an OH_ImageEffect instance. It should be noted that the life cycle of the OH_ImageEffect instancepointed to by the return value * needs to be manually released by [OH_ImageEffect_Release](capi-image-effect-h.md#oh_imageeffect_release)
+Create an OH_ImageEffect instance. It should be noted that the life cycle of the OH_ImageEffect instance pointed to by the return value * needs to be manually released by [OH_ImageEffect_Release](capi-image-effect-h.md#oh_imageeffect_release)
 
 **System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
@@ -134,7 +134,7 @@ Add the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance po
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer |
 
 ### OH_ImageEffect_InsertFilter()
 
@@ -190,7 +190,7 @@ Insert the OH_EffectFilter to the OH_ImageEffect by the OH_EffectFilter instance
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer or the index is invalid value |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer or the index is invalid value |
 
 ### OH_ImageEffect_RemoveFilter()
 
@@ -244,7 +244,7 @@ Remove the filter of the specified position
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer or the index is invalid value |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer or the index is invalid value |
 
 ### OH_ImageEffect_ReplaceFilter()
 
@@ -300,7 +300,7 @@ Replace the OH_EffectFilter in the OH_ImageEffect by the OH_EffectFilter instanc
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer or the index is invalid value |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer or the index is invalid value |
 
 ### OH_ImageEffect_GetFilterCount()
 
@@ -381,7 +381,7 @@ Set configuration information to the OH_ImageEffect
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer.  {@link EFFECT_KEY_ERROR}, the key of the configuration parameter is invalid.  {@link EFFECT_PARAM_ERROR}, the value of the configuration parameter is invalid. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer.<br>{@link EFFECT_KEY_ERROR}, the key of the configuration parameter is invalid.<br>{@link EFFECT_PARAM_ERROR}, the value of the configuration parameter is invalid. |
 
 ### OH_ImageEffect_SetOutputSurface()
 
@@ -408,7 +408,7 @@ Set the Surface to the image effect, this interface must be called before
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_GetInputSurface()
 
@@ -435,7 +435,7 @@ Get the input Surface from the image effect, this interface must be called after
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetInputPixelmap()
 
@@ -445,7 +445,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPixelmap(OH_ImageEffect *imageEffec
 
 **Description**
 
-Set input pixelmap that contains the image information. It should be noted that the input pixel map will bedirectly rendered and modified if the output is not set
+Set input pixelmap that contains the image information. It should be noted that the input pixel map will be directly rendered and modified if the output is not set
 
 **System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
@@ -462,7 +462,7 @@ Set input pixelmap that contains the image information. It should be noted that 
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetOutputPixelmap()
 
@@ -489,7 +489,7 @@ Set output pixelmap that contains the image information
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetInputNativeBuffer()
 
@@ -499,7 +499,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputNativeBuffer(OH_ImageEffect *imageE
 
 **Description**
 
-Set input NativeBuffer that contains the image information. It should be noted that the input NativeBufferwill be directly rendered and modified if the output is not set
+Set input NativeBuffer that contains the image information. It should be noted that the input NativeBuffer will be directly rendered and modified if the output is not set
 
 **System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
@@ -516,7 +516,7 @@ Set input NativeBuffer that contains the image information. It should be noted t
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetOutputNativeBuffer()
 
@@ -543,7 +543,7 @@ Set output NativeBuffer that contains the image information
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetInputUri()
 
@@ -553,7 +553,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputUri(OH_ImageEffect *imageEffect, co
 
 **Description**
 
-Set input URI of the image. It should be noted that the image resource will be directly rendered and modifiedif the output is not set
+Set input URI of the image. It should be noted that the image resource will be directly rendered and modified if the output is not set
 
 **System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
@@ -570,7 +570,7 @@ Set input URI of the image. It should be noted that the image resource will be d
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetOutputUri()
 
@@ -597,7 +597,7 @@ Set output URI of the image
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetInputPicture()
 
@@ -607,7 +607,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect
 
 **Description**
 
-Set input picture that contains the image information. It should be noted that the input picture will bedirectly rendered and modified if the output is not set
+Set input picture that contains the image information. It should be noted that the input picture will be directly rendered and modified if the output is not set
 
 **System capability**: SystemCapability.Multimedia.ImageEffect.Core
 
@@ -624,7 +624,7 @@ Set input picture that contains the image information. It should be noted that t
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetOutputPicture()
 
@@ -651,7 +651,7 @@ Set output picture that contains the image information
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_SetInputTextureId()
 
@@ -672,7 +672,7 @@ Sets the ID of the input texture that contains the image information.
 | Parameter | Description |
 | -- | -- |
 | { | OH_ImageEffect } imageEffect Pointer to an instance of the OH_ImageEffect struct. |
-| int32_t textureId | ID of the texture that contains the image information. This ID must be valid and have beenbound bound to a texture of a GL_TEXTURE_2D type. |
+| int32_t textureId | ID of the texture that contains the image information. This ID must be valid and have been bound bound to a texture of a GL_TEXTURE_2D type. |
 | int32_t colorSpace | Color space of the image. |
 
 **Returns**:
@@ -700,7 +700,7 @@ Sets the ID of the output texture that contains the rendered image information.
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Pointer to an instance of the OH_ImageEffect struct. |
-| int32_t textureId | ID of the texture that contains the rendered image information. This ID must be valid. Ifit it is not bound to a texture, it will automatically be bound to a GL_TEXTURE_2D type. If the texture isalready already bound and the size is inappropriate, the rendered result may be cropped or partially filledinto into this texture. |
+| int32_t textureId | ID of the texture that contains the rendered image information. This ID must be valid. If it it is not bound to a texture, it will automatically be bound to a GL_TEXTURE_2D type. If the texture is already already bound and the size is inappropriate, the rendered result may be cropped or partially filled into into this texture. |
 
 **Returns**:
 
@@ -732,7 +732,7 @@ Render the filter effects that can be a single filter or a chain of filters
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer.  {@link EFFECT_INPUT_OUTPUT_NOT_SUPPORTED}, the data types of the input and output images  to be processed are different.  {@link EFFECT_COLOR_SPACE_NOT_MATCH}, the color spaces of the input and output images are different.  {@link EFFECT_ALLOCATE_MEMORY_FAILED}, the buffer fails to be allocated. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer.<br>{@link EFFECT_INPUT_OUTPUT_NOT_SUPPORTED}, the data types of the input and output images<br>to be processed are different.<br>{@link EFFECT_COLOR_SPACE_NOT_MATCH}, the color spaces of the input and output images are different.<br>{@link EFFECT_ALLOCATE_MEMORY_FAILED}, the buffer fails to be allocated. |
 
 ### OH_ImageEffect_Stop()
 
@@ -758,7 +758,7 @@ Stop rendering the filter effects for next image frame data
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_Release()
 
@@ -784,7 +784,7 @@ Clear the internal resources of the OH_ImageEffect and destroy the OH_ImageEffec
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_Save()
 
@@ -805,13 +805,13 @@ Convert the OH_ImageEffect and the information of the filters in OH_ImageEffect 
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | Encapsulate OH_ImageEffect structure instance pointer |
-| char **info | Indicates the serialized information that is obtained by converting the information of the filters inOH_ImageEffect to JSON string |
+| char **info | Indicates the serialized information that is obtained by converting the information of the filters in OH_ImageEffect to JSON string |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}  {@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
+| ImageEffect_ErrorCode | Returns EFFECT_SUCCESS if the execution is successful, otherwise returns a specific error code, refer to  {@link ImageEffect_ErrorCode}<br>{@link EFFECT_ERROR_PARAM_INVALID}, the input parameter is a null pointer. |
 
 ### OH_ImageEffect_Restore()
 
@@ -831,7 +831,7 @@ Create an OH_ImageEffect instance by deserializing the JSON string info
 
 | Parameter | Description |
 | -- | -- |
-| const char *info | Indicates the serialized information that is obtained by converting the information of the filters inOH_ImageEffect to JSON string |
+| const char *info | Indicates the serialized information that is obtained by converting the information of the filters in OH_ImageEffect to JSON string |
 
 **Returns**:
 

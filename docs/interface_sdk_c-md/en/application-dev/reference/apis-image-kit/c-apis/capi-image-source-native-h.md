@@ -18,11 +18,11 @@ The file declares the APIs for image decoding.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) | - | The struct describes the image source, which is encapsulated at the native layer and is used to create imagedata. The struct cannot be directly operated. Instead, functions must be called to create and release the struct andoperate the fields in the struct. |
-| [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) | - | The OH_ImageSource_Info struct describes the image source information encapsulated at the native layer. Thestruct cannot be directly operated. Instead, functions must be called to create and release the struct and operatethe fields in the struct. |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) | - | The struct describes the decoding options for pictures. It is obtained by calling[OH_DecodingOptionsForPicture_Create](capi-image-source-native-h.md#oh_decodingoptionsforpicture_create). |
-| [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) | - | The OH_DecodingOptions struct describes the decoding options encapsulated at the native layer. The struct isused to set decoding options and is passed in as an input parameter for creating a PixelMap. For details, see [OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap). |
-| [OH_ImageRawData](capi-image-nativemodule-oh-imagerawdata.md) | - | Defines raw data in an image.It is used in [OH_ImageSourceNative_CreateImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_createimagerawdata). |
+| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) | - | The struct describes the image source, which is encapsulated at the native layer and is used to create image data. The struct cannot be directly operated. Instead, functions must be called to create and release the struct and operate the fields in the struct. |
+| [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) | - | The OH_ImageSource_Info struct describes the image source information encapsulated at the native layer. The struct cannot be directly operated. Instead, functions must be called to create and release the struct and operate the fields in the struct. |
+| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) | - | The struct describes the decoding options for pictures. It is obtained by calling [OH_DecodingOptionsForPicture_Create](capi-image-source-native-h.md#oh_decodingoptionsforpicture_create). |
+| [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) | - | The OH_DecodingOptions struct describes the decoding options encapsulated at the native layer. The struct is used to set decoding options and is passed in as an input parameter for creating a PixelMap. For details, see [OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap). |
+| [OH_ImageRawData](capi-image-nativemodule-oh-imagerawdata.md) | - | Defines raw data in an image. It is used in [OH_ImageSourceNative_CreateImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_createimagerawdata). |
 
 ### Enum
 
@@ -30,8 +30,7 @@ The file declares the APIs for image decoding.
 | -- | -- | -- |
 | [IMAGE_DYNAMIC_RANGE](#image_dynamic_range) | IMAGE_DYNAMIC_RANGE | Enumerates the desired dynamic range for decoding. |
 | [IMAGE_ALLOCATOR_TYPE](#image_allocator_type) | IMAGE_ALLOCATOR_TYPE | Enumerates the types of allocators used to allocate PixelMap memory. |
-| [OH_ImageSource_SVGResourceLimitLevel](#oh_imagesource_svgresourcelimitlevel) | OH_ImageSource_SVGResourceLimitLevel | Indicates the enumeration of SVG resource restriction levels.Higher levels allow fewer resources to be used when parsing and rendering SVG images.System resource limits are enforced regardless of the level specified. |
-| [Image_CropAndScaleStrategy](#image_cropandscalestrategy) | Image_CropAndScaleStrategy | Enumerates the cropping and scaling strategies when **desiredSize** and **desiredRegion** are both specified.If the **ImageCropAndScaleStrategy** parameter is not specified in [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) and both**desiredRegion** and **desiredSize** are set, the final decoding result may vary slightly due to differences indecoding algorithms used for different image formats.For example, if the original image size is 200x200, and you specify **desiredSize:{width: 150, height: 150},desiredRegion:{x: 0, y: 0, width: 100, height: 100}**, the expectation is to decode the top-left 1/4 region of theoriginal image and then scale the pixelMap size to 150x150.For JPEG and WebP images (as well as some DNG images that decode a JPEG preview within the file and therefore aretreated as JPEG format), the system first performs downsampling. For instance, it might downsample by 7/8 and thencrop the region based on a 175x175 image size. As a result, the final cropped region will be slightly larger thanthe top-left 1/4 of the original image.For SVG images, which are vector-based and can be scaled without losing clarity, the system scales the image basedon the ratio of **desiredSize** to the original image size and then crops the region. This results in a decodedregion that may differ from the exact 1/4 region of the original image.To ensure consistent results when both **desiredRegion** and **desiredSize** are set, set the **ImageCropAndScaleStrategyparameter to **CROP_FIRST**. |
+| [Image_CropAndScaleStrategy](#image_cropandscalestrategy) | Image_CropAndScaleStrategy | Enumerates the cropping and scaling strategies when **desiredSize** and **desiredRegion** are both specified.<br> If the **ImageCropAndScaleStrategy** parameter is not specified in [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) and both **desiredRegion** and **desiredSize** are set, the final decoding result may vary slightly due to differences in decoding algorithms used for different image formats.<br> For example, if the original image size is 200x200, and you specify **desiredSize:{width: 150, height: 150},<br>desiredRegion:{x: 0, y: 0, width: 100, height: 100}**, the expectation is to decode the top-left 1/4 region of the original image and then scale the pixelMap size to 150x150.<br> For JPEG and WebP images (as well as some DNG images that decode a JPEG preview within the file and therefore are treated as JPEG format), the system first performs downsampling. For instance, it might downsample by 7/8 and then crop the region based on a 175x175 image size. As a result, the final cropped region will be slightly larger than the top-left 1/4 of the original image.<br> For SVG images, which are vector-based and can be scaled without losing clarity, the system scales the image based on the ratio of **desiredSize** to the original image size and then crops the region. This results in a decoded region that may differ from the exact 1/4 region of the original image.<br> To ensure consistent results when both **desiredRegion** and **desiredSize** are set, set the **ImageCropAndScaleStrategy**<br>parameter to **CROP_FIRST**. |
 
 ### Function
 
@@ -52,8 +51,8 @@ The file declares the APIs for image decoding.
 | [Image_ErrorCode OH_DecodingOptions_SetRotate(OH_DecodingOptions *options, float rotate)](#oh_decodingoptions_setrotate) | Sets the rotation angle. |
 | [Image_ErrorCode OH_DecodingOptions_GetDesiredSize(OH_DecodingOptions *options, Image_Size *desiredSize)](#oh_decodingoptions_getdesiredsize) | Obtains the desired output size. |
 | [Image_ErrorCode OH_DecodingOptions_SetDesiredSize(OH_DecodingOptions *options, Image_Size *desiredSize)](#oh_decodingoptions_setdesiredsize) | Sets the desired output size. |
-| [Image_ErrorCode OH_DecodingOptions_GetDesiredRegion(OH_DecodingOptions *options, Image_Region *desiredRegion)](#oh_decodingoptions_getdesiredregion) | Obtains the region to decode.Since the corresponding **SetDesiredRegion** function cannot meet the regional decoding requirements, starting fromAPI version 19, you are advised to use [OH_DecodingOptions_GetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_getcropregion) instead. |
-| [Image_ErrorCode OH_DecodingOptions_SetDesiredRegion(OH_DecodingOptions *options, Image_Region *desiredRegion)](#oh_decodingoptions_setdesiredregion) | Sets the region to decode.The actual decoding will process the entire original image, without any regional decoding effect. Starting from APIversion 19, you are advised to use [OH_DecodingOptions_SetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_setcropregion) instead. |
+| [Image_ErrorCode OH_DecodingOptions_GetDesiredRegion(OH_DecodingOptions *options, Image_Region *desiredRegion)](#oh_decodingoptions_getdesiredregion) | Obtains the region to decode. Since the corresponding **SetDesiredRegion** function cannot meet the regional decoding requirements, starting from API version 19, you are advised to use [OH_DecodingOptions_GetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_getcropregion) instead. |
+| [Image_ErrorCode OH_DecodingOptions_SetDesiredRegion(OH_DecodingOptions *options, Image_Region *desiredRegion)](#oh_decodingoptions_setdesiredregion) | Sets the region to decode. The actual decoding will process the entire original image, without any regional decoding effect. Starting from API version 19, you are advised to use [OH_DecodingOptions_SetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_setcropregion) instead. |
 | [Image_ErrorCode OH_DecodingOptions_GetDesiredDynamicRange(OH_DecodingOptions *options, int32_t *desiredDynamicRange)](#oh_decodingoptions_getdesireddynamicrange) | Obtains the desired dynamic range configured during decoding. |
 | [Image_ErrorCode OH_DecodingOptions_SetDesiredDynamicRange(OH_DecodingOptions *options, int32_t desiredDynamicRange)](#oh_decodingoptions_setdesireddynamicrange) | Sets the desired dynamic range during decoding. |
 | [Image_ErrorCode OH_DecodingOptions_GetCropAndScaleStrategy(OH_DecodingOptions *options, int32_t *cropAndScaleStrategy)](#oh_decodingoptions_getcropandscalestrategy) | Obtains the cropping and scaling strategy used during decoding. |
@@ -65,14 +64,12 @@ The file declares the APIs for image decoding.
 | [Image_ErrorCode OH_DecodingOptions_Release(OH_DecodingOptions *options)](#oh_decodingoptions_release) | Releases the pointer to an OH_DecodingOptions object. |
 | [Image_ErrorCode OH_ImageSourceNative_CreateFromUri(char *uri, size_t uriSize, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromuri) | Creates the pointer to an OH_ImageSourceNative object based on a URI. |
 | [Image_ErrorCode OH_ImageSourceNative_CreateFromFd(int32_t fd, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromfd) | Creates the pointer to an OH_ImageSourceNative object based on a file descriptor. |
-| [Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSize, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromdata) | Creates the pointer to an OH_ImageSourceNative object based on buffer data.The buffer data must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create aPixelMap based on the pixel buffer data, call {@link OH_PixelmapNative_CreatePixelmap}. |
-| [Image_ErrorCode OH_ImageSourceNative_CreateFromDataWithUserBuffer(uint8_t *data, size_t datalength, OH_ImageSourceNative **imageSource)](#oh_imagesourcenative_createfromdatawithuserbuffer) | Creates an image source from data buffer. The data buffer is directly accessed by the image source object,and therefore the data buffer must remain accessible within the lifecycle of the image source object. |
-| [Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFile, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromrawfile) | Creates the pointer to an OH_ImageSourceNative object by using the raw file descriptor of an image resourcefile. |
-| [Image_ErrorCode OH_ImageSourceNative_SetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel level)](#oh_imagesourcenative_setsvgresourcelimitlevel) | Sets the SVG resource limit level for the image source.This only takes effect for SVG format images. For non-SVG images, this function has no effect.Must be called before [OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap) to ensure the limittakes effect on both DOM parsing and rendering stages. |
-| [Image_ErrorCode OH_ImageSourceNative_GetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel *level)](#oh_imagesourcenative_getsvgresourcelimitlevel) | Gets the SVG resource limit level of the image source. |
+| [Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSize, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromdata) | Creates the pointer to an OH_ImageSourceNative object based on buffer data. The buffer data must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call {@link OH_PixelmapNative_CreatePixelmap}. |
+| [Image_ErrorCode OH_ImageSourceNative_CreateFromDataWithUserBuffer(uint8_t *data, size_t datalength, OH_ImageSourceNative **imageSource)](#oh_imagesourcenative_createfromdatawithuserbuffer) | Creates an image source from data buffer. The data buffer is directly accessed by the image source object, and therefore the data buffer must remain accessible within the lifecycle of the image source object. |
+| [Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFile, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromrawfile) | Creates the pointer to an OH_ImageSourceNative object by using the raw file descriptor of an image resource file. |
 | [Image_ErrorCode OH_ImageSourceNative_CreatePixelmap(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmap) | Creates the pointer to an OH_PixelmapNative object based on decoding options. |
-| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSourceNative *source, OH_DecodingOptions *options, IMAGE_ALLOCATOR_TYPE allocator, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmapusingallocator) | Creates an OH_PixelmapNative object based on decoding options and memory type, where **allocatorTypespecifies the memory type of the PixelMap.By default, the system selects an appropriate memory type based on the image type, image size, and platformcapability. When processing the returned PixelMap object, consider the impact of stride. |
-| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative *resVecPixMap[], size_t size)](#oh_imagesourcenative_createpixelmaplist) | Creates an array of OH_PixelmapNative objects based on decoding options.This function decodes all frames at once. If the number of frames is high or the size of individual frames is large,it can lead to significant memory usage. In these cases, you are advised to use the **Image** component fordisplaying animations. The **Image** component decodes frames one by one, which uses less memory than this function. |
+| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSourceNative *source, OH_DecodingOptions *options, IMAGE_ALLOCATOR_TYPE allocator, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmapusingallocator) | Creates an OH_PixelmapNative object based on decoding options and memory type, where **allocatorType**<br>specifies the memory type of the PixelMap. By default, the system selects an appropriate memory type based on the image type, image size, and platform capability. When processing the returned PixelMap object, consider the impact of stride. |
+| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative *resVecPixMap[], size_t size)](#oh_imagesourcenative_createpixelmaplist) | Creates an array of OH_PixelmapNative objects based on decoding options. This function decodes all frames at once. If the number of frames is high or the size of individual frames is large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this function. |
 | [Image_ErrorCode OH_ImageSourceNative_CreatePicture(OH_ImageSourceNative *source, OH_DecodingOptionsForPicture *options, OH_PictureNative **picture)](#oh_imagesourcenative_createpicture) | Creates the pointer to an OH_PictureNative object based on decoding options. |
 | [Image_ErrorCode OH_ImageSourceNative_CreatePictureAtIndex(OH_ImageSourceNative *source, uint32_t index, OH_PictureNative **picture)](#oh_imagesourcenative_createpictureatindex) | Creates the pointer to an OH_PictureNative object at the specified index. |
 | [Image_ErrorCode OH_ImageSourceNative_GetDelayTimeList(OH_ImageSourceNative *source, int32_t *delayTimeList, size_t size)](#oh_imagesourcenative_getdelaytimelist) | Obtains the image delay time list. |
@@ -83,14 +80,8 @@ The file declares the APIs for image decoding.
 | [Image_ErrorCode OH_ImageSourceNative_GetFrameCount(OH_ImageSourceNative *source, uint32_t *frameCount)](#oh_imagesourcenative_getframecount) | Obtains the number of image frames. |
 | [Image_ErrorCode OH_ImageSourceNative_Release(OH_ImageSourceNative *source)](#oh_imagesourcenative_release) | Releases the pointer to an OH_ImageSourceNative object. |
 | [Image_ErrorCode OH_DecodingOptionsForPicture_Create(OH_DecodingOptionsForPicture **options)](#oh_decodingoptionsforpicture_create) | Creates the pointer to an OH_DecodingOptionsForPicture object. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredAuxiliaryPictures(OH_DecodingOptionsForPicture *options, Image_AuxiliaryPictureType **desiredAuxiliaryPictures, size_t *length)](#oh_decodingoptionsforpicture_getdesiredauxiliarypictures) | Obtains desired auxiliary pictures in the decoding options (auxiliary pictures contained in **pictureexpected to be decoded.) |
+| [Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredAuxiliaryPictures(OH_DecodingOptionsForPicture *options, Image_AuxiliaryPictureType **desiredAuxiliaryPictures, size_t *length)](#oh_decodingoptionsforpicture_getdesiredauxiliarypictures) | Obtains desired auxiliary pictures in the decoding options (auxiliary pictures contained in **picture**<br>expected to be decoded.) |
 | [Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredAuxiliaryPictures(OH_DecodingOptionsForPicture *options, Image_AuxiliaryPictureType *desiredAuxiliaryPictures, size_t length)](#oh_decodingoptionsforpicture_setdesiredauxiliarypictures) | Sets desired auxiliary pictures in the decoding options. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool *needsDecodeDfxData)](#oh_decodingoptionsforpicture_getneedsdecodedfxdata) | Obtains the **needsDecodeDfxData** parameter in the decoding options. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool needsDecodeDfxData)](#oh_decodingoptionsforpicture_setneedsdecodedfxdata) | Sets the **needsDecodeDfxData** parameter in the decoding options. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size *desiredSizeForMainPixelmap)](#oh_decodingoptionsforpicture_getdesiredsizeformainpixelmap) | Gets the desiredSizeForMainPixelMap number for DecodingOptionsForPicture struct. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size desiredSizeForMainPixelmap)](#oh_decodingoptionsforpicture_setdesiredsizeformainpixelmap) | Sets the desiredSizeForMainPixelMap number for DecodingOptionsForPicture struct. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT *desiredPixelFormat)](#oh_decodingoptionsforpicture_getdesiredpixelformat) | Get pixelFormat number for DecodingOptionsForPicture struct. |
-| [Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT desiredPixelFormat)](#oh_decodingoptionsforpicture_setdesiredpixelformat) | Set pixelFormat number for DecodingOptionsForPicture struct. |
 | [Image_ErrorCode OH_DecodingOptionsForPicture_Release(OH_DecodingOptionsForPicture *options)](#oh_decodingoptionsforpicture_release) | Releases the pointer to an OH_DecodingOptionsForPicture object. |
 | [Image_ErrorCode OH_ImageSourceNative_GetSupportedFormats(Image_MimeType** supportedFormats, size_t* length)](#oh_imagesourcenative_getsupportedformats) | Obtains the supported image formats that can be decoded. |
 | [Image_ErrorCode OH_ImageSourceNative_GetImagePropertyShort(OH_ImageSourceNative *source, Image_String *key, uint16_t *value)](#oh_imagesourcenative_getimagepropertyshort) | Obtains the value of an image property as short int type. |
@@ -107,8 +98,7 @@ The file declares the APIs for image decoding.
 | [Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyIntArray(OH_ImageSourceNative *source, Image_String *key, int32_t *value, size_t size)](#oh_imagesourcenative_modifyimagepropertyintarray) | Modify the value of an image property as int array. |
 | [Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyDoubleArray(OH_ImageSourceNative *source, Image_String *key, double *value, size_t size)](#oh_imagesourcenative_modifyimagepropertydoublearray) | Modify the value of an image property as double array. |
 | [Image_ErrorCode OH_ImageSourceNative_ModifyImagePropertyBlob(OH_ImageSourceNative *source, Image_String *key, void *value, size_t size)](#oh_imagesourcenative_modifyimagepropertyblob) | Modify the value of an image property as blob. |
-| [Image_ErrorCode OH_ImageSourceNative_ReadImageMetadataByType(OH_ImageSourceNative *source, uint32_t index, Image_MetadataType *metadataTypes, size_t typeCount, OH_PictureMetadata **outMetadataArray, size_t *metadataCount)](#oh_imagesourcenative_readimagemetadatabytype) | Read metadata of the image source, use metadatatype to specify metadata of interest. If metadataTypeis not specified, all supported metadata will be returned. |
-| [Image_ErrorCode OH_ImageSourceNative_CreateImageRawData(const OH_ImageSourceNative *source, OH_ImageRawData **rawData)](#oh_imagesourcenative_createimagerawdata) | Obtains rawData object from an image.The rawData object usually occupies a large amount of memory because it containsraw data from the camera. When the rawData object and the data it contains are not used, call the[OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata) method to destroy them in a timely manner. |
+| [Image_ErrorCode OH_ImageSourceNative_CreateImageRawData(const OH_ImageSourceNative *source, OH_ImageRawData **rawData)](#oh_imagesourcenative_createimagerawdata) | Obtains rawData object from an image. The rawData object usually occupies a large amount of memory because it contains raw data from the camera. When the rawData object and the data it contains are not used, call the [OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata) method to destroy them in a timely manner. |
 | [Image_ErrorCode OH_ImageSourceNative_GetBufferFromRawData(const OH_ImageRawData *rawData, uint8_t **data, size_t *length)](#oh_imagesourcenative_getbufferfromrawdata) | Gets binary data from the rawData object. |
 | [Image_ErrorCode OH_ImageSourceNative_GetBitsPerPixelFromRawData(const OH_ImageRawData *rawData, uint8_t *bitsPerPixel)](#oh_imagesourcenative_getbitsperpixelfromrawdata) | Gets number of bits that each pixel actually occupies in the buffer data. |
 | [Image_ErrorCode OH_ImageSourceNative_DestroyImageRawData(OH_ImageRawData *rawData)](#oh_imagesourcenative_destroyimagerawdata) | Destroys the rawData object. |
@@ -151,25 +141,6 @@ Enumerates the types of allocators used to allocate PixelMap memory.
 | IMAGE_ALLOCATOR_TYPE_DMA = 1 | Use DMA buffer to create the PixelMap. |
 | IMAGE_ALLOCATOR_TYPE_SHARE_MEMORY = 2 | Use share memory to create the PixelMap. |
 
-### OH_ImageSource_SVGResourceLimitLevel
-
-```c
-enum OH_ImageSource_SVGResourceLimitLevel
-```
-
-**Description**
-
-Indicates the enumeration of SVG resource restriction levels.Higher levels allow fewer resources to be used when parsing and rendering SVG images.System resource limits are enforced regardless of the level specified.
-
-**Since**: 26.1.0
-
-| Enum item | Description |
-| -- | -- |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_NONE = 0 |  |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_LOW = 1 |  |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_MEDIUM = 2 |  |
-| OH_IMAGESOURCE_SVG_RESOURCE_LIMIT_LEVEL_HIGH = 3 |  |
-
 ### Image_CropAndScaleStrategy
 
 ```c
@@ -178,7 +149,7 @@ enum Image_CropAndScaleStrategy
 
 **Description**
 
-Enumerates the cropping and scaling strategies when **desiredSize** and **desiredRegion** are both specified.If the **ImageCropAndScaleStrategy** parameter is not specified in [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) and both**desiredRegion** and **desiredSize** are set, the final decoding result may vary slightly due to differences indecoding algorithms used for different image formats.For example, if the original image size is 200x200, and you specify **desiredSize:{width: 150, height: 150},desiredRegion:{x: 0, y: 0, width: 100, height: 100}**, the expectation is to decode the top-left 1/4 region of theoriginal image and then scale the pixelMap size to 150x150.For JPEG and WebP images (as well as some DNG images that decode a JPEG preview within the file and therefore aretreated as JPEG format), the system first performs downsampling. For instance, it might downsample by 7/8 and thencrop the region based on a 175x175 image size. As a result, the final cropped region will be slightly larger thanthe top-left 1/4 of the original image.For SVG images, which are vector-based and can be scaled without losing clarity, the system scales the image basedon the ratio of **desiredSize** to the original image size and then crops the region. This results in a decodedregion that may differ from the exact 1/4 region of the original image.To ensure consistent results when both **desiredRegion** and **desiredSize** are set, set the **ImageCropAndScaleStrategyparameter to **CROP_FIRST**.
+Enumerates the cropping and scaling strategies when **desiredSize** and **desiredRegion** are both specified.<br> If the **ImageCropAndScaleStrategy** parameter is not specified in [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) and both **desiredRegion** and **desiredSize** are set, the final decoding result may vary slightly due to differences in decoding algorithms used for different image formats.<br> For example, if the original image size is 200x200, and you specify **desiredSize:{width: 150, height: 150},<br>desiredRegion:{x: 0, y: 0, width: 100, height: 100}**, the expectation is to decode the top-left 1/4 region of the original image and then scale the pixelMap size to 150x150.<br> For JPEG and WebP images (as well as some DNG images that decode a JPEG preview within the file and therefore are treated as JPEG format), the system first performs downsampling. For instance, it might downsample by 7/8 and then crop the region based on a 175x175 image size. As a result, the final cropped region will be slightly larger than the top-left 1/4 of the original image.<br> For SVG images, which are vector-based and can be scaled without losing clarity, the system scales the image based on the ratio of **desiredSize** to the original image size and then crops the region. This results in a decoded region that may differ from the exact 1/4 region of the original image.<br> To ensure consistent results when both **desiredRegion** and **desiredSize** are set, set the **ImageCropAndScaleStrategy**<br>parameter to **CROP_FIRST**.
 
 **Since**: 18
 
@@ -212,7 +183,7 @@ Creates the pointer to an OH_ImageSource_Info object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_BAD_PARAMETER} info is nullptr.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_BAD_PARAMETER} info is nullptr.</li>          </ul> |
 
 ### OH_ImageSourceInfo_GetWidth()
 
@@ -237,7 +208,7 @@ Obtains the image width.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or width is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or width is nullptr. |
 
 ### OH_ImageSourceInfo_GetHeight()
 
@@ -262,7 +233,7 @@ Obtains the image height.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or height is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or height is nullptr. |
 
 ### OH_ImageSourceInfo_GetDynamicRange()
 
@@ -287,7 +258,7 @@ Obtains the dynamic range of an image.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or isHdr is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or isHdr is nullptr. |
 
 ### OH_ImageSourceInfo_GetMimeType()
 
@@ -312,7 +283,7 @@ Obtains the MIME type of an image source.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} info is nullptr, or mimeType is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} info is nullptr, or mimeType is nullptr. |
 
 ### OH_ImageSourceInfo_Release()
 
@@ -336,7 +307,7 @@ Releases the pointer to an OH_ImageSource_Info object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
 
 ### OH_DecodingOptions_Create()
 
@@ -360,7 +331,7 @@ Creates the pointer to an OH_DecodingOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_BAD_PARAMETER} options is nullptr.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_BAD_PARAMETER} options is nullptr.</li>          </ul> |
 
 ### OH_DecodingOptions_GetPixelFormat()
 
@@ -385,7 +356,7 @@ Obtains the pixel format.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or pixelFormat is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or pixelFormat is nullptr. |
 
 ### OH_DecodingOptions_SetPixelFormat()
 
@@ -410,7 +381,7 @@ Sets the pixel format.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_DecodingOptions_GetIndex()
 
@@ -435,7 +406,7 @@ Obtains the index of an image.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or index is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or index is nullptr. |
 
 ### OH_DecodingOptions_SetIndex()
 
@@ -460,7 +431,7 @@ Sets the index for an image.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_DecodingOptions_GetRotate()
 
@@ -485,7 +456,7 @@ Obtains the rotation degree.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or rotate is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or rotate is nullptr. |
 
 ### OH_DecodingOptions_SetRotate()
 
@@ -510,7 +481,7 @@ Sets the rotation angle.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_DecodingOptions_GetDesiredSize()
 
@@ -535,7 +506,7 @@ Obtains the desired output size.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredSize is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredSize is nullptr. |
 
 ### OH_DecodingOptions_SetDesiredSize()
 
@@ -560,7 +531,7 @@ Sets the desired output size.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredSize is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredSize is nullptr. |
 
 ### OH_DecodingOptions_GetDesiredRegion()
 
@@ -570,7 +541,7 @@ Image_ErrorCode OH_DecodingOptions_GetDesiredRegion(OH_DecodingOptions *options,
 
 **Description**
 
-Obtains the region to decode.Since the corresponding **SetDesiredRegion** function cannot meet the regional decoding requirements, starting fromAPI version 19, you are advised to use [OH_DecodingOptions_GetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_getcropregion) instead.
+Obtains the region to decode. Since the corresponding **SetDesiredRegion** function cannot meet the regional decoding requirements, starting from API version 19, you are advised to use [OH_DecodingOptions_GetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_getcropregion) instead.
 
 **Since**: 12
 
@@ -585,7 +556,7 @@ Obtains the region to decode.Since the corresponding **SetDesiredRegion** functi
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredRegion is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredRegion is nullptr. |
 
 ### OH_DecodingOptions_SetDesiredRegion()
 
@@ -595,7 +566,7 @@ Image_ErrorCode OH_DecodingOptions_SetDesiredRegion(OH_DecodingOptions *options,
 
 **Description**
 
-Sets the region to decode.The actual decoding will process the entire original image, without any regional decoding effect. Starting from APIversion 19, you are advised to use [OH_DecodingOptions_SetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_setcropregion) instead.
+Sets the region to decode. The actual decoding will process the entire original image, without any regional decoding effect. Starting from API version 19, you are advised to use [OH_DecodingOptions_SetCropRegion](capi-image-source-native-h.md#oh_decodingoptions_setcropregion) instead.
 
 **Since**: 12
 
@@ -610,7 +581,7 @@ Sets the region to decode.The actual decoding will process the entire original i
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options or desiredRegion is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options or desiredRegion is nullptr. |
 
 ### OH_DecodingOptions_GetDesiredDynamicRange()
 
@@ -629,13 +600,13 @@ Obtains the desired dynamic range configured during decoding.
 | Parameter | Description |
 | -- | -- |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | Pointer to an OH_DecodingOptions object. |
-| int32_t *desiredDynamicRange | Pointer to the desired dynamic range. For details about the available options, see[IMAGE_DYNAMIC_RANGE](capi-image-source-native-h.md#image_dynamic_range). |
+| int32_t *desiredDynamicRange | Pointer to the desired dynamic range. For details about the available options, see [IMAGE_DYNAMIC_RANGE](capi-image-source-native-h.md#image_dynamic_range). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredDynamicRange is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredDynamicRange is nullptr. |
 
 ### OH_DecodingOptions_SetDesiredDynamicRange()
 
@@ -654,13 +625,13 @@ Sets the desired dynamic range during decoding.
 | Parameter | Description |
 | -- | -- |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | Pointer to an OH_DecodingOptions object. |
-| int32_t desiredDynamicRange | Desired dynamic range. For details about the available options, see[IMAGE_DYNAMIC_RANGE](capi-image-source-native-h.md#image_dynamic_range). |
+| int32_t desiredDynamicRange | Desired dynamic range. For details about the available options, see [IMAGE_DYNAMIC_RANGE](capi-image-source-native-h.md#image_dynamic_range). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_DecodingOptions_GetCropAndScaleStrategy()
 
@@ -679,13 +650,13 @@ Obtains the cropping and scaling strategy used during decoding.
 | Parameter | Description |
 | -- | -- |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | Pointer to an OH_DecodingOptions object. |
-| int32_t *cropAndScaleStrategy | Pointer to the cropping and scaling strategy that is executed when **desiredSize** and**desiredRegion** are both specified. |
+| int32_t *cropAndScaleStrategy | Pointer to the cropping and scaling strategy that is executed when **desiredSize** and **desiredRegion** are both specified. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS}: The execution is successful.       <br>{@link IMAGE_BAD_PARAMETER}: options or cropAndScaleStrategy is a null pointer. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS}: The execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER}: options or cropAndScaleStrategy is a null pointer. |
 
 ### OH_DecodingOptions_SetCropAndScaleStrategy()
 
@@ -704,13 +675,13 @@ Sets the cropping and scaling strategy used during decoding.
 | Parameter | Description |
 | -- | -- |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | Pointer to an OH_DecodingOptions object. |
-| int32_t cropAndScaleStrategy | Cropping and scaling strategy that is executed when **desiredSize** and **desiredRegionare both specified. |
+| int32_t cropAndScaleStrategy | Cropping and scaling strategy that is executed when **desiredSize** and **desiredRegion**<br>are both specified. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} The execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is a null pointer or cropAndScaleStrategy is not in the range of Image_CropAndScaleStrategy. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} The execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is a null pointer or cropAndScaleStrategy is not in the range of Image_CropAndScaleStrategy. |
 
 ### OH_DecodingOptions_SetDesiredColorSpace()
 
@@ -735,7 +706,7 @@ Sets the desired color space for the decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options is a null pointer or colorSpace is not supported. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options is a null pointer or colorSpace is not supported. |
 
 ### OH_DecodingOptions_GetDesiredColorSpace()
 
@@ -760,7 +731,7 @@ Obtains the color space set in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options or colorSpace is null pointer. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options or colorSpace is null pointer. |
 
 ### OH_DecodingOptions_SetCropRegion()
 
@@ -785,7 +756,7 @@ Sets the cropping region in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options or cropRegion is null pointer. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options or cropRegion is null pointer. |
 
 ### OH_DecodingOptions_GetCropRegion()
 
@@ -810,7 +781,7 @@ Obtains the cropping region in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options or cropRegion is null pointer. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if options or cropRegion is null pointer. |
 
 ### OH_DecodingOptions_Release()
 
@@ -834,7 +805,7 @@ Releases the pointer to an OH_DecodingOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} if options is a null pointer. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} if options is a null pointer. |
 
 ### OH_ImageSourceNative_CreateFromUri()
 
@@ -852,7 +823,7 @@ Creates the pointer to an OH_ImageSourceNative object based on a URI.
 
 | Parameter | Description |
 | -- | -- |
-| char *uri | Pointer to the URI of the image source. Only file URIs or Base64 URIs are accepted. Currently, onlyabsolute paths are supported. |
+| char *uri | Pointer to the URI of the image source. Only file URIs or Base64 URIs are accepted. Currently, only absolute paths are supported. |
 | size_t uriSize | URI length. |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) **res | Double pointer to the OH_ImageSourceNative object created at the C++ local layer. |
 
@@ -860,7 +831,7 @@ Creates the pointer to an OH_ImageSourceNative object based on a URI.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} if uri is a null pointer. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} if uri is a null pointer. |
 
 ### OH_ImageSourceNative_CreateFromFd()
 
@@ -885,7 +856,7 @@ Creates the pointer to an OH_ImageSourceNative object based on a file descriptor
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} if fd is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} if fd is invalid. |
 
 ### OH_ImageSourceNative_CreateFromData()
 
@@ -895,7 +866,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSi
 
 **Description**
 
-Creates the pointer to an OH_ImageSourceNative object based on buffer data.The buffer data must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create aPixelMap based on the pixel buffer data, call {@link OH_PixelmapNative_CreatePixelmap}.
+Creates the pointer to an OH_ImageSourceNative object based on buffer data. The buffer data must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call {@link OH_PixelmapNative_CreatePixelmap}.
 
 **Since**: 12
 
@@ -911,7 +882,7 @@ Creates the pointer to an OH_ImageSourceNative object based on buffer data.The b
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} if data is a null pointer or if dataSize is 0. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} if data is a null pointer or if dataSize is 0. |
 
 ### OH_ImageSourceNative_CreateFromDataWithUserBuffer()
 
@@ -921,7 +892,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromDataWithUserBuffer(uint8_t *data,
 
 **Description**
 
-Creates an image source from data buffer. The data buffer is directly accessed by the image source object,and therefore the data buffer must remain accessible within the lifecycle of the image source object.
+Creates an image source from data buffer. The data buffer is directly accessed by the image source object, and therefore the data buffer must remain accessible within the lifecycle of the image source object.
 
 **Since**: 20
 
@@ -937,7 +908,7 @@ Creates an image source from data buffer. The data buffer is directly accessed b
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.       <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if data or imageSource is a null pointer or if datalength is 0. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if data or imageSource is a null pointer or if datalength is 0. |
 
 ### OH_ImageSourceNative_CreateFromRawFile()
 
@@ -947,7 +918,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFil
 
 **Description**
 
-Creates the pointer to an OH_ImageSourceNative object by using the raw file descriptor of an image resourcefile.
+Creates the pointer to an OH_ImageSourceNative object by using the raw file descriptor of an image resource file.
 
 **Since**: 12
 
@@ -962,57 +933,7 @@ Creates the pointer to an OH_ImageSourceNative object by using the raw file desc
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} if rawFile is a null pointer. |
-
-### OH_ImageSourceNative_SetSvgResourceLimitLevel()
-
-```c
-Image_ErrorCode OH_ImageSourceNative_SetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel level)
-```
-
-**Description**
-
-Sets the SVG resource limit level for the image source.This only takes effect for SVG format images. For non-SVG images, this function has no effect.Must be called before [OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap) to ensure the limittakes effect on both DOM parsing and rendering stages.
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | Indicates a pointer to the image source. |
-| [OH_ImageSource_SVGResourceLimitLevel](capi-image-source-native-h.md#oh_imagesource_svgresourcelimitlevel) level | Indicates the SVG resource limit level. For details, see [OH_ImageSource_SVGResourceLimitLevel](capi-image-source-native-h.md#oh_imagesource_svgresourcelimitlevel). |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION} if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} source is nullptr.</li>          </ul> |
-
-### OH_ImageSourceNative_GetSvgResourceLimitLevel()
-
-```c
-Image_ErrorCode OH_ImageSourceNative_GetSvgResourceLimitLevel(OH_ImageSourceNative *source, OH_ImageSource_SVGResourceLimitLevel *level)
-```
-
-**Description**
-
-Gets the SVG resource limit level of the image source.
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | Indicates a pointer to the image source. |
-| [OH_ImageSource_SVGResourceLimitLevel](capi-image-source-native-h.md#oh_imagesource_svgresourcelimitlevel) *level | Indicates the pointer to receive the SVG resource limit level.For details, see [OH_ImageSource_SVGResourceLimitLevel](capi-image-source-native-h.md#oh_imagesource_svgresourcelimitlevel). |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION} if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} source or level is nullptr.</li>          </ul> |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} if rawFile is a null pointer. |
 
 ### OH_ImageSourceNative_CreatePixelmap()
 
@@ -1038,7 +959,7 @@ Creates the pointer to an OH_PixelmapNative object based on decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_OPTIONS} unsupported options,          e.g, cannot convert image into desired pixel format. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_OPTIONS} unsupported options,          e.g, cannot convert image into desired pixel format. |
 
 ### OH_ImageSourceNative_CreatePixelmapUsingAllocator()
 
@@ -1048,7 +969,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSource
 
 **Description**
 
-Creates an OH_PixelmapNative object based on decoding options and memory type, where **allocatorTypespecifies the memory type of the PixelMap.By default, the system selects an appropriate memory type based on the image type, image size, and platformcapability. When processing the returned PixelMap object, consider the impact of stride.
+Creates an OH_PixelmapNative object based on decoding options and memory type, where **allocatorType**<br>specifies the memory type of the PixelMap. By default, the system selects an appropriate memory type based on the image type, image size, and platform capability. When processing the returned PixelMap object, consider the impact of stride.
 
 **Since**: 15
 
@@ -1075,7 +996,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *so
 
 **Description**
 
-Creates an array of OH_PixelmapNative objects based on decoding options.This function decodes all frames at once. If the number of frames is high or the size of individual frames is large,it can lead to significant memory usage. In these cases, you are advised to use the **Image** component fordisplaying animations. The **Image** component decodes frames one by one, which uses less memory than this function.
+Creates an array of OH_PixelmapNative objects based on decoding options. This function decodes all frames at once. If the number of frames is high or the size of individual frames is large, it can lead to significant memory usage. In these cases, you are advised to use the **Image** component for displaying animations. The **Image** component decodes frames one by one, which uses less memory than this function.
 
 **Since**: 12
 
@@ -1085,14 +1006,14 @@ Creates an array of OH_PixelmapNative objects based on decoding options.This fun
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | Pointer to an OH_ImageSourceNative object. |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | Pointer to the decoding options. |
-| OH_PixelmapNative *resVecPixMap[] | Indicates a pointer array to the <b>Pixelmap</b> objects obtained at the C++ native layer.It cannot be a null pointer. |
+| OH_PixelmapNative *resVecPixMap[] | Indicates a pointer array to the <b>Pixelmap</b> objects obtained at the C++ native layer. It cannot be a null pointer. |
 | size_t size | Size of the array. You can use [OH_ImageSourceNative_GetFrameCount](capi-image-source-native-h.md#oh_imagesourcenative_getframecount) to obtain the size. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or options is nullptr, or resVecPixMap is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or options is nullptr, or resVecPixMap is nullptr. |
 
 ### OH_ImageSourceNative_CreatePicture()
 
@@ -1118,7 +1039,7 @@ Creates the pointer to an OH_PictureNative object based on decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or picture is nullptr.      <br>{@link IMAGE_DECODE_FAILED} decode failed. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or picture is nullptr.<br>    <br>{@link IMAGE_DECODE_FAILED} decode failed. |
 
 ### OH_ImageSourceNative_CreatePictureAtIndex()
 
@@ -1144,7 +1065,7 @@ Creates the pointer to an OH_PictureNative object at the specified index.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS}: The execution is successful.      <br>{@link IMAGE_BAD_SOURCE}: The data source is abnormal.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIMETYPE}: The image format is unsupported.      <br>{@link IMAGE_SOURCE_TOO_LARGE}: The image is too large.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_OPTIONS}: The operation is not supported, for example, invalid index.      <br>{@link IMAGE_DECODE_FAILED}: Decoding fails. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS}: The execution is successful.<br>    <br>{@link IMAGE_BAD_SOURCE}: The data source is abnormal.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIMETYPE}: The image format is unsupported.<br>    <br>{@link IMAGE_SOURCE_TOO_LARGE}: The image is too large.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_OPTIONS}: The operation is not supported, for example, invalid index.<br>    <br>{@link IMAGE_DECODE_FAILED}: Decoding fails. |
 
 ### OH_ImageSourceNative_GetDelayTimeList()
 
@@ -1170,7 +1091,7 @@ Obtains the image delay time list.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or delayTimeList is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or delayTimeList is nullptr. |
 
 ### OH_ImageSourceNative_GetImageInfo()
 
@@ -1189,14 +1110,14 @@ Obtains the information about an image with a given index.
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | Pointer to an OH_ImageSourceNative object. |
-| int32_t index | Index of an image. For a GIF image, the value range is [0, N-1], where N indicates the number of GIFframes. For an image with only one frame, you can pass in **0**. |
-| [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) *info | Pointer to the image information obtained, which is an OH_ImageSource_Info struct.For details, see [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md). |
+| int32_t index | Index of an image. For a GIF image, the value range is [0, N-1], where N indicates the number of GIF frames. For an image with only one frame, you can pass in **0**. |
+| [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) *info | Pointer to the image information obtained, which is an OH_ImageSource_Info struct. For details, see [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or info is nullptr, or failed to get image info. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or info is nullptr, or failed to get image info. |
 
 ### OH_ImageSourceNative_GetImageProperty()
 
@@ -1215,14 +1136,14 @@ Obtains the value of an image property.
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | Pointer to an OH_ImageSourceNative object. |
-| Image_String *key | Pointer to the property key. For details, see {@link Image_String}. For details about the value range of **key**, see the definition of {@link OHOS_IMAGE_PROPERTY_XXX}. The memory must be released after the image source is used. For details, see [OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release). |
-| Image_String *value | Pointer to the value obtained. You can pass in a null pointer with the size set to zero. In this case,the system will allocate memory, but you must release the memory after use. |
+| Image_String *key | Pointer to the property key. For details, see {@link Image_String}. For details about the value range of **key**, see the definition of {@link OHOS_IMAGE_PROPERTY_XXX} . The memory must be released after the image source is used. For details, see [OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release). |
+| Image_String *value | Pointer to the value obtained. You can pass in a null pointer with the size set to zero. In this case, the system will allocate memory, but you must release the memory after use. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or key is nullptr, or value is nullptr.      <br>{@link IMAGE_ALLOC_FAILED} allocate memory failed.      <br>{@link IMAGE_COPY_FAILED} copy memory failed. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or key is nullptr, or value is nullptr.<br>    <br>{@link IMAGE_ALLOC_FAILED} allocate memory failed.<br>    <br>{@link IMAGE_COPY_FAILED} copy memory failed. |
 
 ### OH_ImageSourceNative_GetImagePropertyWithNull()
 
@@ -1248,7 +1169,7 @@ Obtains the value of an image property from an <b>ImageSource</b> object. The ou
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr. |
 
 ### OH_ImageSourceNative_ModifyImageProperty()
 
@@ -1274,7 +1195,7 @@ Obtains the value of an image property. The output **value.data** is terminated 
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or key is nullptr, or value is nullptr,          or failed to modify image property because of invalid parameters. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or key is nullptr, or value is nullptr,          or failed to modify image property because of invalid parameters. |
 
 ### OH_ImageSourceNative_GetFrameCount()
 
@@ -1299,7 +1220,7 @@ Obtains the number of image frames.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or frameCount is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr, or frameCount is nullptr. |
 
 ### OH_ImageSourceNative_Release()
 
@@ -1323,7 +1244,7 @@ Releases the pointer to an OH_ImageSourceNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} source is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} source is nullptr. |
 
 ### OH_DecodingOptionsForPicture_Create()
 
@@ -1347,7 +1268,7 @@ Creates the pointer to an OH_DecodingOptionsForPicture object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_DecodingOptionsForPicture_GetDesiredAuxiliaryPictures()
 
@@ -1357,7 +1278,7 @@ Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredAuxiliaryPictures(OH_Deco
 
 **Description**
 
-Obtains desired auxiliary pictures in the decoding options (auxiliary pictures contained in **pictureexpected to be decoded.)
+Obtains desired auxiliary pictures in the decoding options (auxiliary pictures contained in **picture**<br>expected to be decoded.)
 
 **Since**: 13
 
@@ -1373,7 +1294,7 @@ Obtains desired auxiliary pictures in the decoding options (auxiliary pictures c
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, desiredAuxiliaryPictures is nullptr,          or length is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, desiredAuxiliaryPictures is nullptr,          or length is invalid. |
 
 ### OH_DecodingOptionsForPicture_SetDesiredAuxiliaryPictures()
 
@@ -1399,157 +1320,7 @@ Sets desired auxiliary pictures in the decoding options.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, desiredAuxiliaryPictures is nullptr,          or length is invalid. |
-
-### OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData()
-
-```c
-Image_ErrorCode OH_DecodingOptionsForPicture_GetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool *needsDecodeDfxData)
-```
-
-**Description**
-
-Obtains the **needsDecodeDfxData** parameter in the decoding options.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | Pointer to an OH_DecodingOptionsForPicture object. |
-| bool *needsDecodeDfxData | Whether to decode image DFX data. The values include **true** (yes) and **false** (no). |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} options or needsDecodeDfxData is nullptr.</li>          </ul> |
-
-### OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData()
-
-```c
-Image_ErrorCode OH_DecodingOptionsForPicture_SetNeedsDecodeDfxData(OH_DecodingOptionsForPicture *options, bool needsDecodeDfxData)
-```
-
-**Description**
-
-Sets the **needsDecodeDfxData** parameter in the decoding options.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | Pointer to an OH_DecodingOptionsForPicture object. |
-| bool needsDecodeDfxData | Whether to decode image DFX data. The values include **true** (yes) and **false** (no). |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} options is nullptr.</li>          </ul> |
-
-### OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap()
-
-```c
-Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size *desiredSizeForMainPixelmap)
-```
-
-**Description**
-
-Gets the desiredSizeForMainPixelMap number for DecodingOptionsForPicture struct.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | The OH_DecodingOptionsForPicture pointer will be operated. |
-| Image_Size *desiredSizeForMainPixelmap | On output, the number of main pixelMap desiredSize. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} options is nullptr.</li>          </ul> |
-
-### OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap()
-
-```c
-Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredSizeForMainPixelmap(OH_DecodingOptionsForPicture *options, Image_Size desiredSizeForMainPixelmap)
-```
-
-**Description**
-
-Sets the desiredSizeForMainPixelMap number for DecodingOptionsForPicture struct.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | The OH_DecodingOptionsForPicture pointer will be operated. |
-| Image_Size desiredSizeForMainPixelmap | the number of main pixelMap desiredSize. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} options is nullptr.</li>          </ul> |
-
-### OH_DecodingOptionsForPicture_GetDesiredPixelFormat()
-
-```c
-Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT *desiredPixelFormat)
-```
-
-**Description**
-
-Get pixelFormat number for DecodingOptionsForPicture struct.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | The OH_DecodingOptionsForPicture pointer will be operated. |
-| PIXEL_FORMAT *desiredPixelFormat | the number of image pixelFormat. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} options is nullptr.</li>          </ul> |
-
-### OH_DecodingOptionsForPicture_SetDesiredPixelFormat()
-
-```c
-Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredPixelFormat(OH_DecodingOptionsForPicture *options, PIXEL_FORMAT desiredPixelFormat)
-```
-
-**Description**
-
-Set pixelFormat number for DecodingOptionsForPicture struct.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | The OH_DecodingOptionsForPicture pointer will be operated. |
-| PIXEL_FORMAT desiredPixelFormat | Image pixel format. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} options is nullptr.</li>          </ul> |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, desiredAuxiliaryPictures is nullptr,          or length is invalid. |
 
 ### OH_DecodingOptionsForPicture_Release()
 
@@ -1573,7 +1344,7 @@ Releases the pointer to an OH_DecodingOptionsForPicture object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_ImageSourceNative_GetSupportedFormats()
 
@@ -1598,7 +1369,7 @@ Obtains the supported image formats that can be decoded.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if <b>supportedFormats</b> or <b>length</b> is empty. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if <b>supportedFormats</b> or <b>length</b> is empty. |
 
 ### OH_ImageSourceNative_GetImagePropertyShort()
 
@@ -1624,7 +1395,7 @@ Obtains the value of an image property as short int type.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a short int value. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a short int value. |
 
 ### OH_ImageSourceNative_GetImagePropertyLong()
 
@@ -1650,7 +1421,7 @@ Obtains the value of an image property as long int type.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a long int value. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a long int value. |
 
 ### OH_ImageSourceNative_GetImagePropertyDouble()
 
@@ -1676,7 +1447,7 @@ Obtains the value of an image property as double type.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double value. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double value. |
 
 ### OH_ImageSourceNative_GetImagePropertyArraySize()
 
@@ -1702,7 +1473,7 @@ Gets the array length of an array type property or the string length of a string
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or size is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a array\string value. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or size is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a array\string value. |
 
 ### OH_ImageSourceNative_GetImagePropertyString()
 
@@ -1729,7 +1500,7 @@ Obtains the value of an image property as string type.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a string value. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a string value. |
 
 ### OH_ImageSourceNative_GetImagePropertyIntArray()
 
@@ -1756,7 +1527,7 @@ Obtains the value of an image property as int array.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a int array. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a int array. |
 
 ### OH_ImageSourceNative_GetImagePropertyDoubleArray()
 
@@ -1783,7 +1554,7 @@ Obtains the value of an image property as double array.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double array. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double array. |
 
 ### OH_ImageSourceNative_GetImagePropertyBlob()
 
@@ -1810,7 +1581,7 @@ Obtains the value of an image property as blob.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a blob. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key, value or size is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a blob. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyShort()
 
@@ -1836,7 +1607,7 @@ Modify the value of an image property as short int.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a short int. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a short int. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyLong()
 
@@ -1862,7 +1633,7 @@ Modify the value of an image property as long int.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a long int. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a long int. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyDouble()
 
@@ -1888,7 +1659,7 @@ Modify the value of an image property as double.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyIntArray()
 
@@ -1915,7 +1686,7 @@ Modify the value of an image property as int array.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not an int array. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not an int array. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyDoubleArray()
 
@@ -1942,7 +1713,7 @@ Modify the value of an image property as double array.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double array. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a double array. |
 
 ### OH_ImageSourceNative_ModifyImagePropertyBlob()
 
@@ -1969,36 +1740,7 @@ Modify the value of an image property as blob.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a blob. |
-
-### OH_ImageSourceNative_ReadImageMetadataByType()
-
-```c
-Image_ErrorCode OH_ImageSourceNative_ReadImageMetadataByType(OH_ImageSourceNative *source, uint32_t index, Image_MetadataType *metadataTypes, size_t typeCount, OH_PictureMetadata **outMetadataArray, size_t *metadataCount)
-```
-
-**Description**
-
-Read metadata of the image source, use metadatatype to specify metadata of interest. If metadataTypeis not specified, all supported metadata will be returned.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | Pointer to the image source. |
-| uint32_t index | Image index. |
-| Image_MetadataType *metadataTypes | Metadata types of interest. |
-| size_t typeCount | Count of metadataTypes. |
-| OH_PictureMetadata **outMetadataArray | Output parameter used to receive a metadata array allocated by this function. The calleris required to release this object. |
-| size_t *metadataCount | Number of OH_PictureMetadata elements returned in outMetadataArray. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, outMetadataArray or metadataCount is nullptr.</li>          <li>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if metadata doesn't exist, or types are unsupported.</li>          <li>{@link IMAGE_SOURCE_ALLOC_FAILED} memory allocation failed.</li>          </ul> |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if source, key or value is nullptr.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} if query image property of current mimetype is not supported.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_METADATA} if indicated metadata doesn't exist, or is not a blob. |
 
 ### OH_ImageSourceNative_CreateImageRawData()
 
@@ -2008,7 +1750,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateImageRawData(const OH_ImageSourceNati
 
 **Description**
 
-Obtains rawData object from an image.The rawData object usually occupies a large amount of memory because it containsraw data from the camera. When the rawData object and the data it contains are not used, call the[OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata) method to destroy them in a timely manner.
+Obtains rawData object from an image. The rawData object usually occupies a large amount of memory because it contains raw data from the camera. When the rawData object and the data it contains are not used, call the [OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata) method to destroy them in a timely manner.
 
 **Since**: 24
 
@@ -2023,7 +1765,7 @@ Obtains rawData object from an image.The rawData object usually occupies a large
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_SOURCE} Bad source.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid.      <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} Unsupported MIME type. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_SOURCE} Bad source.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid.<br>    <br>{@link IMAGE_SOURCE_UNSUPPORTED_MIME_TYPE} Unsupported MIME type. |
 
 ### OH_ImageSourceNative_GetBufferFromRawData()
 
@@ -2049,7 +1791,7 @@ Gets binary data from the rawData object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid. |
 
 ### OH_ImageSourceNative_GetBitsPerPixelFromRawData()
 
@@ -2074,7 +1816,7 @@ Gets number of bits that each pixel actually occupies in the buffer data.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid. |
 
 ### OH_ImageSourceNative_DestroyImageRawData()
 
@@ -2098,6 +1840,6 @@ Destroys the rawData object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_SOURCE_INVALID_PARAMETER} if the rawData object is invalid. |
 
 

@@ -70,9 +70,9 @@ Defines a set of text common enum and interface.
 | [void OH_ArkUI_TextSelectionMenuOptions_Dispose(ArkUI_TextSelectionMenuOptions* selectionMenuOptions)](#oh_arkui_textselectionmenuoptions_dispose) | - | Dispose an object of the text selection menu options. |
 | [ArkUI_TextContentBaseController* OH_ArkUI_TextContentBaseController_Create()](#oh_arkui_textcontentbasecontroller_create) | - | Create an object of the text content base controller. |
 | [void OH_ArkUI_TextContentBaseController_Dispose(ArkUI_TextContentBaseController* controller)](#oh_arkui_textcontentbasecontroller_dispose) | - | Dispose an object of the text content base controller. |
-| [void OH_ArkUI_TextContentBaseController_DeleteBackward(ArkUI_TextContentBaseController* controller)](#oh_arkui_textcontentbasecontroller_deletebackward) | - | Delete the character before the caret of the input field component in editing state.Otherwise, delete the last character of the input field component. |
+| [void OH_ArkUI_TextContentBaseController_DeleteBackward(ArkUI_TextContentBaseController* controller)](#oh_arkui_textcontentbasecontroller_deletebackward) | - | Delete the character before the caret of the input field component in editing state. Otherwise, delete the last character of the input field component. |
 | [void OH_ArkUI_TextContentBaseController_ScrollToVisible(ArkUI_TextContentBaseController *controller, int32_t start, int32_t end)](#oh_arkui_textcontentbasecontroller_scrolltovisible) | - | Scroll the input field component to make the specified content visible. |
-| [OH_ArkUI_DecorationStyleOptions* OH_ArkUI_DecorationStyleOptions_Create()](#oh_arkui_decorationstyleoptions_create) | - | Creates a decorative line style object. When the object is no longer used, call[OH_ArkUI_DecorationStyleOptions_Destroy](capi-text-common-h.md#oh_arkui_decorationstyleoptions_destroy) to destroy it. |
+| [OH_ArkUI_DecorationStyleOptions* OH_ArkUI_DecorationStyleOptions_Create()](#oh_arkui_decorationstyleoptions_create) | - | Creates a decorative line style object. When the object is no longer used, call [OH_ArkUI_DecorationStyleOptions_Destroy](capi-text-common-h.md#oh_arkui_decorationstyleoptions_destroy) to destroy it. |
 | [void OH_ArkUI_DecorationStyleOptions_Destroy(OH_ArkUI_DecorationStyleOptions* options)](#oh_arkui_decorationstyleoptions_destroy) | - | Destroys the decorative line style object. |
 
 ## Enum type description
@@ -287,8 +287,8 @@ Enumerates the word break rules.
 | -- | -- |
 | ARKUI_WORD_BREAK_NORMAL = 0 | Word breaks can occur between any two characters for Chinese, Japanese, and Korean (CJK) text, but can occur |
 | ARKUI_WORD_BREAK_BREAK_ALL | Word breaks can occur between any two characters for non-CJK text. CJK text behavior is the same as for |
-| ARKUI_WORD_BREAK_BREAK_WORD | This option has the same effect as <b>BREAK_ALL</b> for non-CJK text, except that if it preferentially wrapslines at appropriate characters (for example, spaces) whenever possible. |
-| ARKUI_WORD_BREAK_HYPHENATION | Line breaks can occur between any two syllabic units for non-CJK text.CJK text behavior is the same as for <b>NORMAL</b>.<br>**Since**: 18 |
+| ARKUI_WORD_BREAK_BREAK_WORD | This option has the same effect as <b>BREAK_ALL</b> for non-CJK text, except that if it preferentially wraps lines at appropriate characters (for example, spaces) whenever possible. |
+| ARKUI_WORD_BREAK_HYPHENATION | Line breaks can occur between any two syllabic units for non-CJK text. CJK text behavior is the same as for <b>NORMAL</b>.<br>**Since**: 18 |
 
 ### ArkUI_EllipsisMode
 
@@ -307,8 +307,8 @@ Enumerates the ellipsis positions.
 | ARKUI_ELLIPSIS_MODE_START = 0 | An ellipsis is used at the start of the line of text. |
 | ARKUI_ELLIPSIS_MODE_CENTER | An ellipsis is used at the center of the line of text. |
 | ARKUI_ELLIPSIS_MODE_END | An ellipsis is used at the end of the line of text. |
-| ARKUI_ELLIPSIS_MODE_MULTILINE_START | An ellipsis is used at the start of the line of text for multiline and single line.@since 24 |
-| ARKUI_ELLIPSIS_MODE_MULTILINE_CENTER | An ellipsis is used at the center of the line of text for multiline and single line.@since 24 |
+| ARKUI_ELLIPSIS_MODE_MULTILINE_START | An ellipsis is used at the start of the line of text for multiline and single line. @since 24 |
+| ARKUI_ELLIPSIS_MODE_MULTILINE_CENTER | An ellipsis is used at the center of the line of text for multiline and single line. @since 24 |
 
 ### ArkUI_KeyboardAppearance
 
@@ -399,7 +399,7 @@ Enumerates the text span type.
 | ARKUI_TEXT_SPAN_TYPE_TEXT = 0 | The span type only contains text. |
 | ARKUI_TEXT_SPAN_TYPE_IMAGE = 1 | The span type only contains image. |
 | ARKUI_TEXT_SPAN_TYPE_MIXED = 2 | The span type contains both text and image. |
-| ARKUI_TEXT_SPAN_TYPE_DEFAULT = 3 | When no other types are explicitly specified, this type will be matched.When this type is registered but TEXT, IMAGE, or MIXED types are not registered,this type will be triggered and displayed for those registered types. |
+| ARKUI_TEXT_SPAN_TYPE_DEFAULT = 3 | When no other types are explicitly specified, this type will be matched. When this type is registered but TEXT, IMAGE, or MIXED types are not registered, this type will be triggered and displayed for those registered types. |
 
 ### ArkUI_TextResponseType
 
@@ -418,7 +418,7 @@ Enumerates the text response type.
 | ARKUI_TEXT_RESPONSE_TYPE_RIGHT_CLICK = 0 | The response type of right click. |
 | ARKUI_TEXT_RESPONSE_TYPE_LONG_PRESS = 1 | The response type of long press. |
 | ARKUI_TEXT_RESPONSE_TYPE_SELECT = 2 | The response type of select by mouse. |
-| ARKUI_TEXT_RESPONSE_TYPE_DEFAULT = 3 | When no other types are explicitly specified, this type will be matched.When this type is registered but RIGHT_CLICK, LONG_PRESS, or SELECT types are not registered,this type will be triggered and displayed for right-click, long press, and mouse selection actions. |
+| ARKUI_TEXT_RESPONSE_TYPE_DEFAULT = 3 | When no other types are explicitly specified, this type will be matched. When this type is registered but RIGHT_CLICK, LONG_PRESS, or SELECT types are not registered, this type will be triggered and displayed for right-click, long press, and mouse selection actions. |
 
 
 ## Function description
@@ -437,7 +437,7 @@ typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, voi
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)\* items | The framework creates and owns the array.In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs.The developer must not free the array instance. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)\* items | The framework creates and owns the array. In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},<br>    {@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs. The developer must not free the array instance. |
 | void\* userData | User defined data. |
 
 ### ArkUI_TextPrepareMenuCallback()
@@ -454,7 +454,7 @@ typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, vo
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)\* items | The framework creates and owns the array.In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},{@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs.The developer must not free the array instance. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)\* items | The framework creates and owns the array. In callback: the developer can modify the array by calling {@link OH_ArkUI_TextMenuItemArray_Insert},<br>    {@link OH_ArkUI_TextMenuItemArray_Erase}, or similar APIs. The developer must not free the array instance. |
 | void\* userData | User defined data. |
 
 ### ArkUI_TextMenuItemClickCallback()
@@ -756,7 +756,7 @@ void OH_ArkUI_TextContentBaseController_DeleteBackward(ArkUI_TextContentBaseCont
 
 **Description**
 
-Delete the character before the caret of the input field component in editing state.Otherwise, delete the last character of the input field component.
+Delete the character before the caret of the input field component in editing state. Otherwise, delete the last character of the input field component.
 
 **Since**: 23
 
@@ -782,7 +782,7 @@ Scroll the input field component to make the specified content visible.
 
 | Parameter | Description |
 | -- | -- |
-| {ArkUI_TextContentBaseController*} | controller Pointer to theconfiguration object to be modified. |
+| {ArkUI_TextContentBaseController*} | controller Pointer to the configuration object to be modified. |
 | {int32_t} | start The start offset of the content to be made visible. |
 | {int32_t} | end The end offset of the content to be made visible |
 
@@ -794,7 +794,7 @@ OH_ArkUI_DecorationStyleOptions* OH_ArkUI_DecorationStyleOptions_Create()
 
 **Description**
 
-Creates a decorative line style object. When the object is no longer used, call[OH_ArkUI_DecorationStyleOptions_Destroy](capi-text-common-h.md#oh_arkui_decorationstyleoptions_destroy) to destroy it.
+Creates a decorative line style object. When the object is no longer used, call [OH_ArkUI_DecorationStyleOptions_Destroy](capi-text-common-h.md#oh_arkui_decorationstyleoptions_destroy) to destroy it.
 
 **Since**: 24
 

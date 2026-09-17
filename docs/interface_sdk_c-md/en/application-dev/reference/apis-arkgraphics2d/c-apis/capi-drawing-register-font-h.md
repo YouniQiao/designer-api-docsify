@@ -2,13 +2,13 @@
 
 ## Overview
 
-Defines functions related to the font manager in the drawing module, providing capabilities for registeringand unregistering custom fonts as well as detecting font formats, and supporting multiple font file formats such asttf, otf, ttc, and otc.
+Defines functions related to the font manager in the drawing module, providing capabilities for registering and unregistering custom fonts as well as detecting font formats, and supporting multiple font file formats such as ttf, otf, ttc, and otc.
 
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -22,7 +22,7 @@ Defines functions related to the font manager in the drawing module, providing c
 | [uint32_t OH_Drawing_RegisterFontBuffer(OH_Drawing_FontCollection* fontCollection, const char* fontFamily, uint8_t* fontBuffer, size_t length)](#oh_drawing_registerfontbuffer) | Registers a font buffer in the font manager, supporting data read from ttf and otf files. |
 | [uint32_t OH_Drawing_RegisterFontByIndex(OH_Drawing_FontCollection* fontCollection, const char* fontFamily, const char* familySrc, uint32_t index)](#oh_drawing_registerfontbyindex) | Registers a custom font using a ttc/otc file, with the index parameter specifying the font index to register. |
 | [uint32_t OH_Drawing_RegisterFontBufferByIndex(OH_Drawing_FontCollection* fontCollection, const char* fontFamily, uint8_t* fontBuffer, size_t length, uint32_t index)](#oh_drawing_registerfontbufferbyindex) | Registers a font using the font buffer of a TTC/OTC file. |
-| [uint32_t OH_Drawing_UnregisterFont(OH_Drawing_FontCollection* fontCollection, const char* fontFamily)](#oh_drawing_unregisterfont) | Unregisters a custom font by font name.<br>Unregistering a font that is currently in use may lead to text rendering exceptions (such as garbled charactersor missing glyphs).<br>All typesetting objects that use the unregistered font name should be destroyed and recreated. |
+| [uint32_t OH_Drawing_UnregisterFont(OH_Drawing_FontCollection* fontCollection, const char* fontFamily)](#oh_drawing_unregisterfont) | Unregisters a custom font by font name. <br>Unregistering a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs). <br>All typesetting objects that use the unregistered font name should be destroyed and recreated. |
 | [bool OH_Drawing_IsFontSupportedFromPath(const char* path)](#oh_drawing_isfontsupportedfrompath) | Checks whether the system supports the font format of the specified path. |
 | [bool OH_Drawing_IsFontSupportedFromBuffer(uint8_t* data, size_t dataLength)](#oh_drawing_isfontsupportedfrombuffer) | Checks whether the system supports the font format specified in the buffer. |
 
@@ -104,7 +104,7 @@ Registers a custom font using a ttc/otc file, with the index parameter specifyin
 | OH_Drawing_FontCollection* fontCollection | Pointer to an {@link OH_Drawing_FontCollection} object. |
 | const char* fontFamily | Family name of the font to register. |
 | const char* familySrc | Path of the font file to register. |
-| uint32_t index | Index of the font in the ttc/otc file. The value ranges from 0 to the total number of fonts minus 1.For non-ttc/otc files, set this parameter to 0. |
+| uint32_t index | Index of the font in the ttc/otc file. The value ranges from 0 to the total number of fonts minus 1. For non-ttc/otc files, set this parameter to 0. |
 
 **Returns**:
 
@@ -132,7 +132,7 @@ Registers a font using the font buffer of a TTC/OTC file.
 | const char* fontFamily | Family name of the font to register. |
 | uint8_t* fontBuffer | Font buffer of the font file to register. |
 | size_t length | Length of the byte stream data, which must match the actual length of fontBuffer. |
-| uint32_t index | Index of the font in the ttc/otc file. The value ranges from 0 to the number of fonts minus 1. Forfiles in non-ttc/otc formats, set this parameter to 0. |
+| uint32_t index | Index of the font in the ttc/otc file. The value ranges from 0 to the number of fonts minus 1. For files in non-ttc/otc formats, set this parameter to 0. |
 
 **Returns**:
 
@@ -148,7 +148,7 @@ uint32_t OH_Drawing_UnregisterFont(OH_Drawing_FontCollection* fontCollection, co
 
 **Description**
 
-Unregisters a custom font by font name.<br>Unregistering a font that is currently in use may lead to text rendering exceptions (such as garbled charactersor missing glyphs).<br>All typesetting objects that use the unregistered font name should be destroyed and recreated.
+Unregisters a custom font by font name. <br>Unregistering a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs). <br>All typesetting objects that use the unregistered font name should be destroyed and recreated.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 

@@ -8,7 +8,7 @@ This file declares the functions related to the color space in the drawing modul
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 

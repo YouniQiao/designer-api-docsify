@@ -8,7 +8,7 @@ Declare avsession base info.
 
 **System capability**: SystemCapability.Multimedia.AVSession.Core
 
-**Since**: 23
+**Since**: 13
 
 **Related module**: [OHAVSession](capi-ohavsession.md)
 
@@ -189,8 +189,8 @@ Enum for cast category indicating different playback scenes.
 
 | Enum item | Description |
 | -- | -- |
-| CATEGORY_LOCAL = 0 | The default cast type "local", media can be routed on the same device,including internal speakers or audio jack on the device itself, A2DP devices. |
-| CATEGORY_REMOTE = 1 | The remote category indicating the media is presenting on a remote device,the application needs to get an AVCastController to control remote playback. |
+| CATEGORY_LOCAL = 0 | The default cast type "local", media can be routed on the same device, including internal speakers or audio jack on the device itself, A2DP devices. |
+| CATEGORY_REMOTE = 1 | The remote category indicating the media is presenting on a remote device, the application needs to get an AVCastController to control remote playback. |
 
 ### AVSession_DeviceType
 
@@ -225,9 +225,9 @@ Enum for Protocol type .
 
 | Enum item | Description |
 | -- | -- |
-| TYPE_LOCAL = 0 | The default cast type "local", media can be routed on the same device,including internal speakers or audio jack on the device itself, A2DP devices.<br>**Since**: 23 |
-| TYPE_CAST_PLUS_STREAM = 2 | The Cast+ Stream indicating the media is presenting on a different devicethe application need get an AVCastController to control remote playback.<br>**Since**: 23 |
-| TYPE_DLNA = 4 | The DLNA type indicates the device supports DLNA protocol,the application needs to get an AVCastController to control remote playback.<br>**Since**: 23 |
+| TYPE_LOCAL = 0 | The default cast type "local", media can be routed on the same device, including internal speakers or audio jack on the device itself, A2DP devices.<br>**Since**: 23 |
+| TYPE_CAST_PLUS_STREAM = 2 | The Cast+ Stream indicating the media is presenting on a different device the application need get an AVCastController to control remote playback.<br>**Since**: 23 |
+| TYPE_DLNA = 4 | The DLNA type indicates the device supports DLNA protocol, the application needs to get an AVCastController to control remote playback.<br>**Since**: 23 |
 | TYPE_CAST_PLUS_AUDIO = 8 | This type indicates the device supports audio casting with high defination to get a better sound quality.<br>**Since**: 23 |
 
 ### AVSession_AVCastControlCommandType

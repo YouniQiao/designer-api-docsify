@@ -1,4 +1,4 @@
-# @ohos.multimedia.audio
+# @ohos.multimedia.audio(音频渲染、采集和管理)
 
 音频管理提供基础的音频控制能力，包括音量调节、设备管理、数据采集及渲染。该模块提供以下音频相关的常用功能：
 

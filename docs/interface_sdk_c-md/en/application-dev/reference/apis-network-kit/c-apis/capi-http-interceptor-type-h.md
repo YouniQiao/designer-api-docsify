@@ -2,13 +2,13 @@
 
 ## Overview
 
-Defines the data structures for the C APIs of the global HTTP interceptor module, including the interceptorrequest/response header information, HTTP request/response data packet structure, interceptor configurationinformation, and related enum types and function pointers.
+Defines the data structures for the C APIs of the global HTTP interceptor module, including the interceptor request/response header information, HTTP request/response data packet structure, interceptor configuration information, and related enum types and function pointers.
 
 **Library**: libhttp_interceptor.so
 
 **System capability**: SystemCapability.Communication.NetStack
 
-**Since**: 24
+**Since**: 11
 
 **Related module**: [netstack](capi-netstack.md)
 
@@ -36,6 +36,12 @@ Defines the data structures for the C APIs of the global HTTP interceptor module
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [typedef OH_Interceptor_Result (\*OH_Http_InterceptorHandler)(OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified)](#oh_http_interceptorhandler) | OH_Http_InterceptorHandler | Defines the HTTP interceptor handler function. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| OH_Interceptor_Result (*OH_Http_InterceptorHandler)( OH_Http_Interceptor_Request *request, OH_Http_Interceptor_Response *response, int32_t *isModified) | Defines the HTTP interceptor handler function.<br>**Since**: 24 |
 
 ## Enum type description
 
@@ -111,7 +117,7 @@ Defines the HTTP interceptor handler function.
 | -- | -- |
 | [OH_Http_Interceptor_Request](capi-netstack-oh-http-interceptor-request.md) \*request | Pointer to the HTTP request data packet (valid only in the request stage). |
 | [OH_Http_Interceptor_Response](capi-netstack-oh-http-interceptor-response.md) \*response | Pointer to the HTTP response data packet (valid only in the response stage). |
-| int32_t \*isModified | Output parameter, which indicates whether the interceptor has modified the data packet. Thisparameter is invalid for the interceptor of the **OH_TYPE_READ_ONLY** type. |
+| int32_t \*isModified | Output parameter, which indicates whether the interceptor has modified the data packet. This parameter is invalid for the interceptor of the **OH_TYPE_READ_ONLY** type. |
 
 **Returns**:
 

@@ -18,7 +18,7 @@ Provides BASE DDK types and declares the macros, enums, and data structures requ
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [DDK_Ashmem](capi-ddk-ddk-ashmem.md) | DDK_Ashmem | Device memory map created by calling {@link OH_DDK_CreateAshmem}. A buffer using the device memory map canprovide better performance. |
+| [DDK_Ashmem](capi-ddk-ddk-ashmem.md) | DDK_Ashmem | Device memory map created by calling {@link OH_DDK_CreateAshmem}. A buffer using the device memory map can provide better performance. |
 
 ### Enum
 

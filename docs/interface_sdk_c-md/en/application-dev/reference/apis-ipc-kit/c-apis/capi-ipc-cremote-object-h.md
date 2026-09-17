@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides C APIs for creating and destroying a remote object, transferring data, and observing the dead statusof a remote object.
+Provides C APIs for creating and destroying a remote object, transferring data, and observing the dead status of a remote object.
 
 **Library**: libipc_capi.so
 
@@ -40,11 +40,20 @@ Provides C APIs for creating and destroying a remote object, transferring data, 
 | [int OH_IPCRemoteProxy_GetInterfaceDescriptor(OHIPCRemoteProxy *proxy, char **descriptor, int32_t *len, OH_IPC_MemAllocator allocator)](#oh_ipcremoteproxy_getinterfacedescriptor) | - | Obtains the interface descriptor from the stub. |
 | [typedef void (\*OH_OnDeathRecipientCallback)(void *userData)](#oh_ondeathrecipientcallback) | OH_OnDeathRecipientCallback | Defines a callback to be invoked when the remote **OHIPCRemoteStub** object dies unexpectedly. |
 | [typedef void (\*OH_OnDeathRecipientDestroyCallback)(void *userData)](#oh_ondeathrecipientdestroycallback) | OH_OnDeathRecipientDestroyCallback | Defines a callback to be invoked when the **OHIPCDeathRecipient** object is destroyed. |
-| [OHIPCDeathRecipient* OH_IPCDeathRecipient_Create(OH_OnDeathRecipientCallback deathRecipientCallback, OH_OnDeathRecipientDestroyCallback destroyCallback, void *userData)](#oh_ipcdeathrecipient_create) | - | Creates an **OHIPCDeathRecipient** object, which triggers a notification when the **OHIPCRemoteStub** objectdies unexpectedly. |
+| [OHIPCDeathRecipient* OH_IPCDeathRecipient_Create(OH_OnDeathRecipientCallback deathRecipientCallback, OH_OnDeathRecipientDestroyCallback destroyCallback, void *userData)](#oh_ipcdeathrecipient_create) | - | Creates an **OHIPCDeathRecipient** object, which triggers a notification when the **OHIPCRemoteStub** object dies unexpectedly. |
 | [void OH_IPCDeathRecipient_Destroy(OHIPCDeathRecipient *recipient)](#oh_ipcdeathrecipient_destroy) | - | Destroys an **OHIPCDeathRecipient** object. |
 | [int OH_IPCRemoteProxy_AddDeathRecipient(OHIPCRemoteProxy *proxy, OHIPCDeathRecipient *recipient)](#oh_ipcremoteproxy_adddeathrecipient) | - | Subscribes to the death of an **OHIPCRemoteStub** object for an **OHIPCRemoteProxy** object. |
 | [int OH_IPCRemoteProxy_RemoveDeathRecipient(OHIPCRemoteProxy *proxy, OHIPCDeathRecipient *recipient)](#oh_ipcremoteproxy_removedeathrecipient) | - | Unsubscribes from the death of the **OHIPCRemoteStub** object for an **OHIPCRemoteProxy** object. |
 | [int OH_IPCRemoteProxy_IsRemoteDead(const OHIPCRemoteProxy *proxy)](#oh_ipcremoteproxy_isremotedead) | - | Checks whether the **OHIPCRemoteStub** object corresponding to the **OHIPCRemoteProxy** object is dead. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| int (*OH_OnRemoteRequestCallback)(uint32_t code, const OHIPCParcel *data, OHIPCParcel *reply, void *userData) | Called to process the peer request at the stub.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.IPC.Core |
+| void (*OH_OnRemoteDestroyCallback)(void *userData) | Called when an observed object is destroyed.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.IPC.Core |
+| void (*OH_OnDeathRecipientCallback)(void *userData) | Defines a callback to be invoked when the remote **OHIPCRemoteStub** object dies unexpectedly.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.IPC.Core |
+| void (*OH_OnDeathRecipientDestroyCallback)(void *userData) | Defines a callback to be invoked when the **OHIPCDeathRecipient** object is destroyed.<br>**Since**: 12<br>**System capability**: SystemCapability.Communication.IPC.Core |
 
 ## Enum type description
 
@@ -86,16 +95,16 @@ Called to process the peer request at the stub.
 
 | Parameter | Description |
 | -- | -- |
-| uint32_t code | Customized communication command word.Value range: [0x01, 0x00ffffff] |
+| uint32_t code | Customized communication command word. Value range: [0x01, 0x00ffffff] |
 | const OHIPCParcel \*data | Pointer to the requested data object. It cannot be NULL or released in the function. |
-| OHIPCParcel \*reply | Pointer to the response data object. It cannot be NULL or released in the function. If this functionreturns an error, data cannot be written to this parameter. |
+| OHIPCParcel \*reply | Pointer to the response data object. It cannot be NULL or released in the function. If this function returns an error, data cannot be written to this parameter. |
 | void \*userData | Pointer to the private user data. It can be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.  Returns a custom error code in the range [1909001, 1909999] or a system error code otherwise.  If the custom error code is out of range, {@link OH_IPC_ErrorCode#OH_IPC_INVALID_USER_ERROR_CODE} is returned. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.<br>Returns a custom error code in the range [1909001, 1909999] or a system error code otherwise.<br>If the custom error code is out of range, {@link OH_IPC_ErrorCode#OH_IPC_INVALID_USER_ERROR_CODE} is returned. |
 
 ### OH_OnRemoteDestroyCallback()
 
@@ -207,14 +216,14 @@ Sends an IPC message.
 | const OHIPCRemoteProxy *proxy | Pointer to the **OHIPCRemoteProxy** object. It cannot be NULL. |
 | uint32_t code | Customized IPC command word, in the range [0x01, 0x00ffffff]. |
 | const OHIPCParcel *data | Pointer to the requested data object. It cannot be NULL. |
-| OHIPCParcel *reply | Pointer to the response data object. It cannot be NULL in the case of a synchronous request, and can beNULL in the case of an asynchronous request. |
+| OHIPCParcel *reply | Pointer to the response data object. It cannot be NULL in the case of a synchronous request, and can be NULL in the case of an asynchronous request. |
 | [const OH_IPC_MessageOption](capi-ohipcremoteobject-oh-ipc-messageoption.md) *option | Pointer to the message option. It can be NULL, which indicates a synchronous request. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the message is sent successfully.  Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if invalid parameters are found.  Returns {@link OH_IPC_ErrorCode#OH_IPC_DEAD_REMOTE_OBJECT} if the remote OHIPCRemoteStub object dies.  Returns {@link OH_IPC_ErrorCode#OH_IPC_CODE_OUT_OF_RANGE} if the code is out of range.  Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} or a custom error code in other cases. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the message is sent successfully.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if invalid parameters are found.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_DEAD_REMOTE_OBJECT} if the remote OHIPCRemoteStub object dies.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_CODE_OUT_OF_RANGE} if the code is out of range.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} or a custom error code in other cases. |
 
 ### OH_IPCRemoteProxy_GetInterfaceDescriptor()
 
@@ -235,7 +244,7 @@ Obtains the interface descriptor from the stub.
 | Parameter | Description |
 | -- | -- |
 | OHIPCRemoteProxy *proxy | Pointer to the **OHIPCRemoteProxy** object. It cannot be NULL. |
-| char **descriptor | Pointer to the address of the memory for holding the interface descriptor. The memory is allocatedby the allocator provided by the user and needs to be released. This pointer cannot be NULL. If an error code isreturned, you still need to check whether the memory is empty and release the memory. Otherwise, memory leaks mayoccur. |
+| char **descriptor | Pointer to the address of the memory for holding the interface descriptor. The memory is allocated by the allocator provided by the user and needs to be released. This pointer cannot be NULL. If an error code is returned, you still need to check whether the memory is empty and release the memory. Otherwise, memory leaks may occur. |
 | int32_t *len | Pointer to the length of the data written to the descriptor, including the terminator. It cannot be NULL. |
 | OH_IPC_MemAllocator allocator | Memory allocator specified by the user for allocating memory for **identity**. It cannot be NULL. |
 
@@ -243,7 +252,7 @@ Obtains the interface descriptor from the stub.
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the message is sent successfully.  Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.  Returns {@link OH_IPC_ErrorCode#OH_IPC_DEAD_REMOTE_OBJECT} if the remote OHIPCRemoteStub object dies.  Returns {@link OH_IPC_ErrorCode#OH_IPC_MEM_ALLOCATOR_ERROR} if the memory allocation fails.  Returns {@link OH_IPC_ErrorCode#OH_IPC_PARCEL_READ_ERROR} or a custom error code if the data in the serialized  object fails to be read. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the message is sent successfully.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_DEAD_REMOTE_OBJECT} if the remote OHIPCRemoteStub object dies.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_MEM_ALLOCATOR_ERROR} if the memory allocation fails.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_PARCEL_READ_ERROR} or a custom error code if the data in the serialized  object fails to be read. |
 
 ### OH_OnDeathRecipientCallback()
 
@@ -293,7 +302,7 @@ OHIPCDeathRecipient* OH_IPCDeathRecipient_Create(OH_OnDeathRecipientCallback dea
 
 **Description**
 
-Creates an **OHIPCDeathRecipient** object, which triggers a notification when the **OHIPCRemoteStub** objectdies unexpectedly.
+Creates an **OHIPCDeathRecipient** object, which triggers a notification when the **OHIPCRemoteStub** object dies unexpectedly.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -352,13 +361,13 @@ Subscribes to the death of an **OHIPCRemoteStub** object for an **OHIPCRemotePro
 | Parameter | Description |
 | -- | -- |
 | OHIPCRemoteProxy *proxy | Pointer to the **OHIPCRemoteProxy** object that subscribes to the death notification. It cannot be NULL. |
-| [OHIPCDeathRecipient](capi-ohipcremoteobject-ohipcdeathrecipient.md) *recipient | Pointer to the object that receives the death notification of the **OHIPCRemoteStub** object. Itcannot be NULL. |
+| [OHIPCDeathRecipient](capi-ohipcremoteobject-ohipcdeathrecipient.md) *recipient | Pointer to the object that receives the death notification of the **OHIPCRemoteStub** object. It cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.  Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.  Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
 
 ### OH_IPCRemoteProxy_RemoveDeathRecipient()
 
@@ -378,14 +387,14 @@ Unsubscribes from the death of the **OHIPCRemoteStub** object for an **OHIPCRemo
 
 | Parameter | Description |
 | -- | -- |
-| OHIPCRemoteProxy *proxy | Pointer to the **OHIPCRemoteProxy** object that unsubscribes from the death notification. It cannot beNULL. |
-| [OHIPCDeathRecipient](capi-ohipcremoteobject-ohipcdeathrecipient.md) *recipient | Pointer to the object that receives the death notification of the **OHIPCRemoteStub** object. Itcannot be NULL. |
+| OHIPCRemoteProxy *proxy | Pointer to the **OHIPCRemoteProxy** object that unsubscribes from the death notification. It cannot be NULL. |
+| [OHIPCDeathRecipient](capi-ohipcremoteobject-ohipcdeathrecipient.md) *recipient | Pointer to the object that receives the death notification of the **OHIPCRemoteStub** object. It cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.  Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.  Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.<br>Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
 
 ### OH_IPCRemoteProxy_IsRemoteDead()
 

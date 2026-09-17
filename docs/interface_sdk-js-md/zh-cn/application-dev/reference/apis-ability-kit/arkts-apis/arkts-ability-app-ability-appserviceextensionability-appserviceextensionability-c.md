@@ -226,7 +226,7 @@ context: AppServiceExtensionContext
 
 AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)。
 
-**类型：** [AppServiceExtensionContext](../../apis-default/arkts-apis/arkts-appserviceextensioncontext-c.md)
+**类型：** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 
 **起始版本：** 20
 

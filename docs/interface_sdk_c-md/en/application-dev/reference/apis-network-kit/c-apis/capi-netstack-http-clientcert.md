@@ -6,7 +6,7 @@ typedef struct Http_ClientCert {...} Http_ClientCert
 
 ## Overview
 
-Defines the client certificate sent to a remote server, which will be used by the server to verify theidentity of the client.
+Defines the client certificate sent to a remote server, which will be used by the server to verify the identity of the client.
 
 **Since**: 20
 

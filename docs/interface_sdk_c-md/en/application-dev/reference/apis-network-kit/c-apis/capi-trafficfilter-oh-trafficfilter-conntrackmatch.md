@@ -6,7 +6,7 @@ typedef struct OH_TrafficFilter_ConntrackMatch {...} OH_TrafficFilter_ConntrackM
 
 ## Overview
 
-Connection tracking match conditionMatches packets based on connection tracking states
+Connection tracking match condition<br> Matches packets based on connection tracking states
 
 **Since**: 26.1.0
 

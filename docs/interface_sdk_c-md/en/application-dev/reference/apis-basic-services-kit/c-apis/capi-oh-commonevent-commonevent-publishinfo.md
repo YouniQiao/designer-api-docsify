@@ -6,7 +6,7 @@ typedef struct CommonEvent_PublishInfo CommonEvent_PublishInfo
 
 ## Overview
 
-Defines the property object used for publishing a common event. This objectencapsulates the property configuration required for publishing a common event. It isapplicable to scenarios where an app needs to publish a custom common event and specifythe publishing parameters.
+Defines the property object used for publishing a common event. This object encapsulates the property configuration required for publishing a common event. It is applicable to scenarios where an app needs to publish a custom common event and specify the publishing parameters.
 
 **Since**: 18
 

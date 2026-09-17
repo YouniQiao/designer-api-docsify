@@ -25,6 +25,7 @@ typedef struct Rdb_KeyInfo {...} Rdb_KeyInfo
 | union Rdb_KeyData |  |
 | uint64_t integer | 表示uint64_t类型的数据。 |
 | double real | 表示double类型的数据。 |
-| const char *text; } *data | 表示const char *类型的数据。 |
+| const char *text;
+ } *data | 表示const char *类型的数据。 |
 
 

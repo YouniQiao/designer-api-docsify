@@ -8,410 +8,410 @@
 
 | Name | Description |
 | -- | -- |
-| [ani_status (\*GetVersion)(ani_env *env, uint32_t *result)](#getversion) | Retrieves the version information.This function retrieves the version information and stores it in the result parameter. |
-| [ani_status (\*GetVM)(ani_env *env, ani_vm **result)](#getvm) | Retrieves the Virtual Machine (VM) instance.This function retrieves the VM instance and stores it in the result parameter. |
-| [ani_status (\*Object_New)(ani_env *env, ani_class cls, ani_method ctor, ani_object *result, ...)](#object_new) | Creates a new object of a specified class using a constructor method.This function creates a new object of the given class and calls the specified constructor method with variadicarguments. |
-| [ani_status (\*Object_New_A)(ani_env *env, ani_class cls, ani_method ctor, ani_object *result, const ani_value *args)](#object_new_a) | Creates a new object of a specified class using a constructor method (array-based).This function creates a new object of the given class and calls the specified constructor method with argumentsprovided in an array. |
-| [ani_status (\*Object_New_V)(ani_env *env, ani_class cls, ani_method ctor, ani_object *result, va_list args)](#object_new_v) | Creates a new object of a specified class using a constructor method (variadic arguments).This function creates a new object of the given class and calls the specified constructor method with a `va_list`of arguments. |
-| [ani_status (\*Object_GetType)(ani_env *env, ani_object object, ani_type *result)](#object_gettype) | Retrieves the type of a given object.This function retrieves the type of the specified object. |
-| [ani_status (\*Object_InstanceOf)(ani_env *env, ani_object object, ani_type type, ani_boolean *result)](#object_instanceof) | Checks if an object is an instance of a specified type.This function checks whether the given object is an instance of the specified type. |
-| [ani_status (\*Type_GetSuperClass)(ani_env *env, ani_type type, ani_class *result)](#type_getsuperclass) | Retrieves the superclass of a specified type.This function retrieves the superclass of a given type and stores it in the result parameter. |
-| [ani_status (\*Type_IsAssignableFrom)(ani_env *env, ani_type from_type, ani_type to_type, ani_boolean *result)](#type_isassignablefrom) | Determines if one type is assignable from another.This function checks if a type is assignable from another and stores the result in the output parameter. |
-| [ani_status (\*FindModule)(ani_env *env, const char *module_descriptor, ani_module *result)](#findmodule) | Finds a module by its descriptor.This function locates a module based on its descriptor and stores it in the result parameter. |
-| [ani_status (\*FindNamespace)(ani_env *env, const char *namespace_descriptor, ani_namespace *result)](#findnamespace) | Finds a namespace by its descriptor.This function locates a namespace based on its descriptor and stores it in the result parameter. |
-| [ani_status (\*FindClass)(ani_env *env, const char *class_descriptor, ani_class *result)](#findclass) | Finds a class by its descriptor.This function locates a class based on its descriptor and stores it in the result parameter. |
-| [ani_status (\*FindEnum)(ani_env *env, const char *enum_descriptor, ani_enum *result)](#findenum) | Finds an enum by its descriptor.This function locates an enum based on its descriptor and stores it in the result parameter. |
-| [ani_status (\*Module_FindFunction)(ani_env *env, ani_module module, const char *name, const char *signature,ani_function *result)](#module_findfunction) | Finds a function within a module by its name and signature.This function locates a function within the specified module based on its name and signature. |
-| [ani_status (\*Module_FindVariable)(ani_env *env, ani_module module, const char *name, ani_variable *result)](#module_findvariable) | Finds a variable within a module by its name.This function locates a variable within the specified module based on its name. |
-| [ani_status (\*Namespace_FindFunction)(ani_env *env, ani_namespace ns, const char *name, const char *signature,ani_function *result)](#namespace_findfunction) | Finds a function within a namespace by its name and signature.This function locates a function within the specified namespace based on its name and signature. |
-| [ani_status (\*Namespace_FindVariable)(ani_env *env, ani_namespace ns, const char *name, ani_variable *result)](#namespace_findvariable) | Finds a variable within a namespace by its name.This function locates a variable within the specified namespace based on its name. |
-| [ani_status (\*Module_BindNativeFunctions)(ani_env *env, ani_module module, const ani_native_function *functions,ani_size nr_functions)](#module_bindnativefunctions) | Binds native functions to a module.This function binds an array of native functions to the specified module. |
-| [ani_status (\*Namespace_BindNativeFunctions)(ani_env *env, ani_namespace ns, const ani_native_function *functions,ani_size nr_functions)](#namespace_bindnativefunctions) | Binds native functions to a namespace.This function binds an array of native functions to the specified namespace. |
-| [ani_status (\*Class_BindNativeMethods)(ani_env *env, ani_class cls, const ani_native_function *methods,ani_size nr_methods)](#class_bindnativemethods) | Binds native methods to a class.This function binds an array of native instance methods to the specified class. |
-| [ani_status (\*Reference_Delete)(ani_env *env, ani_ref lref)](#reference_delete) | Deletes a local reference.This function deletes a specified local reference to free up resources. |
-| [ani_status (\*EnsureEnoughReferences)(ani_env *env, ani_size nr_refs)](#ensureenoughreferences) | Ensures enough local references are available.This function checks and ensures that the specified number of local references can be created. |
-| [ani_status (\*CreateLocalScope)(ani_env *env, ani_size nr_refs)](#createlocalscope) | Creates a new local scope for references.This function creates a local scope for references with a specified capacity. |
-| [ani_status (\*DestroyLocalScope)(ani_env *env)](#destroylocalscope) | Destroys the current local scope.This function destroys the current local scope and frees all references within it. |
-| [ani_status (\*CreateEscapeLocalScope)(ani_env *env, ani_size nr_refs)](#createescapelocalscope) | Creates a new escape local scope.This function creates a local scope for references with escape functionality, allowing objects to escape thisscope. |
-| [ani_status (\*DestroyEscapeLocalScope)(ani_env *env, ani_ref ref, ani_ref *result)](#destroyescapelocalscope) | Destroys the current escape local scope.This function destroys the current escape local scope and allows escaping references to be retrieved. |
-| [ani_status (\*ThrowError)(ani_env *env, ani_error err)](#throwerror) | Throws an error.This function throws the specified error in the current environment. |
-| [ani_status (\*ExistUnhandledError)(ani_env *env, ani_boolean *result)](#existunhandlederror) | Checks if there are unhandled errors.This function determines if there are unhandled errors in the current environment. |
-| [ani_status (\*GetUnhandledError)(ani_env *env, ani_error *result)](#getunhandlederror) | Retrieves the current unhandled error.This function fetches the unhandled error in the environment. |
-| [ani_status (\*ResetError)(ani_env *env)](#reseterror) | Resets the current error state.This function clears the error state in the current environment. |
-| [ani_status (\*DescribeError)(ani_env *env)  // NOTE: Print stacktrace for debugging?](#describeerror) | Provides a description of the current error.This function prints the stack trace or other debug information for the current error.Printing is done via invocation of `console.error` provided by standard library. |
-| [ani_status (\*Abort)(ani_env *env, const char *message)](#abort) | Aborts execution with a message.This function terminates execution with the specified error message. |
-| [ani_status (\*GetNull)(ani_env *env, ani_ref *result)](#getnull) | Retrieves a null reference.This function provides a null reference in the specified result. |
-| [ani_status (\*GetUndefined)(ani_env *env, ani_ref *result)](#getundefined) | Retrieves an undefined reference.This function provides an undefined reference in the specified result. |
-| [ani_status (\*Reference_IsNull)(ani_env *env, ani_ref ref, ani_boolean *result)](#reference_isnull) | Checks if a reference is null.This function determines if the specified reference is null. |
-| [ani_status (\*Reference_IsUndefined)(ani_env *env, ani_ref ref, ani_boolean *result)](#reference_isundefined) | Checks if a reference is undefined.This function determines if the specified reference is undefined. |
-| [ani_status (\*Reference_IsNullishValue)(ani_env *env, ani_ref ref, ani_boolean *result)](#reference_isnullishvalue) | Checks if a reference is nullish value (null or undefined).This function determines if the specified reference is either null or undefined. |
-| [ani_status (\*Reference_Equals)(ani_env *env, ani_ref ref0, ani_ref ref1, ani_boolean *result)](#reference_equals) | Compares two references for equality.This function checks if two references are equal. |
-| [ani_status (\*Reference_StrictEquals)(ani_env *env, ani_ref ref0, ani_ref ref1, ani_boolean *result)](#reference_strictequals) | Compares two references for strict equality.This function checks if two references are strictly equal. |
-| [ani_status (\*String_NewUTF16)(ani_env *env, const uint16_t *utf16_string, ani_size utf16_size, ani_string *result)](#string_newutf16) | Creates a new UTF-16 string.This function creates a new string from the provided UTF-16 encoded data. |
-| [ani_status (\*String_GetUTF16Size)(ani_env *env, ani_string string, ani_size *result)](#string_getutf16size) | Retrieves the size of a UTF-16 string.This function retrieves the size (in code units) of the specified UTF-16 string. |
-| [ani_status (\*String_GetUTF16)(ani_env *env, ani_string string, uint16_t *utf16_buffer, ani_size utf16_buffer_size,ani_size *result)](#string_getutf16) | Retrieves the UTF-16 encoded data of a string.This function copies the UTF-16 encoded data of the string into the provided buffer. |
-| [ani_status (\*String_GetUTF16SubString)(ani_env *env, ani_string string, ani_size substr_offset,ani_size substr_size, uint16_t *utf16_buffer, ani_size utf16_buffer_size,ani_size *result)](#string_getutf16substring) | Retrieves a substring of a UTF-16 string.This function copies a portion of the UTF-16 string into the provided buffer. |
-| [ani_status (\*String_NewUTF8)(ani_env *env, const char *utf8_string, ani_size utf8_size, ani_string *result)](#string_newutf8) | Creates a new UTF-8 string.This function creates a new string from the provided UTF-8 encoded data. |
-| [ani_status (\*String_GetUTF8Size)(ani_env *env, ani_string string, ani_size *result)](#string_getutf8size) | Retrieves the size of a UTF-8 string.This function retrieves the size (in bytes) of the specified UTF-8 string. |
-| [ani_status (\*String_GetUTF8)(ani_env *env, ani_string string, char *utf8_buffer, ani_size utf8_buffer_size,ani_size *result)](#string_getutf8) | Retrieves the UTF-8 encoded data of a string.This function copies the UTF-8 encoded data of the string into the provided buffer. |
-| [ani_status (\*String_GetUTF8SubString)(ani_env *env, ani_string string, ani_size substr_offset, ani_size substr_size,char *utf8_buffer, ani_size utf8_buffer_size, ani_size *result)](#string_getutf8substring) | Retrieves a substring of a UTF-8 string.This function copies a portion of the UTF-8 string into the provided buffer. |
-| [ani_status (\*Array_GetLength)(ani_env *env, ani_array array, ani_size *result)](#array_getlength) | Retrieves the length of an Array.This function retrieves the length of the specified Array objectwith respect to possible override of the managed method. |
+| [ani_status (\*GetVersion)(ani_env *env, uint32_t *result)](#getversion) | Retrieves the version information.<br> This function retrieves the version information and stores it in the result parameter. |
+| [ani_status (\*GetVM)(ani_env *env, ani_vm **result)](#getvm) | Retrieves the Virtual Machine (VM) instance.<br> This function retrieves the VM instance and stores it in the result parameter. |
+| [ani_status (\*Object_New)(ani_env *env, ani_class cls, ani_method ctor, ani_object *result, ...)](#object_new) | Creates a new object of a specified class using a constructor method.<br> This function creates a new object of the given class and calls the specified constructor method with variadic arguments. |
+| [ani_status (\*Object_New_A)(ani_env *env, ani_class cls, ani_method ctor, ani_object *result, const ani_value *args)](#object_new_a) | Creates a new object of a specified class using a constructor method (array-based).<br> This function creates a new object of the given class and calls the specified constructor method with arguments provided in an array. |
+| [ani_status (\*Object_New_V)(ani_env *env, ani_class cls, ani_method ctor, ani_object *result, va_list args)](#object_new_v) | Creates a new object of a specified class using a constructor method (variadic arguments).<br> This function creates a new object of the given class and calls the specified constructor method with a `va_list` of arguments. |
+| [ani_status (\*Object_GetType)(ani_env *env, ani_object object, ani_type *result)](#object_gettype) | Retrieves the type of a given object.<br> This function retrieves the type of the specified object. |
+| [ani_status (\*Object_InstanceOf)(ani_env *env, ani_object object, ani_type type, ani_boolean *result)](#object_instanceof) | Checks if an object is an instance of a specified type.<br> This function checks whether the given object is an instance of the specified type. |
+| [ani_status (\*Type_GetSuperClass)(ani_env *env, ani_type type, ani_class *result)](#type_getsuperclass) | Retrieves the superclass of a specified type.<br> This function retrieves the superclass of a given type and stores it in the result parameter. |
+| [ani_status (\*Type_IsAssignableFrom)(ani_env *env, ani_type from_type, ani_type to_type, ani_boolean *result)](#type_isassignablefrom) | Determines if one type is assignable from another.<br> This function checks if a type is assignable from another and stores the result in the output parameter. |
+| [ani_status (\*FindModule)(ani_env *env, const char *module_descriptor, ani_module *result)](#findmodule) | Finds a module by its descriptor.<br> This function locates a module based on its descriptor and stores it in the result parameter. |
+| [ani_status (\*FindNamespace)(ani_env *env, const char *namespace_descriptor, ani_namespace *result)](#findnamespace) | Finds a namespace by its descriptor.<br> This function locates a namespace based on its descriptor and stores it in the result parameter. |
+| [ani_status (\*FindClass)(ani_env *env, const char *class_descriptor, ani_class *result)](#findclass) | Finds a class by its descriptor.<br> This function locates a class based on its descriptor and stores it in the result parameter. |
+| [ani_status (\*FindEnum)(ani_env *env, const char *enum_descriptor, ani_enum *result)](#findenum) | Finds an enum by its descriptor.<br> This function locates an enum based on its descriptor and stores it in the result parameter. |
+| [ani_status (\*Module_FindFunction)(ani_env *env, ani_module module, const char *name, const char *signature,ani_function *result)](#module_findfunction) | Finds a function within a module by its name and signature.<br> This function locates a function within the specified module based on its name and signature. |
+| [ani_status (\*Module_FindVariable)(ani_env *env, ani_module module, const char *name, ani_variable *result)](#module_findvariable) | Finds a variable within a module by its name.<br> This function locates a variable within the specified module based on its name. |
+| [ani_status (\*Namespace_FindFunction)(ani_env *env, ani_namespace ns, const char *name, const char *signature,ani_function *result)](#namespace_findfunction) | Finds a function within a namespace by its name and signature.<br> This function locates a function within the specified namespace based on its name and signature. |
+| [ani_status (\*Namespace_FindVariable)(ani_env *env, ani_namespace ns, const char *name, ani_variable *result)](#namespace_findvariable) | Finds a variable within a namespace by its name.<br> This function locates a variable within the specified namespace based on its name. |
+| [ani_status (\*Module_BindNativeFunctions)(ani_env *env, ani_module module, const ani_native_function *functions,ani_size nr_functions)](#module_bindnativefunctions) | Binds native functions to a module.<br> This function binds an array of native functions to the specified module. |
+| [ani_status (\*Namespace_BindNativeFunctions)(ani_env *env, ani_namespace ns, const ani_native_function *functions,ani_size nr_functions)](#namespace_bindnativefunctions) | Binds native functions to a namespace.<br> This function binds an array of native functions to the specified namespace. |
+| [ani_status (\*Class_BindNativeMethods)(ani_env *env, ani_class cls, const ani_native_function *methods,ani_size nr_methods)](#class_bindnativemethods) | Binds native methods to a class.<br> This function binds an array of native instance methods to the specified class. |
+| [ani_status (\*Reference_Delete)(ani_env *env, ani_ref lref)](#reference_delete) | Deletes a local reference.<br> This function deletes a specified local reference to free up resources. |
+| [ani_status (\*EnsureEnoughReferences)(ani_env *env, ani_size nr_refs)](#ensureenoughreferences) | Ensures enough local references are available.<br> This function checks and ensures that the specified number of local references can be created. |
+| [ani_status (\*CreateLocalScope)(ani_env *env, ani_size nr_refs)](#createlocalscope) | Creates a new local scope for references.<br> This function creates a local scope for references with a specified capacity. |
+| [ani_status (\*DestroyLocalScope)(ani_env *env)](#destroylocalscope) | Destroys the current local scope.<br> This function destroys the current local scope and frees all references within it. |
+| [ani_status (\*CreateEscapeLocalScope)(ani_env *env, ani_size nr_refs)](#createescapelocalscope) | Creates a new escape local scope.<br> This function creates a local scope for references with escape functionality, allowing objects to escape this scope. |
+| [ani_status (\*DestroyEscapeLocalScope)(ani_env *env, ani_ref ref, ani_ref *result)](#destroyescapelocalscope) | Destroys the current escape local scope.<br> This function destroys the current escape local scope and allows escaping references to be retrieved. |
+| [ani_status (\*ThrowError)(ani_env *env, ani_error err)](#throwerror) | Throws an error.<br> This function throws the specified error in the current environment. |
+| [ani_status (\*ExistUnhandledError)(ani_env *env, ani_boolean *result)](#existunhandlederror) | Checks if there are unhandled errors.<br> This function determines if there are unhandled errors in the current environment. |
+| [ani_status (\*GetUnhandledError)(ani_env *env, ani_error *result)](#getunhandlederror) | Retrieves the current unhandled error.<br> This function fetches the unhandled error in the environment. |
+| [ani_status (\*ResetError)(ani_env *env)](#reseterror) | Resets the current error state.<br> This function clears the error state in the current environment. |
+| [ani_status (\*DescribeError)(ani_env *env)  // NOTE: Print stacktrace for debugging?](#describeerror) | Provides a description of the current error.<br> This function prints the stack trace or other debug information for the current error. Printing is done via invocation of `console.error` provided by standard library. |
+| [ani_status (\*Abort)(ani_env *env, const char *message)](#abort) | Aborts execution with a message.<br> This function terminates execution with the specified error message. |
+| [ani_status (\*GetNull)(ani_env *env, ani_ref *result)](#getnull) | Retrieves a null reference.<br> This function provides a null reference in the specified result. |
+| [ani_status (\*GetUndefined)(ani_env *env, ani_ref *result)](#getundefined) | Retrieves an undefined reference.<br> This function provides an undefined reference in the specified result. |
+| [ani_status (\*Reference_IsNull)(ani_env *env, ani_ref ref, ani_boolean *result)](#reference_isnull) | Checks if a reference is null.<br> This function determines if the specified reference is null. |
+| [ani_status (\*Reference_IsUndefined)(ani_env *env, ani_ref ref, ani_boolean *result)](#reference_isundefined) | Checks if a reference is undefined.<br> This function determines if the specified reference is undefined. |
+| [ani_status (\*Reference_IsNullishValue)(ani_env *env, ani_ref ref, ani_boolean *result)](#reference_isnullishvalue) | Checks if a reference is nullish value (null or undefined).<br> This function determines if the specified reference is either null or undefined. |
+| [ani_status (\*Reference_Equals)(ani_env *env, ani_ref ref0, ani_ref ref1, ani_boolean *result)](#reference_equals) | Compares two references for equality.<br> This function checks if two references are equal. |
+| [ani_status (\*Reference_StrictEquals)(ani_env *env, ani_ref ref0, ani_ref ref1, ani_boolean *result)](#reference_strictequals) | Compares two references for strict equality.<br> This function checks if two references are strictly equal. |
+| [ani_status (\*String_NewUTF16)(ani_env *env, const uint16_t *utf16_string, ani_size utf16_size, ani_string *result)](#string_newutf16) | Creates a new UTF-16 string.<br> This function creates a new string from the provided UTF-16 encoded data. |
+| [ani_status (\*String_GetUTF16Size)(ani_env *env, ani_string string, ani_size *result)](#string_getutf16size) | Retrieves the size of a UTF-16 string.<br> This function retrieves the size (in code units) of the specified UTF-16 string. |
+| [ani_status (\*String_GetUTF16)(ani_env *env, ani_string string, uint16_t *utf16_buffer, ani_size utf16_buffer_size,ani_size *result)](#string_getutf16) | Retrieves the UTF-16 encoded data of a string.<br> This function copies the UTF-16 encoded data of the string into the provided buffer. |
+| [ani_status (\*String_GetUTF16SubString)(ani_env *env, ani_string string, ani_size substr_offset,ani_size substr_size, uint16_t *utf16_buffer, ani_size utf16_buffer_size,ani_size *result)](#string_getutf16substring) | Retrieves a substring of a UTF-16 string.<br> This function copies a portion of the UTF-16 string into the provided buffer. |
+| [ani_status (\*String_NewUTF8)(ani_env *env, const char *utf8_string, ani_size utf8_size, ani_string *result)](#string_newutf8) | Creates a new UTF-8 string.<br> This function creates a new string from the provided UTF-8 encoded data. |
+| [ani_status (\*String_GetUTF8Size)(ani_env *env, ani_string string, ani_size *result)](#string_getutf8size) | Retrieves the size of a UTF-8 string.<br> This function retrieves the size (in bytes) of the specified UTF-8 string. |
+| [ani_status (\*String_GetUTF8)(ani_env *env, ani_string string, char *utf8_buffer, ani_size utf8_buffer_size,ani_size *result)](#string_getutf8) | Retrieves the UTF-8 encoded data of a string.<br> This function copies the UTF-8 encoded data of the string into the provided buffer. |
+| [ani_status (\*String_GetUTF8SubString)(ani_env *env, ani_string string, ani_size substr_offset, ani_size substr_size,char *utf8_buffer, ani_size utf8_buffer_size, ani_size *result)](#string_getutf8substring) | Retrieves a substring of a UTF-8 string.<br> This function copies a portion of the UTF-8 string into the provided buffer. |
+| [ani_status (\*Array_GetLength)(ani_env *env, ani_array array, ani_size *result)](#array_getlength) | Retrieves the length of an Array.<br> This function retrieves the length of the specified Array object with respect to possible override of the managed method. |
 | [ani_status (\*Array_New)(ani_env *env, ani_size length, ani_ref initial_element, ani_array *result)](#array_new) | This function creates a new Array of the specified length. |
-| [ani_status (\*Array_Set)(ani_env *env, ani_array array, ani_size index, ani_ref ref)](#array_set) | Sets a value to an Array.This function sets a value at a given index in Arraywith respect to possible override of the managed method. |
-| [ani_status (\*Array_Get)(ani_env *env, ani_array array, ani_size index, ani_ref *result)](#array_get) | Retrieves a value from an Array.This function retrieves a value at a given index from Arraywith respect to possible override of the managed method. |
-| [ani_status (\*Array_Push)(ani_env *env, ani_array array, ani_ref ref)](#array_push) | Push a value to the end of Array.This function pushes a value to the end of Arraywith respect to possible override of the managed method. |
-| [ani_status (\*Array_Pop)(ani_env *env, ani_array array, ani_ref *result)](#array_pop) | Retrieves the last element and erases it from array.This function retrieves the last element and erases it from Arraywith respect to possible override of the managed method. |
-| [ani_status (\*FixedArray_GetLength)(ani_env *env, ani_fixedarray array, ani_size *result)](#fixedarray_getlength) | Retrieves the length of a FixedArray.This function retrieves the length of the specified FixedArray. |
-| [ani_status (\*ValueArray_New_Boolean)(ani_env *env, ani_size length, ani_valuearray_boolean *result)](#valuearray_new_boolean) | Creates a new ValueArray of booleans.This function creates a new ValueArray of the specified length for boolean values. |
-| [ani_status (\*ValueArray_New_Char)(ani_env *env, ani_size length, ani_valuearray_char *result)](#valuearray_new_char) | Creates a new ValueArray of characters.This function creates a new ValueArray of the specified length for character values. |
-| [ani_status (\*ValueArray_New_Byte)(ani_env *env, ani_size length, ani_valuearray_byte *result)](#valuearray_new_byte) | Creates a new ValueArray of bytes.This function creates a new ValueArray of the specified length for byte values. |
-| [ani_status (\*ValueArray_New_Short)(ani_env *env, ani_size length, ani_valuearray_short *result)](#valuearray_new_short) | Creates a new ValueArray of shorts.This function creates a new ValueArray of the specified length for short integer values. |
-| [ani_status (\*ValueArray_New_Int)(ani_env *env, ani_size length, ani_valuearray_int *result)](#valuearray_new_int) | Creates a new ValueArray of integers.This function creates a new ValueArray of the specified length for integer values. |
-| [ani_status (\*ValueArray_New_Long)(ani_env *env, ani_size length, ani_valuearray_long *result)](#valuearray_new_long) | Creates a new ValueArray of long integers.This function creates a new ValueArray of the specified length for long integer values. |
-| [ani_status (\*ValueArray_New_Float)(ani_env *env, ani_size length, ani_valuearray_float *result)](#valuearray_new_float) | Creates a new ValueArray of floats.This function creates a new ValueArray of the specified length for float values. |
-| [ani_status (\*ValueArray_New_Double)(ani_env *env, ani_size length, ani_valuearray_double *result)](#valuearray_new_double) | Creates a new ValueArray of doubles.This function creates a new ValueArray of the specified length for double values. |
-| [ani_status (\*ValueArray_GetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, ani_boolean *native_buffer)](#valuearray_getregion_boolean) | Retrieves a region of boolean values from a ValueArray.This function retrieves a portion of the specified boolean ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,ani_char *native_buffer)](#valuearray_getregion_char) | Retrieves a region of character values from a ValueArray.This function retrieves a portion of the specified character ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,ani_byte *native_buffer)](#valuearray_getregion_byte) | Retrieves a region of byte values from a ValueArray.This function retrieves a portion of the specified byte ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,ani_short *native_buffer)](#valuearray_getregion_short) | Retrieves a region of short values from a ValueArray.This function retrieves a portion of the specified short ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,ani_int *native_buffer)](#valuearray_getregion_int) | Retrieves a region of integer values from a ValueArray.This function retrieves a portion of the specified integer ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,ani_long *native_buffer)](#valuearray_getregion_long) | Retrieves a region of long integer values from a ValueArray.This function retrieves a portion of the specified long integer ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,ani_float *native_buffer)](#valuearray_getregion_float) | Retrieves a region of float values from a ValueArray.This function retrieves a portion of the specified float ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_GetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, ani_double *native_buffer)](#valuearray_getregion_double) | Retrieves a region of double values from a ValueArray.This function retrieves a portion of the specified double ValueArray into a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, const ani_boolean *native_buffer)](#valuearray_setregion_boolean) | Sets a region of boolean values in a ValueArray.This function sets a portion of the specified boolean ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,const ani_char *native_buffer)](#valuearray_setregion_char) | Sets a region of character values in a ValueArray.This function sets a portion of the specified character ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,const ani_byte *native_buffer)](#valuearray_setregion_byte) | Sets a region of byte values in a ValueArray.This function sets a portion of the specified byte ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,const ani_short *native_buffer)](#valuearray_setregion_short) | Sets a region of short values in a ValueArray.This function sets a portion of the specified short ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,const ani_int *native_buffer)](#valuearray_setregion_int) | Sets a region of integer values in a ValueArray.This function sets a portion of the specified integer ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,const ani_long *native_buffer)](#valuearray_setregion_long) | Sets a region of long integer values in a ValueArray.This function sets a portion of the specified long integer ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,const ani_float *native_buffer)](#valuearray_setregion_float) | Sets a region of float values in a ValueArray.This function sets a portion of the specified float ValueArray using a native buffer. |
-| [ani_status (\*ValueArray_SetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, const ani_double *native_buffer)](#valuearray_setregion_double) | Sets a region of double values in a ValueArray.This function sets a portion of the specified double ValueArray using a native buffer. |
-| [ani_status (\*FixedArray_New)(ani_env *env, ani_type type, ani_size length, ani_ref initial_element,ani_fixedarray *result)](#fixedarray_new) | Creates a new FixedArray of references.This function creates a new FixedArray of references, optionally initializing it with an initial_element ref. |
-| [ani_status (\*FixedArray_Set)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref ref)](#fixedarray_set) | Sets a reference at a specific index in a FixedArray.This function sets the value of a reference at the specified index in the FixedArray. |
-| [ani_status (\*FixedArray_Get)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref *result)](#fixedarray_get) | Retrieves a reference from a specific index in a FixedArray.This function retrieves the value of a reference at the specified index in the FixedArray. |
-| [ani_status (\*Enum_GetEnumItemByName)(ani_env *env, ani_enum enm, const char *name, ani_enum_item *result)](#enum_getenumitembyname) | Retrieves an enum item by its name.This function retrieves an enum item associated with the specified name. |
-| [ani_status (\*Enum_GetEnumItemByIndex)(ani_env *env, ani_enum enm, ani_size index, ani_enum_item *result)](#enum_getenumitembyindex) | Retrieves an enum item by its index.This function retrieves an enum item located at the specified index. |
-| [ani_status (\*EnumItem_GetEnum)(ani_env *env, ani_enum_item enum_item, ani_enum *result)](#enumitem_getenum) | Retrieves the enum associated with an enum item.This function retrieves the enum to which the specified enum item belongs. |
-| [ani_status (\*EnumItem_GetValue_Int)(ani_env *env, ani_enum_item enum_item, ani_int *result)](#enumitem_getvalue_int) | Retrieves the integer value of an enum item.This function retrieves the integer representing the value of the specified enum item. |
-| [ani_status (\*EnumItem_GetValue_String)(ani_env *env, ani_enum_item enum_item, ani_string *result)](#enumitem_getvalue_string) | Retrieves the string value of an enum item.This function retrieves the string representing the value of the specified enum item. |
-| [ani_status (\*EnumItem_GetName)(ani_env *env, ani_enum_item enum_item, ani_string *result)](#enumitem_getname) | Retrieves the name of an enum item.This function retrieves the name associated with the specified enum item. |
-| [ani_status (\*EnumItem_GetIndex)(ani_env *env, ani_enum_item enum_item, ani_size *result)](#enumitem_getindex) | Retrieves the index of an enum item.This function retrieves the index of the specified enum item within its enum. |
-| [ani_status (\*FunctionalObject_Call)(ani_env *env, ani_fn_object fn, ani_size argc, ani_ref *argv, ani_ref *result)](#functionalobject_call) | Invokes an object of function type.This function invokes an object of function type with the specified arguments. |
-| [ani_status (\*Variable_SetValue_Boolean)(ani_env *env, ani_variable variable, ani_boolean value)](#variable_setvalue_boolean) | Sets a boolean value to a variable.This function assigns a boolean value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Char)(ani_env *env, ani_variable variable, ani_char value)](#variable_setvalue_char) | Sets a character value to a variable.This function assigns a character value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Byte)(ani_env *env, ani_variable variable, ani_byte value)](#variable_setvalue_byte) | Sets a byte value to a variable.This function assigns a byte value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Short)(ani_env *env, ani_variable variable, ani_short value)](#variable_setvalue_short) | Sets a short value to a variable.This function assigns a short integer value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Int)(ani_env *env, ani_variable variable, ani_int value)](#variable_setvalue_int) | Sets an integer value to a variable.This function assigns an integer value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Long)(ani_env *env, ani_variable variable, ani_long value)](#variable_setvalue_long) | Sets a long value to a variable.This function assigns a long integer value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Float)(ani_env *env, ani_variable variable, ani_float value)](#variable_setvalue_float) | Sets a float value to a variable.This function assigns a float value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Double)(ani_env *env, ani_variable variable, ani_double value)](#variable_setvalue_double) | Sets a double value to a variable.This function assigns a double value to the specified variable. |
-| [ani_status (\*Variable_SetValue_Ref)(ani_env *env, ani_variable variable, ani_ref value)](#variable_setvalue_ref) | Sets a reference value to a variable.This function assigns a reference value to the specified variable. |
-| [ani_status (\*Variable_GetValue_Boolean)(ani_env *env, ani_variable variable, ani_boolean *result)](#variable_getvalue_boolean) | Retrieves a boolean value from a variable.This function fetches a boolean value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Char)(ani_env *env, ani_variable variable, ani_char *result)](#variable_getvalue_char) | Retrieves a character value from a variable.This function fetches a character value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Byte)(ani_env *env, ani_variable variable, ani_byte *result)](#variable_getvalue_byte) | Retrieves a byte value from a variable.This function fetches a byte value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Short)(ani_env *env, ani_variable variable, ani_short *result)](#variable_getvalue_short) | Retrieves a short value from a variable.This function fetches a short integer value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Int)(ani_env *env, ani_variable variable, ani_int *result)](#variable_getvalue_int) | Retrieves an integer value from a variable.This function fetches an integer value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Long)(ani_env *env, ani_variable variable, ani_long *result)](#variable_getvalue_long) | Retrieves a long value from a variable.This function fetches a long integer value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Float)(ani_env *env, ani_variable variable, ani_float *result)](#variable_getvalue_float) | Retrieves a float value from a variable.This function fetches a float value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Double)(ani_env *env, ani_variable variable, ani_double *result)](#variable_getvalue_double) | Retrieves a double value from a variable.This function fetches a double value from the specified variable. |
-| [ani_status (\*Variable_GetValue_Ref)(ani_env *env, ani_variable variable, ani_ref *result)](#variable_getvalue_ref) | Retrieves a reference value from a variable.This function fetches a reference value from the specified variable. |
-| [ani_status (\*Function_Call_Boolean)(ani_env *env, ani_function fn, ani_boolean *result, ...)](#function_call_boolean) | Calls a function and retrieves a boolean result.This function calls the specified function with variadic arguments and retrieves a boolean result. |
-| [ani_status (\*Function_Call_Boolean_A)(ani_env *env, ani_function fn, ani_boolean *result, const ani_value *args)](#function_call_boolean_a) | Calls a function and retrieves a boolean result (array-based).This function calls the specified function with arguments provided in an array and retrieves a boolean result. |
-| [ani_status (\*Function_Call_Boolean_V)(ani_env *env, ani_function fn, ani_boolean *result, va_list args)](#function_call_boolean_v) | Calls a function and retrieves a boolean result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a boolean result. |
-| [ani_status (\*Function_Call_Char)(ani_env *env, ani_function fn, ani_char *result, ...)](#function_call_char) | Calls a function and retrieves a character result.This function calls the specified function with variadic arguments and retrieves a character result. |
-| [ani_status (\*Function_Call_Char_A)(ani_env *env, ani_function fn, ani_char *result, const ani_value *args)](#function_call_char_a) | Calls a function and retrieves a character result (array-based).This function calls the specified function with arguments provided in an array and retrieves a character result. |
-| [ani_status (\*Function_Call_Char_V)(ani_env *env, ani_function fn, ani_char *result, va_list args)](#function_call_char_v) | Calls a function and retrieves a character result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a characterresult. |
-| [ani_status (\*Function_Call_Byte)(ani_env *env, ani_function fn, ani_byte *result, ...)](#function_call_byte) | Calls a function and retrieves a byte result.This function calls the specified function with variadic arguments and retrieves a byte result. |
-| [ani_status (\*Function_Call_Byte_A)(ani_env *env, ani_function fn, ani_byte *result, const ani_value *args)](#function_call_byte_a) | Calls a function and retrieves a byte result (array-based).This function calls the specified function with arguments provided in an array and retrieves a byte result. |
-| [ani_status (\*Function_Call_Byte_V)(ani_env *env, ani_function fn, ani_byte *result, va_list args)](#function_call_byte_v) | Calls a function and retrieves a byte result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a byte result. |
-| [ani_status (\*Function_Call_Short)(ani_env *env, ani_function fn, ani_short *result, ...)](#function_call_short) | Calls a function and retrieves a short result.This function calls the specified function with variadic arguments and retrieves a short result. |
-| [ani_status (\*Function_Call_Short_A)(ani_env *env, ani_function fn, ani_short *result, const ani_value *args)](#function_call_short_a) | Calls a function and retrieves a short result (array-based).This function calls the specified function with arguments provided in an array and retrieves a short result. |
-| [ani_status (\*Function_Call_Short_V)(ani_env *env, ani_function fn, ani_short *result, va_list args)](#function_call_short_v) | Calls a function and retrieves a short result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a short result. |
-| [ani_status (\*Function_Call_Int)(ani_env *env, ani_function fn, ani_int *result, ...)](#function_call_int) | Calls a function and retrieves an integer result.This function calls the specified function with variadic arguments and retrieves an integer result. |
-| [ani_status (\*Function_Call_Int_A)(ani_env *env, ani_function fn, ani_int *result, const ani_value *args)](#function_call_int_a) | Calls a function and retrieves an integer result (array-based).This function calls the specified function with arguments provided in an array and retrieves an integer result. |
-| [ani_status (\*Function_Call_Int_V)(ani_env *env, ani_function fn, ani_int *result, va_list args)](#function_call_int_v) | Calls a function and retrieves an integer result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves an integerresult. |
-| [ani_status (\*Function_Call_Long)(ani_env *env, ani_function fn, ani_long *result, ...)](#function_call_long) | Calls a function and retrieves a long result.This function calls the specified function with variadic arguments and retrieves a long result. |
-| [ani_status (\*Function_Call_Long_A)(ani_env *env, ani_function fn, ani_long *result, const ani_value *args)](#function_call_long_a) | Calls a function and retrieves a long result (array-based).This function calls the specified function with arguments provided in an array and retrieves a long result. |
-| [ani_status (\*Function_Call_Long_V)(ani_env *env, ani_function fn, ani_long *result, va_list args)](#function_call_long_v) | Calls a function and retrieves a long result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a long result. |
-| [ani_status (\*Function_Call_Float)(ani_env *env, ani_function fn, ani_float *result, ...)](#function_call_float) | Calls a function and retrieves a float result.This function calls the specified function with variadic arguments and retrieves a float result. |
-| [ani_status (\*Function_Call_Float_A)(ani_env *env, ani_function fn, ani_float *result, const ani_value *args)](#function_call_float_a) | Calls a function and retrieves a float result (array-based).This function calls the specified function with arguments provided in an array and retrieves a float result. |
-| [ani_status (\*Function_Call_Float_V)(ani_env *env, ani_function fn, ani_float *result, va_list args)](#function_call_float_v) | Calls a function and retrieves a float result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a float result. |
-| [ani_status (\*Function_Call_Double)(ani_env *env, ani_function fn, ani_double *result, ...)](#function_call_double) | Calls a function and retrieves a double result.This function calls the specified function with variadic arguments and retrieves a double result. |
-| [ani_status (\*Function_Call_Double_A)(ani_env *env, ani_function fn, ani_double *result, const ani_value *args)](#function_call_double_a) | Calls a function and retrieves a double result (array-based).This function calls the specified function with arguments provided in an array and retrieves a double result. |
-| [ani_status (\*Function_Call_Double_V)(ani_env *env, ani_function fn, ani_double *result, va_list args)](#function_call_double_v) | Calls a function and retrieves a double result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a double result. |
-| [ani_status (\*Function_Call_Ref)(ani_env *env, ani_function fn, ani_ref *result, ...)](#function_call_ref) | Calls a function and retrieves a reference result.This function calls the specified function with variadic arguments and retrieves a reference result. |
-| [ani_status (\*Function_Call_Ref_A)(ani_env *env, ani_function fn, ani_ref *result, const ani_value *args)](#function_call_ref_a) | Calls a function and retrieves a reference result (array-based).This function calls the specified function with arguments provided in an array and retrieves a reference result. |
-| [ani_status (\*Function_Call_Ref_V)(ani_env *env, ani_function fn, ani_ref *result, va_list args)](#function_call_ref_v) | Calls a function and retrieves a reference result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a referenceresult. |
-| [ani_status (\*Function_Call_Void)(ani_env *env, ani_function fn, ...)](#function_call_void) | Calls a function without returning a result.This function calls the specified function with variadic arguments and does not return a result. |
-| [ani_status (\*Function_Call_Void_A)(ani_env *env, ani_function fn, const ani_value *args)](#function_call_void_a) | Calls a function without returning a result (array-based).This function calls the specified function with arguments provided in an array and does not return a result. |
-| [ani_status (\*Function_Call_Void_V)(ani_env *env, ani_function fn, va_list args)](#function_call_void_v) | Calls a function without returning a result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and does not return a result. |
-| [ani_status (\*Class_FindField)(ani_env *env, ani_class cls, const char *name, ani_field *result)](#class_findfield) | Finds a field from by its name.This function locates a field based on its name and stores it in the result parameter. |
-| [ani_status (\*Class_FindStaticField)(ani_env *env, ani_class cls, const char *name, ani_static_field *result)](#class_findstaticfield) | Finds a static field by its name.This function locates a static field based on its name and stores it in the result parameter. |
-| [ani_status (\*Class_FindMethod)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_method *result)](#class_findmethod) | Finds a method from by its name and signature.This function locates a method based on its name and signature and stores it in the result parameter. |
-| [ani_status (\*Class_FindStaticMethod)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_static_method *result)](#class_findstaticmethod) | Finds a static method from by its name and signature.This function locates a static method based on its name and signature and stores it in the result parameter. |
-| [ani_status (\*Class_FindSetter)(ani_env *env, ani_class cls, const char *name, ani_method *result)](#class_findsetter) | Finds a setter method from by its name.This function locates a setter method based on its name and stores it in the result parameter. |
-| [ani_status (\*Class_FindGetter)(ani_env *env, ani_class cls, const char *name, ani_method *result)](#class_findgetter) | Finds a getter method from by its name.This function locates a getter method based on its name and stores it in the result parameter. |
-| [ani_status (\*Class_FindIndexableGetter)(ani_env *env, ani_class cls, const char *signature, ani_method *result)](#class_findindexablegetter) | Finds an indexable getter method from by its signature.This function locates an indexable getter method based on its signature and stores it in the result parameter. |
-| [ani_status (\*Class_FindIndexableSetter)(ani_env *env, ani_class cls, const char *signature, ani_method *result)](#class_findindexablesetter) | Finds an indexable setter method from by its signature.This function locates an indexable setter method based on its signature and stores it in the result parameter. |
-| [ani_status (\*Class_FindIterator)(ani_env *env, ani_class cls, ani_method *result)](#class_finditerator) | Finds an iterator method.This function locates an iterator method |
-| [ani_status (\*Class_GetStaticField_Boolean)(ani_env *env, ani_class cls, ani_static_field field,ani_boolean *result)](#class_getstaticfield_boolean) | Retrieves a boolean value from a static field of a class.This function retrieves the boolean value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Char)(ani_env *env, ani_class cls, ani_static_field field, ani_char *result)](#class_getstaticfield_char) | Retrieves a character value from a static field of a class.This function retrieves the character value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Byte)(ani_env *env, ani_class cls, ani_static_field field, ani_byte *result)](#class_getstaticfield_byte) | Retrieves a byte value from a static field of a class.This function retrieves the byte value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Short)(ani_env *env, ani_class cls, ani_static_field field, ani_short *result)](#class_getstaticfield_short) | Retrieves a short value from a static field of a class.This function retrieves the short value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Int)(ani_env *env, ani_class cls, ani_static_field field, ani_int *result)](#class_getstaticfield_int) | Retrieves an integer value from a static field of a class.This function retrieves the integer value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Long)(ani_env *env, ani_class cls, ani_static_field field, ani_long *result)](#class_getstaticfield_long) | Retrieves a long value from a static field of a class.This function retrieves the long value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Float)(ani_env *env, ani_class cls, ani_static_field field, ani_float *result)](#class_getstaticfield_float) | Retrieves a float value from a static field of a class.This function retrieves the float value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Double)(ani_env *env, ani_class cls, ani_static_field field, ani_double *result)](#class_getstaticfield_double) | Retrieves a double value from a static field of a class.This function retrieves the double value of the specified static field from the given class. |
-| [ani_status (\*Class_GetStaticField_Ref)(ani_env *env, ani_class cls, ani_static_field field, ani_ref *result)](#class_getstaticfield_ref) | Retrieves a reference value from a static field of a class.This function retrieves the reference value of the specified static field from the given class. |
-| [ani_status (\*Class_SetStaticField_Boolean)(ani_env *env, ani_class cls, ani_static_field field, ani_boolean value)](#class_setstaticfield_boolean) | Sets a boolean value to a static field of a class.This function assigns a boolean value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Char)(ani_env *env, ani_class cls, ani_static_field field, ani_char value)](#class_setstaticfield_char) | Sets a character value to a static field of a class.This function assigns a character value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Byte)(ani_env *env, ani_class cls, ani_static_field field, ani_byte value)](#class_setstaticfield_byte) | Sets a byte value to a static field of a class.This function assigns a byte value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Short)(ani_env *env, ani_class cls, ani_static_field field, ani_short value)](#class_setstaticfield_short) | Sets a short value to a static field of a class.This function assigns a short value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Int)(ani_env *env, ani_class cls, ani_static_field field, ani_int value)](#class_setstaticfield_int) | Sets an integer value to a static field of a class.This function assigns an integer value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Long)(ani_env *env, ani_class cls, ani_static_field field, ani_long value)](#class_setstaticfield_long) | Sets a long value to a static field of a class.This function assigns a long value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Float)(ani_env *env, ani_class cls, ani_static_field field, ani_float value)](#class_setstaticfield_float) | Sets a float value to a static field of a class.This function assigns a float value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Double)(ani_env *env, ani_class cls, ani_static_field field, ani_double value)](#class_setstaticfield_double) | Sets a double value to a static field of a class.This function assigns a double value to the specified static field of the given class. |
-| [ani_status (\*Class_SetStaticField_Ref)(ani_env *env, ani_class cls, ani_static_field field, ani_ref value)](#class_setstaticfield_ref) | Sets a reference value to a static field of a class.This function assigns a reference value to the specified static field of the given class. |
-| [ani_status (\*Class_GetStaticFieldByName_Boolean)(ani_env *env, ani_class cls, const char *name,ani_boolean *result)](#class_getstaticfieldbyname_boolean) | Retrieves a boolean value from a static field of a class by its name.This function retrieves the boolean value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Char)(ani_env *env, ani_class cls, const char *name, ani_char *result)](#class_getstaticfieldbyname_char) | Retrieves a character value from a static field of a class by its name.This function retrieves the character value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Byte)(ani_env *env, ani_class cls, const char *name, ani_byte *result)](#class_getstaticfieldbyname_byte) | Retrieves a byte value from a static field of a class by its name.This function retrieves the byte value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Short)(ani_env *env, ani_class cls, const char *name, ani_short *result)](#class_getstaticfieldbyname_short) | Retrieves a short value from a static field of a class by its name.This function retrieves the short value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Int)(ani_env *env, ani_class cls, const char *name, ani_int *result)](#class_getstaticfieldbyname_int) | Retrieves an integer value from a static field of a class by its name.This function retrieves the integer value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Long)(ani_env *env, ani_class cls, const char *name, ani_long *result)](#class_getstaticfieldbyname_long) | Retrieves a long value from a static field of a class by its name.This function retrieves the long value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Float)(ani_env *env, ani_class cls, const char *name, ani_float *result)](#class_getstaticfieldbyname_float) | Retrieves a float value from a static field of a class by its name.This function retrieves the float value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Double)(ani_env *env, ani_class cls, const char *name, ani_double *result)](#class_getstaticfieldbyname_double) | Retrieves a double value from a static field of a class by its name.This function retrieves the double value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_GetStaticFieldByName_Ref)(ani_env *env, ani_class cls, const char *name, ani_ref *result)](#class_getstaticfieldbyname_ref) | Retrieves a reference value from a static field of a class by its name.This function retrieves the reference value of the specified static field from the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Boolean)(ani_env *env, ani_class cls, const char *name, ani_boolean value)](#class_setstaticfieldbyname_boolean) | Sets a boolean value to a static field of a class by its name.This function assigns a boolean value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Char)(ani_env *env, ani_class cls, const char *name, ani_char value)](#class_setstaticfieldbyname_char) | Sets a character value to a static field of a class by its name.This function assigns a character value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Byte)(ani_env *env, ani_class cls, const char *name, ani_byte value)](#class_setstaticfieldbyname_byte) | Sets a byte value to a static field of a class by its name.This function assigns a byte value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Short)(ani_env *env, ani_class cls, const char *name, ani_short value)](#class_setstaticfieldbyname_short) | Sets a short value to a static field of a class by its name.This function assigns a short value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Int)(ani_env *env, ani_class cls, const char *name, ani_int value)](#class_setstaticfieldbyname_int) | Sets an integer value to a static field of a class by its name.This function assigns an integer value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Long)(ani_env *env, ani_class cls, const char *name, ani_long value)](#class_setstaticfieldbyname_long) | Sets a long value to a static field of a class by its name.This function assigns a long value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Float)(ani_env *env, ani_class cls, const char *name, ani_float value)](#class_setstaticfieldbyname_float) | Sets a float value to a static field of a class by its name.This function assigns a float value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Double)(ani_env *env, ani_class cls, const char *name, ani_double value)](#class_setstaticfieldbyname_double) | Sets a double value to a static field of a class by its name.This function assigns a double value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_SetStaticFieldByName_Ref)(ani_env *env, ani_class cls, const char *name, ani_ref value)](#class_setstaticfieldbyname_ref) | Sets a reference value to a static field of a class by its name.This function assigns a reference value to the specified static field of the given class by its name. |
-| [ani_status (\*Class_CallStaticMethod_Boolean)(ani_env *env, ani_class cls, ani_static_method method,ani_boolean *result, ...)](#class_callstaticmethod_boolean) | Calls a static method with a boolean return type.This function calls the specified static method of a class and retrieves a boolean result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethod_Boolean_A)(ani_env *env, ani_class cls, ani_static_method method,ani_boolean *result, const ani_value *args)](#class_callstaticmethod_boolean_a) | Calls a static method with a boolean return type (array-based).This function calls the specified static method of a class and retrieves a boolean result using arguments from anarray. |
-| [ani_status (\*Class_CallStaticMethod_Boolean_V)(ani_env *env, ani_class cls, ani_static_method method,ani_boolean *result, va_list args)](#class_callstaticmethod_boolean_v) | Calls a static method with a boolean return type (variadic arguments).This function calls the specified static method of a class and retrieves a boolean result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Char)(ani_env *env, ani_class cls, ani_static_method method, ani_char *result,...)](#class_callstaticmethod_char) | Calls a static method with a character return type.This function calls the specified static method of a class and retrieves a character result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethod_Char_A)(ani_env *env, ani_class cls, ani_static_method method, ani_char *result,const ani_value *args)](#class_callstaticmethod_char_a) | Calls a static method with a character return type (array-based).This function calls the specified static method of a class and retrieves a character result using arguments froman array. |
-| [ani_status (\*Class_CallStaticMethod_Char_V)(ani_env *env, ani_class cls, ani_static_method method, ani_char *result,va_list args)](#class_callstaticmethod_char_v) | Calls a static method with a character return type (variadic arguments).This function calls the specified static method of a class and retrieves a character result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Byte)(ani_env *env, ani_class cls, ani_static_method method, ani_byte *result,...)](#class_callstaticmethod_byte) | Calls a static method with a byte return type.This function calls the specified static method of a class and retrieves a byte result using variadic arguments. |
-| [ani_status (\*Class_CallStaticMethod_Byte_A)(ani_env *env, ani_class cls, ani_static_method method, ani_byte *result,const ani_value *args)](#class_callstaticmethod_byte_a) | Calls a static method with a byte return type (array-based).This function calls the specified static method of a class and retrieves a byte result using arguments from anarray. |
-| [ani_status (\*Class_CallStaticMethod_Byte_V)(ani_env *env, ani_class cls, ani_static_method method, ani_byte *result,va_list args)](#class_callstaticmethod_byte_v) | Calls a static method with a byte return type (variadic arguments).This function calls the specified static method of a class and retrieves a byte result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Short)(ani_env *env, ani_class cls, ani_static_method method, ani_short *result,...)](#class_callstaticmethod_short) | Calls a static method with a short return type.This function calls the specified static method of a class and retrieves a short result using variadic arguments. |
-| [ani_status (\*Class_CallStaticMethod_Short_A)(ani_env *env, ani_class cls, ani_static_method method,ani_short *result, const ani_value *args)](#class_callstaticmethod_short_a) | Calls a static method with a short return type (array-based).This function calls the specified static method of a class and retrieves a short result using arguments from anarray. |
-| [ani_status (\*Class_CallStaticMethod_Short_V)(ani_env *env, ani_class cls, ani_static_method method,ani_short *result, va_list args)](#class_callstaticmethod_short_v) | Calls a static method with a short return type (variadic arguments).This function calls the specified static method of a class and retrieves a short result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Int)(ani_env *env, ani_class cls, ani_static_method method, ani_int *result,...)](#class_callstaticmethod_int) | Calls a static method with an integer return type.This function calls the specified static method of a class and retrieves an integer result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethod_Int_A)(ani_env *env, ani_class cls, ani_static_method method, ani_int *result,const ani_value *args)](#class_callstaticmethod_int_a) | Calls a static method with an integer return type (array-based).This function calls the specified static method of a class and retrieves an integer result using arguments froman array. |
-| [ani_status (\*Class_CallStaticMethod_Int_V)(ani_env *env, ani_class cls, ani_static_method method, ani_int *result,va_list args)](#class_callstaticmethod_int_v) | Calls a static method with an integer return type (variadic arguments).This function calls the specified static method of a class and retrieves an integer result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Long)(ani_env *env, ani_class cls, ani_static_method method, ani_long *result,...)](#class_callstaticmethod_long) | Calls a static method with a long return type.This function calls the specified static method of a class and retrieves a long result using variadic arguments. |
-| [ani_status (\*Class_CallStaticMethod_Long_A)(ani_env *env, ani_class cls, ani_static_method method, ani_long *result,const ani_value *args)](#class_callstaticmethod_long_a) | Calls a static method with a long return type (array-based).This function calls the specified static method of a class and retrieves a long result using arguments from anarray. |
-| [ani_status (\*Class_CallStaticMethod_Long_V)(ani_env *env, ani_class cls, ani_static_method method, ani_long *result,va_list args)](#class_callstaticmethod_long_v) | Calls a static method with a long return type (variadic arguments).This function calls the specified static method of a class and retrieves a long result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Float)(ani_env *env, ani_class cls, ani_static_method method, ani_float *result,...)](#class_callstaticmethod_float) | Calls a static method with a float return type.This function calls the specified static method of a class and retrieves a float result using variadic arguments. |
-| [ani_status (\*Class_CallStaticMethod_Float_A)(ani_env *env, ani_class cls, ani_static_method method,ani_float *result, const ani_value *args)](#class_callstaticmethod_float_a) | Calls a static method with a float return type (array-based).This function calls the specified static method of a class and retrieves a float result using arguments from anarray. |
-| [ani_status (\*Class_CallStaticMethod_Float_V)(ani_env *env, ani_class cls, ani_static_method method,ani_float *result, va_list args)](#class_callstaticmethod_float_v) | Calls a static method with a float return type (variadic arguments).This function calls the specified static method of a class and retrieves a float result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Double)(ani_env *env, ani_class cls, ani_static_method method,ani_double *result, ...)](#class_callstaticmethod_double) | Calls a static method with a double return type.This function calls the specified static method of a class and retrieves a double result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethod_Double_A)(ani_env *env, ani_class cls, ani_static_method method,ani_double *result, const ani_value *args)](#class_callstaticmethod_double_a) | Calls a static method with a double return type (array-based).This function calls the specified static method of a class and retrieves a double result using arguments from anarray. |
-| [ani_status (\*Class_CallStaticMethod_Double_V)(ani_env *env, ani_class cls, ani_static_method method,ani_double *result, va_list args)](#class_callstaticmethod_double_v) | Calls a static method with a double return type (variadic arguments).This function calls the specified static method of a class and retrieves a double result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Ref)(ani_env *env, ani_class cls, ani_static_method method, ani_ref *result,...)](#class_callstaticmethod_ref) | Calls a static method with a reference return type.This function calls the specified static method of a class and retrieves a reference result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethod_Ref_A)(ani_env *env, ani_class cls, ani_static_method method, ani_ref *result,const ani_value *args)](#class_callstaticmethod_ref_a) | Calls a static method with a reference return type (array-based).This function calls the specified static method of a class and retrieves a reference result using arguments froman array. |
-| [ani_status (\*Class_CallStaticMethod_Ref_V)(ani_env *env, ani_class cls, ani_static_method method, ani_ref *result,va_list args)](#class_callstaticmethod_ref_v) | Calls a static method with a reference return type (variadic arguments).This function calls the specified static method of a class and retrieves a reference result using a `va_list`. |
-| [ani_status (\*Class_CallStaticMethod_Void)(ani_env *env, ani_class cls, ani_static_method method, ...)](#class_callstaticmethod_void) | Calls a static method with no return value.This function calls the specified static method of a class using variadic arguments. The method does not return avalue. |
-| [ani_status (\*Class_CallStaticMethod_Void_A)(ani_env *env, ani_class cls, ani_static_method method,const ani_value *args)](#class_callstaticmethod_void_a) | Calls a static method with no return value (array-based).This function calls the specified static method of a class using arguments from an array. The method does notreturn a value. |
-| [ani_status (\*Class_CallStaticMethod_Void_V)(ani_env *env, ani_class cls, ani_static_method method, va_list args)](#class_callstaticmethod_void_v) | Calls a static method with no return value (variadic arguments).This function calls the specified static method of a class using a `va_list`. The method does not return a value. |
-| [ani_status (\*Class_CallStaticMethodByName_Boolean)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_boolean *result, ...)](#class_callstaticmethodbyname_boolean) | Calls a static method by name with a boolean return type.This function calls the specified static method of a class by its name and retrieves a boolean result usingvariadic arguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Boolean_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_boolean *result,const ani_value *args)](#class_callstaticmethodbyname_boolean_a) | Calls a static method by name with a boolean return type (array-based).This function calls the specified static method of a class by its name and retrieves a boolean result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Boolean_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_boolean *result, va_list args)](#class_callstaticmethodbyname_boolean_v) | Calls a static method by name with a boolean return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a boolean result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Char)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_char *result, ...)](#class_callstaticmethodbyname_char) | Calls a static method by name with a char return type.This function calls the specified static method of a class by its name and retrieves a char result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Char_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_char *result, const ani_value *args)](#class_callstaticmethodbyname_char_a) | Calls a static method by name with a char return type (array-based).This function calls the specified static method of a class by its name and retrieves a char result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Char_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_char *result, va_list args)](#class_callstaticmethodbyname_char_v) | Calls a static method by name with a char return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a char result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Byte)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_byte *result, ...)](#class_callstaticmethodbyname_byte) | Calls a static method by name with a byte return type.This function calls the specified static method of a class by its name and retrieves a byte result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Byte_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_byte *result, const ani_value *args)](#class_callstaticmethodbyname_byte_a) | Calls a static method by name with a byte return type (array-based).This function calls the specified static method of a class by its name and retrieves a byte result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Byte_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_byte *result, va_list args)](#class_callstaticmethodbyname_byte_v) | Calls a static method by name with a byte return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a byte result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Short)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_short *result, ...)](#class_callstaticmethodbyname_short) | Calls a static method by name with a short return type.This function calls the specified static method of a class by its name and retrieves a short result usingvariadic arguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Short_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_short *result, const ani_value *args)](#class_callstaticmethodbyname_short_a) | Calls a static method by name with a short return type (array-based).This function calls the specified static method of a class by its name and retrieves a short result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Short_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_short *result, va_list args)](#class_callstaticmethodbyname_short_v) | Calls a static method by name with a short return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a short result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Int)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_int *result, ...)](#class_callstaticmethodbyname_int) | Calls a static method by name with a integer return type.This function calls the specified static method of a class by its name and retrieves a integer result usingvariadic arguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Int_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_int *result, const ani_value *args)](#class_callstaticmethodbyname_int_a) | Calls a static method by name with a integer return type (array-based).This function calls the specified static method of a class by its name and retrieves a integer result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Int_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_int *result, va_list args)](#class_callstaticmethodbyname_int_v) | Calls a static method by name with a integer return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a integer result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Long)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_long *result, ...)](#class_callstaticmethodbyname_long) | Calls a static method by name with a long return type.This function calls the specified static method of a class by its name and retrieves a long result using variadicarguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Long_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_long *result, const ani_value *args)](#class_callstaticmethodbyname_long_a) | Calls a static method by name with a long return type (array-based).This function calls the specified static method of a class by its name and retrieves a long result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Long_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_long *result, va_list args)](#class_callstaticmethodbyname_long_v) | Calls a static method by name with a long return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a long result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Float)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_float *result, ...)](#class_callstaticmethodbyname_float) | Calls a static method by name with a float return type.This function calls the specified static method of a class by its name and retrieves a float result usingvariadic arguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Float_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_float *result, const ani_value *args)](#class_callstaticmethodbyname_float_a) | Calls a static method by name with a float return type (array-based).This function calls the specified static method of a class by its name and retrieves a float result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Float_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_float *result, va_list args)](#class_callstaticmethodbyname_float_v) | Calls a static method by name with a float return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a float result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Double)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_double *result, ...)](#class_callstaticmethodbyname_double) | Calls a static method by name with a double return type.This function calls the specified static method of a class by its name and retrieves a double result usingvariadic arguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Double_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_double *result,const ani_value *args)](#class_callstaticmethodbyname_double_a) | Calls a static method by name with a double return type (array-based).This function calls the specified static method of a class by its name and retrieves a double result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Double_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_double *result, va_list args)](#class_callstaticmethodbyname_double_v) | Calls a static method by name with a double return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a double result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Ref)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_ref *result, ...)](#class_callstaticmethodbyname_ref) | Calls a static method by name with a reference return type.This function calls the specified static method of a class by its name and retrieves a reference result usingvariadic arguments. |
-| [ani_status (\*Class_CallStaticMethodByName_Ref_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_ref *result, const ani_value *args)](#class_callstaticmethodbyname_ref_a) | Calls a static method by name with a reference return type (array-based).This function calls the specified static method of a class by its name and retrieves a reference result usingarguments from an array. |
-| [ani_status (\*Class_CallStaticMethodByName_Ref_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_ref *result, va_list args)](#class_callstaticmethodbyname_ref_v) | Calls a static method by name with a reference return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a reference result using a`va_list`. |
-| [ani_status (\*Class_CallStaticMethodByName_Void)(ani_env *env, ani_class cls, const char *name,const char *signature, ...)](#class_callstaticmethodbyname_void) | Calls a static method by name with no return value.This function calls the specified static method of a class by its name using variadic arguments. The method doesnot return a value. |
-| [ani_status (\*Class_CallStaticMethodByName_Void_A)(ani_env *env, ani_class cls, const char *name,const char *signature, const ani_value *args)](#class_callstaticmethodbyname_void_a) | Calls a static method by name with no return value (array-based).This function calls the specified static method of a class by its name using arguments from an array. The methoddoes not return a value. |
-| [ani_status (\*Class_CallStaticMethodByName_Void_V)(ani_env *env, ani_class cls, const char *name,const char *signature, va_list args)](#class_callstaticmethodbyname_void_v) | Calls a static method by name with no return value (variadic arguments).This function calls the specified static method of a class by its name using a `va_list`. The method does notreturn a value. |
-| [ani_status (\*Object_GetField_Boolean)(ani_env *env, ani_object object, ani_field field, ani_boolean *result)](#object_getfield_boolean) | Retrieves a boolean value from a field of an object.This function retrieves the boolean value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Char)(ani_env *env, ani_object object, ani_field field, ani_char *result)](#object_getfield_char) | Retrieves a char value from a field of an object.This function retrieves the char value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Byte)(ani_env *env, ani_object object, ani_field field, ani_byte *result)](#object_getfield_byte) | Retrieves a byte value from a field of an object.This function retrieves the byte value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Short)(ani_env *env, ani_object object, ani_field field, ani_short *result)](#object_getfield_short) | Retrieves a short value from a field of an object.This function retrieves the short value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Int)(ani_env *env, ani_object object, ani_field field, ani_int *result)](#object_getfield_int) | Retrieves a integer value from a field of an object.This function retrieves the integer value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Long)(ani_env *env, ani_object object, ani_field field, ani_long *result)](#object_getfield_long) | Retrieves a long value from a field of an object.This function retrieves the long value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Float)(ani_env *env, ani_object object, ani_field field, ani_float *result)](#object_getfield_float) | Retrieves a float value from a field of an object.This function retrieves the float value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Double)(ani_env *env, ani_object object, ani_field field, ani_double *result)](#object_getfield_double) | Retrieves a double value from a field of an object.This function retrieves the double value of the specified field from the given object. |
-| [ani_status (\*Object_GetField_Ref)(ani_env *env, ani_object object, ani_field field, ani_ref *result)](#object_getfield_ref) | Retrieves a reference value from a field of an object.This function retrieves the reference value of the specified field from the given object. |
-| [ani_status (\*Object_SetField_Boolean)(ani_env *env, ani_object object, ani_field field, ani_boolean value)](#object_setfield_boolean) | Sets a boolean value to a field of an object.This function assigns a boolean value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Char)(ani_env *env, ani_object object, ani_field field, ani_char value)](#object_setfield_char) | Sets a char value to a field of an object.This function assigns a char value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Byte)(ani_env *env, ani_object object, ani_field field, ani_byte value)](#object_setfield_byte) | Sets a byte value to a field of an object.This function assigns a byte value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Short)(ani_env *env, ani_object object, ani_field field, ani_short value)](#object_setfield_short) | Sets a short value to a field of an object.This function assigns a short value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Int)(ani_env *env, ani_object object, ani_field field, ani_int value)](#object_setfield_int) | Sets a integer value to a field of an object.This function assigns a integer value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Long)(ani_env *env, ani_object object, ani_field field, ani_long value)](#object_setfield_long) | Sets a long value to a field of an object.This function assigns a long value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Float)(ani_env *env, ani_object object, ani_field field, ani_float value)](#object_setfield_float) | Sets a float value to a field of an object.This function assigns a float value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Double)(ani_env *env, ani_object object, ani_field field, ani_double value)](#object_setfield_double) | Sets a double value to a field of an object.This function assigns a double value to the specified field of the given object. |
-| [ani_status (\*Object_SetField_Ref)(ani_env *env, ani_object object, ani_field field, ani_ref value)](#object_setfield_ref) | Sets a reference value to a field of an object.This function assigns a reference value to the specified field of the given object. |
-| [ani_status (\*Object_GetFieldByName_Boolean)(ani_env *env, ani_object object, const char *name, ani_boolean *result)](#object_getfieldbyname_boolean) | Retrieves a boolean value from a field of an object by its name.This function retrieves the boolean value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Char)(ani_env *env, ani_object object, const char *name, ani_char *result)](#object_getfieldbyname_char) | Retrieves a char value from a field of an object by its name.This function retrieves the char value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte *result)](#object_getfieldbyname_byte) | Retrieves a byte value from a field of an object by its name.This function retrieves the byte value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Short)(ani_env *env, ani_object object, const char *name, ani_short *result)](#object_getfieldbyname_short) | Retrieves a short value from a field of an object by its name.This function retrieves the short value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Int)(ani_env *env, ani_object object, const char *name, ani_int *result)](#object_getfieldbyname_int) | Retrieves a integer value from a field of an object by its name.This function retrieves the integer value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Long)(ani_env *env, ani_object object, const char *name, ani_long *result)](#object_getfieldbyname_long) | Retrieves a long value from a field of an object by its name.This function retrieves the long value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Float)(ani_env *env, ani_object object, const char *name, ani_float *result)](#object_getfieldbyname_float) | Retrieves a float value from a field of an object by its name.This function retrieves the float value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Double)(ani_env *env, ani_object object, const char *name, ani_double *result)](#object_getfieldbyname_double) | Retrieves a double value from a field of an object by its name.This function retrieves the double value of the specified field from the given object by its name. |
-| [ani_status (\*Object_GetFieldByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref *result)](#object_getfieldbyname_ref) | Retrieves a reference value from a field of an object by its name.This function retrieves the reference value of the specified field from the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Boolean)(ani_env *env, ani_object object, const char *name, ani_boolean value)](#object_setfieldbyname_boolean) | Sets a boolean value to a field of an object by its name.This function assigns a boolean value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Char)(ani_env *env, ani_object object, const char *name, ani_char value)](#object_setfieldbyname_char) | Sets a char value to a field of an object by its name.This function assigns a char value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte value)](#object_setfieldbyname_byte) | Sets a byte value to a field of an object by its name.This function assigns a byte value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Short)(ani_env *env, ani_object object, const char *name, ani_short value)](#object_setfieldbyname_short) | Sets a short value to a field of an object by its name.This function assigns a short value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Int)(ani_env *env, ani_object object, const char *name, ani_int value)](#object_setfieldbyname_int) | Sets a integer value to a field of an object by its name.This function assigns a integer value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Long)(ani_env *env, ani_object object, const char *name, ani_long value)](#object_setfieldbyname_long) | Sets a long value to a field of an object by its name.This function assigns a long value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Float)(ani_env *env, ani_object object, const char *name, ani_float value)](#object_setfieldbyname_float) | Sets a float value to a field of an object by its name.This function assigns a float value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Double)(ani_env *env, ani_object object, const char *name, ani_double value)](#object_setfieldbyname_double) | Sets a double value to a field of an object by its name.This function assigns a double value to the specified field of the given object by its name. |
-| [ani_status (\*Object_SetFieldByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref value)](#object_setfieldbyname_ref) | Sets a reference value to a field of an object by its name.This function assigns a reference value to the specified field of the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Boolean)(ani_env *env, ani_object object, const char *name,ani_boolean *result)](#object_getpropertybyname_boolean) | Retrieves a boolean value from a property of an object by its name.This function retrieves the boolean value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Char)(ani_env *env, ani_object object, const char *name, ani_char *result)](#object_getpropertybyname_char) | Retrieves a char value from a property of an object by its name.This function retrieves the char value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte *result)](#object_getpropertybyname_byte) | Retrieves a byte value from a property of an object by its name.This function retrieves the byte value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Short)(ani_env *env, ani_object object, const char *name, ani_short *result)](#object_getpropertybyname_short) | Retrieves a short value from a property of an object by its name.This function retrieves the short value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Int)(ani_env *env, ani_object object, const char *name, ani_int *result)](#object_getpropertybyname_int) | Retrieves a integer value from a property of an object by its name.This function retrieves the integer value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Long)(ani_env *env, ani_object object, const char *name, ani_long *result)](#object_getpropertybyname_long) | Retrieves a long value from a property of an object by its name.This function retrieves the long value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Float)(ani_env *env, ani_object object, const char *name, ani_float *result)](#object_getpropertybyname_float) | Retrieves a float value from a property of an object by its name.This function retrieves the float value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Double)(ani_env *env, ani_object object, const char *name,ani_double *result)](#object_getpropertybyname_double) | Retrieves a double value from a property of an object by its name.This function retrieves the double value of the specified property from the given object by its name. |
-| [ani_status (\*Object_GetPropertyByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref *result)](#object_getpropertybyname_ref) | Retrieves a reference value from a property of an object by its name.This function retrieves the reference value of the specified property from the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Boolean)(ani_env *env, ani_object object, const char *name,ani_boolean value)](#object_setpropertybyname_boolean) | Sets a boolean value to a property of an object by its name.This function assigns a boolean value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Char)(ani_env *env, ani_object object, const char *name, ani_char value)](#object_setpropertybyname_char) | Sets a char value to a property of an object by its name.This function assigns a char value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte value)](#object_setpropertybyname_byte) | Sets a byte value to a property of an object by its name.This function assigns a byte value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Short)(ani_env *env, ani_object object, const char *name, ani_short value)](#object_setpropertybyname_short) | Sets a short value to a property of an object by its name.This function assigns a short value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Int)(ani_env *env, ani_object object, const char *name, ani_int value)](#object_setpropertybyname_int) | Sets a integer value to a property of an object by its name.This function assigns a integer value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Long)(ani_env *env, ani_object object, const char *name, ani_long value)](#object_setpropertybyname_long) | Sets a long value to a property of an object by its name.This function assigns a long value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Float)(ani_env *env, ani_object object, const char *name, ani_float value)](#object_setpropertybyname_float) | Sets a float value to a property of an object by its name.This function assigns a float value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Double)(ani_env *env, ani_object object, const char *name, ani_double value)](#object_setpropertybyname_double) | Sets a double value to a property of an object by its name.This function assigns a double value to the specified property of the given object by its name. |
-| [ani_status (\*Object_SetPropertyByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref value)](#object_setpropertybyname_ref) | Sets a reference value to a property of an object by its name.This function assigns a reference value to the specified property of the given object by its name. |
-| [ani_status (\*Object_CallMethod_Boolean)(ani_env *env, ani_object object, ani_method method, ani_boolean *result,...)](#object_callmethod_boolean) | Calls a method on an object and retrieves a boolean return value.This function calls the specified method of an object using variadic arguments and retrieves a boolean result. |
-| [ani_status (\*Object_CallMethod_Boolean_A)(ani_env *env, ani_object object, ani_method method, ani_boolean *result,const ani_value *args)](#object_callmethod_boolean_a) | Calls a method on an object and retrieves a boolean return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves aboolean result. |
-| [ani_status (\*Object_CallMethod_Boolean_V)(ani_env *env, ani_object object, ani_method method, ani_boolean *result,va_list args)](#object_callmethod_boolean_v) | Calls a method on an object and retrieves a boolean return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a boolean result. |
-| [ani_status (\*Object_CallMethod_Char)(ani_env *env, ani_object object, ani_method method, ani_char *result, ...)](#object_callmethod_char) | Calls a method on an object and retrieves a char return value.This function calls the specified method of an object using variadic arguments and retrieves a char result. |
-| [ani_status (\*Object_CallMethod_Char_A)(ani_env *env, ani_object object, ani_method method, ani_char *result,const ani_value *args)](#object_callmethod_char_a) | Calls a method on an object and retrieves a char return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a charresult. |
-| [ani_status (\*Object_CallMethod_Char_V)(ani_env *env, ani_object object, ani_method method, ani_char *result,va_list args)](#object_callmethod_char_v) | Calls a method on an object and retrieves a char return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a char result. |
-| [ani_status (\*Object_CallMethod_Byte)(ani_env *env, ani_object object, ani_method method, ani_byte *result, ...)](#object_callmethod_byte) | Calls a method on an object and retrieves a byte return value.This function calls the specified method of an object using variadic arguments and retrieves a byte result. |
-| [ani_status (\*Object_CallMethod_Byte_A)(ani_env *env, ani_object object, ani_method method, ani_byte *result,const ani_value *args)](#object_callmethod_byte_a) | Calls a method on an object and retrieves a byte return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a byteresult. |
-| [ani_status (\*Object_CallMethod_Byte_V)(ani_env *env, ani_object object, ani_method method, ani_byte *result,va_list args)](#object_callmethod_byte_v) | Calls a method on an object and retrieves a byte return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a byte result. |
-| [ani_status (\*Object_CallMethod_Short)(ani_env *env, ani_object object, ani_method method, ani_short *result, ...)](#object_callmethod_short) | Calls a method on an object and retrieves a short return value.This function calls the specified method of an object using variadic arguments and retrieves a short result. |
-| [ani_status (\*Object_CallMethod_Short_A)(ani_env *env, ani_object object, ani_method method, ani_short *result,const ani_value *args)](#object_callmethod_short_a) | Calls a method on an object and retrieves a short return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a shortresult. |
-| [ani_status (\*Object_CallMethod_Short_V)(ani_env *env, ani_object object, ani_method method, ani_short *result,va_list args)](#object_callmethod_short_v) | Calls a method on an object and retrieves a short return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a short result. |
-| [ani_status (\*Object_CallMethod_Int)(ani_env *env, ani_object object, ani_method method, ani_int *result, ...)](#object_callmethod_int) | Calls a method on an object and retrieves a integer return value.This function calls the specified method of an object using variadic arguments and retrieves a integer result. |
-| [ani_status (\*Object_CallMethod_Int_A)(ani_env *env, ani_object object, ani_method method, ani_int *result,const ani_value *args)](#object_callmethod_int_a) | Calls a method on an object and retrieves a integer return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves ainteger result. |
-| [ani_status (\*Object_CallMethod_Int_V)(ani_env *env, ani_object object, ani_method method, ani_int *result,va_list args)](#object_callmethod_int_v) | Calls a method on an object and retrieves a integer return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a integer result. |
-| [ani_status (\*Object_CallMethod_Long)(ani_env *env, ani_object object, ani_method method, ani_long *result, ...)](#object_callmethod_long) | Calls a method on an object and retrieves a long return value.This function calls the specified method of an object using variadic arguments and retrieves a long result. |
-| [ani_status (\*Object_CallMethod_Long_A)(ani_env *env, ani_object object, ani_method method, ani_long *result,const ani_value *args)](#object_callmethod_long_a) | Calls a method on an object and retrieves a long return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a longresult. |
-| [ani_status (\*Object_CallMethod_Long_V)(ani_env *env, ani_object object, ani_method method, ani_long *result,va_list args)](#object_callmethod_long_v) | Calls a method on an object and retrieves a long return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a long result. |
-| [ani_status (\*Object_CallMethod_Float)(ani_env *env, ani_object object, ani_method method, ani_float *result, ...)](#object_callmethod_float) | Calls a method on an object and retrieves a float return value.This function calls the specified method of an object using variadic arguments and retrieves a float result. |
-| [ani_status (\*Object_CallMethod_Float_A)(ani_env *env, ani_object object, ani_method method, ani_float *result,const ani_value *args)](#object_callmethod_float_a) | Calls a method on an object and retrieves a float return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a floatresult. |
-| [ani_status (\*Object_CallMethod_Float_V)(ani_env *env, ani_object object, ani_method method, ani_float *result,va_list args)](#object_callmethod_float_v) | Calls a method on an object and retrieves a float return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a float result. |
-| [ani_status (\*Object_CallMethod_Double)(ani_env *env, ani_object object, ani_method method, ani_double *result, ...)](#object_callmethod_double) | Calls a method on an object and retrieves a double return value.This function calls the specified method of an object using variadic arguments and retrieves a double result. |
-| [ani_status (\*Object_CallMethod_Double_A)(ani_env *env, ani_object object, ani_method method, ani_double *result,const ani_value *args)](#object_callmethod_double_a) | Calls a method on an object and retrieves a double return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a doubleresult. |
-| [ani_status (\*Object_CallMethod_Double_V)(ani_env *env, ani_object object, ani_method method, ani_double *result,va_list args)](#object_callmethod_double_v) | Calls a method on an object and retrieves a double return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a double result. |
-| [ani_status (\*Object_CallMethod_Ref)(ani_env *env, ani_object object, ani_method method, ani_ref *result, ...)](#object_callmethod_ref) | Calls a method on an object and retrieves a reference return value.This function calls the specified method of an object using variadic arguments and retrieves a reference result. |
-| [ani_status (\*Object_CallMethod_Ref_A)(ani_env *env, ani_object object, ani_method method, ani_ref *result,const ani_value *args)](#object_callmethod_ref_a) | Calls a method on an object and retrieves a reference return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves areference result. |
-| [ani_status (\*Object_CallMethod_Ref_V)(ani_env *env, ani_object object, ani_method method, ani_ref *result,va_list args)](#object_callmethod_ref_v) | Calls a method on an object and retrieves a reference return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a reference result. |
-| [ani_status (\*Object_CallMethod_Void)(ani_env *env, ani_object object, ani_method method, ...)](#object_callmethod_void) | Calls a method on an object with no return value.This function calls the specified method of an object using variadic arguments. The method does not return avalue. |
-| [ani_status (\*Object_CallMethod_Void_A)(ani_env *env, ani_object object, ani_method method, const ani_value *args)](#object_callmethod_void_a) | Calls a method on an object with no return value (array-based).This function calls the specified method of an object using arguments provided in an array. The method does notreturn a value. |
-| [ani_status (\*Object_CallMethod_Void_V)(ani_env *env, ani_object object, ani_method method, va_list args)](#object_callmethod_void_v) | Calls a method on an object with no return value (variadic arguments).This function calls the specified method of an object using a `va_list`. The method does not return a value. |
-| [ani_status (\*Object_CallMethodByName_Boolean)(ani_env *env, ani_object object, const char *name,const char *signature, ani_boolean *result, ...)](#object_callmethodbyname_boolean) | Calls a method by name on an object and retrieves a boolean return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a boolean result. |
-| [ani_status (\*Object_CallMethodByName_Boolean_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_boolean *result, const ani_value *args)](#object_callmethodbyname_boolean_a) | Calls a method by name on an object and retrieves a boolean return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a boolean result. |
-| [ani_status (\*Object_CallMethodByName_Boolean_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_boolean *result, va_list args)](#object_callmethodbyname_boolean_v) | Calls a method by name on an object and retrieves a boolean return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves aboolean result. |
-| [ani_status (\*Object_CallMethodByName_Char)(ani_env *env, ani_object object, const char *name, const char *signature,ani_char *result, ...)](#object_callmethodbyname_char) | Calls a method by name on an object and retrieves a char return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a char result. |
-| [ani_status (\*Object_CallMethodByName_Char_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_char *result, const ani_value *args)](#object_callmethodbyname_char_a) | Calls a method by name on an object and retrieves a char return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a char result. |
-| [ani_status (\*Object_CallMethodByName_Char_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_char *result, va_list args)](#object_callmethodbyname_char_v) | Calls a method by name on an object and retrieves a char return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves achar result. |
-| [ani_status (\*Object_CallMethodByName_Byte)(ani_env *env, ani_object object, const char *name, const char *signature,ani_byte *result, ...)](#object_callmethodbyname_byte) | Calls a method by name on an object and retrieves a byte return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a byte result. |
-| [ani_status (\*Object_CallMethodByName_Byte_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_byte *result, const ani_value *args)](#object_callmethodbyname_byte_a) | Calls a method by name on an object and retrieves a byte return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a byte result. |
-| [ani_status (\*Object_CallMethodByName_Byte_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_byte *result, va_list args)](#object_callmethodbyname_byte_v) | Calls a method by name on an object and retrieves a byte return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves abyte result. |
-| [ani_status (\*Object_CallMethodByName_Short)(ani_env *env, ani_object object, const char *name,const char *signature, ani_short *result, ...)](#object_callmethodbyname_short) | Calls a method by name on an object and retrieves a short return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a short result. |
-| [ani_status (\*Object_CallMethodByName_Short_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_short *result, const ani_value *args)](#object_callmethodbyname_short_a) | Calls a method by name on an object and retrieves a short return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a short result. |
-| [ani_status (\*Object_CallMethodByName_Short_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_short *result, va_list args)](#object_callmethodbyname_short_v) | Calls a method by name on an object and retrieves a short return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves ashort result. |
-| [ani_status (\*Object_CallMethodByName_Int)(ani_env *env, ani_object object, const char *name, const char *signature,ani_int *result, ...)](#object_callmethodbyname_int) | Calls a method by name on an object and retrieves a integer return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a integer result. |
-| [ani_status (\*Object_CallMethodByName_Int_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_int *result, const ani_value *args)](#object_callmethodbyname_int_a) | Calls a method by name on an object and retrieves a integer return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a integer result. |
-| [ani_status (\*Object_CallMethodByName_Int_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_int *result, va_list args)](#object_callmethodbyname_int_v) | Calls a method by name on an object and retrieves a integer return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves ainteger result. |
-| [ani_status (\*Object_CallMethodByName_Long)(ani_env *env, ani_object object, const char *name, const char *signature,ani_long *result, ...)](#object_callmethodbyname_long) | Calls a method by name on an object and retrieves a long return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a long result. |
-| [ani_status (\*Object_CallMethodByName_Long_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_long *result, const ani_value *args)](#object_callmethodbyname_long_a) | Calls a method by name on an object and retrieves a long return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a long result. |
-| [ani_status (\*Object_CallMethodByName_Long_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_long *result, va_list args)](#object_callmethodbyname_long_v) | Calls a method by name on an object and retrieves a long return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves along result. |
-| [ani_status (\*Object_CallMethodByName_Float)(ani_env *env, ani_object object, const char *name,const char *signature, ani_float *result, ...)](#object_callmethodbyname_float) | Calls a method by name on an object and retrieves a float return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a float result. |
-| [ani_status (\*Object_CallMethodByName_Float_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_float *result, const ani_value *args)](#object_callmethodbyname_float_a) | Calls a method by name on an object and retrieves a float return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a float result. |
-| [ani_status (\*Object_CallMethodByName_Float_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_float *result, va_list args)](#object_callmethodbyname_float_v) | Calls a method by name on an object and retrieves a float return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves afloat result. |
-| [ani_status (\*Object_CallMethodByName_Double)(ani_env *env, ani_object object, const char *name,const char *signature, ani_double *result, ...)](#object_callmethodbyname_double) | Calls a method by name on an object and retrieves a double return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a double result. |
-| [ani_status (\*Object_CallMethodByName_Double_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_double *result, const ani_value *args)](#object_callmethodbyname_double_a) | Calls a method by name on an object and retrieves a double return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a double result. |
-| [ani_status (\*Object_CallMethodByName_Double_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_double *result, va_list args)](#object_callmethodbyname_double_v) | Calls a method by name on an object and retrieves a double return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves adouble result. |
-| [ani_status (\*Object_CallMethodByName_Ref)(ani_env *env, ani_object object, const char *name, const char *signature,ani_ref *result, ...)](#object_callmethodbyname_ref) | Calls a method by name on an object and retrieves a reference return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a reference result. |
-| [ani_status (\*Object_CallMethodByName_Ref_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_ref *result, const ani_value *args)](#object_callmethodbyname_ref_a) | Calls a method by name on an object and retrieves a reference return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a reference result. |
-| [ani_status (\*Object_CallMethodByName_Ref_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_ref *result, va_list args)](#object_callmethodbyname_ref_v) | Calls a method by name on an object and retrieves a reference return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves areference result. |
-| [ani_status (\*Object_CallMethodByName_Void)(ani_env *env, ani_object object, const char *name, const char *signature,...)](#object_callmethodbyname_void) | Calls a method by name on an object with no return value.This function calls the specified method by its name and signature on an object using variadic arguments. Themethod does not return a value. |
-| [ani_status (\*Object_CallMethodByName_Void_A)(ani_env *env, ani_object object, const char *name,const char *signature, const ani_value *args)](#object_callmethodbyname_void_a) | Calls a method by name on an object with no return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray. The method does not return a value. |
-| [ani_status (\*Object_CallMethodByName_Void_V)(ani_env *env, ani_object object, const char *name,const char *signature, va_list args)](#object_callmethodbyname_void_v) | Calls a method by name on an object with no return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list`. The methoddoes not return a value. |
-| [ani_status (\*TupleValue_GetNumberOfItems)(ani_env *env, ani_tuple_value tuple_value, ani_size *result)](#tuplevalue_getnumberofitems) | Retrieves the number of items in a tuple value.This function retrieves the total number of items in the specified tuple value. |
-| [ani_status (\*TupleValue_GetItem_Boolean)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_boolean *result)](#tuplevalue_getitem_boolean) | Retrieves a boolean item from a tuple value.This function retrieves the boolean value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Char)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_char *result)](#tuplevalue_getitem_char) | Retrieves a char item from a tuple value.This function retrieves the char value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Byte)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_byte *result)](#tuplevalue_getitem_byte) | Retrieves a byte item from a tuple value.This function retrieves the byte value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Short)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_short *result)](#tuplevalue_getitem_short) | Retrieves a short item from a tuple value.This function retrieves the short value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Int)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_int *result)](#tuplevalue_getitem_int) | Retrieves a integer item from a tuple value.This function retrieves the integer value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Long)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_long *result)](#tuplevalue_getitem_long) | Retrieves a long item from a tuple value.This function retrieves the long value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Float)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_float *result)](#tuplevalue_getitem_float) | Retrieves a float item from a tuple value.This function retrieves the float value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Double)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_double *result)](#tuplevalue_getitem_double) | Retrieves a double item from a tuple value.This function retrieves the double value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_GetItem_Ref)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_ref *result)](#tuplevalue_getitem_ref) | Retrieves a reference item from a tuple value.This function retrieves the reference value of the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Boolean)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_boolean value)](#tuplevalue_setitem_boolean) | Sets a boolean value to an item in a tuple value.This function assigns a boolean value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Char)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_char value)](#tuplevalue_setitem_char) | Sets a char value to an item in a tuple value.This function assigns a char value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Byte)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_byte value)](#tuplevalue_setitem_byte) | Sets a byte value to an item in a tuple value.This function assigns a byte value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Short)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_short value)](#tuplevalue_setitem_short) | Sets a short value to an item in a tuple value.This function assigns a short value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Int)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_int value)](#tuplevalue_setitem_int) | Sets a integer value to an item in a tuple value.This function assigns a integer value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Long)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_long value)](#tuplevalue_setitem_long) | Sets a long value to an item in a tuple value.This function assigns a long value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Float)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_float value)](#tuplevalue_setitem_float) | Sets a float value to an item in a tuple value.This function assigns a float value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Double)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_double value)](#tuplevalue_setitem_double) | Sets a double value to an item in a tuple value.This function assigns a double value to the item at the specified index in the tuple value. |
-| [ani_status (\*TupleValue_SetItem_Ref)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_ref value)](#tuplevalue_setitem_ref) | Sets a reference value to an item in a tuple value.This function assigns a reference value to the item at the specified index in the tuple value. |
-| [ani_status (\*GlobalReference_Create)(ani_env *env, ani_ref ref, ani_ref *result)](#globalreference_create) | Creates a global reference.This function creates a global reference from a local reference. |
-| [ani_status (\*GlobalReference_Delete)(ani_env *env, ani_ref gref)](#globalreference_delete) | Deletes a global reference.This function deletes the specified global reference, releasing all associated resources. |
-| [ani_status (\*WeakReference_Create)(ani_env *env, ani_ref ref, ani_wref *result)](#weakreference_create) | Creates a weak reference.This function creates a weak reference from a local reference. |
-| [ani_status (\*WeakReference_Delete)(ani_env *env, ani_wref wref)](#weakreference_delete) | Deletes a weak reference.This function deletes the specified weak reference, releasing all associated resources. |
-| [ani_status (\*WeakReference_GetReference)(ani_env *env, ani_wref wref, ani_boolean *was_released_result,ani_ref *ref_result)](#weakreference_getreference) | Retrieves the local reference associated with a weak reference.This function retrieves the local reference that corresponds to the specified weak reference. |
-| [ani_status (\*CreateArrayBuffer)(ani_env *env, size_t length, void **data_result,ani_arraybuffer *arraybuffer_result)](#createarraybuffer) | Creates a new array buffer.This function creates a new array buffer with the specified length and returns a pointer to the allocated data. |
-| [ani_status (\*ArrayBuffer_GetInfo)(ani_env *env, ani_arraybuffer arraybuffer, void **data_result,size_t *length_result)](#arraybuffer_getinfo) | Retrieves information about an array buffer.This function retrieves the data pointer and length of the specified array buffer. |
-| [ani_status (\*Promise_New)(ani_env *env, ani_resolver *result_resolver, ani_object *result_promise)](#promise_new) | Creates a new Promise.This function creates a new promise and a resolver to manage it. |
-| [ani_status (\*PromiseResolver_Resolve)(ani_env *env, ani_resolver resolver, ani_ref resolution)](#promiseresolver_resolve) | Resolves a promise.This function resolves a promise by way of the resolver with which it is associatedand queues promise `then` callbacks. |
+| [ani_status (\*Array_Set)(ani_env *env, ani_array array, ani_size index, ani_ref ref)](#array_set) | Sets a value to an Array.<br> This function sets a value at a given index in Array with respect to possible override of the managed method. |
+| [ani_status (\*Array_Get)(ani_env *env, ani_array array, ani_size index, ani_ref *result)](#array_get) | Retrieves a value from an Array.<br> This function retrieves a value at a given index from Array with respect to possible override of the managed method. |
+| [ani_status (\*Array_Push)(ani_env *env, ani_array array, ani_ref ref)](#array_push) | Push a value to the end of Array.<br> This function pushes a value to the end of Array with respect to possible override of the managed method. |
+| [ani_status (\*Array_Pop)(ani_env *env, ani_array array, ani_ref *result)](#array_pop) | Retrieves the last element and erases it from array.<br> This function retrieves the last element and erases it from Array with respect to possible override of the managed method. |
+| [ani_status (\*FixedArray_GetLength)(ani_env *env, ani_fixedarray array, ani_size *result)](#fixedarray_getlength) | Retrieves the length of a FixedArray.<br> This function retrieves the length of the specified FixedArray. |
+| [ani_status (\*ValueArray_New_Boolean)(ani_env *env, ani_size length, ani_valuearray_boolean *result)](#valuearray_new_boolean) | Creates a new ValueArray of booleans.<br> This function creates a new ValueArray of the specified length for boolean values. |
+| [ani_status (\*ValueArray_New_Char)(ani_env *env, ani_size length, ani_valuearray_char *result)](#valuearray_new_char) | Creates a new ValueArray of characters.<br> This function creates a new ValueArray of the specified length for character values. |
+| [ani_status (\*ValueArray_New_Byte)(ani_env *env, ani_size length, ani_valuearray_byte *result)](#valuearray_new_byte) | Creates a new ValueArray of bytes.<br> This function creates a new ValueArray of the specified length for byte values. |
+| [ani_status (\*ValueArray_New_Short)(ani_env *env, ani_size length, ani_valuearray_short *result)](#valuearray_new_short) | Creates a new ValueArray of shorts.<br> This function creates a new ValueArray of the specified length for short integer values. |
+| [ani_status (\*ValueArray_New_Int)(ani_env *env, ani_size length, ani_valuearray_int *result)](#valuearray_new_int) | Creates a new ValueArray of integers.<br> This function creates a new ValueArray of the specified length for integer values. |
+| [ani_status (\*ValueArray_New_Long)(ani_env *env, ani_size length, ani_valuearray_long *result)](#valuearray_new_long) | Creates a new ValueArray of long integers.<br> This function creates a new ValueArray of the specified length for long integer values. |
+| [ani_status (\*ValueArray_New_Float)(ani_env *env, ani_size length, ani_valuearray_float *result)](#valuearray_new_float) | Creates a new ValueArray of floats.<br> This function creates a new ValueArray of the specified length for float values. |
+| [ani_status (\*ValueArray_New_Double)(ani_env *env, ani_size length, ani_valuearray_double *result)](#valuearray_new_double) | Creates a new ValueArray of doubles.<br> This function creates a new ValueArray of the specified length for double values. |
+| [ani_status (\*ValueArray_GetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, ani_boolean *native_buffer)](#valuearray_getregion_boolean) | Retrieves a region of boolean values from a ValueArray.<br> This function retrieves a portion of the specified boolean ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,ani_char *native_buffer)](#valuearray_getregion_char) | Retrieves a region of character values from a ValueArray.<br> This function retrieves a portion of the specified character ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,ani_byte *native_buffer)](#valuearray_getregion_byte) | Retrieves a region of byte values from a ValueArray.<br> This function retrieves a portion of the specified byte ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,ani_short *native_buffer)](#valuearray_getregion_short) | Retrieves a region of short values from a ValueArray.<br> This function retrieves a portion of the specified short ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,ani_int *native_buffer)](#valuearray_getregion_int) | Retrieves a region of integer values from a ValueArray.<br> This function retrieves a portion of the specified integer ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,ani_long *native_buffer)](#valuearray_getregion_long) | Retrieves a region of long integer values from a ValueArray.<br> This function retrieves a portion of the specified long integer ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,ani_float *native_buffer)](#valuearray_getregion_float) | Retrieves a region of float values from a ValueArray.<br> This function retrieves a portion of the specified float ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_GetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, ani_double *native_buffer)](#valuearray_getregion_double) | Retrieves a region of double values from a ValueArray.<br> This function retrieves a portion of the specified double ValueArray into a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Boolean)(ani_env *env, ani_valuearray_boolean array, ani_size offset,ani_size length, const ani_boolean *native_buffer)](#valuearray_setregion_boolean) | Sets a region of boolean values in a ValueArray.<br> This function sets a portion of the specified boolean ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Char)(ani_env *env, ani_valuearray_char array, ani_size offset, ani_size length,const ani_char *native_buffer)](#valuearray_setregion_char) | Sets a region of character values in a ValueArray.<br> This function sets a portion of the specified character ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Byte)(ani_env *env, ani_valuearray_byte array, ani_size offset, ani_size length,const ani_byte *native_buffer)](#valuearray_setregion_byte) | Sets a region of byte values in a ValueArray.<br> This function sets a portion of the specified byte ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Short)(ani_env *env, ani_valuearray_short array, ani_size offset, ani_size length,const ani_short *native_buffer)](#valuearray_setregion_short) | Sets a region of short values in a ValueArray.<br> This function sets a portion of the specified short ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Int)(ani_env *env, ani_valuearray_int array, ani_size offset, ani_size length,const ani_int *native_buffer)](#valuearray_setregion_int) | Sets a region of integer values in a ValueArray.<br> This function sets a portion of the specified integer ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Long)(ani_env *env, ani_valuearray_long array, ani_size offset, ani_size length,const ani_long *native_buffer)](#valuearray_setregion_long) | Sets a region of long integer values in a ValueArray.<br> This function sets a portion of the specified long integer ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Float)(ani_env *env, ani_valuearray_float array, ani_size offset, ani_size length,const ani_float *native_buffer)](#valuearray_setregion_float) | Sets a region of float values in a ValueArray.<br> This function sets a portion of the specified float ValueArray using a native buffer. |
+| [ani_status (\*ValueArray_SetRegion_Double)(ani_env *env, ani_valuearray_double array, ani_size offset,ani_size length, const ani_double *native_buffer)](#valuearray_setregion_double) | Sets a region of double values in a ValueArray.<br> This function sets a portion of the specified double ValueArray using a native buffer. |
+| [ani_status (\*FixedArray_New)(ani_env *env, ani_type type, ani_size length, ani_ref initial_element,ani_fixedarray *result)](#fixedarray_new) | Creates a new FixedArray of references.<br> This function creates a new FixedArray of references, optionally initializing it with an initial_element ref. |
+| [ani_status (\*FixedArray_Set)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref ref)](#fixedarray_set) | Sets a reference at a specific index in a FixedArray.<br> This function sets the value of a reference at the specified index in the FixedArray. |
+| [ani_status (\*FixedArray_Get)(ani_env *env, ani_fixedarray array, ani_size index, ani_ref *result)](#fixedarray_get) | Retrieves a reference from a specific index in a FixedArray.<br> This function retrieves the value of a reference at the specified index in the FixedArray. |
+| [ani_status (\*Enum_GetEnumItemByName)(ani_env *env, ani_enum enm, const char *name, ani_enum_item *result)](#enum_getenumitembyname) | Retrieves an enum item by its name.<br> This function retrieves an enum item associated with the specified name. |
+| [ani_status (\*Enum_GetEnumItemByIndex)(ani_env *env, ani_enum enm, ani_size index, ani_enum_item *result)](#enum_getenumitembyindex) | Retrieves an enum item by its index.<br> This function retrieves an enum item located at the specified index. |
+| [ani_status (\*EnumItem_GetEnum)(ani_env *env, ani_enum_item enum_item, ani_enum *result)](#enumitem_getenum) | Retrieves the enum associated with an enum item.<br> This function retrieves the enum to which the specified enum item belongs. |
+| [ani_status (\*EnumItem_GetValue_Int)(ani_env *env, ani_enum_item enum_item, ani_int *result)](#enumitem_getvalue_int) | Retrieves the integer value of an enum item.<br> This function retrieves the integer representing the value of the specified enum item. |
+| [ani_status (\*EnumItem_GetValue_String)(ani_env *env, ani_enum_item enum_item, ani_string *result)](#enumitem_getvalue_string) | Retrieves the string value of an enum item.<br> This function retrieves the string representing the value of the specified enum item. |
+| [ani_status (\*EnumItem_GetName)(ani_env *env, ani_enum_item enum_item, ani_string *result)](#enumitem_getname) | Retrieves the name of an enum item.<br> This function retrieves the name associated with the specified enum item. |
+| [ani_status (\*EnumItem_GetIndex)(ani_env *env, ani_enum_item enum_item, ani_size *result)](#enumitem_getindex) | Retrieves the index of an enum item.<br> This function retrieves the index of the specified enum item within its enum. |
+| [ani_status (\*FunctionalObject_Call)(ani_env *env, ani_fn_object fn, ani_size argc, ani_ref *argv, ani_ref *result)](#functionalobject_call) | Invokes an object of function type.<br> This function invokes an object of function type with the specified arguments. |
+| [ani_status (\*Variable_SetValue_Boolean)(ani_env *env, ani_variable variable, ani_boolean value)](#variable_setvalue_boolean) | Sets a boolean value to a variable.<br> This function assigns a boolean value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Char)(ani_env *env, ani_variable variable, ani_char value)](#variable_setvalue_char) | Sets a character value to a variable.<br> This function assigns a character value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Byte)(ani_env *env, ani_variable variable, ani_byte value)](#variable_setvalue_byte) | Sets a byte value to a variable.<br> This function assigns a byte value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Short)(ani_env *env, ani_variable variable, ani_short value)](#variable_setvalue_short) | Sets a short value to a variable.<br> This function assigns a short integer value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Int)(ani_env *env, ani_variable variable, ani_int value)](#variable_setvalue_int) | Sets an integer value to a variable.<br> This function assigns an integer value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Long)(ani_env *env, ani_variable variable, ani_long value)](#variable_setvalue_long) | Sets a long value to a variable.<br> This function assigns a long integer value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Float)(ani_env *env, ani_variable variable, ani_float value)](#variable_setvalue_float) | Sets a float value to a variable.<br> This function assigns a float value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Double)(ani_env *env, ani_variable variable, ani_double value)](#variable_setvalue_double) | Sets a double value to a variable.<br> This function assigns a double value to the specified variable. |
+| [ani_status (\*Variable_SetValue_Ref)(ani_env *env, ani_variable variable, ani_ref value)](#variable_setvalue_ref) | Sets a reference value to a variable.<br> This function assigns a reference value to the specified variable. |
+| [ani_status (\*Variable_GetValue_Boolean)(ani_env *env, ani_variable variable, ani_boolean *result)](#variable_getvalue_boolean) | Retrieves a boolean value from a variable.<br> This function fetches a boolean value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Char)(ani_env *env, ani_variable variable, ani_char *result)](#variable_getvalue_char) | Retrieves a character value from a variable.<br> This function fetches a character value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Byte)(ani_env *env, ani_variable variable, ani_byte *result)](#variable_getvalue_byte) | Retrieves a byte value from a variable.<br> This function fetches a byte value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Short)(ani_env *env, ani_variable variable, ani_short *result)](#variable_getvalue_short) | Retrieves a short value from a variable.<br> This function fetches a short integer value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Int)(ani_env *env, ani_variable variable, ani_int *result)](#variable_getvalue_int) | Retrieves an integer value from a variable.<br> This function fetches an integer value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Long)(ani_env *env, ani_variable variable, ani_long *result)](#variable_getvalue_long) | Retrieves a long value from a variable.<br> This function fetches a long integer value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Float)(ani_env *env, ani_variable variable, ani_float *result)](#variable_getvalue_float) | Retrieves a float value from a variable.<br> This function fetches a float value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Double)(ani_env *env, ani_variable variable, ani_double *result)](#variable_getvalue_double) | Retrieves a double value from a variable.<br> This function fetches a double value from the specified variable. |
+| [ani_status (\*Variable_GetValue_Ref)(ani_env *env, ani_variable variable, ani_ref *result)](#variable_getvalue_ref) | Retrieves a reference value from a variable.<br> This function fetches a reference value from the specified variable. |
+| [ani_status (\*Function_Call_Boolean)(ani_env *env, ani_function fn, ani_boolean *result, ...)](#function_call_boolean) | Calls a function and retrieves a boolean result.<br> This function calls the specified function with variadic arguments and retrieves a boolean result. |
+| [ani_status (\*Function_Call_Boolean_A)(ani_env *env, ani_function fn, ani_boolean *result, const ani_value *args)](#function_call_boolean_a) | Calls a function and retrieves a boolean result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a boolean result. |
+| [ani_status (\*Function_Call_Boolean_V)(ani_env *env, ani_function fn, ani_boolean *result, va_list args)](#function_call_boolean_v) | Calls a function and retrieves a boolean result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a boolean result. |
+| [ani_status (\*Function_Call_Char)(ani_env *env, ani_function fn, ani_char *result, ...)](#function_call_char) | Calls a function and retrieves a character result.<br> This function calls the specified function with variadic arguments and retrieves a character result. |
+| [ani_status (\*Function_Call_Char_A)(ani_env *env, ani_function fn, ani_char *result, const ani_value *args)](#function_call_char_a) | Calls a function and retrieves a character result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a character result. |
+| [ani_status (\*Function_Call_Char_V)(ani_env *env, ani_function fn, ani_char *result, va_list args)](#function_call_char_v) | Calls a function and retrieves a character result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a character result. |
+| [ani_status (\*Function_Call_Byte)(ani_env *env, ani_function fn, ani_byte *result, ...)](#function_call_byte) | Calls a function and retrieves a byte result.<br> This function calls the specified function with variadic arguments and retrieves a byte result. |
+| [ani_status (\*Function_Call_Byte_A)(ani_env *env, ani_function fn, ani_byte *result, const ani_value *args)](#function_call_byte_a) | Calls a function and retrieves a byte result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a byte result. |
+| [ani_status (\*Function_Call_Byte_V)(ani_env *env, ani_function fn, ani_byte *result, va_list args)](#function_call_byte_v) | Calls a function and retrieves a byte result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a byte result. |
+| [ani_status (\*Function_Call_Short)(ani_env *env, ani_function fn, ani_short *result, ...)](#function_call_short) | Calls a function and retrieves a short result.<br> This function calls the specified function with variadic arguments and retrieves a short result. |
+| [ani_status (\*Function_Call_Short_A)(ani_env *env, ani_function fn, ani_short *result, const ani_value *args)](#function_call_short_a) | Calls a function and retrieves a short result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a short result. |
+| [ani_status (\*Function_Call_Short_V)(ani_env *env, ani_function fn, ani_short *result, va_list args)](#function_call_short_v) | Calls a function and retrieves a short result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a short result. |
+| [ani_status (\*Function_Call_Int)(ani_env *env, ani_function fn, ani_int *result, ...)](#function_call_int) | Calls a function and retrieves an integer result.<br> This function calls the specified function with variadic arguments and retrieves an integer result. |
+| [ani_status (\*Function_Call_Int_A)(ani_env *env, ani_function fn, ani_int *result, const ani_value *args)](#function_call_int_a) | Calls a function and retrieves an integer result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves an integer result. |
+| [ani_status (\*Function_Call_Int_V)(ani_env *env, ani_function fn, ani_int *result, va_list args)](#function_call_int_v) | Calls a function and retrieves an integer result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves an integer result. |
+| [ani_status (\*Function_Call_Long)(ani_env *env, ani_function fn, ani_long *result, ...)](#function_call_long) | Calls a function and retrieves a long result.<br> This function calls the specified function with variadic arguments and retrieves a long result. |
+| [ani_status (\*Function_Call_Long_A)(ani_env *env, ani_function fn, ani_long *result, const ani_value *args)](#function_call_long_a) | Calls a function and retrieves a long result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a long result. |
+| [ani_status (\*Function_Call_Long_V)(ani_env *env, ani_function fn, ani_long *result, va_list args)](#function_call_long_v) | Calls a function and retrieves a long result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a long result. |
+| [ani_status (\*Function_Call_Float)(ani_env *env, ani_function fn, ani_float *result, ...)](#function_call_float) | Calls a function and retrieves a float result.<br> This function calls the specified function with variadic arguments and retrieves a float result. |
+| [ani_status (\*Function_Call_Float_A)(ani_env *env, ani_function fn, ani_float *result, const ani_value *args)](#function_call_float_a) | Calls a function and retrieves a float result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a float result. |
+| [ani_status (\*Function_Call_Float_V)(ani_env *env, ani_function fn, ani_float *result, va_list args)](#function_call_float_v) | Calls a function and retrieves a float result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a float result. |
+| [ani_status (\*Function_Call_Double)(ani_env *env, ani_function fn, ani_double *result, ...)](#function_call_double) | Calls a function and retrieves a double result.<br> This function calls the specified function with variadic arguments and retrieves a double result. |
+| [ani_status (\*Function_Call_Double_A)(ani_env *env, ani_function fn, ani_double *result, const ani_value *args)](#function_call_double_a) | Calls a function and retrieves a double result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a double result. |
+| [ani_status (\*Function_Call_Double_V)(ani_env *env, ani_function fn, ani_double *result, va_list args)](#function_call_double_v) | Calls a function and retrieves a double result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a double result. |
+| [ani_status (\*Function_Call_Ref)(ani_env *env, ani_function fn, ani_ref *result, ...)](#function_call_ref) | Calls a function and retrieves a reference result.<br> This function calls the specified function with variadic arguments and retrieves a reference result. |
+| [ani_status (\*Function_Call_Ref_A)(ani_env *env, ani_function fn, ani_ref *result, const ani_value *args)](#function_call_ref_a) | Calls a function and retrieves a reference result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a reference result. |
+| [ani_status (\*Function_Call_Ref_V)(ani_env *env, ani_function fn, ani_ref *result, va_list args)](#function_call_ref_v) | Calls a function and retrieves a reference result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a reference result. |
+| [ani_status (\*Function_Call_Void)(ani_env *env, ani_function fn, ...)](#function_call_void) | Calls a function without returning a result.<br> This function calls the specified function with variadic arguments and does not return a result. |
+| [ani_status (\*Function_Call_Void_A)(ani_env *env, ani_function fn, const ani_value *args)](#function_call_void_a) | Calls a function without returning a result (array-based).<br> This function calls the specified function with arguments provided in an array and does not return a result. |
+| [ani_status (\*Function_Call_Void_V)(ani_env *env, ani_function fn, va_list args)](#function_call_void_v) | Calls a function without returning a result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and does not return a result. |
+| [ani_status (\*Class_FindField)(ani_env *env, ani_class cls, const char *name, ani_field *result)](#class_findfield) | Finds a field from by its name.<br> This function locates a field based on its name and stores it in the result parameter. |
+| [ani_status (\*Class_FindStaticField)(ani_env *env, ani_class cls, const char *name, ani_static_field *result)](#class_findstaticfield) | Finds a static field by its name.<br> This function locates a static field based on its name and stores it in the result parameter. |
+| [ani_status (\*Class_FindMethod)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_method *result)](#class_findmethod) | Finds a method from by its name and signature.<br> This function locates a method based on its name and signature and stores it in the result parameter. |
+| [ani_status (\*Class_FindStaticMethod)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_static_method *result)](#class_findstaticmethod) | Finds a static method from by its name and signature.<br> This function locates a static method based on its name and signature and stores it in the result parameter. |
+| [ani_status (\*Class_FindSetter)(ani_env *env, ani_class cls, const char *name, ani_method *result)](#class_findsetter) | Finds a setter method from by its name.<br> This function locates a setter method based on its name and stores it in the result parameter. |
+| [ani_status (\*Class_FindGetter)(ani_env *env, ani_class cls, const char *name, ani_method *result)](#class_findgetter) | Finds a getter method from by its name.<br> This function locates a getter method based on its name and stores it in the result parameter. |
+| [ani_status (\*Class_FindIndexableGetter)(ani_env *env, ani_class cls, const char *signature, ani_method *result)](#class_findindexablegetter) | Finds an indexable getter method from by its signature.<br> This function locates an indexable getter method based on its signature and stores it in the result parameter. |
+| [ani_status (\*Class_FindIndexableSetter)(ani_env *env, ani_class cls, const char *signature, ani_method *result)](#class_findindexablesetter) | Finds an indexable setter method from by its signature.<br> This function locates an indexable setter method based on its signature and stores it in the result parameter. |
+| [ani_status (\*Class_FindIterator)(ani_env *env, ani_class cls, ani_method *result)](#class_finditerator) | Finds an iterator method.<br> This function locates an iterator method |
+| [ani_status (\*Class_GetStaticField_Boolean)(ani_env *env, ani_class cls, ani_static_field field,ani_boolean *result)](#class_getstaticfield_boolean) | Retrieves a boolean value from a static field of a class.<br> This function retrieves the boolean value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Char)(ani_env *env, ani_class cls, ani_static_field field, ani_char *result)](#class_getstaticfield_char) | Retrieves a character value from a static field of a class.<br> This function retrieves the character value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Byte)(ani_env *env, ani_class cls, ani_static_field field, ani_byte *result)](#class_getstaticfield_byte) | Retrieves a byte value from a static field of a class.<br> This function retrieves the byte value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Short)(ani_env *env, ani_class cls, ani_static_field field, ani_short *result)](#class_getstaticfield_short) | Retrieves a short value from a static field of a class.<br> This function retrieves the short value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Int)(ani_env *env, ani_class cls, ani_static_field field, ani_int *result)](#class_getstaticfield_int) | Retrieves an integer value from a static field of a class.<br> This function retrieves the integer value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Long)(ani_env *env, ani_class cls, ani_static_field field, ani_long *result)](#class_getstaticfield_long) | Retrieves a long value from a static field of a class.<br> This function retrieves the long value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Float)(ani_env *env, ani_class cls, ani_static_field field, ani_float *result)](#class_getstaticfield_float) | Retrieves a float value from a static field of a class.<br> This function retrieves the float value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Double)(ani_env *env, ani_class cls, ani_static_field field, ani_double *result)](#class_getstaticfield_double) | Retrieves a double value from a static field of a class.<br> This function retrieves the double value of the specified static field from the given class. |
+| [ani_status (\*Class_GetStaticField_Ref)(ani_env *env, ani_class cls, ani_static_field field, ani_ref *result)](#class_getstaticfield_ref) | Retrieves a reference value from a static field of a class.<br> This function retrieves the reference value of the specified static field from the given class. |
+| [ani_status (\*Class_SetStaticField_Boolean)(ani_env *env, ani_class cls, ani_static_field field, ani_boolean value)](#class_setstaticfield_boolean) | Sets a boolean value to a static field of a class.<br> This function assigns a boolean value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Char)(ani_env *env, ani_class cls, ani_static_field field, ani_char value)](#class_setstaticfield_char) | Sets a character value to a static field of a class.<br> This function assigns a character value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Byte)(ani_env *env, ani_class cls, ani_static_field field, ani_byte value)](#class_setstaticfield_byte) | Sets a byte value to a static field of a class.<br> This function assigns a byte value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Short)(ani_env *env, ani_class cls, ani_static_field field, ani_short value)](#class_setstaticfield_short) | Sets a short value to a static field of a class.<br> This function assigns a short value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Int)(ani_env *env, ani_class cls, ani_static_field field, ani_int value)](#class_setstaticfield_int) | Sets an integer value to a static field of a class.<br> This function assigns an integer value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Long)(ani_env *env, ani_class cls, ani_static_field field, ani_long value)](#class_setstaticfield_long) | Sets a long value to a static field of a class.<br> This function assigns a long value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Float)(ani_env *env, ani_class cls, ani_static_field field, ani_float value)](#class_setstaticfield_float) | Sets a float value to a static field of a class.<br> This function assigns a float value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Double)(ani_env *env, ani_class cls, ani_static_field field, ani_double value)](#class_setstaticfield_double) | Sets a double value to a static field of a class.<br> This function assigns a double value to the specified static field of the given class. |
+| [ani_status (\*Class_SetStaticField_Ref)(ani_env *env, ani_class cls, ani_static_field field, ani_ref value)](#class_setstaticfield_ref) | Sets a reference value to a static field of a class.<br> This function assigns a reference value to the specified static field of the given class. |
+| [ani_status (\*Class_GetStaticFieldByName_Boolean)(ani_env *env, ani_class cls, const char *name,ani_boolean *result)](#class_getstaticfieldbyname_boolean) | Retrieves a boolean value from a static field of a class by its name.<br> This function retrieves the boolean value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Char)(ani_env *env, ani_class cls, const char *name, ani_char *result)](#class_getstaticfieldbyname_char) | Retrieves a character value from a static field of a class by its name.<br> This function retrieves the character value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Byte)(ani_env *env, ani_class cls, const char *name, ani_byte *result)](#class_getstaticfieldbyname_byte) | Retrieves a byte value from a static field of a class by its name.<br> This function retrieves the byte value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Short)(ani_env *env, ani_class cls, const char *name, ani_short *result)](#class_getstaticfieldbyname_short) | Retrieves a short value from a static field of a class by its name.<br> This function retrieves the short value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Int)(ani_env *env, ani_class cls, const char *name, ani_int *result)](#class_getstaticfieldbyname_int) | Retrieves an integer value from a static field of a class by its name.<br> This function retrieves the integer value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Long)(ani_env *env, ani_class cls, const char *name, ani_long *result)](#class_getstaticfieldbyname_long) | Retrieves a long value from a static field of a class by its name.<br> This function retrieves the long value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Float)(ani_env *env, ani_class cls, const char *name, ani_float *result)](#class_getstaticfieldbyname_float) | Retrieves a float value from a static field of a class by its name.<br> This function retrieves the float value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Double)(ani_env *env, ani_class cls, const char *name, ani_double *result)](#class_getstaticfieldbyname_double) | Retrieves a double value from a static field of a class by its name.<br> This function retrieves the double value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_GetStaticFieldByName_Ref)(ani_env *env, ani_class cls, const char *name, ani_ref *result)](#class_getstaticfieldbyname_ref) | Retrieves a reference value from a static field of a class by its name.<br> This function retrieves the reference value of the specified static field from the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Boolean)(ani_env *env, ani_class cls, const char *name, ani_boolean value)](#class_setstaticfieldbyname_boolean) | Sets a boolean value to a static field of a class by its name.<br> This function assigns a boolean value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Char)(ani_env *env, ani_class cls, const char *name, ani_char value)](#class_setstaticfieldbyname_char) | Sets a character value to a static field of a class by its name.<br> This function assigns a character value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Byte)(ani_env *env, ani_class cls, const char *name, ani_byte value)](#class_setstaticfieldbyname_byte) | Sets a byte value to a static field of a class by its name.<br> This function assigns a byte value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Short)(ani_env *env, ani_class cls, const char *name, ani_short value)](#class_setstaticfieldbyname_short) | Sets a short value to a static field of a class by its name.<br> This function assigns a short value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Int)(ani_env *env, ani_class cls, const char *name, ani_int value)](#class_setstaticfieldbyname_int) | Sets an integer value to a static field of a class by its name.<br> This function assigns an integer value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Long)(ani_env *env, ani_class cls, const char *name, ani_long value)](#class_setstaticfieldbyname_long) | Sets a long value to a static field of a class by its name.<br> This function assigns a long value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Float)(ani_env *env, ani_class cls, const char *name, ani_float value)](#class_setstaticfieldbyname_float) | Sets a float value to a static field of a class by its name.<br> This function assigns a float value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Double)(ani_env *env, ani_class cls, const char *name, ani_double value)](#class_setstaticfieldbyname_double) | Sets a double value to a static field of a class by its name.<br> This function assigns a double value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_SetStaticFieldByName_Ref)(ani_env *env, ani_class cls, const char *name, ani_ref value)](#class_setstaticfieldbyname_ref) | Sets a reference value to a static field of a class by its name.<br> This function assigns a reference value to the specified static field of the given class by its name. |
+| [ani_status (\*Class_CallStaticMethod_Boolean)(ani_env *env, ani_class cls, ani_static_method method,ani_boolean *result, ...)](#class_callstaticmethod_boolean) | Calls a static method with a boolean return type.<br> This function calls the specified static method of a class and retrieves a boolean result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Boolean_A)(ani_env *env, ani_class cls, ani_static_method method,ani_boolean *result, const ani_value *args)](#class_callstaticmethod_boolean_a) | Calls a static method with a boolean return type (array-based).<br> This function calls the specified static method of a class and retrieves a boolean result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Boolean_V)(ani_env *env, ani_class cls, ani_static_method method,ani_boolean *result, va_list args)](#class_callstaticmethod_boolean_v) | Calls a static method with a boolean return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a boolean result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Char)(ani_env *env, ani_class cls, ani_static_method method, ani_char *result,...)](#class_callstaticmethod_char) | Calls a static method with a character return type.<br> This function calls the specified static method of a class and retrieves a character result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Char_A)(ani_env *env, ani_class cls, ani_static_method method, ani_char *result,const ani_value *args)](#class_callstaticmethod_char_a) | Calls a static method with a character return type (array-based).<br> This function calls the specified static method of a class and retrieves a character result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Char_V)(ani_env *env, ani_class cls, ani_static_method method, ani_char *result,va_list args)](#class_callstaticmethod_char_v) | Calls a static method with a character return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a character result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Byte)(ani_env *env, ani_class cls, ani_static_method method, ani_byte *result,...)](#class_callstaticmethod_byte) | Calls a static method with a byte return type.<br> This function calls the specified static method of a class and retrieves a byte result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Byte_A)(ani_env *env, ani_class cls, ani_static_method method, ani_byte *result,const ani_value *args)](#class_callstaticmethod_byte_a) | Calls a static method with a byte return type (array-based).<br> This function calls the specified static method of a class and retrieves a byte result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Byte_V)(ani_env *env, ani_class cls, ani_static_method method, ani_byte *result,va_list args)](#class_callstaticmethod_byte_v) | Calls a static method with a byte return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a byte result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Short)(ani_env *env, ani_class cls, ani_static_method method, ani_short *result,...)](#class_callstaticmethod_short) | Calls a static method with a short return type.<br> This function calls the specified static method of a class and retrieves a short result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Short_A)(ani_env *env, ani_class cls, ani_static_method method,ani_short *result, const ani_value *args)](#class_callstaticmethod_short_a) | Calls a static method with a short return type (array-based).<br> This function calls the specified static method of a class and retrieves a short result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Short_V)(ani_env *env, ani_class cls, ani_static_method method,ani_short *result, va_list args)](#class_callstaticmethod_short_v) | Calls a static method with a short return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a short result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Int)(ani_env *env, ani_class cls, ani_static_method method, ani_int *result,...)](#class_callstaticmethod_int) | Calls a static method with an integer return type.<br> This function calls the specified static method of a class and retrieves an integer result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Int_A)(ani_env *env, ani_class cls, ani_static_method method, ani_int *result,const ani_value *args)](#class_callstaticmethod_int_a) | Calls a static method with an integer return type (array-based).<br> This function calls the specified static method of a class and retrieves an integer result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Int_V)(ani_env *env, ani_class cls, ani_static_method method, ani_int *result,va_list args)](#class_callstaticmethod_int_v) | Calls a static method with an integer return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves an integer result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Long)(ani_env *env, ani_class cls, ani_static_method method, ani_long *result,...)](#class_callstaticmethod_long) | Calls a static method with a long return type.<br> This function calls the specified static method of a class and retrieves a long result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Long_A)(ani_env *env, ani_class cls, ani_static_method method, ani_long *result,const ani_value *args)](#class_callstaticmethod_long_a) | Calls a static method with a long return type (array-based).<br> This function calls the specified static method of a class and retrieves a long result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Long_V)(ani_env *env, ani_class cls, ani_static_method method, ani_long *result,va_list args)](#class_callstaticmethod_long_v) | Calls a static method with a long return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a long result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Float)(ani_env *env, ani_class cls, ani_static_method method, ani_float *result,...)](#class_callstaticmethod_float) | Calls a static method with a float return type.<br> This function calls the specified static method of a class and retrieves a float result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Float_A)(ani_env *env, ani_class cls, ani_static_method method,ani_float *result, const ani_value *args)](#class_callstaticmethod_float_a) | Calls a static method with a float return type (array-based).<br> This function calls the specified static method of a class and retrieves a float result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Float_V)(ani_env *env, ani_class cls, ani_static_method method,ani_float *result, va_list args)](#class_callstaticmethod_float_v) | Calls a static method with a float return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a float result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Double)(ani_env *env, ani_class cls, ani_static_method method,ani_double *result, ...)](#class_callstaticmethod_double) | Calls a static method with a double return type.<br> This function calls the specified static method of a class and retrieves a double result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Double_A)(ani_env *env, ani_class cls, ani_static_method method,ani_double *result, const ani_value *args)](#class_callstaticmethod_double_a) | Calls a static method with a double return type (array-based).<br> This function calls the specified static method of a class and retrieves a double result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Double_V)(ani_env *env, ani_class cls, ani_static_method method,ani_double *result, va_list args)](#class_callstaticmethod_double_v) | Calls a static method with a double return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a double result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Ref)(ani_env *env, ani_class cls, ani_static_method method, ani_ref *result,...)](#class_callstaticmethod_ref) | Calls a static method with a reference return type.<br> This function calls the specified static method of a class and retrieves a reference result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethod_Ref_A)(ani_env *env, ani_class cls, ani_static_method method, ani_ref *result,const ani_value *args)](#class_callstaticmethod_ref_a) | Calls a static method with a reference return type (array-based).<br> This function calls the specified static method of a class and retrieves a reference result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethod_Ref_V)(ani_env *env, ani_class cls, ani_static_method method, ani_ref *result,va_list args)](#class_callstaticmethod_ref_v) | Calls a static method with a reference return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a reference result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethod_Void)(ani_env *env, ani_class cls, ani_static_method method, ...)](#class_callstaticmethod_void) | Calls a static method with no return value.<br> This function calls the specified static method of a class using variadic arguments. The method does not return a value. |
+| [ani_status (\*Class_CallStaticMethod_Void_A)(ani_env *env, ani_class cls, ani_static_method method,const ani_value *args)](#class_callstaticmethod_void_a) | Calls a static method with no return value (array-based).<br> This function calls the specified static method of a class using arguments from an array. The method does not return a value. |
+| [ani_status (\*Class_CallStaticMethod_Void_V)(ani_env *env, ani_class cls, ani_static_method method, va_list args)](#class_callstaticmethod_void_v) | Calls a static method with no return value (variadic arguments).<br> This function calls the specified static method of a class using a `va_list`. The method does not return a value. |
+| [ani_status (\*Class_CallStaticMethodByName_Boolean)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_boolean *result, ...)](#class_callstaticmethodbyname_boolean) | Calls a static method by name with a boolean return type.<br> This function calls the specified static method of a class by its name and retrieves a boolean result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Boolean_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_boolean *result,const ani_value *args)](#class_callstaticmethodbyname_boolean_a) | Calls a static method by name with a boolean return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a boolean result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Boolean_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_boolean *result, va_list args)](#class_callstaticmethodbyname_boolean_v) | Calls a static method by name with a boolean return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a boolean result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Char)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_char *result, ...)](#class_callstaticmethodbyname_char) | Calls a static method by name with a char return type.<br> This function calls the specified static method of a class by its name and retrieves a char result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Char_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_char *result, const ani_value *args)](#class_callstaticmethodbyname_char_a) | Calls a static method by name with a char return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a char result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Char_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_char *result, va_list args)](#class_callstaticmethodbyname_char_v) | Calls a static method by name with a char return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a char result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Byte)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_byte *result, ...)](#class_callstaticmethodbyname_byte) | Calls a static method by name with a byte return type.<br> This function calls the specified static method of a class by its name and retrieves a byte result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Byte_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_byte *result, const ani_value *args)](#class_callstaticmethodbyname_byte_a) | Calls a static method by name with a byte return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a byte result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Byte_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_byte *result, va_list args)](#class_callstaticmethodbyname_byte_v) | Calls a static method by name with a byte return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a byte result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Short)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_short *result, ...)](#class_callstaticmethodbyname_short) | Calls a static method by name with a short return type.<br> This function calls the specified static method of a class by its name and retrieves a short result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Short_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_short *result, const ani_value *args)](#class_callstaticmethodbyname_short_a) | Calls a static method by name with a short return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a short result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Short_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_short *result, va_list args)](#class_callstaticmethodbyname_short_v) | Calls a static method by name with a short return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a short result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Int)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_int *result, ...)](#class_callstaticmethodbyname_int) | Calls a static method by name with a integer return type.<br> This function calls the specified static method of a class by its name and retrieves a integer result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Int_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_int *result, const ani_value *args)](#class_callstaticmethodbyname_int_a) | Calls a static method by name with a integer return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a integer result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Int_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_int *result, va_list args)](#class_callstaticmethodbyname_int_v) | Calls a static method by name with a integer return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a integer result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Long)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_long *result, ...)](#class_callstaticmethodbyname_long) | Calls a static method by name with a long return type.<br> This function calls the specified static method of a class by its name and retrieves a long result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Long_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_long *result, const ani_value *args)](#class_callstaticmethodbyname_long_a) | Calls a static method by name with a long return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a long result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Long_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_long *result, va_list args)](#class_callstaticmethodbyname_long_v) | Calls a static method by name with a long return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a long result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Float)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_float *result, ...)](#class_callstaticmethodbyname_float) | Calls a static method by name with a float return type.<br> This function calls the specified static method of a class by its name and retrieves a float result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Float_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_float *result, const ani_value *args)](#class_callstaticmethodbyname_float_a) | Calls a static method by name with a float return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a float result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Float_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_float *result, va_list args)](#class_callstaticmethodbyname_float_v) | Calls a static method by name with a float return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a float result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Double)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_double *result, ...)](#class_callstaticmethodbyname_double) | Calls a static method by name with a double return type.<br> This function calls the specified static method of a class by its name and retrieves a double result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Double_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_double *result,const ani_value *args)](#class_callstaticmethodbyname_double_a) | Calls a static method by name with a double return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a double result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Double_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_double *result, va_list args)](#class_callstaticmethodbyname_double_v) | Calls a static method by name with a double return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a double result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Ref)(ani_env *env, ani_class cls, const char *name, const char *signature,ani_ref *result, ...)](#class_callstaticmethodbyname_ref) | Calls a static method by name with a reference return type.<br> This function calls the specified static method of a class by its name and retrieves a reference result using variadic arguments. |
+| [ani_status (\*Class_CallStaticMethodByName_Ref_A)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_ref *result, const ani_value *args)](#class_callstaticmethodbyname_ref_a) | Calls a static method by name with a reference return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a reference result using arguments from an array. |
+| [ani_status (\*Class_CallStaticMethodByName_Ref_V)(ani_env *env, ani_class cls, const char *name,const char *signature, ani_ref *result, va_list args)](#class_callstaticmethodbyname_ref_v) | Calls a static method by name with a reference return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a reference result using a `va_list`. |
+| [ani_status (\*Class_CallStaticMethodByName_Void)(ani_env *env, ani_class cls, const char *name,const char *signature, ...)](#class_callstaticmethodbyname_void) | Calls a static method by name with no return value.<br> This function calls the specified static method of a class by its name using variadic arguments. The method does not return a value. |
+| [ani_status (\*Class_CallStaticMethodByName_Void_A)(ani_env *env, ani_class cls, const char *name,const char *signature, const ani_value *args)](#class_callstaticmethodbyname_void_a) | Calls a static method by name with no return value (array-based).<br> This function calls the specified static method of a class by its name using arguments from an array. The method does not return a value. |
+| [ani_status (\*Class_CallStaticMethodByName_Void_V)(ani_env *env, ani_class cls, const char *name,const char *signature, va_list args)](#class_callstaticmethodbyname_void_v) | Calls a static method by name with no return value (variadic arguments).<br> This function calls the specified static method of a class by its name using a `va_list`. The method does not return a value. |
+| [ani_status (\*Object_GetField_Boolean)(ani_env *env, ani_object object, ani_field field, ani_boolean *result)](#object_getfield_boolean) | Retrieves a boolean value from a field of an object.<br> This function retrieves the boolean value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Char)(ani_env *env, ani_object object, ani_field field, ani_char *result)](#object_getfield_char) | Retrieves a char value from a field of an object.<br> This function retrieves the char value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Byte)(ani_env *env, ani_object object, ani_field field, ani_byte *result)](#object_getfield_byte) | Retrieves a byte value from a field of an object.<br> This function retrieves the byte value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Short)(ani_env *env, ani_object object, ani_field field, ani_short *result)](#object_getfield_short) | Retrieves a short value from a field of an object.<br> This function retrieves the short value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Int)(ani_env *env, ani_object object, ani_field field, ani_int *result)](#object_getfield_int) | Retrieves a integer value from a field of an object.<br> This function retrieves the integer value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Long)(ani_env *env, ani_object object, ani_field field, ani_long *result)](#object_getfield_long) | Retrieves a long value from a field of an object.<br> This function retrieves the long value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Float)(ani_env *env, ani_object object, ani_field field, ani_float *result)](#object_getfield_float) | Retrieves a float value from a field of an object.<br> This function retrieves the float value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Double)(ani_env *env, ani_object object, ani_field field, ani_double *result)](#object_getfield_double) | Retrieves a double value from a field of an object.<br> This function retrieves the double value of the specified field from the given object. |
+| [ani_status (\*Object_GetField_Ref)(ani_env *env, ani_object object, ani_field field, ani_ref *result)](#object_getfield_ref) | Retrieves a reference value from a field of an object.<br> This function retrieves the reference value of the specified field from the given object. |
+| [ani_status (\*Object_SetField_Boolean)(ani_env *env, ani_object object, ani_field field, ani_boolean value)](#object_setfield_boolean) | Sets a boolean value to a field of an object.<br> This function assigns a boolean value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Char)(ani_env *env, ani_object object, ani_field field, ani_char value)](#object_setfield_char) | Sets a char value to a field of an object.<br> This function assigns a char value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Byte)(ani_env *env, ani_object object, ani_field field, ani_byte value)](#object_setfield_byte) | Sets a byte value to a field of an object.<br> This function assigns a byte value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Short)(ani_env *env, ani_object object, ani_field field, ani_short value)](#object_setfield_short) | Sets a short value to a field of an object.<br> This function assigns a short value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Int)(ani_env *env, ani_object object, ani_field field, ani_int value)](#object_setfield_int) | Sets a integer value to a field of an object.<br> This function assigns a integer value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Long)(ani_env *env, ani_object object, ani_field field, ani_long value)](#object_setfield_long) | Sets a long value to a field of an object.<br> This function assigns a long value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Float)(ani_env *env, ani_object object, ani_field field, ani_float value)](#object_setfield_float) | Sets a float value to a field of an object.<br> This function assigns a float value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Double)(ani_env *env, ani_object object, ani_field field, ani_double value)](#object_setfield_double) | Sets a double value to a field of an object.<br> This function assigns a double value to the specified field of the given object. |
+| [ani_status (\*Object_SetField_Ref)(ani_env *env, ani_object object, ani_field field, ani_ref value)](#object_setfield_ref) | Sets a reference value to a field of an object.<br> This function assigns a reference value to the specified field of the given object. |
+| [ani_status (\*Object_GetFieldByName_Boolean)(ani_env *env, ani_object object, const char *name, ani_boolean *result)](#object_getfieldbyname_boolean) | Retrieves a boolean value from a field of an object by its name.<br> This function retrieves the boolean value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Char)(ani_env *env, ani_object object, const char *name, ani_char *result)](#object_getfieldbyname_char) | Retrieves a char value from a field of an object by its name.<br> This function retrieves the char value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte *result)](#object_getfieldbyname_byte) | Retrieves a byte value from a field of an object by its name.<br> This function retrieves the byte value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Short)(ani_env *env, ani_object object, const char *name, ani_short *result)](#object_getfieldbyname_short) | Retrieves a short value from a field of an object by its name.<br> This function retrieves the short value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Int)(ani_env *env, ani_object object, const char *name, ani_int *result)](#object_getfieldbyname_int) | Retrieves a integer value from a field of an object by its name.<br> This function retrieves the integer value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Long)(ani_env *env, ani_object object, const char *name, ani_long *result)](#object_getfieldbyname_long) | Retrieves a long value from a field of an object by its name.<br> This function retrieves the long value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Float)(ani_env *env, ani_object object, const char *name, ani_float *result)](#object_getfieldbyname_float) | Retrieves a float value from a field of an object by its name.<br> This function retrieves the float value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Double)(ani_env *env, ani_object object, const char *name, ani_double *result)](#object_getfieldbyname_double) | Retrieves a double value from a field of an object by its name.<br> This function retrieves the double value of the specified field from the given object by its name. |
+| [ani_status (\*Object_GetFieldByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref *result)](#object_getfieldbyname_ref) | Retrieves a reference value from a field of an object by its name.<br> This function retrieves the reference value of the specified field from the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Boolean)(ani_env *env, ani_object object, const char *name, ani_boolean value)](#object_setfieldbyname_boolean) | Sets a boolean value to a field of an object by its name.<br> This function assigns a boolean value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Char)(ani_env *env, ani_object object, const char *name, ani_char value)](#object_setfieldbyname_char) | Sets a char value to a field of an object by its name.<br> This function assigns a char value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte value)](#object_setfieldbyname_byte) | Sets a byte value to a field of an object by its name.<br> This function assigns a byte value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Short)(ani_env *env, ani_object object, const char *name, ani_short value)](#object_setfieldbyname_short) | Sets a short value to a field of an object by its name.<br> This function assigns a short value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Int)(ani_env *env, ani_object object, const char *name, ani_int value)](#object_setfieldbyname_int) | Sets a integer value to a field of an object by its name.<br> This function assigns a integer value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Long)(ani_env *env, ani_object object, const char *name, ani_long value)](#object_setfieldbyname_long) | Sets a long value to a field of an object by its name.<br> This function assigns a long value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Float)(ani_env *env, ani_object object, const char *name, ani_float value)](#object_setfieldbyname_float) | Sets a float value to a field of an object by its name.<br> This function assigns a float value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Double)(ani_env *env, ani_object object, const char *name, ani_double value)](#object_setfieldbyname_double) | Sets a double value to a field of an object by its name.<br> This function assigns a double value to the specified field of the given object by its name. |
+| [ani_status (\*Object_SetFieldByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref value)](#object_setfieldbyname_ref) | Sets a reference value to a field of an object by its name.<br> This function assigns a reference value to the specified field of the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Boolean)(ani_env *env, ani_object object, const char *name,ani_boolean *result)](#object_getpropertybyname_boolean) | Retrieves a boolean value from a property of an object by its name.<br> This function retrieves the boolean value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Char)(ani_env *env, ani_object object, const char *name, ani_char *result)](#object_getpropertybyname_char) | Retrieves a char value from a property of an object by its name.<br> This function retrieves the char value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte *result)](#object_getpropertybyname_byte) | Retrieves a byte value from a property of an object by its name.<br> This function retrieves the byte value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Short)(ani_env *env, ani_object object, const char *name, ani_short *result)](#object_getpropertybyname_short) | Retrieves a short value from a property of an object by its name.<br> This function retrieves the short value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Int)(ani_env *env, ani_object object, const char *name, ani_int *result)](#object_getpropertybyname_int) | Retrieves a integer value from a property of an object by its name.<br> This function retrieves the integer value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Long)(ani_env *env, ani_object object, const char *name, ani_long *result)](#object_getpropertybyname_long) | Retrieves a long value from a property of an object by its name.<br> This function retrieves the long value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Float)(ani_env *env, ani_object object, const char *name, ani_float *result)](#object_getpropertybyname_float) | Retrieves a float value from a property of an object by its name.<br> This function retrieves the float value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Double)(ani_env *env, ani_object object, const char *name,ani_double *result)](#object_getpropertybyname_double) | Retrieves a double value from a property of an object by its name.<br> This function retrieves the double value of the specified property from the given object by its name. |
+| [ani_status (\*Object_GetPropertyByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref *result)](#object_getpropertybyname_ref) | Retrieves a reference value from a property of an object by its name.<br> This function retrieves the reference value of the specified property from the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Boolean)(ani_env *env, ani_object object, const char *name,ani_boolean value)](#object_setpropertybyname_boolean) | Sets a boolean value to a property of an object by its name.<br> This function assigns a boolean value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Char)(ani_env *env, ani_object object, const char *name, ani_char value)](#object_setpropertybyname_char) | Sets a char value to a property of an object by its name.<br> This function assigns a char value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Byte)(ani_env *env, ani_object object, const char *name, ani_byte value)](#object_setpropertybyname_byte) | Sets a byte value to a property of an object by its name.<br> This function assigns a byte value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Short)(ani_env *env, ani_object object, const char *name, ani_short value)](#object_setpropertybyname_short) | Sets a short value to a property of an object by its name.<br> This function assigns a short value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Int)(ani_env *env, ani_object object, const char *name, ani_int value)](#object_setpropertybyname_int) | Sets a integer value to a property of an object by its name.<br> This function assigns a integer value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Long)(ani_env *env, ani_object object, const char *name, ani_long value)](#object_setpropertybyname_long) | Sets a long value to a property of an object by its name.<br> This function assigns a long value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Float)(ani_env *env, ani_object object, const char *name, ani_float value)](#object_setpropertybyname_float) | Sets a float value to a property of an object by its name.<br> This function assigns a float value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Double)(ani_env *env, ani_object object, const char *name, ani_double value)](#object_setpropertybyname_double) | Sets a double value to a property of an object by its name.<br> This function assigns a double value to the specified property of the given object by its name. |
+| [ani_status (\*Object_SetPropertyByName_Ref)(ani_env *env, ani_object object, const char *name, ani_ref value)](#object_setpropertybyname_ref) | Sets a reference value to a property of an object by its name.<br> This function assigns a reference value to the specified property of the given object by its name. |
+| [ani_status (\*Object_CallMethod_Boolean)(ani_env *env, ani_object object, ani_method method, ani_boolean *result,...)](#object_callmethod_boolean) | Calls a method on an object and retrieves a boolean return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a boolean result. |
+| [ani_status (\*Object_CallMethod_Boolean_A)(ani_env *env, ani_object object, ani_method method, ani_boolean *result,const ani_value *args)](#object_callmethod_boolean_a) | Calls a method on an object and retrieves a boolean return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a boolean result. |
+| [ani_status (\*Object_CallMethod_Boolean_V)(ani_env *env, ani_object object, ani_method method, ani_boolean *result,va_list args)](#object_callmethod_boolean_v) | Calls a method on an object and retrieves a boolean return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a boolean result. |
+| [ani_status (\*Object_CallMethod_Char)(ani_env *env, ani_object object, ani_method method, ani_char *result, ...)](#object_callmethod_char) | Calls a method on an object and retrieves a char return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a char result. |
+| [ani_status (\*Object_CallMethod_Char_A)(ani_env *env, ani_object object, ani_method method, ani_char *result,const ani_value *args)](#object_callmethod_char_a) | Calls a method on an object and retrieves a char return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a char result. |
+| [ani_status (\*Object_CallMethod_Char_V)(ani_env *env, ani_object object, ani_method method, ani_char *result,va_list args)](#object_callmethod_char_v) | Calls a method on an object and retrieves a char return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a char result. |
+| [ani_status (\*Object_CallMethod_Byte)(ani_env *env, ani_object object, ani_method method, ani_byte *result, ...)](#object_callmethod_byte) | Calls a method on an object and retrieves a byte return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a byte result. |
+| [ani_status (\*Object_CallMethod_Byte_A)(ani_env *env, ani_object object, ani_method method, ani_byte *result,const ani_value *args)](#object_callmethod_byte_a) | Calls a method on an object and retrieves a byte return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a byte result. |
+| [ani_status (\*Object_CallMethod_Byte_V)(ani_env *env, ani_object object, ani_method method, ani_byte *result,va_list args)](#object_callmethod_byte_v) | Calls a method on an object and retrieves a byte return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a byte result. |
+| [ani_status (\*Object_CallMethod_Short)(ani_env *env, ani_object object, ani_method method, ani_short *result, ...)](#object_callmethod_short) | Calls a method on an object and retrieves a short return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a short result. |
+| [ani_status (\*Object_CallMethod_Short_A)(ani_env *env, ani_object object, ani_method method, ani_short *result,const ani_value *args)](#object_callmethod_short_a) | Calls a method on an object and retrieves a short return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a short result. |
+| [ani_status (\*Object_CallMethod_Short_V)(ani_env *env, ani_object object, ani_method method, ani_short *result,va_list args)](#object_callmethod_short_v) | Calls a method on an object and retrieves a short return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a short result. |
+| [ani_status (\*Object_CallMethod_Int)(ani_env *env, ani_object object, ani_method method, ani_int *result, ...)](#object_callmethod_int) | Calls a method on an object and retrieves a integer return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a integer result. |
+| [ani_status (\*Object_CallMethod_Int_A)(ani_env *env, ani_object object, ani_method method, ani_int *result,const ani_value *args)](#object_callmethod_int_a) | Calls a method on an object and retrieves a integer return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a integer result. |
+| [ani_status (\*Object_CallMethod_Int_V)(ani_env *env, ani_object object, ani_method method, ani_int *result,va_list args)](#object_callmethod_int_v) | Calls a method on an object and retrieves a integer return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a integer result. |
+| [ani_status (\*Object_CallMethod_Long)(ani_env *env, ani_object object, ani_method method, ani_long *result, ...)](#object_callmethod_long) | Calls a method on an object and retrieves a long return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a long result. |
+| [ani_status (\*Object_CallMethod_Long_A)(ani_env *env, ani_object object, ani_method method, ani_long *result,const ani_value *args)](#object_callmethod_long_a) | Calls a method on an object and retrieves a long return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a long result. |
+| [ani_status (\*Object_CallMethod_Long_V)(ani_env *env, ani_object object, ani_method method, ani_long *result,va_list args)](#object_callmethod_long_v) | Calls a method on an object and retrieves a long return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a long result. |
+| [ani_status (\*Object_CallMethod_Float)(ani_env *env, ani_object object, ani_method method, ani_float *result, ...)](#object_callmethod_float) | Calls a method on an object and retrieves a float return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a float result. |
+| [ani_status (\*Object_CallMethod_Float_A)(ani_env *env, ani_object object, ani_method method, ani_float *result,const ani_value *args)](#object_callmethod_float_a) | Calls a method on an object and retrieves a float return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a float result. |
+| [ani_status (\*Object_CallMethod_Float_V)(ani_env *env, ani_object object, ani_method method, ani_float *result,va_list args)](#object_callmethod_float_v) | Calls a method on an object and retrieves a float return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a float result. |
+| [ani_status (\*Object_CallMethod_Double)(ani_env *env, ani_object object, ani_method method, ani_double *result, ...)](#object_callmethod_double) | Calls a method on an object and retrieves a double return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a double result. |
+| [ani_status (\*Object_CallMethod_Double_A)(ani_env *env, ani_object object, ani_method method, ani_double *result,const ani_value *args)](#object_callmethod_double_a) | Calls a method on an object and retrieves a double return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a double result. |
+| [ani_status (\*Object_CallMethod_Double_V)(ani_env *env, ani_object object, ani_method method, ani_double *result,va_list args)](#object_callmethod_double_v) | Calls a method on an object and retrieves a double return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a double result. |
+| [ani_status (\*Object_CallMethod_Ref)(ani_env *env, ani_object object, ani_method method, ani_ref *result, ...)](#object_callmethod_ref) | Calls a method on an object and retrieves a reference return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a reference result. |
+| [ani_status (\*Object_CallMethod_Ref_A)(ani_env *env, ani_object object, ani_method method, ani_ref *result,const ani_value *args)](#object_callmethod_ref_a) | Calls a method on an object and retrieves a reference return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a reference result. |
+| [ani_status (\*Object_CallMethod_Ref_V)(ani_env *env, ani_object object, ani_method method, ani_ref *result,va_list args)](#object_callmethod_ref_v) | Calls a method on an object and retrieves a reference return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a reference result. |
+| [ani_status (\*Object_CallMethod_Void)(ani_env *env, ani_object object, ani_method method, ...)](#object_callmethod_void) | Calls a method on an object with no return value.<br> This function calls the specified method of an object using variadic arguments. The method does not return a value. |
+| [ani_status (\*Object_CallMethod_Void_A)(ani_env *env, ani_object object, ani_method method, const ani_value *args)](#object_callmethod_void_a) | Calls a method on an object with no return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array. The method does not return a value. |
+| [ani_status (\*Object_CallMethod_Void_V)(ani_env *env, ani_object object, ani_method method, va_list args)](#object_callmethod_void_v) | Calls a method on an object with no return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list`. The method does not return a value. |
+| [ani_status (\*Object_CallMethodByName_Boolean)(ani_env *env, ani_object object, const char *name,const char *signature, ani_boolean *result, ...)](#object_callmethodbyname_boolean) | Calls a method by name on an object and retrieves a boolean return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a boolean result. |
+| [ani_status (\*Object_CallMethodByName_Boolean_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_boolean *result, const ani_value *args)](#object_callmethodbyname_boolean_a) | Calls a method by name on an object and retrieves a boolean return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a boolean result. |
+| [ani_status (\*Object_CallMethodByName_Boolean_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_boolean *result, va_list args)](#object_callmethodbyname_boolean_v) | Calls a method by name on an object and retrieves a boolean return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a boolean result. |
+| [ani_status (\*Object_CallMethodByName_Char)(ani_env *env, ani_object object, const char *name, const char *signature,ani_char *result, ...)](#object_callmethodbyname_char) | Calls a method by name on an object and retrieves a char return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a char result. |
+| [ani_status (\*Object_CallMethodByName_Char_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_char *result, const ani_value *args)](#object_callmethodbyname_char_a) | Calls a method by name on an object and retrieves a char return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a char result. |
+| [ani_status (\*Object_CallMethodByName_Char_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_char *result, va_list args)](#object_callmethodbyname_char_v) | Calls a method by name on an object and retrieves a char return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a char result. |
+| [ani_status (\*Object_CallMethodByName_Byte)(ani_env *env, ani_object object, const char *name, const char *signature,ani_byte *result, ...)](#object_callmethodbyname_byte) | Calls a method by name on an object and retrieves a byte return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a byte result. |
+| [ani_status (\*Object_CallMethodByName_Byte_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_byte *result, const ani_value *args)](#object_callmethodbyname_byte_a) | Calls a method by name on an object and retrieves a byte return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a byte result. |
+| [ani_status (\*Object_CallMethodByName_Byte_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_byte *result, va_list args)](#object_callmethodbyname_byte_v) | Calls a method by name on an object and retrieves a byte return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a byte result. |
+| [ani_status (\*Object_CallMethodByName_Short)(ani_env *env, ani_object object, const char *name,const char *signature, ani_short *result, ...)](#object_callmethodbyname_short) | Calls a method by name on an object and retrieves a short return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a short result. |
+| [ani_status (\*Object_CallMethodByName_Short_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_short *result, const ani_value *args)](#object_callmethodbyname_short_a) | Calls a method by name on an object and retrieves a short return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a short result. |
+| [ani_status (\*Object_CallMethodByName_Short_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_short *result, va_list args)](#object_callmethodbyname_short_v) | Calls a method by name on an object and retrieves a short return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a short result. |
+| [ani_status (\*Object_CallMethodByName_Int)(ani_env *env, ani_object object, const char *name, const char *signature,ani_int *result, ...)](#object_callmethodbyname_int) | Calls a method by name on an object and retrieves a integer return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a integer result. |
+| [ani_status (\*Object_CallMethodByName_Int_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_int *result, const ani_value *args)](#object_callmethodbyname_int_a) | Calls a method by name on an object and retrieves a integer return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a integer result. |
+| [ani_status (\*Object_CallMethodByName_Int_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_int *result, va_list args)](#object_callmethodbyname_int_v) | Calls a method by name on an object and retrieves a integer return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a integer result. |
+| [ani_status (\*Object_CallMethodByName_Long)(ani_env *env, ani_object object, const char *name, const char *signature,ani_long *result, ...)](#object_callmethodbyname_long) | Calls a method by name on an object and retrieves a long return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a long result. |
+| [ani_status (\*Object_CallMethodByName_Long_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_long *result, const ani_value *args)](#object_callmethodbyname_long_a) | Calls a method by name on an object and retrieves a long return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a long result. |
+| [ani_status (\*Object_CallMethodByName_Long_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_long *result, va_list args)](#object_callmethodbyname_long_v) | Calls a method by name on an object and retrieves a long return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a long result. |
+| [ani_status (\*Object_CallMethodByName_Float)(ani_env *env, ani_object object, const char *name,const char *signature, ani_float *result, ...)](#object_callmethodbyname_float) | Calls a method by name on an object and retrieves a float return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a float result. |
+| [ani_status (\*Object_CallMethodByName_Float_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_float *result, const ani_value *args)](#object_callmethodbyname_float_a) | Calls a method by name on an object and retrieves a float return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a float result. |
+| [ani_status (\*Object_CallMethodByName_Float_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_float *result, va_list args)](#object_callmethodbyname_float_v) | Calls a method by name on an object and retrieves a float return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a float result. |
+| [ani_status (\*Object_CallMethodByName_Double)(ani_env *env, ani_object object, const char *name,const char *signature, ani_double *result, ...)](#object_callmethodbyname_double) | Calls a method by name on an object and retrieves a double return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a double result. |
+| [ani_status (\*Object_CallMethodByName_Double_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_double *result, const ani_value *args)](#object_callmethodbyname_double_a) | Calls a method by name on an object and retrieves a double return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a double result. |
+| [ani_status (\*Object_CallMethodByName_Double_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_double *result, va_list args)](#object_callmethodbyname_double_v) | Calls a method by name on an object and retrieves a double return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a double result. |
+| [ani_status (\*Object_CallMethodByName_Ref)(ani_env *env, ani_object object, const char *name, const char *signature,ani_ref *result, ...)](#object_callmethodbyname_ref) | Calls a method by name on an object and retrieves a reference return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a reference result. |
+| [ani_status (\*Object_CallMethodByName_Ref_A)(ani_env *env, ani_object object, const char *name,const char *signature, ani_ref *result, const ani_value *args)](#object_callmethodbyname_ref_a) | Calls a method by name on an object and retrieves a reference return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a reference result. |
+| [ani_status (\*Object_CallMethodByName_Ref_V)(ani_env *env, ani_object object, const char *name,const char *signature, ani_ref *result, va_list args)](#object_callmethodbyname_ref_v) | Calls a method by name on an object and retrieves a reference return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a reference result. |
+| [ani_status (\*Object_CallMethodByName_Void)(ani_env *env, ani_object object, const char *name, const char *signature,...)](#object_callmethodbyname_void) | Calls a method by name on an object with no return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments. The method does not return a value. |
+| [ani_status (\*Object_CallMethodByName_Void_A)(ani_env *env, ani_object object, const char *name,const char *signature, const ani_value *args)](#object_callmethodbyname_void_a) | Calls a method by name on an object with no return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array. The method does not return a value. |
+| [ani_status (\*Object_CallMethodByName_Void_V)(ani_env *env, ani_object object, const char *name,const char *signature, va_list args)](#object_callmethodbyname_void_v) | Calls a method by name on an object with no return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list`. The method does not return a value. |
+| [ani_status (\*TupleValue_GetNumberOfItems)(ani_env *env, ani_tuple_value tuple_value, ani_size *result)](#tuplevalue_getnumberofitems) | Retrieves the number of items in a tuple value.<br> This function retrieves the total number of items in the specified tuple value. |
+| [ani_status (\*TupleValue_GetItem_Boolean)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_boolean *result)](#tuplevalue_getitem_boolean) | Retrieves a boolean item from a tuple value.<br> This function retrieves the boolean value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Char)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_char *result)](#tuplevalue_getitem_char) | Retrieves a char item from a tuple value.<br> This function retrieves the char value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Byte)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_byte *result)](#tuplevalue_getitem_byte) | Retrieves a byte item from a tuple value.<br> This function retrieves the byte value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Short)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_short *result)](#tuplevalue_getitem_short) | Retrieves a short item from a tuple value.<br> This function retrieves the short value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Int)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_int *result)](#tuplevalue_getitem_int) | Retrieves a integer item from a tuple value.<br> This function retrieves the integer value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Long)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_long *result)](#tuplevalue_getitem_long) | Retrieves a long item from a tuple value.<br> This function retrieves the long value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Float)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_float *result)](#tuplevalue_getitem_float) | Retrieves a float item from a tuple value.<br> This function retrieves the float value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Double)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_double *result)](#tuplevalue_getitem_double) | Retrieves a double item from a tuple value.<br> This function retrieves the double value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_GetItem_Ref)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_ref *result)](#tuplevalue_getitem_ref) | Retrieves a reference item from a tuple value.<br> This function retrieves the reference value of the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Boolean)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_boolean value)](#tuplevalue_setitem_boolean) | Sets a boolean value to an item in a tuple value.<br> This function assigns a boolean value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Char)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_char value)](#tuplevalue_setitem_char) | Sets a char value to an item in a tuple value.<br> This function assigns a char value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Byte)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_byte value)](#tuplevalue_setitem_byte) | Sets a byte value to an item in a tuple value.<br> This function assigns a byte value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Short)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_short value)](#tuplevalue_setitem_short) | Sets a short value to an item in a tuple value.<br> This function assigns a short value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Int)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_int value)](#tuplevalue_setitem_int) | Sets a integer value to an item in a tuple value.<br> This function assigns a integer value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Long)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_long value)](#tuplevalue_setitem_long) | Sets a long value to an item in a tuple value.<br> This function assigns a long value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Float)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_float value)](#tuplevalue_setitem_float) | Sets a float value to an item in a tuple value.<br> This function assigns a float value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Double)(ani_env *env, ani_tuple_value tuple_value, ani_size index,ani_double value)](#tuplevalue_setitem_double) | Sets a double value to an item in a tuple value.<br> This function assigns a double value to the item at the specified index in the tuple value. |
+| [ani_status (\*TupleValue_SetItem_Ref)(ani_env *env, ani_tuple_value tuple_value, ani_size index, ani_ref value)](#tuplevalue_setitem_ref) | Sets a reference value to an item in a tuple value.<br> This function assigns a reference value to the item at the specified index in the tuple value. |
+| [ani_status (\*GlobalReference_Create)(ani_env *env, ani_ref ref, ani_ref *result)](#globalreference_create) | Creates a global reference.<br> This function creates a global reference from a local reference. |
+| [ani_status (\*GlobalReference_Delete)(ani_env *env, ani_ref gref)](#globalreference_delete) | Deletes a global reference.<br> This function deletes the specified global reference, releasing all associated resources. |
+| [ani_status (\*WeakReference_Create)(ani_env *env, ani_ref ref, ani_wref *result)](#weakreference_create) | Creates a weak reference.<br> This function creates a weak reference from a local reference. |
+| [ani_status (\*WeakReference_Delete)(ani_env *env, ani_wref wref)](#weakreference_delete) | Deletes a weak reference.<br> This function deletes the specified weak reference, releasing all associated resources. |
+| [ani_status (\*WeakReference_GetReference)(ani_env *env, ani_wref wref, ani_boolean *was_released_result,ani_ref *ref_result)](#weakreference_getreference) | Retrieves the local reference associated with a weak reference.<br> This function retrieves the local reference that corresponds to the specified weak reference. |
+| [ani_status (\*CreateArrayBuffer)(ani_env *env, size_t length, void **data_result,ani_arraybuffer *arraybuffer_result)](#createarraybuffer) | Creates a new array buffer.<br> This function creates a new array buffer with the specified length and returns a pointer to the allocated data. |
+| [ani_status (\*ArrayBuffer_GetInfo)(ani_env *env, ani_arraybuffer arraybuffer, void **data_result,size_t *length_result)](#arraybuffer_getinfo) | Retrieves information about an array buffer.<br> This function retrieves the data pointer and length of the specified array buffer. |
+| [ani_status (\*Promise_New)(ani_env *env, ani_resolver *result_resolver, ani_object *result_promise)](#promise_new) | Creates a new Promise.<br> This function creates a new promise and a resolver to manage it. |
+| [ani_status (\*PromiseResolver_Resolve)(ani_env *env, ani_resolver resolver, ani_ref resolution)](#promiseresolver_resolve) | Resolves a promise.<br> This function resolves a promise by way of the resolver with which it is associated and queues promise `then` callbacks. |
 | [ani_status (\*PromiseResolver_Reject)(ani_env *env, ani_resolver resolver, ani_error rejection)
-void *reserved4void *reserved5void *reserved6void *reserved7void *reserved8void *reserved9void *reserved10void *reserved11void *reserved12void *reserved13](#promiseresolver_reject) | Rejects a promise.This function rejects a promise by way of the resolver with which it is associatedand queues promise `catch` callbacks. |
-| [ani_status (\*Class_BindStaticNativeMethods)(ani_env *env, ani_class cls, const ani_native_function *methods,ani_size nr_methods)](#class_bindstaticnativemethods) | Binds static native methods to a class.This function binds an array of static native methods to the specified class. |
-| [ani_status (\*Primitive_Box_Boolean)(ani_env *env, ani_boolean value, ani_object *result)](#primitive_box_boolean) | Box a boolean value into an object.This function boxes a boolean value into an object. |
-| [ani_status (\*Primitive_Unbox_Boolean)(ani_env *env, ani_object obj, ani_boolean *result)](#primitive_unbox_boolean) | Unbox a boolean object into a boolean value.This function unboxes a boolean object into a boolean value. |
-| [ani_status (\*Primitive_Box_Byte)(ani_env *env, ani_byte value, ani_object *result)](#primitive_box_byte) | Box a byte value into an object.This function boxes a byte value into an object. |
-| [ani_status (\*Primitive_Unbox_Byte)(ani_env *env, ani_object obj, ani_byte *result)](#primitive_unbox_byte) | Unbox a byte object into a byte value.This function unboxes a byte object into a byte value. |
-| [ani_status (\*Primitive_Box_Char)(ani_env *env, ani_char value, ani_object *result)](#primitive_box_char) | Box a char value into an object.This function boxes a char value into an object. |
-| [ani_status (\*Primitive_Unbox_Char)(ani_env *env, ani_object obj, ani_char *result)](#primitive_unbox_char) | Unbox a char object into a char value.This function unboxes a char object into a char value. |
-| [ani_status (\*Primitive_Box_Short)(ani_env *env, ani_short value, ani_object *result)](#primitive_box_short) | Box a short value into an object.This function boxes a short value into an object. |
-| [ani_status (\*Primitive_Unbox_Short)(ani_env *env, ani_object obj, ani_short *result)](#primitive_unbox_short) | Unbox a short object into a short value.This function unboxes a short object into a short value. |
-| [ani_status (\*Primitive_Box_Int)(ani_env *env, ani_int value, ani_object *result)](#primitive_box_int) | Box a int value into an object.This function boxes a int value into an object. |
-| [ani_status (\*Primitive_Unbox_Int)(ani_env *env, ani_object obj, ani_int *result)](#primitive_unbox_int) | Unbox a int object into a int value.This function unboxes a int object into a int value. |
-| [ani_status (\*Primitive_Box_Long)(ani_env *env, ani_long value, ani_object *result)](#primitive_box_long) | Box a long value into an object.This function boxes a long value into an object. |
-| [ani_status (\*Primitive_Unbox_Long)(ani_env *env, ani_object obj, ani_long *result)](#primitive_unbox_long) | Unbox a long object into a long value.This function unboxes a long object into a long value. |
-| [ani_status (\*Primitive_Box_Float)(ani_env *env, ani_float value, ani_object *result)](#primitive_box_float) | Box a float value into an object.This function boxes a float value into an object. |
-| [ani_status (\*Primitive_Unbox_Float)(ani_env *env, ani_object obj, ani_float *result)](#primitive_unbox_float) | Unbox a float object into a float value.This function unboxes a float object into a float value. |
-| [ani_status (\*Primitive_Box_Double)(ani_env *env, ani_double value, ani_object *result)](#primitive_box_double) | Box a double value into an object.This function boxes a double value into an object. |
-| [ani_status (\*Primitive_Unbox_Double)(ani_env *env, ani_object obj, ani_double *result)](#primitive_unbox_double) | Unbox a double object into a double value.This function unboxes a double object into a double value. |
-| [ani_status (\*ValueArray_GetLength)(ani_env *env, ani_valuearray array, ani_size *result)](#valuearray_getlength) | Retrieves the length of a ValueArray.This function retrieves the length of the specified ValueArray. |
+void *reserved4void *reserved5void *reserved6void *reserved7void *reserved8void *reserved9void *reserved10void *reserved11void *reserved12void *reserved13](#promiseresolver_reject) | Rejects a promise.<br> This function rejects a promise by way of the resolver with which it is associated and queues promise `catch` callbacks. |
+| [ani_status (\*Class_BindStaticNativeMethods)(ani_env *env, ani_class cls, const ani_native_function *methods,ani_size nr_methods)](#class_bindstaticnativemethods) | Binds static native methods to a class.<br> This function binds an array of static native methods to the specified class. |
+| [ani_status (\*Primitive_Box_Boolean)(ani_env *env, ani_boolean value, ani_object *result)](#primitive_box_boolean) | Box a boolean value into an object.<br> This function boxes a boolean value into an object. |
+| [ani_status (\*Primitive_Unbox_Boolean)(ani_env *env, ani_object obj, ani_boolean *result)](#primitive_unbox_boolean) | Unbox a boolean object into a boolean value.<br> This function unboxes a boolean object into a boolean value. |
+| [ani_status (\*Primitive_Box_Byte)(ani_env *env, ani_byte value, ani_object *result)](#primitive_box_byte) | Box a byte value into an object.<br> This function boxes a byte value into an object. |
+| [ani_status (\*Primitive_Unbox_Byte)(ani_env *env, ani_object obj, ani_byte *result)](#primitive_unbox_byte) | Unbox a byte object into a byte value.<br> This function unboxes a byte object into a byte value. |
+| [ani_status (\*Primitive_Box_Char)(ani_env *env, ani_char value, ani_object *result)](#primitive_box_char) | Box a char value into an object.<br> This function boxes a char value into an object. |
+| [ani_status (\*Primitive_Unbox_Char)(ani_env *env, ani_object obj, ani_char *result)](#primitive_unbox_char) | Unbox a char object into a char value.<br> This function unboxes a char object into a char value. |
+| [ani_status (\*Primitive_Box_Short)(ani_env *env, ani_short value, ani_object *result)](#primitive_box_short) | Box a short value into an object.<br> This function boxes a short value into an object. |
+| [ani_status (\*Primitive_Unbox_Short)(ani_env *env, ani_object obj, ani_short *result)](#primitive_unbox_short) | Unbox a short object into a short value.<br> This function unboxes a short object into a short value. |
+| [ani_status (\*Primitive_Box_Int)(ani_env *env, ani_int value, ani_object *result)](#primitive_box_int) | Box a int value into an object.<br> This function boxes a int value into an object. |
+| [ani_status (\*Primitive_Unbox_Int)(ani_env *env, ani_object obj, ani_int *result)](#primitive_unbox_int) | Unbox a int object into a int value.<br> This function unboxes a int object into a int value. |
+| [ani_status (\*Primitive_Box_Long)(ani_env *env, ani_long value, ani_object *result)](#primitive_box_long) | Box a long value into an object.<br> This function boxes a long value into an object. |
+| [ani_status (\*Primitive_Unbox_Long)(ani_env *env, ani_object obj, ani_long *result)](#primitive_unbox_long) | Unbox a long object into a long value.<br> This function unboxes a long object into a long value. |
+| [ani_status (\*Primitive_Box_Float)(ani_env *env, ani_float value, ani_object *result)](#primitive_box_float) | Box a float value into an object.<br> This function boxes a float value into an object. |
+| [ani_status (\*Primitive_Unbox_Float)(ani_env *env, ani_object obj, ani_float *result)](#primitive_unbox_float) | Unbox a float object into a float value.<br> This function unboxes a float object into a float value. |
+| [ani_status (\*Primitive_Box_Double)(ani_env *env, ani_double value, ani_object *result)](#primitive_box_double) | Box a double value into an object.<br> This function boxes a double value into an object. |
+| [ani_status (\*Primitive_Unbox_Double)(ani_env *env, ani_object obj, ani_double *result)](#primitive_unbox_double) | Unbox a double object into a double value.<br> This function unboxes a double object into a double value. |
+| [ani_status (\*ValueArray_GetLength)(ani_env *env, ani_valuearray array, ani_size *result)](#valuearray_getlength) | Retrieves the length of a ValueArray.<br> This function retrieves the length of the specified ValueArray. |
 
 ## Member function description
 
@@ -423,7 +423,7 @@ ani_status (*GetVersion)(ani_env *env, uint32_t *result)
 
 **Description**
 
-Retrieves the version information.This function retrieves the version information and stores it in the result parameter.
+Retrieves the version information.<br> This function retrieves the version information and stores it in the result parameter.
 
 **Since**: 23
 
@@ -448,7 +448,7 @@ ani_status (*GetVM)(ani_env *env, ani_vm **result)
 
 **Description**
 
-Retrieves the Virtual Machine (VM) instance.This function retrieves the VM instance and stores it in the result parameter.
+Retrieves the Virtual Machine (VM) instance.<br> This function retrieves the VM instance and stores it in the result parameter.
 
 **Since**: 23
 
@@ -473,7 +473,7 @@ ani_status (*Object_New)(ani_env *env, ani_class cls, ani_method ctor, ani_objec
 
 **Description**
 
-Creates a new object of a specified class using a constructor method.This function creates a new object of the given class and calls the specified constructor method with variadicarguments.
+Creates a new object of a specified class using a constructor method.<br> This function creates a new object of the given class and calls the specified constructor method with variadic arguments.
 
 **Since**: 23
 
@@ -501,7 +501,7 @@ ani_status (*Object_New_A)(ani_env *env, ani_class cls, ani_method ctor, ani_obj
 
 **Description**
 
-Creates a new object of a specified class using a constructor method (array-based).This function creates a new object of the given class and calls the specified constructor method with argumentsprovided in an array.
+Creates a new object of a specified class using a constructor method (array-based).<br> This function creates a new object of the given class and calls the specified constructor method with arguments provided in an array.
 
 **Since**: 23
 
@@ -529,7 +529,7 @@ ani_status (*Object_New_V)(ani_env *env, ani_class cls, ani_method ctor, ani_obj
 
 **Description**
 
-Creates a new object of a specified class using a constructor method (variadic arguments).This function creates a new object of the given class and calls the specified constructor method with a `va_list`of arguments.
+Creates a new object of a specified class using a constructor method (variadic arguments).<br> This function creates a new object of the given class and calls the specified constructor method with a `va_list` of arguments.
 
 **Since**: 23
 
@@ -557,7 +557,7 @@ ani_status (*Object_GetType)(ani_env *env, ani_object object, ani_type *result)
 
 **Description**
 
-Retrieves the type of a given object.This function retrieves the type of the specified object.
+Retrieves the type of a given object.<br> This function retrieves the type of the specified object.
 
 **Since**: 23
 
@@ -583,7 +583,7 @@ ani_status (*Object_InstanceOf)(ani_env *env, ani_object object, ani_type type, 
 
 **Description**
 
-Checks if an object is an instance of a specified type.This function checks whether the given object is an instance of the specified type.
+Checks if an object is an instance of a specified type.<br> This function checks whether the given object is an instance of the specified type.
 
 **Since**: 23
 
@@ -594,7 +594,7 @@ Checks if an object is an instance of a specified type.This function checks whet
 | [in] | env A pointer to the environment structure. |
 | [in] | object The object to check. |
 | [in] | type The type to compare against. |
-| [out] | result A pointer to store the boolean result (true if the object is an instance of the type, falseotherwise). |
+| [out] | result A pointer to store the boolean result (true if the object is an instance of the type, false otherwise). |
 
 **Returns**:
 
@@ -610,7 +610,7 @@ ani_status (*Type_GetSuperClass)(ani_env *env, ani_type type, ani_class *result)
 
 **Description**
 
-Retrieves the superclass of a specified type.This function retrieves the superclass of a given type and stores it in the result parameter.
+Retrieves the superclass of a specified type.<br> This function retrieves the superclass of a given type and stores it in the result parameter.
 
 **Since**: 23
 
@@ -636,7 +636,7 @@ ani_status (*Type_IsAssignableFrom)(ani_env *env, ani_type from_type, ani_type t
 
 **Description**
 
-Determines if one type is assignable from another.This function checks if a type is assignable from another and stores the result in the output parameter.
+Determines if one type is assignable from another.<br> This function checks if a type is assignable from another and stores the result in the output parameter.
 
 **Since**: 23
 
@@ -663,7 +663,7 @@ ani_status (*FindModule)(ani_env *env, const char *module_descriptor, ani_module
 
 **Description**
 
-Finds a module by its descriptor.This function locates a module based on its descriptor and stores it in the result parameter.
+Finds a module by its descriptor.<br> This function locates a module based on its descriptor and stores it in the result parameter.
 
 **Since**: 23
 
@@ -689,7 +689,7 @@ ani_status (*FindNamespace)(ani_env *env, const char *namespace_descriptor, ani_
 
 **Description**
 
-Finds a namespace by its descriptor.This function locates a namespace based on its descriptor and stores it in the result parameter.
+Finds a namespace by its descriptor.<br> This function locates a namespace based on its descriptor and stores it in the result parameter.
 
 **Since**: 23
 
@@ -715,7 +715,7 @@ ani_status (*FindClass)(ani_env *env, const char *class_descriptor, ani_class *r
 
 **Description**
 
-Finds a class by its descriptor.This function locates a class based on its descriptor and stores it in the result parameter.
+Finds a class by its descriptor.<br> This function locates a class based on its descriptor and stores it in the result parameter.
 
 **Since**: 23
 
@@ -741,7 +741,7 @@ ani_status (*FindEnum)(ani_env *env, const char *enum_descriptor, ani_enum *resu
 
 **Description**
 
-Finds an enum by its descriptor.This function locates an enum based on its descriptor and stores it in the result parameter.
+Finds an enum by its descriptor.<br> This function locates an enum based on its descriptor and stores it in the result parameter.
 
 **Since**: 23
 
@@ -767,7 +767,7 @@ ani_status (*Module_FindFunction)(ani_env *env, ani_module module, const char *n
 
 **Description**
 
-Finds a function within a module by its name and signature.This function locates a function within the specified module based on its name and signature.
+Finds a function within a module by its name and signature.<br> This function locates a function within the specified module based on its name and signature.
 
 **Since**: 23
 
@@ -795,7 +795,7 @@ ani_status (*Module_FindVariable)(ani_env *env, ani_module module, const char *n
 
 **Description**
 
-Finds a variable within a module by its name.This function locates a variable within the specified module based on its name.
+Finds a variable within a module by its name.<br> This function locates a variable within the specified module based on its name.
 
 **Since**: 23
 
@@ -822,7 +822,7 @@ ani_status (*Namespace_FindFunction)(ani_env *env, ani_namespace ns, const char 
 
 **Description**
 
-Finds a function within a namespace by its name and signature.This function locates a function within the specified namespace based on its name and signature.
+Finds a function within a namespace by its name and signature.<br> This function locates a function within the specified namespace based on its name and signature.
 
 **Since**: 23
 
@@ -850,7 +850,7 @@ ani_status (*Namespace_FindVariable)(ani_env *env, ani_namespace ns, const char 
 
 **Description**
 
-Finds a variable within a namespace by its name.This function locates a variable within the specified namespace based on its name.
+Finds a variable within a namespace by its name.<br> This function locates a variable within the specified namespace based on its name.
 
 **Since**: 23
 
@@ -877,7 +877,7 @@ ani_status (*Module_BindNativeFunctions)(ani_env *env, ani_module module, const 
 
 **Description**
 
-Binds native functions to a module.This function binds an array of native functions to the specified module.
+Binds native functions to a module.<br> This function binds an array of native functions to the specified module.
 
 **Since**: 23
 
@@ -904,7 +904,7 @@ ani_status (*Namespace_BindNativeFunctions)(ani_env *env, ani_namespace ns, cons
 
 **Description**
 
-Binds native functions to a namespace.This function binds an array of native functions to the specified namespace.
+Binds native functions to a namespace.<br> This function binds an array of native functions to the specified namespace.
 
 **Since**: 23
 
@@ -931,7 +931,7 @@ ani_status (*Class_BindNativeMethods)(ani_env *env, ani_class cls, const ani_nat
 
 **Description**
 
-Binds native methods to a class.This function binds an array of native instance methods to the specified class.
+Binds native methods to a class.<br> This function binds an array of native instance methods to the specified class.
 
 **Since**: 23
 
@@ -958,7 +958,7 @@ ani_status (*Reference_Delete)(ani_env *env, ani_ref lref)
 
 **Description**
 
-Deletes a local reference.This function deletes a specified local reference to free up resources.
+Deletes a local reference.<br> This function deletes a specified local reference to free up resources.
 
 **Since**: 23
 
@@ -983,7 +983,7 @@ ani_status (*EnsureEnoughReferences)(ani_env *env, ani_size nr_refs)
 
 **Description**
 
-Ensures enough local references are available.This function checks and ensures that the specified number of local references can be created.
+Ensures enough local references are available.<br> This function checks and ensures that the specified number of local references can be created.
 
 **Since**: 23
 
@@ -1008,7 +1008,7 @@ ani_status (*CreateLocalScope)(ani_env *env, ani_size nr_refs)
 
 **Description**
 
-Creates a new local scope for references.This function creates a local scope for references with a specified capacity.
+Creates a new local scope for references.<br> This function creates a local scope for references with a specified capacity.
 
 **Since**: 23
 
@@ -1033,7 +1033,7 @@ ani_status (*DestroyLocalScope)(ani_env *env)
 
 **Description**
 
-Destroys the current local scope.This function destroys the current local scope and frees all references within it.
+Destroys the current local scope.<br> This function destroys the current local scope and frees all references within it.
 
 **Since**: 23
 
@@ -1057,7 +1057,7 @@ ani_status (*CreateEscapeLocalScope)(ani_env *env, ani_size nr_refs)
 
 **Description**
 
-Creates a new escape local scope.This function creates a local scope for references with escape functionality, allowing objects to escape thisscope.
+Creates a new escape local scope.<br> This function creates a local scope for references with escape functionality, allowing objects to escape this scope.
 
 **Since**: 23
 
@@ -1082,7 +1082,7 @@ ani_status (*DestroyEscapeLocalScope)(ani_env *env, ani_ref ref, ani_ref *result
 
 **Description**
 
-Destroys the current escape local scope.This function destroys the current escape local scope and allows escaping references to be retrieved.
+Destroys the current escape local scope.<br> This function destroys the current escape local scope and allows escaping references to be retrieved.
 
 **Since**: 23
 
@@ -1108,7 +1108,7 @@ ani_status (*ThrowError)(ani_env *env, ani_error err)
 
 **Description**
 
-Throws an error.This function throws the specified error in the current environment.
+Throws an error.<br> This function throws the specified error in the current environment.
 
 **Since**: 23
 
@@ -1133,7 +1133,7 @@ ani_status (*ExistUnhandledError)(ani_env *env, ani_boolean *result)
 
 **Description**
 
-Checks if there are unhandled errors.This function determines if there are unhandled errors in the current environment.
+Checks if there are unhandled errors.<br> This function determines if there are unhandled errors in the current environment.
 
 **Since**: 23
 
@@ -1158,7 +1158,7 @@ ani_status (*GetUnhandledError)(ani_env *env, ani_error *result)
 
 **Description**
 
-Retrieves the current unhandled error.This function fetches the unhandled error in the environment.
+Retrieves the current unhandled error.<br> This function fetches the unhandled error in the environment.
 
 **Since**: 23
 
@@ -1183,7 +1183,7 @@ ani_status (*ResetError)(ani_env *env)
 
 **Description**
 
-Resets the current error state.This function clears the error state in the current environment.
+Resets the current error state.<br> This function clears the error state in the current environment.
 
 **Since**: 23
 
@@ -1207,7 +1207,7 @@ ani_status (*DescribeError)(ani_env *env)  // NOTE: Print stacktrace for debuggi
 
 **Description**
 
-Provides a description of the current error.This function prints the stack trace or other debug information for the current error.Printing is done via invocation of `console.error` provided by standard library.
+Provides a description of the current error.<br> This function prints the stack trace or other debug information for the current error. Printing is done via invocation of `console.error` provided by standard library.
 
 **Since**: 23
 
@@ -1231,7 +1231,7 @@ ani_status (*Abort)(ani_env *env, const char *message)
 
 **Description**
 
-Aborts execution with a message.This function terminates execution with the specified error message.
+Aborts execution with a message.<br> This function terminates execution with the specified error message.
 
 **Since**: 23
 
@@ -1256,7 +1256,7 @@ ani_status (*GetNull)(ani_env *env, ani_ref *result)
 
 **Description**
 
-Retrieves a null reference.This function provides a null reference in the specified result.
+Retrieves a null reference.<br> This function provides a null reference in the specified result.
 
 **Since**: 23
 
@@ -1281,7 +1281,7 @@ ani_status (*GetUndefined)(ani_env *env, ani_ref *result)
 
 **Description**
 
-Retrieves an undefined reference.This function provides an undefined reference in the specified result.
+Retrieves an undefined reference.<br> This function provides an undefined reference in the specified result.
 
 **Since**: 23
 
@@ -1306,7 +1306,7 @@ ani_status (*Reference_IsNull)(ani_env *env, ani_ref ref, ani_boolean *result)
 
 **Description**
 
-Checks if a reference is null.This function determines if the specified reference is null.
+Checks if a reference is null.<br> This function determines if the specified reference is null.
 
 **Since**: 23
 
@@ -1332,7 +1332,7 @@ ani_status (*Reference_IsUndefined)(ani_env *env, ani_ref ref, ani_boolean *resu
 
 **Description**
 
-Checks if a reference is undefined.This function determines if the specified reference is undefined.
+Checks if a reference is undefined.<br> This function determines if the specified reference is undefined.
 
 **Since**: 23
 
@@ -1358,7 +1358,7 @@ ani_status (*Reference_IsNullishValue)(ani_env *env, ani_ref ref, ani_boolean *r
 
 **Description**
 
-Checks if a reference is nullish value (null or undefined).This function determines if the specified reference is either null or undefined.
+Checks if a reference is nullish value (null or undefined).<br> This function determines if the specified reference is either null or undefined.
 
 **Since**: 23
 
@@ -1384,7 +1384,7 @@ ani_status (*Reference_Equals)(ani_env *env, ani_ref ref0, ani_ref ref1, ani_boo
 
 **Description**
 
-Compares two references for equality.This function checks if two references are equal.
+Compares two references for equality.<br> This function checks if two references are equal.
 
 **Since**: 23
 
@@ -1411,7 +1411,7 @@ ani_status (*Reference_StrictEquals)(ani_env *env, ani_ref ref0, ani_ref ref1, a
 
 **Description**
 
-Compares two references for strict equality.This function checks if two references are strictly equal.
+Compares two references for strict equality.<br> This function checks if two references are strictly equal.
 
 **Since**: 23
 
@@ -1438,7 +1438,7 @@ ani_status (*String_NewUTF16)(ani_env *env, const uint16_t *utf16_string, ani_si
 
 **Description**
 
-Creates a new UTF-16 string.This function creates a new string from the provided UTF-16 encoded data.
+Creates a new UTF-16 string.<br> This function creates a new string from the provided UTF-16 encoded data.
 
 **Since**: 23
 
@@ -1465,7 +1465,7 @@ ani_status (*String_GetUTF16Size)(ani_env *env, ani_string string, ani_size *res
 
 **Description**
 
-Retrieves the size of a UTF-16 string.This function retrieves the size (in code units) of the specified UTF-16 string.
+Retrieves the size of a UTF-16 string.<br> This function retrieves the size (in code units) of the specified UTF-16 string.
 
 **Since**: 23
 
@@ -1491,7 +1491,7 @@ ani_status (*String_GetUTF16)(ani_env *env, ani_string string, uint16_t *utf16_b
 
 **Description**
 
-Retrieves the UTF-16 encoded data of a string.This function copies the UTF-16 encoded data of the string into the provided buffer.
+Retrieves the UTF-16 encoded data of a string.<br> This function copies the UTF-16 encoded data of the string into the provided buffer.
 
 **Since**: 23
 
@@ -1519,7 +1519,7 @@ ani_status (*String_GetUTF16SubString)(ani_env *env, ani_string string, ani_size
 
 **Description**
 
-Retrieves a substring of a UTF-16 string.This function copies a portion of the UTF-16 string into the provided buffer.
+Retrieves a substring of a UTF-16 string.<br> This function copies a portion of the UTF-16 string into the provided buffer.
 
 **Since**: 23
 
@@ -1549,7 +1549,7 @@ ani_status (*String_NewUTF8)(ani_env *env, const char *utf8_string, ani_size utf
 
 **Description**
 
-Creates a new UTF-8 string.This function creates a new string from the provided UTF-8 encoded data.
+Creates a new UTF-8 string.<br> This function creates a new string from the provided UTF-8 encoded data.
 
 **Since**: 23
 
@@ -1576,7 +1576,7 @@ ani_status (*String_GetUTF8Size)(ani_env *env, ani_string string, ani_size *resu
 
 **Description**
 
-Retrieves the size of a UTF-8 string.This function retrieves the size (in bytes) of the specified UTF-8 string.
+Retrieves the size of a UTF-8 string.<br> This function retrieves the size (in bytes) of the specified UTF-8 string.
 
 **Since**: 23
 
@@ -1602,7 +1602,7 @@ ani_status (*String_GetUTF8)(ani_env *env, ani_string string, char *utf8_buffer,
 
 **Description**
 
-Retrieves the UTF-8 encoded data of a string.This function copies the UTF-8 encoded data of the string into the provided buffer.
+Retrieves the UTF-8 encoded data of a string.<br> This function copies the UTF-8 encoded data of the string into the provided buffer.
 
 **Since**: 23
 
@@ -1630,7 +1630,7 @@ ani_status (*String_GetUTF8SubString)(ani_env *env, ani_string string, ani_size 
 
 **Description**
 
-Retrieves a substring of a UTF-8 string.This function copies a portion of the UTF-8 string into the provided buffer.
+Retrieves a substring of a UTF-8 string.<br> This function copies a portion of the UTF-8 string into the provided buffer.
 
 **Since**: 23
 
@@ -1660,7 +1660,7 @@ ani_status (*Array_GetLength)(ani_env *env, ani_array array, ani_size *result)
 
 **Description**
 
-Retrieves the length of an Array.This function retrieves the length of the specified Array objectwith respect to possible override of the managed method.
+Retrieves the length of an Array.<br> This function retrieves the length of the specified Array object with respect to possible override of the managed method.
 
 **Since**: 23
 
@@ -1712,7 +1712,7 @@ ani_status (*Array_Set)(ani_env *env, ani_array array, ani_size index, ani_ref r
 
 **Description**
 
-Sets a value to an Array.This function sets a value at a given index in Arraywith respect to possible override of the managed method.
+Sets a value to an Array.<br> This function sets a value at a given index in Array with respect to possible override of the managed method.
 
 **Since**: 23
 
@@ -1739,7 +1739,7 @@ ani_status (*Array_Get)(ani_env *env, ani_array array, ani_size index, ani_ref *
 
 **Description**
 
-Retrieves a value from an Array.This function retrieves a value at a given index from Arraywith respect to possible override of the managed method.
+Retrieves a value from an Array.<br> This function retrieves a value at a given index from Array with respect to possible override of the managed method.
 
 **Since**: 23
 
@@ -1766,7 +1766,7 @@ ani_status (*Array_Push)(ani_env *env, ani_array array, ani_ref ref)
 
 **Description**
 
-Push a value to the end of Array.This function pushes a value to the end of Arraywith respect to possible override of the managed method.
+Push a value to the end of Array.<br> This function pushes a value to the end of Array with respect to possible override of the managed method.
 
 **Since**: 23
 
@@ -1792,7 +1792,7 @@ ani_status (*Array_Pop)(ani_env *env, ani_array array, ani_ref *result)
 
 **Description**
 
-Retrieves the last element and erases it from array.This function retrieves the last element and erases it from Arraywith respect to possible override of the managed method.
+Retrieves the last element and erases it from array.<br> This function retrieves the last element and erases it from Array with respect to possible override of the managed method.
 
 **Since**: 23
 
@@ -1818,7 +1818,7 @@ ani_status (*FixedArray_GetLength)(ani_env *env, ani_fixedarray array, ani_size 
 
 **Description**
 
-Retrieves the length of a FixedArray.This function retrieves the length of the specified FixedArray.
+Retrieves the length of a FixedArray.<br> This function retrieves the length of the specified FixedArray.
 
 **Since**: 23
 
@@ -1844,7 +1844,7 @@ ani_status (*ValueArray_New_Boolean)(ani_env *env, ani_size length, ani_valuearr
 
 **Description**
 
-Creates a new ValueArray of booleans.This function creates a new ValueArray of the specified length for boolean values.
+Creates a new ValueArray of booleans.<br> This function creates a new ValueArray of the specified length for boolean values.
 
 **Since**: 23
 
@@ -1870,7 +1870,7 @@ ani_status (*ValueArray_New_Char)(ani_env *env, ani_size length, ani_valuearray_
 
 **Description**
 
-Creates a new ValueArray of characters.This function creates a new ValueArray of the specified length for character values.
+Creates a new ValueArray of characters.<br> This function creates a new ValueArray of the specified length for character values.
 
 **Since**: 23
 
@@ -1896,7 +1896,7 @@ ani_status (*ValueArray_New_Byte)(ani_env *env, ani_size length, ani_valuearray_
 
 **Description**
 
-Creates a new ValueArray of bytes.This function creates a new ValueArray of the specified length for byte values.
+Creates a new ValueArray of bytes.<br> This function creates a new ValueArray of the specified length for byte values.
 
 **Since**: 23
 
@@ -1922,7 +1922,7 @@ ani_status (*ValueArray_New_Short)(ani_env *env, ani_size length, ani_valuearray
 
 **Description**
 
-Creates a new ValueArray of shorts.This function creates a new ValueArray of the specified length for short integer values.
+Creates a new ValueArray of shorts.<br> This function creates a new ValueArray of the specified length for short integer values.
 
 **Since**: 23
 
@@ -1948,7 +1948,7 @@ ani_status (*ValueArray_New_Int)(ani_env *env, ani_size length, ani_valuearray_i
 
 **Description**
 
-Creates a new ValueArray of integers.This function creates a new ValueArray of the specified length for integer values.
+Creates a new ValueArray of integers.<br> This function creates a new ValueArray of the specified length for integer values.
 
 **Since**: 23
 
@@ -1974,7 +1974,7 @@ ani_status (*ValueArray_New_Long)(ani_env *env, ani_size length, ani_valuearray_
 
 **Description**
 
-Creates a new ValueArray of long integers.This function creates a new ValueArray of the specified length for long integer values.
+Creates a new ValueArray of long integers.<br> This function creates a new ValueArray of the specified length for long integer values.
 
 **Since**: 23
 
@@ -2000,7 +2000,7 @@ ani_status (*ValueArray_New_Float)(ani_env *env, ani_size length, ani_valuearray
 
 **Description**
 
-Creates a new ValueArray of floats.This function creates a new ValueArray of the specified length for float values.
+Creates a new ValueArray of floats.<br> This function creates a new ValueArray of the specified length for float values.
 
 **Since**: 23
 
@@ -2026,7 +2026,7 @@ ani_status (*ValueArray_New_Double)(ani_env *env, ani_size length, ani_valuearra
 
 **Description**
 
-Creates a new ValueArray of doubles.This function creates a new ValueArray of the specified length for double values.
+Creates a new ValueArray of doubles.<br> This function creates a new ValueArray of the specified length for double values.
 
 **Since**: 23
 
@@ -2052,7 +2052,7 @@ ani_status (*ValueArray_GetRegion_Boolean)(ani_env *env, ani_valuearray_boolean 
 
 **Description**
 
-Retrieves a region of boolean values from a ValueArray.This function retrieves a portion of the specified boolean ValueArray into a native buffer.
+Retrieves a region of boolean values from a ValueArray.<br> This function retrieves a portion of the specified boolean ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2080,7 +2080,7 @@ ani_status (*ValueArray_GetRegion_Char)(ani_env *env, ani_valuearray_char array,
 
 **Description**
 
-Retrieves a region of character values from a ValueArray.This function retrieves a portion of the specified character ValueArray into a native buffer.
+Retrieves a region of character values from a ValueArray.<br> This function retrieves a portion of the specified character ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2108,7 +2108,7 @@ ani_status (*ValueArray_GetRegion_Byte)(ani_env *env, ani_valuearray_byte array,
 
 **Description**
 
-Retrieves a region of byte values from a ValueArray.This function retrieves a portion of the specified byte ValueArray into a native buffer.
+Retrieves a region of byte values from a ValueArray.<br> This function retrieves a portion of the specified byte ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2136,7 +2136,7 @@ ani_status (*ValueArray_GetRegion_Short)(ani_env *env, ani_valuearray_short arra
 
 **Description**
 
-Retrieves a region of short values from a ValueArray.This function retrieves a portion of the specified short ValueArray into a native buffer.
+Retrieves a region of short values from a ValueArray.<br> This function retrieves a portion of the specified short ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2164,7 +2164,7 @@ ani_status (*ValueArray_GetRegion_Int)(ani_env *env, ani_valuearray_int array, a
 
 **Description**
 
-Retrieves a region of integer values from a ValueArray.This function retrieves a portion of the specified integer ValueArray into a native buffer.
+Retrieves a region of integer values from a ValueArray.<br> This function retrieves a portion of the specified integer ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2192,7 +2192,7 @@ ani_status (*ValueArray_GetRegion_Long)(ani_env *env, ani_valuearray_long array,
 
 **Description**
 
-Retrieves a region of long integer values from a ValueArray.This function retrieves a portion of the specified long integer ValueArray into a native buffer.
+Retrieves a region of long integer values from a ValueArray.<br> This function retrieves a portion of the specified long integer ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2220,7 +2220,7 @@ ani_status (*ValueArray_GetRegion_Float)(ani_env *env, ani_valuearray_float arra
 
 **Description**
 
-Retrieves a region of float values from a ValueArray.This function retrieves a portion of the specified float ValueArray into a native buffer.
+Retrieves a region of float values from a ValueArray.<br> This function retrieves a portion of the specified float ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2248,7 +2248,7 @@ ani_status (*ValueArray_GetRegion_Double)(ani_env *env, ani_valuearray_double ar
 
 **Description**
 
-Retrieves a region of double values from a ValueArray.This function retrieves a portion of the specified double ValueArray into a native buffer.
+Retrieves a region of double values from a ValueArray.<br> This function retrieves a portion of the specified double ValueArray into a native buffer.
 
 **Since**: 23
 
@@ -2276,7 +2276,7 @@ ani_status (*ValueArray_SetRegion_Boolean)(ani_env *env, ani_valuearray_boolean 
 
 **Description**
 
-Sets a region of boolean values in a ValueArray.This function sets a portion of the specified boolean ValueArray using a native buffer.
+Sets a region of boolean values in a ValueArray.<br> This function sets a portion of the specified boolean ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2304,7 +2304,7 @@ ani_status (*ValueArray_SetRegion_Char)(ani_env *env, ani_valuearray_char array,
 
 **Description**
 
-Sets a region of character values in a ValueArray.This function sets a portion of the specified character ValueArray using a native buffer.
+Sets a region of character values in a ValueArray.<br> This function sets a portion of the specified character ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2332,7 +2332,7 @@ ani_status (*ValueArray_SetRegion_Byte)(ani_env *env, ani_valuearray_byte array,
 
 **Description**
 
-Sets a region of byte values in a ValueArray.This function sets a portion of the specified byte ValueArray using a native buffer.
+Sets a region of byte values in a ValueArray.<br> This function sets a portion of the specified byte ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2360,7 +2360,7 @@ ani_status (*ValueArray_SetRegion_Short)(ani_env *env, ani_valuearray_short arra
 
 **Description**
 
-Sets a region of short values in a ValueArray.This function sets a portion of the specified short ValueArray using a native buffer.
+Sets a region of short values in a ValueArray.<br> This function sets a portion of the specified short ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2388,7 +2388,7 @@ ani_status (*ValueArray_SetRegion_Int)(ani_env *env, ani_valuearray_int array, a
 
 **Description**
 
-Sets a region of integer values in a ValueArray.This function sets a portion of the specified integer ValueArray using a native buffer.
+Sets a region of integer values in a ValueArray.<br> This function sets a portion of the specified integer ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2416,7 +2416,7 @@ ani_status (*ValueArray_SetRegion_Long)(ani_env *env, ani_valuearray_long array,
 
 **Description**
 
-Sets a region of long integer values in a ValueArray.This function sets a portion of the specified long integer ValueArray using a native buffer.
+Sets a region of long integer values in a ValueArray.<br> This function sets a portion of the specified long integer ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2444,7 +2444,7 @@ ani_status (*ValueArray_SetRegion_Float)(ani_env *env, ani_valuearray_float arra
 
 **Description**
 
-Sets a region of float values in a ValueArray.This function sets a portion of the specified float ValueArray using a native buffer.
+Sets a region of float values in a ValueArray.<br> This function sets a portion of the specified float ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2472,7 +2472,7 @@ ani_status (*ValueArray_SetRegion_Double)(ani_env *env, ani_valuearray_double ar
 
 **Description**
 
-Sets a region of double values in a ValueArray.This function sets a portion of the specified double ValueArray using a native buffer.
+Sets a region of double values in a ValueArray.<br> This function sets a portion of the specified double ValueArray using a native buffer.
 
 **Since**: 23
 
@@ -2500,7 +2500,7 @@ ani_status (*FixedArray_New)(ani_env *env, ani_type type, ani_size length, ani_r
 
 **Description**
 
-Creates a new FixedArray of references.This function creates a new FixedArray of references, optionally initializing it with an initial_element ref.
+Creates a new FixedArray of references.<br> This function creates a new FixedArray of references, optionally initializing it with an initial_element ref.
 
 **Since**: 23
 
@@ -2528,7 +2528,7 @@ ani_status (*FixedArray_Set)(ani_env *env, ani_fixedarray array, ani_size index,
 
 **Description**
 
-Sets a reference at a specific index in a FixedArray.This function sets the value of a reference at the specified index in the FixedArray.
+Sets a reference at a specific index in a FixedArray.<br> This function sets the value of a reference at the specified index in the FixedArray.
 
 **Since**: 23
 
@@ -2555,7 +2555,7 @@ ani_status (*FixedArray_Get)(ani_env *env, ani_fixedarray array, ani_size index,
 
 **Description**
 
-Retrieves a reference from a specific index in a FixedArray.This function retrieves the value of a reference at the specified index in the FixedArray.
+Retrieves a reference from a specific index in a FixedArray.<br> This function retrieves the value of a reference at the specified index in the FixedArray.
 
 **Since**: 23
 
@@ -2582,7 +2582,7 @@ ani_status (*Enum_GetEnumItemByName)(ani_env *env, ani_enum enm, const char *nam
 
 **Description**
 
-Retrieves an enum item by its name.This function retrieves an enum item associated with the specified name.
+Retrieves an enum item by its name.<br> This function retrieves an enum item associated with the specified name.
 
 **Since**: 23
 
@@ -2609,7 +2609,7 @@ ani_status (*Enum_GetEnumItemByIndex)(ani_env *env, ani_enum enm, ani_size index
 
 **Description**
 
-Retrieves an enum item by its index.This function retrieves an enum item located at the specified index.
+Retrieves an enum item by its index.<br> This function retrieves an enum item located at the specified index.
 
 **Since**: 23
 
@@ -2636,7 +2636,7 @@ ani_status (*EnumItem_GetEnum)(ani_env *env, ani_enum_item enum_item, ani_enum *
 
 **Description**
 
-Retrieves the enum associated with an enum item.This function retrieves the enum to which the specified enum item belongs.
+Retrieves the enum associated with an enum item.<br> This function retrieves the enum to which the specified enum item belongs.
 
 **Since**: 23
 
@@ -2662,7 +2662,7 @@ ani_status (*EnumItem_GetValue_Int)(ani_env *env, ani_enum_item enum_item, ani_i
 
 **Description**
 
-Retrieves the integer value of an enum item.This function retrieves the integer representing the value of the specified enum item.
+Retrieves the integer value of an enum item.<br> This function retrieves the integer representing the value of the specified enum item.
 
 **Since**: 23
 
@@ -2688,7 +2688,7 @@ ani_status (*EnumItem_GetValue_String)(ani_env *env, ani_enum_item enum_item, an
 
 **Description**
 
-Retrieves the string value of an enum item.This function retrieves the string representing the value of the specified enum item.
+Retrieves the string value of an enum item.<br> This function retrieves the string representing the value of the specified enum item.
 
 **Since**: 23
 
@@ -2714,7 +2714,7 @@ ani_status (*EnumItem_GetName)(ani_env *env, ani_enum_item enum_item, ani_string
 
 **Description**
 
-Retrieves the name of an enum item.This function retrieves the name associated with the specified enum item.
+Retrieves the name of an enum item.<br> This function retrieves the name associated with the specified enum item.
 
 **Since**: 23
 
@@ -2740,7 +2740,7 @@ ani_status (*EnumItem_GetIndex)(ani_env *env, ani_enum_item enum_item, ani_size 
 
 **Description**
 
-Retrieves the index of an enum item.This function retrieves the index of the specified enum item within its enum.
+Retrieves the index of an enum item.<br> This function retrieves the index of the specified enum item within its enum.
 
 **Since**: 23
 
@@ -2766,7 +2766,7 @@ ani_status (*FunctionalObject_Call)(ani_env *env, ani_fn_object fn, ani_size arg
 
 **Description**
 
-Invokes an object of function type.This function invokes an object of function type with the specified arguments.
+Invokes an object of function type.<br> This function invokes an object of function type with the specified arguments.
 
 **Since**: 23
 
@@ -2794,7 +2794,7 @@ ani_status (*Variable_SetValue_Boolean)(ani_env *env, ani_variable variable, ani
 
 **Description**
 
-Sets a boolean value to a variable.This function assigns a boolean value to the specified variable.
+Sets a boolean value to a variable.<br> This function assigns a boolean value to the specified variable.
 
 **Since**: 23
 
@@ -2820,7 +2820,7 @@ ani_status (*Variable_SetValue_Char)(ani_env *env, ani_variable variable, ani_ch
 
 **Description**
 
-Sets a character value to a variable.This function assigns a character value to the specified variable.
+Sets a character value to a variable.<br> This function assigns a character value to the specified variable.
 
 **Since**: 23
 
@@ -2846,7 +2846,7 @@ ani_status (*Variable_SetValue_Byte)(ani_env *env, ani_variable variable, ani_by
 
 **Description**
 
-Sets a byte value to a variable.This function assigns a byte value to the specified variable.
+Sets a byte value to a variable.<br> This function assigns a byte value to the specified variable.
 
 **Since**: 23
 
@@ -2872,7 +2872,7 @@ ani_status (*Variable_SetValue_Short)(ani_env *env, ani_variable variable, ani_s
 
 **Description**
 
-Sets a short value to a variable.This function assigns a short integer value to the specified variable.
+Sets a short value to a variable.<br> This function assigns a short integer value to the specified variable.
 
 **Since**: 23
 
@@ -2898,7 +2898,7 @@ ani_status (*Variable_SetValue_Int)(ani_env *env, ani_variable variable, ani_int
 
 **Description**
 
-Sets an integer value to a variable.This function assigns an integer value to the specified variable.
+Sets an integer value to a variable.<br> This function assigns an integer value to the specified variable.
 
 **Since**: 23
 
@@ -2924,7 +2924,7 @@ ani_status (*Variable_SetValue_Long)(ani_env *env, ani_variable variable, ani_lo
 
 **Description**
 
-Sets a long value to a variable.This function assigns a long integer value to the specified variable.
+Sets a long value to a variable.<br> This function assigns a long integer value to the specified variable.
 
 **Since**: 23
 
@@ -2950,7 +2950,7 @@ ani_status (*Variable_SetValue_Float)(ani_env *env, ani_variable variable, ani_f
 
 **Description**
 
-Sets a float value to a variable.This function assigns a float value to the specified variable.
+Sets a float value to a variable.<br> This function assigns a float value to the specified variable.
 
 **Since**: 23
 
@@ -2976,7 +2976,7 @@ ani_status (*Variable_SetValue_Double)(ani_env *env, ani_variable variable, ani_
 
 **Description**
 
-Sets a double value to a variable.This function assigns a double value to the specified variable.
+Sets a double value to a variable.<br> This function assigns a double value to the specified variable.
 
 **Since**: 23
 
@@ -3002,7 +3002,7 @@ ani_status (*Variable_SetValue_Ref)(ani_env *env, ani_variable variable, ani_ref
 
 **Description**
 
-Sets a reference value to a variable.This function assigns a reference value to the specified variable.
+Sets a reference value to a variable.<br> This function assigns a reference value to the specified variable.
 
 **Since**: 23
 
@@ -3028,7 +3028,7 @@ ani_status (*Variable_GetValue_Boolean)(ani_env *env, ani_variable variable, ani
 
 **Description**
 
-Retrieves a boolean value from a variable.This function fetches a boolean value from the specified variable.
+Retrieves a boolean value from a variable.<br> This function fetches a boolean value from the specified variable.
 
 **Since**: 23
 
@@ -3054,7 +3054,7 @@ ani_status (*Variable_GetValue_Char)(ani_env *env, ani_variable variable, ani_ch
 
 **Description**
 
-Retrieves a character value from a variable.This function fetches a character value from the specified variable.
+Retrieves a character value from a variable.<br> This function fetches a character value from the specified variable.
 
 **Since**: 23
 
@@ -3080,7 +3080,7 @@ ani_status (*Variable_GetValue_Byte)(ani_env *env, ani_variable variable, ani_by
 
 **Description**
 
-Retrieves a byte value from a variable.This function fetches a byte value from the specified variable.
+Retrieves a byte value from a variable.<br> This function fetches a byte value from the specified variable.
 
 **Since**: 23
 
@@ -3106,7 +3106,7 @@ ani_status (*Variable_GetValue_Short)(ani_env *env, ani_variable variable, ani_s
 
 **Description**
 
-Retrieves a short value from a variable.This function fetches a short integer value from the specified variable.
+Retrieves a short value from a variable.<br> This function fetches a short integer value from the specified variable.
 
 **Since**: 23
 
@@ -3132,7 +3132,7 @@ ani_status (*Variable_GetValue_Int)(ani_env *env, ani_variable variable, ani_int
 
 **Description**
 
-Retrieves an integer value from a variable.This function fetches an integer value from the specified variable.
+Retrieves an integer value from a variable.<br> This function fetches an integer value from the specified variable.
 
 **Since**: 23
 
@@ -3158,7 +3158,7 @@ ani_status (*Variable_GetValue_Long)(ani_env *env, ani_variable variable, ani_lo
 
 **Description**
 
-Retrieves a long value from a variable.This function fetches a long integer value from the specified variable.
+Retrieves a long value from a variable.<br> This function fetches a long integer value from the specified variable.
 
 **Since**: 23
 
@@ -3184,7 +3184,7 @@ ani_status (*Variable_GetValue_Float)(ani_env *env, ani_variable variable, ani_f
 
 **Description**
 
-Retrieves a float value from a variable.This function fetches a float value from the specified variable.
+Retrieves a float value from a variable.<br> This function fetches a float value from the specified variable.
 
 **Since**: 23
 
@@ -3210,7 +3210,7 @@ ani_status (*Variable_GetValue_Double)(ani_env *env, ani_variable variable, ani_
 
 **Description**
 
-Retrieves a double value from a variable.This function fetches a double value from the specified variable.
+Retrieves a double value from a variable.<br> This function fetches a double value from the specified variable.
 
 **Since**: 23
 
@@ -3236,7 +3236,7 @@ ani_status (*Variable_GetValue_Ref)(ani_env *env, ani_variable variable, ani_ref
 
 **Description**
 
-Retrieves a reference value from a variable.This function fetches a reference value from the specified variable.
+Retrieves a reference value from a variable.<br> This function fetches a reference value from the specified variable.
 
 **Since**: 23
 
@@ -3262,7 +3262,7 @@ ani_status (*Function_Call_Boolean)(ani_env *env, ani_function fn, ani_boolean *
 
 **Description**
 
-Calls a function and retrieves a boolean result.This function calls the specified function with variadic arguments and retrieves a boolean result.
+Calls a function and retrieves a boolean result.<br> This function calls the specified function with variadic arguments and retrieves a boolean result.
 
 **Since**: 23
 
@@ -3289,7 +3289,7 @@ ani_status (*Function_Call_Boolean_A)(ani_env *env, ani_function fn, ani_boolean
 
 **Description**
 
-Calls a function and retrieves a boolean result (array-based).This function calls the specified function with arguments provided in an array and retrieves a boolean result.
+Calls a function and retrieves a boolean result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a boolean result.
 
 **Since**: 23
 
@@ -3316,7 +3316,7 @@ ani_status (*Function_Call_Boolean_V)(ani_env *env, ani_function fn, ani_boolean
 
 **Description**
 
-Calls a function and retrieves a boolean result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a boolean result.
+Calls a function and retrieves a boolean result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a boolean result.
 
 **Since**: 23
 
@@ -3343,7 +3343,7 @@ ani_status (*Function_Call_Char)(ani_env *env, ani_function fn, ani_char *result
 
 **Description**
 
-Calls a function and retrieves a character result.This function calls the specified function with variadic arguments and retrieves a character result.
+Calls a function and retrieves a character result.<br> This function calls the specified function with variadic arguments and retrieves a character result.
 
 **Since**: 23
 
@@ -3370,7 +3370,7 @@ ani_status (*Function_Call_Char_A)(ani_env *env, ani_function fn, ani_char *resu
 
 **Description**
 
-Calls a function and retrieves a character result (array-based).This function calls the specified function with arguments provided in an array and retrieves a character result.
+Calls a function and retrieves a character result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a character result.
 
 **Since**: 23
 
@@ -3397,7 +3397,7 @@ ani_status (*Function_Call_Char_V)(ani_env *env, ani_function fn, ani_char *resu
 
 **Description**
 
-Calls a function and retrieves a character result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a characterresult.
+Calls a function and retrieves a character result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a character result.
 
 **Since**: 23
 
@@ -3424,7 +3424,7 @@ ani_status (*Function_Call_Byte)(ani_env *env, ani_function fn, ani_byte *result
 
 **Description**
 
-Calls a function and retrieves a byte result.This function calls the specified function with variadic arguments and retrieves a byte result.
+Calls a function and retrieves a byte result.<br> This function calls the specified function with variadic arguments and retrieves a byte result.
 
 **Since**: 23
 
@@ -3451,7 +3451,7 @@ ani_status (*Function_Call_Byte_A)(ani_env *env, ani_function fn, ani_byte *resu
 
 **Description**
 
-Calls a function and retrieves a byte result (array-based).This function calls the specified function with arguments provided in an array and retrieves a byte result.
+Calls a function and retrieves a byte result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a byte result.
 
 **Since**: 23
 
@@ -3478,7 +3478,7 @@ ani_status (*Function_Call_Byte_V)(ani_env *env, ani_function fn, ani_byte *resu
 
 **Description**
 
-Calls a function and retrieves a byte result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a byte result.
+Calls a function and retrieves a byte result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a byte result.
 
 **Since**: 23
 
@@ -3505,7 +3505,7 @@ ani_status (*Function_Call_Short)(ani_env *env, ani_function fn, ani_short *resu
 
 **Description**
 
-Calls a function and retrieves a short result.This function calls the specified function with variadic arguments and retrieves a short result.
+Calls a function and retrieves a short result.<br> This function calls the specified function with variadic arguments and retrieves a short result.
 
 **Since**: 23
 
@@ -3532,7 +3532,7 @@ ani_status (*Function_Call_Short_A)(ani_env *env, ani_function fn, ani_short *re
 
 **Description**
 
-Calls a function and retrieves a short result (array-based).This function calls the specified function with arguments provided in an array and retrieves a short result.
+Calls a function and retrieves a short result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a short result.
 
 **Since**: 23
 
@@ -3559,7 +3559,7 @@ ani_status (*Function_Call_Short_V)(ani_env *env, ani_function fn, ani_short *re
 
 **Description**
 
-Calls a function and retrieves a short result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a short result.
+Calls a function and retrieves a short result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a short result.
 
 **Since**: 23
 
@@ -3586,7 +3586,7 @@ ani_status (*Function_Call_Int)(ani_env *env, ani_function fn, ani_int *result, 
 
 **Description**
 
-Calls a function and retrieves an integer result.This function calls the specified function with variadic arguments and retrieves an integer result.
+Calls a function and retrieves an integer result.<br> This function calls the specified function with variadic arguments and retrieves an integer result.
 
 **Since**: 23
 
@@ -3613,7 +3613,7 @@ ani_status (*Function_Call_Int_A)(ani_env *env, ani_function fn, ani_int *result
 
 **Description**
 
-Calls a function and retrieves an integer result (array-based).This function calls the specified function with arguments provided in an array and retrieves an integer result.
+Calls a function and retrieves an integer result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves an integer result.
 
 **Since**: 23
 
@@ -3640,7 +3640,7 @@ ani_status (*Function_Call_Int_V)(ani_env *env, ani_function fn, ani_int *result
 
 **Description**
 
-Calls a function and retrieves an integer result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves an integerresult.
+Calls a function and retrieves an integer result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves an integer result.
 
 **Since**: 23
 
@@ -3667,7 +3667,7 @@ ani_status (*Function_Call_Long)(ani_env *env, ani_function fn, ani_long *result
 
 **Description**
 
-Calls a function and retrieves a long result.This function calls the specified function with variadic arguments and retrieves a long result.
+Calls a function and retrieves a long result.<br> This function calls the specified function with variadic arguments and retrieves a long result.
 
 **Since**: 23
 
@@ -3694,7 +3694,7 @@ ani_status (*Function_Call_Long_A)(ani_env *env, ani_function fn, ani_long *resu
 
 **Description**
 
-Calls a function and retrieves a long result (array-based).This function calls the specified function with arguments provided in an array and retrieves a long result.
+Calls a function and retrieves a long result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a long result.
 
 **Since**: 23
 
@@ -3721,7 +3721,7 @@ ani_status (*Function_Call_Long_V)(ani_env *env, ani_function fn, ani_long *resu
 
 **Description**
 
-Calls a function and retrieves a long result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a long result.
+Calls a function and retrieves a long result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a long result.
 
 **Since**: 23
 
@@ -3748,7 +3748,7 @@ ani_status (*Function_Call_Float)(ani_env *env, ani_function fn, ani_float *resu
 
 **Description**
 
-Calls a function and retrieves a float result.This function calls the specified function with variadic arguments and retrieves a float result.
+Calls a function and retrieves a float result.<br> This function calls the specified function with variadic arguments and retrieves a float result.
 
 **Since**: 23
 
@@ -3775,7 +3775,7 @@ ani_status (*Function_Call_Float_A)(ani_env *env, ani_function fn, ani_float *re
 
 **Description**
 
-Calls a function and retrieves a float result (array-based).This function calls the specified function with arguments provided in an array and retrieves a float result.
+Calls a function and retrieves a float result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a float result.
 
 **Since**: 23
 
@@ -3802,7 +3802,7 @@ ani_status (*Function_Call_Float_V)(ani_env *env, ani_function fn, ani_float *re
 
 **Description**
 
-Calls a function and retrieves a float result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a float result.
+Calls a function and retrieves a float result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a float result.
 
 **Since**: 23
 
@@ -3829,7 +3829,7 @@ ani_status (*Function_Call_Double)(ani_env *env, ani_function fn, ani_double *re
 
 **Description**
 
-Calls a function and retrieves a double result.This function calls the specified function with variadic arguments and retrieves a double result.
+Calls a function and retrieves a double result.<br> This function calls the specified function with variadic arguments and retrieves a double result.
 
 **Since**: 23
 
@@ -3856,7 +3856,7 @@ ani_status (*Function_Call_Double_A)(ani_env *env, ani_function fn, ani_double *
 
 **Description**
 
-Calls a function and retrieves a double result (array-based).This function calls the specified function with arguments provided in an array and retrieves a double result.
+Calls a function and retrieves a double result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a double result.
 
 **Since**: 23
 
@@ -3883,7 +3883,7 @@ ani_status (*Function_Call_Double_V)(ani_env *env, ani_function fn, ani_double *
 
 **Description**
 
-Calls a function and retrieves a double result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a double result.
+Calls a function and retrieves a double result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a double result.
 
 **Since**: 23
 
@@ -3910,7 +3910,7 @@ ani_status (*Function_Call_Ref)(ani_env *env, ani_function fn, ani_ref *result, 
 
 **Description**
 
-Calls a function and retrieves a reference result.This function calls the specified function with variadic arguments and retrieves a reference result.
+Calls a function and retrieves a reference result.<br> This function calls the specified function with variadic arguments and retrieves a reference result.
 
 **Since**: 23
 
@@ -3937,7 +3937,7 @@ ani_status (*Function_Call_Ref_A)(ani_env *env, ani_function fn, ani_ref *result
 
 **Description**
 
-Calls a function and retrieves a reference result (array-based).This function calls the specified function with arguments provided in an array and retrieves a reference result.
+Calls a function and retrieves a reference result (array-based).<br> This function calls the specified function with arguments provided in an array and retrieves a reference result.
 
 **Since**: 23
 
@@ -3964,7 +3964,7 @@ ani_status (*Function_Call_Ref_V)(ani_env *env, ani_function fn, ani_ref *result
 
 **Description**
 
-Calls a function and retrieves a reference result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and retrieves a referenceresult.
+Calls a function and retrieves a reference result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and retrieves a reference result.
 
 **Since**: 23
 
@@ -3991,7 +3991,7 @@ ani_status (*Function_Call_Void)(ani_env *env, ani_function fn, ...)
 
 **Description**
 
-Calls a function without returning a result.This function calls the specified function with variadic arguments and does not return a result.
+Calls a function without returning a result.<br> This function calls the specified function with variadic arguments and does not return a result.
 
 **Since**: 23
 
@@ -4017,7 +4017,7 @@ ani_status (*Function_Call_Void_A)(ani_env *env, ani_function fn, const ani_valu
 
 **Description**
 
-Calls a function without returning a result (array-based).This function calls the specified function with arguments provided in an array and does not return a result.
+Calls a function without returning a result (array-based).<br> This function calls the specified function with arguments provided in an array and does not return a result.
 
 **Since**: 23
 
@@ -4043,7 +4043,7 @@ ani_status (*Function_Call_Void_V)(ani_env *env, ani_function fn, va_list args)
 
 **Description**
 
-Calls a function without returning a result (variadic arguments).This function calls the specified function with arguments provided in a `va_list` and does not return a result.
+Calls a function without returning a result (variadic arguments).<br> This function calls the specified function with arguments provided in a `va_list` and does not return a result.
 
 **Since**: 23
 
@@ -4069,7 +4069,7 @@ ani_status (*Class_FindField)(ani_env *env, ani_class cls, const char *name, ani
 
 **Description**
 
-Finds a field from by its name.This function locates a field based on its name and stores it in the result parameter.
+Finds a field from by its name.<br> This function locates a field based on its name and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4096,7 +4096,7 @@ ani_status (*Class_FindStaticField)(ani_env *env, ani_class cls, const char *nam
 
 **Description**
 
-Finds a static field by its name.This function locates a static field based on its name and stores it in the result parameter.
+Finds a static field by its name.<br> This function locates a static field based on its name and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4123,7 +4123,7 @@ ani_status (*Class_FindMethod)(ani_env *env, ani_class cls, const char *name, co
 
 **Description**
 
-Finds a method from by its name and signature.This function locates a method based on its name and signature and stores it in the result parameter.
+Finds a method from by its name and signature.<br> This function locates a method based on its name and signature and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4151,7 +4151,7 @@ ani_status (*Class_FindStaticMethod)(ani_env *env, ani_class cls, const char *na
 
 **Description**
 
-Finds a static method from by its name and signature.This function locates a static method based on its name and signature and stores it in the result parameter.
+Finds a static method from by its name and signature.<br> This function locates a static method based on its name and signature and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4179,7 +4179,7 @@ ani_status (*Class_FindSetter)(ani_env *env, ani_class cls, const char *name, an
 
 **Description**
 
-Finds a setter method from by its name.This function locates a setter method based on its name and stores it in the result parameter.
+Finds a setter method from by its name.<br> This function locates a setter method based on its name and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4206,7 +4206,7 @@ ani_status (*Class_FindGetter)(ani_env *env, ani_class cls, const char *name, an
 
 **Description**
 
-Finds a getter method from by its name.This function locates a getter method based on its name and stores it in the result parameter.
+Finds a getter method from by its name.<br> This function locates a getter method based on its name and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4233,7 +4233,7 @@ ani_status (*Class_FindIndexableGetter)(ani_env *env, ani_class cls, const char 
 
 **Description**
 
-Finds an indexable getter method from by its signature.This function locates an indexable getter method based on its signature and stores it in the result parameter.
+Finds an indexable getter method from by its signature.<br> This function locates an indexable getter method based on its signature and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4260,7 +4260,7 @@ ani_status (*Class_FindIndexableSetter)(ani_env *env, ani_class cls, const char 
 
 **Description**
 
-Finds an indexable setter method from by its signature.This function locates an indexable setter method based on its signature and stores it in the result parameter.
+Finds an indexable setter method from by its signature.<br> This function locates an indexable setter method based on its signature and stores it in the result parameter.
 
 **Since**: 23
 
@@ -4287,7 +4287,7 @@ ani_status (*Class_FindIterator)(ani_env *env, ani_class cls, ani_method *result
 
 **Description**
 
-Finds an iterator method.This function locates an iterator method
+Finds an iterator method.<br> This function locates an iterator method
 
 **Since**: 23
 
@@ -4313,7 +4313,7 @@ ani_status (*Class_GetStaticField_Boolean)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Retrieves a boolean value from a static field of a class.This function retrieves the boolean value of the specified static field from the given class.
+Retrieves a boolean value from a static field of a class.<br> This function retrieves the boolean value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4340,7 +4340,7 @@ ani_status (*Class_GetStaticField_Char)(ani_env *env, ani_class cls, ani_static_
 
 **Description**
 
-Retrieves a character value from a static field of a class.This function retrieves the character value of the specified static field from the given class.
+Retrieves a character value from a static field of a class.<br> This function retrieves the character value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4367,7 +4367,7 @@ ani_status (*Class_GetStaticField_Byte)(ani_env *env, ani_class cls, ani_static_
 
 **Description**
 
-Retrieves a byte value from a static field of a class.This function retrieves the byte value of the specified static field from the given class.
+Retrieves a byte value from a static field of a class.<br> This function retrieves the byte value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4394,7 +4394,7 @@ ani_status (*Class_GetStaticField_Short)(ani_env *env, ani_class cls, ani_static
 
 **Description**
 
-Retrieves a short value from a static field of a class.This function retrieves the short value of the specified static field from the given class.
+Retrieves a short value from a static field of a class.<br> This function retrieves the short value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4421,7 +4421,7 @@ ani_status (*Class_GetStaticField_Int)(ani_env *env, ani_class cls, ani_static_f
 
 **Description**
 
-Retrieves an integer value from a static field of a class.This function retrieves the integer value of the specified static field from the given class.
+Retrieves an integer value from a static field of a class.<br> This function retrieves the integer value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4448,7 +4448,7 @@ ani_status (*Class_GetStaticField_Long)(ani_env *env, ani_class cls, ani_static_
 
 **Description**
 
-Retrieves a long value from a static field of a class.This function retrieves the long value of the specified static field from the given class.
+Retrieves a long value from a static field of a class.<br> This function retrieves the long value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4475,7 +4475,7 @@ ani_status (*Class_GetStaticField_Float)(ani_env *env, ani_class cls, ani_static
 
 **Description**
 
-Retrieves a float value from a static field of a class.This function retrieves the float value of the specified static field from the given class.
+Retrieves a float value from a static field of a class.<br> This function retrieves the float value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4502,7 +4502,7 @@ ani_status (*Class_GetStaticField_Double)(ani_env *env, ani_class cls, ani_stati
 
 **Description**
 
-Retrieves a double value from a static field of a class.This function retrieves the double value of the specified static field from the given class.
+Retrieves a double value from a static field of a class.<br> This function retrieves the double value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4529,7 +4529,7 @@ ani_status (*Class_GetStaticField_Ref)(ani_env *env, ani_class cls, ani_static_f
 
 **Description**
 
-Retrieves a reference value from a static field of a class.This function retrieves the reference value of the specified static field from the given class.
+Retrieves a reference value from a static field of a class.<br> This function retrieves the reference value of the specified static field from the given class.
 
 **Since**: 23
 
@@ -4556,7 +4556,7 @@ ani_status (*Class_SetStaticField_Boolean)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Sets a boolean value to a static field of a class.This function assigns a boolean value to the specified static field of the given class.
+Sets a boolean value to a static field of a class.<br> This function assigns a boolean value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4583,7 +4583,7 @@ ani_status (*Class_SetStaticField_Char)(ani_env *env, ani_class cls, ani_static_
 
 **Description**
 
-Sets a character value to a static field of a class.This function assigns a character value to the specified static field of the given class.
+Sets a character value to a static field of a class.<br> This function assigns a character value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4610,7 +4610,7 @@ ani_status (*Class_SetStaticField_Byte)(ani_env *env, ani_class cls, ani_static_
 
 **Description**
 
-Sets a byte value to a static field of a class.This function assigns a byte value to the specified static field of the given class.
+Sets a byte value to a static field of a class.<br> This function assigns a byte value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4637,7 +4637,7 @@ ani_status (*Class_SetStaticField_Short)(ani_env *env, ani_class cls, ani_static
 
 **Description**
 
-Sets a short value to a static field of a class.This function assigns a short value to the specified static field of the given class.
+Sets a short value to a static field of a class.<br> This function assigns a short value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4664,7 +4664,7 @@ ani_status (*Class_SetStaticField_Int)(ani_env *env, ani_class cls, ani_static_f
 
 **Description**
 
-Sets an integer value to a static field of a class.This function assigns an integer value to the specified static field of the given class.
+Sets an integer value to a static field of a class.<br> This function assigns an integer value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4691,7 +4691,7 @@ ani_status (*Class_SetStaticField_Long)(ani_env *env, ani_class cls, ani_static_
 
 **Description**
 
-Sets a long value to a static field of a class.This function assigns a long value to the specified static field of the given class.
+Sets a long value to a static field of a class.<br> This function assigns a long value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4718,7 +4718,7 @@ ani_status (*Class_SetStaticField_Float)(ani_env *env, ani_class cls, ani_static
 
 **Description**
 
-Sets a float value to a static field of a class.This function assigns a float value to the specified static field of the given class.
+Sets a float value to a static field of a class.<br> This function assigns a float value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4745,7 +4745,7 @@ ani_status (*Class_SetStaticField_Double)(ani_env *env, ani_class cls, ani_stati
 
 **Description**
 
-Sets a double value to a static field of a class.This function assigns a double value to the specified static field of the given class.
+Sets a double value to a static field of a class.<br> This function assigns a double value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4772,7 +4772,7 @@ ani_status (*Class_SetStaticField_Ref)(ani_env *env, ani_class cls, ani_static_f
 
 **Description**
 
-Sets a reference value to a static field of a class.This function assigns a reference value to the specified static field of the given class.
+Sets a reference value to a static field of a class.<br> This function assigns a reference value to the specified static field of the given class.
 
 **Since**: 23
 
@@ -4799,7 +4799,7 @@ ani_status (*Class_GetStaticFieldByName_Boolean)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Retrieves a boolean value from a static field of a class by its name.This function retrieves the boolean value of the specified static field from the given class by its name.
+Retrieves a boolean value from a static field of a class by its name.<br> This function retrieves the boolean value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4826,7 +4826,7 @@ ani_status (*Class_GetStaticFieldByName_Char)(ani_env *env, ani_class cls, const
 
 **Description**
 
-Retrieves a character value from a static field of a class by its name.This function retrieves the character value of the specified static field from the given class by its name.
+Retrieves a character value from a static field of a class by its name.<br> This function retrieves the character value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4853,7 +4853,7 @@ ani_status (*Class_GetStaticFieldByName_Byte)(ani_env *env, ani_class cls, const
 
 **Description**
 
-Retrieves a byte value from a static field of a class by its name.This function retrieves the byte value of the specified static field from the given class by its name.
+Retrieves a byte value from a static field of a class by its name.<br> This function retrieves the byte value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4880,7 +4880,7 @@ ani_status (*Class_GetStaticFieldByName_Short)(ani_env *env, ani_class cls, cons
 
 **Description**
 
-Retrieves a short value from a static field of a class by its name.This function retrieves the short value of the specified static field from the given class by its name.
+Retrieves a short value from a static field of a class by its name.<br> This function retrieves the short value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4907,7 +4907,7 @@ ani_status (*Class_GetStaticFieldByName_Int)(ani_env *env, ani_class cls, const 
 
 **Description**
 
-Retrieves an integer value from a static field of a class by its name.This function retrieves the integer value of the specified static field from the given class by its name.
+Retrieves an integer value from a static field of a class by its name.<br> This function retrieves the integer value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4934,7 +4934,7 @@ ani_status (*Class_GetStaticFieldByName_Long)(ani_env *env, ani_class cls, const
 
 **Description**
 
-Retrieves a long value from a static field of a class by its name.This function retrieves the long value of the specified static field from the given class by its name.
+Retrieves a long value from a static field of a class by its name.<br> This function retrieves the long value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4961,7 +4961,7 @@ ani_status (*Class_GetStaticFieldByName_Float)(ani_env *env, ani_class cls, cons
 
 **Description**
 
-Retrieves a float value from a static field of a class by its name.This function retrieves the float value of the specified static field from the given class by its name.
+Retrieves a float value from a static field of a class by its name.<br> This function retrieves the float value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -4988,7 +4988,7 @@ ani_status (*Class_GetStaticFieldByName_Double)(ani_env *env, ani_class cls, con
 
 **Description**
 
-Retrieves a double value from a static field of a class by its name.This function retrieves the double value of the specified static field from the given class by its name.
+Retrieves a double value from a static field of a class by its name.<br> This function retrieves the double value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -5015,7 +5015,7 @@ ani_status (*Class_GetStaticFieldByName_Ref)(ani_env *env, ani_class cls, const 
 
 **Description**
 
-Retrieves a reference value from a static field of a class by its name.This function retrieves the reference value of the specified static field from the given class by its name.
+Retrieves a reference value from a static field of a class by its name.<br> This function retrieves the reference value of the specified static field from the given class by its name.
 
 **Since**: 23
 
@@ -5042,7 +5042,7 @@ ani_status (*Class_SetStaticFieldByName_Boolean)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Sets a boolean value to a static field of a class by its name.This function assigns a boolean value to the specified static field of the given class by its name.
+Sets a boolean value to a static field of a class by its name.<br> This function assigns a boolean value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5069,7 +5069,7 @@ ani_status (*Class_SetStaticFieldByName_Char)(ani_env *env, ani_class cls, const
 
 **Description**
 
-Sets a character value to a static field of a class by its name.This function assigns a character value to the specified static field of the given class by its name.
+Sets a character value to a static field of a class by its name.<br> This function assigns a character value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5096,7 +5096,7 @@ ani_status (*Class_SetStaticFieldByName_Byte)(ani_env *env, ani_class cls, const
 
 **Description**
 
-Sets a byte value to a static field of a class by its name.This function assigns a byte value to the specified static field of the given class by its name.
+Sets a byte value to a static field of a class by its name.<br> This function assigns a byte value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5123,7 +5123,7 @@ ani_status (*Class_SetStaticFieldByName_Short)(ani_env *env, ani_class cls, cons
 
 **Description**
 
-Sets a short value to a static field of a class by its name.This function assigns a short value to the specified static field of the given class by its name.
+Sets a short value to a static field of a class by its name.<br> This function assigns a short value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5150,7 +5150,7 @@ ani_status (*Class_SetStaticFieldByName_Int)(ani_env *env, ani_class cls, const 
 
 **Description**
 
-Sets an integer value to a static field of a class by its name.This function assigns an integer value to the specified static field of the given class by its name.
+Sets an integer value to a static field of a class by its name.<br> This function assigns an integer value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5177,7 +5177,7 @@ ani_status (*Class_SetStaticFieldByName_Long)(ani_env *env, ani_class cls, const
 
 **Description**
 
-Sets a long value to a static field of a class by its name.This function assigns a long value to the specified static field of the given class by its name.
+Sets a long value to a static field of a class by its name.<br> This function assigns a long value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5204,7 +5204,7 @@ ani_status (*Class_SetStaticFieldByName_Float)(ani_env *env, ani_class cls, cons
 
 **Description**
 
-Sets a float value to a static field of a class by its name.This function assigns a float value to the specified static field of the given class by its name.
+Sets a float value to a static field of a class by its name.<br> This function assigns a float value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5231,7 +5231,7 @@ ani_status (*Class_SetStaticFieldByName_Double)(ani_env *env, ani_class cls, con
 
 **Description**
 
-Sets a double value to a static field of a class by its name.This function assigns a double value to the specified static field of the given class by its name.
+Sets a double value to a static field of a class by its name.<br> This function assigns a double value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5258,7 +5258,7 @@ ani_status (*Class_SetStaticFieldByName_Ref)(ani_env *env, ani_class cls, const 
 
 **Description**
 
-Sets a reference value to a static field of a class by its name.This function assigns a reference value to the specified static field of the given class by its name.
+Sets a reference value to a static field of a class by its name.<br> This function assigns a reference value to the specified static field of the given class by its name.
 
 **Since**: 23
 
@@ -5285,7 +5285,7 @@ ani_status (*Class_CallStaticMethod_Boolean)(ani_env *env, ani_class cls, ani_st
 
 **Description**
 
-Calls a static method with a boolean return type.This function calls the specified static method of a class and retrieves a boolean result using variadicarguments.
+Calls a static method with a boolean return type.<br> This function calls the specified static method of a class and retrieves a boolean result using variadic arguments.
 
 **Since**: 23
 
@@ -5313,7 +5313,7 @@ ani_status (*Class_CallStaticMethod_Boolean_A)(ani_env *env, ani_class cls, ani_
 
 **Description**
 
-Calls a static method with a boolean return type (array-based).This function calls the specified static method of a class and retrieves a boolean result using arguments from anarray.
+Calls a static method with a boolean return type (array-based).<br> This function calls the specified static method of a class and retrieves a boolean result using arguments from an array.
 
 **Since**: 23
 
@@ -5341,7 +5341,7 @@ ani_status (*Class_CallStaticMethod_Boolean_V)(ani_env *env, ani_class cls, ani_
 
 **Description**
 
-Calls a static method with a boolean return type (variadic arguments).This function calls the specified static method of a class and retrieves a boolean result using a `va_list`.
+Calls a static method with a boolean return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a boolean result using a `va_list`.
 
 **Since**: 23
 
@@ -5369,7 +5369,7 @@ ani_status (*Class_CallStaticMethod_Char)(ani_env *env, ani_class cls, ani_stati
 
 **Description**
 
-Calls a static method with a character return type.This function calls the specified static method of a class and retrieves a character result using variadicarguments.
+Calls a static method with a character return type.<br> This function calls the specified static method of a class and retrieves a character result using variadic arguments.
 
 **Since**: 23
 
@@ -5397,7 +5397,7 @@ ani_status (*Class_CallStaticMethod_Char_A)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a character return type (array-based).This function calls the specified static method of a class and retrieves a character result using arguments froman array.
+Calls a static method with a character return type (array-based).<br> This function calls the specified static method of a class and retrieves a character result using arguments from an array.
 
 **Since**: 23
 
@@ -5425,7 +5425,7 @@ ani_status (*Class_CallStaticMethod_Char_V)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a character return type (variadic arguments).This function calls the specified static method of a class and retrieves a character result using a `va_list`.
+Calls a static method with a character return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a character result using a `va_list`.
 
 **Since**: 23
 
@@ -5453,7 +5453,7 @@ ani_status (*Class_CallStaticMethod_Byte)(ani_env *env, ani_class cls, ani_stati
 
 **Description**
 
-Calls a static method with a byte return type.This function calls the specified static method of a class and retrieves a byte result using variadic arguments.
+Calls a static method with a byte return type.<br> This function calls the specified static method of a class and retrieves a byte result using variadic arguments.
 
 **Since**: 23
 
@@ -5481,7 +5481,7 @@ ani_status (*Class_CallStaticMethod_Byte_A)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a byte return type (array-based).This function calls the specified static method of a class and retrieves a byte result using arguments from anarray.
+Calls a static method with a byte return type (array-based).<br> This function calls the specified static method of a class and retrieves a byte result using arguments from an array.
 
 **Since**: 23
 
@@ -5509,7 +5509,7 @@ ani_status (*Class_CallStaticMethod_Byte_V)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a byte return type (variadic arguments).This function calls the specified static method of a class and retrieves a byte result using a `va_list`.
+Calls a static method with a byte return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a byte result using a `va_list`.
 
 **Since**: 23
 
@@ -5537,7 +5537,7 @@ ani_status (*Class_CallStaticMethod_Short)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Calls a static method with a short return type.This function calls the specified static method of a class and retrieves a short result using variadic arguments.
+Calls a static method with a short return type.<br> This function calls the specified static method of a class and retrieves a short result using variadic arguments.
 
 **Since**: 23
 
@@ -5565,7 +5565,7 @@ ani_status (*Class_CallStaticMethod_Short_A)(ani_env *env, ani_class cls, ani_st
 
 **Description**
 
-Calls a static method with a short return type (array-based).This function calls the specified static method of a class and retrieves a short result using arguments from anarray.
+Calls a static method with a short return type (array-based).<br> This function calls the specified static method of a class and retrieves a short result using arguments from an array.
 
 **Since**: 23
 
@@ -5593,7 +5593,7 @@ ani_status (*Class_CallStaticMethod_Short_V)(ani_env *env, ani_class cls, ani_st
 
 **Description**
 
-Calls a static method with a short return type (variadic arguments).This function calls the specified static method of a class and retrieves a short result using a `va_list`.
+Calls a static method with a short return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a short result using a `va_list`.
 
 **Since**: 23
 
@@ -5621,7 +5621,7 @@ ani_status (*Class_CallStaticMethod_Int)(ani_env *env, ani_class cls, ani_static
 
 **Description**
 
-Calls a static method with an integer return type.This function calls the specified static method of a class and retrieves an integer result using variadicarguments.
+Calls a static method with an integer return type.<br> This function calls the specified static method of a class and retrieves an integer result using variadic arguments.
 
 **Since**: 23
 
@@ -5649,7 +5649,7 @@ ani_status (*Class_CallStaticMethod_Int_A)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Calls a static method with an integer return type (array-based).This function calls the specified static method of a class and retrieves an integer result using arguments froman array.
+Calls a static method with an integer return type (array-based).<br> This function calls the specified static method of a class and retrieves an integer result using arguments from an array.
 
 **Since**: 23
 
@@ -5677,7 +5677,7 @@ ani_status (*Class_CallStaticMethod_Int_V)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Calls a static method with an integer return type (variadic arguments).This function calls the specified static method of a class and retrieves an integer result using a `va_list`.
+Calls a static method with an integer return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves an integer result using a `va_list`.
 
 **Since**: 23
 
@@ -5705,7 +5705,7 @@ ani_status (*Class_CallStaticMethod_Long)(ani_env *env, ani_class cls, ani_stati
 
 **Description**
 
-Calls a static method with a long return type.This function calls the specified static method of a class and retrieves a long result using variadic arguments.
+Calls a static method with a long return type.<br> This function calls the specified static method of a class and retrieves a long result using variadic arguments.
 
 **Since**: 23
 
@@ -5733,7 +5733,7 @@ ani_status (*Class_CallStaticMethod_Long_A)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a long return type (array-based).This function calls the specified static method of a class and retrieves a long result using arguments from anarray.
+Calls a static method with a long return type (array-based).<br> This function calls the specified static method of a class and retrieves a long result using arguments from an array.
 
 **Since**: 23
 
@@ -5761,7 +5761,7 @@ ani_status (*Class_CallStaticMethod_Long_V)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a long return type (variadic arguments).This function calls the specified static method of a class and retrieves a long result using a `va_list`.
+Calls a static method with a long return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a long result using a `va_list`.
 
 **Since**: 23
 
@@ -5789,7 +5789,7 @@ ani_status (*Class_CallStaticMethod_Float)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Calls a static method with a float return type.This function calls the specified static method of a class and retrieves a float result using variadic arguments.
+Calls a static method with a float return type.<br> This function calls the specified static method of a class and retrieves a float result using variadic arguments.
 
 **Since**: 23
 
@@ -5817,7 +5817,7 @@ ani_status (*Class_CallStaticMethod_Float_A)(ani_env *env, ani_class cls, ani_st
 
 **Description**
 
-Calls a static method with a float return type (array-based).This function calls the specified static method of a class and retrieves a float result using arguments from anarray.
+Calls a static method with a float return type (array-based).<br> This function calls the specified static method of a class and retrieves a float result using arguments from an array.
 
 **Since**: 23
 
@@ -5845,7 +5845,7 @@ ani_status (*Class_CallStaticMethod_Float_V)(ani_env *env, ani_class cls, ani_st
 
 **Description**
 
-Calls a static method with a float return type (variadic arguments).This function calls the specified static method of a class and retrieves a float result using a `va_list`.
+Calls a static method with a float return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a float result using a `va_list`.
 
 **Since**: 23
 
@@ -5873,7 +5873,7 @@ ani_status (*Class_CallStaticMethod_Double)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with a double return type.This function calls the specified static method of a class and retrieves a double result using variadicarguments.
+Calls a static method with a double return type.<br> This function calls the specified static method of a class and retrieves a double result using variadic arguments.
 
 **Since**: 23
 
@@ -5901,7 +5901,7 @@ ani_status (*Class_CallStaticMethod_Double_A)(ani_env *env, ani_class cls, ani_s
 
 **Description**
 
-Calls a static method with a double return type (array-based).This function calls the specified static method of a class and retrieves a double result using arguments from anarray.
+Calls a static method with a double return type (array-based).<br> This function calls the specified static method of a class and retrieves a double result using arguments from an array.
 
 **Since**: 23
 
@@ -5929,7 +5929,7 @@ ani_status (*Class_CallStaticMethod_Double_V)(ani_env *env, ani_class cls, ani_s
 
 **Description**
 
-Calls a static method with a double return type (variadic arguments).This function calls the specified static method of a class and retrieves a double result using a `va_list`.
+Calls a static method with a double return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a double result using a `va_list`.
 
 **Since**: 23
 
@@ -5957,7 +5957,7 @@ ani_status (*Class_CallStaticMethod_Ref)(ani_env *env, ani_class cls, ani_static
 
 **Description**
 
-Calls a static method with a reference return type.This function calls the specified static method of a class and retrieves a reference result using variadicarguments.
+Calls a static method with a reference return type.<br> This function calls the specified static method of a class and retrieves a reference result using variadic arguments.
 
 **Since**: 23
 
@@ -5985,7 +5985,7 @@ ani_status (*Class_CallStaticMethod_Ref_A)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Calls a static method with a reference return type (array-based).This function calls the specified static method of a class and retrieves a reference result using arguments froman array.
+Calls a static method with a reference return type (array-based).<br> This function calls the specified static method of a class and retrieves a reference result using arguments from an array.
 
 **Since**: 23
 
@@ -6013,7 +6013,7 @@ ani_status (*Class_CallStaticMethod_Ref_V)(ani_env *env, ani_class cls, ani_stat
 
 **Description**
 
-Calls a static method with a reference return type (variadic arguments).This function calls the specified static method of a class and retrieves a reference result using a `va_list`.
+Calls a static method with a reference return type (variadic arguments).<br> This function calls the specified static method of a class and retrieves a reference result using a `va_list`.
 
 **Since**: 23
 
@@ -6041,7 +6041,7 @@ ani_status (*Class_CallStaticMethod_Void)(ani_env *env, ani_class cls, ani_stati
 
 **Description**
 
-Calls a static method with no return value.This function calls the specified static method of a class using variadic arguments. The method does not return avalue.
+Calls a static method with no return value.<br> This function calls the specified static method of a class using variadic arguments. The method does not return a value.
 
 **Since**: 23
 
@@ -6068,7 +6068,7 @@ ani_status (*Class_CallStaticMethod_Void_A)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with no return value (array-based).This function calls the specified static method of a class using arguments from an array. The method does notreturn a value.
+Calls a static method with no return value (array-based).<br> This function calls the specified static method of a class using arguments from an array. The method does not return a value.
 
 **Since**: 23
 
@@ -6095,7 +6095,7 @@ ani_status (*Class_CallStaticMethod_Void_V)(ani_env *env, ani_class cls, ani_sta
 
 **Description**
 
-Calls a static method with no return value (variadic arguments).This function calls the specified static method of a class using a `va_list`. The method does not return a value.
+Calls a static method with no return value (variadic arguments).<br> This function calls the specified static method of a class using a `va_list`. The method does not return a value.
 
 **Since**: 23
 
@@ -6122,7 +6122,7 @@ ani_status (*Class_CallStaticMethodByName_Boolean)(ani_env *env, ani_class cls, 
 
 **Description**
 
-Calls a static method by name with a boolean return type.This function calls the specified static method of a class by its name and retrieves a boolean result usingvariadic arguments.
+Calls a static method by name with a boolean return type.<br> This function calls the specified static method of a class by its name and retrieves a boolean result using variadic arguments.
 
 **Since**: 23
 
@@ -6151,7 +6151,7 @@ ani_status (*Class_CallStaticMethodByName_Boolean_A)(ani_env *env, ani_class cls
 
 **Description**
 
-Calls a static method by name with a boolean return type (array-based).This function calls the specified static method of a class by its name and retrieves a boolean result usingarguments from an array.
+Calls a static method by name with a boolean return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a boolean result using arguments from an array.
 
 **Since**: 23
 
@@ -6180,7 +6180,7 @@ ani_status (*Class_CallStaticMethodByName_Boolean_V)(ani_env *env, ani_class cls
 
 **Description**
 
-Calls a static method by name with a boolean return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a boolean result using a`va_list`.
+Calls a static method by name with a boolean return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a boolean result using a `va_list`.
 
 **Since**: 23
 
@@ -6209,7 +6209,7 @@ ani_status (*Class_CallStaticMethodByName_Char)(ani_env *env, ani_class cls, con
 
 **Description**
 
-Calls a static method by name with a char return type.This function calls the specified static method of a class by its name and retrieves a char result using variadicarguments.
+Calls a static method by name with a char return type.<br> This function calls the specified static method of a class by its name and retrieves a char result using variadic arguments.
 
 **Since**: 23
 
@@ -6238,7 +6238,7 @@ ani_status (*Class_CallStaticMethodByName_Char_A)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a char return type (array-based).This function calls the specified static method of a class by its name and retrieves a char result usingarguments from an array.
+Calls a static method by name with a char return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a char result using arguments from an array.
 
 **Since**: 23
 
@@ -6267,7 +6267,7 @@ ani_status (*Class_CallStaticMethodByName_Char_V)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a char return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a char result using a`va_list`.
+Calls a static method by name with a char return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a char result using a `va_list`.
 
 **Since**: 23
 
@@ -6296,7 +6296,7 @@ ani_status (*Class_CallStaticMethodByName_Byte)(ani_env *env, ani_class cls, con
 
 **Description**
 
-Calls a static method by name with a byte return type.This function calls the specified static method of a class by its name and retrieves a byte result using variadicarguments.
+Calls a static method by name with a byte return type.<br> This function calls the specified static method of a class by its name and retrieves a byte result using variadic arguments.
 
 **Since**: 23
 
@@ -6325,7 +6325,7 @@ ani_status (*Class_CallStaticMethodByName_Byte_A)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a byte return type (array-based).This function calls the specified static method of a class by its name and retrieves a byte result usingarguments from an array.
+Calls a static method by name with a byte return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a byte result using arguments from an array.
 
 **Since**: 23
 
@@ -6354,7 +6354,7 @@ ani_status (*Class_CallStaticMethodByName_Byte_V)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a byte return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a byte result using a`va_list`.
+Calls a static method by name with a byte return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a byte result using a `va_list`.
 
 **Since**: 23
 
@@ -6383,7 +6383,7 @@ ani_status (*Class_CallStaticMethodByName_Short)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Calls a static method by name with a short return type.This function calls the specified static method of a class by its name and retrieves a short result usingvariadic arguments.
+Calls a static method by name with a short return type.<br> This function calls the specified static method of a class by its name and retrieves a short result using variadic arguments.
 
 **Since**: 23
 
@@ -6412,7 +6412,7 @@ ani_status (*Class_CallStaticMethodByName_Short_A)(ani_env *env, ani_class cls, 
 
 **Description**
 
-Calls a static method by name with a short return type (array-based).This function calls the specified static method of a class by its name and retrieves a short result usingarguments from an array.
+Calls a static method by name with a short return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a short result using arguments from an array.
 
 **Since**: 23
 
@@ -6441,7 +6441,7 @@ ani_status (*Class_CallStaticMethodByName_Short_V)(ani_env *env, ani_class cls, 
 
 **Description**
 
-Calls a static method by name with a short return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a short result using a`va_list`.
+Calls a static method by name with a short return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a short result using a `va_list`.
 
 **Since**: 23
 
@@ -6470,7 +6470,7 @@ ani_status (*Class_CallStaticMethodByName_Int)(ani_env *env, ani_class cls, cons
 
 **Description**
 
-Calls a static method by name with a integer return type.This function calls the specified static method of a class by its name and retrieves a integer result usingvariadic arguments.
+Calls a static method by name with a integer return type.<br> This function calls the specified static method of a class by its name and retrieves a integer result using variadic arguments.
 
 **Since**: 23
 
@@ -6499,7 +6499,7 @@ ani_status (*Class_CallStaticMethodByName_Int_A)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Calls a static method by name with a integer return type (array-based).This function calls the specified static method of a class by its name and retrieves a integer result usingarguments from an array.
+Calls a static method by name with a integer return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a integer result using arguments from an array.
 
 **Since**: 23
 
@@ -6528,7 +6528,7 @@ ani_status (*Class_CallStaticMethodByName_Int_V)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Calls a static method by name with a integer return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a integer result using a`va_list`.
+Calls a static method by name with a integer return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a integer result using a `va_list`.
 
 **Since**: 23
 
@@ -6557,7 +6557,7 @@ ani_status (*Class_CallStaticMethodByName_Long)(ani_env *env, ani_class cls, con
 
 **Description**
 
-Calls a static method by name with a long return type.This function calls the specified static method of a class by its name and retrieves a long result using variadicarguments.
+Calls a static method by name with a long return type.<br> This function calls the specified static method of a class by its name and retrieves a long result using variadic arguments.
 
 **Since**: 23
 
@@ -6586,7 +6586,7 @@ ani_status (*Class_CallStaticMethodByName_Long_A)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a long return type (array-based).This function calls the specified static method of a class by its name and retrieves a long result usingarguments from an array.
+Calls a static method by name with a long return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a long result using arguments from an array.
 
 **Since**: 23
 
@@ -6615,7 +6615,7 @@ ani_status (*Class_CallStaticMethodByName_Long_V)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a long return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a long result using a`va_list`.
+Calls a static method by name with a long return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a long result using a `va_list`.
 
 **Since**: 23
 
@@ -6644,7 +6644,7 @@ ani_status (*Class_CallStaticMethodByName_Float)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Calls a static method by name with a float return type.This function calls the specified static method of a class by its name and retrieves a float result usingvariadic arguments.
+Calls a static method by name with a float return type.<br> This function calls the specified static method of a class by its name and retrieves a float result using variadic arguments.
 
 **Since**: 23
 
@@ -6673,7 +6673,7 @@ ani_status (*Class_CallStaticMethodByName_Float_A)(ani_env *env, ani_class cls, 
 
 **Description**
 
-Calls a static method by name with a float return type (array-based).This function calls the specified static method of a class by its name and retrieves a float result usingarguments from an array.
+Calls a static method by name with a float return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a float result using arguments from an array.
 
 **Since**: 23
 
@@ -6702,7 +6702,7 @@ ani_status (*Class_CallStaticMethodByName_Float_V)(ani_env *env, ani_class cls, 
 
 **Description**
 
-Calls a static method by name with a float return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a float result using a`va_list`.
+Calls a static method by name with a float return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a float result using a `va_list`.
 
 **Since**: 23
 
@@ -6731,7 +6731,7 @@ ani_status (*Class_CallStaticMethodByName_Double)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with a double return type.This function calls the specified static method of a class by its name and retrieves a double result usingvariadic arguments.
+Calls a static method by name with a double return type.<br> This function calls the specified static method of a class by its name and retrieves a double result using variadic arguments.
 
 **Since**: 23
 
@@ -6760,7 +6760,7 @@ ani_status (*Class_CallStaticMethodByName_Double_A)(ani_env *env, ani_class cls,
 
 **Description**
 
-Calls a static method by name with a double return type (array-based).This function calls the specified static method of a class by its name and retrieves a double result usingarguments from an array.
+Calls a static method by name with a double return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a double result using arguments from an array.
 
 **Since**: 23
 
@@ -6789,7 +6789,7 @@ ani_status (*Class_CallStaticMethodByName_Double_V)(ani_env *env, ani_class cls,
 
 **Description**
 
-Calls a static method by name with a double return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a double result using a`va_list`.
+Calls a static method by name with a double return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a double result using a `va_list`.
 
 **Since**: 23
 
@@ -6818,7 +6818,7 @@ ani_status (*Class_CallStaticMethodByName_Ref)(ani_env *env, ani_class cls, cons
 
 **Description**
 
-Calls a static method by name with a reference return type.This function calls the specified static method of a class by its name and retrieves a reference result usingvariadic arguments.
+Calls a static method by name with a reference return type.<br> This function calls the specified static method of a class by its name and retrieves a reference result using variadic arguments.
 
 **Since**: 23
 
@@ -6847,7 +6847,7 @@ ani_status (*Class_CallStaticMethodByName_Ref_A)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Calls a static method by name with a reference return type (array-based).This function calls the specified static method of a class by its name and retrieves a reference result usingarguments from an array.
+Calls a static method by name with a reference return type (array-based).<br> This function calls the specified static method of a class by its name and retrieves a reference result using arguments from an array.
 
 **Since**: 23
 
@@ -6876,7 +6876,7 @@ ani_status (*Class_CallStaticMethodByName_Ref_V)(ani_env *env, ani_class cls, co
 
 **Description**
 
-Calls a static method by name with a reference return type (variadic arguments).This function calls the specified static method of a class by its name and retrieves a reference result using a`va_list`.
+Calls a static method by name with a reference return type (variadic arguments).<br> This function calls the specified static method of a class by its name and retrieves a reference result using a `va_list`.
 
 **Since**: 23
 
@@ -6905,7 +6905,7 @@ ani_status (*Class_CallStaticMethodByName_Void)(ani_env *env, ani_class cls, con
 
 **Description**
 
-Calls a static method by name with no return value.This function calls the specified static method of a class by its name using variadic arguments. The method doesnot return a value.
+Calls a static method by name with no return value.<br> This function calls the specified static method of a class by its name using variadic arguments. The method does not return a value.
 
 **Since**: 23
 
@@ -6933,7 +6933,7 @@ ani_status (*Class_CallStaticMethodByName_Void_A)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with no return value (array-based).This function calls the specified static method of a class by its name using arguments from an array. The methoddoes not return a value.
+Calls a static method by name with no return value (array-based).<br> This function calls the specified static method of a class by its name using arguments from an array. The method does not return a value.
 
 **Since**: 23
 
@@ -6961,7 +6961,7 @@ ani_status (*Class_CallStaticMethodByName_Void_V)(ani_env *env, ani_class cls, c
 
 **Description**
 
-Calls a static method by name with no return value (variadic arguments).This function calls the specified static method of a class by its name using a `va_list`. The method does notreturn a value.
+Calls a static method by name with no return value (variadic arguments).<br> This function calls the specified static method of a class by its name using a `va_list`. The method does not return a value.
 
 **Since**: 23
 
@@ -6989,7 +6989,7 @@ ani_status (*Object_GetField_Boolean)(ani_env *env, ani_object object, ani_field
 
 **Description**
 
-Retrieves a boolean value from a field of an object.This function retrieves the boolean value of the specified field from the given object.
+Retrieves a boolean value from a field of an object.<br> This function retrieves the boolean value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7016,7 +7016,7 @@ ani_status (*Object_GetField_Char)(ani_env *env, ani_object object, ani_field fi
 
 **Description**
 
-Retrieves a char value from a field of an object.This function retrieves the char value of the specified field from the given object.
+Retrieves a char value from a field of an object.<br> This function retrieves the char value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7043,7 +7043,7 @@ ani_status (*Object_GetField_Byte)(ani_env *env, ani_object object, ani_field fi
 
 **Description**
 
-Retrieves a byte value from a field of an object.This function retrieves the byte value of the specified field from the given object.
+Retrieves a byte value from a field of an object.<br> This function retrieves the byte value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7070,7 +7070,7 @@ ani_status (*Object_GetField_Short)(ani_env *env, ani_object object, ani_field f
 
 **Description**
 
-Retrieves a short value from a field of an object.This function retrieves the short value of the specified field from the given object.
+Retrieves a short value from a field of an object.<br> This function retrieves the short value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7097,7 +7097,7 @@ ani_status (*Object_GetField_Int)(ani_env *env, ani_object object, ani_field fie
 
 **Description**
 
-Retrieves a integer value from a field of an object.This function retrieves the integer value of the specified field from the given object.
+Retrieves a integer value from a field of an object.<br> This function retrieves the integer value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7124,7 +7124,7 @@ ani_status (*Object_GetField_Long)(ani_env *env, ani_object object, ani_field fi
 
 **Description**
 
-Retrieves a long value from a field of an object.This function retrieves the long value of the specified field from the given object.
+Retrieves a long value from a field of an object.<br> This function retrieves the long value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7151,7 +7151,7 @@ ani_status (*Object_GetField_Float)(ani_env *env, ani_object object, ani_field f
 
 **Description**
 
-Retrieves a float value from a field of an object.This function retrieves the float value of the specified field from the given object.
+Retrieves a float value from a field of an object.<br> This function retrieves the float value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7178,7 +7178,7 @@ ani_status (*Object_GetField_Double)(ani_env *env, ani_object object, ani_field 
 
 **Description**
 
-Retrieves a double value from a field of an object.This function retrieves the double value of the specified field from the given object.
+Retrieves a double value from a field of an object.<br> This function retrieves the double value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7205,7 +7205,7 @@ ani_status (*Object_GetField_Ref)(ani_env *env, ani_object object, ani_field fie
 
 **Description**
 
-Retrieves a reference value from a field of an object.This function retrieves the reference value of the specified field from the given object.
+Retrieves a reference value from a field of an object.<br> This function retrieves the reference value of the specified field from the given object.
 
 **Since**: 23
 
@@ -7232,7 +7232,7 @@ ani_status (*Object_SetField_Boolean)(ani_env *env, ani_object object, ani_field
 
 **Description**
 
-Sets a boolean value to a field of an object.This function assigns a boolean value to the specified field of the given object.
+Sets a boolean value to a field of an object.<br> This function assigns a boolean value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7259,7 +7259,7 @@ ani_status (*Object_SetField_Char)(ani_env *env, ani_object object, ani_field fi
 
 **Description**
 
-Sets a char value to a field of an object.This function assigns a char value to the specified field of the given object.
+Sets a char value to a field of an object.<br> This function assigns a char value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7286,7 +7286,7 @@ ani_status (*Object_SetField_Byte)(ani_env *env, ani_object object, ani_field fi
 
 **Description**
 
-Sets a byte value to a field of an object.This function assigns a byte value to the specified field of the given object.
+Sets a byte value to a field of an object.<br> This function assigns a byte value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7313,7 +7313,7 @@ ani_status (*Object_SetField_Short)(ani_env *env, ani_object object, ani_field f
 
 **Description**
 
-Sets a short value to a field of an object.This function assigns a short value to the specified field of the given object.
+Sets a short value to a field of an object.<br> This function assigns a short value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7340,7 +7340,7 @@ ani_status (*Object_SetField_Int)(ani_env *env, ani_object object, ani_field fie
 
 **Description**
 
-Sets a integer value to a field of an object.This function assigns a integer value to the specified field of the given object.
+Sets a integer value to a field of an object.<br> This function assigns a integer value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7367,7 +7367,7 @@ ani_status (*Object_SetField_Long)(ani_env *env, ani_object object, ani_field fi
 
 **Description**
 
-Sets a long value to a field of an object.This function assigns a long value to the specified field of the given object.
+Sets a long value to a field of an object.<br> This function assigns a long value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7394,7 +7394,7 @@ ani_status (*Object_SetField_Float)(ani_env *env, ani_object object, ani_field f
 
 **Description**
 
-Sets a float value to a field of an object.This function assigns a float value to the specified field of the given object.
+Sets a float value to a field of an object.<br> This function assigns a float value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7421,7 +7421,7 @@ ani_status (*Object_SetField_Double)(ani_env *env, ani_object object, ani_field 
 
 **Description**
 
-Sets a double value to a field of an object.This function assigns a double value to the specified field of the given object.
+Sets a double value to a field of an object.<br> This function assigns a double value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7448,7 +7448,7 @@ ani_status (*Object_SetField_Ref)(ani_env *env, ani_object object, ani_field fie
 
 **Description**
 
-Sets a reference value to a field of an object.This function assigns a reference value to the specified field of the given object.
+Sets a reference value to a field of an object.<br> This function assigns a reference value to the specified field of the given object.
 
 **Since**: 23
 
@@ -7475,7 +7475,7 @@ ani_status (*Object_GetFieldByName_Boolean)(ani_env *env, ani_object object, con
 
 **Description**
 
-Retrieves a boolean value from a field of an object by its name.This function retrieves the boolean value of the specified field from the given object by its name.
+Retrieves a boolean value from a field of an object by its name.<br> This function retrieves the boolean value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7502,7 +7502,7 @@ ani_status (*Object_GetFieldByName_Char)(ani_env *env, ani_object object, const 
 
 **Description**
 
-Retrieves a char value from a field of an object by its name.This function retrieves the char value of the specified field from the given object by its name.
+Retrieves a char value from a field of an object by its name.<br> This function retrieves the char value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7529,7 +7529,7 @@ ani_status (*Object_GetFieldByName_Byte)(ani_env *env, ani_object object, const 
 
 **Description**
 
-Retrieves a byte value from a field of an object by its name.This function retrieves the byte value of the specified field from the given object by its name.
+Retrieves a byte value from a field of an object by its name.<br> This function retrieves the byte value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7556,7 +7556,7 @@ ani_status (*Object_GetFieldByName_Short)(ani_env *env, ani_object object, const
 
 **Description**
 
-Retrieves a short value from a field of an object by its name.This function retrieves the short value of the specified field from the given object by its name.
+Retrieves a short value from a field of an object by its name.<br> This function retrieves the short value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7583,7 +7583,7 @@ ani_status (*Object_GetFieldByName_Int)(ani_env *env, ani_object object, const c
 
 **Description**
 
-Retrieves a integer value from a field of an object by its name.This function retrieves the integer value of the specified field from the given object by its name.
+Retrieves a integer value from a field of an object by its name.<br> This function retrieves the integer value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7610,7 +7610,7 @@ ani_status (*Object_GetFieldByName_Long)(ani_env *env, ani_object object, const 
 
 **Description**
 
-Retrieves a long value from a field of an object by its name.This function retrieves the long value of the specified field from the given object by its name.
+Retrieves a long value from a field of an object by its name.<br> This function retrieves the long value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7637,7 +7637,7 @@ ani_status (*Object_GetFieldByName_Float)(ani_env *env, ani_object object, const
 
 **Description**
 
-Retrieves a float value from a field of an object by its name.This function retrieves the float value of the specified field from the given object by its name.
+Retrieves a float value from a field of an object by its name.<br> This function retrieves the float value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7664,7 +7664,7 @@ ani_status (*Object_GetFieldByName_Double)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Retrieves a double value from a field of an object by its name.This function retrieves the double value of the specified field from the given object by its name.
+Retrieves a double value from a field of an object by its name.<br> This function retrieves the double value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7691,7 +7691,7 @@ ani_status (*Object_GetFieldByName_Ref)(ani_env *env, ani_object object, const c
 
 **Description**
 
-Retrieves a reference value from a field of an object by its name.This function retrieves the reference value of the specified field from the given object by its name.
+Retrieves a reference value from a field of an object by its name.<br> This function retrieves the reference value of the specified field from the given object by its name.
 
 **Since**: 23
 
@@ -7718,7 +7718,7 @@ ani_status (*Object_SetFieldByName_Boolean)(ani_env *env, ani_object object, con
 
 **Description**
 
-Sets a boolean value to a field of an object by its name.This function assigns a boolean value to the specified field of the given object by its name.
+Sets a boolean value to a field of an object by its name.<br> This function assigns a boolean value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7745,7 +7745,7 @@ ani_status (*Object_SetFieldByName_Char)(ani_env *env, ani_object object, const 
 
 **Description**
 
-Sets a char value to a field of an object by its name.This function assigns a char value to the specified field of the given object by its name.
+Sets a char value to a field of an object by its name.<br> This function assigns a char value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7772,7 +7772,7 @@ ani_status (*Object_SetFieldByName_Byte)(ani_env *env, ani_object object, const 
 
 **Description**
 
-Sets a byte value to a field of an object by its name.This function assigns a byte value to the specified field of the given object by its name.
+Sets a byte value to a field of an object by its name.<br> This function assigns a byte value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7799,7 +7799,7 @@ ani_status (*Object_SetFieldByName_Short)(ani_env *env, ani_object object, const
 
 **Description**
 
-Sets a short value to a field of an object by its name.This function assigns a short value to the specified field of the given object by its name.
+Sets a short value to a field of an object by its name.<br> This function assigns a short value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7826,7 +7826,7 @@ ani_status (*Object_SetFieldByName_Int)(ani_env *env, ani_object object, const c
 
 **Description**
 
-Sets a integer value to a field of an object by its name.This function assigns a integer value to the specified field of the given object by its name.
+Sets a integer value to a field of an object by its name.<br> This function assigns a integer value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7853,7 +7853,7 @@ ani_status (*Object_SetFieldByName_Long)(ani_env *env, ani_object object, const 
 
 **Description**
 
-Sets a long value to a field of an object by its name.This function assigns a long value to the specified field of the given object by its name.
+Sets a long value to a field of an object by its name.<br> This function assigns a long value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7880,7 +7880,7 @@ ani_status (*Object_SetFieldByName_Float)(ani_env *env, ani_object object, const
 
 **Description**
 
-Sets a float value to a field of an object by its name.This function assigns a float value to the specified field of the given object by its name.
+Sets a float value to a field of an object by its name.<br> This function assigns a float value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7907,7 +7907,7 @@ ani_status (*Object_SetFieldByName_Double)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Sets a double value to a field of an object by its name.This function assigns a double value to the specified field of the given object by its name.
+Sets a double value to a field of an object by its name.<br> This function assigns a double value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7934,7 +7934,7 @@ ani_status (*Object_SetFieldByName_Ref)(ani_env *env, ani_object object, const c
 
 **Description**
 
-Sets a reference value to a field of an object by its name.This function assigns a reference value to the specified field of the given object by its name.
+Sets a reference value to a field of an object by its name.<br> This function assigns a reference value to the specified field of the given object by its name.
 
 **Since**: 23
 
@@ -7961,7 +7961,7 @@ ani_status (*Object_GetPropertyByName_Boolean)(ani_env *env, ani_object object, 
 
 **Description**
 
-Retrieves a boolean value from a property of an object by its name.This function retrieves the boolean value of the specified property from the given object by its name.
+Retrieves a boolean value from a property of an object by its name.<br> This function retrieves the boolean value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -7988,7 +7988,7 @@ ani_status (*Object_GetPropertyByName_Char)(ani_env *env, ani_object object, con
 
 **Description**
 
-Retrieves a char value from a property of an object by its name.This function retrieves the char value of the specified property from the given object by its name.
+Retrieves a char value from a property of an object by its name.<br> This function retrieves the char value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8015,7 +8015,7 @@ ani_status (*Object_GetPropertyByName_Byte)(ani_env *env, ani_object object, con
 
 **Description**
 
-Retrieves a byte value from a property of an object by its name.This function retrieves the byte value of the specified property from the given object by its name.
+Retrieves a byte value from a property of an object by its name.<br> This function retrieves the byte value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8042,7 +8042,7 @@ ani_status (*Object_GetPropertyByName_Short)(ani_env *env, ani_object object, co
 
 **Description**
 
-Retrieves a short value from a property of an object by its name.This function retrieves the short value of the specified property from the given object by its name.
+Retrieves a short value from a property of an object by its name.<br> This function retrieves the short value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8069,7 +8069,7 @@ ani_status (*Object_GetPropertyByName_Int)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Retrieves a integer value from a property of an object by its name.This function retrieves the integer value of the specified property from the given object by its name.
+Retrieves a integer value from a property of an object by its name.<br> This function retrieves the integer value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8096,7 +8096,7 @@ ani_status (*Object_GetPropertyByName_Long)(ani_env *env, ani_object object, con
 
 **Description**
 
-Retrieves a long value from a property of an object by its name.This function retrieves the long value of the specified property from the given object by its name.
+Retrieves a long value from a property of an object by its name.<br> This function retrieves the long value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8123,7 +8123,7 @@ ani_status (*Object_GetPropertyByName_Float)(ani_env *env, ani_object object, co
 
 **Description**
 
-Retrieves a float value from a property of an object by its name.This function retrieves the float value of the specified property from the given object by its name.
+Retrieves a float value from a property of an object by its name.<br> This function retrieves the float value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8150,7 +8150,7 @@ ani_status (*Object_GetPropertyByName_Double)(ani_env *env, ani_object object, c
 
 **Description**
 
-Retrieves a double value from a property of an object by its name.This function retrieves the double value of the specified property from the given object by its name.
+Retrieves a double value from a property of an object by its name.<br> This function retrieves the double value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8177,7 +8177,7 @@ ani_status (*Object_GetPropertyByName_Ref)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Retrieves a reference value from a property of an object by its name.This function retrieves the reference value of the specified property from the given object by its name.
+Retrieves a reference value from a property of an object by its name.<br> This function retrieves the reference value of the specified property from the given object by its name.
 
 **Since**: 23
 
@@ -8204,7 +8204,7 @@ ani_status (*Object_SetPropertyByName_Boolean)(ani_env *env, ani_object object, 
 
 **Description**
 
-Sets a boolean value to a property of an object by its name.This function assigns a boolean value to the specified property of the given object by its name.
+Sets a boolean value to a property of an object by its name.<br> This function assigns a boolean value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8231,7 +8231,7 @@ ani_status (*Object_SetPropertyByName_Char)(ani_env *env, ani_object object, con
 
 **Description**
 
-Sets a char value to a property of an object by its name.This function assigns a char value to the specified property of the given object by its name.
+Sets a char value to a property of an object by its name.<br> This function assigns a char value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8258,7 +8258,7 @@ ani_status (*Object_SetPropertyByName_Byte)(ani_env *env, ani_object object, con
 
 **Description**
 
-Sets a byte value to a property of an object by its name.This function assigns a byte value to the specified property of the given object by its name.
+Sets a byte value to a property of an object by its name.<br> This function assigns a byte value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8285,7 +8285,7 @@ ani_status (*Object_SetPropertyByName_Short)(ani_env *env, ani_object object, co
 
 **Description**
 
-Sets a short value to a property of an object by its name.This function assigns a short value to the specified property of the given object by its name.
+Sets a short value to a property of an object by its name.<br> This function assigns a short value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8312,7 +8312,7 @@ ani_status (*Object_SetPropertyByName_Int)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Sets a integer value to a property of an object by its name.This function assigns a integer value to the specified property of the given object by its name.
+Sets a integer value to a property of an object by its name.<br> This function assigns a integer value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8339,7 +8339,7 @@ ani_status (*Object_SetPropertyByName_Long)(ani_env *env, ani_object object, con
 
 **Description**
 
-Sets a long value to a property of an object by its name.This function assigns a long value to the specified property of the given object by its name.
+Sets a long value to a property of an object by its name.<br> This function assigns a long value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8366,7 +8366,7 @@ ani_status (*Object_SetPropertyByName_Float)(ani_env *env, ani_object object, co
 
 **Description**
 
-Sets a float value to a property of an object by its name.This function assigns a float value to the specified property of the given object by its name.
+Sets a float value to a property of an object by its name.<br> This function assigns a float value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8393,7 +8393,7 @@ ani_status (*Object_SetPropertyByName_Double)(ani_env *env, ani_object object, c
 
 **Description**
 
-Sets a double value to a property of an object by its name.This function assigns a double value to the specified property of the given object by its name.
+Sets a double value to a property of an object by its name.<br> This function assigns a double value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8420,7 +8420,7 @@ ani_status (*Object_SetPropertyByName_Ref)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Sets a reference value to a property of an object by its name.This function assigns a reference value to the specified property of the given object by its name.
+Sets a reference value to a property of an object by its name.<br> This function assigns a reference value to the specified property of the given object by its name.
 
 **Since**: 23
 
@@ -8447,7 +8447,7 @@ ani_status (*Object_CallMethod_Boolean)(ani_env *env, ani_object object, ani_met
 
 **Description**
 
-Calls a method on an object and retrieves a boolean return value.This function calls the specified method of an object using variadic arguments and retrieves a boolean result.
+Calls a method on an object and retrieves a boolean return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a boolean result.
 
 **Since**: 23
 
@@ -8475,7 +8475,7 @@ ani_status (*Object_CallMethod_Boolean_A)(ani_env *env, ani_object object, ani_m
 
 **Description**
 
-Calls a method on an object and retrieves a boolean return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves aboolean result.
+Calls a method on an object and retrieves a boolean return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a boolean result.
 
 **Since**: 23
 
@@ -8503,7 +8503,7 @@ ani_status (*Object_CallMethod_Boolean_V)(ani_env *env, ani_object object, ani_m
 
 **Description**
 
-Calls a method on an object and retrieves a boolean return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a boolean result.
+Calls a method on an object and retrieves a boolean return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a boolean result.
 
 **Since**: 23
 
@@ -8531,7 +8531,7 @@ ani_status (*Object_CallMethod_Char)(ani_env *env, ani_object object, ani_method
 
 **Description**
 
-Calls a method on an object and retrieves a char return value.This function calls the specified method of an object using variadic arguments and retrieves a char result.
+Calls a method on an object and retrieves a char return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a char result.
 
 **Since**: 23
 
@@ -8559,7 +8559,7 @@ ani_status (*Object_CallMethod_Char_A)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a char return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a charresult.
+Calls a method on an object and retrieves a char return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a char result.
 
 **Since**: 23
 
@@ -8587,7 +8587,7 @@ ani_status (*Object_CallMethod_Char_V)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a char return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a char result.
+Calls a method on an object and retrieves a char return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a char result.
 
 **Since**: 23
 
@@ -8615,7 +8615,7 @@ ani_status (*Object_CallMethod_Byte)(ani_env *env, ani_object object, ani_method
 
 **Description**
 
-Calls a method on an object and retrieves a byte return value.This function calls the specified method of an object using variadic arguments and retrieves a byte result.
+Calls a method on an object and retrieves a byte return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a byte result.
 
 **Since**: 23
 
@@ -8643,7 +8643,7 @@ ani_status (*Object_CallMethod_Byte_A)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a byte return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a byteresult.
+Calls a method on an object and retrieves a byte return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a byte result.
 
 **Since**: 23
 
@@ -8671,7 +8671,7 @@ ani_status (*Object_CallMethod_Byte_V)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a byte return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a byte result.
+Calls a method on an object and retrieves a byte return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a byte result.
 
 **Since**: 23
 
@@ -8699,7 +8699,7 @@ ani_status (*Object_CallMethod_Short)(ani_env *env, ani_object object, ani_metho
 
 **Description**
 
-Calls a method on an object and retrieves a short return value.This function calls the specified method of an object using variadic arguments and retrieves a short result.
+Calls a method on an object and retrieves a short return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a short result.
 
 **Since**: 23
 
@@ -8727,7 +8727,7 @@ ani_status (*Object_CallMethod_Short_A)(ani_env *env, ani_object object, ani_met
 
 **Description**
 
-Calls a method on an object and retrieves a short return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a shortresult.
+Calls a method on an object and retrieves a short return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a short result.
 
 **Since**: 23
 
@@ -8755,7 +8755,7 @@ ani_status (*Object_CallMethod_Short_V)(ani_env *env, ani_object object, ani_met
 
 **Description**
 
-Calls a method on an object and retrieves a short return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a short result.
+Calls a method on an object and retrieves a short return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a short result.
 
 **Since**: 23
 
@@ -8783,7 +8783,7 @@ ani_status (*Object_CallMethod_Int)(ani_env *env, ani_object object, ani_method 
 
 **Description**
 
-Calls a method on an object and retrieves a integer return value.This function calls the specified method of an object using variadic arguments and retrieves a integer result.
+Calls a method on an object and retrieves a integer return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a integer result.
 
 **Since**: 23
 
@@ -8811,7 +8811,7 @@ ani_status (*Object_CallMethod_Int_A)(ani_env *env, ani_object object, ani_metho
 
 **Description**
 
-Calls a method on an object and retrieves a integer return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves ainteger result.
+Calls a method on an object and retrieves a integer return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a integer result.
 
 **Since**: 23
 
@@ -8839,7 +8839,7 @@ ani_status (*Object_CallMethod_Int_V)(ani_env *env, ani_object object, ani_metho
 
 **Description**
 
-Calls a method on an object and retrieves a integer return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a integer result.
+Calls a method on an object and retrieves a integer return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a integer result.
 
 **Since**: 23
 
@@ -8867,7 +8867,7 @@ ani_status (*Object_CallMethod_Long)(ani_env *env, ani_object object, ani_method
 
 **Description**
 
-Calls a method on an object and retrieves a long return value.This function calls the specified method of an object using variadic arguments and retrieves a long result.
+Calls a method on an object and retrieves a long return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a long result.
 
 **Since**: 23
 
@@ -8895,7 +8895,7 @@ ani_status (*Object_CallMethod_Long_A)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a long return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a longresult.
+Calls a method on an object and retrieves a long return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a long result.
 
 **Since**: 23
 
@@ -8923,7 +8923,7 @@ ani_status (*Object_CallMethod_Long_V)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a long return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a long result.
+Calls a method on an object and retrieves a long return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a long result.
 
 **Since**: 23
 
@@ -8951,7 +8951,7 @@ ani_status (*Object_CallMethod_Float)(ani_env *env, ani_object object, ani_metho
 
 **Description**
 
-Calls a method on an object and retrieves a float return value.This function calls the specified method of an object using variadic arguments and retrieves a float result.
+Calls a method on an object and retrieves a float return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a float result.
 
 **Since**: 23
 
@@ -8979,7 +8979,7 @@ ani_status (*Object_CallMethod_Float_A)(ani_env *env, ani_object object, ani_met
 
 **Description**
 
-Calls a method on an object and retrieves a float return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a floatresult.
+Calls a method on an object and retrieves a float return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a float result.
 
 **Since**: 23
 
@@ -9007,7 +9007,7 @@ ani_status (*Object_CallMethod_Float_V)(ani_env *env, ani_object object, ani_met
 
 **Description**
 
-Calls a method on an object and retrieves a float return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a float result.
+Calls a method on an object and retrieves a float return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a float result.
 
 **Since**: 23
 
@@ -9035,7 +9035,7 @@ ani_status (*Object_CallMethod_Double)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object and retrieves a double return value.This function calls the specified method of an object using variadic arguments and retrieves a double result.
+Calls a method on an object and retrieves a double return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a double result.
 
 **Since**: 23
 
@@ -9063,7 +9063,7 @@ ani_status (*Object_CallMethod_Double_A)(ani_env *env, ani_object object, ani_me
 
 **Description**
 
-Calls a method on an object and retrieves a double return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves a doubleresult.
+Calls a method on an object and retrieves a double return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a double result.
 
 **Since**: 23
 
@@ -9091,7 +9091,7 @@ ani_status (*Object_CallMethod_Double_V)(ani_env *env, ani_object object, ani_me
 
 **Description**
 
-Calls a method on an object and retrieves a double return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a double result.
+Calls a method on an object and retrieves a double return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a double result.
 
 **Since**: 23
 
@@ -9119,7 +9119,7 @@ ani_status (*Object_CallMethod_Ref)(ani_env *env, ani_object object, ani_method 
 
 **Description**
 
-Calls a method on an object and retrieves a reference return value.This function calls the specified method of an object using variadic arguments and retrieves a reference result.
+Calls a method on an object and retrieves a reference return value.<br> This function calls the specified method of an object using variadic arguments and retrieves a reference result.
 
 **Since**: 23
 
@@ -9147,7 +9147,7 @@ ani_status (*Object_CallMethod_Ref_A)(ani_env *env, ani_object object, ani_metho
 
 **Description**
 
-Calls a method on an object and retrieves a reference return value (array-based).This function calls the specified method of an object using arguments provided in an array and retrieves areference result.
+Calls a method on an object and retrieves a reference return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array and retrieves a reference result.
 
 **Since**: 23
 
@@ -9175,7 +9175,7 @@ ani_status (*Object_CallMethod_Ref_V)(ani_env *env, ani_object object, ani_metho
 
 **Description**
 
-Calls a method on an object and retrieves a reference return value (variadic arguments).This function calls the specified method of an object using a `va_list` and retrieves a reference result.
+Calls a method on an object and retrieves a reference return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list` and retrieves a reference result.
 
 **Since**: 23
 
@@ -9203,7 +9203,7 @@ ani_status (*Object_CallMethod_Void)(ani_env *env, ani_object object, ani_method
 
 **Description**
 
-Calls a method on an object with no return value.This function calls the specified method of an object using variadic arguments. The method does not return avalue.
+Calls a method on an object with no return value.<br> This function calls the specified method of an object using variadic arguments. The method does not return a value.
 
 **Since**: 23
 
@@ -9230,7 +9230,7 @@ ani_status (*Object_CallMethod_Void_A)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object with no return value (array-based).This function calls the specified method of an object using arguments provided in an array. The method does notreturn a value.
+Calls a method on an object with no return value (array-based).<br> This function calls the specified method of an object using arguments provided in an array. The method does not return a value.
 
 **Since**: 23
 
@@ -9257,7 +9257,7 @@ ani_status (*Object_CallMethod_Void_V)(ani_env *env, ani_object object, ani_meth
 
 **Description**
 
-Calls a method on an object with no return value (variadic arguments).This function calls the specified method of an object using a `va_list`. The method does not return a value.
+Calls a method on an object with no return value (variadic arguments).<br> This function calls the specified method of an object using a `va_list`. The method does not return a value.
 
 **Since**: 23
 
@@ -9284,7 +9284,7 @@ ani_status (*Object_CallMethodByName_Boolean)(ani_env *env, ani_object object, c
 
 **Description**
 
-Calls a method by name on an object and retrieves a boolean return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a boolean result.
+Calls a method by name on an object and retrieves a boolean return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a boolean result.
 
 **Since**: 23
 
@@ -9313,7 +9313,7 @@ ani_status (*Object_CallMethodByName_Boolean_A)(ani_env *env, ani_object object,
 
 **Description**
 
-Calls a method by name on an object and retrieves a boolean return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a boolean result.
+Calls a method by name on an object and retrieves a boolean return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a boolean result.
 
 **Since**: 23
 
@@ -9342,7 +9342,7 @@ ani_status (*Object_CallMethodByName_Boolean_V)(ani_env *env, ani_object object,
 
 **Description**
 
-Calls a method by name on an object and retrieves a boolean return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves aboolean result.
+Calls a method by name on an object and retrieves a boolean return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a boolean result.
 
 **Since**: 23
 
@@ -9371,7 +9371,7 @@ ani_status (*Object_CallMethodByName_Char)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Calls a method by name on an object and retrieves a char return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a char result.
+Calls a method by name on an object and retrieves a char return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a char result.
 
 **Since**: 23
 
@@ -9400,7 +9400,7 @@ ani_status (*Object_CallMethodByName_Char_A)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a char return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a char result.
+Calls a method by name on an object and retrieves a char return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a char result.
 
 **Since**: 23
 
@@ -9429,7 +9429,7 @@ ani_status (*Object_CallMethodByName_Char_V)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a char return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves achar result.
+Calls a method by name on an object and retrieves a char return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a char result.
 
 **Since**: 23
 
@@ -9458,7 +9458,7 @@ ani_status (*Object_CallMethodByName_Byte)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Calls a method by name on an object and retrieves a byte return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a byte result.
+Calls a method by name on an object and retrieves a byte return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a byte result.
 
 **Since**: 23
 
@@ -9487,7 +9487,7 @@ ani_status (*Object_CallMethodByName_Byte_A)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a byte return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a byte result.
+Calls a method by name on an object and retrieves a byte return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a byte result.
 
 **Since**: 23
 
@@ -9516,7 +9516,7 @@ ani_status (*Object_CallMethodByName_Byte_V)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a byte return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves abyte result.
+Calls a method by name on an object and retrieves a byte return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a byte result.
 
 **Since**: 23
 
@@ -9545,7 +9545,7 @@ ani_status (*Object_CallMethodByName_Short)(ani_env *env, ani_object object, con
 
 **Description**
 
-Calls a method by name on an object and retrieves a short return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a short result.
+Calls a method by name on an object and retrieves a short return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a short result.
 
 **Since**: 23
 
@@ -9574,7 +9574,7 @@ ani_status (*Object_CallMethodByName_Short_A)(ani_env *env, ani_object object, c
 
 **Description**
 
-Calls a method by name on an object and retrieves a short return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a short result.
+Calls a method by name on an object and retrieves a short return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a short result.
 
 **Since**: 23
 
@@ -9603,7 +9603,7 @@ ani_status (*Object_CallMethodByName_Short_V)(ani_env *env, ani_object object, c
 
 **Description**
 
-Calls a method by name on an object and retrieves a short return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves ashort result.
+Calls a method by name on an object and retrieves a short return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a short result.
 
 **Since**: 23
 
@@ -9632,7 +9632,7 @@ ani_status (*Object_CallMethodByName_Int)(ani_env *env, ani_object object, const
 
 **Description**
 
-Calls a method by name on an object and retrieves a integer return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a integer result.
+Calls a method by name on an object and retrieves a integer return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a integer result.
 
 **Since**: 23
 
@@ -9661,7 +9661,7 @@ ani_status (*Object_CallMethodByName_Int_A)(ani_env *env, ani_object object, con
 
 **Description**
 
-Calls a method by name on an object and retrieves a integer return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a integer result.
+Calls a method by name on an object and retrieves a integer return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a integer result.
 
 **Since**: 23
 
@@ -9690,7 +9690,7 @@ ani_status (*Object_CallMethodByName_Int_V)(ani_env *env, ani_object object, con
 
 **Description**
 
-Calls a method by name on an object and retrieves a integer return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves ainteger result.
+Calls a method by name on an object and retrieves a integer return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a integer result.
 
 **Since**: 23
 
@@ -9719,7 +9719,7 @@ ani_status (*Object_CallMethodByName_Long)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Calls a method by name on an object and retrieves a long return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a long result.
+Calls a method by name on an object and retrieves a long return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a long result.
 
 **Since**: 23
 
@@ -9748,7 +9748,7 @@ ani_status (*Object_CallMethodByName_Long_A)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a long return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a long result.
+Calls a method by name on an object and retrieves a long return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a long result.
 
 **Since**: 23
 
@@ -9777,7 +9777,7 @@ ani_status (*Object_CallMethodByName_Long_V)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a long return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves along result.
+Calls a method by name on an object and retrieves a long return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a long result.
 
 **Since**: 23
 
@@ -9806,7 +9806,7 @@ ani_status (*Object_CallMethodByName_Float)(ani_env *env, ani_object object, con
 
 **Description**
 
-Calls a method by name on an object and retrieves a float return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a float result.
+Calls a method by name on an object and retrieves a float return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a float result.
 
 **Since**: 23
 
@@ -9835,7 +9835,7 @@ ani_status (*Object_CallMethodByName_Float_A)(ani_env *env, ani_object object, c
 
 **Description**
 
-Calls a method by name on an object and retrieves a float return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a float result.
+Calls a method by name on an object and retrieves a float return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a float result.
 
 **Since**: 23
 
@@ -9864,7 +9864,7 @@ ani_status (*Object_CallMethodByName_Float_V)(ani_env *env, ani_object object, c
 
 **Description**
 
-Calls a method by name on an object and retrieves a float return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves afloat result.
+Calls a method by name on an object and retrieves a float return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a float result.
 
 **Since**: 23
 
@@ -9893,7 +9893,7 @@ ani_status (*Object_CallMethodByName_Double)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object and retrieves a double return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a double result.
+Calls a method by name on an object and retrieves a double return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a double result.
 
 **Since**: 23
 
@@ -9922,7 +9922,7 @@ ani_status (*Object_CallMethodByName_Double_A)(ani_env *env, ani_object object, 
 
 **Description**
 
-Calls a method by name on an object and retrieves a double return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a double result.
+Calls a method by name on an object and retrieves a double return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a double result.
 
 **Since**: 23
 
@@ -9951,7 +9951,7 @@ ani_status (*Object_CallMethodByName_Double_V)(ani_env *env, ani_object object, 
 
 **Description**
 
-Calls a method by name on an object and retrieves a double return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves adouble result.
+Calls a method by name on an object and retrieves a double return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a double result.
 
 **Since**: 23
 
@@ -9980,7 +9980,7 @@ ani_status (*Object_CallMethodByName_Ref)(ani_env *env, ani_object object, const
 
 **Description**
 
-Calls a method by name on an object and retrieves a reference return value.This function calls the specified method by its name and signature on an object using variadic arguments andretrieves a reference result.
+Calls a method by name on an object and retrieves a reference return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments and retrieves a reference result.
 
 **Since**: 23
 
@@ -10009,7 +10009,7 @@ ani_status (*Object_CallMethodByName_Ref_A)(ani_env *env, ani_object object, con
 
 **Description**
 
-Calls a method by name on an object and retrieves a reference return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray and retrieves a reference result.
+Calls a method by name on an object and retrieves a reference return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array and retrieves a reference result.
 
 **Since**: 23
 
@@ -10038,7 +10038,7 @@ ani_status (*Object_CallMethodByName_Ref_V)(ani_env *env, ani_object object, con
 
 **Description**
 
-Calls a method by name on an object and retrieves a reference return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list` and retrieves areference result.
+Calls a method by name on an object and retrieves a reference return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list` and retrieves a reference result.
 
 **Since**: 23
 
@@ -10067,7 +10067,7 @@ ani_status (*Object_CallMethodByName_Void)(ani_env *env, ani_object object, cons
 
 **Description**
 
-Calls a method by name on an object with no return value.This function calls the specified method by its name and signature on an object using variadic arguments. Themethod does not return a value.
+Calls a method by name on an object with no return value.<br> This function calls the specified method by its name and signature on an object using variadic arguments. The method does not return a value.
 
 **Since**: 23
 
@@ -10095,7 +10095,7 @@ ani_status (*Object_CallMethodByName_Void_A)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object with no return value (array-based).This function calls the specified method by its name and signature on an object using arguments provided in anarray. The method does not return a value.
+Calls a method by name on an object with no return value (array-based).<br> This function calls the specified method by its name and signature on an object using arguments provided in an array. The method does not return a value.
 
 **Since**: 23
 
@@ -10123,7 +10123,7 @@ ani_status (*Object_CallMethodByName_Void_V)(ani_env *env, ani_object object, co
 
 **Description**
 
-Calls a method by name on an object with no return value (variadic arguments).This function calls the specified method by its name and signature on an object using a `va_list`. The methoddoes not return a value.
+Calls a method by name on an object with no return value (variadic arguments).<br> This function calls the specified method by its name and signature on an object using a `va_list`. The method does not return a value.
 
 **Since**: 23
 
@@ -10151,7 +10151,7 @@ ani_status (*TupleValue_GetNumberOfItems)(ani_env *env, ani_tuple_value tuple_va
 
 **Description**
 
-Retrieves the number of items in a tuple value.This function retrieves the total number of items in the specified tuple value.
+Retrieves the number of items in a tuple value.<br> This function retrieves the total number of items in the specified tuple value.
 
 **Since**: 23
 
@@ -10177,7 +10177,7 @@ ani_status (*TupleValue_GetItem_Boolean)(ani_env *env, ani_tuple_value tuple_val
 
 **Description**
 
-Retrieves a boolean item from a tuple value.This function retrieves the boolean value of the item at the specified index in the tuple value.
+Retrieves a boolean item from a tuple value.<br> This function retrieves the boolean value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10204,7 +10204,7 @@ ani_status (*TupleValue_GetItem_Char)(ani_env *env, ani_tuple_value tuple_value,
 
 **Description**
 
-Retrieves a char item from a tuple value.This function retrieves the char value of the item at the specified index in the tuple value.
+Retrieves a char item from a tuple value.<br> This function retrieves the char value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10231,7 +10231,7 @@ ani_status (*TupleValue_GetItem_Byte)(ani_env *env, ani_tuple_value tuple_value,
 
 **Description**
 
-Retrieves a byte item from a tuple value.This function retrieves the byte value of the item at the specified index in the tuple value.
+Retrieves a byte item from a tuple value.<br> This function retrieves the byte value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10258,7 +10258,7 @@ ani_status (*TupleValue_GetItem_Short)(ani_env *env, ani_tuple_value tuple_value
 
 **Description**
 
-Retrieves a short item from a tuple value.This function retrieves the short value of the item at the specified index in the tuple value.
+Retrieves a short item from a tuple value.<br> This function retrieves the short value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10285,7 +10285,7 @@ ani_status (*TupleValue_GetItem_Int)(ani_env *env, ani_tuple_value tuple_value, 
 
 **Description**
 
-Retrieves a integer item from a tuple value.This function retrieves the integer value of the item at the specified index in the tuple value.
+Retrieves a integer item from a tuple value.<br> This function retrieves the integer value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10312,7 +10312,7 @@ ani_status (*TupleValue_GetItem_Long)(ani_env *env, ani_tuple_value tuple_value,
 
 **Description**
 
-Retrieves a long item from a tuple value.This function retrieves the long value of the item at the specified index in the tuple value.
+Retrieves a long item from a tuple value.<br> This function retrieves the long value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10339,7 +10339,7 @@ ani_status (*TupleValue_GetItem_Float)(ani_env *env, ani_tuple_value tuple_value
 
 **Description**
 
-Retrieves a float item from a tuple value.This function retrieves the float value of the item at the specified index in the tuple value.
+Retrieves a float item from a tuple value.<br> This function retrieves the float value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10366,7 +10366,7 @@ ani_status (*TupleValue_GetItem_Double)(ani_env *env, ani_tuple_value tuple_valu
 
 **Description**
 
-Retrieves a double item from a tuple value.This function retrieves the double value of the item at the specified index in the tuple value.
+Retrieves a double item from a tuple value.<br> This function retrieves the double value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10393,7 +10393,7 @@ ani_status (*TupleValue_GetItem_Ref)(ani_env *env, ani_tuple_value tuple_value, 
 
 **Description**
 
-Retrieves a reference item from a tuple value.This function retrieves the reference value of the item at the specified index in the tuple value.
+Retrieves a reference item from a tuple value.<br> This function retrieves the reference value of the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10420,7 +10420,7 @@ ani_status (*TupleValue_SetItem_Boolean)(ani_env *env, ani_tuple_value tuple_val
 
 **Description**
 
-Sets a boolean value to an item in a tuple value.This function assigns a boolean value to the item at the specified index in the tuple value.
+Sets a boolean value to an item in a tuple value.<br> This function assigns a boolean value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10447,7 +10447,7 @@ ani_status (*TupleValue_SetItem_Char)(ani_env *env, ani_tuple_value tuple_value,
 
 **Description**
 
-Sets a char value to an item in a tuple value.This function assigns a char value to the item at the specified index in the tuple value.
+Sets a char value to an item in a tuple value.<br> This function assigns a char value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10474,7 +10474,7 @@ ani_status (*TupleValue_SetItem_Byte)(ani_env *env, ani_tuple_value tuple_value,
 
 **Description**
 
-Sets a byte value to an item in a tuple value.This function assigns a byte value to the item at the specified index in the tuple value.
+Sets a byte value to an item in a tuple value.<br> This function assigns a byte value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10501,7 +10501,7 @@ ani_status (*TupleValue_SetItem_Short)(ani_env *env, ani_tuple_value tuple_value
 
 **Description**
 
-Sets a short value to an item in a tuple value.This function assigns a short value to the item at the specified index in the tuple value.
+Sets a short value to an item in a tuple value.<br> This function assigns a short value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10528,7 +10528,7 @@ ani_status (*TupleValue_SetItem_Int)(ani_env *env, ani_tuple_value tuple_value, 
 
 **Description**
 
-Sets a integer value to an item in a tuple value.This function assigns a integer value to the item at the specified index in the tuple value.
+Sets a integer value to an item in a tuple value.<br> This function assigns a integer value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10555,7 +10555,7 @@ ani_status (*TupleValue_SetItem_Long)(ani_env *env, ani_tuple_value tuple_value,
 
 **Description**
 
-Sets a long value to an item in a tuple value.This function assigns a long value to the item at the specified index in the tuple value.
+Sets a long value to an item in a tuple value.<br> This function assigns a long value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10582,7 +10582,7 @@ ani_status (*TupleValue_SetItem_Float)(ani_env *env, ani_tuple_value tuple_value
 
 **Description**
 
-Sets a float value to an item in a tuple value.This function assigns a float value to the item at the specified index in the tuple value.
+Sets a float value to an item in a tuple value.<br> This function assigns a float value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10609,7 +10609,7 @@ ani_status (*TupleValue_SetItem_Double)(ani_env *env, ani_tuple_value tuple_valu
 
 **Description**
 
-Sets a double value to an item in a tuple value.This function assigns a double value to the item at the specified index in the tuple value.
+Sets a double value to an item in a tuple value.<br> This function assigns a double value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10636,7 +10636,7 @@ ani_status (*TupleValue_SetItem_Ref)(ani_env *env, ani_tuple_value tuple_value, 
 
 **Description**
 
-Sets a reference value to an item in a tuple value.This function assigns a reference value to the item at the specified index in the tuple value.
+Sets a reference value to an item in a tuple value.<br> This function assigns a reference value to the item at the specified index in the tuple value.
 
 **Since**: 23
 
@@ -10663,7 +10663,7 @@ ani_status (*GlobalReference_Create)(ani_env *env, ani_ref ref, ani_ref *result)
 
 **Description**
 
-Creates a global reference.This function creates a global reference from a local reference.
+Creates a global reference.<br> This function creates a global reference from a local reference.
 
 **Since**: 23
 
@@ -10689,7 +10689,7 @@ ani_status (*GlobalReference_Delete)(ani_env *env, ani_ref gref)
 
 **Description**
 
-Deletes a global reference.This function deletes the specified global reference, releasing all associated resources.
+Deletes a global reference.<br> This function deletes the specified global reference, releasing all associated resources.
 
 **Since**: 23
 
@@ -10714,7 +10714,7 @@ ani_status (*WeakReference_Create)(ani_env *env, ani_ref ref, ani_wref *result)
 
 **Description**
 
-Creates a weak reference.This function creates a weak reference from a local reference.
+Creates a weak reference.<br> This function creates a weak reference from a local reference.
 
 **Since**: 23
 
@@ -10740,7 +10740,7 @@ ani_status (*WeakReference_Delete)(ani_env *env, ani_wref wref)
 
 **Description**
 
-Deletes a weak reference.This function deletes the specified weak reference, releasing all associated resources.
+Deletes a weak reference.<br> This function deletes the specified weak reference, releasing all associated resources.
 
 **Since**: 23
 
@@ -10765,7 +10765,7 @@ ani_status (*WeakReference_GetReference)(ani_env *env, ani_wref wref, ani_boolea
 
 **Description**
 
-Retrieves the local reference associated with a weak reference.This function retrieves the local reference that corresponds to the specified weak reference.
+Retrieves the local reference associated with a weak reference.<br> This function retrieves the local reference that corresponds to the specified weak reference.
 
 **Since**: 23
 
@@ -10792,7 +10792,7 @@ ani_status (*CreateArrayBuffer)(ani_env *env, size_t length, void **data_result,
 
 **Description**
 
-Creates a new array buffer.This function creates a new array buffer with the specified length and returns a pointer to the allocated data.
+Creates a new array buffer.<br> This function creates a new array buffer with the specified length and returns a pointer to the allocated data.
 
 **Since**: 23
 
@@ -10819,7 +10819,7 @@ ani_status (*ArrayBuffer_GetInfo)(ani_env *env, ani_arraybuffer arraybuffer, voi
 
 **Description**
 
-Retrieves information about an array buffer.This function retrieves the data pointer and length of the specified array buffer.
+Retrieves information about an array buffer.<br> This function retrieves the data pointer and length of the specified array buffer.
 
 **Since**: 23
 
@@ -10846,7 +10846,7 @@ ani_status (*Promise_New)(ani_env *env, ani_resolver *result_resolver, ani_objec
 
 **Description**
 
-Creates a new Promise.This function creates a new promise and a resolver to manage it.
+Creates a new Promise.<br> This function creates a new promise and a resolver to manage it.
 
 **Since**: 23
 
@@ -10872,7 +10872,7 @@ ani_status (*PromiseResolver_Resolve)(ani_env *env, ani_resolver resolver, ani_r
 
 **Description**
 
-Resolves a promise.This function resolves a promise by way of the resolver with which it is associatedand queues promise `then` callbacks.
+Resolves a promise.<br> This function resolves a promise by way of the resolver with which it is associated and queues promise `then` callbacks.
 
 **Since**: 23
 
@@ -10899,7 +10899,7 @@ void *reserved4void *reserved5void *reserved6void *reserved7void *reserved8void 
 
 **Description**
 
-Rejects a promise.This function rejects a promise by way of the resolver with which it is associatedand queues promise `catch` callbacks.
+Rejects a promise.<br> This function rejects a promise by way of the resolver with which it is associated and queues promise `catch` callbacks.
 
 **Since**: 23
 
@@ -10925,7 +10925,7 @@ ani_status (*Class_BindStaticNativeMethods)(ani_env *env, ani_class cls, const a
 
 **Description**
 
-Binds static native methods to a class.This function binds an array of static native methods to the specified class.
+Binds static native methods to a class.<br> This function binds an array of static native methods to the specified class.
 
 **Since**: 23
 
@@ -10952,7 +10952,7 @@ ani_status (*Primitive_Box_Boolean)(ani_env *env, ani_boolean value, ani_object 
 
 **Description**
 
-Box a boolean value into an object.This function boxes a boolean value into an object.
+Box a boolean value into an object.<br> This function boxes a boolean value into an object.
 
 **Since**: 24
 
@@ -10978,7 +10978,7 @@ ani_status (*Primitive_Unbox_Boolean)(ani_env *env, ani_object obj, ani_boolean 
 
 **Description**
 
-Unbox a boolean object into a boolean value.This function unboxes a boolean object into a boolean value.
+Unbox a boolean object into a boolean value.<br> This function unboxes a boolean object into a boolean value.
 
 **Since**: 24
 
@@ -11004,7 +11004,7 @@ ani_status (*Primitive_Box_Byte)(ani_env *env, ani_byte value, ani_object *resul
 
 **Description**
 
-Box a byte value into an object.This function boxes a byte value into an object.
+Box a byte value into an object.<br> This function boxes a byte value into an object.
 
 **Since**: 24
 
@@ -11030,7 +11030,7 @@ ani_status (*Primitive_Unbox_Byte)(ani_env *env, ani_object obj, ani_byte *resul
 
 **Description**
 
-Unbox a byte object into a byte value.This function unboxes a byte object into a byte value.
+Unbox a byte object into a byte value.<br> This function unboxes a byte object into a byte value.
 
 **Since**: 24
 
@@ -11056,7 +11056,7 @@ ani_status (*Primitive_Box_Char)(ani_env *env, ani_char value, ani_object *resul
 
 **Description**
 
-Box a char value into an object.This function boxes a char value into an object.
+Box a char value into an object.<br> This function boxes a char value into an object.
 
 **Since**: 24
 
@@ -11082,7 +11082,7 @@ ani_status (*Primitive_Unbox_Char)(ani_env *env, ani_object obj, ani_char *resul
 
 **Description**
 
-Unbox a char object into a char value.This function unboxes a char object into a char value.
+Unbox a char object into a char value.<br> This function unboxes a char object into a char value.
 
 **Since**: 24
 
@@ -11108,7 +11108,7 @@ ani_status (*Primitive_Box_Short)(ani_env *env, ani_short value, ani_object *res
 
 **Description**
 
-Box a short value into an object.This function boxes a short value into an object.
+Box a short value into an object.<br> This function boxes a short value into an object.
 
 **Since**: 24
 
@@ -11134,7 +11134,7 @@ ani_status (*Primitive_Unbox_Short)(ani_env *env, ani_object obj, ani_short *res
 
 **Description**
 
-Unbox a short object into a short value.This function unboxes a short object into a short value.
+Unbox a short object into a short value.<br> This function unboxes a short object into a short value.
 
 **Since**: 24
 
@@ -11160,7 +11160,7 @@ ani_status (*Primitive_Box_Int)(ani_env *env, ani_int value, ani_object *result)
 
 **Description**
 
-Box a int value into an object.This function boxes a int value into an object.
+Box a int value into an object.<br> This function boxes a int value into an object.
 
 **Since**: 24
 
@@ -11186,7 +11186,7 @@ ani_status (*Primitive_Unbox_Int)(ani_env *env, ani_object obj, ani_int *result)
 
 **Description**
 
-Unbox a int object into a int value.This function unboxes a int object into a int value.
+Unbox a int object into a int value.<br> This function unboxes a int object into a int value.
 
 **Since**: 24
 
@@ -11212,7 +11212,7 @@ ani_status (*Primitive_Box_Long)(ani_env *env, ani_long value, ani_object *resul
 
 **Description**
 
-Box a long value into an object.This function boxes a long value into an object.
+Box a long value into an object.<br> This function boxes a long value into an object.
 
 **Since**: 24
 
@@ -11238,7 +11238,7 @@ ani_status (*Primitive_Unbox_Long)(ani_env *env, ani_object obj, ani_long *resul
 
 **Description**
 
-Unbox a long object into a long value.This function unboxes a long object into a long value.
+Unbox a long object into a long value.<br> This function unboxes a long object into a long value.
 
 **Since**: 24
 
@@ -11264,7 +11264,7 @@ ani_status (*Primitive_Box_Float)(ani_env *env, ani_float value, ani_object *res
 
 **Description**
 
-Box a float value into an object.This function boxes a float value into an object.
+Box a float value into an object.<br> This function boxes a float value into an object.
 
 **Since**: 24
 
@@ -11290,7 +11290,7 @@ ani_status (*Primitive_Unbox_Float)(ani_env *env, ani_object obj, ani_float *res
 
 **Description**
 
-Unbox a float object into a float value.This function unboxes a float object into a float value.
+Unbox a float object into a float value.<br> This function unboxes a float object into a float value.
 
 **Since**: 24
 
@@ -11316,7 +11316,7 @@ ani_status (*Primitive_Box_Double)(ani_env *env, ani_double value, ani_object *r
 
 **Description**
 
-Box a double value into an object.This function boxes a double value into an object.
+Box a double value into an object.<br> This function boxes a double value into an object.
 
 **Since**: 24
 
@@ -11342,7 +11342,7 @@ ani_status (*Primitive_Unbox_Double)(ani_env *env, ani_object obj, ani_double *r
 
 **Description**
 
-Unbox a double object into a double value.This function unboxes a double object into a double value.
+Unbox a double object into a double value.<br> This function unboxes a double object into a double value.
 
 **Since**: 24
 
@@ -11368,7 +11368,7 @@ ani_status (*ValueArray_GetLength)(ani_env *env, ani_valuearray array, ani_size 
 
 **Description**
 
-Retrieves the length of a ValueArray.This function retrieves the length of the specified ValueArray.
+Retrieves the length of a ValueArray.<br> This function retrieves the length of the specified ValueArray.
 
 **Since**: 26.1.0
 

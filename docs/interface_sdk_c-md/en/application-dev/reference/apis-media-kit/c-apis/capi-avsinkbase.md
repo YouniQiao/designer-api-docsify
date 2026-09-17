@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AVSinkBase module provides variables, properties, and functionsfor lowpower audio sink and lowpower video sink.
+The AVSinkBase module provides variables, properties, and functions for lowpower audio sink and lowpower video sink.
 
 **Since**: 20
 

@@ -138,7 +138,7 @@ Set whether smoothing effect is enabled.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ProgressLinearStyleOption](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md)* option | Linear progress indicator style information. |
-| bool enabled | Whether to enable the smooth effect. When this effect is enabled, the progress change tothe set value takes place gradually. Otherwise, it takes place immediately. Default value: true. |
+| bool enabled | Whether to enable the smooth effect. When this effect is enabled, the progress change to the set value takes place gradually. Otherwise, it takes place immediately. Default value: true. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_SetStrokeWidth()
 
@@ -157,7 +157,7 @@ Set linear progress indicator stroke width.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ProgressLinearStyleOption](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md)* option | Linear progress indicator style information. |
-| float strokeWidth | Stroke width of the progress indicator. It cannot be set in percentage.Default value: 4.0vp. |
+| float strokeWidth | Stroke width of the progress indicator. It cannot be set in percentage. Default value: 4.0vp. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_SetStrokeRadius()
 
@@ -176,7 +176,7 @@ Set linear progress indicator stroke radius.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_ProgressLinearStyleOption](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md)* option | Linear progress indicator style information. |
-| float strokeRadius | Rounded corner radius of the progress indicator. Value range: [0, strokeWidth/2].Default value: strokeWidth/2. |
+| float strokeRadius | Rounded corner radius of the progress indicator. Value range: [0, strokeWidth/2]. Default value: strokeWidth/2. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_GetScanEffectEnabled()
 

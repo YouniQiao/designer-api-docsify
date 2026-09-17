@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides C APIs for managing the token IDs, credentials, process IDs (PIDs), user IDs (UIDs), and thread poolin the IPC framework.
+Provides C APIs for managing the token IDs, credentials, process IDs (PIDs), user IDs (UIDs), and thread pool in the IPC framework.
 
 **Library**: libipc_capi.so
 
@@ -20,14 +20,14 @@ Provides C APIs for managing the token IDs, credentials, process IDs (PIDs), use
 | -- | -- |
 | [void OH_IPCSkeleton_JoinWorkThread(void)](#oh_ipcskeleton_joinworkthread) | Joins this thread to the IPC worker thread pool. |
 | [void OH_IPCSkeleton_StopWorkThread(void)](#oh_ipcskeleton_stopworkthread) | Stops this thread. |
-| [uint64_t OH_IPCSkeleton_GetCallingTokenId(void)](#oh_ipcskeleton_getcallingtokenid) | Obtains the token ID of the caller. This function must be called in the IPC context. Otherwise, the localtoken ID is returned. |
+| [uint64_t OH_IPCSkeleton_GetCallingTokenId(void)](#oh_ipcskeleton_getcallingtokenid) | Obtains the token ID of the caller. This function must be called in the IPC context. Otherwise, the local token ID is returned. |
 | [uint64_t OH_IPCSkeleton_GetFirstTokenId(void)](#oh_ipcskeleton_getfirsttokenid) | Obtains the token ID of the first caller. |
 | [uint64_t OH_IPCSkeleton_GetSelfTokenId(void)](#oh_ipcskeleton_getselftokenid) | Obtains the local token ID. |
-| [uint64_t OH_IPCSkeleton_GetCallingPid(void)](#oh_ipcskeleton_getcallingpid) | Obtains the PID of the caller. This function must be called in the IPC context. Otherwise, the local PID isreturned. |
-| [uint64_t OH_IPCSkeleton_GetCallingUid(void)](#oh_ipcskeleton_getcallinguid) | Obtains the UID of the caller. This function must be called in the IPC context. Otherwise, the local UID isreturned. |
+| [uint64_t OH_IPCSkeleton_GetCallingPid(void)](#oh_ipcskeleton_getcallingpid) | Obtains the PID of the caller. This function must be called in the IPC context. Otherwise, the local PID is returned. |
+| [uint64_t OH_IPCSkeleton_GetCallingUid(void)](#oh_ipcskeleton_getcallinguid) | Obtains the UID of the caller. This function must be called in the IPC context. Otherwise, the local UID is returned. |
 | [int OH_IPCSkeleton_IsLocalCalling(void)](#oh_ipcskeleton_islocalcalling) | Checks whether a local calling is being made. |
 | [int OH_IPCSkeleton_SetMaxWorkThreadNum(const int maxThreadNum)](#oh_ipcskeleton_setmaxworkthreadnum) | Sets the maximum number of worker threads. |
-| [int OH_IPCSkeleton_ResetCallingIdentity(char **identity, int32_t *len, OH_IPC_MemAllocator allocator)](#oh_ipcskeleton_resetcallingidentity) | Resets the caller identity credential (including the token ID, UID, and PID) to that of this process andreturns the caller credential information. The credential information is used in**OH_IPCSkeleton_SetCallingIdentity**. |
+| [int OH_IPCSkeleton_ResetCallingIdentity(char **identity, int32_t *len, OH_IPC_MemAllocator allocator)](#oh_ipcskeleton_resetcallingidentity) | Resets the caller identity credential (including the token ID, UID, and PID) to that of this process and returns the caller credential information. The credential information is used in **OH_IPCSkeleton_SetCallingIdentity**. |
 | [int OH_IPCSkeleton_SetCallingIdentity(const char *identity)](#oh_ipcskeleton_setcallingidentity) | Sets the caller credential information to the IPC context. |
 | [int OH_IPCSkeleton_IsHandlingTransaction(void)](#oh_ipcskeleton_ishandlingtransaction) | Checks whether an IPC request is being handled. |
 
@@ -69,7 +69,7 @@ uint64_t OH_IPCSkeleton_GetCallingTokenId(void)
 
 **Description**
 
-Obtains the token ID of the caller. This function must be called in the IPC context. Otherwise, the localtoken ID is returned.
+Obtains the token ID of the caller. This function must be called in the IPC context. Otherwise, the local token ID is returned.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -129,7 +129,7 @@ uint64_t OH_IPCSkeleton_GetCallingPid(void)
 
 **Description**
 
-Obtains the PID of the caller. This function must be called in the IPC context. Otherwise, the local PID isreturned.
+Obtains the PID of the caller. This function must be called in the IPC context. Otherwise, the local PID is returned.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -149,7 +149,7 @@ uint64_t OH_IPCSkeleton_GetCallingUid(void)
 
 **Description**
 
-Obtains the UID of the caller. This function must be called in the IPC context. Otherwise, the local UID isreturned.
+Obtains the UID of the caller. This function must be called in the IPC context. Otherwise, the local UID is returned.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -199,13 +199,13 @@ Sets the maximum number of worker threads.
 
 | Parameter | Description |
 | -- | -- |
-| const int maxThreadNum | Maximum number of worker threads.Value range: [1, 32]Default value: **16** |
+| const int maxThreadNum | Maximum number of worker threads. Value range: [1, 32] Default value: **16** |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.      Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.      Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
 
 ### OH_IPCSkeleton_ResetCallingIdentity()
 
@@ -215,7 +215,7 @@ int OH_IPCSkeleton_ResetCallingIdentity(char **identity, int32_t *len, OH_IPC_Me
 
 **Description**
 
-Resets the caller identity credential (including the token ID, UID, and PID) to that of this process andreturns the caller credential information. The credential information is used in**OH_IPCSkeleton_SetCallingIdentity**.
+Resets the caller identity credential (including the token ID, UID, and PID) to that of this process and returns the caller credential information. The credential information is used in **OH_IPCSkeleton_SetCallingIdentity**.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -225,7 +225,7 @@ Resets the caller identity credential (including the token ID, UID, and PID) to 
 
 | Parameter | Description |
 | -- | -- |
-| char **identity | Double pointer to the address of the memory for holding the caller identity information. The memoryis allocated by the allocator provided by the user and needs to be released. This pointer cannot be NULL. |
+| char **identity | Double pointer to the address of the memory for holding the caller identity information. The memory is allocated by the allocator provided by the user and needs to be released. This pointer cannot be NULL. |
 | int32_t *len | Pointer to the length of the data written to the identity. It cannot be NULL. |
 | OH_IPC_MemAllocator allocator | Memory allocator specified by the user for allocating memory for **identity**. It cannot be NULL. |
 
@@ -233,7 +233,7 @@ Resets the caller identity credential (including the token ID, UID, and PID) to 
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.      Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.      Returns {@link OH_IPC_ErrorCode#OH_IPC_MEM_ALLOCATOR_ERROR} if the memory allocation fails.      Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_MEM_ALLOCATOR_ERROR} if the memory allocation fails.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
 
 ### OH_IPCSkeleton_SetCallingIdentity()
 
@@ -253,13 +253,13 @@ Sets the caller credential information to the IPC context.
 
 | Parameter | Description |
 | -- | -- |
-| const char *identity | Pointer to the caller credential, which cannot be NULL. The value is returned by**OH_IPCSkeleton_ResetCallingIdentity**. |
+| const char *identity | Pointer to the caller credential, which cannot be NULL. The value is returned by **OH_IPCSkeleton_ResetCallingIdentity**. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.      Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.      Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
+| int | Returns {@link OH_IPC_ErrorCode#OH_IPC_SUCCESS} if the operation is successful.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_CHECK_PARAM_ERROR} if the parameters are incorrect.<br>    Returns {@link OH_IPC_ErrorCode#OH_IPC_INNER_ERROR} in other cases. |
 
 ### OH_IPCSkeleton_IsHandlingTransaction()
 

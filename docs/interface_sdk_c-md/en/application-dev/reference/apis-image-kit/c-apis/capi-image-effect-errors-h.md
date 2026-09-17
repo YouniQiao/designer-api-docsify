@@ -42,7 +42,7 @@ Effect error code
 | EFFECT_ERROR_PERMISSION_DENIED = 201 | Permission denied. |
 | EFFECT_ERROR_PARAM_INVALID = 401 | Invalid parameter. |
 | EFFECT_BUFFER_SIZE_NOT_MATCH = 29000001 | Warning code if input and output buffer size is not match, it will be rendered through output buffer size. |
-| EFFECT_COLOR_SPACE_NOT_MATCH = 29000002 | Warning code if input and output color space is not match, it will be rendered by modifying the color space ofoutput image. |
+| EFFECT_COLOR_SPACE_NOT_MATCH = 29000002 | Warning code if input and output color space is not match, it will be rendered by modifying the color space of output image. |
 | EFFECT_INPUT_OUTPUT_NOT_MATCH = 29000101 | The input and output image type is not match. For example, set input OH_Pixelmap and set output NativeBuffer. |
 | EFFECT_EFFECT_NUMBER_LIMITED = 29000102 | Over the max number of the filters that can be added. |
 | EFFECT_INPUT_OUTPUT_NOT_SUPPORTED = 29000103 | The input or output image type is not supported. For example, the pixel format beyond the current definition. |

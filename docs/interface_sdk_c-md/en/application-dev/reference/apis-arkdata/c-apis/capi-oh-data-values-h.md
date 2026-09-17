@@ -8,7 +8,7 @@ Provides functions and enumerations related to the data values.
 
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Since**: 18
+**Since**: 10
 
 **Related module**: [RDB](capi-rdb.md)
 
@@ -99,7 +99,7 @@ Destroys an OH_Data_Values instance object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_Put()
 
@@ -124,7 +124,7 @@ Add OH_Data_Value data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutNull()
 
@@ -148,7 +148,7 @@ Add empty data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutInt()
 
@@ -173,7 +173,7 @@ Add integer data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutReal()
 
@@ -198,7 +198,7 @@ Add decimal data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutText()
 
@@ -223,7 +223,7 @@ Add string data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutBlob()
 
@@ -249,7 +249,7 @@ Add binary data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutAsset()
 
@@ -274,7 +274,7 @@ Add Data_Asset data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutAssets()
 
@@ -300,7 +300,7 @@ Add multiple Data_Asset data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutFloatVector()
 
@@ -326,7 +326,7 @@ Add float array data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_PutUnlimitedInt()
 
@@ -353,7 +353,7 @@ Add an integer of any length data to the OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_Count()
 
@@ -378,7 +378,7 @@ Get data count from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_GetType()
 
@@ -404,7 +404,7 @@ Get data type from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_Get()
 
@@ -424,13 +424,13 @@ Get OH_Data_Value data from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| OH_Data_Value **val | Represents a pointer to an instance of OH_Data_Value. It is an output parameter.The caller does not need to apply for memory and release memory. |
+| OH_Data_Value **val | Represents a pointer to an instance of OH_Data_Value. It is an output parameter. The caller does not need to apply for memory and release memory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_IsNull()
 
@@ -450,13 +450,13 @@ Check whether the data is empty from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| bool *val | Represents empty data flag. It is an output parameter.The value true means that the data is empty, and false means the opposite. |
+| bool *val | Represents empty data flag. It is an output parameter. The value true means that the data is empty, and false means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Values_GetInt()
 
@@ -482,7 +482,7 @@ Get integer data from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetReal()
 
@@ -508,7 +508,7 @@ Get decimal data from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetText()
 
@@ -528,13 +528,13 @@ Get string data from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| const char **val | Represents a pointer to a string data. It is an output parameter.The caller does not need to apply for memory and release memory.The life cycle of val follows the value of index in values. |
+| const char **val | Represents a pointer to a string data. It is an output parameter. The caller does not need to apply for memory and release memory. The life cycle of val follows the value of index in values. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetBlob()
 
@@ -554,14 +554,14 @@ Get binary data from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| const uint8_t **val | Represents a pointer to a binary data. It is an output parameter.The caller does not need to apply for memory and release memory.The life cycle of val follows the value of index in values. |
+| const uint8_t **val | Represents a pointer to a binary data. It is an output parameter. The caller does not need to apply for memory and release memory. The life cycle of val follows the value of index in values. |
 | size_t *length | Represents the size of binary array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetAsset()
 
@@ -581,13 +581,13 @@ Get Data_Asset data from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| Data_Asset *val | Represents a pointer to an instance of Data_Asset. The caller needs to apply for data memory.This function only fills data. Otherwise, the execution fails. |
+| Data_Asset *val | Represents a pointer to an instance of Data_Asset. The caller needs to apply for data memory. This function only fills data. Otherwise, the execution fails. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetAssetsCount()
 
@@ -613,7 +613,7 @@ Get multiple Data_Asset size from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetAssets()
 
@@ -633,7 +633,7 @@ Get multiple Data_Asset data from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| Data_Asset **val | Represents a pointer to Data_Asset array. The caller needs to apply for data memory.This function only fills data. Otherwise, the execution fails. |
+| Data_Asset **val | Represents a pointer to Data_Asset array. The caller needs to apply for data memory. This function only fills data. Otherwise, the execution fails. |
 | size_t inLen | Represents the size of val. It can be obtained through the OH_Values_GetAssetsCount function. |
 | size_t *outLen | Represents the actual amount of data obtained. It is an output parameter. |
 
@@ -641,7 +641,7 @@ Get multiple Data_Asset data from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 **Reference**:
 
@@ -672,7 +672,7 @@ Get float array data size from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetFloatVector()
 
@@ -692,7 +692,7 @@ Get float array from OH_Data_Values object.
 | -- | -- |
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
-| float *val | Represents a pointer to float array. The caller needs to apply for data memory.This function only fills data. Otherwise, the execution fails. |
+| float *val | Represents a pointer to float array. The caller needs to apply for data memory. This function only fills data. Otherwise, the execution fails. |
 | size_t inLen | Represents the size of val. It can be obtained through the OH_Values_GetFloatVectorCount function. |
 | size_t *outLen | Represents the actual amount of data obtained. It is an output parameter. |
 
@@ -700,7 +700,7 @@ Get float array from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 **Reference**:
 
@@ -731,7 +731,7 @@ Get an integer of any length data size from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 ### OH_Values_GetUnlimitedInt()
 
@@ -752,7 +752,7 @@ Get an integer of any length data from OH_Data_Values object.
 | [OH_Data_Values](capi-rdb-oh-data-values.md) *values | Represents a pointer to an instance of OH_Data_Values. |
 | int index | Represents the zero-based index of target data in values. |
 | int *sign | Represents 0 is positive integer, 1 is negative integer. It is an output parameter. |
-| uint64_t *trueForm | Represents a pointer to integer array. The caller needs to apply for data memory.This function only fills data. Otherwise, the execution fails. |
+| uint64_t *trueForm | Represents a pointer to integer array. The caller needs to apply for data memory. This function only fills data. Otherwise, the execution fails. |
 | size_t inLen | Represents the size of trueForm. It can be obtained through the OH_Values_GetUnlimitedIntBand function. |
 | size_t *outLen | Represents the actual amount of data obtained. It is an output parameter. |
 
@@ -760,7 +760,7 @@ Get an integer of any length data from OH_Data_Values object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.          Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_DATA_TYPE_NULL} the content stored in parameter value is null.<br>        Returns {@link RDB_E_TYPE_MISMATCH} storage data type mismatch. |
 
 **Reference**:
 

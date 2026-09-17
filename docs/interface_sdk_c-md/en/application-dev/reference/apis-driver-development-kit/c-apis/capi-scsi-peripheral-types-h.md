@@ -18,7 +18,7 @@ Provides the enum variables, structures, and macros used in the SCSI Peripheral 
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ScsiPeripheral_DeviceMemMap](capi-scsiperipheralddk-scsiperipheral-devicememmap.md) | ScsiPeripheral_DeviceMemMap | Represents the device memory mapping created by calling {@link OH_ScsiPeripheral_CreateDeviceMemMap}. Thebuffer that uses the device memory mapping can provide better performance. |
+| [ScsiPeripheral_DeviceMemMap](capi-scsiperipheralddk-scsiperipheral-devicememmap.md) | ScsiPeripheral_DeviceMemMap | Represents the device memory mapping created by calling {@link OH_ScsiPeripheral_CreateDeviceMemMap}. The buffer that uses the device memory mapping can provide better performance. |
 | [ScsiPeripheral_IORequest](capi-scsiperipheralddk-scsiperipheral-iorequest.md) | ScsiPeripheral_IORequest | Defines the read/write operation request. |
 | [ScsiPeripheral_Request](capi-scsiperipheralddk-scsiperipheral-request.md) | ScsiPeripheral_Request | Defines the request structure. |
 | [ScsiPeripheral_Response](capi-scsiperipheralddk-scsiperipheral-response.md) | ScsiPeripheral_Response | Defines the response structure. |

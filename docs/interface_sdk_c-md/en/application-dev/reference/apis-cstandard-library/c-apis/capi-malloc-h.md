@@ -2,7 +2,7 @@
 
 ## Overview
 
-Includes some memory-related methods and structures,such as: malloc, calloc, realloc, and so on.
+Includes some memory-related methods and structures, such as: malloc, calloc, realloc, and so on.
 
 **Library**: libc.so
 
@@ -23,7 +23,11 @@ Includes some memory-related methods and structures,such as: malloc, calloc, rea
 
 | Name | Description |
 | -- | -- |
-| [int malloc_check_from_ptr(void *ptr) struct mallinfo  struct mallinfo2](#malloc_check_from_ptr) | This function determines whether a given memory block was allocated usingStandard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe. |
+| [int malloc_check_from_ptr(void *ptr)
+
+struct mallinfo 
+
+struct mallinfo2](#malloc_check_from_ptr) | This function determines whether a given memory block was allocated using Standard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe. |
 | [struct mallinfo mallinfo(void)](#mallinfo) | Obtains the memory information allocated by malloc-related operations. |
 | [struct mallinfo2 mallinfo2(void)](#mallinfo2) | Obtains the memory information allocated by malloc-related operations. |
 
@@ -32,12 +36,18 @@ Includes some memory-related methods and structures,such as: malloc, calloc, rea
 ### malloc_check_from_ptr()
 
 ```c
-int malloc_check_from_ptr(void *ptr) struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost } struct mallinfo2 {size_t arenasize_t ordblkssize_t smblkssize_t hblkssize_t hblkhdsize_t usmblkssize_t fsmblkssize_t uordblkssize_t fordblkssize_t keepcost }
+int malloc_check_from_ptr(void *ptr)
+
+struct mallinfo {int arenaint ordblksint smblksint hblksint hblkhdint usmblksint fsmblksint uordblksint fordblksint keepcost
+}
+
+struct mallinfo2 {size_t arenasize_t ordblkssize_t smblkssize_t hblkssize_t hblkhdsize_t usmblkssize_t fsmblkssize_t uordblkssize_t fordblkssize_t keepcost
+}
 ```
 
 **Description**
 
-This function determines whether a given memory block was allocated usingStandard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe.
+This function determines whether a given memory block was allocated using Standard C library Memory Allocator. This function is MT-Safe(multi-thread safe) but not signal-safe.
 
 **Since**: 19
 

@@ -55,7 +55,7 @@ OH_AVMemory *OH_AVMemory_Create(int32_t size)
 | -- | -- |
 | int32_t size | 创建内存的大小，单位字节。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -83,7 +83,7 @@ uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)
 | -- | -- |
 | [struct OH_AVMemory](capi-core-oh-avmemory.md) *mem | 指向OH_AVMemory实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -111,7 +111,7 @@ int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)
 | -- | -- |
 | [struct OH_AVMemory](capi-core-oh-avmemory.md) *mem | 指向OH_AVMemory实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -139,7 +139,7 @@ OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)
 | -- | -- |
 | [struct OH_AVMemory](capi-core-oh-avmemory.md) *mem | 指向OH_AVMemory实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

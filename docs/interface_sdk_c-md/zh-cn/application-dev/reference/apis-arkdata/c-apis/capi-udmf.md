@@ -2,7 +2,7 @@
 
 ## 概述
 
-统一数据管理框架旨在定义数据跨应用、跨设备以及跨平台过程中的各项标准，提供统一的OpenHarmony数据语言和标准化的数据接入与读取通路。
+统一数据管理框架旨在定义数据跨应用、跨设备以及跨平台过程中的各项标准， 提供统一的OpenHarmony数据语言和标准化的数据接入与读取通路。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 

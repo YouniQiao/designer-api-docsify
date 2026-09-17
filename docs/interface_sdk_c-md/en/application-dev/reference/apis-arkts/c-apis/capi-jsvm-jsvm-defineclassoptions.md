@@ -24,6 +24,7 @@ DefineClass options.
 | union | option content. |
 | void* ptr | for option value with pointer type. |
 | int num | for option value with integer type |
-| bool boolean; } content | for option value with bool type |
+| bool boolean;
+ } content | for option value with bool type |
 
 

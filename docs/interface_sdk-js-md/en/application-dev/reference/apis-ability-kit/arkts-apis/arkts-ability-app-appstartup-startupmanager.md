@@ -1,4 +1,4 @@
-# @ohos.app.appstartup.startupManager
+# @ohos.app.appstartup.startupManager(AppStartup Management)
 
 The module provides the capability to manage startup tasks in [AppStartup](../../../application-models/app-startup.md). The APIs of this module can be called only on the main thread.
 

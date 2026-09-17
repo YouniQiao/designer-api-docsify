@@ -1,4 +1,4 @@
-# @ohos.app.ability.ChildProcess
+# @ohos.app.ability.ChildProcess(Child Process Base Class)
 
 ## Modules to Import
 

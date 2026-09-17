@@ -6,7 +6,7 @@ typedef struct FileShare_PolicyErrorResult {...} FileShare_PolicyErrorResult
 
 ## Overview
 
-Define the FileShare_PolicyErrorResult structure type.Failed policy result on URI.
+Define the FileShare_PolicyErrorResult structure type.<br> Failed policy result on URI.
 
 **Since**: 12
 

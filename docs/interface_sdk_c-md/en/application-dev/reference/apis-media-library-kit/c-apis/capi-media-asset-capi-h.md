@@ -180,7 +180,7 @@ Obtains the date when a media asset was added.
 | Parameter | Description |
 | -- | -- |
 | OH_MediaAsset* mediaAsset | Pointer to an {@link OH_MediaAsset} instance. |
-| uint32_t* dateAdded | Pointer to the date obtained. The value is the number of seconds elapsed since the Unix Epoch time (00:00:00 UTC on January 1, 1970). |
+| uint32_t* dateAdded | Pointer to the date obtained. The value is the number of seconds elapsed since the Unix Epoch time ( 00:00:00 UTC on January 1, 1970). |
 
 **Returns**:
 
@@ -205,7 +205,7 @@ Obtains the date when a media asset (content not the media asset name) was last 
 | Parameter | Description |
 | -- | -- |
 | OH_MediaAsset* mediaAsset | Pointer to an {@link OH_MediaAsset} instance. |
-| uint32_t* dateModified | Pointer to the date obtained. The value is the number of milliseconds elapsed since the UnixEpoch time. |
+| uint32_t* dateModified | Pointer to the date obtained. The value is the number of milliseconds elapsed since the Unix Epoch time. |
 
 **Returns**:
 
@@ -255,7 +255,7 @@ Obtains the date when a media asset was added, in ms.
 | Parameter | Description |
 | -- | -- |
 | OH_MediaAsset* mediaAsset | Pointer to an {@link OH_MediaAsset} instance. |
-| uint32_t* dateAddedMs | Pointer to the date obtained, in ms. The value is the number of milliseconds elapsed since theUnix Epoch time. |
+| uint32_t* dateAddedMs | Pointer to the date obtained, in ms. The value is the number of milliseconds elapsed since the Unix Epoch time. |
 
 **Returns**:
 
@@ -280,7 +280,7 @@ Obtains the date when a media asset (content not the media asset name) was last 
 | Parameter | Description |
 | -- | -- |
 | OH_MediaAsset* mediaAsset | Pointer to an {@link OH_MediaAsset} instance. |
-| uint32_t* dateModifiedMs | Pointer to the date obtained, in ms. The value is the number of milliseconds elapsed since theUnix Epoch time. |
+| uint32_t* dateModifiedMs | Pointer to the date obtained, in ms. The value is the number of milliseconds elapsed since the Unix Epoch time. |
 
 **Returns**:
 

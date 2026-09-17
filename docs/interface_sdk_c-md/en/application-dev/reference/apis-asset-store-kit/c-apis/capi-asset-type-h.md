@@ -44,9 +44,7 @@ Defines the enums, structs, and error codes used in the asset store service.
 
 | Name | Description |
 | -- | -- |
-| ASSET_TAG_TYPE_MASK (0xF << 28)
-#ifdef \_\_cplusplus
-} | Defines the mask used to obtain the key type of an asset attribute.<br>**Since**: 11 |
+| ASSET_TAG_TYPE_MASK (0xF << 28) | Defines the mask used to obtain the key type of an asset attribute.<br>**Since**: 11 |
 
 ## Enum type description
 
@@ -85,13 +83,13 @@ Enumerates the tags of asset attributes.
 | ASSET_TAG_SECRET = ASSET_TYPE_BYTES \| 0x01 | Sensitive user data in the form of bytes, such as passwords and tokens. |
 | ASSET_TAG_ALIAS = ASSET_TYPE_BYTES \| 0x02 | Asset alias (identifier) in the form of bytes. |
 | ASSET_TAG_ACCESSIBILITY = ASSET_TYPE_NUMBER \| 0x03 | Access control based on the lock screen status. The value is of the uint32_t type. |
-| ASSET_TAG_REQUIRE_PASSWORD_SET = ASSET_TYPE_BOOL \| 0x04 | A Boolean value indicating whether the asset is available only with a lock screen password.true indicates that asset is only available when a lock screen password is set,and false indicates that asset is not restricted by the lock screen password. |
+| ASSET_TAG_REQUIRE_PASSWORD_SET = ASSET_TYPE_BOOL \| 0x04 | A Boolean value indicating whether the asset is available only with a lock screen password. true indicates that asset is only available when a lock screen password is set, and false indicates that asset is not restricted by the lock screen password. |
 | ASSET_TAG_AUTH_TYPE = ASSET_TYPE_NUMBER \| 0x05 | User authentication type for the asset. The value is of the uint32_t type. |
 | ASSET_TAG_AUTH_VALIDITY_PERIOD = ASSET_TYPE_NUMBER \| 0x06 | Validity period of the user authentication, in seconds. The value is of the uint32_t type, in seconds. |
 | ASSET_TAG_AUTH_CHALLENGE = ASSET_TYPE_BYTES \| 0x07 | Challenge value, in the form of bytes, used for anti-replay during the authentication. |
 | ASSET_TAG_AUTH_TOKEN = ASSET_TYPE_BYTES \| 0x08 | Authentication token, in the form of bytes, obtained after a successful user authentication. |
 | ASSET_TAG_SYNC_TYPE = ASSET_TYPE_NUMBER \| 0x10 | Asset sync type. The value is of the uint32_t type. |
-| ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11 | Whether the asset needs to be stored persistently.true indicates that assets are retained when the application is uninstalled,while false indicates that assets are not retained.Verification of **ohos.permission.STORE_PERSISTENT_DATAis required if **OH_Asset_Add** is called with this tag passed in. |
+| ASSET_TAG_IS_PERSISTENT = ASSET_TYPE_BOOL \| 0x11 | Whether the asset needs to be stored persistently. true indicates that assets are retained when the application is uninstalled, while false indicates that assets are not retained. Verification of **ohos.permission.STORE_PERSISTENT_DATA**<br>is required if **OH_Asset_Add** is called with this tag passed in. |
 | ASSET_TAG_DATA_LABEL_CRITICAL_1 = ASSET_TYPE_BYTES \| 0x20 | Custom data, which is of the bytes type and cannot be changed. |
 | ASSET_TAG_DATA_LABEL_CRITICAL_2 = ASSET_TYPE_BYTES \| 0x21 | Custom data, which is of the bytes type and cannot be changed. |
 | ASSET_TAG_DATA_LABEL_CRITICAL_3 = ASSET_TYPE_BYTES \| 0x22 | Custom data, which is of the bytes type and cannot be changed. |
@@ -184,7 +182,7 @@ Enumerates the user authentication types supported by assets.
 | Enum item | Description |
 | -- | -- |
 | ASSET_AUTH_TYPE_NONE = 0x00 | No user authentication is required before the asset is accessed. |
-| ASSET_AUTH_TYPE_ANY = 0xFF | The asset can be accessed if any user authentication (such as PIN, facial, or fingerprint authentication) issuccessful. |
+| ASSET_AUTH_TYPE_ANY = 0xFF | The asset can be accessed if any user authentication (such as PIN, facial, or fingerprint authentication) is successful. |
 
 ### Asset_SyncType
 

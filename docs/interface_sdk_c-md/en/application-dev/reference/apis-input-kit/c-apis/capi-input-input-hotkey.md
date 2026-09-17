@@ -6,7 +6,7 @@ typedef struct Input_Hotkey Input_Hotkey
 
 ## Overview
 
-Defines the hotkey struct, which describes the hotkey design logic such as the key combination, triggerconditions, and callback handling. Applications can register and manage custom hotkeys.
+Defines the hotkey struct, which describes the hotkey design logic such as the key combination, trigger conditions, and callback handling. Applications can register and manage custom hotkeys.
 
 **Since**: 14
 

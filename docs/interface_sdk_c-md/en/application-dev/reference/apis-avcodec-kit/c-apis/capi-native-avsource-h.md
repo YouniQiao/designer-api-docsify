@@ -24,14 +24,14 @@ The file declares the APIs for parsing audio and video media data.
 
 | Name | Description |
 | -- | -- |
-| [OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)](#oh_avsource_createwithdatasource) | Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer. |
-| [OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource, void *userData)](#oh_avsource_createwithdatasourceext) | Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).User-defined data can be passed to its callback functions through the **userData** parameter.The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer. |
-| [OH_AVSource *OH_AVSource_CreateWithURI(char *uri)](#oh_avsource_createwithuri) | Creates an OH_AVSource instance based on a URI. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy). This function supports only HTTP progressive streaming media,but not HLS/DASH streaming media. For HLS/DASH streaming media playback, use the AVPlayer for development. |
-| [OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)](#oh_avsource_createwithfd) | Creates an OH_AVSource instance based on an FD. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).If **offset** is not the start position of the file or **size** is not the file size, undefined errors such ascreation failure and demultiplexing failure may occur due to incomplete data obtained. |
-| [OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)](#oh_avsource_destroy) | Destroys an OH_AVSource instance and clears internal resources.An instance can be destroyed only once. The destroyed instance cannot be used until it is re-created.You are advised to set the pointer to NULL after the instance is destroyed. |
-| [OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)](#oh_avsource_getsourceformat) | Obtains the basic information about a media resource file.You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends. |
-| [OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex)](#oh_avsource_gettrackformat) | Obtains the basic information about a track.You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends. |
-| [OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)](#oh_avsource_getcustommetadataformat) | Obtains the basic information about custom metadata.You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends. |
+| [OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)](#oh_avsource_createwithdatasource) | Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).<br> The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer. |
+| [OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource, void *userData)](#oh_avsource_createwithdatasourceext) | Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).<br> User-defined data can be passed to its callback functions through the **userData** parameter.<br> The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer. |
+| [OH_AVSource *OH_AVSource_CreateWithURI(char *uri)](#oh_avsource_createwithuri) | Creates an OH_AVSource instance based on a URI. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy). This function supports only HTTP progressive streaming media, but not HLS/DASH streaming media. For HLS/DASH streaming media playback, use the AVPlayer for development. |
+| [OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)](#oh_avsource_createwithfd) | Creates an OH_AVSource instance based on an FD. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).<br> If **offset** is not the start position of the file or **size** is not the file size, undefined errors such as creation failure and demultiplexing failure may occur due to incomplete data obtained. |
+| [OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)](#oh_avsource_destroy) | Destroys an OH_AVSource instance and clears internal resources.<br> An instance can be destroyed only once. The destroyed instance cannot be used until it is re-created. You are advised to set the pointer to NULL after the instance is destroyed. |
+| [OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)](#oh_avsource_getsourceformat) | Obtains the basic information about a media resource file.<br> You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends. |
+| [OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex)](#oh_avsource_gettrackformat) | Obtains the basic information about a track.<br> You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends. |
+| [OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)](#oh_avsource_getcustommetadataformat) | Obtains the basic information about custom metadata.<br> You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends. |
 
 ## Function description
 
@@ -43,7 +43,7 @@ OH_AVSource *OH_AVSource_CreateWithDataSource(OH_AVDataSource *dataSource)
 
 **Description**
 
-Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer.
+Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).<br> The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer.
 
 **Since**: 12
 
@@ -67,7 +67,7 @@ OH_AVSource *OH_AVSource_CreateWithDataSourceExt(OH_AVDataSourceExt *dataSource,
 
 **Description**
 
-Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).User-defined data can be passed to its callback functions through the **userData** parameter.The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer.
+Creates an OH_AVSource instance with a user-defined data source. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).<br> User-defined data can be passed to its callback functions through the **userData** parameter.<br> The lifecycle of **dataSource** must be the same as that of the returned OH_AVSource * pointer.
 
 **Since**: 20
 
@@ -92,7 +92,7 @@ OH_AVSource *OH_AVSource_CreateWithURI(char *uri)
 
 **Description**
 
-Creates an OH_AVSource instance based on a URI. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy). This function supports only HTTP progressive streaming media,but not HLS/DASH streaming media. For HLS/DASH streaming media playback, use the AVPlayer for development.
+Creates an OH_AVSource instance based on a URI. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy). This function supports only HTTP progressive streaming media, but not HLS/DASH streaming media. For HLS/DASH streaming media playback, use the AVPlayer for development.
 
 **Since**: 10
 
@@ -116,7 +116,7 @@ OH_AVSource *OH_AVSource_CreateWithFD(int32_t fd, int64_t offset, int64_t size)
 
 **Description**
 
-Creates an OH_AVSource instance based on an FD. You can release the instance by calling[OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).If **offset** is not the start position of the file or **size** is not the file size, undefined errors such ascreation failure and demultiplexing failure may occur due to incomplete data obtained.
+Creates an OH_AVSource instance based on an FD. You can release the instance by calling [OH_AVSource_Destroy](capi-native-avsource-h.md#oh_avsource_destroy).<br> If **offset** is not the start position of the file or **size** is not the file size, undefined errors such as creation failure and demultiplexing failure may occur due to incomplete data obtained.
 
 **Since**: 10
 
@@ -142,7 +142,7 @@ OH_AVErrCode OH_AVSource_Destroy(OH_AVSource *source)
 
 **Description**
 
-Destroys an OH_AVSource instance and clears internal resources.An instance can be destroyed only once. The destroyed instance cannot be used until it is re-created.You are advised to set the pointer to NULL after the instance is destroyed.
+Destroys an OH_AVSource instance and clears internal resources.<br> An instance can be destroyed only once. The destroyed instance cannot be used until it is re-created. You are advised to set the pointer to NULL after the instance is destroyed.
 
 **Since**: 10
 
@@ -156,7 +156,7 @@ Destroys an OH_AVSource instance and clears internal resources.An instance can b
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}:      <br>1. The value of source is nullptr.      <br>2. The value of source does not point to an OH_AVSource instance. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}:      <br>1. The value of source is nullptr.      <br>2. The value of source does not point to an OH_AVSource instance. |
 
 ### OH_AVSource_GetSourceFormat()
 
@@ -166,7 +166,7 @@ OH_AVFormat *OH_AVSource_GetSourceFormat(OH_AVSource *source)
 
 **Description**
 
-Obtains the basic information about a media resource file.You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends.
+Obtains the basic information about a media resource file.<br> You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends.
 
 **Since**: 10
 
@@ -190,7 +190,7 @@ OH_AVFormat *OH_AVSource_GetTrackFormat(OH_AVSource *source, uint32_t trackIndex
 
 **Description**
 
-Obtains the basic information about a track.You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends.
+Obtains the basic information about a track.<br> You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends.
 
 **Since**: 10
 
@@ -215,7 +215,7 @@ OH_AVFormat *OH_AVSource_GetCustomMetadataFormat(OH_AVSource *source)
 
 **Description**
 
-Obtains the basic information about custom metadata.You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends.
+Obtains the basic information about custom metadata.<br> You must call {@link OH_AVFormat_Destroy} to release the OH_AVFormat instance when its lifecycle ends.
 
 **Since**: 18
 

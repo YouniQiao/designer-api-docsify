@@ -8,7 +8,7 @@ Defines the child process info type and accessor functions.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since**: 26.1.0
+**Since**: 13
 
 **Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
@@ -57,7 +57,7 @@ Retrieves a specific child process info handle from the collection by its index.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       </ul> |
 
 ### OH_AbilityRuntime_ChildProcessInfo_GetPid()
 
@@ -82,7 +82,7 @@ Gets PID of child process info.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       </ul> |
 
 ### OH_AbilityRuntime_ChildProcessInfo_GetParentPid()
 
@@ -107,7 +107,7 @@ Gets parent PID of child process info.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the arguments provided are invalid.</li>       </ul> |
 
 ### OH_AbilityRuntime_ChildProcessInfo_GetProcessName()
 
@@ -134,7 +134,7 @@ Gets process name of child process info.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if processName or requiredSize is NULL,       or processNameSize is 0.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_BUFFER_TOO_SMALL} if the buffer is too small.</li>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if string copy operation failed.</li>       </ul> |
+| AbilityRuntime_ErrorCode | <ul>       <li>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if processName or requiredSize is NULL,<br>     or processNameSize is 0.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_BUFFER_TOO_SMALL} if the buffer is too small.</li><br>     <li>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} if string copy operation failed.</li>       </ul> |
 
 ### OH_AbilityRuntime_ReleaseChildProcessInfos()
 
@@ -152,6 +152,6 @@ Releases child process info collection.
 
 | Parameter | Description |
 | -- | -- |
-| OH_AbilityRuntime_ChildProcessInfosHandle *infos | [in] The child process infos to be released. It must not be NULL.After release, handle will be set to NULL. |
+| OH_AbilityRuntime_ChildProcessInfosHandle *infos | [in] The child process infos to be released. It must not be NULL. After release, handle will be set to NULL. |
 
 

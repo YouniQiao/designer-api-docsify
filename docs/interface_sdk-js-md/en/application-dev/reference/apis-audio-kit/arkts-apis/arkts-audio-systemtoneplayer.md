@@ -1,4 +1,4 @@
-# systemTonePlayer
+# systemTonePlayer(System Tone Player)
 
 The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related
  information.

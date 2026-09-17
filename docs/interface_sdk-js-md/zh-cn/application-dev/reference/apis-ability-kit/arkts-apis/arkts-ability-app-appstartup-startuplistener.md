@@ -1,4 +1,4 @@
-# @ohos.app.appstartup.StartupListener
+# @ohos.app.appstartup.StartupListener(启动框架任务监听器)
 
 ## 导入模块
 

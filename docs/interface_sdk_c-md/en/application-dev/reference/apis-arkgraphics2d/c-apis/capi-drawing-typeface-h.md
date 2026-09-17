@@ -2,13 +2,13 @@
 
 ## Overview
 
-This file declares the functions related to the typeface in the drawing module.Different platforms have their own default typefaces. You can also parse the .ttf file to obtain the typefacesspecified by the third party, such as SimSun and SimHei.
+This file declares the functions related to the typeface in the drawing module. Different platforms have their own default typefaces. You can also parse the .ttf file to obtain the typefaces specified by the third party, such as SimSun and SimHei.
 
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -19,12 +19,12 @@ This file declares the functions related to the typeface in the drawing module.D
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateDefault(void)](#oh_drawing_typefacecreatedefault) | Creates a default **OH_Drawing_Typeface** object. |
-| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromFile(const char* path, int index)](#oh_drawing_typefacecreatefromfile) | Creates an **OH_Drawing_Typeface** object through a file.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromFileWithArguments(const char* path, const OH_Drawing_FontArguments* fontArguments)](#oh_drawing_typefacecreatefromfilewitharguments) | Creates an **OH_Drawing_Typeface** object with font arguments through a file.If the **OH_Drawing_Typeface** object does not support the variation described in the font arguments, this functioncreates an **OH_Drawing_Typeface** object with the default font arguments.In this case, this function provides the same capability as [OH_Drawing_TypefaceCreateFromFile](capi-drawing-typeface-h.md#oh_drawing_typefacecreatefromfile). |
-| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromCurrent(const OH_Drawing_Typeface* current, const OH_Drawing_FontArguments* fontArguments)](#oh_drawing_typefacecreatefromcurrent) | Creates an **OH_Drawing_Typeface** object with font arguments based on an existing **OH_Drawing_Typefaceobject. |
-| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromStream(OH_Drawing_MemoryStream* memoryStream, int32_t index)](#oh_drawing_typefacecreatefromstream) | Creates an **OH_Drawing_Typeface** object through a memory stream. If the memory stream is an invalid fontfile, a null pointer is returned. After the memory stream is passed in, the ownership is transferred and you cannotrelease it.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **memoryStream** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromFile(const char* path, int index)](#oh_drawing_typefacecreatefromfile) | Creates an **OH_Drawing_Typeface** object through a file. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromFileWithArguments(const char* path, const OH_Drawing_FontArguments* fontArguments)](#oh_drawing_typefacecreatefromfilewitharguments) | Creates an **OH_Drawing_Typeface** object with font arguments through a file. If the **OH_Drawing_Typeface** object does not support the variation described in the font arguments, this function creates an **OH_Drawing_Typeface** object with the default font arguments. In this case, this function provides the same capability as [OH_Drawing_TypefaceCreateFromFile](capi-drawing-typeface-h.md#oh_drawing_typefacecreatefromfile). |
+| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromCurrent(const OH_Drawing_Typeface* current, const OH_Drawing_FontArguments* fontArguments)](#oh_drawing_typefacecreatefromcurrent) | Creates an **OH_Drawing_Typeface** object with font arguments based on an existing **OH_Drawing_Typeface**<br>object. |
+| [OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromStream(OH_Drawing_MemoryStream* memoryStream, int32_t index)](#oh_drawing_typefacecreatefromstream) | Creates an **OH_Drawing_Typeface** object through a memory stream. If the memory stream is an invalid font file, a null pointer is returned. After the memory stream is passed in, the ownership is transferred and you cannot release it. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **memoryStream** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_TypefaceDestroy(OH_Drawing_Typeface* typeface)](#oh_drawing_typefacedestroy) | Destroys an **OH_Drawing_Typeface** object and reclaims the memory occupied by the object. |
-| [OH_Drawing_FontArguments* OH_Drawing_FontArgumentsCreate(void)](#oh_drawing_fontargumentscreate) | Creates an **OH_Drawing_FontArguments** object. The font arguments are used to create an OH_Drawing_Typeface** object with custom attributes. |
+| [OH_Drawing_FontArguments* OH_Drawing_FontArgumentsCreate(void)](#oh_drawing_fontargumentscreate) | Creates an **OH_Drawing_FontArguments** object. The font arguments are used to create an **<br>OH_Drawing_Typeface** object with custom attributes. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontArgumentsAddVariation(OH_Drawing_FontArguments* fontArguments, const char* axis, float value)](#oh_drawing_fontargumentsaddvariation) | Adds a variation to an **OH_Drawing_FontArguments** object. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontArgumentsDestroy(OH_Drawing_FontArguments* fontArguments)](#oh_drawing_fontargumentsdestroy) | Destroys an **OH_Drawing_FontArguments** object. |
 | [OH_Drawing_ErrorCode OH_Drawing_TypefaceIsBold(const OH_Drawing_Typeface* typeface, bool* isBold)](#oh_drawing_typefaceisbold) | Checks whether the typeface is bold. |
@@ -58,7 +58,7 @@ OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromFile(const char* path, int ind
 
 **Description**
 
-Creates an **OH_Drawing_Typeface** object through a file.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates an **OH_Drawing_Typeface** object through a file. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **path** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -83,7 +83,7 @@ OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromFileWithArguments(const char* 
 
 **Description**
 
-Creates an **OH_Drawing_Typeface** object with font arguments through a file.If the **OH_Drawing_Typeface** object does not support the variation described in the font arguments, this functioncreates an **OH_Drawing_Typeface** object with the default font arguments.In this case, this function provides the same capability as [OH_Drawing_TypefaceCreateFromFile](capi-drawing-typeface-h.md#oh_drawing_typefacecreatefromfile).
+Creates an **OH_Drawing_Typeface** object with font arguments through a file. If the **OH_Drawing_Typeface** object does not support the variation described in the font arguments, this function creates an **OH_Drawing_Typeface** object with the default font arguments. In this case, this function provides the same capability as [OH_Drawing_TypefaceCreateFromFile](capi-drawing-typeface-h.md#oh_drawing_typefacecreatefromfile).
 
 **Since**: 13
 
@@ -108,7 +108,7 @@ OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromCurrent(const OH_Drawing_Typef
 
 **Description**
 
-Creates an **OH_Drawing_Typeface** object with font arguments based on an existing **OH_Drawing_Typefaceobject.
+Creates an **OH_Drawing_Typeface** object with font arguments based on an existing **OH_Drawing_Typeface**<br>object.
 
 **Since**: 13
 
@@ -133,7 +133,7 @@ OH_Drawing_Typeface* OH_Drawing_TypefaceCreateFromStream(OH_Drawing_MemoryStream
 
 **Description**
 
-Creates an **OH_Drawing_Typeface** object through a memory stream. If the memory stream is an invalid fontfile, a null pointer is returned. After the memory stream is passed in, the ownership is transferred and you cannotrelease it.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **memoryStream** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates an **OH_Drawing_Typeface** object through a memory stream. If the memory stream is an invalid font file, a null pointer is returned. After the memory stream is passed in, the ownership is transferred and you cannot release it. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **memoryStream** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -176,7 +176,7 @@ OH_Drawing_FontArguments* OH_Drawing_FontArgumentsCreate(void)
 
 **Description**
 
-Creates an **OH_Drawing_FontArguments** object. The font arguments are used to create an OH_Drawing_Typeface** object with custom attributes.
+Creates an **OH_Drawing_FontArguments** object. The font arguments are used to create an **<br>OH_Drawing_Typeface** object with custom attributes.
 
 **Since**: 13
 
@@ -203,7 +203,7 @@ Adds a variation to an **OH_Drawing_FontArguments** object.
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_FontArguments* fontArguments | Pointer to an {@link OH_Drawing_FontArguments} object. |
-| const char* axis | Pointer to the label of the variation. The value must contain four ASCII characters. The supportedlabels depend on the loaded font file. For example, **'wght'** is the font weight label. |
+| const char* axis | Pointer to the label of the variation. The value must contain four ASCII characters. The supported labels depend on the loaded font file. For example, **'wght'** is the font weight label. |
 | float value | Value of the variation label. |
 
 **Returns**:
@@ -253,7 +253,7 @@ Checks whether the typeface is bold.
 | Parameter | Description |
 | -- | -- |
 | const OH_Drawing_Typeface* typeface | Pointer to the {@link OH_Drawing_Typeface} object. |
-| bool* isBold | Whether the typeface is bold. It is used as an output parameter. **true** if the typeface is bold; false** otherwise. |
+| bool* isBold | Whether the typeface is bold. It is used as an output parameter. **true** if the typeface is bold; **<br>false** otherwise. |
 
 **Returns**:
 
@@ -278,7 +278,7 @@ Checks whether the typeface is italic.
 | Parameter | Description |
 | -- | -- |
 | const OH_Drawing_Typeface* typeface | Pointer to the {@link OH_Drawing_Typeface} object. |
-| bool* isItalic | Whether the typeface is italic. It is used as an output parameter. **true** if the typeface isitalic; **false** otherwise. |
+| bool* isItalic | Whether the typeface is italic. It is used as an output parameter. **true** if the typeface is italic; **false** otherwise. |
 
 **Returns**:
 

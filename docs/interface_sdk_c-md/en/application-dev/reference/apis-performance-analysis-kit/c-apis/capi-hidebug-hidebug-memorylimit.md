@@ -20,7 +20,7 @@ Defines the struct for the memory limit of the application process.
 
 | Name | Description |
 | -- | -- |
-| uint64_t rssLimit | Limit on the physical memory size of the application process, in KB. Currently, the system does not limit thephysical memory size of the process. However, the available physical memory of the process cannot exceed themaximum physical memory of the device. You can call {@link OH_HiDebug_GetSystemMemInfo} to obtain the physicalmemory usage of the device. |
+| uint64_t rssLimit | Limit on the physical memory size of the application process, in KB. Currently, the system does not limit the physical memory size of the process. However, the available physical memory of the process cannot exceed the maximum physical memory of the device. You can call {@link OH_HiDebug_GetSystemMemInfo} to obtain the physical memory usage of the device. |
 | uint64_t vssLimit | Limit on the virtual set size, in KB. |
 
 

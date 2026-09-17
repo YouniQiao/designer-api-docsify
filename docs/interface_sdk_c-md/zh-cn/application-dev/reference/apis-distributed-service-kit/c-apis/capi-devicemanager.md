@@ -2,7 +2,7 @@
 
 ## 概述
 
-Distributed device management module,which provides APIs to obtain information about trusted devices and local devices.
+Distributed device management module, which provides APIs to obtain information about trusted devices and local devices.
 
 **起始版本：** 20
 

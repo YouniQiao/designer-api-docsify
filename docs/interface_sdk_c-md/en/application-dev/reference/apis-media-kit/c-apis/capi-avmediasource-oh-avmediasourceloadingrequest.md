@@ -6,7 +6,7 @@ typedef struct OH_AVMediaSourceLoadingRequest OH_AVMediaSourceLoadingRequest
 
 ## Overview
 
-Defines a load request object for the media resource, through which the application obtains the location ofthe requested resource.
+Defines a load request object for the media resource, through which the application obtains the location of the requested resource.
 
 **Since**: 23
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.ServiceExtensionAbility
+# @ohos.app.ability.ServiceExtensionAbility(ServiceExtensionAbility)
 
 ## 导入模块
 

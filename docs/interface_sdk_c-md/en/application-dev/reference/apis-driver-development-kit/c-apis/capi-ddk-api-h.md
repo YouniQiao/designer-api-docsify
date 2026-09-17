@@ -18,8 +18,8 @@ Declares the BASE DDK APIs used by the USB host to access USB devices.
 
 | Name | Description |
 | -- | -- |
-| [DDK_RetCode OH_DDK_CreateAshmem(const uint8_t *name, uint32_t size, DDK_Ashmem **ashmem)](#oh_ddk_createashmem) | Creates an **Ashmem** object. To prevent resource leakage, call [OH_DDK_DestroyAshmem](capi-ddk-api-h.md#oh_ddk_destroyashmem) to destroy the**Ashmem** object when it is no longer needed. |
-| [DDK_RetCode OH_DDK_MapAshmem(DDK_Ashmem *ashmem, const uint8_t ashmemMapType)](#oh_ddk_mapashmem) | Maps the created **Ashmem** object to the user space. Call [OH_DDK_UnmapAshmem](capi-ddk-api-h.md#oh_ddk_unmapashmem) to unmap the **Ashmemobject when it is no longer needed. |
+| [DDK_RetCode OH_DDK_CreateAshmem(const uint8_t *name, uint32_t size, DDK_Ashmem **ashmem)](#oh_ddk_createashmem) | Creates an **Ashmem** object. To prevent resource leakage, call [OH_DDK_DestroyAshmem](capi-ddk-api-h.md#oh_ddk_destroyashmem) to destroy the **Ashmem** object when it is no longer needed. |
+| [DDK_RetCode OH_DDK_MapAshmem(DDK_Ashmem *ashmem, const uint8_t ashmemMapType)](#oh_ddk_mapashmem) | Maps the created **Ashmem** object to the user space. Call [OH_DDK_UnmapAshmem](capi-ddk-api-h.md#oh_ddk_unmapashmem) to unmap the **Ashmem**<br>object when it is no longer needed. |
 | [DDK_RetCode OH_DDK_UnmapAshmem(DDK_Ashmem *ashmem)](#oh_ddk_unmapashmem) | Unmaps an **Ashmem** object. |
 | [DDK_RetCode OH_DDK_DestroyAshmem(DDK_Ashmem *ashmem)](#oh_ddk_destroyashmem) | Destroys an **Ashmem** object. |
 
@@ -33,7 +33,7 @@ DDK_RetCode OH_DDK_CreateAshmem(const uint8_t *name, uint32_t size, DDK_Ashmem *
 
 **Description**
 
-Creates an **Ashmem** object. To prevent resource leakage, call [OH_DDK_DestroyAshmem](capi-ddk-api-h.md#oh_ddk_destroyashmem) to destroy the**Ashmem** object when it is no longer needed.
+Creates an **Ashmem** object. To prevent resource leakage, call [OH_DDK_DestroyAshmem](capi-ddk-api-h.md#oh_ddk_destroyashmem) to destroy the **Ashmem** object when it is no longer needed.
 
 **Since**: 12
 
@@ -49,7 +49,7 @@ Creates an **Ashmem** object. To prevent resource leakage, call [OH_DDK_DestroyA
 
 | Type | Description |
 | -- | -- |
-| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.      {@link DDK_INVALID_PARAMETER}: The input name is a null pointer, the value of size is 0, or the input      ashmem is a null pointer.      {@link DDK_FAILURE}: The attempt to create an Ashmem object or the DDK_Ashmem structure fails. |
+| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.<br>    {@link DDK_INVALID_PARAMETER}: The input name is a null pointer, the value of size is 0, or the input<br>    ashmem is a null pointer.<br>    {@link DDK_FAILURE}: The attempt to create an Ashmem object or the DDK_Ashmem structure fails. |
 
 ### OH_DDK_MapAshmem()
 
@@ -59,7 +59,7 @@ DDK_RetCode OH_DDK_MapAshmem(DDK_Ashmem *ashmem, const uint8_t ashmemMapType)
 
 **Description**
 
-Maps the created **Ashmem** object to the user space. Call [OH_DDK_UnmapAshmem](capi-ddk-api-h.md#oh_ddk_unmapashmem) to unmap the **Ashmemobject when it is no longer needed.
+Maps the created **Ashmem** object to the user space. Call [OH_DDK_UnmapAshmem](capi-ddk-api-h.md#oh_ddk_unmapashmem) to unmap the **Ashmem**<br>object when it is no longer needed.
 
 **Since**: 12
 
@@ -74,7 +74,7 @@ Maps the created **Ashmem** object to the user space. Call [OH_DDK_UnmapAshmem](
 
 | Type | Description |
 | -- | -- |
-| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.      {@link DDK_NULL_PTR}: The input ashmem is a null pointer.      {@link DDK_FAILURE}: The file descriptor of the Ashmem object is invalid.      {@link DDK_INVALID_OPERATION}: The attempt to call MapAshmem fails. |
+| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.<br>    {@link DDK_NULL_PTR}: The input ashmem is a null pointer.<br>    {@link DDK_FAILURE}: The file descriptor of the Ashmem object is invalid.<br>    {@link DDK_INVALID_OPERATION}: The attempt to call MapAshmem fails. |
 
 ### OH_DDK_UnmapAshmem()
 
@@ -98,7 +98,7 @@ Unmaps an **Ashmem** object.
 
 | Type | Description |
 | -- | -- |
-| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.      {@link DDK_NULL_PTR}: The input ashmem is a null pointer.      {@link DDK_FAILURE}: The file descriptor of the Ashmem object is invalid. |
+| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.<br>    {@link DDK_NULL_PTR}: The input ashmem is a null pointer.<br>    {@link DDK_FAILURE}: The file descriptor of the Ashmem object is invalid. |
 
 ### OH_DDK_DestroyAshmem()
 
@@ -122,6 +122,6 @@ Destroys an **Ashmem** object.
 
 | Type | Description |
 | -- | -- |
-| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.      {@link DDK_NULL_PTR}: The input ashmem is a null pointer.      {@link DDK_FAILURE}: The file descriptor of the Ashmem object is invalid. |
+| DDK_RetCode | {@link DDK_SUCCESS}: The API call is successful.<br>    {@link DDK_NULL_PTR}: The input ashmem is a null pointer.<br>    {@link DDK_FAILURE}: The file descriptor of the Ashmem object is invalid. |
 
 

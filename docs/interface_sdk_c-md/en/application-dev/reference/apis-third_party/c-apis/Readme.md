@@ -256,7 +256,6 @@
     - [api_module](capi--api-module.md)
     - [v__io_s](capi--v--io-s.md)
     - [v_buf_t](capi--v-buf-t.md)
-    - [_uv_barrier](capi---uv-barrier.md)
     - [v_barrier_t](capi--v-barrier-t.md)
     - [v_lib_t](capi--v-lib-t.md)
     - [v__work](capi--v--work.md)

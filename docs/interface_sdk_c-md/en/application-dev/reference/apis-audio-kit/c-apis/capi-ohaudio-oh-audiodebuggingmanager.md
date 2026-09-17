@@ -6,7 +6,7 @@ typedef struct OH_AudioDebuggingManager OH_AudioDebuggingManager
 
 ## Overview
 
-Declare the audio debugging manager.Audio debugging manager provides many functions for developer to get theinformation about audio system runtime info.
+Declare the audio debugging manager. Audio debugging manager provides many functions for developer to get the information about audio system runtime info.
 
 **Since**: 26.0.0
 

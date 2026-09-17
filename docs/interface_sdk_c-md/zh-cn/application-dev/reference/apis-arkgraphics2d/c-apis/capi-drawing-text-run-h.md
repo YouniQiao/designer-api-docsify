@@ -63,7 +63,7 @@ OH_Drawing_Array* OH_Drawing_GetRunStringIndices(OH_Drawing_Run* run, int64_t st
 | int64_t start | 渲染单元内指定的开始位置，取值范围为[0, glyphCount-1]，其中glyphCount为渲染单元字形数量。传入负数或超出渲染单元字形数量时，该方法返回空指针。 |
 | int64_t length | 渲染单元内指定的长度。length为0时获取渲染单元的所有字符索引数组；length小于0时该方法返回空指针；start+length超出渲染单元实际范围时，获取到渲染单元末尾的有效数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -90,7 +90,7 @@ uint64_t OH_Drawing_GetRunStringIndicesByIndex(OH_Drawing_Array* stringIndices, 
 | OH_Drawing_Array* stringIndices | 字符索引数组。 |
 | size_t index | 渲染单元字形的字符索引数组下标，取值范围为[0, arrayLength-1]，其中arrayLength为stringIndices数组的元素个数，超出该取值范围时返回0。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -161,7 +161,7 @@ float OH_Drawing_GetRunTypographicBounds(OH_Drawing_Run* run, float* ascent, flo
 | float* descent | 渲染单元中最低字符到基准线的距离，单位为px。 |
 | float* leading | 渲染单元行间距，单位为px。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -210,7 +210,7 @@ OH_Drawing_Rect* OH_Drawing_GetRunImageBounds(OH_Drawing_Run* run)
 | -- | -- |
 | OH_Drawing_Run* run | 指向渲染单元{@link OH_Drawing_Run}对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -258,7 +258,7 @@ OH_Drawing_Array* OH_Drawing_GetRunGlyphs(OH_Drawing_Run* run, int64_t start, in
 | int64_t start | 渲染单元内指定的开始位置，取值范围为[0, glyphCount-1]，其中glyphCount为渲染单元字形数量。传入负数或超出渲染单元字形数量时，该方法返回空指针。 |
 | int64_t length | 渲染单元内指定的长度。length为0时获取渲染单元的所有字形；length小于0时该方法返回空指针；start+length超出渲染单元实际范围时，获取到渲染单元末尾的有效数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -285,7 +285,7 @@ uint16_t OH_Drawing_GetRunGlyphsByIndex(OH_Drawing_Array* glyphs, size_t index)
 | OH_Drawing_Array* glyphs | 指向渲染单元字形数组{@link OH_Drawing_Array}对象的指针。 |
 | size_t index | 渲染单元字形数组下标，取值范围为[0, arrayLength-1]，其中arrayLength为glyphs数组的元素个数，超出该取值范围时返回0。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -333,7 +333,7 @@ OH_Drawing_Array* OH_Drawing_GetRunPositions(OH_Drawing_Run* run, int64_t start,
 | int64_t start | 渲染单元内指定的开始位置，取值范围为[0, glyphCount-1]，其中glyphCount为渲染单元字形数量。传入负数或超出渲染单元字形数量时，该方法返回空指针。 |
 | int64_t length | 渲染单元内指定的长度。length为0时获取渲染单元的所有字形位置；length小于0时该方法返回空指针；start+length超出渲染单元实际范围时，获取到渲染单元末尾的有效数据。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -360,7 +360,7 @@ OH_Drawing_Point* OH_Drawing_GetRunPositionsByIndex(OH_Drawing_Array* positions,
 | OH_Drawing_Array* positions | 指向渲染单元字形位置数组{@link OH_Drawing_Array}对象的指针。 |
 | size_t index | 渲染单元字形位置数组下标，取值范围为[0, arrayLength-1]，其中arrayLength为positions数组的元素个数，超出该取值范围时返回空指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -406,7 +406,7 @@ uint32_t OH_Drawing_GetRunGlyphCount(OH_Drawing_Run* run)
 | -- | -- |
 | OH_Drawing_Run* run | 指向渲染单元{@link OH_Drawing_Run}对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -432,7 +432,7 @@ OH_Drawing_Font* OH_Drawing_GetRunFont(OH_Drawing_Run* run)
 | -- | -- |
 | OH_Drawing_Run* run | 指向渲染单元{@link OH_Drawing_Run}对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -458,7 +458,7 @@ OH_Drawing_TextDirection OH_Drawing_GetRunTextDirection(OH_Drawing_Run* run)
 | -- | -- |
 | OH_Drawing_Run* run | 指向渲染单元{@link OH_Drawing_Run}对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -486,7 +486,7 @@ OH_Drawing_Array* OH_Drawing_GetRunGlyphAdvances(OH_Drawing_Run* run, uint32_t s
 | uint32_t start | 渲染单元内指定的开始位置，取值范围为[0, glyphCount-1]，其中glyphCount为渲染单元字形数量。传入值超出渲染单元字形数量时，该方法返回空指针。 |
 | uint32_t length | 渲染单元内指定的长度，length为0时获取从start开始到渲染单元结束的所有字形宽度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -513,7 +513,7 @@ OH_Drawing_Point* OH_Drawing_GetRunGlyphAdvanceByIndex(OH_Drawing_Array* advance
 | OH_Drawing_Array* advances | 指向渲染单元字形宽度数组{@link OH_Drawing_Array}对象的指针。 |
 | size_t index | 渲染单元字形宽度数组的下标，取值范围为[0, arrayLength-1]，其中arrayLength为advances数组的元素个数，超出该取值范围时返回空指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

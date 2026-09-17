@@ -283,7 +283,7 @@ Obtains a string from an [OH_PreferencesValue](capi-preferences-oh-preferencesva
 | Parameter | Description |
 | -- | -- |
 | [const OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) *object | Pointer to the [OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md) instance. |
-| char **value | Double pointer to the string obtained. If the string is not required, you can use{@link OH_Preferences_FreeString} to free the string (release the memory occupied by the string). |
+| char **value | Double pointer to the string obtained. If the string is not required, you can use {@link OH_Preferences_FreeString} to free the string (release the memory occupied by the string). |
 | uint32_t *valueLen | Pointer to the length of the string obtained. |
 
 **Returns**:

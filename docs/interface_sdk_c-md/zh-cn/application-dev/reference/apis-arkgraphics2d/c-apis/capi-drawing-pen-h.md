@@ -2,7 +2,7 @@
 
 ## 概述
 
-文件中定义了与画笔相关的功能函数。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+文件中定义了与画笔相关的功能函数。 <br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **库：** libnative_drawing.so
 
@@ -32,35 +32,35 @@
 | 名称 | 描述 |
 | -- | -- |
 | [OH_Drawing_Pen* OH_Drawing_PenCreate(void)](#oh_drawing_pencreate) | 用于创建一个画笔对象。 |
-| [OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)](#oh_drawing_pencopy) | 创建一个画笔对象副本{@link OH_Drawing_Pen}，用于拷贝一个已有画笔对象。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)](#oh_drawing_pencopy) | 创建一个画笔对象副本{@link OH_Drawing_Pen}，用于拷贝一个已有画笔对象。<br><br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
 | [void OH_Drawing_PenDestroy(OH_Drawing_Pen* pen)](#oh_drawing_pendestroy) | 用于销毁画笔对象并回收该对象占有的内存。 |
-| [bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)](#oh_drawing_penisantialias) | 用于获取画笔是否设置抗锯齿属性，如果为真则说明画笔会启用抗锯齿功能，在绘制图形时会对图形的边缘像素进行半透明的模糊处理。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetAntiAlias(OH_Drawing_Pen* pen, bool antiAlias)](#oh_drawing_pensetantialias) | 用于设置画笔的抗锯齿属性，设置为真则画笔在绘制图形时会对图形的边缘像素进行半透明的模糊处理。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcolor) | 用于获取画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetColor(OH_Drawing_Pen* pen, uint32_t color)](#oh_drawing_pensetcolor) | 用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)](#oh_drawing_pengetalpha) | 获取画笔的透明度值。画笔在勾勒图形时透明通道会使用该值。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetAlpha(OH_Drawing_Pen* pen, uint8_t alpha)](#oh_drawing_pensetalpha) | 设置画笔透明度。画笔在勾勒图形时透明通道会使用该值。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)](#oh_drawing_pensetcolor4f) | 用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色。<br>颜色采用浮点数表示的ARGB格式，色彩空间由[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)指定。<br>如果colorSpaceManager为NULL，使用SRGB（基于IEC 61966-2.1:1999的标准红绿蓝色彩空间）色彩空间作为默认值。 |
+| [bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)](#oh_drawing_penisantialias) | 用于获取画笔是否设置抗锯齿属性，如果为真则说明画笔会启用抗锯齿功能，在绘制图形时会对图形的边缘像素进行半透明的模糊处理。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetAntiAlias(OH_Drawing_Pen* pen, bool antiAlias)](#oh_drawing_pensetantialias) | 用于设置画笔的抗锯齿属性，设置为真则画笔在绘制图形时会对图形的边缘像素进行半透明的模糊处理。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcolor) | 用于获取画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetColor(OH_Drawing_Pen* pen, uint32_t color)](#oh_drawing_pensetcolor) | 用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)](#oh_drawing_pengetalpha) | 获取画笔的透明度值。画笔在勾勒图形时透明通道会使用该值。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetAlpha(OH_Drawing_Pen* pen, uint8_t alpha)](#oh_drawing_pensetalpha) | 设置画笔透明度。画笔在勾勒图形时透明通道会使用该值。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)](#oh_drawing_pensetcolor4f) | 用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色。 <br>颜色采用浮点数表示的ARGB格式，色彩空间由[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)指定。 <br>如果colorSpaceManager为NULL，使用SRGB（基于IEC 61966-2.1:1999的标准红绿蓝色彩空间）色彩空间作为默认值。 |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetAlphaFloat(OH_Drawing_Pen* pen, float* a)](#oh_drawing_pengetalphafloat) | 获取画笔颜色的透明度值。 |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetRedFloat(OH_Drawing_Pen* pen, float* r)](#oh_drawing_pengetredfloat) | 获取画笔颜色的红色分量。 |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetGreenFloat(OH_Drawing_Pen* pen, float* g)](#oh_drawing_pengetgreenfloat) | 获取画笔颜色的绿色分量。 |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetBlueFloat(OH_Drawing_Pen* pen, float* b)](#oh_drawing_pengetbluefloat) | 获取画笔颜色的蓝色分量。 |
-| [float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)](#oh_drawing_pengetwidth) | 用于获取画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetWidth(OH_Drawing_Pen* pen, float width)](#oh_drawing_pensetwidth) | 用于设置画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)](#oh_drawing_pengetmiterlimit) | 用于获取折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围；如果超出限制值则显示为平角，未超出则保持尖角。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetMiterLimit(OH_Drawing_Pen* pen, float miter)](#oh_drawing_pensetmiterlimit) | 用于设置折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围；如果超出限制值则显示为平角，未超出则保持尖角。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcap) | 用于获取画笔笔帽的样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetCap(OH_Drawing_Pen* pen, OH_Drawing_PenLineCapStyle capStyle)](#oh_drawing_pensetcap) | 用于设置画笔笔帽样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>capStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
-| [OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)](#oh_drawing_pengetjoin) | 用于获取画笔绘制折线转角的样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetJoin(OH_Drawing_Pen* pen, OH_Drawing_PenLineJoinStyle joinStyle)](#oh_drawing_pensetjoin) | 用于设置画笔绘制转角的样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>joinStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
-| [void OH_Drawing_PenSetShaderEffect(OH_Drawing_Pen* pen, OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_pensetshadereffect) | 设置画笔着色器效果。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetShadowLayer(OH_Drawing_Pen* pen, OH_Drawing_ShadowLayer* shadowLayer)](#oh_drawing_pensetshadowlayer) | 设置画笔阴影层效果，设置的阴影层效果当前仅在绘制文字时生效。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetPathEffect(OH_Drawing_Pen* pen, OH_Drawing_PathEffect* pathEffect)](#oh_drawing_pensetpatheffect) | 设置画笔路径效果。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pensetfilter) | 设置画笔滤波器。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenGetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pengetfilter) | 从画笔获取滤波器{@link OH_Drawing_Filter}。滤波器是一个容器，可以承载蒙版滤波器和颜色滤波器。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen、filter任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenSetBlendMode(OH_Drawing_Pen* pen, OH_Drawing_BlendMode blendMode)](#oh_drawing_pensetblendmode) | 为画笔设置一个混合器，该混合器实现了指定的混合模式枚举。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>blendMode不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
-| [bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, OH_Drawing_Path* dst, const OH_Drawing_Rect* rect, const OH_Drawing_Matrix* matrix)](#oh_drawing_pengetfillpath) | 获取使用画笔绘制的源路径轮廓，并用目标路径表示。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen、src、dst任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
-| [void OH_Drawing_PenReset(OH_Drawing_Pen* pen)](#oh_drawing_penreset) | 将画笔重置至初始值。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)](#oh_drawing_pengetwidth) | 用于获取画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetWidth(OH_Drawing_Pen* pen, float width)](#oh_drawing_pensetwidth) | 用于设置画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)](#oh_drawing_pengetmiterlimit) | 用于获取折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围； 如果超出限制值则显示为平角，未超出则保持尖角。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetMiterLimit(OH_Drawing_Pen* pen, float miter)](#oh_drawing_pensetmiterlimit) | 用于设置折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围； 如果超出限制值则显示为平角，未超出则保持尖角。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcap) | 用于获取画笔笔帽的样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetCap(OH_Drawing_Pen* pen, OH_Drawing_PenLineCapStyle capStyle)](#oh_drawing_pensetcap) | 用于设置画笔笔帽样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER； <br>capStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
+| [OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)](#oh_drawing_pengetjoin) | 用于获取画笔绘制折线转角的样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetJoin(OH_Drawing_Pen* pen, OH_Drawing_PenLineJoinStyle joinStyle)](#oh_drawing_pensetjoin) | 用于设置画笔绘制转角的样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER； <br>joinStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
+| [void OH_Drawing_PenSetShaderEffect(OH_Drawing_Pen* pen, OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_pensetshadereffect) | 设置画笔着色器效果。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetShadowLayer(OH_Drawing_Pen* pen, OH_Drawing_ShadowLayer* shadowLayer)](#oh_drawing_pensetshadowlayer) | 设置画笔阴影层效果，设置的阴影层效果当前仅在绘制文字时生效。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetPathEffect(OH_Drawing_Pen* pen, OH_Drawing_PathEffect* pathEffect)](#oh_drawing_pensetpatheffect) | 设置画笔路径效果。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pensetfilter) | 设置画笔滤波器。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenGetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pengetfilter) | 从画笔获取滤波器{@link OH_Drawing_Filter}。滤波器是一个容器，可以承载蒙版滤波器和颜色滤波器。<br><br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen、filter任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenSetBlendMode(OH_Drawing_Pen* pen, OH_Drawing_BlendMode blendMode)](#oh_drawing_pensetblendmode) | 为画笔设置一个混合器，该混合器实现了指定的混合模式枚举。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER； <br>blendMode不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。 |
+| [bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, OH_Drawing_Path* dst, const OH_Drawing_Rect* rect, const OH_Drawing_Matrix* matrix)](#oh_drawing_pengetfillpath) | 获取使用画笔绘制的源路径轮廓，并用目标路径表示。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen、src、dst任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
+| [void OH_Drawing_PenReset(OH_Drawing_Pen* pen)](#oh_drawing_penreset) | 将画笔重置至初始值。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。 |
 
 ## 枚举类型说明
 
@@ -115,7 +115,7 @@ OH_Drawing_Pen* OH_Drawing_PenCreate(void)
 
 **起始版本：** 8
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -129,7 +129,7 @@ OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)
 
 **描述：**
 
-创建一个画笔对象副本{@link OH_Drawing_Pen}，用于拷贝一个已有画笔对象。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+创建一个画笔对象副本{@link OH_Drawing_Pen}，用于拷贝一个已有画笔对象。<br><br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 12
 
@@ -139,7 +139,7 @@ OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)
 | -- | -- |
 | OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -171,7 +171,7 @@ bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-用于获取画笔是否设置抗锯齿属性，如果为真则说明画笔会启用抗锯齿功能，在绘制图形时会对图形的边缘像素进行半透明的模糊处理。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于获取画笔是否设置抗锯齿属性，如果为真则说明画笔会启用抗锯齿功能，在绘制图形时会对图形的边缘像素进行半透明的模糊处理。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -181,7 +181,7 @@ bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -195,7 +195,7 @@ void OH_Drawing_PenSetAntiAlias(OH_Drawing_Pen* pen, bool antiAlias)
 
 **描述：**
 
-用于设置画笔的抗锯齿属性，设置为真则画笔在绘制图形时会对图形的边缘像素进行半透明的模糊处理。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于设置画笔的抗锯齿属性，设置为真则画笔在绘制图形时会对图形的边缘像素进行半透明的模糊处理。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -214,7 +214,7 @@ uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-用于获取画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于获取画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -224,7 +224,7 @@ uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -238,7 +238,7 @@ void OH_Drawing_PenSetColor(OH_Drawing_Pen* pen, uint32_t color)
 
 **描述：**
 
-用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色，用一个32位（ARGB）的变量表示。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -257,7 +257,7 @@ uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-获取画笔的透明度值。画笔在勾勒图形时透明通道会使用该值。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+获取画笔的透明度值。画笔在勾勒图形时透明通道会使用该值。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 11
 
@@ -267,7 +267,7 @@ uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -281,7 +281,7 @@ void OH_Drawing_PenSetAlpha(OH_Drawing_Pen* pen, uint8_t alpha)
 
 **描述：**
 
-设置画笔透明度。画笔在勾勒图形时透明通道会使用该值。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+设置画笔透明度。画笔在勾勒图形时透明通道会使用该值。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 11
 
@@ -300,7 +300,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, floa
 
 **描述：**
 
-用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色。<br>颜色采用浮点数表示的ARGB格式，色彩空间由[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)指定。<br>如果colorSpaceManager为NULL，使用SRGB（基于IEC 61966-2.1:1999的标准红绿蓝色彩空间）色彩空间作为默认值。
+用于设置画笔的颜色属性，颜色属性描述了画笔绘制图形轮廓时使用的颜色。 <br>颜色采用浮点数表示的ARGB格式，色彩空间由[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)指定。 <br>如果colorSpaceManager为NULL，使用SRGB（基于IEC 61966-2.1:1999的标准红绿蓝色彩空间）色彩空间作为默认值。
 
 **起始版本：** 20
 
@@ -315,7 +315,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, floa
 | float b | 表示颜色中的蓝色分量，用0.0 ~ 1.0之间的浮点数表示，大于1.0时，取1.0，小于0.0时，取0.0。 |
 | [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)* colorSpaceManager | 表示指向OH_NativeColorSpaceManager对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -340,7 +340,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenGetAlphaFloat(OH_Drawing_Pen* pen, float* a)
 | OH_Drawing_Pen* pen | 指向OH_Drawing_Pen对象的指针。 |
 | float* a | 表示颜色中的透明度，范围为0.0 ~ 1.0的浮点数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -365,7 +365,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenGetRedFloat(OH_Drawing_Pen* pen, float* r)
 | OH_Drawing_Pen* pen | 指向OH_Drawing_Pen对象的指针。 |
 | float* r | 表示颜色中的红色分量，范围为0.0 ~ 1.0的浮点数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -390,7 +390,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenGetGreenFloat(OH_Drawing_Pen* pen, float* g)
 | OH_Drawing_Pen* pen | 指向OH_Drawing_Pen对象的指针。 |
 | float* g | 表示颜色中的绿色分量，范围为0.0 ~ 1.0的浮点数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -415,7 +415,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenGetBlueFloat(OH_Drawing_Pen* pen, float* b)
 | OH_Drawing_Pen* pen | 指向OH_Drawing_Pen对象的指针。 |
 | float* b | 表示颜色中的蓝色分量，范围为0.0 ~ 1.0的浮点数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -429,7 +429,7 @@ float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-用于获取画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于获取画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -439,7 +439,7 @@ float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -453,7 +453,7 @@ void OH_Drawing_PenSetWidth(OH_Drawing_Pen* pen, float width)
 
 **描述：**
 
-用于设置画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于设置画笔的厚度属性，厚度属性描述了画笔绘制图形轮廓的宽度。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -472,7 +472,7 @@ float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-用于获取折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围；如果超出限制值则显示为平角，未超出则保持尖角。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于获取折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围； 如果超出限制值则显示为平角，未超出则保持尖角。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -482,7 +482,7 @@ float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -496,7 +496,7 @@ void OH_Drawing_PenSetMiterLimit(OH_Drawing_Pen* pen, float miter)
 
 **描述：**
 
-用于设置折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围；如果超出限制值则显示为平角，未超出则保持尖角。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于设置折线尖角的限制值。当画笔绘制折线且转角类型设置为尖角时，该属性用于限制尖角的长度范围； 如果超出限制值则显示为平角，未超出则保持尖角。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -515,7 +515,7 @@ OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-用于获取画笔笔帽的样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于获取画笔笔帽的样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -525,7 +525,7 @@ OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -539,7 +539,7 @@ void OH_Drawing_PenSetCap(OH_Drawing_Pen* pen, OH_Drawing_PenLineCapStyle capSty
 
 **描述：**
 
-用于设置画笔笔帽样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>capStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。
+用于设置画笔笔帽样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER； <br>capStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。
 
 **起始版本：** 8
 
@@ -558,7 +558,7 @@ OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)
 
 **描述：**
 
-用于获取画笔绘制折线转角的样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+用于获取画笔绘制折线转角的样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 8
 
@@ -568,7 +568,7 @@ OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)
 | -- | -- |
 | const OH_Drawing_Pen* pen | 指向画笔对象OH_Drawing_Pen的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -582,7 +582,7 @@ void OH_Drawing_PenSetJoin(OH_Drawing_Pen* pen, OH_Drawing_PenLineJoinStyle join
 
 **描述：**
 
-用于设置画笔绘制转角的样式。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>joinStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。
+用于设置画笔绘制转角的样式。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER； <br>joinStyle不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。
 
 **起始版本：** 8
 
@@ -601,7 +601,7 @@ void OH_Drawing_PenSetShaderEffect(OH_Drawing_Pen* pen, OH_Drawing_ShaderEffect*
 
 **描述：**
 
-设置画笔着色器效果。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+设置画笔着色器效果。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 11
 
@@ -620,7 +620,7 @@ void OH_Drawing_PenSetShadowLayer(OH_Drawing_Pen* pen, OH_Drawing_ShadowLayer* s
 
 **描述：**
 
-设置画笔阴影层效果，设置的阴影层效果当前仅在绘制文字时生效。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+设置画笔阴影层效果，设置的阴影层效果当前仅在绘制文字时生效。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 12
 
@@ -639,7 +639,7 @@ void OH_Drawing_PenSetPathEffect(OH_Drawing_Pen* pen, OH_Drawing_PathEffect* pat
 
 **描述：**
 
-设置画笔路径效果。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+设置画笔路径效果。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 12
 
@@ -658,7 +658,7 @@ void OH_Drawing_PenSetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)
 
 **描述：**
 
-设置画笔滤波器。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+设置画笔滤波器。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 11
 
@@ -677,7 +677,7 @@ void OH_Drawing_PenGetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)
 
 **描述：**
 
-从画笔获取滤波器{@link OH_Drawing_Filter}。滤波器是一个容器，可以承载蒙版滤波器和颜色滤波器。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen、filter任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+从画笔获取滤波器{@link OH_Drawing_Filter}。滤波器是一个容器，可以承载蒙版滤波器和颜色滤波器。<br><br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen、filter任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 12
 
@@ -696,7 +696,7 @@ void OH_Drawing_PenSetBlendMode(OH_Drawing_Pen* pen, OH_Drawing_BlendMode blendM
 
 **描述：**
 
-为画笔设置一个混合器，该混合器实现了指定的混合模式枚举。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER；<br>blendMode不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。
+为画笔设置一个混合器，该混合器实现了指定的混合模式枚举。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER； <br>blendMode不在枚举范围内时返回OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE。
 
 **起始版本：** 12
 
@@ -715,7 +715,7 @@ bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, 
 
 **描述：**
 
-获取使用画笔绘制的源路径轮廓，并用目标路径表示。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen、src、dst任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+获取使用画笔绘制的源路径轮廓，并用目标路径表示。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen、src、dst任意一个为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 12
 
@@ -729,7 +729,7 @@ bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, 
 | const OH_Drawing_Rect* rect | 指向矩形对象OH_Drawing_Rect的指针，推荐使用NULL，为NULL时不指定裁剪矩形。 |
 | const OH_Drawing_Matrix* matrix | 指向矩阵对象OH_Drawing_Matrix的指针，推荐使用NULL，默认使用单位矩阵即不进行变换。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -743,7 +743,7 @@ void OH_Drawing_PenReset(OH_Drawing_Pen* pen)
 
 **描述：**
 
-将画笔重置至初始值。<br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。<br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
+将画笔重置至初始值。 <br>本接口会产生错误码，可以通过{@link OH_Drawing_ErrorCodeGet}查看错误码的取值。 <br>pen为NULL时返回OH_DRAWING_ERROR_INVALID_PARAMETER。
 
 **起始版本：** 12
 

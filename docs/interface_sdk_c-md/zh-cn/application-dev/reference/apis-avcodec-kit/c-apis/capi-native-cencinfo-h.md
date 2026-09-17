@@ -44,7 +44,7 @@
 | 名称 | 描述 |
 | -- | -- |
 | [OH_AVCencInfo *OH_AVCencInfo_Create()](#oh_avcencinfo_create) | 创建用于设置cencInfo的OH_AVCencInfo实例。 |
-| [OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)](#oh_avcencinfo_destroy) | 销毁OH_AVCencInfo实例并释放内部资源。同一个实例只能销毁一次。在再次创建实例之前，不应使用该实例。建议在实例销毁成功后立即将实例指针设置为nullptr。 |
+| [OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)](#oh_avcencinfo_destroy) | 销毁OH_AVCencInfo实例并释放内部资源。<br> 同一个实例只能销毁一次。在再次创建实例之前，不应使用该实例。 建议在实例销毁成功后立即将实例指针设置为nullptr。 |
 | [OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlgorithm algo)](#oh_avcencinfo_setalgorithm) | 设置cencInfo加密算法。 |
 | [OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId, uint32_t keyIdLen, uint8_t *iv, uint32_t ivLen)](#oh_avcencinfo_setkeyidandiv) | 设置cencInfo的keyId和iv。 |
 | [OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t encryptedBlockCount, uint32_t skippedBlockCount, uint32_t firstEncryptedOffset, uint32_t subsampleCount, DrmSubsample *subsamples)](#oh_avcencinfo_setsubsampleinfo) | 设置cencInfo的subsamples信息。 |
@@ -106,7 +106,7 @@ OH_AVCencInfo *OH_AVCencInfo_Create()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -120,7 +120,7 @@ OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)
 
 **描述：**
 
-销毁OH_AVCencInfo实例并释放内部资源。同一个实例只能销毁一次。在再次创建实例之前，不应使用该实例。建议在实例销毁成功后立即将实例指针设置为nullptr。
+销毁OH_AVCencInfo实例并释放内部资源。<br> 同一个实例只能销毁一次。在再次创建实例之前，不应使用该实例。 建议在实例销毁成功后立即将实例指针设置为nullptr。
 
 **起始版本：** 12
 
@@ -130,7 +130,7 @@ OH_AVErrCode OH_AVCencInfo_Destroy(OH_AVCencInfo *cencInfo)
 | -- | -- |
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | 指向OH_AVCencInfo实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -155,7 +155,7 @@ OH_AVErrCode OH_AVCencInfo_SetAlgorithm(OH_AVCencInfo *cencInfo, enum DrmCencAlg
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | 指向OH_AVCencInfo实例的指针。 |
 | enum DrmCencAlgorithm algo | 加密算法模式。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -183,7 +183,7 @@ OH_AVErrCode OH_AVCencInfo_SetKeyIdAndIv(OH_AVCencInfo *cencInfo, uint8_t *keyId
 | uint8_t *iv | 初始化向量。 |
 | uint32_t ivLen | 初始化向量长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -212,7 +212,7 @@ OH_AVErrCode OH_AVCencInfo_SetSubsampleInfo(OH_AVCencInfo *cencInfo, uint32_t en
 | uint32_t subsampleCount | Subsample数量。 |
 | [DrmSubsample](capi-multimedia-drm-drmsubsample.md) *subsamples | Subsample内容集。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -237,7 +237,7 @@ OH_AVErrCode OH_AVCencInfo_SetMode(OH_AVCencInfo *cencInfo, enum DrmCencInfoMode
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | 指向OH_AVCencInfo实例的指针。 |
 | enum DrmCencInfoMode mode | cencInfo模式，指示是否设置了keyId/iv/subsample。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -262,7 +262,7 @@ OH_AVErrCode OH_AVCencInfo_SetAVBuffer(OH_AVCencInfo *cencInfo, OH_AVBuffer *buf
 | [OH_AVCencInfo](capi-multimedia-drm-oh-avcencinfo.md) *cencInfo | 指向OH_AVCencInfo实例的指针。 |
 | [OH_AVBuffer](capi-multimedia-drm-oh-avbuffer.md) *buffer | 携带数据的帧buffer。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

@@ -6,7 +6,7 @@ typedef struct AVSession_DeviceInfo AVSession_DeviceInfo
 
 ## Overview
 
-Declaring the device information.The instance is used to get more device information detail attributes.
+Declaring the device information. The instance is used to get more device information detail attributes.
 
 **Since**: 23
 

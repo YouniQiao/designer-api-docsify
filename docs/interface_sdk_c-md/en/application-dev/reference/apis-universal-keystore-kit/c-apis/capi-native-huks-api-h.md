@@ -16,6 +16,12 @@ Declares the APIs used to access HUKS.
 
 ## Summary
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| NATIVE_HUKS_API_H | Declares the APIs used to access HUKS.<br>**Since**: 9<br>**System capability**: SystemCapability.Security.Huks.Core |
+
 ### Function
 
 | Name | Description |
@@ -29,9 +35,9 @@ Declares the APIs used to access HUKS.
 | [struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSetIn, struct OH_Huks_ParamSet *paramSetOut)](#oh_huks_getkeyitemparamset) | Obtains the properties of a key. |
 | [struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_iskeyitemexist) | Checks whether a key exists. |
 | [struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_attestkeyitem) | Obtains the certificate chain of a key. This API is open only to system applications. |
-| [struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_anonattestkeyitem) | Obtains the certificate chain of a key. This is a networking duration interface caller need to get thecertChain in asynchronous thread |
-| [struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)](#oh_huks_initsession) | Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional). |
-| [struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_updatesession) | Adds data by segment for the key operation, performs the related key operation, and outputs the processeddata. |
+| [struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_CertChain *certChain)](#oh_huks_anonattestkeyitem) | Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread |
+| [struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_Blob *handle, struct OH_Huks_Blob *token)](#oh_huks_initsession) | Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) . |
+| [struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_updatesession) | Adds data by segment for the key operation, performs the related key operation, and outputs the processed data. |
 | [struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Blob *inData, struct OH_Huks_Blob *outData)](#oh_huks_finishsession) | Finishes a key session. |
 | [struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, const struct OH_Huks_ParamSet *paramSet)](#oh_huks_abortsession) | Aborts a key session. |
 | [struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSet, struct OH_Huks_KeyAliasSet **outData)](#oh_huks_listaliases) | Obtains the key alias set. |
@@ -82,7 +88,7 @@ Generates a key.
 | -- | -- |
 | const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to generate. The alias must be unique in the process of the service. |
 | const struct OH_Huks_ParamSet *paramSetIn | Pointer to the parameters for generating the key. |
-| struct OH_Huks_ParamSet *paramSetOut | If a temporary key is generated, this parameter stores the key data. If a non-temporary key isgenerated, this parameter can be left empty. |
+| struct OH_Huks_ParamSet *paramSetOut | If a temporary key is generated, this parameter stores the key data. If a non-temporary key is generated, this parameter can be left empty. |
 
 **Returns**:
 
@@ -108,7 +114,7 @@ Imports a key in plaintext.
 | -- | -- |
 | const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to import. The alias must be unique in the process of the service. |
 | const struct OH_Huks_ParamSet *paramSet | Pointer to the properties of the key to import. |
-| const struct OH_Huks_Blob *key | Pointer to the data of the key to import, complying with the format requirements of HUKS. For details,see {@link native_huks_type.h}. |
+| const struct OH_Huks_Blob *key | Pointer to the data of the key to import, complying with the format requirements of HUKS. For details, see {@link native_huks_type.h}. |
 
 **Returns**:
 
@@ -133,9 +139,9 @@ Imports a key in ciphertext.
 | Parameter | Description |
 | -- | -- |
 | const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to import. The alias must be unique in the process of the service. |
-| const struct OH_Huks_Blob *wrappingKeyAlias | Pointer to the alias of the key used for key negotiation or digital envelope decryption.The key corresponding to this alias must already exist. The negotiated or decrypted key isthen used to decrypt the key to import. |
+| const struct OH_Huks_Blob *wrappingKeyAlias | Pointer to the alias of the key used for key negotiation or digital envelope decryption. The key corresponding to this alias must already exist. The negotiated or decrypted key is then used to decrypt the key to import. |
 | const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for importing the key in ciphertext. |
-| const struct OH_Huks_Blob *wrappedKeyData | Pointer to the data of the key to import, complying with the format requirements of HUKS. Fordetails, see {@link OH_Huks_AlgSuite}. |
+| const struct OH_Huks_Blob *wrappedKeyData | Pointer to the data of the key to import, complying with the format requirements of HUKS. For details, see {@link OH_Huks_AlgSuite}. |
 
 **Returns**:
 
@@ -159,7 +165,7 @@ Exports the public key.
 
 | Parameter | Description |
 | -- | -- |
-| const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the public key to export. It must be the same as the alias used forgenerating the key. |
+| const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the public key to export. It must be the same as the alias used for generating the key. |
 | const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for exporting the public key. |
 | struct OH_Huks_Blob *key | Pointer to the public key exported. |
 
@@ -185,8 +191,8 @@ Deletes a key.
 
 | Parameter | Description |
 | -- | -- |
-| const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to delete. It must be the same as the alias used for generating thekey. |
-| const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for deleting the key. By default, this parameter is a null pointer. Thedefault key storage level is {@link OH_HUKS_AUTH_STORAGE_LEVEL_CE}. |
+| const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to delete. It must be the same as the alias used for generating the key. |
+| const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for deleting the key. By default, this parameter is a null pointer. The default key storage level is {@link OH_HUKS_AUTH_STORAGE_LEVEL_CE}. |
 
 **Returns**:
 
@@ -211,7 +217,7 @@ Obtains the properties of a key.
 | Parameter | Description |
 | -- | -- |
 | const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the target key. |
-| const struct OH_Huks_ParamSet *paramSetIn | Pointer to the tag required for obtaining the properties. By default, this parameter is a nullpointer. |
+| const struct OH_Huks_ParamSet *paramSetIn | Pointer to the tag required for obtaining the properties. By default, this parameter is a null pointer. |
 | struct OH_Huks_ParamSet *paramSetOut | Pointer to the key properties obtained. |
 
 **Returns**:
@@ -281,7 +287,7 @@ struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAl
 
 **Description**
 
-Obtains the certificate chain of a key. This is a networking duration interface caller need to get thecertChain in asynchronous thread
+Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread
 
 **Since**: 11
 
@@ -307,7 +313,7 @@ struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, c
 
 **Description**
 
-Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional).
+Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) .
 
 **Since**: 9
 
@@ -317,7 +323,7 @@ Initializes a key session. This function returns a session handle (mandatory) an
 | -- | -- |
 | const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to be operated. |
 | const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for the initialization operation. |
-| struct OH_Huks_Blob *handle | Pointer to the handle of the key session. This handle is required for subsequent operations of thesame key, including [OH_Huks_UpdateSession](capi-native-huks-api-h.md#oh_huks_updatesession), [OH_Huks_FinishSession](capi-native-huks-api-h.md#oh_huks_finishsession) and[OH_Huks_AbortSession](capi-native-huks-api-h.md#oh_huks_abortsession). |
+| struct OH_Huks_Blob *handle | Pointer to the handle of the key session. This handle is required for subsequent operations of the same key, including [OH_Huks_UpdateSession](capi-native-huks-api-h.md#oh_huks_updatesession), [OH_Huks_FinishSession](capi-native-huks-api-h.md#oh_huks_finishsession) and [OH_Huks_AbortSession](capi-native-huks-api-h.md#oh_huks_abortsession). |
 | struct OH_Huks_Blob *token | Pointer to the token used for key access control. |
 
 **Returns**:
@@ -341,7 +347,7 @@ struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, c
 
 **Description**
 
-Adds data by segment for the key operation, performs the related key operation, and outputs the processeddata.
+Adds data by segment for the key operation, performs the related key operation, and outputs the processed data.
 
 **Since**: 9
 
@@ -351,7 +357,7 @@ Adds data by segment for the key operation, performs the related key operation, 
 | -- | -- |
 | const struct OH_Huks_Blob *handle | Pointer to the key session handle, which is returned by [OH_Huks_InitSession](capi-native-huks-api-h.md#oh_huks_initsession). |
 | const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters required for the key operation. |
-| const struct OH_Huks_Blob *inData | Pointer to the data to be processed. If there is a large amount of data to be processed, you can callthis function multiple times to process data by segment. |
+| const struct OH_Huks_Blob *inData | Pointer to the data to be processed. If there is a large amount of data to be processed, you can call this function multiple times to process data by segment. |
 | struct OH_Huks_Blob *outData | Pointer to the output data. |
 
 **Returns**:
@@ -449,8 +455,8 @@ Obtains the key alias set.
 
 | Parameter | Description |
 | -- | -- |
-| const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for obtaining the key alias set. By default, this parameter is a nullpointer. |
-| struct OH_Huks_KeyAliasSet **outData | Double pointer to the obtained key alias set. After the key alias set is used, you need to use{@link OH_Huks_FreeKeyAliasSet} to release the memory allocated by the system. |
+| const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for obtaining the key alias set. By default, this parameter is a null pointer. |
+| struct OH_Huks_KeyAliasSet **outData | Double pointer to the obtained key alias set. After the key alias set is used, you need to use {@link OH_Huks_FreeKeyAliasSet} to release the memory allocated by the system. |
 
 **Returns**:
 
@@ -500,7 +506,7 @@ Imports a wrapped key.
 
 | Parameter | Description |
 | -- | -- |
-| const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to import. The alias must be unique in the service process.Otherwise, the key will be overwritten. |
+| const struct OH_Huks_Blob *keyAlias | Pointer to the alias of the key to import. The alias must be unique in the service process. Otherwise, the key will be overwritten. |
 | const struct OH_Huks_ParamSet *paramSet | Pointer to the parameters for encrypting the imported key. |
 | struct OH_Huks_Blob *wrappedKey | Pointer to the wrapped key to import. |
 

@@ -1,7 +1,7 @@
 # TEE_Param
 
 ```c
-typedef struct TEE_Param {...} TEE_Param
+typedef union TEE_Param {...} TEE_Param
 ```
 
 ## Overview
@@ -20,13 +20,17 @@ Enumerates the TEE parameter.
 
 | Name | Description |
 | -- | -- |
+| struct | Describes a memory reference.<br>**Since**: 20 |
 | void *buffer | Pointer to the memory buffer. |
-| size_t size; } memref | Size of the memory buffer. |
+| size_t size;
+ } memref | Size of the memory buffer. |
 | struct | Describes value parameters.<br>**Since**: 20 |
 | unsigned int a | First value. |
-| unsigned int b; } value | Second value. |
+| unsigned int b;
+ } value | Second value. |
 | struct | Describes shared memory reference.<br>**Since**: 20 |
 | void *buffer | Pointer to the shared memory buffer. |
-| size_t size; } sharedmem | Size of the shared memory buffer. |
+| size_t size;
+ } sharedmem | Size of the shared memory buffer. |
 
 

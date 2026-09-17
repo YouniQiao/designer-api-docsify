@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides APIs for managing the Trusted Execution Environment (TEE) time.You can use these APIs to implement time-related features in a TEE.
+Provides APIs for managing the Trusted Execution Environment (TEE) time.<br> You can use these APIs to implement time-related features in a TEE.
 
 **Library**: NA
 

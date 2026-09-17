@@ -25,9 +25,9 @@ The file declares the preview output concepts.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutput)](#oh_previewoutput_onframestart) | OH_PreviewOutput_OnFrameStart | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview outputframe start events. |
-| [typedef void (\*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput, int32_t frameCount)](#oh_previewoutput_onframeend) | OH_PreviewOutput_OnFrameEnd | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview outputframe end events. |
-| [typedef void (\*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Camera_ErrorCode errorCode)](#oh_previewoutput_onerror) | OH_PreviewOutput_OnError | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview outputerrors. |
+| [typedef void (\*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutput)](#oh_previewoutput_onframestart) | OH_PreviewOutput_OnFrameStart | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame start events. |
+| [typedef void (\*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput, int32_t frameCount)](#oh_previewoutput_onframeend) | OH_PreviewOutput_OnFrameEnd | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame end events. |
+| [typedef void (\*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Camera_ErrorCode errorCode)](#oh_previewoutput_onerror) | OH_PreviewOutput_OnError | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output errors. |
 | [Camera_ErrorCode OH_PreviewOutput_RegisterCallback(Camera_PreviewOutput* previewOutput, PreviewOutput_Callbacks* callback)](#oh_previewoutput_registercallback) | - | Registers a callback to listen for preview output events. |
 | [Camera_ErrorCode OH_PreviewOutput_UnregisterCallback(Camera_PreviewOutput* previewOutput, PreviewOutput_Callbacks* callback)](#oh_previewoutput_unregistercallback) | - | Unregisters the callback used to listen for preview output events. |
 | [Camera_ErrorCode OH_PreviewOutput_Start(Camera_PreviewOutput* previewOutput)](#oh_previewoutput_start) | - | Starts preview output. |
@@ -42,11 +42,20 @@ The file declares the preview output concepts.
 | [Camera_ErrorCode OH_PreviewOutput_DeleteFrameRates(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)](#oh_previewoutput_deleteframerates) | - | Deletes the frame rate list. |
 | [Camera_ErrorCode OH_PreviewOutput_SetFrameRate(Camera_PreviewOutput* previewOutput, int32_t minFps, int32_t maxFps)](#oh_previewoutput_setframerate) | - | Sets the frame rates for a PreviewOutput instance. |
 | [Camera_ErrorCode OH_PreviewOutput_GetActiveFrameRate(Camera_PreviewOutput* previewOutput, Camera_FrameRateRange* frameRateRange)](#oh_previewoutput_getactiveframerate) | - | Obtains the active frame rates of a PreviewOutput instance. |
-| [Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported) ](#oh_previewoutput_isbandwidthcompressionsupported) | - | Checks whether preview bandwidth compression is supported. This involves reducing data volume throughencoding to minimize bandwidth usage during transmission. |
-| [Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutput* previewOutput, bool enabled)](#oh_previewoutput_enablebandwidthcompression) | - | Enables preview bandwidth compression.This function must be called prior to {@link OH_CaptureSession_CommitConfig()}. Otherwise, the preview output streamformat will be affected. |
+| [Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported)
+ ](#oh_previewoutput_isbandwidthcompressionsupported) | - | Checks whether preview bandwidth compression is supported. This involves reducing data volume through encoding to minimize bandwidth usage during transmission. |
+| [Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutput* previewOutput, bool enabled)](#oh_previewoutput_enablebandwidthcompression) | - | Enables preview bandwidth compression. This function must be called prior to {@link OH_CaptureSession_CommitConfig()}. Otherwise, the preview output stream format will be affected. |
 | [bool OH_PreviewOutput_IsLogViewAssistSupported(const Camera_PreviewOutput* previewOutput)](#oh_previewoutput_islogviewassistsupported) | - | Checks whether log video view assistance is supported. |
-| [Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* previewOutput, bool enable)](#oh_previewoutput_setlogviewassistenable) | - | Log video view assistance toggle.Before enabling this feature, you can call[isLogViewAssistSupported]{@link camera.PreviewOutput.isLogViewAssistSupported} to check whetherthe device supports log video view assistance. |
+| [Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* previewOutput, bool enable)](#oh_previewoutput_setlogviewassistenable) | - | Log video view assistance toggle.Before enabling this feature, you can call [isLogViewAssistSupported]{@link camera.PreviewOutput.isLogViewAssistSupported} to check whether the device supports log video view assistance. |
 | [Camera_ErrorCode OH_PreviewOutput_AddDeferredSurface(const Camera_PreviewOutput* previewOutput, const char* surfaceId)](#oh_previewoutput_adddeferredsurface) | - | add surface for preview output. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutput) | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame start events.<br>**Since**: 11 |
+| void (*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput, int32_t frameCount) | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame end events.<br>**Since**: 11 |
+| void (*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Camera_ErrorCode errorCode) | Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output errors.<br>**Since**: 11 |
 
 ## Function description
 
@@ -58,7 +67,7 @@ typedef void (*OH_PreviewOutput_OnFrameStart)(Camera_PreviewOutput* previewOutpu
 
 **Description**
 
-Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview outputframe start events.
+Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame start events.
 
 **Since**: 11
 
@@ -76,7 +85,7 @@ typedef void (*OH_PreviewOutput_OnFrameEnd)(Camera_PreviewOutput* previewOutput,
 
 **Description**
 
-Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview outputframe end events.
+Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output frame end events.
 
 **Since**: 11
 
@@ -95,7 +104,7 @@ typedef void (*OH_PreviewOutput_OnError)(Camera_PreviewOutput* previewOutput, Ca
 
 **Description**
 
-Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview outputerrors.
+Defines the callback defined in the [PreviewOutput_Callbacks](capi-oh-camera-previewoutput-callbacks.md) struct and used to report preview output errors.
 
 **Since**: 11
 
@@ -351,7 +360,7 @@ Sets the preview rotation angle.
 | -- | -- |
 | [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | Pointer to the PreviewOutput instance used to set the rotation angle. |
 | Camera_ImageRotation previewRotation | Preview rotation angle. |
-| bool isDisplayLocked | Whether the orientation of the surface is locked when the screen rotates. If this parameteris not set, the default value **false** is used, indicating that the orientation is not locked. **true** if locked, *false** otherwise. For details, see {@link SurfaceRotationOptions}. |
+| bool isDisplayLocked | Whether the orientation of the surface is locked when the screen rotates. If this parameter is not set, the default value **false** is used, indicating that the orientation is not locked. **true** if locked, *<br>*false** otherwise. For details, see {@link SurfaceRotationOptions}. |
 
 **Returns**:
 
@@ -453,7 +462,7 @@ Obtains the active frame rates of a PreviewOutput instance.
 | Parameter | Description |
 | -- | -- |
 | [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | Pointer to the PreviewOutput instance used to obtain the active frame rates. |
-| Camera_FrameRateRange* frameRateRange | Pointer to the frame rate range, which is defined in the {@link Camera_FrameRateRange} struct,if the function is successfully called. |
+| Camera_FrameRateRange* frameRateRange | Pointer to the frame rate range, which is defined in the {@link Camera_FrameRateRange} struct, if the function is successfully called. |
 
 **Returns**:
 
@@ -464,12 +473,13 @@ Obtains the active frame rates of a PreviewOutput instance.
 ### OH_PreviewOutput_IsBandwidthCompressionSupported()
 
 ```c
-Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported) 
+Camera_ErrorCode OH_PreviewOutput_IsBandwidthCompressionSupported(Camera_PreviewOutput* previewOutput, bool* isSupported)
+ 
 ```
 
 **Description**
 
-Checks whether preview bandwidth compression is supported. This involves reducing data volume throughencoding to minimize bandwidth usage during transmission.
+Checks whether preview bandwidth compression is supported. This involves reducing data volume through encoding to minimize bandwidth usage during transmission.
 
 **Since**: 23
 
@@ -478,7 +488,7 @@ Checks whether preview bandwidth compression is supported. This involves reducin
 | Parameter | Description |
 | -- | -- |
 | [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | Pointer to the target PreviewOutput instance. |
-| isSupported | Pointer to the check result for the support of bandwidth compression. **true** if supported, false** otherwise. |
+| isSupported | Pointer to the check result for the support of bandwidth compression. **true** if supported, **<br>false** otherwise. |
 
 **Returns**:
 
@@ -494,7 +504,7 @@ Camera_ErrorCode OH_PreviewOutput_EnableBandwidthCompression(Camera_PreviewOutpu
 
 **Description**
 
-Enables preview bandwidth compression.This function must be called prior to {@link OH_CaptureSession_CommitConfig()}. Otherwise, the preview output streamformat will be affected.
+Enables preview bandwidth compression. This function must be called prior to {@link OH_CaptureSession_CommitConfig()}. Otherwise, the preview output stream format will be affected.
 
 **Since**: 23
 
@@ -543,7 +553,7 @@ Camera_ErrorCode OH_PreviewOutput_SetLogViewAssistEnable(Camera_PreviewOutput* p
 
 **Description**
 
-Log video view assistance toggle.Before enabling this feature, you can call[isLogViewAssistSupported]{@link camera.PreviewOutput.isLogViewAssistSupported} to check whetherthe device supports log video view assistance.
+Log video view assistance toggle.Before enabling this feature, you can call [isLogViewAssistSupported]{@link camera.PreviewOutput.isLogViewAssistSupported} to check whether the device supports log video view assistance.
 
 **Since**: 26.0.0
 
@@ -558,7 +568,7 @@ Log video view assistance toggle.Before enabling this feature, you can call[isLo
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | <ul><li>{@link CAMERA_OK}: The operation is successful.</li>      <li>{@link CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED}: The capability is not supported.</li>      <li>{@link CAMERA_INVALID_ARGUMENT}: A parameter is missing or the parameter type is incorrect.</li>      <li>{@link CAMERA_SESSION_NOT_CONFIG}: The camera session is not configured.</li>      <li>{@link CAMERA_SERVICE_FATAL_ERROR}: The camera service is abnormal.</li></ul> |
+| Camera_ErrorCode | <ul><li>{@link CAMERA_OK}: The operation is successful.</li><br>    <li>{@link CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED}: The capability is not supported.</li><br>    <li>{@link CAMERA_INVALID_ARGUMENT}: A parameter is missing or the parameter type is incorrect.</li><br>    <li>{@link CAMERA_SESSION_NOT_CONFIG}: The camera session is not configured.</li><br>    <li>{@link CAMERA_SERVICE_FATAL_ERROR}: The camera service is abnormal.</li></ul> |
 
 ### OH_PreviewOutput_AddDeferredSurface()
 
@@ -583,6 +593,6 @@ add surface for preview output.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the method call succeeds.          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect. |
+| Camera_ErrorCode | {@link CAMERA_OK} if the method call succeeds.<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect. |
 
 

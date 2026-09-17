@@ -8,7 +8,7 @@ Defines the common types for native buffer.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
-**Since**: 12
+**Since**: 9
 
 **Related module**: [OH_NativeBuffer](capi-oh-nativebuffer.md)
 
@@ -27,9 +27,9 @@ Defines the common types for native buffer.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_NativeBuffer_ColorSpace](#oh_nativebuffer_colorspace) | OH_NativeBuffer_ColorSpace | Indicates the color space of a native buffer.Move from native_buffer.h to native_common.h |
+| [OH_NativeBuffer_ColorSpace](#oh_nativebuffer_colorspace) | OH_NativeBuffer_ColorSpace | Indicates the color space of a native buffer. Move from native_buffer.h to native_common.h |
 | [OH_NativeBuffer_MetadataType](#oh_nativebuffer_metadatatype) | OH_NativeBuffer_MetadataType | Indicates the HDR metadata type of a native buffer. |
-| [OH_NativeBuffer_MetadataKey](#oh_nativebuffer_metadatakey) | OH_NativeBuffer_MetadataKey | Indicates the descriptive information of a native buffer,such as HDR metadata, ROI metadata, etc. |
+| [OH_NativeBuffer_MetadataKey](#oh_nativebuffer_metadatakey) | OH_NativeBuffer_MetadataKey | Indicates the descriptive information of a native buffer, such as HDR metadata, ROI metadata, etc. |
 | [OH_NativeBuffer_Format](#oh_nativebuffer_format) | OH_NativeBuffer_Format | Indicates the format of a native buffer. |
 | [OH_NativeBuffer_TransformType](#oh_nativebuffer_transformtype) | OH_NativeBuffer_TransformType | Indicates the transform type of a native buffer. |
 | [OH_NativeBuffer_VideoDimensionType](#oh_nativebuffer_videodimensiontype) | OH_NativeBuffer_VideoDimensionType | Indicates video dimension type. |
@@ -45,7 +45,7 @@ enum OH_NativeBuffer_ColorSpace
 
 **Description**
 
-Indicates the color space of a native buffer.Move from native_buffer.h to native_common.h
+Indicates the color space of a native buffer. Move from native_buffer.h to native_common.h
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -121,7 +121,7 @@ enum OH_NativeBuffer_MetadataKey
 
 **Description**
 
-Indicates the descriptive information of a native buffer,such as HDR metadata, ROI metadata, etc.
+Indicates the descriptive information of a native buffer, such as HDR metadata, ROI metadata, etc.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 

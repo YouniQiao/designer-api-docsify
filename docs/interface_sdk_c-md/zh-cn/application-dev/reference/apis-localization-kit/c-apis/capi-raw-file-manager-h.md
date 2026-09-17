@@ -18,7 +18,13 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [NativeResourceManager](capi-rawfile-nativeresourcemanager.md) | NativeResourceManager | 表示Native层的ResourceManager对象。NativeResourceManager对JavaScript ResourceManager的Native实现进行封装，可以通过[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager)函数获取。 |
+| [NativeResourceManager](capi-rawfile-nativeresourcemanager.md) | NativeResourceManager | 表示Native层的ResourceManager对象。NativeResourceManager对JavaScript ResourceManager的Native实现进行封装，可以通过 [OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager)函数获取。 |
+
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| GLOBAL_NATIVE_RESOURCE_MANAGER_H | 通过本模块可以创建、释放NativeResourceManager对象，以及打开rawfile文件和目录。<br>**起始版本：** 8<br>**系统能力：** SystemCapability.Global.ResourceManager |
 
 ### 函数
 
@@ -52,7 +58,7 @@ NativeResourceManager *OH_ResourceManager_InitNativeResourceManager(napi_env env
 | napi_env env | 输入参数。指向JavaScript Native Interface（napi）环境的指针。 |
 | napi_value jsResMgr | 输入参数。表示JavaScript ResourceManager对象的引用。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -95,7 +101,7 @@ RawDir *OH_ResourceManager_OpenRawDir(const NativeResourceManager *mgr, const ch
 | [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | 输入参数。指向NativeResourceManager对象的指针。 |
 | const char *dirName | 输入参数。待打开的目录路径。相对于rawfile根目录的路径，例如"images/icons"。当为空字符串时表示打开rawfile根目录。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -126,7 +132,7 @@ RawFile *OH_ResourceManager_OpenRawFile(const NativeResourceManager *mgr, const 
 | [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | 输入参数。指向NativeResourceManager对象的指针。 |
 | const char *fileName | 输入参数。待打开的文件路径。相对于rawfile根目录的路径，例如"images/icons/1.png"。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -157,7 +163,7 @@ RawFile64 *OH_ResourceManager_OpenRawFile64(const NativeResourceManager *mgr, co
 | [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | 输入参数。指向NativeResourceManager对象的指针。 |
 | const char *fileName | 输入参数。待打开的文件路径。相对于rawfile根目录的路径，例如"images/icons/1.png"。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -188,7 +194,7 @@ bool OH_ResourceManager_IsRawDir(const NativeResourceManager *mgr, const char *p
 | [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | 输入参数。指向NativeResourceManager对象的指针。 |
 | const char *path | 待判断的路径。相对于rawfile根目录的路径，如"images/icons"。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

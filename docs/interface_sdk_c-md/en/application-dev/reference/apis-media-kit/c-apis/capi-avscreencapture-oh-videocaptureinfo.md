@@ -6,7 +6,7 @@ typedef struct OH_VideoCaptureInfo {...} OH_VideoCaptureInfo
 
 ## Overview
 
-The struct describes the video capture information. When **videoFrameWidth** and **videoFrameHeight** areboth **0**, video-related parameters are ignored and screen data is not recorded.
+The struct describes the video capture information. When **videoFrameWidth** and **videoFrameHeight** are both **0**, video-related parameters are ignored and screen data is not recorded.
 
 **Since**: 10
 

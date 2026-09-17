@@ -30,6 +30,12 @@ Provides the model file types and device types supported by MindSpore Lite.
 | [OH_AI_OptimizationLevel](#oh_ai_optimizationlevel) | OH_AI_OptimizationLevel | optimization level for train model. |
 | [OH_AI_QuantizationType](#oh_ai_quantizationtype) | OH_AI_QuantizationType | quantization type |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| MINDSPORE_INCLUDE_C_API_TYPES_C_H | Provides the model file types and device types supported by MindSpore Lite.<br>**Since**: 9 |
+
 ## Enum type description
 
 ### OH_AI_ModelType

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides the enumeration and structure definitions required by the `resourcemanager` module.<br>This header file defines enumerations such as error codes, screen orientations, color modes, device types, andscreen densities, as well as the device configuration structure, providing data type support for the resourceretrieval functions in `ohresmgr.h`.
+Provides the enumeration and structure definitions required by the `resourcemanager` module. <br>This header file defines enumerations such as error codes, screen orientations, color modes, device types, and screen densities, as well as the device configuration structure, providing data type support for the resource retrieval functions in `ohresmgr.h`.
 
 **Library**: libohresmgr.so
 
@@ -29,6 +29,12 @@ Provides the enumeration and structure definitions required by the `resourcemana
 | [ResourceManager_ColorMode](#resourcemanager_colormode) | ResourceManager_ColorMode | Enumerates color modes. |
 | [ResourceManager_DeviceType](#resourcemanager_devicetype) | ResourceManager_DeviceType | Enumerates device types. |
 | [ScreenDensity](#screendensity) | ScreenDensity | Enumerates the screen density types. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| GLOBAL_RESMGR_COMMON_H | Provides the enumeration and structure definitions required by the `resourcemanager` module. <br>This header file defines enumerations such as error codes, screen orientations, color modes, device types, and screen densities, as well as the device configuration structure, providing data type support for the resource retrieval functions in `ohresmgr.h`.<br>**Since**: 12<br>**System capability**: SystemCapability.Global.ResourceManager |
 
 ## Enum type description
 

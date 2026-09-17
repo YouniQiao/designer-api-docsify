@@ -30,7 +30,7 @@ Defines the basic APIs of the camera.
 | [Camera_PhotoCaptureSetting](capi-oh-camera-camera-photocapturesetting.md) | Camera_PhotoCaptureSetting | The struct describes the parameters related to photo capture. |
 | [Camera_FrameShutterInfo](capi-oh-camera-camera-frameshutterinfo.md) | Camera_FrameShutterInfo | The struct describes the frame shutter information. |
 | [Camera_CaptureEndInfo](capi-oh-camera-camera-captureendinfo.md) | Camera_CaptureEndInfo | The struct describes the capture end information. |
-| [Camera_Rect](capi-oh-camera-camera-rect.md) | Camera_Rect | The struct describes a rectangle. The coordinate system for the returned detection points is based on thelandscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is(0, 0), and the bottom-right corner corresponds to the pixel dimensions of the camera preview output stream. Allmember values are integer pixel values. Here, **topLeftX** and **topLeftY** represent the coordinates of the top-leftcorner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle,respectively. |
+| [Camera_Rect](capi-oh-camera-camera-rect.md) | Camera_Rect | The struct describes a rectangle. The coordinate system for the returned detection points is based on the landscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is (0, 0), and the bottom-right corner corresponds to the pixel dimensions of the camera preview output stream. All member values are integer pixel values. Here, **topLeftX** and **topLeftY** represent the coordinates of the top-left corner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle, respectively. |
 | [Camera_MetadataObject](capi-oh-camera-camera-metadataobject.md) | Camera_MetadataObject | The struct describes the camera metadata. |
 | [Camera_TorchStatusInfo](capi-oh-camera-camera-torchstatusinfo.md) | Camera_TorchStatusInfo | The struct describes the flashlight status information. |
 | [Camera_SmoothZoomInfo](capi-oh-camera-camera-smoothzoominfo.md) | Camera_SmoothZoomInfo | The struct describes the smooth zoom information. |
@@ -121,7 +121,7 @@ Enumerates the camera error codes.
 | CAMERA_DEVICE_PREEMPTED = 7400109 | The camera is preempted. |
 | CAMERA_UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110 |  |
 | CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST = 7400113 |  |
-| CAMERA_SERVICE_FATAL_ERROR = 7400201 | The camera service is abnormal, for example, no camera permission, camera service restart, or abnormal cross-process invocation. |
+| CAMERA_SERVICE_FATAL_ERROR = 7400201 | The camera service is abnormal, for example, no camera permission, camera service restart, or abnormal cross- process invocation. |
 | CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED = 7400114 |  |
 
 ### Camera_Status
@@ -159,7 +159,7 @@ Enumerates the camera scene modes.
 | -- | -- |
 | NORMAL_PHOTO = 1 | Normal photo mode. |
 | NORMAL_VIDEO = 2 | Normal video mode. |
-| SECURE_PHOTO = 12 | Secure mode, which is mainly provided for high-security applications like banking that require features such asbiometric verification. The secure mode requires the encryption algorithm framework and trusted applicationservices. For details,see [Device Certificate Kit](docroot://security/DeviceCertificateKit/device-certificate-kit-intro.md). |
+| SECURE_PHOTO = 12 | Secure mode, which is mainly provided for high-security applications like banking that require features such as biometric verification. The secure mode requires the encryption algorithm framework and trusted application services. For details, see [Device Certificate Kit](docroot://security/DeviceCertificateKit/device-certificate-kit-intro.md). |
 
 ### Camera_Position
 
@@ -341,9 +341,9 @@ Enumerates the exposure modes.
 | Enum item | Description |
 | -- | -- |
 | EXPOSURE_MODE_UNSPECIFIED = -1 |  |
-| EXPOSURE_MODE_LOCKED = 0 | Exposure locked. The metering point cannot be set.<br>After this mode is used, the exposure will be locked bydefault for each photo capture. |
-| EXPOSURE_MODE_AUTO = 1 | Auto exposure. The metering point can be set by calling {@link OH_CaptureSession_SetMeteringPoint}.After this mode is used, it takes effect only for the first photo capture. |
-| EXPOSURE_MODE_CONTINUOUS_AUTO = 2 | Continuous auto exposure.<br>After this mode is used, the camera system automatically adjusts the exposure basedon the environment changes each time. |
+| EXPOSURE_MODE_LOCKED = 0 | Exposure locked. The metering point cannot be set.<br>After this mode is used, the exposure will be locked by default for each photo capture. |
+| EXPOSURE_MODE_AUTO = 1 | Auto exposure. The metering point can be set by calling {@link OH_CaptureSession_SetMeteringPoint}. After this mode is used, it takes effect only for the first photo capture. |
+| EXPOSURE_MODE_CONTINUOUS_AUTO = 2 | Continuous auto exposure.<br>After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time. |
 | EXPOSURE_MODE_MANUAL = 3 |  |
 
 ### OH_Camera_ExposureMeteringMode
@@ -452,13 +452,13 @@ Enumerates the image rotation angles.
 
 | Enum item | Description |
 | -- | -- |
-| IAMGE_ROTATION_0 = 0 | The image rotates 0 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_0](capi-camera-h.md#camera_imagerotation)instead. |
+| IAMGE_ROTATION_0 = 0 | The image rotates 0 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_0](capi-camera-h.md#camera_imagerotation) instead. |
 | CAMERA_IMAGE_ROTATION_0 = 0 |  |
-| IAMGE_ROTATION_90 = 90 | The image rotates 90 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_90](capi-camera-h.md#camera_imagerotation)instead. |
+| IAMGE_ROTATION_90 = 90 | The image rotates 90 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_90](capi-camera-h.md#camera_imagerotation) instead. |
 | CAMERA_IMAGE_ROTATION_90 = 90 |  |
-| IAMGE_ROTATION_180 = 180 | The image rotates 180 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_180](capi-camera-h.md#camera_imagerotation)instead. |
+| IAMGE_ROTATION_180 = 180 | The image rotates 180 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_180](capi-camera-h.md#camera_imagerotation) instead. |
 | CAMERA_IMAGE_ROTATION_180 = 180 |  |
-| IAMGE_ROTATION_270 = 270 | The image rotates 270 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_270](capi-camera-h.md#camera_imagerotation)instead. |
+| IAMGE_ROTATION_270 = 270 | The image rotates 270 degrees.<br> Since API version 23, you are advised to use the new enum value [CAMERA_IMAGE_ROTATION_270](capi-camera-h.md#camera_imagerotation) instead. |
 | CAMERA_IMAGE_ROTATION_270 = 270 |  |
 
 ### Camera_QualityLevel
@@ -493,7 +493,7 @@ Enumerates the metadata object types.
 
 | Enum item | Description |
 | -- | -- |
-| FACE_DETECTION = 0 | Metadata object used for face detection.<br> Since API version 23, you are advised to use the new enum value [CAMERA_METADATA_OBJECT_TYPE_FACE_DETECTION](capi-camera-h.md#camera_metadataobjecttype)instead. |
+| FACE_DETECTION = 0 | Metadata object used for face detection.<br> Since API version 23, you are advised to use the new enum value [CAMERA_METADATA_OBJECT_TYPE_FACE_DETECTION](capi-camera-h.md#camera_metadataobjecttype) instead. |
 | CAMERA_METADATA_OBJECT_TYPE_FACE_DETECTION = 0 |  |
 | CAMERA_METADATA_OBJECT_TYPE_HUMAN_BODY = 1 |  |
 | CAMERA_METADATA_OBJECT_TYPE_CAT_FACE = 2 |  |
@@ -518,11 +518,11 @@ Enumerates the flashlight modes.
 
 | Enum item | Description |
 | -- | -- |
-| OFF = 0 | The flashlight is always off.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_OFF](capi-camera-h.md#camera_torchmode)instead. |
+| OFF = 0 | The flashlight is always off.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_OFF](capi-camera-h.md#camera_torchmode) instead. |
 | CAMERA_TORCH_MODE_OFF = 0 |  |
-| ON = 1 | The flashlight is always on.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_ON](capi-camera-h.md#camera_torchmode)instead. |
+| ON = 1 | The flashlight is always on.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_ON](capi-camera-h.md#camera_torchmode) instead. |
 | CAMERA_TORCH_MODE_ON = 1 |  |
-| AUTO = 2 | The flashlight will be turned on automatically based on the ambient lighting level.<br> Since API version 23,you are advised to use the new enum value [CAMERA_TORCH_MODE_AUTO](capi-camera-h.md#camera_torchmode) instead. |
+| AUTO = 2 | The flashlight will be turned on automatically based on the ambient lighting level.<br> Since API version 23, you are advised to use the new enum value [CAMERA_TORCH_MODE_AUTO](capi-camera-h.md#camera_torchmode) instead. |
 | CAMERA_TORCH_MODE_AUTO = 2 |  |
 
 ### Camera_SmoothZoomMode
@@ -539,7 +539,7 @@ Enumerates the smooth zoom modes.
 
 | Enum item | Description |
 | -- | -- |
-| NORMAL = 0 | Bessel curve mode.<br> Since API version 23, you are advised to use the new enum value [CAMERA_SMOOTH_ZOOM_MODE_NORMAL](capi-camera-h.md#camera_smoothzoommode)instead. |
+| NORMAL = 0 | Bessel curve mode.<br> Since API version 23, you are advised to use the new enum value [CAMERA_SMOOTH_ZOOM_MODE_NORMAL](capi-camera-h.md#camera_smoothzoommode) instead. |
 | CAMERA_SMOOTH_ZOOM_MODE_NORMAL = 0 |  |
 
 ### Camera_PreconfigType
@@ -612,11 +612,11 @@ Enumerates the fold statuses.
 
 | Enum item | Description |
 | -- | -- |
-| NON_FOLDABLE = 0 | Unfoldable.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_NON_FOLDABLE](capi-camera-h.md#camera_foldstatus)instead. |
+| NON_FOLDABLE = 0 | Unfoldable.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_NON_FOLDABLE](capi-camera-h.md#camera_foldstatus) instead. |
 | CAMERA_FOLD_STATUS_NON_FOLDABLE = 0 |  |
-| EXPANDED = 1 | Unfolded.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_EXPANDED](capi-camera-h.md#camera_foldstatus)instead. |
+| EXPANDED = 1 | Unfolded.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_EXPANDED](capi-camera-h.md#camera_foldstatus) instead. |
 | CAMERA_FOLD_STATUS_EXPANDED = 1 |  |
-| FOLDED = 2 | Folded.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_FOLDED](capi-camera-h.md#camera_foldstatus)instead. |
+| FOLDED = 2 | Folded.<br> Since API version 23, you are advised to use the new enum value [CAMERA_FOLD_STATUS_FOLDED](capi-camera-h.md#camera_foldstatus) instead. |
 | CAMERA_FOLD_STATUS_FOLDED = 2 |  |
 
 ### Camera_QualityPrioritization
@@ -667,7 +667,7 @@ Enumerates the photo quality prioritization strategies.
 
 | Enum item | Description |
 | -- | -- |
-| CAMERA_PHOTO_QUALITY_PRIORITIZATION_HIGH_QUALITY = 0 | Focuses on image quality, which may increase the time required for capturing photos to ensure high-qualityoutput. |
+| CAMERA_PHOTO_QUALITY_PRIORITIZATION_HIGH_QUALITY = 0 | Focuses on image quality, which may increase the time required for capturing photos to ensure high-quality output. |
 | CAMERA_PHOTO_QUALITY_PRIORITIZATION_SPEED = 1 | Focuses on performance, trading off image quality for faster capture times. |
 
 ### Camera_ControlCenterEffectType

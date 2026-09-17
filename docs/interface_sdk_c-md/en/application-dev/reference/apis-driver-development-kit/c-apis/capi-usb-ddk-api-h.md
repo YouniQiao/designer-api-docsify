@@ -22,7 +22,7 @@ Declares the USB DDK APIs used by the USB host to access USB devices.
 | [void OH_Usb_Release(void)](#oh_usb_release) | Releases the USB DDK. |
 | [int32_t OH_Usb_ReleaseResource(void)](#oh_usb_releaseresource) | Releases the USB DDK. |
 | [int32_t OH_Usb_GetDeviceDescriptor(uint64_t deviceId, struct UsbDeviceDescriptor *desc)](#oh_usb_getdevicedescriptor) | Obtains the device descriptor. |
-| [int32_t OH_Usb_GetConfigDescriptor(uint64_t deviceId, uint8_t configIndex, struct UsbDdkConfigDescriptor ** const config)](#oh_usb_getconfigdescriptor) | Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeConfigDescriptor](capi-usb-ddk-api-h.md#oh_usb_freeconfigdescriptor) torelease a descriptor after use. |
+| [int32_t OH_Usb_GetConfigDescriptor(uint64_t deviceId, uint8_t configIndex, struct UsbDdkConfigDescriptor ** const config)](#oh_usb_getconfigdescriptor) | Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeConfigDescriptor](capi-usb-ddk-api-h.md#oh_usb_freeconfigdescriptor) to release a descriptor after use. |
 | [void OH_Usb_FreeConfigDescriptor(struct UsbDdkConfigDescriptor * const config)](#oh_usb_freeconfigdescriptor) | Releases a configuration descriptor after use to prevent memory leakage. |
 | [int32_t OH_Usb_ClaimInterface(uint64_t deviceId, uint8_t interfaceIndex, uint64_t *interfaceHandle)](#oh_usb_claiminterface) | Claims a USB interface. |
 | [int32_t OH_Usb_ReleaseInterface(uint64_t interfaceHandle)](#oh_usb_releaseinterface) | Releases a USB interface. |
@@ -30,13 +30,13 @@ Declares the USB DDK APIs used by the USB host to access USB devices.
 | [int32_t OH_Usb_GetCurrentInterfaceSetting(uint64_t interfaceHandle, uint8_t *settingIndex)](#oh_usb_getcurrentinterfacesetting) | Obtains the activated alternate setting of a USB interface. |
 | [int32_t OH_Usb_SendControlReadRequest(uint64_t interfaceHandle, const struct UsbControlRequestSetup *setup, uint32_t timeout, uint8_t *data, uint32_t *dataLen)](#oh_usb_sendcontrolreadrequest) | Sends a control read transfer request. This API works in a synchronous manner. |
 | [int32_t OH_Usb_SendControlWriteRequest(uint64_t interfaceHandle, const struct UsbControlRequestSetup *setup, uint32_t timeout, const uint8_t *data, uint32_t dataLen)](#oh_usb_sendcontrolwriterequest) | Sends a control write transfer request. This API works in a synchronous manner. |
-| [int32_t OH_Usb_SendPipeRequest(const struct UsbRequestPipe *pipe, UsbDeviceMemMap *devMmap)](#oh_usb_sendpiperequest) | Sends a pipe request. This API works in a synchronous manner. It applies to interrupt transfer and bulktransfer. |
-| [int32_t OH_Usb_SendPipeRequestWithAshmem(const struct UsbRequestPipe *pipe, DDK_Ashmem *ashmem)](#oh_usb_sendpiperequestwithashmem) | Sends a pipe request based on the shared memory. This API returns the result synchronously. It applies tointerrupt transfer and bulk transfer. |
-| [int32_t OH_Usb_CreateDeviceMemMap(uint64_t deviceId, size_t size, UsbDeviceMemMap **devMmap)](#oh_usb_createdevicememmap) | Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](capi-usb-ddk-api-h.md#oh_usb_destroydevicememmap) to destroy a buffer afteruse. |
+| [int32_t OH_Usb_SendPipeRequest(const struct UsbRequestPipe *pipe, UsbDeviceMemMap *devMmap)](#oh_usb_sendpiperequest) | Sends a pipe request. This API works in a synchronous manner. It applies to interrupt transfer and bulk transfer. |
+| [int32_t OH_Usb_SendPipeRequestWithAshmem(const struct UsbRequestPipe *pipe, DDK_Ashmem *ashmem)](#oh_usb_sendpiperequestwithashmem) | Sends a pipe request based on the shared memory. This API returns the result synchronously. It applies to interrupt transfer and bulk transfer. |
+| [int32_t OH_Usb_CreateDeviceMemMap(uint64_t deviceId, size_t size, UsbDeviceMemMap **devMmap)](#oh_usb_createdevicememmap) | Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](capi-usb-ddk-api-h.md#oh_usb_destroydevicememmap) to destroy a buffer after use. |
 | [void OH_Usb_DestroyDeviceMemMap(UsbDeviceMemMap *devMmap)](#oh_usb_destroydevicememmap) | Destroys a buffer. To prevent resource leakage, destroy a buffer in time after use. |
-| [int32_t OH_Usb_GetDevices(struct Usb_DeviceArray *devices)](#oh_usb_getdevices) | Obtains the USB device ID list. Ensure that the pointer parameters passed in are valid. To avoid excessivememory usage, the size of the requested device ID array is recommended not to exceed 128. After using the struct,release the memory of its members; otherwise, resource leaks may occur. Besides, make sure that the obtained USBdevice ID has been filtered by **vid** in the driver configuration information. |
+| [int32_t OH_Usb_GetDevices(struct Usb_DeviceArray *devices)](#oh_usb_getdevices) | Obtains the USB device ID list. Ensure that the pointer parameters passed in are valid. To avoid excessive memory usage, the size of the requested device ID array is recommended not to exceed 128. After using the struct, release the memory of its members; otherwise, resource leaks may occur. Besides, make sure that the obtained USB device ID has been filtered by **vid** in the driver configuration information. |
 | [int32_t OH_Usb_ControlTransfer(uint64_t deviceID, const struct UsbControlRequestSetup *setupPacket, uint8_t *data, uint32_t timeout)](#oh_usb_controltransfer) | Performs a USB control transfer. This API works in a synchronous manner. |
-| [int32_t OH_Usb_GetNonRootHubs(struct Usb_NonRootHubArray *nonRootHub)](#oh_usb_getnonroothubs) | Queries and returns the list of non-root hubs. Ensure that the pointer parameters passed in are valid. Toavoid excessive memory usage, the size of the requested non-root hub ID array is recommended not to exceed 128.After using the struct, release the memory of its members; otherwise, resource leaks may occur. |
+| [int32_t OH_Usb_GetNonRootHubs(struct Usb_NonRootHubArray *nonRootHub)](#oh_usb_getnonroothubs) | Queries and returns the list of non-root hubs. Ensure that the pointer parameters passed in are valid. To avoid excessive memory usage, the size of the requested non-root hub ID array is recommended not to exceed 128. After using the struct, release the memory of its members; otherwise, resource leaks may occur. |
 
 ## Function description
 
@@ -58,7 +58,7 @@ Initializes the USB DDK.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails, or an internal error occurs.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_MEMORY_ERROR}: The memory allocation fails. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails, or an internal error occurs.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_MEMORY_ERROR}: The memory allocation fails. |
 
 ### OH_Usb_Release()
 
@@ -92,7 +92,7 @@ Releases the USB DDK.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails. |
 
 ### OH_Usb_GetDeviceDescriptor()
 
@@ -119,7 +119,7 @@ Obtains the device descriptor.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input desc is a null pointer. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input desc is a null pointer. |
 
 ### OH_Usb_GetConfigDescriptor()
 
@@ -129,7 +129,7 @@ int32_t OH_Usb_GetConfigDescriptor(uint64_t deviceId, uint8_t configIndex, struc
 
 **Description**
 
-Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeConfigDescriptor](capi-usb-ddk-api-h.md#oh_usb_freeconfigdescriptor) torelease a descriptor after use.
+Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeConfigDescriptor](capi-usb-ddk-api-h.md#oh_usb_freeconfigdescriptor) to release a descriptor after use.
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -140,14 +140,14 @@ Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeC
 | Parameter | Description |
 | -- | -- |
 | uint64_t deviceId | Device ID. |
-| uint8_t configIndex | Configuration index, which corresponds to the **bConfigurationValue** field in the USBconfiguration descriptor. |
-| struct UsbDdkConfigDescriptor ** const config | Configuration descriptor, which includes the standard configuration descriptor defined in the USBprotocol and the associated interface descriptor and endpoint descriptor. |
+| uint8_t configIndex | Configuration index, which corresponds to the **bConfigurationValue** field in the USB configuration descriptor. |
+| struct UsbDdkConfigDescriptor ** const config | Configuration descriptor, which includes the standard configuration descriptor defined in the USB protocol and the associated interface descriptor and endpoint descriptor. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input config is a null pointer.      {@link USB_DDK_IO_FAILED}: An I/O exception occurs.      {@link USB_DDK_MEMORY_ERROR}: The memory allocation fails. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input config is a null pointer.<br>    {@link USB_DDK_IO_FAILED}: An I/O exception occurs.<br>    {@link USB_DDK_MEMORY_ERROR}: The memory allocation fails. |
 
 ### OH_Usb_FreeConfigDescriptor()
 
@@ -189,13 +189,13 @@ Claims a USB interface.
 | -- | -- |
 | uint64_t deviceId | Device ID. |
 | uint8_t interfaceIndex | Interface index, which corresponds to {@link bInterfaceNumber} in the USB protocol. |
-| uint64_t *interfaceHandle | Interface operation handle. After the interface is claimed successfully, a value will beassigned to this parameter. |
+| uint64_t *interfaceHandle | Interface operation handle. After the interface is claimed successfully, a value will be assigned to this parameter. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input interfaceHandle is a null pointer.      {@link USB_DDK_MEMORY_ERROR}: The memory to be allocated exceeds the limit. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input interfaceHandle is a null pointer.<br>    {@link USB_DDK_MEMORY_ERROR}: The memory to be allocated exceeds the limit. |
 
 ### OH_Usb_ReleaseInterface()
 
@@ -221,7 +221,7 @@ Releases a USB interface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: One or more parameters are invalid. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: One or more parameters are invalid. |
 
 ### OH_Usb_SelectInterfaceSetting()
 
@@ -242,13 +242,13 @@ Activates the alternate setting of a USB interface.
 | Parameter | Description |
 | -- | -- |
 | uint64_t interfaceHandle | Interface operation handle. |
-| uint8_t settingIndex | Alternate setting index, which corresponds to the **bAlternateSetting** field of the interfacedescriptor in the USB protocol. |
+| uint8_t settingIndex | Alternate setting index, which corresponds to the **bAlternateSetting** field of the interface descriptor in the USB protocol. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: One or more parameters are invalid. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: One or more parameters are invalid. |
 
 ### OH_Usb_GetCurrentInterfaceSetting()
 
@@ -269,13 +269,13 @@ Obtains the activated alternate setting of a USB interface.
 | Parameter | Description |
 | -- | -- |
 | uint64_t interfaceHandle | Interface operation handle. |
-| uint8_t *settingIndex | Alternate setting index, which corresponds to the **bAlternateSetting** field of the interfacedescriptor in the USB protocol. |
+| uint8_t *settingIndex | Alternate setting index, which corresponds to the **bAlternateSetting** field of the interface descriptor in the USB protocol. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input settingIndex is a null pointer. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input settingIndex is a null pointer. |
 
 ### OH_Usb_SendControlReadRequest()
 
@@ -305,7 +305,7 @@ Sends a control read transfer request. This API works in a synchronous manner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input setup, data, or dataLen is a null pointer, or the value      of datalen is less than the length of the read data.      {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.      {@link USB_DDK_IO_FAILED}: An I/O exception occurs.      {@link USB_DDK_TIMEOUT}: The operation times out. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input setup, data, or dataLen is a null pointer, or the value<br>    of datalen is less than the length of the read data.<br>    {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.<br>    {@link USB_DDK_IO_FAILED}: An I/O exception occurs.<br>    {@link USB_DDK_TIMEOUT}: The operation times out. |
 
 ### OH_Usb_SendControlWriteRequest()
 
@@ -335,7 +335,7 @@ Sends a control write transfer request. This API works in a synchronous manner.
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input setup or data is a null pointer.      {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.      {@link USB_DDK_IO_FAILED}: An I/O exception occurs.      {@link USB_DDK_TIMEOUT}: The operation times out. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input setup or data is a null pointer.<br>    {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.<br>    {@link USB_DDK_IO_FAILED}: An I/O exception occurs.<br>    {@link USB_DDK_TIMEOUT}: The operation times out. |
 
 ### OH_Usb_SendPipeRequest()
 
@@ -345,7 +345,7 @@ int32_t OH_Usb_SendPipeRequest(const struct UsbRequestPipe *pipe, UsbDeviceMemMa
 
 **Description**
 
-Sends a pipe request. This API works in a synchronous manner. It applies to interrupt transfer and bulktransfer.
+Sends a pipe request. This API works in a synchronous manner. It applies to interrupt transfer and bulk transfer.
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -362,7 +362,7 @@ Sends a pipe request. This API works in a synchronous manner. It applies to inte
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input pipe or devMmap is a null pointer, or the devMmap      address is null.      {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.      {@link USB_DDK_IO_FAILED}: An I/O exception occurs.      {@link USB_DDK_TIMEOUT}: The operation times out. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input pipe or devMmap is a null pointer, or the devMmap<br>    address is null.<br>    {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.<br>    {@link USB_DDK_IO_FAILED}: An I/O exception occurs.<br>    {@link USB_DDK_TIMEOUT}: The operation times out. |
 
 ### OH_Usb_SendPipeRequestWithAshmem()
 
@@ -372,7 +372,7 @@ int32_t OH_Usb_SendPipeRequestWithAshmem(const struct UsbRequestPipe *pipe, DDK_
 
 **Description**
 
-Sends a pipe request based on the shared memory. This API returns the result synchronously. It applies tointerrupt transfer and bulk transfer.
+Sends a pipe request based on the shared memory. This API returns the result synchronously. It applies to interrupt transfer and bulk transfer.
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -389,7 +389,7 @@ Sends a pipe request based on the shared memory. This API returns the result syn
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input pipe or ashmem is a null pointer, or the ashmem address      is null.      {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.      {@link USB_DDK_IO_FAILED}: An I/O exception occurs.      {@link USB_DDK_TIMEOUT}: The operation times out. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input pipe or ashmem is a null pointer, or the ashmem address<br>    is null.<br>    {@link USB_DDK_MEMORY_ERROR}: The attempt to copy the memory that stores the read data fails.<br>    {@link USB_DDK_IO_FAILED}: An I/O exception occurs.<br>    {@link USB_DDK_TIMEOUT}: The operation times out. |
 
 ### OH_Usb_CreateDeviceMemMap()
 
@@ -399,7 +399,7 @@ int32_t OH_Usb_CreateDeviceMemMap(uint64_t deviceId, size_t size, UsbDeviceMemMa
 
 **Description**
 
-Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](capi-usb-ddk-api-h.md#oh_usb_destroydevicememmap) to destroy a buffer afteruse.
+Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](capi-usb-ddk-api-h.md#oh_usb_destroydevicememmap) to destroy a buffer after use.
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -417,7 +417,7 @@ Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](ca
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_PARAMETER}: The input parameter devMmap or devMmap is a null pointer.      {@link USB_DDK_MEMORY_ERROR}: The memory mapping fails, or the memory allocation of devMmap fails. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input parameter devMmap or devMmap is a null pointer.<br>    {@link USB_DDK_MEMORY_ERROR}: The memory mapping fails, or the memory allocation of devMmap fails. |
 
 ### OH_Usb_DestroyDeviceMemMap()
 
@@ -447,7 +447,7 @@ int32_t OH_Usb_GetDevices(struct Usb_DeviceArray *devices)
 
 **Description**
 
-Obtains the USB device ID list. Ensure that the pointer parameters passed in are valid. To avoid excessivememory usage, the size of the requested device ID array is recommended not to exceed 128. After using the struct,release the memory of its members; otherwise, resource leaks may occur. Besides, make sure that the obtained USBdevice ID has been filtered by **vid** in the driver configuration information.
+Obtains the USB device ID list. Ensure that the pointer parameters passed in are valid. To avoid excessive memory usage, the size of the requested device ID array is recommended not to exceed 128. After using the struct, release the memory of its members; otherwise, resource leaks may occur. Besides, make sure that the obtained USB device ID has been filtered by **vid** in the driver configuration information.
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -463,7 +463,7 @@ Obtains the USB device ID list. Ensure that the pointer parameters passed in are
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.      {@link USB_DDK_NO_PERM}: The permission check fails.      {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.      {@link USB_DDK_INVALID_PARAMETER}: The input devices is a null pointer. |
+| int32_t | {@link USB_DDK_SUCCESS}: The operation is successful.<br>    {@link USB_DDK_NO_PERM}: The permission check fails.<br>    {@link USB_DDK_INVALID_OPERATION}: The USB DDK service connection fails.<br>    {@link USB_DDK_INVALID_PARAMETER}: The input devices is a null pointer. |
 
 ### OH_Usb_ControlTransfer()
 
@@ -485,14 +485,14 @@ Performs a USB control transfer. This API works in a synchronous manner.
 | -- | -- |
 | uint64_t deviceID | An ID for the device to communicate with |
 | const struct UsbControlRequestSetup *setupPacket | Configuration parameters for the setup packet in control transfer requests |
-| uint8_t *data | A suitably-sized data buffer for either input or output based on the direction bitswithin bmRequestType. |
-| uint32_t timeout | Timeout (in milliseconds) that this function should wait before giving up due to no response beingreceived. For an unlimited timeout, use value 0. |
+| uint8_t *data | A suitably-sized data buffer for either input or output based on the direction bits within bmRequestType. |
+| uint32_t timeout | Timeout (in milliseconds) that this function should wait before giving up due to no response being received. For an unlimited timeout, use value 0. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | on success, the number of bytes actually transferred.      {@link USB_DDK_NO_PERM} Permission authentication failed.      {@link USB_DDK_INVALID_OPERATION} DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the      initialization process first.      {@link USB_DDK_INVALID_PARAMETER} The setupPacket or data parameters are invalid.      {@link USB_DDK_TIMEOUT} The control transfer timed out.      {@link USB_DDK_IO_FAILED} Control transfer request I/O exception. |
+| int32_t | on success, the number of bytes actually transferred.      {@link USB_DDK_NO_PERM} Permission authentication failed.<br>    {@link USB_DDK_INVALID_OPERATION} DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the<br>    initialization process first.<br>    {@link USB_DDK_INVALID_PARAMETER} The setupPacket or data parameters are invalid.<br>    {@link USB_DDK_TIMEOUT} The control transfer timed out.<br>    {@link USB_DDK_IO_FAILED} Control transfer request I/O exception. |
 
 ### OH_Usb_GetNonRootHubs()
 
@@ -502,7 +502,7 @@ int32_t OH_Usb_GetNonRootHubs(struct Usb_NonRootHubArray *nonRootHub)
 
 **Description**
 
-Queries and returns the list of non-root hubs. Ensure that the pointer parameters passed in are valid. Toavoid excessive memory usage, the size of the requested non-root hub ID array is recommended not to exceed 128.After using the struct, release the memory of its members; otherwise, resource leaks may occur.
+Queries and returns the list of non-root hubs. Ensure that the pointer parameters passed in are valid. To avoid excessive memory usage, the size of the requested non-root hub ID array is recommended not to exceed 128. After using the struct, release the memory of its members; otherwise, resource leaks may occur.
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -518,6 +518,6 @@ Queries and returns the list of non-root hubs. Ensure that the pointer parameter
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link USB_DDK_SUCCESS} Query operation successful.      {@link USB_DDK_NO_PERM} Permission authentication failed.      {@link USB_DDK_INVALID_OPERATION} DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the      initialization process first.      {@link USB_DDK_INVALID_PARAMETER} The parameter nonRootHub is null. |
+| int32_t | {@link USB_DDK_SUCCESS} Query operation successful.<br>    {@link USB_DDK_NO_PERM} Permission authentication failed.<br>    {@link USB_DDK_INVALID_OPERATION} DDK Service not initialized. Please invoke [OH_Usb_Init](capi-usb-ddk-api-h.md#oh_usb_init) to complete the<br>    initialization process first.<br>    {@link USB_DDK_INVALID_PARAMETER} The parameter nonRootHub is null. |
 
 

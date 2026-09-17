@@ -59,7 +59,7 @@ enum InputEvent_AxisEventType
 | 枚举项 | 描述 |
 | -- | -- |
 | AXIS_EVENT_TYPE_PINCH = 1 | 双指捏合事件，包含AXIS_TYPE_PINCH和AXIS_TYPE_ROTATE两种[InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype)。<br>**起始版本：** 12 |
-| AXIS_EVENT_TYPE_SCROLL = 2 | 滚轴事件，包含AXIS_TYPE_SCROLL_VERTICAL和AXIS_TYPE_SCROLL_HORIZONTAL两种[InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype)，其中鼠标滚轮事件仅包含AXIS_TYPE_SCROLL_VERTICAL一种[InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype)。<br>**起始版本：** 12 |
+| AXIS_EVENT_TYPE_SCROLL = 2 | 滚轴事件，包含AXIS_TYPE_SCROLL_VERTICAL和AXIS_TYPE_SCROLL_HORIZONTAL两种[InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype)， 其中鼠标滚轮事件仅包含AXIS_TYPE_SCROLL_VERTICAL一种[InputEvent_AxisType](capi-oh-axis-type-h.md#inputevent_axistype)。<br>**起始版本：** 12 |
 
 ### InputEvent_AxisAction
 

@@ -51,7 +51,7 @@ Sets thread attributes for CA, task ID, and shadow settings.
 | pthread_attr_t *a | Pointer to the thread attribute object to be modified. |
 | int ca | Specifies the CA attribute value (e.g., TEESMP_THREAD_ATTR_CA_INHERIT for inheritance). |
 | int task_id | Specifies the task ID attribute value (e.g., TEESMP_THREAD_ATTR_TASK_ID_INHERIT for inheritance). |
-| int shadow | Indicates whether to enable shadow settings (TEESMP_THREAD_ATTR_NO_SHADOW 0x0 for no shadow,TEESMP_THREAD_ATTR_HAS_SHADOW 0x1 for has shadow). |
+| int shadow | Indicates whether to enable shadow settings (TEESMP_THREAD_ATTR_NO_SHADOW 0x0 for no shadow, TEESMP_THREAD_ATTR_HAS_SHADOW 0x1 for has shadow). |
 
 **Returns**:
 

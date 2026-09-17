@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Document ContentEmbed_Document
 
 ## Overview
 
-Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure ofthe embedded document.
+Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure of the embedded document.
 
 **Since**: 24
 

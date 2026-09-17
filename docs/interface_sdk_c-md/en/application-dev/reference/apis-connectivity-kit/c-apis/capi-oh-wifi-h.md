@@ -18,7 +18,7 @@ Define interfaces for querying wifi switch status.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_WifiLinkedInfo](capi-wifi-oh-wifilinkedinfo.md) | OH_WifiLinkedInfo | Represents the Wi-Fi connection information.This structure describes the hotspot information of the current station connection.The information can be obtained by calling [OH_Wifi_GetLinkedInfo](capi-oh-wifi-h.md#oh_wifi_getlinkedinfo). |
+| [OH_WifiLinkedInfo](capi-wifi-oh-wifilinkedinfo.md) | OH_WifiLinkedInfo | Represents the Wi-Fi connection information.<br> This structure describes the hotspot information of the current station connection. The information can be obtained by calling [OH_Wifi_GetLinkedInfo](capi-oh-wifi-h.md#oh_wifi_getlinkedinfo). |
 
 ### Enum
 
@@ -44,7 +44,7 @@ Define interfaces for querying wifi switch status.
 | -- | -- |
 | [Wifi_ResultCode OH_Wifi_IsWifiEnabled(bool *enabled)](#oh_wifi_iswifienabled) | Check whether the wifi switch is enabled. |
 | [Wifi_ResultCode OH_Wifi_GetDeviceMacAddress(char *macAddr, unsigned int *macAddrLen)](#oh_wifi_getdevicemacaddress) | Get the device Mac address. |
-| [Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)](#oh_wifi_getlinkedinfo) | Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddress also requires the<br> ohos.permission.GET_WIFI_LOCAL_MAC permission. This permission is available only to system apps in<br> API versions 8–15. Starting from API 16, it is available to regular apps on PC/2-in-1 devices, while on other<br> devices it remains restricted to system apps. If the permission is not granted, macAddress will be returned<br> as empty. If the application has requested the ohos.permission.GET_WIFI_PEERS_MAC permission, the bssid<br> in the returned result will be the real BSSID address; otherwise, it will be a randomized device address.<br> |
+| [Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)](#oh_wifi_getlinkedinfo) | Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddress also requires the ohos.permission.GET_WIFI_LOCAL_MAC permission. This permission is available only to system apps in API versions 8–15. Starting from API 16, it is available to regular apps on PC/2-in-1 devices, while on other devices it remains restricted to system apps. If the permission is not granted, macAddress will be returned as empty. If the application has requested the ohos.permission.GET_WIFI_PEERS_MAC permission, the bssid in the returned result will be the real BSSID address; otherwise, it will be a randomized device address. |
 
 ## Enum type description
 
@@ -63,10 +63,10 @@ Enumerates the wifi result codes.
 | Enum item | Description |
 | -- | -- |
 | WIFI_SUCCESS = 0 | The operation is successful. |
-| WIFI_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have thepermission required to call the API. |
-| WIFI_INVALID_PARAM = 401 | Parameter error. Possible reasons: 1. The input parameter is a null pointer;<br> 2. Parameter values exceed the defined range. |
+| WIFI_PERMISSION_DENIED = 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| WIFI_INVALID_PARAM = 401 | Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range. |
 | WIFI_NOT_SUPPORTED = 801 | Capability not supported. Failed to call function due to limited device capabilities. |
-| WIFI_OPERATION_FAILED = 2501000 | Operation failed.Possible reasons: Internal execution failed. |
+| WIFI_OPERATION_FAILED = 2501000 | Operation failed. Possible reasons: Internal execution failed. |
 | WIFI_STA_DISABLED = 2501001 |  Wi-Fi STA disabled.<br>**Since**: 21 |
 
 ### OH_WifiLinkType
@@ -198,7 +198,7 @@ Check whether the wifi switch is enabled.
 
 | Parameter | Description |
 | -- | -- |
-| bool *enabled | - It is a boolean pointer used to receive wifi switch status values.<br> Equal to true indicates that the wifi switch is turned on, false indicates that<br> the wifi switch is turned off.<br> The caller needs to pass in a non empty boolean pointer, otherwise an error will be returned. |
+| bool *enabled | - It is a boolean pointer used to receive wifi switch status values. Equal to true indicates that the wifi switch is turned on, false indicates that the wifi switch is turned off. The caller needs to pass in a non empty boolean pointer, otherwise an error will be returned. |
 
 **Returns**:
 
@@ -241,7 +241,7 @@ Wifi_ResultCode OH_Wifi_GetLinkedInfo(OH_WifiLinkedInfo *info)
 
 **Description**
 
-Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddress also requires the<br> ohos.permission.GET_WIFI_LOCAL_MAC permission. This permission is available only to system apps in<br> API versions 8–15. Starting from API 16, it is available to regular apps on PC/2-in-1 devices, while on other<br> devices it remains restricted to system apps. If the permission is not granted, macAddress will be returned<br> as empty. If the application has requested the ohos.permission.GET_WIFI_PEERS_MAC permission, the bssid<br> in the returned result will be the real BSSID address; otherwise, it will be a randomized device address.<br>
+Get wifi linked info. When macType is 1 (device MAC address), obtaining macAddress also requires the ohos.permission.GET_WIFI_LOCAL_MAC permission. This permission is available only to system apps in API versions 8–15. Starting from API 16, it is available to regular apps on PC/2-in-1 devices, while on other devices it remains restricted to system apps. If the permission is not granted, macAddress will be returned as empty. If the application has requested the ohos.permission.GET_WIFI_PEERS_MAC permission, the bssid in the returned result will be the real BSSID address; otherwise, it will be a randomized device address.
 
 **Required permission**: ohos.permission.GET_WIFI_INFO.
 

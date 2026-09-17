@@ -6,7 +6,7 @@ typedef struct JSVM_PropertyHandlerConfigurationStruct {...} JSVM_PropertyHandle
 
 ## Overview
 
-When the object's getter, setter, deleter, and enumerator operations are performed, the correspondingcallback will be triggered.
+When the object's getter, setter, deleter, and enumerator operations are performed, the corresponding callback will be triggered.
 
 **Since**: 12
 

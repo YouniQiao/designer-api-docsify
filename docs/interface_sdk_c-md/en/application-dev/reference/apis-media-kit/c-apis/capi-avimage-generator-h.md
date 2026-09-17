@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the AVImageGenerator APIs. You can use the APIs to extract video frames at given timepoints from videos.
+The file declares the AVImageGenerator APIs. You can use the APIs to extract video frames at given time points from videos.
 
 **Library**: libavimage_generator.so
 
@@ -72,7 +72,7 @@ Sets a data source based on the media file descriptor.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input generator is nullptr or input param is invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.  {@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input generator is nullptr or input param is invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.<br>{@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
 
 ### OH_AVImageGenerator_FetchFrameByTime()
 
@@ -99,7 +99,7 @@ Extracts a video frame at a given time from a video.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input generator is nullptr or input param is invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.  {@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.  {@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input generator is nullptr or input param is invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: operation not allowed.<br>{@link AV_ERR_UNSUPPORTED_FORMAT}: format is unsupported.<br>{@link AV_ERR_NO_MEMORY}: internal memory allocation failed. |
 
 ### OH_AVImageGenerator_Release()
 
@@ -123,6 +123,6 @@ Releases the resources used by the OH_AVImageGenerator instance and destroys the
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.  {@link AV_ERR_INVALID_VAL}: input generator is nullptr or input param is invalid. |
+| OH_AVErrCode | Function result code.  {@link AV_ERR_OK}: the execution is successful.<br>{@link AV_ERR_INVALID_VAL}: input generator is nullptr or input param is invalid. |
 
 

@@ -21,8 +21,8 @@ Defines **Image** node types for **NativeNode** APIs.
 | [ArkUI_ImageRepeat](#arkui_imagerepeat) | ArkUI_ImageRepeat | Enumerates the image repeat patterns. |
 | [ArkUI_ImageSize](#arkui_imagesize) | ArkUI_ImageSize | Enumerates the image sizes. |
 | [ArkUI_ObjectFit](#arkui_objectfit) | ArkUI_ObjectFit | Enumerates the image filling effects of the {@link Image} component. |
-| [ArkUI_ImageInterpolation](#arkui_imageinterpolation) | ArkUI_ImageInterpolation | Enumerates the image interpolation effects. This attribute mitigates aliasing during image scaling. Thisattribute is not applicable to SVG images. |
-| [ArkUI_DynamicRangeMode](#arkui_dynamicrangemode) | ArkUI_DynamicRangeMode | Enumerates the dynamic range modes (for example, SDR/HDR) for images, controlling the display range of imagebrightness and color gamut. |
+| [ArkUI_ImageInterpolation](#arkui_imageinterpolation) | ArkUI_ImageInterpolation | Enumerates the image interpolation effects. This attribute mitigates aliasing during image scaling. This attribute is not applicable to SVG images. |
+| [ArkUI_DynamicRangeMode](#arkui_dynamicrangemode) | ArkUI_DynamicRangeMode | Enumerates the dynamic range modes (for example, SDR/HDR) for images, controlling the display range of image brightness and color gamut. |
 | [ArkUI_ImageRotateOrientation](#arkui_imagerotateorientation) | ArkUI_ImageRotateOrientation | Enumerates image rotation directions. |
 | [ArkUI_ImageRenderMode](#arkui_imagerendermode) | ArkUI_ImageRenderMode | Enumerates the image rendering modes. |
 
@@ -104,7 +104,7 @@ enum ArkUI_ImageInterpolation
 
 **Description**
 
-Enumerates the image interpolation effects. This attribute mitigates aliasing during image scaling. Thisattribute is not applicable to SVG images.
+Enumerates the image interpolation effects. This attribute mitigates aliasing during image scaling. This attribute is not applicable to SVG images.
 
 **Since**: 12
 
@@ -123,7 +123,7 @@ enum ArkUI_DynamicRangeMode
 
 **Description**
 
-Enumerates the dynamic range modes (for example, SDR/HDR) for images, controlling the display range of imagebrightness and color gamut.
+Enumerates the dynamic range modes (for example, SDR/HDR) for images, controlling the display range of image brightness and color gamut.
 
 **Since**: 21
 

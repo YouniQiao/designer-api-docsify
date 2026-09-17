@@ -60,23 +60,23 @@ Defines a set of Text enum and interface.
 | [ArkUI_MarqueeStartPolicy OH_ArkUI_TextMarqueeOptions_GetStartPolicy(ArkUI_TextMarqueeOptions* option)](#oh_arkui_textmarqueeoptions_getstartpolicy) | Gets the start policy of the option object for marquee animation of text. |
 | [void OH_ArkUI_TextMarqueeOptions_SetUpdatePolicy(ArkUI_TextMarqueeOptions* option, ArkUI_MarqueeUpdatePolicy updatePolicy)](#oh_arkui_textmarqueeoptions_setupdatepolicy) | Sets the update policy of the option object for marquee animation of text. |
 | [ArkUI_MarqueeUpdatePolicy OH_ArkUI_TextMarqueeOptions_GetUpdatePolicy(ArkUI_TextMarqueeOptions* option)](#oh_arkui_textmarqueeoptions_getupdatepolicy) | Gets the update policy of the option object for marquee animation of text. |
-| [OH_ArkUI_TextDataDetectorConfig* OH_ArkUI_TextDataDetectorConfig_Create()](#oh_arkui_textdatadetectorconfig_create) | Creates a text entity recognition configuration object. When the object is no longer used, call[OH_ArkUI_TextDataDetectorConfig_Destroy](capi-text-h.md#oh_arkui_textdatadetectorconfig_destroy) to destroy it. |
+| [OH_ArkUI_TextDataDetectorConfig* OH_ArkUI_TextDataDetectorConfig_Create()](#oh_arkui_textdatadetectorconfig_create) | Creates a text entity recognition configuration object. When the object is no longer used, call [OH_ArkUI_TextDataDetectorConfig_Destroy](capi-text-h.md#oh_arkui_textdatadetectorconfig_destroy) to destroy it. |
 | [void OH_ArkUI_TextDataDetectorConfig_Destroy(OH_ArkUI_TextDataDetectorConfig* config)](#oh_arkui_textdatadetectorconfig_destroy) | Destroys the text entity recognition configuration object. |
 | [OH_ArkUI_TextController* OH_ArkUI_TextController_Create()](#oh_arkui_textcontroller_create) | Create a controller object for text. |
 | [void OH_ArkUI_TextController_Destroy(OH_ArkUI_TextController* controller)](#oh_arkui_textcontroller_destroy) | Destroys the text controller. |
 | [OH_ArkUI_FontWeightConfigs* OH_ArkUI_FontWeightConfigs_Create()](#oh_arkui_fontweightconfigs_create) | Create an option object for font weight configuration of text. |
 | [void OH_ArkUI_FontWeightConfigs_Destroy(OH_ArkUI_FontWeightConfigs* option)](#oh_arkui_fontweightconfigs_destroy) | Destroy an option object for font weight configuration of text. |
-| [void OH_ArkUI_FontWeightConfigs_SetEnableVariableFontWeight(OH_ArkUI_FontWeightConfigs* option, bool enable)](#oh_arkui_fontweightconfigs_setenablevariablefontweight) | Sets the enableVariableFontWeight flag of an option object for font weight configuration of text.The flag defines whether VariableFontWeight is supported. The default value is false.True means enable VariableFontWeight, false means disable VariableFontWeight. |
-| [bool OH_ArkUI_FontWeightConfigs_GetEnableVariableFontWeight(OH_ArkUI_FontWeightConfigs* option)](#oh_arkui_fontweightconfigs_getenablevariablefontweight) | Gets the enableVariableFontWeight flag of an option object for font weight configuration of text.The flag defines whether VariableFontWeight is supported. The default value is false.True means enable VariableFontWeight, false means disable VariableFontWeight. |
-| [void OH_ArkUI_FontWeightConfigs_SetEnableDeviceFontWeightCategory(OH_ArkUI_FontWeightConfigs* option, bool enable)](#oh_arkui_fontweightconfigs_setenabledevicefontweightcategory) | Sets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text.Defines whether font weight will be automatically updated when the device's font weight category changes.The default value is true.True means font weight will be automatically updated when the device's font weight category changes.False means font weight will not be automatically updated when the device's font weight category changes. |
-| [bool OH_ArkUI_FontWeightConfigs_GetEnableDeviceFontWeightCategory(OH_ArkUI_FontWeightConfigs* option)](#oh_arkui_fontweightconfigs_getenabledevicefontweightcategory) | Gets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text.Defines whether font weight will be automatically updated when the device's font weight category changes.The default value is true.True means font weight will be automatically updated when the device's font weight category changes.False means font weight will not be automatically updated when the device's font weight category changes. |
+| [void OH_ArkUI_FontWeightConfigs_SetEnableVariableFontWeight(OH_ArkUI_FontWeightConfigs* option, bool enable)](#oh_arkui_fontweightconfigs_setenablevariablefontweight) | Sets the enableVariableFontWeight flag of an option object for font weight configuration of text. The flag defines whether VariableFontWeight is supported. The default value is false. True means enable VariableFontWeight, false means disable VariableFontWeight. |
+| [bool OH_ArkUI_FontWeightConfigs_GetEnableVariableFontWeight(OH_ArkUI_FontWeightConfigs* option)](#oh_arkui_fontweightconfigs_getenablevariablefontweight) | Gets the enableVariableFontWeight flag of an option object for font weight configuration of text. The flag defines whether VariableFontWeight is supported. The default value is false. True means enable VariableFontWeight, false means disable VariableFontWeight. |
+| [void OH_ArkUI_FontWeightConfigs_SetEnableDeviceFontWeightCategory(OH_ArkUI_FontWeightConfigs* option, bool enable)](#oh_arkui_fontweightconfigs_setenabledevicefontweightcategory) | Sets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text. Defines whether font weight will be automatically updated when the device's font weight category changes. The default value is true. True means font weight will be automatically updated when the device's font weight category changes. False means font weight will not be automatically updated when the device's font weight category changes. |
+| [bool OH_ArkUI_FontWeightConfigs_GetEnableDeviceFontWeightCategory(OH_ArkUI_FontWeightConfigs* option)](#oh_arkui_fontweightconfigs_getenabledevicefontweightcategory) | Gets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text. Defines whether font weight will be automatically updated when the device's font weight category changes. The default value is true. True means font weight will be automatically updated when the device's font weight category changes. False means font weight will not be automatically updated when the device's font weight category changes. |
 | [OH_ArkUI_FontConfigs* OH_ArkUI_FontConfigs_Create()](#oh_arkui_fontconfigs_create) | Create an option object for font configuration of text. |
 | [void OH_ArkUI_FontConfigs_Destroy(OH_ArkUI_FontConfigs* option)](#oh_arkui_fontconfigs_destroy) | Destroy an option object for font configuration of text. |
 | [void OH_ArkUI_FontConfigs_SetFontWeightConfigs(OH_ArkUI_FontConfigs* option, OH_ArkUI_FontWeightConfigs* fontWeightConfigs)](#oh_arkui_fontconfigs_setfontweightconfigs) | Sets the font weight configs of an option object for font configuration of text. |
 | [OH_ArkUI_FontWeightConfigs* OH_ArkUI_FontConfigs_GetFontWeightConfigs(OH_ArkUI_FontConfigs* option)](#oh_arkui_fontconfigs_getfontweightconfigs) | Gets the font weight configs of an option object for font configuration of text. |
-| [OH_ArkUI_NativeModule_LineSpacingOptions *OH_ArkUI_NativeModule_LineSpacingOptions_Create()](#oh_arkui_nativemodule_linespacingoptions_create) | Creates a line spacing options object for text. When the object is no longer used,call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it. |
+| [OH_ArkUI_NativeModule_LineSpacingOptions *OH_ArkUI_NativeModule_LineSpacingOptions_Create()](#oh_arkui_nativemodule_linespacingoptions_create) | Creates a line spacing options object for text. When the object is no longer used, call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it. |
 | [void OH_ArkUI_NativeModule_LineSpacingOptions_Destroy(OH_ArkUI_NativeModule_LineSpacingOptions *options)](#oh_arkui_nativemodule_linespacingoptions_destroy) | Destroys the line spacing options object. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines(OH_ArkUI_NativeModule_LineSpacingOptions *options, bool onlyBetweenLines)](#oh_arkui_nativemodule_linespacingoptions_setonlybetweenlines) | Sets the onlyBetweenLines parameter for the line spacing options.When set to true, line spacing is only applied between lines, not for the first and last lines.When set to false, line spacing is applied uniformly to all lines. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines(OH_ArkUI_NativeModule_LineSpacingOptions *options, bool onlyBetweenLines)](#oh_arkui_nativemodule_linespacingoptions_setonlybetweenlines) | Sets the onlyBetweenLines parameter for the line spacing options. When set to true, line spacing is only applied between lines, not for the first and last lines. When set to false, line spacing is applied uniformly to all lines. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines(const OH_ArkUI_NativeModule_LineSpacingOptions *options, bool *onlyBetweenLines)](#oh_arkui_nativemodule_linespacingoptions_getonlybetweenlines) | Gets the onlyBetweenLines parameter from the line spacing options. |
 
 ## Enum type description
@@ -633,7 +633,7 @@ OH_ArkUI_TextDataDetectorConfig* OH_ArkUI_TextDataDetectorConfig_Create()
 
 **Description**
 
-Creates a text entity recognition configuration object. When the object is no longer used, call[OH_ArkUI_TextDataDetectorConfig_Destroy](capi-text-h.md#oh_arkui_textdatadetectorconfig_destroy) to destroy it.
+Creates a text entity recognition configuration object. When the object is no longer used, call [OH_ArkUI_TextDataDetectorConfig_Destroy](capi-text-h.md#oh_arkui_textdatadetectorconfig_destroy) to destroy it.
 
 **Since**: 24
 
@@ -741,7 +741,7 @@ void OH_ArkUI_FontWeightConfigs_SetEnableVariableFontWeight(OH_ArkUI_FontWeightC
 
 **Description**
 
-Sets the enableVariableFontWeight flag of an option object for font weight configuration of text.The flag defines whether VariableFontWeight is supported. The default value is false.True means enable VariableFontWeight, false means disable VariableFontWeight.
+Sets the enableVariableFontWeight flag of an option object for font weight configuration of text. The flag defines whether VariableFontWeight is supported. The default value is false. True means enable VariableFontWeight, false means disable VariableFontWeight.
 
 **Since**: 24
 
@@ -760,7 +760,7 @@ bool OH_ArkUI_FontWeightConfigs_GetEnableVariableFontWeight(OH_ArkUI_FontWeightC
 
 **Description**
 
-Gets the enableVariableFontWeight flag of an option object for font weight configuration of text.The flag defines whether VariableFontWeight is supported. The default value is false.True means enable VariableFontWeight, false means disable VariableFontWeight.
+Gets the enableVariableFontWeight flag of an option object for font weight configuration of text. The flag defines whether VariableFontWeight is supported. The default value is false. True means enable VariableFontWeight, false means disable VariableFontWeight.
 
 **Since**: 24
 
@@ -784,7 +784,7 @@ void OH_ArkUI_FontWeightConfigs_SetEnableDeviceFontWeightCategory(OH_ArkUI_FontW
 
 **Description**
 
-Sets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text.Defines whether font weight will be automatically updated when the device's font weight category changes.The default value is true.True means font weight will be automatically updated when the device's font weight category changes.False means font weight will not be automatically updated when the device's font weight category changes.
+Sets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text. Defines whether font weight will be automatically updated when the device's font weight category changes. The default value is true. True means font weight will be automatically updated when the device's font weight category changes. False means font weight will not be automatically updated when the device's font weight category changes.
 
 **Since**: 24
 
@@ -803,7 +803,7 @@ bool OH_ArkUI_FontWeightConfigs_GetEnableDeviceFontWeightCategory(OH_ArkUI_FontW
 
 **Description**
 
-Gets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text.Defines whether font weight will be automatically updated when the device's font weight category changes.The default value is true.True means font weight will be automatically updated when the device's font weight category changes.False means font weight will not be automatically updated when the device's font weight category changes.
+Gets the enableDeviceFontWeightCategory flag of an option object for font weight configuration of text. Defines whether font weight will be automatically updated when the device's font weight category changes. The default value is true. True means font weight will be automatically updated when the device's font weight category changes. False means font weight will not be automatically updated when the device's font weight category changes.
 
 **Since**: 24
 
@@ -906,7 +906,7 @@ OH_ArkUI_NativeModule_LineSpacingOptions *OH_ArkUI_NativeModule_LineSpacingOptio
 
 **Description**
 
-Creates a line spacing options object for text. When the object is no longer used,call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it.
+Creates a line spacing options object for text. When the object is no longer used, call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it.
 
 **Since**: 26.1.0
 
@@ -942,7 +942,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines(OH_
 
 **Description**
 
-Sets the onlyBetweenLines parameter for the line spacing options.When set to true, line spacing is only applied between lines, not for the first and last lines.When set to false, line spacing is applied uniformly to all lines.
+Sets the onlyBetweenLines parameter for the line spacing options. When set to true, line spacing is only applied between lines, not for the first and last lines. When set to false, line spacing is applied uniformly to all lines.
 
 **Since**: 26.1.0
 
@@ -951,13 +951,13 @@ Sets the onlyBetweenLines parameter for the line spacing options.When set to tru
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) *options | [in] Pointer to the [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) object. |
-| bool onlyBetweenLines | [in] Whether line spacing is only applied between lines.True means only between lines, false means uniformly to all lines.The default value is false. |
+| bool onlyBetweenLines | [in] Whether line spacing is only applied between lines. True means only between lines, false means uniformly to all lines. The default value is false. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <ul>      <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if the options parameter is null.</li>      </ul> |
+| ArkUI_ErrorCode | Result code.      <ul>      <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if the options parameter is null.</li>      </ul> |
 
 ### OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines()
 
@@ -976,12 +976,12 @@ Gets the onlyBetweenLines parameter from the line spacing options.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) *options | [in] Pointer to the [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) object. |
-| bool *onlyBetweenLines | [out] Output parameter. Pointer to a bool variable to receive the value.True means only between lines, false means uniformly to all lines.The default value is false. |
+| bool *onlyBetweenLines | [out] Output parameter. Pointer to a bool variable to receive the value. True means only between lines, false means uniformly to all lines. The default value is false. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <ul>      <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if any parameter is null.</li>      </ul> |
+| ArkUI_ErrorCode | Result code.      <ul>      <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if any parameter is null.</li>      </ul> |
 
 

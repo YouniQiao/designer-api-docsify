@@ -51,7 +51,7 @@ uint32_t OH_NetStack_CertVerification(const struct NetStack_CertBlob *cert, cons
 | const struct NetStack_CertBlob *cert | 用户传入的待校验证书。 |
 | const struct NetStack_CertBlob *caCert | 用户指定的证书，若为空则以系统预置证书进行校验。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -78,7 +78,7 @@ int32_t OH_NetStack_GetPinSetForHostName(const char *hostname, NetStack_Certific
 | const char *hostname | 主机名。 |
 | NetStack_CertificatePinning *pin | 证书锁定信息的结构体。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -105,7 +105,7 @@ int32_t OH_NetStack_GetCertificatesForHostName(const char *hostname, NetStack_Ce
 | const char *hostname | 主机名。 |
 | NetStack_Certificates *certs | 证书信息的结构体。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -151,7 +151,7 @@ int32_t OH_Netstack_IsCleartextPermitted(bool *isCleartextPermitted)
 | -- | -- |
 | bool *isCleartextPermitted | 输出参数，如果允许明文流量，则true，否则false。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -178,7 +178,7 @@ int32_t OH_Netstack_IsCleartextPermittedByHostName(const char *hostname, bool *i
 | const char *hostname | 主机名。 |
 | bool *isCleartextPermitted | 输出参数，如果允许指定主机名的明文流量，则true，否则false。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -203,7 +203,7 @@ int32_t OH_Netstack_IsCleartextCfgByComponent(const char *component, bool *compo
 | const char *component | 组件名称，当前支持的组件：Network Kit、ArkWeb。 |
 | bool *componentCfg | 输出参数，组件是否配置开启明文HTTP拦截功能，如果开启则为true，否则为false。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -233,10 +233,10 @@ uint32_t OH_NetStack_CreateAndVerifySortedCertChain(const struct NetStack_CertBl
 | size_t certCount | 证书链中的证书数量。 |
 | const struct NetStack_CertBlob *caCert | 用户指定的CA证书。如果为NULL，则使用预设证书。 |
 | const char *hostname | 预期的服务器主机名。 |
-| struct NetStack_CertBlob **outSortedChain | 用于接收排序证书链的指针。如果调用者不需要链数据，可以为NULL。仅在返回值为0时有效。必须使用OH_NetStack_FreeCertChain释放分配的内存。 |
+| struct NetStack_CertBlob **outSortedChain | 用于接收排序证书链的指针。 如果调用者不需要链数据，可以为NULL。 仅在返回值为0时有效。 必须使用OH_NetStack_FreeCertChain释放分配的内存。 |
 | size_t *outSortedCount | 用于接收排序证书数量的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -258,7 +258,7 @@ void OH_NetStack_FreeCertChain(struct NetStack_CertBlob *certChain, size_t certC
 
 | 参数项 | 描述 |
 | -- | -- |
-| struct NetStack_CertBlob *certChain | 从outSortedChain接收的证书链指针。如果为NULL，此函数不执行任何操作。 |
+| struct NetStack_CertBlob *certChain | 从outSortedChain接收的证书链指针。 如果为NULL，此函数不执行任何操作。 |
 | size_t certCount | 证书链中的证书数量。 |
 
 

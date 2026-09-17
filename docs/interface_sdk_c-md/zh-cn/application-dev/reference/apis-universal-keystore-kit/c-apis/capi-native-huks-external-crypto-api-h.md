@@ -22,7 +22,7 @@
 | -- | -- |
 | [struct OH_Huks_Result OH_Huks_RegisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_registerprovider) | 注册外部密钥管理能力扩展提供者。 |
 | [struct OH_Huks_Result OH_Huks_UnregisterProvider(const struct OH_Huks_Blob *providerName, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_unregisterprovider) | 注销外部密钥管理能力扩展提供者。 |
-| [struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_openresource) | 根据指定的资源ID打开资源。<br>注意：打开的资源必须通过[OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource)关闭。 |
+| [struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_openresource) | 根据指定的资源ID打开资源。 <br>注意：打开的资源必须通过[OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource)关闭。 |
 | [struct OH_Huks_Result OH_Huks_CloseResource(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet)](#oh_huks_closeresource) | 根据指定的资源ID关闭资源。 |
 | [struct OH_Huks_Result OH_Huks_GetUkeyPinAuthState(const struct OH_Huks_Blob *resourceId, const OH_Huks_ExternalCryptoParamSet *paramSet, OH_Huks_ExternalPinAuthState *authState)](#oh_huks_getukeypinauthstate) | 获取指定UKey资源ID的PIN授权状态。 |
 | [struct OH_Huks_Result OH_Huks_GetProperty(const struct OH_Huks_Blob *resourceId, const struct OH_Huks_Blob *propertyId, const OH_Huks_ExternalCryptoParamSet *paramSetIn, OH_Huks_ExternalCryptoParamSet **paramSetOut)](#oh_huks_getproperty) | 获取外部密钥管理能力扩展提供者的属性信息。 |
@@ -55,7 +55,7 @@ struct OH_Huks_Result OH_Huks_RegisterProvider(const struct OH_Huks_Blob *provid
 | const struct OH_Huks_Blob *providerName | 指定提供者名称。 |
 | const OH_Huks_ExternalCryptoParamSet *paramSet | 指向注册参数的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -82,7 +82,7 @@ struct OH_Huks_Result OH_Huks_UnregisterProvider(const struct OH_Huks_Blob *prov
 | const struct OH_Huks_Blob *providerName | 指定提供者名称。 |
 | const OH_Huks_ExternalCryptoParamSet *paramSet | 指向注销参数的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -96,7 +96,7 @@ struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId
 
 **描述：**
 
-根据指定的资源ID打开资源。<br>注意：打开的资源必须通过[OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource)关闭。
+根据指定的资源ID打开资源。 <br>注意：打开的资源必须通过[OH_Huks_CloseResource](capi-native-huks-external-crypto-api-h.md#oh_huks_closeresource)关闭。
 
 **起始版本：** 22
 
@@ -107,7 +107,7 @@ struct OH_Huks_Result OH_Huks_OpenResource(const struct OH_Huks_Blob *resourceId
 | const struct OH_Huks_Blob *resourceId | 指定提供者的资源ID。 |
 | const OH_Huks_ExternalCryptoParamSet *paramSet | 指向句柄操作参数的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -132,7 +132,7 @@ struct OH_Huks_Result OH_Huks_CloseResource(const struct OH_Huks_Blob *resourceI
 | const struct OH_Huks_Blob *resourceId | 指定提供者的资源ID。 |
 | const OH_Huks_ExternalCryptoParamSet *paramSet | 指向句柄操作参数的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -158,7 +158,7 @@ struct OH_Huks_Result OH_Huks_GetUkeyPinAuthState(const struct OH_Huks_Blob *res
 | const OH_Huks_ExternalCryptoParamSet *paramSet | 指向PIN授权参数的指针。 |
 | OH_Huks_ExternalPinAuthState *authState | 用于返回指定索引的授权状态。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -185,7 +185,7 @@ struct OH_Huks_Result OH_Huks_GetProperty(const struct OH_Huks_Blob *resourceId,
 | const OH_Huks_ExternalCryptoParamSet *paramSetIn | 指向输入操作参数的指针。 |
 | OH_Huks_ExternalCryptoParamSet **paramSetOut | 指向输出参数的指针，且必须包含参数OH_HUKS_EXT_CRYPTO_TAG_EXTRA_DATA。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -209,7 +209,7 @@ struct OH_Huks_Result OH_Huks_InitExternalCryptoParamSet(OH_Huks_ExternalCryptoP
 | -- | -- |
 | OH_Huks_ExternalCryptoParamSet **paramSet | 指向要初始化的参数集合的二级指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -235,7 +235,7 @@ struct OH_Huks_Result OH_Huks_AddExternalCryptoParams(OH_Huks_ExternalCryptoPara
 | const OH_Huks_ExternalCryptoParam *params | 指向要添加的参数数组。 |
 | uint32_t paramCnt | 要添加的参数数量。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -259,7 +259,7 @@ struct OH_Huks_Result OH_Huks_BuildExternalCryptoParamSet(OH_Huks_ExternalCrypto
 | -- | -- |
 | OH_Huks_ExternalCryptoParamSet **paramSet | 指向要构建的参数集合的二级指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -303,7 +303,7 @@ struct OH_Huks_Result OH_Huks_GetExternalCryptoParam(OH_Huks_ExternalCryptoParam
 | const uint32_t tag | 指定要获取的参数标签值。 |
 | OH_Huks_ExternalCryptoParam **param | 用于返回获取到的参数的二级指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

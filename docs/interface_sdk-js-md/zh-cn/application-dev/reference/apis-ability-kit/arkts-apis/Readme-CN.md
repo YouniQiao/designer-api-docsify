@@ -15,7 +15,7 @@
   - [updateId](arkts-ability-datauriutils-updateid-depr-f.md)
 - [@ohos.ability.errorCode](arkts-ability-ability-errorcode.md)
   - [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md)
-- [@ohos.ability.featureAbility](arkts-ability-ability-featureability.md)
+- [@ohos.ability.featureAbility(FeatureAbility模块)](arkts-ability-ability-featureability.md)
   - [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md)
   - [connectAbility](arkts-ability-featureability-connectability-f.md)
   - [disconnectAbility](arkts-ability-featureability-disconnectability-f.md)
@@ -34,7 +34,7 @@
   - [AbilityWindowConfiguration](arkts-ability-featureability-abilitywindowconfiguration-e.md)
   - [DataAbilityOperationType](arkts-ability-featureability-dataabilityoperationtype-e.md)
   - [ErrorCode](arkts-ability-featureability-errorcode-e.md)
-- [@ohos.ability.particleAbility](arkts-ability-ability-particleability.md)
+- [@ohos.ability.particleAbility(ParticleAbility模块)](arkts-ability-ability-particleability.md)
   - [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md)
   - [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md)
   - [connectAbility](arkts-ability-particleability-connectability-f.md)
@@ -233,9 +233,9 @@
   - [getAppPreloadType](arkts-ability-application-getapppreloadtype-f.md)
   - [promoteCurrentToCandidateMasterProcess](arkts-ability-application-promotecurrenttocandidatemasterprocess-f.md)
   - [AppPreloadType](arkts-ability-application-apppreloadtype-e.md)
-- [@ohos.app.ability.ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback.md)
+- [@ohos.app.ability.ApplicationStateChangeCallback(应用进程状态变化监听器)](arkts-ability-app-ability-applicationstatechangecallback.md)
   - [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md)
-- [@ohos.app.ability.appManager](arkts-ability-app-ability-appmanager.md)
+- [@ohos.app.ability.appManager(应用管理)](arkts-ability-app-ability-appmanager.md)
   <!--Del-->
   - [clearUpAppData(系统接口)](arkts-ability-appmanager-clearupappdata-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -322,7 +322,7 @@
   <!--Del-->
   - [PreloadMode(系统接口)](arkts-ability-appmanager-preloadmode-e-sys.md)<!--DelEnd-->
   - [ProcessState](arkts-ability-appmanager-processstate-e.md)
-- [@ohos.app.ability.appMemoryOptimizer](arkts-ability-app-ability-appmemoryoptimizer.md)
+- [@ohos.app.ability.appMemoryOptimizer(应用内存优化器)](arkts-ability-app-ability-appmemoryoptimizer.md)
   - [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md)
   - [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md)
 - [@ohos.app.ability.appRecovery(应用故障恢复)](arkts-ability-app-ability-apprecovery.md)
@@ -333,7 +333,7 @@
   - [RestartFlag](arkts-ability-apprecovery-restartflag-e.md)
   - [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md)
   - [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md)
-- [@ohos.app.ability.AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability.md)
+- [@ohos.app.ability.AppServiceExtensionAbility(应用后台服务扩展组件)](arkts-ability-app-ability-appserviceextensionability.md)
   - [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)
 - [@ohos.app.ability.AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions.md)
   - [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
@@ -366,7 +366,7 @@
   - [UpdateRequest(系统接口)](arkts-ability-autofillmanager-updaterequest-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ViewData(系统接口)](arkts-ability-autofillmanager-viewdata-t-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.autoStartupManager](arkts-ability-app-ability-autostartupmanager.md)
+- [@ohos.app.ability.autoStartupManager(开机自启管理能力)](arkts-ability-app-ability-autostartupmanager.md)
   <!--Del-->
   - [cancelApplicationAutoStartup(系统接口)](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md)<!--DelEnd-->
   - [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md)
@@ -379,11 +379,11 @@
   - [queryAllAutoStartupApplications(系统接口)](arkts-ability-autostartupmanager-queryallautostartupapplications-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setApplicationAutoStartup(系统接口)](arkts-ability-autostartupmanager-setapplicationautostartup-f-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.ChildProcess](arkts-ability-app-ability-childprocess.md)
+- [@ohos.app.ability.ChildProcess(子进程基类)](arkts-ability-app-ability-childprocess.md)
   - [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md)
-- [@ohos.app.ability.ChildProcessArgs](arkts-ability-app-ability-childprocessargs.md)
+- [@ohos.app.ability.ChildProcessArgs(子进程参数)](arkts-ability-app-ability-childprocessargs.md)
   - [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md)
-- [@ohos.app.ability.childProcessManager](arkts-ability-app-ability-childprocessmanager.md)
+- [@ohos.app.ability.childProcessManager(子进程管理)](arkts-ability-app-ability-childprocessmanager.md)
   - [getChildProcessInfos](arkts-ability-childprocessmanager-getchildprocessinfos-f.md)
   - [isArkChildProcessSupported](arkts-ability-childprocessmanager-isarkchildprocesssupported-f.md)
   - [isNativeChildProcessSupported](arkts-ability-childprocessmanager-isnativechildprocesssupported-f.md)
@@ -392,7 +392,7 @@
   - [startNativeChildProcess](arkts-ability-childprocessmanager-startnativechildprocess-f.md)
   - [ChildProcessInformation](arkts-ability-childprocessmanager-childprocessinformation-t.md)
   - [StartMode](arkts-ability-childprocessmanager-startmode-e.md)
-- [@ohos.app.ability.ChildProcessOptions](arkts-ability-app-ability-childprocessoptions.md)
+- [@ohos.app.ability.ChildProcessOptions(子进程启动选项)](arkts-ability-app-ability-childprocessoptions.md)
   - [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md)
 - [@ohos.app.ability.common(Ability公共模块)](arkts-ability-app-ability-common.md)
   - [AbilityResult](arkts-ability-common-abilityresult-t.md)
@@ -468,7 +468,7 @@
   - [on](arkts-ability-continuemanager-on-f.md)
   - [ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)
   - [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md)
-- [@ohos.app.ability.dataUriUtils](arkts-ability-app-ability-datauriutils.md)
+- [@ohos.app.ability.dataUriUtils(DataUriUtils模块)](arkts-ability-app-ability-datauriutils.md)
   - [attachId](arkts-ability-datauriutils-attachid-f.md)
   - [deleteId](arkts-ability-datauriutils-deleteid-f.md)
   - [getId](arkts-ability-datauriutils-getid-f.md)
@@ -513,7 +513,7 @@
   - [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md)
   - [InstanceType](arkts-ability-errormanager-instancetype-e.md)
   - [ResourceType](arkts-ability-errormanager-resourcetype-e.md)
-- [@ohos.app.ability.ExtensionAbility](arkts-ability-app-ability-extensionability.md)
+- [@ohos.app.ability.ExtensionAbility(扩展能力基类)](arkts-ability-app-ability-extensionability.md)
   - [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 - [@ohos.app.ability.hyperSnapManager(应用快启管理)](arkts-ability-app-ability-hypersnapmanager.md)
   - [getLastError](arkts-ability-hypersnapmanager-getlasterror-f.md)
@@ -687,7 +687,7 @@
   - [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md)
   - [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md)
 <!--Del-->
-- [@ohos.app.ability.ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability.md)<!--DelEnd-->
+- [@ohos.app.ability.ServiceExtensionAbility(ServiceExtensionAbility)](arkts-ability-app-ability-serviceextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [ServiceExtensionAbility(系统接口)](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.ShareExtensionAbility(支持分享详情页接入的ExtensionAbility组件)](arkts-ability-app-ability-shareextensionability.md)
@@ -795,13 +795,13 @@
   - [updateAgentCard(系统接口)](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
 - [@ohos.app.agent.AgentUIExtensionAbility(带界面的智能体扩展组件)](arkts-ability-app-agent-agentuiextensionability.md)
   - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
-- [@ohos.app.appstartup.StartupConfig](arkts-ability-app-appstartup-startupconfig.md)
+- [@ohos.app.appstartup.StartupConfig(启动框架配置信息)](arkts-ability-app-appstartup-startupconfig.md)
   - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
-- [@ohos.app.appstartup.StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry.md)
+- [@ohos.app.appstartup.StartupConfigEntry(启动框架配置)](arkts-ability-app-appstartup-startupconfigentry.md)
   - [StartupConfigEntry](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md)
-- [@ohos.app.appstartup.StartupListener](arkts-ability-app-appstartup-startuplistener.md)
+- [@ohos.app.appstartup.StartupListener(启动框架任务监听器)](arkts-ability-app-appstartup-startuplistener.md)
   - [StartupListener](arkts-ability-app-appstartup-startuplistener-startuplistener-c.md)
-- [@ohos.app.appstartup.startupManager](arkts-ability-app-appstartup-startupmanager.md)
+- [@ohos.app.appstartup.startupManager(启动框架管理能力)](arkts-ability-app-appstartup-startupmanager.md)
   - [getStartupTaskResult](arkts-ability-startupmanager-getstartuptaskresult-f.md)
   - [isStartupTaskInitialized](arkts-ability-startupmanager-isstartuptaskinitialized-f.md)
   - [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md)
@@ -867,7 +867,7 @@
   - [updateConfiguration(系统接口)](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AbilityState(系统接口)](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.application.appManager](arkts-ability-application-appmanager.md)
+- [@ohos.application.appManager(appManager)](arkts-ability-application-appmanager.md)
   <!--Del-->
   - [clearUpApplicationData(系统接口)](arkts-ability-appmanager-clearupapplicationdata-depr-f-sys.md)<!--DelEnd-->
   - [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md)
@@ -1546,19 +1546,19 @@
     - [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)
   - [connectOptions](arkts-ability-connectoptions.md)
     - [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md)
-  - [dataAbilityHelper](arkts-ability-dataabilityhelper.md)
+  - [dataAbilityHelper(DataAbilityHelper)](arkts-ability-dataabilityhelper.md)
     - [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md)
     - [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)
-  - [dataAbilityOperation](arkts-ability-dataabilityoperation.md)
+  - [dataAbilityOperation(DataAbilityOperation)](arkts-ability-dataabilityoperation.md)
     - [DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)
-  - [dataAbilityResult](arkts-ability-dataabilityresult.md)
+  - [dataAbilityResult(DataAbilityResult)](arkts-ability-dataabilityresult.md)
     - [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)
   - [startAbilityParameter](arkts-ability-startabilityparameter.md)
     - [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md)
   - [want(Want)](arkts-ability-want.md)
     - [Want](arkts-ability-want-want-i.md)
 - app<!--arkts-abilitykit-app-->
-  - [appVersionInfo](arkts-ability-appversioninfo.md)
+  - [appVersionInfo(AppVersionInfo)](arkts-ability-appversioninfo.md)
     - [AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)
   - [context(FA模型的上下文基类)](arkts-ability-context.md)
     - [Context](arkts-ability-context-context-depr-i.md)
@@ -1614,16 +1614,18 @@
     <!--Del-->
     - [AgentProxy(系统接口)](arkts-ability-agentproxy-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver.md)<!--DelEnd-->
+  - [AppForegroundStateObserver(AppForegroundStateObserver)](arkts-ability-appforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AppForegroundStateObserver(系统接口)](arkts-ability-appforegroundstateobserver-c-sys.md)<!--DelEnd-->
   - [ApplicationContext(应用上下文)](arkts-ability-applicationcontext.md)
     - [ApplicationContext](arkts-ability-applicationcontext-c.md)
     <!--Del-->
     - [ApplicationContext(系统接口)](arkts-ability-applicationcontext-c-sys.md)<!--DelEnd-->
-  - [ApplicationStateObserver](arkts-ability-applicationstateobserver.md)
+  - [ApplicationStateObserver(ApplicationStateObserver)](arkts-ability-applicationstateobserver.md)
     - [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md)
     - [ProcessData](arkts-ability-processdata-t.md)
+  - [AppServiceExtensionContext(应用后台服务扩展组件上下文)](arkts-ability-appserviceextensioncontext.md)
+    - [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
   - [AppStateData(AppStateData)](arkts-ability-appstatedata.md)
     - [AppStateData](arkts-ability-appstatedata-c.md)
   <!--Del-->
@@ -1664,11 +1666,11 @@
     <!--Del-->
     - [AutoFillType(系统接口)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AutoStartupCallback](arkts-ability-autostartupcallback.md)<!--DelEnd-->
+  - [AutoStartupCallback(AutoStartupCallback)](arkts-ability-autostartupcallback.md)<!--DelEnd-->
     <!--Del-->
     - [AutoStartupCallback(系统接口)](arkts-ability-autostartupcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [AutoStartupInfo](arkts-ability-autostartupinfo.md)<!--DelEnd-->
+  - [AutoStartupInfo(AutoStartupInfo)](arkts-ability-autostartupinfo.md)<!--DelEnd-->
     <!--Del-->
     - [AutoStartupInfo(系统接口)](arkts-ability-autostartupinfo-i-sys.md)<!--DelEnd-->
   - [BaseContext(BaseContext)](arkts-ability-basecontext.md)
@@ -1720,7 +1722,7 @@
   - [ExtensionContext(ExtensionContext)](arkts-ability-extensioncontext.md)
     - [ExtensionContext](arkts-ability-extensioncontext-c.md)
   <!--Del-->
-  - [ExtensionRunningInfo](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
+  - [ExtensionRunningInfo(ExtensionRunningInfo)](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
     <!--Del-->
     - [ExtensionRunningInfo(系统接口)](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1772,11 +1774,11 @@
   - [PageNodeInfo](arkts-ability-pagenodeinfo.md)<!--DelEnd-->
     <!--Del-->
     - [PageNodeInfo(系统接口)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
-  - [ProcessData](arkts-ability-processdata.md)
+  - [ProcessData(ProcessData)](arkts-ability-processdata.md)
     - [ProcessData](arkts-ability-processdata-c.md)
-  - [ProcessInformation](arkts-ability-processinformation.md)
+  - [ProcessInformation(ProcessInformation)](arkts-ability-processinformation.md)
     - [ProcessInformation](arkts-ability-processinformation-i.md)
-  - [ProcessRunningInfo](arkts-ability-processrunninginfo.md)
+  - [ProcessRunningInfo(ProcessRunningInfo)](arkts-ability-processrunninginfo.md)
     - [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)
   <!--Del-->
   - [RunningAppClone](arkts-ability-runningappclone.md)<!--DelEnd-->
@@ -1792,6 +1794,10 @@
     - [RunningMultiInstanceInfo(系统接口)](arkts-ability-runningmultiinstanceinfo-i-sys.md)<!--DelEnd-->
   - [SendableContext](arkts-ability-sendablecontext.md)
     - [SendableContext](arkts-ability-sendablecontext-i.md)
+  <!--Del-->
+  - [ServiceExtensionContext(ServiceExtensionContext)](arkts-ability-serviceextensioncontext.md)<!--DelEnd-->
+    <!--Del-->
+    - [ServiceExtensionContext(系统接口)](arkts-ability-serviceextensioncontext-c-sys.md)<!--DelEnd-->
   - [shellCmdResult(ShellCmdResult)](arkts-ability-shellcmdresult.md)
     - [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)
   <!--Del-->

@@ -18,9 +18,9 @@ Defines the functions for obtaining and using a native buffer.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_NativeBuffer_Config](capi-oh-nativebuffer-oh-nativebuffer-config.md) | OH_NativeBuffer_Config | <b>OH_NativeBuffer</b> config. <br> Used to allocating new <b>OH_NativeBuffer</b> and query parameters if existing ones. |
-| [OH_NativeBuffer_Plane](capi-oh-nativebuffer-oh-nativebuffer-plane.md) | OH_NativeBuffer_Plane | Holds info for a single image plane. <br> |
-| [OH_NativeBuffer_Planes](capi-oh-nativebuffer-oh-nativebuffer-planes.md) | OH_NativeBuffer_Planes | Holds all image planes. <br> |
+| [OH_NativeBuffer_Config](capi-oh-nativebuffer-oh-nativebuffer-config.md) | OH_NativeBuffer_Config | <b>OH_NativeBuffer</b> config. Used to allocating new <b>OH_NativeBuffer</b> and query parameters if existing ones. |
+| [OH_NativeBuffer_Plane](capi-oh-nativebuffer-oh-nativebuffer-plane.md) | OH_NativeBuffer_Plane | Holds info for a single image plane. |
+| [OH_NativeBuffer_Planes](capi-oh-nativebuffer-oh-nativebuffer-planes.md) | OH_NativeBuffer_Planes | Holds all image planes. |
 | [OHIPCParcel](capi-oh-nativebuffer-ohipcparcel.md) | OHIPCParcel | Defines the ipc parcel. |
 
 ### Enum
@@ -34,24 +34,24 @@ Defines the functions for obtaining and using a native buffer.
 
 | Name | Description |
 | -- | -- |
-| [OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)](#oh_nativebuffer_alloc) | Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. <br> A new <b>OH_NativeBuffer</b> instance is created each time this function is called.<br> This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)](#oh_nativebuffer_reference) | Adds the reference count of a OH_NativeBuffer.<br> This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)](#oh_nativebuffer_unreference) | Decreases the reference count of a OH_NativeBuffer and, when the reference count reaches 0,destroys this OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br> |
-| [void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* config)](#oh_nativebuffer_getconfig) | Return a config of the OH_NativeBuffer in the passed OHNativeBufferConfig struct.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)](#oh_nativebuffer_map) | Provide direct cpu access to the OH_NativeBuffer in the process's address space.<br> This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unmap</b>.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)](#oh_nativebuffer_unmap) | Remove direct cpu access ability of the OH_NativeBuffer in the process's address space.<br> This interface is a non-thread-safe type interface.<br> |
-| [uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)](#oh_nativebuffer_getseqnum) | Get the system wide unique sequence number of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_NativeBuffer_Planes *outPlanes)](#oh_nativebuffer_mapplanes) | Provide direct cpu access to the potentially multi-planar OH_NativeBuffer in the process's address space.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindowBuffer, OH_NativeBuffer **buffer)](#oh_nativebuffer_fromnativewindowbuffer) | Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace colorSpace)](#oh_nativebuffer_setcolorspace) | Set the color space of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace *colorSpace)](#oh_nativebuffer_getcolorspace) | Get the color space of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativebuffer_setmetadatavalue) | Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativebuffer_getmetadatavalue) | Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br> |
-| [int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, void **virAddr)](#oh_nativebuffer_mapwaitfence) | Provide direct cpu access to the OH_NativeBuffer in the process's address space and wait fence.<br> If the interface returns OK, fenceFd does not need to be closed by the developer,Otherwise, the developer needs to close the fenceFd.<br> This interface is a non-thread-safe type interface. |
-| [int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parcel)](#oh_nativebuffer_writetoparcel) | Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> object.<br> This interface is a non-thread-safe type interface. |
-| [int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** buffer)](#oh_nativebuffer_readfromparcel) | Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object.This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance.This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,<br> otherwise memory leaks will occur.This interface is a non-thread-safe type interface. |
-| [int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSupported)](#oh_nativebuffer_issupported) | Check whether the system supports the <b>NativeBufferConfig</b>.<br> This interface is a non-thread-safe type interface. |
-| [int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr, OH_NativeBuffer_Config* config)](#oh_nativebuffer_mapandgetconfig) | Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space,<br> and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>.This interface is a non-thread-safe type interface. |
+| [OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)](#oh_nativebuffer_alloc) | Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. A new <b>OH_NativeBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)](#oh_nativebuffer_reference) | Adds the reference count of a OH_NativeBuffer. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)](#oh_nativebuffer_unreference) | Decreases the reference count of a OH_NativeBuffer and, when the reference count reaches 0, destroys this OH_NativeBuffer. This interface is a non-thread-safe type interface. |
+| [void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* config)](#oh_nativebuffer_getconfig) | Return a config of the OH_NativeBuffer in the passed OHNativeBufferConfig struct. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)](#oh_nativebuffer_map) | Provide direct cpu access to the OH_NativeBuffer in the process's address space. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unmap</b>. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)](#oh_nativebuffer_unmap) | Remove direct cpu access ability of the OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface. |
+| [uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)](#oh_nativebuffer_getseqnum) | Get the system wide unique sequence number of the OH_NativeBuffer. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_NativeBuffer_Planes *outPlanes)](#oh_nativebuffer_mapplanes) | Provide direct cpu access to the potentially multi-planar OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindowBuffer, OH_NativeBuffer **buffer)](#oh_nativebuffer_fromnativewindowbuffer) | Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace colorSpace)](#oh_nativebuffer_setcolorspace) | Set the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_ColorSpace *colorSpace)](#oh_nativebuffer_getcolorspace) | Get the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativebuffer_setmetadatavalue) | Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffer_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativebuffer_getmetadatavalue) | Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, void **virAddr)](#oh_nativebuffer_mapwaitfence) | Provide direct cpu access to the OH_NativeBuffer in the process's address space and wait fence. If the interface returns OK, fenceFd does not need to be closed by the developer, Otherwise, the developer needs to close the fenceFd. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parcel)](#oh_nativebuffer_writetoparcel) | Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> object. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** buffer)](#oh_nativebuffer_readfromparcel) | Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object. This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSupported)](#oh_nativebuffer_issupported) | Check whether the system supports the <b>NativeBufferConfig</b>. This interface is a non-thread-safe type interface. |
+| [int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr, OH_NativeBuffer_Config* config)](#oh_nativebuffer_mapandgetconfig) | Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space, and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface. |
 | [int32_t OH_NativeBuffer_SetDmaBufferName(OH_NativeBuffer *buffer, const char *name)](#oh_nativebuffer_setdmabuffername) | Set the dma buffer name of the OH_NativeBuffer. |
 
 ## Enum type description
@@ -120,7 +120,7 @@ OH_NativeBuffer* OH_NativeBuffer_Alloc(const OH_NativeBuffer_Config* config)
 
 **Description**
 
-Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. <br> A new <b>OH_NativeBuffer</b> instance is created each time this function is called.<br> This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br>
+Alloc a <b>OH_NativeBuffer</b> that matches the passed BufferRequestConfig. A new <b>OH_NativeBuffer</b> instance is created each time this function is called. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -146,7 +146,7 @@ int32_t OH_NativeBuffer_Reference(OH_NativeBuffer *buffer)
 
 **Description**
 
-Adds the reference count of a OH_NativeBuffer.<br> This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,otherwise memory leaks will occur.<br> This interface is a non-thread-safe type interface.<br>
+Adds the reference count of a OH_NativeBuffer. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -172,7 +172,7 @@ int32_t OH_NativeBuffer_Unreference(OH_NativeBuffer *buffer)
 
 **Description**
 
-Decreases the reference count of a OH_NativeBuffer and, when the reference count reaches 0,destroys this OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br>
+Decreases the reference count of a OH_NativeBuffer and, when the reference count reaches 0, destroys this OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -198,7 +198,7 @@ void OH_NativeBuffer_GetConfig(OH_NativeBuffer *buffer, OH_NativeBuffer_Config* 
 
 **Description**
 
-Return a config of the OH_NativeBuffer in the passed OHNativeBufferConfig struct.<br> This interface is a non-thread-safe type interface.<br>
+Return a config of the OH_NativeBuffer in the passed OHNativeBufferConfig struct. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -219,7 +219,7 @@ int32_t OH_NativeBuffer_Map(OH_NativeBuffer *buffer, void **virAddr)
 
 **Description**
 
-Provide direct cpu access to the OH_NativeBuffer in the process's address space.<br> This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unmap</b>.<br> This interface is a non-thread-safe type interface.<br>
+Provide direct cpu access to the OH_NativeBuffer in the process's address space. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unmap</b>. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -246,7 +246,7 @@ int32_t OH_NativeBuffer_Unmap(OH_NativeBuffer *buffer)
 
 **Description**
 
-Remove direct cpu access ability of the OH_NativeBuffer in the process's address space.<br> This interface is a non-thread-safe type interface.<br>
+Remove direct cpu access ability of the OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -272,7 +272,7 @@ uint32_t OH_NativeBuffer_GetSeqNum(OH_NativeBuffer *buffer)
 
 **Description**
 
-Get the system wide unique sequence number of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br>
+Get the system wide unique sequence number of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -298,7 +298,7 @@ int32_t OH_NativeBuffer_MapPlanes(OH_NativeBuffer *buffer, void **virAddr, OH_Na
 
 **Description**
 
-Provide direct cpu access to the potentially multi-planar OH_NativeBuffer in the process's address space.<br> This interface is a non-thread-safe type interface.<br>
+Provide direct cpu access to the potentially multi-planar OH_NativeBuffer in the process's address space. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -326,7 +326,7 @@ int32_t OH_NativeBuffer_FromNativeWindowBuffer(OHNativeWindowBuffer *nativeWindo
 
 **Description**
 
-Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>.<br> This interface is a non-thread-safe type interface.<br>
+Converts an <b>OHNativeWindowBuffer</b> instance to an <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -353,7 +353,7 @@ int32_t OH_NativeBuffer_SetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_C
 
 **Description**
 
-Set the color space of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br>
+Set the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -380,7 +380,7 @@ int32_t OH_NativeBuffer_GetColorSpace(OH_NativeBuffer *buffer, OH_NativeBuffer_C
 
 **Description**
 
-Get the color space of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br>
+Get the color space of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -397,7 +397,7 @@ Get the color space of the OH_NativeBuffer.<br> This interface is a non-thread-s
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect colorSpace state. |
 
 ### OH_NativeBuffer_SetMetadataValue()
 
@@ -407,7 +407,7 @@ int32_t OH_NativeBuffer_SetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffe
 
 **Description**
 
-Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br>
+Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -426,7 +426,7 @@ Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or metadata is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or metadata is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>    {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeBuffer_GetMetadataValue()
 
@@ -436,7 +436,7 @@ int32_t OH_NativeBuffer_GetMetadataValue(OH_NativeBuffer *buffer, OH_NativeBuffe
 
 **Description**
 
-Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread-safe type interface.<br>
+Set the metadata type of the OH_NativeBuffer. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -455,7 +455,7 @@ Set the metadata type of the OH_NativeBuffer.<br> This interface is a non-thread
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer, metadata, or size is NULL.      {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.      {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer, metadata, or size is NULL.<br>    {@link NATIVE_ERROR_BUFFER_STATE_INVALID} 41207000 - Incorrect metadata state.<br>    {@link NATIVE_ERROR_UNSUPPORTED} 50102000 - Unsupported metadata key. |
 
 ### OH_NativeBuffer_MapWaitFence()
 
@@ -465,7 +465,7 @@ int32_t OH_NativeBuffer_MapWaitFence(OH_NativeBuffer *buffer, int32_t fenceFd, v
 
 **Description**
 
-Provide direct cpu access to the OH_NativeBuffer in the process's address space and wait fence.<br> If the interface returns OK, fenceFd does not need to be closed by the developer,Otherwise, the developer needs to close the fenceFd.<br> This interface is a non-thread-safe type interface.
+Provide direct cpu access to the OH_NativeBuffer in the process's address space and wait fence. If the interface returns OK, fenceFd does not need to be closed by the developer, Otherwise, the developer needs to close the fenceFd. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -483,7 +483,7 @@ Provide direct cpu access to the OH_NativeBuffer in the process's address space 
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr is NULL or invalid fenceFd.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>{@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr is NULL or invalid fenceFd.<br>{@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
 
 ### OH_NativeBuffer_WriteToParcel()
 
@@ -493,7 +493,7 @@ int32_t OH_NativeBuffer_WriteToParcel(OH_NativeBuffer* buffer, OHIPCParcel* parc
 
 **Description**
 
-Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> object.<br> This interface is a non-thread-safe type interface.
+Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> object. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -510,7 +510,7 @@ Serialize <b>OH_NativeBuffer</b> object to the serialized <b>OHIPCParcel</b> obj
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or parcel is NULL.  {@link SURFACE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>{@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or parcel is NULL.<br>{@link SURFACE_ERROR_BINDER_ERROR} 50401000 - ipc send failed. |
 
 ### OH_NativeBuffer_ReadFromParcel()
 
@@ -520,7 +520,7 @@ int32_t OH_NativeBuffer_ReadFromParcel(OHIPCParcel* parcel, OH_NativeBuffer** bu
 
 **Description**
 
-Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object.This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance.This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>,<br> otherwise memory leaks will occur.This interface is a non-thread-safe type interface.
+Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH_NativeBuffer</b> object. This interface will cause an increase in the reference count of the <b>OH_NativeBuffer</b> instance. This interface needs to be used in conjunction with <b>OH_NativeBuffer_Unreference</b>, otherwise memory leaks will occur. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -537,7 +537,7 @@ Deserialize data from the serialized <b>OHIPCParcel</b> object and rebuild <b>OH
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel or buffer is NULL.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - deserialize failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>{@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - parcel or buffer is NULL.<br>{@link NATIVE_ERROR_UNKNOWN} 50002000 - deserialize failed. |
 
 ### OH_NativeBuffer_IsSupported()
 
@@ -547,7 +547,7 @@ int32_t OH_NativeBuffer_IsSupported(OH_NativeBuffer_Config config, bool* isSuppo
 
 **Description**
 
-Check whether the system supports the <b>NativeBufferConfig</b>.<br> This interface is a non-thread-safe type interface.
+Check whether the system supports the <b>NativeBufferConfig</b>. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -564,7 +564,7 @@ Check whether the system supports the <b>NativeBufferConfig</b>.<br> This interf
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - isSupported is NULL. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>{@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - isSupported is NULL. |
 
 ### OH_NativeBuffer_MapAndGetConfig()
 
@@ -574,7 +574,7 @@ int32_t OH_NativeBuffer_MapAndGetConfig(OH_NativeBuffer* buffer, void** virAddr,
 
 **Description**
 
-Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space,<br> and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>.This interface is a non-thread-safe type interface.
+Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address space, and return a <b>NativeBufferConfig<b> of the <b>OH_NativeBuffer</b>. This interface is a non-thread-safe type interface.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeBuffer
 
@@ -592,7 +592,7 @@ Provide direct cpu access to the <b>OH_NativeBuffer</b> in the process's address
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.  {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr or config is NULL or invalid fenceFd.  {@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>{@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer or virAddr or config is NULL or invalid fenceFd.<br>{@link NATIVE_ERROR_UNKNOWN} 50002000 - map failed. |
 
 ### OH_NativeBuffer_SetDmaBufferName()
 
@@ -613,12 +613,12 @@ Set the dma buffer name of the OH_NativeBuffer.
 | Parameter | Description |
 | -- | -- |
 | OH_NativeBuffer *buffer | Indicates the pointer to a <b>OH_NativeBuffer</b> instance. |
-| const char *name | Indicates the dma buffer name string. The name must start with a letter, only containletters or digits, and be no longer than 64 bytes. |
+| const char *name | Indicates the dma buffer name string. The name must start with a letter, only contain letters or digits, and be no longer than 64 bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.      {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL or name invalid. |
+| int32_t | {@link NATIVE_ERROR_OK} 0 - Success.<br>    {@link NATIVE_ERROR_INVALID_ARGUMENTS} 40001000 - buffer is NULL or name invalid. |
 
 

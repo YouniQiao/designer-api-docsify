@@ -8,7 +8,7 @@ Declare the common types for the extension ability AbilityRuntime.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since**: 24
+**Since**: 13
 
 **Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
@@ -31,7 +31,8 @@ Declare the common types for the extension ability AbilityRuntime.
 
 | Name | Description |
 | -- | -- |
-| [AbilityRuntime_Extension_CreateFunc](capi-extension-ability-h.md#abilityruntime_extension_createfunc) OH_AbilityRuntime_OnNativeExtensionCreate | The name of the function that native extension ability instance looks for when launching its native code.<br>**Since**: 24<br>**System capability**: SystemCapability.Ability.AbilityRuntime.Core |
+| [AbilityRuntime_Extension_CreateFunc](capi-extension-ability-h.md#abilityruntime_extension_createfunc) OH_AbilityRuntime_OnNativeExtensionCreate | The name of the function that native extension ability instance looks for when launching its native code.<br>**Since**: 24 |
+| void AbilityRuntime_Extension_CreateFunc( AbilityRuntime_ExtensionInstanceHandle handle, const char *abilityName) | Define the function that must be in the native code to instantiate the native extension ability.<br>**Since**: 24 |
 
 ## Function description
 

@@ -32,7 +32,7 @@ Defines APIs for game device events.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void(\* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent)](#gamedevice_devicemonitorcallback) | GameDevice_DeviceMonitorCallback | Defines the callback function used in {@link OH_GameDevice_RegisterDeviceMonitor}. Called when the devicegoes online or offline. |
+| [typedef void(\* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent)](#gamedevice_devicemonitorcallback) | GameDevice_DeviceMonitorCallback | Defines the callback function used in {@link OH_GameDevice_RegisterDeviceMonitor}. Called when the device goes online or offline. |
 | [GameController_ErrorCode OH_GameDevice_DeviceEvent_GetChangedType(const struct GameDevice_DeviceEvent* deviceEvent, GameDevice_StatusChangedType* statusChangedType)](#oh_gamedevice_deviceevent_getchangedtype) | - | Obtains the status change type from a device status change event. |
 | [GameController_ErrorCode OH_GameDevice_DeviceEvent_GetDeviceInfo(const struct GameDevice_DeviceEvent* deviceEvent, GameDevice_DeviceInfo** deviceInfo)](#oh_gamedevice_deviceevent_getdeviceinfo) | - | Obtains the device information from a device status change event. |
 | [GameController_ErrorCode OH_GameDevice_DestroyDeviceInfo(GameDevice_DeviceInfo** deviceInfo)](#oh_gamedevice_destroydeviceinfo) | - | Destroys a device information instance. |
@@ -42,6 +42,12 @@ Defines APIs for game device events.
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVersion(const struct GameDevice_DeviceInfo* deviceInfo, int32_t* version)](#oh_gamedevice_deviceinfo_getversion) | - | Obtains the version information from the device information. |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetPhysicalAddress(const struct GameDevice_DeviceInfo* deviceInfo, char** physicalAddress)](#oh_gamedevice_deviceinfo_getphysicaladdress) | - | Obtains the physical address from the device information. |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceType(const struct GameDevice_DeviceInfo* deviceInfo, GameDevice_DeviceType* deviceType)](#oh_gamedevice_deviceinfo_getdevicetype) | - | Obtains the device type from the device information. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void(* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent) | Defines the callback function used in {@link OH_GameDevice_RegisterDeviceMonitor}. Called when the device goes online or offline.<br>**Since**: 21 |
 
 ## Enum type description
 
@@ -90,7 +96,7 @@ typedef void(* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceE
 
 **Description**
 
-Defines the callback function used in {@link OH_GameDevice_RegisterDeviceMonitor}. Called when the devicegoes online or offline.
+Defines the callback function used in {@link OH_GameDevice_RegisterDeviceMonitor}. Called when the device goes online or offline.
 
 **Since**: 21
 
@@ -123,7 +129,7 @@ Obtains the status change type from a device status change event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       deviceEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    deviceEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceEvent_GetDeviceInfo()
 
@@ -148,7 +154,7 @@ Obtains the device information from a device status change event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       deviceEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    deviceEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -177,7 +183,7 @@ Destroys a device information instance.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       deviceInfo is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    deviceInfo is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetDeviceId()
 
@@ -202,7 +208,7 @@ Obtains the device ID from the device information.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       deviceInfo or deviceId is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the      device memory is insufficient, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    deviceInfo or deviceId is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the<br>    device memory is insufficient, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetName()
 
@@ -227,7 +233,7 @@ Obtains the device name from the device information.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       deviceInfo or name is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the device      memory is insufficient, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    deviceInfo or name is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the device<br>    memory is insufficient, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetProduct()
 
@@ -252,7 +258,7 @@ Obtains the product information from the device information.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       deviceInfo parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    deviceInfo parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetVersion()
 
@@ -277,7 +283,7 @@ Obtains the version information from the device information.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       deviceInfo parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    deviceInfo parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetPhysicalAddress()
 
@@ -302,7 +308,7 @@ Obtains the physical address from the device information.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       deviceInfo or physicalAddress is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If      the device memory is insufficient, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    deviceInfo or physicalAddress is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If<br>    the device memory is insufficient, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetDeviceType()
 
@@ -327,6 +333,6 @@ Obtains the device type from the device information.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       deviceInfo parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    deviceInfo parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 

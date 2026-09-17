@@ -8,7 +8,7 @@
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Since**: 22
+**Since**: 12
 
 **Related module**: [input](capi-input.md)
 
@@ -19,6 +19,12 @@
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [Input_PointerStyle](#input_pointerstyle) | Input_PointerStyle | Enumerates the pointer styles. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| OH_POINTER_STYLE_H | Defines the mouse pointer styles.<br>**Since**: 22<br>**System capability**: SystemCapability.MultimodalInput.Input.Core |
 
 ## Enum type description
 
@@ -85,9 +91,9 @@ Enumerates the pointer styles.
 | RUNNING_RIGHT = 46 | Running in the background (extension 2)<br>**Since**: 22 |
 | AECH_DEVELOPER_DEFINED_ICON = 47 | Custom circular pointer<br>**Since**: 22 |
 | SCREENRECORDER_CURSOR = 48 | Screen recording<br>**Since**: 22 |
-| LASER_CURSOR = 49 | Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directlyset.<br>In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on thescreen and press the button on the stylus to turn pages up or down. This mode is used PPT presentation and airgesture control.<br>**Since**: 22 |
-| LASER_CURSOR_DOT = 50 | Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directlyset.<br>In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointeron the screen and press the button on the stylus to turn pages up or down. This mode is used PPT presentationand air gesture control.<br>**Since**: 22 |
-| LASER_CURSOR_DOT_RED = 51 | Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot bedirectly set.<br>In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer onthe screen and press the button on the stylus to turn pages up or down. This mode is used PPT presentation andair gesture control.<br>**Since**: 22 |
-| DEVELOPER_DEFINED_ICON = -100 | Custom pointer. You can use the {@link OH_Input_SetCustomCursor} to set a custom pointer, but not the{@link OH_Input_SetPointerStyle}.<br>**Since**: 22 |
+| LASER_CURSOR = 49 | Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.<br> In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used PPT presentation and air gesture control.<br>**Since**: 22 |
+| LASER_CURSOR_DOT = 50 | Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.<br>In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used PPT presentation and air gesture control.<br>**Since**: 22 |
+| LASER_CURSOR_DOT_RED = 51 | Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set. <br>In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used PPT presentation and air gesture control.<br>**Since**: 22 |
+| DEVELOPER_DEFINED_ICON = -100 | Custom pointer. You can use the {@link OH_Input_SetCustomCursor} to set a custom pointer, but not the<br>{@link OH_Input_SetPointerStyle}.<br>**Since**: 22 |
 
 

@@ -43,6 +43,12 @@
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetPhysicalAddress(const struct GameDevice_DeviceInfo* deviceInfo, char** physicalAddress)](#oh_gamedevice_deviceinfo_getphysicaladdress) | - | 从设备信息中获取物理地址。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceType(const struct GameDevice_DeviceInfo* deviceInfo, GameDevice_DeviceType* deviceType)](#oh_gamedevice_deviceinfo_getdevicetype) | - | 从设备信息中获取设备类型。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent) | 定义{@link OH_GameDevice_RegisterDeviceMonitor}中使用的回调函数。当设备上线或下线时，该回调函数将被调用。<br>**起始版本：** 21 |
+
 ## 枚举类型说明
 
 ### GameDevice_StatusChangedType
@@ -119,11 +125,11 @@ GameController_ErrorCode OH_GameDevice_DeviceEvent_GetChangedType(const struct G
 | [const struct GameDevice_DeviceEvent](capi-gamecontroller-gamedevice-deviceevent.md)* deviceEvent | 指针指向[GameDevice_DeviceEvent](capi-gamecontroller-gamedevice-deviceevent.md)实例，不能为空。 |
 | [GameDevice_StatusChangedType](capi-game-device-event-h.md#gamedevice_statuschangedtype)* statusChangedType | 输出参数，设备状态变化类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceEvent为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceEvent为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 ### OH_GameDevice_DeviceEvent_GetDeviceInfo()
 
@@ -144,11 +150,11 @@ GameController_ErrorCode OH_GameDevice_DeviceEvent_GetDeviceInfo(const struct Ga
 | [const struct GameDevice_DeviceEvent](capi-gamecontroller-gamedevice-deviceevent.md)* deviceEvent | 指针指向[GameDevice_DeviceEvent](capi-gamecontroller-gamedevice-deviceevent.md)实例，不能为空。 |
 | [GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)** deviceInfo | 输出参数，二级指针指向设备信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceEvent为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceEvent为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 **参考：**
 
@@ -173,11 +179,11 @@ GameController_ErrorCode OH_GameDevice_DestroyDeviceInfo(GameDevice_DeviceInfo**
 | -- | -- |
 | [GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)** deviceInfo | 二级指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetDeviceId()
 
@@ -198,11 +204,11 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceId(const struct GameD
 | [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | 指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 | char** deviceId | 输出参数，二级指针指向设备ID。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo或deviceId为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果设备内存不足，返回{@link GAME_CONTROLLER_NO_MEMORY}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo或deviceId为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果设备内存不足，返回{@link GAME_CONTROLLER_NO_MEMORY}。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetName()
 
@@ -223,11 +229,11 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetName(const struct GameDevic
 | [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | 指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 | char** name | 输出参数，二级指针指向设备名称。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo或name为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果设备内存不足，返回{@link GAME_CONTROLLER_NO_MEMORY}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo或name为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果设备内存不足，返回{@link GAME_CONTROLLER_NO_MEMORY}。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetProduct()
 
@@ -248,11 +254,11 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetProduct(const struct GameDe
 | [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | 指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 | int32_t* product | 输出参数，产品信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetVersion()
 
@@ -273,11 +279,11 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVersion(const struct GameDe
 | [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | 指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 | int32_t* version | 输出参数，版本信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetPhysicalAddress()
 
@@ -298,11 +304,11 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetPhysicalAddress(const struc
 | [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | 指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 | char** physicalAddress | 输出参数，二级指针指向物理地址。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo或physicalAddress为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果设备内存不足，返回{@link GAME_CONTROLLER_NO_MEMORY}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo或physicalAddress为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果设备内存不足，返回{@link GAME_CONTROLLER_NO_MEMORY}。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetDeviceType()
 
@@ -323,10 +329,10 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceType(const struct Gam
 | [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | 指针指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例，不能为空。 |
 | [GameDevice_DeviceType](capi-game-device-event-h.md#gamedevice_devicetype)* deviceType | 输出参数，设备类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceInfo为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 

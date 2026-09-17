@@ -42,6 +42,12 @@ Declares the APIs used to access the native Accessibility.
 | [ArkUI_AccessibilityFocusType](#arkui_accessibilityfocustype) | ArkUI_AccessibilityFocusType | Defines an enum for the accessibility focus types. |
 | [ArkUI_AccessibilityFocusMoveDirection](#arkui_accessibilityfocusmovedirection) | ArkUI_AccessibilityFocusMoveDirection | Enumerates the directions for moving the accessibility focus. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| _NATIVE_INTERFACE_ACCESSIBILITY_H | Declares the APIs used to access the native Accessibility.<br>**Since**: 13<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
+
 ### Function
 
 | Name | Description |
@@ -101,7 +107,7 @@ Declares the APIs used to access the native Accessibility.
 | [int32_t OH_ArkUI_AccessibilityEventSetRequestFocusId(ArkUI_AccessibilityEventInfo* eventInfo, int32_t requestFocusId)](#oh_arkui_accessibilityeventsetrequestfocusid) | Sets the request focus ID for an <b>ArkUI_AccessibilityEventInfo</b> object. |
 | [int32_t OH_ArkUI_AccessibilityEventSetElementInfo(ArkUI_AccessibilityEventInfo* eventInfo, ArkUI_AccessibilityElementInfo* elementInfo)](#oh_arkui_accessibilityeventsetelementinfo) | Sets the element information for an <b>ArkUI_AccessibilityEventInfo</b> object. |
 | [int32_t OH_ArkUI_FindAccessibilityActionArgumentByKey(ArkUI_AccessibilityActionArguments* arguments, const char* key, char** value)](#oh_arkui_findaccessibilityactionargumentbykey) | Obtains the value of a key from an <b>ArkUI_AccessibilityActionArguments</b> object. |
-| [int32_t OH_ArkUI_NativeModule_GetNativeAccessibilityProvider(ArkUI_NodeHandle* node, ArkUI_AccessibilityProvider** provider)](#oh_arkui_nativemodule_getnativeaccessibilityprovider) | Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b>instance of this <b>ArkUI_NodeHandle</b> instance. |
+| [int32_t OH_ArkUI_NativeModule_GetNativeAccessibilityProvider(ArkUI_NodeHandle* node, ArkUI_AccessibilityProvider** provider)](#oh_arkui_nativemodule_getnativeaccessibilityprovider) | Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b> instance of this <b>ArkUI_NodeHandle</b> instance. |
 | [int32_t OH_ArkUI_AccessibilityElementInfoSetComponentIdentifier(ArkUI_AccessibilityElementInfo* elementInfo, const char* identifier)](#oh_arkui_accessibilityelementinfosetcomponentidentifier) | Sets the component identifier for an <b>ArkUI_AccessibilityElementInfo</b> object. |
 
 ## Enum type description
@@ -133,8 +139,8 @@ Defines an enum for accessibility action types.
 | ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_SELECT_TEXT = 0x00002000 | Text selection action, requiring the setting of <b>selectTextBegin</b>, <b>TextEnd</b>, and <b>TextInForward</b> |
 | ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_SET_TEXT = 0x00004000 | Text content setting action. |
 | ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_SET_CURSOR_POSITION = 0x00100000 | Cursor position setting action. |
-| ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_NEXT_HTML_ITEM = 0x02000000 | Support action for find next item in focus move operation@since 15 |
-| ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_PREVIOUS_HTML_ITEM = 0x04000000 | Support action for find previous item in focus move operation@since 15 |
+| ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_NEXT_HTML_ITEM = 0x02000000 | Support action for find next item in focus move operation @since 15 |
+| ARKUI_ACCESSIBILITY_NATIVE_ACTION_TYPE_PREVIOUS_HTML_ITEM = 0x04000000 | Support action for find previous item in focus move operation @since 15 |
 
 ### ArkUI_AccessibilityEventType
 
@@ -1601,7 +1607,7 @@ int32_t OH_ArkUI_NativeModule_GetNativeAccessibilityProvider(ArkUI_NodeHandle* n
 
 **Description**
 
-Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b>instance of this <b>ArkUI_NodeHandle</b> instance.
+Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b> instance of this <b>ArkUI_NodeHandle</b> instance.
 
 **Since**: 23
 

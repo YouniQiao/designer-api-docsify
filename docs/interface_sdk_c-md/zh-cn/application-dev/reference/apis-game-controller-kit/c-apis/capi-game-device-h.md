@@ -51,11 +51,11 @@ GameController_ErrorCode OH_GameDevice_GetAllDeviceInfos(GameDevice_AllDeviceInf
 | -- | -- |
 | [GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md)** allDeviceInfos | 输出参数。二级指针指向[GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md)实例，不能为空。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果查询多模输入中所有设备信息失败，返回      {@link GAME_CONTROLLER_MULTIMODAL_INPUT_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li>     <li>如果查询多模输入中所有设备信息失败，返回<br>    {@link GAME_CONTROLLER_MULTIMODAL_INPUT_ERROR}。</li></ul> |
 
 **参考：**
 
@@ -80,11 +80,11 @@ GameController_ErrorCode OH_GameDevice_RegisterDeviceMonitor(GameDevice_DeviceMo
 | -- | -- |
 | GameDevice_DeviceMonitorCallback deviceMonitorCallback | 回调函数{@link GameDevice_DeviceMonitorCallback}，不能为空。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceMonitorCallback为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数deviceMonitorCallback为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 **参考：**
 
@@ -103,7 +103,7 @@ GameController_ErrorCode OH_GameDevice_UnregisterDeviceMonitor(void)
 
 **起始版本：** 21
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -127,11 +127,11 @@ GameController_ErrorCode OH_GameDevice_DestroyAllDeviceInfos(GameDevice_AllDevic
 | -- | -- |
 | [GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md)** allDeviceInfos | 二级指针指向[GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md)实例，不能为空。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 ### OH_GameDevice_AllDeviceInfos_GetCount()
 
@@ -152,11 +152,11 @@ GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetCount(const struct Game
 | [const struct GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md)* allDeviceInfos | 指针指向[GameDevice_AllDeviceInfos](capi-gamecontroller-gamedevice-alldeviceinfos.md)实例，不能为空。 |
 | int32_t* count | 输出参数，设备数量。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，返回      {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，返回<br>    {@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 ### OH_GameDevice_AllDeviceInfos_GetDeviceInfo()
 
@@ -178,10 +178,10 @@ GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetDeviceInfo(const struct
 | const int32_t index | 指定设备索引。 |
 | GameDevice_DeviceInfo** deviceInfo | 输出参数，二级指针指向设备信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，或index小于0或大于等于设备总数，      返回{@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
+| GameController_ErrorCode | <ul><li>如果执行成功，返回{@link GAME_CONTROLLER_SUCCESS}。</li>     <li>如果参数allDeviceInfos为null，或index小于0或大于等于设备总数，<br>    返回{@link GAME_CONTROLLER_PARAM_ERROR}。</li></ul> |
 
 

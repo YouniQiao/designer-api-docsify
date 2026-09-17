@@ -6,7 +6,7 @@ typedef struct Ethernet_NetAddrInfo {...} Ethernet_NetAddrInfo
 
 ## Overview
 
-Defines the network address of the Ethernet NIC, including the Ethernet NIC name and the network addressinformation.
+Defines the network address of the Ethernet NIC, including the Ethernet NIC name and the network address information.
 
 **Since**: 26.0.0
 

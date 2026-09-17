@@ -23,7 +23,7 @@ Used to input the query information and receive the query result.
 | double base | Indicates the reference time for the query, in milliseconds. The value is Unix timestamp. |
 | int32_t prevRawOffset | Indicates the previous raw offset of the time zone, in milliseconds. |
 | int32_t prevDSTSavings | Indicates the previous daylight saving time offset, in milliseconds. |
-| bool inclusive | Indicates whether the query result contains the base time. The value **true** indicates that the queryresult contains the base time. The value **false** indicates the opposite. |
+| bool inclusive | Indicates whether the query result contains the base time. The value **true** indicates that the query result contains the base time. The value **false** indicates the opposite. |
 | double result | Indicates the query result, in milliseconds. The value is Unix timestamp. |
 
 

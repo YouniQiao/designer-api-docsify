@@ -12,3 +12,11 @@ The file declares the error codes generated during screen capture.
 
 **Related module**: [AVScreenCapture](capi-avscreencapture.md)
 
+## Summary
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| NATIVE_AVSCREEN_CAPTURE_ERRORS_H | The file declares the error codes generated during screen capture.<br>**Since**: 10<br>**System capability**: SystemCapability.Multimedia.Media.AVScreenCapture |
+

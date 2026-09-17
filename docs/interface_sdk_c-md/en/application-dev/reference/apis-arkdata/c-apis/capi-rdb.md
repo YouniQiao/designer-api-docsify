@@ -2,7 +2,7 @@
 
 ## Overview
 
-The relational database (RDB) store manages data based on relational models.With the underlying SQLite database, the RDB store provides a complete mechanism for managing local databases.To satisfy different needs in complicated scenarios, the RDB store offers a series of APIs for performing operationssuch as adding, deleting, modifying, and querying data, and supports direct execution of SQL statements.
+The relational database (RDB) store manages data based on relational models. With the underlying SQLite database, the RDB store provides a complete mechanism for managing local databases. To satisfy different needs in complicated scenarios, the RDB store offers a series of APIs for performing operations such as adding, deleting, modifying, and querying data, and supports direct execution of SQL statements.
 
 **Since**: 10
 

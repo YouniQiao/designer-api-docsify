@@ -39,6 +39,12 @@
 | -- | -- | -- |
 | [typedef void (\*TransientTask_Callback)(void)](#transienttask_callback) | TransientTask_Callback | 定义短时任务超时回调类型。若申请的短时任务即将超时，系统会调用此回调函数通知应用。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*TransientTask_Callback)(void) | 定义短时任务超时回调类型。若申请的短时任务即将超时，系统会调用此回调函数通知应用。<br>**起始版本：** 13 |
+
 ## 枚举类型说明
 
 ### TransientTask_ErrorCode

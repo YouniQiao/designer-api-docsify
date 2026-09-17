@@ -53,7 +53,7 @@ int OH_VBucket_PutAsset(OH_VBucket *bucket, const char *field, Data_Asset *value
 | const char *field | 数据库表中的列名，不能为空。 |
 | Data_Asset *value | 数据库表中指定列名对应的值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -85,7 +85,7 @@ int OH_VBucket_PutAssets(OH_VBucket *bucket, const char *field, Data_Asset **val
 | Data_Asset **value | 数据库表中指定列名对应的值。 |
 | uint32_t count | 表示传入的{@link Data_Asset}对象数组元素的个数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -117,7 +117,7 @@ int OH_VBucket_PutFloatVector(OH_VBucket *bucket, const char *field, const float
 | const float *vec | 表示指向float数组的指针。 |
 | size_t len | 表示float数组的大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -150,7 +150,7 @@ int OH_VBucket_PutUnlimitedInt(OH_VBucket *bucket, const char *field, int sign, 
 | const uint64_t *trueForm | 表示指向整数类型数组的指针。 |
 | size_t len | 表示整数数组的大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

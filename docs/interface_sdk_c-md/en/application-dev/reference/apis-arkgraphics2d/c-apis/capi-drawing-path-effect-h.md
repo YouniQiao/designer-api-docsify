@@ -8,7 +8,7 @@ This file declares the functions related to the path effect in the drawing modul
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -25,8 +25,8 @@ This file declares the functions related to the path effect in the drawing modul
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_PathEffect* OH_Drawing_CreateComposePathEffect(OH_Drawing_PathEffect* outer, OH_Drawing_PathEffect* inner)](#oh_drawing_createcomposepatheffect) | Creates a path effect by sequentially applying the inner effect and then the outer effect. |
-| [OH_Drawing_PathEffect* OH_Drawing_CreateCornerPathEffect(float radius)](#oh_drawing_createcornerpatheffect) | Creates a path effect that transforms the sharp angle between line segments into a rounded corner with thespecified radius. |
-| [OH_Drawing_PathEffect* OH_Drawing_CreateDashPathEffect(float* intervals, int count, float phase)](#oh_drawing_createdashpatheffect) | Creates a dashed path effect. The dashed line effect is determined by a group of "on" and "off" intervals.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **intervals** is NULL or **count** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_PathEffect* OH_Drawing_CreateCornerPathEffect(float radius)](#oh_drawing_createcornerpatheffect) | Creates a path effect that transforms the sharp angle between line segments into a rounded corner with the specified radius. |
+| [OH_Drawing_PathEffect* OH_Drawing_CreateDashPathEffect(float* intervals, int count, float phase)](#oh_drawing_createdashpatheffect) | Creates a dashed path effect. The dashed line effect is determined by a group of "on" and "off" intervals. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **intervals** is NULL or **count** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_PathEffect* OH_Drawing_CreateDiscretePathEffect(float segLength, float deviation)](#oh_drawing_creatediscretepatheffect) | Creates a path effect that segments the path and scatters the segments in an irregular pattern along the path. |
 | [OH_Drawing_PathEffect* OH_Drawing_CreatePathDashEffect(const OH_Drawing_Path* path, float advance, float phase, OH_Drawing_PathDashStyle type)](#oh_drawing_createpathdasheffect) | Creates a dashed path effect. |
 | [OH_Drawing_PathEffect* OH_Drawing_CreateSumPathEffect(OH_Drawing_PathEffect* firstPathEffect, OH_Drawing_PathEffect* secondPathEffect)](#oh_drawing_createsumpatheffect) | Creates an overlay path effect based on two distinct path effects that take effect separately. |
@@ -88,7 +88,7 @@ OH_Drawing_PathEffect* OH_Drawing_CreateCornerPathEffect(float radius)
 
 **Description**
 
-Creates a path effect that transforms the sharp angle between line segments into a rounded corner with thespecified radius.
+Creates a path effect that transforms the sharp angle between line segments into a rounded corner with the specified radius.
 
 **Since**: 18
 
@@ -112,7 +112,7 @@ OH_Drawing_PathEffect* OH_Drawing_CreateDashPathEffect(float* intervals, int cou
 
 **Description**
 
-Creates a dashed path effect. The dashed line effect is determined by a group of "on" and "off" intervals.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **intervals** is NULL or **count** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates a dashed path effect. The dashed line effect is determined by a group of "on" and "off" intervals. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **intervals** is NULL or **count** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -120,7 +120,7 @@ Creates a dashed path effect. The dashed line effect is determined by a group of
 
 | Parameter | Description |
 | -- | -- |
-| float* intervals | Pointer to the start address of the dashed line interval array. In the array, an even entryindicates an "on" interval and an odd entry indicates an "off" interval. The unit is px. |
+| float* intervals | Pointer to the start address of the dashed line interval array. In the array, an even entry indicates an "on" interval and an odd entry indicates an "off" interval. The unit is px. |
 | int count | Number of entries in the dashed line interval array. The value must be an even number greater than 0. |
 | float phase | Offset in the dashed line interval array. |
 
@@ -146,7 +146,7 @@ Creates a path effect that segments the path and scatters the segments in an irr
 
 | Parameter | Description |
 | -- | -- |
-| float segLength | Distance along the path at which each segment is fragmented. An effect is created when it isgreater than 0. |
+| float segLength | Distance along the path at which each segment is fragmented. An effect is created when it is greater than 0. |
 | float deviation | Maximum amount by which the end points of the segments can be randomly displaced during rendering. |
 
 **Returns**:

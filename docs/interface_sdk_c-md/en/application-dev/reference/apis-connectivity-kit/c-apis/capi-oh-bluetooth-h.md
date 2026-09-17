@@ -66,7 +66,7 @@ Enumeration the bluetooth result codes.
 | Enum item | Description |
 | -- | -- |
 | BLUETOOTH_SUCCESS = 0 | The operation is successful. |
-| BLUETOOTH_INVALID_PARAM = 401 | Parameter error. Possible reasons: 1. The input parameter is a null pointer;2. Parameter values exceed the defined range. |
+| BLUETOOTH_INVALID_PARAM = 401 | Parameter error. Possible reasons: 1. The input parameter is a null pointer; 2. Parameter values exceed the defined range. |
 
 
 ## Function description
@@ -87,7 +87,7 @@ Get the bluetooth switch state.
 
 | Parameter | Description |
 | -- | -- |
-| [Bluetooth_SwitchState](capi-oh-bluetooth-h.md#bluetooth_switchstate) *state | - It is a pointer used to receive bluetooth switch status values.The caller needs to pass in a non empty boolean pointer, otherwise an error will be returned.For a detailed definition, please refer to [Bluetooth_SwitchState](capi-oh-bluetooth-h.md#bluetooth_switchstate). |
+| [Bluetooth_SwitchState](capi-oh-bluetooth-h.md#bluetooth_switchstate) *state | - It is a pointer used to receive bluetooth switch status values. The caller needs to pass in a non empty boolean pointer, otherwise an error will be returned. For a detailed definition, please refer to [Bluetooth_SwitchState](capi-oh-bluetooth-h.md#bluetooth_switchstate). |
 
 **Returns**:
 

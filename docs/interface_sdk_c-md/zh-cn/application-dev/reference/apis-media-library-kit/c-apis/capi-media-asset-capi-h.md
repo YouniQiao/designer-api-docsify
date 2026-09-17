@@ -57,7 +57,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetUri(OH_MediaAsset* mediaAsset, const cha
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | const char** uri | 媒体资产的uri。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -82,7 +82,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetMediaType(OH_MediaAsset* mediaAsset, Med
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | MediaLibrary_MediaType* mediaType | 媒体资源类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -107,7 +107,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetMediaSubType(OH_MediaAsset* mediaAsset, 
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | MediaLibrary_MediaSubType* mediaSubType | 媒体资源子类型。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -132,7 +132,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDisplayName(OH_MediaAsset* mediaAsset, c
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | const char** displayName | 媒体资源的显示名称。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -157,7 +157,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetSize(OH_MediaAsset* mediaAsset, uint32_t
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* size | 媒体资源的文件大小（以字节为单位）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -182,7 +182,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateAdded(OH_MediaAsset* mediaAsset, uin
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* dateAdded | 资产添加日期。该值是添加文件时间距1970年1月1日的秒数值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -207,7 +207,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateModified(OH_MediaAsset* mediaAsset, 
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* dateModified | 资产的修改日期。该值是修改文件时间距1970年1月1日的秒数值，修改文件名不会改变此值，当文件内容发生修改时才会更新。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -232,7 +232,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateTaken(OH_MediaAsset* mediaAsset, uin
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* dateTaken | 资产的拍摄日期。该值是文件拍照时间距1970年1月1日的秒数值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -257,7 +257,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateAddedMs(OH_MediaAsset* mediaAsset, u
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* dateAddedMs | 资产的添加时间（毫秒）。该值是添加文件时间距1970年1月1日的毫秒数值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -282,7 +282,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDateModifiedMs(OH_MediaAsset* mediaAsset
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* dateModifiedMs | 资产的修改时间（毫秒）。该值是修改文件时间距1970年1月1日的毫秒数值，修改文件名不会改变此值，当文件内容发生修改时才会更新。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -307,7 +307,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetDuration(OH_MediaAsset* mediaAsset, uint
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* duration | 媒体资源的持续时间（毫秒）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -332,7 +332,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetWidth(OH_MediaAsset* mediaAsset, uint32_
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* width | 媒体资源的图像宽度（像素）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -357,7 +357,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetHeight(OH_MediaAsset* mediaAsset, uint32
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* height | 媒体资源的图像高度（像素）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -382,7 +382,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetOrientation(OH_MediaAsset* mediaAsset, u
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* orientation | 图像的旋转角度，单位为度（°）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -407,7 +407,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_IsFavorite(OH_MediaAsset* mediaAsset, uint3
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | uint32_t* favorite | 资产的收藏状态。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -432,7 +432,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_GetTitle(OH_MediaAsset* mediaAsset, const c
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 | const char** title | 媒体资产的标题。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -456,7 +456,7 @@ MediaLibrary_ErrorCode OH_MediaAsset_Release(OH_MediaAsset* mediaAsset)
 | -- | -- |
 | OH_MediaAsset* mediaAsset | {@link OH_MediaAsset}实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

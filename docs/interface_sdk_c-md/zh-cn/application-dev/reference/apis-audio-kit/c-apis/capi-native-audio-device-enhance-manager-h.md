@@ -51,7 +51,7 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioDeviceEnhanceManager(OH_AudioDevic
 | -- | -- |
 | [OH_AudioDeviceEnhanceManager](capi-ohaudio-oh-audiodeviceenhancemanager.md) **audioDeviceEnhanceManager | 指向OH_AudioDeviceEnhanceManager句柄的指针，用于接收函数返回的管理器实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -76,7 +76,7 @@ OH_AudioCommon_Result OH_AudioDeviceEnhanceManager_IsEnhancedRoutingSupported(OH
 | [OH_AudioDeviceEnhanceManager](capi-ohaudio-oh-audiodeviceenhancemanager.md) *audioDeviceEnhanceManager | 通过[OH_AudioManager_GetAudioDeviceEnhanceManager](capi-native-audio-device-enhance-manager-h.md#oh_audiomanager_getaudiodeviceenhancemanager)获取的音频设备增强管理器句柄。 |
 | bool *supported | 查询结果，即系统是否支持音频设备增强管理功能。true表示支持，false表示不支持。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -99,9 +99,9 @@ OH_AudioCommon_Result OH_AudioDeviceEnhanceManager_SelectOutputDevice(OH_AudioDe
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioDeviceEnhanceManager](capi-ohaudio-oh-audiodeviceenhancemanager.md) *audioDeviceEnhanceManager | 通过[OH_AudioManager_GetAudioDeviceEnhanceManager](capi-native-audio-device-enhance-manager-h.md#oh_audiomanager_getaudiodeviceenhancemanager)获取的音频设备增强管理器句柄。 |
-| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时，系统会清除上一次选择，并为应用恢复默认输出设备。 |
+| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时， 系统会清除上一次选择，并为应用恢复默认输出设备。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -124,9 +124,9 @@ OH_AudioCommon_Result OH_AudioDeviceEnhanceManager_SelectInputDevice(OH_AudioDev
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioDeviceEnhanceManager](capi-ohaudio-oh-audiodeviceenhancemanager.md) *audioDeviceEnhanceManager | 通过[OH_AudioManager_GetAudioDeviceEnhanceManager](capi-native-audio-device-enhance-manager-h.md#oh_audiomanager_getaudiodeviceenhancemanager)获取的音频设备增强管理器句柄。 |
-| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时，系统会清除上一次选择，并为应用恢复默认输入设备。 |
+| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时， 系统会清除上一次选择，并为应用恢复默认输入设备。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -150,9 +150,9 @@ OH_AudioCommon_Result OH_AudioDeviceEnhanceManager_SelectOutputDeviceForAudioRen
 | -- | -- |
 | [OH_AudioDeviceEnhanceManager](capi-ohaudio-oh-audiodeviceenhancemanager.md) *audioDeviceEnhanceManager | 通过[OH_AudioManager_GetAudioDeviceEnhanceManager](capi-native-audio-device-enhance-manager-h.md#oh_audiomanager_getaudiodeviceenhancemanager)获取的音频设备增强管理器句柄。 |
 | OH_AudioRenderer *renderer | 通过{@link OH_AudioStreamBuilder_GenerateRenderer}创建的音频播放流实例。 |
-| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时，系统会清除上一次选择，并为该音频播放流恢复默认输出设备。 |
+| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时， 系统会清除上一次选择，并为该音频播放流恢复默认输出设备。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -176,9 +176,9 @@ OH_AudioCommon_Result OH_AudioDeviceEnhanceManager_SelectInputDeviceForAudioCapt
 | -- | -- |
 | [OH_AudioDeviceEnhanceManager](capi-ohaudio-oh-audiodeviceenhancemanager.md) *audioDeviceEnhanceManager | 通过[OH_AudioManager_GetAudioDeviceEnhanceManager](capi-native-audio-device-enhance-manager-h.md#oh_audiomanager_getaudiodeviceenhancemanager)获取的音频设备增强管理器句柄。 |
 | OH_AudioCapturer *capturer | 通过{@link OH_AudioStreamBuilder_GenerateCapturer}创建的音频录制流实例。 |
-| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时，系统会清除上一次选择，并为该音频录制流恢复默认输入设备。 |
+| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备需从{@link OH_AudioRoutingManager_GetAvailableDevices}返回的设备列表中获取。传入nullptr时， 系统会清除上一次选择，并为该音频录制流恢复默认输入设备。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

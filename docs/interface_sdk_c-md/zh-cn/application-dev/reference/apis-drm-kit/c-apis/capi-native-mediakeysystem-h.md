@@ -2,7 +2,7 @@
 
 ## 概述
 
-定义DRM MediaKeySystem API。提供以下功能：<br> 查询是否支持特定的DRM、创建媒体密钥会话、获取和设置配置、获取统计信息、获取内容保护级别、生成提供请求、处理提供响应、事件监听、管理离线媒体密钥等。
+定义DRM MediaKeySystem API。提供以下功能： 查询是否支持特定的DRM、创建媒体密钥会话、获取和设置配置、获取统计信息、获取内容保护级别、生成提供请求、处理提供响应、事件监听、管理离线媒体密钥等。
 
 **引用文件：** <multimedia/drm_framework/native_mediakeysystem.h>
 
@@ -44,6 +44,13 @@
 | [Drm_ErrCode OH_MediaKeySystem_GetCertificateStatus(MediaKeySystem *mediaKeySystem, DRM_CertificateStatus *certStatus)](#oh_mediakeysystem_getcertificatestatus) | - | 获取设备DRM证书状态。 |
 | [Drm_ErrCode OH_MediaKeySystem_Destroy(MediaKeySystem *mediaKeySystem)](#oh_mediakeysystem_destroy) | - | 销毁MediaKeySystem实例。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| Drm_ErrCode (*MediaKeySystem_Callback)(DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | MediaKeySystem事件触发时将调用的回调函数，不返回MediaKeySystem实例，适用于单个MediaKeySystem场景。<br>**起始版本：** 11 |
+| Drm_ErrCode (*OH_MediaKeySystem_Callback)(MediaKeySystem *mediaKeySystem, DRM_EventType eventType, uint8_t *info, int32_t infoLen, char *extra) | MediaKeySystem事件触发时将调用的回调函数，返回MediaKeySystem实例，适用于多个MediaKeySystem场景。<br>**起始版本：** 12 |
+
 ## 函数说明
 
 ### MediaKeySystem_Callback()
@@ -67,7 +74,7 @@ MediaKeySystem事件触发时将调用的回调函数，不返回MediaKeySystem�
 | int32_t infoLen | 事件信息长度。 |
 | char \*extra | 增量信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -95,7 +102,7 @@ MediaKeySystem事件触发时将调用的回调函数，返回MediaKeySystem实�
 | int32_t infoLen | 事件信息长度。 |
 | char \*extra | 增量信息。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -120,7 +127,7 @@ Drm_ErrCode OH_MediaKeySystem_SetCallback(MediaKeySystem *mediaKeySystem, OH_Med
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 | [OH_MediaKeySystem_Callback](capi-native-mediakeysystem-h.md#oh_mediakeysystem_callback) callback | 回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -145,7 +152,7 @@ Drm_ErrCode OH_MediaKeySystem_GetMediaKeySystems(DRM_MediaKeySystemDescription *
 | DRM_MediaKeySystemDescription *descs | DRM解决方案名称和唯一标识的列表。 |
 | uint32_t *count | DRM解决方案名称和唯一标识的列表长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -169,7 +176,7 @@ bool OH_MediaKeySystem_IsSupported(const char *name)
 | -- | -- |
 | const char *name | 输入参数，DRM解决方案名称。可通过[OH_MediaKeySystem_GetMediaKeySystems](capi-native-mediakeysystem-h.md#oh_mediakeysystem_getmediakeysystems)接口获取设备支持的DRM解决方案名称。示例："com.clearplay.drm"。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -194,7 +201,7 @@ bool OH_MediaKeySystem_IsSupported2(const char *name, const char *mimeType)
 | const char *name | 输入参数，DRM解决方案名称。可通过[OH_MediaKeySystem_GetMediaKeySystems](capi-native-mediakeysystem-h.md#oh_mediakeysystem_getmediakeysystems)接口获取设备支持的DRM解决方案名称。 |
 | const char *mimeType | 输入参数，媒体类型，支持的媒体类型取决于DRM解决方案，如：video/avc、video/hevc。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -220,7 +227,7 @@ bool OH_MediaKeySystem_IsSupported3(const char *name, const char *mimeType, DRM_
 | const char *mimeType | 输入参数，媒体类型，支持的媒体类型取决于DRM解决方案，如：video/avc、video/hevc。 |
 | DRM_ContentProtectionLevel contentProtectionLevel | 输入参数，内容保护级别。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -245,7 +252,7 @@ Drm_ErrCode OH_MediaKeySystem_Create(const char *name, MediaKeySystem **mediaKey
 | const char *name | DRM解决方案名称。 |
 | MediaKeySystem **mediaKeySystem | MediaKeySystem实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -271,7 +278,7 @@ Drm_ErrCode OH_MediaKeySystem_SetConfigurationString(MediaKeySystem *mediaKeySys
 | const char *configName | 字符串类型配置属性名，不能为空，具体支持的属性名由设备上DRM解决方案决定。 |
 | const char *value | 字符串类型配置属性值，不能为空，具体支持的属性值由设备上DRM解决方案决定。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -298,7 +305,7 @@ Drm_ErrCode OH_MediaKeySystem_GetConfigurationString(MediaKeySystem *mediaKeySys
 | char *value | 字符串类型配置值，用于存储获取的配置属性值。该参数不能为空，具体支持的取值由设备上DRM解决方案决定。 |
 | int32_t valueLen | 字符串类型配置值长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -325,7 +332,7 @@ Drm_ErrCode OH_MediaKeySystem_SetConfigurationByteArray(MediaKeySystem *mediaKey
 | uint8_t *value | 字符数组类型配置属性值，不能为空，具体支持的属性值由设备上DRM解决方案决定。 |
 | int32_t valueLen | 字符数组类型配置属性值长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -352,7 +359,7 @@ Drm_ErrCode OH_MediaKeySystem_GetConfigurationByteArray(MediaKeySystem *mediaKey
 | uint8_t *value | 字符数组类型配置属性，用于存储获取的配置属性值。该参数不能为空，具体支持的取值由设备上DRM解决方案决定。 |
 | int32_t *valueLen | 字符数组类型配置属性长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -377,7 +384,7 @@ Drm_ErrCode OH_MediaKeySystem_GetStatistics(MediaKeySystem *mediaKeySystem, DRM_
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 | DRM_Statistics *statistics | 度量记录。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -402,7 +409,7 @@ Drm_ErrCode OH_MediaKeySystem_GetMaxContentProtectionLevel(MediaKeySystem *media
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 | DRM_ContentProtectionLevel *contentProtectionLevel | 内容保护级别。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -427,7 +434,7 @@ Drm_ErrCode OH_MediaKeySystem_SetMediaKeySystemCallback(MediaKeySystem *mediaKey
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 | [MediaKeySystem_Callback](capi-native-mediakeysystem-h.md#mediakeysystem_callback) callback | 回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -453,7 +460,7 @@ Drm_ErrCode OH_MediaKeySystem_CreateMediaKeySession(MediaKeySystem *mediaKeySyst
 | DRM_ContentProtectionLevel *level | 内容保护级别。可通过[OH_MediaKeySystem_GetMaxContentProtectionLevel](capi-native-mediakeysystem-h.md#oh_mediakeysystem_getmaxcontentprotectionlevel)接口先获取设备支持的最大内容保护级别。 |
 | MediaKeySession **mediaKeySession | MediaKeySession实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -481,7 +488,7 @@ Drm_ErrCode OH_MediaKeySystem_GenerateKeySystemRequest(MediaKeySystem *mediaKeyS
 | char *defaultUrl | 设备DRM证书服务的URL。 |
 | int32_t defaultUrlLen | 设备DRM证书服务的URL长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -507,7 +514,7 @@ Drm_ErrCode OH_MediaKeySystem_ProcessKeySystemResponse(MediaKeySystem *mediaKeyS
 | uint8_t *response | 设备DRM证书请求响应。 |
 | int32_t responseLen | 设备DRM证书请求响应长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -532,7 +539,7 @@ Drm_ErrCode OH_MediaKeySystem_GetOfflineMediaKeyIds(MediaKeySystem *mediaKeySyst
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 | DRM_OfflineMediakeyIdArray *offlineMediaKeyIds | 离线媒体密钥的媒体密钥标识列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -559,7 +566,7 @@ Drm_ErrCode OH_MediaKeySystem_GetOfflineMediaKeyStatus(MediaKeySystem *mediaKeyS
 | int32_t offlineMediaKeyIdLen | 离线媒体密钥标识长度。 |
 | DRM_OfflineMediaKeyStatus *status | 媒体密钥状态。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -585,7 +592,7 @@ Drm_ErrCode OH_MediaKeySystem_ClearOfflineMediaKeys(MediaKeySystem *mediaKeySyst
 | uint8_t *offlineMediaKeyId | 离线媒体密钥标识。 |
 | int32_t offlineMediaKeyIdLen | 离线媒体密钥标识长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -610,7 +617,7 @@ Drm_ErrCode OH_MediaKeySystem_GetCertificateStatus(MediaKeySystem *mediaKeySyste
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 | DRM_CertificateStatus *certStatus | 设备DRM证书状态值。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -634,7 +641,7 @@ Drm_ErrCode OH_MediaKeySystem_Destroy(MediaKeySystem *mediaKeySystem)
 | -- | -- |
 | MediaKeySystem *mediaKeySystem | MediaKeySystem实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

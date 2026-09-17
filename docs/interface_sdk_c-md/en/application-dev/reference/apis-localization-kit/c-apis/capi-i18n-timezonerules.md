@@ -6,7 +6,7 @@ typedef struct TimeZoneRules {...} TimeZoneRules
 
 ## Overview
 
-A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamparray, and time zone rule that takes effect every year. It can comprehensively describe both the historical andfuture rules of a time zone.
+A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamp array, and time zone rule that takes effect every year. It can comprehensively describe both the historical and future rules of a time zone.
 
 **Since**: 22
 

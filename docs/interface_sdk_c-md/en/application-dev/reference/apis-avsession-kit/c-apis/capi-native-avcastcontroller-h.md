@@ -8,7 +8,7 @@ Declare avcastcontroller interface.
 
 **System capability**: SystemCapability.Multimedia.AVSession.Core
 
-**Since**: 23
+**Since**: 13
 
 **Related module**: [OHAVSession](capi-ohavsession.md)
 
@@ -18,7 +18,7 @@ Declare avcastcontroller interface.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md) | OH_AVCastController | OH_AVCastController objectA pointer can be created using the {@link OH_AVSession_CreateAVCastController} method. |
+| [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md) | OH_AVCastController | OH_AVCastController object<br> A pointer can be created using the {@link OH_AVSession_CreateAVCastController} method. |
 
 ### Function
 
@@ -32,7 +32,7 @@ Declare avcastcontroller interface.
 | [typedef AVSessionCallback_Result(\*OH_AVCastControllerCallback_EndOfStream)(OH_AVCastController* avcastcontroller, void* userData)](#oh_avcastcontrollercallback_endofstream) | OH_AVCastControllerCallback_EndOfStream | Declaring the callback struct for EndOfStream |
 | [typedef AVSessionCallback_Result(\*OH_AVCastControllerCallback_Error)(OH_AVCastController* avcastcontroller, void* userData, AVSession_ErrCode error)](#oh_avcastcontrollercallback_error) | OH_AVCastControllerCallback_Error | Declaring the callback struct for cast play error |
 | [AVSession_ErrCode OH_AVCastController_Destroy(OH_AVCastController* avcastcontroller)](#oh_avcastcontroller_destroy) | - | Request to destroy the avcastcontroller. |
-| [AVSession_ErrCode OH_AVCastController_GetPlaybackState(OH_AVCastController* avcastcontroller, OH_AVSession_AVPlaybackState** playbackState)](#oh_avcastcontroller_getplaybackstate) | - | Get the playback status of the current player.Do not release the playbackState pointer separately.It will be destroyed when [OH_AVCastController_Destroy](capi-native-avcastcontroller-h.md#oh_avcastcontroller_destroy) is called. |
+| [AVSession_ErrCode OH_AVCastController_GetPlaybackState(OH_AVCastController* avcastcontroller, OH_AVSession_AVPlaybackState** playbackState)](#oh_avcastcontroller_getplaybackstate) | - | Get the playback status of the current player. Do not release the playbackState pointer separately. It will be destroyed when [OH_AVCastController_Destroy](capi-native-avcastcontroller-h.md#oh_avcastcontroller_destroy) is called. |
 | [AVSession_ErrCode OH_AVCastController_RegisterPlaybackStateChangedCallback(OH_AVCastController* avcastcontroller, int32_t filter, OH_AVCastControllerCallback_PlaybackStateChanged callback, void* userData)](#oh_avcastcontroller_registerplaybackstatechangedcallback) | - | Request to register playback state changed callback. |
 | [AVSession_ErrCode OH_AVCastController_UnregisterPlaybackStateChangedCallback(OH_AVCastController* avcastcontroller, OH_AVCastControllerCallback_PlaybackStateChanged callback)](#oh_avcastcontroller_unregisterplaybackstatechangedcallback) | - | Request to unregister playback state changed callback. |
 | [AVSession_ErrCode OH_AVCastController_RegisterMediaItemChangedCallback(OH_AVCastController* avcastcontroller, OH_AVCastControllerCallback_MediaItemChange callback, void* userData)](#oh_avcastcontroller_registermediaitemchangedcallback) | - | Request to register current media changed callback. |
@@ -56,6 +56,18 @@ Declare avcastcontroller interface.
 | [AVSession_ErrCode OH_AVCastController_Prepare(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avqueueItem)](#oh_avcastcontroller_prepare) | - | Request to prepare the current player item, this is needed for sink media information displaying. |
 | [AVSession_ErrCode OH_AVCastController_Start(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avqueueItem)](#oh_avcastcontroller_start) | - | Request to Play the current item, should contain media uri otherwise the playback will fail. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_PlaybackStateChanged)( OH_AVCastController* avcastcontroller, OH_AVSession_AVPlaybackState* playbackState, void* userData) | Declaring the callback struct for playback state change<br>**Since**: 23 |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_MediaItemChange)(OH_AVCastController* avcastcontroller, OH_AVSession_AVQueueItem* avQueueItem, void* userData) | Declaring the callback struct for media item change<br>**Since**: 23 |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_PlayNext)(OH_AVCastController* avcastcontroller, void* userData) | Declaring the callback struct for Play Next<br>**Since**: 23 |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_PlayPrevious)(OH_AVCastController* avcastcontroller, void* userData) | Declaring the callback struct for Play Previous<br>**Since**: 23 |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_SeekDone)(OH_AVCastController* avcastcontroller, int32_t position, void* userData) | Declaring the callback struct for seekDone<br>**Since**: 23 |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_EndOfStream)(OH_AVCastController* avcastcontroller, void* userData) | Declaring the callback struct for EndOfStream<br>**Since**: 23 |
+| AVSessionCallback_Result(*OH_AVCastControllerCallback_Error)(OH_AVCastController* avcastcontroller, void* userData, AVSession_ErrCode error) | Declaring the callback struct for cast play error<br>**Since**: 23 |
+
 ## Function description
 
 ### OH_AVCastControllerCallback_PlaybackStateChanged()
@@ -75,7 +87,7 @@ Declaring the callback struct for playback state change
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
-| OH_AVSession_AVPlaybackState\* playbackState | the {@link OH_AVSession_AVPlaybackState}pointer variable which will be set the changed playback state. |
+| OH_AVSession_AVPlaybackState\* playbackState | the {@link OH_AVSession_AVPlaybackState} pointer variable which will be set the changed playback state. |
 | userdata | userdata which is passed by register. |
 
 ### OH_AVCastControllerCallback_MediaItemChange()
@@ -95,7 +107,7 @@ Declaring the callback struct for media item change
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)\* avcastcontroller | the OH_AVCastController instance pointer. |
-| OH_AVSession_AVQueueItem\* avQueueItem | the {@link OH_AVSession_AVQueueItem}pointer variable which will be set the changed media item info. |
+| OH_AVSession_AVQueueItem\* avQueueItem | the {@link OH_AVSession_AVQueueItem} pointer variable which will be set the changed media item info. |
 | userdata | userdata which is passed by register |
 
 ### OH_AVCastControllerCallback_PlayNext()
@@ -217,7 +229,7 @@ Request to destroy the avcastcontroller.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER} The param of avcastcontroller is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER} The param of avcastcontroller is nullptr. |
 
 ### OH_AVCastController_GetPlaybackState()
 
@@ -227,7 +239,7 @@ AVSession_ErrCode OH_AVCastController_GetPlaybackState(OH_AVCastController* avca
 
 **Description**
 
-Get the playback status of the current player.Do not release the playbackState pointer separately.It will be destroyed when [OH_AVCastController_Destroy](capi-native-avcastcontroller-h.md#oh_avcastcontroller_destroy) is called.
+Get the playback status of the current player. Do not release the playbackState pointer separately. It will be destroyed when [OH_AVCastController_Destroy](capi-native-avcastcontroller-h.md#oh_avcastcontroller_destroy) is called.
 
 **Since**: 23
 
@@ -242,7 +254,7 @@ Get the playback status of the current player.Do not release the playbackState p
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of playbackState is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of playbackState is nullptr. |
 
 ### OH_AVCastController_RegisterPlaybackStateChangedCallback()
 
@@ -261,7 +273,7 @@ Request to register playback state changed callback.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCastController](capi-ohavsession-oh-avcastcontroller.md)* avcastcontroller | The avcastcontroller instance pointer |
-| int32_t filter | The filter {@link AVSession_PlaybackFilter} of playback state determineswhich param are included in callback. |
+| int32_t filter | The filter {@link AVSession_PlaybackFilter} of playback state determines which param are included in callback. |
 | [OH_AVCastControllerCallback_PlaybackStateChanged](capi-native-avcastcontroller-h.md#oh_avcastcontrollercallback_playbackstatechanged) callback | The callback [OH_AVCastControllerCallback_PlaybackStateChanged](capi-native-avcastcontroller-h.md#oh_avcastcontrollercallback_playbackstatechanged) to be registered. |
 | void* userData | User data which is passed by user. |
 
@@ -269,7 +281,7 @@ Request to register playback state changed callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr.                                                  3. filter is invalid |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr.                                                  3. filter is invalid |
 
 ### OH_AVCastController_UnregisterPlaybackStateChangedCallback()
 
@@ -294,7 +306,7 @@ Request to unregister playback state changed callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code：          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code：          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterMediaItemChangedCallback()
 
@@ -320,7 +332,7 @@ Request to register current media changed callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterMediaItemChangedCallback()
 
@@ -345,7 +357,7 @@ Request to unregister current media item changed callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterPlayNextCallback()
 
@@ -371,7 +383,7 @@ Request to register playnext callback send by remote side or media center.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterPlayNextCallback()
 
@@ -396,7 +408,7 @@ Request to unregister playnext callback send by remote side or media center.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterPlayPreviousCallback()
 
@@ -422,7 +434,7 @@ Request to register playprevious command callback send by remote side or media c
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterPlayPreviousCallback()
 
@@ -447,7 +459,7 @@ Request to unregister playprevious command callback send by remote side or media
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterSeekDoneCallback()
 
@@ -473,7 +485,7 @@ Request to register seek done callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterSeekDoneCallback()
 
@@ -498,7 +510,7 @@ Request to unregister seek done callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterEndOfStreamCallback()
 
@@ -524,7 +536,7 @@ Request to register end of stream callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterEndOfStreamCallback()
 
@@ -549,7 +561,7 @@ Request to unregister end of stream callback.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_RegisterErrorCallback()
 
@@ -575,7 +587,7 @@ Request to register listener for playback error events.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_UnregisterErrorCallback()
 
@@ -600,7 +612,7 @@ Request to unregister listener for playback error events.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of callback is nullptr. |
 
 ### OH_AVCastController_SendCommonCommand()
 
@@ -625,7 +637,7 @@ Request to send common command to Remote, only support to send play pause stop p
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER} The param of avcastcontroller is nullptr.          {@link AV_SESSION_ERR_CODE_COMMAND_INVALID} The param of avCastControlcommand is invalid.          {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER} The param of avcastcontroller is nullptr.<br>        {@link AV_SESSION_ERR_CODE_COMMAND_INVALID} The param of avCastControlcommand is invalid.<br>        {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_SendSeekCommand()
 
@@ -650,7 +662,7 @@ Request to send seek command to Remote.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:         {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.         {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.         {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                1. The param of avcastcontroller is nullptr.                                                2. seekTimeMS invalid.         {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:         {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>       {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>       {@link AV_SESSION_ERR_INVALID_PARAMETER}<br>                                              1. The param of avcastcontroller is nullptr.<br>                                              2. seekTimeMS invalid.<br>       {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_SendFastForwardCommand()
 
@@ -675,7 +687,7 @@ Request to send forward command to Remote.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:         {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.         {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.         {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                 1. The param of avcastcontroller is nullptr.                                                 2. forwardTimeS invalid.         {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:         {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>       {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>       {@link AV_SESSION_ERR_INVALID_PARAMETER}<br>                                               1. The param of avcastcontroller is nullptr.<br>                                               2. forwardTimeS invalid.<br>       {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_SendRewindCommand()
 
@@ -700,7 +712,7 @@ Request to send rewind command to Remote.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:         {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.         {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.         {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                 1. The param of avcastcontroller is nullptr.                                                 2. rewindTimeS invalid.         {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:         {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>       {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>       {@link AV_SESSION_ERR_INVALID_PARAMETER}<br>                                               1. The param of avcastcontroller is nullptr.<br>                                               2. rewindTimeS invalid.<br>       {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_SendSetSpeedCommand()
 
@@ -725,7 +737,7 @@ Request to send set speed command to Remote.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. speed invalid.          {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}<br>                                                1. The param of avcastcontroller is nullptr.<br>                                                2. speed invalid.<br>        {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_SendVolumeCommand()
 
@@ -750,7 +762,7 @@ Request to send volume command to Remote.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. volume invalid.          {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}<br>                                                1. The param of avcastcontroller is nullptr.<br>                                                2. volume invalid.<br>        {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_Prepare()
 
@@ -775,7 +787,7 @@ Request to prepare the current player item, this is needed for sink media inform
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of avqueueItem is nullptr.          {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}<br>                                                1. The param of avcastcontroller is nullptr.<br>                                                2. The param of avqueueItem is nullptr.<br>        {@link AV_SESSION_ERR_CODE_REMOTE_CONNECTION_NOT_EXIST} The remote connection is not established. |
 
 ### OH_AVCastController_Start()
 
@@ -800,6 +812,6 @@ Request to Play the current item, should contain media uri otherwise the playbac
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of avqueueItem is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_SERVICE_EXCEPTION} Internal server error.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1. The param of avcastcontroller is nullptr.                                                  2. The param of avqueueItem is nullptr. |
 
 

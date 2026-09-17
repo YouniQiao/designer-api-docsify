@@ -20,8 +20,8 @@ Defines the location information.
 
 | Name | Description |
 | -- | -- |
-| double latitude | Indicates latitude information, with positive values indicating north latitude<br> and negative values indicating south latitude. The value range is -90 to 90.<br> Only supports WGS84 coordinate system. |
-| double longitude | Indicates longitude information, positive values indicate east longitude,<br> and negative values indicate west longitude. The value range is -180 to 180.<br> Only supports WGS84 coordinate system. |
+| double latitude | Indicates latitude information, with positive values indicating north latitude and negative values indicating south latitude. The value range is -90 to 90. Only supports WGS84 coordinate system. |
+| double longitude | Indicates longitude information, positive values indicate east longitude, and negative values indicate west longitude. The value range is -180 to 180. Only supports WGS84 coordinate system. |
 | double altitude | Altitude in meters. |
 | double accuracy | Horizontal location accuracy in meters. |
 | double speed | Speed in meters per second. |

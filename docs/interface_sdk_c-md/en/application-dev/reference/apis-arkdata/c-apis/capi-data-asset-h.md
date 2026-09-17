@@ -8,7 +8,7 @@ Provides the data type of asset.
 
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Since**: 11
+**Since**: 10
 
 **Related module**: [RDB](capi-rdb.md)
 
@@ -18,7 +18,7 @@ Provides the data type of asset.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Data_Asset](capi-rdb-data-asset.md) | Data_Asset | Define the Data_Asset structure type.Provides information of an asset. |
+| [Data_Asset](capi-rdb-data-asset.md) | Data_Asset | Define the Data_Asset structure type.<br> Provides information of an asset. |
 
 ### Enum
 
@@ -99,7 +99,7 @@ Set the name of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -129,7 +129,7 @@ Set the uri of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -159,7 +159,7 @@ Set the path of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -183,13 +183,13 @@ Set the create time of the Data_Asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| int64_t createTime | Indicates the create time to set.There is no specific unit. Developers can specify it themselves. |
+| int64_t createTime | Indicates the create time to set. There is no specific unit. Developers can specify it themselves. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -213,13 +213,13 @@ Set the modify time of the Data_Asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| int64_t modifyTime | Indicates the create time to set.There is no specific unit. Developers can specify it themselves. |
+| int64_t modifyTime | Indicates the create time to set. There is no specific unit. Developers can specify it themselves. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -249,7 +249,7 @@ Set the size of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -279,7 +279,7 @@ Set the status of the Data_Asset.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -303,14 +303,14 @@ Obtains the name of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| char *name | This parameter is the output parameter,and the name of the asset as a char * is written to this variable. |
+| char *name | This parameter is the output parameter, and the name of the asset as a char * is written to this variable. |
 | size_t *length | Indicates the length of the name. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -334,14 +334,14 @@ Obtains the uri of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| char *uri | This parameter is the output parameter,and the uri of the asset as a char * is written to this variable. |
+| char *uri | This parameter is the output parameter, and the uri of the asset as a char * is written to this variable. |
 | size_t *length | Indicates the length of the uri. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -365,14 +365,14 @@ Obtains the path of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| char *path | This parameter is the output parameter,and the path of the asset as a char * is written to this variable. |
+| char *path | This parameter is the output parameter, and the path of the asset as a char * is written to this variable. |
 | size_t *length | Indicates the length of the path. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -396,13 +396,13 @@ Obtains the create time of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| int64_t *createTime | This parameter is the output parameter,and the create time of the asset as a int64_t is written to this variable.There is no specific unit. Developers can specify it themselves. |
+| int64_t *createTime | This parameter is the output parameter, and the create time of the asset as a int64_t is written to this variable. There is no specific unit. Developers can specify it themselves. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -426,13 +426,13 @@ Obtains the modify time of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| int64_t *modifyTime | This parameter is the output parameter,and the create time of the asset as a int64_t is written to this variable.There is no specific unit. Developers can specify it themselves. |
+| int64_t *modifyTime | This parameter is the output parameter, and the create time of the asset as a int64_t is written to this variable. There is no specific unit. Developers can specify it themselves. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -456,13 +456,13 @@ Obtains the size of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| size_t *size | This parameter is the output parameter,and the size of the asset as a size_t is written to this variable. |
+| size_t *size | This parameter is the output parameter, and the size of the asset as a size_t is written to this variable. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -486,13 +486,13 @@ Obtains the status of the asset.
 | Parameter | Description |
 | -- | -- |
 | [Data_Asset](capi-rdb-data-asset.md) *asset | Represents a pointer to an [Data_Asset](capi-rdb-data-asset.md) instance. |
-| [Data_AssetStatus](capi-data-asset-h.md#data_assetstatus) *status | This parameter is the output parameter,and the size of the status as a [Data_AssetStatus](capi-data-asset-h.md#data_assetstatus) is written to this variable. |
+| [Data_AssetStatus](capi-data-asset-h.md#data_assetstatus) *status | This parameter is the output parameter, and the size of the status as a [Data_AssetStatus](capi-data-asset-h.md#data_assetstatus) is written to this variable. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -544,7 +544,7 @@ Destroy the [Data_Asset](capi-rdb-data-asset.md) object and reclaim the memory o
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      <br>while failure returns a specific error code.      <br>{@link RDB_OK} - success.      <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      <br>while failure returns a specific error code.      <br>{@link RDB_OK} - success.<br>    <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -603,7 +603,7 @@ Destroy the [Data_Asset](capi-rdb-data-asset.md) objects and reclaim the memory 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      <br>while failure returns a specific error code.      <br>{@link RDB_OK} - success.      <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      <br>while failure returns a specific error code.      <br>{@link RDB_OK} - success.<br>    <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 

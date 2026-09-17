@@ -2,13 +2,13 @@
 
 ## Overview
 
-Declares the timer interfaces in C.Provides timer capabilities based on QoS levels, supporting callback execution after a specified timeout.It can be used for delayed task scheduling and other scenarios.
+Declares the timer interfaces in C.<br> Provides timer capabilities based on QoS levels, supporting callback execution after a specified timeout. It can be used for delayed task scheduling and other scenarios.
 
 **Library**: libffrt.z.so
 
 **System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
-**Since**: 12
+**Since**: 10
 
 **Related module**: [FFRT](capi-ffrt.md)
 
@@ -18,8 +18,8 @@ Declares the timer interfaces in C.Provides timer capabilities based on QoS leve
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API ffrt_timer_t ffrt_timer_start(ffrt_qos_t qos, uint64_t timeout, void* data, ffrt_timer_cb cb, bool repeat)](#ffrt_timer_start) | Starts a timer on an FFRT worker.Avoid calling `exit` or [ffrt_timer_stop](capi-timer-h.md#ffrt_timer_stop) in `cb` to prevent undefined behavior or deadlock. |
-| [FFRT_C_API int ffrt_timer_stop(ffrt_qos_t qos, ffrt_timer_t handle)](#ffrt_timer_stop) | Stops a timer on an FFRT worker.This is a blocking interface. Avoid calling it inside the callback function to prevent deadlockor synchronization issues. If the callback associated with `handle` is currently running,this function waits for the callback to complete before returning. |
+| [FFRT_C_API ffrt_timer_t ffrt_timer_start(ffrt_qos_t qos, uint64_t timeout, void* data, ffrt_timer_cb cb, bool repeat)](#ffrt_timer_start) | Starts a timer on an FFRT worker.<br> Avoid calling `exit` or [ffrt_timer_stop](capi-timer-h.md#ffrt_timer_stop) in `cb` to prevent undefined behavior or deadlock. |
+| [FFRT_C_API int ffrt_timer_stop(ffrt_qos_t qos, ffrt_timer_t handle)](#ffrt_timer_stop) | Stops a timer on an FFRT worker.<br> This is a blocking interface. Avoid calling it inside the callback function to prevent deadlock or synchronization issues. If the callback associated with `handle` is currently running, this function waits for the callback to complete before returning. |
 
 ## Function description
 
@@ -31,7 +31,7 @@ FFRT_C_API ffrt_timer_t ffrt_timer_start(ffrt_qos_t qos, uint64_t timeout, void*
 
 **Description**
 
-Starts a timer on an FFRT worker.Avoid calling `exit` or [ffrt_timer_stop](capi-timer-h.md#ffrt_timer_stop) in `cb` to prevent undefined behavior or deadlock.
+Starts a timer on an FFRT worker.<br> Avoid calling `exit` or [ffrt_timer_stop](capi-timer-h.md#ffrt_timer_stop) in `cb` to prevent undefined behavior or deadlock.
 
 **Since**: 12
 
@@ -64,7 +64,7 @@ FFRT_C_API int ffrt_timer_stop(ffrt_qos_t qos, ffrt_timer_t handle)
 
 **Description**
 
-Stops a timer on an FFRT worker.This is a blocking interface. Avoid calling it inside the callback function to prevent deadlockor synchronization issues. If the callback associated with `handle` is currently running,this function waits for the callback to complete before returning.
+Stops a timer on an FFRT worker.<br> This is a blocking interface. Avoid calling it inside the callback function to prevent deadlock or synchronization issues. If the callback associated with `handle` is currently running, this function waits for the callback to complete before returning.
 
 **Since**: 12
 

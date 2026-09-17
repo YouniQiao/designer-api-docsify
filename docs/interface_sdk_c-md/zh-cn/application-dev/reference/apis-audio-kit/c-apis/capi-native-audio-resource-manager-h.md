@@ -25,7 +25,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceManager **resourceManager)](#oh_audiomanager_getaudioresourcemanager) | 获取音频资源管理器。<br>使用音频资源管理器相关功能，首先需要获取音频资源管理器实例。 |
+| [OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceManager **resourceManager)](#oh_audiomanager_getaudioresourcemanager) | 获取音频资源管理器。 <br>使用音频资源管理器相关功能，首先需要获取音频资源管理器实例。 |
 | [OH_AudioCommon_Result OH_AudioResourceManager_CreateWorkgroup(OH_AudioResourceManager *resourceManager, const char *name, OH_AudioWorkgroup **group)](#oh_audioresourcemanager_createworkgroup) | 创建音频工作组。 |
 | [OH_AudioCommon_Result OH_AudioResourceManager_ReleaseWorkgroup(OH_AudioResourceManager *resourceManager, OH_AudioWorkgroup *group)](#oh_audioresourcemanager_releaseworkgroup) | 释放音频工作组。 |
 | [OH_AudioCommon_Result OH_AudioWorkgroup_AddCurrentThread(OH_AudioWorkgroup *group, int32_t *tokenId)](#oh_audioworkgroup_addcurrentthread) | 将当前线程加入group指向的音频工作组。 |
@@ -43,7 +43,7 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceMa
 
 **描述：**
 
-获取音频资源管理器。<br>使用音频资源管理器相关功能，首先需要获取音频资源管理器实例。
+获取音频资源管理器。 <br>使用音频资源管理器相关功能，首先需要获取音频资源管理器实例。
 
 **起始版本：** 20
 
@@ -53,11 +53,11 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioResourceManager(OH_AudioResourceMa
 | -- | -- |
 | [OH_AudioResourceManager](capi-ohaudio-oh-audioresourcemanager.md) **resourceManager | 指向OH_AudioResourceManager指针的地址，用于接收创建的音频资源管理器实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr |
 
 ### OH_AudioResourceManager_CreateWorkgroup()
 
@@ -79,11 +79,11 @@ OH_AudioCommon_Result OH_AudioResourceManager_CreateWorkgroup(OH_AudioResourceMa
 | const char *name | 要创建的音频工作组的名称。 |
 | [OH_AudioWorkgroup](capi-ohaudio-oh-audioworkgroup.md) **group | 指向OH_AudioWorkgroup指针的地址，用于接收返回的音频工作组实例的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr      {@link #AUDIOCOMMON_RESULT_ERROR_NO_MEMORY} out of workgroup resources      {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr<br>    {@link #AUDIOCOMMON_RESULT_ERROR_NO_MEMORY} out of workgroup resources<br>    {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
 
 ### OH_AudioResourceManager_ReleaseWorkgroup()
 
@@ -104,11 +104,11 @@ OH_AudioCommon_Result OH_AudioResourceManager_ReleaseWorkgroup(OH_AudioResourceM
 | [OH_AudioResourceManager](capi-ohaudio-oh-audioresourcemanager.md) *resourceManager | 指向[OH_AudioManager_GetAudioResourceManager](capi-native-audio-resource-manager-h.md#oh_audiomanager_getaudioresourcemanager)创建的音频资源管理器实例OH_AudioResourceManager。 |
 | [OH_AudioWorkgroup](capi-ohaudio-oh-audioworkgroup.md) *group | 指向[OH_AudioResourceManager_CreateWorkgroup](capi-native-audio-resource-manager-h.md#oh_audioresourcemanager_createworkgroup)创建的音频工作组实例OH_AudioWorkgroup。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr      {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr<br>    {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
 
 ### OH_AudioWorkgroup_AddCurrentThread()
 
@@ -129,11 +129,11 @@ OH_AudioCommon_Result OH_AudioWorkgroup_AddCurrentThread(OH_AudioWorkgroup *grou
 | [OH_AudioWorkgroup](capi-ohaudio-oh-audioworkgroup.md) *group | 指向[OH_AudioResourceManager_CreateWorkgroup](capi-native-audio-resource-manager-h.md#oh_audioresourcemanager_createworkgroup)创建的音频工作组实例OH_AudioWorkgroup。 |
 | int32_t *tokenId | 用于接收加入音频工作组的线程号。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr      {@link #AUDIOCOMMON_RESULT_ERROR_NO_MEMORY} out of resources for the new thread      {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr<br>    {@link #AUDIOCOMMON_RESULT_ERROR_NO_MEMORY} out of resources for the new thread<br>    {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
 
 ### OH_AudioWorkgroup_RemoveThread()
 
@@ -154,7 +154,7 @@ OH_AudioCommon_Result OH_AudioWorkgroup_RemoveThread(OH_AudioWorkgroup *group, i
 | [OH_AudioWorkgroup](capi-ohaudio-oh-audioworkgroup.md) *group | 指向[OH_AudioResourceManager_CreateWorkgroup](capi-native-audio-resource-manager-h.md#oh_audioresourcemanager_createworkgroup)创建的音频工作组实例OH_AudioWorkgroup。 |
 | int32_t tokenId | 要从音频工作组中移除的线程号。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -180,11 +180,11 @@ OH_AudioCommon_Result OH_AudioWorkgroup_Start(OH_AudioWorkgroup *group, uint64_t
 | uint64_t startTime | 当前音频工作组启动的时间点，单位为毫秒（ms）。 |
 | uint64_t deadlineTime | 当前音频工作组预期完成的时间，单位为毫秒（ms）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr, or time is invalid      {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr, or time is invalid<br>    {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
 
 ### OH_AudioWorkgroup_Stop()
 
@@ -204,10 +204,10 @@ OH_AudioCommon_Result OH_AudioWorkgroup_Stop(OH_AudioWorkgroup *group)
 | -- | -- |
 | [OH_AudioWorkgroup](capi-ohaudio-oh-audioworkgroup.md) *group | 指向[OH_AudioResourceManager_CreateWorkgroup](capi-native-audio-resource-manager-h.md#oh_audioresourcemanager_createworkgroup)创建的音频工作组实例OH_AudioWorkgroup。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr      {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM} if input param is nullptr<br>    {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} system process error occurs |
 
 

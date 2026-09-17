@@ -6,7 +6,7 @@ typedef struct ArkWeb_AnyNativeAPI {...} ArkWeb_AnyNativeAPI
 
 ## Overview
 
-ArkWeb_AnyNativeAPI is the basic struct type of ArkWeb Native API, used to uniformly represent pointers tovarious Native API structs obtained through the [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) API. This struct contains a sizemember of the size_t type, which records the size of the current struct.
+ArkWeb_AnyNativeAPI is the basic struct type of ArkWeb Native API, used to uniformly represent pointers to various Native API structs obtained through the [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) API. This struct contains a size member of the size_t type, which records the size of the current struct.
 
 **Since**: 12
 

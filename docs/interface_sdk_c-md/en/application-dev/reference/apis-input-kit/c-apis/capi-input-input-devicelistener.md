@@ -6,7 +6,7 @@ typedef struct Input_DeviceListener {...} Input_DeviceListener
 
 ## Overview
 
-Defines the struct for listening for device hot swapping. It is applicable to applications that need torespond to input device connection and disconnection in real time, such as games and music players. By listening fordevice hot swapping events, applications can update the input status in a timely manner, improving user experienceand avoiding exceptions caused by device disconnection.
+Defines the struct for listening for device hot swapping. It is applicable to applications that need to respond to input device connection and disconnection in real time, such as games and music players. By listening for device hot swapping events, applications can update the input status in a timely manner, improving user experience and avoiding exceptions caused by device disconnection.
 
 **Since**: 13
 

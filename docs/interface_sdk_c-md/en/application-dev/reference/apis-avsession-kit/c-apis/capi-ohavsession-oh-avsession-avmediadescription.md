@@ -6,7 +6,7 @@ typedef struct OH_AVSession_AVMediaDescription OH_AVSession_AVMediaDescription
 
 ## Overview
 
-Declaring the AVMediaDescription.The instance of AVMediaDescription set by application for current resource.
+Declaring the AVMediaDescription. The instance of AVMediaDescription set by application for current resource.
 
 **Since**: 23
 

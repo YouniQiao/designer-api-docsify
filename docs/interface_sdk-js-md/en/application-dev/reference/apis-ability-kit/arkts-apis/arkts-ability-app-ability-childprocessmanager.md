@@ -1,4 +1,4 @@
-# @ohos.app.ability.childProcessManager
+# @ohos.app.ability.childProcessManager(Child Process Management)
 
 The childProcessManager module provides the child process management capability. Currently, it provides APIs to create and start a child process The created child process will exit when the parent process exits and cannot run independently.
 

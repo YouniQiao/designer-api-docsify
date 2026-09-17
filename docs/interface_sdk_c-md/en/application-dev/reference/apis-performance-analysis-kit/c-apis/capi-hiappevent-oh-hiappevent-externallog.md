@@ -6,7 +6,7 @@ typedef struct OH_HiAppEvent_ExternalLog {...} OH_HiAppEvent_ExternalLog
 
 ## Overview
 
-The OH_HiAppEvent_ExternalLog structure is used to describe external log information, includingthe file path, the generation timestamp, file size, and type of system event.
+The OH_HiAppEvent_ExternalLog structure is used to describe external log information, including the file path, the generation timestamp, file size, and type of system event.
 
 **Since**: 26.1.0
 

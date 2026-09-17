@@ -82,6 +82,13 @@ Defines a set of custom dialog box APIs of ArkUI on the native side.
 | [int32_t OH_ArkUI_NativeModule_CustomDialog_SetSystemMaterialInOptions(ArkUI_CustomDialogOptions* options, ArkUI_ImmersiveMaterialHandle material)](#oh_arkui_nativemodule_customdialog_setsystemmaterialinoptions) | - | Sets the system material of the dialog box. |
 | [int32_t OH_ArkUI_NativeModule_CustomDialog_SetSystemMaterial(ArkUI_NativeDialogHandle handle, ArkUI_ImmersiveMaterialHandle material)](#oh_arkui_nativemodule_customdialog_setsystemmaterial) | - | Sets the system material of the dialog box. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| bool (*ArkUI_OnWillDismissEvent)(int32_t reason) | Invoked when the dialog box is closed.<br>**Since**: 12 |
+| void (*ArkUI_OpenDialogCallback)(int32_t errorCode, int32_t dialogId, void* userData) | Callback function when the dialog is displayed.<br>**Since**: 26.1.0 |
+
 ## Enum type description
 
 ### ArkUI_DismissReason
@@ -209,7 +216,7 @@ Sets whether to block the system behavior of dismissing a dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_DialogDismissEvent](capi-arkui-nativemodule-arkui-dialogdismissevent.md)* event | Indicates the pointer to a dialog box dismiss event object. |
-| bool shouldBlockDismiss | Indicates whether to block the system behavior of dismissing the dialog box. The value<b>true</b> means to block the system behavior, and <b>false</b> means the opposite. |
+| bool shouldBlockDismiss | Indicates whether to block the system behavior of dismissing the dialog box. The value <b>true</b> means to block the system behavior, and <b>false</b> means the opposite. |
 
 ### OH_ArkUI_DialogDismissEvent_GetUserData()
 
@@ -282,7 +289,7 @@ Displays a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### ArkUI_OpenDialogCallback()
 
@@ -300,7 +307,7 @@ Callback function when the dialog is displayed.
 
 | Parameter | Description |
 | -- | -- |
-| int32_t errorCode | the error code.{@link ARKUI_ERROR_CODE_NO_ERROR} The operation is successful.{@link ARKUI_ERROR_CODE_PARAM_INVALID} A parameter error occurs.{@link ARKUI_ERROR_CODE_DIALOG_NODE_MOUNT_FAILURE} The dialog cannot be opened due to node mount failure.{@link ARKUI_ERROR_CODE_DIALOG_SUBWINDOW_CREATE_FAILURE} The dialog cannot be opened due to subwindow create failure. |
+| int32_t errorCode | the error code. {@link ARKUI_ERROR_CODE_NO_ERROR} The operation is successful.<br>{@link ARKUI_ERROR_CODE_PARAM_INVALID} A parameter error occurs.<br>{@link ARKUI_ERROR_CODE_DIALOG_NODE_MOUNT_FAILURE} The dialog cannot be opened due to node mount failure.<br>{@link ARKUI_ERROR_CODE_DIALOG_SUBWINDOW_CREATE_FAILURE} The dialog cannot be opened due to subwindow create failure. |
 | int32_t dialogId | Dialog id. Returns -1 when the dialog cannot be displayed. |
 | void\* userData | Indicates the pointer to the custom data. |
 
@@ -347,7 +354,7 @@ Updates a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_CloseDialog()
 
@@ -371,7 +378,7 @@ Closes a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_CreateOptions()
 
@@ -442,7 +449,7 @@ Sets the level mode for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetLevelUniqueId()
 
@@ -467,7 +474,7 @@ Sets the level uniqueId for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetImmersiveMode()
 
@@ -496,7 +503,7 @@ Sets the immersive mode for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBackgroundColor()
 
@@ -521,7 +528,7 @@ Sets the background color of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetCornerRadius()
 
@@ -549,7 +556,7 @@ Sets the corner radius for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBorderWidth()
 
@@ -578,7 +585,7 @@ Sets the border width of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBorderColor()
 
@@ -606,7 +613,7 @@ Sets the border color of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBorderStyle()
 
@@ -634,7 +641,7 @@ Sets the border style of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetWidth()
 
@@ -660,7 +667,7 @@ Sets the width of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetHeight()
 
@@ -686,7 +693,7 @@ Sets the height of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetShadow()
 
@@ -711,7 +718,7 @@ Sets the shadow of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetCustomShadow()
 
@@ -730,13 +737,13 @@ Sets the custom shadow of the dialog box background.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| const ArkUI_AttributeItem* customShadow | Custom shadow parameter. The format is the same as that ofthe <b>NODE_CUSTOM_SHADOW</b> property. |
+| const ArkUI_AttributeItem* customShadow | Custom shadow parameter. The format is the same as that of the <b>NODE_CUSTOM_SHADOW</b> property. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBackgroundBlurStyle()
 
@@ -761,7 +768,7 @@ Sets the background blur style of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetAlignment()
 
@@ -788,7 +795,7 @@ Sets the alignment mode of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetModalMode()
 
@@ -807,13 +814,13 @@ Sets the modal mode for a custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| bool isModal | Whether the dialog box is a modal. A modal dialog box has a mask applied,while a non-modal dialog box does not. The value <b>true</b> means that the dialog box is a modal. |
+| bool isModal | Whether the dialog box is a modal. A modal dialog box has a mask applied, while a non-modal dialog box does not. The value <b>true</b> means that the dialog box is a modal. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetAutoCancel()
 
@@ -832,13 +839,13 @@ Specifies whether to allow users to touch the mask to dismiss the custom dialog 
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| bool autoCancel | Specifies whether to allow users to touch the mask to dismiss the dialog box.The value <b>true</b> means to allow users to do so, and <b>false</b> means the opposite. |
+| bool autoCancel | Specifies whether to allow users to touch the mask to dismiss the dialog box. The value <b>true</b> means to allow users to do so, and <b>false</b> means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetSubwindowMode()
 
@@ -857,13 +864,13 @@ Sets whether to display the dialog box in a subwindow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| bool showInSubwindow | Whether to display the dialog box in a subwindow when it is not in the main window.The default value is <b>false</b>, meaning the dialog box is displayed within the application, not in aseparate subwindow. |
+| bool showInSubwindow | Whether to display the dialog box in a subwindow when it is not in the main window. The default value is <b>false</b>, meaning the dialog box is displayed within the application, not in a separate subwindow. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetDisplayModeInSubWindow()
 
@@ -886,13 +893,13 @@ Sets the display mode of the custom dialog box in a subwindow.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| [OH_ArkUI_DialogDisplayModeInSubWindow](capi-native-dialog-h.md#oh_arkui_dialogdisplaymodeinsubwindow) displayModeInSubWindow | Display mode of the dialog box in the subwindow.The parameter type is [OH_ArkUI_DialogDisplayModeInSubWindow](capi-native-dialog-h.md#oh_arkui_dialogdisplaymodeinsubwindow).The default value is <b>OH_ARKUI_DIALOG_DISPLAY_MODE_SCREEN_BASED</b>. |
+| [OH_ArkUI_DialogDisplayModeInSubWindow](capi-native-dialog-h.md#oh_arkui_dialogdisplaymodeinsubwindow) displayModeInSubWindow | Display mode of the dialog box in the subwindow. The parameter type is [OH_ArkUI_DialogDisplayModeInSubWindow](capi-native-dialog-h.md#oh_arkui_dialogdisplaymodeinsubwindow). The default value is <b>OH_ARKUI_DIALOG_DISPLAY_MODE_SCREEN_BASED</b>. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetMask()
 
@@ -912,13 +919,13 @@ Sets the mask for a custom dialog box.
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
 | uint32_t maskColor | Mask color, in 0xargb format. |
-| const ArkUI_Rect* maskRect | Pointer to the mask area. Events outside the mask area are transparently transmitted,and events within the mask area are not. The parameter type is {@link ArkUI_Rect}. |
+| const ArkUI_Rect* maskRect | Pointer to the mask area. Events outside the mask area are transparently transmitted, and events within the mask area are not. The parameter type is {@link ArkUI_Rect}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetKeyboardAvoidMode()
 
@@ -943,7 +950,7 @@ Sets the keyboard avoidance mode of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetHoverModeEnabled()
 
@@ -968,7 +975,7 @@ Sets whether to enable the hover mode for the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetHoverModeArea()
 
@@ -993,7 +1000,7 @@ Set the default display area of the dialog box in hover mode.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_RegisterOnWillDismissCallback()
 
@@ -1019,7 +1026,7 @@ Registers a callback for the dismissal event of the custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_RegisterOnWillAppearCallback()
 
@@ -1045,7 +1052,7 @@ Registers a callback to be invoked when the custom dialog box is about to appear
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_RegisterOnDidAppearCallback()
 
@@ -1071,7 +1078,7 @@ Registers a callback to be invoked when the custom dialog box appears.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_RegisterOnWillDisappearCallback()
 
@@ -1097,7 +1104,7 @@ Registers a callback to be invoked when the custom dialog box is about to disapp
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_RegisterOnDidDisappearCallback()
 
@@ -1123,7 +1130,7 @@ Registers a callback to be invoked when the custom dialog box disappears.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_GetState()
 
@@ -1148,7 +1155,7 @@ Get state of dialog.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBackgroundBlurStyleOptions()
 
@@ -1167,13 +1174,13 @@ Sets the background blur effect for a dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| const ArkUI_AttributeItem* backgroundBlurStyleOptions | Background blur effect options of the dialog box.Format of the {@link ArkUI_AttributeItem} parameter: <br>        .value[0].i32: color mode. The value is an enum of {@link ArkUI_ColorMode}. <br>        .value[1]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>        .value[2]?.f32: blur degree. The value range is [0.0, 1.0]. <br>        .value[3]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>        .value[4]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>        .value[5]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}. <br>        .value[6]?.u32: background color, in 0xARGB format, of the components within the window after the window losesfocus (in which case, the blur effect on the components within the window is removed). |
+| const ArkUI_AttributeItem* backgroundBlurStyleOptions | Background blur effect options of the dialog box. Format of the {@link ArkUI_AttributeItem} parameter: <br>       .value[0].i32: color mode. The value is an enum of {@link ArkUI_ColorMode}. <br>       .value[1]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>       .value[2]?.f32: blur degree. The value range is [0.0, 1.0]. <br>       .value[3]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>       .value[4]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>       .value[5]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}.  .value[6]?.u32: background color, in 0xARGB format, of the components within the window after the window loses focus (in which case, the blur effect on the components within the window is removed). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_CustomDialog_SetBackgroundEffect()
 
@@ -1192,13 +1199,13 @@ Sets the background effect parameters for a dialog box.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
-| const ArkUI_AttributeItem* backgroundEffect | Background effect of the dialog box.Format of the {@link ArkUI_AttributeItem} parameter: <br>        .value[0].f32: blur radius, in vp. <br>        .value[1]?.f32: saturation. <br>        .value[2]?.f32: brightness. <br>        .value[3]?.u32: color, in 0xARGB format. <br>        .value[4]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>        .value[5]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>        .value[6]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>        .value[7]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}. <br>        .value[8]?.u32: background color, in 0xARGB format, of the components within the window after the window losesfocus (in which case, the blur effect on the components within the window is removed). |
+| const ArkUI_AttributeItem* backgroundEffect | Background effect of the dialog box. Format of the {@link ArkUI_AttributeItem} parameter: <br>       .value[0].f32: blur radius, in vp. <br>       .value[1]?.f32: saturation. <br>       .value[2]?.f32: brightness. <br>       .value[3]?.u32: color, in 0xARGB format. <br>       .value[4]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>       .value[5]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>       .value[6]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>       .value[7]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}.  .value[8]?.u32: background color, in 0xARGB format, of the components within the window after the window loses focus (in which case, the blur effect on the components within the window is removed). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_NativeModule_CustomDialog_SetSystemMaterialInOptions()
 
@@ -1223,7 +1230,7 @@ Sets the system material of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul>          <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>          <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>          </ul> |
+| int32_t | <ul>          <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>        <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>          </ul> |
 
 ### OH_ArkUI_NativeModule_CustomDialog_SetSystemMaterial()
 
@@ -1248,6 +1255,6 @@ Sets the system material of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | <ul>           <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>           <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>           </ul> |
+| int32_t | <ul>           <li>{@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>        <li>{@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter exception occurs.</li>           </ul> |
 
 

@@ -8,7 +8,7 @@ This file declares the functions related to the color filter in the drawing modu
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 11
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -19,12 +19,12 @@ This file declares the functions related to the color filter in the drawing modu
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateBlendMode(uint32_t color, OH_Drawing_BlendMode blendMode)](#oh_drawing_colorfiltercreateblendmode) | Creates an **OH_Drawing_ColorFilter** object with a given blend mode. |
-| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateCompose(OH_Drawing_ColorFilter* outerColorFilter, OH_Drawing_ColorFilter* innerColorFilter)](#oh_drawing_colorfiltercreatecompose) | Creates an **OH_Drawing_ColorFilter** object by combining another two color filters.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **outerColorFilter** or **innerColorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20])](#oh_drawing_colorfiltercreatematrix) | Creates an **OH_Drawing_ColorFilter** object with a given 5x4 color matrix.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateCompose(OH_Drawing_ColorFilter* outerColorFilter, OH_Drawing_ColorFilter* innerColorFilter)](#oh_drawing_colorfiltercreatecompose) | Creates an **OH_Drawing_ColorFilter** object by combining another two color filters. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **outerColorFilter** or **innerColorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20])](#oh_drawing_colorfiltercreatematrix) | Creates an **OH_Drawing_ColorFilter** object with a given 5x4 color matrix. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLinearToSrgbGamma(void)](#oh_drawing_colorfiltercreatelineartosrgbgamma) | Creates an **OH_Drawing_ColorFilter** object that applies the sRGB gamma curve to the RGB channels. |
 | [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateSrgbGammaToLinear(void)](#oh_drawing_colorfiltercreatesrgbgammatolinear) | Creates an **OH_Drawing_ColorFilter** object that applies the RGB channels to the sRGB gamma curve. |
-| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLuma(void)](#oh_drawing_colorfiltercreateluma) | Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels tozero. |
-| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLighting(uint32_t mulColor, uint32_t addColor)](#oh_drawing_colorfiltercreatelighting) | Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds anothercolor value. The final output stays between 0 and 255. |
+| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLuma(void)](#oh_drawing_colorfiltercreateluma) | Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels to zero. |
+| [OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLighting(uint32_t mulColor, uint32_t addColor)](#oh_drawing_colorfiltercreatelighting) | Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds another color value. The final output stays between 0 and 255. |
 | [void OH_Drawing_ColorFilterDestroy(OH_Drawing_ColorFilter* colorFilter)](#oh_drawing_colorfilterdestroy) | Destroys an **OH_Drawing_ColorFilter** object and reclaims the memory occupied by the object. |
 
 ## Function description
@@ -62,7 +62,7 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateCompose(OH_Drawing_ColorFilt
 
 **Description**
 
-Creates an **OH_Drawing_ColorFilter** object by combining another two color filters.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **outerColorFilter** or **innerColorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates an **OH_Drawing_ColorFilter** object by combining another two color filters. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **outerColorFilter** or **innerColorFilter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -87,7 +87,7 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateMatrix(const float matrix[20
 
 **Description**
 
-Creates an **OH_Drawing_ColorFilter** object with a given 5x4 color matrix.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates an **OH_Drawing_ColorFilter** object with a given 5x4 color matrix. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **matrix** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -147,7 +147,7 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLuma(void)
 
 **Description**
 
-Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels tozero.
+Creates a **ColorFilter** object that multiplies the luma into the alpha channel and sets the RGB channels to zero.
 
 **Since**: 11
 
@@ -165,7 +165,7 @@ OH_Drawing_ColorFilter* OH_Drawing_ColorFilterCreateLighting(uint32_t mulColor, 
 
 **Description**
 
-Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds anothercolor value. The final output stays between 0 and 255.
+Creates a lighting color filter. It multiplies the RGB channel values by one color and then adds another color value. The final output stays between 0 and 255.
 
 **Since**: 20
 

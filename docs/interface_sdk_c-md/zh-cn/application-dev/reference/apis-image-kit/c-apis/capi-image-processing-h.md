@@ -18,8 +18,8 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [ImageProcessing_ErrorCode OH_ImageProcessing_InitializeEnvironment(void)](#oh_imageprocessing_initializeenvironment) | 初始化图片处理模块的全局环境。<br>此函数为非必需函数。通常此函数在主进程启动时被调用，用于图片处理模块的全局环境初始化并可以减少[OH_ImageProcessing_Create](capi-image-processing-h.md#oh_imageprocessing_create)的耗时。调用[OH_ImageProcessing_DeinitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_deinitializeenvironment)进行全局环境反初始化。可用于检查设备GPU是否正常工作。 |
-| [ImageProcessing_ErrorCode OH_ImageProcessing_DeinitializeEnvironment(void)](#oh_imageprocessing_deinitializeenvironment) | 反初始化图片处理模块的全局环境。<br>如果[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)被调用，则此函数为必需函数。通常此函数在主进程准备退出时被调用，用于反初始化图片处理模块的全局环境（由[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)接口初始化）。如果此时存在图片处理实例，则不应调用此函数。如果[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)未被调用，则不应调用此函数。 |
+| [ImageProcessing_ErrorCode OH_ImageProcessing_InitializeEnvironment(void)](#oh_imageprocessing_initializeenvironment) | 初始化图片处理模块的全局环境。 <br>此函数为非必需函数。通常此函数在主进程启动时被调用，用于图片处理模块的全局环境初始化并可以减少[OH_ImageProcessing_Create](capi-image-processing-h.md#oh_imageprocessing_create)的耗时。调用 [OH_ImageProcessing_DeinitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_deinitializeenvironment)进行全局环境反初始化。可用于检查设备GPU是否正常工作。 |
+| [ImageProcessing_ErrorCode OH_ImageProcessing_DeinitializeEnvironment(void)](#oh_imageprocessing_deinitializeenvironment) | 反初始化图片处理模块的全局环境。 <br>如果[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)被调用，则此函数为必需函数。通常此函数在主进程准备退出时被调用，用于反初始化图片处理模块的全局环境（由 [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)接口初始化）。如果此时存在图片处理实例，则不应调用此函数。如果 [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)未被调用，则不应调用此函数。 |
 | [bool OH_ImageProcessing_IsColorSpaceConversionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo)](#oh_imageprocessing_iscolorspaceconversionsupported) | 查询是否支持当前图片色彩空间转换能力。 |
 | [bool OH_ImageProcessing_IsCompositionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* sourceGainmapInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo)](#oh_imageprocessing_iscompositionsupported) | 查询是否支持HDR双层图片转换为HDR单层图片。 |
 | [bool OH_ImageProcessing_IsDecompositionSupported(const ImageProcessing_ColorSpaceInfo* sourceImageInfo, const ImageProcessing_ColorSpaceInfo* destinationImageInfo, const ImageProcessing_ColorSpaceInfo* destinationGainmapInfo)](#oh_imageprocessing_isdecompositionsupported) | 查询是否支持HDR单层图片转换为HDR双层图片。 |
@@ -44,11 +44,11 @@ ImageProcessing_ErrorCode OH_ImageProcessing_InitializeEnvironment(void)
 
 **描述：**
 
-初始化图片处理模块的全局环境。<br>此函数为非必需函数。通常此函数在主进程启动时被调用，用于图片处理模块的全局环境初始化并可以减少[OH_ImageProcessing_Create](capi-image-processing-h.md#oh_imageprocessing_create)的耗时。调用[OH_ImageProcessing_DeinitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_deinitializeenvironment)进行全局环境反初始化。可用于检查设备GPU是否正常工作。
+初始化图片处理模块的全局环境。 <br>此函数为非必需函数。通常此函数在主进程启动时被调用，用于图片处理模块的全局环境初始化并可以减少[OH_ImageProcessing_Create](capi-image-processing-h.md#oh_imageprocessing_create)的耗时。调用 [OH_ImageProcessing_DeinitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_deinitializeenvironment)进行全局环境反初始化。可用于检查设备GPU是否正常工作。
 
 **起始版本：** 13
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -62,11 +62,11 @@ ImageProcessing_ErrorCode OH_ImageProcessing_DeinitializeEnvironment(void)
 
 **描述：**
 
-反初始化图片处理模块的全局环境。<br>如果[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)被调用，则此函数为必需函数。通常此函数在主进程准备退出时被调用，用于反初始化图片处理模块的全局环境（由[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)接口初始化）。如果此时存在图片处理实例，则不应调用此函数。如果[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)未被调用，则不应调用此函数。
+反初始化图片处理模块的全局环境。 <br>如果[OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)被调用，则此函数为必需函数。通常此函数在主进程准备退出时被调用，用于反初始化图片处理模块的全局环境（由 [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)接口初始化）。如果此时存在图片处理实例，则不应调用此函数。如果 [OH_ImageProcessing_InitializeEnvironment](capi-image-processing-h.md#oh_imageprocessing_initializeenvironment)未被调用，则不应调用此函数。
 
 **起始版本：** 13
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -91,7 +91,7 @@ bool OH_ImageProcessing_IsColorSpaceConversionSupported(const ImageProcessing_Co
 | const ImageProcessing_ColorSpaceInfo* sourceImageInfo | 指向输入图片色彩空间信息的指针。 |
 | const ImageProcessing_ColorSpaceInfo* destinationImageInfo | 指向输出图片色彩空间信息的指针， |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -117,7 +117,7 @@ bool OH_ImageProcessing_IsCompositionSupported(const ImageProcessing_ColorSpaceI
 | const ImageProcessing_ColorSpaceInfo* sourceGainmapInfo | 指向输入Gainmap色彩空间信息的指针。 |
 | const ImageProcessing_ColorSpaceInfo* destinationImageInfo | 指向输出图片色彩空间信息的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -143,7 +143,7 @@ bool OH_ImageProcessing_IsDecompositionSupported(const ImageProcessing_ColorSpac
 | const ImageProcessing_ColorSpaceInfo* destinationImageInfo | 指向输出图片色彩空间信息的指针。 |
 | const ImageProcessing_ColorSpaceInfo* destinationGainmapInfo | 指向输出Gainmap色彩空间信息的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -167,7 +167,7 @@ bool OH_ImageProcessing_IsMetadataGenerationSupported(const ImageProcessing_Colo
 | -- | -- |
 | const ImageProcessing_ColorSpaceInfo* sourceImageInfo | 指向输入图片色彩空间信息的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -192,7 +192,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Create(OH_ImageProcessing** imagePr
 | OH_ImageProcessing** imageProcessor | 输出参数。指针\*imageProcessor指向一个新的图片处理对象。指针\*imageProcessor在传递前必须是一个空指针。 |
 | int32_t type | 使用IMAGE_PROCESSING_TYPE_XXX来指定图片处理类型。此实例的类型在创建后不能更改。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -216,7 +216,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Destroy(OH_ImageProcessing* imagePr
 | -- | -- |
 | OH_ImageProcessing* imageProcessor | 指向图片处理模块实例的指针。当实例被销毁时，建议该指针设置为空。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -241,7 +241,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_SetParameter(OH_ImageProcessing* im
 | OH_ImageProcessing* imageProcessor | 指向图片处理模块实例的指针。 |
 | const OH_AVFormat* parameter | 图片处理参数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -266,7 +266,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_GetParameter(OH_ImageProcessing* im
 | OH_ImageProcessing* imageProcessor | 指向图片处理模块实例的指针。 |
 | OH_AVFormat* parameter | 该图片处理模块实例使用的参数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -292,7 +292,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_ConvertColorSpace(OH_ImageProcessin
 | OH_PixelmapNative* sourceImage | 指向输入图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 | OH_PixelmapNative* destinationImage | 指向输出图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -319,7 +319,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Compose(OH_ImageProcessing* imagePr
 | OH_PixelmapNative* sourceGainmap | 指向输入Gainmap的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 | OH_PixelmapNative* destinationImage | 指向输出图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -346,7 +346,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_Decompose(OH_ImageProcessing* image
 | OH_PixelmapNative* destinationImage | 指向输出图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 | OH_PixelmapNative* destinationGainmap | 指向输出Gainmap的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -371,7 +371,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_GenerateMetadata(OH_ImageProcessing
 | OH_ImageProcessing* imageProcessor | 指向图片处理模块实例的指针。该实例应该由IMAGE_PROCESSING_TYPE_METADATA_GENERATION类型创建。 |
 | OH_PixelmapNative* sourceImage | 指向输入图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -397,7 +397,7 @@ ImageProcessing_ErrorCode OH_ImageProcessing_EnhanceDetail(OH_ImageProcessing* i
 | OH_PixelmapNative* sourceImage | 指向输入图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 | OH_PixelmapNative* destinationImage | 指向输出图片的指针，指向的OH_PixelmapNative需为DMA内存，具体情况请参考{@link PixelMap的内存类型介绍}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

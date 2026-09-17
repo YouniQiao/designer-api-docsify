@@ -2,7 +2,7 @@
 
 ## 概述
 
-Neural Network Runtime定义的结构体和枚举值。include "neural_network_runtime/neural_network_runtime_type.h"
+Neural Network Runtime定义的结构体和枚举值。<br> include "neural_network_runtime/neural_network_runtime_type.h"
 
 **库：** libneural_network_runtime.so
 
@@ -37,14 +37,21 @@ Neural Network Runtime定义的结构体和枚举值。include "neural_network_r
 | [OH_NN_DeviceType](#oh_nn_devicetype) | OH_NN_DeviceType | Neural Network Runtime 支持的设备类型 |
 | [OH_NN_DataType](#oh_nn_datatype) | OH_NN_DataType | Neural Network Runtime 支持的数据类型。 |
 | [OH_NN_OperationType](#oh_nn_operationtype) | OH_NN_OperationType | Neural Network Runtime 支持算子的类型。 |
-| [OH_NN_TensorType](#oh_nn_tensortype) | OH_NN_TensorType | 张量的类型。 <br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)；当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。<br> 假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将{@link OH_NN_Tensor}实例的type属性设置为[OH_NN_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。 |
+| [OH_NN_TensorType](#oh_nn_tensortype) | OH_NN_TensorType | 张量的类型。 <br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)；<br>当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。<br>假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将{@link OH_NN_Tensor}实例的type属性设置为<br>[OH_NN_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。 |
 
 ### 函数
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [typedef void (\*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *outputTensor[], int32_t outputCount)](#nn_onrundone) | NN_OnRunDone | 异步推理结束后的回调处理函数句柄。<br> 使用参数userData来查询希望获取的那次异步推理执行。userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 <br> 使用参数errCode（[OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode)类型）来获取该次异步推理的返回状态。 <br> |
-| [typedef void (\*NN_OnServiceDied)(void *userData)](#nn_onservicedied) | NN_OnServiceDied | 异步推理执行期间设备驱动服务异常终止时的回调处理函数句柄。<br> 如果该回调函数被调用，您需要重新编译模型。 <br> 使用参数userData来查询希望获取的那次异步推理执行。userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 |
+| [typedef void (\*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *outputTensor[], int32_t outputCount)](#nn_onrundone) | NN_OnRunDone | 异步推理结束后的回调处理函数句柄。 使用参数userData来查询希望获取的那次异步推理执行。 userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 <br> 使用参数errCode（[OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode)类型）来获取该次异步推理的返回状态。 |
+| [typedef void (\*NN_OnServiceDied)(void *userData)](#nn_onservicedied) | NN_OnServiceDied | 异步推理执行期间设备驱动服务异常终止时的回调处理函数句柄。<br> 如果该回调函数被调用，您需要重新编译模型。 <br> 使用参数userData来查询希望获取的那次异步推理执行。 userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *outputTensor[], int32_t outputCount) | 异步推理结束后的回调处理函数句柄。 使用参数userData来查询希望获取的那次异步推理执行。 userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 <br> 使用参数errCode（[OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode)类型）来获取该次异步推理的返回状态。<br>**起始版本：** 11 |
+| void (*NN_OnServiceDied)(void *userData) | 异步推理执行期间设备驱动服务异常终止时的回调处理函数句柄。<br> 如果该回调函数被调用，您需要重新编译模型。 <br> 使用参数userData来查询希望获取的那次异步推理执行。 userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。<br>**起始版本：** 11 |
 
 ## 枚举类型说明
 
@@ -332,7 +339,7 @@ enum OH_NN_TensorType
 
 **描述：**
 
-张量的类型。 <br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)；当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。<br> 假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将{@link OH_NN_Tensor}实例的type属性设置为[OH_NN_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。
+张量的类型。 <br> 张量通常用于设置模型的输入、输出和算子参数。作为模型（或算子）的输入和输出时，需要将张量类型设置为[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)；<br>当张量作为算子参数时，需要选择除[OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)以外合适的枚举值，作为张量的类型。<br>假设正在设置[OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype)算子的pad参数，则需要将{@link OH_NN_Tensor}实例的type属性设置为<br>[OH_NN_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)。其他算子参数的设置以此类推，枚举值的命名遵守 OH_NN_{算子名词}_{属性名} 的格式。
 
 **起始版本：** 9
 
@@ -416,91 +423,91 @@ enum OH_NN_TensorType
 | OH_NN_ARG_MAX_AXIS = 75 | 当张量作为ArgMax算子的axis参数时，使用本枚举值。 |
 | OH_NN_ARG_MAX_KEEPDIMS = 76 | 当张量作为ArgMax算子的keepDims参数时，使用本枚举值。 |
 | OH_NN_UNSQUEEZE_AXIS = 77 | 当张量作为Unsqueeze算子的Axis参数时，使用本枚举值。 |
-| OH_NN_UNSTACK_AXIS = 78 | 当张量作为Unstack算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_FLATTEN_AXIS = 79 | 当张量作为Flatten算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_DEPTH_TO_SPACE_BLOCK_SIZE = 80 | 当张量作为DepthToSpace算子的blockSize参数时，使用本枚举值。@since 12 |
-| OH_NN_DEPTH_TO_SPACE_MODE = 81 | 当张量作为DepthToSpace算子的mode参数时，使用本枚举值。@since 12 |
-| OH_NN_RANGE_START = 82 | 当张量作为Range算子的start参数时，使用本枚举值。@since 12 |
-| OH_NN_RANGE_LIMIT = 83 | 当张量作为Range算子的limit参数时，使用本枚举值。@since 12 |
-| OH_NN_RANGE_DELTA = 84 | 当张量作为Range算子的delta参数时，使用本枚举值。@since 12 |
-| OH_NN_CONSTANT_OF_SHAPE_DATA_TYPE = 85 | 当张量作为ConstantOfShape算子的dataType参数时，使用本枚举值。@since 12 |
-| OH_NN_CONSTANT_OF_SHAPE_VALUE = 86 | 当张量作为ConstantOfShape算子的value参数时，使用本枚举值。@since 12 |
-| OH_NN_BROADCAST_TO_SHAPE = 87 | 当张量作为BroadcastTo算子的shape参数时，使用本枚举值。@since 12 |
-| OH_NN_INSTANCE_NORM_EPSILON = 88 | 当张量作为InstanceNorm算子的epsilon参数时，使用本枚举值。@since 12 |
-| OH_NN_EXP_BASE = 89 | 当张量作为Exp算子的base参数时，使用本枚举值。@since 12 |
-| OH_NN_EXP_SCALE = 90 | 当张量作为Exp算子的scale参数时，使用本枚举值。@since 12 |
-| OH_NN_EXP_SHIFT = 91 | 当张量作为Exp算子的shift参数时，使用本枚举值。@since 12 |
-| OH_NN_LEAKY_RELU_NEGATIVE_SLOPE = 92 | 当张量作为LeakyRelu算子的negativeSlope参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_BIDIRECTIONAL = 93 | 当张量作为LSTM算子的bidirectional参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_HAS_BIAS = 94 | 当张量作为LSTM算子的hasBias参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_INPUT_SIZE = 95 | 当张量作为LSTM算子的inputSize参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_HIDDEN_SIZE = 96 | 当张量作为LSTM算子的hiddenSize参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_NUM_LAYERS = 97 | 当张量作为LSTM算子的numLayers参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_NUM_DIRECTIONS = 98 | 当张量作为LSTM算子的numDirections参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_DROPOUT = 99 | 当张量作为LSTM算子的dropout参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_ZONEOUT_CELL = 100 | 当张量作为LSTM算子的zoneoutCell参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_ZONEOUT_HIDDEN = 101 | 当张量作为LSTM算子的zoneoutHidden参数时，使用本枚举值。@since 12 |
-| OH_NN_LSTM_PROJ_SIZE = 102 | 当张量作为LSTM算子的projSize参数时，使用本枚举值。@since 12 |
-| OH_NN_CLIP_MAX = 103 | 当张量作为Clip算子的max参数时，使用本枚举值。@since 12 |
-| OH_NN_CLIP_MIN = 104 | 当张量作为Clip算子的min参数时，使用本枚举值。@since 12 |
-| OH_NN_ALL_KEEP_DIMS = 105 | 当张量作为All算子的keepDims参数时，使用本枚举值。@since 12 |
-| OH_NN_ASSERT_SUMMARIZE = 106 | 当张量作为Assert算子的summarize参数时，使用本枚举值。@since 12 |
-| OH_NN_POW_SCALE = 107 | 当张量作为Pow算子的scale参数时，使用本枚举值。@since 12 |
-| OH_NN_POW_SHIFT = 108 | 当张量作为Pow算子的shift参数时，使用本枚举值。@since 12 |
-| OH_NN_AVG_POOL_ROUND_MODE = 109 | 当张量作为AvgPool算子的RoundMode参数时，使用本枚举值。@since 12 |
-| OH_NN_AVG_POOL_GLOBAL = 110 | 当张量作为AvgPool算子的global参数时，使用本枚举值。@since 12 |
-| OH_NN_FULL_CONNECTION_HAS_BIAS = 111 | 当张量作为FullConnection算子的hasBias参数时，使用本枚举值。@since 12 |
-| OH_NN_FULL_CONNECTION_USE_AXIS = 112 | 当张量作为FullConnection算子的useAxis参数时，使用本枚举值。@since 12 |
-| OH_NN_GELU_APPROXIMATE = 113 | 当张量作为GeLU算子的approximate参数时，使用本枚举值。@since 12 |
-| OH_NN_MAX_POOL_ROUND_MODE = 114 | 当张量作为MaxPool算子的RoundMode参数时，使用本枚举值。@since 12 |
-| OH_NN_MAX_POOL_GLOBAL = 115 | 当张量作为MaxPool算子的global参数时，使用本枚举值。@since 12 |
-| OH_NN_PAD_PADDING_MODE = 116 | 当张量作为Pad算子的paddingMode参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MEAN_REDUCE_TO_END = 117 | 当张量作为ReduceMean算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MEAN_COEFF = 118 | 当张量作为ReduceMean算子的coeff参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_PROD_REDUCE_TO_END = 119 | 当张量作为ReduceProd算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_PROD_COEFF = 120 | 当张量作为ReduceProd算子的coeff参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_ALL_REDUCE_TO_END = 121 | 当张量作为ReduceAll算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_ALL_COEFF = 122 | 当张量作为ReduceAll算子的coeff参数时，使用本枚举值。@since 12 |
-| OH_NN_TOP_K_AXIS = 123 | 当张量作为TopK算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_ARG_MAX_TOP_K = 124 | 当张量作为ArgMax算子的topK参数时，使用本枚举值。@since 12 |
-| OH_NN_ARG_MAX_OUT_MAX_VALUE = 125 | 当张量作为ArgMax算子的outMaxValue参数时，使用本枚举值。@since 12 |
-| OH_NN_QUANT_DTYPE_CAST_AXIS = 126 | 当张量作为QuantDTypeCast算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_SLICE_AXES = 127 | 当张量作为Slice算子的axes参数时，使用本枚举值。@since 12 |
-| OH_NN_TILE_DIMS = 128 | 当张量作为Tile算子的dims参数时，使用本枚举值。@since 12 |
-| OH_NN_CROP_AXIS = 129 | 当张量作为Crop算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_CROP_OFFSET = 130 | 当张量作为Crop算子的offset参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_INPUT_SIZE = 131 | 当张量作为DetectionPostProcess算子的inputSize参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_SCALE = 132 | 当张量作为DetectionPostProcess算子的scale参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_NMS_IOU_THRESHOLD = 133 | 当张量作为DetectionPostProcess算子的nmsIouThreshold参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_NMS_SCORE_THRESHOLD = 134 | 当张量作为DetectionPostProcess算子的nmsScoreThreshold参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_MAX_DETECTIONS = 135 | 当张量作为DetectionPostProcess算子的maxDetections参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_DETECTIONS_PER_CLASS = 136 | 当张量作为DetectionPostProcess算子的perClass参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_MAX_CLASSES_PER_DETECTION = 137 | 当张量作为DetectionPostProcess算子的maxClassPerDetection参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_NUM_CLASSES = 138 | 当张量作为DetectionPostProcess算子的numClasses参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_USE_REGULAR_NMS = 139 | 当张量作为DetectionPostProcess算子的useRegularNms参数时，使用本枚举值。@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_OUT_QUANTIZED = 140 | 当张量作为DetectionPostProcess算子的outQuantized参数时，使用本枚举值。@since 12 |
-| OH_NN_L2_NORMALIZE_AXIS = 141 | 当张量作为L2Normalize算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_L2_NORMALIZE_EPSILON = 142 | 当张量作为L2Normalize算子的epsilon参数时，使用本枚举值。@since 12 |
-| OH_NN_L2_NORMALIZE_ACTIVATION_TYPE = 143 | 当张量作为L2Normalize算子的activationType参数时，使用本枚举值。@since 12 |
-| OH_NN_LOG_SOFTMAX_AXIS = 144 | 当张量作为LogSoftmax算子的axis参数时，使用本枚举值。@since 12 |
-| OH_NN_LRN_DEPTH_RADIUS = 145 | 当张量作为LRN算子的depthRadius参数时，使用本枚举值。@since 12 |
-| OH_NN_LRN_BIAS = 146 | 当张量作为LRN算子的bias参数时，使用本枚举值。@since 12 |
-| OH_NN_LRN_ALPHA = 147 | 当张量作为LRN算子的alpha参数时，使用本枚举值。@since 12 |
-| OH_NN_LRN_BETA = 148 | 当张量作为LRN算子的beta参数时，使用本枚举值。@since 12 |
-| OH_NN_LRN_NORM_REGION = 149 | 当张量作为LRN算子的normRegion参数时，使用本枚举值。@since 12 |
-| OH_NN_SPACE_TO_DEPTH_BLOCK_SIZE = 150 | 当张量作为SpaceToDepth算子的blockSize参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MAX_KEEP_DIMS = 151 | 当张量作为ReduceMax算子的keepDims参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MAX_REDUCE_TO_END = 152 | 当张量作为ReduceMax算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MAX_COEFF = 153 | 当张量作为ReduceMax算子的coeff参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MIN_KEEP_DIMS = 154 | 当张量作为ReduceMin算子的keepDims参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MIN_REDUCE_TO_END = 155 | 当张量作为ReduceMin算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_MIN_COEFF = 156 | 当张量作为ReduceMin算子的coeff参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_SUM_KEEP_DIMS = 157 | 当张量作为ReduceSum算子的keepDims参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_SUM_REDUCE_TO_END = 158 | 当张量作为ReduceSum算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_SUM_COEFF = 159 | 当张量作为ReduceSum算子的coeff参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_L2_KEEP_DIMS = 160 | 当张量作为ReduceL2算子的keepDims参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_L2_REDUCE_TO_END = 161 | 当张量作为ReduceL2算子的reduceToEnd参数时，使用本枚举值。@since 12 |
-| OH_NN_REDUCE_L2_COEFF = 162 | 当张量作为ReduceL2算子的coeff参数时，使用本枚举值。@since 12 |
+| OH_NN_UNSTACK_AXIS = 78 | 当张量作为Unstack算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_FLATTEN_AXIS = 79 | 当张量作为Flatten算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_DEPTH_TO_SPACE_BLOCK_SIZE = 80 | 当张量作为DepthToSpace算子的blockSize参数时，使用本枚举值。 @since 12 |
+| OH_NN_DEPTH_TO_SPACE_MODE = 81 | 当张量作为DepthToSpace算子的mode参数时，使用本枚举值。 @since 12 |
+| OH_NN_RANGE_START = 82 | 当张量作为Range算子的start参数时，使用本枚举值。 @since 12 |
+| OH_NN_RANGE_LIMIT = 83 | 当张量作为Range算子的limit参数时，使用本枚举值。 @since 12 |
+| OH_NN_RANGE_DELTA = 84 | 当张量作为Range算子的delta参数时，使用本枚举值。 @since 12 |
+| OH_NN_CONSTANT_OF_SHAPE_DATA_TYPE = 85 | 当张量作为ConstantOfShape算子的dataType参数时，使用本枚举值。 @since 12 |
+| OH_NN_CONSTANT_OF_SHAPE_VALUE = 86 | 当张量作为ConstantOfShape算子的value参数时，使用本枚举值。 @since 12 |
+| OH_NN_BROADCAST_TO_SHAPE = 87 | 当张量作为BroadcastTo算子的shape参数时，使用本枚举值。 @since 12 |
+| OH_NN_INSTANCE_NORM_EPSILON = 88 | 当张量作为InstanceNorm算子的epsilon参数时，使用本枚举值。 @since 12 |
+| OH_NN_EXP_BASE = 89 | 当张量作为Exp算子的base参数时，使用本枚举值。 @since 12 |
+| OH_NN_EXP_SCALE = 90 | 当张量作为Exp算子的scale参数时，使用本枚举值。 @since 12 |
+| OH_NN_EXP_SHIFT = 91 | 当张量作为Exp算子的shift参数时，使用本枚举值。 @since 12 |
+| OH_NN_LEAKY_RELU_NEGATIVE_SLOPE = 92 | 当张量作为LeakyRelu算子的negativeSlope参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_BIDIRECTIONAL = 93 | 当张量作为LSTM算子的bidirectional参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_HAS_BIAS = 94 | 当张量作为LSTM算子的hasBias参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_INPUT_SIZE = 95 | 当张量作为LSTM算子的inputSize参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_HIDDEN_SIZE = 96 | 当张量作为LSTM算子的hiddenSize参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_NUM_LAYERS = 97 | 当张量作为LSTM算子的numLayers参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_NUM_DIRECTIONS = 98 | 当张量作为LSTM算子的numDirections参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_DROPOUT = 99 | 当张量作为LSTM算子的dropout参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_ZONEOUT_CELL = 100 | 当张量作为LSTM算子的zoneoutCell参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_ZONEOUT_HIDDEN = 101 | 当张量作为LSTM算子的zoneoutHidden参数时，使用本枚举值。 @since 12 |
+| OH_NN_LSTM_PROJ_SIZE = 102 | 当张量作为LSTM算子的projSize参数时，使用本枚举值。 @since 12 |
+| OH_NN_CLIP_MAX = 103 | 当张量作为Clip算子的max参数时，使用本枚举值。 @since 12 |
+| OH_NN_CLIP_MIN = 104 | 当张量作为Clip算子的min参数时，使用本枚举值。 @since 12 |
+| OH_NN_ALL_KEEP_DIMS = 105 | 当张量作为All算子的keepDims参数时，使用本枚举值。 @since 12 |
+| OH_NN_ASSERT_SUMMARIZE = 106 | 当张量作为Assert算子的summarize参数时，使用本枚举值。 @since 12 |
+| OH_NN_POW_SCALE = 107 | 当张量作为Pow算子的scale参数时，使用本枚举值。 @since 12 |
+| OH_NN_POW_SHIFT = 108 | 当张量作为Pow算子的shift参数时，使用本枚举值。 @since 12 |
+| OH_NN_AVG_POOL_ROUND_MODE = 109 | 当张量作为AvgPool算子的RoundMode参数时，使用本枚举值。 @since 12 |
+| OH_NN_AVG_POOL_GLOBAL = 110 | 当张量作为AvgPool算子的global参数时，使用本枚举值。 @since 12 |
+| OH_NN_FULL_CONNECTION_HAS_BIAS = 111 | 当张量作为FullConnection算子的hasBias参数时，使用本枚举值。 @since 12 |
+| OH_NN_FULL_CONNECTION_USE_AXIS = 112 | 当张量作为FullConnection算子的useAxis参数时，使用本枚举值。 @since 12 |
+| OH_NN_GELU_APPROXIMATE = 113 | 当张量作为GeLU算子的approximate参数时，使用本枚举值。 @since 12 |
+| OH_NN_MAX_POOL_ROUND_MODE = 114 | 当张量作为MaxPool算子的RoundMode参数时，使用本枚举值。 @since 12 |
+| OH_NN_MAX_POOL_GLOBAL = 115 | 当张量作为MaxPool算子的global参数时，使用本枚举值。 @since 12 |
+| OH_NN_PAD_PADDING_MODE = 116 | 当张量作为Pad算子的paddingMode参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MEAN_REDUCE_TO_END = 117 | 当张量作为ReduceMean算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MEAN_COEFF = 118 | 当张量作为ReduceMean算子的coeff参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_PROD_REDUCE_TO_END = 119 | 当张量作为ReduceProd算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_PROD_COEFF = 120 | 当张量作为ReduceProd算子的coeff参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_ALL_REDUCE_TO_END = 121 | 当张量作为ReduceAll算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_ALL_COEFF = 122 | 当张量作为ReduceAll算子的coeff参数时，使用本枚举值。 @since 12 |
+| OH_NN_TOP_K_AXIS = 123 | 当张量作为TopK算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_ARG_MAX_TOP_K = 124 | 当张量作为ArgMax算子的topK参数时，使用本枚举值。 @since 12 |
+| OH_NN_ARG_MAX_OUT_MAX_VALUE = 125 | 当张量作为ArgMax算子的outMaxValue参数时，使用本枚举值。 @since 12 |
+| OH_NN_QUANT_DTYPE_CAST_AXIS = 126 | 当张量作为QuantDTypeCast算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_SLICE_AXES = 127 | 当张量作为Slice算子的axes参数时，使用本枚举值。 @since 12 |
+| OH_NN_TILE_DIMS = 128 | 当张量作为Tile算子的dims参数时，使用本枚举值。 @since 12 |
+| OH_NN_CROP_AXIS = 129 | 当张量作为Crop算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_CROP_OFFSET = 130 | 当张量作为Crop算子的offset参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_INPUT_SIZE = 131 | 当张量作为DetectionPostProcess算子的inputSize参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_SCALE = 132 | 当张量作为DetectionPostProcess算子的scale参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_NMS_IOU_THRESHOLD = 133 | 当张量作为DetectionPostProcess算子的nmsIouThreshold参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_NMS_SCORE_THRESHOLD = 134 | 当张量作为DetectionPostProcess算子的nmsScoreThreshold参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_MAX_DETECTIONS = 135 | 当张量作为DetectionPostProcess算子的maxDetections参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_DETECTIONS_PER_CLASS = 136 | 当张量作为DetectionPostProcess算子的perClass参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_MAX_CLASSES_PER_DETECTION = 137 | 当张量作为DetectionPostProcess算子的maxClassPerDetection参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_NUM_CLASSES = 138 | 当张量作为DetectionPostProcess算子的numClasses参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_USE_REGULAR_NMS = 139 | 当张量作为DetectionPostProcess算子的useRegularNms参数时，使用本枚举值。 @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_OUT_QUANTIZED = 140 | 当张量作为DetectionPostProcess算子的outQuantized参数时，使用本枚举值。 @since 12 |
+| OH_NN_L2_NORMALIZE_AXIS = 141 | 当张量作为L2Normalize算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_L2_NORMALIZE_EPSILON = 142 | 当张量作为L2Normalize算子的epsilon参数时，使用本枚举值。 @since 12 |
+| OH_NN_L2_NORMALIZE_ACTIVATION_TYPE = 143 | 当张量作为L2Normalize算子的activationType参数时，使用本枚举值。 @since 12 |
+| OH_NN_LOG_SOFTMAX_AXIS = 144 | 当张量作为LogSoftmax算子的axis参数时，使用本枚举值。 @since 12 |
+| OH_NN_LRN_DEPTH_RADIUS = 145 | 当张量作为LRN算子的depthRadius参数时，使用本枚举值。 @since 12 |
+| OH_NN_LRN_BIAS = 146 | 当张量作为LRN算子的bias参数时，使用本枚举值。 @since 12 |
+| OH_NN_LRN_ALPHA = 147 | 当张量作为LRN算子的alpha参数时，使用本枚举值。 @since 12 |
+| OH_NN_LRN_BETA = 148 | 当张量作为LRN算子的beta参数时，使用本枚举值。 @since 12 |
+| OH_NN_LRN_NORM_REGION = 149 | 当张量作为LRN算子的normRegion参数时，使用本枚举值。 @since 12 |
+| OH_NN_SPACE_TO_DEPTH_BLOCK_SIZE = 150 | 当张量作为SpaceToDepth算子的blockSize参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MAX_KEEP_DIMS = 151 | 当张量作为ReduceMax算子的keepDims参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MAX_REDUCE_TO_END = 152 | 当张量作为ReduceMax算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MAX_COEFF = 153 | 当张量作为ReduceMax算子的coeff参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MIN_KEEP_DIMS = 154 | 当张量作为ReduceMin算子的keepDims参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MIN_REDUCE_TO_END = 155 | 当张量作为ReduceMin算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_MIN_COEFF = 156 | 当张量作为ReduceMin算子的coeff参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_SUM_KEEP_DIMS = 157 | 当张量作为ReduceSum算子的keepDims参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_SUM_REDUCE_TO_END = 158 | 当张量作为ReduceSum算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_SUM_COEFF = 159 | 当张量作为ReduceSum算子的coeff参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_L2_KEEP_DIMS = 160 | 当张量作为ReduceL2算子的keepDims参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_L2_REDUCE_TO_END = 161 | 当张量作为ReduceL2算子的reduceToEnd参数时，使用本枚举值。 @since 12 |
+| OH_NN_REDUCE_L2_COEFF = 162 | 当张量作为ReduceL2算子的coeff参数时，使用本枚举值。 @since 12 |
 
 
 ## 函数说明
@@ -513,7 +520,7 @@ typedef void (*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *out
 
 **描述：**
 
-异步推理结束后的回调处理函数句柄。<br> 使用参数userData来查询希望获取的那次异步推理执行。userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 <br> 使用参数errCode（[OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode)类型）来获取该次异步推理的返回状态。 <br>
+异步推理结束后的回调处理函数句柄。 使用参数userData来查询希望获取的那次异步推理执行。 userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。 <br> 使用参数errCode（[OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode)类型）来获取该次异步推理的返回状态。
 
 **起始版本：** 11
 
@@ -534,7 +541,7 @@ typedef void (*NN_OnServiceDied)(void *userData)
 
 **描述：**
 
-异步推理执行期间设备驱动服务异常终止时的回调处理函数句柄。<br> 如果该回调函数被调用，您需要重新编译模型。 <br> 使用参数userData来查询希望获取的那次异步推理执行。userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。
+异步推理执行期间设备驱动服务异常终止时的回调处理函数句柄。<br> 如果该回调函数被调用，您需要重新编译模型。 <br> 使用参数userData来查询希望获取的那次异步推理执行。 userData与调用异步推理{@link OH_NNExecutor_RunAsync}接口时传入的参数userData是一致的。
 
 **起始版本：** 11
 

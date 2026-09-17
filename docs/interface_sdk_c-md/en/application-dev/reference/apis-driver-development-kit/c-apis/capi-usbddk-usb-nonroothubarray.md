@@ -6,7 +6,7 @@ typedef struct Usb_NonRootHubArray {...} Usb_NonRootHubArray
 
 ## Overview
 
-The list of non-root hubs, which is used to store the non-root hub IDs and quantity obtained using{@link OH_Usb_GetNonRootHubs}.
+The list of non-root hubs, which is used to store the non-root hub IDs and quantity obtained using {@link OH_Usb_GetNonRootHubs}.
 
 **Since**: 26.0.0
 

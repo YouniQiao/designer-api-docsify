@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides functions related to `rawfile` directory operations, including directory traversal, file countretrieval, file name retrieval, and directory closing.
+Provides functions related to `rawfile` directory operations, including directory traversal, file count retrieval, file name retrieval, and directory closing.
 
 **Library**: librawfile.z.so
 
@@ -18,15 +18,21 @@ Provides functions related to `rawfile` directory operations, including director
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [RawDir](capi-rawfile-rawdir.md) | RawDir | `RawDir` represents an opened rawfile directory object, which can be used to traverse the directory and fileswithin it. It is obtained through {@link OH_ResourceManager_OpenRawDir}, and must be closed and released through[OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) after use. |
+| [RawDir](capi-rawfile-rawdir.md) | RawDir | `RawDir` represents an opened rawfile directory object, which can be used to traverse the directory and files within it. It is obtained through {@link OH_ResourceManager_OpenRawDir}, and must be closed and released through [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) after use. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| GLOBAL_RAW_DIR_H | Provides functions related to `rawfile` directory operations, including directory traversal, file count retrieval, file name retrieval, and directory closing.<br>**Since**: 8<br>**System capability**: SystemCapability.Global.ResourceManager |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [const char *OH_ResourceManager_GetRawFileName(RawDir *rawDir, int index)](#oh_resourcemanager_getrawfilename) | Obtains the file name in the `rawfile` directory by index. When you need to traverse the `rawfile` directory,you can use this function together with [OH_ResourceManager_GetRawFileCount](capi-raw-dir-h.md#oh_resourcemanager_getrawfilecount) to iterate through the directoryin a loop. |
-| [int OH_ResourceManager_GetRawFileCount(RawDir *rawDir)](#oh_resourcemanager_getrawfilecount) | Obtains the number of subdirectories and files under `rawfile`. When traversal of the `rawfile` directory isneeded, this function can be used with [OH_ResourceManager_GetRawFileName](capi-raw-dir-h.md#oh_resourcemanager_getrawfilename) to iterate through the directory ina loop. |
-| [void OH_ResourceManager_CloseRawDir(RawDir *rawDir)](#oh_resourcemanager_closerawdir) | Closes an opened `RawDir` object and releases all associated resources. After traversing the `rawfile`directory, this function must be called to close the directory and release resources. |
+| [const char *OH_ResourceManager_GetRawFileName(RawDir *rawDir, int index)](#oh_resourcemanager_getrawfilename) | Obtains the file name in the `rawfile` directory by index. When you need to traverse the `rawfile` directory, you can use this function together with [OH_ResourceManager_GetRawFileCount](capi-raw-dir-h.md#oh_resourcemanager_getrawfilecount) to iterate through the directory in a loop. |
+| [int OH_ResourceManager_GetRawFileCount(RawDir *rawDir)](#oh_resourcemanager_getrawfilecount) | Obtains the number of subdirectories and files under `rawfile`. When traversal of the `rawfile` directory is needed, this function can be used with [OH_ResourceManager_GetRawFileName](capi-raw-dir-h.md#oh_resourcemanager_getrawfilename) to iterate through the directory in a loop. |
+| [void OH_ResourceManager_CloseRawDir(RawDir *rawDir)](#oh_resourcemanager_closerawdir) | Closes an opened `RawDir` object and releases all associated resources. After traversing the `rawfile` directory, this function must be called to close the directory and release resources. |
 
 ## Function description
 
@@ -38,7 +44,7 @@ const char *OH_ResourceManager_GetRawFileName(RawDir *rawDir, int index)
 
 **Description**
 
-Obtains the file name in the `rawfile` directory by index. When you need to traverse the `rawfile` directory,you can use this function together with [OH_ResourceManager_GetRawFileCount](capi-raw-dir-h.md#oh_resourcemanager_getrawfilecount) to iterate through the directoryin a loop.
+Obtains the file name in the `rawfile` directory by index. When you need to traverse the `rawfile` directory, you can use this function together with [OH_ResourceManager_GetRawFileCount](capi-raw-dir-h.md#oh_resourcemanager_getrawfilecount) to iterate through the directory in a loop.
 
 **Since**: 8
 
@@ -46,7 +52,7 @@ Obtains the file name in the `rawfile` directory by index. When you need to trav
 
 | Parameter | Description |
 | -- | -- |
-| [RawDir](capi-rawfile-rawdir.md) *rawDir | Input parameter. Pointer to a `RawDir` object, which is obtained through{@link OH_ResourceManager_OpenRawDir}. |
+| [RawDir](capi-rawfile-rawdir.md) *rawDir | Input parameter. Pointer to a `RawDir` object, which is obtained through {@link OH_ResourceManager_OpenRawDir}. |
 | int index | Input parameter. Index of the file in the `rawfile` directory, ranging from [0, total file count - 1]. |
 
 **Returns**:
@@ -68,7 +74,7 @@ int OH_ResourceManager_GetRawFileCount(RawDir *rawDir)
 
 **Description**
 
-Obtains the number of subdirectories and files under `rawfile`. When traversal of the `rawfile` directory isneeded, this function can be used with [OH_ResourceManager_GetRawFileName](capi-raw-dir-h.md#oh_resourcemanager_getrawfilename) to iterate through the directory ina loop.
+Obtains the number of subdirectories and files under `rawfile`. When traversal of the `rawfile` directory is needed, this function can be used with [OH_ResourceManager_GetRawFileName](capi-raw-dir-h.md#oh_resourcemanager_getrawfilename) to iterate through the directory in a loop.
 
 **Since**: 8
 
@@ -76,7 +82,7 @@ Obtains the number of subdirectories and files under `rawfile`. When traversal o
 
 | Parameter | Description |
 | -- | -- |
-| [RawDir](capi-rawfile-rawdir.md) *rawDir | Input parameter. Pointer to a `RawDir` object, which is obtained through{@link OH_ResourceManager_OpenRawDir}. |
+| [RawDir](capi-rawfile-rawdir.md) *rawDir | Input parameter. Pointer to a `RawDir` object, which is obtained through {@link OH_ResourceManager_OpenRawDir}. |
 
 **Returns**:
 
@@ -97,7 +103,7 @@ void OH_ResourceManager_CloseRawDir(RawDir *rawDir)
 
 **Description**
 
-Closes an opened `RawDir` object and releases all associated resources. After traversing the `rawfile`directory, this function must be called to close the directory and release resources.
+Closes an opened `RawDir` object and releases all associated resources. After traversing the `rawfile` directory, this function must be called to close the directory and release resources.
 
 **Since**: 8
 
@@ -105,7 +111,7 @@ Closes an opened `RawDir` object and releases all associated resources. After tr
 
 | Parameter | Description |
 | -- | -- |
-| [RawDir](capi-rawfile-rawdir.md) *rawDir | Input parameter. Pointer to a `RawDir` object, which is obtained through{@link OH_ResourceManager_OpenRawDir}. After the release, the pointer becomes invalid and cannot be used forother operations. |
+| [RawDir](capi-rawfile-rawdir.md) *rawDir | Input parameter. Pointer to a `RawDir` object, which is obtained through {@link OH_ResourceManager_OpenRawDir}. After the release, the pointer becomes invalid and cannot be used for other operations. |
 
 **Reference**:
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the structure and enumeration.include "neural_network_runtime/neural_network_runtime_type.h"
+Defines the structure and enumeration.<br> include "neural_network_runtime/neural_network_runtime_type.h"
 
 **Library**: libneural_network_runtime.so
 
@@ -19,8 +19,8 @@ Defines the structure and enumeration.include "neural_network_runtime/neural_net
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [OH_NN_UInt32Array](capi-neuralnetworkruntime-oh-nn-uint32array.md) | OH_NN_UInt32Array | This structure is used to store a 32-bit unsigned integer array. |
-| [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md) | OH_NN_QuantParam | Quantization information.In quantization scenarios, the 32-bit floating-point data type is quantized into the fixed-point data type accordingto the following formula: \f[ q = clamp(round(\frac{r}{s}+z), q_{min}, q_{max}) \f]s and z are quantization parameters, which are stored by <b>scale</b> and <b>zeroPoint</b>in [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md).r is a floating point number, q is the quantization result, q_min is the lower bound of the quantization result, andq_max is an upper bound of a quantization result. The calculation method is as follows: \f[ \text{clamp}(x,min,max) = \begin{cases} q_{min} = -(1 << (numBits - 1)) \ q_{max} = (1 << (numBits - 1)) \ \end{cases}<br> \f]The clamp function is defined as follows: \f[ \text{clamp}(x,min,max) = \begin{cases} \text{max} & \text{ if } x > \text{ max } \ \text{min} & \text{ if } x < \text{ min } \ x & \text{ otherwise } \ \end{cases}<br> \f] |
-| [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) | OH_NN_Tensor | Defines the tensor structure.It is usually used to construct data nodes and operator parameters in a model graph. When constructing a tensor,you need to specify the data type, number of dimensions, dimension information, and quantization information. |
+| [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md) | OH_NN_QuantParam | Quantization information.<br> In quantization scenarios, the 32-bit floating-point data type is quantized into the fixed-point data type according to the following formula: \f[<br> q = clamp(round(\frac{r}{s}+z), q_{min}, q_{max})<br> \f]<br>s and z are quantization parameters, which are stored by <b>scale</b> and <b>zeroPoint</b><br>in [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md).<br>r is a floating point number, q is the quantization result, q_min is the lower bound of the quantization result, and<br>q_max is an upper bound of a quantization result. The calculation method is as follows:<br> \f[<br> \text{clamp}(x,min,max) =<br> \begin{cases}<br> q_{min} = -(1 << (numBits - 1)) \ q_{max} = (1 << (numBits - 1)) \ \end{cases}<br> \f]<br>The clamp function is defined as follows:<br> \f[<br> \text{clamp}(x,min,max) =<br> \begin{cases}<br> \text{max} & \text{ if } x > \text{ max } \ \text{min} & \text{ if } x < \text{ min } \ x & \text{ otherwise } \ \end{cases}<br> \f] |
+| [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) | OH_NN_Tensor | Defines the tensor structure.<br> It is usually used to construct data nodes and operator parameters in a model graph. When constructing a tensor, you need to specify the data type, number of dimensions, dimension information, and quantization information. |
 | [OH_NN_Memory](capi-neuralnetworkruntime-oh-nn-memory.md) | OH_NN_Memory | Defines the memory structure. |
 | [OH_NNModel](capi-neuralnetworkruntime-oh-nnmodel.md) | OH_NNModel | Defines the handles of models. |
 | [OH_NNCompilation](capi-neuralnetworkruntime-oh-nncompilation.md) | OH_NNCompilation | Defines the compilation handle. |
@@ -41,14 +41,21 @@ Defines the structure and enumeration.include "neural_network_runtime/neural_net
 | [OH_NN_DeviceType](#oh_nn_devicetype) | OH_NN_DeviceType | Defines device types. |
 | [OH_NN_DataType](#oh_nn_datatype) | OH_NN_DataType | Defines tensor data types. |
 | [OH_NN_OperationType](#oh_nn_operationtype) | OH_NN_OperationType | Defines operator types. |
-| [OH_NN_TensorType](#oh_nn_tensortype) | OH_NN_TensorType | Enumerates the tensor data types.Tensors are usually used to set the input, output, and operator parameters of a model. When a tensor is usedas the input or output of a model (or operator), set the tensor type to [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).When the tensor is used as an operator parameter, select an enumerated value other than [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)as the tensor type. Assume that the <b>pad</b> parameter of the [OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype) operator is being set.You need to set the <b>type</b> attribute of the [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) instance to [OH_NN_CONV2D_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).The settings of other operator parameters are similar. The enumerated values are namedin the format OH_NN_{<i>Operator name</i>}_{<i>Attribute name</i>}. |
+| [OH_NN_TensorType](#oh_nn_tensortype) | OH_NN_TensorType | Enumerates the tensor data types.<br> Tensors are usually used to set the input, output, and operator parameters of a model. When a tensor is used as the input or output of a model (or operator), set the tensor type to [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).<br>When the tensor is used as an operator parameter, select an enumerated value other than [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)<br>as the tensor type. Assume that the <b>pad</b> parameter of the [OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype) operator is being set.<br>You need to set the <b>type</b> attribute of the [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) instance to [OH_NN_CONV2D_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype). The settings of other operator parameters are similar. The enumerated values are named in the format OH_NN_{<i>Operator name</i>}_{<i>Attribute name</i>}. |
 
 ### Function
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *outputTensor[], int32_t outputCount)](#nn_onrundone) | NN_OnRunDone | Defines the callback function handle for the post-process when the asynchronous execution has been done.Use <b>userData</b> to identify the asynchronous execution you want to get.It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br> Use <b>errCode</b> of type [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) to get the error code returned by the asynchronous execution.<br> The <b>outputTensor</b> and <b>outputCount</b> are the inference results, which is the same as ones passed to{@link OH_NNExecutor_RunAsync}.<br> |
-| [typedef void (\*NN_OnServiceDied)(void *userData)](#nn_onservicedied) | NN_OnServiceDied | Defines the callback function handle for the post-process when the device driver service is dead duringasynchronous execution.You should recompile the model if this callback function is called.<br> Use <b>userData</b> to identify the asynchronous execution you want to get.It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br> |
+| [typedef void (\*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *outputTensor[], int32_t outputCount)](#nn_onrundone) | NN_OnRunDone | Defines the callback function handle for the post-process when the asynchronous execution has been done.<br> Use <b>userData</b> to identify the asynchronous execution you want to get. It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br>Use <b>errCode</b> of type [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) to get the error code returned by the asynchronous execution.<br>The <b>outputTensor</b> and <b>outputCount</b> are the inference results, which is the same as ones passed to<br>{@link OH_NNExecutor_RunAsync}. |
+| [typedef void (\*NN_OnServiceDied)(void *userData)](#nn_onservicedied) | NN_OnServiceDied | Defines the callback function handle for the post-process when the device driver service is dead during asynchronous execution.<br> You should recompile the model if this callback function is called.<br> Use <b>userData</b> to identify the asynchronous execution you want to get. It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *outputTensor[], int32_t outputCount) | Defines the callback function handle for the post-process when the asynchronous execution has been done.<br> Use <b>userData</b> to identify the asynchronous execution you want to get. It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br>Use <b>errCode</b> of type [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) to get the error code returned by the asynchronous execution.<br>The <b>outputTensor</b> and <b>outputCount</b> are the inference results, which is the same as ones passed to<br>{@link OH_NNExecutor_RunAsync}.<br>**Since**: 11 |
+| void (*NN_OnServiceDied)(void *userData) | Defines the callback function handle for the post-process when the device driver service is dead during asynchronous execution.<br> You should recompile the model if this callback function is called.<br> Use <b>userData</b> to identify the asynchronous execution you want to get. It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br>**Since**: 11 |
 
 ## Enum type description
 
@@ -336,7 +343,7 @@ enum OH_NN_TensorType
 
 **Description**
 
-Enumerates the tensor data types.Tensors are usually used to set the input, output, and operator parameters of a model. When a tensor is usedas the input or output of a model (or operator), set the tensor type to [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).When the tensor is used as an operator parameter, select an enumerated value other than [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)as the tensor type. Assume that the <b>pad</b> parameter of the [OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype) operator is being set.You need to set the <b>type</b> attribute of the [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) instance to [OH_NN_CONV2D_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).The settings of other operator parameters are similar. The enumerated values are namedin the format OH_NN_{<i>Operator name</i>}_{<i>Attribute name</i>}.
+Enumerates the tensor data types.<br> Tensors are usually used to set the input, output, and operator parameters of a model. When a tensor is used as the input or output of a model (or operator), set the tensor type to [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).<br>When the tensor is used as an operator parameter, select an enumerated value other than [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)<br>as the tensor type. Assume that the <b>pad</b> parameter of the [OH_NN_OPS_CONV2D](capi-neural-network-runtime-type-h.md#oh_nn_operationtype) operator is being set.<br>You need to set the <b>type</b> attribute of the [OH_NN_Tensor](capi-neuralnetworkruntime-oh-nn-tensor.md) instance to [OH_NN_CONV2D_PAD](capi-neural-network-runtime-type-h.md#oh_nn_tensortype). The settings of other operator parameters are similar. The enumerated values are named in the format OH_NN_{<i>Operator name</i>}_{<i>Attribute name</i>}.
 
 **Since**: 9
 
@@ -420,91 +427,91 @@ Enumerates the tensor data types.Tensors are usually used to set the input, outp
 | OH_NN_ARG_MAX_AXIS = 75 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter |
 | OH_NN_ARG_MAX_KEEPDIMS = 76 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter |
 | OH_NN_UNSQUEEZE_AXIS = 77 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter |
-| OH_NN_UNSTACK_AXIS = 78 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the Unstack operator.@since 12 |
-| OH_NN_FLATTEN_AXIS = 79 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the Flatten operator.@since 12 |
-| OH_NN_DEPTH_TO_SPACE_BLOCK_SIZE = 80 | This enumerated value is used when the tensor is used as the <b>blockSize</b> parameterof the DepthToSpace operator.@since 12 |
-| OH_NN_DEPTH_TO_SPACE_MODE = 81 | This enumerated value is used when the tensor is used as the <b>mode</b> parameterof the DepthToSpace operator.@since 12 |
-| OH_NN_RANGE_START = 82 | This enumerated value is used when the tensor is used as the <b>start</b> parameter of the Range operator.@since 12 |
-| OH_NN_RANGE_LIMIT = 83 | This enumerated value is used when the tensor is used as the <b>limit</b> parameter of the Range operator.@since 12 |
-| OH_NN_RANGE_DELTA = 84 | This enumerated value is used when the tensor is used as the <b>delta</b> parameter of the Range operator.@since 12 |
-| OH_NN_CONSTANT_OF_SHAPE_DATA_TYPE = 85 | This enumerated value is used when the tensor is used as the <b>dataType</b> parameterof the ConstantOfShape operator.@since 12 |
-| OH_NN_CONSTANT_OF_SHAPE_VALUE = 86 | This enumerated value is used when the tensor is used as the <b>value</b> parameterof the ConstantOfShape operator.@since 12 |
-| OH_NN_BROADCAST_TO_SHAPE = 87 | This enumerated value is used when the tensor is used as the <b>shape</b> parameterof the BroadcastTo operator.@since 12 |
-| OH_NN_INSTANCE_NORM_EPSILON = 88 | This enumerated value is used when the tensor is used as the <b>epsilon</b> parameterof the InstanceNorm operator.@since 12 |
-| OH_NN_EXP_BASE = 89 | This enumerated value is used when the tensor is used as the <b>base</b> parameter of the Exp operator.@since 12 |
-| OH_NN_EXP_SCALE = 90 | This enumerated value is used when the tensor is used as the <b>scale</b> parameter of the Exp operator.@since 12 |
-| OH_NN_EXP_SHIFT = 91 | This enumerated value is used when the tensor is used as the <b>shift</b> parameter of the Exp operator.@since 12 |
-| OH_NN_LEAKY_RELU_NEGATIVE_SLOPE = 92 | This enumerated value is used when the tensor is used as the <b>negativeSlope</b> parameterof the LeakyRelu operator.@since 12 |
-| OH_NN_LSTM_BIDIRECTIONAL = 93 | This enumerated value is used when the tensor is used as the <b>bidirectional</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_HAS_BIAS = 94 | This enumerated value is used when the tensor is used as the <b>hasBias</b> parameter of the LSTM operator.@since 12 |
-| OH_NN_LSTM_INPUT_SIZE = 95 | This enumerated value is used when the tensor is used as the <b>inputSize</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_HIDDEN_SIZE = 96 | This enumerated value is used when the tensor is used as the <b>hiddenSize</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_NUM_LAYERS = 97 | This enumerated value is used when the tensor is used as the <b>numLayers</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_NUM_DIRECTIONS = 98 | This enumerated value is used when the tensor is used as the <b>numDirections</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_DROPOUT = 99 | This enumerated value is used when the tensor is used as the <b>dropout</b> parameter of the LSTM operator.@since 12 |
-| OH_NN_LSTM_ZONEOUT_CELL = 100 | This enumerated value is used when the tensor is used as the <b>zoneoutCell</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_ZONEOUT_HIDDEN = 101 | This enumerated value is used when the tensor is used as the <b>zoneoutHidden</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_LSTM_PROJ_SIZE = 102 | This enumerated value is used when the tensor is used as the <b>projSize</b> parameterof the LSTM operator.@since 12 |
-| OH_NN_CLIP_MAX = 103 | This enumerated value is used when the tensor is used as the <b>max</b> parameter of the Clip operator.@since 12 |
-| OH_NN_CLIP_MIN = 104 | This enumerated value is used when the tensor is used as the <b>min</b> parameter of the Clip operator.@since 12 |
-| OH_NN_ALL_KEEP_DIMS = 105 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter of the All operator.@since 12 |
-| OH_NN_ASSERT_SUMMARIZE = 106 | This enumerated value is used when the tensor is used as the <b>summarize</b> parameterof the Assert operator.@since 12 |
-| OH_NN_POW_SCALE = 107 | This enumerated value is used when the tensor is used as the <b>scale</b> parameter of the pow operator.@since 12 |
-| OH_NN_POW_SHIFT = 108 | This enumerated value is used when the tensor is used as the <b>shift</b> parameter of the pow operator.@since 12 |
-| OH_NN_AVG_POOL_ROUND_MODE = 109 | This enumerated value is used when the tensor is used as the <b>roundMode</b> parameterof the AvgPool operator.@since 12 |
-| OH_NN_AVG_POOL_GLOBAL = 110 | This enumerated value is used when the tensor is used as the <b>global</b> parameterof the AvgPool operator.@since 12 |
-| OH_NN_FULL_CONNECTION_HAS_BIAS = 111 | This enumerated value is used when the tensor is used as the <b>hasBias</b> parameterof the FullConnection operator.@since 12 |
-| OH_NN_FULL_CONNECTION_USE_AXIS = 112 | This enumerated value is used when the tensor is used as the <b>useAxis</b> parameterof the FullConnection operator.@since 12 |
-| OH_NN_GELU_APPROXIMATE = 113 | This enumerated value is used when the tensor is used as the <b>approximate</b> parameterof the GeLU operator.@since 12 |
-| OH_NN_MAX_POOL_ROUND_MODE = 114 | This enumerated value is used when the tensor is used as the <b>roundMode</b> parameterof the MaxPool operator.@since 12 |
-| OH_NN_MAX_POOL_GLOBAL = 115 | This enumerated value is used when the tensor is used as the <b>global</b> parameterof the MaxPool operator.@since 12 |
-| OH_NN_PAD_PADDING_MODE = 116 | This enumerated value is used when the tensor is used as the <b>paddingMode</b> parameterof the Pad operator.@since 12 |
-| OH_NN_REDUCE_MEAN_REDUCE_TO_END = 117 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceMean operator.@since 12 |
-| OH_NN_REDUCE_MEAN_COEFF = 118 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceMean operator.@since 12 |
-| OH_NN_REDUCE_PROD_REDUCE_TO_END = 119 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceProd operator.@since 12 |
-| OH_NN_REDUCE_PROD_COEFF = 120 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceProd operator.@since 12 |
-| OH_NN_REDUCE_ALL_REDUCE_TO_END = 121 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceAll operator.@since 12 |
-| OH_NN_REDUCE_ALL_COEFF = 122 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceAll operator.@since 12 |
-| OH_NN_TOP_K_AXIS = 123 | This enumerated value is used when the tensor is used as the <b>axis</b> parameterof the Topk operator.@since 12 |
-| OH_NN_ARG_MAX_TOP_K = 124 | This enumerated value is used when the tensor is used as the <b>topK</b> parameterof the ArgMax operator.@since 12 |
-| OH_NN_ARG_MAX_OUT_MAX_VALUE = 125 | This enumerated value is used when the tensor is used as the <b>outMaxValue</b> parameterof the ArgMax operator.@since 12 |
-| OH_NN_QUANT_DTYPE_CAST_AXIS = 126 | This enumerated value is used when the tensor is used as the <b>axis</b> parameterof the QuantDTypeCast operator.@since 12 |
-| OH_NN_SLICE_AXES = 127 | This enumerated value is used when the tensor is used as the <b>axes</b> parameter of the Slice operator.@since 12 |
-| OH_NN_TILE_DIMS = 128 | This enumerated value is used when the tensor is used as the <b>dims</b> parameter of the Tile operator.@since 12 |
-| OH_NN_CROP_AXIS = 129 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the crop operator.@since 12 |
-| OH_NN_CROP_OFFSET = 130 | This enumerated value is used when the tensor is used as the <b>offset</b> parameter of the crop operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_INPUT_SIZE = 131 | This enumerated value is used when the tensor is used as the <b>inputSize</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_SCALE = 132 | This enumerated value is used when the tensor is used as the <b>scale</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_NMS_IOU_THRESHOLD = 133 | This enumerated value is used when the tensor is used as the <b>nmsIoUThreshold</b>parameter of the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_NMS_SCORE_THRESHOLD = 134 | This enumerated value is used when the tensor is used as the <b>nmsScoreThreshold</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_MAX_DETECTIONS = 135 | This enumerated value is used when the tensor is used as the <b>maxDetections</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_DETECTIONS_PER_CLASS = 136 | This enumerated value is used when the tensor is used as the <b>detectionsPerClass</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_MAX_CLASSES_PER_DETECTION = 137 | This enumerated value is used when the tensor is used as the <b>maxClassesPerDetection</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_NUM_CLASSES = 138 | This enumerated value is used when the tensor is used as the <b>numClasses</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_USE_REGULAR_NMS = 139 | This enumerated value is used when the tensor is used as the <b>useRegularNms</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_DETECTION_POST_PROCESS_OUT_QUANTIZED = 140 | This enumerated value is used when the tensor is used as the <b>outQuantized</b> parameterof the detectionPostProcess operator.@since 12 |
-| OH_NN_L2_NORMALIZE_AXIS = 141 | This enumerated value is used when the tensor is used as the <b>axis</b> parameterof the L2Normalize operator.@since 12 |
-| OH_NN_L2_NORMALIZE_EPSILON = 142 | This enumerated value is used when the tensor is used as the <b>epsilon</b> parameterof the L2Normalize operator.@since 12 |
-| OH_NN_L2_NORMALIZE_ACTIVATION_TYPE = 143 | This enumerated value is used when the tensor is used as the <b>activationType</b> parameterof the L2Normalize operator.@since 12 |
-| OH_NN_LOG_SOFTMAX_AXIS = 144 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the softmax operator.@since 12 |
-| OH_NN_LRN_DEPTH_RADIUS = 145 | This enumerated value is used when the tensor is used as the <b>depthRedius</b>parameter of the LRN operator.@since 12 |
-| OH_NN_LRN_BIAS = 146 | This enumerated value is used when the tensor is used as the <b>bias</b> parameter of the LRN operator.@since 12 |
-| OH_NN_LRN_ALPHA = 147 | This enumerated value is used when the tensor is used as the <b>alpha</b> parameter of the LRN operator.@since 12 |
-| OH_NN_LRN_BETA = 148 | This enumerated value is used when the tensor is used as the <b>beta</b> parameter of the LRN operator.@since 12 |
-| OH_NN_LRN_NORM_REGION = 149 | This enumerated value is used when the tensor is used as the <b>normRegion</b> parameterof the LRN operator.@since 12 |
-| OH_NN_SPACE_TO_DEPTH_BLOCK_SIZE = 150 | This enumerated value is used when the tensor is used as the <b>blockSize</b> parameterof the spaceToDepth operator.@since 12 |
-| OH_NN_REDUCE_MAX_KEEP_DIMS = 151 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameterof the ReduceMax operator.@since 12 |
-| OH_NN_REDUCE_MAX_REDUCE_TO_END = 152 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceMax operator.@since 12 |
-| OH_NN_REDUCE_MAX_COEFF = 153 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceMax operator.@since 12 |
-| OH_NN_REDUCE_MIN_KEEP_DIMS = 154 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameterof the ReduceMin operator.@since 12 |
-| OH_NN_REDUCE_MIN_REDUCE_TO_END = 155 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceMin operator.@since 12 |
-| OH_NN_REDUCE_MIN_COEFF = 156 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceMin operator.@since 12 |
-| OH_NN_REDUCE_SUM_KEEP_DIMS = 157 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameterof the ReduceSum operator.@since 12 |
-| OH_NN_REDUCE_SUM_REDUCE_TO_END = 158 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceSum operator.@since 12 |
-| OH_NN_REDUCE_SUM_COEFF = 159 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceSum operator.@since 12 |
-| OH_NN_REDUCE_L2_KEEP_DIMS = 160 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameterof the ReduceL2 operator.@since 12 |
-| OH_NN_REDUCE_L2_REDUCE_TO_END = 161 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameterof the ReduceL2 operator.@since 12 |
-| OH_NN_REDUCE_L2_COEFF = 162 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameterof the ReduceL2 operator.@since 12 |
+| OH_NN_UNSTACK_AXIS = 78 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the Unstack operator. @since 12 |
+| OH_NN_FLATTEN_AXIS = 79 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the Flatten operator. @since 12 |
+| OH_NN_DEPTH_TO_SPACE_BLOCK_SIZE = 80 | This enumerated value is used when the tensor is used as the <b>blockSize</b> parameter of the DepthToSpace operator. @since 12 |
+| OH_NN_DEPTH_TO_SPACE_MODE = 81 | This enumerated value is used when the tensor is used as the <b>mode</b> parameter of the DepthToSpace operator. @since 12 |
+| OH_NN_RANGE_START = 82 | This enumerated value is used when the tensor is used as the <b>start</b> parameter of the Range operator. @since 12 |
+| OH_NN_RANGE_LIMIT = 83 | This enumerated value is used when the tensor is used as the <b>limit</b> parameter of the Range operator. @since 12 |
+| OH_NN_RANGE_DELTA = 84 | This enumerated value is used when the tensor is used as the <b>delta</b> parameter of the Range operator. @since 12 |
+| OH_NN_CONSTANT_OF_SHAPE_DATA_TYPE = 85 | This enumerated value is used when the tensor is used as the <b>dataType</b> parameter of the ConstantOfShape operator. @since 12 |
+| OH_NN_CONSTANT_OF_SHAPE_VALUE = 86 | This enumerated value is used when the tensor is used as the <b>value</b> parameter of the ConstantOfShape operator. @since 12 |
+| OH_NN_BROADCAST_TO_SHAPE = 87 | This enumerated value is used when the tensor is used as the <b>shape</b> parameter of the BroadcastTo operator. @since 12 |
+| OH_NN_INSTANCE_NORM_EPSILON = 88 | This enumerated value is used when the tensor is used as the <b>epsilon</b> parameter of the InstanceNorm operator. @since 12 |
+| OH_NN_EXP_BASE = 89 | This enumerated value is used when the tensor is used as the <b>base</b> parameter of the Exp operator. @since 12 |
+| OH_NN_EXP_SCALE = 90 | This enumerated value is used when the tensor is used as the <b>scale</b> parameter of the Exp operator. @since 12 |
+| OH_NN_EXP_SHIFT = 91 | This enumerated value is used when the tensor is used as the <b>shift</b> parameter of the Exp operator. @since 12 |
+| OH_NN_LEAKY_RELU_NEGATIVE_SLOPE = 92 | This enumerated value is used when the tensor is used as the <b>negativeSlope</b> parameter of the LeakyRelu operator. @since 12 |
+| OH_NN_LSTM_BIDIRECTIONAL = 93 | This enumerated value is used when the tensor is used as the <b>bidirectional</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_HAS_BIAS = 94 | This enumerated value is used when the tensor is used as the <b>hasBias</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_INPUT_SIZE = 95 | This enumerated value is used when the tensor is used as the <b>inputSize</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_HIDDEN_SIZE = 96 | This enumerated value is used when the tensor is used as the <b>hiddenSize</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_NUM_LAYERS = 97 | This enumerated value is used when the tensor is used as the <b>numLayers</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_NUM_DIRECTIONS = 98 | This enumerated value is used when the tensor is used as the <b>numDirections</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_DROPOUT = 99 | This enumerated value is used when the tensor is used as the <b>dropout</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_ZONEOUT_CELL = 100 | This enumerated value is used when the tensor is used as the <b>zoneoutCell</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_ZONEOUT_HIDDEN = 101 | This enumerated value is used when the tensor is used as the <b>zoneoutHidden</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_LSTM_PROJ_SIZE = 102 | This enumerated value is used when the tensor is used as the <b>projSize</b> parameter of the LSTM operator. @since 12 |
+| OH_NN_CLIP_MAX = 103 | This enumerated value is used when the tensor is used as the <b>max</b> parameter of the Clip operator. @since 12 |
+| OH_NN_CLIP_MIN = 104 | This enumerated value is used when the tensor is used as the <b>min</b> parameter of the Clip operator. @since 12 |
+| OH_NN_ALL_KEEP_DIMS = 105 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter of the All operator. @since 12 |
+| OH_NN_ASSERT_SUMMARIZE = 106 | This enumerated value is used when the tensor is used as the <b>summarize</b> parameter of the Assert operator. @since 12 |
+| OH_NN_POW_SCALE = 107 | This enumerated value is used when the tensor is used as the <b>scale</b> parameter of the pow operator. @since 12 |
+| OH_NN_POW_SHIFT = 108 | This enumerated value is used when the tensor is used as the <b>shift</b> parameter of the pow operator. @since 12 |
+| OH_NN_AVG_POOL_ROUND_MODE = 109 | This enumerated value is used when the tensor is used as the <b>roundMode</b> parameter of the AvgPool operator. @since 12 |
+| OH_NN_AVG_POOL_GLOBAL = 110 | This enumerated value is used when the tensor is used as the <b>global</b> parameter of the AvgPool operator. @since 12 |
+| OH_NN_FULL_CONNECTION_HAS_BIAS = 111 | This enumerated value is used when the tensor is used as the <b>hasBias</b> parameter of the FullConnection operator. @since 12 |
+| OH_NN_FULL_CONNECTION_USE_AXIS = 112 | This enumerated value is used when the tensor is used as the <b>useAxis</b> parameter of the FullConnection operator. @since 12 |
+| OH_NN_GELU_APPROXIMATE = 113 | This enumerated value is used when the tensor is used as the <b>approximate</b> parameter of the GeLU operator. @since 12 |
+| OH_NN_MAX_POOL_ROUND_MODE = 114 | This enumerated value is used when the tensor is used as the <b>roundMode</b> parameter of the MaxPool operator. @since 12 |
+| OH_NN_MAX_POOL_GLOBAL = 115 | This enumerated value is used when the tensor is used as the <b>global</b> parameter of the MaxPool operator. @since 12 |
+| OH_NN_PAD_PADDING_MODE = 116 | This enumerated value is used when the tensor is used as the <b>paddingMode</b> parameter of the Pad operator. @since 12 |
+| OH_NN_REDUCE_MEAN_REDUCE_TO_END = 117 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceMean operator. @since 12 |
+| OH_NN_REDUCE_MEAN_COEFF = 118 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceMean operator. @since 12 |
+| OH_NN_REDUCE_PROD_REDUCE_TO_END = 119 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceProd operator. @since 12 |
+| OH_NN_REDUCE_PROD_COEFF = 120 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceProd operator. @since 12 |
+| OH_NN_REDUCE_ALL_REDUCE_TO_END = 121 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceAll operator. @since 12 |
+| OH_NN_REDUCE_ALL_COEFF = 122 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceAll operator. @since 12 |
+| OH_NN_TOP_K_AXIS = 123 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the Topk operator. @since 12 |
+| OH_NN_ARG_MAX_TOP_K = 124 | This enumerated value is used when the tensor is used as the <b>topK</b> parameter of the ArgMax operator. @since 12 |
+| OH_NN_ARG_MAX_OUT_MAX_VALUE = 125 | This enumerated value is used when the tensor is used as the <b>outMaxValue</b> parameter of the ArgMax operator. @since 12 |
+| OH_NN_QUANT_DTYPE_CAST_AXIS = 126 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the QuantDTypeCast operator. @since 12 |
+| OH_NN_SLICE_AXES = 127 | This enumerated value is used when the tensor is used as the <b>axes</b> parameter of the Slice operator. @since 12 |
+| OH_NN_TILE_DIMS = 128 | This enumerated value is used when the tensor is used as the <b>dims</b> parameter of the Tile operator. @since 12 |
+| OH_NN_CROP_AXIS = 129 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the crop operator. @since 12 |
+| OH_NN_CROP_OFFSET = 130 | This enumerated value is used when the tensor is used as the <b>offset</b> parameter of the crop operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_INPUT_SIZE = 131 | This enumerated value is used when the tensor is used as the <b>inputSize</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_SCALE = 132 | This enumerated value is used when the tensor is used as the <b>scale</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_NMS_IOU_THRESHOLD = 133 | This enumerated value is used when the tensor is used as the <b>nmsIoUThreshold</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_NMS_SCORE_THRESHOLD = 134 | This enumerated value is used when the tensor is used as the <b>nmsScoreThreshold</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_MAX_DETECTIONS = 135 | This enumerated value is used when the tensor is used as the <b>maxDetections</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_DETECTIONS_PER_CLASS = 136 | This enumerated value is used when the tensor is used as the <b>detectionsPerClass</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_MAX_CLASSES_PER_DETECTION = 137 | This enumerated value is used when the tensor is used as the <b>maxClassesPerDetection</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_NUM_CLASSES = 138 | This enumerated value is used when the tensor is used as the <b>numClasses</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_USE_REGULAR_NMS = 139 | This enumerated value is used when the tensor is used as the <b>useRegularNms</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_DETECTION_POST_PROCESS_OUT_QUANTIZED = 140 | This enumerated value is used when the tensor is used as the <b>outQuantized</b> parameter of the detectionPostProcess operator. @since 12 |
+| OH_NN_L2_NORMALIZE_AXIS = 141 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the L2Normalize operator. @since 12 |
+| OH_NN_L2_NORMALIZE_EPSILON = 142 | This enumerated value is used when the tensor is used as the <b>epsilon</b> parameter of the L2Normalize operator. @since 12 |
+| OH_NN_L2_NORMALIZE_ACTIVATION_TYPE = 143 | This enumerated value is used when the tensor is used as the <b>activationType</b> parameter of the L2Normalize operator. @since 12 |
+| OH_NN_LOG_SOFTMAX_AXIS = 144 | This enumerated value is used when the tensor is used as the <b>axis</b> parameter of the softmax operator. @since 12 |
+| OH_NN_LRN_DEPTH_RADIUS = 145 | This enumerated value is used when the tensor is used as the <b>depthRedius</b> parameter of the LRN operator. @since 12 |
+| OH_NN_LRN_BIAS = 146 | This enumerated value is used when the tensor is used as the <b>bias</b> parameter of the LRN operator. @since 12 |
+| OH_NN_LRN_ALPHA = 147 | This enumerated value is used when the tensor is used as the <b>alpha</b> parameter of the LRN operator. @since 12 |
+| OH_NN_LRN_BETA = 148 | This enumerated value is used when the tensor is used as the <b>beta</b> parameter of the LRN operator. @since 12 |
+| OH_NN_LRN_NORM_REGION = 149 | This enumerated value is used when the tensor is used as the <b>normRegion</b> parameter of the LRN operator. @since 12 |
+| OH_NN_SPACE_TO_DEPTH_BLOCK_SIZE = 150 | This enumerated value is used when the tensor is used as the <b>blockSize</b> parameter of the spaceToDepth operator. @since 12 |
+| OH_NN_REDUCE_MAX_KEEP_DIMS = 151 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter of the ReduceMax operator. @since 12 |
+| OH_NN_REDUCE_MAX_REDUCE_TO_END = 152 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceMax operator. @since 12 |
+| OH_NN_REDUCE_MAX_COEFF = 153 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceMax operator. @since 12 |
+| OH_NN_REDUCE_MIN_KEEP_DIMS = 154 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter of the ReduceMin operator. @since 12 |
+| OH_NN_REDUCE_MIN_REDUCE_TO_END = 155 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceMin operator. @since 12 |
+| OH_NN_REDUCE_MIN_COEFF = 156 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceMin operator. @since 12 |
+| OH_NN_REDUCE_SUM_KEEP_DIMS = 157 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter of the ReduceSum operator. @since 12 |
+| OH_NN_REDUCE_SUM_REDUCE_TO_END = 158 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceSum operator. @since 12 |
+| OH_NN_REDUCE_SUM_COEFF = 159 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceSum operator. @since 12 |
+| OH_NN_REDUCE_L2_KEEP_DIMS = 160 | This enumerated value is used when the tensor is used as the <b>keepDims</b> parameter of the ReduceL2 operator. @since 12 |
+| OH_NN_REDUCE_L2_REDUCE_TO_END = 161 | This enumerated value is used when the tensor is used as the <b>reduceToEnd</b> parameter of the ReduceL2 operator. @since 12 |
+| OH_NN_REDUCE_L2_COEFF = 162 | This enumerated value is used when the tensor is used as the <b>coeff</b> parameter of the ReduceL2 operator. @since 12 |
 
 
 ## Function description
@@ -517,7 +524,7 @@ typedef void (*NN_OnRunDone)(void *userData, OH_NN_ReturnCode errCode, void *out
 
 **Description**
 
-Defines the callback function handle for the post-process when the asynchronous execution has been done.Use <b>userData</b> to identify the asynchronous execution you want to get.It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br> Use <b>errCode</b> of type [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) to get the error code returned by the asynchronous execution.<br> The <b>outputTensor</b> and <b>outputCount</b> are the inference results, which is the same as ones passed to{@link OH_NNExecutor_RunAsync}.<br>
+Defines the callback function handle for the post-process when the asynchronous execution has been done.<br> Use <b>userData</b> to identify the asynchronous execution you want to get. It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br>Use <b>errCode</b> of type [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) to get the error code returned by the asynchronous execution.<br>The <b>outputTensor</b> and <b>outputCount</b> are the inference results, which is the same as ones passed to<br>{@link OH_NNExecutor_RunAsync}.
 
 **Since**: 11
 
@@ -525,10 +532,10 @@ Defines the callback function handle for the post-process when the asynchronous 
 
 | Parameter | Description |
 | -- | -- |
-| void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to{@link OH_NNExecutor_RunAsync}. |
+| void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}. |
 | [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) errCode | Error code [OH_NN_ReturnCode](capi-neural-network-runtime-type-h.md#oh_nn_returncode) returned by the asynchronous execution. |
-| void \*outputTensor[] | An array of output tensors [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) of the model, which is the same as the argument<b>outputTensor</b> passed to {@link OH_NNExecutor_RunAsync}. |
-| int32_t outputCount | Output tensor count, which is the same as the argument <b>outputCount</b> passed to{@link OH_NNExecutor_RunAsync}. |
+| void \*outputTensor[] | An array of output tensors [NN_Tensor](capi-neuralnetworkruntime-nn-tensor.md) of the model, which is the same as the argument <b>outputTensor</b> passed to {@link OH_NNExecutor_RunAsync}. |
+| int32_t outputCount | Output tensor count, which is the same as the argument <b>outputCount</b> passed to {@link OH_NNExecutor_RunAsync}. |
 
 ### NN_OnServiceDied()
 
@@ -538,7 +545,7 @@ typedef void (*NN_OnServiceDied)(void *userData)
 
 **Description**
 
-Defines the callback function handle for the post-process when the device driver service is dead duringasynchronous execution.You should recompile the model if this callback function is called.<br> Use <b>userData</b> to identify the asynchronous execution you want to get.It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.<br>
+Defines the callback function handle for the post-process when the device driver service is dead during asynchronous execution.<br> You should recompile the model if this callback function is called.<br> Use <b>userData</b> to identify the asynchronous execution you want to get. It is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}.
 
 **Since**: 11
 
@@ -546,6 +553,6 @@ Defines the callback function handle for the post-process when the device driver
 
 | Parameter | Description |
 | -- | -- |
-| void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to{@link OH_NNExecutor_RunAsync}. |
+| void \*userData | Asynchronous execution identifier, which is the argument <b>userData</b> passed to {@link OH_NNExecutor_RunAsync}. |
 
 

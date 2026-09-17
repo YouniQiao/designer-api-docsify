@@ -88,7 +88,7 @@ Creates symmetric cipher parameters.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if params is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if params is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -113,13 +113,13 @@ Sets cipher parameters.
 | -- | -- |
 | [OH_CryptoSymCipherParams](capi-cryptosymcipherapi-oh-cryptosymcipherparams.md) *params | [in] Cipher parameters. Cannot be NULL. |
 | [CryptoSymCipher_ParamsType](capi-crypto-sym-cipher-h.md#cryptosymcipher_paramstype) paramsType | [in] Cipher parameter type to set. |
-| Crypto_DataBlob *value | [in] Parameter value. This function performs a shallow copy and does not copy thedata in value. The caller must ensure that the memory pointed to by value remains valid until[OH_CryptoSymCipher_Init](capi-crypto-sym-cipher-h.md#oh_cryptosymcipher_init) completes. Cannot be NULL. |
+| Crypto_DataBlob *value | [in] Parameter value. This function performs a shallow copy and does not copy the data in value. The caller must ensure that the memory pointed to by value remains valid until [OH_CryptoSymCipher_Init](capi-crypto-sym-cipher-h.md#oh_cryptosymcipher_init) completes. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if params or value is NULL, or             paramsType is unrecognized.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if params or value is NULL, or<br>           paramsType is unrecognized.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSymCipherParams_Destroy()
 
@@ -155,14 +155,14 @@ Creates a symmetric cipher context based on the given algorithm name.
 
 | Parameter | Description |
 | -- | -- |
-| const char *algoName | [in] Symmetric cipher algorithm name. Cannot be NULL. Format: "Algorithm|Mode|Padding",separated by "|". Algorithms: AES128, AES192, AES256, SM4_128, 3DES192, DES64, ChaCha20, RC2,Blowfish, CAST. Modes: ECB, CBC, CTR, OFB, CFB, CFB1, CFB8, CFB64, CFB128, GCM, CCM, XTS,Poly1305. Padding: NoPadding, PKCS5, PKCS7. Supported combinations:- AES series since API version 12: AES128, AES192, AES256 algorithms, ECB, CBC, CTR, OFB, CFB,GCM, CCM modes, NoPadding or PKCS7. Examples: "AES128|GCM", "AES256|CBC|PKCS7".- 3DES series since API version 12: 3DES192 algorithm, ECB, CBC, OFB, CFB modes, NoPadding,PKCS5, or PKCS7. Example: "3DES192|CBC|PKCS5".- SM4 series since API version 12: SM4_128 algorithm, ECB, CBC, CTR, OFB, CFB, CFB128, GCM modes,NoPadding or PKCS7. Examples: "SM4_128|CBC|PKCS7", "SM4_128|GCM|NoPadding".- DES series since API version 20: DES64 algorithm, ECB, CBC, OFB, CFB modes, NoPadding,PKCS5, or PKCS7. Example: "DES64|CBC|PKCS5".- AES WRAP algorithms since API version 22: AES128_WRAP, AES192_WRAP, AES256_WRAP.Examples: "AES128_WRAP", "AES192_WRAP", "AES256_WRAP".- ChaCha20 since API version 22: "ChaCha20", "ChaCha20|Poly1305".Examples: "ChaCha20|Poly1305", "ChaCha20".- AES XTS mode since API version 26.0.0: "AES128|XTS", "AES256|XTS". AES192 is not supported.- RC2 since API version 26.0.0: ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "RC2|CBC|PKCS5".- RC4 since API version 26.0.0: "RC4". Example: "RC4".- Blowfish since API version 26.0.0: ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7.Example: "Blowfish|CBC|PKCS5".- CAST since API version 26.0.0: ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "CAST|CBC|PKCS5".Padding notes:- ECB and CBC modes require padding: when plaintext length is not a multiple of the algorithm block size,PKCS5 or PKCS7 must be used; with NoPadding, input length must be a multiple of theblock size (16 bytes for AES/SM4, 8 bytes for DES/3DES/RC2/Blowfish/CAST).- CTR, OFB, CFB, CFB1, CFB8, CFB64, CFB128, GCM, CCM modes convert block ciphers to streammode and do not need padding. Any specified padding is treated as NoPadding.- XTS mode does not involve padding and does not require a padding field. Any specified padding is treatedas NoPadding.- ChaCha20 is a stream cipher algorithm and does not require a padding field. Any specified padding is treatedas NoPadding. |
+| const char *algoName | [in] Symmetric cipher algorithm name. Cannot be NULL. Format: "Algorithm\|Mode\|Padding", separated by "\|". Algorithms: AES128, AES192, AES256, SM4_128, 3DES192, DES64, ChaCha20, RC2, Blowfish, CAST. Modes: ECB, CBC, CTR, OFB, CFB, CFB1, CFB8, CFB64, CFB128, GCM, CCM, XTS, Poly1305. Padding: NoPadding, PKCS5, PKCS7. Supported combinations: - AES series since API version 12: AES128, AES192, AES256 algorithms, ECB, CBC, CTR, OFB, CFB, GCM, CCM modes, NoPadding or PKCS7. Examples: "AES128\|GCM", "AES256\|CBC\|PKCS7". - 3DES series since API version 12: 3DES192 algorithm, ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "3DES192\|CBC\|PKCS5". - SM4 series since API version 12: SM4_128 algorithm, ECB, CBC, CTR, OFB, CFB, CFB128, GCM modes, NoPadding or PKCS7. Examples: "SM4_128\|CBC\|PKCS7", "SM4_128\|GCM\|NoPadding". - DES series since API version 20: DES64 algorithm, ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "DES64\|CBC\|PKCS5". - AES WRAP algorithms since API version 22: AES128_WRAP, AES192_WRAP, AES256_WRAP. Examples: "AES128_WRAP", "AES192_WRAP", "AES256_WRAP". - ChaCha20 since API version 22: "ChaCha20", "ChaCha20\|Poly1305". Examples: "ChaCha20\|Poly1305", "ChaCha20". - AES XTS mode since API version 26.0.0: "AES128\|XTS", "AES256\|XTS". AES192 is not supported. - RC2 since API version 26.0.0: ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "RC2\|CBC\|PKCS5". - RC4 since API version 26.0.0: "RC4". Example: "RC4". - Blowfish since API version 26.0.0: ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "Blowfish\|CBC\|PKCS5". - CAST since API version 26.0.0: ECB, CBC, OFB, CFB modes, NoPadding, PKCS5, or PKCS7. Example: "CAST\|CBC\|PKCS5". Padding notes: - ECB and CBC modes require padding: when plaintext length is not a multiple of the algorithm block size, PKCS5 or PKCS7 must be used; with NoPadding, input length must be a multiple of the block size (16 bytes for AES/SM4, 8 bytes for DES/3DES/RC2/Blowfish/CAST). - CTR, OFB, CFB, CFB1, CFB8, CFB64, CFB128, GCM, CCM modes convert block ciphers to stream mode and do not need padding. Any specified padding is treated as NoPadding. - XTS mode does not involve padding and does not require a padding field. Any specified padding is treated as NoPadding. - ChaCha20 is a stream cipher algorithm and does not require a padding field. Any specified padding is treated as NoPadding. |
 | [OH_CryptoSymCipher](capi-cryptosymcipherapi-oh-cryptosymcipher.md) **ctx | [out] Pointer to the symmetric cipher context pointer. ctx cannot be NULL, *ctx must be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or algoName is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or algoName is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -194,7 +194,7 @@ Initializes the cipher operation with the given mode, key, and parameters.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or key is NULL,             or IV is missing or has wrong length for non-ECB modes.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the operation is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher init fails. Possible causes:             key length does not match the algorithm.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or key is NULL,<br>           or IV is missing or has wrong length for non-ECB modes.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the operation is not supported.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher init fails. Possible causes:             key length does not match the algorithm.</li>          </ul> |
 
 **Reference**:
 
@@ -220,13 +220,13 @@ Updates cipher data, outputting encrypted or decrypted data.
 | -- | -- |
 | [OH_CryptoSymCipher](capi-cryptosymcipherapi-oh-cryptosymcipher.md) *ctx | [in] Symmetric cipher context. Cannot be NULL. |
 | Crypto_DataBlob *in | [in] Data to be encrypted or decrypted. Cannot be NULL. |
-| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the updated data. Cannot be NULL. Initializeout to {0} before calling. Do not pre-allocate out->data. |
+| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the updated data. Cannot be NULL. Initialize out to {0} before calling. Do not pre-allocate out->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx, in, or out is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher update fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx, in, or out is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher update fails.</li>          </ul> |
 
 **Reference**:
 
@@ -250,14 +250,14 @@ Finishes the cipher operation, outputting the final result.
 | Parameter | Description |
 | -- | -- |
 | [OH_CryptoSymCipher](capi-cryptosymcipherapi-oh-cryptosymcipher.md) *ctx | [in] Symmetric cipher context. Cannot be NULL. |
-| Crypto_DataBlob *in | [in] Data to be encrypted or decrypted. Can be NULL if all data has been updated via[OH_CryptoSymCipher_Update](capi-crypto-sym-cipher-h.md#oh_cryptosymcipher_update). |
-| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the final result. Cannot be NULL. Initializeout to {0} before calling. Do not pre-allocate out->data. |
+| Crypto_DataBlob *in | [in] Data to be encrypted or decrypted. Can be NULL if all data has been updated via [OH_CryptoSymCipher_Update](capi-crypto-sym-cipher-h.md#oh_cryptosymcipher_update). |
+| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the final result. Cannot be NULL. Initialize out to {0} before calling. Do not pre-allocate out->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or out is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher final fails. Possible causes:             incorrect IV or key during decryption; AEAD (GCM/CCM) authentication tag verification             failure due to incorrect TAG, AAD, ciphertext, or key; block cipher (e.g. AES-CBC/ECB)             decryption where ciphertext length is not a multiple of the block size; block cipher             encryption with NoPadding where plaintext length is not a multiple of the block size.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or out is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if parameters are invalid. [since 20]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if cipher final fails. Possible causes:             incorrect IV or key during decryption; AEAD (GCM/CCM) authentication tag verification             failure due to incorrect TAG, AAD, ciphertext, or key; block cipher (e.g. AES-CBC/ECB)             decryption where ciphertext length is not a multiple of the block size; block cipher             encryption with NoPadding where plaintext length is not a multiple of the block size.</li>          </ul> |
 
 ### OH_CryptoSymCipher_GetAlgoName()
 

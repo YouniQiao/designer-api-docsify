@@ -45,6 +45,7 @@ Defines a variant structure using union + type tag for ABI compatibility.
 | [OH_AbilityRuntime_ModObjDispatcher_MapHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-map8h.md) pmapVal | Map handle.<br>**Since**: 26.0.0 |
 | [OH_AbilityRuntime_ModObjDispatcher_StructHandle](capi-abilityruntime-oh-abilityruntime-modularobjectdispatcher-struct8h.md) pstructVal | Struct handle.<br>**Since**: 26.0.0 |
 | OHIPCRemoteProxy *premoteProxyVal | Ipc remote proxy handle.<br>**Since**: 26.0.0 |
-| OHIPCRemoteStub *premoteStubVal; } u | Ipc remote stub handle.<br>**Since**: 26.0.0 |
+| OHIPCRemoteStub *premoteStubVal;
+ } u | Ipc remote stub handle.<br>**Since**: 26.0.0 |
 
 

@@ -2,7 +2,7 @@
 
 ## 概述
 
-定义HTTP全局拦截器模块的接口，分为只读拦截器与可修改拦截器两类。通过全局只读拦截器，开发者可以监控应用内部通过所支持的系统网络组件发起的所有HTTP请求，实现日志记录功能，也可以在全局可修改拦截器中添加自定义逻辑，修改应用内部通过所支持的系统网络组件发起的HTTP请求的请求头、响应头、响应体。
+定义HTTP全局拦截器模块的接口，分为只读拦截器与可修改拦截器两类。通过全局只读拦截器，开发者可以监控应用内部通过所支持的系统网络组件发起的所有HTTP请求，实现日志记录功能，也可以在全局可修改拦截器中添加自定义逻辑， 修改应用内部通过所支持的系统网络组件发起的HTTP请求的请求头、响应头、响应体。
 
 **库：** libhttp_interceptor.so
 
@@ -51,7 +51,7 @@ int32_t OH_Http_AddReadOnlyInterceptor(struct OH_Http_Interceptor *interceptor)
 | -- | -- |
 | struct OH_Http_Interceptor *interceptor | 待添加的拦截器，指向OH_Http_Interceptor结构体的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -81,7 +81,7 @@ int32_t OH_Http_AddWritableInterceptor(struct OH_Http_Interceptor *interceptor)
 | -- | -- |
 | struct OH_Http_Interceptor *interceptor | 待添加的拦截器，指向OH_Http_Interceptor结构体的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -107,7 +107,7 @@ int32_t OH_Http_RemoveInterceptor(struct OH_Http_Interceptor *interceptor)
 | -- | -- |
 | struct OH_Http_Interceptor *interceptor | 待删除的拦截器，指向OH_Http_Interceptor结构体的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -137,7 +137,7 @@ int32_t OH_Http_RemoveAllInterceptors(int32_t groupId)
 | -- | -- |
 | int32_t groupId | 拦截器组ID。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -163,11 +163,11 @@ int32_t OH_Http_StartAllInterceptors(int32_t groupId)
 | -- | -- |
 | int32_t groupId | http global interceptor group id |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | {@link OH_HTTP_RESULT_OK} 0 -if the operation is successful.      {@link OH_HTTP_PERMISSION_DENIED} 201 -if permission is denied. |
+| int32_t | {@link OH_HTTP_RESULT_OK} 0 -if the operation is successful.<br>    {@link OH_HTTP_PERMISSION_DENIED} 201 -if permission is denied. |
 
 ### OH_Http_StopAllInterceptors()
 
@@ -189,10 +189,10 @@ int32_t OH_Http_StopAllInterceptors(int32_t groupId)
 | -- | -- |
 | int32_t groupId | http global interceptor group id |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | {@link OH_HTTP_RESULT_OK} 0 -if the operation is successful.      {@link OH_HTTP_PERMISSION_DENIED} 201 -if permission is denied. |
+| int32_t | {@link OH_HTTP_RESULT_OK} 0 -if the operation is successful.<br>    {@link OH_HTTP_PERMISSION_DENIED} 201 -if permission is denied. |
 
 

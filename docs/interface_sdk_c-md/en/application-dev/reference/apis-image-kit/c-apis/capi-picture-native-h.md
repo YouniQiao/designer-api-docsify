@@ -8,7 +8,7 @@ The file declares the APIs for obtaining picture data and information.
 
 **System capability**: SystemCapability.Multimedia.Image.Core
 
-**Since**: 13
+**Since**: 12
 
 **Related module**: [Image_NativeModule](capi-image-nativemodule.md)
 
@@ -18,13 +18,12 @@ The file declares the APIs for obtaining picture data and information.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_PictureNative_AuxiliaryPictureCopyItem](capi-image-nativemodule-oh-picturenative-auxiliarypicturecopyitem.md) | OH_PictureNative_AuxiliaryPictureCopyItem | This structure is used to specify an auxiliary picture copy rule when creating a deep copy of aPictureNative object. It describes how to copy an auxiliary picture from one type to another. |
-| [OH_PictureNative_MetadataCopyItem](capi-image-nativemodule-oh-picturenative-metadatacopyitem.md) | OH_PictureNative_MetadataCopyItem | This structure is used to specify a metadata copy rule when creating a deep copy of a PictureNative object.It describes how to copy metadata from one type to another. |
+| [OH_PictureNative_AuxiliaryPictureCopyItem](capi-image-nativemodule-oh-picturenative-auxiliarypicturecopyitem.md) | OH_PictureNative_AuxiliaryPictureCopyItem | This structure is used to specify an auxiliary picture copy rule when creating a deep copy of a PictureNative object. It describes how to copy an auxiliary picture from one type to another. |
+| [OH_PictureNative_MetadataCopyItem](capi-image-nativemodule-oh-picturenative-metadatacopyitem.md) | OH_PictureNative_MetadataCopyItem | This structure is used to specify a metadata copy rule when creating a deep copy of a PictureNative object. It describes how to copy metadata from one type to another. |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) | - | The struct is used to perform operations related to the picture. |
-| [OH_AuxiliaryPictureNative](capi-image-nativemodule-oh-auxiliarypicturenative.md) | - | The struct describes the auxiliary picture, which is used to perform operations related to the auxiliarypicture. |
-| [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) | - | The struct describes the auxiliary picture information, which is used to perform operations related to theauxiliary picture information. |
-| [OH_ComposeOptions](capi-image-nativemodule-oh-composeoptions.md) | OH_ComposeOptions | **OH_ComposeOptions** is the HDR composition option struct encapsulated at the native layer. It is used tospecify parameters used for HDR composition, such as the target pixel format. |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) | OH_DecomposeOptions | **OH_DecomposeOptions** is the HDR decomposition option struct encapsulated at the native layer. It isused to specify parameters used for HDR decomposition, such as the target pixel format. |
+| [OH_AuxiliaryPictureNative](capi-image-nativemodule-oh-auxiliarypicturenative.md) | - | The struct describes the auxiliary picture, which is used to perform operations related to the auxiliary picture. |
+| [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) | - | The struct describes the auxiliary picture information, which is used to perform operations related to the auxiliary picture information. |
+| [OH_ComposeOptions](capi-image-nativemodule-oh-composeoptions.md) | OH_ComposeOptions | **OH_ComposeOptions** is the HDR composition option struct encapsulated at the native layer. It is used to specify parameters used for HDR composition, such as the target pixel format. |
 
 ### Enum
 
@@ -55,10 +54,9 @@ The file declares the APIs for obtaining picture data and information.
 | [Image_ErrorCode OH_PictureNative_GetMetadataTypes(OH_PictureNative *picture, Image_MetadataType *metadataTypes, uint32_t *count)](#oh_picturenative_getmetadatatypes) | Obtains the types of metadata in a Picture object. |
 | [Image_ErrorCode OH_PictureNative_RemoveAuxiliaryPicture(OH_PictureNative *picture, Image_AuxiliaryPictureType type)](#oh_picturenative_removeauxiliarypicture) | Removes an auxiliary picture from a Picture object. |
 | [Image_ErrorCode OH_PictureNative_RemoveMetadata(OH_PictureNative *picture, Image_MetadataType type)](#oh_picturenative_removemetadata) | Removes metadata from a Picture object. |
-| [Image_ErrorCode OH_PictureNative_DeepCopyWithItems(OH_PictureNative *source, const OH_PictureNative_AuxiliaryPictureCopyItem *auxiliaryPictureCopyItems, uint32_t auxiliaryPictureCopyCount, const OH_PictureNative_MetadataCopyItem *metadataCopyItems, uint32_t metadataCopyCount, Image_AuxiliaryPictureType *sourceAuxPictureAsMainPixelMap, OH_PictureNative **picture)](#oh_picturenative_deepcopywithitems) | Creates a deep copy of a PictureNative object with specified auxiliary pictures and metadata copied tospecified destination types. |
+| [Image_ErrorCode OH_PictureNative_DeepCopyWithItems(OH_PictureNative *source, const OH_PictureNative_AuxiliaryPictureCopyItem *auxiliaryPictureCopyItems, uint32_t auxiliaryPictureCopyCount, const OH_PictureNative_MetadataCopyItem *metadataCopyItems, uint32_t metadataCopyCount, Image_AuxiliaryPictureType *sourceAuxPictureAsMainPixelMap, OH_PictureNative **picture)](#oh_picturenative_deepcopywithitems) | Creates a deep copy of a PictureNative object with specified auxiliary pictures and metadata copied to specified destination types. |
 | [Image_ErrorCode OH_PictureNative_Release(OH_PictureNative *picture)](#oh_picturenative_release) | Releases the pointer to an OH_PictureNative object. |
-| [Image_ErrorCode OH_AuxiliaryPictureNative_Create(uint8_t *data, size_t dataLength, Image_Size *size, Image_AuxiliaryPictureType type, OH_AuxiliaryPictureNative **auxiliaryPicture)](#oh_auxiliarypicturenative_create) | Creates the pointer to an OH_AuxiliaryPictureNative object. This API supports only continuous pixel datawhose {@link pixel format} is BGRA_8888 and creates an auxiliary picture in RGBA_8888 format. |
-| [Image_ErrorCode OH_AuxiliaryPictureNative_CreateUsingAllocator(uint8_t *data, uint32_t dataLength, OH_AuxiliaryPictureInfo *info, IMAGE_ALLOCATOR_MODE allocator, OH_AuxiliaryPictureNative **auxiliaryPicture)](#oh_auxiliarypicturenative_createusingallocator) | Creates an OH_AuxiliaryPictureNative object with a specified memory type. By default, the system selectsthe memory type based on the image type, image size, platform capability, and other factors. When processing theauxiliary picture returned by this API, always consider the impact of stride. If **data** is null or **dataLengthis less than or equal to 0, the auxiliary picture will not be initialized. |
+| [Image_ErrorCode OH_AuxiliaryPictureNative_Create(uint8_t *data, size_t dataLength, Image_Size *size, Image_AuxiliaryPictureType type, OH_AuxiliaryPictureNative **auxiliaryPicture)](#oh_auxiliarypicturenative_create) | Creates the pointer to an OH_AuxiliaryPictureNative object. This API supports only continuous pixel data whose {@link pixel format} is BGRA_8888 and creates an auxiliary picture in RGBA_8888 format. |
 | [Image_ErrorCode OH_AuxiliaryPictureNative_WritePixels(OH_AuxiliaryPictureNative *auxiliaryPicture, uint8_t *source, size_t bufferSize)](#oh_auxiliarypicturenative_writepixels) | Reads pixels in the buffer and writes the result to an auxiliary picture. |
 | [Image_ErrorCode OH_AuxiliaryPictureNative_ReadPixels(OH_AuxiliaryPictureNative *auxiliaryPicture, uint8_t *destination, size_t *bufferSize)](#oh_auxiliarypicturenative_readpixels) | Reads pixels of an auxiliary picture and writes the result to the buffer. |
 | [Image_ErrorCode OH_AuxiliaryPictureNative_GetType(OH_AuxiliaryPictureNative *auxiliaryPicture, Image_AuxiliaryPictureType *type)](#oh_auxiliarypicturenative_gettype) | Obtains the type of an auxiliary picture. |
@@ -78,13 +76,6 @@ The file declares the APIs for obtaining picture data and information.
 | [Image_ErrorCode OH_AuxiliaryPictureInfo_GetPixelFormat(OH_AuxiliaryPictureInfo *info, PIXEL_FORMAT *pixelFormat)](#oh_auxiliarypictureinfo_getpixelformat) | Obtains the pixel format in **OH_AuxiliaryPictureInfo**. |
 | [Image_ErrorCode OH_AuxiliaryPictureInfo_SetPixelFormat(OH_AuxiliaryPictureInfo *info, PIXEL_FORMAT pixelFormat)](#oh_auxiliarypictureinfo_setpixelformat) | Sets the pixel format in **OH_AuxiliaryPictureInfo**. |
 | [Image_ErrorCode OH_AuxiliaryPictureInfo_Release(OH_AuxiliaryPictureInfo *info)](#oh_auxiliarypictureinfo_release) | Releases the pointer to an OH_AuxiliaryPictureInfo object. |
-| [Image_ErrorCode OH_DecomposeOptions_Create(OH_DecomposeOptions **outOwnedOptions)](#oh_decomposeoptions_create) | Creates an OH_DecomposeOptions object. |
-| [Image_ErrorCode OH_DecomposeOptions_SetIsFullSizeGainmap(OH_DecomposeOptions *options, bool isFullSizeGainmap)](#oh_decomposeoptions_setisfullsizegainmap) | Sets whether to generate a full-size gainmap. |
-| [Image_ErrorCode OH_DecomposeOptions_GetIsFullSizeGainmap(OH_DecomposeOptions *options, bool *isFullSizeGainmap)](#oh_decomposeoptions_getisfullsizegainmap) | Gets whether to generate a full-size gainmap. |
-| [Image_ErrorCode OH_DecomposeOptions_SetDesiredPixelFormat(OH_DecomposeOptions *options, int32_t desiredPixelFormat)](#oh_decomposeoptions_setdesiredpixelformat) | Sets the desired pixel format of the SDR pixel map generated after HDR decomposition. |
-| [Image_ErrorCode OH_DecomposeOptions_GetDesiredPixelFormat(OH_DecomposeOptions *options, int32_t *desiredPixelFormat)](#oh_decomposeoptions_getdesiredpixelformat) | Gets the desired pixel format of the SDR pixel map generated after HDR decomposition. |
-| [Image_ErrorCode OH_DecomposeOptions_Release(OH_DecomposeOptions *options)](#oh_decomposeoptions_release) | Releases an OH_DecomposeOptions object. |
-| [Image_ErrorCode OH_PictureNative_DecomposeToPicture(OH_PixelmapNative *hdrPixelmap, OH_DecomposeOptions *options, OH_PictureNative **outOwnedPicture)](#oh_picturenative_decomposetopicture) | Decomposes an HDR pixel map into a Picture object which contains an SDR pixel map and a gainmap. |
 
 ## Enum type description
 
@@ -133,7 +124,7 @@ Creates an **OH_ComposeOptions** instance.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_ComposeOptions_SetDesiredPixelFormat()
 
@@ -158,7 +149,7 @@ Sets the pixel format in **OH_ComposeOptions**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredPixelFormat is not supported. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr, or desiredPixelFormat is not supported. |
 
 ### OH_ComposeOptions_GetDesiredPixelFormat()
 
@@ -183,7 +174,7 @@ Obtains the pixel format in **OH_ComposeOptions**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr,or desiredPixelFormat is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr,or desiredPixelFormat is nullptr. |
 
 ### OH_ComposeOptions_Release()
 
@@ -207,7 +198,7 @@ Releases the pointer to **OH_ComposeOptions**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} options is nullptr. |
 
 ### OH_PictureNative_CreatePicture()
 
@@ -232,7 +223,7 @@ Creates the pointer to an OH_PictureNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} mainPixelmap is nullptr, or picture is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} mainPixelmap is nullptr, or picture is nullptr. |
 
 ### OH_PictureNative_GetMainPixelmap()
 
@@ -257,7 +248,7 @@ Obtains the pointer to the OH_PixelmapNative object of a main picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or mainPixelmap is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or mainPixelmap is nullptr. |
 
 ### OH_PictureNative_GetHdrComposedPixelmap()
 
@@ -282,7 +273,7 @@ Obtains the pointer to the OH_PixelmapNative object of an HDR picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or hdrPixelmap is nullptr.      <br>{@link IMAGE_UNSUPPORTED_OPERATION} Unsupported operation, e.g. the picture does not has a gainmap. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or hdrPixelmap is nullptr.<br>    <br>{@link IMAGE_UNSUPPORTED_OPERATION} Unsupported operation, e.g. the picture does not has a gainmap. |
 
 ### OH_PictureNative_GetHdrComposedPixelmapWithOptions()
 
@@ -308,7 +299,7 @@ Obtains the pointer to **OH_PixelmapNative** of an HDR picture based on **OH_Com
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or hdrPixelmap is nullptr.      <br>{@link IMAGE_UNSUPPORTED_OPERATION} Unsupported operation, e.g. the picture does not has a gainmap. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or hdrPixelmap is nullptr.<br>    <br>{@link IMAGE_UNSUPPORTED_OPERATION} Unsupported operation, e.g. the picture does not has a gainmap. |
 
 ### OH_PictureNative_GetGainmapPixelmap()
 
@@ -333,7 +324,7 @@ Obtains the pointer to the OH_PixelmapNative object of a gain map.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or gainmapPixelmap is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or gainmapPixelmap is nullptr. |
 
 ### OH_PictureNative_SetAuxiliaryPicture()
 
@@ -359,7 +350,7 @@ Sets an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
 
 ### OH_PictureNative_GetAuxiliaryPicture()
 
@@ -385,7 +376,7 @@ Obtains an auxiliary picture by type.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or auxiliaryPicture is nullptr, or the type is invalid. |
 
 ### OH_PictureNative_GetMetadata()
 
@@ -411,7 +402,7 @@ Obtains the metadata of a main picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or metadata is nullptr.      <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or metadata is nullptr.<br>    <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type. |
 
 ### OH_PictureNative_SetMetadata()
 
@@ -437,7 +428,7 @@ Sets the metadata for a main picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or metadata is nullptr.      <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr, or metadata is nullptr.<br>    <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type. |
 
 ### OH_PictureNative_GetAuxiliaryPictureCount()
 
@@ -462,7 +453,7 @@ Obtains the number of auxiliary pictures in a Picture object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} picture or count is nullptr, or fail to get the picture.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} picture or count is nullptr, or fail to get the picture.</li>          </ul> |
 
 ### OH_PictureNative_GetAuxiliaryPictureTypes()
 
@@ -482,13 +473,13 @@ Obtains the types of auxiliary pictures in a Picture object.
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | Pointer to an OH_PictureNative object. |
 | [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) *auxiliaryPictureTypes | Pointer to the array that receives the auxiliary picture types. |
-| uint32_t *count | On input, the size of auxiliaryPictureTypes array.On output, the actual number of auxiliary pictures. |
+| uint32_t *count | On input, the size of auxiliaryPictureTypes array. On output, the actual number of auxiliary pictures. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} picture, auxiliaryPictureTypes, or count is nullptr,          or fail to get the picture, or count is smaller than required.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} picture, auxiliaryPictureTypes, or count is nullptr,          or fail to get the picture, or count is smaller than required.</li>          </ul> |
 
 ### OH_PictureNative_GetMetadataCount()
 
@@ -513,7 +504,7 @@ Obtains the number of metadata entries in a Picture object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} picture or count is nullptr, or fail to get the picture.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} picture or count is nullptr, or fail to get the picture.</li>          </ul> |
 
 ### OH_PictureNative_GetMetadataTypes()
 
@@ -533,13 +524,13 @@ Obtains the types of metadata in a Picture object.
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | Pointer to an OH_PictureNative object. |
 | Image_MetadataType *metadataTypes | Pointer to the array that receives the metadata types. |
-| uint32_t *count | On input, the size of metadataTypes array.On output, the actual number of metadata entries. |
+| uint32_t *count | On input, the size of metadataTypes array. On output, the actual number of metadata entries. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} picture, metadataTypes, or count is nullptr,          or fail to get the picture, or count is smaller than required.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} picture, metadataTypes, or count is nullptr,          or fail to get the picture, or count is smaller than required.</li>          </ul> |
 
 ### OH_PictureNative_RemoveAuxiliaryPicture()
 
@@ -564,7 +555,7 @@ Removes an auxiliary picture from a Picture object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the auxiliary picture was successfully removed or did not exist.</li>          <li>{@link IMAGE_INVALID_PARAMETER} picture is nullptr, or fail to get the picture,          or the type is invalid.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the auxiliary picture was successfully removed or did not exist.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} picture is nullptr, or fail to get the picture,          or the type is invalid.</li>          </ul> |
 
 ### OH_PictureNative_RemoveMetadata()
 
@@ -589,7 +580,7 @@ Removes metadata from a Picture object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the metadata was successfully removed or did not exist.</li>          <li>{@link IMAGE_INVALID_PARAMETER} picture is nullptr, or fail to get the picture.</li>          <li>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the metadata was successfully removed or did not exist.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} picture is nullptr, or fail to get the picture.</li><br>        <li>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type.</li>          </ul> |
 
 ### OH_PictureNative_DeepCopyWithItems()
 
@@ -599,7 +590,7 @@ Image_ErrorCode OH_PictureNative_DeepCopyWithItems(OH_PictureNative *source, con
 
 **Description**
 
-Creates a deep copy of a PictureNative object with specified auxiliary pictures and metadata copied tospecified destination types.
+Creates a deep copy of a PictureNative object with specified auxiliary pictures and metadata copied to specified destination types.
 
 **Since**: 26.0.0
 
@@ -608,18 +599,18 @@ Creates a deep copy of a PictureNative object with specified auxiliary pictures 
 | Parameter | Description |
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *source | The source PictureNative object to be copied. Must not be NULL. |
-| [const OH_PictureNative_AuxiliaryPictureCopyItem](capi-image-nativemodule-oh-picturenative-auxiliarypicturecopyitem.md) *auxiliaryPictureCopyItems | An array describing the auxiliary pictures to copy,including source and destination auxiliary picture types. Can be NULL ifauxiliaryPictureCopyCount is 0. |
+| [const OH_PictureNative_AuxiliaryPictureCopyItem](capi-image-nativemodule-oh-picturenative-auxiliarypicturecopyitem.md) *auxiliaryPictureCopyItems | An array describing the auxiliary pictures to copy, including source and destination auxiliary picture types. Can be NULL if auxiliaryPictureCopyCount is 0. |
 | uint32_t auxiliaryPictureCopyCount | The number of items in auxiliaryPictureCopyItems. |
-| [const OH_PictureNative_MetadataCopyItem](capi-image-nativemodule-oh-picturenative-metadatacopyitem.md) *metadataCopyItems | An array describing the metadata entries to copy,including source and destination metadata types. Can be NULL ifmetadataCopyCount is 0. |
+| [const OH_PictureNative_MetadataCopyItem](capi-image-nativemodule-oh-picturenative-metadatacopyitem.md) *metadataCopyItems | An array describing the metadata entries to copy, including source and destination metadata types. Can be NULL if metadataCopyCount is 0. |
 | uint32_t metadataCopyCount | The number of items in metadataCopyItems. |
-| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) *sourceAuxPictureAsMainPixelMap | Specifies an auxiliary picture type in the sourcepicture to be used as the main pixel map in the copied picture. Can be NULL ifthe original main pixel map should be used. |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) **picture | Output parameter used to receive the newly created PictureNative object.The caller is responsible for releasing it when it is no longer needed. |
+| [Image_AuxiliaryPictureType](capi-picture-native-h.md#image_auxiliarypicturetype) *sourceAuxPictureAsMainPixelMap | Specifies an auxiliary picture type in the source picture to be used as the main pixel map in the copied picture. Can be NULL if the original main pixel map should be used. |
+| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) **picture | Output parameter used to receive the newly created PictureNative object. The caller is responsible for releasing it when it is no longer needed. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} if source or picture is nullptr, or counts mismatch,          or fail to get the source picture, or Count is not zero but corresponding array is nullptr.</li>          <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} if source or picture is nullptr, or counts mismatch,<br>        or fail to get the source picture, or Count is not zero but corresponding array is nullptr.</li><br>        <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          </ul> |
 
 ### OH_PictureNative_Release()
 
@@ -643,7 +634,7 @@ Releases the pointer to an OH_PictureNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr. |
 
 ### OH_AuxiliaryPictureNative_Create()
 
@@ -653,7 +644,7 @@ Image_ErrorCode OH_AuxiliaryPictureNative_Create(uint8_t *data, size_t dataLengt
 
 **Description**
 
-Creates the pointer to an OH_AuxiliaryPictureNative object. This API supports only continuous pixel datawhose {@link pixel format} is BGRA_8888 and creates an auxiliary picture in RGBA_8888 format.
+Creates the pointer to an OH_AuxiliaryPictureNative object. This API supports only continuous pixel data whose {@link pixel format} is BGRA_8888 and creates an auxiliary picture in RGBA_8888 format.
 
 **Since**: 13
 
@@ -671,35 +662,7 @@ Creates the pointer to an OH_AuxiliaryPictureNative object. This API supports on
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} data is nullptr, or dataLength is invalid, or size is nullptr, or the type          is invalid, or auxiliaryPicture is nullptr. |
-
-### OH_AuxiliaryPictureNative_CreateUsingAllocator()
-
-```c
-Image_ErrorCode OH_AuxiliaryPictureNative_CreateUsingAllocator(uint8_t *data, uint32_t dataLength, OH_AuxiliaryPictureInfo *info, IMAGE_ALLOCATOR_MODE allocator, OH_AuxiliaryPictureNative **auxiliaryPicture)
-```
-
-**Description**
-
-Creates an OH_AuxiliaryPictureNative object with a specified memory type. By default, the system selectsthe memory type based on the image type, image size, platform capability, and other factors. When processing theauxiliary picture returned by this API, always consider the impact of stride. If **data** is null or **dataLengthis less than or equal to 0, the auxiliary picture will not be initialized.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| uint8_t *data | Pointer to the image data. |
-| uint32_t dataLength | Length of the image data. |
-| [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | Pointer to the basic information of the auxiliary picture. |
-| IMAGE_ALLOCATOR_MODE allocator | Memory type used by the auxiliary picture. For details about the available options, see{@link IMAGE_ALLOCATOR_MODE}. |
-| [OH_AuxiliaryPictureNative](capi-image-nativemodule-oh-auxiliarypicturenative.md) **auxiliaryPicture | Double pointer to the OH_AuxiliaryPictureNative object created. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>{@link IMAGE_INVALID_PARAMETER} info or auxiliaryPicture is nullptr, or allocator is invalid,          or the size is invalid, or the type is unsupported, or dataLength is smaller than required.</li>          <li>{@link IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE} unsupported allocator type,          e.g., use share memory create a gainmap as only DMA supported hdr metadata.</li>          <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          </ul> |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} data is nullptr, or dataLength is invalid, or size is nullptr, or the type          is invalid, or auxiliaryPicture is nullptr. |
 
 ### OH_AuxiliaryPictureNative_WritePixels()
 
@@ -725,7 +688,7 @@ Reads pixels in the buffer and writes the result to an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or source is nullptr, or the bufferSize is invalid.      <br>{@link IMAGE_ALLOC_FAILED} memory alloc failed.      <br>{@link IMAGE_COPY_FAILED} memory copy failed. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or source is nullptr, or the bufferSize is invalid.<br>    <br>{@link IMAGE_ALLOC_FAILED} memory alloc failed.<br>    <br>{@link IMAGE_COPY_FAILED} memory copy failed. |
 
 ### OH_AuxiliaryPictureNative_ReadPixels()
 
@@ -751,7 +714,7 @@ Reads pixels of an auxiliary picture and writes the result to the buffer.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or destination is nullptr,          or the bufferSize is invalid.      <br>{@link IMAGE_ALLOC_FAILED} memory alloc failed.      <br>{@link IMAGE_COPY_FAILED} memory copy failed. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or destination is nullptr,<br>        or the bufferSize is invalid.<br>    <br>{@link IMAGE_ALLOC_FAILED} memory alloc failed.<br>    <br>{@link IMAGE_COPY_FAILED} memory copy failed. |
 
 ### OH_AuxiliaryPictureNative_GetType()
 
@@ -776,7 +739,7 @@ Obtains the type of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or type is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or type is nullptr. |
 
 ### OH_AuxiliaryPictureNative_GetInfo()
 
@@ -801,7 +764,7 @@ Obtains the information of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or info is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or info is nullptr. |
 
 ### OH_AuxiliaryPictureNative_SetInfo()
 
@@ -826,7 +789,7 @@ Sets the information for an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or info is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or info is nullptr. |
 
 ### OH_AuxiliaryPictureNative_GetMetadata()
 
@@ -852,7 +815,7 @@ Obtains the metadata of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or metadata is nullptr.      <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type, or the metadata type does not match the          auxiliary picture type. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or metadata is nullptr.<br>    <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type, or the metadata type does not match the          auxiliary picture type. |
 
 ### OH_AuxiliaryPictureNative_SetMetadata()
 
@@ -878,7 +841,7 @@ Sets the metadata for an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or metadata is nullptr.      <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type, or the metadata type does not match the          auxiliary picture type. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} auxiliaryPicture is nullptr, or metadata is nullptr.<br>    <br>{@link IMAGE_UNSUPPORTED_METADATA} unsupported metadata type, or the metadata type does not match the          auxiliary picture type. |
 
 ### OH_AuxiliaryPictureNative_AcquirePixelmap()
 
@@ -903,7 +866,7 @@ Obtains the OH_PixelmapNative object of an auxiliary picture.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} auxiliaryPicture is nullptr, or pixelmap is nullptr.</li>          <li>{@link IMAGE_GET_IMAGE_DATA_FAILED} fail to get the auxiliary picture or its pixelmap content.</li>          <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          </ul> |
+| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li><br>        <li>{@link IMAGE_INVALID_PARAMETER} auxiliaryPicture is nullptr, or pixelmap is nullptr.</li><br>        <li>{@link IMAGE_GET_IMAGE_DATA_FAILED} fail to get the auxiliary picture or its pixelmap content.</li><br>        <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          </ul> |
 
 ### OH_AuxiliaryPictureNative_Release()
 
@@ -927,7 +890,7 @@ Releases the pointer to an OH_AuxiliaryPictureNative object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} picture is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_Create()
 
@@ -951,7 +914,7 @@ Creates an OH_AuxiliaryPictureInfo object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_GetType()
 
@@ -976,7 +939,7 @@ Obtains the auxiliary picture type in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or type is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or type is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetType()
 
@@ -1001,7 +964,7 @@ Sets the auxiliary picture type in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or type is invalid. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or type is invalid. |
 
 ### OH_AuxiliaryPictureInfo_GetSize()
 
@@ -1026,7 +989,7 @@ Obtains the image size in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or size is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or size is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetSize()
 
@@ -1051,7 +1014,7 @@ Sets the image size in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or size is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or size is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_GetRowStride()
 
@@ -1070,13 +1033,13 @@ Obtains the row stride in **OH_AuxiliaryPictureInfo**.
 | Parameter | Description |
 | -- | -- |
 | [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | Pointer to the OH_AuxiliaryPictureInfo object. |
-| uint32_t *rowStride | Pointer to the row stride, which is the number of bytes from one row of pixels in memory to thenext row of pixels in memory. |
+| uint32_t *rowStride | Pointer to the row stride, which is the number of bytes from one row of pixels in memory to the next row of pixels in memory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or rowStride is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or rowStride is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetRowStride()
 
@@ -1095,13 +1058,13 @@ Sets the row stride in **OH_AuxiliaryPictureInfo**.
 | Parameter | Description |
 | -- | -- |
 | [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | Pointer to the OH_AuxiliaryPictureInfo object. |
-| uint32_t rowStride | Row stride, which is the number of bytes from one row of pixels in memory to the next row of pixelsin memory. |
+| uint32_t rowStride | Row stride, which is the number of bytes from one row of pixels in memory to the next row of pixels in memory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or rowStride is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or rowStride is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_GetPixelFormat()
 
@@ -1126,7 +1089,7 @@ Obtains the pixel format in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or pixelFormat is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr, or pixelFormat is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_SetPixelFormat()
 
@@ -1151,7 +1114,7 @@ Sets the pixel format in **OH_AuxiliaryPictureInfo**.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
 
 ### OH_AuxiliaryPictureInfo_Release()
 
@@ -1175,180 +1138,6 @@ Releases the pointer to an OH_AuxiliaryPictureInfo object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.      <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
-
-### OH_DecomposeOptions_Create()
-
-```c
-Image_ErrorCode OH_DecomposeOptions_Create(OH_DecomposeOptions **outOwnedOptions)
-```
-
-**Description**
-
-Creates an OH_DecomposeOptions object.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) **outOwnedOptions | The pointer to an OH_DecomposeOptions object. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} outOwnedOptions is nullptr.</li>          <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
-
-### OH_DecomposeOptions_SetIsFullSizeGainmap()
-
-```c
-Image_ErrorCode OH_DecomposeOptions_SetIsFullSizeGainmap(OH_DecomposeOptions *options, bool isFullSizeGainmap)
-```
-
-**Description**
-
-Sets whether to generate a full-size gainmap.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | The pointer to an OH_DecomposeOptions object. |
-| bool isFullSizeGainmap | Whether to generate a full-size gainmap. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} options is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
-
-### OH_DecomposeOptions_GetIsFullSizeGainmap()
-
-```c
-Image_ErrorCode OH_DecomposeOptions_GetIsFullSizeGainmap(OH_DecomposeOptions *options, bool *isFullSizeGainmap)
-```
-
-**Description**
-
-Gets whether to generate a full-size gainmap.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | The pointer to an OH_DecomposeOptions object. |
-| bool *isFullSizeGainmap | Pointer to the value indicating whether to generate a full-size gainmap. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} options or isFullSizeGainmap is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
-
-### OH_DecomposeOptions_SetDesiredPixelFormat()
-
-```c
-Image_ErrorCode OH_DecomposeOptions_SetDesiredPixelFormat(OH_DecomposeOptions *options, int32_t desiredPixelFormat)
-```
-
-**Description**
-
-Sets the desired pixel format of the SDR pixel map generated after HDR decomposition.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | The pointer to an OH_DecomposeOptions object. |
-| int32_t desiredPixelFormat | The desired pixel format of the generated SDR pixel map, which can be set toRGBA_8888, NV12, or NV21. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} options is nullptr.</li>          <li>{@link IMAGE_UNSUPPORTED_OPERATION} desiredPixelFormat is not supported.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
-
-### OH_DecomposeOptions_GetDesiredPixelFormat()
-
-```c
-Image_ErrorCode OH_DecomposeOptions_GetDesiredPixelFormat(OH_DecomposeOptions *options, int32_t *desiredPixelFormat)
-```
-
-**Description**
-
-Gets the desired pixel format of the SDR pixel map generated after HDR decomposition.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | The pointer to an OH_DecomposeOptions object. |
-| int32_t *desiredPixelFormat | Pointer to the desired pixel format of the generated SDR pixel map. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} options or desiredPixelFormat is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
-
-### OH_DecomposeOptions_Release()
-
-```c
-Image_ErrorCode OH_DecomposeOptions_Release(OH_DecomposeOptions *options)
-```
-
-**Description**
-
-Releases an OH_DecomposeOptions object.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | The pointer to an OH_DecomposeOptions object. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} options is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
-
-### OH_PictureNative_DecomposeToPicture()
-
-```c
-Image_ErrorCode OH_PictureNative_DecomposeToPicture(OH_PixelmapNative *hdrPixelmap, OH_DecomposeOptions *options, OH_PictureNative **outOwnedPicture)
-```
-
-**Description**
-
-Decomposes an HDR pixel map into a Picture object which contains an SDR pixel map and a gainmap.
-
-**Since**: 26.0.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| OH_PixelmapNative *hdrPixelmap | The HDR pixel map to be decomposed. |
-| [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | Options used to control HDR decomposition. This parameter is mandatory. |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) **outOwnedPicture | Pointer to the created Picture object. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| Image_ErrorCode | <ul>          <li>{@link IMAGE_SUCCESS} if the execution is successful.</li>          <li>{@link IMAGE_INVALID_PARAMETER} hdrPixelmap, options, or outOwnedPicture is nullptr.</li>          <li>{@link IMAGE_UNSUPPORTED_OPERATION} the pixel map is not supported for decomposition.</li>          <li>{@link IMAGE_DECOMPOSE_FAILED} the decomposition process failed.</li>          <li>{@link IMAGE_ALLOC_FAILED} memory allocation failed.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} if the execution is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} info is nullptr. |
 
 

@@ -6,7 +6,7 @@ typedef struct OH_AudioResourceManager OH_AudioResourceManager
 
 ## Overview
 
-Declare the audio resource manager.Audio resource manager provides many functions for developer to manage system resources to avoidunderrun or overrun in audio playback and recording.
+Declare the audio resource manager. Audio resource manager provides many functions for developer to manage system resources to avoid underrun or overrun in audio playback and recording.
 
 **Since**: 20
 

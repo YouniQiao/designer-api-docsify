@@ -26,15 +26,15 @@ This file declares the functions related to the bitmap in the drawing module.
 | -- | -- |
 | [OH_Drawing_Bitmap* OH_Drawing_BitmapCreate(void)](#oh_drawing_bitmapcreate) | Creates an **OH_Drawing_Bitmap** object. |
 | [void OH_Drawing_BitmapDestroy(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapdestroy) | Destroys an **OH_Drawing_Bitmap** object and reclaims the memory occupied by the object. |
-| [OH_Drawing_Bitmap* OH_Drawing_BitmapCreateFromPixels(OH_Drawing_Image_Info* imageInfo, void* pixels, uint32_t rowBytes)](#oh_drawing_bitmapcreatefrompixels) | Creates an **OH_Drawing_Bitmap** object, with the address of the memory for storing the bitmap pixels set tothe memory address that you applied for.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **imageInfo** or **pixels** is NULL or **rowBytes** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** isreturned. |
-| [void OH_Drawing_BitmapBuild(OH_Drawing_Bitmap* bitmap, const uint32_t width, const uint32_t height, const OH_Drawing_BitmapFormat* bitmapFormat)](#oh_drawing_bitmapbuild) | Initializes the width and height of a bitmap and sets the pixel format for the bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **bitmap** or **bitmapFormat** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint32_t OH_Drawing_BitmapGetWidth(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetwidth) | Obtains the width of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint32_t OH_Drawing_BitmapGetHeight(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetheight) | Obtains the height of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ColorFormat OH_Drawing_BitmapGetColorFormat(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetcolorformat) | Obtains the pixel format of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_AlphaFormat OH_Drawing_BitmapGetAlphaFormat(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetalphaformat) | Obtains the alpha component of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void* OH_Drawing_BitmapGetPixels(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetpixels) | Obtains the pixel address of a bitmap. You can use this address to obtain the pixel data of the bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BitmapGetImageInfo(OH_Drawing_Bitmap* bitmap, OH_Drawing_Image_Info* imageInfo)](#oh_drawing_bitmapgetimageinfo) | Obtains the image information of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **bitmap** or **imageInfo** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [bool OH_Drawing_BitmapReadPixels(OH_Drawing_Bitmap* bitmap, const OH_Drawing_Image_Info* dstInfo, void* dstPixels, size_t dstRowBytes, int32_t srcX, int32_t srcY)](#oh_drawing_bitmapreadpixels) | Reads pixels of a rectangle in a bitmap to the specified buffer.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **bitmap**, **dstInfo**, and **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Bitmap* OH_Drawing_BitmapCreateFromPixels(OH_Drawing_Image_Info* imageInfo, void* pixels, uint32_t rowBytes)](#oh_drawing_bitmapcreatefrompixels) | Creates an **OH_Drawing_Bitmap** object, with the address of the memory for storing the bitmap pixels set to the memory address that you applied for. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **imageInfo** or **pixels** is NULL or **rowBytes** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BitmapBuild(OH_Drawing_Bitmap* bitmap, const uint32_t width, const uint32_t height, const OH_Drawing_BitmapFormat* bitmapFormat)](#oh_drawing_bitmapbuild) | Initializes the width and height of a bitmap and sets the pixel format for the bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **bitmap** or **bitmapFormat** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint32_t OH_Drawing_BitmapGetWidth(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetwidth) | Obtains the width of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint32_t OH_Drawing_BitmapGetHeight(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetheight) | Obtains the height of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ColorFormat OH_Drawing_BitmapGetColorFormat(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetcolorformat) | Obtains the pixel format of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_AlphaFormat OH_Drawing_BitmapGetAlphaFormat(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetalphaformat) | Obtains the alpha component of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void* OH_Drawing_BitmapGetPixels(OH_Drawing_Bitmap* bitmap)](#oh_drawing_bitmapgetpixels) | Obtains the pixel address of a bitmap. You can use this address to obtain the pixel data of the bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BitmapGetImageInfo(OH_Drawing_Bitmap* bitmap, OH_Drawing_Image_Info* imageInfo)](#oh_drawing_bitmapgetimageinfo) | Obtains the image information of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **bitmap** or **imageInfo** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [bool OH_Drawing_BitmapReadPixels(OH_Drawing_Bitmap* bitmap, const OH_Drawing_Image_Info* dstInfo, void* dstPixels, size_t dstRowBytes, int32_t srcX, int32_t srcY)](#oh_drawing_bitmapreadpixels) | Reads pixels of a rectangle in a bitmap to the specified buffer. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **bitmap**, **dstInfo**, and **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_BitmapGetRowBytes(OH_Drawing_Bitmap* bitmap, uint32_t* bytes)](#oh_drawing_bitmapgetrowbytes) | Gets the row bytes of the bitmap. |
 
 ## Function description
@@ -83,7 +83,7 @@ OH_Drawing_Bitmap* OH_Drawing_BitmapCreateFromPixels(OH_Drawing_Image_Info* imag
 
 **Description**
 
-Creates an **OH_Drawing_Bitmap** object, with the address of the memory for storing the bitmap pixels set tothe memory address that you applied for.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **imageInfo** or **pixels** is NULL or **rowBytes** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** isreturned.
+Creates an **OH_Drawing_Bitmap** object, with the address of the memory for storing the bitmap pixels set to the memory address that you applied for. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **imageInfo** or **pixels** is NULL or **rowBytes** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -92,7 +92,7 @@ Creates an **OH_Drawing_Bitmap** object, with the address of the memory for stor
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Image_Info* imageInfo | Pointer to an {@link OH_Drawing_Image_Info} object. |
-| void* pixels | Pointer to the start address of the memory for storing the bitmap pixels. You need to apply for thememory and ensure its validity. |
+| void* pixels | Pointer to the start address of the memory for storing the bitmap pixels. You need to apply for the memory and ensure its validity. |
 | uint32_t rowBytes | Number of bytes in each row of pixels. The value is invalid if it is less than or equal to 0. |
 
 **Returns**:
@@ -109,7 +109,7 @@ void OH_Drawing_BitmapBuild(OH_Drawing_Bitmap* bitmap, const uint32_t width, con
 
 **Description**
 
-Initializes the width and height of a bitmap and sets the pixel format for the bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **bitmap** or **bitmapFormat** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Initializes the width and height of a bitmap and sets the pixel format for the bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **bitmap** or **bitmapFormat** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -120,7 +120,7 @@ Initializes the width and height of a bitmap and sets the pixel format for the b
 | OH_Drawing_Bitmap* bitmap | Pointer to an **OH_Drawing_Bitmap** object. |
 | const uint32_t width | Width of the bitmap to be initialized. |
 | const uint32_t height | Height of the bitmap to be initialized. |
-| [const OH_Drawing_BitmapFormat](capi-drawing-oh-drawing-bitmapformat.md)* bitmapFormat | Pointer to the pixel format of the bitmap to be initialized, including the pixel color type andalpha type. |
+| [const OH_Drawing_BitmapFormat](capi-drawing-oh-drawing-bitmapformat.md)* bitmapFormat | Pointer to the pixel format of the bitmap to be initialized, including the pixel color type and alpha type. |
 
 ### OH_Drawing_BitmapGetWidth()
 
@@ -130,7 +130,7 @@ uint32_t OH_Drawing_BitmapGetWidth(OH_Drawing_Bitmap* bitmap)
 
 **Description**
 
-Obtains the width of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the width of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -154,7 +154,7 @@ uint32_t OH_Drawing_BitmapGetHeight(OH_Drawing_Bitmap* bitmap)
 
 **Description**
 
-Obtains the height of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the height of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -178,7 +178,7 @@ OH_Drawing_ColorFormat OH_Drawing_BitmapGetColorFormat(OH_Drawing_Bitmap* bitmap
 
 **Description**
 
-Obtains the pixel format of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the pixel format of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -202,7 +202,7 @@ OH_Drawing_AlphaFormat OH_Drawing_BitmapGetAlphaFormat(OH_Drawing_Bitmap* bitmap
 
 **Description**
 
-Obtains the alpha component of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the alpha component of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -226,7 +226,7 @@ void* OH_Drawing_BitmapGetPixels(OH_Drawing_Bitmap* bitmap)
 
 **Description**
 
-Obtains the pixel address of a bitmap. You can use this address to obtain the pixel data of the bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the pixel address of a bitmap. You can use this address to obtain the pixel data of the bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **bitmap** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -250,7 +250,7 @@ void OH_Drawing_BitmapGetImageInfo(OH_Drawing_Bitmap* bitmap, OH_Drawing_Image_I
 
 **Description**
 
-Obtains the image information of a bitmap.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **bitmap** or **imageInfo** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the image information of a bitmap. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **bitmap** or **imageInfo** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -269,7 +269,7 @@ bool OH_Drawing_BitmapReadPixels(OH_Drawing_Bitmap* bitmap, const OH_Drawing_Ima
 
 **Description**
 
-Reads pixels of a rectangle in a bitmap to the specified buffer.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **bitmap**, **dstInfo**, and **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Reads pixels of a rectangle in a bitmap to the specified buffer. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **bitmap**, **dstInfo**, and **dstPixels** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -280,9 +280,9 @@ Reads pixels of a rectangle in a bitmap to the specified buffer.This API may ret
 | OH_Drawing_Bitmap* bitmap | Pointer to the {@link OH_Drawing_Bitmap} object. |
 | const OH_Drawing_Image_Info* dstInfo | Pointer to an {@link OH_Drawing_Image_Info} object. |
 | void* dstPixels | Pointer to the buffer for storing the pixels read. |
-| size_t dstRowBytes | Number of bytes in each row of the pixel data read. The value must be greater than or equal tothe minimum number of bytes in each row in the **OH_Drawing_Image_Info** object. |
-| int32_t srcX | Start X coordinate of the pixel data to read from the bitmap. The value must be less than the width ofthe bitmap. |
-| int32_t srcY | Start Y coordinate of the pixel data to read from the bitmap. The value must be less than the height ofthe bitmap. |
+| size_t dstRowBytes | Number of bytes in each row of the pixel data read. The value must be greater than or equal to the minimum number of bytes in each row in the **OH_Drawing_Image_Info** object. |
+| int32_t srcX | Start X coordinate of the pixel data to read from the bitmap. The value must be less than the width of the bitmap. |
+| int32_t srcY | Start Y coordinate of the pixel data to read from the bitmap. The value must be less than the height of the bitmap. |
 
 **Returns**:
 
@@ -313,6 +313,6 @@ Gets the row bytes of the bitmap.
 
 | Type | Description |
 | -- | -- |
-| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.          Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if bitmap or bytes is nullptr. |
+| OH_Drawing_ErrorCode | Returns the error code.          Returns {@link OH_DRAWING_SUCCESS} if the operation is successful.<br>        Returns {@link OH_DRAWING_ERROR_INCORRECT_PARAMETER} if bitmap or bytes is nullptr. |
 
 

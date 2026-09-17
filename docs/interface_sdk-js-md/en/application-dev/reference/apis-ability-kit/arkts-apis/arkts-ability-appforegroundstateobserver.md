@@ -1,4 +1,4 @@
-# AppForegroundStateObserver
+# AppForegroundStateObserver(AppForegroundStateObserver)
 
 ## Summary
 

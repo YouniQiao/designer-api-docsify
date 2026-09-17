@@ -8,7 +8,7 @@ Declares the native ability wrapper APIs.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since**: 26.0.0
+**Since**: 13
 
 **Related module**: [AbilityRuntime](capi-abilityruntime.md)
 
@@ -47,14 +47,14 @@ Get ability instance ID from NativeAbilityWrapper.
 | Parameter | Description |
 | -- | -- |
 | [const AbilityRuntime_NativeAbilityWrapper](capi-abilityruntime-abilityruntime-nativeabilitywrapper.md)* nativeAbilityWrapper | The native ability wrapper pointer. |
-| char* buffer | A pointer to a buffer that receives the instance ID string which is UUID format,an amount of 37 bytes, 36 chars plus an ending '\0'. |
+| char* buffer | A pointer to a buffer that receives the instance ID string which is UUID format, an amount of 37 bytes, 36 chars plus an ending '\0'. |
 | const int32_t bufferSize | The length of the buffer, must be at least 37. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the nativeAbilityWrapper or buffer is null,          or the buffer size is less than 37. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the nativeAbilityWrapper or buffer is null,          or the buffer size is less than 37. |
 
 ### OH_AbilityRuntime_GetAbilityName()
 
@@ -73,7 +73,7 @@ Get ability name from NativeAbilityWrapper.
 | Parameter | Description |
 | -- | -- |
 | [const AbilityRuntime_NativeAbilityWrapper](capi-abilityruntime-abilityruntime-nativeabilitywrapper.md) *nativeAbilityWrapper | The native ability wrapper pointer. |
-| char *buffer | A pointer to a buffer that receives the ability name.Pass nullptr to query the ability name length. |
+| char *buffer | A pointer to a buffer that receives the ability name. Pass nullptr to query the ability name length. |
 | const int32_t bufferSize | The length of the buffer. Make sure the buffer has at least one more byte for '\0'. |
 | int32_t *writeLength | Outputs the ability name string length. |
 
@@ -81,7 +81,7 @@ Get ability name from NativeAbilityWrapper.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the nativeAbilityWrapper or writeLength is null,          or the buffer is too small for the ability name.          {@link ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID} if the native ability wrapper is invalid or          incomplete.          {@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} inner error. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the nativeAbilityWrapper or writeLength is null,<br>        or the buffer is too small for the ability name.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID} if the native ability wrapper is invalid or<br>        incomplete.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} inner error. |
 
 ### OH_AbilityRuntime_GetEnv()
 
@@ -106,6 +106,6 @@ Get napi_env from NativeAbilityWrapper.
 
 | Type | Description |
 | -- | -- |
-| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the nativeAbilityWrapper or env is null.          {@link ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID} if the native ability wrapper is invalid or          incomplete. |
+| AbilityRuntime_ErrorCode | The error code.          {@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} if the nativeAbilityWrapper or env is null.<br>        {@link ABILITY_RUNTIME_ERROR_CODE_ABILITY_WRAPPER_INVALID} if the native ability wrapper is invalid or          incomplete. |
 
 

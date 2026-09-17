@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects onthe native side.
+Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side.
 
 **Library**: libace_ndk.z.so
 
@@ -18,15 +18,15 @@ Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>Ar
 
 | Name | Description |
 | -- | -- |
-| [int32_t OH_ArkUI_GetNodeHandleFromNapiValue(napi_env env, napi_value frameNode, ArkUI_NodeHandle* handle)](#oh_arkui_getnodehandlefromnapivalue) | Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on thenative side. |
-| [int32_t OH_ArkUI_GetContextFromNapiValue(napi_env env, napi_value value, ArkUI_ContextHandle* context)](#oh_arkui_getcontextfromnapivalue) | Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on thenative side. |
-| [int32_t OH_ArkUI_GetNodeContentFromNapiValue(napi_env env, napi_value value, ArkUI_NodeContentHandle* content)](#oh_arkui_getnodecontentfromnapivalue) | Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b>object on the native side. |
-| [int32_t OH_ArkUI_GetDrawableDescriptorFromNapiValue(napi_env env, napi_value value, ArkUI_DrawableDescriptor** drawableDescriptor)](#oh_arkui_getdrawabledescriptorfromnapivalue) | Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptor</b> object on the native side. |
-| [int32_t OH_ArkUI_GetDrawableDescriptorFromResourceNapiValue(napi_env env, napi_value value, ArkUI_DrawableDescriptor** drawableDescriptor)](#oh_arkui_getdrawabledescriptorfromresourcenapivalue) | Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptor</b> object on the native side. |
+| [int32_t OH_ArkUI_GetNodeHandleFromNapiValue(napi_env env, napi_value frameNode, ArkUI_NodeHandle* handle)](#oh_arkui_getnodehandlefromnapivalue) | Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on the native side. |
+| [int32_t OH_ArkUI_GetContextFromNapiValue(napi_env env, napi_value value, ArkUI_ContextHandle* context)](#oh_arkui_getcontextfromnapivalue) | Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on the native side. |
+| [int32_t OH_ArkUI_GetNodeContentFromNapiValue(napi_env env, napi_value value, ArkUI_NodeContentHandle* content)](#oh_arkui_getnodecontentfromnapivalue) | Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b> object on the native side. |
+| [int32_t OH_ArkUI_GetDrawableDescriptorFromNapiValue(napi_env env, napi_value value, ArkUI_DrawableDescriptor** drawableDescriptor)](#oh_arkui_getdrawabledescriptorfromnapivalue) | Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptor</b> object on the native side. |
+| [int32_t OH_ArkUI_GetDrawableDescriptorFromResourceNapiValue(napi_env env, napi_value value, ArkUI_DrawableDescriptor** drawableDescriptor)](#oh_arkui_getdrawabledescriptorfromresourcenapivalue) | Obtains a <b>Resource</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptor</b> object on the native side. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavigationid) | Obtain the ID of the Navigation component where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationName(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationname) | Obtain the name of the NavDestination component where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavStackLength(ArkUI_NodeHandle node, int32_t* length)](#oh_arkui_getnavstacklength) | Based on the given index value, obtain the length of the Navigation stack where the node is located. |
-| [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int32_t index, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationnamebyindex) | Based on the given index value, obtain the page name of the corresponding positionin the navigation stack where the node is located.Index values are counted from 0, with 0 being the bottom of the stack. |
+| [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int32_t index, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationnamebyindex) | Based on the given index value, obtain the page name of the corresponding position in the navigation stack where the node is located. Index values are counted from 0, with 0 being the bottom of the stack. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getnavdestinationid) | Obtain the ID of the NavDestination component where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationState(ArkUI_NodeHandle node, ArkUI_NavDestinationState* state)](#oh_arkui_getnavdestinationstate) | Obtain the state of the NavDestination component where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetNavDestinationIndex(ArkUI_NodeHandle node, int32_t* index)](#oh_arkui_getnavdestinationindex) | Obtain the index of the NavDestination component on the Navigation stack where the node is located. |
@@ -36,11 +36,11 @@ Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>Ar
 | [ArkUI_ErrorCode OH_ArkUI_GetRouterPagePath(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpagepath) | Obtain the path of the page where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetRouterPageState(ArkUI_NodeHandle node, ArkUI_RouterPageState* state)](#oh_arkui_getrouterpagestate) | Obtain the state of the page where the node is located. |
 | [ArkUI_ErrorCode OH_ArkUI_GetRouterPageId(ArkUI_NodeHandle node, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_getrouterpageid) | Obtain the ID of the page where the node is located. |
-| [int32_t OH_ArkUI_PostFrameCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimestamp, uint32_t frameCount, void* userData))](#oh_arkui_postframecallback) | Register a callback to be executed when rendering in the next frame. Cannot be called onthe non-UI thread. Checking for non-UI thread calls will abort. |
-| [ArkUI_ErrorCode OH_ArkUI_InitModuleForArkTSEnv(napi_env env)](#oh_arkui_initmoduleforarktsenv) | Initialize the ArkTS method for the specified env environment. Cannot be called onthe non-UI thread. Checking for non-UI thread calls will abort. |
-| [void OH_ArkUI_NotifyArkTSEnvDestroy(napi_env env)](#oh_arkui_notifyarktsenvdestroy) | Notifies that the specified context environment has been destroyed. This function must not be called from anon-UI thread; otherwise, the program will actively abort. |
-| [int32_t OH_ArkUI_PostIdleCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimeLeft, uint32_t frameCount, void* userData))](#oh_arkui_postidlecallback) | Register a callback to be executed at the end of the next idle frame.If there is no next frame, will request one automatically. |
-| [ArkUI_ErrorCode OH_ArkUI_EnableEventPassthrough(ArkUI_ContextHandle uiContext, bool enabled, ArkUI_RawInputEventType type)](#oh_arkui_enableeventpassthrough) | Enables or disables event passthrough. Event passthrough indicates that an event is directly delivered to acomponent without resampling during event distribution. |
+| [int32_t OH_ArkUI_PostFrameCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimestamp, uint32_t frameCount, void* userData))](#oh_arkui_postframecallback) | Register a callback to be executed when rendering in the next frame. Cannot be called on the non-UI thread. Checking for non-UI thread calls will abort. |
+| [ArkUI_ErrorCode OH_ArkUI_InitModuleForArkTSEnv(napi_env env)](#oh_arkui_initmoduleforarktsenv) | Initialize the ArkTS method for the specified env environment. Cannot be called on the non-UI thread. Checking for non-UI thread calls will abort. |
+| [void OH_ArkUI_NotifyArkTSEnvDestroy(napi_env env)](#oh_arkui_notifyarktsenvdestroy) | Notifies that the specified context environment has been destroyed. This function must not be called from a non-UI thread; otherwise, the program will actively abort. |
+| [int32_t OH_ArkUI_PostIdleCallback(ArkUI_ContextHandle uiContext, void* userData, void (\*callback)(uint64_t nanoTimeLeft, uint32_t frameCount, void* userData))](#oh_arkui_postidlecallback) | Register a callback to be executed at the end of the next idle frame. If there is no next frame, will request one automatically. |
+| [ArkUI_ErrorCode OH_ArkUI_EnableEventPassthrough(ArkUI_ContextHandle uiContext, bool enabled, ArkUI_RawInputEventType type)](#oh_arkui_enableeventpassthrough) | Enables or disables event passthrough. Event passthrough indicates that an event is directly delivered to a component without resampling during event distribution. |
 
 ## Function description
 
@@ -52,7 +52,7 @@ int32_t OH_ArkUI_GetNodeHandleFromNapiValue(napi_env env, napi_value frameNode, 
 
 **Description**
 
-Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on thenative side.
+Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeHandle</b> object on the native side.
 
 **Since**: 12
 
@@ -68,7 +68,7 @@ Obtains a <b>FrameNode</b> object on the ArkTS side and maps it to an <b>ArkUI_N
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_GetContextFromNapiValue()
 
@@ -78,7 +78,7 @@ int32_t OH_ArkUI_GetContextFromNapiValue(napi_env env, napi_value value, ArkUI_C
 
 **Description**
 
-Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on thenative side.
+Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_ContextHandle</b> object on the native side.
 
 **Since**: 12
 
@@ -94,7 +94,7 @@ Obtains a <b>UIContext</b> object on the ArkTS side and maps it to an <b>ArkUI_C
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_GetNodeContentFromNapiValue()
 
@@ -104,7 +104,7 @@ int32_t OH_ArkUI_GetNodeContentFromNapiValue(napi_env env, napi_value value, Ark
 
 **Description**
 
-Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b>object on the native side.
+Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI_NodeContentHandle</b> object on the native side.
 
 **Since**: 12
 
@@ -120,7 +120,7 @@ Obtains a <b>NodeContent</b> object on the ArkTS side and maps it to an <b>ArkUI
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.           Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.           Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.           Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_GetDrawableDescriptorFromNapiValue()
 
@@ -130,7 +130,7 @@ int32_t OH_ArkUI_GetDrawableDescriptorFromNapiValue(napi_env env, napi_value val
 
 **Description**
 
-Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptor</b> object on the native side.
+Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptor</b> object on the native side.
 
 **Since**: 12
 
@@ -146,7 +146,7 @@ Obtains a <b>DrawableDescriptor</b> object on the ArkTS side and maps it to an<b
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_GetDrawableDescriptorFromResourceNapiValue()
 
@@ -156,7 +156,7 @@ int32_t OH_ArkUI_GetDrawableDescriptorFromResourceNapiValue(napi_env env, napi_v
 
 **Description**
 
-Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_DrawableDescriptor</b> object on the native side.
+Obtains a <b>Resource</b> object on the ArkTS side and maps it to an <b>ArkUI_DrawableDescriptor</b> object on the native side.
 
 **Since**: 12
 
@@ -172,7 +172,7 @@ Obtains a <b>Resource</b> object on the ArkTS side and maps it to an<b>ArkUI_Dra
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_GetNavigationId()
 
@@ -191,15 +191,15 @@ Obtain the ID of the Navigation component where the node is located.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which NavigationID writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which NavigationID writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in Navigation.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavDestinationName()
 
@@ -218,15 +218,15 @@ Obtain the name of the NavDestination component where the node is located.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which NavDestination name writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which NavDestination name writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in Navigation.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavStackLength()
 
@@ -251,7 +251,7 @@ Based on the given index value, obtain the length of the Navigation stack where 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or length is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or length is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
 
 ### OH_ArkUI_GetNavDestinationNameByIndex()
 
@@ -261,7 +261,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int
 
 **Description**
 
-Based on the given index value, obtain the page name of the corresponding positionin the navigation stack where the node is located.Index values are counted from 0, with 0 being the bottom of the stack.
+Based on the given index value, obtain the page name of the corresponding position in the navigation stack where the node is located. Index values are counted from 0, with 0 being the bottom of the stack.
 
 **Since**: 12
 
@@ -271,15 +271,15 @@ Based on the given index value, obtain the page name of the corresponding positi
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
 | int32_t index | The index of the NavDestination in the stack is queried. |
-| char* buffer | The buffer to which NavDestination index writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which NavDestination index writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_NODE_INDEX_INVALID} if index is an invalid value.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_NODE_INDEX_INVALID} if index is an invalid value.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in Navigation.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavDestinationId()
 
@@ -298,15 +298,15 @@ Obtain the ID of the NavDestination component where the node is located.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which NavDestination ID writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which NavDestination ID writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in Navigation.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetNavDestinationState()
 
@@ -331,7 +331,7 @@ Obtain the state of the NavDestination component where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or state is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or state is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
 
 ### OH_ArkUI_GetNavDestinationIndex()
 
@@ -356,7 +356,7 @@ Obtain the index of the NavDestination component on the Navigation stack where t
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or index is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or index is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in Navigation. |
 
 ### OH_ArkUI_GetNavDestinationParam()
 
@@ -405,7 +405,7 @@ Obtain the index of the page where the node resides in the Router page stack.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or index is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or index is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage. |
 
 ### OH_ArkUI_GetRouterPageName()
 
@@ -424,15 +424,15 @@ Obtain the name of the page where the node is located.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which page name writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which page name writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in RouterPage.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetRouterPagePath()
 
@@ -451,15 +451,15 @@ Obtain the path of the page where the node is located.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which page path writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which page path writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in RouterPage.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_GetRouterPageState()
 
@@ -484,7 +484,7 @@ Obtain the state of the page where the node is located.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or state is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node or state is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage. |
 
 ### OH_ArkUI_GetRouterPageId()
 
@@ -503,15 +503,15 @@ Obtain the ID of the page where the node is located.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NodeHandle node | The node. |
-| char* buffer | The buffer to which page ID writes to the memory,memory space needs to be allocated by the developer. |
+| char* buffer | The buffer to which page ID writes to the memory, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The buffer size |
-| int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning {@link ARKUI_ERROR_CODE_NO_ERROR}.Indicates the minimum buffer size that can accommodate the targetwhen {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
+| int32_t* writeLength | Indicates the string length actually written to the buffer when returning {@link ARKUI_ERROR_CODE_NO_ERROR}.<br>                   Indicates the minimum buffer size that can accommodate the target<br>                   when {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} is returned. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.          {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,          this may be because the node is not in RouterPage.          {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the node, buffer or writeLength is null.<br>        {@link ARKUI_ERROR_CODE_GET_INFO_FAILED} if query information failed,<br>        this may be because the node is not in RouterPage.<br>        {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_PostFrameCallback()
 
@@ -521,7 +521,7 @@ int32_t OH_ArkUI_PostFrameCallback(ArkUI_ContextHandle uiContext, void* userData
 
 **Description**
 
-Register a callback to be executed when rendering in the next frame. Cannot be called onthe non-UI thread. Checking for non-UI thread calls will abort.
+Register a callback to be executed when rendering in the next frame. Cannot be called on the non-UI thread. Checking for non-UI thread calls will abort.
 
 **Since**: 18
 
@@ -539,7 +539,7 @@ Register a callback to be executed when rendering in the next frame. Cannot be c
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error.          Returns {@link ARKUI_ERROR_CODE_UI_CONTEXT_INVALID} if the uiContext is invalid.          Returns {@link ARKUI_ERROR_CODE_CALLBACK_INVALID} if the callback function is invalid. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error.<br>        Returns {@link ARKUI_ERROR_CODE_UI_CONTEXT_INVALID} if the uiContext is invalid.<br>        Returns {@link ARKUI_ERROR_CODE_CALLBACK_INVALID} if the callback function is invalid. |
 
 ### OH_ArkUI_InitModuleForArkTSEnv()
 
@@ -549,7 +549,7 @@ ArkUI_ErrorCode OH_ArkUI_InitModuleForArkTSEnv(napi_env env)
 
 **Description**
 
-Initialize the ArkTS method for the specified env environment. Cannot be called onthe non-UI thread. Checking for non-UI thread calls will abort.
+Initialize the ArkTS method for the specified env environment. Cannot be called on the non-UI thread. Checking for non-UI thread calls will abort.
 
 **Since**: 20
 
@@ -563,7 +563,7 @@ Initialize the ArkTS method for the specified env environment. Cannot be called 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          {@link ARKUI_ERROR_CODE_PARAM_INVALID} if env is null or failed to set the whitelist.          {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error. |
+| ArkUI_ErrorCode | The error code.          {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        {@link ARKUI_ERROR_CODE_PARAM_INVALID} if env is null or failed to set the whitelist.<br>        {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error. |
 
 ### OH_ArkUI_NotifyArkTSEnvDestroy()
 
@@ -573,7 +573,7 @@ void OH_ArkUI_NotifyArkTSEnvDestroy(napi_env env)
 
 **Description**
 
-Notifies that the specified context environment has been destroyed. This function must not be called from anon-UI thread; otherwise, the program will actively abort.
+Notifies that the specified context environment has been destroyed. This function must not be called from a non-UI thread; otherwise, the program will actively abort.
 
 **Since**: 20
 
@@ -591,7 +591,7 @@ int32_t OH_ArkUI_PostIdleCallback(ArkUI_ContextHandle uiContext, void* userData,
 
 **Description**
 
-Register a callback to be executed at the end of the next idle frame.If there is no next frame, will request one automatically.
+Register a callback to be executed at the end of the next idle frame. If there is no next frame, will request one automatically.
 
 **Since**: 20
 
@@ -609,7 +609,7 @@ Register a callback to be executed at the end of the next idle frame.If there is
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          Returns {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error.          Returns {@link ARKUI_ERROR_CODE_UI_CONTEXT_INVALID} if the uiContext is invalid.          Returns {@link ARKUI_ERROR_CODE_CALLBACK_INVALID} if the callback function is invalid. |
+| int32_t | Returns the result code.          Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_CAPI_INIT_ERROR} if the CAPI init error.<br>        Returns {@link ARKUI_ERROR_CODE_UI_CONTEXT_INVALID} if the uiContext is invalid.<br>        Returns {@link ARKUI_ERROR_CODE_CALLBACK_INVALID} if the callback function is invalid. |
 
 ### OH_ArkUI_EnableEventPassthrough()
 
@@ -619,7 +619,7 @@ ArkUI_ErrorCode OH_ArkUI_EnableEventPassthrough(ArkUI_ContextHandle uiContext, b
 
 **Description**
 
-Enables or disables event passthrough. Event passthrough indicates that an event is directly delivered to acomponent without resampling during event distribution.
+Enables or disables event passthrough. Event passthrough indicates that an event is directly delivered to a component without resampling during event distribution.
 
 **Since**: 26.0.0
 
@@ -635,6 +635,6 @@ Enables or disables event passthrough. Event passthrough indicates that an event
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.      <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the UIContext object is invalid. |
+| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the UIContext object is invalid. |
 
 

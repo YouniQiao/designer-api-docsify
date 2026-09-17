@@ -2,13 +2,13 @@
 
 ## Overview
 
-This file declares the functions related to the surface in the drawing module, including creating, destroying,and using the surface.
+This file declares the functions related to the surface in the drawing module, including creating, destroying, and using the surface.
 
 **Library**: libnative_drawing.so
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -18,9 +18,9 @@ This file declares the functions related to the surface in the drawing module, i
 
 | Name | Description |
 | -- | -- |
-| [OH_Drawing_Surface* OH_Drawing_SurfaceCreateFromGpuContext(OH_Drawing_GpuContext* gpuContext, bool flag, OH_Drawing_Image_Info imageInfo)](#oh_drawing_surfacecreatefromgpucontext) | Creates an **OH_Drawing_Surface** object using the GPU context to manage the content drawn on the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **gpuContext** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_Surface* OH_Drawing_SurfaceCreateOnScreen(OH_Drawing_GpuContext* gpuContext, OH_Drawing_Image_Info imageInfo, void* window)](#oh_drawing_surfacecreateonscreen) | Creates an **OH_Drawing_Surface** object bound to the window using the GPU context to manage the contentdrawn on the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.**OH_DRAWING_ERROR_INVALID_PARAMETER** if **gpuContext** or **window** is NULL. |
-| [OH_Drawing_Canvas* OH_Drawing_SurfaceGetCanvas(OH_Drawing_Surface* surface)](#oh_drawing_surfacegetcanvas) | Obtains a canvas from an **OH_Drawing_Surface** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **surface** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Surface* OH_Drawing_SurfaceCreateFromGpuContext(OH_Drawing_GpuContext* gpuContext, bool flag, OH_Drawing_Image_Info imageInfo)](#oh_drawing_surfacecreatefromgpucontext) | Creates an **OH_Drawing_Surface** object using the GPU context to manage the content drawn on the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **gpuContext** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Surface* OH_Drawing_SurfaceCreateOnScreen(OH_Drawing_GpuContext* gpuContext, OH_Drawing_Image_Info imageInfo, void* window)](#oh_drawing_surfacecreateonscreen) | Creates an **OH_Drawing_Surface** object bound to the window using the GPU context to manage the content drawn on the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. **OH_DRAWING_ERROR_INVALID_PARAMETER** if **gpuContext** or **window** is NULL. |
+| [OH_Drawing_Canvas* OH_Drawing_SurfaceGetCanvas(OH_Drawing_Surface* surface)](#oh_drawing_surfacegetcanvas) | Obtains a canvas from an **OH_Drawing_Surface** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **surface** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_SurfaceFlush(OH_Drawing_Surface* surface)](#oh_drawing_surfaceflush) | Pushes the drawing content from an **OH_Drawing_Surface** object to the GPU for rendering. |
 | [void OH_Drawing_SurfaceDestroy(OH_Drawing_Surface* surface)](#oh_drawing_surfacedestroy) | Destroys an **OH_Drawing_Surface** object and reclaims the memory occupied. |
 
@@ -34,7 +34,7 @@ OH_Drawing_Surface* OH_Drawing_SurfaceCreateFromGpuContext(OH_Drawing_GpuContext
 
 **Description**
 
-Creates an **OH_Drawing_Surface** object using the GPU context to manage the content drawn on the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **gpuContext** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates an **OH_Drawing_Surface** object using the GPU context to manage the content drawn on the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **gpuContext** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -60,7 +60,7 @@ OH_Drawing_Surface* OH_Drawing_SurfaceCreateOnScreen(OH_Drawing_GpuContext* gpuC
 
 **Description**
 
-Creates an **OH_Drawing_Surface** object bound to the window using the GPU context to manage the contentdrawn on the canvas.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.**OH_DRAWING_ERROR_INVALID_PARAMETER** if **gpuContext** or **window** is NULL.
+Creates an **OH_Drawing_Surface** object bound to the window using the GPU context to manage the content drawn on the canvas. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. **OH_DRAWING_ERROR_INVALID_PARAMETER** if **gpuContext** or **window** is NULL.
 
 **Since**: 16
 
@@ -68,7 +68,7 @@ Creates an **OH_Drawing_Surface** object bound to the window using the GPU conte
 
 | Parameter | Description |
 | -- | -- |
-| OH_Drawing_GpuContext* gpuContext | Pointer to an {@link OH_Drawing_GpuContext} object.This object must be created by {@link OH_Drawing_GpuContextCreate}. Otherwise, the **OH_Drawing_Surface** objectfails to be created. |
+| OH_Drawing_GpuContext* gpuContext | Pointer to an {@link OH_Drawing_GpuContext} object.<br>This object must be created by {@link OH_Drawing_GpuContextCreate}. Otherwise, the **OH_Drawing_Surface** object fails to be created. |
 | OH_Drawing_Image_Info imageInfo | Image information struct. |
 | void* window | Pointer to the window object. |
 
@@ -86,7 +86,7 @@ OH_Drawing_Canvas* OH_Drawing_SurfaceGetCanvas(OH_Drawing_Surface* surface)
 
 **Description**
 
-Obtains a canvas from an **OH_Drawing_Surface** object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **surface** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains a canvas from an **OH_Drawing_Surface** object. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **surface** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -118,7 +118,7 @@ Pushes the drawing content from an **OH_Drawing_Surface** object to the GPU for 
 
 | Parameter | Description |
 | -- | -- |
-| OH_Drawing_Surface* surface | Pointer to the created  {@link OH_Drawing_Surface}  object. This object must be created by calling[OH_Drawing_SurfaceCreateOnScreen](capi-drawing-surface-h.md#oh_drawing_surfacecreateonscreen). Otherwise, calling the current API has no effect. |
+| OH_Drawing_Surface* surface | Pointer to the created  {@link OH_Drawing_Surface}  object. This object must be created by calling [OH_Drawing_SurfaceCreateOnScreen](capi-drawing-surface-h.md#oh_drawing_surfacecreateonscreen) . Otherwise, calling the current API has no effect. |
 
 **Returns**:
 

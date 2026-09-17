@@ -55,7 +55,7 @@ Put the {@link Data_Asset} * value to this [OH_VBucket](capi-rdb-oh-vbucket.md) 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -87,7 +87,7 @@ Put the {@link Data_Asset} * value of given count to this [OH_VBucket](capi-rdb-
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -119,7 +119,7 @@ Put the float vector to the OH_VBucket object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -152,7 +152,7 @@ Put the an integer of any length to the OH_VBucket object.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 

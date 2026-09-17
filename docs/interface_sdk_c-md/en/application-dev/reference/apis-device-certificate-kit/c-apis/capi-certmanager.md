@@ -2,7 +2,7 @@
 
 ## Overview
 
-Describes the OpenHarmony Certificate Manager capabilities, including certificate and credential managementoperations, provided for applications.
+Describes the OpenHarmony Certificate Manager capabilities, including certificate and credential management operations, provided for applications.
 
 **Since**: 22
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-uri verification and conversionThis class is mainly for URI format verification and URI conversion processing;The conversion and operation of the media library type URI is not supported,and the class only converts according to the existing specifications,and there is no guarantee that the conversion result will actually exist.
+uri verification and conversion This class is mainly for URI format verification and URI conversion processing; The conversion and operation of the media library type URI is not supported, and the class only converts according to the existing specifications, and there is no guarantee that the conversion result will actually exist.
 
 **Library**: libohfileuri.so
 
@@ -22,7 +22,7 @@ uri verification and conversionThis class is mainly for URI format verification 
 | [FileManagement_ErrCode OH_FileUri_GetPathFromUri(const char *uri, unsigned int length, char **result)](#oh_fileuri_getpathfromuri) | Get path From uri. |
 | [FileManagement_ErrCode OH_FileUri_GetFullDirectoryUri(const char *uri, unsigned int length, char **result)](#oh_fileuri_getfulldirectoryuri) | Gets the uri of the path or directory where the uri is located. |
 | [bool OH_FileUri_IsValidUri(const char *uri, unsigned int length)](#oh_fileuri_isvaliduri) | Check that the incoming uri is valid |
-| [FileManagement_ErrCode OH_FileUri_GetFileName(const char *uri, unsigned int length, char **result)](#oh_fileuri_getfilename) | Gets the fileName From uri.This function obtains that the last segment of the URI string is the return value of the function,and the URI of the media type is not supported |
+| [FileManagement_ErrCode OH_FileUri_GetFileName(const char *uri, unsigned int length, char **result)](#oh_fileuri_getfilename) | Gets the fileName From uri. This function obtains that the last segment of the URI string is the return value of the function, and the URI of the media type is not supported |
 
 ## Function description
 
@@ -52,7 +52,7 @@ Get uri From path.
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER}  401 - Invalid input parameter.          {@link ERR_UNKNOWN} 13900042 - Unknow error. The length of the output uri string is 0.          {@link ERR_ENOMEM}  13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER}  401 - Invalid input parameter.<br>        {@link ERR_UNKNOWN} 13900042 - Unknow error. The length of the output uri string is 0.<br>        {@link ERR_ENOMEM}  13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileUri_GetPathFromUri()
 
@@ -80,7 +80,7 @@ Get path From uri.
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_UNKNOWN} 13900042 - Unknow error. The length of the output path string is 0.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_UNKNOWN} 13900042 - Unknow error. The length of the output path string is 0.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileUri_GetFullDirectoryUri()
 
@@ -108,7 +108,7 @@ Gets the uri of the path or directory where the uri is located.
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.          {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.          {@link ERR_ENOENT} 13900002 - No such file or directory.          {@link ERR_UNKNOWN} 13900042 - Unknow error. The length of the output path string is 0.          {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.          {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_ENOENT} 13900002 - No such file or directory.<br>        {@link ERR_UNKNOWN} 13900042 - Unknow error. The length of the output path string is 0.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 ### OH_FileUri_IsValidUri()
 
@@ -145,7 +145,7 @@ FileManagement_ErrCode OH_FileUri_GetFileName(const char *uri, unsigned int leng
 
 **Description**
 
-Gets the fileName From uri.This function obtains that the last segment of the URI string is the return value of the function,and the URI of the media type is not supported
+Gets the fileName From uri. This function obtains that the last segment of the URI string is the return value of the function, and the URI of the media type is not supported
 
 **System capability**: SystemCapability.FileManagement.AppFileService
 
@@ -163,6 +163,6 @@ Gets the fileName From uri.This function obtains that the last segment of the UR
 
 | Type | Description |
 | -- | -- |
-| FileManagement_ErrCode | Returns the status code of the execution.         {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.         {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.         {@link ERR_OK} 0 - This operation was successfully executed. |
+| FileManagement_ErrCode | Returns the status code of the execution.         {@link ERR_INVALID_PARAMETER} 401 - Invalid input parameter.<br>        {@link ERR_ENOMEM} 13900011 - Failed to apply for memory or failed to copy memory.<br>        {@link ERR_OK} 0 - This operation was successfully executed. |
 
 

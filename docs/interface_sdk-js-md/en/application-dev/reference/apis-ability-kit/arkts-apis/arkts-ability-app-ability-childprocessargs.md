@@ -1,4 +1,4 @@
-# @ohos.app.ability.ChildProcessArgs
+# @ohos.app.ability.ChildProcessArgs(Child Process Arguments)
 
 ## Modules to Import
 

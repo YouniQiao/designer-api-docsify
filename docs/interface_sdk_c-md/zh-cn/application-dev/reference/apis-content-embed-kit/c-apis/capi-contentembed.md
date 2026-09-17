@@ -2,7 +2,7 @@
 
 ## 概述
 
-内容嵌入（ContentEmbed）模块提供对象编辑（Object Editor，简称OE）功能框架与技术，支持应用间文档的嵌入与协同编辑。通过OE技术实现的被嵌入文档（简称OE文档），在客户端界面中可能呈现为缩略图或者快照（Snapshot），也可能以标准格式序列化为一段二进制数据保存在内存或者某个文件（称为OE格式文件）中。
+内容嵌入（ContentEmbed）模块提供对象编辑（Object Editor，简称OE）功能框架与技术，支持应用间文档的嵌入与协同编辑。 通过OE技术实现的被嵌入文档（简称OE文档），在客户端界面中可能呈现为缩略图或者快照（Snapshot）， 也可能以标准格式序列化为一段二进制数据保存在内存或者某个文件（称为OE格式文件）中。
 
 **系统能力：** SystemCapability.ContentEmbed.ObjectEditor
 

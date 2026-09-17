@@ -6,7 +6,7 @@ typedef struct OH_AudioDeviceDescriptor OH_AudioDeviceDescriptor
 
 ## Overview
 
-Declaring the audio device descriptor.The instance is used to get more audio device detail attributes.
+Declaring the audio device descriptor. The instance is used to get more audio device detail attributes.
 
 **Since**: 12
 

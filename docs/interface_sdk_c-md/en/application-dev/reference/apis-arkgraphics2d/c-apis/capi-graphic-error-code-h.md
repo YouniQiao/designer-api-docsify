@@ -8,7 +8,7 @@ Defines the error codes.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeWindow
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [NativeWindow](capi-nativewindow.md)
 

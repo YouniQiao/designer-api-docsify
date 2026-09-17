@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares APIs for discovering and connecting to scanners, scanning pictures, querying the scan progress, andsetting parameters for scanning.
+Declares APIs for discovering and connecting to scanners, scanning pictures, querying the scan progress, and setting parameters for scanning.
 
 **Library**: libohscan.so
 
@@ -32,17 +32,23 @@ Declares APIs for discovering and connecting to scanners, scanning pictures, que
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int32_t deviceCount)](#scan_scannerdiscoverycallback) | Scan_ScannerDiscoveryCallback | Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery)will be released when the callback function ends. |
+| [typedef void (\*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int32_t deviceCount)](#scan_scannerdiscoverycallback) | Scan_ScannerDiscoveryCallback | Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery) will be released when the callback function ends. |
 | [int32_t OH_Scan_Init()](#oh_scan_init) | - | Initiates the scan service, initializes the scan client, and connects the client to the scan service. |
 | [int32_t OH_Scan_StartScannerDiscovery(Scan_ScannerDiscoveryCallback callback)](#oh_scan_startscannerdiscovery) | - | Starts scanner discovery and registers a callback used to process the discovered scanners. |
 | [int32_t OH_Scan_OpenScanner(const char* scannerId)](#oh_scan_openscanner) | - | Opens a scanner. |
 | [int32_t OH_Scan_CloseScanner(const char* scannerId)](#oh_scan_closescanner) | - | Closes a connected scanner. |
-| [Scan_ScannerOptions* OH_Scan_GetScannerParameter(const char* scannerId, int32_t* errorCode)](#oh_scan_getscannerparameter) | - | Obtains the scanner setting options. The memory to which the returned struct pointer points is automaticallyreleased when [OH_Scan_Exit](capi-ohscan-h.md#oh_scan_exit) is called. Only one copy of each scanner model is stored in the memory. |
-| [int32_t OH_Scan_SetScannerParameter(const char* scannerId, const int32_t option, const char* value)](#oh_scan_setscannerparameter) | - | Sets the option parameters of a scanner. The option values are obtained through the[OH_Scan_GetScannerParameter](capi-ohscan-h.md#oh_scan_getscannerparameter) API. |
+| [Scan_ScannerOptions* OH_Scan_GetScannerParameter(const char* scannerId, int32_t* errorCode)](#oh_scan_getscannerparameter) | - | Obtains the scanner setting options. The memory to which the returned struct pointer points is automatically released when [OH_Scan_Exit](capi-ohscan-h.md#oh_scan_exit) is called. Only one copy of each scanner model is stored in the memory. |
+| [int32_t OH_Scan_SetScannerParameter(const char* scannerId, const int32_t option, const char* value)](#oh_scan_setscannerparameter) | - | Sets the option parameters of a scanner. The option values are obtained through the [OH_Scan_GetScannerParameter](capi-ohscan-h.md#oh_scan_getscannerparameter) API. |
 | [int32_t OH_Scan_StartScan(const char* scannerId, bool batchMode)](#oh_scan_startscan) | - | Starts scanning. |
 | [int32_t OH_Scan_CancelScan(const char* scannerId)](#oh_scan_cancelscan) | - | Cancels scanning. |
-| [int32_t OH_Scan_GetPictureScanProgress(const char* scannerId, Scan_PictureScanProgress* prog)](#oh_scan_getpicturescanprogress) | - | Obtains the progress of scanning a picture by the scanner. A non-null value must be passed. The scan progresswill be written into the struct pointed to by the pointer. |
-| [int32_t OH_Scan_Exit()](#oh_scan_exit) | - | Exits the scan service, releases the memory of the scan framework, and deregisters the scanner discoverycallback. |
+| [int32_t OH_Scan_GetPictureScanProgress(const char* scannerId, Scan_PictureScanProgress* prog)](#oh_scan_getpicturescanprogress) | - | Obtains the progress of scanning a picture by the scanner. A non-null value must be passed. The scan progress will be written into the struct pointed to by the pointer. |
+| [int32_t OH_Scan_Exit()](#oh_scan_exit) | - | Exits the scan service, releases the memory of the scan framework, and deregisters the scanner discovery callback. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int32_t deviceCount) | Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery) will be released when the callback function ends.<br>**Since**: 12 |
 
 ## Enum type description
 
@@ -87,7 +93,7 @@ typedef void (*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int3
 
 **Description**
 
-Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery)will be released when the callback function ends.
+Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery) will be released when the callback function ends.
 
 **Since**: 12
 
@@ -204,7 +210,7 @@ Scan_ScannerOptions* OH_Scan_GetScannerParameter(const char* scannerId, int32_t*
 
 **Description**
 
-Obtains the scanner setting options. The memory to which the returned struct pointer points is automaticallyreleased when [OH_Scan_Exit](capi-ohscan-h.md#oh_scan_exit) is called. Only one copy of each scanner model is stored in the memory.
+Obtains the scanner setting options. The memory to which the returned struct pointer points is automatically released when [OH_Scan_Exit](capi-ohscan-h.md#oh_scan_exit) is called. Only one copy of each scanner model is stored in the memory.
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -215,7 +221,7 @@ Obtains the scanner setting options. The memory to which the returned struct poi
 | Parameter | Description |
 | -- | -- |
 | const char* scannerId | Pointer to the scanner ID. |
-| int32_t* errorCode | Pointer to the error code. If the operation is successful, [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode) is returned;otherwise, a specific error code is returned. For details, see [Scan_ErrorCode](capi-ohscan-h.md#scan_errorcode). |
+| int32_t* errorCode | Pointer to the error code. If the operation is successful, [SCAN_ERROR_NONE](capi-ohscan-h.md#scan_errorcode) is returned; otherwise, a specific error code is returned. For details, see [Scan_ErrorCode](capi-ohscan-h.md#scan_errorcode). |
 
 **Returns**:
 
@@ -231,7 +237,7 @@ int32_t OH_Scan_SetScannerParameter(const char* scannerId, const int32_t option,
 
 **Description**
 
-Sets the option parameters of a scanner. The option values are obtained through the[OH_Scan_GetScannerParameter](capi-ohscan-h.md#oh_scan_getscannerparameter) API.
+Sets the option parameters of a scanner. The option values are obtained through the [OH_Scan_GetScannerParameter](capi-ohscan-h.md#oh_scan_getscannerparameter) API.
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -242,8 +248,8 @@ Sets the option parameters of a scanner. The option values are obtained through 
 | Parameter | Description |
 | -- | -- |
 | const char* scannerId | Pointer to the scanner ID. |
-| const int32_t option | ID of the option to be set. The value, obtained from [Scan_ScannerOptions](capi-oh-scan-scan-scanneroptions.md), ranges from 0 to*optionCount* – 1. |
-| const char* value | Pointer to the option value to be set. The valid value is obtained from **ranges** of[Scan_ScannerOptions](capi-oh-scan-scan-scanneroptions.md). |
+| const int32_t option | ID of the option to be set. The value, obtained from [Scan_ScannerOptions](capi-oh-scan-scan-scanneroptions.md), ranges from 0 to *optionCount* – 1. |
+| const char* value | Pointer to the option value to be set. The valid value is obtained from **ranges** of [Scan_ScannerOptions](capi-oh-scan-scan-scanneroptions.md). |
 
 **Returns**:
 
@@ -312,7 +318,7 @@ int32_t OH_Scan_GetPictureScanProgress(const char* scannerId, Scan_PictureScanPr
 
 **Description**
 
-Obtains the progress of scanning a picture by the scanner. A non-null value must be passed. The scan progresswill be written into the struct pointed to by the pointer.
+Obtains the progress of scanning a picture by the scanner. A non-null value must be passed. The scan progress will be written into the struct pointed to by the pointer.
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -339,7 +345,7 @@ int32_t OH_Scan_Exit()
 
 **Description**
 
-Exits the scan service, releases the memory of the scan framework, and deregisters the scanner discoverycallback.
+Exits the scan service, releases the memory of the scan framework, and deregisters the scanner discovery callback.
 
 **Required permission**: {@code ohos.permission.PRINT}
 

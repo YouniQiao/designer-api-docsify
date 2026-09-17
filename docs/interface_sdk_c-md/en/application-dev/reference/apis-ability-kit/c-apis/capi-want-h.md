@@ -2,7 +2,7 @@
 
 ## Overview
 
-Want is a carrier for information transfer between objects (application components). Want can be used as aparameter of **startAbility** to specify a startup target and information that needs to be carried during startup,for example, **bundleName** and **abilityName**, which respectively indicate the bundle name of the target abilityand the ability name in the bundle. When ability A needs to start ability B and transfer some data to ability B, itcan use Want a carrier to transfer the data.
+Want is a carrier for information transfer between objects (application components). Want can be used as a parameter of **startAbility** to specify a startup target and information that needs to be carried during startup, for example, **bundleName** and **abilityName**, which respectively indicate the bundle name of the target ability and the ability name in the bundle. When ability A needs to start ability B and transfer some data to ability B, it can use Want a carrier to transfer the data.
 
 **Library**: libability_base_want.so
 
@@ -187,7 +187,7 @@ Obtains **Param** set by [OH_AbilityBase_SetWantCharParam](capi-want-h.md#oh_abi
 | [AbilityBase_Want](capi-abilitybase-abilitybase-want.md)* want | Pointer to Want. |
 | const char* key | Pointer to a key in Want. |
 | char* value | Pointer to the value of the key in Want. |
-| size_t valueSize | Length of the value string. If **valueSize** is less than the actual value length,the {@link ABILITY_BASE_ERROR_CODE_PARAM_INVALID} error is reported. |
+| size_t valueSize | Length of the value string. If **valueSize** is less than the actual value length, the {@link ABILITY_BASE_ERROR_CODE_PARAM_INVALID} error is reported. |
 
 **Returns**:
 
@@ -264,7 +264,7 @@ Sets **uri** in Want. For details about the URI, see {@link uri in Want}.
 | Parameter | Description |
 | -- | -- |
 | [AbilityBase_Want](capi-abilitybase-abilitybase-want.md)* want | Pointer to Want. |
-| const char* uri | Pointer to a URI. If a URI is specified in Want, Want will match the specified URI information. Fordetails about the URI, see {@link uri in Want}. |
+| const char* uri | Pointer to a URI. If a URI is specified in Want, Want will match the specified URI information. For details about the URI, see {@link uri in Want}. |
 
 **Returns**:
 
@@ -289,8 +289,8 @@ Obtains **uri** set in Want. For details about the URI, see {@link uri in Want}.
 | Parameter | Description |
 | -- | -- |
 | [AbilityBase_Want](capi-abilitybase-abilitybase-want.md)* want | Pointer to Want. |
-| char* uri | Pointer to a URI. If a URI is specified in Want, Want will match the specified URI information. Fordetails about the URI, see {@link uri in Want}. |
-| size_t uriSize | Length of the URI string. If **uriSize** is less than the actual URI length,the {@link ABILITY_BASE_ERROR_CODE_PARAM_INVALID} error is reported. |
+| char* uri | Pointer to a URI. If a URI is specified in Want, Want will match the specified URI information. For details about the URI, see {@link uri in Want}. |
+| size_t uriSize | Length of the URI string. If **uriSize** is less than the actual URI length, the {@link ABILITY_BASE_ERROR_CODE_PARAM_INVALID} error is reported. |
 
 **Returns**:
 

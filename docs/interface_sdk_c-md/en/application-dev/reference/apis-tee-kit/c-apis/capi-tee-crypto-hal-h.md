@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides APIs for cryptographic operations.You can use these APIs to implement encryption and decryption.
+Provides APIs for cryptographic operations.<br> You can use these APIs to implement encryption and decryption.
 
 **Library**: NA
 

@@ -18,8 +18,8 @@ Provides common event constants defined by the system.
 
 | Name | Description |
 | -- | -- |
-| static const char * const COMMON_EVENT_SHUTDOWN = "usual.event.SHUTDOWN" | Indicates the common event that the device is being shut down and the final shutdown will proceed.<br>**Since**: 12<br>**System capability**: SystemCapability.Notification.CommonEvent |
-| static const char * const COMMON_EVENT_BATTERY_CHANGED = "usual.event.BATTERY_CHANGED" | Indicates the common event that the charging state, level, and other information about the battery havechanged.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_SHUTDOWN = "usual.event.SHUTDOWN" | Indicates the common event that the device is being shut down and the final shutdown will proceed.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_BATTERY_CHANGED = "usual.event.BATTERY_CHANGED" | Indicates the common event that the charging state, level, and other information about the battery have changed.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_BATTERY_LOW = "usual.event.BATTERY_LOW" | Indicates the common event that the battery level is low.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_BATTERY_OKAY = "usual.event.BATTERY_OKAY" | Indicates the common event that the battery exits the low state.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_POWER_CONNECTED = "usual.event.POWER_CONNECTED" | Indicates the common event that the device is connected to an external power supply.<br>**Since**: 12 |
@@ -33,10 +33,10 @@ Provides common event constants defined by the system.
 | static const char * const COMMON_EVENT_TIME_CHANGED = "usual.event.TIME_CHANGED" | Indicates the common event that the system time has been set.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_TIMEZONE_CHANGED = "usual.event.TIMEZONE_CHANGED" | Indicates the common event that the system time zone has changed.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_PACKAGE_ADDED = "usual.event.PACKAGE_ADDED" | Indicates the common event that a new application package has been installed on the device.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_PACKAGE_REMOVED = "usual.event.PACKAGE_REMOVED" | Indicates the common event that an installed application has been uninstalled from the device with theapplication data retained.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_BUNDLE_REMOVED = "usual.event.BUNDLE_REMOVED" | Indicates the common event that an installed bundle has been uninstalled from the device with the applicationdata retained.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_PACKAGE_FULLY_REMOVED = "usual.event.PACKAGE_FULLY_REMOVED" | Indicates the common event that an installed application, including both the application data and code, hasbeen completely uninstalled from the device.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_PACKAGE_CHANGED = "usual.event.PACKAGE_CHANGED" | Indicates the common event that an application package has been changed (for example, a component in thepackage has been enabled or disabled).<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_PACKAGE_REMOVED = "usual.event.PACKAGE_REMOVED" | Indicates the common event that an installed application has been uninstalled from the device with the application data retained.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_BUNDLE_REMOVED = "usual.event.BUNDLE_REMOVED" | Indicates the common event that an installed bundle has been uninstalled from the device with the application data retained.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_PACKAGE_FULLY_REMOVED = "usual.event.PACKAGE_FULLY_REMOVED" | Indicates the common event that an installed application, including both the application data and code, has been completely uninstalled from the device.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_PACKAGE_CHANGED = "usual.event.PACKAGE_CHANGED" | Indicates the common event that an application package has been changed (for example, a component in the package has been enabled or disabled).<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_PACKAGE_RESTARTED = "usual.event.PACKAGE_RESTARTED" | Indicates the common event that the user has restarted the application package and killed all its processes.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_PACKAGE_DATA_CLEARED = "usual.event.PACKAGE_DATA_CLEARED" | Indicates the common event that the user cleared the application package data.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_PACKAGE_CACHE_CLEARED = "usual.event.PACKAGE_CACHE_CLEARED" | Indicates the common event that the user has cleared the application package data cache.<br>**Since**: 12 |
@@ -45,7 +45,7 @@ Provides common event constants defined by the system.
 | static const char * const COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = "usual.event.MY_PACKAGE_UNSUSPENDED" | Indicates the common event that application packages have not been suspended.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_LOCALE_CHANGED = "usual.event.LOCALE_CHANGED" | Indicates the common event that the device locale has changed.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_MANAGE_PACKAGE_STORAGE = "usual.event.MANAGE_PACKAGE_STORAGE" | Indicates the common event that the device storage is insufficient.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_USER_UNLOCKED = "usual.event.USER_UNLOCKED" | Indicates the common event that the credential-encrypted storage has been unlocked for the current user whenthe device is unlocked upon restart.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_USER_UNLOCKED = "usual.event.USER_UNLOCKED" | Indicates the common event that the credential-encrypted storage has been unlocked for the current user when the device is unlocked upon restart.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = "common.event.DISTRIBUTED_ACCOUNT_LOGOUT" | Indicates the common event that a distributed account is successfully logged out.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = "common.event.DISTRIBUTED_ACCOUNT_TOKEN_INVALID" | Indicates the common event that the token of a distributed account is invalid.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = "common.event.DISTRIBUTED_ACCOUNT_LOGOFF" | Indicates the common event that a distributed account is deregistered.<br>**Since**: 12 |
@@ -53,7 +53,7 @@ Provides common event constants defined by the system.
 | static const char * const COMMON_EVENT_WIFI_SCAN_FINISHED = "usual.event.wifi.SCAN_FINISHED" | Indicates the common event that the Wi-Fi access point has been scanned and proven to be available.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_WIFI_RSSI_VALUE = "usual.event.wifi.RSSI_VALUE" | Indicates the common event that the Wi-Fi signal strength (RSSI) has changed.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_WIFI_CONN_STATE = "usual.event.wifi.CONN_STATE" | Indicates the common event that the Wi-Fi connection state has changed.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_WIFI_HOTSPOT_STATE = "usual.event.wifi.HOTSPOT_STATE" | Indicates the common event that the Wi-Fi hotspot state has changed to a new state, such as enabled ordisabled.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_WIFI_HOTSPOT_STATE = "usual.event.wifi.HOTSPOT_STATE" | Indicates the common event that the Wi-Fi hotspot state has changed to a new state, such as enabled or disabled.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_WIFI_AP_STA_JOIN = "usual.event.wifi.WIFI_HS_STA_JOIN" | Indicates the common event that a client has joined the Wi-Fi hotspot of the current device.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_WIFI_AP_STA_LEAVE = "usual.event.wifi.WIFI_HS_STA_LEAVE" | Indicates the common event that a client has disconnected from the Wi-Fi hotspot of the current device.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = "usual.event.wifi.mplink.STATE_CHANGE" | Indicates the common event that the state of MPLINK (an enhanced Wi-Fi feature) has changed.<br>**Since**: 12 |
@@ -81,7 +81,7 @@ Provides common event constants defined by the system.
 | static const char * const COMMON_EVENT_QUICK_FIX_REVOKE_RESULT = "usual.event.QUICK_FIX_REVOKE_RESULT" | Indicates the common event that a quick fix is revoked.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_USER_INFO_UPDATED = "usual.event.USER_INFO_UPDATED" | Indicates the common event that the user information has been updated.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_SIM_STATE_CHANGED = "usual.event.SIM_STATE_CHANGED" | Indicates the common event that the SIM card state has been updated.<br>**Since**: 12 |
-| static const char * const COMMON_EVENT_CALL_STATE_CHANGED = "usual.event.CALL_STATE_CHANGED" | Indicates the common event that the call state has been updated.To subscribe to this common event, your application must have the ohos.permission.GET_TELEPHONY_STATEpermission.<br>**Since**: 12 |
+| static const char * const COMMON_EVENT_CALL_STATE_CHANGED = "usual.event.CALL_STATE_CHANGED" | Indicates the common event that the call state has been updated.<br> To subscribe to this common event, your application must have the ohos.permission.GET_TELEPHONY_STATE permission.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_NETWORK_STATE_CHANGED = "usual.event.NETWORK_STATE_CHANGED" | Indicates the common event that the network state has been updated.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_SIGNAL_INFO_CHANGED = "usual.event.SIGNAL_INFO_CHANGED" | Indicates the common event that the signal information has been updated.<br>**Since**: 12 |
 | static const char * const COMMON_EVENT_SCREEN_UNLOCKED = "usual.event.SCREEN_UNLOCKED" | Indicates the common event that the screen has been unlocked.<br>**Since**: 12 |
@@ -94,7 +94,7 @@ Provides common event constants defined by the system.
 | static const char * const COMMON_EVENT_TABLET_MODE_CHANGED = "usual.event.TABLET_MODE_CHANGED" | Indicates the common event that the tablet mode of a device has been changed.<br>**Since**: 23 |
 | static const char * const COMMON_EVENT_VOLUME_DECRYPTED = "usual.event.VOLUME_DECRYPTED" | This common event indicates that specific volumes on the device have been decrypted.<br>**Since**: 26.0.0 |
 | static const char * const COMMON_EVENT_VOLUME_ENCRYPTED = "usual.event.VOLUME_ENCRYPTED" | This common event indicates that specific volumes on the device have been encrypted.<br>**Since**: 26.0.0 |
-| static const char * const COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = "usual.event.VOLUME_ENCRYPTION_POLICY_SET" | This common event indicates that specific volumes on the device have had their encryption policy set.To subscribe to this common event, your application must have the ohos.permission.QUERY_VOLUME_ENCRYPTION_STATUSpermission.<br>**Since**: 26.0.0 |
-| static const char * const COMMON_EVENT_SKILL_CHANGED = "usual.event.SKILL_CHANGED" | This common event indicates that the skill information of an application has been changed.To receive this common event, your application must have the ohos.permission.MANAGE_SKILL_PRIVILEGE permission.<br>**Since**: 26.0.0 |
+| static const char * const COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = "usual.event.VOLUME_ENCRYPTION_POLICY_SET" | This common event indicates that specific volumes on the device have had their encryption policy set.<br> To subscribe to this common event, your application must have the ohos.permission.QUERY_VOLUME_ENCRYPTION_STATUS permission.<br>**Since**: 26.0.0 |
+| static const char * const COMMON_EVENT_SKILL_CHANGED = "usual.event.SKILL_CHANGED" | This common event indicates that the skill information of an application has been changed.<br> To receive this common event, your application must have the ohos.permission.MANAGE_SKILL_PRIVILEGE permission.<br>**Since**: 26.0.0 |
 | static const char * const COMMON_EVENT_LID_STATE_CHANGED = "usual.event.LID_STATE_CHANGED" | Indicates the common event that the lid state of a device has been changed.<br>**Since**: 23 |
 

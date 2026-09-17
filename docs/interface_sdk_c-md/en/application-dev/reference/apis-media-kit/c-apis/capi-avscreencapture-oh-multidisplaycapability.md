@@ -6,7 +6,7 @@ typedef struct OH_MultiDisplayCapability {...} OH_MultiDisplayCapability
 
 ## Overview
 
-Defines a struct for the multi-screen recording capability. It includes whether the multi-screen supportsjoint recording and the width and height of the screen for joint recording.
+Defines a struct for the multi-screen recording capability. It includes whether the multi-screen supports joint recording and the width and height of the screen for joint recording.
 
 **Since**: 24
 

@@ -6,7 +6,7 @@ typedef struct Camera_Rect {...} Camera_Rect
 
 ## Overview
 
-The struct describes a rectangle. The coordinate system for the returned detection points is based on thelandscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is(0, 0), and the bottom-right corner corresponds to the pixel dimensions of the camera preview output stream. Allmember values are integer pixel values. Here, **topLeftX** and **topLeftY** represent the coordinates of the top-leftcorner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle,respectively.
+The struct describes a rectangle. The coordinate system for the returned detection points is based on the landscape device orientation, with the charging port on the right. In this coordinate system, the top-left corner is (0, 0), and the bottom-right corner corresponds to the pixel dimensions of the camera preview output stream. All member values are integer pixel values. Here, **topLeftX** and **topLeftY** represent the coordinates of the top-left corner of the rectangle, whereas **width** and **height** represent the width and height of the rectangle, respectively.
 
 **Since**: 11
 

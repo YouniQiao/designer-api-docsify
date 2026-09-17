@@ -6,7 +6,7 @@ typedef struct OH_Drawing_PathIterator OH_Drawing_PathIterator
 
 ## Overview
 
-This struct defines a path operation iterator that enables path operation instructions to be read viaiterator traversal.
+This struct defines a path operation iterator that enables path operation instructions to be read via iterator traversal.
 
 **Since**: 23
 

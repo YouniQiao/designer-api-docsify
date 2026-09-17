@@ -29,13 +29,19 @@
 | [int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageReceiverInfo info, napi_value* res)](#oh_image_receiver_createimagereceiver) | - | 创建应用层ImageReceiver对象。 |
 | [ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)](#oh_image_receiver_initimagereceivernative) | - | 通过应用层ImageReceiver对象初始化native层[ImageReceiverNative](capi-image-imagereceivernative-.md)对象。 |
 | [int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* native, char* id, size_t len)](#oh_image_receiver_getreceivingsurfaceid) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取receiver的id。 |
-| [int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readlatestimage) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取最新的一张图片。<br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。 |
-| [int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readnextimage) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取下一张图片。<br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。 |
+| [int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readlatestimage) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取最新的一张图片。<br><br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用<br>{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。 |
+| [int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readnextimage) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取下一张图片。<br><br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用<br>{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。 |
 | [int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receiver_On_Callback callback)](#oh_image_receiver_on) | - | 注册一个[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调事件。每当接收新图片，该回调事件就会响应。 |
 | [int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct OhosImageSize* size)](#oh_image_receiver_getsize) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取ImageReceiver的大小。 |
 | [int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t* capacity)](#oh_image_receiver_getcapacity) | - | 通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取ImageReceiver的容量。 |
 | [int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* format)](#oh_image_receiver_getformat) | - | Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)](#oh_image_receiver_release) | - | 释放native层[ImageReceiverNative](capi-image-imagereceivernative-.md)对象。<br>注意，此方法不能释放应用层ImageReceiver对象。 |
+| [int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)](#oh_image_receiver_release) | - | 释放native层[ImageReceiverNative](capi-image-imagereceivernative-.md)对象。 <br>注意，此方法不能释放应用层ImageReceiver对象。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_Image_Receiver_On_Callback)(void) | 定义native层图片的回调方法。<br>**起始版本：** 10 |
 
 ## 函数说明
 
@@ -71,7 +77,7 @@ int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageRece
 | [struct OhosImageReceiverInfo](capi-image-ohosimagereceiverinfo.md) info | ImageReceiver数据设置项。 |
 | napi_value* res | 应用层的ImageReceiver对象的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -101,7 +107,7 @@ ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, nap
 | napi_env env | napi的环境指针。 |
 | napi_value source | napi的ImageReceiver对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -132,7 +138,7 @@ int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* nativ
 | char* id | 指向字符缓冲区的指针，用于获取字符串的id。 |
 | size_t len | id所对应的字符缓冲区的大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -151,7 +157,7 @@ int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, nap
 
 **描述：**
 
-通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取最新的一张图片。<br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。
+通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取最新的一张图片。<br><br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用<br>{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 10
 
@@ -162,7 +168,7 @@ int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, nap
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | native层的ImageReceiverNative指针。 |
 | napi_value* image | 获取到的应用层的Image指针对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -181,7 +187,7 @@ int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_
 
 **描述：**
 
-通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取下一张图片。<br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。
+通过[ImageReceiverNative](capi-image-imagereceivernative-.md)获取下一张图片。<br><br>注意，此接口需要在[OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)回调后调用，才能正常的接收到数据。并且使用此接口返回Image对象创建的{@link ImageNative}使用完毕后需要调用<br>{@link OH_Image_Release}方法释放，释放后才可以继续接收新的数据。
 
 **起始版本：** 10
 
@@ -192,7 +198,7 @@ int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | native层的ImageReceiverNative指针。 |
 | napi_value* image | 读取到的应用层的Image指针对象。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -222,7 +228,7 @@ int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receive
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | native层的ImageReceiverNative指针。 |
 | [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback | [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback)事件的回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -252,7 +258,7 @@ int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct Ohos
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | native层的ImageReceiverNative指针。 |
 | struct OhosImageSize* size | 作为结果的OhosImageSize指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -282,7 +288,7 @@ int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | native层的ImageReceiverNative指针。 |
 | int32_t* capacity | 作为结果的指向容量的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -312,11 +318,11 @@ Obtains the format of the image receiver through an [ImageReceiverNative](capi-i
 | [const ImageReceiverNative](capi-image-imagereceivernative-.md)* native | Indicates the pointer to an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer. |
 | int32_t* format | Indicates the pointer to the format obtained. |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
 
 **参考：**
 
@@ -331,7 +337,7 @@ int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)
 
 **描述：**
 
-释放native层[ImageReceiverNative](capi-image-imagereceivernative-.md)对象。<br>注意，此方法不能释放应用层ImageReceiver对象。
+释放native层[ImageReceiverNative](capi-image-imagereceivernative-.md)对象。 <br>注意，此方法不能释放应用层ImageReceiver对象。
 
 **起始版本：** 10
 
@@ -341,7 +347,7 @@ int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)
 | -- | -- |
 | [ImageReceiverNative](capi-image-imagereceivernative-.md)* native | native层的ImageReceiverNative指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

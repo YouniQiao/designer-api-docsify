@@ -19,8 +19,8 @@ Defines the functions for using native fence.
 | Name | Description |
 | -- | -- |
 | [bool OH_NativeFence_IsValid(int fenceFd)](#oh_nativefence_isvalid) | Checks if the fenceFd is valid. |
-| [bool OH_NativeFence_Wait(int fenceFd, uint32_t timeout)](#oh_nativefence_wait) | Waits for a fence signal. The maximum waiting time is determined by the timeout parameter.The incoming fenceFd needs to be closed by the user themselves. |
-| [bool OH_NativeFence_WaitForever(int fenceFd)](#oh_nativefence_waitforever) | Waits forever for a fence signal.The incoming fenceFd needs to be closed by the user themselves. |
+| [bool OH_NativeFence_Wait(int fenceFd, uint32_t timeout)](#oh_nativefence_wait) | Waits for a fence signal. The maximum waiting time is determined by the timeout parameter. The incoming fenceFd needs to be closed by the user themselves. |
+| [bool OH_NativeFence_WaitForever(int fenceFd)](#oh_nativefence_waitforever) | Waits forever for a fence signal. The incoming fenceFd needs to be closed by the user themselves. |
 | [void OH_NativeFence_Close(int fenceFd)](#oh_nativefence_close) | Close the fenceFd. |
 
 ## Function description
@@ -57,7 +57,7 @@ bool OH_NativeFence_Wait(int fenceFd, uint32_t timeout)
 
 **Description**
 
-Waits for a fence signal. The maximum waiting time is determined by the timeout parameter.The incoming fenceFd needs to be closed by the user themselves.
+Waits for a fence signal. The maximum waiting time is determined by the timeout parameter. The incoming fenceFd needs to be closed by the user themselves.
 
 **Since**: 20
 
@@ -66,7 +66,7 @@ Waits for a fence signal. The maximum waiting time is determined by the timeout 
 | Parameter | Description |
 | -- | -- |
 | int fenceFd | Indicates a file descriptor handle, which is used for timing synchronization. |
-| uint32_t timeout | Indicates the timeout duration.The unit is milliseconds, 0 represents immediate return. |
+| uint32_t timeout | Indicates the timeout duration. The unit is milliseconds, 0 represents immediate return. |
 
 **Returns**:
 
@@ -82,7 +82,7 @@ bool OH_NativeFence_WaitForever(int fenceFd)
 
 **Description**
 
-Waits forever for a fence signal.The incoming fenceFd needs to be closed by the user themselves.
+Waits forever for a fence signal. The incoming fenceFd needs to be closed by the user themselves.
 
 **Since**: 20
 
@@ -114,6 +114,6 @@ Close the fenceFd.
 
 | Parameter | Description |
 | -- | -- |
-| int fenceFd | Indicates a file descriptor handle, which is used for timing synchronization.This value is a non negative integer. |
+| int fenceFd | Indicates a file descriptor handle, which is used for timing synchronization. This value is a non negative integer. |
 
 

@@ -1,4 +1,4 @@
-# @ohos.zlib
+# @ohos.zlib(Zip模块)
 
 本模块提供压缩解压缩文件的能力。
 

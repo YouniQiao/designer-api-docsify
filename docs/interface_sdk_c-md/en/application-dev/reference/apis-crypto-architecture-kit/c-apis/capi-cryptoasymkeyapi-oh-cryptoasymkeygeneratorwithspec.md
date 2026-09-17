@@ -6,7 +6,7 @@ typedef struct OH_CryptoAsymKeyGeneratorWithSpec OH_CryptoAsymKeyGeneratorWithSp
 
 ## Overview
 
-Specification-based asymmetric key generator structure, representing a specification-based asymmetric keygenerator.
+Specification-based asymmetric key generator structure, representing a specification-based asymmetric key generator.
 
 **Since**: 20
 

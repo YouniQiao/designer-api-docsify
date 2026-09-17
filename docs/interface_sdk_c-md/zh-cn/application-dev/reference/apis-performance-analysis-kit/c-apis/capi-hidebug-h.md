@@ -20,6 +20,12 @@
 | -- | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) | OH_HiDebug_ProfilerOptions | 资源采集配置结构体前向声明。 |
 
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| HIVIEWDFX_HIDEBUG_H | 定义HiDebug模块的调试功能，提供CPU使用率监控、内存信息查询、trace采集、栈回溯、性能采样、内存导出监听、维测信息记录等能力，帮助开发者进行应用性能分析、资源管理和问题诊断。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug |
+
 ### 函数
 
 | 名称 | typedef关键字 | 描述 |
@@ -37,7 +43,7 @@
 | [HiDebug_ErrorCode OH_HiDebug_RequestTrace(OH_HiDebug_RequestTraceConfig *config, OH_HiDebug_RequestTraceCallback callback)](#oh_hidebug_requesttrace) | - | 根据设置的采集配置请求trace采集。 |
 | [HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemory(uint32_t *value)](#oh_hidebug_getgraphicsmemory) | - | 获取应用GPU显存大小。注意：由于该接口涉及多次跨进程通信，其耗时可能超过1秒，建议不要在主线程中直接调用该接口。 |
 | [HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemorySummary(uint32_t interval, HiDebug_GraphicsMemorySummary *summary)](#oh_hidebug_getgraphicsmemorysummary) | - | 获取应用显存占用的详细数据。 |
-| [HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatch *dispatchTable)](#oh_hidebug_setmallocdispatchtable) | - | 通过设置基础库C库中的MallocDispatch表，将原始内存操作函数（例如：malloc/free/calloc/realloc/mmap/munmap）临时替换为开发者自定义的内存操作函数。MallocDispatch表是基础库C库中封装malloc/calloc/realloc/free等内存操作函数的结构体，HiDebug_MallocDispatch只是MallocDispatch结构体的一部分。 |
+| [HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatch *dispatchTable)](#oh_hidebug_setmallocdispatchtable) | - | 通过设置基础库C库中的MallocDispatch表，将原始内存操作函数（例如：malloc/free/calloc/realloc/mmap/munmap）临时替换为开发者自定义的内存操作函数。 MallocDispatch表是基础库C库中封装malloc/calloc/realloc/free等内存操作函数的结构体，HiDebug_MallocDispatch只是MallocDispatch结构体的一部分。 |
 | [HiDebug_MallocDispatch* OH_HiDebug_GetDefaultMallocDispatchTable(void)](#oh_hidebug_getdefaultmallocdispatchtable) | - | 获取基础库C库当前默认MallocDispatch表，调用[OH_HiDebug_RestoreMallocDispatchTable](capi-hidebug-h.md#oh_hidebug_restoremallocdispatchtable)可恢复。 |
 | [void OH_HiDebug_RestoreMallocDispatchTable(void)](#oh_hidebug_restoremallocdispatchtable) | - | 恢复基础库C库MallocDispatch表。 |
 | [int OH_HiDebug_BacktraceFromFp(HiDebug_Backtrace_Object object, void* startFp, void** pcArray, int size)](#oh_hidebug_backtracefromfp) | - | 根据给定的fp地址进行栈回溯，该函数异步信号安全。 |
@@ -45,14 +51,14 @@
 | [HiDebug_ErrorCode OH_HiDebug_SymbolicAddress(HiDebug_Backtrace_Object object, void* pc, void* arg, OH_HiDebug_SymbolicAddressCallback callback)](#oh_hidebug_symbolicaddress) | - | 通过给定的pc地址获取详细的符号信息，该函数非异步信号安全。不能在异步信号处理函数中使用。 |
 | [HiDebug_Backtrace_Object OH_HiDebug_CreateBacktraceObject(void)](#oh_hidebug_createbacktraceobject) | - | 创建一个用于栈回溯及栈解析的对象，该函数非异步信号安全。 |
 | [void OH_HiDebug_DestroyBacktraceObject(HiDebug_Backtrace_Object object)](#oh_hidebug_destroybacktraceobject) | - | 销毁由[OH_HiDebug_CreateBacktraceObject](capi-hidebug-h.md#oh_hidebug_createbacktraceobject)创建的对象，以释放栈回溯及栈解析过程中申请的资源，该函数非异步信号安全。 |
-| [uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)](#oh_hidebug_setcrashobj) | - | 将维测信息添加到崩溃日志中，与[OH_HiDebug_ResetCrashObj](capi-hidebug-h.md#oh_hidebug_resetcrashobj)配对使用。若程序在OH_HiDebug_SetCrashObj与OH_HiDebug_ResetCrashObj之间发生崩溃，会将OH_HiDebug_SetCrashObj设置的维测信息添加到记录本次崩溃的日志中。 |
+| [uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)](#oh_hidebug_setcrashobj) | - | 将维测信息添加到崩溃日志中，与[OH_HiDebug_ResetCrashObj](capi-hidebug-h.md#oh_hidebug_resetcrashobj)配对使用。若程序在OH_HiDebug_SetCrashObj与OH_HiDebug_ResetCrashObj之间发生崩溃， 会将OH_HiDebug_SetCrashObj设置的维测信息添加到记录本次崩溃的日志中。 |
 | [void OH_HiDebug_ResetCrashObj(uint64_t crashObj)](#oh_hidebug_resetcrashobj) | - | 将维测信息对象还原到使用OH_HiDebug_SetCrashObj之前的状态。 |
 | [typedef void (\*OH_HiDebug_ThreadLiteSamplingCallback)(const char* stacks)](#oh_hidebug_threadlitesamplingcallback) | OH_HiDebug_ThreadLiteSamplingCallback | 轻量级Perf采样栈内容的回调函数定义。注意：采样数据仅在该回调函数执行期间有效，若需在函数外使用，务必对采样栈内容进行深拷贝。 |
 | [HiDebug_ErrorCode OH_HiDebug_RequestThreadLiteSampling(HiDebug_ProcessSamplerConfig* config, OH_HiDebug_ThreadLiteSamplingCallback stacksCallback)](#oh_hidebug_requestthreadlitesampling) | - |  |
-| [HiDebug_ErrorCode OH_HiDebug_StartProfiler(OH_HiDebug_ResourceType type, OH_HiDebug_ResProfilerConfig* config, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofiler) | - | 异步启动当前进程资源采集功能。<br>回调函数只在终止采集（含系统自动停止采集）时调用，其携带采集资源类型和采集文件路径。<br>若采集异常，则文件路径为NULL。 |
+| [HiDebug_ErrorCode OH_HiDebug_StartProfiler(OH_HiDebug_ResourceType type, OH_HiDebug_ResProfilerConfig* config, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofiler) | - | 异步启动当前进程资源采集功能。 <br>回调函数只在终止采集（含系统自动停止采集）时调用，其携带采集资源类型和采集文件路径。 <br>若采集异常，则文件路径为NULL。 |
 | [HiDebug_ErrorCode OH_HiDebug_StopProfiler(void)](#oh_hidebug_stopprofiler) | - | 停止当前进程资源采集功能。该接口可在[OH_HiDebug_StartProfiler](capi-hidebug-h.md#oh_hidebug_startprofiler)接口调用后使用，且调用间隔不能超过最大持续时间。 |
 | [typedef bool (\*OH_HiDebug_MemDumpListener)(int32_t fd, OH_HiDebug_MemListenerType tag, bool mayReportToOEM, const char* arg)](#oh_hidebug_memdumplistener) | OH_HiDebug_MemDumpListener | 触发监听的回调函数。开发者在应用中使用FD来写入内存数据，这样就可以使用hidumper命令导出数据。 |
-| [HiDebug_ErrorCode OH_HiDebug_RegisterMemDumpListener(const char* name, OH_HiDebug_MemDumpListener listener)](#oh_hidebug_registermemdumplistener) | - | 注册内存导出监听。当应用的内存占用较高，或通过{@link hidumper命令}手动导出内存信息时，系统会主动调用已注册的回调函数。<br>第三方应用框架或开发者可借此将应用内部内存信息转储到hidumper中，或通过商业灰度上传至OEM厂商。<br>对应的注销函数为：[OH_HiDebug_UnregisterMemDumpListener](capi-hidebug-h.md#oh_hidebug_unregistermemdumplistener)。 |
+| [HiDebug_ErrorCode OH_HiDebug_RegisterMemDumpListener(const char* name, OH_HiDebug_MemDumpListener listener)](#oh_hidebug_registermemdumplistener) | - | 注册内存导出监听。当应用的内存占用较高，或通过{@link hidumper命令}手动导出内存信息时，系统会主动调用已注册的回调函数。 <br>第三方应用框架或开发者可借此将应用内部内存信息转储到hidumper中，或通过商业灰度上传至OEM厂商。 <br>对应的注销函数为：[OH_HiDebug_UnregisterMemDumpListener](capi-hidebug-h.md#oh_hidebug_unregistermemdumplistener)。 |
 | [HiDebug_ErrorCode OH_HiDebug_UnregisterMemDumpListener(const char* name)](#oh_hidebug_unregistermemdumplistener) | - | 注销已经注册成功的内存导出监听。 |
 | [uint64_t OH_HiDebug_AcquireAsyncContext()](#oh_hidebug_acquireasynccontext) | - | Profiler辅助接口，获取一个AsyncContext供后续使用。对应的释放函数为：[OH_HiDebug_ReleaseAsyncContext](capi-hidebug-h.md#oh_hidebug_releaseasynccontext)。 |
 | [void OH_HiDebug_PushAsyncContext(uint64_t ctx)](#oh_hidebug_pushasynccontext) | - | Profiler辅助接口，将AsyncContext压入运行上下文栈表。 |
@@ -69,6 +75,14 @@
 | [HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts, uint32_t seconds)](#oh_hidebug_setmaxdurationsec) | - | 设置最大采集持续时间（单位：秒）。 |
 | [HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType type, OH_HiDebug_ProfilerOptions *opts, OH_HiDebug_ProfilingCallback callback)](#oh_hidebug_startprofilerwithoptions) | - | 根据指定资源类型和配置启动分配栈trace日志采集。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_HiDebug_SymbolicAddressCallback)(void* pc, void* arg, const HiDebug_StackFrame* frame) | 若[OH_HiDebug_SymbolicAddress](capi-hidebug-h.md#oh_hidebug_symbolicaddress)接口调用成功，将通过该函数将解析后的栈信息返回给调用者。注意：由于该接口涉及多次IO操作，耗时较长，建议不要在主线程中直接调用。<br>**起始版本：** 20 |
+| void (*OH_HiDebug_ThreadLiteSamplingCallback)(const char* stacks) | 轻量级Perf采样栈内容的回调函数定义。注意：采样数据仅在该回调函数执行期间有效，若需在函数外使用，务必对采样栈内容进行深拷贝。<br>**起始版本：** 22 |
+| bool (*OH_HiDebug_MemDumpListener)(int32_t fd, OH_HiDebug_MemListenerType tag, bool mayReportToOEM, const char* arg) | 触发监听的回调函数。开发者在应用中使用FD来写入内存数据，这样就可以使用hidumper命令导出数据。<br>**起始版本：** 26.0.0 |
+
 ## 函数说明
 
 ### OH_HiDebug_GetSystemCpuUsage()
@@ -83,7 +97,7 @@ double OH_HiDebug_GetSystemCpuUsage()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -101,7 +115,7 @@ double OH_HiDebug_GetAppCpuUsage()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -119,7 +133,7 @@ HiDebug_ThreadCpuUsagePtr OH_HiDebug_GetAppThreadCpuUsage()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -141,7 +155,7 @@ void OH_HiDebug_FreeThreadCpuUsage(HiDebug_ThreadCpuUsagePtr *threadCpuUsage)
 
 | 参数项 | 描述 |
 | -- | -- |
-| HiDebug_ThreadCpuUsagePtr *threadCpuUsage | 应用的所有线程可用CPU使用缓冲区指针，见{@link HiDebug_ThreadCpuUsagePtr}。传入的参数是要由OH_HiDebug_GetAppThreadCpuUsage()得到的。传入后该函数将释放指向的线程CPU使用数据结构，释放后该指针不可再被使用。 |
+| HiDebug_ThreadCpuUsagePtr *threadCpuUsage | 应用的所有线程可用CPU使用缓冲区指针，见{@link HiDebug_ThreadCpuUsagePtr}。传入的参数是要由OH_HiDebug_GetAppThreadCpuUsage( )得到的。传入后该函数将释放指向的线程CPU使用数据结构，释放后该指针不可再被使用。 |
 
 ### OH_HiDebug_GetSystemMemInfo()
 
@@ -196,7 +210,7 @@ void OH_HiDebug_GetAppNativeMemInfoWithCache(HiDebug_NativeMemInfo *nativeMemInf
 | 参数项 | 描述 |
 | -- | -- |
 | HiDebug_NativeMemInfo *nativeMemInfo | 表示指向{@link HiDebug_NativeMemInfo}。函数调用后，若结构体数据为空，则表明调用失败。 |
-| bool forceRefresh | 是否需要无视缓存有效性，强制更新缓存值。<br>当为true时，直接获取当前内存数据并更新缓存值；<br>当为false时，缓存有效时，直接返回缓存值，缓存失效时，获取当前内存数据并更新缓存值。 |
+| bool forceRefresh | 是否需要无视缓存有效性，强制更新缓存值。 <br>当为true时，直接获取当前内存数据并更新缓存值； <br>当为false时，缓存有效时，直接返回缓存值，缓存失效时，获取当前内存数据并更新缓存值。 |
 
 ### OH_HiDebug_GetAppMemoryLimit()
 
@@ -238,7 +252,7 @@ HiDebug_ErrorCode OH_HiDebug_StartAppTraceCapture(HiDebug_TraceFlag flag, uint64
 | char* fileName | 输出trace文件名缓冲区。 |
 | uint32_t length | 输出trace文件名缓冲区长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -256,7 +270,7 @@ HiDebug_ErrorCode OH_HiDebug_StopAppTraceCapture()
 
 **起始版本：** 12
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -281,11 +295,11 @@ HiDebug_ErrorCode OH_HiDebug_RequestTrace(OH_HiDebug_RequestTraceConfig *config,
 | OH_HiDebug_RequestTraceConfig *config | trace采集的采集配置参数，参考{@link OH_HiDebug_RequestTraceConfig}。 |
 | OH_HiDebug_RequestTraceCallback callback | trace采集的回调函数，参考{@link OH_HiDebug_RequestTraceCallback}。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：采集成功。      <br>{@link HIDEBUG_TRACE_ABNORMAL}：远程服务异常或状态异常。      <br>{@link OH_HIDEBUG_TRACE_STORAGE_LIMIT}：trace存储达到限制。目录下存储的trace文件大于等于3份时，返回失败。      <br>{@link HIDEBUG_RESOURCE_UNAVAILABLE}：采集资源限制。 |
+| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：采集成功。<br>    <br>{@link HIDEBUG_TRACE_ABNORMAL}：远程服务异常或状态异常。<br>    <br>{@link OH_HIDEBUG_TRACE_STORAGE_LIMIT}：trace存储达到限制。目录下存储的trace文件大于等于3份时，返回失败。<br>    <br>{@link HIDEBUG_RESOURCE_UNAVAILABLE}：采集资源限制。 |
 
 ### OH_HiDebug_GetGraphicsMemory()
 
@@ -305,7 +319,7 @@ HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemory(uint32_t *value)
 | -- | -- |
 | uint32_t *value | 指向用来保存接口获取到的应用显存大小（单位KB）的变量的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -327,14 +341,14 @@ HiDebug_ErrorCode OH_HiDebug_GetGraphicsMemorySummary(uint32_t interval, HiDebug
 
 | 参数项 | 描述 |
 | -- | -- |
-| uint32_t interval | 当显存数据缓存值存在时间超过设定间隔interval（单位：秒）时，接口会获取最新的显存数据并更新缓存；否则，接口将直接返回缓存值。<br>interval的取值范围为[2, 3600]，若传入的interval超出取值范围时，将使用300作为默认值。 |
+| uint32_t interval | 当显存数据缓存值存在时间超过设定间隔interval（单位：秒）时，接口会获取最新的显存数据并更新缓存；否则，接口将直接返回缓存值。 <br>interval的取值范围为[2, 3600]，若传入的interval超出取值范围时，将使用300作为默认值。 |
 | HiDebug_GraphicsMemorySummary *summary | 表示指向{@link HiDebug_GraphicsMemorySummary}的指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果具体可参考{@link HiDebug_ErrorCode}：      <br>{@link HIDEBUG_SUCCESS} 成功获取到应用显存数据。      <br>{@link HIDEBUG_INVALID_ARGUMENT} 无效参数。      <br>{@link HIDEBUG_TRACE_ABNORMAL} 系统内部错误。 |
+| HiDebug_ErrorCode | 返回结果具体可参考{@link HiDebug_ErrorCode}：<br>    <br>{@link HIDEBUG_SUCCESS} 成功获取到应用显存数据。<br>    <br>{@link HIDEBUG_INVALID_ARGUMENT} 无效参数。<br>    <br>{@link HIDEBUG_TRACE_ABNORMAL} 系统内部错误。 |
 
 ### OH_HiDebug_SetMallocDispatchTable()
 
@@ -344,7 +358,7 @@ HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatc
 
 **描述：**
 
-通过设置基础库C库中的MallocDispatch表，将原始内存操作函数（例如：malloc/free/calloc/realloc/mmap/munmap）临时替换为开发者自定义的内存操作函数。MallocDispatch表是基础库C库中封装malloc/calloc/realloc/free等内存操作函数的结构体，HiDebug_MallocDispatch只是MallocDispatch结构体的一部分。
+通过设置基础库C库中的MallocDispatch表，将原始内存操作函数（例如：malloc/free/calloc/realloc/mmap/munmap）临时替换为开发者自定义的内存操作函数。 MallocDispatch表是基础库C库中封装malloc/calloc/realloc/free等内存操作函数的结构体，HiDebug_MallocDispatch只是MallocDispatch结构体的一部分。
 
 **起始版本：** 20
 
@@ -354,11 +368,11 @@ HiDebug_ErrorCode OH_HiDebug_SetMallocDispatchTable(struct HiDebug_MallocDispatc
 | -- | -- |
 | struct HiDebug_MallocDispatch *dispatchTable | 指向开发者自定义内存操作函数{@link HiDebug_MallocDispatch}结构体指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果具体可参考{@link HiDebug_ErrorCode}：      <br>{@link HIDEBUG_SUCCESS} 成功设置自定义内存操作函数。      <br>{@link HIDEBUG_INVALID_ARGUMENT} 无效参数。 |
+| HiDebug_ErrorCode | 返回结果具体可参考{@link HiDebug_ErrorCode}：<br>    <br>{@link HIDEBUG_SUCCESS} 成功设置自定义内存操作函数。<br>    <br>{@link HIDEBUG_INVALID_ARGUMENT} 无效参数。 |
 
 ### OH_HiDebug_GetDefaultMallocDispatchTable()
 
@@ -372,7 +386,7 @@ HiDebug_MallocDispatch* OH_HiDebug_GetDefaultMallocDispatchTable(void)
 
 **起始版本：** 20
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -411,7 +425,7 @@ int OH_HiDebug_BacktraceFromFp(HiDebug_Backtrace_Object object, void* startFp, v
 | void** pcArray | 保存栈回溯得到的pc地址的数组。 |
 | int size | 保存栈回溯得到的pc地址的数组长度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -458,11 +472,11 @@ HiDebug_ErrorCode OH_HiDebug_SymbolicAddress(HiDebug_Backtrace_Object object, vo
 | void* arg | 保留的自定义参数，符号解析成功后系统内部会将该参数传递给回调函数[OH_HiDebug_SymbolicAddressCallback](capi-hidebug-h.md#oh_hidebug_symbolicaddresscallback)。 |
 | [OH_HiDebug_SymbolicAddressCallback](capi-hidebug-h.md#oh_hidebug_symbolicaddresscallback) callback | 用于返回解析后栈信息的回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果具体可参考{@link HiDebug_ErrorCode}：      <br>{@link HIDEBUG_SUCCESS} 成功获取到详细的栈信息，且该函数传入的callback被调用。      <br>{@link HIDEBUG_INVALID_ARGUMENT} 无效参数。      <br>{@link HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS} 无法根据传入的pc地址找到对应的符号。 |
+| HiDebug_ErrorCode | 返回结果具体可参考{@link HiDebug_ErrorCode}：<br>    <br>{@link HIDEBUG_SUCCESS} 成功获取到详细的栈信息，且该函数传入的callback被调用。<br>    <br>{@link HIDEBUG_INVALID_ARGUMENT} 无效参数。<br>    <br>{@link HIDEBUG_INVALID_SYMBOLIC_PC_ADDRESS} 无法根据传入的pc地址找到对应的符号。 |
 
 ### OH_HiDebug_CreateBacktraceObject()
 
@@ -476,7 +490,7 @@ HiDebug_Backtrace_Object OH_HiDebug_CreateBacktraceObject(void)
 
 **起始版本：** 20
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -508,7 +522,7 @@ uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)
 
 **描述：**
 
-将维测信息添加到崩溃日志中，与[OH_HiDebug_ResetCrashObj](capi-hidebug-h.md#oh_hidebug_resetcrashobj)配对使用。若程序在OH_HiDebug_SetCrashObj与OH_HiDebug_ResetCrashObj之间发生崩溃，会将OH_HiDebug_SetCrashObj设置的维测信息添加到记录本次崩溃的日志中。
+将维测信息添加到崩溃日志中，与[OH_HiDebug_ResetCrashObj](capi-hidebug-h.md#oh_hidebug_resetcrashobj)配对使用。若程序在OH_HiDebug_SetCrashObj与OH_HiDebug_ResetCrashObj之间发生崩溃， 会将OH_HiDebug_SetCrashObj设置的维测信息添加到记录本次崩溃的日志中。
 
 **起始版本：** 23
 
@@ -519,7 +533,7 @@ uint64_t OH_HiDebug_SetCrashObj(HiDebug_CrashObjType type, void* addr)
 | HiDebug_CrashObjType type | 维测信息的数据类型{@link HiDebug_CrashObjType}。 |
 | void* addr | 维测信息的地址，崩溃时该地址必须保持有效。设置后，若程序崩溃，系统将读取该地址指向的维测信息并记录到崩溃日志中。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -578,11 +592,11 @@ HiDebug_ErrorCode OH_HiDebug_RequestThreadLiteSampling(HiDebug_ProcessSamplerCon
 | HiDebug_ProcessSamplerConfig* config | 指向Perf采样配置结构体{@link HiDebug_ProcessSamplerConfig}的指针。配置参数决定了采样的具体行为，如采样频率、目标线程等。 |
 | [OH_HiDebug_ThreadLiteSamplingCallback](capi-hidebug-h.md#oh_hidebug_threadlitesamplingcallback) stacksCallback | 采样结束时的回调函数，用于返回采样结果。采样完成后，系统将调用此函数并将采样数据作为参数传递。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：采样成功完成。      <br>{@link HIDEBUG_INVALID_ARGUMENT}：无效参数。      <br>{@link HIDEBUG_NOT_SUPPORTED}：当前设备不支持Perf采样。      <br>{@link HIDEBUG_UNDER_SAMPLING}：已有采样任务正在执行中。      <br>{@link HIDEBUG_RESOURCE_UNAVAILABLE}：采样资源不足或已达调用上限。 |
+| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：采样成功完成。<br>    <br>{@link HIDEBUG_INVALID_ARGUMENT}：无效参数。<br>    <br>{@link HIDEBUG_NOT_SUPPORTED}：当前设备不支持Perf采样。<br>    <br>{@link HIDEBUG_UNDER_SAMPLING}：已有采样任务正在执行中。<br>    <br>{@link HIDEBUG_RESOURCE_UNAVAILABLE}：采样资源不足或已达调用上限。 |
 
 ### OH_HiDebug_StartProfiler()
 
@@ -592,7 +606,7 @@ HiDebug_ErrorCode OH_HiDebug_StartProfiler(OH_HiDebug_ResourceType type, OH_HiDe
 
 **描述：**
 
-异步启动当前进程资源采集功能。<br>回调函数只在终止采集（含系统自动停止采集）时调用，其携带采集资源类型和采集文件路径。<br>若采集异常，则文件路径为NULL。
+异步启动当前进程资源采集功能。 <br>回调函数只在终止采集（含系统自动停止采集）时调用，其携带采集资源类型和采集文件路径。 <br>若采集异常，则文件路径为NULL。
 
 **起始版本：** 24
 
@@ -600,15 +614,15 @@ HiDebug_ErrorCode OH_HiDebug_StartProfiler(OH_HiDebug_ResourceType type, OH_HiDe
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_HiDebug_ResourceType type | 资源采集类型，决定了采集的具体资源类别（如CPU、内存、IO等）。不同类型对应不同资源采集场景：CPU采集用于分析CPU性能问题，内存采集用于分析内存泄漏和内存使用情况，IO采集用于分析IO性能瓶颈。根据分析需求选择合适的资源类型。 |
+| OH_HiDebug_ResourceType type | 资源采集类型，决定了采集的具体资源类别（如CPU、内存、IO等）。不同类型对应不同资源采集场景：CPU采集用于分析CPU性能问题，内存采集用于分析内存泄漏和内存使用情况，IO采集用于分析IO性能瓶颈。 根据分析需求选择合适的资源类型。 |
 | OH_HiDebug_ResProfilerConfig* config | 资源采集配置参数。配置参数决定了采集的具体行为，如采样频率、持续时间等。 |
 | OH_HiDebug_ProfilingCallback callback | 资源采集回调结果函数。采集终止时将调用此回调函数，传递采集结果和文件路径。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_RES_PROF_SUCCESS}：启动资源采集成功。      <br>{@link HIDEBUG_RES_PROF_INVALID_ARG}：资源采集参数无效。      <br>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION}：资源采集最大持续时间参数无效。      <br>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE}：资源采集过滤大小参数无效。      <br>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH}：资源采集最大回栈深度参数无效。      <br>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL}：资源采集统计间隔参数无效。      <br>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL}：资源采集采样大小参数无效。      <br>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE}：资源采集类型参数无效。      <br>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED}：资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。      <br>{@link HIDEBUG_RES_PROF_ALREADY_STARTED}：资源采集重复启动。      <br>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT}：资源采集进程数超出 4 个限制。      <br>{@link HIDEBUG_RES_PROF_CONFLICT}：资源采集与命令行工具或系统采集任务冲突。      <br>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED}：资源采集每日配额超出 10 次限制。      <br>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED}：系统 CPU 处于高负载状态，CPU 占用率超过 70%。      <br>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL}：内存可用空间紧张，可用空间少于 15%。      <br>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL}：存储可用空间紧张，可用空间少于 15%。      <br>{@link HIDEBUG_RES_PROF_FAILURE}：启动资源采集失败。 |
+| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_RES_PROF_SUCCESS}：启动资源采集成功。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_ARG}：资源采集参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION}：资源采集最大持续时间参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE}：资源采集过滤大小参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH}：资源采集最大回栈深度参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL}：资源采集统计间隔参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL}：资源采集采样大小参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE}：资源采集类型参数无效。<br>    <br>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED}：资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。<br>    <br>{@link HIDEBUG_RES_PROF_ALREADY_STARTED}：资源采集重复启动。<br>    <br>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT}：资源采集进程数超出 4 个限制。<br>    <br>{@link HIDEBUG_RES_PROF_CONFLICT}：资源采集与命令行工具或系统采集任务冲突。<br>    <br>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED}：资源采集每日配额超出 10 次限制。<br>    <br>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED}：系统 CPU 处于高负载状态，CPU 占用率超过 70%。<br>    <br>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL}：内存可用空间紧张，可用空间少于 15%。<br>    <br>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL}：存储可用空间紧张，可用空间少于 15%。<br>    <br>{@link HIDEBUG_RES_PROF_FAILURE}：启动资源采集失败。 |
 
 ### OH_HiDebug_StopProfiler()
 
@@ -622,11 +636,11 @@ HiDebug_ErrorCode OH_HiDebug_StopProfiler(void)
 
 **起始版本：** 24
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_RES_PROF_SUCCESS}：已成功停止资源采集。      <br>{@link HIDEBUG_RES_PROF_NOT_STARTED}：资源采集未启动，停止失败。      <br>{@link HIDEBUG_RES_PROF_FAILURE}：停止资源采集失败。 |
+| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_RES_PROF_SUCCESS}：已成功停止资源采集。<br>    <br>{@link HIDEBUG_RES_PROF_NOT_STARTED}：资源采集未启动，停止失败。<br>    <br>{@link HIDEBUG_RES_PROF_FAILURE}：停止资源采集失败。 |
 
 ### OH_HiDebug_MemDumpListener()
 
@@ -649,7 +663,7 @@ typedef bool (*OH_HiDebug_MemDumpListener)(int32_t fd, OH_HiDebug_MemListenerTyp
 | bool mayReportToOEM | 当值为true时告知开发者该数据会上传给OEM厂商请注意数据隐私安全问题 |
 | const char\* arg | 回调参数。根据type的值传递不同的参数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -663,7 +677,7 @@ HiDebug_ErrorCode OH_HiDebug_RegisterMemDumpListener(const char* name, OH_HiDebu
 
 **描述：**
 
-注册内存导出监听。当应用的内存占用较高，或通过{@link hidumper命令}手动导出内存信息时，系统会主动调用已注册的回调函数。<br>第三方应用框架或开发者可借此将应用内部内存信息转储到hidumper中，或通过商业灰度上传至OEM厂商。<br>对应的注销函数为：[OH_HiDebug_UnregisterMemDumpListener](capi-hidebug-h.md#oh_hidebug_unregistermemdumplistener)。
+注册内存导出监听。当应用的内存占用较高，或通过{@link hidumper命令}手动导出内存信息时，系统会主动调用已注册的回调函数。 <br>第三方应用框架或开发者可借此将应用内部内存信息转储到hidumper中，或通过商业灰度上传至OEM厂商。 <br>对应的注销函数为：[OH_HiDebug_UnregisterMemDumpListener](capi-hidebug-h.md#oh_hidebug_unregistermemdumplistener)。
 
 **起始版本：** 26.0.0
 
@@ -671,14 +685,14 @@ HiDebug_ErrorCode OH_HiDebug_RegisterMemDumpListener(const char* name, OH_HiDebu
 
 | 参数项 | 描述 |
 | -- | -- |
-| const char* name | 监听器的唯一标识。用于标识本次注册的监听，注销时需传入相同的name。<br>相同name只能注册一次，重复注册将返回HIDEBUG_INVALID_ARGUMENT；如需更新，请先注销原监听器。 |
+| const char* name | 监听器的唯一标识。用于标识本次注册的监听，注销时需传入相同的name。 <br>相同name只能注册一次，重复注册将返回HIDEBUG_INVALID_ARGUMENT；如需更新，请先注销原监听器。 |
 | [OH_HiDebug_MemDumpListener](capi-hidebug-h.md#oh_hidebug_memdumplistener) listener | 触发监听的回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：操作成功。      <br>{@link HIDEBUG_INVALID_ARGUMENT}：无效参数。 |
+| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：操作成功。<br>    <br>{@link HIDEBUG_INVALID_ARGUMENT}：无效参数。 |
 
 ### OH_HiDebug_UnregisterMemDumpListener()
 
@@ -698,11 +712,11 @@ HiDebug_ErrorCode OH_HiDebug_UnregisterMemDumpListener(const char* name)
 | -- | -- |
 | const char* name | 监听器的唯一标识。需要与注册时传入的name保持一致。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：操作成功。      <br>{@link HIDEBUG_INVALID_ARGUMENT}：无效参数。 |
+| HiDebug_ErrorCode | 返回结果码：      <br>{@link HIDEBUG_SUCCESS}：操作成功。<br>    <br>{@link HIDEBUG_INVALID_ARGUMENT}：无效参数。 |
 
 ### OH_HiDebug_AcquireAsyncContext()
 
@@ -716,7 +730,7 @@ Profiler辅助接口，获取一个AsyncContext供后续使用。对应的释放
 
 **起始版本：** 26.0.0
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -788,7 +802,7 @@ OH_HiDebug_ProfilerOptions *OH_HiDebug_CreateProfilerOptions(void)
 
 **起始版本：** 26.1.0
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -812,11 +826,11 @@ HiDebug_ErrorCode OH_HiDebug_DestroyProfilerOptions(OH_HiDebug_ProfilerOptions *
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。  <ul><li>{@link HIDEBUG_SUCCESS}成功</li>  <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li></ul> |
+| HiDebug_ErrorCode | 返回码。  <ul><li>{@link HIDEBUG_SUCCESS}成功</li><br><li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li></ul> |
 
 ### OH_HiDebug_SetMaxAsyncNestingDepth()
 
@@ -837,11 +851,11 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncNestingDepth(OH_HiDebug_ProfilerOptions 
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t depth | [in] 允许的最大异步嵌套深度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH} 无效的最大异步嵌套深度。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH} 无效的最大异步嵌套深度。</li></ul> |
 
 ### OH_HiDebug_SetMaxAsyncTaskStackDepth()
 
@@ -862,11 +876,11 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncTaskStackDepth(OH_HiDebug_ProfilerOption
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t depth | [in] 最大异步任务栈深。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH} 无效的最大异步任务栈深度。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH} 无效的最大异步任务栈深度。</li></ul> |
 
 ### OH_HiDebug_SetSampleIntervalBytes()
 
@@ -887,11 +901,11 @@ HiDebug_ErrorCode OH_HiDebug_SetSampleIntervalBytes(OH_HiDebug_ProfilerOptions *
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t bytes | [in] 采样间隔。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} 无效的采样间隔。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL} 无效的采样间隔。</li></ul> |
 
 ### OH_HiDebug_SetStatisticsIntervalSec()
 
@@ -912,11 +926,11 @@ HiDebug_ErrorCode OH_HiDebug_SetStatisticsIntervalSec(OH_HiDebug_ProfilerOptions
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t seconds | [in] 统计时间间隔。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} 无效的统计间隔。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL} 无效的统计间隔。</li></ul> |
 
 ### OH_HiDebug_SetMaxStackDepth()
 
@@ -937,11 +951,11 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxStackDepth(OH_HiDebug_ProfilerOptions *opts, 
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t depth | [in] 最大回栈深度。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} 无效的最大栈深度。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH} 无效的最大栈深度。</li></ul> |
 
 ### OH_HiDebug_SetFilterSize()
 
@@ -962,11 +976,11 @@ HiDebug_ErrorCode OH_HiDebug_SetFilterSize(OH_HiDebug_ProfilerOptions *opts, uin
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t size | [in] 过滤大小（单位：字节）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} 无效的过滤大小。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE} 无效的过滤大小。</li></ul> |
 
 ### OH_HiDebug_SetMaxDurationSec()
 
@@ -987,11 +1001,11 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts,
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
 | uint32_t seconds | [in] 最大采集持续时间（单位：秒）。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} 无效的最大持续时间。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_SUCCESS} 成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION} 无效的最大持续时间。</li></ul> |
 
 ### OH_HiDebug_StartProfilerWithOptions()
 
@@ -1013,10 +1027,10 @@ HiDebug_ErrorCode OH_HiDebug_StartProfilerWithOptions(OH_HiDebug_ResourceType ty
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions资源采集配置结构体的指针，该参数须为非空指针。 |
 | OH_HiDebug_ProfilingCallback callback | [in] 接收采集结果的回调函数。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_RES_PROF_SUCCESS}启动资源采集成功。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts或callback是一个空指针。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION}资源采集最大持续时间参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE}资源采集过滤大小参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH}资源采集最大回栈深度参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL}资源采集统计间隔参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL}资源采集采样大小参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH}最大异步嵌套深度参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH}最大异步任务回栈栈深参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE}资源类型参数无效。</li>      <li>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED}资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。</li>      <li>{@link HIDEBUG_RES_PROF_ALREADY_STARTED}资源采集重复启动。</li>      <li>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT}资源采集进程数超出限制。</li>      <li>{@link HIDEBUG_RES_PROF_CONFLICT}资源采集与命令行工具或系统采集任务冲突。</li>      <li>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED}资源采集每日配额超出限制。</li>      <li>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED}系统CPU高负载，禁止采集。</li>      <li>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL}系统内存可用空间紧张，禁止采集。</li>      <li>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL}存储可用空间紧张，禁止采集。</li>     <li>{@link HIDEBUG_RES_PROF_FAILURE}启动资源采集失败。</li></ul> |
+| HiDebug_ErrorCode | 返回码。      <ul><li>{@link HIDEBUG_RES_PROF_SUCCESS}启动资源采集成功。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_ARG} opts或callback是一个空指针。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_DURATION}资源采集最大持续时间参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_FILTER_SIZE}资源采集过滤大小参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_STACK_DEPTH}资源采集最大回栈深度参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_STATISTICS_INTERVAL}资源采集统计间隔参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_SAMPLE_INTERVAL}资源采集采样大小参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_NESTING_DEPTH}最大异步嵌套深度参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_MAX_ASYNC_TASK_STACK_DEPTH}最大异步任务回栈栈深参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_INVALID_RESOURCE_TYPE}资源类型参数无效。</li><br>    <li>{@link HIDEBUG_RES_PROF_PERMISSION_DENIED}资源采集权限不足，采集资源的目标进程仅支持调用接口进程本身。</li><br>    <li>{@link HIDEBUG_RES_PROF_ALREADY_STARTED}资源采集重复启动。</li><br>    <li>{@link HIDEBUG_RES_PROF_PROCESS_OVERLIMIT}资源采集进程数超出限制。</li><br>    <li>{@link HIDEBUG_RES_PROF_CONFLICT}资源采集与命令行工具或系统采集任务冲突。</li><br>    <li>{@link HIDEBUG_RES_PROF_DAILY_QUOTA_EXCEEDED}资源采集每日配额超出限制。</li><br>    <li>{@link HIDEBUG_RES_PROF_CPU_OVERLOADED}系统CPU高负载，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_MEM_PRESSURE_CRITICAL}系统内存可用空间紧张，禁止采集。</li><br>    <li>{@link HIDEBUG_RES_PROF_STORAGE_PRESSURE_CRITICAL}存储可用空间紧张，禁止采集。</li><br>   <li>{@link HIDEBUG_RES_PROF_FAILURE}启动资源采集失败。</li></ul> |
 
 

@@ -15,7 +15,7 @@ Provide the definition of the C interface for the native AbilityRuntime
 | [modular_object_extension_ability.h](capi-modular-object-extension-ability-h.md) | Declares the modular object extension ability. |
 | [start_options.h](capi-start-options-h.md) | Defines the start options APIs. |
 | [modular_object_dispatcher.h](capi-modular-object-dispatcher-h.md) | Declare common types and interfaces for modular object dispatcher. |
-| [connect_options.h](capi-connect-options-h.md) | Declares the connection options for extension ability, including callbacks forconnection success, disconnection, and connection failure. |
+| [connect_options.h](capi-connect-options-h.md) | Declares the connection options for extension ability, including callbacks for connection success, disconnection, and connection failure. |
 | [application_context.h](capi-application-context-h.md) | The file declares the APIs related to the application-level context. |
 | [context_constant.h](capi-context-constant-h.md) | The file declares the context constants of the AbilityRuntime module. |
 | [modular_object_extension_manager.h](capi-modular-object-extension-manager-h.md) | Declares the modular object extension manager. |

@@ -26,14 +26,14 @@ The file declares the photo output concepts.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_PhotoOutput_OnFrameStart)(Camera_PhotoOutput* photoOutput)](#oh_photooutput_onframestart) | OH_PhotoOutput_OnFrameStart | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo outputframe start events. |
-| [typedef void (\*OH_PhotoOutput_OnFrameShutter)(Camera_PhotoOutput* photoOutput, Camera_FrameShutterInfo* info)](#oh_photooutput_onframeshutter) | OH_PhotoOutput_OnFrameShutter | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report frame shutterevents. |
-| [typedef void (\*OH_PhotoOutput_OnFrameEnd)(Camera_PhotoOutput* photoOutput, int32_t frameCount)](#oh_photooutput_onframeend) | OH_PhotoOutput_OnFrameEnd | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo outputframe end events. |
-| [typedef void (\*OH_PhotoOutput_OnError)(Camera_PhotoOutput* photoOutput, Camera_ErrorCode errorCode)](#oh_photooutput_onerror) | OH_PhotoOutput_OnError | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo outputerrors. |
+| [typedef void (\*OH_PhotoOutput_OnFrameStart)(Camera_PhotoOutput* photoOutput)](#oh_photooutput_onframestart) | OH_PhotoOutput_OnFrameStart | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame start events. |
+| [typedef void (\*OH_PhotoOutput_OnFrameShutter)(Camera_PhotoOutput* photoOutput, Camera_FrameShutterInfo* info)](#oh_photooutput_onframeshutter) | OH_PhotoOutput_OnFrameShutter | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report frame shutter events. |
+| [typedef void (\*OH_PhotoOutput_OnFrameEnd)(Camera_PhotoOutput* photoOutput, int32_t frameCount)](#oh_photooutput_onframeend) | OH_PhotoOutput_OnFrameEnd | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame end events. |
+| [typedef void (\*OH_PhotoOutput_OnError)(Camera_PhotoOutput* photoOutput, Camera_ErrorCode errorCode)](#oh_photooutput_onerror) | OH_PhotoOutput_OnError | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output errors. |
 | [typedef void (\*OH_PhotoOutput_CaptureEnd)(Camera_PhotoOutput* photoOutput, int32_t frameCount)](#oh_photooutput_captureend) | OH_PhotoOutput_CaptureEnd | Defines the callback invoked when the capture ends. |
 | [typedef void (\*OH_PhotoOutput_CaptureStartWithInfo)(Camera_PhotoOutput* photoOutput, Camera_CaptureStartInfo* Info)](#oh_photooutput_capturestartwithinfo) | OH_PhotoOutput_CaptureStartWithInfo | Defines the callback invoked when the capture starts. |
 | [typedef void (\*OH_PhotoOutput_OnFrameShutterEnd)(Camera_PhotoOutput* photoOutput, Camera_FrameShutterInfo* Info)](#oh_photooutput_onframeshutterend) | OH_PhotoOutput_OnFrameShutterEnd | Defines the callback invoked when frame shutter ends. |
-| [typedef void (\*OH_PhotoOutput_CaptureReady)(Camera_PhotoOutput* photoOutput)](#oh_photooutput_captureready) | OH_PhotoOutput_CaptureReady | Defines the callback invoked when the camera is ready to take photos. When the callback is received, the nextcapture can be performed. |
+| [typedef void (\*OH_PhotoOutput_CaptureReady)(Camera_PhotoOutput* photoOutput)](#oh_photooutput_captureready) | OH_PhotoOutput_CaptureReady | Defines the callback invoked when the camera is ready to take photos. When the callback is received, the next capture can be performed. |
 | [typedef void (\*OH_PhotoOutput_EstimatedCaptureDuration)(Camera_PhotoOutput* photoOutput, int64_t duration)](#oh_photooutput_estimatedcaptureduration) | OH_PhotoOutput_EstimatedCaptureDuration | Defines the callback for the estimated capture duration. |
 | [typedef void (\*OH_PhotoOutput_PhotoAvailable)(Camera_PhotoOutput* photoOutput, OH_PhotoNative* photo)](#oh_photooutput_photoavailable) | OH_PhotoOutput_PhotoAvailable | Defines the callback invoked when a high-resolution photo is available. |
 | [typedef void (\*OH_PhotoOutput_PhotoAssetAvailable)(Camera_PhotoOutput* photoOutput, OH_MediaAsset* photoAsset)](#oh_photooutput_photoassetavailable) | OH_PhotoOutput_PhotoAssetAvailable | Defines the callback invoked when a photo asset is available. |
@@ -47,7 +47,7 @@ The file declares the photo output concepts.
 | [Camera_ErrorCode OH_PhotoOutput_UnregisterCaptureEndCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_CaptureEnd callback)](#oh_photooutput_unregistercaptureendcallback) | - | Unregisters the callback used to listen for capture end events. |
 | [Camera_ErrorCode OH_PhotoOutput_RegisterFrameShutterEndCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_OnFrameShutterEnd callback)](#oh_photooutput_registerframeshutterendcallback) | - | Registers a callback to listen for frame shutter end events. |
 | [Camera_ErrorCode OH_PhotoOutput_UnregisterFrameShutterEndCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_OnFrameShutterEnd callback)](#oh_photooutput_unregisterframeshutterendcallback) | - | Unregisters the callback used to listen for frame shutter end events. |
-| [Camera_ErrorCode OH_PhotoOutput_RegisterCaptureReadyCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_CaptureReady callback)](#oh_photooutput_registercapturereadycallback) | - | Registers a callback to listen for camera ready events. When the callback is received, the next capture canbe performed. |
+| [Camera_ErrorCode OH_PhotoOutput_RegisterCaptureReadyCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_CaptureReady callback)](#oh_photooutput_registercapturereadycallback) | - | Registers a callback to listen for camera ready events. When the callback is received, the next capture can be performed. |
 | [Camera_ErrorCode OH_PhotoOutput_UnregisterCaptureReadyCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_CaptureReady callback)](#oh_photooutput_unregistercapturereadycallback) | - | Unregisters the callback used to listen for camera ready events. |
 | [Camera_ErrorCode OH_PhotoOutput_RegisterEstimatedCaptureDurationCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_EstimatedCaptureDuration callback)](#oh_photooutput_registerestimatedcapturedurationcallback) | - | Registers a callback to listen for estimated capture duration events. |
 | [Camera_ErrorCode OH_PhotoOutput_UnregisterEstimatedCaptureDurationCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_EstimatedCaptureDuration callback)](#oh_photooutput_unregisterestimatedcapturedurationcallback) | - | Unregisters the callback used to listen for estimated capture duration events. |
@@ -55,7 +55,7 @@ The file declares the photo output concepts.
 | [Camera_ErrorCode OH_PhotoOutput_UnregisterPhotoAvailableCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_PhotoAvailable callback)](#oh_photooutput_unregisterphotoavailablecallback) | - | Unregisters the callback used to listen for photo availability events. |
 | [Camera_ErrorCode OH_PhotoOutput_RegisterPhotoAssetAvailableCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_PhotoAssetAvailable callback)](#oh_photooutput_registerphotoassetavailablecallback) | - | Registers a callback to listen for photo asset availability events. |
 | [Camera_ErrorCode OH_PhotoOutput_UnregisterPhotoAssetAvailableCallback(Camera_PhotoOutput* photoOutput, OH_PhotoOutput_PhotoAssetAvailable callback)](#oh_photooutput_unregisterphotoassetavailablecallback) | - | Unregisters the callback used to listen for photo asset availability events. |
-| [Camera_ErrorCode OH_PhotoOutput_Capture(Camera_PhotoOutput* photoOutput)](#oh_photooutput_capture) | - | Captures a photo.This function must be called in prior to {@link OH_PreviewOutput_Release}. Otherwise, photo capture fails. |
+| [Camera_ErrorCode OH_PhotoOutput_Capture(Camera_PhotoOutput* photoOutput)](#oh_photooutput_capture) | - | Captures a photo. This function must be called in prior to {@link OH_PreviewOutput_Release}. Otherwise, photo capture fails. |
 | [Camera_ErrorCode OH_PhotoOutput_Capture_WithCaptureSetting(Camera_PhotoOutput* photoOutput, Camera_PhotoCaptureSetting setting)](#oh_photooutput_capture_withcapturesetting) | - | Captures a photo with photographing parameters. |
 | [Camera_ErrorCode OH_PhotoOutput_Release(Camera_PhotoOutput* photoOutput)](#oh_photooutput_release) | - | Releases a PhotoOutput instance. |
 | [Camera_ErrorCode OH_PhotoOutput_IsMirrorSupported(Camera_PhotoOutput* photoOutput, bool* isSupported)](#oh_photooutput_ismirrorsupported) | - | Checks whether mirroring is supported. |
@@ -67,7 +67,7 @@ The file declares the photo output concepts.
 | [Camera_ErrorCode OH_PhotoOutput_IsPhotoQualityPrioritizationSupported(Camera_PhotoOutput* photoOutput, Camera_PhotoQualityPrioritization qualityPrioritization, bool* isSupported)](#oh_photooutput_isphotoqualityprioritizationsupported) | - | Checks whether the specified photo quality prioritization strategy is supported. |
 | [Camera_ErrorCode OH_PhotoOutput_SetPhotoQualityPrioritization(Camera_PhotoOutput* photoOutput, Camera_PhotoQualityPrioritization qualityPrioritization)](#oh_photooutput_setphotoqualityprioritization) | - | Sets the photo quality prioritization strategy. |
 | [Camera_ErrorCode OH_PhotoOutput_Capture_WithCaptureSettingExt(Camera_PhotoOutput* photoOutput, OH_Camera_PhotoCaptureSettingExt* setting)](#oh_photooutput_capture_withcapturesettingext) | - | Captures a photo with photo capture setting extension. |
-| [Camera_ErrorCode OH_PhotoOutput_CreatePhotoCaptureSettingExt(Camera_PhotoOutput* photoOutput, OH_Camera_PhotoCaptureSettingExt** setting)](#oh_photooutput_createphotocapturesettingext) | - | Creates a **OH_Camera_PhotoCaptureSettingExt** instance.Release the photo capture setting ext memory by calling [OH_PhotoOutput_DestroyPhotoCaptureSettingExt](capi-photo-output-h.md#oh_photooutput_destroyphotocapturesettingext). |
+| [Camera_ErrorCode OH_PhotoOutput_CreatePhotoCaptureSettingExt(Camera_PhotoOutput* photoOutput, OH_Camera_PhotoCaptureSettingExt** setting)](#oh_photooutput_createphotocapturesettingext) | - | Creates a **OH_Camera_PhotoCaptureSettingExt** instance. Release the photo capture setting ext memory by calling [OH_PhotoOutput_DestroyPhotoCaptureSettingExt](capi-photo-output-h.md#oh_photooutput_destroyphotocapturesettingext). |
 | [Camera_ErrorCode OH_PhotoCaptureSettingExt_SetCompressionQuality(OH_Camera_PhotoCaptureSettingExt* photoCaptureSettingExt, uint8_t compressionQuality)](#oh_photocapturesettingext_setcompressionquality) | - | Sets the image compression quality for the photo capture extension configuration. |
 | [Camera_ErrorCode OH_PhotoCaptureSettingExt_SetImageRotation(OH_Camera_PhotoCaptureSettingExt* photoCaptureSettingExt, Camera_ImageRotation rotation)](#oh_photocapturesettingext_setimagerotation) | - | Sets the image rotation for the photo capture extension configuration. |
 | [Camera_ErrorCode OH_PhotoCaptureSettingExt_SetMirror(OH_Camera_PhotoCaptureSettingExt* photoCaptureSettingExt, bool mirror)](#oh_photocapturesettingext_setmirror) | - | Sets the image mirror for the photo capture extension configuration. |
@@ -75,6 +75,22 @@ The file declares the photo output concepts.
 | [Camera_ErrorCode OH_PhotoCaptureSettingExt_SetLocation(OH_Camera_PhotoCaptureSettingExt* photoCaptureSettingExt, Camera_Location location)](#oh_photocapturesettingext_setlocation) | - | Sets the image location for the photo capture extension configuration. |
 | [Camera_ErrorCode OH_PhotoOutput_EnableAutoExtendedGainmapDelivery(Camera_PhotoOutput* photoOutput, bool enabled)](#oh_photooutput_enableautoextendedgainmapdelivery) | - | Enables auto extended gainmap delivery. |
 | [bool OH_PhotoOutput_IsAutoExtendedGainmapDeliverySupported(const Camera_PhotoOutput* photoOutput)](#oh_photooutput_isautoextendedgainmapdeliverysupported) | - | Checks whether the auto extended gainmap delivery is supported. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_PhotoOutput_OnFrameStart)(Camera_PhotoOutput* photoOutput) | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame start events.<br>**Since**: 11 |
+| void (*OH_PhotoOutput_OnFrameShutter)(Camera_PhotoOutput* photoOutput, Camera_FrameShutterInfo* info) | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report frame shutter events.<br>**Since**: 11 |
+| void (*OH_PhotoOutput_OnFrameEnd)(Camera_PhotoOutput* photoOutput, int32_t frameCount) | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame end events.<br>**Since**: 11 |
+| void (*OH_PhotoOutput_OnError)(Camera_PhotoOutput* photoOutput, Camera_ErrorCode errorCode) | Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output errors.<br>**Since**: 11 |
+| void (*OH_PhotoOutput_CaptureEnd) (Camera_PhotoOutput* photoOutput, int32_t frameCount) | Defines the callback invoked when the capture ends.<br>**Since**: 12 |
+| void (*OH_PhotoOutput_CaptureStartWithInfo) (Camera_PhotoOutput* photoOutput, Camera_CaptureStartInfo* Info) | Defines the callback invoked when the capture starts.<br>**Since**: 12 |
+| void (*OH_PhotoOutput_OnFrameShutterEnd) (Camera_PhotoOutput* photoOutput, Camera_FrameShutterInfo* Info) | Defines the callback invoked when frame shutter ends.<br>**Since**: 12 |
+| void (*OH_PhotoOutput_CaptureReady) (Camera_PhotoOutput* photoOutput) | Defines the callback invoked when the camera is ready to take photos. When the callback is received, the next capture can be performed.<br>**Since**: 12 |
+| void (*OH_PhotoOutput_EstimatedCaptureDuration) (Camera_PhotoOutput* photoOutput, int64_t duration) | Defines the callback for the estimated capture duration.<br>**Since**: 12 |
+| void (*OH_PhotoOutput_PhotoAvailable)(Camera_PhotoOutput* photoOutput, OH_PhotoNative* photo) | Defines the callback invoked when a high-resolution photo is available.<br>**Since**: 12 |
+| void (*OH_PhotoOutput_PhotoAssetAvailable)(Camera_PhotoOutput* photoOutput, OH_MediaAsset* photoAsset) | Defines the callback invoked when a photo asset is available.<br>**Since**: 12 |
 
 ## Function description
 
@@ -86,7 +102,7 @@ typedef void (*OH_PhotoOutput_OnFrameStart)(Camera_PhotoOutput* photoOutput)
 
 **Description**
 
-Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo outputframe start events.
+Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame start events.
 
 **Since**: 11
 
@@ -104,7 +120,7 @@ typedef void (*OH_PhotoOutput_OnFrameShutter)(Camera_PhotoOutput* photoOutput, C
 
 **Description**
 
-Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report frame shutterevents.
+Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report frame shutter events.
 
 **Since**: 11
 
@@ -123,7 +139,7 @@ typedef void (*OH_PhotoOutput_OnFrameEnd)(Camera_PhotoOutput* photoOutput, int32
 
 **Description**
 
-Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo outputframe end events.
+Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame end events.
 
 **Since**: 11
 
@@ -142,7 +158,7 @@ typedef void (*OH_PhotoOutput_OnError)(Camera_PhotoOutput* photoOutput, Camera_E
 
 **Description**
 
-Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo outputerrors.
+Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output errors.
 
 **Since**: 11
 
@@ -223,7 +239,7 @@ typedef void (*OH_PhotoOutput_CaptureReady)(Camera_PhotoOutput* photoOutput)
 
 **Description**
 
-Defines the callback invoked when the camera is ready to take photos. When the callback is received, the nextcapture can be performed.
+Defines the callback invoked when the camera is ready to take photos. When the callback is received, the next capture can be performed.
 
 **Since**: 12
 
@@ -549,7 +565,7 @@ Camera_ErrorCode OH_PhotoOutput_RegisterCaptureReadyCallback(Camera_PhotoOutput*
 
 **Description**
 
-Registers a callback to listen for camera ready events. When the callback is received, the next capture canbe performed.
+Registers a callback to listen for camera ready events. When the callback is received, the next capture can be performed.
 
 **Since**: 12
 
@@ -749,7 +765,7 @@ Camera_ErrorCode OH_PhotoOutput_Capture(Camera_PhotoOutput* photoOutput)
 
 **Description**
 
-Captures a photo.This function must be called in prior to {@link OH_PreviewOutput_Release}. Otherwise, photo capture fails.
+Captures a photo. This function must be called in prior to {@link OH_PreviewOutput_Release}. Otherwise, photo capture fails.
 
 **Since**: 11
 
@@ -831,7 +847,7 @@ Checks whether mirroring is supported.
 | Parameter | Description |
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
-| bool* isSupported | Pointer to the check result for the support of mirroring. **true** if supported, **falseotherwise. |
+| bool* isSupported | Pointer to the check result for the support of mirroring. **true** if supported, **false**<br>otherwise. |
 
 **Returns**:
 
@@ -930,7 +946,7 @@ Checks whether moving photos are supported.
 | Parameter | Description |
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
-| bool* isSupported | Pointer to the check result for the support of moving photos. **true** if supported, **falseotherwise. |
+| bool* isSupported | Pointer to the check result for the support of moving photos. **true** if supported, **false**<br>otherwise. |
 
 **Returns**:
 
@@ -981,7 +997,7 @@ Checks whether the specified photo quality prioritization strategy is supported.
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
 | Camera_PhotoQualityPrioritization qualityPrioritization | Photo quality prioritization strategy. |
-| bool* isSupported | Pointer to the check result for the support of the specified photo quality prioritizationstrategy. **true** if supported, **false** otherwise. |
+| bool* isSupported | Pointer to the check result for the support of the specified photo quality prioritization strategy. **true** if supported, **false** otherwise. |
 
 **Returns**:
 
@@ -1047,7 +1063,7 @@ Camera_ErrorCode OH_PhotoOutput_CreatePhotoCaptureSettingExt(Camera_PhotoOutput*
 
 **Description**
 
-Creates a **OH_Camera_PhotoCaptureSettingExt** instance.Release the photo capture setting ext memory by calling [OH_PhotoOutput_DestroyPhotoCaptureSettingExt](capi-photo-output-h.md#oh_photooutput_destroyphotocapturesettingext).
+Creates a **OH_Camera_PhotoCaptureSettingExt** instance. Release the photo capture setting ext memory by calling [OH_PhotoOutput_DestroyPhotoCaptureSettingExt](capi-photo-output-h.md#oh_photooutput_destroyphotocapturesettingext).
 
 **Since**: 26.0.0
 
@@ -1056,7 +1072,7 @@ Creates a **OH_Camera_PhotoCaptureSettingExt** instance.Release the photo captur
 | Parameter | Description |
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
-| [OH_Camera_PhotoCaptureSettingExt](capi-oh-camera-oh-camera-photocapturesettingext.md)** setting | Double pointer to the **OH_Camera_PhotoCaptureSettingExt** instance created,if the function is successfully called. |
+| [OH_Camera_PhotoCaptureSettingExt](capi-oh-camera-oh-camera-photocapturesettingext.md)** setting | Double pointer to the **OH_Camera_PhotoCaptureSettingExt** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -1205,7 +1221,7 @@ Enables auto extended gainmap delivery.
 | Parameter | Description |
 | -- | -- |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
-| bool enabled | Whether to enable or disable auto extended gainmap delivery. **true** to enable,**false** otherwise. |
+| bool enabled | Whether to enable or disable auto extended gainmap delivery. **true** to enable, **false** otherwise. |
 
 **Returns**:
 

@@ -1,4 +1,4 @@
-# @ohos.app.ability.ChildProcessOptions
+# @ohos.app.ability.ChildProcessOptions(Child Process Startup Options)
 
 ## Modules to Import
 

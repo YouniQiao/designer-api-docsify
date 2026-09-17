@@ -8,7 +8,7 @@ The file declares the APIs related to moving photos. You can use the APIs to obt
 
 **System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**Since**: 13
+**Since**: 12
 
 **Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
 

@@ -20,7 +20,7 @@ Defines the struct and enum of **AVMediaSource**.
 | -- | -- | -- |
 | [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) | OH_AVHttpHeader | Defines a struct for the HTTP header. |
 | [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) | OH_AVMediaSource | Defines a struct for the media source. |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) | OH_AVMediaSourceLoadingRequest | Defines a load request object for the media resource, through which the application obtains the location ofthe requested resource. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) | OH_AVMediaSourceLoadingRequest | Defines a load request object for the media resource, through which the application obtains the location of the requested resource. |
 | [OH_AVMediaSourceLoader](capi-avmediasource-oh-avmediasourceloader.md) | OH_AVMediaSourceLoader | Declares the media source loader type, which is implemented by the application. |
 
 ### Enum
@@ -46,17 +46,25 @@ Defines the struct and enum of **AVMediaSource**.
 | [OH_AVErrCode OH_AVMediaSourceLoadingRequest_GetUrl(OH_AVMediaSourceLoadingRequest *request, const char **url)](#oh_avmediasourceloadingrequest_geturl) | - | Obtains the URL of a request. |
 | [OH_AVErrCode OH_AVMediaSourceLoadingRequest_GetHttpHeader(OH_AVMediaSourceLoadingRequest *request, OH_AVHttpHeader **header)](#oh_avmediasourceloadingrequest_gethttpheader) | - | Obtains the HTTP header of a request. |
 | [int32_t OH_AVMediaSourceLoadingRequest_RespondData(OH_AVMediaSourceLoadingRequest *request, int64_t uuid, int64_t offset, const uint8_t *data, uint64_t dataSize)](#oh_avmediasourceloadingrequest_responddata) | - | Sends request data to the AVPlayer. |
-| [void OH_AVMediaSourceLoadingRequest_RespondHeader(OH_AVMediaSourceLoadingRequest *request, int64_t uuid, OH_AVHttpHeader *header, const char *redirectUrl)](#oh_avmediasourceloadingrequest_respondheader) | - | Sends the response header to the AVPlayer. This API must be called before [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata)is called for the first time. |
-| [void OH_AVMediaSourceLoadingRequest_FinishLoading(OH_AVMediaSourceLoadingRequest *request, int64_t uuid, AVLoadingRequestError error)](#oh_avmediasourceloadingrequest_finishloading) | - | Notifies the player of the current request status. After pushing all data of a single resource, theapplication should send the **LOADING_ERROR_SUCCESS** state to notify the player that the resource push is complete. |
-| [OH_AVMediaSourceLoader *OH_AVMediaSourceLoader_Create(void)](#oh_avmediasourceloader_create) | - | Creates an **OH_AVMediaSourceLoader** instance. If the operation is successful, the **OH_AVMediaSourceLoaderpointer is returned. If the operation fails, a null pointer is returned. |
+| [void OH_AVMediaSourceLoadingRequest_RespondHeader(OH_AVMediaSourceLoadingRequest *request, int64_t uuid, OH_AVHttpHeader *header, const char *redirectUrl)](#oh_avmediasourceloadingrequest_respondheader) | - | Sends the response header to the AVPlayer. This API must be called before [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) is called for the first time. |
+| [void OH_AVMediaSourceLoadingRequest_FinishLoading(OH_AVMediaSourceLoadingRequest *request, int64_t uuid, AVLoadingRequestError error)](#oh_avmediasourceloadingrequest_finishloading) | - | Notifies the player of the current request status. After pushing all data of a single resource, the application should send the **LOADING_ERROR_SUCCESS** state to notify the player that the resource push is complete. |
+| [OH_AVMediaSourceLoader *OH_AVMediaSourceLoader_Create(void)](#oh_avmediasourceloader_create) | - | Creates an **OH_AVMediaSourceLoader** instance. If the operation is successful, the **OH_AVMediaSourceLoader**<br>pointer is returned. If the operation fails, a null pointer is returned. |
 | [OH_AVErrCode OH_AVMediaSourceLoader_Destroy(OH_AVMediaSourceLoader *loader)](#oh_avmediasourceloader_destroy) | - | Releases an **OH_AVMediaSourceLoader** instance. |
 | [OH_AVErrCode OH_AVMediaSource_SetMediaSourceLoader(OH_AVMediaSource *source, OH_AVMediaSourceLoader *loader)](#oh_avmediasource_setmediasourceloader) | - | Sets a source loader for the media source instance. |
-| [typedef int64_t (\*OH_AVMediaSourceLoaderOnSourceOpenedCallback)(OH_AVMediaSourceLoadingRequest *request, void *userData)](#oh_avmediasourceloaderonsourceopenedcallback) | OH_AVMediaSourceLoaderOnSourceOpenedCallback | Defines the SourceOpenCallback function which is called by the service.client should process the incoming requestand return the unique handle to the open resource.The client must return the handle immediately after processing the request. |
-| [typedef void (\*OH_AVMediaSourceLoaderOnSourceReadCallback)(int64_t uuid, int64_t requestedOffset, int64_t requestedLength, void *userData)](#oh_avmediasourceloaderonsourcereadcallback) | OH_AVMediaSourceLoaderOnSourceReadCallback | Defines the **SourceReadCallback** function called by the server. The client should record the read requestand push data using the [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) and [OH_AVMediaSourceLoadingRequest_RespondHeader](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_respondheader)methods of the request object when there is sufficient data. The client must return immediately after the requestis processed. |
-| [typedef void (\*OH_AVMediaSourceLoaderOnSourceClosedCallback)(int64_t uuid, void *userData)](#oh_avmediasourceloaderonsourceclosedcallback) | OH_AVMediaSourceLoaderOnSourceClosedCallback | Defines the **SourceCloseCallback** function called by the server. The client should release relatedresources and return immediately after the request is processed. |
+| [typedef int64_t (\*OH_AVMediaSourceLoaderOnSourceOpenedCallback)(OH_AVMediaSourceLoadingRequest *request, void *userData)](#oh_avmediasourceloaderonsourceopenedcallback) | OH_AVMediaSourceLoaderOnSourceOpenedCallback | Defines the SourceOpenCallback function which is called by the service. client should process the incoming request and return the unique handle to the open resource. The client must return the handle immediately after processing the request. |
+| [typedef void (\*OH_AVMediaSourceLoaderOnSourceReadCallback)(int64_t uuid, int64_t requestedOffset, int64_t requestedLength, void *userData)](#oh_avmediasourceloaderonsourcereadcallback) | OH_AVMediaSourceLoaderOnSourceReadCallback | Defines the **SourceReadCallback** function called by the server. The client should record the read request and push data using the [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) and [OH_AVMediaSourceLoadingRequest_RespondHeader](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_respondheader) methods of the request object when there is sufficient data. The client must return immediately after the request is processed. |
+| [typedef void (\*OH_AVMediaSourceLoaderOnSourceClosedCallback)(int64_t uuid, void *userData)](#oh_avmediasourceloaderonsourceclosedcallback) | OH_AVMediaSourceLoaderOnSourceClosedCallback | Defines the **SourceCloseCallback** function called by the server. The client should release related resources and return immediately after the request is processed. |
 | [OH_AVErrCode OH_AVMediaSourceLoader_SetSourceOpenCallback(OH_AVMediaSourceLoader *loader, OH_AVMediaSourceLoaderOnSourceOpenedCallback callback, void *userData)](#oh_avmediasourceloader_setsourceopencallback) | - | Sets the open callback function for **OH_AVMediaSourceLoader**. |
 | [OH_AVErrCode OH_AVMediaSourceLoader_SetSourceReadCallback(OH_AVMediaSourceLoader *loader, OH_AVMediaSourceLoaderOnSourceReadCallback callback, void *userData)](#oh_avmediasourceloader_setsourcereadcallback) | - | Sets the read callback function for **OH_AVMediaSourceLoader**. |
 | [OH_AVErrCode OH_AVMediaSourceLoader_SetSourceCloseCallback(OH_AVMediaSourceLoader *loader, OH_AVMediaSourceLoaderOnSourceClosedCallback callback, void *userData)](#oh_avmediasourceloader_setsourceclosecallback) | - | Sets the close callback function for **OH_AVMediaSourceLoader**. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| int64_t (*OH_AVMediaSourceLoaderOnSourceOpenedCallback)(OH_AVMediaSourceLoadingRequest *request, void *userData) | Defines the SourceOpenCallback function which is called by the service. client should process the incoming request and return the unique handle to the open resource. The client must return the handle immediately after processing the request.<br>**Since**: 23 |
+| void (*OH_AVMediaSourceLoaderOnSourceReadCallback)(int64_t uuid, int64_t requestedOffset, int64_t requestedLength, void *userData) | Defines the **SourceReadCallback** function called by the server. The client should record the read request and push data using the [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) and [OH_AVMediaSourceLoadingRequest_RespondHeader](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_respondheader) methods of the request object when there is sufficient data. The client must return immediately after the request is processed.<br>**Since**: 23 |
+| void (*OH_AVMediaSourceLoaderOnSourceClosedCallback)(int64_t uuid, void *userData) | Defines the **SourceCloseCallback** function called by the server. The client should release related resources and return immediately after the request is processed.<br>**Since**: 23 |
 
 ## Enum type description
 
@@ -125,7 +133,7 @@ Releases an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The header is a null pointer or the instance fails to be destroyed. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The header is a null pointer or the instance fails to be destroyed. |
 
 ### OH_AVHttpHeader_GetCount()
 
@@ -150,7 +158,7 @@ Obtains the number of records in an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The header is a null pointer. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The header is a null pointer. |
 
 ### OH_AVHttpHeader_AddRecord()
 
@@ -176,7 +184,7 @@ Adds a key-value pair record to an HTTP header instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: Any parameter is a null pointer. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: Any parameter is a null pointer. |
 
 ### OH_AVHttpHeader_GetRecord()
 
@@ -203,7 +211,7 @@ Obtains a key-value pair record in an HTTP header instance by index.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The header is a null pointer or the index is out of range. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The header is a null pointer or the index is out of range. |
 
 ### OH_AVMediaSource_CreateWithUrl()
 
@@ -221,7 +229,7 @@ Creates a media source using a URL.
 
 | Parameter | Description |
 | -- | -- |
-| const char *url | Pointer to the URL of the media source. The following streaming media formats are supported: HLS, HTTP-FLV, DASH, and HTTPS. |
+| const char *url | Pointer to the URL of the media source. The following streaming media formats are supported: HLS, HTTP- FLV, DASH, and HTTPS. |
 | [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the HTTP header attached to the network request. |
 
 **Returns**:
@@ -302,7 +310,7 @@ Releases a media source instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The source is a null pointer or fails to be released. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The source is a null pointer or fails to be released. |
 
 ### OH_AVMediaSource_SetMimeType()
 
@@ -327,7 +335,7 @@ Sets the MIME type to process extended media sources.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The source or mimetype is a null pointer.  {@link AV_ERR_UNSUPPORTED_FORMAT}: The mimetype is not supported. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The source or mimetype is a null pointer.<br>{@link AV_ERR_UNSUPPORTED_FORMAT}: The mimetype is not supported. |
 
 ### OH_AVMediaSourceLoadingRequest_GetUrl()
 
@@ -352,7 +360,7 @@ Obtains the URL of a request.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The request is a null pointer or the URL does not exist. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The request is a null pointer or the URL does not exist. |
 
 ### OH_AVMediaSourceLoadingRequest_GetHttpHeader()
 
@@ -377,7 +385,7 @@ Obtains the HTTP header of a request.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The request is a null pointer. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The request is a null pointer. |
 
 ### OH_AVMediaSourceLoadingRequest_RespondData()
 
@@ -415,7 +423,7 @@ void OH_AVMediaSourceLoadingRequest_RespondHeader(OH_AVMediaSourceLoadingRequest
 
 **Description**
 
-Sends the response header to the AVPlayer. This API must be called before [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata)is called for the first time.
+Sends the response header to the AVPlayer. This API must be called before [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) is called for the first time.
 
 **Since**: 23
 
@@ -425,7 +433,7 @@ Sends the response header to the AVPlayer. This API must be called before [OH_AV
 | -- | -- |
 | [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) *request | Pointer to the request for opening a resource. |
 | int64_t uuid | ID of the resource handle. |
-| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the header information in the HTTP response.The application can intersect the header field with the supported fields at the bottom layer and then pass theintersection result to the AVPlayer, or directly pass all the corresponding header information. |
+| [OH_AVHttpHeader](capi-avmediasource-oh-avhttpheader.md) *header | Pointer to the header information in the HTTP response. The application can intersect the header field with the supported fields at the bottom layer and then pass the intersection result to the AVPlayer, or directly pass all the corresponding header information. |
 | const char *redirectUrl | Pointer to the redirection URL contained in the HTTP response (if any). |
 
 ### OH_AVMediaSourceLoadingRequest_FinishLoading()
@@ -436,7 +444,7 @@ void OH_AVMediaSourceLoadingRequest_FinishLoading(OH_AVMediaSourceLoadingRequest
 
 **Description**
 
-Notifies the player of the current request status. After pushing all data of a single resource, theapplication should send the **LOADING_ERROR_SUCCESS** state to notify the player that the resource push is complete.
+Notifies the player of the current request status. After pushing all data of a single resource, the application should send the **LOADING_ERROR_SUCCESS** state to notify the player that the resource push is complete.
 
 **Since**: 23
 
@@ -456,7 +464,7 @@ OH_AVMediaSourceLoader *OH_AVMediaSourceLoader_Create(void)
 
 **Description**
 
-Creates an **OH_AVMediaSourceLoader** instance. If the operation is successful, the **OH_AVMediaSourceLoaderpointer is returned. If the operation fails, a null pointer is returned.
+Creates an **OH_AVMediaSourceLoader** instance. If the operation is successful, the **OH_AVMediaSourceLoader**<br>pointer is returned. If the operation fails, a null pointer is returned.
 
 **Since**: 23
 
@@ -488,7 +496,7 @@ Releases an **OH_AVMediaSourceLoader** instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The loader is a null pointer or fails to be released. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The loader is a null pointer or fails to be released. |
 
 ### OH_AVMediaSource_SetMediaSourceLoader()
 
@@ -513,7 +521,7 @@ Sets a source loader for the media source instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The source or loader is a null pointer, or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The source or loader is a null pointer, or the operation fails. |
 
 ### OH_AVMediaSourceLoaderOnSourceOpenedCallback()
 
@@ -523,7 +531,7 @@ typedef int64_t (*OH_AVMediaSourceLoaderOnSourceOpenedCallback)(OH_AVMediaSource
 
 **Description**
 
-Defines the SourceOpenCallback function which is called by the service.client should process the incoming requestand return the unique handle to the open resource.The client must return the handle immediately after processing the request.
+Defines the SourceOpenCallback function which is called by the service. client should process the incoming request and return the unique handle to the open resource. The client must return the handle immediately after processing the request.
 
 **Since**: 23
 
@@ -531,7 +539,7 @@ Defines the SourceOpenCallback function which is called by the service.client sh
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) \*request | Parameters for the resource open request,including detailed information about the requested resource and the data push method. |
+| [OH_AVMediaSourceLoadingRequest](capi-avmediasource-oh-avmediasourceloadingrequest.md) \*request | Parameters for the resource open request, including detailed information about the requested resource and the data push method. |
 | void \*userData | The data set by user in OH_AVMediaSourceLoader_SetSourceOpenCallback |
 
 **Returns**:
@@ -548,7 +556,7 @@ typedef void (*OH_AVMediaSourceLoaderOnSourceReadCallback)(int64_t uuid, int64_t
 
 **Description**
 
-Defines the **SourceReadCallback** function called by the server. The client should record the read requestand push data using the [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) and [OH_AVMediaSourceLoadingRequest_RespondHeader](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_respondheader)methods of the request object when there is sufficient data. The client must return immediately after the requestis processed.
+Defines the **SourceReadCallback** function called by the server. The client should record the read request and push data using the [OH_AVMediaSourceLoadingRequest_RespondData](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_responddata) and [OH_AVMediaSourceLoadingRequest_RespondHeader](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_respondheader) methods of the request object when there is sufficient data. The client must return immediately after the request is processed.
 
 **Since**: 23
 
@@ -558,7 +566,7 @@ Defines the **SourceReadCallback** function called by the server. The client sho
 | -- | -- |
 | int64_t uuid | ID of the resource handle. |
 | int64_t requestedOffset | Offset of the current media data relative to the start of the resource. |
-| int64_t requestedLength | Length of the requested data. The value **-1** indicates that the end of the resource hasbeen reached. In this case, call the [OH_AVMediaSourceLoadingRequest_FinishLoading](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_finishloading) method to notify theplayer that the push is complete. |
+| int64_t requestedLength | Length of the requested data. The value **-1** indicates that the end of the resource has been reached. In this case, call the [OH_AVMediaSourceLoadingRequest_FinishLoading](capi-avmedia-source-h.md#oh_avmediasourceloadingrequest_finishloading) method to notify the player that the push is complete. |
 | void \*userData | The data set by user in OH_AVMediaSourceLoader_SetSourceReadCallback |
 
 ### OH_AVMediaSourceLoaderOnSourceClosedCallback()
@@ -569,7 +577,7 @@ typedef void (*OH_AVMediaSourceLoaderOnSourceClosedCallback)(int64_t uuid, void 
 
 **Description**
 
-Defines the **SourceCloseCallback** function called by the server. The client should release relatedresources and return immediately after the request is processed.
+Defines the **SourceCloseCallback** function called by the server. The client should release related resources and return immediately after the request is processed.
 
 **Since**: 23
 
@@ -604,7 +612,7 @@ Sets the open callback function for **OH_AVMediaSourceLoader**.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The loader is a null pointer or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The loader is a null pointer or the operation fails. |
 
 ### OH_AVMediaSourceLoader_SetSourceReadCallback()
 
@@ -630,7 +638,7 @@ Sets the read callback function for **OH_AVMediaSourceLoader**.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The loader is a null pointer or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The loader is a null pointer or the operation fails. |
 
 ### OH_AVMediaSourceLoader_SetSourceCloseCallback()
 
@@ -656,6 +664,6 @@ Sets the close callback function for **OH_AVMediaSourceLoader**.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.  {@link AV_ERR_INVALID_VAL}: The loader is a null pointer or the operation fails. |
+| OH_AVErrCode | Execution result of the function.  {@link AV_ERR_OK}: The execution is successful.<br>{@link AV_ERR_INVALID_VAL}: The loader is a null pointer or the operation fails. |
 
 

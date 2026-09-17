@@ -8,7 +8,7 @@ Defines the APIs of the HTTP request module.
 
 **System capability**: SystemCapability.Communication.NetStack
 
-**Since**: 20
+**Since**: 11
 
 **Related module**: [netstack](capi-netstack.md)
 

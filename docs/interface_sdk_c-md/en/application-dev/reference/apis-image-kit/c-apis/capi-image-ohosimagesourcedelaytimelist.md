@@ -6,7 +6,7 @@ struct OhosImageSourceDelayTimeList {...}
 
 ## Overview
 
-Defines the delay time list of the image source. It is obtained by calling[OH_ImageSource_GetDelayTime](capi-image-source-mdk-h.md#oh_imagesource_getdelaytime).
+Defines the delay time list of the image source. It is obtained by calling [OH_ImageSource_GetDelayTime](capi-image-source-mdk-h.md#oh_imagesource_getdelaytime).
 
 **Since**: 10
 
@@ -21,8 +21,10 @@ Defines the delay time list of the image source. It is obtained by calling[OH_Im
 | Name | Description |
 | -- | -- |
 | int32_t* delayTimeList |  |
-| size_t size = 0; #else |  |
+| size_t size = 0;
+#else |  |
 | int32_t* delayTimeList |  |
-| size_t size; #endif |  |
+| size_t size;
+#endif |  |
 
 

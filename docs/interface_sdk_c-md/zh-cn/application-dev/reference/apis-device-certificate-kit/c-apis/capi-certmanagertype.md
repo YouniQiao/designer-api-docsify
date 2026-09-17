@@ -2,7 +2,7 @@
 
 ## 概述
 
-Defines the macros, enumerated values, data structures,and error codes used by OpenHarmony Certificate Manager APIs.
+Defines the macros, enumerated values, data structures, and error codes used by OpenHarmony Certificate Manager APIs.
 
 **起始版本：** 22
 

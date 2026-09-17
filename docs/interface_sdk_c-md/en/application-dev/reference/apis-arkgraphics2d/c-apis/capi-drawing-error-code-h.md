@@ -8,7 +8,7 @@ This file declares the functions related to the error code in the drawing module
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 12
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -25,7 +25,7 @@ This file declares the functions related to the error code in the drawing module
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_ErrorCode OH_Drawing_ErrorCodeGet()](#oh_drawing_errorcodeget) | Obtains the error code of the module. |
-| [void OH_Drawing_ErrorCodeReset(void)](#oh_drawing_errorcodereset) | Resets the error code of this module to **OH_DRAWING_SUCCESS**.When a function that does not return an error code fails, the error code obtained through[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget) is reset to the corresponding error number. However, it is not reset to**OH_DRAWING_SUCCESS** for a successful operation. By calling this function, you can manually reset theerror code to **OH_DRAWING_SUCCESS**, avoiding interference between different functions and simplifying thedebugging process. |
+| [void OH_Drawing_ErrorCodeReset(void)](#oh_drawing_errorcodereset) | Resets the error code of this module to **OH_DRAWING_SUCCESS**. When a function that does not return an error code fails, the error code obtained through [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget) is reset to the corresponding error number. However, it is not reset to **OH_DRAWING_SUCCESS** for a successful operation. By calling this function, you can manually reset the error code to **OH_DRAWING_SUCCESS**, avoiding interference between different functions and simplifying the debugging process. |
 
 ## Enum type description
 
@@ -87,7 +87,7 @@ void OH_Drawing_ErrorCodeReset(void)
 
 **Description**
 
-Resets the error code of this module to **OH_DRAWING_SUCCESS**.When a function that does not return an error code fails, the error code obtained through[OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget) is reset to the corresponding error number. However, it is not reset to**OH_DRAWING_SUCCESS** for a successful operation. By calling this function, you can manually reset theerror code to **OH_DRAWING_SUCCESS**, avoiding interference between different functions and simplifying thedebugging process.
+Resets the error code of this module to **OH_DRAWING_SUCCESS**. When a function that does not return an error code fails, the error code obtained through [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget) is reset to the corresponding error number. However, it is not reset to **OH_DRAWING_SUCCESS** for a successful operation. By calling this function, you can manually reset the error code to **OH_DRAWING_SUCCESS**, avoiding interference between different functions and simplifying the debugging process.
 
 **Since**: 18
 

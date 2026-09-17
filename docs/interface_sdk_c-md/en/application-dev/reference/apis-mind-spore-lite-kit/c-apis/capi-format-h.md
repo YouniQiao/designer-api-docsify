@@ -10,3 +10,11 @@ Declares tensor data formats.
 
 **Related module**: [MindSpore](capi-mindspore.md)
 
+## Summary
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| MINDSPORE_INCLUDE_C_API_FORMAT_C_H | Declares tensor data formats.<br>**Since**: 9 |
+

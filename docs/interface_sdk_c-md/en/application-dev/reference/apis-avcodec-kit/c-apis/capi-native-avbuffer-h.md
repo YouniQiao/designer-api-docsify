@@ -8,7 +8,7 @@ The file declares the functions of the media struct AVBuffer.
 
 **System capability**: SystemCapability.Multimedia.Media.Core
 
-**Since**: 11
+**Since**: 9
 
 **Related module**: [Core](capi-core.md)
 
@@ -25,15 +25,15 @@ The file declares the functions of the media struct AVBuffer.
 
 | Name | Description |
 | -- | -- |
-| [OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)](#oh_avbuffer_create) | Creates an OH_AVBuffer instance. You must call [OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy) to manually release theOH_AVBuffer instance returned. |
+| [OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)](#oh_avbuffer_create) | Creates an OH_AVBuffer instance. You must call [OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy) to manually release the OH_AVBuffer instance returned. |
 | [OH_AVErrCode OH_AVBuffer_Destroy(OH_AVBuffer *buffer)](#oh_avbuffer_destroy) | Releases an OH_AVBuffer instance. A buffer cannot be destroyed repeatedly. |
 | [OH_AVErrCode OH_AVBuffer_GetBufferAttr(OH_AVBuffer *buffer, OH_AVCodecBufferAttr *attr)](#oh_avbuffer_getbufferattr) | Obtains the basic attributes, including **pts**, **size**, **offset**, and **flags**, of a buffer. |
 | [OH_AVErrCode OH_AVBuffer_SetBufferAttr(OH_AVBuffer *buffer, const OH_AVCodecBufferAttr *attr)](#oh_avbuffer_setbufferattr) | Sets the basic attributes, including **pts**, **size**, **offset**, and **flags**, of a buffer. |
-| [OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)](#oh_avbuffer_getparameter) | Obtains parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance.You must call {@link OH_AVFormat_Destroy} to manually release the OH_AVFormat instance returned. |
+| [OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)](#oh_avbuffer_getparameter) | Obtains parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance. You must call {@link OH_AVFormat_Destroy} to manually release the OH_AVFormat instance returned. |
 | [OH_AVErrCode OH_AVBuffer_SetParameter(OH_AVBuffer *buffer, const OH_AVFormat *format)](#oh_avbuffer_setparameter) | Sets parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance. |
 | [uint8_t *OH_AVBuffer_GetAddr(OH_AVBuffer *buffer)](#oh_avbuffer_getaddr) | Obtains the virtual address of a data buffer. |
 | [int32_t OH_AVBuffer_GetCapacity(OH_AVBuffer *buffer)](#oh_avbuffer_getcapacity) | Obtains the capacity (in bytes) of a buffer. |
-| [OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)](#oh_avbuffer_getnativebuffer) | Obtains the pointer to an OH_NativeBuffer instance. You must call {@link OH_NativeBuffer_Unreference} tomanually release the OH_NativeBuffer instance returned. |
+| [OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)](#oh_avbuffer_getnativebuffer) | Obtains the pointer to an OH_NativeBuffer instance. You must call {@link OH_NativeBuffer_Unreference} to manually release the OH_NativeBuffer instance returned. |
 
 ## Function description
 
@@ -45,7 +45,7 @@ OH_AVBuffer *OH_AVBuffer_Create(int32_t capacity)
 
 **Description**
 
-Creates an OH_AVBuffer instance. You must call [OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy) to manually release theOH_AVBuffer instance returned.
+Creates an OH_AVBuffer instance. You must call [OH_AVBuffer_Destroy](capi-native-avbuffer-h.md#oh_avbuffer_destroy) to manually release the OH_AVBuffer instance returned.
 
 **Since**: 11
 
@@ -83,7 +83,7 @@ Releases an OH_AVBuffer instance. A buffer cannot be destroyed repeatedly.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The value of buffer is nullptr or fails format verification.      <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The input buffer is not created by the user. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The value of buffer is nullptr or fails format verification.<br>    <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The input buffer is not created by the user. |
 
 ### OH_AVBuffer_GetBufferAttr()
 
@@ -108,7 +108,7 @@ Obtains the basic attributes, including **pts**, **size**, **offset**, and **fla
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer or attr is nullptr.      <br>2. The value of buffer fails parameter structure verification. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer or attr is nullptr.      <br>2. The value of buffer fails parameter structure verification. |
 
 ### OH_AVBuffer_SetBufferAttr()
 
@@ -133,7 +133,7 @@ Sets the basic attributes, including **pts**, **size**, **offset**, and **flags*
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      <br>{@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer or attr is nullptr.      <br>2. The value of buffer fails parameter structure verification.      <br>3. The memory size or offset of the buffer is invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    <br>{@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer or attr is nullptr.      <br>2. The value of buffer fails parameter structure verification.      <br>3. The memory size or offset of the buffer is invalid. |
 
 ### OH_AVBuffer_GetParameter()
 
@@ -143,7 +143,7 @@ OH_AVFormat *OH_AVBuffer_GetParameter(OH_AVBuffer *buffer)
 
 **Description**
 
-Obtains parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance.You must call {@link OH_AVFormat_Destroy} to manually release the OH_AVFormat instance returned.
+Obtains parameters except basic attributes of a buffer. The information is carried in an OH_AVFormat instance. You must call {@link OH_AVFormat_Destroy} to manually release the OH_AVFormat instance returned.
 
 **Since**: 11
 
@@ -157,7 +157,7 @@ Obtains parameters except basic attributes of a buffer. The information is carri
 
 | Type | Description |
 | -- | -- |
-| OH_AVFormat * | {@link AV_ERR_OK}: The operation is successful.      {@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer is nullptr.      <br>2. The meta of the buffer is nullptr.      <br>3. The value of buffer fails parameter structure verification. |
+| OH_AVFormat * | {@link AV_ERR_OK}: The operation is successful.<br>    {@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer is nullptr.      <br>2. The meta of the buffer is nullptr.      <br>3. The value of buffer fails parameter structure verification. |
 
 ### OH_AVBuffer_SetParameter()
 
@@ -182,7 +182,7 @@ Sets parameters except basic attributes of a buffer. The information is carried 
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.      {@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer or format is nullptr.      <br>2. The meta of the buffer is nullptr.      <br>3. The value of buffer fails parameter structure verification. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>    {@link AV_ERR_INVALID_VAL}: The possible causes are as follows:      <br>1. The value of buffer or format is nullptr.      <br>2. The meta of the buffer is nullptr.      <br>3. The value of buffer fails parameter structure verification. |
 
 ### OH_AVBuffer_GetAddr()
 
@@ -240,7 +240,7 @@ OH_NativeBuffer *OH_AVBuffer_GetNativeBuffer(OH_AVBuffer *buffer)
 
 **Description**
 
-Obtains the pointer to an OH_NativeBuffer instance. You must call {@link OH_NativeBuffer_Unreference} tomanually release the OH_NativeBuffer instance returned.
+Obtains the pointer to an OH_NativeBuffer instance. You must call {@link OH_NativeBuffer_Unreference} to manually release the OH_NativeBuffer instance returned.
 
 **Since**: 11
 

@@ -41,7 +41,7 @@ Enumerates the key codes.
 | KEYCODE_HOME = 1 | Function (Home) key<br>**Since**: 22 |
 | KEYCODE_BACK = 2 | Back button<br>**Since**: 22 |
 | KEYCODE_SEARCH = 9 | Search key<br>**Since**: 22 |
-| KEYCODE_MEDIA_PLAY_PAUSE = 10 | Media: Play/Pause key<br>Difference between this key and **KEYCODE_PLAYPAUSE**:<br>*KEYCODE_PLAYPAUSEis anearlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.<br>**Since**: 22 |
+| KEYCODE_MEDIA_PLAY_PAUSE = 10 | Media: Play/Pause key<br>Difference between this key and **KEYCODE_PLAYPAUSE**:<br> **KEYCODE_PLAYPAUSE**<br>is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.<br>**Since**: 22 |
 | KEYCODE_MEDIA_STOP = 11 | Media: Stop Key<br>**Since**: 22 |
 | KEYCODE_MEDIA_NEXT = 12 | Media: Next key<br>**Since**: 22 |
 | KEYCODE_MEDIA_PREVIOUS = 13 | Media: Previous key<br>**Since**: 22 |
@@ -222,7 +222,7 @@ Enumerates the key codes.
 | KEYCODE_FILE = 2627 | File key<br>**Since**: 22 |
 | KEYCODE_BOOKMARKS = 2628 | Bookmarks key<br>**Since**: 22 |
 | KEYCODE_NEXT = 2629 | Page Down key<br>**Since**: 22 |
-| KEYCODE_PLAYPAUSE = 2630 | Media: Play/Pause key<br>Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:<br>*KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed formodern media key devices.<br>**Since**: 22 |
+| KEYCODE_PLAYPAUSE = 2630 | Media: Play/Pause key<br>Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:<br> **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.<br>**Since**: 22 |
 | KEYCODE_PREVIOUS = 2631 | Page Up key<br>**Since**: 22 |
 | KEYCODE_STOPCD = 2632 | Stop CD key<br>**Since**: 22 |
 | KEYCODE_CONFIG = 2634 | Configuration key<br>**Since**: 22 |

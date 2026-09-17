@@ -25,25 +25,25 @@ This file declares the functions related to the brush in the drawing module.
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_Brush* OH_Drawing_BrushCreate(void)](#oh_drawing_brushcreate) | Creates an **OH_Drawing_Brush** object. |
-| [OH_Drawing_Brush* OH_Drawing_BrushCopy(OH_Drawing_Brush* brush)](#oh_drawing_brushcopy) | Copies an existing {@link OH_Drawing_Brush} object to create a new one.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Brush* OH_Drawing_BrushCopy(OH_Drawing_Brush* brush)](#oh_drawing_brushcopy) | Copies an existing {@link OH_Drawing_Brush} object to create a new one.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_BrushDestroy(OH_Drawing_Brush* brush)](#oh_drawing_brushdestroy) | Destroys an **OH_Drawing_Brush** object and reclaims the memory occupied by the object. |
-| [bool OH_Drawing_BrushIsAntiAlias(const OH_Drawing_Brush* brush)](#oh_drawing_brushisantialias) | Checks whether anti-aliasing is enabled for a brush. Anti-aliasing makes the pixels around the shape edgessemi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushSetAntiAlias(OH_Drawing_Brush* brush, bool antiAlias)](#oh_drawing_brushsetantialias) | Enables or disables anti-aliasing for a brush. Anti-aliasing makes the pixels around the shape edges semi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint32_t OH_Drawing_BrushGetColor(const OH_Drawing_Brush* brush)](#oh_drawing_brushgetcolor) | Obtains the color of a brush. The color is used by the brush to fill in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushSetColor(OH_Drawing_Brush* brush, uint32_t color)](#oh_drawing_brushsetcolor) | Sets the color for a brush. The color is used by the brush to fill in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint8_t OH_Drawing_BrushGetAlpha(const OH_Drawing_Brush* brush)](#oh_drawing_brushgetalpha) | Obtains the alpha value of a brush. This value is used by the alpha channel when the brush fills in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushSetAlpha(OH_Drawing_Brush* brush, uint8_t alpha)](#oh_drawing_brushsetalpha) | Sets the alpha value for a brush. This value is used by the alpha channel when the brush fills in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ErrorCode OH_Drawing_BrushSetColor4f(OH_Drawing_Brush* brush, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)](#oh_drawing_brushsetcolor4f) | Sets a color for this brush. The color will be used by the brush to fill in a shape.The color is in ARGB format represented by floating-point numbers. The color space is specified by[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md).If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2.1:1999) color space is used as the default value. |
+| [bool OH_Drawing_BrushIsAntiAlias(const OH_Drawing_Brush* brush)](#oh_drawing_brushisantialias) | Checks whether anti-aliasing is enabled for a brush. Anti-aliasing makes the pixels around the shape edges semi-transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetAntiAlias(OH_Drawing_Brush* brush, bool antiAlias)](#oh_drawing_brushsetantialias) | Enables or disables anti-aliasing for a brush. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint32_t OH_Drawing_BrushGetColor(const OH_Drawing_Brush* brush)](#oh_drawing_brushgetcolor) | Obtains the color of a brush. The color is used by the brush to fill in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetColor(OH_Drawing_Brush* brush, uint32_t color)](#oh_drawing_brushsetcolor) | Sets the color for a brush. The color is used by the brush to fill in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint8_t OH_Drawing_BrushGetAlpha(const OH_Drawing_Brush* brush)](#oh_drawing_brushgetalpha) | Obtains the alpha value of a brush. This value is used by the alpha channel when the brush fills in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetAlpha(OH_Drawing_Brush* brush, uint8_t alpha)](#oh_drawing_brushsetalpha) | Sets the alpha value for a brush. This value is used by the alpha channel when the brush fills in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_BrushSetColor4f(OH_Drawing_Brush* brush, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)](#oh_drawing_brushsetcolor4f) | Sets a color for this brush. The color will be used by the brush to fill in a shape. The color is in ARGB format represented by floating-point numbers. The color space is specified by [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md). If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2. 1:1999) color space is used as the default value. |
 | [OH_Drawing_ErrorCode OH_Drawing_BrushGetAlphaFloat(const OH_Drawing_Brush* brush, float* a)](#oh_drawing_brushgetalphafloat) | Obtains the alpha value of the brush color. |
 | [OH_Drawing_ErrorCode OH_Drawing_BrushGetRedFloat(const OH_Drawing_Brush* brush, float* r)](#oh_drawing_brushgetredfloat) | Obtains the red component of the brush color. |
 | [OH_Drawing_ErrorCode OH_Drawing_BrushGetGreenFloat(const OH_Drawing_Brush* brush, float* g)](#oh_drawing_brushgetgreenfloat) | Obtains the green component of the brush color. |
 | [OH_Drawing_ErrorCode OH_Drawing_BrushGetBlueFloat(const OH_Drawing_Brush* brush, float* b)](#oh_drawing_brushgetbluefloat) | Obtains the blue component of the brush color. |
-| [void OH_Drawing_BrushSetShaderEffect(OH_Drawing_Brush* brush, OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_brushsetshadereffect) | Sets the shader effect for a brush.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushSetShadowLayer(OH_Drawing_Brush* brush, OH_Drawing_ShadowLayer* shadowLayer)](#oh_drawing_brushsetshadowlayer) | Sets the shadow layer for a brush. The shadow layer effect takes effect only when text is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushSetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)](#oh_drawing_brushsetfilter) | Sets the filter {@link OH_Drawing_Filter} for a brush. The filter is a container that holds a mask filter andcolor filter.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushGetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)](#oh_drawing_brushgetfilter) | Obtains the {@link OH_Drawing_Filter} object from the brush. The filter is a container that holds a maskfilter and color filter.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **brush** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_BrushSetBlendMode(OH_Drawing_Brush* brush, OH_Drawing_BlendMode blendMode)](#oh_drawing_brushsetblendmode) | Sets a blender for a brush. The blender implements the specified blend mode.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [void OH_Drawing_BrushReset(OH_Drawing_Brush* brush)](#oh_drawing_brushreset) | Resets a brush to the initial state. All configured attributes are cleared.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetShaderEffect(OH_Drawing_Brush* brush, OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_brushsetshadereffect) | Sets the shader effect for a brush. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetShadowLayer(OH_Drawing_Brush* brush, OH_Drawing_ShadowLayer* shadowLayer)](#oh_drawing_brushsetshadowlayer) | Sets the shadow layer for a brush. The shadow layer effect takes effect only when text is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)](#oh_drawing_brushsetfilter) | Sets the filter {@link OH_Drawing_Filter} for a brush. The filter is a container that holds a mask filter and<br>color filter.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushGetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filter)](#oh_drawing_brushgetfilter) | Obtains the {@link OH_Drawing_Filter} object from the brush. The filter is a container that holds a mask<br>filter and color filter.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **brush** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_BrushSetBlendMode(OH_Drawing_Brush* brush, OH_Drawing_BlendMode blendMode)](#oh_drawing_brushsetblendmode) | Sets a blender for a brush. The blender implements the specified blend mode. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_BrushReset(OH_Drawing_Brush* brush)](#oh_drawing_brushreset) | Resets a brush to the initial state. All configured attributes are cleared. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 
 ## Function description
 
@@ -73,7 +73,7 @@ OH_Drawing_Brush* OH_Drawing_BrushCopy(OH_Drawing_Brush* brush)
 
 **Description**
 
-Copies an existing {@link OH_Drawing_Brush} object to create a new one.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Copies an existing {@link OH_Drawing_Brush} object to create a new one.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -115,7 +115,7 @@ bool OH_Drawing_BrushIsAntiAlias(const OH_Drawing_Brush* brush)
 
 **Description**
 
-Checks whether anti-aliasing is enabled for a brush. Anti-aliasing makes the pixels around the shape edgessemi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Checks whether anti-aliasing is enabled for a brush. Anti-aliasing makes the pixels around the shape edges semi-transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -139,7 +139,7 @@ void OH_Drawing_BrushSetAntiAlias(OH_Drawing_Brush* brush, bool antiAlias)
 
 **Description**
 
-Enables or disables anti-aliasing for a brush. Anti-aliasing makes the pixels around the shape edges semi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Enables or disables anti-aliasing for a brush. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -148,7 +148,7 @@ Enables or disables anti-aliasing for a brush. Anti-aliasing makes the pixels ar
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Brush* brush | Pointer to an **OH_Drawing_Brush** object. |
-| bool antiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **falsemeans the opposite. |
+| bool antiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false**<br>means the opposite. |
 
 ### OH_Drawing_BrushGetColor()
 
@@ -158,7 +158,7 @@ uint32_t OH_Drawing_BrushGetColor(const OH_Drawing_Brush* brush)
 
 **Description**
 
-Obtains the color of a brush. The color is used by the brush to fill in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the color of a brush. The color is used by the brush to fill in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -182,7 +182,7 @@ void OH_Drawing_BrushSetColor(OH_Drawing_Brush* brush, uint32_t color)
 
 **Description**
 
-Sets the color for a brush. The color is used by the brush to fill in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the color for a brush. The color is used by the brush to fill in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -201,7 +201,7 @@ uint8_t OH_Drawing_BrushGetAlpha(const OH_Drawing_Brush* brush)
 
 **Description**
 
-Obtains the alpha value of a brush. This value is used by the alpha channel when the brush fills in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the alpha value of a brush. This value is used by the alpha channel when the brush fills in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -225,7 +225,7 @@ void OH_Drawing_BrushSetAlpha(OH_Drawing_Brush* brush, uint8_t alpha)
 
 **Description**
 
-Sets the alpha value for a brush. This value is used by the alpha channel when the brush fills in a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the alpha value for a brush. This value is used by the alpha channel when the brush fills in a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -244,7 +244,7 @@ OH_Drawing_ErrorCode OH_Drawing_BrushSetColor4f(OH_Drawing_Brush* brush, float a
 
 **Description**
 
-Sets a color for this brush. The color will be used by the brush to fill in a shape.The color is in ARGB format represented by floating-point numbers. The color space is specified by[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md).If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2.1:1999) color space is used as the default value.
+Sets a color for this brush. The color will be used by the brush to fill in a shape. The color is in ARGB format represented by floating-point numbers. The color space is specified by [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md). If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2. 1:1999) color space is used as the default value.
 
 **Since**: 20
 
@@ -253,10 +253,10 @@ Sets a color for this brush. The color will be used by the brush to fill in a sh
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Brush* brush | Pointer to an {@link OH_Drawing_Brush} object. |
-| float a | Alpha value of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
-| float r | Red component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
-| float g | Green component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
-| float b | Blue component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
+| float a | Alpha value of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
+| float r | Red component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
+| float g | Green component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
+| float b | Blue component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
 | [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)* colorSpaceManager | Pointer to an [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md) object. |
 
 **Returns**:
@@ -373,7 +373,7 @@ void OH_Drawing_BrushSetShaderEffect(OH_Drawing_Brush* brush, OH_Drawing_ShaderE
 
 **Description**
 
-Sets the shader effect for a brush.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the shader effect for a brush. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -382,7 +382,7 @@ Sets the shader effect for a brush.This API may return an error code. For detail
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Brush* brush | Pointer to an **OH_Drawing_Brush** object. |
-| OH_Drawing_ShaderEffect* shaderEffect | Pointer to an **OH_Drawing_ShaderEffect** object. If NULL is passed in, the shader effect of thebrush will be cleared. |
+| OH_Drawing_ShaderEffect* shaderEffect | Pointer to an **OH_Drawing_ShaderEffect** object. If NULL is passed in, the shader effect of the brush will be cleared. |
 
 ### OH_Drawing_BrushSetShadowLayer()
 
@@ -392,7 +392,7 @@ void OH_Drawing_BrushSetShadowLayer(OH_Drawing_Brush* brush, OH_Drawing_ShadowLa
 
 **Description**
 
-Sets the shadow layer for a brush. The shadow layer effect takes effect only when text is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the shadow layer for a brush. The shadow layer effect takes effect only when text is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -401,7 +401,7 @@ Sets the shadow layer for a brush. The shadow layer effect takes effect only whe
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Brush* brush | Pointer to an **OH_Drawing_Brush** object. |
-| OH_Drawing_ShadowLayer* shadowLayer | Pointer to an **OH_Drawing_ShadowLayer** object. If NULL is passed in, the shadow layer effect ofthe brush will be cleared. |
+| OH_Drawing_ShadowLayer* shadowLayer | Pointer to an **OH_Drawing_ShadowLayer** object. If NULL is passed in, the shadow layer effect of the brush will be cleared. |
 
 ### OH_Drawing_BrushSetFilter()
 
@@ -411,7 +411,7 @@ void OH_Drawing_BrushSetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filte
 
 **Description**
 
-Sets the filter {@link OH_Drawing_Filter} for a brush. The filter is a container that holds a mask filter andcolor filter.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the filter {@link OH_Drawing_Filter} for a brush. The filter is a container that holds a mask filter and<br>color filter.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -430,7 +430,7 @@ void OH_Drawing_BrushGetFilter(OH_Drawing_Brush* brush, OH_Drawing_Filter* filte
 
 **Description**
 
-Obtains the {@link OH_Drawing_Filter} object from the brush. The filter is a container that holds a maskfilter and color filter.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **brush** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the {@link OH_Drawing_Filter} object from the brush. The filter is a container that holds a mask<br>filter and color filter.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **brush** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -449,7 +449,7 @@ void OH_Drawing_BrushSetBlendMode(OH_Drawing_Brush* brush, OH_Drawing_BlendMode 
 
 **Description**
 
-Sets a blender for a brush. The blender implements the specified blend mode.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Sets a blender for a brush. The blender implements the specified blend mode. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -468,7 +468,7 @@ void OH_Drawing_BrushReset(OH_Drawing_Brush* brush)
 
 **Description**
 
-Resets a brush to the initial state. All configured attributes are cleared.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Resets a brush to the initial state. All configured attributes are cleared. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **brush** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 

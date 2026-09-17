@@ -8,7 +8,7 @@ Declares the APIs for obtaining image data from the native layer.
 
 **System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
-**Since**: 10
+**Since**: 8
 
 **Related module**: [Image](capi-image.md)
 
@@ -27,15 +27,21 @@ Declares the APIs for obtaining image data from the native layer.
 | -- | -- | -- |
 | [typedef void (\*OH_Image_Receiver_On_Callback)(void)](#oh_image_receiver_on_callback) | OH_Image_Receiver_On_Callback | Defines the callbacks for images at the native layer. |
 | [int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageReceiverInfo info, napi_value* res)](#oh_image_receiver_createimagereceiver) | - | Creates an <b>ImageReceiver</b> object at the application layer. |
-| [ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)](#oh_image_receiver_initimagereceivernative) | - | Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layerthrough an <b>ImageReceiver</b> object at the application layer. |
+| [ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, napi_value source)](#oh_image_receiver_initimagereceivernative) | - | Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer. |
 | [int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* native, char* id, size_t len)](#oh_image_receiver_getreceivingsurfaceid) | - | Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
 | [int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readlatestimage) | - | Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
 | [int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_value* image)](#oh_image_receiver_readnextimage) | - | Obtains the next image through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receiver_On_Callback callback)](#oh_image_receiver_on) | - | Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.This callback event is triggered whenever a new image is received. |
+| [int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receiver_On_Callback callback)](#oh_image_receiver_on) | - | Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.<br> This callback event is triggered whenever a new image is received. |
 | [int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct OhosImageSize* size)](#oh_image_receiver_getsize) | - | Obtains the size of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
 | [int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t* capacity)](#oh_image_receiver_getcapacity) | - | Obtains the capacity of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
 | [int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* format)](#oh_image_receiver_getformat) | - | Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative-.md) object. |
-| [int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)](#oh_image_receiver_release) | - | Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer.This API is not used to release an <b>ImageReceiver</b> object at the application layer. |
+| [int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)](#oh_image_receiver_release) | - | Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_Image_Receiver_On_Callback)(void) | Defines the callbacks for images at the native layer.<br>**Since**: 10 |
 
 ## Function description
 
@@ -75,7 +81,7 @@ Creates an <b>ImageReceiver</b> object at the application layer.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_CREATE_SURFACE_FAILED - if create surface failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GRALLOC_BUFFER_FAILED - if surface gralloc buffer failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_RTSP_SURFACE_UNSUPPORT - if media rtsp surface not support.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.  returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_DATA_UNSUPPORT - if media type unsupported. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_CREATE_SURFACE_FAILED - if create surface failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GRALLOC_BUFFER_FAILED - if surface gralloc buffer failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_RTSP_SURFACE_UNSUPPORT - if media rtsp surface not support.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_DATA_UNSUPPORT - if media type unsupported. |
 
 **Reference**:
 
@@ -90,7 +96,7 @@ ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, nap
 
 **Description**
 
-Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layerthrough an <b>ImageReceiver</b> object at the application layer.
+Initializes an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer.
 
 **Since**: 10
 
@@ -136,7 +142,7 @@ Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceive
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.  returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_DATA_UNSUPPORT - if media type unsupported. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_DATA_UNSUPPORT - if media type unsupported. |
 
 **Reference**:
 
@@ -166,7 +172,7 @@ Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceiv
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_CREATE_SURFACE_FAILED - if create surface failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GRALLOC_BUFFER_FAILED - if surface gralloc buffer failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_RTSP_SURFACE_UNSUPPORT - if media rtsp surface not support.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_REQUEST_BUFFER_FAILED - if request Buffer failed. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_CREATE_SURFACE_FAILED - if create surface failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GRALLOC_BUFFER_FAILED - if surface gralloc buffer failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_RTSP_SURFACE_UNSUPPORT - if media rtsp surface not support.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_REQUEST_BUFFER_FAILED - if request Buffer failed. |
 
 **Reference**:
 
@@ -196,7 +202,7 @@ Obtains the next image through an [ImageReceiverNative](capi-image-imagereceiver
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.  returns {@link IRNdkErrCode} IMAGE_RESULT_CREATE_SURFACE_FAILED - if create surface failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GRALLOC_BUFFER_FAILED - if surface gralloc buffer failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_RTSP_SURFACE_UNSUPPORT - if media rtsp surface not support.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.  returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_REQUEST_BUFFER_FAILED - if request Buffer failed. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GET_PARAMETER_FAILED - if Failed to obtain parameters for surface.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_CREATE_SURFACE_FAILED - if create surface failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_GRALLOC_BUFFER_FAILED - if surface gralloc buffer failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_MEDIA_RTSP_SURFACE_UNSUPPORT - if media rtsp surface not support.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_SURFACE_REQUEST_BUFFER_FAILED - if request Buffer failed. |
 
 **Reference**:
 
@@ -211,7 +217,7 @@ int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receive
 
 **Description**
 
-Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.This callback event is triggered whenever a new image is received.
+Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.<br> This callback event is triggered whenever a new image is received.
 
 **Since**: 10
 
@@ -226,7 +232,7 @@ Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_ima
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.  returns {@link IRNdkErrCode} IMAGE_RESULT_REGISTER_LISTENER_FAILED - if Failed to register listener.  returns {@link IRNdkErrCode} IMAGE_RESULT_REGISTER_BUFFER_FAILED - if Failed to register buffer. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_GET_SURFACE_FAILED - if get sufrace failed.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_REGISTER_LISTENER_FAILED - if Failed to register listener.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_REGISTER_BUFFER_FAILED - if Failed to register buffer. |
 
 **Reference**:
 
@@ -256,7 +262,7 @@ Obtains the size of the image receiver through an [ImageReceiverNative](capi-ima
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
 
 **Reference**:
 
@@ -286,7 +292,7 @@ Obtains the capacity of the image receiver through an [ImageReceiverNative](capi
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
 
 **Reference**:
 
@@ -316,7 +322,7 @@ Obtains the format of the image receiver through an [ImageReceiverNative](capi-i
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_DATA_UNSUPPORT - if image type unsupported. |
 
 **Reference**:
 
@@ -331,7 +337,7 @@ int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)
 
 **Description**
 
-Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer.This API is not used to release an <b>ImageReceiver</b> object at the application layer.
+Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer.
 
 **Since**: 10
 
@@ -345,7 +351,7 @@ Releases an [ImageReceiverNative](capi-image-imagereceivernative-.md) object at 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.  returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.  returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.  returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. |
+| int32_t | Returns {@link IRNdkErrCode} IMAGE_RESULT_SUCCESS - if the operation is successful.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_BAD_PARAMETER - if bad parameter.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_JNI_ENV_ABNORMAL - if Abnormal JNI environment.<br>returns {@link IRNdkErrCode} IMAGE_RESULT_INVALID_PARAMETER - if invalid parameter. |
 
 **Reference**:
 

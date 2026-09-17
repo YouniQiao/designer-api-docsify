@@ -8,7 +8,7 @@ The file declares the camera photo concepts.
 
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
-**Since**: 12
+**Since**: 11
 
 **Related module**: [OH_Camera](capi-oh-camera.md)
 

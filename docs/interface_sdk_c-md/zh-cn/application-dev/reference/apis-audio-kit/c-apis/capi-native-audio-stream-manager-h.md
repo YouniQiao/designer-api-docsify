@@ -2,7 +2,7 @@
 
 ## 概述
 
-声明音频流管理器相关的接口。<br>该文件接口用于创建AudioStreamManager以及音频流设置和管理。
+声明音频流管理器相关的接口。 <br>该文件接口用于创建AudioStreamManager以及音频流设置和管理。
 
 **库：** libohaudio.so
 
@@ -54,11 +54,11 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioStreamManager(OH_AudioStreamManage
 | -- | -- |
 | [OH_AudioStreamManager](capi-ohaudio-oh-audiostreammanager.md) **streamManager | 音频流管理器句柄。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds      {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} if system state error |
+| OH_AudioCommon_Result | @return      {@link #AUDIOCOMMON_RESULT_SUCCESS} if execution succeeds<br>    {@link #AUDIOCOMMON_RESULT_ERROR_SYSTEM} if system state error |
 
 ### OH_AudioStreamManager_GetDirectPlaybackSupport()
 
@@ -81,7 +81,7 @@ OH_AudioCommon_Result OH_AudioStreamManager_GetDirectPlaybackSupport(OH_AudioStr
 | OH_AudioStream_Usage usage | 音频流使用场景。 |
 | OH_AudioStream_DirectPlaybackMode *directPlaybackMode | 指向 {@link OH_AudioStream_DirectPlaybackMode}，用于获取当前音频流支持的direct通路播放模式。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -107,7 +107,7 @@ OH_AudioCommon_Result OH_AudioStreamManager_IsAcousticEchoCancelerSupported(OH_A
 | OH_AudioStream_SourceType sourceType | 指定音频输入流的使用场景。 |
 | bool *supported | 查询指定的source type是否支持回声消除的结果。true表示支持回声消除，false表示不支持回声消除。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -133,7 +133,7 @@ bool OH_AudioStreamManager_IsFastPlaybackSupported(OH_AudioStreamManager *stream
 | OH_AudioStreamInfo *streamInfo | 音频流信息指针。 |
 | OH_AudioStream_Usage usage | 音频流使用场景。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -159,7 +159,7 @@ bool OH_AudioStreamManager_IsFastRecordingSupported(OH_AudioStreamManager *strea
 | OH_AudioStreamInfo *streamInfo | 音频流信息指针。 |
 | OH_AudioStream_SourceType source | 音频流使用场景。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -184,7 +184,7 @@ bool OH_AudioStreamManager_IsIntelligentNoiseReductionEnabledForCurrentDevice(OH
 | [OH_AudioStreamManager](capi-ohaudio-oh-audiostreammanager.md) *streamManager | 音频流管理器句柄。通过[OH_AudioManager_GetAudioStreamManager](capi-native-audio-stream-manager-h.md#oh_audiomanager_getaudiostreammanager)获取句柄。 |
 | OH_AudioStream_SourceType source | 根据音频设备和管道类型选择结果得出的音频流使用场景。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -210,7 +210,7 @@ bool OH_AudioStreamManager_IsMultichannelPlaybackSupported(OH_AudioStreamManager
 | OH_AudioStreamInfo *streamInfo | 音频流信息指针，用于描述基础音频格式。 |
 | OH_AudioStream_Usage usage | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -236,7 +236,7 @@ bool OH_AudioStreamManager_IsDirectPlaybackSupported(OH_AudioStreamManager *stre
 | OH_AudioStreamInfo *streamInfo | 音频流信息指针，用于描述基础音频格式。 |
 | OH_AudioStream_Usage usage | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -262,7 +262,7 @@ bool OH_AudioStreamManager_IsOffloadPlaybackSupported(OH_AudioStreamManager *str
 | OH_AudioStreamInfo *streamInfo | 音频流信息指针，用于描述基础音频格式。 |
 | OH_AudioStream_Usage usage | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

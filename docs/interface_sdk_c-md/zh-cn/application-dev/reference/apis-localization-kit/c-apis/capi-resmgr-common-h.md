@@ -2,7 +2,7 @@
 
 ## 概述
 
-提供resourcemanager模块所需的枚举类型和结构体定义。<br>本头文件定义了错误码、屏幕方向、颜色模式、设备类型、屏幕密度等枚举，以及设备配置结构体，为ohresmgr.h中的资源获取函数提供数据类型支持。
+提供resourcemanager模块所需的枚举类型和结构体定义。 <br>本头文件定义了错误码、屏幕方向、颜色模式、设备类型、屏幕密度等枚举，以及设备配置结构体，为ohresmgr.h中的资源获取函数提供数据类型支持。
 
 **库：** libohresmgr.so
 
@@ -29,6 +29,12 @@
 | [ResourceManager_ColorMode](#resourcemanager_colormode) | ResourceManager_ColorMode | 颜色模式的枚举。 |
 | [ResourceManager_DeviceType](#resourcemanager_devicetype) | ResourceManager_DeviceType | 设备类型的枚举。 |
 | [ScreenDensity](#screendensity) | ScreenDensity | 屏幕密度类型的枚举。 |
+
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| GLOBAL_RESMGR_COMMON_H | 提供resourcemanager模块所需的枚举类型和结构体定义。 <br>本头文件定义了错误码、屏幕方向、颜色模式、设备类型、屏幕密度等枚举，以及设备配置结构体，为ohresmgr.h中的资源获取函数提供数据类型支持。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Global.ResourceManager |
 
 ## 枚举类型说明
 

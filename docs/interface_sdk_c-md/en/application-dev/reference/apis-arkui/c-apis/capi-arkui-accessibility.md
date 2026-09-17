@@ -2,7 +2,7 @@
 
 ## Overview
 
-Describes the native capabilities supported by ArkUI Accessibility, such as querying accessibility nodes andreporting accessibility events.
+Describes the native capabilities supported by ArkUI Accessibility, such as querying accessibility nodes and reporting accessibility events.
 
 **Since**: 13
 

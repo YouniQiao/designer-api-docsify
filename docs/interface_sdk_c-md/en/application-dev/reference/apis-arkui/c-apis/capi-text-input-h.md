@@ -105,17 +105,17 @@ Enumerates the autofill types.
 | ARKUI_TEXTINPUT_CONTENT_TYPE_DETAIL_INFO_WITHOUT_STREET | Address information without street address. The scenario-based autofill feature, when enabled, can automatically |
 | ARKUI_TEXTINPUT_CONTENT_TYPE_FORMAT_ADDRESS | Standard address. The scenario-based autofill feature, when enabled, can automatically save and fill in standard |
 | ARKUI_TEXTINPUT_CONTENT_TYPE_PASSPORT_NUMBER |  |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_VALIDITY | Passport validity. The scenario-based autofill feature, when enabled, can automatically save and fill inpassport validities.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_ISSUE_AT | Place of issue. The scenario-based autofill feature, when enabled, can automatically save and fill inplace of issues.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_ORGANIZATION | Tax organization. The scenario-based autofill feature, when enabled, can automatically save and fill in taxorganizations.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_TAX_ID | Tax id. The scenario-based autofill feature, when enabled, can automatically save and fill in standard Tax ids.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_ADDRESS_CITY_AND_STATE | City name and state name or state code. The scenario-based autofill feature, when enabled, can automaticallysave and fill in city names and state names or state codes.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_FLIGHT_NUMBER | Flight number. The scenario-based autofill feature, when enabled, can automatically save and fill in flightnumbers.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_NUMBER | License number. The scenario-based autofill feature, when enabled, can automatically save and fill in licensenumbers.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_FILE_NUMBER | License file number. The scenario-based autofill feature, when enabled, can automatically save and fill inlicense file numbers.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_PLATE | License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill inlicense plate numbers.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_ENGINE_NUMBER | Engine number. The scenario-based autofill feature, when enabled, can automatically save and fill in enginenumbers.@since 18 |
-| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_CHASSIS_NUMBER | License chassis number. The scenario-based autofill feature, when enabled, can automatically save and fill inlicense chassis numbers.@since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_VALIDITY | Passport validity. The scenario-based autofill feature, when enabled, can automatically save and fill in passport validities. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_ISSUE_AT | Place of issue. The scenario-based autofill feature, when enabled, can automatically save and fill in place of issues. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_ORGANIZATION | Tax organization. The scenario-based autofill feature, when enabled, can automatically save and fill in tax organizations. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_TAX_ID | Tax id. The scenario-based autofill feature, when enabled, can automatically save and fill in standard Tax ids. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_ADDRESS_CITY_AND_STATE | City name and state name or state code. The scenario-based autofill feature, when enabled, can automatically save and fill in city names and state names or state codes. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_FLIGHT_NUMBER | Flight number. The scenario-based autofill feature, when enabled, can automatically save and fill in flight numbers. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_NUMBER | License number. The scenario-based autofill feature, when enabled, can automatically save and fill in license numbers. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_FILE_NUMBER | License file number. The scenario-based autofill feature, when enabled, can automatically save and fill in license file numbers. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_PLATE | License plate number. The scenario-based autofill feature, when enabled, can automatically save and fill in license plate numbers. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_ENGINE_NUMBER | Engine number. The scenario-based autofill feature, when enabled, can automatically save and fill in engine numbers. @since 18 |
+| ARKUI_TEXTINPUT_CONTENT_TYPE_LICENSE_CHASSIS_NUMBER | License chassis number. The scenario-based autofill feature, when enabled, can automatically save and fill in license chassis numbers. @since 18 |
 
 ### ArkUI_TextInputStyle
 

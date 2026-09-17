@@ -26,6 +26,7 @@ Defines a single parameter in a parameter set.
 | int32_t int32Param | Parameter of the int32_t type.<br>**Since**: 22 |
 | uint32_t uint32Param | Parameter of the uint32_t type.<br>**Since**: 22 |
 | uint64_t uint64Param | Parameter of the uint64_t type.<br>**Since**: 22 |
-| struct OH_Huks_Blob blob; } | Parameter of the struct OH_Huks_Blob type.<br>**Since**: 22 |
+| struct OH_Huks_Blob blob;
+ } | Parameter of the struct OH_Huks_Blob type.<br>**Since**: 22 |
 
 

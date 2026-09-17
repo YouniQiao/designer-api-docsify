@@ -1,4 +1,4 @@
-# @ohos.app.ability.ExtensionAbility
+# @ohos.app.ability.ExtensionAbility(扩展能力基类)
 
 ## 导入模块
 

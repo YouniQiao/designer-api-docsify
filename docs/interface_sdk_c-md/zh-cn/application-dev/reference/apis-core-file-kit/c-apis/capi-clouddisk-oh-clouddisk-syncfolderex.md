@@ -6,7 +6,7 @@ typedef struct OH_CloudDisk_SyncFolderEx {...} OH_CloudDisk_SyncFolderEx
 
 ## 概述
 
-定义带占位符支持的云盘同步文件夹。必须将版本字段设置为有效的版本宏(例如{@ Cloud_DISK_SYNC_LAYER_EX_VERSION_1})，然后才能传递结构到任何API。运行时使用版本来确定字段有效；当指定低版本时，在较高版本中引入的字段将被忽略。
+定义带占位符支持的云盘同步文件夹。 必须将版本字段设置为有效的版本宏(例如{@ Cloud_DISK_SYNC_LAYER_EX_VERSION_1})，然后才能传递结构到任何API。 运行时使用版本来确定字段有效；当指定低版本时，在较高版本中引入的字段将被忽略。
 
 **起始版本：** 26.1.0
 

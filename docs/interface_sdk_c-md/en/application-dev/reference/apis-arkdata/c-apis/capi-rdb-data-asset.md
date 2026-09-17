@@ -6,7 +6,7 @@ typedef struct Data_Asset Data_Asset
 
 ## Overview
 
-Define the Data_Asset structure type.Provides information of an asset.
+Define the Data_Asset structure type.<br> Provides information of an asset.
 
 **Since**: 11
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Describes the OpenHarmony Universal KeyStore (HUKS) capabilities specifical for external crypto extensions,including provider management and ukey pin management and other operations, provided for applications.
+Describes the OpenHarmony Universal KeyStore (HUKS) capabilities specifical for external crypto extensions, including provider management and ukey pin management and other operations, provided for applications.
 
 **Since**: 22
 

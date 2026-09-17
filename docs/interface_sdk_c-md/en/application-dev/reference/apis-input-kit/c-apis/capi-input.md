@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides C APIs of the multimodal input module, supporting event processing for various input devices such astouch, key, and mouse. It enables unified access to multiple devices, improving development efficiency andapplication interaction experience.
+Provides C APIs of the multimodal input module, supporting event processing for various input devices such as touch, key, and mouse. It enables unified access to multiple devices, improving development efficiency and application interaction experience.
 
 **Since**: 12
 

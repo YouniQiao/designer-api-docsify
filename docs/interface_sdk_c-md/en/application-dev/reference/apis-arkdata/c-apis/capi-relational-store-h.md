@@ -49,6 +49,7 @@ Provides database related functions and enumerations.
 
 | Name | Description |
 | -- | -- |
+| RELATIONAL_STORE_H | Provides database related functions and enumerations.<br>**Since**: 10<br>**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core |
 | DISTRIBUTED_CONFIG_VERSION 1 | Indicates version of [Rdb_DistributedConfig](capi-rdb-rdb-distributedconfig.md)<br>**Since**: 11 |
 | DISTRIBUTED_CHANGE_INFO_VERSION 1 | Indicates version of [Rdb_ChangeInfo](capi-rdb-rdb-changeinfo.md)<br>**Since**: 11 |
 | DISTRIBUTED_PROGRESS_DETAIL_VERSION 1 | Indicates version of [Rdb_ProgressDetails](capi-rdb-rdb-progressdetails.md)<br>**Since**: 11 |
@@ -79,14 +80,14 @@ Provides database related functions and enumerations.
 | [OH_VObject *OH_Rdb_CreateValueObject()](#oh_rdb_createvalueobject) | - | Creates an {@link OH_VObject} instance. |
 | [OH_VBucket *OH_Rdb_CreateValuesBucket()](#oh_rdb_createvaluesbucket) | - | Creates an {@link OH_VBucket} object. |
 | [OH_Predicates *OH_Rdb_CreatePredicates(const char *table)](#oh_rdb_createpredicates) | - | Creates an {@link OH_Predicates} instance. |
-| [OH_Rdb_Store *OH_Rdb_GetOrOpen(const OH_Rdb_Config *config, int *errCode)](#oh_rdb_getoropen) | - | Obtains an RDB store.You can set parameters of the RDB store as required. In general,this method is recommended to obtain a rdb store. |
-| [OH_Rdb_Store *OH_Rdb_CreateOrOpen(const OH_Rdb_ConfigV2 *config, int *errCode)](#oh_rdb_createoropen) | - | Obtains an RDB store with OH_Rdb_ConfigV2.You can set parameters of the RDB store as required. In general,this method is recommended to obtain a rdb store. |
+| [OH_Rdb_Store *OH_Rdb_GetOrOpen(const OH_Rdb_Config *config, int *errCode)](#oh_rdb_getoropen) | - | Obtains an RDB store.<br> You can set parameters of the RDB store as required. In general, this method is recommended to obtain a rdb store. |
+| [OH_Rdb_Store *OH_Rdb_CreateOrOpen(const OH_Rdb_ConfigV2 *config, int *errCode)](#oh_rdb_createoropen) | - | Obtains an RDB store with OH_Rdb_ConfigV2.<br> You can set parameters of the RDB store as required. In general, this method is recommended to obtain a rdb store. |
 | [int OH_Rdb_CloseStore(OH_Rdb_Store *store)](#oh_rdb_closestore) | - | Close the [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) object and reclaim the memory occupied by the object. |
 | [int OH_Rdb_DeleteStore(const OH_Rdb_Config *config)](#oh_rdb_deletestore) | - | Deletes the database with a specified path. |
 | [int OH_Rdb_DeleteStoreV2(const OH_Rdb_ConfigV2 *config)](#oh_rdb_deletestorev2) | - | Deletes the database with a specified path. |
 | [int OH_Rdb_Insert(OH_Rdb_Store *store, const char *table, OH_VBucket *valuesBucket)](#oh_rdb_insert) | - | Inserts a row of data into the target table. |
 | [int OH_Rdb_InsertWithConflictResolution(OH_Rdb_Store *store, const char *table, OH_VBucket *row, Rdb_ConflictResolution resolution, int64_t *rowId)](#oh_rdb_insertwithconflictresolution) | - | Inserts a row of data into the target table and support conflict resolution. |
-| [int OH_Rdb_BatchInsert(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdb_batchinsert) | - | Inserts a batch of data into the target table.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size ofthe union of all fields in the inserted data equals the number of parameters. For example, if the size of the unionis 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complieswith this constraint when calling this API to avoid errors caused by excessive parameters. |
+| [int OH_Rdb_BatchInsert(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdb_batchinsert) | - | Inserts a batch of data into the target table.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. |
 | [int OH_Rdb_Update(OH_Rdb_Store *store, OH_VBucket *valuesBucket, OH_Predicates *predicates)](#oh_rdb_update) | - | Updates data in the database based on specified conditions. |
 | [int OH_Rdb_UpdateWithConflictResolution(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdb_updatewithconflictresolution) | - | Updates data in the database based on specified conditions and support conflict resolution. |
 | [int OH_Rdb_Delete(OH_Rdb_Store *store, OH_Predicates *predicates)](#oh_rdb_delete) | - | Deletes data from the database based on specified conditions. |
@@ -112,13 +113,13 @@ Provides database related functions and enumerations.
 | [OH_Cursor *OH_Rdb_FindModifyTime(OH_Rdb_Store *store, const char *tableName, const char *columnName, OH_VObject *values)](#oh_rdb_findmodifytime) | - | Set table to be distributed table. |
 | [typedef void (\*Rdb_BriefObserver)(void *context, const char *values[], uint32_t count)](#rdb_briefobserver) | Rdb_BriefObserver | The callback function of cloud data change event. |
 | [typedef void (\*Rdb_DetailsObserver)(void *context, const Rdb_ChangeInfo **changeInfo, uint32_t count)](#rdb_detailsobserver) | Rdb_DetailsObserver | The callback function of cloud data change details event. |
-| [int OH_Rdb_Subscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)](#oh_rdb_subscribe) | - | Registers an observer for the database.When data in the distributed database or the local database changes, the callback will be invoked. |
+| [int OH_Rdb_Subscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)](#oh_rdb_subscribe) | - | Registers an observer for the database. When data in the distributed database or the local database changes, the callback will be invoked. |
 | [int OH_Rdb_Unsubscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_DataObserver *observer)](#oh_rdb_unsubscribe) | - | Remove specified observer of specified type from the database. |
 | [Rdb_TableDetails *OH_Rdb_GetTableDetails(Rdb_ProgressDetails *progress, int32_t version)](#oh_rdb_gettabledetails) | - | Get table details from progress details. |
 | [typedef void (\*Rdb_ProgressCallback)(void *context, Rdb_ProgressDetails *progressDetails)](#rdb_progresscallback) | Rdb_ProgressCallback | The callback function of progress. |
 | [typedef void (\*Rdb_SyncCallback)(Rdb_ProgressDetails *progressDetails)](#rdb_synccallback) | Rdb_SyncCallback | The callback function of sync. |
 | [int OH_Rdb_CloudSync(OH_Rdb_Store *store, Rdb_SyncMode mode, const char *tables[], uint32_t count, const Rdb_ProgressObserver *observer)](#oh_rdb_cloudsync) | - | Sync data to cloud. |
-| [int OH_Rdb_SubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)](#oh_rdb_subscribeautosyncprogress) | - | Subscribes to the automatic synchronization progress of an RDB store.A callback will be invoked when there is a notification of the automatic synchronization progress. |
+| [int OH_Rdb_SubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)](#oh_rdb_subscribeautosyncprogress) | - | Subscribes to the automatic synchronization progress of an RDB store. A callback will be invoked when there is a notification of the automatic synchronization progress. |
 | [int OH_Rdb_UnsubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObserver *observer)](#oh_rdb_unsubscribeautosyncprogress) | - | Unsubscribes from the automatic synchronization progress of an RDB store. |
 | [int OH_Rdb_LockRow(OH_Rdb_Store *store, OH_Predicates *predicates)](#oh_rdb_lockrow) | - | Lock data from the database based on specified conditions. |
 | [int OH_Rdb_UnlockRow(OH_Rdb_Store *store, OH_Predicates *predicates)](#oh_rdb_unlockrow) | - | Unlock data from the database based on specified conditions. |
@@ -131,9 +132,19 @@ Provides database related functions and enumerations.
 | [int OH_Rdb_RegisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context, const Rdb_CorruptedHandler handler)](#oh_rdb_registercorruptedhandler) | - | Registers corrupted handler for the database. |
 | [int OH_Rdb_UnregisterCorruptedHandler(const OH_Rdb_ConfigV2 *config, void *context, const Rdb_CorruptedHandler handler)](#oh_rdb_unregistercorruptedhandler) | - | Unregisters corrupted handler for the database. |
 | [int OH_Rdb_RekeyEx(OH_Rdb_Store *store, OH_Rdb_CryptoParam *param)](#oh_rdb_rekeyex) | - | Change the encrypted database key. |
-| [int OH_Rdb_BatchInsertWithReturning(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdb_batchinsertwithreturning) | - | Inserts a batch of data into the target table and output change info to context.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size ofthe union of all fields in the inserted data equals the number of parameters. For example, if the size of the unionis 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complieswith this constraint when calling this API to avoid errors caused by excessive parameters. |
+| [int OH_Rdb_BatchInsertWithReturning(OH_Rdb_Store *store, const char *table, const OH_Data_VBuckets *rows, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdb_batchinsertwithreturning) | - | Inserts a batch of data into the target table and output change info to context.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters. |
 | [int OH_Rdb_UpdateWithReturning(OH_Rdb_Store *store, OH_VBucket *row, OH_Predicates *predicates, Rdb_ConflictResolution resolution, OH_RDB_ReturningContext *context)](#oh_rdb_updatewithreturning) | - | Updates data in the database based on specified conditions and output change info to context. |
 | [int OH_Rdb_DeleteWithReturning(OH_Rdb_Store *store, OH_Predicates *predicates, OH_RDB_ReturningContext *context)](#oh_rdb_deletewithreturning) | - | Deletes data from the database based on specified conditions and output change info to context. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*Rdb_BriefObserver)(void *context, const char *values[], uint32_t count) | The callback function of cloud data change event.<br>**Since**: 11 |
+| void (*Rdb_DetailsObserver)(void *context, const Rdb_ChangeInfo **changeInfo, uint32_t count) | The callback function of cloud data change details event.<br>**Since**: 11 |
+| void (*Rdb_ProgressCallback)(void *context, Rdb_ProgressDetails *progressDetails) | The callback function of progress.<br>**Since**: 11 |
+| void (*Rdb_SyncCallback)(Rdb_ProgressDetails *progressDetails) | The callback function of sync.<br>**Since**: 11 |
+| void (*Rdb_CorruptedHandler)(void *context, OH_Rdb_ConfigV2 *config, OH_Rdb_Store *store) | The callback function of database corruption handle.<br>**Since**: 22 |
 
 ## Enum type description
 
@@ -277,7 +288,7 @@ Indicates the database synchronization mode.
 
 | Enum item | Description |
 | -- | -- |
-| RDB_SYNC_MODE_TIME_FIRST | Indicates that data is synchronized from the end with the closest modification timeto the end with a more distant modification time. |
+| RDB_SYNC_MODE_TIME_FIRST | Indicates that data is synchronized from the end with the closest modification time to the end with a more distant modification time. |
 | RDB_SYNC_MODE_NATIVE_FIRST | Indicates that data is synchronized from local to cloud. |
 | RDB_SYNC_MODE_CLOUD_FIRST | Indicates that data is synchronized from cloud to local. |
 
@@ -337,13 +348,13 @@ Destroy OH_Rdb_ConfigV2 which is created by OH_Rdb_CreateConfig
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetDatabaseDir()
 
@@ -361,14 +372,14 @@ Set property databaseDir into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | const char *databaseDir | Indicates the directory of the database. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetStoreName()
 
@@ -386,14 +397,14 @@ Set property storeName into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | const char *storeName | Indicates the name of the database. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetBundleName()
 
@@ -411,14 +422,14 @@ Set property bundleName into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | const char *bundleName | Indicates the bundle name of the application |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetModuleName()
 
@@ -436,14 +447,14 @@ Set property moduleName into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | const char *moduleName | Indicates the module name of the application. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetEncrypted()
 
@@ -461,14 +472,14 @@ Set property isEncrypted into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | bool isEncrypted | Indicates whether the database is encrypted. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetSecurityLevel()
 
@@ -486,14 +497,14 @@ Set property securityLevel into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | int securityLevel | Indicates the security level [OH_Rdb_SecurityLevel](capi-relational-store-h.md#oh_rdb_securitylevel) of the database. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetArea()
 
@@ -511,14 +522,14 @@ Set property area into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store |
 | int area | Represents the security area of the database. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetDbType()
 
@@ -543,7 +554,7 @@ Set property dbType into config
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_NOT_SUPPORTED} - The error code for not support db types. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_NOT_SUPPORTED} - The error code for not support db types. |
 
 ### OH_Rdb_SetCustomDir()
 
@@ -568,7 +579,7 @@ Sets the customized directory relative to the database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Rdb_SetReadOnly()
 
@@ -593,7 +604,7 @@ Sets the relation database store is read-only mode.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Rdb_SetPlugins()
 
@@ -619,7 +630,7 @@ Sets the dynamic libraries with capabilities such as Full-Text Search (FTS).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Rdb_SetCryptoParam()
 
@@ -644,7 +655,7 @@ Sets the custom encryption parameters.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter. |
 
 ### OH_Rdb_SetTokenizer()
 
@@ -669,7 +680,7 @@ Set property tokenizer into config
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_NOT_SUPPORTED} - The error code for not support tokenizer. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_NOT_SUPPORTED} - The error code for not support tokenizer. |
 
 ### OH_Rdb_SetPersistent()
 
@@ -687,14 +698,14 @@ Set property persist into config
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | bool isPersistent | Indicates whether the database need persistence. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_SetSemanticIndex()
 
@@ -712,14 +723,14 @@ Set whether the database enable the capabilities for semantic indexing processin
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 | bool enableSemanticIndex | Indicates whether the database enable the capabilities for semantic indexing processing. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 ### OH_Rdb_IsTokenizerSupported()
 
@@ -744,7 +755,7 @@ Check if a tokenizer is supported or not.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          {@link RDB_OK} indicates the operation is successful.          {@link RDB_E_INVALID_ARGS} indicates invalid args are passed in. |
+| int | Returns the status code of the execution.          {@link RDB_OK} indicates the operation is successful.<br>        {@link RDB_E_INVALID_ARGS} indicates invalid args are passed in. |
 
 ### OH_Rdb_GetSupportedDbType()
 
@@ -853,7 +864,7 @@ OH_Rdb_Store *OH_Rdb_GetOrOpen(const OH_Rdb_Config *config, int *errCode)
 
 **Description**
 
-Obtains an RDB store.You can set parameters of the RDB store as required. In general,this method is recommended to obtain a rdb store.
+Obtains an RDB store.<br> You can set parameters of the RDB store as required. In general, this method is recommended to obtain a rdb store.
 
 **Since**: 10
 
@@ -861,8 +872,8 @@ Obtains an RDB store.You can set parameters of the RDB store as required. In gen
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Rdb_Config](capi-rdb-oh-rdb-config.md) *config | Represents a pointer to an [OH_Rdb_Config](capi-rdb-oh-rdb-config.md) instance.Indicates the configuration of the database related to this RDB store. |
-| int *errCode | This parameter is the output parameter,and the execution status of a function is written to this variable. |
+| [const OH_Rdb_Config](capi-rdb-oh-rdb-config.md) *config | Represents a pointer to an [OH_Rdb_Config](capi-rdb-oh-rdb-config.md) instance. Indicates the configuration of the database related to this RDB store. |
+| int *errCode | This parameter is the output parameter, and the execution status of a function is written to this variable. |
 
 **Returns**:
 
@@ -883,7 +894,7 @@ OH_Rdb_Store *OH_Rdb_CreateOrOpen(const OH_Rdb_ConfigV2 *config, int *errCode)
 
 **Description**
 
-Obtains an RDB store with OH_Rdb_ConfigV2.You can set parameters of the RDB store as required. In general,this method is recommended to obtain a rdb store.
+Obtains an RDB store with OH_Rdb_ConfigV2.<br> You can set parameters of the RDB store as required. In general, this method is recommended to obtain a rdb store.
 
 **Since**: 14
 
@@ -891,8 +902,8 @@ Obtains an RDB store with OH_Rdb_ConfigV2.You can set parameters of the RDB stor
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to an [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
-| int *errCode | This parameter is the output parameter,and the execution status of a function is written to this variable. |
+| [const OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to an [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
+| int *errCode | This parameter is the output parameter, and the execution status of a function is written to this variable. |
 
 **Returns**:
 
@@ -927,7 +938,7 @@ Close the [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) object and reclaim the memory
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  while failure returns a specific error code. Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>while failure returns a specific error code. Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -950,13 +961,13 @@ Deletes the database with a specified path.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Rdb_Config](capi-rdb-oh-rdb-config.md) *config | Represents a pointer to an [OH_Rdb_Config](capi-rdb-oh-rdb-config.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [const OH_Rdb_Config](capi-rdb-oh-rdb-config.md) *config | Represents a pointer to an [OH_Rdb_Config](capi-rdb-oh-rdb-config.md) instance. Indicates the configuration of the database related to this RDB store. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  while failure returns a specific error code. Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>while failure returns a specific error code. Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -979,13 +990,13 @@ Deletes the database with a specified path.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to an [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance.Indicates the configuration of the database related to this RDB store. |
+| [const OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) *config | Represents a pointer to an [OH_Rdb_ConfigV2](capi-rdb-oh-rdb-configv2.md) instance. Indicates the configuration of the database related to this RDB store. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  while failure returns a specific error code. Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>while failure returns a specific error code. Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -1016,7 +1027,7 @@ Inserts a row of data into the target table.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the rowId if success, returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the rowId if success, returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -1049,7 +1060,7 @@ Inserts a row of data into the target table and support conflict resolution.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
 
 ### OH_Rdb_BatchInsert()
 
@@ -1059,7 +1070,7 @@ int OH_Rdb_BatchInsert(OH_Rdb_Store *store, const char *table, const OH_Data_VBu
 
 **Description**
 
-Inserts a batch of data into the target table.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size ofthe union of all fields in the inserted data equals the number of parameters. For example, if the size of the unionis 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complieswith this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since**: 18
 
@@ -1077,7 +1088,7 @@ Inserts a batch of data into the target table.A maximum of 32766 parameters can 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
 
 ### OH_Rdb_Update()
 
@@ -1097,13 +1108,13 @@ Updates data in the database based on specified conditions.
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | OH_VBucket *valuesBucket | Indicates the row of data {@link OH_VBucket} to be updated in the database |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified update condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified update condition. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the number of rows changed if success, otherwise, returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the number of rows changed if success, otherwise, returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -1136,7 +1147,7 @@ Updates data in the database based on specified conditions and support conflict 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
 
 ### OH_Rdb_Delete()
 
@@ -1155,13 +1166,13 @@ Deletes data from the database based on specified conditions.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified delete condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified delete condition. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the number of rows changed if success, otherwise, returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the number of rows changed if success, otherwise, returns a specific error code.      {@link RDB_ERR} - Indicates that the function execution exception.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -1185,7 +1196,7 @@ Queries data in the database based on specified conditions.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified query condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified query condition. |
 | const char *const *columnNames | Indicates the columns to query. If the value is empty array, the query applies to all columns. |
 | int length | Indicates the length of columnNames. |
 
@@ -1217,7 +1228,7 @@ Queries data in the database based on specified conditions without row count.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified query condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified query condition. |
 | const char *const columns[] | Indicates the columns to query. If the value is empty array, the query applies to all columns. |
 | int length | Indicates the length of columns. |
 
@@ -1286,7 +1297,7 @@ Executes an SQL statement.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1312,13 +1323,13 @@ Executes an SQL statement.
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | const char *sql | Indicates the SQL statement to execute. |
 | const OH_Data_Values *args | Represents the values of the parameters in the SQL statement. |
-| OH_Data_Value **result | Represents a pointer to OH_Data_Value instance when the execution is successful.The memory must be released through the OH_Value_Destroy interface after the use is complete. |
+| OH_Data_Value **result | Represents a pointer to OH_Data_Value instance when the execution is successful. The memory must be released through the OH_Value_Destroy interface after the use is complete. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch. |
 
 **Reference**:
 
@@ -1349,7 +1360,7 @@ Write operations are performed using the specified transaction represented by th
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
 
 **Reference**:
 
@@ -1439,7 +1450,7 @@ Begins a transaction in EXCLUSIVE mode.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1468,7 +1479,7 @@ Rolls back a transaction in EXCLUSIVE mode.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1497,7 +1508,7 @@ Commits a transaction in EXCLUSIVE mode.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1527,7 +1538,7 @@ Begin a transaction and the transaction ID corresponding to the transaction.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
 
 **Reference**:
 
@@ -1557,7 +1568,7 @@ Roll back a transaction that is represented by a specified transaction ID
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
 
 **Reference**:
 
@@ -1587,7 +1598,7 @@ Commit a transaction that is represented by a specified transaction ID
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_NOT_SUPPORTED} - The error code for not support. |
 
 **Reference**:
 
@@ -1617,7 +1628,7 @@ Backs up a database on specified path.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1647,7 +1658,7 @@ Restores a database from a specified database file.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1677,7 +1688,7 @@ Gets the version of a database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1707,7 +1718,7 @@ Sets the version of a database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution.      {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1740,7 +1751,7 @@ Set table to be distributed table.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1766,8 +1777,8 @@ Set table to be distributed table.
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | const char *tableName | Indicates the name of the table to check. |
-| const char *columnName | Indicates the name of the column corresponding to the primary key.If the table has no primary key , please pass in "rowid". |
-| OH_VObject *values | Indicates the primary keys of the rows to check.If the table has no primary key , please pass in the row-ids of the rows to check. |
+| const char *columnName | Indicates the name of the column corresponding to the primary key. If the table has no primary key , please pass in "rowid". |
+| OH_VObject *values | Indicates the primary keys of the rows to check. If the table has no primary key , please pass in the row-ids of the rows to check. |
 
 **Returns**:
 
@@ -1835,7 +1846,7 @@ int OH_Rdb_Subscribe(OH_Rdb_Store *store, Rdb_SubscribeType type, const Rdb_Data
 
 **Description**
 
-Registers an observer for the database.When data in the distributed database or the local database changes, the callback will be invoked.
+Registers an observer for the database. When data in the distributed database or the local database changes, the callback will be invoked.
 
 **Since**: 11
 
@@ -1844,14 +1855,14 @@ Registers an observer for the database.When data in the distributed database or 
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| [Rdb_SubscribeType](capi-relational-store-h.md#rdb_subscribetype) type | Indicates the subscription type, which is defined in [Rdb_SubscribeType](capi-relational-store-h.md#rdb_subscribetype).If its value is RDB_SUBSCRIBE_TYPE_LOCAL_DETAILS, the callback will be invoked for data changesin the local database. |
+| [Rdb_SubscribeType](capi-relational-store-h.md#rdb_subscribetype) type | Indicates the subscription type, which is defined in [Rdb_SubscribeType](capi-relational-store-h.md#rdb_subscribetype). If its value is RDB_SUBSCRIBE_TYPE_LOCAL_DETAILS, the callback will be invoked for data changes in the local database. |
 | [const Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) *observer | The [Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) of change events in the database. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1877,13 +1888,13 @@ Remove specified observer of specified type from the database.
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | [Rdb_SubscribeType](capi-relational-store-h.md#rdb_subscribetype) type | Indicates the subscription type, which is defined in [Rdb_SubscribeType](capi-relational-store-h.md#rdb_subscribetype). |
-| [const Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) *observer | The [Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) of change events in the database.If this is nullptr, remove all observers of the type. |
+| [const Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) *observer | The [Rdb_DataObserver](capi-rdb-rdb-dataobserver.md) of change events in the database. If this is nullptr, remove all observers of the type. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -1938,7 +1949,7 @@ The callback function of progress.
 
 | Parameter | Description |
 | -- | -- |
-| void \*context | Represents user-provided data context,which will be passed back into the function when invoked. |
+| void \*context | Represents user-provided data context, which will be passed back into the function when invoked. |
 | [Rdb_ProgressDetails](capi-rdb-rdb-progressdetails.md) \*progressDetails | The details of the sync progress. |
 
 **Reference**:
@@ -1995,7 +2006,7 @@ Sync data to cloud.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -2011,7 +2022,7 @@ int OH_Rdb_SubscribeAutoSyncProgress(OH_Rdb_Store *store, const Rdb_ProgressObse
 
 **Description**
 
-Subscribes to the automatic synchronization progress of an RDB store.A callback will be invoked when there is a notification of the automatic synchronization progress.
+Subscribes to the automatic synchronization progress of an RDB store. A callback will be invoked when there is a notification of the automatic synchronization progress.
 
 **Since**: 11
 
@@ -2020,13 +2031,13 @@ Subscribes to the automatic synchronization progress of an RDB store.A callback 
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Indicates the pointer to the target [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| [const Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) *observer | The [Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) for the automatic synchronization progress.Indicates the callback invoked to return the automatic synchronization progress. |
+| [const Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) *observer | The [Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) for the automatic synchronization progress. Indicates the callback invoked to return the automatic synchronization progress. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -2051,13 +2062,13 @@ Unsubscribes from the automatic synchronization progress of an RDB store.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Indicates the pointer to the target [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| [const Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) *observer | Indicates the [Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) callback for the automatic synchronization progress.If it is a null pointer, all callbacks for the automatic synchronization progress will be unregistered. |
+| [const Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) *observer | Indicates the [Rdb_ProgressObserver](capi-rdb-rdb-progressobserver.md) callback for the automatic synchronization progress. If it is a null pointer, all callbacks for the automatic synchronization progress will be unregistered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -2082,13 +2093,13 @@ Lock data from the database based on specified conditions.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified lock condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified lock condition. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -2112,13 +2123,13 @@ Unlock data from the database based on specified conditions.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified unlock condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified unlock condition. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.      {@link RDB_OK} - success.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link OH_Rdb_ErrCode}.<br>    {@link RDB_OK} - success.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args. |
 
 **Reference**:
 
@@ -2142,7 +2153,7 @@ Queries locked data in the database based on specified conditions.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance.Indicates the specified query condition. |
+| OH_Predicates *predicates | Represents a pointer to an {@link OH_Predicates} instance. Indicates the specified query condition. |
 | const char *const *columnNames | Indicates the columns to query. If the value is empty array, the query applies to all columns. |
 | int length | Indicates the length of columnNames. |
 
@@ -2175,13 +2186,13 @@ Creates an OH_Rdb_Transaction instance object.
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an instance of OH_Rdb_Store. |
 | const OH_RDB_TransOptions *options | Represents a pointer to an instance of OH_RDB_TransOptions. |
-| OH_Rdb_Transaction **trans | Represents a pointer to OH_Rdb_Transaction instance when the execution is successful.Otherwise, nullptr is returned. The memory must be released through the OH_RdbTrans_Destroyinterface after the use is complete. |
+| OH_Rdb_Transaction **trans | Represents a pointer to OH_Rdb_Transaction instance when the execution is successful. Otherwise, nullptr is returned. The memory must be released through the OH_RdbTrans_Destroy interface after the use is complete. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_DATABASE_BUSY} database does not respond.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_CANT_OPEN} SQLite: Unable to open the database file. |
+| int | Returns the error code.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_DATABASE_BUSY} database does not respond.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_CANT_OPEN} SQLite: Unable to open the database file. |
 
 **Reference**:
 
@@ -2214,7 +2225,7 @@ Attaches a database file to the currently linked database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_NOT_SUPPORTED} - The error code for not support.          Returns {@link RDB_E_DATABASE_BUSY} database does not respond.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_NOT_SUPPORTED} - The error code for not support.<br>        Returns {@link RDB_E_DATABASE_BUSY} database does not respond.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
 
 ### OH_Rdb_Detach()
 
@@ -2241,7 +2252,7 @@ Detaches a database from this database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_NOT_SUPPORTED} - The error code for not support.          Returns {@link RDB_E_DATABASE_BUSY} database does not respond.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_NOT_SUPPORTED} - The error code for not support.<br>        Returns {@link RDB_E_DATABASE_BUSY} database does not respond.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation. |
 
 **Reference**:
 
@@ -2271,7 +2282,7 @@ Support for collations in different languages.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      <br>{@link RDB_OK} if the execution is successful.      <br>{@link RDB_ERR} - Indicates that the function execution exception.      <br>{@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      <br>{@link RDB_E_ALREADY_CLOSED} database already closed.      <br>{@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.      <br>{@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.      <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      <br>{@link RDB_OK} if the execution is successful.<br>    <br>{@link RDB_ERR} - Indicates that the function execution exception.<br>    <br>{@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    <br>{@link RDB_E_ALREADY_CLOSED} database already closed.<br>    <br>{@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>    <br>{@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>    <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -2322,7 +2333,7 @@ Registers corrupted handler for the database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} if the execution is successful.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.      {@link RDB_E_SUB_OVER_LIMIT} - Indicates the number of subscriptions exceeds the limit.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} if the execution is successful.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>    {@link RDB_E_SUB_OVER_LIMIT} - Indicates the number of subscriptions exceeds the limit.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -2353,7 +2364,7 @@ Unregisters corrupted handler for the database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns a specific error code.      {@link RDB_OK} if the execution is successful.      {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns a specific error code.      {@link RDB_OK} if the execution is successful.<br>    {@link RDB_E_INVALID_ARGS} - The error code for common invalid args.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -2383,7 +2394,7 @@ Change the encrypted database key.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_ERROR} database common error.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_ALREADY_CLOSED} database already closed.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_ERROR} database common error.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_ALREADY_CLOSED} database already closed.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_PERM} SQLite: Access permission denied.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_NOMEM} SQLite: The database is out of memory.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full. |
 
 ### OH_Rdb_BatchInsertWithReturning()
 
@@ -2393,7 +2404,7 @@ int OH_Rdb_BatchInsertWithReturning(OH_Rdb_Store *store, const char *table, cons
 
 **Description**
 
-Inserts a batch of data into the target table and output change info to context.A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size ofthe union of all fields in the inserted data equals the number of parameters. For example, if the size of the unionis 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complieswith this constraint when calling this API to avoid errors caused by excessive parameters.
+Inserts a batch of data into the target table and output change info to context.<br> A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit, the error code RDB_E_INVALID_ARGS is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10, a maximum of 3276 data records can be inserted (3276 × 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since**: 23
 
@@ -2411,7 +2422,7 @@ Inserts a batch of data into the target table and output change info to context.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_NOT_SUPPORTED} The error code for not support.          Returns {@link RDB_E_DATABASE_BUSY} The error code for database busy.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation.          Returns {@link RDB_E_SQLITE_ERROR} SQLite error.              Possible causes: syntax error, such as a table or column not existing.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_NOT_SUPPORTED} The error code for not support.<br>        Returns {@link RDB_E_DATABASE_BUSY} The error code for database busy.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation.<br>        Returns {@link RDB_E_SQLITE_ERROR} SQLite error.<br>            Possible causes: syntax error, such as a table or column not existing.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -2444,7 +2455,7 @@ Updates data in the database based on specified conditions and output change inf
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_NOT_SUPPORTED} The error code for not support.          Returns {@link RDB_E_EMPTY_VALUES_BUCKET} The error code for a values bucket is empty.          Returns {@link RDB_E_DATABASE_BUSY} The error code for database busy.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation.          Returns {@link RDB_E_SQLITE_ERROR} SQLite error.              Possible causes: syntax error, such as a table or column not existing.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_NOT_SUPPORTED} The error code for not support.<br>        Returns {@link RDB_E_EMPTY_VALUES_BUCKET} The error code for a values bucket is empty.<br>        Returns {@link RDB_E_DATABASE_BUSY} The error code for database busy.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_CONSTRAINT} SQLite: Abort due to constraint violation.<br>        Returns {@link RDB_E_SQLITE_ERROR} SQLite error.<br>            Possible causes: syntax error, such as a table or column not existing.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -2475,7 +2486,7 @@ Deletes data from the database based on specified conditions and output change i
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.          Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.          Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.          Returns {@link RDB_E_NOT_SUPPORTED} The error code for not support.          Returns {@link RDB_E_DATABASE_BUSY} The error code for database busy.          Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.          Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.          Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.          Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.          Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.          Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.          Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.          Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.          Returns {@link RDB_E_SQLITE_ERROR} SQLite error.              Possible causes: syntax error, such as a table or column not existing.  Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution.          Returns {@link RDB_OK} if the execution is successful.<br>        Returns {@link RDB_E_INVALID_ARGS} if invalid input parameter.<br>        Returns {@link RDB_E_WAL_SIZE_OVER_LIMIT} the WAL file size over default limit.<br>        Returns {@link RDB_E_NOT_SUPPORTED} The error code for not support.<br>        Returns {@link RDB_E_DATABASE_BUSY} The error code for database busy.<br>        Returns {@link RDB_E_SQLITE_FULL} SQLite: The database is full.<br>        Returns {@link RDB_E_SQLITE_CORRUPT} database corrupted.<br>        Returns {@link RDB_E_SQLITE_BUSY} SQLite: The database file is locked.<br>        Returns {@link RDB_E_SQLITE_LOCKED} SQLite: A table in the database is locked.<br>        Returns {@link RDB_E_SQLITE_READONLY} SQLite: Attempt to write a readonly database.<br>        Returns {@link RDB_E_SQLITE_IOERR} SQLite: Some kind of disk I/O error occurred.<br>        Returns {@link RDB_E_SQLITE_TOO_BIG} SQLite: TEXT or BLOB exceeds size limit.<br>        Returns {@link RDB_E_SQLITE_MISMATCH} SQLite: Data type mismatch.<br>        Returns {@link RDB_E_SQLITE_ERROR} SQLite error.<br>            Possible causes: syntax error, such as a table or column not existing.<br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 

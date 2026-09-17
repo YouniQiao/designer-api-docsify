@@ -21,7 +21,7 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md) | OH_LowPowerVideoSink | LowPowerVideoSink声明。 |
-| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md) | OH_LowPowerVideoSinkCallback | 包含了LowPowerVideoSink回调函数指针的集合。<br> 应用需注册此实例结构体到[OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)实例中，并对回调上报的信息进行处理，保证OH_LowPowerVideoSink的正常运行。 |
+| [OH_LowPowerVideoSinkCallback](capi-lowpowervideosink-oh-lowpowervideosinkcallback.md) | OH_LowPowerVideoSinkCallback | 包含了LowPowerVideoSink回调函数指针的集合。<br> 应用需注册此实例结构体到[OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)实例中，并对回调上报的信息进行处理， 保证OH_LowPowerVideoSink的正常运行。 |
 
 ### 函数
 
@@ -34,6 +34,18 @@
 | [typedef void (\*OH_LowPowerVideoSink_OnStreamChanged)(OH_LowPowerVideoSink* sink, OH_AVFormat* format, void* userData)](#oh_lowpowervideosink_onstreamchanged) | OH_LowPowerVideoSink_OnStreamChanged | LowPowerVideoSink流切换时调用该方法。 |
 | [typedef void (\*OH_LowPowerVideoSink_OnFirstFrameDecoded)(OH_LowPowerVideoSink* sink, void* userData)](#oh_lowpowervideosink_onfirstframedecoded) | OH_LowPowerVideoSink_OnFirstFrameDecoded | LowPowerVideoSink第一帧解码成功时调用该方法。 |
 | [typedef void (\*OH_LowPowerVideoSink_OnEos)(OH_LowPowerVideoSink* sink, void* userData)](#oh_lowpowervideosink_oneos) | OH_LowPowerVideoSink_OnEos | LowPowerVideoSink播放完成时调用该方法。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*OH_LowPowerVideoSink_OnDataNeeded)( OH_LowPowerVideoSink* sink, OH_AVSamplesBuffer* buffer, void *userData) | LowPowerVideoSink需要数据时调用该方法。<br>**起始版本：** 20 |
+| void (*OH_LowPowerVideoSink_OnError)( OH_LowPowerVideoSink* sink, OH_AVErrCode errCode, const char* errMsg, void* userData) | LowPowerVideoSink发生错误时调用该方法。<br>**起始版本：** 20 |
+| void (*OH_LowPowerVideoSink_OnTargetArrived)( OH_LowPowerVideoSink* sink, const int64_t targetPts, const bool isTimeout, void* userData) | LowPowerVideoSink到达指定的播放目标位置时调用该方法。<br>**起始版本：** 20 |
+| void (*OH_LowPowerVideoSink_OnRenderStarted)(OH_LowPowerVideoSink* sink, void* userData) | LowPowerVideoSink开始渲染时调用该方法。<br>**起始版本：** 20 |
+| void (*OH_LowPowerVideoSink_OnStreamChanged)(OH_LowPowerVideoSink* sink, OH_AVFormat* format, void* userData) | LowPowerVideoSink流切换时调用该方法。<br>**起始版本：** 20 |
+| void (*OH_LowPowerVideoSink_OnFirstFrameDecoded)(OH_LowPowerVideoSink* sink, void* userData) | LowPowerVideoSink第一帧解码成功时调用该方法。<br>**起始版本：** 20 |
+| void (*OH_LowPowerVideoSink_OnEos)(OH_LowPowerVideoSink* sink, void* userData) | LowPowerVideoSink播放完成时调用该方法。<br>**起始版本：** 20 |
 
 ## 函数说明
 
@@ -74,7 +86,7 @@ LowPowerVideoSink发生错误时调用该方法。
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_LowPowerVideoSink](capi-lowpowervideosink-oh-lowpowervideosink.md)\* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| OH_AVErrCode errCode | 业务操作过程中发生错误时返回的错误码。请参考{@link OH_AVErrCode} |
+| OH_AVErrCode errCode | 业务操作过程中发生错误时返回的错误码。 请参考{@link OH_AVErrCode} |
 | const char\* errMsg | 业务操作过程中发生错误时返回的错误描述信息。 |
 | void\* userData | 用户执行回调所依赖的数据。 |
 

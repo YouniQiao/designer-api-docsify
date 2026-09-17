@@ -6,7 +6,7 @@ typedef struct OH_NativeBuffer_Planes {...} OH_NativeBuffer_Planes
 
 ## Overview
 
-Holds all image planes. <br>
+Holds all image planes.
 
 **Since**: 12
 

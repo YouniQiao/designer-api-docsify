@@ -6,7 +6,7 @@ struct OH_PackingOptions
 
 ## Overview
 
-OH_PackingOptions is an image encoding option struct encapsulated at the native layer. It cannot bemanipulated directly; instead, functions shall be called to create and release the struct, and operate on itsspecific fields.
+OH_PackingOptions is an image encoding option struct encapsulated at the native layer. It cannot be manipulated directly; instead, functions shall be called to create and release the struct, and operate on its specific fields.
 
 **Since**: 12
 

@@ -8,7 +8,7 @@ This file declares the functions related to the path operation iterator object.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
-**Since**: 23
+**Since**: 8
 
 **Related module**: [Drawing](capi-drawing.md)
 
@@ -123,7 +123,7 @@ Checks whether there is any next operation in the path operation iterator.
 | Parameter | Description |
 | -- | -- |
 | const OH_Drawing_PathIterator* pathIterator | Pointer to an {@link OH_Drawing_PathIterator} object. |
-| bool* hasNext | Whether there is a next operation in the path operation iterator, which serves as an output parameter.A value of **true** means there is a next operation; **false** means the opposite. |
+| bool* hasNext | Whether there is a next operation in the path operation iterator, which serves as an output parameter. A value of **true** means there is a next operation; **false** means the opposite. |
 
 **Returns**:
 

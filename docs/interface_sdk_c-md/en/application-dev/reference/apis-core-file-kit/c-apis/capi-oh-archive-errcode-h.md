@@ -20,6 +20,12 @@ Declares the error codes of Archive module.
 | -- | -- | -- |
 | [OH_Archive_ErrCode](#oh_archive_errcode) | OH_Archive_ErrCode | Error codes for the Archive. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| FILE_MANAGEMENT_ARCHIVE_OH_ARCHIVE_ERRCODE_H | Declares the error codes of Archive module.<br>**Since**: 26.0.0<br>**System capability**: SystemCapability.FileManagement.File.FileIO |
+
 ## Enum type description
 
 ### OH_Archive_ErrCode

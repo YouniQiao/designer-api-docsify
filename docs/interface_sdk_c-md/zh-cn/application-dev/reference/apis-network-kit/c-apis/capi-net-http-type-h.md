@@ -68,6 +68,16 @@
 | [typedef void (\*Http_OnHeaderReceiveCallback)(Http_Headers *headers)](#http_onheaderreceivecallback) | Http_OnHeaderReceiveCallback | 收到HTTP响应头的回调函数。 |
 | [typedef void (\*Http_OnVoidCallback)(void)](#http_onvoidcallback) | Http_OnVoidCallback | 请求的DataEnd或Cancel事件回调的回调函数。 |
 
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*Http_ResponseCallback)(struct Http_Response *response, uint32_t errCode) | 接收到HTTP响应的回调函数。<br>**起始版本：** 20 |
+| void (*Http_OnDataReceiveCallback)(const char *data, size_t length) | 接收到数据的回调。<br>**起始版本：** 20 |
+| void (*Http_OnProgressCallback)(uint64_t totalSize, uint64_t transferredSize) | 请求/响应数据传输过程中调用的回调函数。<br>**起始版本：** 20 |
+| void (*Http_OnHeaderReceiveCallback)(Http_Headers *headers) | 收到HTTP响应头的回调函数。<br>**起始版本：** 20 |
+| void (*Http_OnVoidCallback)(void) | 请求的DataEnd或Cancel事件回调的回调函数。<br>**起始版本：** 20 |
+
 ## 枚举类型说明
 
 ### Http_ErrCode

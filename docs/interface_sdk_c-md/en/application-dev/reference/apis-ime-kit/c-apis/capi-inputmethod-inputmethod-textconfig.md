@@ -6,7 +6,7 @@ typedef struct InputMethod_TextConfig InputMethod_TextConfig
 
 ## Overview
 
-Define the InputMethod_TextConfig structure type.The configuration of the text editor.
+Define the InputMethod_TextConfig structure type.<br> The configuration of the text editor.
 
 **Since**: 12
 

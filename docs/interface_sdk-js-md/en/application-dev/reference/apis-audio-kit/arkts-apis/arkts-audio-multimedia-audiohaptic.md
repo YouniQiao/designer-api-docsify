@@ -1,4 +1,4 @@
-# @ohos.multimedia.audioHaptic
+# @ohos.multimedia.audioHaptic(Audio Haptic)
 
 Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.
 

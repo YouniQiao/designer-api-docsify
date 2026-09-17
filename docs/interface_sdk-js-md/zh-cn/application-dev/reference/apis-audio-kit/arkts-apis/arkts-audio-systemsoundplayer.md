@@ -1,7 +1,4 @@
-# SystemSoundPlayer
-
-音效播放器
-
+# SystemSoundPlayer(系统音效播放器)
 
 ## 汇总
 

@@ -31,19 +31,19 @@ Provide C interface for the data network connection module of network management
 | [int32_t OHOS_NetConn_UnregisterDnsResolver(void)](#ohos_netconn_unregisterdnsresolver) | Unregisters a custom DNS resolver.(Deprecated in API13) |
 | [int32_t OH_NetConn_RegisterDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registerdnsresolver) | Registers a custom DNS resolver.(Deprecated in API26.0.0) |
 | [int32_t OH_NetConn_UnregisterDnsResolver(void)](#oh_netconn_unregisterdnsresolver) | Unregisters a custom DNS resolver.(Deprecated in API26.0.0) |
-| [int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registercustomdnsresolver) | Registers a custom DNS resolver to intercept and override DNS queries.Falls back to system DNS if no result is specified.Only a single resolver is allowed. You must unregister the existing one before registering a new one. |
+| [int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolver)](#oh_netconn_registercustomdnsresolver) | Registers a custom DNS resolver to intercept and override DNS queries. Falls back to system DNS if no result is specified. Only a single resolver is allowed. You must unregister the existing one before registering a new one. |
 | [int32_t OH_NetConn_UnregisterCustomDnsResolver(void)](#oh_netconn_unregistercustomdnsresolver) | Unregisters the custom DNS resolver. |
 | [int32_t OH_NetConn_BindSocket(int32_t socketFd, NetConn_NetHandle *netHandle)](#oh_netconn_bindsocket) | Binds a socket to the specified network. |
 | [int32_t OH_NetConn_SetAppHttpProxy(NetConn_HttpProxy *httpProxy)](#oh_netconn_setapphttpproxy) | Sets an HTTP proxy for the current application. |
 | [int32_t OH_NetConn_RegisterAppHttpProxyCallback(OH_NetConn_AppHttpProxyChange appHttpProxyChange, uint32_t *callbackId)](#oh_netconn_registerapphttpproxycallback) | Registers a callback for HTTP proxy changes of the application. |
 | [void OH_NetConn_UnregisterAppHttpProxyCallback(uint32_t callbackId)](#oh_netconn_unregisterapphttpproxycallback) | Unregisters the callback for HTTP proxy changes of the application. |
-| [int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxyRefreshCallback callback, void *userContext)](#oh_netconn_refreshglobalhttpproxywithcallback) | Requests global HTTP proxy re-authentication and reports the result through a one-shot callback.This function submits an asynchronous re-authentication request. A return value of 0 indicatesthat the request has been accepted. It does not indicate that re-authentication has succeeded.The final result is reported through the callback.<br>If this function returns 0, the callback will be invoked at most once. After the callback isinvoked, it is automatically released by the system.<br>If this function returns a non-zero value, the callback will not be invoked.<br>The callback may be invoked on a system worker thread. The caller must ensure that the callbackimplementation is thread-safe and returns quickly.<br>The caller must ensure that the callback function and userData remain valid until the callbackis invoked. |
+| [int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxyRefreshCallback callback, void *userContext)](#oh_netconn_refreshglobalhttpproxywithcallback) | Requests global HTTP proxy re-authentication and reports the result through a one-shot callback.<br> This function submits an asynchronous re-authentication request. A return value of 0 indicates that the request has been accepted. It does not indicate that re-authentication has succeeded. The final result is reported through the callback.<br><br> If this function returns 0, the callback will be invoked at most once. After the callback is invoked, it is automatically released by the system.<br><br> If this function returns a non-zero value, the callback will not be invoked.<br><br> The callback may be invoked on a system worker thread. The caller must ensure that the callback implementation is thread-safe and returns quickly.<br><br> The caller must ensure that the callback function and userData remain valid until the callback is invoked. |
 | [int32_t OH_NetConn_RegisterNetConnCallback(NetConn_NetSpecifier *specifier, NetConn_NetConnCallback *netConnCallback, uint32_t timeout, uint32_t *callbackId)](#oh_netconn_registernetconncallback) | Registers a callback for network status changes. |
 | [int32_t OH_NetConn_RegisterDefaultNetConnCallback(NetConn_NetConnCallback *netConnCallback, uint32_t *callbackId)](#oh_netconn_registerdefaultnetconncallback) | Registers a callback for status changes of the default network. |
 | [int32_t OH_NetConn_UnregisterNetConnCallback(uint32_t callBackId)](#oh_netconn_unregisternetconncallback) | Unregisters the callback for network status changes. |
-| [NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)](#oh_netconn_setpacurl) | Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **http://127.0.0.1:21998/PacProxyScript.pac**. You can obtain the proxy information by parsing the URL. |
+| [NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)](#oh_netconn_setpacurl) | Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **http://127.0.0.1:21998/ PacProxyScript.pac**. You can obtain the proxy information by parsing the URL. |
 | [NetConn_ErrorCode OH_NetConn_GetPacUrl(char *pacUrl)](#oh_netconn_getpacurl) | Obtains the URL of the system-level PAC script. |
-| [int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn_ProbeResultInfo *probeResultInfo)](#oh_netconn_queryproberesult) | Queries network probe results. If an exception (for example, network disconnection) occurs and the requestfails to be sent, the API immediately returns the result without performing subsequent detection. This API involvesnetwork operations. Do not call it in the main process. Otherwise, the UI may freeze. |
+| [int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn_ProbeResultInfo *probeResultInfo)](#oh_netconn_queryproberesult) | Queries network probe results. If an exception (for example, network disconnection) occurs and the request fails to be sent, the API immediately returns the result without performing subsequent detection. This API involves network operations. Do not call it in the main process. Otherwise, the UI may freeze. |
 | [int32_t OH_NetConn_QueryTraceRoute(char *destination, NetConn_TraceRouteOption *option, NetConn_TraceRouteInfo *traceRouteInfo)](#oh_netconn_querytraceroute) | Queries network trace route information. |
 
 ## Function description
@@ -416,7 +416,7 @@ int32_t OH_NetConn_RegisterCustomDnsResolver(OH_NetConn_CustomDnsResolver resolv
 
 **Description**
 
-Registers a custom DNS resolver to intercept and override DNS queries.Falls back to system DNS if no result is specified.Only a single resolver is allowed. You must unregister the existing one before registering a new one.
+Registers a custom DNS resolver to intercept and override DNS queries. Falls back to system DNS if no result is specified. Only a single resolver is allowed. You must unregister the existing one before registering a new one.
 
 **Since**: 26.0.0
 
@@ -424,7 +424,7 @@ Registers a custom DNS resolver to intercept and override DNS queries.Falls back
 
 | Parameter | Description |
 | -- | -- |
-| OH_NetConn_CustomDnsResolver resolver | Pointer to the custom DNS resolver. If the resolver returns 0, skip system DNS;otherwise, fallback to system DNS. |
+| OH_NetConn_CustomDnsResolver resolver | Pointer to the custom DNS resolver. If the resolver returns 0, skip system DNS; otherwise, fallback to system DNS. |
 
 **Returns**:
 
@@ -558,7 +558,7 @@ int32_t OH_NetConn_RefreshGlobalHttpProxyWithCallback(OH_NetConn_GlobalHttpProxy
 
 **Description**
 
-Requests global HTTP proxy re-authentication and reports the result through a one-shot callback.This function submits an asynchronous re-authentication request. A return value of 0 indicatesthat the request has been accepted. It does not indicate that re-authentication has succeeded.The final result is reported through the callback.<br>If this function returns 0, the callback will be invoked at most once. After the callback isinvoked, it is automatically released by the system.<br>If this function returns a non-zero value, the callback will not be invoked.<br>The callback may be invoked on a system worker thread. The caller must ensure that the callbackimplementation is thread-safe and returns quickly.<br>The caller must ensure that the callback function and userData remain valid until the callbackis invoked.
+Requests global HTTP proxy re-authentication and reports the result through a one-shot callback.<br> This function submits an asynchronous re-authentication request. A return value of 0 indicates that the request has been accepted. It does not indicate that re-authentication has succeeded. The final result is reported through the callback.<br><br> If this function returns 0, the callback will be invoked at most once. After the callback is invoked, it is automatically released by the system.<br><br> If this function returns a non-zero value, the callback will not be invoked.<br><br> The callback may be invoked on a system worker thread. The caller must ensure that the callback implementation is thread-safe and returns quickly.<br><br> The caller must ensure that the callback function and userData remain valid until the callback is invoked.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -569,7 +569,7 @@ Requests global HTTP proxy re-authentication and reports the result through a on
 | Parameter | Description |
 | -- | -- |
 | OH_NetConn_GlobalHttpProxyRefreshCallback callback | The one-shot callback used to receive the re-authentication result. It must not be NULL. |
-| void *userContext | The user-defined data passed to the callback. It can be NULL. The system doesnot access, copy, or release it. |
+| void *userContext | The user-defined data passed to the callback. It can be NULL. The system does not access, copy, or release it. |
 
 **Returns**:
 
@@ -673,7 +673,7 @@ NetConn_ErrorCode OH_NetConn_SetPacUrl(const char *pacUrl)
 
 **Description**
 
-Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **http://127.0.0.1:21998/PacProxyScript.pac**. You can obtain the proxy information by parsing the URL.
+Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **http://127.0.0.1:21998/ PacProxyScript.pac**. You can obtain the proxy information by parsing the URL.
 
 **Required permission**: ohos.permission.SET_PAC_URL
 
@@ -689,7 +689,7 @@ Sets the URL of the system-level Proxy Auto Config (PAC) script, for example, **
 
 | Type | Description |
 | -- | -- |
-| NetConn_ErrorCode | Result code defined in {@link NetConn_ErrorCode}.      <br>{@link NETCONN_SUCCESS}: success.      <br>{@link NETCONN_PERMISSION_DENIED}: permission denied.      <br>{@link NETCONN_PARAMETER_ERROR}: parameter error.      <br>{@link NETCONN_OPERATION_FAILED}: unable to connect to the service.      <br>{@link NETCONN_INTERNAL_ERROR}: internal error. |
+| NetConn_ErrorCode | Result code defined in {@link NetConn_ErrorCode}.<br>    <br>{@link NETCONN_SUCCESS}: success.<br>    <br>{@link NETCONN_PERMISSION_DENIED}: permission denied.<br>    <br>{@link NETCONN_PARAMETER_ERROR}: parameter error.<br>    <br>{@link NETCONN_OPERATION_FAILED}: unable to connect to the service.<br>    <br>{@link NETCONN_INTERNAL_ERROR}: internal error. |
 
 ### OH_NetConn_GetPacUrl()
 
@@ -713,7 +713,7 @@ Obtains the URL of the system-level PAC script.
 
 | Type | Description |
 | -- | -- |
-| NetConn_ErrorCode | Result code defined in {@link NetConn_ErrorCode}.      <br>{@link NETCONN_SUCCESS}: success.      <br>{@link NETCONN_PARAMETER_ERROR}: parameter error.      <br>{@link NETCONN_OPERATION_FAILED}: unable to connect to the service.      <br>{@link NETCONN_INTERNAL_ERROR}: internal error. |
+| NetConn_ErrorCode | Result code defined in {@link NetConn_ErrorCode}.<br>    <br>{@link NETCONN_SUCCESS}: success.<br>    <br>{@link NETCONN_PARAMETER_ERROR}: parameter error.<br>    <br>{@link NETCONN_OPERATION_FAILED}: unable to connect to the service.<br>    <br>{@link NETCONN_INTERNAL_ERROR}: internal error. |
 
 ### OH_NetConn_QueryProbeResult()
 
@@ -723,7 +723,7 @@ int32_t OH_NetConn_QueryProbeResult(char *destination, int32_t duration, NetConn
 
 **Description**
 
-Queries network probe results. If an exception (for example, network disconnection) occurs and the requestfails to be sent, the API immediately returns the result without performing subsequent detection. This API involvesnetwork operations. Do not call it in the main process. Otherwise, the UI may freeze.
+Queries network probe results. If an exception (for example, network disconnection) occurs and the request fails to be sent, the API immediately returns the result without performing subsequent detection. This API involves network operations. Do not call it in the main process. Otherwise, the UI may freeze.
 
 **Required permission**: ohos.permission.INTERNET
 
@@ -733,8 +733,8 @@ Queries network probe results. If an exception (for example, network disconnecti
 
 | Parameter | Description |
 | -- | -- |
-| char *destination | Target domain name or IP address to be detected. For a domain name, the domain name is resolvedto the target IP address before the detection, and then the detection is initiated. The domain name resolutiontime is not included in the probe duration indicated by duration. |
-| int32_t duration | Probe duration. in seconds. The detection interval is 1 second. Therefore, you can use this field tocontrol the number of detections. |
+| char *destination | Target domain name or IP address to be detected. For a domain name, the domain name is resolved to the target IP address before the detection, and then the detection is initiated. The domain name resolution time is not included in the probe duration indicated by duration. |
+| int32_t duration | Probe duration. in seconds. The detection interval is 1 second. Therefore, you can use this field to control the number of detections. |
 | NetConn_ProbeResultInfo *probeResultInfo | Packet loss rate and round-trip time (RTT). |
 
 **Returns**:
@@ -763,7 +763,7 @@ Queries network trace route information.
 | -- | -- |
 | char *destination | Destination address. |
 | NetConn_TraceRouteOption *option | Route options. |
-| NetConn_TraceRouteInfo *traceRouteInfo | Route result. An array pointer needs to be passed. The array size indicates the number ofroute hops, which is **30** by default. If you customize the number of hops, ensure that the array size is thesame as the value of **maxJumpNumber** in the **option** field. |
+| NetConn_TraceRouteInfo *traceRouteInfo | Route result. An array pointer needs to be passed. The array size indicates the number of route hops, which is **30** by default. If you customize the number of hops, ensure that the array size is the same as the value of **maxJumpNumber** in the **option** field. |
 
 **Returns**:
 

@@ -88,7 +88,7 @@ Provides unified data management framework related functions and enumerations.
 | [int OH_UdmfData_GetRecordCount(OH_UdmfData* data)](#oh_udmfdata_getrecordcount) | - | Get the count of [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) in the [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
 | [OH_UdmfRecord* OH_UdmfData_GetRecord(OH_UdmfData* data, unsigned int index)](#oh_udmfdata_getrecord) | - | Get the record of the specified index from the [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
 | [bool OH_UdmfData_IsLocal(OH_UdmfData* data)](#oh_udmfdata_islocal) | - | Checks whether the UDMF data is from a local device. |
-| [OH_UdmfProperty* OH_UdmfProperty_Create(OH_UdmfData* unifiedData)](#oh_udmfproperty_create) | - | Creates a pointer to the instance of the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md)from a [OH_UdmfData](capi-udmf-oh-udmfdata.md) data. |
+| [OH_UdmfProperty* OH_UdmfProperty_Create(OH_UdmfData* unifiedData)](#oh_udmfproperty_create) | - | Creates a pointer to the instance of the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) from a [OH_UdmfData](capi-udmf-oh-udmfdata.md) data. |
 | [void OH_UdmfProperty_Destroy(OH_UdmfProperty* pThis)](#oh_udmfproperty_destroy) | - | Destroy a pointer that points to the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) instance. |
 | [const char* OH_UdmfProperty_GetTag(OH_UdmfProperty* pThis)](#oh_udmfproperty_gettag) | - | Get tag value from the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md). |
 | [int64_t OH_UdmfProperty_GetTimestamp(OH_UdmfProperty* pThis)](#oh_udmfproperty_gettimestamp) | - | Get timestamp value from the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md). |
@@ -101,7 +101,7 @@ Provides unified data management framework related functions and enumerations.
 | [int OH_UdmfProperty_SetExtrasStringParam(OH_UdmfProperty* pThis, const char* key, const char* param)](#oh_udmfproperty_setextrasstringparam) | - | Set extras param to [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md). |
 | [int OH_UdmfProperty_SetAuthPermission(OH_UdmfProperty* pThis, uint32_t authPolicy)](#oh_udmfproperty_setauthpermission) | - | Set auth permission to the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md). |
 | [OH_UdmfOptions* OH_UdmfOptions_Create()](#oh_udmfoptions_create) | - | Creates a pointer to the instance of the [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
-| [void OH_UdmfOptions_Destroy(OH_UdmfOptions* pThis)](#oh_udmfoptions_destroy) | - | Destroy the heap memory pointed to by the pointer of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md).Note that this function cannot be called repeatedly for the same pointer. |
+| [void OH_UdmfOptions_Destroy(OH_UdmfOptions* pThis)](#oh_udmfoptions_destroy) | - | Destroy the heap memory pointed to by the pointer of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). Note that this function cannot be called repeatedly for the same pointer. |
 | [const char* OH_UdmfOptions_GetKey(OH_UdmfOptions* pThis)](#oh_udmfoptions_getkey) | - | Get key from the [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
 | [int OH_UdmfOptions_SetKey(OH_UdmfOptions* pThis, const char* key)](#oh_udmfoptions_setkey) | - | Set the key to the [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
 | [Udmf_Intention OH_UdmfOptions_GetIntention(OH_UdmfOptions* pThis)](#oh_udmfoptions_getintention) | - | Get intention from the [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
@@ -131,11 +131,20 @@ Provides unified data management framework related functions and enumerations.
 | [void OH_UdmfDataLoadParams_SetLoadHandler(OH_UdmfDataLoadParams* params, const OH_Udmf_DataLoadHandler dataLoadHandler)](#oh_udmfdataloadparams_setloadhandler) | - | Sets the data load handler to the {@OH_UdmfDataLoadParams}. |
 | [void OH_UdmfDataLoadParams_SetDataLoadInfo(OH_UdmfDataLoadParams* params, OH_UdmfDataLoadInfo* dataLoadInfo)](#oh_udmfdataloadparams_setdataloadinfo) | - | Sets the data load info to the {@OH_UdmfDataLoadParams}. |
 | [OH_UdmfDataLoadInfo* OH_UdmfDataLoadInfo_Create()](#oh_udmfdataloadinfo_create) | - | Creates a pointer to the instance of the [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md). |
-| [void OH_UdmfDataLoadInfo_Destroy(OH_UdmfDataLoadInfo* dataLoadInfo)](#oh_udmfdataloadinfo_destroy) | - | Destroy the heap memory pointed to by the pointer of [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md).Note that this function cannot be called repeatedly for the same pointer. |
+| [void OH_UdmfDataLoadInfo_Destroy(OH_UdmfDataLoadInfo* dataLoadInfo)](#oh_udmfdataloadinfo_destroy) | - | Destroy the heap memory pointed to by the pointer of [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md). Note that this function cannot be called repeatedly for the same pointer. |
 | [char** OH_UdmfDataLoadInfo_GetTypes(OH_UdmfDataLoadInfo* dataLoadInfo, unsigned int* count)](#oh_udmfdataloadinfo_gettypes) | - | Gets the types from the {@OH_UdmfDataLoadInfo}. |
 | [void OH_UdmfDataLoadInfo_SetType(OH_UdmfDataLoadInfo* dataLoadInfo, const char* type)](#oh_udmfdataloadinfo_settype) | - | Sets the data load info to the {@OH_UdmfDataLoadInfo}. |
 | [int OH_UdmfDataLoadInfo_GetRecordCount(OH_UdmfDataLoadInfo* dataLoadInfo)](#oh_udmfdataloadinfo_getrecordcount) | - | Gets the record count from the {@OH_UdmfDataLoadInfo}. |
 | [void OH_UdmfDataLoadInfo_SetRecordCount(OH_UdmfDataLoadInfo* dataLoadInfo, unsigned int recordCount)](#oh_udmfdataloadinfo_setrecordcount) | - | Sets the record count to the {@OH_UdmfDataLoadInfo}. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_Udmf_DataProgressListener)(OH_Udmf_ProgressInfo* progressInfo, OH_UdmfData* data) | Defines the callback function used to return the progress information and data.<br>**Since**: 15 |
+| OH_UdmfData* (*OH_Udmf_DataLoadHandler)(OH_UdmfDataLoadInfo* acceptableInfo) | Indicates the callback function for loading data.<br>**Since**: 20 |
+| void (*UdmfData_Finalize)(void* context) | Defines the callback function used free the context.<br>**Since**: 13 |
+| void* (*OH_UdmfRecordProvider_GetData)(void* context, const char* type) | Defines a callback function used to obtain data by type.<br>**Since**: 13 |
 
 ## Enum type description
 
@@ -344,7 +353,7 @@ Add one {OH_UdmfRecord} record to the [OH_UdmfData](capi-udmf-oh-udmfdata.md) da
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -374,7 +383,7 @@ Check whether the type exists in the [OH_UdmfData](capi-udmf-oh-udmfdata.md) dat
 
 | Type | Description |
 | -- | -- |
-| bool | Returns the status of finding type.          {@code false} is not existed.          {@code true} is existed. |
+| bool | Returns the status of finding type.          {@code false} is not existed.<br>        {@code true} is existed. |
 
 **Reference**:
 
@@ -504,7 +513,7 @@ Destroy an [OH_UdmfRecordProvider](capi-udmf-oh-udmfrecordprovider.md) instance.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. For details, see {@link Udmf_ErrCode}.          Returns {@link UDMF_E_OK} if the operation is successful.          Returns {@link UDMF_E_INVALID_PARAM} if invalid args are detected. |
+| int | Returns the status code of the execution. For details, see {@link Udmf_ErrCode}.<br>        Returns {@link UDMF_E_OK} if the operation is successful.<br>        Returns {@link UDMF_E_INVALID_PARAM} if invalid args are detected. |
 
 **Reference**:
 
@@ -555,13 +564,13 @@ Sets a callback function to obtain data.
 | [OH_UdmfRecordProvider](capi-udmf-oh-udmfrecordprovider.md)* provider | Pointer to the [OH_UdmfRecordProvider](capi-udmf-oh-udmfrecordprovider.md) instance. |
 | void* context | Pointer to the context set, which is the first parameter in OH_UdmfRecordProvider_GetData. |
 | [const OH_UdmfRecordProvider_GetData](capi-udmf-h.md#oh_udmfrecordprovider_getdata) callback | Callback to set. For details, see [OH_UdmfRecordProvider_GetData](capi-udmf-h.md#oh_udmfrecordprovider_getdata). |
-| [const UdmfData_Finalize](capi-udmf-h.md#udmfdata_finalize) finalize | Optional callback that can free context when destroy provider.For details, see [UdmfData_Finalize](capi-udmf-h.md#udmfdata_finalize). |
+| [const UdmfData_Finalize](capi-udmf-h.md#udmfdata_finalize) finalize | Optional callback that can free context when destroy provider. For details, see [UdmfData_Finalize](capi-udmf-h.md#udmfdata_finalize). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. For details, see {@link Udmf_ErrCode}.          Returns {@link UDMF_E_OK} if the operation is successful.          Returns {@link UDMF_E_INVALID_PARAM} if invalid args are detected. |
+| int | Returns the status code of the execution. For details, see {@link Udmf_ErrCode}.<br>        Returns {@link UDMF_E_OK} if the operation is successful.<br>        Returns {@link UDMF_E_INVALID_PARAM} if invalid args are detected. |
 
 **Reference**:
 
@@ -639,7 +648,7 @@ Add one custom data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -669,7 +678,7 @@ Add one {OH_UdsPlainText} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -699,7 +708,7 @@ Add one {OH_UdsHyperlink} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -729,7 +738,7 @@ Add one {OH_UdsHtml} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) rec
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -759,7 +768,7 @@ Add one {OH_UdsAppItem} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -789,7 +798,7 @@ Add one {OH_UdsFileUri} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -819,7 +828,7 @@ Add one {OH_UdsPixelMap} data to the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md)
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -850,7 +859,7 @@ Add one {@link OH_UdsArrayBuffer} data to the [OH_UdmfRecord](capi-udmf-oh-udmfr
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -880,7 +889,7 @@ Add one {@link OH_UdsContentForm} data to the [OH_UdmfRecord](capi-udmf-oh-udmfr
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -942,7 +951,7 @@ Get one entry data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) record.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -972,7 +981,7 @@ Get one {OH_UdsPlainText} data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -1002,7 +1011,7 @@ Get one {OH_UdsHyperlink} data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -1032,7 +1041,7 @@ Get one {OH_UdsHtml} data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md) r
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -1062,7 +1071,7 @@ Get one {OH_UdsAppItem} data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error. |
 
 **Reference**:
 
@@ -1092,7 +1101,7 @@ Get one {OH_UdsFileUri} data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.md
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1122,7 +1131,7 @@ Get one {OH_UdsPixelMap} data from the [OH_UdmfRecord](capi-udmf-oh-udmfrecord.m
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1154,7 +1163,7 @@ Set the data provider of the types.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1185,7 +1194,7 @@ Get one {@link OH_UdsArrayBuffer} data from the [OH_UdmfRecord](capi-udmf-oh-udm
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1215,7 +1224,7 @@ Get one {@link OH_UdsContentForm} data from the [OH_UdmfRecord](capi-udmf-oh-udm
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1245,7 +1254,7 @@ Get primary {@link OH_UdsPlainText} data from the [OH_UdmfData](capi-udmf-oh-udm
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1275,7 +1284,7 @@ Get one {@link OH_UdsHtml} data from the [OH_UdmfData](capi-udmf-oh-udmfdata.md)
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1363,7 +1372,7 @@ Checks whether the UDMF data is from a local device.
 
 | Type | Description |
 | -- | -- |
-| bool | Returns a boolean value, which indicates whether the UDMF data is from a local device.          The value {@code true} means the data is from a local device.          The value {@code false} means the opposite. |
+| bool | Returns a boolean value, which indicates whether the UDMF data is from a local device.          The value {@code true} means the data is from a local device.<br>        The value {@code false} means the opposite. |
 
 **Reference**:
 
@@ -1378,7 +1387,7 @@ OH_UdmfProperty* OH_UdmfProperty_Create(OH_UdmfData* unifiedData)
 
 **Description**
 
-Creates a pointer to the instance of the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md)from a [OH_UdmfData](capi-udmf-oh-udmfdata.md) data.
+Creates a pointer to the instance of the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) from a [OH_UdmfData](capi-udmf-oh-udmfdata.md) data.
 
 **Since**: 12
 
@@ -1593,7 +1602,7 @@ Set tag value to [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) .
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1623,7 +1632,7 @@ Set Udmf_ShareOption value to [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1654,7 +1663,7 @@ Set extras param to [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1685,7 +1694,7 @@ Set extras param to [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1715,7 +1724,7 @@ Set auth permission to the [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1753,7 +1762,7 @@ void OH_UdmfOptions_Destroy(OH_UdmfOptions* pThis)
 
 **Description**
 
-Destroy the heap memory pointed to by the pointer of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md).Note that this function cannot be called repeatedly for the same pointer.
+Destroy the heap memory pointed to by the pointer of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). Note that this function cannot be called repeatedly for the same pointer.
 
 **Since**: 20
 
@@ -1820,7 +1829,7 @@ Set the key to the [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1879,7 +1888,7 @@ Set intention value to [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1908,7 +1917,7 @@ Reset [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) to default.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1967,7 +1976,7 @@ Set visibility value to [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md).
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args. |
 
 **Reference**:
 
@@ -1998,7 +2007,7 @@ Get [OH_UdmfData](capi-udmf-oh-udmfdata.md) data from udmf database.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
 
 **Reference**:
 
@@ -2022,14 +2031,14 @@ Get [OH_UdmfData](capi-udmf-oh-udmfdata.md) data array from udmf database by int
 | Parameter | Description |
 | -- | -- |
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)* options | Represents a pointer to an instance of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
-| [OH_UdmfData](capi-udmf-oh-udmfdata.md)** dataArray | Represents output params of [OH_UdmfData](capi-udmf-oh-udmfdata.md).It should be accessed using [OH_UDMF_GetDataElementAt](capi-udmf-h.md#oh_udmf_getdataelementat) to retrieve elements by index.This pointer needs to be released using the [OH_Udmf_DestroyDataArray](capi-udmf-h.md#oh_udmf_destroydataarray) function. |
+| [OH_UdmfData](capi-udmf-oh-udmfdata.md)** dataArray | Represents output params of [OH_UdmfData](capi-udmf-oh-udmfdata.md). It should be accessed using [OH_UDMF_GetDataElementAt](capi-udmf-h.md#oh_udmf_getdataelementat) to retrieve elements by index. This pointer needs to be released using the [OH_Udmf_DestroyDataArray](capi-udmf-h.md#oh_udmf_destroydataarray) function. |
 | unsigned int* dataSize | Represents the data count of output params. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
 
 **Reference**:
 
@@ -2054,14 +2063,14 @@ Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database.
 | -- | -- |
 | [Udmf_Intention](capi-udmf-h.md#udmf_intention) intention | Represents data type [Udmf_Intention](capi-udmf-h.md#udmf_intention). |
 | [OH_UdmfData](capi-udmf-oh-udmfdata.md)* unifiedData | Represents a pointer to an instance of [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
-| char* key | Represents return value after set data to database successfully,it's memory size not less than {@link UDMF_KEY_BUFFER_LEN}. |
+| char* key | Represents return value after set data to database successfully, it's memory size not less than {@link UDMF_KEY_BUFFER_LEN}. |
 | unsigned int keyLen | Represents size of key param. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
 
 **Reference**:
 
@@ -2086,14 +2095,14 @@ Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database with options.
 | -- | -- |
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)* options | Represents a pointer to an instance of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
 | [OH_UdmfData](capi-udmf-oh-udmfdata.md)* unifiedData | Represents a pointer to an instance of [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
-| char* key | Represents return value after set data to database successfully,it's memory size not less than {@link UDMF_KEY_BUFFER_LEN}. |
+| char* key | Represents return value after set data to database successfully, it's memory size not less than {@link UDMF_KEY_BUFFER_LEN}. |
 | unsigned int keyLen | Represents size of key param. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
 
 **Reference**:
 
@@ -2123,7 +2132,7 @@ Update [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database with options.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
 
 **Reference**:
 
@@ -2147,14 +2156,14 @@ Delete [OH_UdmfData](capi-udmf-oh-udmfdata.md) data of database with options.
 | Parameter | Description |
 | -- | -- |
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)* options | Represents a pointer to an instance of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
-| [OH_UdmfData](capi-udmf-oh-udmfdata.md)** dataArray | Represents output params of [OH_UdmfData](capi-udmf-oh-udmfdata.md).It should be accessed using [OH_UDMF_GetDataElementAt](capi-udmf-h.md#oh_udmf_getdataelementat) to retrieve elements by index.This pointer needs to be released using the [OH_Udmf_DestroyDataArray](capi-udmf-h.md#oh_udmf_destroydataarray) function. |
+| [OH_UdmfData](capi-udmf-oh-udmfdata.md)** dataArray | Represents output params of [OH_UdmfData](capi-udmf-oh-udmfdata.md). It should be accessed using [OH_UDMF_GetDataElementAt](capi-udmf-h.md#oh_udmf_getdataelementat) to retrieve elements by index. This pointer needs to be released using the [OH_Udmf_DestroyDataArray](capi-udmf-h.md#oh_udmf_destroydataarray) function. |
 | unsigned int* dataSize | Represents the data count of output params. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.          {@link UDMF_E_OK} success.          {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.          {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
+| int | Returns the status code of the execution. See {@link Udmf_ErrCode}.<br>        {@link UDMF_E_OK} success.<br>        {@link UDMF_E_INVALID_PARAM} The error code for common invalid args.<br>        {@link UDMF_ERR} Internal data error.              The possible cause is that the server is faulty or the memory is insufficient. |
 
 **Reference**:
 
@@ -2564,7 +2573,7 @@ void OH_UdmfDataLoadInfo_Destroy(OH_UdmfDataLoadInfo* dataLoadInfo)
 
 **Description**
 
-Destroy the heap memory pointed to by the pointer of [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md).Note that this function cannot be called repeatedly for the same pointer.
+Destroy the heap memory pointed to by the pointer of [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md). Note that this function cannot be called repeatedly for the same pointer.
 
 **Since**: 20
 

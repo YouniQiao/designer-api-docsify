@@ -6,7 +6,7 @@ typedef struct OH_AudioDeviceEnhanceManager OH_AudioDeviceEnhanceManager
 
 ## Overview
 
-Defines the handle type of the audio device enhancement manager,which is used for enhanced audio device management functions.
+Defines the handle type of the audio device enhancement manager, which is used for enhanced audio device management functions.
 
 **Since**: 26.0.0
 

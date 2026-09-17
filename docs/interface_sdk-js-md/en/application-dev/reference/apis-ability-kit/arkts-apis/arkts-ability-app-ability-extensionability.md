@@ -1,4 +1,4 @@
-# @ohos.app.ability.ExtensionAbility
+# @ohos.app.ability.ExtensionAbility(ExtensionAbility Base Class)
 
 ## Modules to Import
 

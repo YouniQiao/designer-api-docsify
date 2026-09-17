@@ -42,7 +42,7 @@ MediaLibrary_ErrorCode OH_MediaAccessHelper_ApplyChanges(OH_MediaAssetChangeRequ
 | -- | -- |
 | OH_MediaAssetChangeRequest* changeRequest | 变更请求实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

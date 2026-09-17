@@ -18,17 +18,17 @@ This file declares the data types of the canvas, brush, pen, bitmap, and path us
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Drawing_Point2D](capi-drawing-oh-drawing-point2d.md) | OH_Drawing_Point2D | **OH_Drawing_Point2D** defines a two-dimensional coordinate point.<br>*OH_Drawing_Corner_Radii** definesrounded corner radii, consisting of an x-axis radius and a y-axis radius. |
+| [OH_Drawing_Point2D](capi-drawing-oh-drawing-point2d.md) | OH_Drawing_Point2D | **OH_Drawing_Point2D** defines a two-dimensional coordinate point.<br>**OH_Drawing_Corner_Radii** defines rounded corner radii, consisting of an x-axis radius and a y-axis radius. |
 | [OH_Drawing_Point3D](capi-drawing-oh-drawing-point3d.md) | OH_Drawing_Point3D | This struct describes a three-dimensional coordinate point. |
 | [OH_Drawing_RectStyle_Info](capi-drawing-oh-drawing-rectstyle-info.md) | OH_Drawing_RectStyle_Info | This struct describes the style of a rectangle. |
 | [OH_Drawing_Image_Info](capi-drawing-oh-drawing-image-info.md) | OH_Drawing_Image_Info | This struct describes the image information. |
 | [OH_Drawing_String](capi-drawing-oh-drawing-string.md) | OH_Drawing_String | This struct describes a string of characters encoded in UTF-16. |
-| [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) | OH_Drawing_Canvas | Defines a struct for a rectangular canvas, on which various shapes, images, and texts can be drawn by usingthe brush and pen. |
+| [OH_Drawing_Canvas](capi-drawing-oh-drawing-canvas.md) | OH_Drawing_Canvas | Defines a struct for a rectangular canvas, on which various shapes, images, and texts can be drawn by using the brush and pen. |
 | [OH_Drawing_Pen](capi-drawing-oh-drawing-pen.md) | OH_Drawing_Pen | Defines a struct for a pen, which is used to describe the style and color to outline a shape. |
 | [OH_Drawing_Region](capi-drawing-oh-drawing-region.md) | OH_Drawing_Region | Defines a struct for a region, which represents a closed area on the canvas for more accurate graphic control. |
 | [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) | OH_Drawing_Brush | Defines a struct for a brush, which is used to describe the style and color to fill in a shape. |
 | [OH_Drawing_Path](capi-drawing-oh-drawing-path.md) | OH_Drawing_Path | Defines a struct for a path, which is used to customize various shapes. |
-| [OH_Drawing_PathIterator](capi-drawing-oh-drawing-pathiterator.md) | OH_Drawing_PathIterator | This struct defines a path operation iterator that enables path operation instructions to be read viaiterator traversal. |
+| [OH_Drawing_PathIterator](capi-drawing-oh-drawing-pathiterator.md) | OH_Drawing_PathIterator | This struct defines a path operation iterator that enables path operation instructions to be read via iterator traversal. |
 | [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md) | OH_Drawing_Lattice | This struct defines a rectangle grid, which is used to divide an image by rectangle grid. |
 | [OH_Drawing_Bitmap](capi-drawing-oh-drawing-bitmap.md) | OH_Drawing_Bitmap | Defines a struct for a bitmap, which is a memory area that contains the pixel data of a shape. |
 | [OH_Drawing_Point](capi-drawing-oh-drawing-point.md) | OH_Drawing_Point | Defines a struct for a coordinate point. |
@@ -44,11 +44,11 @@ This file declares the data types of the canvas, brush, pen, bitmap, and path us
 | [OH_Drawing_MaskFilter](capi-drawing-oh-drawing-maskfilter.md) | OH_Drawing_MaskFilter | Defines a struct for a mask filter. |
 | [OH_Drawing_ColorFilter](capi-drawing-oh-drawing-colorfilter.md) | OH_Drawing_ColorFilter | Defines a struct for a color filter, which is used to convert a color into a new one. |
 | [OH_Drawing_Font](capi-drawing-oh-drawing-font.md) | OH_Drawing_Font | Defines a struct for a font. |
-| [OH_Drawing_FontFeatures](capi-drawing-oh-drawing-fontfeatures.md) | OH_Drawing_FontFeatures | Defines a struct for font features, which are typesetting rules within a font that determine how glyphs look,such as ligatures, alternates, and superscripts/subscripts. |
+| [OH_Drawing_FontFeatures](capi-drawing-oh-drawing-fontfeatures.md) | OH_Drawing_FontFeatures | Defines a struct for font features, which are typesetting rules within a font that determine how glyphs look, such as ligatures, alternates, and superscripts/subscripts. |
 | [OH_Drawing_MemoryStream](capi-drawing-oh-drawing-memorystream.md) | OH_Drawing_MemoryStream | Defines a struct for a memory stream. |
 | [OH_Drawing_FontArguments](capi-drawing-oh-drawing-fontarguments.md) | OH_Drawing_FontArguments | Defines a struct for font arguments. |
 | [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) | OH_Drawing_Typeface | Defines a struct for a typeface. |
-| [OH_Drawing_TextBlob](capi-drawing-oh-drawing-textblob.md) | OH_Drawing_TextBlob | Defines a struct for a text blob, an immutable container that holds multiple texts. Each text blob consistsof glyphs and position. |
+| [OH_Drawing_TextBlob](capi-drawing-oh-drawing-textblob.md) | OH_Drawing_TextBlob | Defines a struct for a text blob, an immutable container that holds multiple texts. Each text blob consists of glyphs and position. |
 | [OH_Drawing_Image](capi-drawing-oh-drawing-image.md) | OH_Drawing_Image | Defines a struct for an image that describes a two-dimensional pixel array. |
 | [OH_Drawing_ImageFilter](capi-drawing-oh-drawing-imagefilter.md) | OH_Drawing_ImageFilter | Defines a struct for an image filter, which is used to operate all color bits that make up image pixels. |
 | [OH_Drawing_SamplingOptions](capi-drawing-oh-drawing-samplingoptions.md) | OH_Drawing_SamplingOptions | Defines a struct for sampling options, which describe the sampling methods for images and bitmaps. |
@@ -67,8 +67,14 @@ This file declares the data types of the canvas, brush, pen, bitmap, and path us
 | -- | -- | -- |
 | [OH_Drawing_ColorFormat](#oh_drawing_colorformat) | OH_Drawing_ColorFormat | Defines an enum for the storage formats of bitmap pixels. |
 | [OH_Drawing_AlphaFormat](#oh_drawing_alphaformat) | OH_Drawing_AlphaFormat | Defines an enum for the alpha formats of bitmap pixels. |
-| [OH_Drawing_BlendMode](#oh_drawing_blendmode) | OH_Drawing_BlendMode | Defines an enum for blend modes. In blend mode, each operation generates a new color from two colors (sourcecolor and destination color).These operations are the same for the red, green, and blue color channels (the alpha channel follows a differentrule).For simplicity, the following description uses the alpha channel as an example rather than naming each channelindividually. For brevity, the following abbreviations are used:**s**: source.**d**: destination.**sa**: source alpha.**da**: destination alpha.The following abbreviations are used in the calculation result:**r**: The calculation methods of the four channels are the same.**ra**: used when only the alpha channel is manipulated.**rc**: used when the other three color channels are manipulated. |
+| [OH_Drawing_BlendMode](#oh_drawing_blendmode) | OH_Drawing_BlendMode | Defines an enum for blend modes. In blend mode, each operation generates a new color from two colors (source color and destination color). These operations are the same for the red, green, and blue color channels (the alpha channel follows a different rule). For simplicity, the following description uses the alpha channel as an example rather than naming each channel individually. For brevity, the following abbreviations are used: **s**: source. **d**: destination. **sa**: source alpha. **da**: destination alpha. The following abbreviations are used in the calculation result: **r**: The calculation methods of the four channels are the same. **ra**: used when only the alpha channel is manipulated. **rc**: used when the other three color channels are manipulated. |
 | [OH_Drawing_TextEncoding](#oh_drawing_textencoding) | OH_Drawing_TextEncoding | Defines an enum for the text encoding types. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| OH_Drawing_Point2D OH_Drawing_Corner_Radii | Defines corner radii, which is on x-axis and y-axis.<br>**Since**: 12 |
 
 ## Enum type description
 
@@ -120,7 +126,7 @@ enum OH_Drawing_BlendMode
 
 **Description**
 
-Defines an enum for blend modes. In blend mode, each operation generates a new color from two colors (sourcecolor and destination color).These operations are the same for the red, green, and blue color channels (the alpha channel follows a differentrule).For simplicity, the following description uses the alpha channel as an example rather than naming each channelindividually. For brevity, the following abbreviations are used:**s**: source.**d**: destination.**sa**: source alpha.**da**: destination alpha.The following abbreviations are used in the calculation result:**r**: The calculation methods of the four channels are the same.**ra**: used when only the alpha channel is manipulated.**rc**: used when the other three color channels are manipulated.
+Defines an enum for blend modes. In blend mode, each operation generates a new color from two colors (source color and destination color). These operations are the same for the red, green, and blue color channels (the alpha channel follows a different rule). For simplicity, the following description uses the alpha channel as an example rather than naming each channel individually. For brevity, the following abbreviations are used: **s**: source. **d**: destination. **sa**: source alpha. **da**: destination alpha. The following abbreviations are used in the calculation result: **r**: The calculation methods of the four channels are the same. **ra**: used when only the alpha channel is manipulated. **rc**: used when the other three color channels are manipulated.
 
 **Since**: 11
 

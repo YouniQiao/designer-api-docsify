@@ -77,7 +77,7 @@ Sets the display order for a custom dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### registerOnWillAppear()
 
@@ -103,7 +103,7 @@ Registers a listener callback before the dialog openAnimation starts.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### registerOnDidAppear()
 
@@ -129,7 +129,7 @@ Registers a listener callback when the dialog appears.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### registerOnWillDisappear()
 
@@ -155,7 +155,7 @@ Registers a listener callback before the dialog closeAnimation starts.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### registerOnDidDisappear()
 
@@ -181,7 +181,7 @@ Registers a listener callback when the dialog disappears.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setBorderWidth()
 
@@ -214,7 +214,7 @@ Sets the border width of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setBorderColor()
 
@@ -246,7 +246,7 @@ Sets the border color of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setBorderStyle()
 
@@ -278,7 +278,7 @@ Sets the border style of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setWidth()
 
@@ -308,7 +308,7 @@ Sets the width of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setHeight()
 
@@ -338,7 +338,7 @@ Sets the height of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setShadow()
 
@@ -367,7 +367,7 @@ Sets the shadow of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setCustomShadow()
 
@@ -396,7 +396,7 @@ Sets the custom shadow of the dialog box background.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setBackgroundBlurStyle()
 
@@ -425,7 +425,7 @@ Sets the background blur style of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setKeyboardAvoidMode()
 
@@ -454,7 +454,7 @@ Sets the keyboard avoidance mode of the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### enableHoverMode()
 
@@ -483,7 +483,7 @@ Sets whether to enable the hover mode for the dialog box.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur.. |
 
 ### setHoverModeArea()
 
@@ -512,7 +512,7 @@ Set the default display area of the dialog box in hover mode.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occur. |
 
 ### setFocusable()
 
@@ -537,7 +537,7 @@ Sets whether to get focus when the custom dialog is displayed.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the error code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setBackgroundBlurStyleOptions()
 
@@ -560,13 +560,13 @@ Sets the background blur effect for a custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  const ArkUI_AttributeItem* backgroundBlurStyleOptions | Background blur effect options.Format of the {@link ArkUI_AttributeItem} parameter: <br>        .value[0].i32: color mode. The value is an enum of {@link ArkUI_ColorMode}. <br>        .value[1]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>        .value[2]?.f32: blur degree. The value range is [0.0, 1.0]. <br>        .value[3]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>        .value[4]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>        .value[5]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}. <br>        .value[6]?.u32: background color, in 0xARGB format, of the components within the window after the windowloses focus (in which case, the blur effect on the components within the window isremoved). |
+|  const ArkUI_AttributeItem* backgroundBlurStyleOptions | Background blur effect options. Format of the {@link ArkUI_AttributeItem} parameter: <br>       .value[0].i32: color mode. The value is an enum of {@link ArkUI_ColorMode}. <br>       .value[1]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>       .value[2]?.f32: blur degree. The value range is [0.0, 1.0]. <br>       .value[3]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>       .value[4]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>       .value[5]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}.  .value[6]?.u32: background color, in 0xARGB format, of the components within the window after the window loses focus (in which case, the blur effect on the components within the window is removed). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setBackgroundEffect()
 
@@ -589,12 +589,12 @@ Sets the background effect parameters for a custom dialog box.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_NativeDialogHandle handle | Indicates the pointer to the custom dialog box controller. |
-|  const ArkUI_AttributeItem* backgroundEffect | Background effect.Format of the {@link ArkUI_AttributeItem} parameter: <br>        .value[0].f32: blur radius, in vp. <br>        .value[1]?.f32: saturation. <br>        .value[2]?.f32: brightness. <br>        .value[3]?.u32: color, in 0xARGB format. <br>        .value[4]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>        .value[5]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>        .value[6]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>        .value[7]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}. <br>        .value[8]?.u32: background color, in 0xARGB format, of the components within the window after the windowloses focus (in which case, the blur effect on the components within the window isremoved). |
+|  const ArkUI_AttributeItem* backgroundEffect | Background effect. Format of the {@link ArkUI_AttributeItem} parameter: <br>       .value[0].f32: blur radius, in vp. <br>       .value[1]?.f32: saturation. <br>       .value[2]?.f32: brightness. <br>       .value[3]?.u32: color, in 0xARGB format. <br>       .value[4]?.i32: adaptive color mode. The value is an enum of {@link ArkUI_AdaptiveColor}. <br>       .value[5]?.u32: brightness of black in the grayscale blur. The value range is [0, 127]. <br>       .value[6]?.u32: degree of darkening the white color in the grayscale blur. The value range is [0, 127]. <br>       .value[7]?.i32: blur activation policy. The value is an enum of {@link ArkUI_BlurStyleActivePolicy}.  .value[8]?.u32: background color, in 0xARGB format, of the components within the window after the window loses focus (in which case, the blur effect on the components within the window is removed). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.              Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Returns the result code.              Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>        Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

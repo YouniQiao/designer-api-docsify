@@ -1,4 +1,4 @@
-# @ohos.app.ability.hyperSnapManager
+# @ohos.app.ability.hyperSnapManager(Application Quick Startup Management)
 
 This module provides the capability to manage HyperSnap.
 

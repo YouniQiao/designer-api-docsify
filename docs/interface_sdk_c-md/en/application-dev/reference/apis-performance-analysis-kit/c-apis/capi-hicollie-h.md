@@ -33,20 +33,30 @@ Defines the interface of the HiCollie module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_HiCollie_Task)(void)](#oh_hicollie_task) | OH_HiCollie_Task | Checks whether a service thread is stuck.This function is called by HiCollie every 3 seconds in a service thread.For example, this function can be used to send a message to a service thread and set a flag after the service threadreceives the message. Then the flag is checked to determine whether the service thread is stuck. |
-| [typedef void (\*OH_HiCollie_BeginFunc)(const char* eventName)](#oh_hicollie_beginfunc) | OH_HiCollie_BeginFunc | In jank scenario, you need to insert two stub functions before and aftereach event processing of your business thread.By checking these two function executing timestamp, HiCollie will know consuming time for every event.If it exceeds the preset threshold, a jank event will be reported.This is the stub function inserted before each event processing. |
-| [typedef void (\*OH_HiCollie_EndFunc)(const char* eventName)](#oh_hicollie_endfunc) | OH_HiCollie_EndFunc | Records the end time when a service thread processes an event. This function is used in the jank eventdetection.HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event isreported.This is the stub function inserted after each event processing. |
-| [HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)](#oh_hicollie_init_stuckdetection) | - | Registers a callback used to periodically detect service thread stuck events.By default, the **BUSSINESS_THREAD_BLOCK_3S** event is reported when the thread is blocked for 3s and the BUSSINESS_THREAD_BLOCK_6S** event is reported when the thread is blocked for 6s. |
-| [HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task task, uint32_t stuckTimeout)](#oh_hicollie_init_stuckdetectionwithtimeout) | - | Registers a callback used to periodically detect service thread stuck events.You can set the interval for the stuck event detection. The value range is [3, 15], in seconds. |
-| [HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFunc, OH_HiCollie_EndFunc* endFunc, HiCollie_DetectionParam param)](#oh_hicollie_init_jankdetection) | - | Registers a callback used to detect service thread jank events.To monitor service thread jank events, you can implement two callbacks as instrumentation functions, placing thembefore and after the service thread event. |
-| [HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)](#oh_hicollie_report) | - | Reports a service thread stuck event and generates logs to help locate application stuck issues.Call **OH_HiCollie_Init_StuckDetection()** or **OH_HiCollie_Init_StuckDetectionWithTimeout()** to initialize thedetection task.If the task times out, call **OH_HiCollie_Report()** to report the stuck event based on the service logic. |
-| [HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()](#oh_hicollie_reportinputblock) | - | Reports an application input unresponsive event and generates logs to help locate application freeze issues.On a PC or tablet, a dialog box is displayed, prompting the user to wait or close the application. On other devices,no dialog box is displayed. You are advised to use this API in either of the following ways:Method 1 (recommended): Use this API together with **OH_HiCollie_Report**, **OH_HiCollie_Init_StuckDetection**, or OH_HiCollie_Init_StuckDetectionWithTimeout**. The service thread periodically checks whether it is frozen throughthe preceding APIs. When the service thread is frozen and an input event (such as screen tapping, mouse clicking, orkeyboard input) occurs, the service thread calls **OH_HiCollie_ReportInputBlock**.Method 2: If the service thread can detect its own freeze without using the **OH_HiCollie_Report**, OH_HiCollie_Init_StuckDetection**, or **OH_HiCollie_Init_StuckDetectionWithTimeout** API, the application calls the *OH_HiCollie_ReportInputBlock** API based on the service thread freeze and input event. |
-| [typedef void (\*OH_HiCollie_Callback)(void*)](#oh_hicollie_callback) | OH_HiCollie_Callback | Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called withinthe custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called. |
-| [HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)](#oh_hicollie_settimer) | - | Registers a timer to check whether the execution time of a function or code block exceeds the custom time.This API is used together with the **OH_HiCollie_CancelTimer** API. |
-| [void OH_HiCollie_CancelTimer(int id)](#oh_hicollie_canceltimer) | - | Cancels a timer based on the ID.This API is used together with the **OH_HiCollie_SetTimer** API. It must be used after the function or code block isexecuted.If a timer is not canceled within the custom time, a callback function is executed to generate fault logs for thespecified timeout event. |
+| [typedef void (\*OH_HiCollie_Task)(void)](#oh_hicollie_task) | OH_HiCollie_Task | Checks whether a service thread is stuck. This function is called by HiCollie every 3 seconds in a service thread. For example, this function can be used to send a message to a service thread and set a flag after the service thread receives the message. Then the flag is checked to determine whether the service thread is stuck. |
+| [typedef void (\*OH_HiCollie_BeginFunc)(const char* eventName)](#oh_hicollie_beginfunc) | OH_HiCollie_BeginFunc | In jank scenario, you need to insert two stub functions before and after each event processing of your business thread. By checking these two function executing timestamp, HiCollie will know consuming time for every event. If it exceeds the preset threshold, a jank event will be reported. This is the stub function inserted before each event processing. |
+| [typedef void (\*OH_HiCollie_EndFunc)(const char* eventName)](#oh_hicollie_endfunc) | OH_HiCollie_EndFunc | Records the end time when a service thread processes an event. This function is used in the jank event detection. HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event is reported. This is the stub function inserted after each event processing. |
+| [HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)](#oh_hicollie_init_stuckdetection) | - | Registers a callback used to periodically detect service thread stuck events. By default, the **BUSSINESS_THREAD_BLOCK_3S** event is reported when the thread is blocked for 3s and the **<br>BUSSINESS_THREAD_BLOCK_6S** event is reported when the thread is blocked for 6s. |
+| [HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task task, uint32_t stuckTimeout)](#oh_hicollie_init_stuckdetectionwithtimeout) | - | Registers a callback used to periodically detect service thread stuck events. You can set the interval for the stuck event detection. The value range is [3, 15], in seconds. |
+| [HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFunc, OH_HiCollie_EndFunc* endFunc, HiCollie_DetectionParam param)](#oh_hicollie_init_jankdetection) | - | Registers a callback used to detect service thread jank events. To monitor service thread jank events, you can implement two callbacks as instrumentation functions, placing them before and after the service thread event. |
+| [HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)](#oh_hicollie_report) | - | Reports a service thread stuck event and generates logs to help locate application stuck issues. Call **OH_HiCollie_Init_StuckDetection()** or **OH_HiCollie_Init_StuckDetectionWithTimeout()** to initialize the detection task. If the task times out, call **OH_HiCollie_Report()** to report the stuck event based on the service logic. |
+| [HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()](#oh_hicollie_reportinputblock) | - | Reports an application input unresponsive event and generates logs to help locate application freeze issues. On a PC or tablet, a dialog box is displayed, prompting the user to wait or close the application. On other devices, no dialog box is displayed. You are advised to use this API in either of the following ways: Method 1 (recommended): Use this API together with **OH_HiCollie_Report**, **OH_HiCollie_Init_StuckDetection**, or **<br>OH_HiCollie_Init_StuckDetectionWithTimeout**. The service thread periodically checks whether it is frozen through the preceding APIs. When the service thread is frozen and an input event (such as screen tapping, mouse clicking, or keyboard input) occurs, the service thread calls **OH_HiCollie_ReportInputBlock**. Method 2: If the service thread can detect its own freeze without using the **OH_HiCollie_Report**, **<br>OH_HiCollie_Init_StuckDetection**, or **OH_HiCollie_Init_StuckDetectionWithTimeout** API, the application calls the *<br>*OH_HiCollie_ReportInputBlock** API based on the service thread freeze and input event. |
+| [typedef void (\*OH_HiCollie_Callback)(void*)](#oh_hicollie_callback) | OH_HiCollie_Callback | Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called within the custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called. |
+| [HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)](#oh_hicollie_settimer) | - | Registers a timer to check whether the execution time of a function or code block exceeds the custom time. This API is used together with the **OH_HiCollie_CancelTimer** API. |
+| [void OH_HiCollie_CancelTimer(int id)](#oh_hicollie_canceltimer) | - | Cancels a timer based on the ID. This API is used together with the **OH_HiCollie_SetTimer** API. It must be used after the function or code block is executed. If a timer is not canceled within the custom time, a callback function is executed to generate fault logs for the specified timeout event. |
 | [typedef size_t (\*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size)](#oh_hicollie_freezecallback) | OH_HiCollie_FreezeCallback | the freeze callback used in [OH_HiCollie_SetFreezeCallback](capi-hicollie-h.md#oh_hicollie_setfreezecallback) |
 | [void* OH_HiCollie_SetFreezeCallback(OH_HiCollie_FreezeCallback callback)](#oh_hicollie_setfreezecallback) | - | Sets the freeze event callback in the system. The system calls this function when a freeze event occurs. |
-| [HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)](#oh_hicollie_associateprocessreport) | - | Reports a freeze event of a process. In this case, a **HiAppEvent** event of the **APP_HICOLLIE** type isgenerated. |
+| [HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)](#oh_hicollie_associateprocessreport) | - | Reports a freeze event of a process. In this case, a **HiAppEvent** event of the **APP_HICOLLIE** type is generated. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_HiCollie_Task)(void) | Checks whether a service thread is stuck. This function is called by HiCollie every 3 seconds in a service thread. For example, this function can be used to send a message to a service thread and set a flag after the service thread receives the message. Then the flag is checked to determine whether the service thread is stuck.<br>**Since**: 12 |
+| void (*OH_HiCollie_BeginFunc)(const char* eventName) | In jank scenario, you need to insert two stub functions before and after each event processing of your business thread. By checking these two function executing timestamp, HiCollie will know consuming time for every event. If it exceeds the preset threshold, a jank event will be reported. This is the stub function inserted before each event processing.<br>**Since**: 12 |
+| void (*OH_HiCollie_EndFunc)(const char* eventName) | Records the end time when a service thread processes an event. This function is used in the jank event detection. HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event is reported. This is the stub function inserted after each event processing.<br>**Since**: 12 |
+| void (*OH_HiCollie_Callback)(void*) | Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called within the custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called.<br>**Since**: 18 |
+| size_t (*OH_HiCollie_FreezeCallback)(OH_HiCollie_Freeze_Type type, void* buffer, size_t size) | the freeze callback used in [OH_HiCollie_SetFreezeCallback](capi-hicollie-h.md#oh_hicollie_setfreezecallback)<br>**Since**: 24 |
 
 ## Enum type description
 
@@ -127,7 +137,7 @@ typedef void (*OH_HiCollie_Task)(void)
 
 **Description**
 
-Checks whether a service thread is stuck.This function is called by HiCollie every 3 seconds in a service thread.For example, this function can be used to send a message to a service thread and set a flag after the service threadreceives the message. Then the flag is checked to determine whether the service thread is stuck.
+Checks whether a service thread is stuck. This function is called by HiCollie every 3 seconds in a service thread. For example, this function can be used to send a message to a service thread and set a flag after the service thread receives the message. Then the flag is checked to determine whether the service thread is stuck.
 
 **Since**: 12
 
@@ -139,7 +149,7 @@ typedef void (*OH_HiCollie_BeginFunc)(const char* eventName)
 
 **Description**
 
-In jank scenario, you need to insert two stub functions before and aftereach event processing of your business thread.By checking these two function executing timestamp, HiCollie will know consuming time for every event.If it exceeds the preset threshold, a jank event will be reported.This is the stub function inserted before each event processing.
+In jank scenario, you need to insert two stub functions before and after each event processing of your business thread. By checking these two function executing timestamp, HiCollie will know consuming time for every event. If it exceeds the preset threshold, a jank event will be reported. This is the stub function inserted before each event processing.
 
 **Since**: 12
 
@@ -157,7 +167,7 @@ typedef void (*OH_HiCollie_EndFunc)(const char* eventName)
 
 **Description**
 
-Records the end time when a service thread processes an event. This function is used in the jank eventdetection.HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event isreported.This is the stub function inserted after each event processing.
+Records the end time when a service thread processes an event. This function is used in the jank event detection. HiCollie checks the execution time of the event. If the duration exceeds the preset threshold, a jank event is reported. This is the stub function inserted after each event processing.
 
 **Since**: 12
 
@@ -175,7 +185,7 @@ HiCollie_ErrorCode OH_HiCollie_Init_StuckDetection(OH_HiCollie_Task task)
 
 **Description**
 
-Registers a callback used to periodically detect service thread stuck events.By default, the **BUSSINESS_THREAD_BLOCK_3S** event is reported when the thread is blocked for 3s and the BUSSINESS_THREAD_BLOCK_6S** event is reported when the thread is blocked for 6s.
+Registers a callback used to periodically detect service thread stuck events. By default, the **BUSSINESS_THREAD_BLOCK_3S** event is reported when the thread is blocked for 3s and the **<br>BUSSINESS_THREAD_BLOCK_6S** event is reported when the thread is blocked for 6s.
 
 **Since**: 12
 
@@ -199,7 +209,7 @@ HiCollie_ErrorCode OH_HiCollie_Init_StuckDetectionWithTimeout(OH_HiCollie_Task t
 
 **Description**
 
-Registers a callback used to periodically detect service thread stuck events.You can set the interval for the stuck event detection. The value range is [3, 15], in seconds.
+Registers a callback used to periodically detect service thread stuck events. You can set the interval for the stuck event detection. The value range is [3, 15], in seconds.
 
 **Since**: 18
 
@@ -207,8 +217,8 @@ Registers a callback used to periodically detect service thread stuck events.You
 
 | Parameter | Description |
 | -- | -- |
-| [OH_HiCollie_Task](capi-hicollie-h.md#oh_hicollie_task) task | Periodic detection task that is executed every **stuckTimeout** time to check whether a service threadis stuck. |
-| uint32_t stuckTimeout | Threshold for reporting a service thread stuck event, in seconds. When the task execution timeexceeds the value of **stuckTimeout**, a stuck warning event is reported. When the task execution time exceeds twicethe value of **stuckTimeout**, a stuck event is reported.The maximum value is **15s** and the minimum value is **3s**. |
+| [OH_HiCollie_Task](capi-hicollie-h.md#oh_hicollie_task) task | Periodic detection task that is executed every **stuckTimeout** time to check whether a service thread is stuck. |
+| uint32_t stuckTimeout | Threshold for reporting a service thread stuck event, in seconds. When the task execution time exceeds the value of **stuckTimeout**, a stuck warning event is reported. When the task execution time exceeds twice the value of **stuckTimeout**, a stuck event is reported. The maximum value is **15s** and the minimum value is **3s**. |
 
 **Returns**:
 
@@ -224,7 +234,7 @@ HiCollie_ErrorCode OH_HiCollie_Init_JankDetection(OH_HiCollie_BeginFunc* beginFu
 
 **Description**
 
-Registers a callback used to detect service thread jank events.To monitor service thread jank events, you can implement two callbacks as instrumentation functions, placing thembefore and after the service thread event.
+Registers a callback used to detect service thread jank events. To monitor service thread jank events, you can implement two callbacks as instrumentation functions, placing them before and after the service thread event.
 
 **Since**: 12
 
@@ -250,7 +260,7 @@ HiCollie_ErrorCode OH_HiCollie_Report(bool* isSixSecond)
 
 **Description**
 
-Reports a service thread stuck event and generates logs to help locate application stuck issues.Call **OH_HiCollie_Init_StuckDetection()** or **OH_HiCollie_Init_StuckDetectionWithTimeout()** to initialize thedetection task.If the task times out, call **OH_HiCollie_Report()** to report the stuck event based on the service logic.
+Reports a service thread stuck event and generates logs to help locate application stuck issues. Call **OH_HiCollie_Init_StuckDetection()** or **OH_HiCollie_Init_StuckDetectionWithTimeout()** to initialize the detection task. If the task times out, call **OH_HiCollie_Report()** to report the stuck event based on the service logic.
 
 **Since**: 12
 
@@ -258,7 +268,7 @@ Reports a service thread stuck event and generates logs to help locate applicati
 
 | Parameter | Description |
 | -- | -- |
-| bool* isSixSecond | Pointer to a Boolean value.  If the service thread is stuck for 6s, the value is **true**. If theservice thread is stuck for 3s, the value is **false**. |
+| bool* isSixSecond | Pointer to a Boolean value.  If the service thread is stuck for 6s, the value is **true**. If the service thread is stuck for 3s, the value is **false**. |
 
 **Returns**:
 
@@ -274,7 +284,7 @@ HiCollie_ErrorCode OH_HiCollie_ReportInputBlock()
 
 **Description**
 
-Reports an application input unresponsive event and generates logs to help locate application freeze issues.On a PC or tablet, a dialog box is displayed, prompting the user to wait or close the application. On other devices,no dialog box is displayed. You are advised to use this API in either of the following ways:Method 1 (recommended): Use this API together with **OH_HiCollie_Report**, **OH_HiCollie_Init_StuckDetection**, or OH_HiCollie_Init_StuckDetectionWithTimeout**. The service thread periodically checks whether it is frozen throughthe preceding APIs. When the service thread is frozen and an input event (such as screen tapping, mouse clicking, orkeyboard input) occurs, the service thread calls **OH_HiCollie_ReportInputBlock**.Method 2: If the service thread can detect its own freeze without using the **OH_HiCollie_Report**, OH_HiCollie_Init_StuckDetection**, or **OH_HiCollie_Init_StuckDetectionWithTimeout** API, the application calls the *OH_HiCollie_ReportInputBlock** API based on the service thread freeze and input event.
+Reports an application input unresponsive event and generates logs to help locate application freeze issues. On a PC or tablet, a dialog box is displayed, prompting the user to wait or close the application. On other devices, no dialog box is displayed. You are advised to use this API in either of the following ways: Method 1 (recommended): Use this API together with **OH_HiCollie_Report**, **OH_HiCollie_Init_StuckDetection**, or **<br>OH_HiCollie_Init_StuckDetectionWithTimeout**. The service thread periodically checks whether it is frozen through the preceding APIs. When the service thread is frozen and an input event (such as screen tapping, mouse clicking, or keyboard input) occurs, the service thread calls **OH_HiCollie_ReportInputBlock**. Method 2: If the service thread can detect its own freeze without using the **OH_HiCollie_Report**, **<br>OH_HiCollie_Init_StuckDetection**, or **OH_HiCollie_Init_StuckDetectionWithTimeout** API, the application calls the *<br>*OH_HiCollie_ReportInputBlock** API based on the service thread freeze and input event.
 
 **Since**: 24
 
@@ -292,7 +302,7 @@ typedef void (*OH_HiCollie_Callback)(void*)
 
 **Description**
 
-Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called withinthe custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called.
+Triggered when [OH_HiCollie_CancelTimer](capi-hicollie-h.md#oh_hicollie_canceltimer) is not called within the custom task timeout period after [OH_HiCollie_SetTimer](capi-hicollie-h.md#oh_hicollie_settimer) is called.
 
 **Since**: 18
 
@@ -304,7 +314,7 @@ HiCollie_ErrorCode OH_HiCollie_SetTimer(HiCollie_SetTimerParam param, int *id)
 
 **Description**
 
-Registers a timer to check whether the execution time of a function or code block exceeds the custom time.This API is used together with the **OH_HiCollie_CancelTimer** API.
+Registers a timer to check whether the execution time of a function or code block exceeds the custom time. This API is used together with the **OH_HiCollie_CancelTimer** API.
 
 **Since**: 18
 
@@ -329,7 +339,7 @@ void OH_HiCollie_CancelTimer(int id)
 
 **Description**
 
-Cancels a timer based on the ID.This API is used together with the **OH_HiCollie_SetTimer** API. It must be used after the function or code block isexecuted.If a timer is not canceled within the custom time, a callback function is executed to generate fault logs for thespecified timeout event.
+Cancels a timer based on the ID. This API is used together with the **OH_HiCollie_SetTimer** API. It must be used after the function or code block is executed. If a timer is not canceled within the custom time, a callback function is executed to generate fault logs for the specified timeout event.
 
 **Since**: 18
 
@@ -356,7 +366,7 @@ the freeze callback used in [OH_HiCollie_SetFreezeCallback](capi-hicollie-h.md#o
 | Parameter | Description |
 | -- | -- |
 | [OH_HiCollie_Freeze_Type](capi-hicollie-h.md#oh_hicollie_freeze_type) type | Freeze event type in [OH_HiCollie_Freeze_Type](capi-hicollie-h.md#oh_hicollie_freeze_type) |
-| void\* buffer | log buffer provided by the system, whose content will be moved to APP_FREEZE or APP_HICOLLIEHiAppEvent |
+| void\* buffer | log buffer provided by the system, whose content will be moved to APP_FREEZE or APP_HICOLLIE HiAppEvent |
 | size_t size | buffer size can be used |
 
 **Returns**:
@@ -397,7 +407,7 @@ HiCollie_ErrorCode OH_HiCollie_AssociateProcessReport(bool isFreezeEvent)
 
 **Description**
 
-Reports a freeze event of a process. In this case, a **HiAppEvent** event of the **APP_HICOLLIE** type isgenerated.
+Reports a freeze event of a process. In this case, a **HiAppEvent** event of the **APP_HICOLLIE** type is generated.
 
 **Since**: 24
 

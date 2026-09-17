@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the APIs related to media asset change requests. You can use the APIs to change mediaassets.
+The file declares the APIs related to media asset change requests. You can use the APIs to change media assets.
 
 **Library**: libmedia_asset_manager.so
 

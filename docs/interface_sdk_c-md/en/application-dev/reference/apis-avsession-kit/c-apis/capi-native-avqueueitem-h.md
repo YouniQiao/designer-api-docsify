@@ -8,7 +8,7 @@ Declare avqueueitem related interfaces.
 
 **System capability**: SystemCapability.Multimedia.AVSession.Core
 
-**Since**: 23
+**Since**: 13
 
 **Related module**: [OHAVSession](capi-ohavsession.md)
 
@@ -18,15 +18,15 @@ Declare avqueueitem related interfaces.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md) | OH_AVSession_AVQueueItem | Declaring the avqueue item.The instance of AVQueueItem. |
-| [OH_AVSession_AVMediaDescription](capi-ohavsession-oh-avsession-avmediadescription.md) | OH_AVSession_AVMediaDescription | Declaring the AVMediaDescription.The instance of AVMediaDescription set by application for current resource. |
-| [OH_AVSession_AVMediaDescriptionBuilder](capi-ohavsession-oh-avsession-avmediadescriptionbuilder.md) | OH_AVSession_AVMediaDescriptionBuilder | Declaring the AVMediaDescription builder.The instance of builder is used for creating AVMediaDescription. |
+| [OH_AVSession_AVQueueItem](capi-ohavsession-oh-avsession-avqueueitem.md) | OH_AVSession_AVQueueItem | Declaring the avqueue item. The instance of AVQueueItem. |
+| [OH_AVSession_AVMediaDescription](capi-ohavsession-oh-avsession-avmediadescription.md) | OH_AVSession_AVMediaDescription | Declaring the AVMediaDescription. The instance of AVMediaDescription set by application for current resource. |
+| [OH_AVSession_AVMediaDescriptionBuilder](capi-ohavsession-oh-avsession-avmediadescriptionbuilder.md) | OH_AVSession_AVMediaDescriptionBuilder | Declaring the AVMediaDescription builder. The instance of builder is used for creating AVMediaDescription. |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_Create(OH_AVSession_AVMediaDescriptionBuilder** builder)](#oh_avsession_avmediadescriptionbuilder_create) | Creates an OH_AVSession_AVMediaDescriptionBuilder instance.Call [OH_AVSession_AVMediaDescriptionBuilder_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescriptionbuilder_destroy) to release the builder objectwhen it is not used anymore. |
+| [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_Create(OH_AVSession_AVMediaDescriptionBuilder** builder)](#oh_avsession_avmediadescriptionbuilder_create) | Creates an OH_AVSession_AVMediaDescriptionBuilder instance. Call [OH_AVSession_AVMediaDescriptionBuilder_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescriptionbuilder_destroy) to release the builder object when it is not used anymore. |
 | [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_Destroy(OH_AVSession_AVMediaDescriptionBuilder* builder)](#oh_avsession_avmediadescriptionbuilder_destroy) | Destroys a builder. |
 | [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_SetAssetId(OH_AVSession_AVMediaDescriptionBuilder* builder, const char* assetId)](#oh_avsession_avmediadescriptionbuilder_setassetid) | Set current asset id of the resource |
 | [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_SetTitle(OH_AVSession_AVMediaDescriptionBuilder* builder, const char* title)](#oh_avsession_avmediadescriptionbuilder_settitle) | Set the title of the resource |
@@ -54,7 +54,7 @@ Declare avqueueitem related interfaces.
 | [AVQueueItem_Result OH_AVSession_AVMediaDescription_GetMediaSize(OH_AVSession_AVMediaDescription* description, int32_t* mediaSize)](#oh_avsession_avmediadescription_getmediasize) | Get media size of the resource |
 | [AVQueueItem_Result OH_AVSession_AVMediaDescription_GetAlbumTitle(OH_AVSession_AVMediaDescription* description, char** albumTitle)](#oh_avsession_avmediadescription_getalbumtitle) | Get the album title of the resource |
 | [AVQueueItem_Result OH_AVSession_AVMediaDescription_GetAppName(OH_AVSession_AVMediaDescription* description, char** appName)](#oh_avsession_avmediadescription_getappname) | Get the app name of the resource |
-| [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_GenerateAVMediaDescription(OH_AVSession_AVMediaDescriptionBuilder* builder, OH_AVSession_AVMediaDescription** avMediaDescription)](#oh_avsession_avmediadescriptionbuilder_generateavmediadescription) | Create the avMediaDescription.Call [OH_AVSession_AVMediaDescription_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescription_destroy) to release the avMediaDescription objectwhen it is not used anymore. |
+| [AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_GenerateAVMediaDescription(OH_AVSession_AVMediaDescriptionBuilder* builder, OH_AVSession_AVMediaDescription** avMediaDescription)](#oh_avsession_avmediadescriptionbuilder_generateavmediadescription) | Create the avMediaDescription. Call [OH_AVSession_AVMediaDescription_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescription_destroy) to release the avMediaDescription object when it is not used anymore. |
 | [AVQueueItem_Result OH_AVSession_AVMediaDescription_Destroy(OH_AVSession_AVMediaDescription* avMediaDescription)](#oh_avsession_avmediadescription_destroy) | Request to release the avMediaDescription. |
 
 ## Function description
@@ -67,7 +67,7 @@ AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_Create(OH_AVSession_AV
 
 **Description**
 
-Creates an OH_AVSession_AVMediaDescriptionBuilder instance.Call [OH_AVSession_AVMediaDescriptionBuilder_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescriptionbuilder_destroy) to release the builder objectwhen it is not used anymore.
+Creates an OH_AVSession_AVMediaDescriptionBuilder instance. Call [OH_AVSession_AVMediaDescriptionBuilder_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescriptionbuilder_destroy) to release the builder object when it is not used anymore.
 
 **Since**: 23
 
@@ -81,7 +81,7 @@ Creates an OH_AVSession_AVMediaDescriptionBuilder instance.Call [OH_AVSession_AV
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM} The param of builder is nullptr.          {@link AVQUEUEITEM_ERROR_NO_MEMORY} No memory to allocate a new instance. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM} The param of builder is nullptr.<br>        {@link AVQUEUEITEM_ERROR_NO_MEMORY} No memory to allocate a new instance. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_Destroy()
 
@@ -105,7 +105,7 @@ Destroys a builder.
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM} The param of builder is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM} The param of builder is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAssetId()
 
@@ -130,7 +130,7 @@ Set current asset id of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of assetId is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of assetId is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetTitle()
 
@@ -155,7 +155,7 @@ Set the title of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of title is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of title is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetSubTitle()
 
@@ -180,7 +180,7 @@ Set the subtitle of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of subtitle is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of subtitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetArtist()
 
@@ -205,7 +205,7 @@ Set the artist of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of artist is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of artist is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAlbumCoverUri()
 
@@ -230,7 +230,7 @@ Set the media image url of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of albumCoverUri is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of albumCoverUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetMediaType()
 
@@ -255,7 +255,7 @@ Set the media type of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Return code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of mediaType is nullptr. |
+| AVQueueItem_Result | Return code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of mediaType is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetLyricContent()
 
@@ -280,7 +280,7 @@ Set the lyric content of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of lyricContent is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of lyricContent is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetDuration()
 
@@ -305,7 +305,7 @@ Set the duration of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of duration is invalid. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of duration is invalid. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetMediaUri()
 
@@ -330,7 +330,7 @@ Set the media uri of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of mediaUri is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of mediaUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetStartPosition()
 
@@ -355,7 +355,7 @@ Set the start position of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of startPosition is invalid. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of startPosition is invalid. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetMediaSize()
 
@@ -380,7 +380,7 @@ Set the size of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Return code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of mediaSize is invalid. |
+| AVQueueItem_Result | Return code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1. The param of builder is nullptr.                                                  2. The param of mediaSize is invalid. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAlbumTitle()
 
@@ -405,7 +405,7 @@ Set the album title of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr.                                                  2.The param of albumTitle is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr.                                                  2.The param of albumTitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_SetAppName()
 
@@ -430,7 +430,7 @@ Set the app name of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr.                                                  2.The param of title  is appName. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr.                                                  2.The param of title  is appName. |
 
 ### OH_AVSession_AVMediaDescription_GetAssetId()
 
@@ -455,7 +455,7 @@ Get current asset id of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of assetId is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of assetId is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetTitle()
 
@@ -480,7 +480,7 @@ Get the title of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of title is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of title is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetSubtitle()
 
@@ -505,7 +505,7 @@ Get the subtitle of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of subtitle is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of subtitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetArtist()
 
@@ -530,7 +530,7 @@ Get the artist of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of artist is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of artist is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetAlbumCoverUri()
 
@@ -555,7 +555,7 @@ Get the media image url of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of albumCoverUri is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of albumCoverUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetMediaType()
 
@@ -580,7 +580,7 @@ Get the media type information
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of mediaType is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of mediaType is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetLyricContent()
 
@@ -605,7 +605,7 @@ Get the lyric content of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of lyricContent is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of lyricContent is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetDuration()
 
@@ -630,7 +630,7 @@ Get the duration of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}                                                 1. The param of builder is nullptr.                                                 2. The param of duration is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}                                                 1. The param of builder is nullptr.                                                 2. The param of duration is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetMediaUri()
 
@@ -655,7 +655,7 @@ Get the media uri of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of mediaUri is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of mediaUri is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetStartPosition()
 
@@ -680,7 +680,7 @@ Get start position of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}                                                 1. The param of description is nullptr.                                                 2. The param of startPosition is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}                                                 1. The param of description is nullptr.                                                 2. The param of startPosition is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetMediaSize()
 
@@ -705,7 +705,7 @@ Get media size of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}                                                 1. The param of description is nullptr.                                                 2. The param of mediaSize is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}                                                 1. The param of description is nullptr.                                                 2. The param of mediaSize is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetAlbumTitle()
 
@@ -730,7 +730,7 @@ Get the album title of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of albumTitle is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of albumTitle is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_GetAppName()
 
@@ -755,7 +755,7 @@ Get the app name of the resource
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of appName is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                 1.The param of description is nullptr.                                                 2.The param of appName is nullptr. |
 
 ### OH_AVSession_AVMediaDescriptionBuilder_GenerateAVMediaDescription()
 
@@ -765,7 +765,7 @@ AVQueueItem_Result OH_AVSession_AVMediaDescriptionBuilder_GenerateAVMediaDescrip
 
 **Description**
 
-Create the avMediaDescription.Call [OH_AVSession_AVMediaDescription_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescription_destroy) to release the avMediaDescription objectwhen it is not used anymore.
+Create the avMediaDescription. Call [OH_AVSession_AVMediaDescription_Destroy](capi-native-avqueueitem-h.md#oh_avsession_avmediadescription_destroy) to release the avMediaDescription object when it is not used anymore.
 
 **Since**: 23
 
@@ -780,7 +780,7 @@ Create the avMediaDescription.Call [OH_AVSession_AVMediaDescription_Destroy](cap
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_NO_MEMORY} No memory to allocate a new instance.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of avMediaDescription is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_NO_MEMORY} No memory to allocate a new instance.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM}:                                                  1.The param of builder is nullptr;                                                  2.The param of avMediaDescription is nullptr. |
 
 ### OH_AVSession_AVMediaDescription_Destroy()
 
@@ -804,6 +804,6 @@ Request to release the avMediaDescription.
 
 | Type | Description |
 | -- | -- |
-| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.          {@link AVQUEUEITEM_ERROR_INVALID_PARAM} The param of avMediaDescription is nullptr. |
+| AVQueueItem_Result | Function result code:          {@link AVQUEUEITEM_SUCCESS} If the execution is successful.<br>        {@link AVQUEUEITEM_ERROR_INVALID_PARAM} The param of avMediaDescription is nullptr. |
 
 

@@ -24,7 +24,7 @@ Reference of TEE object api definitions.
 
 | Name | Description |
 | -- | -- |
-| [TEE_Result TEE_GetPropertyAsString(TEE_PropSetHandle propsetOrEnumerator, const char *name, char *valueBuffer, size_t *valueBufferLen)](#tee_getpropertyasstring) | Obtains a property from a property set and converts its value into a printable string. |
+| [TEE_Result TEE_GetPropertyAsString(TEE_PropSetHandle propsetOrEnumerator, const char *name, char *valueBuffer, size_t *valueBufferLen)](#tee_getpropertyasstring) | Obtains a property from a property set and converts its value into a printable string.<br> * |
 | [TEE_Result TEE_GetPropertyAsBool(TEE_PropSetHandle propsetOrEnumerator, const char *name, bool *value)](#tee_getpropertyasbool) | Obtains a property from a property set and converts its value into a Boolean value. |
 | [TEE_Result TEE_GetPropertyAsU32(TEE_PropSetHandle propsetOrEnumerator, const char *name, uint32_t *value)](#tee_getpropertyasu32) | Obtains a property from a property set and converts its value into a 32-bit unsigned integer. |
 | [TEE_Result TEE_GetPropertyAsU64(TEE_PropSetHandle propsetOrEnumerator, const char *name, uint64_t *value)](#tee_getpropertyasu64) | Obtains a property from a property set and converts its value into a 64-bit unsigned integer. |
@@ -37,6 +37,12 @@ Reference of TEE object api definitions.
 | [void TEE_ResetPropertyEnumerator(TEE_PropSetHandle enumerator)](#tee_resetpropertyenumerator) | Resets a property enumerator immediately after allocation. |
 | [TEE_Result TEE_GetPropertyName(TEE_PropSetHandle enumerator, void *nameBuffer, size_t *nameBufferLen)](#tee_getpropertyname) | Obtains the name of this property in an enumerator. |
 | [TEE_Result TEE_GetNextProperty(TEE_PropSetHandle enumerator)](#tee_getnextproperty) | Obtains the next property in an enumerator. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| uint32_t TEE_PropSetHandle | Defines the property set handle type.<br>**Since**: 20 |
 
 ## Enum type description
 
@@ -70,7 +76,7 @@ TEE_Result TEE_GetPropertyAsString(TEE_PropSetHandle propsetOrEnumerator, const 
 
 **Description**
 
-Obtains a property from a property set and converts its value into a printable string.
+Obtains a property from a property set and converts its value into a printable string.<br> *
 
 **Since**: 20
 

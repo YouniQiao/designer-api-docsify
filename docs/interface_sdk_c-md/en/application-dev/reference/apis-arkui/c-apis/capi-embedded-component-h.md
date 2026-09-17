@@ -21,14 +21,20 @@ Defines embedded component attribute and interface.
 | [AbilityBase_Want](capi-arkui-nativemodule-abilitybase-want.md) | AbilityBase_Want | Declares the Ability base want. |
 | [ArkUI_EmbeddedComponentOption](capi-arkui-nativemodule-arkui-embeddedcomponentoption.md) | ArkUI_EmbeddedComponentOption | Define the EmbeddedComponentOption for the EmbeddedComponent. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| ARKUI_EMBEDDED_COMPONENT_H | Defines embedded component attribute and interface.<br>**Since**: 12<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
+
 ### Function
 
 | Name | Description |
 | -- | -- |
 | [ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()](#oh_arkui_embeddedcomponentoption_create) | Creates an **EmbeddedComponent** option object. |
 | [void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* option)](#oh_arkui_embeddedcomponentoption_dispose) | Disposes of an **EmbeddedComponent** option object. |
-| [void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, const char* name, const char* message))](#oh_arkui_embeddedcomponentoption_setonerror) | Sets the {@link onError} callback for the **EmbeddedComponent** component. This callback is triggered when anerror occurs during the running of the **EmbeddedComponent** component. |
-| [void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, AbilityBase_Want* want))](#oh_arkui_embeddedcomponentoption_setonterminated) | Sets the {@link onTerminated} callback for the **EmbeddedComponent** component. This callback is triggeredwhen the **EmbeddedComponent** component exits properly. |
+| [void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, const char* name, const char* message))](#oh_arkui_embeddedcomponentoption_setonerror) | Sets the {@link onError} callback for the **EmbeddedComponent** component. This callback is triggered when an error occurs during the running of the **EmbeddedComponent** component. |
+| [void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOption* option, void (\*callback)(int32_t code, AbilityBase_Want* want))](#oh_arkui_embeddedcomponentoption_setonterminated) | Sets the {@link onTerminated} callback for the **EmbeddedComponent** component. This callback is triggered when the **EmbeddedComponent** component exits properly. |
 
 ## Function description
 
@@ -76,7 +82,7 @@ void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* 
 
 **Description**
 
-Sets the {@link onError} callback for the **EmbeddedComponent** component. This callback is triggered when anerror occurs during the running of the **EmbeddedComponent** component.
+Sets the {@link onError} callback for the **EmbeddedComponent** component. This callback is triggered when an error occurs during the running of the **EmbeddedComponent** component.
 
 **Since**: 20
 
@@ -85,7 +91,7 @@ Sets the {@link onError} callback for the **EmbeddedComponent** component. This 
 | Parameter | Description |
 | -- | -- |
 | rkUI_EmbeddedComponentOption\* option | Pointer to the **EmbeddedComponent** option object. |
-| void (\*callback)(int32_t code | Callback function that will called when error occurs during the running ofthe **EmbeddedComponent** component |
+| void (\*callback)(int32_t code | Callback function that will called when error occurs during the running of the **EmbeddedComponent** component |
 
 ### OH_ArkUI_EmbeddedComponentOption_SetOnTerminated()
 
@@ -95,7 +101,7 @@ void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOpt
 
 **Description**
 
-Sets the {@link onTerminated} callback for the **EmbeddedComponent** component. This callback is triggeredwhen the **EmbeddedComponent** component exits properly.
+Sets the {@link onTerminated} callback for the **EmbeddedComponent** component. This callback is triggered when the **EmbeddedComponent** component exits properly.
 
 **Since**: 20
 

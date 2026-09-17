@@ -6,7 +6,7 @@ typedef struct OH_AudioStreamBuilderStruct OH_AudioStreamBuilder
 
 ## Overview
 
-Declaring the audio stream builder.The instance of builder is used for creating audio stream.
+Declaring the audio stream builder. The instance of builder is used for creating audio stream.
 
 **Since**: 10
 

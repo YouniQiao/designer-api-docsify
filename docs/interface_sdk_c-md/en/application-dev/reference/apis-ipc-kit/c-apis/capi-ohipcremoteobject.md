@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides C interfaces for creating and destroying a remote object, transferring data,and observing the dead status of a remote object.
+Provides C interfaces for creating and destroying a remote object, transferring data, and observing the dead status of a remote object.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -12,4 +12,4 @@ Provides C interfaces for creating and destroying a remote object, transferring 
 
 | Name | Description |
 | -- | -- |
-| [ipc_cremote_object.h](capi-ipc-cremote-object-h.md) | Provides C APIs for creating and destroying a remote object, transferring data, and observing the dead statusof a remote object. |
+| [ipc_cremote_object.h](capi-ipc-cremote-object-h.md) | Provides C APIs for creating and destroying a remote object, transferring data, and observing the dead status of a remote object. |

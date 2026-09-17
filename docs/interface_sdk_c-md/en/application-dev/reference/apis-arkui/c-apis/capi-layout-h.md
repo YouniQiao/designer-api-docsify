@@ -174,9 +174,9 @@ Enumerates the vertical alignment modes.
 | ARKUI_FLEX_ALIGNMENT_START = 1 | The child components are aligned with the start edge of the main axis. |
 | ARKUI_FLEX_ALIGNMENT_CENTER = 2 | The child components are aligned in the center of the main axis. |
 | ARKUI_FLEX_ALIGNMENT_END = 3 | The child components are aligned with the end edge of the main axis. |
-| ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6 | The child components are evenly distributed along the main axis. The space between any two adjacent componentsis the same. The first component is aligned with the main-start, and the last component is aligned with |
-| ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7 | The child components are evenly distributed along the main axis. The space between any two adjacent componentsis the same. The space between the first component and main-start, and that between the last component and |
-| ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8 | The child components are evenly distributed along the main axis. The space between the first componentand main-start, the space between the last component and main-end, and the space between any two adjacent |
+| ARKUI_FLEX_ALIGNMENT_SPACE_BETWEEN = 6 | The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The first component is aligned with the main-start, and the last component is aligned with |
+| ARKUI_FLEX_ALIGNMENT_SPACE_AROUND = 7 | The child components are evenly distributed along the main axis. The space between any two adjacent components is the same. The space between the first component and main-start, and that between the last component and |
+| ARKUI_FLEX_ALIGNMENT_SPACE_EVENLY = 8 | The child components are evenly distributed along the main axis. The space between the first component and main-start, the space between the last component and main-end, and the space between any two adjacent |
 
 ### ArkUI_FlexDirection
 
@@ -382,7 +382,7 @@ Enumerates the LayoutPolicy.
 | Enum item | Description |
 | -- | -- |
 | ARKUI_LAYOUTPOLICY_MATCHPARENT = 0 | The component fills its parent, which means its size is as large as its parent |
-| ARKUI_LAYOUTPOLICY_WRAPCONTENT | The component fills its content, which means its size is as large as its children but it is constrainedby its parent. |
+| ARKUI_LAYOUTPOLICY_WRAPCONTENT | The component fills its content, which means its size is as large as its children but it is constrained by its parent. |
 | ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE | The component fills its content which means its size is as large as its children. |
 
 ### ArkUI_PixelRoundCalcPolicy
@@ -1463,7 +1463,7 @@ Gets the top edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PositionEdges_SetLeft()
 
@@ -1507,7 +1507,7 @@ Gets the left edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PositionEdges_SetBottom()
 
@@ -1551,7 +1551,7 @@ Gets the bottom edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PositionEdges_SetRight()
 
@@ -1595,7 +1595,7 @@ Gets the right edge of an edge object for position attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_Create()
 
@@ -1675,7 +1675,7 @@ Gets the top edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_SetStart()
 
@@ -1719,7 +1719,7 @@ Gets the start edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_SetBottom()
 
@@ -1763,7 +1763,7 @@ Gets the bottom edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 ### OH_ArkUI_PixelRoundPolicy_SetEnd()
 
@@ -1807,6 +1807,6 @@ Gets the end edge of a policy object for PixelRound attribute.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.       Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
+| int32_t | Returns the result code.       Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>     Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if the parameter is invalid. |
 
 

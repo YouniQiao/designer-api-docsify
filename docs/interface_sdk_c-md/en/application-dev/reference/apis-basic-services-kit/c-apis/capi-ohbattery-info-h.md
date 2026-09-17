@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the battery APIs that are used to obtain the current battery capacity and power supply type anddefine common battery events.
+Declares the battery APIs that are used to obtain the current battery capacity and power supply type and define common battery events.
 
 **Library**: libohbattery_info.so
 
@@ -31,7 +31,7 @@ Declares the battery APIs that are used to obtain the current battery capacity a
 
 | Name | Description |
 | -- | -- |
-| static const char *COMMON_EVENT_KEY_CAPACITY = "soc" | Defines the common event indicating a battery capacity change.<br>**Since**: 13<br>**System capability**: SystemCapability.PowerManager.BatteryManager.Core |
+| static const char *COMMON_EVENT_KEY_CAPACITY = "soc" | Defines the common event indicating a battery capacity change.<br>**Since**: 13 |
 | static const char *COMMON_EVENT_KEY_CHARGE_STATE = "chargeState" | Defines the common event indicating a charging status change.<br>**Since**: 13 |
 | static const char *COMMON_EVENT_KEY_PLUGGED_TYPE = "pluggedType" | Defines the common event indicating a battery plugged type change.<br>**Since**: 13 |
 

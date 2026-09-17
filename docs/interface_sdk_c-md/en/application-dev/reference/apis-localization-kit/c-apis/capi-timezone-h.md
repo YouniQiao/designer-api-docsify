@@ -22,7 +22,7 @@ Provides the capability of obtaining time zone information.
 | [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) | InitialTimeZoneRule | Defines the initial rule of a timezone which has no clear start time. |
 | [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | TimeArrayTimeZoneRule | Defines time zone rule defined by the start timestamp array. |
 | [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | AnnualTimeZoneRule | Defines the time zone rule that takes effect annually. |
-| [TimeZoneRules](capi-i18n-timezonerules.md) | TimeZoneRules | A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamparray, and time zone rule that takes effect every year. It can comprehensively describe both the historical andfuture rules of a time zone. |
+| [TimeZoneRules](capi-i18n-timezonerules.md) | TimeZoneRules | A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamp array, and time zone rule that takes effect every year. It can comprehensively describe both the historical and future rules of a time zone. |
 | [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | TimeZoneRuleQuery | Used to input the query information and receive the query result. |
 
 ### Enum
@@ -72,8 +72,8 @@ Enumerates the types of rules for defining dates.
 | -- | -- |
 | DOM = 0 | Indicates that day of the month. For example, October 16 in 2025 is the 16th day of October. |
 | DOW = 1 | Indicates that weekday of the month. For example, October 16 in 2025 is the third Thursday of October. |
-| DOW_GEQ_DOM = 2 | Indicates that first weekday after the specified day of the month.For example, October 16 in 2025 is the first Thursday after the 13th, 14th, or 15th day of October. |
-| DOW_LEQ_DOM = 3 | Indicates that last weekday before the specified day of the month.For example, October 16 in 2025 is the last Thursday before the 20th day of October. |
+| DOW_GEQ_DOM = 2 | Indicates that first weekday after the specified day of the month. For example, October 16 in 2025 is the first Thursday after the 13th, 14th, or 15th day of October. |
+| DOW_LEQ_DOM = 3 | Indicates that last weekday before the specified day of the month. For example, October 16 in 2025 is the last Thursday before the 20th day of October. |
 
 ### TimeRuleType
 
@@ -119,7 +119,7 @@ Obtains the timezone rules by timezone ID.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes: Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes: Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetFirstStartFromTimeArrayTimeZoneRule()
 
@@ -144,7 +144,7 @@ Obtains the time when the TimeArrayTimeZoneRule first took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetFirstStartFromAnnualTimeZoneRule()
 
@@ -169,7 +169,7 @@ Obtains the time when the AnnualTimeZoneRule first took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetFinalStartFromTimeArrayTimeZoneRule()
 
@@ -194,7 +194,7 @@ Obtains the time when the TimeArrayTimeZoneRule final took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetFinalStartFromAnnualTimeZoneRule()
 
@@ -219,7 +219,7 @@ Obtains the time when the AnnualTimeZoneRule final took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetNextStartFromTimeArrayTimeZoneRule()
 
@@ -244,7 +244,7 @@ Obtains the time when the TimeArrayTimeZoneRule next took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetNextStartFromAnnualTimeZoneRule()
 
@@ -269,7 +269,7 @@ Obtains the time when the AnnualTimeZoneRule next took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetPrevStartFromTimeArrayTimeZoneRule()
 
@@ -294,7 +294,7 @@ Obtains the time when the TimeArrayTimeZoneRule previous took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetPrevStartFromAnnualTimeZoneRule()
 
@@ -319,7 +319,7 @@ Obtains the time when the AnnualTimeZoneRule previous took effect.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetStartTimeAt()
 
@@ -345,7 +345,7 @@ Obtain the effective start time of a specific rule in the TimeArrayTimeZoneRule.
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 ### OH_i18n_GetStartInYear()
 
@@ -371,6 +371,6 @@ Obtain the effective start time of a specific rule for target year in the Annual
 
 | Type | Description |
 | -- | -- |
-| I18n_ErrorCode | {@link SUCCESS} 0 - Success.          {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:      Parameter verification failed.          {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
+| I18n_ErrorCode | {@link SUCCESS} 0 - Success.<br>        {@link ERROR_INVALID_PARAMETER} 8900001 - Invalid parameter. Possible causes:<br>    Parameter verification failed.<br>        {@link UNEXPECTED_ERROR} 8900050 - Unexpected error, such as memory error. |
 
 

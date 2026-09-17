@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides APIs for cryptographic operations.You can use these APIs to implement encryption and decryption.
+Provides APIs for cryptographic operations.<br> You can use these APIs to implement encryption and decryption.
 
 **Library**: NA
 
@@ -19,27 +19,27 @@ Provides APIs for cryptographic operations.You can use these APIs to implement e
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [TEE_DH_OtherInfo](capi-teetrusted-tee-dh-otherinfo.md) | TEE_DH_OtherInfo | Defines a struct for TEE_DH_OtherInfo. |
-| [__TEE_OperationInfo](capi-teetrusted---tee-operationinfo.md) | TEE_OperationInfo | Defines the operation information. |
+| [\_\_TEE_OperationInfo](capi-teetrusted---tee-operationinfo.md) | TEE_OperationInfo | Defines the operation information. |
 | [TEE_OperationInfoKey](capi-teetrusted-tee-operationinfokey.md) | TEE_OperationInfoKey | Defines the key information stored in the <b>OperationInfo</b>. |
 | [TEE_OperationInfoMultiple](capi-teetrusted-tee-operationinfomultiple.md) | TEE_OperationInfoMultiple | Defines information about an operation. |
-| [__TEE_OperationHandle](capi-teetrusted---tee-operationhandle.md) | TEE_OperationHandleVar | Defines the cryptographic operation handle. |
+| [\_\_TEE_OperationHandle](capi-teetrusted---tee-operationhandle.md) | TEE_OperationHandleVar | Defines the cryptographic operation handle. |
 | [crypto_uint2uint](capi-teetrusted-crypto-uint2uint.md) | crypto_uint2uint | Defines the data used for conversion of integers. |
 | [peration_src_dest](capi-teetrusted-peration-src-dest.md) | - | Defines a structure to hold the input and output data. |
 | [peration_ae_init](capi-teetrusted-peration-ae-init.md) | - | Defines the AE initialization data. |
-| [__TEE_ObjectHandle](capi-teetrusted---tee-objecthandle.md) | TEE_ObjectHandleVar | Defines the <b>__TEE_ObjectHandle</b> struct. |
+| [\_\_TEE_ObjectHandle](capi-teetrusted---tee-objecthandle.md) | TEE_ObjectHandleVar | Defines the <b>\_\_TEE_ObjectHandle</b> struct. |
 
 ### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [__TEE_Operation_Constants](#__tee_operation_constants) | - | Enumerates the cryptographic operation handles. |
-| [__tee_crypto_algorithm_id](#__tee_crypto_algorithm_id) | - | Enumerates the cryptographic algorithms. |
+| [\_\_TEE_Operation_Constants](#\_\_tee_operation_constants) | - | Enumerates the cryptographic operation handles. |
+| [\_\_tee_crypto_algorithm_id](#\_\_tee_crypto_algorithm_id) | - | Enumerates the cryptographic algorithms. |
 | [TEE_ECC_CURVE](#tee_ecc_curve) | TEE_ECC_CURVE | Enumerates the Elliptic-Curve Cryptography (ECC) curves supported. |
 | [TEE_DH_HASH_Mode](#tee_dh_hash_mode) | TEE_DH_HASH_Mode | Enumerates the Mask Generation Function (MGF1) modes. |
 | [TEE_DH_OpMode_t](#tee_dh_opmode_t) | TEE_DH_OpMode_t | Enumerates the Diffie-Hellman operation modes. |
 | [TEE_DH_DerivFuncMode](#tee_dh_derivfuncmode) | TEE_DH_DerivFuncMode | Defines an enum for TEE_DH_DerivFuncMode. |
-| [__TEE_DK_ObjectAttribute](#__tee_dk_objectattribute) | - | Enumerates the object attributes for cryptographic operations. |
-| [__TEE_OperationMode](#__tee_operationmode) | - | Enumerates the cryptographic operation modes. |
+| [\_\_TEE_DK_ObjectAttribute](#\_\_tee_dk_objectattribute) | - | Enumerates the object attributes for cryptographic operations. |
+| [\_\_TEE_OperationMode](#\_\_tee_operationmode) | - | Enumerates the cryptographic operation modes. |
 | [tee_operation_state](#tee_operation_state) | - | Enumerates the cryptographic operation states. |
 
 ### Macro
@@ -88,6 +88,12 @@ Provides APIs for cryptographic operations.You can use these APIs to implement e
 | [TEE_Result TEE_AsymmetricVerifyDigest(TEE_OperationHandle operation, const TEE_Attribute *params, uint32_t paramCount, void *digest, size_t digestLen, void *signature, size_t signatureLen)](#tee_asymmetricverifydigest) | Verifies a message digest signature in an asymmetric operation. |
 | [TEE_Result TEE_GetOperationInfoMultiple(TEE_OperationHandle operation, TEE_OperationInfoMultiple *operationInfoMultiple, const size_t *operationSize)](#tee_getoperationinfomultiple) | Obtains information about the operation involving multiple keys. |
 | [TEE_Result TEE_IsAlgorithmSupported(uint32_t algId, uint32_t element)](#tee_isalgorithmsupported) | Checks whether the algorithm is supported. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| uint32_t TEE_OperationMode | Defines the mode for cryptographic operations.<br>**Since**: 20 |
 
 ## Enum type description
 
@@ -543,7 +549,7 @@ Initializes the context to start a cipher operation.
 | Parameter | Description |
 | -- | -- |
 | TEE_OperationHandle operation | Indicates the operation handle. |
-| const void *IV | Indicates the pointer to the buffer storing the operation IV. If this parameter is not used,set it to <b>NULL</b>. |
+| const void *IV | Indicates the pointer to the buffer storing the operation IV. If this parameter is not used, set it to <b>NULL</b>. |
 | size_t IVLen | Indicates the length of the IV buffer. |
 
 ### TEE_CipherUpdate()
@@ -667,7 +673,7 @@ Initializes a MAC operation.
 | Parameter | Description |
 | -- | -- |
 | TEE_OperationHandle operation | Indicates the operation handle. |
-| void *IV | Indicates the pointer to the buffer storing the operation IV. If this parameter is not used,set it to <b>NULL</b>. |
+| void *IV | Indicates the pointer to the buffer storing the operation IV. If this parameter is not used, set it to <b>NULL</b>. |
 | size_t IVLen | Indicates the length of the IV buffer. |
 
 ### TEE_MACUpdate()

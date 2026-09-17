@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the APIs for obtaining the application information, including the bundle name, fingerprintinformation, and appId.
+The file declares the APIs for obtaining the application information, including the bundle name, fingerprint information, and appId.
 
 **Library**: libbundle_ndk.z.so
 
@@ -23,17 +23,23 @@ The file declares the APIs for obtaining the application information, including 
 | [OH_NativeBundle_Metadata](capi-native-bundle-oh-nativebundle-metadata.md) | OH_NativeBundle_Metadata | The struct describes the metadata information. |
 | [OH_NativeBundle_ModuleMetadata](capi-native-bundle-oh-nativebundle-modulemetadata.md) | OH_NativeBundle_ModuleMetadata | The struct describes the metadata of a module. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| FOUNDATION_APPEXECFWK_STANDARD_KITS_APPKIT_NATIVE_BUNDLE_INCLUDE_NATIVE_INTERFACE_BUNDLE_H | The file declares the APIs for obtaining the application information, including the bundle name, fingerprint information, and appId.<br>**Since**: 9<br>**System capability**: SystemCapability.BundleManager.BundleFramework.Core |
+
 ### Function
 
 | Name | Description |
 | -- | -- |
 | [OH_NativeBundle_ApplicationInfo OH_NativeBundle_GetCurrentApplicationInfo()](#oh_nativebundle_getcurrentapplicationinfo) | Obtains the current application information, including the bundle name and fingerprint information. |
-| [char* OH_NativeBundle_GetAppId()](#oh_nativebundle_getappid) | Obtains the appId of the current application. The appId is the unique identifier of an application and isdetermined by the bundle name and signature information of the application. After using this function, you mustmanually release the pointer returned to prevent memory leakage. |
-| [char* OH_NativeBundle_GetAppIdentifier()](#oh_nativebundle_getappidentifier) | Obtains the appIdentifier of the current application. The appIdentifier does not change throughout theapplication lifecycle, including version updates, certificate changes, public and private key changes, andapplication migration. After using this function, you must manually release the pointer returned to prevent memoryleakage. |
-| [OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()](#oh_nativebundle_getmainelementname) | Obtains the mainElement information of the current application, including the bundle name, module name, andability name. After using this function, you must manually release the pointer returned to prevent memory leakage. |
-| [char* OH_NativeBundle_GetCompatibleDeviceType()](#oh_nativebundle_getcompatibledevicetype) | Obtains the compatible device type of the current application. It helps you optimize the layout and fontsize when distributing mobile applications to tablets or 2-in-1 devices. After using this function, you mustmanually release the pointer returned to prevent memory leakage. |
+| [char* OH_NativeBundle_GetAppId()](#oh_nativebundle_getappid) | Obtains the appId of the current application. The appId is the unique identifier of an application and is determined by the bundle name and signature information of the application. After using this function, you must manually release the pointer returned to prevent memory leakage. |
+| [char* OH_NativeBundle_GetAppIdentifier()](#oh_nativebundle_getappidentifier) | Obtains the appIdentifier of the current application. The appIdentifier does not change throughout the application lifecycle, including version updates, certificate changes, public and private key changes, and application migration. After using this function, you must manually release the pointer returned to prevent memory leakage. |
+| [OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()](#oh_nativebundle_getmainelementname) | Obtains the mainElement information of the current application, including the bundle name, module name, and ability name. After using this function, you must manually release the pointer returned to prevent memory leakage. |
+| [char* OH_NativeBundle_GetCompatibleDeviceType()](#oh_nativebundle_getcompatibledevicetype) | Obtains the compatible device type of the current application. It helps you optimize the layout and font size when distributing mobile applications to tablets or 2-in-1 devices. After using this function, you must manually release the pointer returned to prevent memory leakage. |
 | [bool OH_NativeBundle_IsDebugMode(bool* isDebugMode)](#oh_nativebundle_isdebugmode) | Checks whether the current application is in debug mode. |
-| [OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)](#oh_nativebundle_getmodulemetadata) | Obtains the module metadata array of the current application. After using this function, you must manuallyrelease the pointer returned to prevent memory leakage. |
+| [OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)](#oh_nativebundle_getmodulemetadata) | Obtains the module metadata array of the current application. After using this function, you must manually release the pointer returned to prevent memory leakage. |
 | [BundleManager_ErrorCode OH_NativeBundle_GetAbilityResourceInfo(char* fileType, OH_NativeBundle_AbilityResourceInfo** abilityResourceInfo, size_t* size)](#oh_nativebundle_getabilityresourceinfo) | Obtain a list of ability that support opening files in a certain format. |
 
 ## Function description
@@ -64,7 +70,7 @@ char* OH_NativeBundle_GetAppId()
 
 **Description**
 
-Obtains the appId of the current application. The appId is the unique identifier of an application and isdetermined by the bundle name and signature information of the application. After using this function, you mustmanually release the pointer returned to prevent memory leakage.
+Obtains the appId of the current application. The appId is the unique identifier of an application and is determined by the bundle name and signature information of the application. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
 **Since**: 11
 
@@ -82,7 +88,7 @@ char* OH_NativeBundle_GetAppIdentifier()
 
 **Description**
 
-Obtains the appIdentifier of the current application. The appIdentifier does not change throughout theapplication lifecycle, including version updates, certificate changes, public and private key changes, andapplication migration. After using this function, you must manually release the pointer returned to prevent memoryleakage.
+Obtains the appIdentifier of the current application. The appIdentifier does not change throughout the application lifecycle, including version updates, certificate changes, public and private key changes, and application migration. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
 **Since**: 11
 
@@ -100,7 +106,7 @@ OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()
 
 **Description**
 
-Obtains the mainElement information of the current application, including the bundle name, module name, andability name. After using this function, you must manually release the pointer returned to prevent memory leakage.
+Obtains the mainElement information of the current application, including the bundle name, module name, and ability name. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
 **Since**: 13
 
@@ -118,7 +124,7 @@ char* OH_NativeBundle_GetCompatibleDeviceType()
 
 **Description**
 
-Obtains the compatible device type of the current application. It helps you optimize the layout and fontsize when distributing mobile applications to tablets or 2-in-1 devices. After using this function, you mustmanually release the pointer returned to prevent memory leakage.
+Obtains the compatible device type of the current application. It helps you optimize the layout and font size when distributing mobile applications to tablets or 2-in-1 devices. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
 **Since**: 14
 
@@ -144,7 +150,7 @@ Checks whether the current application is in debug mode.
 
 | Parameter | Description |
 | -- | -- |
-| bool* isDebugMode | Pointer to the check result indicating whether the application is in debug mode. **true** if indebug mode, **false** otherwise. |
+| bool* isDebugMode | Pointer to the check result indicating whether the application is in debug mode. **true** if in debug mode, **false** otherwise. |
 
 **Returns**:
 
@@ -160,7 +166,7 @@ OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)
 
 **Description**
 
-Obtains the module metadata array of the current application. After using this function, you must manuallyrelease the pointer returned to prevent memory leakage.
+Obtains the module metadata array of the current application. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
 **Since**: 20
 
@@ -202,6 +208,6 @@ Obtain a list of ability that support opening files in a certain format.
 
 | Type | Description |
 | -- | -- |
-| BundleManager_ErrorCode | <ul><li>Returns {@link BUNDLE_MANAGER_ERROR_CODE_NO_ERROR} if the call is successful.</li><li>      Returns {@link BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED} if the caller has no correct permission.</li></ul> |
+| BundleManager_ErrorCode | <ul><li>Returns {@link BUNDLE_MANAGER_ERROR_CODE_NO_ERROR} if the call is successful.</li><li><br>    Returns {@link BUNDLE_MANAGER_ERROR_CODE_PERMISSION_DENIED} if the caller has no correct permission.</li></ul> |
 
 

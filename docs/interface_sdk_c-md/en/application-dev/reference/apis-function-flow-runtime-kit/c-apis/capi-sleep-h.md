@@ -18,7 +18,7 @@ Declares the [ffrt_usleep](capi-sleep-h.md#ffrt_usleep) and [ffrt_yield](capi-sl
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_usleep(uint64_t usec)](#ffrt_usleep) | Suspends the calling thread for a given duration.If `usec` exceeds the maximum supported value, it is clamped to that maximum. |
+| [FFRT_C_API int ffrt_usleep(uint64_t usec)](#ffrt_usleep) | Suspends the calling thread for a given duration.<br> If `usec` exceeds the maximum supported value, it is clamped to that maximum. |
 | [FFRT_C_API void ffrt_yield(void)](#ffrt_yield) | Passes control to other tasks so that they can be executed. |
 
 ## Function description
@@ -31,7 +31,7 @@ FFRT_C_API int ffrt_usleep(uint64_t usec)
 
 **Description**
 
-Suspends the calling thread for a given duration.If `usec` exceeds the maximum supported value, it is clamped to that maximum.
+Suspends the calling thread for a given duration.<br> If `usec` exceeds the maximum supported value, it is clamped to that maximum.
 
 **Since**: 10
 

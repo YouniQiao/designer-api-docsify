@@ -8,7 +8,7 @@ Defines the basic APIs of the camera device.
 
 **System capability**: SystemCapability.Multimedia.Camera.Core
 
-**Since**: 12
+**Since**: 11
 
 **Related module**: [OH_Camera](capi-oh-camera.md)
 
@@ -23,7 +23,7 @@ Defines the basic APIs of the camera device.
 | [Camera_ErrorCode OH_CameraDevice_GetHostDeviceType(Camera_Device* camera, Camera_HostDeviceType* hostDeviceType)](#oh_cameradevice_gethostdevicetype) | Obtains the type of a remote device. |
 | [Camera_ErrorCode OH_CameraDevice_GetLensEquivalentFocalLengths(const Camera_Device* camera, uint32_t** equivalentFocalLengths, uint32_t* size)](#oh_cameradevice_getlensequivalentfocallengths) | Gets the equivalent focal lengths of a camera device. |
 | [Camera_ErrorCode OH_CameraDevice_IsLogicalCamera(const Camera_Device* camera, bool* isLogicalCamera)](#oh_cameradevice_islogicalcamera) | Checks if a camera device is a logical camera. |
-| [Camera_ErrorCode OH_CameraDevice_GetLogicalCameraConstituentCameraDevices(const Camera_Device* logicalCamera, Camera_Device** constituentCameras, uint32_t* size)](#oh_cameradevice_getlogicalcameraconstituentcameradevices) | Gets the constituent camera devices of a logical camera.Release resources of the constituent cameras by calling [OH_CameraDevice_DeleteConstituentCameraDevices](capi-camera-device-h.md#oh_cameradevice_deleteconstituentcameradevices) . |
+| [Camera_ErrorCode OH_CameraDevice_GetLogicalCameraConstituentCameraDevices(const Camera_Device* logicalCamera, Camera_Device** constituentCameras, uint32_t* size)](#oh_cameradevice_getlogicalcameraconstituentcameradevices) | Gets the constituent camera devices of a logical camera. Release resources of the constituent cameras by calling [OH_CameraDevice_DeleteConstituentCameraDevices](capi-camera-device-h.md#oh_cameradevice_deleteconstituentcameradevices) . |
 | [Camera_ErrorCode OH_CameraDevice_DeleteConstituentCameraDevices(const Camera_Device* logicalCamera, Camera_Device* constituentCameras, uint32_t size)](#oh_cameradevice_deleteconstituentcameradevices) | delete the constituent cameras of logicalCamera. |
 | [Camera_ErrorCode OH_CameraDevice_GetLensFocalLength(const Camera_Device* camera, float* lensFocalLength)](#oh_cameradevice_getlensfocallength) | Gets the focal length of a camera lens. |
 | [Camera_ErrorCode OH_CameraDevice_GetMinimumFocusDistance(const Camera_Device* camera, float* minimumFocusDistance)](#oh_cameradevice_getminimumfocusdistance) | Gets the minimum focus distance of a camera device. |
@@ -135,7 +135,7 @@ Gets the equivalent focal lengths of a camera device.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if successful          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
+| Camera_ErrorCode | {@link CAMERA_OK} if successful<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
 
 ### OH_CameraDevice_IsLogicalCamera()
 
@@ -160,7 +160,7 @@ Checks if a camera device is a logical camera.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if successful          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
+| Camera_ErrorCode | {@link CAMERA_OK} if successful<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
 
 ### OH_CameraDevice_GetLogicalCameraConstituentCameraDevices()
 
@@ -170,7 +170,7 @@ Camera_ErrorCode OH_CameraDevice_GetLogicalCameraConstituentCameraDevices(const 
 
 **Description**
 
-Gets the constituent camera devices of a logical camera.Release resources of the constituent cameras by calling [OH_CameraDevice_DeleteConstituentCameraDevices](capi-camera-device-h.md#oh_cameradevice_deleteconstituentcameradevices) .
+Gets the constituent camera devices of a logical camera. Release resources of the constituent cameras by calling [OH_CameraDevice_DeleteConstituentCameraDevices](capi-camera-device-h.md#oh_cameradevice_deleteconstituentcameradevices) .
 
 **Since**: 24
 
@@ -186,7 +186,7 @@ Gets the constituent camera devices of a logical camera.Release resources of the
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if successful          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
+| Camera_ErrorCode | {@link CAMERA_OK} if successful<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
 
 ### OH_CameraDevice_DeleteConstituentCameraDevices()
 
@@ -212,7 +212,7 @@ delete the constituent cameras of logicalCamera.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the method call succeeds.          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect. |
+| Camera_ErrorCode | {@link CAMERA_OK} if the method call succeeds.<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect. |
 
 ### OH_CameraDevice_GetLensFocalLength()
 
@@ -237,7 +237,7 @@ Gets the focal length of a camera lens.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if successful          {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
+| Camera_ErrorCode | {@link CAMERA_OK} if successful<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter missing or type incorrect<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error |
 
 ### OH_CameraDevice_GetMinimumFocusDistance()
 
@@ -262,7 +262,7 @@ Gets the minimum focus distance of a camera device.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 ### OH_CameraDevice_GetLensDistortion()
 
@@ -288,7 +288,7 @@ Gets the lens distortion parameters of a camera device.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 ### OH_CameraDevice_GetIntrinsicCalibration()
 
@@ -314,7 +314,7 @@ Gets the intrinsic calibration parameters of a camera device.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 ### OH_CameraDevice_GetSensorPhysicalSize()
 
@@ -340,7 +340,7 @@ Gets the physical size of a camera sensor.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 ### OH_CameraDevice_GetSensorPixelArraySize()
 
@@ -366,7 +366,7 @@ Gets the pixel array size of a camera sensor.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 ### OH_CameraDevice_GetSensorColorFilterArrangement()
 
@@ -391,7 +391,7 @@ Gets the color filter arrangement of a camera sensor.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 ### OH_CameraDevice_GetAutomotiveCameraPosition()
 
@@ -416,6 +416,6 @@ Gets the automotive position of a camera sensor.
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds          {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid          {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
+| Camera_ErrorCode | {@link CAMERA_OK} if the operation succeeds<br>        {@link CAMERA_INVALID_ARGUMENT} if parameter is missing or invalid<br>        {@link CAMERA_SERVICE_FATAL_ERROR} if camera service fails |
 
 

@@ -30,10 +30,10 @@ Provides APIs and structs for accessing the **PreferencesOption** object.
 
 | Name | Description |
 | -- | -- |
-| [OH_PreferencesOption *OH_PreferencesOption_Create(void)](#oh_preferencesoption_create) | Creates a [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance and a pointer to it.If this pointer is no longer required, use [OH_PreferencesOption_Destroy](capi-oh-preferences-option-h.md#oh_preferencesoption_destroy) to destroy it. Otherwise, memoryleaks may occur. |
+| [OH_PreferencesOption *OH_PreferencesOption_Create(void)](#oh_preferencesoption_create) | Creates a [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance and a pointer to it. If this pointer is no longer required, use [OH_PreferencesOption_Destroy](capi-oh-preferences-option-h.md#oh_preferencesoption_destroy) to destroy it. Otherwise, memory leaks may occur. |
 | [int OH_PreferencesOption_SetFileName(OH_PreferencesOption *option, const char *fileName)](#oh_preferencesoption_setfilename) | Sets the file name for an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance. |
 | [int OH_PreferencesOption_SetBundleName(OH_PreferencesOption *option, const char *bundleName)](#oh_preferencesoption_setbundlename) | Sets the bundle name for an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance. |
-| [int OH_PreferencesOption_SetDataGroupId(OH_PreferencesOption *option, const char *dataGroupId)](#oh_preferencesoption_setdatagroupid) | Sets the application group ID for an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance.After the application group ID is set, the **Preferences** instance will be created in the sandbox directory of theapplication group ID. The application group ID must be obtained from AppGallery. This parameter is not supportedcurrently.If the application group ID is an empty string, the **Preferences** instance will be created in the sandboxdirectory of the current application. |
+| [int OH_PreferencesOption_SetDataGroupId(OH_PreferencesOption *option, const char *dataGroupId)](#oh_preferencesoption_setdatagroupid) | Sets the application group ID for an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance. After the application group ID is set, the **Preferences** instance will be created in the sandbox directory of the application group ID. The application group ID must be obtained from AppGallery. This parameter is not supported currently. If the application group ID is an empty string, the **Preferences** instance will be created in the sandbox directory of the current application. |
 | [int OH_PreferencesOption_SetStorageType(OH_PreferencesOption *option, Preferences_StorageType type)](#oh_preferencesoption_setstoragetype) | Sets the storage type for a **Preferences** instance. |
 | [int OH_PreferencesOption_Destroy(OH_PreferencesOption *option)](#oh_preferencesoption_destroy) | Destroys an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance. |
 
@@ -53,8 +53,8 @@ Enumerates the preferences storage types.
 
 | Enum item | Description |
 | -- | -- |
-| PREFERENCES_STORAGE_XML = 0 | XML. In this type is used, data operations are performed in the memory and data is persisted after{@link OH_Preferences_Close} is called. This type does not multi-processes operations. |
-| PREFERENCES_STORAGE_GSKV | CLKV. If this type is used, data operations are flushed on a real-time basis. This type supports multi-processoperations. |
+| PREFERENCES_STORAGE_XML = 0 | XML. In this type is used, data operations are performed in the memory and data is persisted after {@link OH_Preferences_Close} is called. This type does not multi-processes operations. |
+| PREFERENCES_STORAGE_GSKV | CLKV. If this type is used, data operations are flushed on a real-time basis. This type supports multi-process operations. |
 
 
 ## Function description
@@ -67,7 +67,7 @@ OH_PreferencesOption *OH_PreferencesOption_Create(void)
 
 **Description**
 
-Creates a [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance and a pointer to it.If this pointer is no longer required, use [OH_PreferencesOption_Destroy](capi-oh-preferences-option-h.md#oh_preferencesoption_destroy) to destroy it. Otherwise, memoryleaks may occur.
+Creates a [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance and a pointer to it. If this pointer is no longer required, use [OH_PreferencesOption_Destroy](capi-oh-preferences-option-h.md#oh_preferencesoption_destroy) to destroy it. Otherwise, memory leaks may occur.
 
 **Since**: 13
 
@@ -150,7 +150,7 @@ int OH_PreferencesOption_SetDataGroupId(OH_PreferencesOption *option, const char
 
 **Description**
 
-Sets the application group ID for an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance.After the application group ID is set, the **Preferences** instance will be created in the sandbox directory of theapplication group ID. The application group ID must be obtained from AppGallery. This parameter is not supportedcurrently.If the application group ID is an empty string, the **Preferences** instance will be created in the sandboxdirectory of the current application.
+Sets the application group ID for an [OH_PreferencesOption](capi-preferences-oh-preferencesoption.md) instance. After the application group ID is set, the **Preferences** instance will be created in the sandbox directory of the application group ID. The application group ID must be obtained from AppGallery. This parameter is not supported currently. If the application group ID is an empty string, the **Preferences** instance will be created in the sandbox directory of the current application.
 
 **Since**: 13
 

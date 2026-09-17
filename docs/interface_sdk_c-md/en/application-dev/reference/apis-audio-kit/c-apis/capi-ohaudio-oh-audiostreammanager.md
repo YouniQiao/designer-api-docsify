@@ -6,7 +6,7 @@ typedef struct OH_AudioStreamManager OH_AudioStreamManager
 
 ## Overview
 
-Declare the audio stream manager.Audio stream manager provides many functions about audio streams, like monitoring audio streams status,getting different stream types supported information and so on.
+Declare the audio stream manager. Audio stream manager provides many functions about audio streams, like monitoring audio streams status, getting different stream types supported information and so on.
 
 **Since**: 19
 

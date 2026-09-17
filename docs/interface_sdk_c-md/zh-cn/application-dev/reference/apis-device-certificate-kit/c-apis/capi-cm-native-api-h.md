@@ -48,7 +48,7 @@ int32_t OH_CertManager_GetUkeyCertificate(const OH_CM_Blob *keyUri, const OH_CM_
 | const OH_CM_UkeyInfo *ukeyInfo | USB证书凭据属性信息。 |
 | OH_CM_CredentialDetailList *certificateList | 获取到的USB证书凭据详情列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -75,7 +75,7 @@ int32_t OH_CertManager_GetPrivateCertificate(const OH_CM_Blob *keyUri, OH_CM_Cre
 | const OH_CM_Blob *keyUri | 存放应用私有证书凭据的唯一标识符（字符串格式）。 |
 | OH_CM_Credential *certificate | 获取到的应用私有凭据的详情。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -102,7 +102,7 @@ int32_t OH_CertManager_GetPublicCertificate(const OH_CM_Blob *keyUri, OH_CM_Cred
 | const OH_CM_Blob *keyUri | 存放用户公共证书凭据的唯一标识符（字符串格式）。 |
 | OH_CM_Credential *certificate | 获取到的用户公共证书凭据的详情。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

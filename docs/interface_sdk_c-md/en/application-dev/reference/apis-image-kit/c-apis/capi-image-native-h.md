@@ -18,7 +18,7 @@ The file declares the cropping rectangle, size, and component data of an image.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) | OH_ImageBufferData | [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) is the image data struct encapsulated at the native layer. To obtain an [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md)object, call [OH_ImageNative_GetBufferData](capi-image-native-h.md#oh_imagenative_getbufferdata).The struct stores the shallow copy of the original image data. Once the original data is released, no reador write operations should be performed on the pointers within this struct; otherwise, undefined behaviorwill occur. |
+| [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) | OH_ImageBufferData | [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) is the image data struct encapsulated at the native layer. To obtain an [OH_ImageBufferData](capi-image-nativemodule-oh-imagebufferdata.md) object, call [OH_ImageNative_GetBufferData](capi-image-native-h.md#oh_imagenative_getbufferdata).<br> The struct stores the shallow copy of the original image data. Once the original data is released, no read or write operations should be performed on the pointers within this struct; otherwise, undefined behavior will occur. |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) | - | The struct describes the alias for an image object at the native layer. |
 
 ### Function
@@ -31,7 +31,7 @@ The file declares the cropping rectangle, size, and component data of an image.
 | [Image_ErrorCode OH_ImageNative_GetBufferSize(OH_ImageNative *image, uint32_t componentType, size_t *size)](#oh_imagenative_getbuffersize) | Obtains the size of the buffer corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | [Image_ErrorCode OH_ImageNative_GetRowStride(OH_ImageNative *image, uint32_t componentType, int32_t *rowStride)](#oh_imagenative_getrowstride) | Obtains the row stride corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | [Image_ErrorCode OH_ImageNative_GetPixelStride(OH_ImageNative *image, uint32_t componentType, int32_t *pixelStride)](#oh_imagenative_getpixelstride) | Obtains the pixel stride corresponding to a component type in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
-| [Image_ErrorCode OH_ImageNative_GetTimestamp(OH_ImageNative *image, int64_t *timestamp)](#oh_imagenative_gettimestamp) | Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. Timestamps, measured in nanoseconds, are usuallymonotonically increasing. |
+| [Image_ErrorCode OH_ImageNative_GetTimestamp(OH_ImageNative *image, int64_t *timestamp)](#oh_imagenative_gettimestamp) | Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. Timestamps, measured in nanoseconds, are usually monotonically increasing. |
 | [Image_ErrorCode OH_ImageNative_Release(OH_ImageNative *image)](#oh_imagenative_release) | Releases an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | [Image_ErrorCode OH_ImageNative_GetColorSpace(OH_ImageNative *image, int32_t *colorSpaceName)](#oh_imagenative_getcolorspace) | Obtains the color space in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
 | [Image_ErrorCode OH_ImageNative_GetFormat(OH_ImageNative *image, OH_NativeBuffer_Format *format)](#oh_imagenative_getformat) | Obtains the image format in an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
@@ -62,7 +62,7 @@ Obtains {@link Image_Size} of an [OH_ImageNative](capi-image-nativemodule-oh-ima
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect.      <br>{@linkImage_ErrorCode} IMAGE_UNKNOWN_ERROR - An unknown error occurs. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect.<br>    <br>{@linkImage_ErrorCode} IMAGE_UNKNOWN_ERROR - An unknown error occurs. |
 
 ### OH_ImageNative_GetComponentTypes()
 
@@ -81,14 +81,14 @@ Obtains the component types of an [OH_ImageNative](capi-image-nativemodule-oh-im
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) *image | Pointer to an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
-| uint32_t **types | Pointer to the component type list object obtained. Since the number of components is uncertain, thisAPI needs to be called twice: first, set **types** to **NULL** to obtain the number of components (**typeSize**);second, allocate corresponding memory for **types** based on **typeSize** and then obtain the component type list. |
+| uint32_t **types | Pointer to the component type list object obtained. Since the number of components is uncertain, this API needs to be called twice: first, set **types** to **NULL** to obtain the number of components (**typeSize**); second, allocate corresponding memory for **types** based on **typeSize** and then obtain the component type list. |
 | size_t *typeSize | Pointer to the number of component types obtained. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetByteBuffer()
 
@@ -114,7 +114,7 @@ Obtains the buffer corresponding to a component type in an [OH_ImageNative](capi
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetBufferSize()
 
@@ -140,7 +140,7 @@ Obtains the size of the buffer corresponding to a component type in an [OH_Image
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetRowStride()
 
@@ -166,7 +166,7 @@ Obtains the row stride corresponding to a component type in an [OH_ImageNative](
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetPixelStride()
 
@@ -192,7 +192,7 @@ Obtains the pixel stride corresponding to a component type in an [OH_ImageNative
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetTimestamp()
 
@@ -202,7 +202,7 @@ Image_ErrorCode OH_ImageNative_GetTimestamp(OH_ImageNative *image, int64_t *time
 
 **Description**
 
-Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. Timestamps, measured in nanoseconds, are usuallymonotonically increasing.
+Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. Timestamps, measured in nanoseconds, are usually monotonically increasing.
 
 **Since**: 12
 
@@ -217,7 +217,7 @@ Obtains the timestamp of an [OH_ImageNative](capi-image-nativemodule-oh-imagenat
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS The operation is successful.      <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER A parameter is incorrect. |
+| Image_ErrorCode | {@link Image_ErrorCode} IMAGE_SUCCESS The operation is successful.<br>    <br>{@link Image_ErrorCode} IMAGE_BAD_PARAMETER A parameter is incorrect. |
 
 ### OH_ImageNative_Release()
 
@@ -241,7 +241,7 @@ Releases an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.      <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
+| Image_ErrorCode | {@linkImage_ErrorCode} IMAGE_SUCCESS - The operation is successful.<br>    <br>{@linkImage_ErrorCode} IMAGE_BAD_PARAMETER - A parameter is incorrect. |
 
 ### OH_ImageNative_GetColorSpace()
 
@@ -260,13 +260,13 @@ Obtains the color space in an [OH_ImageNative](capi-image-nativemodule-oh-imagen
 | Parameter | Description |
 | -- | -- |
 | [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) *image | Pointer to an [OH_ImageNative](capi-image-nativemodule-oh-imagenative.md) object. |
-| int32_t *colorSpaceName | Pointer to the image color space. For details about the color space corresponding to **colorSpaceName**,see {@link ColorSpaceName}. |
+| int32_t *colorSpaceName | Pointer to the image color space. For details about the color space corresponding to **colorSpaceName**, see {@link ColorSpaceName}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} The operation is successful.      <br>{@link IMAGE_BAD_PARAMETER} A parameter is incorrect. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} The operation is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} A parameter is incorrect. |
 
 ### OH_ImageNative_GetFormat()
 
@@ -291,7 +291,7 @@ Obtains the image format in an [OH_ImageNative](capi-image-nativemodule-oh-image
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} The operation is successful.      <br>{@link IMAGE_BAD_PARAMETER} A parameter is incorrect. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} The operation is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} A parameter is incorrect. |
 
 ### OH_ImageNative_GetBufferData()
 
@@ -316,6 +316,6 @@ Obtains the image buffer data object in an [OH_ImageNative](capi-image-nativemod
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | {@link IMAGE_SUCCESS} The operation is successful.      <br>{@link IMAGE_BAD_PARAMETER} A parameter is incorrect. |
+| Image_ErrorCode | {@link IMAGE_SUCCESS} The operation is successful.<br>    <br>{@link IMAGE_BAD_PARAMETER} A parameter is incorrect. |
 
 

@@ -24,9 +24,9 @@ Provides shared list-related type and function definitions for <b>NativeNode</b>
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_ListItemAlignment](#arkui_listitemalignment) | ArkUI_ListItemAlignment | Enumerates the alignment modes of items along the cross axis. The default value is ARKUI_LIST_ITEM_ALIGNMENT_START**. |
+| [ArkUI_ListItemAlignment](#arkui_listitemalignment) | ArkUI_ListItemAlignment | Enumerates the alignment modes of items along the cross axis. The default value is **<br>ARKUI_LIST_ITEM_ALIGNMENT_START**. |
 | [ArkUI_StickyStyle](#arkui_stickystyle) | ArkUI_StickyStyle | Enumerates the modes for pinning the header to the top or the footer to the bottom. |
-| [ArkUI_ListItemGroupArea](#arkui_listitemgrouparea) | ArkUI_ListItemGroupArea | Enumerates the areas in the {@link ListItemGroup} component. The default value is ARKUI_LIST_ITEM_GROUP_AREA_OUTSIDE**. |
+| [ArkUI_ListItemGroupArea](#arkui_listitemgrouparea) | ArkUI_ListItemGroupArea | Enumerates the areas in the {@link ListItemGroup} component. The default value is **<br>ARKUI_LIST_ITEM_GROUP_AREA_OUTSIDE**. |
 
 ### Function
 
@@ -34,12 +34,12 @@ Provides shared list-related type and function definitions for <b>NativeNode</b>
 | -- | -- |
 | [ArkUI_ListChildrenMainSize* OH_ArkUI_ListChildrenMainSizeOption_Create()](#oh_arkui_listchildrenmainsizeoption_create) | Creates a **ListChildrenMainSize** instance. |
 | [void OH_ArkUI_ListChildrenMainSizeOption_Dispose(ArkUI_ListChildrenMainSize* option)](#oh_arkui_listchildrenmainsizeoption_dispose) | Disposes of a **ListChildrenMainSize** instance. |
-| [int32_t OH_ArkUI_ListChildrenMainSizeOption_SetDefaultMainSize(ArkUI_ListChildrenMainSize* option, float defaultMainSize)](#oh_arkui_listchildrenmainsizeoption_setdefaultmainsize) | Sets the default size of the list item in the {@link List} component along the main axis. The vertical axisindicates the height, and the horizontal axis indicates the width. |
-| [float OH_ArkUI_ListChildrenMainSizeOption_GetDefaultMainSize(ArkUI_ListChildrenMainSize* option)](#oh_arkui_listchildrenmainsizeoption_getdefaultmainsize) | Obtains the default size of the list item in the {@link List} component along the main axis. The verticalaxis indicates the height, and the horizontal axis indicates the width. |
+| [int32_t OH_ArkUI_ListChildrenMainSizeOption_SetDefaultMainSize(ArkUI_ListChildrenMainSize* option, float defaultMainSize)](#oh_arkui_listchildrenmainsizeoption_setdefaultmainsize) | Sets the default size of the list item in the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width. |
+| [float OH_ArkUI_ListChildrenMainSizeOption_GetDefaultMainSize(ArkUI_ListChildrenMainSize* option)](#oh_arkui_listchildrenmainsizeoption_getdefaultmainsize) | Obtains the default size of the list item in the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width. |
 | [void OH_ArkUI_ListChildrenMainSizeOption_Resize(ArkUI_ListChildrenMainSize* option, int32_t totalSize)](#oh_arkui_listchildrenmainsizeoption_resize) | Adjusts the capacity of the children item size array in the {@link List} component along the main axis. |
 | [int32_t OH_ArkUI_ListChildrenMainSizeOption_Splice(ArkUI_ListChildrenMainSize* option, int32_t index, int32_t deleteCount, int32_t addCount)](#oh_arkui_listchildrenmainsizeoption_splice) | Adjusts the children item size array in the {@link List} component along the main axis. |
-| [int32_t OH_ArkUI_ListChildrenMainSizeOption_UpdateSize(ArkUI_ListChildrenMainSize* option, int32_t index, float mainSize)](#oh_arkui_listchildrenmainsizeoption_updatesize) | Updates the size at the specified index in the children item size array of the {@link List} component alongthe main axis. The vertical axis indicates the height, and the horizontal axis indicates the width. |
-| [float OH_ArkUI_ListChildrenMainSizeOption_GetMainSize(ArkUI_ListChildrenMainSize* option, int32_t index)](#oh_arkui_listchildrenmainsizeoption_getmainsize) | Obtains the size at the specified index in the children item size array of the {@link List} component alongthe main axis. The vertical axis indicates the height, and the horizontal axis indicates the width. |
+| [int32_t OH_ArkUI_ListChildrenMainSizeOption_UpdateSize(ArkUI_ListChildrenMainSize* option, int32_t index, float mainSize)](#oh_arkui_listchildrenmainsizeoption_updatesize) | Updates the size at the specified index in the children item size array of the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width. |
+| [float OH_ArkUI_ListChildrenMainSizeOption_GetMainSize(ArkUI_ListChildrenMainSize* option, int32_t index)](#oh_arkui_listchildrenmainsizeoption_getmainsize) | Obtains the size at the specified index in the children item size array of the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width. |
 
 ## Enum type description
 
@@ -51,7 +51,7 @@ enum ArkUI_ListItemAlignment
 
 **Description**
 
-Enumerates the alignment modes of items along the cross axis. The default value is ARKUI_LIST_ITEM_ALIGNMENT_START**.
+Enumerates the alignment modes of items along the cross axis. The default value is **<br>ARKUI_LIST_ITEM_ALIGNMENT_START**.
 
 **Since**: 12
 
@@ -88,7 +88,7 @@ enum ArkUI_ListItemGroupArea
 
 **Description**
 
-Enumerates the areas in the {@link ListItemGroup} component. The default value is ARKUI_LIST_ITEM_GROUP_AREA_OUTSIDE**.
+Enumerates the areas in the {@link ListItemGroup} component. The default value is **<br>ARKUI_LIST_ITEM_GROUP_AREA_OUTSIDE**.
 
 **Since**: 15
 
@@ -147,7 +147,7 @@ int32_t OH_ArkUI_ListChildrenMainSizeOption_SetDefaultMainSize(ArkUI_ListChildre
 
 **Description**
 
-Sets the default size of the list item in the {@link List} component along the main axis. The vertical axisindicates the height, and the horizontal axis indicates the width.
+Sets the default size of the list item in the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width.
 
 **Since**: 12
 
@@ -162,7 +162,7 @@ Sets the default size of the list item in the {@link List} component along the m
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_GetDefaultMainSize()
 
@@ -172,7 +172,7 @@ float OH_ArkUI_ListChildrenMainSizeOption_GetDefaultMainSize(ArkUI_ListChildrenM
 
 **Description**
 
-Obtains the default size of the list item in the {@link List} component along the main axis. The verticalaxis indicates the height, and the horizontal axis indicates the width.
+Obtains the default size of the list item in the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width.
 
 **Since**: 12
 
@@ -232,7 +232,7 @@ Adjusts the children item size array in the {@link List} component along the mai
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_UpdateSize()
 
@@ -242,7 +242,7 @@ int32_t OH_ArkUI_ListChildrenMainSizeOption_UpdateSize(ArkUI_ListChildrenMainSiz
 
 **Description**
 
-Updates the size at the specified index in the children item size array of the {@link List} component alongthe main axis. The vertical axis indicates the height, and the horizontal axis indicates the width.
+Updates the size at the specified index in the children item size array of the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width.
 
 **Since**: 12
 
@@ -258,7 +258,7 @@ Updates the size at the specified index in the children item size array of the {
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      </ul> |
 
 ### OH_ArkUI_ListChildrenMainSizeOption_GetMainSize()
 
@@ -268,7 +268,7 @@ float OH_ArkUI_ListChildrenMainSizeOption_GetMainSize(ArkUI_ListChildrenMainSize
 
 **Description**
 
-Obtains the size at the specified index in the children item size array of the {@link List} component alongthe main axis. The vertical axis indicates the height, and the horizontal axis indicates the width.
+Obtains the size at the specified index in the children item size array of the {@link List} component along the main axis. The vertical axis indicates the height, and the horizontal axis indicates the width.
 
 **Since**: 12
 

@@ -8,7 +8,7 @@ Declares the APIs of **NativeKeyEvent**.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 14
+**Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
@@ -33,7 +33,7 @@ Declares the APIs of **NativeKeyEvent**.
 | [ArkUI_KeySourceType OH_ArkUI_KeyEvent_GetKeySource(const ArkUI_UIInputEvent* event)](#oh_arkui_keyevent_getkeysource) | Obtains the type of input device that triggers the specified key event. |
 | [void OH_ArkUI_KeyEvent_StopPropagation(const ArkUI_UIInputEvent* event, bool stopPropagation)](#oh_arkui_keyevent_stoppropagation) | Stops the specified key event from bubbling upwards or downwards. |
 | [ArkUI_KeyIntension OH_ArkUI_KeyEvent_GetKeyIntensionCode(const ArkUI_UIInputEvent* event)](#oh_arkui_keyevent_getkeyintensioncode) | Obtains the intention code associated with the specified key event. |
-| [uint32_t OH_ArkUI_KeyEvent_GetUnicode(const ArkUI_UIInputEvent* event)](#oh_arkui_keyevent_getunicode) | Obtains the Unicode value of the specified key event. Non-space basic Latin characters in the 0x0021-0x007Erange are supported. Characters with a value of 0 are not supported. In the case of key combination, this APIreturns the Unicode value of the key corresponding to the key event. |
+| [uint32_t OH_ArkUI_KeyEvent_GetUnicode(const ArkUI_UIInputEvent* event)](#oh_arkui_keyevent_getunicode) | Obtains the Unicode value of the specified key event. Non-space basic Latin characters in the 0x0021-0x007E range are supported. Characters with a value of 0 are not supported. In the case of key combination, this API returns the Unicode value of the key corresponding to the key event. |
 | [void OH_ArkUI_KeyEvent_SetConsumed(const ArkUI_UIInputEvent* event, bool isConsumed)](#oh_arkui_keyevent_setconsumed) | Sets whether the specified key event is consumed in the key event callback. |
 | [void OH_ArkUI_KeyEvent_Dispatch(ArkUI_NodeHandle node, const ArkUI_UIInputEvent* event)](#oh_arkui_keyevent_dispatch) | Dispatches the specified key event to a specific node. |
 | [ArkUI_ErrorCode OH_ArkUI_KeyEvent_IsNumLockOn(const ArkUI_UIInputEvent* event, bool* state)](#oh_arkui_keyevent_isnumlockon) | Obtains the state of the NumLock key when the specified key event occurs. |
@@ -398,7 +398,7 @@ Stops the specified key event from bubbling upwards or downwards.
 | Parameter | Description |
 | -- | -- |
 | const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
-| bool stopPropagation | Whether to stop event propagation. The value **true** means to stop event propagation, and false** means the opposite. |
+| bool stopPropagation | Whether to stop event propagation. The value **true** means to stop event propagation, and **<br>false** means the opposite. |
 
 ### OH_ArkUI_KeyEvent_GetKeyIntensionCode()
 
@@ -432,7 +432,7 @@ uint32_t OH_ArkUI_KeyEvent_GetUnicode(const ArkUI_UIInputEvent* event)
 
 **Description**
 
-Obtains the Unicode value of the specified key event. Non-space basic Latin characters in the 0x0021-0x007Erange are supported. Characters with a value of 0 are not supported. In the case of key combination, this APIreturns the Unicode value of the key corresponding to the key event.
+Obtains the Unicode value of the specified key event. Non-space basic Latin characters in the 0x0021-0x007E range are supported. Characters with a value of 0 are not supported. In the case of key combination, this API returns the Unicode value of the key corresponding to the key event.
 
 **Since**: 14
 
@@ -465,7 +465,7 @@ Sets whether the specified key event is consumed in the key event callback.
 | Parameter | Description |
 | -- | -- |
 | const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
-| bool isConsumed | Whether the key event is consumed by the callback. The value **true** means that the key event isconsumed, and **false** the opposite. |
+| bool isConsumed | Whether the key event is consumed by the callback. The value **true** means that the key event is consumed, and **false** the opposite. |
 
 ### OH_ArkUI_KeyEvent_Dispatch()
 
@@ -503,13 +503,13 @@ Obtains the state of the NumLock key when the specified key event occurs.
 | Parameter | Description |
 | -- | -- |
 | const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
-| bool* state | Output parameter that returns the state of the NumLock key. The value **true** indicates an activatedstate, and **false** indicates an inactivated state. |
+| bool* state | Output parameter that returns the state of the NumLock key. The value **true** indicates an activated state, and **false** indicates an inactivated state. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.      <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_KeyEvent_IsCapsLockOn()
 
@@ -528,13 +528,13 @@ Obtains the state of the CapsLock key when the specified key event occurs.
 | Parameter | Description |
 | -- | -- |
 | const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
-| bool* state | Output parameter that returns the state of the CapsLock key. The value **true** indicates an activatedstate, and **false** indicates an inactivated state. |
+| bool* state | Output parameter that returns the state of the CapsLock key. The value **true** indicates an activated state, and **false** indicates an inactivated state. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.      <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### OH_ArkUI_KeyEvent_IsScrollLockOn()
 
@@ -553,12 +553,12 @@ Obtains the state of the ScrollLock key when the specified key event occurs.
 | Parameter | Description |
 | -- | -- |
 | const ArkUI_UIInputEvent* event | Pointer to the target **ArkUI_UIInputEvent** object. |
-| bool* state | Output parameter that returns the state of the ScrollLock key. The value **true** indicates anactivated state, and **false** indicates an inactivated state. |
+| bool* state | Output parameter that returns the state of the ScrollLock key. The value **true** indicates an activated state, and **false** indicates an inactivated state. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.      <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

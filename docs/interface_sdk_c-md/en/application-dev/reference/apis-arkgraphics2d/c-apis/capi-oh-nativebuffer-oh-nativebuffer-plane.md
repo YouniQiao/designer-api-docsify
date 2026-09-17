@@ -6,7 +6,7 @@ typedef struct OH_NativeBuffer_Plane {...} OH_NativeBuffer_Plane
 
 ## Overview
 
-Holds info for a single image plane. <br>
+Holds info for a single image plane.
 
 **Since**: 12
 

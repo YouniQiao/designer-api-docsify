@@ -69,7 +69,7 @@ Configure the vibrator to vibrate with the custom sequence.
 
 | Parameter | Description |
 | -- | -- |
-| Vibrator_FileDescription fileDescription | File descriptor of the custom vibration effect.For details, see {@link Vibrator_FileDescription}. |
+| Vibrator_FileDescription fileDescription | File descriptor of the custom vibration effect. For details, see {@link Vibrator_FileDescription}. |
 | Vibrator_Attribute vibrateAttribute | Vibration attribute. For details, see {@link Vibrator_Attribute}. |
 
 **Returns**:

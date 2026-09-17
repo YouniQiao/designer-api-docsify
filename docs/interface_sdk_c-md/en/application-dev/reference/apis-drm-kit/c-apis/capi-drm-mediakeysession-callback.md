@@ -6,7 +6,7 @@ typedef struct MediaKeySession_Callback {...} MediaKeySession_Callback
 
 ## Overview
 
-The MediaKeySession_Callback struct describes the callbacks for media key session events such as keyexpiration and key changes. It does not provide a MediaKeySession instance, making it suitable for single-sessiondecryption scenarios.
+The MediaKeySession_Callback struct describes the callbacks for media key session events such as key expiration and key changes. It does not provide a MediaKeySession instance, making it suitable for single-session decryption scenarios.
 
 **Since**: 11
 

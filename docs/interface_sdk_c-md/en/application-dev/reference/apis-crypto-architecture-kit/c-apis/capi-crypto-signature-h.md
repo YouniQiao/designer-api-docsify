@@ -99,14 +99,14 @@ Creates a verification context based on the given algorithm name.
 
 | Parameter | Description |
 | -- | -- |
-| const char *algoName | [in] Verification algorithm name. Cannot be NULL. Values:- RSA PKCS1 mode: Format "RSA|PKCS1|Digest", e.g. "RSA|PKCS1|SHA256", "RSA|PKCS1|SHA512".Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- RSA PSS mode: Format "RSA|PSS|Digest|MGF1Digest", e.g. "RSA|PSS|SHA256|MGF1_SHA256".Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".MGF1 digest supports "MGF1_MD5", "MGF1_SHA1", "MGF1_SHA224", "MGF1_SHA256", "MGF1_SHA384", "MGF1_SHA512".- RSA verify recovery: Format "RSA|PKCS1|Digest|Recover", e.g. "RSA|PKCS1|SHA256|Recover","RSA|PKCS1|SHA512|Recover".Digest supports "NoHash", "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- ECDSA algorithm: Format "ECC|Digest", e.g. "ECC|SHA256", "ECC|SHA384".Digest supports "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- DSA algorithm: Format "DSA|Digest", e.g. "DSA|SHA256", "DSA|SHA384".Digest supports "NoHash", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- SM2 algorithm: "SM2|SM3".- Ed25519 algorithm: "Ed25519". |
-| [OH_CryptoVerify](capi-cryptosignatureapi-oh-cryptoverify.md) **verify | [out] Pointer to the verification context pointer. verify cannot be NULL,*verify must be NULL. |
+| const char *algoName | [in] Verification algorithm name. Cannot be NULL. Values: - RSA PKCS1 mode: Format "RSA\|PKCS1\|Digest", e.g. "RSA\|PKCS1\|SHA256", "RSA\|PKCS1\|SHA512". Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - RSA PSS mode: Format "RSA\|PSS\|Digest\|MGF1Digest", e.g. "RSA\|PSS\|SHA256\|MGF1_SHA256". Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". MGF1 digest supports "MGF1_MD5", "MGF1_SHA1", "MGF1_SHA224", "MGF1_SHA256", "MGF1_SHA384", "MGF1_SHA512". - RSA verify recovery: Format "RSA\|PKCS1\|Digest\|Recover", e.g. "RSA\|PKCS1\|SHA256\|Recover", "RSA\|PKCS1\|SHA512\|Recover". Digest supports "NoHash", "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - ECDSA algorithm: Format "ECC\|Digest", e.g. "ECC\|SHA256", "ECC\|SHA384". Digest supports "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - DSA algorithm: Format "DSA\|Digest", e.g. "DSA\|SHA256", "DSA\|SHA384". Digest supports "NoHash", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - SM2 algorithm: "SM2\|SM3". - Ed25519 algorithm: "Ed25519". |
+| [OH_CryptoVerify](capi-cryptosignatureapi-oh-cryptoverify.md) **verify | [out] Pointer to the verification context pointer. verify cannot be NULL, *verify must be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if verify or algoName is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if verify or algoName is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -136,7 +136,7 @@ Initializes the verification context with the given public key.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or pubKey is NULL, or the key             type does not match the signature algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if verify init fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or pubKey is NULL, or the key<br>           type does not match the signature algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if verify init fails.</li>          </ul> |
 
 **Reference**:
 
@@ -168,7 +168,7 @@ Appends message data to be verified.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or in is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. [since 26.0.0]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if verify update fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or in is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. [since 26.0.0]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if verify update fails.</li>          </ul> |
 
 **Reference**:
 
@@ -219,13 +219,13 @@ Recovers signature data. Only RSA algorithm is supported.
 | -- | -- |
 | [OH_CryptoVerify](capi-cryptosignatureapi-oh-cryptoverify.md) *ctx | [in] Verification context. Cannot be NULL. |
 | Crypto_DataBlob *signData | [in] Signature data. Cannot be NULL. |
-| Crypto_DataBlob *rawSignData | [out] Pointer to the Crypto_DataBlob structure for storing the raw signature data. Cannot be NULL.Initialize rawSignData to {0} before calling. Do not pre-allocate rawSignData->data. |
+| Crypto_DataBlob *rawSignData | [out] Pointer to the Crypto_DataBlob structure for storing the raw signature data. Cannot be NULL. Initialize rawSignData to {0} before calling. Do not pre-allocate rawSignData->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx, signData, or rawSignData is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. [since 26.0.0]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if recover fails. Possible causes:             signature data length does not match the RSA key modulus size.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx, signData, or rawSignData is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. [since 26.0.0]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if recover fails. Possible causes:             signature data length does not match the RSA key modulus size.</li>          </ul> |
 
 ### OH_CryptoVerify_GetAlgoName()
 
@@ -269,13 +269,13 @@ Sets the specified parameter of the verification context.
 | -- | -- |
 | [OH_CryptoVerify](capi-cryptosignatureapi-oh-cryptoverify.md) *ctx | [in] Verification context. Cannot be NULL. |
 | [CryptoSignature_ParamType](capi-crypto-signature-h.md#cryptosignature_paramtype) type | [in] Signature parameter type. |
-| Crypto_DataBlob *value | [in] Input data. This function performs a deep copy of the data in value. The caller can release valueimmediately after the function returns. Cannot be NULL. |
+| Crypto_DataBlob *value | [in] Input data. This function performs a deep copy of the data in value. The caller can release value immediately after the function returns. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or value is NULL,             value->data is NULL, value->len does not match the expected size for the             type, or type is not a valid CryptoSignature_ParamType.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if setting parameter fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or value is NULL,<br>           value->data is NULL, value->len does not match the expected size for the<br>           type, or type is not a valid CryptoSignature_ParamType.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if setting parameter fails.</li>          </ul> |
 
 ### OH_CryptoVerify_GetParam()
 
@@ -295,13 +295,13 @@ Obtains the specified parameter of the verification context.
 | -- | -- |
 | [OH_CryptoVerify](capi-cryptosignatureapi-oh-cryptoverify.md) *ctx | [in] Verification context. Cannot be NULL. |
 | [CryptoSignature_ParamType](capi-crypto-signature-h.md#cryptosignature_paramtype) type | [in] Signature parameter type. |
-| Crypto_DataBlob *value | [out] Pointer to the Crypto_DataBlob structure for storing the output data. Cannot be NULL.Initialize value to {0} before calling. Do not pre-allocate value->data. |
+| Crypto_DataBlob *value | [out] Pointer to the Crypto_DataBlob structure for storing the output data. Cannot be NULL. Initialize value to {0} before calling. Do not pre-allocate value->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or value is NULL, or type is             not a valid CryptoSignature_ParamType.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for the output fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if getting parameter fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_PARAMS} if ctx or value is NULL, or type is<br>           not a valid CryptoSignature_ParamType.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation for the output fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if getting parameter fails.</li>          </ul> |
 
 ### OH_CryptoVerify_Destroy()
 
@@ -337,14 +337,14 @@ Creates a signing context based on the given algorithm name.
 
 | Parameter | Description |
 | -- | -- |
-| const char *algoName | [in] Signing algorithm name. Cannot be NULL. Values:- RSA PKCS1 mode: Format "RSA|PKCS1|Digest", e.g. "RSA|PKCS1|SHA256", "RSA|PKCS1|SHA512".Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- RSA PSS mode: Format "RSA|PSS|Digest|MGF1Digest", e.g. "RSA|PSS|SHA256|MGF1_SHA256".Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".MGF1 digest supports "MGF1_MD5", "MGF1_SHA1", "MGF1_SHA224", "MGF1_SHA256", "MGF1_SHA384", "MGF1_SHA512".- RSA sign only: Format "RSA|PKCS1|Digest|OnlySign", e.g. "RSA|PKCS1|SHA256|OnlySign","RSA|PKCS1|SHA512|OnlySign".Digest supports "NoHash", "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- ECDSA algorithm: Format "ECC|Digest", e.g. "ECC|SHA256", "ECC|SHA384".Digest supports "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- DSA algorithm: Format "DSA|Digest", e.g. "DSA|SHA256", "DSA|SHA384".Digest supports "NoHash", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512".- SM2 algorithm: "SM2|SM3".- Ed25519 algorithm: "Ed25519". |
+| const char *algoName | [in] Signing algorithm name. Cannot be NULL. Values: - RSA PKCS1 mode: Format "RSA\|PKCS1\|Digest", e.g. "RSA\|PKCS1\|SHA256", "RSA\|PKCS1\|SHA512". Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - RSA PSS mode: Format "RSA\|PSS\|Digest\|MGF1Digest", e.g. "RSA\|PSS\|SHA256\|MGF1_SHA256". Digest supports "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". MGF1 digest supports "MGF1_MD5", "MGF1_SHA1", "MGF1_SHA224", "MGF1_SHA256", "MGF1_SHA384", "MGF1_SHA512". - RSA sign only: Format "RSA\|PKCS1\|Digest\|OnlySign", e.g. "RSA\|PKCS1\|SHA256\|OnlySign", "RSA\|PKCS1\|SHA512\|OnlySign". Digest supports "NoHash", "MD5", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - ECDSA algorithm: Format "ECC\|Digest", e.g. "ECC\|SHA256", "ECC\|SHA384". Digest supports "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - DSA algorithm: Format "DSA\|Digest", e.g. "DSA\|SHA256", "DSA\|SHA384". Digest supports "NoHash", "SHA1", "SHA224", "SHA256", "SHA384", "SHA512". - SM2 algorithm: "SM2\|SM3". - Ed25519 algorithm: "Ed25519". |
 | [OH_CryptoSign](capi-cryptosignatureapi-oh-cryptosign.md) **sign | [out] Pointer to the signing context pointer. sign cannot be NULL, *sign must be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if sign or algoName is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if sign or algoName is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if the algorithm is not supported.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -374,7 +374,7 @@ Initializes the signing context.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or privKey is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if sign init fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or privKey is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if sign init fails.</li>          </ul> |
 
 **Reference**:
 
@@ -405,7 +405,7 @@ Updates data to be signed.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or in is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. [since 26.0.0]</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if sign update fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or in is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_INVALID_CALL} if the function call is invalid. [since 26.0.0]</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if sign update fails.</li>          </ul> |
 
 **Reference**:
 
@@ -430,13 +430,13 @@ Finishes the signing operation.
 | -- | -- |
 | [OH_CryptoSign](capi-cryptosignatureapi-oh-cryptosign.md) *ctx | [in] Signing context. Cannot be NULL. |
 | const Crypto_DataBlob *in | [in] Data to be signed. Can be NULL if all data has been updated via [OH_CryptoSign_Update](capi-crypto-signature-h.md#oh_cryptosign_update). |
-| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the signature result. Cannot be NULL.Initialize out to {0} before calling. Do not pre-allocate out->data. |
+| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the signature result. Cannot be NULL. Initialize out to {0} before calling. Do not pre-allocate out->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or out is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if signing fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or out is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if signing fails.</li>          </ul> |
 
 ### OH_CryptoSign_GetAlgoName()
 
@@ -480,13 +480,13 @@ Sets the specified parameter for the signing context.
 | -- | -- |
 | [OH_CryptoSign](capi-cryptosignatureapi-oh-cryptosign.md) *ctx | [in] Signing context. Cannot be NULL. |
 | [CryptoSignature_ParamType](capi-crypto-signature-h.md#cryptosignature_paramtype) type | [in] Signing parameter type. |
-| const Crypto_DataBlob *value | [in] Input data. This function performs a deep copy of the data in value. The callercan release value immediately after the function returns. Cannot be NULL. |
+| const Crypto_DataBlob *value | [in] Input data. This function performs a deep copy of the data in value. The caller can release value immediately after the function returns. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or value is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or value is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSign_GetParam()
 
@@ -506,13 +506,13 @@ Obtains the specified parameter from the signing context.
 | -- | -- |
 | [OH_CryptoSign](capi-cryptosignatureapi-oh-cryptosign.md) *ctx | [in] Signing context. Cannot be NULL. |
 | [CryptoSignature_ParamType](capi-crypto-signature-h.md#cryptosignature_paramtype) type | [in] Signing parameter type. |
-| Crypto_DataBlob *value | [out] Pointer to the Crypto_DataBlob structure for storing the output data. Cannot be NULL. Initializevalue to {0} before calling. Do not pre-allocate value->data. |
+| Crypto_DataBlob *value | [out] Pointer to the Crypto_DataBlob structure for storing the output data. Cannot be NULL. Initialize value to {0} before calling. Do not pre-allocate value->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or value is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if ctx or value is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoSign_Destroy()
 
@@ -555,7 +555,7 @@ Creates an ECC signature specification. Also supports SM2 signatures.
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec is NULL or spec is not NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if parsing eccSignature fails or             eccSignature contains an invalid DER-encoded ECDSA-Sig-Value.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec is NULL or spec is not NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if parsing eccSignature fails or             eccSignature contains an invalid DER-encoded ECDSA-Sig-Value.</li>          </ul> |
 
 **Reference**:
 
@@ -580,14 +580,14 @@ Gets the r and s values from the ECC signature specification.
 | Parameter | Description |
 | -- | -- |
 | [OH_CryptoEccSignatureSpec](capi-cryptosignatureapi-oh-cryptoeccsignaturespec.md) *spec | [in] ECC signature specification. Cannot be NULL. |
-| Crypto_DataBlob *r | [out] Pointer to the Crypto_DataBlob structure for storing the r value. Cannot be NULL.Initialize r to {0} before calling. Do not pre-allocate r->data. |
-| Crypto_DataBlob *s | [out] Pointer to the Crypto_DataBlob structure for storing the s value. Cannot be NULL.Initialize s to {0} before calling. Do not pre-allocate s->data. |
+| Crypto_DataBlob *r | [out] Pointer to the Crypto_DataBlob structure for storing the r value. Cannot be NULL. Initialize r to {0} before calling. Do not pre-allocate r->data. |
+| Crypto_DataBlob *s | [out] Pointer to the Crypto_DataBlob structure for storing the s value. Cannot be NULL. Initialize s to {0} before calling. Do not pre-allocate s->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec, r, or s is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec, r, or s is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 ### OH_CryptoEccSignatureSpec_SetRAndS()
 
@@ -606,14 +606,14 @@ Sets the r and s values for the ECC signature specification.
 | Parameter | Description |
 | -- | -- |
 | [OH_CryptoEccSignatureSpec](capi-cryptosignatureapi-oh-cryptoeccsignaturespec.md) *spec | [in] ECC signature specification. Cannot be NULL. |
-| Crypto_DataBlob *r | [in] r value. This function performs a deep copy of the data in r and s. The caller canrelease r and s immediately after the function returns. Cannot be NULL. |
+| Crypto_DataBlob *r | [in] r value. This function performs a deep copy of the data in r and s. The caller can release r and s immediately after the function returns. Cannot be NULL. |
 | Crypto_DataBlob *s | [in] s value. Cannot be NULL. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec, r, or s is NULL.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec, r, or s is NULL.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory operation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if crypto operation fails.</li>          </ul> |
 
 **Reference**:
 
@@ -637,13 +637,13 @@ Encodes the ECC signature specification into DER format signature data.
 | Parameter | Description |
 | -- | -- |
 | [OH_CryptoEccSignatureSpec](capi-cryptosignatureapi-oh-cryptoeccsignaturespec.md) *spec | [in] ECC signature specification. Cannot be NULL. |
-| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the encoded signature. Cannotbe NULL. Initialize out to {0} before calling. Do not pre-allocate out->data. |
+| Crypto_DataBlob *out | [out] Pointer to the Crypto_DataBlob structure for storing the encoded signature. Cannot be NULL. Initialize out to {0} before calling. Do not pre-allocate out->data. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or out is NULL, or             r and s values have not been set via [OH_CryptoEccSignatureSpec_SetRAndS](capi-crypto-signature-h.md#oh_cryptoeccsignaturespec_setrands).</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li>          <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if encoding fails.</li>          </ul> |
+| OH_Crypto_ErrCode | <ul>          <li>{@link OH_Crypto_ErrCode#CRYPTO_SUCCESS} if the operation succeeds.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_PARAMETER_CHECK_FAILED} if spec or out is NULL, or<br>           r and s values have not been set via [OH_CryptoEccSignatureSpec_SetRAndS](capi-crypto-signature-h.md#oh_cryptoeccsignaturespec_setrands).</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_NOT_SUPPORTED} if unsupported operation or algorithm.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_MEMORY_ERROR} if memory allocation fails.</li><br>        <li>{@link OH_Crypto_ErrCode#CRYPTO_OPERTION_ERROR} if encoding fails.</li>          </ul> |
 
 ### OH_CryptoEccSignatureSpec_Destroy()
 

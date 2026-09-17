@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the macros, enumerated values, data structures,and error codes used by OpenHarmony Universal KeyStore (HUKS) APIs.
+Defines the macros, enumerated values, data structures, and error codes used by OpenHarmony Universal KeyStore (HUKS) APIs.
 
 **Since**: 9
 

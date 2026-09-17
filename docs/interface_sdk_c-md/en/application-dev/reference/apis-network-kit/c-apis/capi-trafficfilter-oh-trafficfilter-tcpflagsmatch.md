@@ -6,7 +6,7 @@ typedef struct OH_TrafficFilter_TCPFlagsMatch {...} OH_TrafficFilter_TCPFlagsMat
 
 ## Overview
 
-TCP flags match conditionMatches TCP packets based on TCP flag settings
+TCP flags match condition<br> Matches TCP packets based on TCP flag settings
 
 **Since**: 26.1.0
 

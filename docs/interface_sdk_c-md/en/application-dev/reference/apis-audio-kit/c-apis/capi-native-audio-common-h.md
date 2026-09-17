@@ -2,13 +2,13 @@
 
 ## Overview
 
-Declare the audio common base data structure.Defines the types of public return values for audio interfaces.
+Declare the audio common base data structure.<br> Defines the types of public return values for audio interfaces.
 
 **Library**: libohaudio.so
 
 **System capability**: SystemCapability.Multimedia.Audio.Core
 
-**Since**: 12
+**Since**: 10
 
 **Related module**: [OHAudio](capi-ohaudio.md)
 

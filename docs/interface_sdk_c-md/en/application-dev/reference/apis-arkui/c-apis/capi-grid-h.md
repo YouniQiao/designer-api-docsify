@@ -8,7 +8,7 @@ Provides Grid-related type and function definitions for <b>NativeNode</b> APIs.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 22
+**Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
@@ -36,9 +36,9 @@ Provides Grid-related type and function definitions for <b>NativeNode</b> APIs.
 | [ArkUI_GridLayoutOptions* OH_ArkUI_GridLayoutOptions_Create()](#oh_arkui_gridlayoutoptions_create) | Creates **Grid** layout options. |
 | [void OH_ArkUI_GridLayoutOptions_Dispose(ArkUI_GridLayoutOptions* option)](#oh_arkui_gridlayoutoptions_dispose) | Disposes of the **Grid** layout option. |
 | [int32_t OH_ArkUI_GridLayoutOptions_SetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t size)](#oh_arkui_gridlayoutoptions_setirregularindexes) | Sets the irregular grid item index array for the grid layout. |
-| [int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t* size)](#oh_arkui_gridlayoutoptions_getirregularindexes) | Obtains the irregular grid item index array for the grid layout. When OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback** is not set, the grid item specified in thisparameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrollshorizontally. |
+| [int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* option, uint32_t* irregularIndexes, int32_t* size)](#oh_arkui_gridlayoutoptions_getirregularindexes) | Obtains the irregular grid item index array for the grid layout. When **<br>OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback** is not set, the grid item specified in this parameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrolls horizontally. |
 | [void OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemSize (\*callback)(int32_t itemIndex, void* userData))](#oh_arkui_gridlayoutoptions_registergetirregularsizebyindexcallback) | Registers a callback to obtain the row and column span for the grid item at the specified index. |
-| [void OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemRect (\*callback)(int32_t itemIndex, void* userData))](#oh_arkui_gridlayoutoptions_registergetrectbyindexcallback) | Registers a callback to obtain the starting row, starting column, row span, and column span for the grid itemat the specified index. |
+| [void OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback(ArkUI_GridLayoutOptions* option, void* userData, ArkUI_GridItemRect (\*callback)(int32_t itemIndex, void* userData))](#oh_arkui_gridlayoutoptions_registergetrectbyindexcallback) | Registers a callback to obtain the starting row, starting column, row span, and column span for the grid item at the specified index. |
 
 ## Enum type description
 
@@ -139,7 +139,7 @@ Sets the irregular grid item index array for the grid layout.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      <li><br>A possible cause is that mandatory parameters are left unspecified.</li>      </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      <li><br>A possible cause is that mandatory parameters are left unspecified.</li>      </ul> |
 
 ### OH_ArkUI_GridLayoutOptions_GetIrregularIndexes()
 
@@ -149,7 +149,7 @@ int32_t OH_ArkUI_GridLayoutOptions_GetIrregularIndexes(ArkUI_GridLayoutOptions* 
 
 **Description**
 
-Obtains the irregular grid item index array for the grid layout. When OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback** is not set, the grid item specified in thisparameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrollshorizontally.
+Obtains the irregular grid item index array for the grid layout. When **<br>OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback** is not set, the grid item specified in this parameter occupies an entire row of the grid that scrolls vertically or an entire column of the grid that scrolls horizontally.
 
 **Since**: 22
 
@@ -165,7 +165,7 @@ Obtains the irregular grid item index array for the grid layout. When OH_ArkUI_G
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li>      <li><br>Returns {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} if the buffer size is insufficient.</li>      <li><br>A possible cause is that mandatory parameters are left unspecified.</li>      </ul> |
+| int32_t | Result code.      <ul>      <li><br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.</li><br>    <li><br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.</li><br>    <li><br>Returns {@link ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR} if the buffer size is insufficient.</li>      <li><br>A possible cause is that mandatory parameters are left unspecified.</li>      </ul> |
 
 ### OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback()
 
@@ -185,7 +185,7 @@ Registers a callback to obtain the row and column span for the grid item at the 
 | -- | -- |
 | rkUI_GridLayoutOptions\* option | Pointer to the **Grid** layout option. |
 | void\* userData | Pointer to the user-defined data. |
-| ArkUI_GridItemSize (\*callback)(int32_t itemIndex | Callback that returns the row and column span for the grid item at the specified index.itemIndex: grid item index, which must be within the range set by[OH_ArkUI_GridLayoutOptions_SetIrregularIndexes](capi-grid-h.md#oh_arkui_gridlayoutoptions_setirregularindexes). |
+| ArkUI_GridItemSize (\*callback)(int32_t itemIndex | Callback that returns the row and column span for the grid item at the specified index. itemIndex: grid item index, which must be within the range set by [OH_ArkUI_GridLayoutOptions_SetIrregularIndexes](capi-grid-h.md#oh_arkui_gridlayoutoptions_setirregularindexes). |
 
 ### OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback()
 
@@ -195,7 +195,7 @@ void OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback(ArkUI_GridLayoutO
 
 **Description**
 
-Registers a callback to obtain the starting row, starting column, row span, and column span for the grid itemat the specified index.
+Registers a callback to obtain the starting row, starting column, row span, and column span for the grid item at the specified index.
 
 **Since**: 22
 
@@ -205,6 +205,6 @@ Registers a callback to obtain the starting row, starting column, row span, and 
 | -- | -- |
 | rkUI_GridLayoutOptions\* option | Pointer to the **Grid** layout option. |
 | void\* userData | Pointer to the user-defined data. |
-| ArkUI_GridItemRect (\*callback)(int32_t itemIndex | Callback that returns the starting row, starting column, row span,and column span for the grid item at the specified index.itemIndex: grid item index. |
+| ArkUI_GridItemRect (\*callback)(int32_t itemIndex | Callback that returns the starting row, starting column, row span, and column span for the grid item at the specified index. itemIndex: grid item index. |
 
 

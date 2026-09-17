@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides Vulkan capabilities extended by OpenHarmony.This module provides extended APIs for creating a Vulkan surface and obtaining <b>OH_NativeBuffer</b> and<b>OH_NativeBuffer</b> properties through <b>OHNativeWindow</b>.This header is generated from the Khronos Vulkan XML API Registry.
+Provides Vulkan capabilities extended by OpenHarmony. This module provides extended APIs for creating a Vulkan surface and obtaining <b>OH_NativeBuffer</b> and <b>OH_NativeBuffer</b> properties through <b>OHNativeWindow</b>. This header is generated from the Khronos Vulkan XML API Registry.
 
 **Since**: 10
 

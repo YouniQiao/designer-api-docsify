@@ -1,4 +1,4 @@
-# @ohos.application.appManager
+# @ohos.application.appManager(appManager)
 
 The appManager module provides APIs for application management. For example, you can query whether the system is undergoing a stability test, determine whether the device is RAM-constrained, obtain the maximum memory available to the current application, and retrieve information about running processes.
 

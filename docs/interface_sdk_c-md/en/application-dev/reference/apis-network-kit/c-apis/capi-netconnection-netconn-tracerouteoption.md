@@ -20,7 +20,7 @@ Defines the network trace route options.
 
 | Name | Description |
 | -- | -- |
-| uint8_t maxJumpNumber | Maximum number of hops in the probe result. The value must be the same as that of **TraceRouteInfo**. Themaximum number of hops is 30, which is also the default value. |
+| uint8_t maxJumpNumber | Maximum number of hops in the probe result. The value must be the same as that of **TraceRouteInfo**. The maximum number of hops is 30, which is also the default value. |
 | [NetConn_PacketsType](capi-net-connection-type-h.md#netconn_packetstype) packetsType | Protocol type of the probe packet. The default value is **NETCONN_PACKETS_ICMP**. |
 
 

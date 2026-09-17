@@ -6,7 +6,7 @@ typedef struct ArkUI_NativeNodeAPI_1 {...} ArkUI_NativeNodeAPI_1
 
 ## Overview
 
-Provides a collection of native-side Node type APIs provided by ArkUI. APIs related to the Node module mustbe called on the main thread.
+Provides a collection of native-side Node type APIs provided by ArkUI. APIs related to the Node module must be called on the main thread.
 
 **Since**: 12
 
@@ -20,7 +20,7 @@ Provides a collection of native-side Node type APIs provided by ArkUI. APIs rela
 
 | Name | Description |
 | -- | -- |
-| int32_t version | Structure version, that is, the version number of the **ArkUI_NativeNodeAPI_1** structure. The versionnumber is provided by the system and does not need to be modified.<br>**Since**: 12 |
+| int32_t version | Structure version, that is, the version number of the **ArkUI_NativeNodeAPI_1** structure. The version number is provided by the system and does not need to be modified.<br>**Since**: 12 |
 
 
 ### Member functions
@@ -28,39 +28,39 @@ Provides a collection of native-side Node type APIs provided by ArkUI. APIs rela
 | Name | Description |
 | -- | -- |
 | [ArkUI_NodeHandle (\*createNode)(ArkUI_NodeType type)](#createnode) | Creates a component based on [ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype) and returns the pointer to the component object. |
-| [void (\*disposeNode)(ArkUI_NodeHandle node)](#disposenode) | Disposes of the component to which the specified pointer points. When calling this API on a non-mainthread, special attention must be paid to the lifecycle of the component object to be destroyed. Improperlifecycle management may cause the application to crash; therefore, it is not recommended to call this API onnon-main threads. |
-| [int32_t (\*addChild)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child)](#addchild) | Attaches a component to a parent node. This API is used for node operations, and you are advised to callthis API in the main thread. |
-| [int32_t (\*removeChild)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child)](#removechild) | Removes a component from its parent node. This API is used for node operations, and you are advised tocall this API in the main thread. |
-| [int32_t (\*insertChildAfter)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, ArkUI_NodeHandle sibling)](#insertchildafter) | Attaches a component to a parent node, with the position after the **sibling** node. This API is used fornode operations, and you are advised to call this API in the main thread. |
-| [int32_t (\*insertChildBefore)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, ArkUI_NodeHandle sibling)](#insertchildbefore) | Attaches a component to a parent node, with the position before the **sibling** node. This API is usedfor node operations, and you are advised to call this API in the main thread. |
-| [int32_t (\*insertChildAt)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, int32_t position)](#insertchildat) | Attaches a component to a parent node, with the position specified by **position**. This API is used fornode operations, and you are advised to call this API in the main thread. |
-| [int32_t (\*setAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute, const ArkUI_AttributeItem* item)](#setattribute) | Sets attributes. You are advised to call this API in the main thread. In actual service scenarios, if theattributes set for a component contain the heap memory you apply for, ensure that the component is no longer usedbefore calling the corresponding release API. For example, **NODE_TEXT_CONTENT_WITH_STYLED_STRING** in[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype). |
-| [const ArkUI_AttributeItem* (\*getAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute)](#getattribute) | Obtains attributes. The pointer returned by this API is an internal buffer pointer of the ArkUI framework.As such, you do not need to call **delete** to free the memory. However, the pointer must be used before thisAPI is called next time. Otherwise, the pointer may be overwritten by other values. |
+| [void (\*disposeNode)(ArkUI_NodeHandle node)](#disposenode) | Disposes of the component to which the specified pointer points. When calling this API on a non-main thread, special attention must be paid to the lifecycle of the component object to be destroyed. Improper lifecycle management may cause the application to crash; therefore, it is not recommended to call this API on non-main threads. |
+| [int32_t (\*addChild)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child)](#addchild) | Attaches a component to a parent node. This API is used for node operations, and you are advised to call this API in the main thread. |
+| [int32_t (\*removeChild)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child)](#removechild) | Removes a component from its parent node. This API is used for node operations, and you are advised to call this API in the main thread. |
+| [int32_t (\*insertChildAfter)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, ArkUI_NodeHandle sibling)](#insertchildafter) | Attaches a component to a parent node, with the position after the **sibling** node. This API is used for node operations, and you are advised to call this API in the main thread. |
+| [int32_t (\*insertChildBefore)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, ArkUI_NodeHandle sibling)](#insertchildbefore) | Attaches a component to a parent node, with the position before the **sibling** node. This API is used for node operations, and you are advised to call this API in the main thread. |
+| [int32_t (\*insertChildAt)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, int32_t position)](#insertchildat) | Attaches a component to a parent node, with the position specified by **position**. This API is used for node operations, and you are advised to call this API in the main thread. |
+| [int32_t (\*setAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute, const ArkUI_AttributeItem* item)](#setattribute) | Sets attributes. You are advised to call this API in the main thread. In actual service scenarios, if the attributes set for a component contain the heap memory you apply for, ensure that the component is no longer used before calling the corresponding release API. For example, **NODE_TEXT_CONTENT_WITH_STYLED_STRING** in [ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype). |
+| [const ArkUI_AttributeItem* (\*getAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute)](#getattribute) | Obtains attributes. The pointer returned by this API is an internal buffer pointer of the ArkUI framework. As such, you do not need to call **delete** to free the memory. However, the pointer must be used before this API is called next time. Otherwise, the pointer may be overwritten by other values. |
 | [int32_t (\*resetAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute)](#resetattribute) | Resets attributes. You are advised to call this API in the main thread. |
 | [int32_t (\*registerNodeEvent)(ArkUI_NodeHandle node, ArkUI_NodeEventType eventType,int32_t targetId, void* userData)](#registernodeevent) | Registers an event for the specified node. |
-| [void (\*unregisterNodeEvent)(ArkUI_NodeHandle node, ArkUI_NodeEventType eventType)](#unregisternodeevent) | Unregisters an event for the specified node.When the component is being displayed, this API must be called in the main thread. |
-| [void (\*registerNodeEventReceiver)(void (\*eventReceiver)(ArkUI_NodeEvent* event))](#registernodeeventreceiver) | Registers a unified entry point for event callbacks. The ArkUI framework collects component eventsgenerated during processing and returns them through the registered **eventReceiver** API.<br>Repeated calls will override the previously registered API. Do not directly save the pointer to the{@link ArkUI_NodeEvent} object. The data will be destroyed after the callback is complete.<br>To bind with a component instance, you can use the [addNodeEventReceiver](capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addnodeeventreceiver) API. |
+| [void (\*unregisterNodeEvent)(ArkUI_NodeHandle node, ArkUI_NodeEventType eventType)](#unregisternodeevent) | Unregisters an event for the specified node.<br> When the component is being displayed, this API must be called in the main thread. |
+| [void (\*registerNodeEventReceiver)(void (\*eventReceiver)(ArkUI_NodeEvent* event))](#registernodeeventreceiver) | Registers a unified entry point for event callbacks. The ArkUI framework collects component events generated during processing and returns them through the registered **eventReceiver** API. <br>Repeated calls will override the previously registered API. Do not directly save the pointer to the {@link ArkUI_NodeEvent} object. The data will be destroyed after the callback is complete. <br>To bind with a component instance, you can use the [addNodeEventReceiver](capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addnodeeventreceiver) API. |
 | [void (\*unregisterNodeEventReceiver)()](#unregisternodeeventreceiver) | Unregisters the unified entry point for event callbacks. |
-| [void (\*markDirty)(ArkUI_NodeHandle node, ArkUI_NodeDirtyFlag dirtyFlag)](#markdirty) | Forcibly marks the current node for re-measurement, re-layout, or re-drawing. Regarding updates to systemattributes, the ArkUI framework automatically marks nodes and re-executes measurement, layout, or drawing; youdo not need to call this API actively. |
+| [void (\*markDirty)(ArkUI_NodeHandle node, ArkUI_NodeDirtyFlag dirtyFlag)](#markdirty) | Forcibly marks the current node for re-measurement, re-layout, or re-drawing. Regarding updates to system attributes, the ArkUI framework automatically marks nodes and re-executes measurement, layout, or drawing; you do not need to call this API actively. |
 | [uint32_t (\*getTotalChildCount)(ArkUI_NodeHandle node)](#gettotalchildcount) | Obtains the number of subnodes. |
 | [ArkUI_NodeHandle (\*getChildAt)(ArkUI_NodeHandle node, int32_t position)](#getchildat) | Obtains a child node. |
 | [ArkUI_NodeHandle (\*getFirstChild)(ArkUI_NodeHandle node)](#getfirstchild) | Obtains the first child node. |
 | [ArkUI_NodeHandle (\*getLastChild)(ArkUI_NodeHandle node)](#getlastchild) | Obtains the last child node. |
 | [ArkUI_NodeHandle (\*getPreviousSibling)(ArkUI_NodeHandle node)](#getprevioussibling) | Obtains the previous sibling node. |
 | [ArkUI_NodeHandle (\*getNextSibling)(ArkUI_NodeHandle node)](#getnextsibling) | Obtains the next sibling node. |
-| [int32_t (\*registerNodeCustomEvent)(ArkUI_NodeHandle node, ArkUI_NodeCustomEventType eventType, int32_t targetId, void* userData)](#registernodecustomevent) | Registers a custom event for a node. Triggered events are returned through the custom event entry pointfunction registered using **registerNodeCustomEventReceiver**. |
+| [int32_t (\*registerNodeCustomEvent)(ArkUI_NodeHandle node, ArkUI_NodeCustomEventType eventType, int32_t targetId, void* userData)](#registernodecustomevent) | Registers a custom event for a node. Triggered events are returned through the custom event entry point function registered using **registerNodeCustomEventReceiver**. |
 | [void (\*unregisterNodeCustomEvent)(ArkUI_NodeHandle node, ArkUI_NodeCustomEventType eventType)](#unregisternodecustomevent) | Unregisters a custom event for a node. |
-| [void (\*registerNodeCustomEventReceiver)(void (\*eventReceiver)(ArkUI_NodeCustomEvent* event))](#registernodecustomeventreceiver) | Registers a unified entry point for custom node event callbacks. The ArkUI framework collects customcomponent events generated during processing and returns them through the custom event entry point functionregistered using **registerNodeCustomEventReceiver**.<br>Repeated calls will override the previously registered API.<br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyedafter the callback is complete.<br>To bind with a component instance, you can use the **addNodeCustomEventReceiver** function. |
+| [void (\*registerNodeCustomEventReceiver)(void (\*eventReceiver)(ArkUI_NodeCustomEvent* event))](#registernodecustomeventreceiver) | Registers a unified entry point for custom node event callbacks. The ArkUI framework collects custom component events generated during processing and returns them through the custom event entry point function registered using **registerNodeCustomEventReceiver**. <br>Repeated calls will override the previously registered API. <br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyed after the callback is complete. <br>To bind with a component instance, you can use the **addNodeCustomEventReceiver** function. |
 | [void (\*unregisterNodeCustomEventReceiver)()](#unregisternodecustomeventreceiver) | Unregisters the unified entry point function for custom node event callbacks. |
 | [int32_t (\*setMeasuredSize)(ArkUI_NodeHandle node, int32_t width, int32_t height)](#setmeasuredsize) | Sets the width and height for a component after the measurement in the measurement callback function. |
-| [int32_t (\*setLayoutPosition)(ArkUI_NodeHandle node, int32_t positionX, int32_t positionY)](#setlayoutposition) | Sets the position of a component in the layout callback function. This API has a lower priority than[NODE_POSITION](capi-native-node-h.md#arkui_nodeattributetype) in **ArkUI_NodeAttributeType**. |
+| [int32_t (\*setLayoutPosition)(ArkUI_NodeHandle node, int32_t positionX, int32_t positionY)](#setlayoutposition) | Sets the position of a component in the layout callback function. This API has a lower priority than [NODE_POSITION](capi-native-node-h.md#arkui_nodeattributetype) in **ArkUI_NodeAttributeType**. |
 | [ArkUI_IntSize (\*getMeasuredSize)(ArkUI_NodeHandle node)](#getmeasuredsize) | Obtains the width and height of a component after measurement. |
-| [ArkUI_IntOffset (\*getLayoutPosition)(ArkUI_NodeHandle node)](#getlayoutposition) | Obtains the offset of a node relative to its parent node after component layout is completed. The unit ispx. The offset is the result after the parent container lays out the node. Therefore, the **offset** attributethat takes effect after the layout and the **position** attribute that does not participate in the layout do notaffect the offset value. |
+| [ArkUI_IntOffset (\*getLayoutPosition)(ArkUI_NodeHandle node)](#getlayoutposition) | Obtains the offset of a node relative to its parent node after component layout is completed. The unit is px. The offset is the result after the parent container lays out the node. Therefore, the **offset** attribute that takes effect after the layout and the **position** attribute that does not participate in the layout do not affect the offset value. |
 | [int32_t (\*measureNode)(ArkUI_NodeHandle node, ArkUI_LayoutConstraint* Constraint)](#measurenode) | Measures a node. You can use the **getMeasuredSize** API to obtain the size after the measurement. |
 | [int32_t (\*layoutNode)(ArkUI_NodeHandle node, int32_t positionX, int32_t positionY)](#layoutnode) | Lays outs a node and specifies the expected position of the node relative to its parent node. |
-| [int32_t (\*addNodeEventReceiver)(ArkUI_NodeHandle node, void (\*eventReceiver)(ArkUI_NodeEvent* event))](#addnodeeventreceiver) | Adds a component event callback function to a component to receive component events generated by it.Unlike the global registration function **registerNodeEventReceiver**, this API allows multiple event receiversto be added to the same component.<br>The callback added by this function is triggered before the global callback registered by registerNodeEventReceiver**.<br>Do not directly save the pointer to the {@link ArkUI_NodeEvent} object. The data will be destroyed after thecallback is complete. |
+| [int32_t (\*addNodeEventReceiver)(ArkUI_NodeHandle node, void (\*eventReceiver)(ArkUI_NodeEvent* event))](#addnodeeventreceiver) | Adds a component event callback function to a component to receive component events generated by it. Unlike the global registration function **registerNodeEventReceiver**, this API allows multiple event receivers to be added to the same component. <br>The callback added by this function is triggered before the global callback registered by **<br>registerNodeEventReceiver**. <br>Do not directly save the pointer to the {@link ArkUI_NodeEvent} object. The data will be destroyed after the callback is complete. |
 | [int32_t (\*removeNodeEventReceiver)(ArkUI_NodeHandle node, void (\*eventReceiver)(ArkUI_NodeEvent* event))](#removenodeeventreceiver) | Removes a registered component event callback function from a component. |
-| [int32_t (\*addNodeCustomEventReceiver)(ArkUI_NodeHandle node, void (\*eventReceiver)(ArkUI_NodeCustomEvent* event))](#addnodecustomeventreceiver) | Adds a custom event callback function to a component to receive custom events (such as layout and drawingevents) generated by it. Unlike the global registration function **registerNodeCustomEventReceiver**, this APIallows multiple event receivers to be added to the same component.<br>The callback added by this function is triggered before the global callback registered by registerNodeCustomEventReceiver**.<br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyedafter the callback is complete. |
+| [int32_t (\*addNodeCustomEventReceiver)(ArkUI_NodeHandle node, void (\*eventReceiver)(ArkUI_NodeCustomEvent* event))](#addnodecustomeventreceiver) | Adds a custom event callback function to a component to receive custom events (such as layout and drawing events) generated by it. Unlike the global registration function **registerNodeCustomEventReceiver**, this API allows multiple event receivers to be added to the same component. <br>The callback added by this function is triggered before the global callback registered by **<br>registerNodeCustomEventReceiver**. <br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyed after the callback is complete. |
 | [int32_t (\*removeNodeCustomEventReceiver)(ArkUI_NodeHandle node,void (\*eventReceiver)(ArkUI_NodeCustomEvent* event))](#removenodecustomeventreceiver) | Removes a registered custom event callback function from a component. |
 | [int32_t (\*setUserData)(ArkUI_NodeHandle node, void* userData)](#setuserdata) | Saves custom data on a component. |
 | [void* (\*getUserData)(ArkUI_NodeHandle node)](#getuserdata) | Obtains the custom data stored on a component. |
@@ -102,7 +102,7 @@ void (*disposeNode)(ArkUI_NodeHandle node)
 
 **Description**
 
-Disposes of the component to which the specified pointer points. When calling this API on a non-mainthread, special attention must be paid to the lifecycle of the component object to be destroyed. Improperlifecycle management may cause the application to crash; therefore, it is not recommended to call this API onnon-main threads.
+Disposes of the component to which the specified pointer points. When calling this API on a non-main thread, special attention must be paid to the lifecycle of the component object to be destroyed. Improper lifecycle management may cause the application to crash; therefore, it is not recommended to call this API on non-main threads.
 
 **Since**: 12
 
@@ -120,7 +120,7 @@ int32_t (*addChild)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child)
 
 **Description**
 
-Attaches a component to a parent node. This API is used for node operations, and you are advised to callthis API in the main thread.
+Attaches a component to a parent node. This API is used for node operations, and you are advised to call this API in the main thread.
 
 **Since**: 12
 
@@ -135,7 +135,7 @@ Attaches a component to a parent node. This API is used for node operations, and
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS.          <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node<br>    created in ArkTS.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
 
 ### removeChild()
 
@@ -145,7 +145,7 @@ int32_t (*removeChild)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child)
 
 **Description**
 
-Removes a component from its parent node. This API is used for node operations, and you are advised tocall this API in the main thread.
+Removes a component from its parent node. This API is used for node operations, and you are advised to call this API in the main thread.
 
 **Since**: 12
 
@@ -160,7 +160,7 @@ Removes a component from its parent node. This API is used for node operations, 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS.          <br>Returns {@link ARKUI_ERROR_CODE_ADAPTER_EXIST} if the NodeAdapter already exists. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node<br>    created in ArkTS.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ADAPTER_EXIST} if the NodeAdapter already exists. |
 
 ### insertChildAfter()
 
@@ -170,7 +170,7 @@ int32_t (*insertChildAfter)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, Ark
 
 **Description**
 
-Attaches a component to a parent node, with the position after the **sibling** node. This API is used fornode operations, and you are advised to call this API in the main thread.
+Attaches a component to a parent node, with the position after the **sibling** node. This API is used for node operations, and you are advised to call this API in the main thread.
 
 **Since**: 12
 
@@ -180,13 +180,13 @@ Attaches a component to a parent node, with the position after the **sibling** n
 | -- | -- |
 | ArkUI_NodeHandle parent | Pointer to the parent node. |
 |  ArkUI_NodeHandle child | Pointer to the child node. |
-|  ArkUI_NodeHandle sibling | Pointer to the sibling node after which the target node is to be inserted. If the value is null,the node is inserted at the end of the parent node. |
+|  ArkUI_NodeHandle sibling | Pointer to the sibling node after which the target node is to be inserted. If the value is null, the node is inserted at the end of the parent node. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS.          <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node<br>    created in ArkTS.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
 
 ### insertChildBefore()
 
@@ -196,7 +196,7 @@ int32_t (*insertChildBefore)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, Ar
 
 **Description**
 
-Attaches a component to a parent node, with the position before the **sibling** node. This API is usedfor node operations, and you are advised to call this API in the main thread.
+Attaches a component to a parent node, with the position before the **sibling** node. This API is used for node operations, and you are advised to call this API in the main thread.
 
 **Since**: 12
 
@@ -206,13 +206,13 @@ Attaches a component to a parent node, with the position before the **sibling** 
 | -- | -- |
 | ArkUI_NodeHandle parent | Pointer to the parent node. |
 |  ArkUI_NodeHandle child | Pointer to the child node. |
-|  ArkUI_NodeHandle sibling | Pointer to the sibling node before which the target node is to be inserted. If the value is null,the node is inserted at the end of the parent node. |
+|  ArkUI_NodeHandle sibling | Pointer to the sibling node before which the target node is to be inserted. If the value is null, the node is inserted at the end of the parent node. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS.          <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node<br>    created in ArkTS.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
 
 ### insertChildAt()
 
@@ -222,7 +222,7 @@ int32_t (*insertChildAt)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, int32_
 
 **Description**
 
-Attaches a component to a parent node, with the position specified by **position**. This API is used fornode operations, and you are advised to call this API in the main thread.
+Attaches a component to a parent node, with the position specified by **position**. This API is used for node operations, and you are advised to call this API in the main thread.
 
 **Since**: 12
 
@@ -232,13 +232,13 @@ Attaches a component to a parent node, with the position specified by **position
 | -- | -- |
 | ArkUI_NodeHandle parent | Pointer to the parent node. |
 |  ArkUI_NodeHandle child | Pointer to the child node. |
-|  int32_t position | Inserting position. The value range is [-2147483648, 2147483647]. If the value is a negativenumber or invalid, the component is inserted at the end of the parent node. |
+|  int32_t position | Inserting position. The value range is [-2147483648, 2147483647]. If the value is a negative number or invalid, the component is inserted at the end of the parent node. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS.          <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node<br>    created in ArkTS.<br>    <br>Returns {@link ARKUI_ERROR_CODE_NODE_IS_ADOPTED} if the node has been adopted as an affiliated node.          This specification is supported since API version 22. |
 
 ### setAttribute()
 
@@ -248,7 +248,7 @@ int32_t (*setAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute
 
 **Description**
 
-Sets attributes. You are advised to call this API in the main thread. In actual service scenarios, if theattributes set for a component contain the heap memory you apply for, ensure that the component is no longer usedbefore calling the corresponding release API. For example, **NODE_TEXT_CONTENT_WITH_STYLED_STRING** in[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype).
+Sets attributes. You are advised to call this API in the main thread. In actual service scenarios, if the attributes set for a component contain the heap memory you apply for, ensure that the component is no longer used before calling the corresponding release API. For example, **NODE_TEXT_CONTENT_WITH_STYLED_STRING** in [ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype).
 
 **Since**: 12
 
@@ -264,7 +264,7 @@ Sets attributes. You are advised to call this API in the main thread. In actual 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the attribute is not supported.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS.          <br>Returns {@link ARKUI_ERROR_CODE_ADAPTER_EXIST} if the NodeAdapter already exists. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the attribute is not supported.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node<br>    created in ArkTS.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ADAPTER_EXIST} if the NodeAdapter already exists. |
 
 ### getAttribute()
 
@@ -274,7 +274,7 @@ const ArkUI_AttributeItem* (*getAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttr
 
 **Description**
 
-Obtains attributes. The pointer returned by this API is an internal buffer pointer of the ArkUI framework.As such, you do not need to call **delete** to free the memory. However, the pointer must be used before thisAPI is called next time. Otherwise, the pointer may be overwritten by other values.
+Obtains attributes. The pointer returned by this API is an internal buffer pointer of the ArkUI framework. As such, you do not need to call **delete** to free the memory. However, the pointer must be used before this API is called next time. Otherwise, the pointer may be overwritten by other values.
 
 **Since**: 12
 
@@ -314,7 +314,7 @@ Resets attributes. You are advised to call this API in the main thread.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the attribute is not supported.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the attribute is not supported.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS. |
 
 ### registerNodeEvent()
 
@@ -334,14 +334,14 @@ Registers an event for the specified node.
 | -- | -- |
 | ArkUI_NodeHandle node | Target node. |
 |  [ArkUI_NodeEventType](capi-native-node-h.md#arkui_nodeeventtype) eventType | Type of the event to register. |
-| int32_t targetId | Custom event ID, which is passed in the callback of {@link ArkUI_NodeEvent} when the event istriggered. |
-|  void* userData | Custom event parameter, which is passed in the callback of {@link ArkUI_NodeEvent} when theevent is triggered. |
+| int32_t targetId | Custom event ID, which is passed in the callback of {@link ArkUI_NodeEvent} when the event is triggered. |
+|  void* userData | Custom event parameter, which is passed in the callback of {@link ArkUI_NodeEvent} when the event is triggered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the event is not supported.          <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the event is not supported.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ARKTS_NODE_NOT_SUPPORTED} if the operation is not supported for the node          created in ArkTS. |
 
 ### unregisterNodeEvent()
 
@@ -351,7 +351,7 @@ void (*unregisterNodeEvent)(ArkUI_NodeHandle node, ArkUI_NodeEventType eventType
 
 **Description**
 
-Unregisters an event for the specified node.When the component is being displayed, this API must be called in the main thread.
+Unregisters an event for the specified node.<br> When the component is being displayed, this API must be called in the main thread.
 
 **Since**: 12
 
@@ -370,7 +370,7 @@ void (*registerNodeEventReceiver)(void (*eventReceiver)(ArkUI_NodeEvent* event))
 
 **Description**
 
-Registers a unified entry point for event callbacks. The ArkUI framework collects component eventsgenerated during processing and returns them through the registered **eventReceiver** API.<br>Repeated calls will override the previously registered API. Do not directly save the pointer to the{@link ArkUI_NodeEvent} object. The data will be destroyed after the callback is complete.<br>To bind with a component instance, you can use the [addNodeEventReceiver](capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addnodeeventreceiver) API.
+Registers a unified entry point for event callbacks. The ArkUI framework collects component events generated during processing and returns them through the registered **eventReceiver** API. <br>Repeated calls will override the previously registered API. Do not directly save the pointer to the {@link ArkUI_NodeEvent} object. The data will be destroyed after the callback is complete. <br>To bind with a component instance, you can use the [addNodeEventReceiver](capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addnodeeventreceiver) API.
 
 **Since**: 12
 
@@ -400,7 +400,7 @@ void (*markDirty)(ArkUI_NodeHandle node, ArkUI_NodeDirtyFlag dirtyFlag)
 
 **Description**
 
-Forcibly marks the current node for re-measurement, re-layout, or re-drawing. Regarding updates to systemattributes, the ArkUI framework automatically marks nodes and re-executes measurement, layout, or drawing; youdo not need to call this API actively.
+Forcibly marks the current node for re-measurement, re-layout, or re-drawing. Regarding updates to system attributes, the ArkUI framework automatically marks nodes and re-executes measurement, layout, or drawing; you do not need to call this API actively.
 
 **Since**: 12
 
@@ -564,7 +564,7 @@ int32_t (*registerNodeCustomEvent)(ArkUI_NodeHandle node, ArkUI_NodeCustomEventT
 
 **Description**
 
-Registers a custom event for a node. Triggered events are returned through the custom event entry pointfunction registered using **registerNodeCustomEventReceiver**.
+Registers a custom event for a node. Triggered events are returned through the custom event entry point function registered using **registerNodeCustomEventReceiver**.
 
 **Since**: 12
 
@@ -574,14 +574,14 @@ Registers a custom event for a node. Triggered events are returned through the c
 | -- | -- |
 | ArkUI_NodeHandle node | Target node. |
 |  ArkUI_NodeCustomEventType eventType | Type of the event to register. |
-|  int32_t targetId | Custom event ID, which is passed in the callback of [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) when the eventis triggered. |
-|  void* userData | Custom event parameter, which is passed in the callback of [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) whenthe event is triggered. |
+|  int32_t targetId | Custom event ID, which is passed in the callback of [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) when the event is triggered. |
+|  void* userData | Custom event parameter, which is passed in the callback of [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) when the event is triggered. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.          <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the event is not supported. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.<br>    <br>Returns {@link ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED} if the event is not supported. |
 
 ### unregisterNodeCustomEvent()
 
@@ -610,7 +610,7 @@ void (*registerNodeCustomEventReceiver)(void (*eventReceiver)(ArkUI_NodeCustomEv
 
 **Description**
 
-Registers a unified entry point for custom node event callbacks. The ArkUI framework collects customcomponent events generated during processing and returns them through the custom event entry point functionregistered using **registerNodeCustomEventReceiver**.<br>Repeated calls will override the previously registered API.<br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyedafter the callback is complete.<br>To bind with a component instance, you can use the **addNodeCustomEventReceiver** function.
+Registers a unified entry point for custom node event callbacks. The ArkUI framework collects custom component events generated during processing and returns them through the custom event entry point function registered using **registerNodeCustomEventReceiver**. <br>Repeated calls will override the previously registered API. <br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyed after the callback is complete. <br>To bind with a component instance, you can use the **addNodeCustomEventReceiver** function.
 
 **Since**: 12
 
@@ -656,7 +656,7 @@ Sets the width and height for a component after the measurement in the measureme
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setLayoutPosition()
 
@@ -666,7 +666,7 @@ int32_t (*setLayoutPosition)(ArkUI_NodeHandle node, int32_t positionX, int32_t p
 
 **Description**
 
-Sets the position of a component in the layout callback function. This API has a lower priority than[NODE_POSITION](capi-native-node-h.md#arkui_nodeattributetype) in **ArkUI_NodeAttributeType**.
+Sets the position of a component in the layout callback function. This API has a lower priority than [NODE_POSITION](capi-native-node-h.md#arkui_nodeattributetype) in **ArkUI_NodeAttributeType**.
 
 **Since**: 12
 
@@ -682,7 +682,7 @@ Sets the position of a component in the layout callback function. This API has a
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### getMeasuredSize()
 
@@ -716,7 +716,7 @@ ArkUI_IntOffset (*getLayoutPosition)(ArkUI_NodeHandle node)
 
 **Description**
 
-Obtains the offset of a node relative to its parent node after component layout is completed. The unit ispx. The offset is the result after the parent container lays out the node. Therefore, the **offset** attributethat takes effect after the layout and the **position** attribute that does not participate in the layout do notaffect the offset value.
+Obtains the offset of a node relative to its parent node after component layout is completed. The unit is px. The offset is the result after the parent container lays out the node. Therefore, the **offset** attribute that takes effect after the layout and the **position** attribute that does not participate in the layout do not affect the offset value.
 
 **Since**: 12
 
@@ -755,7 +755,7 @@ Measures a node. You can use the **getMeasuredSize** API to obtain the size afte
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### layoutNode()
 
@@ -781,7 +781,7 @@ Lays outs a node and specifies the expected position of the node relative to its
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### addNodeEventReceiver()
 
@@ -791,7 +791,7 @@ int32_t (*addNodeEventReceiver)(ArkUI_NodeHandle node, void (*eventReceiver)(Ark
 
 **Description**
 
-Adds a component event callback function to a component to receive component events generated by it.Unlike the global registration function **registerNodeEventReceiver**, this API allows multiple event receiversto be added to the same component.<br>The callback added by this function is triggered before the global callback registered by registerNodeEventReceiver**.<br>Do not directly save the pointer to the {@link ArkUI_NodeEvent} object. The data will be destroyed after thecallback is complete.
+Adds a component event callback function to a component to receive component events generated by it. Unlike the global registration function **registerNodeEventReceiver**, this API allows multiple event receivers to be added to the same component. <br>The callback added by this function is triggered before the global callback registered by **<br>registerNodeEventReceiver**. <br>Do not directly save the pointer to the {@link ArkUI_NodeEvent} object. The data will be destroyed after the callback is complete.
 
 **Since**: 12
 
@@ -806,7 +806,7 @@ Adds a component event callback function to a component to receive component eve
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### removeNodeEventReceiver()
 
@@ -831,7 +831,7 @@ Removes a registered component event callback function from a component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### addNodeCustomEventReceiver()
 
@@ -841,7 +841,7 @@ int32_t (*addNodeCustomEventReceiver)(ArkUI_NodeHandle node, void (*eventReceive
 
 **Description**
 
-Adds a custom event callback function to a component to receive custom events (such as layout and drawingevents) generated by it. Unlike the global registration function **registerNodeCustomEventReceiver**, this APIallows multiple event receivers to be added to the same component.<br>The callback added by this function is triggered before the global callback registered by registerNodeCustomEventReceiver**.<br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyedafter the callback is complete.
+Adds a custom event callback function to a component to receive custom events (such as layout and drawing events) generated by it. Unlike the global registration function **registerNodeCustomEventReceiver**, this API allows multiple event receivers to be added to the same component. <br>The callback added by this function is triggered before the global callback registered by **<br>registerNodeCustomEventReceiver**. <br>Do not directly save the pointer to the [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) object. The data will be destroyed after the callback is complete.
 
 **Since**: 12
 
@@ -856,7 +856,7 @@ Adds a custom event callback function to a component to receive custom events (s
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### removeNodeCustomEventReceiver()
 
@@ -881,7 +881,7 @@ Removes a registered custom event callback function from a component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### setUserData()
 
@@ -906,7 +906,7 @@ Saves custom data on a component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### getUserData()
 
@@ -955,7 +955,7 @@ Sets the unit of measurement for a component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 ### getParent()
 
@@ -1003,6 +1003,6 @@ Removes all child nodes from the parent component.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.         <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.         <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Result code.         <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

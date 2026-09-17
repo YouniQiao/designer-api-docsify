@@ -45,7 +45,7 @@ MediaLibrary_ErrorCode OH_MovingPhoto_GetUri(OH_MovingPhoto* movingPhoto, const 
 | OH_MovingPhoto* movingPhoto | {@link OH_MovingPhoto}实例。 |
 | const char** uri | 动态照片的uri。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -73,7 +73,7 @@ MediaLibrary_ErrorCode OH_MovingPhoto_RequestContentWithUris(OH_MovingPhoto* mov
 | char* imageUri | 用于保存图像数据的目标文件uri。 |
 | char* videoUri | 用于保存视频数据的目标文件uri。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -101,7 +101,7 @@ MediaLibrary_ErrorCode OH_MovingPhoto_RequestContentWithUri(OH_MovingPhoto* movi
 | MediaLibrary_ResourceType resourceType | 指定的资源类型{@link MediaLibrary_ResourceType}。 |
 | char* uri | 保存数据的目标文件uri。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -130,7 +130,7 @@ MediaLibrary_ErrorCode OH_MovingPhoto_RequestContentWithBuffer(OH_MovingPhoto* m
 | const uint8_t** buffer | 保存目标文件数据的缓冲区。 |
 | uint32_t* size | 缓冲区的大小。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -154,7 +154,7 @@ Release {@link OH_MovingPhoto}实例。
 | -- | -- |
 | OH_MovingPhoto* movingPhoto | 要释放的{@link OH_MovingPhoto}实例。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

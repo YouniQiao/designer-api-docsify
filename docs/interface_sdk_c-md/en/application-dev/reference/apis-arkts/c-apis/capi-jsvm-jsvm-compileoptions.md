@@ -24,6 +24,7 @@ Compile Options
 | union | option content. |
 | void *ptr | ptr type. |
 | int num | int type. |
-| bool boolean; } content | bool type. |
+| bool boolean;
+ } content | bool type. |
 
 

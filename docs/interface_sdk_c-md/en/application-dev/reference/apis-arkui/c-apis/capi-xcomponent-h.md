@@ -20,6 +20,12 @@ Defines xcomponent attribute enum value.
 | -- | -- | -- |
 | [ArkUI_XComponentType](#arkui_xcomponenttype) | ArkUI_XComponentType | Enumerates the types of the **XComponent** component. |
 
+### Macro
+
+| Name | Description |
+| -- | -- |
+| ARKUI_XCOMPONENT_H | Defines xcomponent attribute enum value.<br>**Since**: 12<br>**System capability**: SystemCapability.ArkUI.ArkUI.Full |
+
 ## Enum type description
 
 ### ArkUI_XComponentType

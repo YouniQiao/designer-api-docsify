@@ -33,8 +33,8 @@ Defines APIs for gamepad events.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void(\* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEvent* buttonEvent)](#gamepad_buttoninputmonitorcallback) | GamePad_ButtonInputMonitorCallback | Defines the callback function used by the button event listener registration API. The callback is triggeredwhen a player presses a button. |
-| [typedef void(\* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent* axisEvent)](#gamepad_axisinputmonitorcallback) | GamePad_AxisInputMonitorCallback | Defines the callback function used by the axis event listener registration API. The callback is triggeredwhen a player operates a joystick. |
+| [typedef void(\* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEvent* buttonEvent)](#gamepad_buttoninputmonitorcallback) | GamePad_ButtonInputMonitorCallback | Defines the callback function used by the button event listener registration API. The callback is triggered when a player presses a button. |
+| [typedef void(\* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent* axisEvent)](#gamepad_axisinputmonitorcallback) | GamePad_AxisInputMonitorCallback | Defines the callback function used by the axis event listener registration API. The callback is triggered when a player operates a joystick. |
 | [GameController_ErrorCode OH_GamePad_ButtonEvent_GetDeviceId(const struct GamePad_ButtonEvent* buttonEvent, char** deviceId)](#oh_gamepad_buttonevent_getdeviceid) | - | Obtains the device ID from a button event. |
 | [GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonAction(const struct GamePad_ButtonEvent* buttonEvent, GamePad_Button_ActionType* actionType)](#oh_gamepad_buttonevent_getbuttonaction) | - | Obtains the button action type from a button event. |
 | [GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonCode(const struct GamePad_ButtonEvent* buttonEvent, int32_t* code)](#oh_gamepad_buttonevent_getbuttoncode) | - | Obtains the button code from a button event. |
@@ -56,6 +56,13 @@ Defines APIs for gamepad events.
 | [GameController_ErrorCode OH_GamePad_AxisEvent_GetBrakeAxisValue(const struct GamePad_AxisEvent* axisEvent, double* axisValue)](#oh_gamepad_axisevent_getbrakeaxisvalue) | - | Obtains the Brake-axis value from an axis event. |
 | [GameController_ErrorCode OH_GamePad_AxisEvent_GetGasAxisValue(const struct GamePad_AxisEvent* axisEvent, double* axisValue)](#oh_gamepad_axisevent_getgasaxisvalue) | - | Obtains the Gas-axis value from an axis event. |
 | [GameController_ErrorCode OH_GamePad_AxisEvent_GetActionTime(const struct GamePad_AxisEvent* axisEvent, int64_t* actionTime)](#oh_gamepad_axisevent_getactiontime) | - | Obtains the action time from an axis event. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void(* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEvent* buttonEvent) | Defines the callback function used by the button event listener registration API. The callback is triggered when a player presses a button.<br>**Since**: 21 |
+| void(* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent* axisEvent) | Defines the callback function used by the axis event listener registration API. The callback is triggered when a player operates a joystick.<br>**Since**: 21 |
 
 ## Enum type description
 
@@ -107,7 +114,7 @@ typedef void(* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEv
 
 **Description**
 
-Defines the callback function used by the button event listener registration API. The callback is triggeredwhen a player presses a button.
+Defines the callback function used by the button event listener registration API. The callback is triggered when a player presses a button.
 
 **Since**: 21
 
@@ -125,7 +132,7 @@ typedef void(* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent*
 
 **Description**
 
-Defines the callback function used by the axis event listener registration API. The callback is triggeredwhen a player operates a joystick.
+Defines the callback function used by the axis event listener registration API. The callback is triggered when a player operates a joystick.
 
 **Since**: 21
 
@@ -158,7 +165,7 @@ Obtains the device ID from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       buttonEvent or deviceId is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the      device has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    buttonEvent or deviceId is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the<br>    device has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GamePad_ButtonEvent_GetButtonAction()
 
@@ -183,7 +190,7 @@ Obtains the button action type from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       buttonEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    buttonEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_ButtonEvent_GetButtonCode()
 
@@ -208,7 +215,7 @@ Obtains the button code from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       buttonEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    buttonEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_ButtonEvent_GetButtonCodeName()
 
@@ -233,7 +240,7 @@ Obtains the button name from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       buttonEvent or codeName is null. {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the      device has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    buttonEvent or codeName is null. {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the<br>    device has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GamePad_PressedButtons_GetCount()
 
@@ -258,7 +265,7 @@ Obtains the number of pressed buttons from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       buttonEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    buttonEvent is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_PressedButtons_GetButtonInfo()
 
@@ -284,7 +291,7 @@ Obtains the button information at a specified index from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       buttonEvent is null, or index is less than 0 or greater than or equal to the total number of keys,      {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    buttonEvent is null, or index is less than 0 or greater than or equal to the total number of keys,<br>    {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 **Reference**:
 
@@ -313,7 +320,7 @@ Destroys a pressed button instance.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       pressedButton is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    pressedButton is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_PressedButton_GetButtonCode()
 
@@ -338,7 +345,7 @@ Obtains the button code from a pressed button.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       pressedButton is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    pressedButton is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_PressedButton_GetButtonCodeName()
 
@@ -363,7 +370,7 @@ Obtains the button name from a pressed button.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       pressedButton or codeName is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the      device has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    pressedButton or codeName is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the<br>    device has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GamePad_ButtonEvent_GetActionTime()
 
@@ -388,7 +395,7 @@ Obtains the action time from a button event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the       buttonEvent parameter is null, returns {@link GAME_CONTROLLER_PARAM_ERROR}.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the <br>    buttonEvent parameter is null, returns {@link GAME_CONTROLLER_PARAM_ERROR}.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetDeviceId()
 
@@ -413,7 +420,7 @@ Obtains the device ID from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If       axisEvent or deviceId is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the device      has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If <br>    axisEvent or deviceId is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li>     <li>If the device<br>    has insufficient memory, {@link GAME_CONTROLLER_NO_MEMORY} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetAxisSourceType()
 
@@ -438,7 +445,7 @@ Obtains the source type of an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetXAxisValue()
 
@@ -463,7 +470,7 @@ Obtains the X-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetYAxisValue()
 
@@ -488,7 +495,7 @@ Obtains the Y-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetZAxisValue()
 
@@ -513,7 +520,7 @@ Obtains the Z-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetRZAxisValue()
 
@@ -538,7 +545,7 @@ Obtains the RZ-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetHatXAxisValue()
 
@@ -563,7 +570,7 @@ Obtains the HatX-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetHatYAxisValue()
 
@@ -588,7 +595,7 @@ Obtains the HatY-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetBrakeAxisValue()
 
@@ -613,7 +620,7 @@ Obtains the Brake-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetGasAxisValue()
 
@@ -638,7 +645,7 @@ Obtains the Gas-axis value from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, returns {@link GAME_CONTROLLER_SUCCESS}.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 ### OH_GamePad_AxisEvent_GetActionTime()
 
@@ -663,6 +670,6 @@ Obtains the action time from an axis event.
 
 | Type | Description |
 | -- | -- |
-| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the       axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
+| GameController_ErrorCode | <ul><li>If the operation is successful, {@link GAME_CONTROLLER_SUCCESS} is returned.</li>     <li>If the <br>    axisEvent parameter is null, {@link GAME_CONTROLLER_PARAM_ERROR} is returned.</li></ul> |
 
 

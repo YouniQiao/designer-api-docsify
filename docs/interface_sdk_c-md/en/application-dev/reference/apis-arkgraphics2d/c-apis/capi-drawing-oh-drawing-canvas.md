@@ -6,7 +6,7 @@ typedef struct OH_Drawing_Canvas OH_Drawing_Canvas
 
 ## Overview
 
-Defines a struct for a rectangular canvas, on which various shapes, images, and texts can be drawn by usingthe brush and pen.
+Defines a struct for a rectangular canvas, on which various shapes, images, and texts can be drawn by using the brush and pen.
 
 **Since**: 8
 

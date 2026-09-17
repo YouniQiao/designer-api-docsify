@@ -24,14 +24,14 @@ Provides a unified entry for the native module APIs.
 
 | Name | Description |
 | -- | -- |
-| OH_ArkUI_GetModuleInterface(nativeAPIVariantKind, structType, structPtr)<br>do {<br>void* anyNativeAPI = OH_ArkUI_QueryModuleInterfaceByName(nativeAPIVariantKind, #structType);<br>if (anyNativeAPI) {<br>structPtr = (structType*)(anyNativeAPI);<br>}<br>} while (0) | Obtains the macro function corresponding to a struct pointer based on the struct type.<br>**Since**: 12 |
+| OH_ArkUI_GetModuleInterface(nativeAPIVariantKind, structType, structPtr)                      do {                                                                                              void* anyNativeAPI = OH_ArkUI_QueryModuleInterfaceByName(nativeAPIVariantKind, #structType);  if (anyNativeAPI) {                                                                           structPtr = (structType*)(anyNativeAPI);                                                  }                                                                                             } while (0) | Obtains the macro function corresponding to a struct pointer based on the struct type.<br>**Since**: 12 |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
 | [void* OH_ArkUI_QueryModuleInterfaceByName(ArkUI_NativeAPIVariantKind type, const char* structName)](#oh_arkui_querymoduleinterfacebyname) | Obtains the native API set of a specified type. |
-| [const char* OH_ArkUI_NativeModule_GetErrorMessage()](#oh_arkui_nativemodule_geterrormessage) | Retrieves the latest error message, which includes the error code, method name, and error cause.When other interfaces return an error code, they save the corresponding error message,and this interface can retrieve the currently stored error message.The information returned by this interface may evolve with versions and is intended solely foroutput to aid in analysis and troubleshooting. It should not be used for logical decisions.The returned string is a thread-local global string created by the system. The caller must not modify its content.If any editing is required, create a copy of the string contentyourself. No memory deallocation is required by the caller. |
+| [const char* OH_ArkUI_NativeModule_GetErrorMessage()](#oh_arkui_nativemodule_geterrormessage) | Retrieves the latest error message, which includes the error code, method name, and error cause. When other interfaces return an error code, they save the corresponding error message, and this interface can retrieve the currently stored error message. The information returned by this interface may evolve with versions and is intended solely for output to aid in analysis and troubleshooting. It should not be used for logical decisions.<br> The returned string is a thread-local global string created by the system. The caller must not modify its content. If any editing is required, create a copy of the string content yourself. No memory deallocation is required by the caller. |
 
 ## Enum type description
 
@@ -74,8 +74,8 @@ Obtains the native API set of a specified type.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NativeAPIVariantKind](capi-native-interface-h.md#arkui_nativeapivariantkind) type | Indicates the type of the native API set provided by ArkUI, for example, <b>ARKUI_NATIVE_NODE</b>and <b>ARKUI_NATIVE_GESTURE</b>. |
-| const char* structName | Indicates the name of a native struct defined in the corresponding header file, for example,<b>ArkUI_NativeNodeAPI_1</b> in <arkui/native_node.h>. |
+| [ArkUI_NativeAPIVariantKind](capi-native-interface-h.md#arkui_nativeapivariantkind) type | Indicates the type of the native API set provided by ArkUI, for example, <b>ARKUI_NATIVE_NODE</b> and <b>ARKUI_NATIVE_GESTURE</b>. |
+| const char* structName | Indicates the name of a native struct defined in the corresponding header file, for example, <b>ArkUI_NativeNodeAPI_1</b> in <arkui/native_node.h>. |
 
 **Returns**:
 
@@ -91,7 +91,7 @@ const char* OH_ArkUI_NativeModule_GetErrorMessage()
 
 **Description**
 
-Retrieves the latest error message, which includes the error code, method name, and error cause.When other interfaces return an error code, they save the corresponding error message,and this interface can retrieve the currently stored error message.The information returned by this interface may evolve with versions and is intended solely foroutput to aid in analysis and troubleshooting. It should not be used for logical decisions.The returned string is a thread-local global string created by the system. The caller must not modify its content.If any editing is required, create a copy of the string contentyourself. No memory deallocation is required by the caller.
+Retrieves the latest error message, which includes the error code, method name, and error cause. When other interfaces return an error code, they save the corresponding error message, and this interface can retrieve the currently stored error message. The information returned by this interface may evolve with versions and is intended solely for output to aid in analysis and troubleshooting. It should not be used for logical decisions.<br> The returned string is a thread-local global string created by the system. The caller must not modify its content. If any editing is required, create a copy of the string content yourself. No memory deallocation is required by the caller.
 
 **Since**: 26.0.0
 

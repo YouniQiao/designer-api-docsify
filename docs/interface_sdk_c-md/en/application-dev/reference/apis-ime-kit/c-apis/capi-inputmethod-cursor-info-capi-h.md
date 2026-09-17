@@ -20,7 +20,7 @@ Provides methods for creating, destroying, reading, and writing cursor informati
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | Represents the cursor information, including the coordinates, width, and height of the cursor. |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | Represents the cursor information, including the coordinates, width, and height of the cursor.<br> * |
 
 ### Function
 
@@ -49,8 +49,8 @@ Create a new [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md
 
 | Parameter | Description |
 | -- | -- |
-| double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physicalscreen, in px. |
-| double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen,in px. |
+| double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physical screen, in px. |
+| double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen, in px. |
 | double width | The width of the cursor.in px. |
 | double height | The height of the cursor.in px. |
 
@@ -95,8 +95,8 @@ Set cursor info.
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
-| double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physicalscreen, in px. |
-| double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen,in px. |
+| double left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physical screen, in px. |
+| double top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen, in px. |
 | double width | The width of the cursor.in px. |
 | double height | The height of the cursor.in px. |
 
@@ -104,7 +104,7 @@ Set cursor info.
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_CursorInfo_GetRect()
 
@@ -123,8 +123,8 @@ Get cursor info.
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) *cursorInfo | Represents a pointer to an [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance. |
-| double *left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physicalscreen, in px. |
-| double *top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen,in px. |
+| double *left | Absolute value of the distance between the cursor's leftmost point and the left edge of the physical screen, in px. |
+| double *top | Absolute value of the distance between the cursor's top point and the top edge of the physical screen, in px. |
 | double *width | The width of the cursor.in px. |
 | double *height | The height of the cursor.in px. |
 
@@ -132,6 +132,6 @@ Get cursor info.
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 

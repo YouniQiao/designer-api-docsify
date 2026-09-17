@@ -24,43 +24,43 @@ This file declares functions related to the pen in the drawing module.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [OH_Drawing_PenLineCapStyle](#oh_drawing_penlinecapstyle) | OH_Drawing_PenLineCapStyle | Enumerates the line cap styles of a pen. The line cap style defines the style of both ends of a line segmentdrawn by the pen. |
-| [OH_Drawing_PenLineJoinStyle](#oh_drawing_penlinejoinstyle) | OH_Drawing_PenLineJoinStyle | Enumerates the line join styles of a pen. The line join style defines the shape of the joints of a polylinesegment drawn by the pen. |
+| [OH_Drawing_PenLineCapStyle](#oh_drawing_penlinecapstyle) | OH_Drawing_PenLineCapStyle | Enumerates the line cap styles of a pen. The line cap style defines the style of both ends of a line segment drawn by the pen. |
+| [OH_Drawing_PenLineJoinStyle](#oh_drawing_penlinejoinstyle) | OH_Drawing_PenLineJoinStyle | Enumerates the line join styles of a pen. The line join style defines the shape of the joints of a polyline segment drawn by the pen. |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_Pen* OH_Drawing_PenCreate(void)](#oh_drawing_pencreate) | Creates an **OH_Drawing_Pen** object. |
-| [OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)](#oh_drawing_pencopy) | Creates a copy of the {@link OH_Drawing_Pen} object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)](#oh_drawing_pencopy) | Creates a copy of the {@link OH_Drawing_Pen} object.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [void OH_Drawing_PenDestroy(OH_Drawing_Pen* pen)](#oh_drawing_pendestroy) | Destroys an **OH_Drawing_Pen** object and reclaims the memory occupied by the object. |
-| [bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)](#oh_drawing_penisantialias) | Checks whether anti-aliasing is enabled for a pen. Anti-aliasing makes the pixels around the shape edges semi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetAntiAlias(OH_Drawing_Pen* pen, bool antiAlias)](#oh_drawing_pensetantialias) | Enables or disables anti-aliasing for a pen. Anti-aliasing makes the pixels around the shape edges semi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcolor) | Obtains the color of a pen. The color is used by the pen to outline a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetColor(OH_Drawing_Pen* pen, uint32_t color)](#oh_drawing_pensetcolor) | Sets the color for a pen. The color is used by the pen to outline a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)](#oh_drawing_pengetalpha) | Obtains the alpha value of a pen. This value is used by the alpha channel when the pen outlines a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetAlpha(OH_Drawing_Pen* pen, uint8_t alpha)](#oh_drawing_pensetalpha) | Sets the alpha value for a pen. This value is used by the alpha channel when the pen outlines a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)](#oh_drawing_pensetcolor4f) | Sets the color for a pen, which is used to outline a shape.The color is in ARGB format represented by floating-point numbers. The color space is specified by[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md).If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2.1:1999) color space is used as the default value. |
+| [bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)](#oh_drawing_penisantialias) | Checks whether anti-aliasing is enabled for a pen. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetAntiAlias(OH_Drawing_Pen* pen, bool antiAlias)](#oh_drawing_pensetantialias) | Enables or disables anti-aliasing for a pen. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcolor) | Obtains the color of a pen. The color is used by the pen to outline a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetColor(OH_Drawing_Pen* pen, uint32_t color)](#oh_drawing_pensetcolor) | Sets the color for a pen. The color is used by the pen to outline a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)](#oh_drawing_pengetalpha) | Obtains the alpha value of a pen. This value is used by the alpha channel when the pen outlines a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetAlpha(OH_Drawing_Pen* pen, uint8_t alpha)](#oh_drawing_pensetalpha) | Sets the alpha value for a pen. This value is used by the alpha channel when the pen outlines a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, float r, float g, float b, OH_NativeColorSpaceManager* colorSpaceManager)](#oh_drawing_pensetcolor4f) | Sets the color for a pen, which is used to outline a shape. The color is in ARGB format represented by floating-point numbers. The color space is specified by [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md) . If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2. 1:1999) color space is used as the default value. |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetAlphaFloat(OH_Drawing_Pen* pen, float* a)](#oh_drawing_pengetalphafloat) | Obtains the alpha value of the pen color. |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetRedFloat(OH_Drawing_Pen* pen, float* r)](#oh_drawing_pengetredfloat) | Obtains the red component of the pen color. |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetGreenFloat(OH_Drawing_Pen* pen, float* g)](#oh_drawing_pengetgreenfloat) | Obtains the green component of the pen color. |
 | [OH_Drawing_ErrorCode OH_Drawing_PenGetBlueFloat(OH_Drawing_Pen* pen, float* b)](#oh_drawing_pengetbluefloat) | Obtains the blue component of the pen color. |
-| [float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)](#oh_drawing_pengetwidth) | Obtains the thickness of a pen. This thickness determines the width of the outline of a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetWidth(OH_Drawing_Pen* pen, float width)](#oh_drawing_pensetwidth) | Sets the thickness for a pen. This thickness determines the width of the outline of a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)](#oh_drawing_pengetmiterlimit) | Obtains the stroke miter limit of a polyline drawn by a pen. When the corner type is bevel, a beveled corneris displayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetMiterLimit(OH_Drawing_Pen* pen, float miter)](#oh_drawing_pensetmiterlimit) | Sets the stroke miter limit for a polyline drawn by a pen. When the corner type is bevel, a beveled corner isdisplayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcap) | Obtains the line cap style of a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetCap(OH_Drawing_Pen* pen, OH_Drawing_PenLineCapStyle capStyle)](#oh_drawing_pensetcap) | Sets the line cap style for a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **capStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)](#oh_drawing_pengetjoin) | Obtains the line join style of a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetJoin(OH_Drawing_Pen* pen, OH_Drawing_PenLineJoinStyle joinStyle)](#oh_drawing_pensetjoin) | Sets the join style for this pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **joinStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [void OH_Drawing_PenSetShaderEffect(OH_Drawing_Pen* pen, OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_pensetshadereffect) | Sets the shader effect for this pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetShadowLayer(OH_Drawing_Pen* pen, OH_Drawing_ShadowLayer* shadowLayer)](#oh_drawing_pensetshadowlayer) | Sets the shadow layer for a pen. The shadow layer effect takes effect only when text is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetPathEffect(OH_Drawing_Pen* pen, OH_Drawing_PathEffect* pathEffect)](#oh_drawing_pensetpatheffect) | Sets the path effect for this pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pensetfilter) | Sets a filter for a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenGetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pengetfilter) | Obtains the {@link OH_Drawing_Filter} object from the pen. The filter is a container that holds a mask filterand color filter.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **pen** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenSetBlendMode(OH_Drawing_Pen* pen, OH_Drawing_BlendMode blendMode)](#oh_drawing_pensetblendmode) | Sets a blender for a pen. The blender implements the specified blend mode.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
-| [bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, OH_Drawing_Path* dst, const OH_Drawing_Rect* rect, const OH_Drawing_Matrix* matrix)](#oh_drawing_pengetfillpath) | Obtains the source path outline drawn using this pen and represents it using a destination path.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **pen**, **src**, and **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
-| [void OH_Drawing_PenReset(OH_Drawing_Pen* pen)](#oh_drawing_penreset) | Resets a pen to the initial state.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)](#oh_drawing_pengetwidth) | Obtains the thickness of a pen. This thickness determines the width of the outline of a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetWidth(OH_Drawing_Pen* pen, float width)](#oh_drawing_pensetwidth) | Sets the thickness for a pen. This thickness determines the width of the outline of a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)](#oh_drawing_pengetmiterlimit) | Obtains the stroke miter limit of a polyline drawn by a pen. When the corner type is bevel, a beveled corner is displayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetMiterLimit(OH_Drawing_Pen* pen, float miter)](#oh_drawing_pensetmiterlimit) | Sets the stroke miter limit for a polyline drawn by a pen. When the corner type is bevel, a beveled corner is displayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)](#oh_drawing_pengetcap) | Obtains the line cap style of a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetCap(OH_Drawing_Pen* pen, OH_Drawing_PenLineCapStyle capStyle)](#oh_drawing_pensetcap) | Sets the line cap style for a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **capStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)](#oh_drawing_pengetjoin) | Obtains the line join style of a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetJoin(OH_Drawing_Pen* pen, OH_Drawing_PenLineJoinStyle joinStyle)](#oh_drawing_pensetjoin) | Sets the join style for this pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **joinStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [void OH_Drawing_PenSetShaderEffect(OH_Drawing_Pen* pen, OH_Drawing_ShaderEffect* shaderEffect)](#oh_drawing_pensetshadereffect) | Sets the shader effect for this pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetShadowLayer(OH_Drawing_Pen* pen, OH_Drawing_ShadowLayer* shadowLayer)](#oh_drawing_pensetshadowlayer) | Sets the shadow layer for a pen. The shadow layer effect takes effect only when text is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetPathEffect(OH_Drawing_Pen* pen, OH_Drawing_PathEffect* pathEffect)](#oh_drawing_pensetpatheffect) | Sets the path effect for this pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pensetfilter) | Sets a filter for a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenGetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)](#oh_drawing_pengetfilter) | Obtains the {@link OH_Drawing_Filter} object from the pen. The filter is a container that holds a mask filter<br>and color filter.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **pen** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenSetBlendMode(OH_Drawing_Pen* pen, OH_Drawing_BlendMode blendMode)](#oh_drawing_pensetblendmode) | Sets a blender for a pen. The blender implements the specified blend mode. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned. |
+| [bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, OH_Drawing_Path* dst, const OH_Drawing_Rect* rect, const OH_Drawing_Matrix* matrix)](#oh_drawing_pengetfillpath) | Obtains the source path outline drawn using this pen and represents it using a destination path. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **pen**, **src**, and **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [void OH_Drawing_PenReset(OH_Drawing_Pen* pen)](#oh_drawing_penreset) | Resets a pen to the initial state. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 
 ## Enum type description
 
@@ -72,15 +72,15 @@ enum OH_Drawing_PenLineCapStyle
 
 **Description**
 
-Enumerates the line cap styles of a pen. The line cap style defines the style of both ends of a line segmentdrawn by the pen.
+Enumerates the line cap styles of a pen. The line cap style defines the style of both ends of a line segment drawn by the pen.
 
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
 | LINE_FLAT_CAP | There is no cap style. Both ends of the line segment are cut off square. |
-| LINE_SQUARE_CAP | Square cap style. Both ends have a square, the height of which is half of the width of the line segment, withthe same width. |
-| LINE_ROUND_CAP | Round cap style. Both ends have a semicircle centered, the diameter of which is the same as the width of theline segment. |
+| LINE_SQUARE_CAP | Square cap style. Both ends have a square, the height of which is half of the width of the line segment, with the same width. |
+| LINE_ROUND_CAP | Round cap style. Both ends have a semicircle centered, the diameter of which is the same as the width of the line segment. |
 
 ### OH_Drawing_PenLineJoinStyle
 
@@ -90,13 +90,13 @@ enum OH_Drawing_PenLineJoinStyle
 
 **Description**
 
-Enumerates the line join styles of a pen. The line join style defines the shape of the joints of a polylinesegment drawn by the pen.
+Enumerates the line join styles of a pen. The line join style defines the shape of the joints of a polyline segment drawn by the pen.
 
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| LINE_MITER_JOIN | Mitered corner. If the angle of a polyline is small, its miter length may be inappropriate. In this case, youneed to use the miter limit to limit the miter length. |
+| LINE_MITER_JOIN | Mitered corner. If the angle of a polyline is small, its miter length may be inappropriate. In this case, you need to use the miter limit to limit the miter length. |
 | LINE_ROUND_JOIN | Round corner. |
 | LINE_BEVEL_JOIN | Beveled corner. |
 
@@ -129,7 +129,7 @@ OH_Drawing_Pen* OH_Drawing_PenCopy(OH_Drawing_Pen* pen)
 
 **Description**
 
-Creates a copy of the {@link OH_Drawing_Pen} object.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Creates a copy of the {@link OH_Drawing_Pen} object.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -171,7 +171,7 @@ bool OH_Drawing_PenIsAntiAlias(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Checks whether anti-aliasing is enabled for a pen. Anti-aliasing makes the pixels around the shape edges semi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Checks whether anti-aliasing is enabled for a pen. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -195,7 +195,7 @@ void OH_Drawing_PenSetAntiAlias(OH_Drawing_Pen* pen, bool antiAlias)
 
 **Description**
 
-Enables or disables anti-aliasing for a pen. Anti-aliasing makes the pixels around the shape edges semi-transparent.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Enables or disables anti-aliasing for a pen. Anti-aliasing makes the pixels around the shape edges semi- transparent. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -204,7 +204,7 @@ Enables or disables anti-aliasing for a pen. Anti-aliasing makes the pixels arou
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Pen* pen | Pointer to an **OH_Drawing_Pen** object. |
-| bool antiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **falsemeans the opposite. |
+| bool antiAlias | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false**<br>means the opposite. |
 
 ### OH_Drawing_PenGetColor()
 
@@ -214,7 +214,7 @@ uint32_t OH_Drawing_PenGetColor(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Obtains the color of a pen. The color is used by the pen to outline a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the color of a pen. The color is used by the pen to outline a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -238,7 +238,7 @@ void OH_Drawing_PenSetColor(OH_Drawing_Pen* pen, uint32_t color)
 
 **Description**
 
-Sets the color for a pen. The color is used by the pen to outline a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the color for a pen. The color is used by the pen to outline a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -257,7 +257,7 @@ uint8_t OH_Drawing_PenGetAlpha(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Obtains the alpha value of a pen. This value is used by the alpha channel when the pen outlines a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the alpha value of a pen. This value is used by the alpha channel when the pen outlines a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -281,7 +281,7 @@ void OH_Drawing_PenSetAlpha(OH_Drawing_Pen* pen, uint8_t alpha)
 
 **Description**
 
-Sets the alpha value for a pen. This value is used by the alpha channel when the pen outlines a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the alpha value for a pen. This value is used by the alpha channel when the pen outlines a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -300,7 +300,7 @@ OH_Drawing_ErrorCode OH_Drawing_PenSetColor4f(OH_Drawing_Pen* pen, float a, floa
 
 **Description**
 
-Sets the color for a pen, which is used to outline a shape.The color is in ARGB format represented by floating-point numbers. The color space is specified by[OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md).If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2.1:1999) color space is used as the default value.
+Sets the color for a pen, which is used to outline a shape. The color is in ARGB format represented by floating-point numbers. The color space is specified by [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md) . If **colorSpaceManager** is a null pointer, the SRGB (standard red, green, and blue color space based on IEC 61966-2. 1:1999) color space is used as the default value.
 
 **Since**: 20
 
@@ -309,10 +309,10 @@ Sets the color for a pen, which is used to outline a shape.The color is in ARGB 
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Pen* pen | Pointer to an {@link OH_Drawing_Pen} object. |
-| float a | Alpha value of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
-| float r | Red component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
-| float g | Green component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
-| float b | Blue component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0default to 1.0, while values below 0.0 default to 0.0. |
+| float a | Alpha value of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
+| float r | Red component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
+| float g | Green component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
+| float b | Blue component of the color, which is a floating-point number ranging from 0.0 to 1.0. Values above 1.0 default to 1.0, while values below 0.0 default to 0.0. |
 | [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md)* colorSpaceManager | Pointer to an [OH_NativeColorSpaceManager](capi-drawing-oh-nativecolorspacemanager.md) object. |
 
 **Returns**:
@@ -429,7 +429,7 @@ float OH_Drawing_PenGetWidth(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Obtains the thickness of a pen. This thickness determines the width of the outline of a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the thickness of a pen. This thickness determines the width of the outline of a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -453,7 +453,7 @@ void OH_Drawing_PenSetWidth(OH_Drawing_Pen* pen, float width)
 
 **Description**
 
-Sets the thickness for a pen. This thickness determines the width of the outline of a shape.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the thickness for a pen. This thickness determines the width of the outline of a shape. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -472,7 +472,7 @@ float OH_Drawing_PenGetMiterLimit(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Obtains the stroke miter limit of a polyline drawn by a pen. When the corner type is bevel, a beveled corneris displayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the stroke miter limit of a polyline drawn by a pen. When the corner type is bevel, a beveled corner is displayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -496,7 +496,7 @@ void OH_Drawing_PenSetMiterLimit(OH_Drawing_Pen* pen, float miter)
 
 **Description**
 
-Sets the stroke miter limit for a polyline drawn by a pen. When the corner type is bevel, a beveled corner isdisplayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the stroke miter limit for a polyline drawn by a pen. When the corner type is bevel, a beveled corner is displayed if the miter limit is exceeded, and a mitered corner is displayed if the miter limit is not exceeded. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -515,7 +515,7 @@ OH_Drawing_PenLineCapStyle OH_Drawing_PenGetCap(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Obtains the line cap style of a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the line cap style of a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -539,7 +539,7 @@ void OH_Drawing_PenSetCap(OH_Drawing_Pen* pen, OH_Drawing_PenLineCapStyle capSty
 
 **Description**
 
-Sets the line cap style for a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **capStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Sets the line cap style for a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **capStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 8
 
@@ -558,7 +558,7 @@ OH_Drawing_PenLineJoinStyle OH_Drawing_PenGetJoin(const OH_Drawing_Pen* pen)
 
 **Description**
 
-Obtains the line join style of a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the line join style of a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 8
 
@@ -582,7 +582,7 @@ void OH_Drawing_PenSetJoin(OH_Drawing_Pen* pen, OH_Drawing_PenLineJoinStyle join
 
 **Description**
 
-Sets the join style for this pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **joinStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Sets the join style for this pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **joinStyle** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 8
 
@@ -601,7 +601,7 @@ void OH_Drawing_PenSetShaderEffect(OH_Drawing_Pen* pen, OH_Drawing_ShaderEffect*
 
 **Description**
 
-Sets the shader effect for this pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the shader effect for this pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -610,7 +610,7 @@ Sets the shader effect for this pen.This API may return an error code. For detai
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Pen* pen | Pointer to the {@link OH_Drawing_Pen} object. |
-| OH_Drawing_ShaderEffect* shaderEffect | Pointer to an {@link OH_Drawing_ShaderEffect} object. If NULL is passed in, the shader effectwill be cleared. |
+| OH_Drawing_ShaderEffect* shaderEffect | Pointer to an {@link OH_Drawing_ShaderEffect} object. If NULL is passed in, the shader effect will be cleared. |
 
 ### OH_Drawing_PenSetShadowLayer()
 
@@ -620,7 +620,7 @@ void OH_Drawing_PenSetShadowLayer(OH_Drawing_Pen* pen, OH_Drawing_ShadowLayer* s
 
 **Description**
 
-Sets the shadow layer for a pen. The shadow layer effect takes effect only when text is drawn.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the shadow layer for a pen. The shadow layer effect takes effect only when text is drawn. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -629,7 +629,7 @@ Sets the shadow layer for a pen. The shadow layer effect takes effect only when 
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Pen* pen | Pointer to the {@link OH_Drawing_Pen} object. |
-| OH_Drawing_ShadowLayer* shadowLayer | Pointer to an {@link OH_Drawing_ShadowLayer} object. If NULL is passed in, the shadow layereffect will be cleared. |
+| OH_Drawing_ShadowLayer* shadowLayer | Pointer to an {@link OH_Drawing_ShadowLayer} object. If NULL is passed in, the shadow layer effect will be cleared. |
 
 ### OH_Drawing_PenSetPathEffect()
 
@@ -639,7 +639,7 @@ void OH_Drawing_PenSetPathEffect(OH_Drawing_Pen* pen, OH_Drawing_PathEffect* pat
 
 **Description**
 
-Sets the path effect for this pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets the path effect for this pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -648,7 +648,7 @@ Sets the path effect for this pen.This API may return an error code. For details
 | Parameter | Description |
 | -- | -- |
 | OH_Drawing_Pen* pen | Pointer to the {@link OH_Drawing_Pen} object. |
-| OH_Drawing_PathEffect* pathEffect | Pointer to an {@link OH_Drawing_PathEffect} object. If NULL is passed in, the path effect will becleared. |
+| OH_Drawing_PathEffect* pathEffect | Pointer to an {@link OH_Drawing_PathEffect} object. If NULL is passed in, the path effect will be cleared. |
 
 ### OH_Drawing_PenSetFilter()
 
@@ -658,7 +658,7 @@ void OH_Drawing_PenSetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)
 
 **Description**
 
-Sets a filter for a pen.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Sets a filter for a pen. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 11
 
@@ -677,7 +677,7 @@ void OH_Drawing_PenGetFilter(OH_Drawing_Pen* pen, OH_Drawing_Filter* filter)
 
 **Description**
 
-Obtains the {@link OH_Drawing_Filter} object from the pen. The filter is a container that holds a mask filterand color filter.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If either **pen** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the {@link OH_Drawing_Filter} object from the pen. The filter is a container that holds a mask filter<br>and color filter.<br>This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If either **pen** or **filter** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -696,7 +696,7 @@ void OH_Drawing_PenSetBlendMode(OH_Drawing_Pen* pen, OH_Drawing_BlendMode blendM
 
 **Description**
 
-Sets a blender for a pen. The blender implements the specified blend mode.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
+Sets a blender for a pen. The blender implements the specified blend mode. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **blendMode** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
 **Since**: 12
 
@@ -715,7 +715,7 @@ bool OH_Drawing_PenGetFillPath(OH_Drawing_Pen* pen, const OH_Drawing_Path* src, 
 
 **Description**
 
-Obtains the source path outline drawn using this pen and represents it using a destination path.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If any of **pen**, **src**, and **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Obtains the source path outline drawn using this pen and represents it using a destination path. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If any of **pen**, **src**, and **dst** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 
@@ -727,7 +727,7 @@ Obtains the source path outline drawn using this pen and represents it using a d
 | const OH_Drawing_Path* src | Pointer to the source {@link OH_Drawing_Path} object. |
 | OH_Drawing_Path* dst | Pointer to the target {@link OH_Drawing_Path} object. |
 | const OH_Drawing_Rect* rect | Pointer to an {@link OH_Drawing_Rect} object. NULL is recommended. |
-| const OH_Drawing_Matrix* matrix | Pointer to an {@link OH_Drawing_Matrix} object. NULL is recommended. The default value is an identitymatrix. |
+| const OH_Drawing_Matrix* matrix | Pointer to an {@link OH_Drawing_Matrix} object. NULL is recommended. The default value is an identity matrix. |
 
 **Returns**:
 
@@ -743,7 +743,7 @@ void OH_Drawing_PenReset(OH_Drawing_Pen* pen)
 
 **Description**
 
-Resets a pen to the initial state.This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}.If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+Resets a pen to the initial state. This API may return an error code. For details, call {@link OH_Drawing_ErrorCodeGet}. If **pen** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
 **Since**: 12
 

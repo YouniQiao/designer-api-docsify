@@ -18,7 +18,7 @@ Declares APIs for acquiring the set of system capabilities .
 
 | Name | Description |
 | -- | -- |
-| [bool canIUse(const char *cap)](#caniuse) | Provides the API for querying whether a SystemCapability (SysCap) is supported.SysCap refers to a standalone feature in the operating system.Different devices support different SysCap sets. Each SysCap corresponds to one or more APIs.You can determine whether an API can be used by checking SysCap support. |
+| [bool canIUse(const char *cap)](#caniuse) | Provides the API for querying whether a SystemCapability (SysCap) is supported. SysCap refers to a standalone feature in the operating system. Different devices support different SysCap sets. Each SysCap corresponds to one or more APIs. You can determine whether an API can be used by checking SysCap support. |
 
 ## Function description
 
@@ -30,7 +30,7 @@ bool canIUse(const char *cap)
 
 **Description**
 
-Provides the API for querying whether a SystemCapability (SysCap) is supported.SysCap refers to a standalone feature in the operating system.Different devices support different SysCap sets. Each SysCap corresponds to one or more APIs.You can determine whether an API can be used by checking SysCap support.
+Provides the API for querying whether a SystemCapability (SysCap) is supported. SysCap refers to a standalone feature in the operating system. Different devices support different SysCap sets. Each SysCap corresponds to one or more APIs. You can determine whether an API can be used by checking SysCap support.
 
 **Since**: 8
 

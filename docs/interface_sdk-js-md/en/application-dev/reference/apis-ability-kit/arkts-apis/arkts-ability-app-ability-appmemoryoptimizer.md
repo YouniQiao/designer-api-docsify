@@ -1,4 +1,4 @@
-# @ohos.app.ability.appMemoryOptimizer
+# @ohos.app.ability.appMemoryOptimizer(Application Memory Optimizer)
 
 appMemoryOptimizer provides application memory optimization capabilities, including performing file page cache eviction on specified files, performing file page cache eviction on specified modules.
 

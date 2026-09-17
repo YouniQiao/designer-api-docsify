@@ -26,7 +26,7 @@ Defines the data structures for the C APIs of the network connection module.
 | [NetConn_ConnectionProperties](capi-netconnection-netconn-connectionproperties.md) | NetConn_ConnectionProperties | Defines the network connection properties. |
 | [NetConn_NetHandleList](capi-netconnection-netconn-nethandlelist.md) | NetConn_NetHandleList | Defines the network list. |
 | [NetConn_NetSpecifier](capi-netconnection-netconn-netspecifier.md) | NetConn_NetSpecifier | Defines network feature sets. |
-| [NetConn_NetConnCallback](capi-netconnection-netconn-netconncallback.md) | NetConn_NetConnCallback | Defines a struct for the network status listener callback collection. All callback events must be registered;those not requiring attention can be set to empty. |
+| [NetConn_NetConnCallback](capi-netconnection-netconn-netconncallback.md) | NetConn_NetConnCallback | Defines a struct for the network status listener callback collection. All callback events must be registered; those not requiring attention can be set to empty. |
 | [NetConn_ProbeResultInfo](capi-netconnection-netconn-proberesultinfo.md) | NetConn_ProbeResultInfo | Defines the probe result. |
 | [NetConn_TraceRouteOption](capi-netconnection-netconn-tracerouteoption.md) | NetConn_TraceRouteOption | Defines the network trace route options. |
 | [NetConn_TraceRouteInfo](capi-netconnection-netconn-tracerouteinfo.md) | NetConn_TraceRouteInfo | Defines the trace route information. |
@@ -59,13 +59,27 @@ Defines the data structures for the C APIs of the network connection module.
 | -- | -- | -- |
 | [typedef int (\*OH_NetConn_CustomDnsResolver)(const char *host, const char *serv, const struct addrinfo *hint, struct addrinfo **res)](#oh_netconn_customdnsresolver) | OH_NetConn_CustomDnsResolver | Defines the pointer to the custom DNS resolver. |
 | [typedef void (\*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy)](#oh_netconn_apphttpproxychange) | OH_NetConn_AppHttpProxyChange | Defines the callback invoked when the HTTP proxy information of the application changes. |
-| [typedef void (\*OH_NetConn_GlobalHttpProxyRefreshCallback)(int32_t result, const NetConn_HttpProxy *proxy, void *userContext)](#oh_netconn_globalhttpproxyrefreshcallback) | OH_NetConn_GlobalHttpProxyRefreshCallback | Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.This callback is invoked at most once for each successful call toOH_NetConn_RefreshGlobalHttpProxyWithCallback. |
+| [typedef void (\*OH_NetConn_GlobalHttpProxyRefreshCallback)(int32_t result, const NetConn_HttpProxy *proxy, void *userContext)](#oh_netconn_globalhttpproxyrefreshcallback) | OH_NetConn_GlobalHttpProxyRefreshCallback | Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.<br> This callback is invoked at most once for each successful call to OH_NetConn_RefreshGlobalHttpProxyWithCallback. |
 | [typedef void (\*OH_NetConn_NetworkAvailable)(NetConn_NetHandle *netHandle)](#oh_netconn_networkavailable) | OH_NetConn_NetworkAvailable | Defines the callback invoked when the network is available. |
 | [typedef void (\*OH_NetConn_NetCapabilitiesChange)(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities)](#oh_netconn_netcapabilitieschange) | OH_NetConn_NetCapabilitiesChange | Defines the callback invoked when the network capabilities change. |
 | [typedef void (\*OH_NetConn_NetConnectionPropertiesChange)(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *connConnetionProperties)](#oh_netconn_netconnectionpropertieschange) | OH_NetConn_NetConnectionPropertiesChange | Defines the callback invoked when network connection properties change. |
 | [typedef void (\*OH_NetConn_NetLost)(NetConn_NetHandle *netHandle)](#oh_netconn_netlost) | OH_NetConn_NetLost | Defines the callback invoked when the network is disconnected. |
-| [typedef void (\*OH_NetConn_NetUnavailable)(void)](#oh_netconn_netunavailable) | OH_NetConn_NetUnavailable | Defines the callback invoked when the network is unavailable. This callback is triggered when the network isnot activated within the specified timeout interval. If the timeout interval is not set, this callback is nottriggered. |
+| [typedef void (\*OH_NetConn_NetUnavailable)(void)](#oh_netconn_netunavailable) | OH_NetConn_NetUnavailable | Defines the callback invoked when the network is unavailable. This callback is triggered when the network is not activated within the specified timeout interval. If the timeout interval is not set, this callback is not triggered. |
 | [typedef void (\*OH_NetConn_NetBlockStatusChange)(NetConn_NetHandle *netHandle, bool blocked)](#oh_netconn_netblockstatuschange) | OH_NetConn_NetBlockStatusChange | Defines the callback invoked when the network blocking status changes. |
+
+### Variable
+
+| Name | Description |
+| -- | -- |
+| int (*OH_NetConn_CustomDnsResolver)(const char *host, const char *serv, const struct addrinfo *hint, struct addrinfo **res) | Defines the pointer to the custom DNS resolver.<br>**Since**: 11 |
+| void (*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy) | Defines the callback invoked when the HTTP proxy information of the application changes.<br>**Since**: 12 |
+| void (*OH_NetConn_GlobalHttpProxyRefreshCallback)( int32_t result, const NetConn_HttpProxy *proxy, void *userContext) | Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.<br> This callback is invoked at most once for each successful call to OH_NetConn_RefreshGlobalHttpProxyWithCallback.<br>**Since**: 26.0.0 |
+| void (*OH_NetConn_NetworkAvailable)(NetConn_NetHandle *netHandle) | Defines the callback invoked when the network is available.<br>**Since**: 12 |
+| void (*OH_NetConn_NetCapabilitiesChange)(NetConn_NetHandle *netHandle, NetConn_NetCapabilities *netCapabilities) | Defines the callback invoked when the network capabilities change.<br>**Since**: 12 |
+| void (*OH_NetConn_NetConnectionPropertiesChange)(NetConn_NetHandle *netHandle, NetConn_ConnectionProperties *connConnetionProperties) | Defines the callback invoked when network connection properties change.<br>**Since**: 12 |
+| void (*OH_NetConn_NetLost)(NetConn_NetHandle *netHandle) | Defines the callback invoked when the network is disconnected.<br>**Since**: 12 |
+| void (*OH_NetConn_NetUnavailable)(void) | Defines the callback invoked when the network is unavailable. This callback is triggered when the network is not activated within the specified timeout interval. If the timeout interval is not set, this callback is not triggered.<br>**Since**: 12 |
+| void (*OH_NetConn_NetBlockStatusChange)(NetConn_NetHandle *netHandle, bool blocked) | Defines the callback invoked when the network blocking status changes.<br>**Since**: 12 |
 
 ## Enum type description
 
@@ -129,7 +143,7 @@ Enumerates network connection error codes.
 | NETCONN_PERMISSION_DENIED = 201 | Missing permissions. |
 | NETCONN_PARAMETER_ERROR = 401 | Invalid parameter. |
 | NETCONN_OPERATION_FAILED = 2100002 | Service connection failure. |
-| NETCONN_INTERNAL_ERROR = 2100003 | Internal error.1. Memory-related error, for example, insufficient memory, memory data copy failure, or memoryrequest failure.2. Null pointer, for example, access to a released memory pointer. |
+| NETCONN_INTERNAL_ERROR = 2100003 | Internal error.1. Memory-related error, for example, insufficient memory, memory data copy failure, or memory request failure.2. Null pointer, for example, access to a released memory pointer. |
 
 ### NetConn_PacketsType
 
@@ -198,7 +212,7 @@ typedef void (*OH_NetConn_GlobalHttpProxyRefreshCallback)(int32_t result, const 
 
 **Description**
 
-Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.This callback is invoked at most once for each successful call toOH_NetConn_RefreshGlobalHttpProxyWithCallback.
+Defines the one-shot callback used to receive the global HTTP proxy re-authentication result.<br> This callback is invoked at most once for each successful call to OH_NetConn_RefreshGlobalHttpProxyWithCallback.
 
 **Since**: 26.0.0
 
@@ -207,8 +221,8 @@ Defines the one-shot callback used to receive the global HTTP proxy re-authentic
 | Parameter | Description |
 | -- | -- |
 | int32_t result | The re-authentication result. 0 indicates success. Other values indicate failure. |
-| [const NetConn_HttpProxy](capi-netconnection-netconn-httpproxy.md) \*proxy | The refreshed global HTTP proxy information when result is 0. If re-authenticationfails, proxy is NULL.<br>The proxy object is owned by the system and is valid only during this callbackinvocation. The caller must not free or modify it. If the caller needs to use theproxy information after the callback returns, the caller must make a deep copy. |
-| void \*userContext | The user-defined data passed to OH_NetConn_RefreshGlobalHttpProxyWithCallback. The systemdoes not access, copy, or release it. |
+| [const NetConn_HttpProxy](capi-netconnection-netconn-httpproxy.md) \*proxy | The refreshed global HTTP proxy information when result is 0. If re-authentication fails, proxy is NULL.<br> The proxy object is owned by the system and is valid only during this callback invocation. The caller must not free or modify it. If the caller needs to use the proxy information after the callback returns, the caller must make a deep copy. |
+| void \*userContext | The user-defined data passed to OH_NetConn_RefreshGlobalHttpProxyWithCallback. The system does not access, copy, or release it. |
 
 ### OH_NetConn_NetworkAvailable()
 
@@ -292,7 +306,7 @@ typedef void (*OH_NetConn_NetUnavailable)(void)
 
 **Description**
 
-Defines the callback invoked when the network is unavailable. This callback is triggered when the network isnot activated within the specified timeout interval. If the timeout interval is not set, this callback is nottriggered.
+Defines the callback invoked when the network is unavailable. This callback is triggered when the network is not activated within the specified timeout interval. If the timeout interval is not set, this callback is not triggered.
 
 **Since**: 12
 
@@ -313,6 +327,6 @@ Defines the callback invoked when the network blocking status changes.
 | Parameter | Description |
 | -- | -- |
 | [NetConn_NetHandle](capi-netconnection-netconn-nethandle.md) \*netHandle | Network handle. |
-| bool blocked | Whether the network is blocked. The value true indicates that the network is blocked, and the valuefalse indicates the opposite. |
+| bool blocked | Whether the network is blocked. The value true indicates that the network is blocked, and the value false indicates the opposite. |
 
 

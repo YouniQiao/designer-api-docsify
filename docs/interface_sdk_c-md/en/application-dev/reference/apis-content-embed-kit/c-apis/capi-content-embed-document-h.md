@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides the data structures and corresponding operation APIs related to the embedded documents (OE documents)implemented using the OE technology.
+Provides the data structures and corresponding operation APIs related to the embedded documents (OE documents) implemented using the OE technology.
 
 **Library**: libcontent_embed_ndk.so
 
@@ -18,11 +18,11 @@ Provides the data structures and corresponding operation APIs related to the emb
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure ofthe embedded document. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) | ContentEmbed_Storage | Declares the storage structure type of an OE document. Similar to a directory in a file system, theparent object of a storage object must be another storage object or the root storage object. |
-| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) | ContentEmbed_StorageElement | Defines the structure type of a storage element in an OE document.Use [OH_ContentEmbed_StorageElement_GetName](capi-content-embed-document-h.md#oh_contentembed_storageelement_getname) to get the name,[OH_ContentEmbed_StorageElement_GetCTime](capi-content-embed-document-h.md#oh_contentembed_storageelement_getctime) to get the creation time,and [OH_ContentEmbed_StorageElement_GetMTime](capi-content-embed-document-h.md#oh_contentembed_storageelement_getmtime) to get the modification time.Use [OH_ContentEmbed_StorageElement_IsStorage](capi-content-embed-document-h.md#oh_contentembed_storageelement_isstorage) to determine if the current object is an encapsulationof [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md), and [OH_ContentEmbed_StorageElement_IsStream](capi-content-embed-document-h.md#oh_contentembed_storageelement_isstream) to determine if it is anencapsulation of [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md). |
-| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) | ContentEmbed_StorageElements | Declares the ContentEmbed_StorageElements structure.Use [OH_ContentEmbed_Storage_GetElements](capi-content-embed-document-h.md#oh_contentembed_storage_getelements) to retrieve the collection of all [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) and[ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) objects under a specific [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object, with each objectencapsulated as a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) struct.Use [OH_ContentEmbed_StorageElements_GetCount](capi-content-embed-document-h.md#oh_contentembed_storageelements_getcount) to get the number of elements in the current query,and [OH_ContentEmbed_StorageElements_GetElement](capi-content-embed-document-h.md#oh_contentembed_storageelements_getelement) to obtain the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instanceobject at a specified index position. |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) | ContentEmbed_Stream | Declares the stream structure type of an OE document. Similar to a file in the file system, a streamcan be read or written. A stream object can exist only in the storage object. |
+| [ContentEmbed_Document](capi-contentembed-contentembed-document.md) | ContentEmbed_Document | Declares the structure type of an OE document. Encapsulates the metadata, content, and storage structure of the embedded document. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) | ContentEmbed_Storage | Declares the storage structure type of an OE document. Similar to a directory in a file system, the parent object of a storage object must be another storage object or the root storage object. |
+| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) | ContentEmbed_StorageElement | Defines the structure type of a storage element in an OE document. Use [OH_ContentEmbed_StorageElement_GetName](capi-content-embed-document-h.md#oh_contentembed_storageelement_getname) to get the name, [OH_ContentEmbed_StorageElement_GetCTime](capi-content-embed-document-h.md#oh_contentembed_storageelement_getctime) to get the creation time, and [OH_ContentEmbed_StorageElement_GetMTime](capi-content-embed-document-h.md#oh_contentembed_storageelement_getmtime) to get the modification time. Use [OH_ContentEmbed_StorageElement_IsStorage](capi-content-embed-document-h.md#oh_contentembed_storageelement_isstorage) to determine if the current object is an encapsulation of [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md), and [OH_ContentEmbed_StorageElement_IsStream](capi-content-embed-document-h.md#oh_contentembed_storageelement_isstream) to determine if it is an encapsulation of [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md). |
+| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) | ContentEmbed_StorageElements | Declares the ContentEmbed_StorageElements structure. Use [OH_ContentEmbed_Storage_GetElements](capi-content-embed-document-h.md#oh_contentembed_storage_getelements) to retrieve the collection of all [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) and [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) objects under a specific [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object, with each object encapsulated as a [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) struct. Use [OH_ContentEmbed_StorageElements_GetCount](capi-content-embed-document-h.md#oh_contentembed_storageelements_getcount) to get the number of elements in the current query, and [OH_ContentEmbed_StorageElements_GetElement](capi-content-embed-document-h.md#oh_contentembed_storageelements_getelement) to obtain the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance object at a specified index position. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) | ContentEmbed_Stream | Declares the stream structure type of an OE document. Similar to a file in the file system, a stream can be read or written. A stream object can exist only in the storage object. |
 
 ### Macro
 
@@ -34,24 +34,24 @@ Provides the data structures and corresponding operation APIs related to the emb
 
 | Name | Description |
 | -- | -- |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyoeid) | Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFilePath, size_t length, bool isLinking, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyfile) | Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFilePath, size_t length, ContentEmbed_Document **document)](#oh_contentembed_loaddocumentfromfile) | Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyoeid) | Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFilePath, size_t length, bool isLinking, ContentEmbed_Document **document)](#oh_contentembed_createdocumentbyfile) | Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFilePath, size_t length, ContentEmbed_Document **document)](#oh_contentembed_loaddocumentfromfile) | Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Document_Read(uint8_t *buffer, size_t length, ContentEmbed_Document *document, size_t offset, size_t *readSize)](#oh_contentembed_document_read) | Reads the original binary data from the specified offset position of the OE document object to the buffer. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetOEid(const ContentEmbed_Document *document, char *oeid)](#oh_contentembed_document_getoeid) | Obtains the identifier OEID from the OE document object. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Document_IsLinking(const ContentEmbed_Document *document, bool *isLinking)](#oh_contentembed_document_islinking) | Checks whether an OE document is created in link mode. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetNativeFilePath(const ContentEmbed_Document *document, char *nativeFilePath)](#oh_contentembed_document_getnativefilepath) | Obtains the embedded source file path stored in the client sandbox directory from the OE document. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Document *document, ContentEmbed_Storage **storage)](#oh_contentembed_document_getrootstorage) | Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Document *document, ContentEmbed_Storage **storage)](#oh_contentembed_document_getrootstorage) | Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Document_Flush(const ContentEmbed_Document *document)](#oh_contentembed_document_flush) | Flushes data in an OE document to an OE format file. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_createstorage) | Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_getstorage) | Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OEdocument.<br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_createstream) | Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_getstream) | Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage *parentStorage, const char *name)](#oh_contentembed_storage_deleteentry) | Deletes a child storage object or stream object with a specified name from the parent storage object of theOE document. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Storage *storage)](#oh_contentembed_storage_deleteallentry) | Deletes all entries from the storage object of an OE document, including the sub-storage objects andsub-stream objects. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_createstorage) | Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Storage **childStorage)](#oh_contentembed_storage_getstorage) | Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OE document. <br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_createstream) | Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *parentStorage, const char *name, ContentEmbed_Stream **childStream)](#oh_contentembed_storage_getstream) | Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage *parentStorage, const char *name)](#oh_contentembed_storage_deleteentry) | Deletes a child storage object or stream object with a specified name from the parent storage object of the OE document. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Storage *storage)](#oh_contentembed_storage_deleteallentry) | Deletes all entries from the storage object of an OE document, including the sub-storage objects and sub-stream objects. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyStorage(ContentEmbed_Storage *storage)](#oh_contentembed_destroystorage) | Destroys the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object instance of an OE document and reclaims the memory. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, unsigned char **buffer, size_t length, size_t *num)](#oh_contentembed_stream_read) | Reads data of a specified length from the current position of the stream object of an OE document tothe buffer. After the data is successfully read, the offset of the stream object increases by the number of actuallyread bytes. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream, const unsigned char *data, size_t length, size_t *num)](#oh_contentembed_stream_write) | Writes data of a specified length from the buffer to the current position of the stream object in the OEdocument. After the data is successfully written, the offset of the stream object increases by the number ofactually written bytes. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, unsigned char **buffer, size_t length, size_t *num)](#oh_contentembed_stream_read) | Reads data of a specified length from the current position of the stream object of an OE document to the buffer. After the data is successfully read, the offset of the stream object increases by the number of actually read bytes. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream, const unsigned char *data, size_t length, size_t *num)](#oh_contentembed_stream_write) | Writes data of a specified length from the buffer to the current position of the stream object in the OE document. After the data is successfully written, the offset of the stream object increases by the number of actually written bytes. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Seek(ContentEmbed_Stream *stream, size_t position)](#oh_contentembed_stream_seek) | Sets the current read location of the stream object in an OE document to the specified offset. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetPosition(ContentEmbed_Stream *stream, size_t *position)](#oh_contentembed_stream_getposition) | Obtains the current position offset of the stream object in an OE document. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Stream_GetSize(ContentEmbed_Stream *stream, size_t *size)](#oh_contentembed_stream_getsize) | Obtains the total size of the stream object of the OE document, in bytes. |
@@ -59,7 +59,7 @@ Provides the data structures and corresponding operation APIs related to the emb
 | [ContentEmbed_ErrorCode OH_ContentEmbed_DestroyDocument(ContentEmbed_Document *document)](#oh_contentembed_destroydocument) | Destroys the [ContentEmbed_Document](capi-contentembed-contentembed-document.md) object instance and reclaims the memory. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)](#oh_contentembed_storage_getoeid) | Obtains the identifier (OEID) of the storage object of an OE document. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_SetOEid(ContentEmbed_Storage *storage, char *oeid, size_t oeidSize)](#oh_contentembed_storage_setoeid) | Sets the identifier of the storage object in an OE document. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_StorageElements **storageElements)](#oh_contentembed_storageelements_create) | Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_StorageElements **storageElements)](#oh_contentembed_storageelements_create) | Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. <br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Destroy(ContentEmbed_StorageElements *storageElements)](#oh_contentembed_storageelements_destroy) | Destroys a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance and reclaims the memory occupied by it. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetElements(const ContentEmbed_Storage *storage, ContentEmbed_StorageElements *storageElements)](#oh_contentembed_storage_getelements) | Obtains the element list in the storage object of an OE document. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_GetCount(const ContentEmbed_StorageElements *storageElements, size_t *count)](#oh_contentembed_storageelements_getcount) | Obtains the number of elements in a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
@@ -69,7 +69,7 @@ Provides the data structures and corresponding operation APIs related to the emb
 | [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_GetMTime(const ContentEmbed_StorageElement *element, uint64_t *mtime)](#oh_contentembed_storageelement_getmtime) | Obtains the last modification timestamp of an [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance, in milliseconds. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStorage(const ContentEmbed_StorageElement *storageElement, bool *isStorage)](#oh_contentembed_storageelement_isstorage) | Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is the storage object of an OE document. |
 | [ContentEmbed_ErrorCode OH_ContentEmbed_StorageElement_IsStream(const ContentEmbed_StorageElement *element, bool *isStream)](#oh_contentembed_storageelement_isstream) | Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance is an OE document stream object. |
-| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcStorage, ContentEmbed_Storage *destStorage)](#oh_contentembed_storage_copyto) | Copies all sub-storage objects and stream objects from the source OE document storage object to the target OEdocument storage object. |
+| [ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcStorage, ContentEmbed_Storage *destStorage)](#oh_contentembed_storage_copyto) | Copies all sub-storage objects and stream objects from the source OE document storage object to the target OE document storage object. |
 
 ## Function description
 
@@ -81,7 +81,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByOEid(const char *oeid, Co
 
 **Description**
 
-Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
+Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using the provided identifier OEID. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
 
 **Since**: 24
 
@@ -89,14 +89,14 @@ Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md
 
 | Parameter | Description |
 | -- | -- |
-| const char *oeid | Identifier of the OE document, which is used to uniquely identify the OE document. It is recommendedthat the array length be {@link MAX_OEID_LENGTH}. |
+| const char *oeid | Identifier of the OE document, which is used to uniquely identify the OE document. It is recommended that the array length be {@link MAX_OEID_LENGTH}. |
 | [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Output parameter. This pointer points to the newly created OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_CreateDocumentByFile()
 
@@ -106,7 +106,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_CreateDocumentByFile(const char *srcFileP
 
 **Description**
 
-Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage.
+Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance from a source file. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leakage.
 
 **Since**: 24
 
@@ -116,14 +116,14 @@ Creates a new [ContentEmbed_Document](capi-contentembed-contentembed-document.md
 | -- | -- |
 | const char *srcFilePath | Source file path. |
 | size_t length | Length of the source file path string, excluding the terminator. |
-| bool isLinking | Whether to create an OE document in link mode. true: The OE document is created in link mode. Whenthe server edits the OE document, the source file is also modified.<br>false: The OE document is created in embedded mode. When the server edits the OE document in response to aclient request, a temporary file is copied to the sandbox directory of the client app. |
+| bool isLinking | Whether to create an OE document in link mode. true: The OE document is created in link mode. When the server edits the OE document, the source file is also modified. <br>false: The OE document is created in embedded mode. When the server edits the OE document in response to a client request, a temporary file is copied to the sandbox directory of the client app. |
 | [ContentEmbed_Document](capi-contentembed-contentembed-document.md) **document | Output parameter. This pointer points to the newly created OE document object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - indicates that a null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - indicates that the device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>      <li>{@link CE_ERR_INVALID_LINKING_PATH} - indicates that the link file is in the app sandbox and the link       cannot be created. </li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - indicates that a null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - indicates that the device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in<br>    the DLP sandbox.</li><br>    <li>{@link CE_ERR_INVALID_LINKING_PATH} - indicates that the link file is in the app sandbox and the link       cannot be created. </li>          </ul> |
 
 ### OH_ContentEmbed_LoadDocumentFromFile()
 
@@ -133,7 +133,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_LoadDocumentFromFile(const char *srcFileP
 
 **Description**
 
-Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format.<br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
+Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) instance using an existing file in the OE format. <br>You can destroy the instance using [OH_ContentEmbed_DestroyDocument](capi-content-embed-document-h.md#oh_contentembed_destroydocument) to avoid memory leaks.
 
 **Since**: 24
 
@@ -149,7 +149,7 @@ Loads an [ContentEmbed_Document](capi-contentembed-contentembed-document.md) ins
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Document_Read()
 
@@ -177,7 +177,7 @@ Reads the original binary data from the specified offset position of the OE docu
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the OE file directory failed.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the OE file directory failed.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Document_GetOEid()
 
@@ -196,13 +196,13 @@ Obtains the identifier OEID from the OE document object.
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
-| char *oeid | Output parameter. Character array for storing the OEID value. The recommended array length is{@link MAX_OEID_LENGTH}. |
+| char *oeid | Output parameter. Character array for storing the OEID value. The recommended array length is {@link MAX_OEID_LENGTH}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Document_IsLinking()
 
@@ -221,13 +221,13 @@ Checks whether an OE document is created in link mode.
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
-| bool *isLinking | Output parameter. true indicates that the OE document is created in link mode. false indicates thatthe OE document is created in embedded mode. |
+| bool *isLinking | Output parameter. true indicates that the OE document is created in link mode. false indicates that the OE document is created in embedded mode. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Document_GetNativeFilePath()
 
@@ -246,13 +246,13 @@ Obtains the embedded source file path stored in the client sandbox directory fro
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the OE document object. |
-| char *nativeFilePath | Output parameter. Character array for storing the source file path. It is recommended that thearray length be {@link MAX_PATH_LENGTH}. |
+| char *nativeFilePath | Output parameter. Character array for storing the source file path. It is recommended that the array length be {@link MAX_PATH_LENGTH}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Document_GetRootStorage()
 
@@ -262,7 +262,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Document_GetRootStorage(ContentEmbed_Docu
 
 **Description**
 
-Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
+Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from an OE document object. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
 **Since**: 24
 
@@ -271,13 +271,13 @@ Obtains the root [ContentEmbed_Storage](capi-contentembed-contentembed-storage.m
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Document](capi-contentembed-contentembed-document.md) *document | Pointer to the [ContentEmbed_Document](capi-contentembed-contentembed-document.md)t object. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **storage | Output parameter. After the API is successfully called, this pointer points to the root storageobject of the OE document. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **storage | Output parameter. After the API is successfully called, this pointer points to the root storage object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameters.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameters.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Document_Flush()
 
@@ -301,7 +301,7 @@ Flushes data in an OE document to an OE format file.
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_FILE_OPERATION_FAILED} - Failed to perform the file operation.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_FILE_OPERATION_FAILED} - Failed to perform the file operation.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_CreateStorage()
 
@@ -311,7 +311,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStorage(const ContentEmbed_
 
 **Description**
 
-Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
+Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object based on the parent storage object and name of the OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
 **Since**: 24
 
@@ -319,15 +319,15 @@ Creates a child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md
 
 | Parameter | Description |
 | -- | -- |
-| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document.<br>To delete a specified child storage object from the parent storage object, call[OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry).<br>To delete all child storage objects from the parent storage object, call[OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry). |
-| const char *name | Name of the child storage object to be created. The value cannot be an empty string. It can contain amaximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':', and '!'. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter. After the function is successfully called, the pointer points to the newlycreated child storage object of the OE document. |
+| [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document. <br>To delete a specified child storage object from the parent storage object, call [OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry). <br>To delete all child storage objects from the parent storage object, call [OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry). |
+| const char *name | Name of the child storage object to be created. The value cannot be an empty string. It can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':', and '!'. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter. After the function is successfully called, the pointer points to the newly created child storage object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails. The possible cause is that the parentStorage       or name is invalid.</li>      <li>{@link CE_ERR_NULL_POINTER} - The returned pointer is null. The possible cause is that the childStorage fails       to be created.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - The storage operation fails. The possible cause is that the disk      space is insufficient.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails. The possible cause is that the parentStorage<br>     or name is invalid.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - The returned pointer is null. The possible cause is that the childStorage fails<br>     to be created.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - The storage operation fails. The possible cause is that the disk<br>    space is insufficient.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_GetStorage()
 
@@ -337,7 +337,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStorage(const ContentEmbed_Sto
 
 **Description**
 
-Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OEdocument.<br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
+Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) object from the parent Storage object and name of the OE document. <br>You can destroy the instance by calling [OH_ContentEmbed_DestroyStorage](capi-content-embed-document-h.md#oh_contentembed_destroystorage) to avoid memory leaks.
 
 **Since**: 24
 
@@ -346,14 +346,14 @@ Obtains the child [ContentEmbed_Storage](capi-contentembed-contentembed-storage.
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent Storage object of the OE document. |
-| const char *name | Name of the child Storage object to be obtained. The value cannot be an empty string. It can contain amaximum of 31 characters and cannot contain invalid characters such as '/', '\', ':', and '!'. |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter. After the API is successfully called, the pointer points to the found childStorage object of the OE document. |
+| const char *name | Name of the child Storage object to be obtained. The value cannot be an empty string. It can contain a maximum of 31 characters and cannot contain invalid characters such as '/', '\', ':', and '!'. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) **childStorage | Output parameter. After the API is successfully called, the pointer points to the found child Storage object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - indicates that a null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - indicates that the device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - indicates that the operation related to the directory of the      OE document fails.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - indicates that a null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - indicates that the device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - indicates that the operation related to the directory of the<br>    OE document fails.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_CreateStream()
 
@@ -363,7 +363,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CreateStream(ContentEmbed_Storage
 
 **Description**
 
-Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
+Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object for the parent storage object and name of an OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
 
 **Since**: 24
 
@@ -371,15 +371,15 @@ Creates a [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of an OE document.<br>You can call [OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry) to delete a specified child stream object from theparent storage object.<br>You can call [OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry) to delete all child stream objects from theparent storage object. |
-| const char *name | Name of the stream to be created, which is used to identify and search for the stream. The value cannotbe an empty string. It can contain a maximum of 31 characters and cannot contain invalid characters, such as '/','\', ':', and '!'. |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter. After the call is successful, the pointer points to the newly created streamobject of the OE document. |
+| [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of an OE document. <br>You can call [OH_ContentEmbed_Storage_DeleteEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteentry) to delete a specified child stream object from the parent storage object. <br>You can call [OH_ContentEmbed_Storage_DeleteAllEntry](capi-content-embed-document-h.md#oh_contentembed_storage_deleteallentry) to delete all child stream objects from the parent storage object. |
+| const char *name | Name of the stream to be created, which is used to identify and search for the stream. The value cannot be an empty string. It can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':', and '!'. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter. After the call is successful, the pointer points to the newly created stream object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE document failed.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream of the OE document failed.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE document failed.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream of the OE document failed.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_GetStream()
 
@@ -389,7 +389,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_GetStream(ContentEmbed_Storage *p
 
 **Description**
 
-Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OEdocument.<br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
+Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) object from the parent storage object and name of the OE document. <br>You can destroy the instance using [OH_ContentEmbed_DestroyStream](capi-content-embed-document-h.md#oh_contentembed_destroystream) to avoid memory leaks.
 
 **Since**: 24
 
@@ -398,14 +398,14 @@ Obtains the child [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document. |
-| const char *name | Name of the stream object of the OE document to be obtained. The parameter cannot be an empty string.The name can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':',and '!'. |
-| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter. After the call succeeds, the pointer points to the found stream object of theOE document. |
+| const char *name | Name of the stream object of the OE document to be obtained. The parameter cannot be an empty string. The name can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':', and '!'. |
+| [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) **childStream | Output parameter. After the call succeeds, the pointer points to the found stream object of the OE document. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE document fail.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream of the OE document fail.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE document fail.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream of the OE document fail.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_DeleteEntry()
 
@@ -415,7 +415,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteEntry(ContentEmbed_Storage 
 
 **Description**
 
-Deletes a child storage object or stream object with a specified name from the parent storage object of theOE document.
+Deletes a child storage object or stream object with a specified name from the parent storage object of the OE document.
 
 **Since**: 24
 
@@ -424,13 +424,13 @@ Deletes a child storage object or stream object with a specified name from the p
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *parentStorage | Pointer to the parent storage object of the OE document. |
-| const char *name | Name of the child storage object or stream object to be deleted. The parameter cannot be an empty string.The name can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':',and '!'. |
+| const char *name | Name of the child storage object or stream object to be deleted. The parameter cannot be an empty string. The name can contain a maximum of 31 characters and cannot contain invalid characters, such as '/', '\', ':', and '!'. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE file failed.</li>      <li>{@link CE_ERR_FILE_OPERATION_FAILED} - Operations on the OE file failed.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE file failed.</li><br>    <li>{@link CE_ERR_FILE_OPERATION_FAILED} - Operations on the OE file failed.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_DeleteAllEntry()
 
@@ -440,7 +440,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_DeleteAllEntry(ContentEmbed_Stora
 
 **Description**
 
-Deletes all entries from the storage object of an OE document, including the sub-storage objects andsub-stream objects.
+Deletes all entries from the storage object of an OE document, including the sub-storage objects and sub-stream objects.
 
 **Since**: 24
 
@@ -454,7 +454,7 @@ Deletes all entries from the storage object of an OE document, including the sub
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE file failed.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE file failed.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_DestroyStorage()
 
@@ -478,7 +478,7 @@ Destroys the [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) o
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Stream_Read()
 
@@ -488,7 +488,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Read(ContentEmbed_Stream *stream, 
 
 **Description**
 
-Reads data of a specified length from the current position of the stream object of an OE document tothe buffer. After the data is successfully read, the offset of the stream object increases by the number of actuallyread bytes.
+Reads data of a specified length from the current position of the stream object of an OE document to the buffer. After the data is successfully read, the offset of the stream object increases by the number of actually read bytes.
 
 **Since**: 24
 
@@ -497,7 +497,7 @@ Reads data of a specified length from the current position of the stream object 
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object of an OE document. |
-| unsigned char **buffer | Output parameter. Pointer to the buffer for storing the read data. The memory is allocated internallyin the function. The caller needs to release the memory. |
+| unsigned char **buffer | Output parameter. Pointer to the buffer for storing the read data. The memory is allocated internally in the function. The caller needs to release the memory. |
 | size_t length | Maximum number of bytes of data to be read. |
 | size_t *num | Output parameter. Number of actually read data items, in bytes. |
 
@@ -505,7 +505,7 @@ Reads data of a specified length from the current position of the stream object 
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Failed to perform the stream operation.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Failed to perform the stream operation.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Stream_Write()
 
@@ -515,7 +515,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Stream_Write(ContentEmbed_Stream *stream,
 
 **Description**
 
-Writes data of a specified length from the buffer to the current position of the stream object in the OEdocument. After the data is successfully written, the offset of the stream object increases by the number ofactually written bytes.
+Writes data of a specified length from the buffer to the current position of the stream object in the OE document. After the data is successfully written, the offset of the stream object increases by the number of actually written bytes.
 
 **Since**: 24
 
@@ -532,7 +532,7 @@ Writes data of a specified length from the buffer to the current position of the
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - The stream operation fails.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - The stream operation fails.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Stream_Seek()
 
@@ -557,7 +557,7 @@ Sets the current read location of the stream object in an OE document to the spe
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Failed to perform operations on the stream object in an OE document.      </li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Failed to perform operations on the stream object in an OE document.<br>    </li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Stream_GetPosition()
 
@@ -576,13 +576,13 @@ Obtains the current position offset of the stream object in an OE document.
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) *stream | Pointer to the stream object of the OE document. |
-| size_t *position | Output parameter. Offset of the stream object relative to the start position, in bytes. The valuestarts from 0. |
+| size_t *position | Output parameter. Offset of the stream object relative to the start position, in bytes. The value starts from 0. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream object of the OE document failed.      </li>      <li>{@link CE_ERR_FILE_OPERATION_FAILED} - The file operation failed.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream object of the OE document failed.<br>    </li><br>    <li>{@link CE_ERR_FILE_OPERATION_FAILED} - The file operation failed.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Stream_GetSize()
 
@@ -607,7 +607,7 @@ Obtains the total size of the stream object of the OE document, in bytes.
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream of the OE file failed.</li>      <li>{@link CE_ERR_FILE_OPERATION_FAILED} - The file operation failed.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_STREAM_OPERATION_FAILED} - Operations related to the stream of the OE file failed.</li><br>    <li>{@link CE_ERR_FILE_OPERATION_FAILED} - The file operation failed.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_DestroyStream()
 
@@ -631,7 +631,7 @@ Destroys the [ContentEmbed_Stream](capi-contentembed-contentembed-stream.md) obj
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check failed.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check failed.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_DestroyDocument()
 
@@ -655,7 +655,7 @@ Destroys the [ContentEmbed_Document](capi-contentembed-contentembed-document.md)
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_GetOEid()
 
@@ -674,14 +674,14 @@ Obtains the identifier (OEID) of the storage object of an OE document.
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object of an OE document. |
-| char *oeid | Output parameter. Character array for storing the identifier OEID. It is recommended that the arraylength be {@link MAX_OEID_LENGTH}. |
+| char *oeid | Output parameter. Character array for storing the identifier OEID. It is recommended that the array length be {@link MAX_OEID_LENGTH}. |
 | size_t oeidSize | Length of the OEID array, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE document fail.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations related to the directory of the OE document fail.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_SetOEid()
 
@@ -700,14 +700,14 @@ Sets the identifier of the storage object in an OE document.
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_Storage](capi-contentembed-contentembed-storage.md) *storage | Pointer to the storage object in an OE document. |
-| char *oeid | Character array of the identifier OEID to be set. It is recommended that the array length be{@link MAX_OEID_LENGTH}. |
+| char *oeid | Character array of the identifier OEID to be set. It is recommended that the array length be {@link MAX_OEID_LENGTH}. |
 | size_t oeidSize | Length of the OEID array, in bytes. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations on the Storage object of the OE document failed.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations on the Storage object of the OE document failed.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElements_Create()
 
@@ -717,7 +717,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_StorageElements_Create(ContentEmbed_Stora
 
 **Description**
 
-Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance.<br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks.
+Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. <br>You can destroy the instance using [OH_ContentEmbed_StorageElements_Destroy](capi-content-embed-document-h.md#oh_contentembed_storageelements_destroy) to avoid memory leaks.
 
 **Since**: 24
 
@@ -725,13 +725,13 @@ Creates and initializes a [ContentEmbed_StorageElements](capi-contentembed-conte
 
 | Parameter | Description |
 | -- | -- |
-| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) **storageElements | Output parameter. After the call is successful, the pointer points to the[ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
+| [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) **storageElements | Output parameter. After the call is successful, the pointer points to the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElements_Destroy()
 
@@ -755,7 +755,7 @@ Destroys a [ContentEmbed_StorageElements](capi-contentembed-contentembed-storage
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_GetElements()
 
@@ -780,7 +780,7 @@ Obtains the element list in the storage object of an OE document.
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - indicates that a null pointer is returned.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations on the Storage object of the OE document failed.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - indicates that the device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul>      sandbox. |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - indicates that a null pointer is returned.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - Operations on the Storage object of the OE document failed.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - indicates that the device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul>      sandbox. |
 
 ### OH_ContentEmbed_StorageElements_GetCount()
 
@@ -805,7 +805,7 @@ Obtains the number of elements in a [ContentEmbed_StorageElements](capi-contente
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - indicates that the operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - indicates that the parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElements_GetElement()
 
@@ -825,13 +825,13 @@ Obtains the element at the specified index position of the [ContentEmbed_Storage
 | -- | -- |
 | [const ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) *storageElements | Pointer to the [ContentEmbed_StorageElements](capi-contentembed-contentembed-storageelements.md) instance. |
 | size_t index | Index position of the element to be obtained, starting from 0. |
-| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) **storageElement | Output parameter. Upon successful retrieval, returns a pointer to the[ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance at the specified index in storageElements. |
+| [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) **storageElement | Output parameter. Upon successful retrieval, returns a pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance at the specified index in storageElements. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul>. |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul>. |
 
 ### OH_ContentEmbed_StorageElement_GetName()
 
@@ -857,7 +857,7 @@ Obtains the name of a [ContentEmbed_StorageElement](capi-contentembed-contentemb
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElement_GetCTime()
 
@@ -882,7 +882,7 @@ Obtains the creation timestamp of a [ContentEmbed_StorageElement](capi-contentem
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - The returned pointer is null.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - The returned pointer is null.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElement_GetMTime()
 
@@ -907,7 +907,7 @@ Obtains the last modification timestamp of an [ContentEmbed_StorageElement](capi
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - The operation is successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElement_IsStorage()
 
@@ -926,13 +926,13 @@ Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *storageElement | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| bool *isStorage | Output parameter. The value true indicates that the instance is an OE document storage object, andthe value false indicates that it is not. |
+| bool *isStorage | Output parameter. The value true indicates that the instance is an OE document storage object, and the value false indicates that it is not. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - Operations are successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - Operations are successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Failed to check the parameter.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_StorageElement_IsStream()
 
@@ -951,13 +951,13 @@ Checks whether the [ContentEmbed_StorageElement](capi-contentembed-contentembed-
 | Parameter | Description |
 | -- | -- |
 | [const ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) *element | Pointer to the [ContentEmbed_StorageElement](capi-contentembed-contentembed-storageelement.md) instance. |
-| bool *isStream | Output parameter. The value true indicates that the object is an OE document stream object, and thevalue false indicates that the object is not an OE document stream object. |
+| bool *isStream | Output parameter. The value true indicates that the object is an OE document stream object, and the value false indicates that the object is not an OE document stream object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - Operations are successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - Operations are successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - Parameter check failed.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 ### OH_ContentEmbed_Storage_CopyTo()
 
@@ -967,7 +967,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Storage_CopyTo(ContentEmbed_Storage *srcS
 
 **Description**
 
-Copies all sub-storage objects and stream objects from the source OE document storage object to the target OEdocument storage object.
+Copies all sub-storage objects and stream objects from the source OE document storage object to the target OE document storage object.
 
 **Since**: 24
 
@@ -982,6 +982,6 @@ Copies all sub-storage objects and stream objects from the source OE document st
 
 | Type | Description |
 | -- | -- |
-| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - Operations are successful.</li>      <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li>      <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li>      <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - The storage operation fails.</li>      <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li>      <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
+| ContentEmbed_ErrorCode | <ul>      <li>{@link CE_ERR_OK} - Operations are successful.</li><br>    <li>{@link CE_ERR_PARAM_INVALID} - The parameter check fails.</li><br>    <li>{@link CE_ERR_NULL_POINTER} - A null pointer is returned.</li><br>    <li>{@link CE_ERR_STORAGE_OPERATION_FAILED} - The storage operation fails.</li><br>    <li>{@link CE_ERR_DEVICE_NOT_SUPPORTED} - The device is not supported.</li><br>    <li>{@link CE_ERR_IN_DLP_SANDBOX} - This operation is not supported because the application is in      the DLP sandbox.</li>          </ul> |
 
 

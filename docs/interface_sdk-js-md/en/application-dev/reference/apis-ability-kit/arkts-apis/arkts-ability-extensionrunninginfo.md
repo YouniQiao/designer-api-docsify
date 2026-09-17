@@ -1,4 +1,4 @@
-# ExtensionRunningInfo
+# ExtensionRunningInfo(ExtensionRunningInfo)
 
 ## Summary
 

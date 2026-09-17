@@ -2,7 +2,7 @@
 
 ## Overview
 
-Distributed device management module,which provides APIs to obtain information about trusted devices and local devices.
+Distributed device management module, which provides APIs to obtain information about trusted devices and local devices.
 
 **Since**: 20
 

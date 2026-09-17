@@ -6,7 +6,7 @@ typedef struct OH_Drawing_FontFeatures OH_Drawing_FontFeatures
 
 ## Overview
 
-Defines a struct for font features, which are typesetting rules within a font that determine how glyphs look,such as ligatures, alternates, and superscripts/subscripts.
+Defines a struct for font features, which are typesetting rules within a font that determine how glyphs look, such as ligatures, alternates, and superscripts/subscripts.
 
 **Since**: 20
 

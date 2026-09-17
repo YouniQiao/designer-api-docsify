@@ -6,7 +6,7 @@ typedef struct TEEC_UUID {...} TEEC_UUID
 
 ## Overview
 
-Defines the universally unique identifier (UUID) as defined in RFC4122 [2].The UUIDs are used to identify TAs.
+Defines the universally unique identifier (UUID) as defined in RFC4122 [2]. The UUIDs are used to identify TAs.
 
 **Since**: 20
 

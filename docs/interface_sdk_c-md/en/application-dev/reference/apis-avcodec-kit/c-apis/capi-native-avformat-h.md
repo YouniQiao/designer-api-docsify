@@ -35,13 +35,13 @@ The file declares the functions and enums related to OH_AVFormat.
 | [struct OH_AVFormat *OH_AVFormat_CreateVideoFormat(const char *mimeType, int32_t width, int32_t height)](#oh_avformat_createvideoformat) | Create a video OH_AVFormat handle pointer to read and write data |
 | [void OH_AVFormat_Destroy(struct OH_AVFormat *format)](#oh_avformat_destroy) | Destroys an OH_AVFormat instance. The instance cannot be destroyed repeatedly. |
 | [bool OH_AVFormat_Copy(struct OH_AVFormat *to, struct OH_AVFormat *from)](#oh_avformat_copy) | Copies an OH_AVFormat instance. |
-| [bool OH_AVFormat_SetIntValue(struct OH_AVFormat *format, const char *key, int32_t value)](#oh_avformat_setintvalue) | Assigns a value of the int type to a {@link key} in an OH_AVFormat instance. This function can be used to setonly parameters of the int type. For details, see {@link native_avcodec_base.h}. |
-| [bool OH_AVFormat_SetUintValue(struct OH_AVFormat *format, const char *key, uint32_t value)](#oh_avformat_setuintvalue) | Assigns an unsigned int value to the key of an OH_AVFormat instance. This API can be used to set onlyparameters of the unsigned int type. For details, see {@link native_avcodec_base.h}. |
-| [bool OH_AVFormat_SetLongValue(struct OH_AVFormat *format, const char *key, int64_t value)](#oh_avformat_setlongvalue) | Assigns a value of the long type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the long type. For details, see {@link native_avcodec_base.h}. |
-| [bool OH_AVFormat_SetFloatValue(struct OH_AVFormat *format, const char *key, float value)](#oh_avformat_setfloatvalue) | Assigns a value of the float type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the float type. For details, see {@link native_avcodec_base.h}. |
-| [bool OH_AVFormat_SetDoubleValue(struct OH_AVFormat *format, const char *key, double value)](#oh_avformat_setdoublevalue) | Assigns a value of the double type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the double type. For details, see {@link native_avcodec_base.h}. |
-| [bool OH_AVFormat_SetStringValue(struct OH_AVFormat *format, const char *key, const char *value)](#oh_avformat_setstringvalue) | Assigns a value of the string type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the string type. For details, see {@link native_avcodec_base.h}. |
-| [bool OH_AVFormat_SetBuffer(struct OH_AVFormat *format, const char *key, const uint8_t *addr, size_t size)](#oh_avformat_setbuffer) | Writes data blocks of a specified length to an OH_AVFormat instance. This function can be used to set onlyparameters of the buffer type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetIntValue(struct OH_AVFormat *format, const char *key, int32_t value)](#oh_avformat_setintvalue) | Assigns a value of the int type to a {@link key} in an OH_AVFormat instance. This function can be used to set<br>only parameters of the int type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetUintValue(struct OH_AVFormat *format, const char *key, uint32_t value)](#oh_avformat_setuintvalue) | Assigns an unsigned int value to the key of an OH_AVFormat instance. This API can be used to set only parameters of the unsigned int type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetLongValue(struct OH_AVFormat *format, const char *key, int64_t value)](#oh_avformat_setlongvalue) | Assigns a value of the long type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the long type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetFloatValue(struct OH_AVFormat *format, const char *key, float value)](#oh_avformat_setfloatvalue) | Assigns a value of the float type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the float type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetDoubleValue(struct OH_AVFormat *format, const char *key, double value)](#oh_avformat_setdoublevalue) | Assigns a value of the double type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the double type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetStringValue(struct OH_AVFormat *format, const char *key, const char *value)](#oh_avformat_setstringvalue) | Assigns a value of the string type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the string type. For details, see {@link native_avcodec_base.h}. |
+| [bool OH_AVFormat_SetBuffer(struct OH_AVFormat *format, const char *key, const uint8_t *addr, size_t size)](#oh_avformat_setbuffer) | Writes data blocks of a specified length to an OH_AVFormat instance. This function can be used to set only parameters of the buffer type. For details, see {@link native_avcodec_base.h}. |
 | [bool OH_AVFormat_GetIntValue(struct OH_AVFormat *format, const char *key, int32_t *out)](#oh_avformat_getintvalue) | Obtains the value of the int type of a {@link key} in an OH_AVFormat instance. |
 | [bool OH_AVFormat_GetUintValue(struct OH_AVFormat *format, const char *key, uint32_t *out)](#oh_avformat_getuintvalue) | Obtains the value of the unsigned int type from an OH_AVFormat instance using a key. |
 | [bool OH_AVFormat_GetLongValue(struct OH_AVFormat *format, const char *key, int64_t *out)](#oh_avformat_getlongvalue) | Obtains the value of the long type of a {@link key} in an OH_AVFormat instance. |
@@ -49,8 +49,8 @@ The file declares the functions and enums related to OH_AVFormat.
 | [bool OH_AVFormat_GetDoubleValue(struct OH_AVFormat *format, const char *key, double *out)](#oh_avformat_getdoublevalue) | Obtains the value of the double type of a {@link key} in an OH_AVFormat instance. |
 | [bool OH_AVFormat_GetStringValue(struct OH_AVFormat *format, const char *key, const char **out)](#oh_avformat_getstringvalue) | Obtains the value of the string type of a {@link key} in an OH_AVFormat instance. |
 | [bool OH_AVFormat_GetBuffer(struct OH_AVFormat *format, const char *key, uint8_t **addr, size_t *size)](#oh_avformat_getbuffer) | Reads data blocks of a specified length from an OH_AVFormat instance. |
-| [const char *OH_AVFormat_DumpInfo(struct OH_AVFormat *format)](#oh_avformat_dumpinfo) | Returns a string consisting of key-value pairs in an OH_AVFormat instance. A string of up to 1024 bytes canbe returned. The string pointer is released when the OH_AVFormat instance is destroyed. |
-| [bool OH_AVFormat_GetIntBuffer(struct OH_AVFormat *format, const char *key, int32_t **addr, size_t *size)](#oh_avformat_getintbuffer) | Reads an array of int32_t data from an OH_AVFormat instance.Note that the buffer lifecycle is bound to the OH_AVFormat instance. The buffer becomes invalid automatically whenthe OH_AVFormat instance is destroyed.To keep the data for an extended period, explicitly copy the data to newly allocated memory. |
+| [const char *OH_AVFormat_DumpInfo(struct OH_AVFormat *format)](#oh_avformat_dumpinfo) | Returns a string consisting of key-value pairs in an OH_AVFormat instance. A string of up to 1024 bytes can be returned. The string pointer is released when the OH_AVFormat instance is destroyed. |
+| [bool OH_AVFormat_GetIntBuffer(struct OH_AVFormat *format, const char *key, int32_t **addr, size_t *size)](#oh_avformat_getintbuffer) | Reads an array of int32_t data from an OH_AVFormat instance.<br> Note that the buffer lifecycle is bound to the OH_AVFormat instance. The buffer becomes invalid automatically when the OH_AVFormat instance is destroyed.<br> To keep the data for an extended period, explicitly copy the data to newly allocated memory. |
 | [bool OH_AVFormat_SetIntBuffer(struct OH_AVFormat *format, const char *key, const int32_t *addr, size_t size)](#oh_avformat_setintbuffer) | Writes data blocks of the int32_t type with a specified length to an OH_AVFormat instance. |
 | [uint32_t OH_AVFormat_GetKeyCount(OH_AVFormat *format)](#oh_avformat_getkeycount) | Obtains the total number of keys in an OH_AVFormat instance. |
 | [bool OH_AVFormat_GetKey(OH_AVFormat *format, uint32_t index, const char **key)](#oh_avformat_getkey) | Obtains the key name string from an OH_AVFormat instance by index. |
@@ -202,7 +202,7 @@ bool OH_AVFormat_SetIntValue(struct OH_AVFormat *format, const char *key, int32_
 
 **Description**
 
-Assigns a value of the int type to a {@link key} in an OH_AVFormat instance. This function can be used to setonly parameters of the int type. For details, see {@link native_avcodec_base.h}.
+Assigns a value of the int type to a {@link key} in an OH_AVFormat instance. This function can be used to set<br>only parameters of the int type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 9
 
@@ -228,7 +228,7 @@ bool OH_AVFormat_SetUintValue(struct OH_AVFormat *format, const char *key, uint3
 
 **Description**
 
-Assigns an unsigned int value to the key of an OH_AVFormat instance. This API can be used to set onlyparameters of the unsigned int type. For details, see {@link native_avcodec_base.h}.
+Assigns an unsigned int value to the key of an OH_AVFormat instance. This API can be used to set only parameters of the unsigned int type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 23
 
@@ -254,7 +254,7 @@ bool OH_AVFormat_SetLongValue(struct OH_AVFormat *format, const char *key, int64
 
 **Description**
 
-Assigns a value of the long type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the long type. For details, see {@link native_avcodec_base.h}.
+Assigns a value of the long type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the long type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 9
 
@@ -280,7 +280,7 @@ bool OH_AVFormat_SetFloatValue(struct OH_AVFormat *format, const char *key, floa
 
 **Description**
 
-Assigns a value of the float type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the float type. For details, see {@link native_avcodec_base.h}.
+Assigns a value of the float type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the float type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 9
 
@@ -306,7 +306,7 @@ bool OH_AVFormat_SetDoubleValue(struct OH_AVFormat *format, const char *key, dou
 
 **Description**
 
-Assigns a value of the double type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the double type. For details, see {@link native_avcodec_base.h}.
+Assigns a value of the double type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the double type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 9
 
@@ -332,7 +332,7 @@ bool OH_AVFormat_SetStringValue(struct OH_AVFormat *format, const char *key, con
 
 **Description**
 
-Assigns a value of the string type to a {@link key} in an OH_AVFormat instance. This function can be used toset only parameters of the string type. For details, see {@link native_avcodec_base.h}.
+Assigns a value of the string type to a {@link key} in an OH_AVFormat instance. This function can be used to<br>set only parameters of the string type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 9
 
@@ -358,7 +358,7 @@ bool OH_AVFormat_SetBuffer(struct OH_AVFormat *format, const char *key, const ui
 
 **Description**
 
-Writes data blocks of a specified length to an OH_AVFormat instance. This function can be used to set onlyparameters of the buffer type. For details, see {@link native_avcodec_base.h}.
+Writes data blocks of a specified length to an OH_AVFormat instance. This function can be used to set only parameters of the buffer type. For details, see {@link native_avcodec_base.h}.
 
 **Since**: 9
 
@@ -525,7 +525,7 @@ Obtains the value of the string type of a {@link key} in an OH_AVFormat instance
 | -- | -- |
 | [struct OH_AVFormat](capi-core-oh-avformat.md) *format | Pointer to an OH_AVFormat instance. |
 | const char *key | Pointer to the key of the data to read. |
-| const char **out | Double pointer to the string read. The lifecycle of the **out** data matches the string in **format**. Tokeep the **out** data for an extended period of time, you must copy it to the memory. The maximum length of theoutput string is 256 bytes. If the length exceeds 256 bytes, **false** is returned. |
+| const char **out | Double pointer to the string read. The lifecycle of the **out** data matches the string in **format**. To keep the **out** data for an extended period of time, you must copy it to the memory. The maximum length of the output string is 256 bytes. If the length exceeds 256 bytes, **false** is returned. |
 
 **Returns**:
 
@@ -551,7 +551,7 @@ Reads data blocks of a specified length from an OH_AVFormat instance.
 | -- | -- |
 | [struct OH_AVFormat](capi-core-oh-avformat.md) *format | Pointer to an OH_AVFormat instance. |
 | const char *key | Pointer to the key of the data to read. |
-| uint8_t **addr | Double pointer to the address where the data read is stored. The data read is destroyed when theOH_AVFormat instance is destroyed. To hold the data for an extended period of time, copy it to the memory. |
+| uint8_t **addr | Double pointer to the address where the data read is stored. The data read is destroyed when the OH_AVFormat instance is destroyed. To hold the data for an extended period of time, copy it to the memory. |
 | size_t *size | Pointer to the size of the data read. |
 
 **Returns**:
@@ -568,7 +568,7 @@ const char *OH_AVFormat_DumpInfo(struct OH_AVFormat *format)
 
 **Description**
 
-Returns a string consisting of key-value pairs in an OH_AVFormat instance. A string of up to 1024 bytes canbe returned. The string pointer is released when the OH_AVFormat instance is destroyed.
+Returns a string consisting of key-value pairs in an OH_AVFormat instance. A string of up to 1024 bytes can be returned. The string pointer is released when the OH_AVFormat instance is destroyed.
 
 **Since**: 9
 
@@ -592,7 +592,7 @@ bool OH_AVFormat_GetIntBuffer(struct OH_AVFormat *format, const char *key, int32
 
 **Description**
 
-Reads an array of int32_t data from an OH_AVFormat instance.Note that the buffer lifecycle is bound to the OH_AVFormat instance. The buffer becomes invalid automatically whenthe OH_AVFormat instance is destroyed.To keep the data for an extended period, explicitly copy the data to newly allocated memory.
+Reads an array of int32_t data from an OH_AVFormat instance.<br> Note that the buffer lifecycle is bound to the OH_AVFormat instance. The buffer becomes invalid automatically when the OH_AVFormat instance is destroyed.<br> To keep the data for an extended period, explicitly copy the data to newly allocated memory.
 
 **Since**: 20
 
@@ -680,7 +680,7 @@ Obtains the key name string from an OH_AVFormat instance by index.
 | -- | -- |
 | [OH_AVFormat](capi-core-oh-avformat.md) *format | Pointer to an OH_AVFormat instance. |
 | uint32_t index | Index of the key to be queried. The value range is [0, OH_AVFormat_GetKeyCount(format)). |
-| const char **key | Output pointer for receiving the key name string. The lifecycle of the string is bound to the **formatobject. |
+| const char **key | Output pointer for receiving the key name string. The lifecycle of the string is bound to the **format**<br>object. |
 
 **Returns**:
 

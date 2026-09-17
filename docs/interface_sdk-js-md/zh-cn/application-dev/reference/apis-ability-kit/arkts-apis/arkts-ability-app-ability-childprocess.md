@@ -1,4 +1,4 @@
-# @ohos.app.ability.ChildProcess
+# @ohos.app.ability.ChildProcess(子进程基类)
 
 ## 导入模块
 

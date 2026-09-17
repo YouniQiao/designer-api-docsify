@@ -1,4 +1,4 @@
-# @ohos.app.appstartup.StartupConfig
+# @ohos.app.appstartup.StartupConfig(AppStartup Configuration)
 
 ## Modules to Import
 

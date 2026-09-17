@@ -20,7 +20,7 @@ Defines an externally defined format.
 
 | Name | Description |
 | -- | -- |
-| VkStructureType sType | sType is a VkStructureType value identifying this structure.sType must be VK_STRUCTURE_TYPE_EXTERNAL_FORMAT_OHOS. |
+| VkStructureType sType | sType is a VkStructureType value identifying this structure. sType must be VK_STRUCTURE_TYPE_EXTERNAL_FORMAT_OHOS. |
 | void* pNext | pNext is NULL or a pointer to a structure extending this structure. |
 | uint64_t externalFormat | externalFormat is an implementation-defined identifier for the external format. |
 

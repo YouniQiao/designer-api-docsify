@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the macros, enumerated values, data structures,and error codes used by OpenHarmony Certificate Manager APIs.
+Defines the macros, enumerated values, data structures, and error codes used by OpenHarmony Certificate Manager APIs.
 
 **Since**: 22
 

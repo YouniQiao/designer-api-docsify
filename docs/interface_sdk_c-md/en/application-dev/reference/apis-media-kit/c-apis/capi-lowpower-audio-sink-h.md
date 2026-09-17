@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the native APIs provided by the OH_LowPowerAudioSink instance. You can use the APIs toimplement low-power audio playback.
+The file declares the native APIs provided by the OH_LowPowerAudioSink instance. You can use the APIs to implement low-power audio playback.
 
 **Library**: liblowpower_avsink.so
 
@@ -24,12 +24,12 @@ The file declares the native APIs provided by the OH_LowPowerAudioSink instance.
 | [OH_AVErrCode OH_LowPowerAudioSink_GetParameter(OH_LowPowerAudioSink* sink, OH_AVFormat* format)](#oh_lowpoweraudiosink_getparameter) | Obtains the parameters of an OH_LowPowerAudioSink instance. |
 | [OH_AVErrCode OH_LowPowerAudioSink_Prepare(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_prepare) | Prepares an OH_LowPowerAudioSink instance for decoding and rendering. This function must be called after [OH_LowPowerAudioSink_Configure](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_configure). |
 | [OH_AVErrCode OH_LowPowerAudioSink_Start(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_start) | Starts an OH_LowPowerAudioSink instance. This function must be called after a successful call to [OH_LowPowerAudioSink_Prepare](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_prepare). |
-| [OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_pause) | Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Start](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_start)or [OH_LowPowerAudioSink_Resume](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_resume). |
+| [OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_pause) | Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Start](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_start) or [OH_LowPowerAudioSink_Resume](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_resume). |
 | [OH_AVErrCode OH_LowPowerAudioSink_Resume(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_resume) | Resumes an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Pause](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_pause). |
 | [OH_AVErrCode OH_LowPowerAudioSink_Flush(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_flush) | Clears all input and output data from the decoders and render buffers of an OH_LowPowerAudioSink instance. |
 | [OH_AVErrCode OH_LowPowerAudioSink_Stop(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_stop) | Stops an OH_LowPowerAudioSink instance. |
 | [OH_AVErrCode OH_LowPowerAudioSink_Reset(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_reset) | Resets an OH_LowPowerAudioSink instance. |
-| [OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_destroy) | Clears internal resources of an OH_LowPowerAudioSink instance and destroys the instance. You only need tocall the function once. |
+| [OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)](#oh_lowpoweraudiosink_destroy) | Clears internal resources of an OH_LowPowerAudioSink instance and destroys the instance. You only need to call the function once. |
 | [OH_AVErrCode OH_LowPowerAudioSink_SetVolume(OH_LowPowerAudioSink* sink, const float volume)](#oh_lowpoweraudiosink_setvolume) | Sets the rendering volume for an OH_LowPowerAudioSink instance. |
 | [OH_AVErrCode OH_LowPowerAudioSink_SetPlaybackSpeed(OH_LowPowerAudioSink* sink, const float speed)](#oh_lowpoweraudiosink_setplaybackspeed) | Sets the audio rendering speed for an OH_LowPowerAudioSink instance. |
 | [OH_AVErrCode OH_LowPowerAudioSink_ReturnSamples(OH_LowPowerAudioSink* sink, OH_AVSamplesBuffer* samples)](#oh_lowpoweraudiosink_returnsamples) | Provides a buffer to an OH_LowPowerAudioSink instance for procesing. |
@@ -93,7 +93,7 @@ Configures an OH_LowPowerAudioSink instance. This function must be called before
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_UNSUPPORT}: The format is not supported.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_UNSUPPORT}: The format is not supported.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetParameter()
 
@@ -118,7 +118,7 @@ Sets parameters for an OH_LowPowerAudioSink instance. The parameters can be dyna
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_UNSUPPORT}: The format is not supported.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_UNSUPPORT}: The format is not supported.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_GetParameter()
 
@@ -143,7 +143,7 @@ Obtains the parameters of an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Prepare()
 
@@ -167,7 +167,7 @@ Prepares an OH_LowPowerAudioSink instance for decoding and rendering. This funct
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_UNSUPPORT}: The format is not supported.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_UNSUPPORT}: The format is not supported.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Start()
 
@@ -191,7 +191,7 @@ Starts an OH_LowPowerAudioSink instance. This function must be called after a su
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_UNSUPPORT}: The format is not supported.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_UNSUPPORT}: The format is not supported.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Pause()
 
@@ -201,7 +201,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Pause(OH_LowPowerAudioSink* sink)
 
 **Description**
 
-Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Start](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_start)or [OH_LowPowerAudioSink_Resume](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_resume).
+Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_LowPowerAudioSink_Start](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_start) or [OH_LowPowerAudioSink_Resume](capi-lowpower-audio-sink-h.md#oh_lowpoweraudiosink_resume).
 
 **Since**: 20
 
@@ -215,7 +215,7 @@ Pauses an OH_LowPowerAudioSink instance. This function must be called after [OH_
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Resume()
 
@@ -239,7 +239,7 @@ Resumes an OH_LowPowerAudioSink instance. This function must be called after [OH
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Flush()
 
@@ -263,7 +263,7 @@ Clears all input and output data from the decoders and render buffers of an OH_L
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Stop()
 
@@ -287,7 +287,7 @@ Stops an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Reset()
 
@@ -311,7 +311,7 @@ Resets an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_Destroy()
 
@@ -321,7 +321,7 @@ OH_AVErrCode OH_LowPowerAudioSink_Destroy(OH_LowPowerAudioSink* sink)
 
 **Description**
 
-Clears internal resources of an OH_LowPowerAudioSink instance and destroys the instance. You only need tocall the function once.
+Clears internal resources of an OH_LowPowerAudioSink instance and destroys the instance. You only need to call the function once.
 
 **Since**: 20
 
@@ -335,7 +335,7 @@ Clears internal resources of an OH_LowPowerAudioSink instance and destroys the i
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetVolume()
 
@@ -360,7 +360,7 @@ Sets the rendering volume for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetPlaybackSpeed()
 
@@ -385,7 +385,7 @@ Sets the audio rendering speed for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_ReturnSamples()
 
@@ -410,7 +410,7 @@ Provides a buffer to an OH_LowPowerAudioSink instance for procesing.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_RegisterCallback()
 
@@ -435,7 +435,7 @@ Registers a callback for an OH_LowPowerAudioSink instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_Create()
 
@@ -477,7 +477,7 @@ Destroys an OH_LowPowerAudioSinkCallback instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid. |
 
 ### OH_LowPowerAudioSinkCallback_SetPositionUpdateListener()
 
@@ -496,14 +496,14 @@ Sets a progress update listener for an OH_LowPowerAudioSinkCallback instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| OH_LowPowerAudioSink_OnPositionUpdated onPositionUpdated | OH_LowPowerAudioSink_OnPositionUpdated function,refer to {@link OH_LowPowerAudioSink_OnPositionUpdated} |
+| OH_LowPowerAudioSink_OnPositionUpdated onPositionUpdated | OH_LowPowerAudioSink_OnPositionUpdated function, refer to {@link OH_LowPowerAudioSink_OnPositionUpdated} |
 | void* userData | Pointer to the data on which the caller depends when executing the callback. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetDataNeededListener()
 
@@ -522,14 +522,14 @@ Sets a data needed listener for an OH_LowPowerAudioSinkCallback instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| OH_LowPowerAudioSink_OnDataNeeded onDataNeeded | OH_LowPowerAudioSink_OnDataNeeded function,refer to {@link OH_LowPowerAudioSink_OnDataNeeded} |
+| OH_LowPowerAudioSink_OnDataNeeded onDataNeeded | OH_LowPowerAudioSink_OnDataNeeded function, refer to {@link OH_LowPowerAudioSink_OnDataNeeded} |
 | void* userData | User specific data |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetErrorListener()
 
@@ -548,14 +548,14 @@ Sets an error listener for an OH_LowPowerAudioSinkCallback instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| OH_LowPowerAudioSink_OnError onError | OH_LowPowerAudioSink_OnError function,refer to {@link OH_LowPowerAudioSink_OnError} |
+| OH_LowPowerAudioSink_OnError onError | OH_LowPowerAudioSink_OnError function, refer to {@link OH_LowPowerAudioSink_OnError} |
 | void* userData | User specific data |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetInterruptListener()
 
@@ -574,14 +574,14 @@ Sets an audio focus interruption listener for an OH_LowPowerAudioSinkCallback in
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| OH_LowPowerAudioSink_OnInterrupted onInterrupted | OH_LowPowerAudioSink_OnInterrupted function,refer to {@link OH_LowPowerAudioSink_OnInterrupted} |
+| OH_LowPowerAudioSink_OnInterrupted onInterrupted | OH_LowPowerAudioSink_OnInterrupted function, refer to {@link OH_LowPowerAudioSink_OnInterrupted} |
 | void* userData | User specific data |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetDeviceChangeListener()
 
@@ -600,14 +600,14 @@ Sets an audio device change listener for an OH_LowPowerAudioSinkCallback instanc
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSinkCallback* callback | Pointer to an OH_LowPowerAudioSink Callback instance |
-| OH_LowPowerAudioSink_OnDeviceChanged onDeviceChanged | OH_LowPowerAudioSink_OnDeviceChanged function,refer to {@link OH_LowPowerAudioSink_OnDeviceChanged} |
+| OH_LowPowerAudioSink_OnDeviceChanged onDeviceChanged | OH_LowPowerAudioSink_OnDeviceChanged function, refer to {@link OH_LowPowerAudioSink_OnDeviceChanged} |
 | void* userData | User specific data |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSinkCallback_SetEosListener()
 
@@ -626,14 +626,14 @@ Sets an end-of-stream listener for an OH_LowPowerAudioSinkCallback instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSinkCallback *callback | Pointer to an OH_LowPowerAudioSinkCallback instance |
-| OH_LowPowerAudioSink_OnEos onEos | OH_LowPowerAudioSink_OnEos function,refer to {@link OH_LowPowerAudioSink_OnEos} |
+| OH_LowPowerAudioSink_OnEos onEos | OH_LowPowerAudioSink_OnEos function, refer to {@link OH_LowPowerAudioSink_OnEos} |
 | void* userData | User specific data |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_OPERATE_NOT_PERMIT}: The operation is not supported. |
 
 ### OH_LowPowerAudioSink_SetLoudnessGain()
 
@@ -652,12 +652,12 @@ Sets the loudness gain for an OH_LowPowerAudioSink instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerAudioSink* sink | Pointer to an OH_LowPowerAudioSink instance. |
-| float loudnessGain | Loudness gain to set which changes from -90.0 to 24.0, expressing in dB.The default loudness gain is 0.0dB. |
+| float loudnessGain | Loudness gain to set which changes from -90.0 to 24.0, expressing in dB. The default loudness gain is 0.0dB. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.  {@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.  {@link AV_ERR_SERVICE_DIED}: The media server is destroyed. |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>{@link AV_ERR_INVALID_VAL}: An input parameter is nullptr or invalid.<br>{@link AV_ERR_SERVICE_DIED}: The media server is destroyed. |
 
 

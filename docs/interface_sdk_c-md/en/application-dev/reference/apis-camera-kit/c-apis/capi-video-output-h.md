@@ -25,9 +25,9 @@ The file declares the video output concepts.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [typedef void (\*OH_VideoOutput_OnFrameStart)(Camera_VideoOutput* videoOutput)](#oh_videooutput_onframestart) | OH_VideoOutput_OnFrameStart | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video outputframe start events. |
-| [typedef void (\*OH_VideoOutput_OnFrameEnd)(Camera_VideoOutput* videoOutput, int32_t frameCount)](#oh_videooutput_onframeend) | OH_VideoOutput_OnFrameEnd | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video outputframe end events. |
-| [typedef void (\*OH_VideoOutput_OnError)(Camera_VideoOutput* videoOutput, Camera_ErrorCode errorCode)](#oh_videooutput_onerror) | OH_VideoOutput_OnError | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video outputerrors. |
+| [typedef void (\*OH_VideoOutput_OnFrameStart)(Camera_VideoOutput* videoOutput)](#oh_videooutput_onframestart) | OH_VideoOutput_OnFrameStart | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output frame start events. |
+| [typedef void (\*OH_VideoOutput_OnFrameEnd)(Camera_VideoOutput* videoOutput, int32_t frameCount)](#oh_videooutput_onframeend) | OH_VideoOutput_OnFrameEnd | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output frame end events. |
+| [typedef void (\*OH_VideoOutput_OnError)(Camera_VideoOutput* videoOutput, Camera_ErrorCode errorCode)](#oh_videooutput_onerror) | OH_VideoOutput_OnError | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output errors. |
 | [Camera_ErrorCode OH_VideoOutput_RegisterCallback(Camera_VideoOutput* videoOutput, VideoOutput_Callbacks* callback)](#oh_videooutput_registercallback) | - | Registers a callback to listen for video output events. |
 | [Camera_ErrorCode OH_VideoOutput_UnregisterCallback(Camera_VideoOutput* videoOutput, VideoOutput_Callbacks* callback)](#oh_videooutput_unregistercallback) | - | Unregisters the callback used to listen for video output events. |
 | [Camera_ErrorCode OH_VideoOutput_Start(Camera_VideoOutput* videoOutput)](#oh_videooutput_start) | - | Starts video output. |
@@ -44,6 +44,14 @@ The file declares the video output concepts.
 | [Camera_ErrorCode OH_VideoOutput_SetFrameRate(Camera_VideoOutput* videoOutput, int32_t minFps, int32_t maxFps)](#oh_videooutput_setframerate) | - | Sets the frame rates for a VideoOutput instance. |
 | [Camera_ErrorCode OH_VideoOutput_GetActiveFrameRate(Camera_VideoOutput* videoOutput, Camera_FrameRateRange* frameRateRange)](#oh_videooutput_getactiveframerate) | - | Obtains the active frame rates of a VideoOutput instance. |
 
+### Variable
+
+| Name | Description |
+| -- | -- |
+| void (*OH_VideoOutput_OnFrameStart)(Camera_VideoOutput* videoOutput) | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output frame start events.<br>**Since**: 11 |
+| void (*OH_VideoOutput_OnFrameEnd)(Camera_VideoOutput* videoOutput, int32_t frameCount) | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output frame end events.<br>**Since**: 11 |
+| void (*OH_VideoOutput_OnError)(Camera_VideoOutput* videoOutput, Camera_ErrorCode errorCode) | Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output errors.<br>**Since**: 11 |
+
 ## Function description
 
 ### OH_VideoOutput_OnFrameStart()
@@ -54,7 +62,7 @@ typedef void (*OH_VideoOutput_OnFrameStart)(Camera_VideoOutput* videoOutput)
 
 **Description**
 
-Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video outputframe start events.
+Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output frame start events.
 
 **Since**: 11
 
@@ -72,7 +80,7 @@ typedef void (*OH_VideoOutput_OnFrameEnd)(Camera_VideoOutput* videoOutput, int32
 
 **Description**
 
-Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video outputframe end events.
+Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output frame end events.
 
 **Since**: 11
 
@@ -91,7 +99,7 @@ typedef void (*OH_VideoOutput_OnError)(Camera_VideoOutput* videoOutput, Camera_E
 
 **Description**
 
-Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video outputerrors.
+Defines the callback defined in the [VideoOutput_Callbacks](capi-oh-camera-videooutput-callbacks.md) struct and used to report video output errors.
 
 **Since**: 11
 
@@ -301,7 +309,7 @@ Check whether mirror mode is supported for videoOutput
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.          {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.          {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
+| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.<br>        {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.<br>        {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
 
 ### OH_VideoOutput_EnableMirror()
 
@@ -326,7 +334,7 @@ Enable or disable mirror mode for videoOutput
 
 | Type | Description |
 | -- | -- |
-| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.          {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.          {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
+| Camera_ErrorCode | {@link #CAMERA_OK} if the method call succeeds.<br>        {@link #CAMERA_INVALID_ARGUMENT} if parameter missing or parameter type incorrect.<br>        {@link #CAMERA_SERVICE_FATAL_ERROR} if camera service fatal error. |
 
 ### OH_VideoOutput_GetVideoRotation()
 
@@ -345,7 +353,7 @@ Obtains the rotation angle of a video.
 | Parameter | Description |
 | -- | -- |
 | [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)* videoOutput | Pointer to the target VideoOutput instance. |
-| int deviceDegree | Clockwise rotation angle of the device relative to the natural direction (the charging portfaces downward). |
+| int deviceDegree | Clockwise rotation angle of the device relative to the natural direction (the charging port faces downward). |
 | Camera_ImageRotation* imageRotation | Pointer to the rotation angle of the video output. |
 
 **Returns**:

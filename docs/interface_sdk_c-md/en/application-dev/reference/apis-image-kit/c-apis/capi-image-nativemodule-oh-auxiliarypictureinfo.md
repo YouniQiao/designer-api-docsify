@@ -6,7 +6,7 @@ typedef struct OH_AuxiliaryPictureInfo OH_AuxiliaryPictureInfo
 
 ## Overview
 
-The struct describes the auxiliary picture information, which is used to perform operations related to theauxiliary picture information.
+The struct describes the auxiliary picture information, which is used to perform operations related to the auxiliary picture information.
 
 **Since**: 13
 

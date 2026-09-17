@@ -107,7 +107,7 @@ Set key value into [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-pri
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_SetBoolValue()
 
@@ -132,7 +132,7 @@ Set bool data value into [InputMethod_PrivateCommand](capi-inputmethod-inputmeth
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_SetIntValue()
 
@@ -157,7 +157,7 @@ Set integer data value into [InputMethod_PrivateCommand](capi-inputmethod-inputm
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_SetStrValue()
 
@@ -183,7 +183,7 @@ Set string data value into [InputMethod_PrivateCommand](capi-inputmethod-inputme
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_GetKey()
 
@@ -202,14 +202,14 @@ Get key value from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-pri
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) *command | Represents a pointer to an [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) instance which will be get value from. |
-| const char **key | The lifespan of key is consistent with that of command.You are advised to copy instead of directly saving the key address or writing key. |
+| const char **key | The lifespan of key is consistent with that of command. You are advised to copy instead of directly saving the key address or writing key. |
 | size_t *keyLength | Represents key length. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_GetValueType()
 
@@ -228,13 +228,13 @@ Get value type from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-pr
 | Parameter | Description |
 | -- | -- |
 | [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) *command | Represents a pointer to an [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) instance which will be get value from. |
-| InputMethod_CommandValueType *type | Represents a pointer to a {@link InputMethod_CommandValueType} instance.Indicates the data type of the value. |
+| InputMethod_CommandValueType *type | Represents a pointer to a {@link InputMethod_CommandValueType} instance. Indicates the data type of the value. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_GetBoolValue()
 
@@ -259,7 +259,7 @@ Get bool data value from [InputMethod_PrivateCommand](capi-inputmethod-inputmeth
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>{@link IME_ERR_QUERY_FAILED} - query failed, no bool value in command.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>{@link IME_ERR_QUERY_FAILED} - query failed, no bool value in command.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_GetIntValue()
 
@@ -284,7 +284,7 @@ Get integer data value from [InputMethod_PrivateCommand](capi-inputmethod-inputm
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>{@link IME_ERR_QUERY_FAILED} - query failed, no integer value in command.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>{@link IME_ERR_QUERY_FAILED} - query failed, no integer value in command.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_PrivateCommand_GetStrValue()
 
@@ -304,12 +304,12 @@ Get string data value from [InputMethod_PrivateCommand](capi-inputmethod-inputme
 | -- | -- |
 | [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) *command | Represents a pointer to an [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) instance which will be get value from. |
 | const char **value | Represents string data value. |
-| size_t *valueLength | The lifespan of value is consistent with that of command.You are advised to copy instead of directly saving the value address or writing value. |
+| size_t *valueLength | The lifespan of value is consistent with that of command. You are advised to copy instead of directly saving the value address or writing value. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>{@link IME_ERR_QUERY_FAILED} - query failed, no string value in command.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>{@link IME_ERR_QUERY_FAILED} - query failed, no string value in command.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 

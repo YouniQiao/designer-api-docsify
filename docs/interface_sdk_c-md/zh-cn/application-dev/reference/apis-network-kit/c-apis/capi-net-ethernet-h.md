@@ -45,7 +45,7 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 | -- | -- |
 | Ethernet_MacAddrInfoList *macAddrList | 以太网网卡MAC地址列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
@@ -73,7 +73,7 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 | -- | -- |
 | Ethernet_NetAddrList *netAddrList | 以太网网卡IP地址列表。 |
 
-**返回：**
+**返回值：**
 
 | 类型 | 说明 |
 | -- | -- |

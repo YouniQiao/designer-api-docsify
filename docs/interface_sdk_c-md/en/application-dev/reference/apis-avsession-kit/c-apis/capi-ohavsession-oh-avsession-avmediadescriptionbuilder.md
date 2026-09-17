@@ -6,7 +6,7 @@ typedef struct OH_AVSession_AVMediaDescriptionBuilder OH_AVSession_AVMediaDescri
 
 ## Overview
 
-Declaring the AVMediaDescription builder.The instance of builder is used for creating AVMediaDescription.
+Declaring the AVMediaDescription builder. The instance of builder is used for creating AVMediaDescription.
 
 **Since**: 23
 

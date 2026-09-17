@@ -22,7 +22,7 @@ Defines the response structure.
 | -- | -- |
 | uint8_t senseData[SCSIPERIPHERAL_MAX_SENSE_DATA_LEN] | Sense data. |
 | [ScsiPeripheral_Status](capi-scsi-peripheral-types-h.md#scsiperipheral_status) status | Status when the call is complete, for example, **Good** or **Busy**. |
-| uint8_t maskedStatus | Masked status, which is used in SCSI Generic (SG) interfaces of Linux to store the processed SCSI status foreasy access by applications. |
+| uint8_t maskedStatus | Masked status, which is used in SCSI Generic (SG) interfaces of Linux to store the processed SCSI status for easy access by applications. |
 | uint8_t msgStatus | Message status. |
 | uint8_t sbLenWr | Number of bytes that are actually written to the sense buffer. |
 | uint16_t hostStatus | Host adapter status, for example, success (0x00), connection failure (0x01), busy bus (0x02), or timeout (0x03). |

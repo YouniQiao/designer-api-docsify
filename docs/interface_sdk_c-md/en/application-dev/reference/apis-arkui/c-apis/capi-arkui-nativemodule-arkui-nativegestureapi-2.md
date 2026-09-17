@@ -47,12 +47,12 @@ Sets the callback for gesture interruption events.
 | -- | -- |
 | node | Pointer to the ArkUI node for which you want to set a gesture interruption callback. |
 | userData | Pointer to user-defined data. |
-| interrupter | Gesture interruption callback to set. <b>info</b> indicates the gesture interruption data.If <b>interrupter</b> returns <b>GESTURE_INTERRUPT_RESULT_CONTINUE</b>, the gesture recognition processproceedsproperly. If it returns <b>GESTURE_INTERRUPT_RESULT_REJECT</b>, the gesture recognition process is paused. |
+| interrupter | Gesture interruption callback to set. <b>info</b> indicates the gesture interruption data. If <b>interrupter</b> returns <b>GESTURE_INTERRUPT_RESULT_CONTINUE</b>, the gesture recognition process proceeds properly. If it returns <b>GESTURE_INTERRUPT_RESULT_REJECT</b>, the gesture recognition process is paused. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.          <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
+| int32_t | Error code.          <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs. |
 
 

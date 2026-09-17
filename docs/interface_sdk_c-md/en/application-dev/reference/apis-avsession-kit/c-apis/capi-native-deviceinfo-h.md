@@ -8,7 +8,7 @@ Declare device info interfaces.
 
 **System capability**: SystemCapability.Multimedia.AVSession.Core
 
-**Since**: 23
+**Since**: 13
 
 **Related module**: [OHAVSession](capi-ohavsession.md)
 
@@ -19,7 +19,7 @@ Declare device info interfaces.
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) | - | Declaring the target Device Information. |
-| [AVSession_DeviceInfo](capi-ohavsession-avsession-deviceinfo.md) | AVSession_DeviceInfo | Declaring the device information.The instance is used to get more device information detail attributes. |
+| [AVSession_DeviceInfo](capi-ohavsession-avsession-deviceinfo.md) | AVSession_DeviceInfo | Declaring the device information. The instance is used to get more device information detail attributes. |
 
 ### Function
 
@@ -50,13 +50,13 @@ Get Cast Category of the target device.
 | Parameter | Description |
 | -- | -- |
 | [AVSession_DeviceInfo](capi-ohavsession-avsession-deviceinfo.md) *deviceInfo | The deviceInfo instance pointer |
-| AVSession_AVCastCategory *aVCastCategory | The pointer {@link AVSession_AVCastCategory} variablethat will be set the device Cast Category value. |
+| AVSession_AVCastCategory *aVCastCategory | The pointer {@link AVSession_AVCastCategory} variable that will be set the device Cast Category value. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of aVCastCategory is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of aVCastCategory is nullptr. |
 
 ### OH_DeviceInfo_GetDeviceId()
 
@@ -81,7 +81,7 @@ Get device Id of the target device.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceId is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceId is nullptr. |
 
 ### OH_DeviceInfo_GetDeviceName()
 
@@ -106,7 +106,7 @@ Get device name of the target device.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceName is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceName is nullptr. |
 
 ### OH_DeviceInfo_GetDeviceType()
 
@@ -131,7 +131,7 @@ Get device type of the target device.
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceType is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceType is nullptr. |
 
 ### OH_DeviceInfo_GetSupportedProtocols()
 
@@ -150,12 +150,12 @@ Get supported protocols of the target device.
 | Parameter | Description |
 | -- | -- |
 | [AVSession_DeviceInfo](capi-ohavsession-avsession-deviceinfo.md) *deviceInfo | The deviceInfo instance pointer |
-| uint32_t *deviceProtocolType | the pointer variable that will be set the protocols supported by current device,can be union of {@link ProtocolType}. |
+| uint32_t *deviceProtocolType | the pointer variable that will be set the protocols supported by current device, can be union of {@link ProtocolType}. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.          {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceProtocolType is nullptr. |
+| AVSession_ErrCode | Function result code:          {@link AV_SESSION_ERR_SUCCESS} If the execution is successful.<br>        {@link AV_SESSION_ERR_INVALID_PARAMETER}                                                  1.The param of deviceInfo is nullptr;                                                  2.The param of deviceProtocolType is nullptr. |
 
 

@@ -10,7 +10,7 @@ Audio AudioChannel Layout
 
 **System capability**: SystemCapability.Multimedia.Media.CodecBase
 
-**Since**: 10
+**Since**: 9
 
 **Related module**: [CodecBase](capi-codecbase.md)
 
@@ -21,7 +21,7 @@ Audio AudioChannel Layout
 | Name | Description |
 | -- | -- |
 | [AudioChannelSet](#audiochannelset) | Enumerates the audio channels. Each channel is mapped to a variable of uint64_t.(Deprecated in API11) |
-| [AudioChannelLayout](#audiochannellayout) | Enumerates the layouts of audio channels. The output format of the decoder is described using the channellayout of the codec.(Deprecated in API11) |
+| [AudioChannelLayout](#audiochannellayout) | Enumerates the layouts of audio channels. The output format of the decoder is described using the channel layout of the codec.(Deprecated in API11) |
 
 ## Enum type description
 
@@ -72,7 +72,7 @@ enum AudioChannelLayout
 
 **Description**
 
-Enumerates the layouts of audio channels. The output format of the decoder is described using the channellayout of the codec.
+Enumerates the layouts of audio channels. The output format of the decoder is described using the channel layout of the codec.
 
 **Since**: 10
 

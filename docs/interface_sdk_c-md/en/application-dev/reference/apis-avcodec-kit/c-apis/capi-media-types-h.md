@@ -8,7 +8,7 @@ Declared the common media types definition.
 
 **System capability**: SystemCapability.Multimedia.Media.Core
 
-**Since**: 18
+**Since**: 9
 
 **Related module**: [Core](capi-core.md)
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the APIs of the media asset manager. You can use the functions to request media assets inthe media library.
+The file declares the APIs of the media asset manager. You can use the functions to request media assets in the media library.
 
 **Library**: libmedia_asset_manager.so
 
@@ -154,9 +154,9 @@ Requests a moving photo based on different policies.
 | -- | -- |
 | OH_MediaAssetManager* manager | Pointer to an {@link OH_MediaAssetManager} instance. |
 | OH_MediaAsset* mediaAsset | Pointer to the {@link OH_MediaAsset} instance to be requested. |
-| MediaLibrary_RequestOptions requestOptions | Options related to the media asset quality and delivery mode.The options are specified by {@link MediaLibrary_RequestOptions}. |
+| MediaLibrary_RequestOptions requestOptions | Options related to the media asset quality and delivery mode. The options are specified by {@link MediaLibrary_RequestOptions}. |
 | MediaLibrary_RequestId* requestId | Pointer to the request ID, which is specified by {@link MediaLibrary_RequestId}. |
-| OH_MediaLibrary_OnMovingPhotoDataPrepared callback | Callback to be invoked when the requested moving photo is ready.The callback is specified by {@link OH_MediaLibrary_OnMovingPhotoDataPrepared}. |
+| OH_MediaLibrary_OnMovingPhotoDataPrepared callback | Callback to be invoked when the requested moving photo is ready. The callback is specified by {@link OH_MediaLibrary_OnMovingPhotoDataPrepared}. |
 
 **Returns**:
 
@@ -184,9 +184,9 @@ Requests an image based on different policies.
 | -- | -- |
 | OH_MediaAssetManager* manager | Pointer to an {@link OH_MediaAssetManager} instance. |
 | OH_MediaAsset* mediaAsset | Pointer to the {@link OH_MediaAsset} instance to be requested. |
-| MediaLibrary_RequestOptions requestOptions | Options related to the media asset quality and delivery mode. The options are specifiedby {@link MediaLibrary_RequestOptions}. |
+| MediaLibrary_RequestOptions requestOptions | Options related to the media asset quality and delivery mode. The options are specified by {@link MediaLibrary_RequestOptions}. |
 | MediaLibrary_RequestId* requestId | Pointer to the request ID, which is specified by {@link MediaLibrary_RequestId}. |
-| OH_MediaLibrary_OnImageDataPrepared callback | Callback to be invoked when the requested image is ready. The callback is specifiedby {@link OH_MediaLibrary_OnImageDataPrepared}. |
+| OH_MediaLibrary_OnImageDataPrepared callback | Callback to be invoked when the requested image is ready. The callback is specified by {@link OH_MediaLibrary_OnImageDataPrepared}. |
 
 **Returns**:
 
@@ -239,8 +239,8 @@ Requests an image based on different policies.
 | OH_MediaAssetManager* manager | Pointer to an **OH_MediaAssetManager** instance. |
 | OH_MediaAsset* mediaAsset | Pointer to the **OH_MediaAsset** instance to be requested. |
 | MediaLibrary_RequestOptions requestOptions | **MediaLibrary_RequestOptions** used for the image request policy mode. |
-| MediaLibrary_RequestId* requestId | Pointer to the **MediaLibrary_RequestId** instance of the request. This parameter is an outputparameter. |
-| OH_MediaLibrary_OnQuickImageDataPrepared callback | The **OH_MediaLibrary_OnQuickImageDataPrepared** method called when the requested source data isready. |
+| MediaLibrary_RequestId* requestId | Pointer to the **MediaLibrary_RequestId** instance of the request. This parameter is an output parameter. |
+| OH_MediaLibrary_OnQuickImageDataPrepared callback | The **OH_MediaLibrary_OnQuickImageDataPrepared** method called when the requested source data is ready. |
 
 **Returns**:
 

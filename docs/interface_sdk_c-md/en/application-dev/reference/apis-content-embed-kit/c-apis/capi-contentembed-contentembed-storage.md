@@ -6,7 +6,7 @@ typedef struct ContentEmbed_Storage ContentEmbed_Storage
 
 ## Overview
 
-Declares the storage structure type of an OE document. Similar to a directory in a file system, theparent object of a storage object must be another storage object or the root storage object.
+Declares the storage structure type of an OE document. Similar to a directory in a file system, the parent object of a storage object must be another storage object or the root storage object.
 
 **Since**: 24
 

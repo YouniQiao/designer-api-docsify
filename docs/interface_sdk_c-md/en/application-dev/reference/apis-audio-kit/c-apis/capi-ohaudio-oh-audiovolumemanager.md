@@ -6,7 +6,7 @@ typedef struct OH_AudioVolumeManager OH_AudioVolumeManager
 
 ## Overview
 
-Declare the audio volume manager.Audio volume manager provides many functions for developer to get the information about system volume.
+Declare the audio volume manager. Audio volume manager provides many functions for developer to get the information about system volume.
 
 **Since**: 20
 

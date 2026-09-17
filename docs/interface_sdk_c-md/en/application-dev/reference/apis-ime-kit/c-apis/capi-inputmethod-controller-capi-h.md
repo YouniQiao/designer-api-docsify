@@ -42,15 +42,15 @@ Attach application to the input method service.
 
 | Parameter | Description |
 | -- | -- |
-| InputMethod_TextEditorProxy *textEditorProxy | Pointer to the {@link InputMethod_TextEditorProxy} instance.The caller needs to manage the **textEditorProxy** lifecycle.If the calling is successful, the caller cannot release **textEditorProxy** before the next binding orunbinding call. |
-| InputMethod_AttachOptions *options | Represents a pointer to an {@link InputMethod_AttachOptions} instance.The options when attaching input method. |
-| InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an {@link InputMethod_InputMethodProxy} instance.Lifecycle is maintained until the next attach or detach call. |
+| InputMethod_TextEditorProxy *textEditorProxy | Pointer to the {@link InputMethod_TextEditorProxy} instance. The caller needs to manage the **textEditorProxy** lifecycle. If the calling is successful, the caller cannot release **textEditorProxy** before the next binding or unbinding call. |
+| InputMethod_AttachOptions *options | Represents a pointer to an {@link InputMethod_AttachOptions} instance. The options when attaching input method. |
+| InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an {@link InputMethod_InputMethodProxy} instance. Lifecycle is maintained until the next attach or detach call. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_PARAMCHECK} - parameter check failed.      <br>{@link IME_ERR_IMCLIENT} - input method client error.      <br>{@link IME_ERR_IMMS} - input method manager service error.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_PARAMCHECK} - parameter check failed.<br>    <br>{@link IME_ERR_IMCLIENT} - input method client error.<br>    <br>{@link IME_ERR_IMMS} - input method manager service error.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_InputMethodController_AttachWithUIContext()
 
@@ -69,15 +69,15 @@ Attach application to the input method service.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_ContextHandle context | Pointer to the [ArkUI_Context](../apis-arkui/capi-arkui-nativemodule-arkui-context.md) instance. |
-| InputMethod_TextEditorProxy *textEditorProxy | Pointer to the {@link InputMethod_TextEditorProxy} instance.The caller needs to manage the **textEditorProxy** lifecycle.If the calling is successful, the caller cannot release **textEditorProxy** before the next binding orunbinding call. |
-| InputMethod_AttachOptions *options | Represents a pointer to an {@link InputMethod_AttachOptions} instance.The options when attaching input method. |
-| InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an {@link InputMethod_InputMethodProxy} instance.Lifecycle is maintained until the next attach or detach call. |
+| InputMethod_TextEditorProxy *textEditorProxy | Pointer to the {@link InputMethod_TextEditorProxy} instance. The caller needs to manage the **textEditorProxy** lifecycle. If the calling is successful, the caller cannot release **textEditorProxy** before the next binding or unbinding call. |
+| InputMethod_AttachOptions *options | Represents a pointer to an {@link InputMethod_AttachOptions} instance. The options when attaching input method. |
+| InputMethod_InputMethodProxy **inputMethodProxy | Represents a pointer to an {@link InputMethod_InputMethodProxy} instance. Lifecycle is maintained until the next attach or detach call. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_PARAMCHECK} - parameter check failed.      <br>{@link IME_ERR_IMCLIENT} - input method client error.      <br>{@link IME_ERR_IMMS} - input method manager service error.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_PARAMCHECK} - parameter check failed.<br>    <br>{@link IME_ERR_IMCLIENT} - input method client error.<br>    <br>{@link IME_ERR_IMMS} - input method manager service error.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 ### OH_InputMethodController_Detach()
 
@@ -95,12 +95,12 @@ Detach application from the input method service.
 
 | Parameter | Description |
 | -- | -- |
-| InputMethod_InputMethodProxy *inputMethodProxy | Represents a pointer to an {@link InputMethod_InputMethodProxy} instance.The inputMethodProxy is obtained from [OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach). |
+| InputMethod_InputMethodProxy *inputMethodProxy | Represents a pointer to an {@link InputMethod_InputMethodProxy} instance. The inputMethodProxy is obtained from [OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.      <br>{@link IME_ERR_IMCLIENT} - input method client error.      <br>{@link IME_ERR_IMMS} - input method manager service error.      <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.      <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
+| InputMethod_ErrorCode | Returns a specific error code.      <br>{@link IME_ERR_OK} - success.<br>    <br>{@link IME_ERR_IMCLIENT} - input method client error.<br>    <br>{@link IME_ERR_IMMS} - input method manager service error.<br>    <br>{@link IME_ERR_NULL_POINTER} - unexpected null pointer.<br>    <br>Specific error codes can be referenced {@link InputMethod_ErrorCode}. |
 
 

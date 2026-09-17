@@ -2,7 +2,7 @@
 
 ## Overview
 
-Describes the message authentication code (MAC) interfaces provided by OpenHarmonyfor applications.
+Describes the message authentication code (MAC) interfaces provided by OpenHarmony for applications.
 
 **Since**: 20
 
