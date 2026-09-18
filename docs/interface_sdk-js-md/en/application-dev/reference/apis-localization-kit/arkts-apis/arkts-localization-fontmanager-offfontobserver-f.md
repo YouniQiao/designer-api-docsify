@@ -14,7 +14,7 @@ function offFontObserver(): void
 
 Unregisters the font service death observer.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.UPDATE_SCOPE_FONT
 

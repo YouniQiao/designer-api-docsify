@@ -2,7 +2,7 @@
 
 Information about a form.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -22,7 +22,7 @@ The ability name of the application to which this form belongs.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ The bundle name of the application to which this form belongs.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ The form dimension of the template form.
 
 **Type:** [formInfo.FormDimension](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formdimension-e.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ The name of the application module to which this form belongs.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +86,7 @@ The name of this form.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

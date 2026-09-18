@@ -596,7 +596,7 @@ setAlbumNameByFile(name: string): void
 
 设置相册名称，支持文管规则的.命名
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -700,7 +700,7 @@ setHiddenAttribute(hiddenState: boolean, isInherited: boolean): void
 
 设置相册的UI隐藏属性
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

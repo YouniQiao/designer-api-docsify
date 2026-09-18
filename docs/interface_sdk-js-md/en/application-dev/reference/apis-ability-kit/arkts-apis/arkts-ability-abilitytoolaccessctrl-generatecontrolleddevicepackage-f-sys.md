@@ -13,7 +13,7 @@ export function generateControlledDevicePackage(permissionQuery: PermissionQuery
 
 Generates an authorization package for the controlled device. This function generates a remote authorization package based on the permission query list. The generated package can be sent to the controller device for permission verification.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 

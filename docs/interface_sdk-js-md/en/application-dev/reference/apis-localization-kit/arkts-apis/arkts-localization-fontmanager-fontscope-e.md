@@ -2,7 +2,7 @@
 
 Enumerates the font scopes.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -14,7 +14,7 @@ APP = 0
 
 Application-level font. The font is cleared when the application exits, the font service exits, the account is stopping, or the device restarts.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +28,7 @@ SESSION = 1
 
 Session-level font. The font is cleared when the account is stopping or the device restarts.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

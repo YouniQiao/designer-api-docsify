@@ -382,7 +382,7 @@ offCameraSharedStatus(callback?: Callback<CameraSharedStatusInfo>): void
 
 Unsubscribes from camera shared status change event callback.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -464,7 +464,7 @@ onCameraSharedStatus(callback: Callback<CameraSharedStatusInfo>): void
 
 Subscribes camera shared status change event callback.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

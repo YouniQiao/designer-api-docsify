@@ -2,7 +2,7 @@
 
 App sandbox policy for dual-mode (2in1/tablet) scenarios.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -16,7 +16,7 @@ SHARED_SANDBOX = 0
 
 Shared sandbox (default)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ ISOLATED_SANDBOX = 1
 
 Isolated sandbox
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

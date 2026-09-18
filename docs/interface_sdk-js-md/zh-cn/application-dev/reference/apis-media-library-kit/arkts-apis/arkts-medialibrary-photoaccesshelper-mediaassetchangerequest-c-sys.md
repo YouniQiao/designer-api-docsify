@@ -566,7 +566,7 @@ setCameraEditData(editData: MediaAssetEditData): void
 
 保存资产的摄像机编辑数据。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -851,7 +851,7 @@ setHiddenAttribute(hiddenState: boolean): void
 
 设置资产的UI隐藏属性
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1088,7 +1088,7 @@ setTitleByFile(name: string): void
 
 设置文件名，支持文管规则.命名
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -14,7 +14,7 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 Update notification. Only data transfer ContinuousTasks are supported.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

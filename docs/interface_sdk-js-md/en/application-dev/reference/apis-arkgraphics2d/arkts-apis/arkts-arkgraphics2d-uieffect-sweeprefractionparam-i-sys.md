@@ -2,7 +2,7 @@
 
 Required parameters for creating a SweepRefractionMask.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -24,7 +24,7 @@ Chromatic dispersion delta. The value range is [0, 0.5], and values outside the 
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Normalized edge thickness of the prism. The value range is [1, 1000], and values
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +60,7 @@ Normalized radius of the prism mask. The value range is [0, 10], and values outs
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ Refraction intensity of the prism. The value range is [0, 1], and values outside
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +96,7 @@ Width of the sweep ripple. The value range is [0.01, 1], and values outside the 
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,7 +114,7 @@ Position offset of the sweep. The value range is [-2, 2], and values outside the
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

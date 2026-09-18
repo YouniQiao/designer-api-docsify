@@ -2,7 +2,7 @@
 
 privateComputation的命名空间，提供隐私保护的计算能力。如隐私目标生成、隐私搜索、搜索结果检索等。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 

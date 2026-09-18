@@ -4,7 +4,7 @@ Implements imaging mode.
 
 **Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,7 +24,7 @@ getImagingMode(): CameraImagingMode
 
 Gets current imaging mode.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,7 +53,7 @@ setImagingMode(mode: CameraImagingMode): void
 
 Sets imaging mode.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

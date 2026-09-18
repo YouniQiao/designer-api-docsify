@@ -38,7 +38,7 @@ System material effect of the close button. Default value: **undefined**, indica
 
 **Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +96,7 @@ Background blur effect of the title bar. Supports customizing blur parameters vi
 
 **Type:** [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i-sys.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

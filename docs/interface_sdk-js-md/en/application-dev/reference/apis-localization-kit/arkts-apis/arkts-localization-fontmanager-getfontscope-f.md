@@ -14,7 +14,7 @@ function getFontScope(url: string): Promise<FontScope>
 
 Queries the scope of a font by URL. This API uses a promise to return the result.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.UPDATE_SCOPE_FONT
 

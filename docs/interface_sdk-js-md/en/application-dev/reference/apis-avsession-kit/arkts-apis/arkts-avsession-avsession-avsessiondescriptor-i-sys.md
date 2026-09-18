@@ -38,7 +38,7 @@ The userId to which this session belongs. The value should be an integer.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

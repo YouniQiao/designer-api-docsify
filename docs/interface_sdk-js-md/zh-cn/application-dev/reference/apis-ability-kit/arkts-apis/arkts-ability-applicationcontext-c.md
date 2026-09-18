@@ -429,7 +429,7 @@ getUIAbilityChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 
 获取当前应用的UIAbility子进程信息。该接口使用了一个promise。来返回结果。返回的子进程是通过ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT通过startAbility创建的。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

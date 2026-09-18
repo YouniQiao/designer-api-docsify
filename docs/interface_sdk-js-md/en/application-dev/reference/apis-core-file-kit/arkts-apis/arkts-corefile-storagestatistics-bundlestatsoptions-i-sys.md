@@ -2,7 +2,7 @@
 
 Options for obtaining the bundle statistics.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -24,7 +24,7 @@ Index of an application clone. The default value is **0**, which indicates the a
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Flag for obtaining the bundle statistics.
 
 **Type:** [GetBundleStatsFlag](arkts-corefile-storagestatistics-getbundlestatsflag-e-sys.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

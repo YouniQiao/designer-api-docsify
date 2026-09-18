@@ -8,6 +8,8 @@ typedef struct OH_UdmfOptions OH_UdmfOptions
 
 Describes the optional arguments of data operation
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 20
 
 **Related module**: [UDMF](capi-udmf.md)

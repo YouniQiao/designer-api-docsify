@@ -26,7 +26,7 @@ Request composite auxiliary image data.
 
 The AI enhancement generates an additional image. Together with the original image, they form a composite image. One image is displayed externally, while the other serves as an auxiliary image.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 

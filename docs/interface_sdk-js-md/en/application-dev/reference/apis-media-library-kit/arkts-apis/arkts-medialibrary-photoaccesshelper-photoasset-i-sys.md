@@ -482,7 +482,7 @@ getReadOnlyFdWithCached(): Promise<number>
 
 Open the file and cache it in the gallery sandbox when streaming video from the cloud.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 

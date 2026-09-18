@@ -128,6 +128,7 @@
     - [ArkUI_ImmersiveMaterial](capi-arkui-nativemodule-arkui-immersivematerial.md)
     - [ArkUI_ImmersiveMaterial*](capi-arkui-nativemodule-arkui-immersivematerial8h.md)
     - [ArkUI_LightEffectOptions](capi-arkui-nativemodule-arkui-lighteffectoptions.md)
+    - [ArkUI_LightEffectOptions*](capi-arkui-nativemodule-arkui-lighteffectoptions8h.md)
     - [OH_NativeXComponent_HistoricalPoint](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-historicalpoint.md)
     - [OH_NativeXComponent_TouchPoint](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-touchpoint.md)
     - [OH_NativeXComponent_TouchEvent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-touchevent.md)

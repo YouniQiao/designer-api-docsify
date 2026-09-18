@@ -318,7 +318,7 @@ getOsTypeByNetworkId(networkId: string): number
 
 通过设备网络ID查询设备操作系统类型。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 

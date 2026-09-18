@@ -100,7 +100,7 @@ Used to obtain the bundle information of an application installed by any device.
 
 **System API**: This flag can be used only in system APIs.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

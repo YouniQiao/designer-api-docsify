@@ -13,7 +13,7 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 Gets the remote grant status. This function queries whether the remote authorization feature is enabled or disabled. When enabled, the device can grant permissions to remote devices; when disabled, remote authorization is not allowed.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 

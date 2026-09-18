@@ -28,7 +28,7 @@ getCustomErrorCode(): number
 
 获取加载资源的自定义错误码。自定义错误码通过[WebSchemeHandlerResponse](../arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md)的[setCustomErrorCode](../arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md#setcustomerrorcode)设置，并通过[onErrorReceive](arkts-arkweb-web-comp-attribute.md#onerrorreceive)事件直接传递给应用。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

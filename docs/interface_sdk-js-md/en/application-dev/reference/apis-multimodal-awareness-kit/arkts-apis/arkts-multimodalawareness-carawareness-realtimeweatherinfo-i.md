@@ -2,7 +2,7 @@
 
 Interface for realtime weather response info.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -22,7 +22,7 @@ Indicates timestamp . Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Indicates current weather.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

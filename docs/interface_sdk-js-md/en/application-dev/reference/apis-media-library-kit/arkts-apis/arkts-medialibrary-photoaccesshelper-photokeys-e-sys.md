@@ -600,7 +600,7 @@ SHARE_OWNER_INFO = 'share_owner_info'
 
 The asset owner in share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -616,7 +616,7 @@ SHARE_RISK_STATUS = 'share_risk_status'
 
 The risk status of share album asset.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,7 +632,7 @@ SHARE_RISK_TYPE = 'share_risk_type'
 
 The risk type of share album asset.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -648,7 +648,7 @@ PHOTO_VISIBILITY = 'photo_visibility'
 
 The photo visibility of photo asset.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -664,7 +664,7 @@ SHARE_GROUP = 'share_group'
 
 The share group of share album asset.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -680,7 +680,7 @@ SHARE_DATE_DAY = 'share_date_day'
 
 The share date day of share album asset.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -696,7 +696,7 @@ MUSIC_MASTER_MODE = 'music_master_mode'
 
 The mode of the music master.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

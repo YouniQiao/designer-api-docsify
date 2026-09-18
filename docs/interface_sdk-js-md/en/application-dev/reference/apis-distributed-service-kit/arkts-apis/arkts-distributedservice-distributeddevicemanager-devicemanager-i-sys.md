@@ -330,7 +330,7 @@ getOsTypeByNetworkId(networkId: string): number
 
 Query the device operating system type by device network ID.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 

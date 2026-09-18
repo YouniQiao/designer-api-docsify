@@ -195,11 +195,11 @@ containsAll(elements: Array<T>): boolean
 
 Checks whether all elements in a specified ArkTS Array are contained in this ArkTS Array.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -230,11 +230,11 @@ containsAll(elements: readonly T[]): boolean
 
 Checks whether all elements in a specified JavaScript built-in Array are contained in this ArkTS Array.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1152,11 +1152,11 @@ retainAll(elements: Array<T>): boolean
 
 Retains only the elements in this ArkTS Array that are contained in the specified ArkTS Array.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1187,11 +1187,11 @@ retainAll(elements: readonly T[]): boolean
 
 Retains only the elements in this ArkTS Array that are contained in the specified JavaScript built-in Array.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1222,11 +1222,11 @@ retainAll(predicate: ArrayElementPredicateFn<T>): boolean
 
 Retains only the elements in this ArkTS Array that satisfy the specified predicate.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Utils.Lang
 

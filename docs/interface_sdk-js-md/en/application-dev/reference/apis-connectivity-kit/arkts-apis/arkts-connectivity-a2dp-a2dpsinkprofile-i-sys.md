@@ -4,7 +4,7 @@ Manage a2dp sink profile.
 
 **Inheritance/Implementation:** A2dpSinkProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -22,7 +22,7 @@ connect(deviceId: string): void
 
 Initiate an a2dp sink connection to a remote device.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -59,7 +59,7 @@ disconnect(deviceId: string): void
 
 Disconnect the a2dp sink connection with the remote device.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -95,7 +95,7 @@ getPlayingState(deviceId: string): PlayingState
 
 Obtain the playing state of device.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 

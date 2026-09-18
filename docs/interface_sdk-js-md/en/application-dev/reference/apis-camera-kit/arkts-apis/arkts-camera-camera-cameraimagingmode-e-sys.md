@@ -2,7 +2,7 @@
 
 Enumerates the camera imaging modes.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,7 +16,7 @@ AUTO = 0
 
 Auto imaging mode.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ RGB = 1
 
 RGB imaging mode.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ IR = 2
 
 IR imaging mode.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

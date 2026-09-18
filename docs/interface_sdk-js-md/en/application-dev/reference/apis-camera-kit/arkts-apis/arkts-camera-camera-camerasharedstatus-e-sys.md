@@ -2,7 +2,7 @@
 
 Enums for camera shared status.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,7 +16,7 @@ CAMERA_STATUS_SHARED = 0
 
 Shared status.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ CAMERA_STATUS_UNSHARED = 1
 
 Unshared status.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

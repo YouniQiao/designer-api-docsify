@@ -2,7 +2,7 @@
 
 Describes the Hyper Snap error information.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,7 +22,7 @@ The error code.
 
 **Type:** [HyperSnapErrorCode](arkts-ability-hypersnapmanager-hypersnaperrorcode-e.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ The error message.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ The time elapsed from the Unix epoch to the moment the error occurred. Unit: mil
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

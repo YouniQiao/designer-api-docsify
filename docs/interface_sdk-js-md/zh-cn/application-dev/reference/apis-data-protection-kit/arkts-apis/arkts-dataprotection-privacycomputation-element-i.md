@@ -2,7 +2,7 @@
 
 定义隐私搜索使用的数据集元素。每个元素包含一个用于匹配的键。可选的哈希算法，以及用于PIR协议检索的可选值。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -21,9 +21,9 @@ elemKey: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -37,9 +37,9 @@ elemValue?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -53,8 +53,8 @@ hashAlg?: HashAlg
 
 **类型：** [HashAlg](arkts-dataprotection-privacycomputation-hashalg-e.md)
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 **系统能力：** SystemCapability.Security.Asset

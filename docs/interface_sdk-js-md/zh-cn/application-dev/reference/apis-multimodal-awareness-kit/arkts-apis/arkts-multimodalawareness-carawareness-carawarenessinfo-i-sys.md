@@ -2,7 +2,7 @@
 
 汽车感知响应信息接口。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -24,7 +24,7 @@ awarenessEvent?:Record<string, Object>
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +42,7 @@ capability: Capability
 
 **类型：** [Capability](arkts-multimodalawareness-carawareness-capability-e.md)
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +60,7 @@ timestamp: number
 
 **类型：** number
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

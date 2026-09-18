@@ -2,7 +2,7 @@
 
 Assessment callback interface.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Customization.AssessmentConfiguration
 
@@ -19,7 +19,7 @@ onBegin(error: AssessmentError): void
 
 Assessment start notification.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +39,7 @@ onEnd(): void
 
 Assessment end notification.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,7 +53,7 @@ onInterrupted(info: AssessmentInterruptInfo): void
 
 Assessment interrupt notification.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

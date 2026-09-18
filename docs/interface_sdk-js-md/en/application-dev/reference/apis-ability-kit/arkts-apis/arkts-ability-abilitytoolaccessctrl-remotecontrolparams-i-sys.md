@@ -2,7 +2,7 @@
 
 Interaction params for remote control
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -23,7 +23,7 @@ Anti-replay challenge.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -39,7 +39,7 @@ Device name of controlled device.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -55,7 +55,7 @@ Device name of controller device.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -71,7 +71,7 @@ Remote control ticket for trusted devices.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -87,7 +87,7 @@ Extra message required for signature verification.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 

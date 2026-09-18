@@ -2,7 +2,7 @@
 
 Base options shared by all dialog types.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,7 +24,7 @@ Sets the distortion animation Mode of the dialog.
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +44,7 @@ Sets the edgeLight animation Mode of the dialog.
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

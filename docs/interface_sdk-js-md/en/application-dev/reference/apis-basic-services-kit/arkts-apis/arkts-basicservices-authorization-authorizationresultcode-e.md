@@ -2,7 +2,7 @@
 
 Enumerates authorization result codes.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -14,7 +14,7 @@ AUTHORIZATION_GRANTED = 0
 
 The authorization is granted.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,7 +35,7 @@ Possible causes: The user explicitly dismissed the authorization dialog (e.g., c
 > 1. Treat this as an expected human-driven workflow discontinuation rather than a system fault.
 > 2. Implement a non-intrusive UX notification or status fallback (e.g., smoothly roll back the UI and update a status label to "Authorization Canceled" or "Action Dismissed").
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +56,7 @@ Possible causes: The authorization policy for the privilege is not met. For exam
 > 1. Check the authorization policy configurations for the target privilege.
 > 2. Implement appropriate fallback handling or graceful degradation(e.g., suggesting the user switch to an administrative environment, or prompting that the feature is temporarily unavailable).
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,7 +76,7 @@ Possible causes: A newer application version containing cutting-edge system feat
 > Suggested solutions: A fallback mechanism should be implemented,
 > such as prompting that the feature is unavailable or skipping the operation.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

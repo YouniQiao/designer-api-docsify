@@ -22,7 +22,7 @@ SVG图像解析和绘制时使用的资源限制。该限制于SVG元数据解�
 
 **类型：** [SVGResourceLimitLevel](arkts-image-image-svgresourcelimitlevel-e-sys.md)
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

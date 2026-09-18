@@ -4,7 +4,7 @@ Implements color controls. It inherits from [ColorControlsQuery](arkts-camera-ca
 
 **Inheritance/Implementation:** ColorControls extends [ColorControlsQuery](arkts-camera-camera-colorcontrolsquery-i-sys.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -24,7 +24,7 @@ getRGBBias(): RGBBias
 
 Gets RGB bias value.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,7 +53,7 @@ getSaturation(): number
 
 Gets the amount of saturation.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,7 +82,7 @@ setRGBBias(bias: RGBBias): void
 
 Sets RGB bias value.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,7 +111,7 @@ setSaturation(val: number): void
 
 Sets the amount of saturation. Before the setting, call [isSaturationSupported](arkts-camera-camera-colorcontrolsquery-i-sys.md#issaturationsupported) to check whether saturation adjustment is supported by the current device.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

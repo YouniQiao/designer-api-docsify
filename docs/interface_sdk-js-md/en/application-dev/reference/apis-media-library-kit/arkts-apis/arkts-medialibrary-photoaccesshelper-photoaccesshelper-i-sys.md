@@ -56,7 +56,7 @@ applyShareAlbumChanges(mediaChangeRequest: MediaShareAlbumChangeRequest): Promis
 
 Applies media changes of share album. This API uses a promise to return the target Album or null.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO and ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -189,7 +189,7 @@ cancelAnalysisTool(config: ToolCancelConfig): Promise<void>
 
 Cancels the execution of an intelligent analysis tool.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.CONTROL_IMAGEVIDEO_ANALYSIS
 
@@ -359,7 +359,7 @@ cloneWithShareAlbum(owner:string, assets: PhotoAsset[], targetAlbum: Album, shar
 
 Clone assets in shared albums. Resources can be copied from a common album to a shared album. Assets in a shared album can be copied to a common album. You can copy assets from a shared album to a shared album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO and ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -402,7 +402,7 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 
 Convert Asset Attributes to Compatibility Attributes
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1897,7 +1897,7 @@ getShareAlbums(options?: FetchOptions): Promise<FetchResult<Album>>
 
 Query shared photo albums.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2081,7 +2081,7 @@ invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResu
 
 Triggers the execution of an analysis tool. This API uses an asynchronous callback to return the result.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.CONTROL_IMAGEVIDEO_ANALYSIS
 
@@ -2522,7 +2522,7 @@ offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 Unsubscribes from changes in the share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2553,7 +2553,7 @@ offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 Unsubscribes from changes of share photos and videos.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2790,7 +2790,7 @@ onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 Subscribes to changes of the share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2821,7 +2821,7 @@ onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 Subscribes to changes of share photos and videos.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 

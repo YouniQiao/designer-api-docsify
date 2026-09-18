@@ -2,7 +2,7 @@
 
 Defines the final search result after decryption, indicating whether a match was found and the optional attached value associated with the matched element.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -21,9 +21,9 @@ The attached value associated with the matched element. This field is available 
 
 **Type:** Uint8Array[]
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -37,8 +37,8 @@ Indicates whether the privacy target was found in the dataset. True means a matc
 
 **Type:** boolean
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset

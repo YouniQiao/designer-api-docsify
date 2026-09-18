@@ -2,7 +2,7 @@
 
 Provides unified dialog APIs.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,11 +23,11 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 Dismisses a dialog box. Accepts either the dialog ID (returned by present) or the ComponentContent reference.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +58,11 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 Presents a fixed-style dialog box.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -99,11 +99,11 @@ The content parameter accepts CustomBuilder or ComponentContent via union type:
 
 isModal = true and showInSubWindow = true cannot be used at the same time.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -137,11 +137,11 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 Updates a presented custom dialog box.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -2,7 +2,7 @@
 
 Defines an external log manager for external log management.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -20,9 +20,9 @@ onCapacityReached(container: ExternalLogContainer): void
 
 This function is called when external log directory capacity is reached
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

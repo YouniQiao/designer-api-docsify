@@ -50,6 +50,6 @@ threadName?: string
 
 **类型：** string
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug

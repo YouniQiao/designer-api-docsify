@@ -2,7 +2,7 @@
 
 Defines the result of a privacy search operation, containing the result ciphertexts and optional value ciphertexts.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -21,9 +21,9 @@ The array of result ciphertexts generated during the privacy search. These ciphe
 
 **Type:** Array&lt;Uint8Array&gt;
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -37,8 +37,8 @@ The array of value ciphertexts generated during the privacy search when using PI
 
 **Type:** Uint8Array[]
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset

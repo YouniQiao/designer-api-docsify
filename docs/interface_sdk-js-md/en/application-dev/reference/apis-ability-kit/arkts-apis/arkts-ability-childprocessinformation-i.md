@@ -2,7 +2,7 @@
 
 The module defines the child process information. The information can be obtained through [getChildProcessInfos](arkts-ability-childprocessmanager-getchildprocessinfos-f.md) of childProcessManager and [getUIAbilityChildProcessInfos](arkts-ability-applicationcontext-c.md#getuiabilitychildprocessinfos) of ApplicationContext.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,7 +16,7 @@ PID of the parent process of the child process.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ PID of the child process.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ Process name of the child process.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -552,7 +552,7 @@ requestFullDataDonation(tables: Array<string>): Promise<void>
 
 请求指定分布式表的全量数据捐赠。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

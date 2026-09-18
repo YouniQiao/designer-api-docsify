@@ -2,7 +2,7 @@
 
 设备角色。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -16,7 +16,7 @@ CONTROLLER = 0x01
 
 控制器设备。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -30,7 +30,7 @@ CONTROLLED = 0x02
 
 受控设备。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 

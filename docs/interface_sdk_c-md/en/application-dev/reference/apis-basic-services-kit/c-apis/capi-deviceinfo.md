@@ -4,6 +4,8 @@
 
 Provides APIs for querying terminal device information.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 ## Files

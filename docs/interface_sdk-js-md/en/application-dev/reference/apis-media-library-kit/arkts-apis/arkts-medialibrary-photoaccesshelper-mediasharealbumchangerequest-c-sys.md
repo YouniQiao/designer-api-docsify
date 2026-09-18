@@ -4,7 +4,7 @@ Represents a change request for managing the share album.
 
 **Inheritance/Implementation:** MediaShareAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,7 +24,7 @@ public addShareMember(owner: string, member: string, status: ShareMemberStatus):
 
 Add member of share Album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -58,7 +58,7 @@ public constructor(album: Album)
 
 Constructor used to initialize a new MediaShareAlbumChangeRequest.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -91,7 +91,7 @@ public static createShareAlbum(context: Context, owner: string, name: string, cl
 
 Creates a MediaShareAlbumChangeRequest instance of creating share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -133,7 +133,7 @@ public static deleteMemberShareAlbum(context: Context, owner: string, albums: Al
 
 Delete member share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -174,7 +174,7 @@ public static deleteShareAlbum(context: Context, owner: string, albums: Album[])
 
 Delete share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -215,7 +215,7 @@ public static deleteShareAssets(context: Context, owner: string, assets: string[
 
 Delete assets of share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -256,7 +256,7 @@ public deleteShareMember(owner: string, member: string): void
 
 delete share member.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -290,7 +290,7 @@ public static getShareAlbumMemberInfo(context: Context, owner: string,
 
 Get the member information of share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -331,7 +331,7 @@ public setShareAlbumName(owner: string, name: string): void
 
 set the name of share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -364,7 +364,7 @@ public updateShareMemberStatus(owner: string, member: string, status: ShareMembe
 
 update share member status.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.MANAGE_SHARE_PHOTO and ohos.permission.WRITE_IMAGEVIDEO
 
@@ -400,7 +400,7 @@ A readonly member for type checking.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

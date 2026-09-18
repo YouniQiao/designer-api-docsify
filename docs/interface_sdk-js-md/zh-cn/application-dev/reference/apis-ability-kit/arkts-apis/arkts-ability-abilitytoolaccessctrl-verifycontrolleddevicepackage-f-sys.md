@@ -13,7 +13,7 @@ export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): 
 
 对受控设备的授权包进行校验。对被控设备发送的远程授权包进行校验。它验证票证以确保授权是合法的。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 

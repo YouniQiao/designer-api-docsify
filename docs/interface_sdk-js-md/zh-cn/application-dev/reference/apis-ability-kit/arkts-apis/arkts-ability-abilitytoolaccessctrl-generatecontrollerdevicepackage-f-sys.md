@@ -14,7 +14,7 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
 
 生成控制器设备的授权包。根据远程用户授权结果生成远程授权包。生成的包可以发送到受控设备进行权限验证。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 

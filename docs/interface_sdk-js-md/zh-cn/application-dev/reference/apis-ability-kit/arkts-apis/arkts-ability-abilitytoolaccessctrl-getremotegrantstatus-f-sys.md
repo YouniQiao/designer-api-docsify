@@ -13,7 +13,7 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 
 获取远程授权状态。该功能用于查询远程授权特性的使能状态。启用时，设备可以向远程设备授予权限；禁用时，不允许远程授权。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 

@@ -149,7 +149,7 @@ cancelAnalysisTool(config: ToolCancelConfig): Promise<void>
 
 取消执行智能分析工具。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.CONTROL_IMAGEVIDEO_ANALYSIS
 
@@ -277,7 +277,7 @@ cloneAssetsByPath(assets: string[], target: Album, option?: BatchOperationOption
 
 将文件管理中的资产复制到目标相册中。使用Promise异步回调。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -371,7 +371,7 @@ cloneToDir(assets: string[], target: string, option?: BatchOperationOptions): Pr
 
 复制资产到文件管理目录中。使用Promise异步回调。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -418,7 +418,7 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 
 转换传入的PhotoAsset属性到媒体库兼容文件格式属性。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -459,7 +459,7 @@ convertToAsset(path: string): Promise<PhotoAsset>
 
 将文件管理公共目录中的资产转换为资产对象。使用Promise异步回调。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -2111,7 +2111,7 @@ invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResu
 
 触发分析工具的执行。该接口使用promise返回结果。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.CONTROL_IMAGEVIDEO_ANALYSIS
 
@@ -2352,7 +2352,7 @@ moveAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions
 
 将文件管理中的资产移动到目标相册中。使用Promise异步回调。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -2399,7 +2399,7 @@ moveAssetsToDir(assets: string[], target: string, option?: BatchOperationOptions
 
 移动资产到文件管理目录中。使用Promise异步回调。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -2652,7 +2652,7 @@ offShareAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 
 注销共享相册的监听
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2683,7 +2683,7 @@ offSharePhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 
 注销共享相册图片和视频的监听
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2920,7 +2920,7 @@ onShareAlbumChange(callback: Callback<AlbumChangeInfos>): void
 
 监听共享相册的变化
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
 
@@ -2951,7 +2951,7 @@ onSharePhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 
 共享相册资产的监听
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.MANAGE_SHARE_PHOTO
 

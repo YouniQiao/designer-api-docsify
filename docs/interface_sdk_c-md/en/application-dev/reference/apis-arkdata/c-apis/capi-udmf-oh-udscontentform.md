@@ -8,6 +8,8 @@ typedef struct OH_UdsContentForm OH_UdsContentForm
 
 Describes the unified data struct of content form.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Related module**: [UDMF](capi-udmf.md)

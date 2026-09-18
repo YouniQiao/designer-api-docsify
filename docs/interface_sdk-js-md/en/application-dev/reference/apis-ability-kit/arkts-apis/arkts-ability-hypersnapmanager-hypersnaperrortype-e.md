@@ -2,7 +2,7 @@
 
 Enumerates the Hyper Snap error type.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -14,7 +14,7 @@ CREATE_SNAPSHOT = 0
 
 Errors that occur during snapshot creation.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +28,7 @@ FORK_FROM_SNAPSHOT = 1
 
 Errors that occur during spawning a process from a snapshot.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

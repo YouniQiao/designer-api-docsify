@@ -22,7 +22,7 @@ static createBinocularMask(radiusX: number, radiusY: number, gap: number, softne
 
 Creates a binocular mask. Generates a left‑right symmetric dual‑elliptical‑arc mask shape, which is used together with the maskDispersion filter to control the area and direction of the dispersion effect.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoft
 
 Creates a fractal glass mask. It performs periodic horizontal displacement sampling on the input texture via fractal stripes to produce a glass‑refraction‑like distortion effect. Distortion can be made symmetric around the image vertical axis. Combined with displacementDistort, it produces a grating refraction visual effect.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -387,7 +387,7 @@ static createSweepRefractionMask(param: SweepRefractionParam, options?: SweepRef
 
 Creates a sweep refraction mask Mask instance that simulates a prism-like chromatic dispersion effect. The mask generates a sweeping light band with color separation across the component.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -506,7 +506,7 @@ static createWarpedRingMask(ringParam: WarpedRingParam): Mask
 
 Creates a Mask instance representing a warped ring.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

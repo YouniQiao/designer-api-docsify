@@ -2,7 +2,7 @@
 
 Color controls query object.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -22,7 +22,7 @@ isRGBBiasSupported(): boolean
 
 Checks whether the RGB bias is supported.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +51,7 @@ isSaturationSupported(): boolean
 
 Checks whether the saturation is supported.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

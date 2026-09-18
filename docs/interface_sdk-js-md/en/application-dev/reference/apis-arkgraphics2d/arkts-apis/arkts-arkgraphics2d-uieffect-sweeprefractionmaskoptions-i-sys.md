@@ -2,7 +2,7 @@
 
 Optional parameters for creating a SweepRefractionMask.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -26,7 +26,7 @@ Normalized corner radius of the prism shape, effective when shapeType is ROUNDED
 
 **Default:** {0.16}
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ Normalized height of the prism. The value range is [0.01, 2], and values outside
 
 **Default:** {1.0}
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +66,7 @@ Normalized width of the prism. The value range is [0.01, 2], and values outside 
 
 **Default:** {1.0}
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +86,7 @@ Prism shape type.
 
 **Default:** {PrismShapeType.ROUNDED_RECT}
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +106,7 @@ Normalized X coordinate of the sweep center. The value range is [0, 1], and valu
 
 **Default:** {0.0}
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +126,7 @@ Normalized Y coordinate of the sweep center. The value range is [0, 1], and valu
 
 **Default:** {0.0}
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

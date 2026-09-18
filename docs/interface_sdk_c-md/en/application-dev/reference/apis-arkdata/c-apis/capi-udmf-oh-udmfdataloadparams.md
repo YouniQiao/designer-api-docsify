@@ -8,6 +8,8 @@ typedef struct OH_UdmfDataLoadParams OH_UdmfDataLoadParams
 
 Indicates data loading params.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 20
 
 **Related module**: [UDMF](capi-udmf.md)

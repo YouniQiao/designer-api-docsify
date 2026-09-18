@@ -1441,7 +1441,7 @@ sendCustomCommand(command: string, args: string): Promise<OperResult>
 
 Send custom commands to AVMusicTemplate
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

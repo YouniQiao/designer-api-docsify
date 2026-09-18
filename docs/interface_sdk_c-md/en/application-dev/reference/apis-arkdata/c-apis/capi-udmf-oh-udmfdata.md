@@ -8,6 +8,8 @@ typedef struct OH_UdmfData OH_UdmfData
 
 Describes the unified data type.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Related module**: [UDMF](capi-udmf.md)

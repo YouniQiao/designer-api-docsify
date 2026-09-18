@@ -53,6 +53,8 @@ OH_Utd* OH_Utd_Create(const char* typeId)
 
 Creates a pointer to the instance of the [OH_Utd](capi-udmf-oh-utd.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -82,6 +84,8 @@ void OH_Utd_Destroy(OH_Utd* pThis)
 
 Destroy a pointer that points to the [OH_Utd](capi-udmf-oh-utd.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -104,6 +108,8 @@ const char* OH_Utd_GetTypeId(OH_Utd* pThis)
 **Description**
 
 Get type id from the [OH_Utd](capi-udmf-oh-utd.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -134,6 +140,8 @@ const char* OH_Utd_GetDescription(OH_Utd* pThis)
 
 Get description from the [OH_Utd](capi-udmf-oh-utd.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -162,6 +170,8 @@ const char* OH_Utd_GetReferenceUrl(OH_Utd* pThis)
 **Description**
 
 Get url from the [OH_Utd](capi-udmf-oh-utd.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -192,6 +202,8 @@ const char* OH_Utd_GetIconFile(OH_Utd* pThis)
 
 Get icon file from the [OH_Utd](capi-udmf-oh-utd.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -220,6 +232,8 @@ const char** OH_Utd_GetBelongingToTypes(OH_Utd* pThis, unsigned int* count)
 **Description**
 
 Get belong to type id of the current [OH_Utd](capi-udmf-oh-utd.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -251,6 +265,8 @@ const char** OH_Utd_GetFilenameExtensions(OH_Utd* pThis, unsigned int* count)
 
 Get filename extensions of the current [OH_Utd](capi-udmf-oh-utd.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -280,6 +296,8 @@ const char** OH_Utd_GetMimeTypes(OH_Utd* pThis, unsigned int* count)
 **Description**
 
 Get mime types of the current [OH_Utd](capi-udmf-oh-utd.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -311,6 +329,8 @@ const char** OH_Utd_GetTypesByFilenameExtension(const char* extension, unsigned 
 
 Get type id by file name extension.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -335,6 +355,8 @@ const char** OH_Utd_GetTypesByMimeType(const char* mimeType, unsigned int* count
 **Description**
 
 Get type id by mime type.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -361,6 +383,8 @@ bool OH_Utd_BelongsTo(const char* srcTypeId, const char* destTypeId)
 
 Calculate relationships of two types.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -385,6 +409,8 @@ bool OH_Utd_IsLower(const char* srcTypeId, const char* destTypeId)
 **Description**
 
 Calculate relationships of two types.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -411,6 +437,8 @@ bool OH_Utd_IsHigher(const char* srcTypeId, const char* destTypeId)
 
 Calculate relationships of two types.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -436,6 +464,8 @@ bool OH_Utd_Equals(OH_Utd* utd1, OH_Utd* utd2)
 
 Calculate two [OH_Utd](capi-udmf-oh-utd.md)s are equal.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -460,6 +490,8 @@ void OH_Utd_DestroyStringList(const char** list, unsigned int count)
 **Description**
 
 Destroy string list memory.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 

@@ -1378,7 +1378,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1402,7 +1402,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 **Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 

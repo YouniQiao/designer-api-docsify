@@ -2,7 +2,7 @@
 
 CarAwareness Capability.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -14,7 +14,7 @@ SPATIAL_POINT = 'SpatialPoint'
 
 spatial point specific capability
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,7 +30,7 @@ SPATIAL_GESTURE = 'SpatialGesture'
 
 spatial gesture specific capability
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ CAR_STATUS = 'CarStatus'
 
 car status specific capability
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +62,7 @@ CAR_CFG = 'CarCfg'
 
 car config specific capability
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ HABIT_RECOMMENDATION = 'HabitRecommendation'
 
 habit recommendation specific capability
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,7 @@
 
 Information about the phone book sync state change.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,7 +24,7 @@ The address of the remote device.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Phone book sync state.
 
 **Type:** [SyncStateType](arkts-connectivity-pbap-syncstatetype-e-sys.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -258,7 +258,7 @@ reportPlaybackCaptureUserAllowed(streamId: number, allowed: boolean): Promise<vo
 
 报告用户允许的结果，以响应来自特定系统应用的播放捕获请求给音频系统。系统将根据该结果继续启动播放捕获或返回失败。该 API 使用 Promise 来返回结果。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 

@@ -33,6 +33,8 @@ enum Udmf_ErrCode
 
 Indicates the error code information.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -50,6 +52,8 @@ enum Udmf_ListenerStatus
 **Description**
 
 Indicates the error code information.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 15
 

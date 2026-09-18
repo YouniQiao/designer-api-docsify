@@ -14,7 +14,7 @@ function installScopeFont(url: string, scope: FontScope): Promise<void>
 
 Installs a scope font file from a specified path into the system font library. This API uses a promise to return the result.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.UPDATE_SCOPE_FONT
 

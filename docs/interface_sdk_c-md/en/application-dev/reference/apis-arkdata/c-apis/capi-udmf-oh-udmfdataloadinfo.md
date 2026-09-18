@@ -8,6 +8,8 @@ typedef struct OH_UdmfDataLoadInfo OH_UdmfDataLoadInfo
 
 Indicates data loading information.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 20
 
 **Related module**: [UDMF](capi-udmf.md)

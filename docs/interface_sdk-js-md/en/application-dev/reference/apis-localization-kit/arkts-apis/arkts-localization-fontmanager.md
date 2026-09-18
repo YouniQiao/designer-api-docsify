@@ -2,7 +2,7 @@
 
 This module provides system applications with the capabilities to install and uninstall third-party fonts and migrate font data. Specifically: <br>- Installing font files from a specified path (.ttf and .ttc formats are supported). <br>- Uninstalling installed fonts by font name. <br>- Starting a font data migration task during device upgrades, and providing callbacks for migration progress and results.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Global.FontManager
 

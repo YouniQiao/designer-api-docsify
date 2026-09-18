@@ -599,7 +599,7 @@ getUIAbilityChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 
 Obtains the information about the UIAbility child processes of the current application. This API uses a promise to return the result. The returned child processes are created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

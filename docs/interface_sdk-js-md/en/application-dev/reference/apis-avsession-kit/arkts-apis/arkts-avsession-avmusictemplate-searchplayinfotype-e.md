@@ -44,7 +44,7 @@ PLAY_MUSIC_LIST = 'playMusicList'
 
 play music list.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +58,7 @@ PLAY_VIDEO_LIST = 'playVideoList'
 
 play video list.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

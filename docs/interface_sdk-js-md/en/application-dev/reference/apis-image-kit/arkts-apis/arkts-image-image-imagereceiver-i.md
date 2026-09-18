@@ -244,7 +244,7 @@ Sets the memory name for the ImageReceiver instance. This API returns the result
 
 Only visible ASCII characters are supported. Spaces, newlines, tabs, and other control characters will be filtered out. If the filtered result consists entirely of digits, a prefix "ImageReceiver:" will be automatically prepended.The length of name must not exceed 256 bytes.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

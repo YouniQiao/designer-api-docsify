@@ -8,6 +8,8 @@ typedef struct OH_Udmf_ProgressInfo OH_Udmf_ProgressInfo
 
 Represents the udmf progress information.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 15
 
 **Related module**: [UDMF](capi-udmf.md)

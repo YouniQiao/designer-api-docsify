@@ -563,7 +563,7 @@ setCameraEditData(editData: MediaAssetEditData): void
 
 Saves the camera edited data of an asset.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

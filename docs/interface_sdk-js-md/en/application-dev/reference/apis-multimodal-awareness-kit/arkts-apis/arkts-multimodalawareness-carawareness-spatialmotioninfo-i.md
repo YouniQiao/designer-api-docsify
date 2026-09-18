@@ -2,7 +2,7 @@
 
 Interface for spatial motion response info.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
 
@@ -22,7 +22,7 @@ Indicates hand movements on the screen.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Indicates X-coordinate of the hand on the screen.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ Indicates Y-coordinate of the hand on the screen.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Indicates timestamp . Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

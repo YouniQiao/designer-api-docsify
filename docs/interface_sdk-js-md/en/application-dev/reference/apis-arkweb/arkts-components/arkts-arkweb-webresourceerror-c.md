@@ -28,7 +28,7 @@ getCustomErrorCode(): number
 
 Gets the custom error code of the Web resource.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Web.Webview.Core
 

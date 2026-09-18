@@ -14,7 +14,7 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
 
 Verifies the authorization package from the controller device. This function verifies the remote authorization package sent by the controller device. It validates the ticket and remote device information to ensure the authorization is legitimate.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 

@@ -8,7 +8,7 @@
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
 > 接口声明同一USB接口时触发。独占持有方可通过此回调获知潜在的访问冲突。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -28,7 +28,7 @@ USB设备的总线地址。取值限定为整数。
 
 **类型：** number
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,7 +44,7 @@ USB设备的设备地址。
 
 **类型：** number
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +60,7 @@ interfaceId: number
 
 **类型：** number
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

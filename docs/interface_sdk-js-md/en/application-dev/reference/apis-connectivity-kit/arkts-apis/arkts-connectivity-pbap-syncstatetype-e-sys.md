@@ -2,7 +2,7 @@
 
 Phone book sync state type.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -16,7 +16,7 @@ PHONEBOOK_STATE_IDLE = 0
 
 Phone book sync is idle (not started, e.g. connected but not downloading).
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ PHONEBOOK_STATE_DOWNLOADING = 1
 
 Phone book is downloading.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ PHONEBOOK_STATE_DOWNLOADED = 2
 
 Phone book download completed.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ PHONEBOOK_STATE_DOWNLOAD_ERROR = 3
 
 Phone book download error.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,7 @@
 
 Defines the authorization result. Currently, the authorization validity period of all [Privileges](arkts-basicservices-authorization-privilege-e.md) follows the lifecycle of the caller process.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -22,7 +22,7 @@ Privilege associated with the authorization.
 
 **Type:** [Privilege](arkts-basicservices-authorization-privilege-e.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Authorization result code. If the authorization is granted, [AUTHORIZATION_GRANT
 
 **Type:** [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

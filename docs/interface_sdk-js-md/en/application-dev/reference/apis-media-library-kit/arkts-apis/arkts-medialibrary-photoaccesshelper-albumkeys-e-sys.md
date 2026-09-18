@@ -102,7 +102,7 @@ SHARE_RISK_STATUS = 'share_risk_status'
 
 The risk status of share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,7 +118,7 @@ SHARE_RISK_TYPE = 'share_risk_type'
 
 The risk type of share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,7 +134,7 @@ SHARE_ALBUM_OWNER = 'share_album_owner'
 
 The owner of share album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,7 +150,7 @@ CLOUD_ID = 'cloud_id'
 
 The cloudId of album.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

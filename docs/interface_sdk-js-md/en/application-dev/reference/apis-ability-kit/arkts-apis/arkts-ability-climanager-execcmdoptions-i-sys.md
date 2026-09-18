@@ -64,7 +64,7 @@ Indicates the unique identifier obtained from the access token manager.
 
 **Default:** ""
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +102,7 @@ Indicates whether the command is executed as a shell command.
 
 **Default:** true
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

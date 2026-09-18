@@ -2,7 +2,7 @@
 
 所有Dialog类型共享的基本选项。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,7 +24,7 @@ distortionMode?: DistortionMode
 
 **默认值：** DistortionMode.DISTORTION_AUTO
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,7 +44,7 @@ edgeLightMode?: EdgeLightMode
 
 **默认值：** EdgeLightMode.EDGELIGHT_AUTO
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

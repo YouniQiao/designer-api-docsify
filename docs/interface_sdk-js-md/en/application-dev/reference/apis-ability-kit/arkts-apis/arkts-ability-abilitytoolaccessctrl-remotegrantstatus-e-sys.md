@@ -2,7 +2,7 @@
 
 Remote grant status.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -16,7 +16,7 @@ ENABLE = 0x01
 
 Enable remote grant.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -30,7 +30,7 @@ DISABLE = 0x02
 
 Disable remote grant.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 

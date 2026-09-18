@@ -28,7 +28,7 @@ RESET_FACTORY = 1
 
 Restore device factory settings..
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ REBOOT = 2
 
 Restart devices.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +56,7 @@ SHUT_DOWN = 3
 
 Shut down devices.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ LOCK_SCREEN = 4
 
 Lock device screens.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +84,7 @@ LOCK_DEVICE = 5
 
 Lock devices.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,7 +98,7 @@ UNLOCK_DEVICE = 6
 
 Unlock devices.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

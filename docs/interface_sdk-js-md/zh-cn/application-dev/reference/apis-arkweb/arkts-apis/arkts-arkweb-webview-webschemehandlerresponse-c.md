@@ -36,7 +36,7 @@ getCustomErrorCode(): number
 
 获取当前Response的自定义错误码。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,7 +204,7 @@ setCustomErrorCode(customErrorCode: number): void
 
 给当前的Response设置自定义错误码。详情参考WebResourceError.getCustomErrorCode。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

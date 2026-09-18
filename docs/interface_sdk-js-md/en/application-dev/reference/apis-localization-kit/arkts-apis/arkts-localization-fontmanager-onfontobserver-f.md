@@ -14,7 +14,7 @@ function onFontObserver(observer: FontClientObserver): void
 
 Registers a font service death observer. When the font service dies unexpectedly, the [onServiceDied](arkts-localization-fontmanager-fontclientobserver-i.md#onservicedied) callback is invoked.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.UPDATE_SCOPE_FONT
 

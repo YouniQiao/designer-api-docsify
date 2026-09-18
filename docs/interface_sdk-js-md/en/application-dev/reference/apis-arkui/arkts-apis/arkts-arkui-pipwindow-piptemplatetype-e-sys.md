@@ -30,7 +30,7 @@ VIDEO_NAVIGATION = 5
 
 In-vehicle navigation template, which is loaded when a PiP window is started on cars.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

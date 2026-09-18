@@ -151,7 +151,7 @@ function getBundleStats(packageName: string, option?: BundleStatsOptions): Promi
 
 Obtains the storage space of an application, in bytes. This API uses a promise to return the result.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 

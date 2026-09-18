@@ -2,7 +2,7 @@
 
 Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +18,7 @@ Blur style. Set to GRADIENT to enable gradient blur effect. Default value: **She
 
 **Type:** [SheetTitleBarBackgroundBlur](arkts-arkui-sheettitlebarbackgroundblur-e.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

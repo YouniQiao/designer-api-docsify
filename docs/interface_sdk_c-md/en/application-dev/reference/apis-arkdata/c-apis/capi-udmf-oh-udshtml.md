@@ -8,6 +8,8 @@ typedef struct OH_UdsHtml OH_UdsHtml
 
 Describes the unified data struct of html.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Related module**: [UDMF](capi-udmf.md)

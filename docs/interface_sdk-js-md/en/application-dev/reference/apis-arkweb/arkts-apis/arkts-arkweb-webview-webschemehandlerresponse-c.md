@@ -36,7 +36,7 @@ getCustomErrorCode(): number
 
 Get the custom error code of the Web response.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,7 +204,7 @@ setCustomErrorCode(customErrorCode: number): void
 
 Set the custom error code for the Web response.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

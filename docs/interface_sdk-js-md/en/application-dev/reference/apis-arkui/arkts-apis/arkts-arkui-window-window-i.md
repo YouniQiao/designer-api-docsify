@@ -3365,7 +3365,7 @@ offWindowFocusStateChange(callback?: Callback<WindowFocusState>): void
 
 Unregisters the callback of the window focus state change event.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4322,7 +4322,7 @@ onWindowFocusStateChange(callback: Callback<WindowFocusState>): void
 
 Registers the callback of the window focus state change event.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

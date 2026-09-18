@@ -2,7 +2,7 @@
 
 远程授权状态。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -16,7 +16,7 @@ ENABLE = 0x01
 
 启用远程授权。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -30,7 +30,7 @@ DISABLE = 0x02
 
 禁用远程授权。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **系统能力：** SystemCapability.Security.Asset
 

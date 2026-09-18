@@ -2,7 +2,7 @@
 
 The device security level policy
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -14,7 +14,7 @@ DEFAULT_ENFORCED = 0
 
 Disallowed switch device security level.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +28,7 @@ ALLOW_BALANCED = 1
 
 Allowed switch to device security level 1.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ ALLOW_FLEXIBLE = 2
 
 Allowed switch to device security level2, disallowed switch to device security level1.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

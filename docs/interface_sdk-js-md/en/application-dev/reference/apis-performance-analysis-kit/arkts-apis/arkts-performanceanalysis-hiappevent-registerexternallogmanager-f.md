@@ -14,9 +14,9 @@ function registerExternalLogManager(logMngr: ExternalLogManager): void
 
 Register external log manager
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 

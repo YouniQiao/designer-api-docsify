@@ -2,7 +2,7 @@
 
 Defines the target element for privacy computation, including the raw element data and an optional hash algorithm.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -21,9 +21,9 @@ The raw data of the target element to be searched for.
 
 **Type:** Uint8Array
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -37,8 +37,8 @@ The hash algorithm used for hashing the target element. If not specified, the el
 
 **Type:** [HashAlg](arkts-dataprotection-privacycomputation-hashalg-e.md)
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 **System capability:** SystemCapability.Security.Asset

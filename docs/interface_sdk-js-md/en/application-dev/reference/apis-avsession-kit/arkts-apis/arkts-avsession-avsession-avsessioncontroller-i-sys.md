@@ -24,7 +24,7 @@ The userId to which the corresponding session belongs. The value should be an in
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

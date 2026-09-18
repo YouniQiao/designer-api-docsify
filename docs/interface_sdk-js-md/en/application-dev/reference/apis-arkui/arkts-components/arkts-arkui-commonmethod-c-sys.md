@@ -135,7 +135,7 @@ markLayeredRender(value: boolean | undefined): T
 
 Marks the node as an independent render layer. Once marked, the component and its child components are rendered independently, so that when a popup is displayed above it, the component itself does not need to be rendered again.
 
-**Since:** 26.1.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

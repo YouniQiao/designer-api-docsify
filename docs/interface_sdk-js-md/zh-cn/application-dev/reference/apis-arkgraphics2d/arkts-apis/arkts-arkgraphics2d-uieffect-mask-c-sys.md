@@ -22,7 +22,7 @@ static createBinocularMask(radiusX: number, radiusY: number, gap: number, softne
 
 创建一个双目蒙版。生成一个左右对称的双椭圆弧形蒙版形状，与 maskDispersion 滤镜配合使用，用于控制色散效果的作用区域和方向。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,7 +81,7 @@ static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoft
 
 创建一个分形玻璃蒙版。它通过分形条纹对输入纹理进行周期性水平位移采样，产生类似玻璃折射的扭曲效果。扭曲效果关于图像垂直轴对称。配合 displacementDistort 使用，可产生光栅折射的视觉效果。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -445,7 +445,7 @@ static createSweepRefractionMask(param: SweepRefractionParam,
 
 创建一个模拟棱镜色散效果的扫光折射遮罩 Mask 实例。该遮罩会在组件上生成一条带有颜色分离效果的扫光光带。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -631,7 +631,7 @@ static createWarpedRingMask(ringParam: WarpedRingParam): Mask
 
 创建一个表示扭曲光环的 Mask 实例。
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
