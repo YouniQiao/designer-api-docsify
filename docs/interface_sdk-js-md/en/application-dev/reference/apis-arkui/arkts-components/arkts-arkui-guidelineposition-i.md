@@ -12,7 +12,7 @@ Defines the position of a guideline.
 end? : Dimension
 ```
 
-Distance between the guideline and the right or bottom of the container. Unit: vp.
+Distance from the guideline to the right or bottom edge of the container. Unit: vp. Either this parameter or **start** is used. If both are declared, only **start** takes effect. If the **width** of the container is declared as **"auto"**, a guideline of the **Axis.Vertical** type does not support declaration in the **end** mode. If the **height** of the container is declared as **"auto"**, a guideline of the **Axis.Horizontal** type does not support declaration in the **end** mode.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -30,7 +30,9 @@ Distance between the guideline and the right or bottom of the container. Unit: v
 start? : Dimension
 ```
 
-Distance between the guideline and the left or top of the container. Unit: vp.
+Distance from the guideline to the left or top edge of the container. Unit: vp.
+
+Default value: **0**. Either this parameter or **end** is used. If both are declared, only **start** takes effect. If the **width** of the container is declared as "auto", a guideline of the **Axis.Vertical** type can be declared only in the **start** mode (percentage is not allowed). If the **height** of the container is declared as **"auto"**, a guideline of the **Axis.Horizontal** type can be declared only in the **start** mode (percentage is not allowed).
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

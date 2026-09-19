@@ -12,21 +12,21 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 
 | Name | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | Defines the ContainerReader attribute functions. Provides methods for configuring container reading parameters and breakpoint analysis properties. |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | In addition to the [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md), the following attributes are supported: |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | Defines the breakpoint configuration options for container dimension analysis. Specifies threshold values that trigger different layout behaviors based on container size. |
-| [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Defines the configuration options for ContainerReader component. Used to specify the parameters for container dimension reading and breakpoint analysis. |
-| [ContainerReaderInterface](arkts-arkui-arkui-components-containerreader-containerreaderinterface-i.md) | Defines the ContainerReader Component. Used for reading and analyzing container layout information based on size breakpoints in dynamic scenarios. Provides container dimension analysis and breakpoint detection capabilities. |
+| [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | Defines the breakpoint configuration options, which are used to specify threshold parameters for container size analysis. |
+| [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Defines the configuration options for the **ContainerReader** component, used to specify parameters for reading container size and obtaining breakpoint values. The component size and breakpoint values cannot be changed through this parameter. |
+| [ContainerReaderInterface](arkts-arkui-arkui-components-containerreader-containerreaderinterface-i.md) | **ContainerReader** is a container breakpoint component used to obtain breakpoint information based on container size in dynamic scenarios and perform responsive layout. This component returns the container's size and breakpoint in real time through [two-way binding](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters), enabling you to create and lay out components based on container size. |
 
 ### Constants
 
 | Name | Description |
 | --- | --- |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md) | Defines ContainerReader Component. A component that analyzes container dimensions and provides breakpoint information for responsive layouts. |
+| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md) | **ContainerReader** is a container breakpoint component used to obtain breakpoint information based on container size in dynamic scenarios and perform responsive layout. This component returns the container's size and breakpoint in real time through [two-way binding](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters), enabling you to create and lay out components based on container size. |
 | [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#containerreaderinstance) | Defines ContainerReader Component instance. Provides access to ContainerReader component methods for container dimension analysis and breakpoint detection. |
 
 ## Examples

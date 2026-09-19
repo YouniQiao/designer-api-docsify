@@ -1,6 +1,14 @@
 # RelativeContainer
 
-The **RelativeContainer** component is a container component used for relative layout of elements in complex scenarios. Child components can define their alignment rules within the container using alignRules. > **NOTE** > > * When width and height are not set, > **RelativeContainer** defaults to 100% in both dimensions. > > * Since API version 11, setting width or height to > **"auto"** enables child-adaptive sizing. However, if the child components use the container as an anchor in the > horizontal direction, the **auto** value of **width** has no effect (equivalent to **width** not being set). The > same rule applies to the vertical direction. > > * Since API version 20, the size adaptation behavior of child components in the **RelativeContainer** component > follows the following rules, depending on the **LayoutPolicy** setting for > width and height: > **LayoutPolicy.wrapContent**: The child component adapts to its content size and is constrained by the size of the > ancestor node. **LayoutPolicy.fixAtIdealSize**: The child component adapts to its ideal content size and is not > constrained by the size of the ancestor node. If **width** is set to **wrapContent** or **fixAtIdealSize**, and the > child component (in the horizontal direction) directly or indirectly uses the **RelativeContainer** as its anchor, > the container's horizontal size will not adapt to the child component. The same rule applies to the vertical > direction. > > * For a child component of the container, > margin has a different meaning from the universal attribute **margin**. It indicates > the distance to the anchor in the respective direction. If there is no anchor in the respective direction, > **margin** in that direction does not take effect. > > **Child Components** > > Multiple child components are supported.
+Defines a relative layout component used for element alignment in complex scenarios. By setting the alignment rules of child components, it aligns child components relative to the container or other child components. It is suitable for complex UIs that require flexible layout and fewer nesting levels.
+
+Child components can define their alignment rules within the container using alignRules.
+
+> **NOTE** > > * This component is supported since API version 9. New APIs in later versions are marked with a superscript to > indicate their initial version. > > * In the **RelativeContainer** component, when width and > height are not set, the layout behavior of the corresponding attributes > is the same as when they are set to 100%. > > * Since API version 11, in the **RelativeContainer** component, setting > width and height to "auto" > means adapting to child components. When width is set to "auto", if a child component uses the container as an > anchor in the horizontal direction, "auto" does not take effect (that is, it is treated as if width is not set). > The same applies to the vertical direction. > > * Since API version 20, in the **RelativeContainer** component, setting > width and > height to **LayoutPolicy.wrapContent** means > adapting to child components while being constrained by the ancestor node size, and setting them to > **LayoutPolicy.fixAtIdealSize** means adapting to child components without being constrained by the ancestor node > size. When **width** is set to **wrapContent** or **fixAtIdealSize**, if a child component directly or indirectly > uses the container as an anchor in the horizontal direction, the container size in that direction does not adapt to > that component. The same applies to the vertical direction. > > * The margin of a child component in **RelativeContainer** differs from the universal > margin attribute. It refers to the distance from the child component to the anchor in that direction. For example, > when **alignRules** sets a left anchor, **margin.left** indicates the distance from the child component to the left > anchor. If **alignRules** does not set an anchor in a certain boundary direction (for example, neither **left** nor > **right** anchor is set), the **margin** in that direction does not take effect.
+
+## Child Components
+
+Multiple child components are supported.
 
 ## RelativeContainer
 
@@ -8,7 +16,7 @@ The **RelativeContainer** component is a container component used for relative l
 RelativeContainer()
 ```
 
-Defines the constructor of RelativeContainer.
+The **RelativeContainer** component is a container component used for relative layout of elements in complex scenarios.
 
 **Since:** 9
 
@@ -24,10 +32,10 @@ Defines the constructor of RelativeContainer.
 
 | Name | Description |
 | --- | --- |
-| [BarrierStyle](arkts-arkui-barrierstyle-i.md) | Defines the ID, direction, and referenced components of a barrier. |
+| [BarrierStyle](arkts-arkui-barrierstyle-i.md) | Defines the style of a barrier, which is used to define the ID, direction, and dependent components of a barrier. Child components can reference the barrier by its ID as an anchor for alignment and positioning. |
 | [GuideLinePosition](arkts-arkui-guidelineposition-i.md) | Defines the position of a guideline. |
-| [GuideLineStyle](arkts-arkui-guidelinestyle-i.md) | Defines the ID, direction, and position of a guideline. |
-| [LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md) | Defines the ID, direction, and referenced components of a barrier. |
+| [GuideLineStyle](arkts-arkui-guidelinestyle-i.md) | Defines the style of a guideline, which used to define the ID, direction, and position of a guideline, helping child components to be positioned and aligned in the **RelativeContainer**. |
+| [LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md) | Defines the style of a localized barrier, which is used to define the ID, direction, and dependent components of a barrier that supports mirror mode. Child components can reference the barrier by its ID as an anchor for alignment and positioning. |
 
 ### Enums
 

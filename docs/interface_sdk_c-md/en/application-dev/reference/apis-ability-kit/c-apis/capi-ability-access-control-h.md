@@ -4,7 +4,9 @@
 
 Declares the APIs for implementing application access control.
 
-**Library**: ability_access_control.so
+**Include**: <accesstoken/ability_access_control.h>
+
+**Library**: libability_access_control.so
 
 **System capability**: SystemCapability.Security.AccessToken
 

@@ -1,6 +1,6 @@
 # LocalizedBarrierStyle
 
-Defines the ID, direction, and referenced components of a barrier.
+Defines the style of a localized barrier, which is used to define the ID, direction, and dependent components of a barrier that supports mirror mode. Child components can reference the barrier by its ID as an anchor for alignment and positioning.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Defines the ID, direction, and referenced components of a barrier.
 id : string
 ```
 
-ID of the barrier, which must be unique and cannot be the same as the name of any component in the container.
+ID of the barrier, used to identify the barrier. A child component can reference this ID to use the barrier as an anchor. The ID must be unique and must not duplicate the name of any component in the container.
 
 **Type:** string
 
@@ -32,7 +32,11 @@ localizedDirection : LocalizedBarrierDirection
 
 Direction of the barrier.
 
-Vertical-direction barriers (including **TOP** and **BOTTOM**) can only serve as the horizontal anchor of a component. If they are used as a vertical anchor, the anchor value will be **0**. Horizontal-direction barriers (including **START** and **END**) can only serve as the vertical anchor of a component. If they are used as a horizontal anchor, the anchor value will be **0**.
+A horizontal barrier line (**TOP**\/**BOTTOM**) can be used only as a vertical directional anchor (**top** or **bottom**) of a component. When it is used as a horizontal directional anchor, its position is treated as **0**. A vertical barrier line (**START**\/**END**, supporting LTR/RTL mirroring) can be used only as a horizontal directional anchor (**start** or **end**) of a component. When it is used as a vertical directional anchor, its position is treated as **0**.
+
+Default value: **LocalizedBarrierDirection.START**
+
+Invalid value: the default value is used.
 
 **Type:** [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 
@@ -50,7 +54,7 @@ Vertical-direction barriers (including **TOP** and **BOTTOM**) can only serve as
 referencedId : Array<string>
 ```
 
-Referenced components of the barrier.
+Components on which the barrier is generated. Put the IDs of the components that serve as the barrier reference into the array. The array must contain at least one valid component ID. IDs that do not exist are ignored. For a barrier that supports mirror mode, the barrier position is calculated based on the actual position in LTR/RTL mode.
 
 **Type:** Array&lt;string&gt;
 

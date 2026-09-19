@@ -18,7 +18,11 @@ Describes the options of the path.
 commands?: ResourceStr
 ```
 
-Command string for drawing the path. If the value is invalid or the default value is used, the width and height required for the content are used. The default value is an empty string. An invalid value is handled as the default value.
+Command string for path drawing, complying with the [SVG Path Syntax](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax), in px.
+
+Default value: empty string
+
+An abnormal value is processed as the default value.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -36,7 +40,11 @@ Command string for drawing the path. If the value is invalid or the default valu
 height?: Length
 ```
 
-Height of the rectangle where the path is located. If the value is invalid or the default value is used, the height required for the content is used. Default Unit: vp.
+Height of the rectangle where the path is located. The value range is ≥ 0.
+
+If the value is an abnormal value or is not set, the height is automatically calculated based on the path content.
+
+Default unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -54,7 +62,11 @@ Height of the rectangle where the path is located. If the value is invalid or th
 width?: Length
 ```
 
-Width of the rectangle where the path is located. If the value is invalid or the default value is used, the width required for the content is used. Default Unit: vp.
+Width of the rectangle where the path is located. The value range is ≥ 0.
+
+If the value is an abnormal value or is not set, the width is automatically calculated based on the path content.
+
+Default unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

@@ -1,6 +1,6 @@
 # LayoutChild
 
-Sub component info passed from framework when layout and measure happens.
+Provides the child component layout information.
 
 @interface LayoutChild
 

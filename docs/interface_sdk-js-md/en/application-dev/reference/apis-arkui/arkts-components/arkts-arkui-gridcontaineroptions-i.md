@@ -1,8 +1,6 @@
 # GridContainerOptions
 
-Defines the options of GridContainer.
-
-@interface GridContainerOptions
+Defines the grid layout container configuration parameter object, used to set the number of columns, device width type, gutter, and margin for the **GridContainer** component.
 
 **Since:** 7
 
@@ -18,7 +16,9 @@ Defines the options of GridContainer.
 columns?: number | "auto"
 ```
 
-Sets the total number of columns in the current layout.
+Total number of columns in the current layout. If set to a number, it must be a positive integer. When set to a number, a fixed-column layout is used. When set to **'auto'**, the system automatically determines the number of columns based on the device width type (XS: 2 columns, SM: 4 columns, MD: 8 columns, LG: 12 columns). If **0** or a negative number is passed, it is treated as not set, and the system automatically determines the number of columns.
+
+Default value: **'auto'**
 
 **Type:** number &#124; "auto"
 
@@ -36,7 +36,7 @@ Sets the total number of columns in the current layout.
 gutter?: number | string
 ```
 
-Grid layout column spacing.
+Gutter of the grid layout. Percentage values are not supported. When the type is number, the default unit is vp, with a value range of [0, +∞). If not set, it is automatically determined based on the device width type: 12 vp for XS, and 24 vp for SM, MD, and LG.
 
 **Type:** number &#124; string
 
@@ -54,7 +54,7 @@ Grid layout column spacing.
 margin?: number | string
 ```
 
-Spacing on both sides of the grid layout.
+Margin on both sides of the grid layout. Percentage values are not supported. When the type is number, the default unit is vp, with a value range of [0, +∞). If not set, it is automatically determined based on the device width type: 12 vp for XS, 24 vp for SM, 32 vp for MD, and 48 vp for LG.
 
 **Type:** number &#124; string
 
@@ -72,7 +72,9 @@ Spacing on both sides of the grid layout.
 sizeType?: SizeType
 ```
 
-Select the device width type.
+Device width type for responsive layout.
+
+Default value: **SizeType.Auto**
 
 **Type:** [SizeType](arkts-arkui-sizetype-e.md)
 

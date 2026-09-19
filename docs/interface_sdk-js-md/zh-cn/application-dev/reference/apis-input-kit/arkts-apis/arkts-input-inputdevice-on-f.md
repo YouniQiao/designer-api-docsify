@@ -12,7 +12,7 @@ import { inputDevice } from '@kit.InputKit';
 function on(type: 'change', listener: Callback<DeviceListener>): void
 ```
 
-注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等外部设备。使用callback异步回调。
+注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等外部设备。使用callback异步回调。建议在应用主线程执行此操作，且需要在此线程退出前取消监听。
 
 **起始版本：** 9
 

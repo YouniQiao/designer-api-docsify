@@ -1,12 +1,6 @@
 # RowOptionsV2
 
-Sets the spacing between child components of the **Row** component.
-
-> **NOTE:** 
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While starting version information is preserved for historical anonymous objects, there may be cases where the
-> outer element's
+Sets the spacing between child components of the **Row** component. The spacing type **SpaceType** can be of the number, string, or Resource type.
 
 **Since:** 18
 
@@ -18,11 +12,21 @@ Sets the spacing between child components of the **Row** component.
 space?: SpaceType
 ```
 
-Spacing between child components. This parameter does not take effect if the value specified is a negative number, or if **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**. Unit: vp. Invalid values are treated as the default value.  
-> **NOTE:** 
-> 
-> The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a
-> Resource type that can be converted to a number. Default value: **0**.
+Spacing between child components in the horizontal layout.
+
+Value range: greater than or equal to 0.
+
+Since API version 9, this parameter does not take effect when **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.
+
+Default value: **0**
+
+Unit: vp
+
+Invalid value: the default value is used.
+
+**NOTE:** 
+
+The value of **space** is a number greater than or equal to 0, a string that can be converted to a non-negative number, or a Resource type data that can be converted to a number. A negative number is treated as an invalid value and the default value 0 is used.
 
 **Type:** [SpaceType](arkts-arkui-spacetype-t.md)
 

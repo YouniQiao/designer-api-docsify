@@ -1,5 +1,6 @@
 # StackOptions
 
+Sets the alignment method of the child component in the stack container.
 
 > **NOTE:** 
 > 
@@ -17,7 +18,13 @@
 alignContent?: Alignment
 ```
 
-Alignment of child components in the container. Default value: Alignment.Center. <br>Invalid values are treated as the default value.
+Alignment of child components in the container. When this attribute and the constructor input parameter are set at the same time, the value set by this attribute takes effect.
+
+Default value: **Alignment.Center**
+
+Invalid value: The default value is used.
+
+**Note:** When this parameter and align are set at the same time, the attribute value set later overrides the one set earlier.
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

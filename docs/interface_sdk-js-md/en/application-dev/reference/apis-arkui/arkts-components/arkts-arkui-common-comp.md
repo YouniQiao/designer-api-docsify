@@ -50,7 +50,7 @@ Constructor
 | [@ObservedV2](arkts-arkui-common-comp-observedv2-d.md) | Defining ObservedV2 ClassDecorator. |
 | [@Once](arkts-arkui-common-comp-once-d.md) | Defining Once PropertyDecorator. |
 | [@Param](arkts-arkui-common-comp-param-d.md) | Defining Param PropertyDecorator. |
-| [@Preview](arkts-arkui-common-comp-preview-d.md) | Defining Preview ClassDecorator. |
+| [@Preview](arkts-arkui-common-comp-preview-d.md) | The @Preview decorator decorates custom components for preview. |
 | [@Prop](arkts-arkui-common-comp-prop-d.md) | Defining Prop PropertyDecorator. |
 | [@Provide](arkts-arkui-common-comp-provide-d.md) | Defining Provide PropertyDecorator. |
 | [@Provider](arkts-arkui-common-comp-provider-d.md) | Defining Provider PropertyDecorator, aliasName is the only matching key and if aliasName is the default, the default attribute name is regarded as aliasName. |
@@ -125,7 +125,7 @@ Constructor
 | [FocusMovement](arkts-arkui-focusmovement-i.md) | Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies. |
 | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) to define the foreground blur options. |
 | [ForegroundEffectOptions](arkts-arkui-foregroundeffectoptions-i.md) | Describes the foreground effect. |
-| [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Provides layout geometry information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md). |
+| [GeometryInfo](arkts-arkui-geometryinfo-i.md) | Provides layout information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md). In the **onMeasureSize** and **onPlaceChildren** methods, the **GeometryInfo** object can be obtained through the **selfLayoutInfo** parameter. It contains the border width, margin, and padding information of the parent component, which developers need to consider when calculating the layout of child components. |
 | [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |
 | [GestureModifier](arkts-arkui-gesturemodifier-i.md) | You need a custom class to implement the **GestureModifier** API. |
 | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | Defines the parameters of the center of gravity. |
@@ -144,9 +144,9 @@ Constructor
 | [KeyEvent](arkts-arkui-keyevent-i.md) | KeyEvent object description. |
 | [KeyframeAnimateParam](arkts-arkui-keyframeanimateparam-i.md) | Provides animation configuration options. |
 | [KeyframeState](arkts-arkui-keyframestate-i.md) | Provides keyframe configuration options. |
-| [Layoutable](arkts-arkui-layoutable-i.md) | Provides the child component layout information. |
+| [Layoutable](arkts-arkui-layoutable-i.md) | Provides layout information of a child component. The **Layoutable** object is created and passed in by the ArkUI framework when **onPlaceChildren** is called. It contains the measurement result and unique identifier of the child component. Developers set the position of the child component through the **layout** method of **Layoutable**, and obtain the margin information of the child component through the **getMargin**, **getPadding**, and **getBorderWidth** methods for precise layout calculation. |
 | [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md) | Provides the border information of the child component. |
-| [LayoutChild](arkts-arkui-layoutchild-i.md) | Sub component info passed from framework when layout and measure happens. |
+| [LayoutChild](arkts-arkui-layoutchild-i.md) | Provides the child component layout information. |
 | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | Provides the child component layout information. |
 | [LightSource](arkts-arkui-lightsource-i-sys.md) | Each component allows for one light source. |
 | [LinearGradient](arkts-arkui-lineargradient-i.md) | Linear Gradient Interface |
@@ -155,7 +155,7 @@ Constructor
 | [LocalizedAlignRuleOptions](arkts-arkui-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
 | [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
 | [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
-| [Measurable](arkts-arkui-measurable-i.md) | Provides the child component position information. |
+| [Measurable](arkts-arkui-measurable-i.md) | Provides measurement information of a child component. The **Measurable** object is created and passed in by the ArkUI framework when **onMeasureSize** is called, and is used in the measurement phase. Unlike **Layoutable** (used in the layout phase), Measurable is mainly used to measure the size of a child component. Developers set constraint conditions and obtain measurement results through the **measure** method. **Measurable** and **Layoutable** are two representations of the same child component in different layout phases. |
 | [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. This API inherits from [SizeResult](arkts-arkui-sizeresult-i.md). |
 | [MenuElement](arkts-arkui-menuelement-i.md) | Configures icon, text, and interaction information of a menu item. |
 | [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md) | Defines the grid style of menu. |
@@ -174,7 +174,7 @@ Constructor
 | [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
 | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelMapMock](arkts-arkui-pixelmapmock-i-sys.md) | pixelmap object with release function. |
-| [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | Enumerates the directions of pixel rounding at the component level. |
+| [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | Rounding strategy for the boundary of the current component. |
 | [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md) | Describes the pixel stretch effect options. |
 | [PointLightStyle](arkts-arkui-pointlightstyle-i-sys.md) | You apply a point light style by setting the light source that emits illumination and the components to be illuminated. |
 | [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md) | Sets the color and direction of the linear gradient for the outlines. |
@@ -184,7 +184,7 @@ Constructor
 | [PopupOptions](arkts-arkui-popupoptions-i.md) | Provides the configuration options for the popup. |
 | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | Display state of the popup. |
 | [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | Configures the style of the preview image during custom drag operations. |
-| [PreviewParams](arkts-arkui-previewparams-i.md) | Define Preview property |
+| [PreviewParams](arkts-arkui-previewparams-i.md) | Implements a configuration object for @Preview parameters. Defines preview device attributes such as device type and screen state. |
 | [ProvideOptions](arkts-arkui-provideoptions-i.md) | Defines the options of Provide PropertyDecorator. |
 | [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | Defines the radial gradient parameters. |
 | [Rectangle](arkts-arkui-rectangle-i.md) | The data type used to describe a rectangular area. |
@@ -202,7 +202,7 @@ Constructor
 | [SheetOptions](arkts-arkui-sheetoptions-i.md) | Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md). |
 | [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i-sys.md) | Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values. |
 | [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | Component sheet title options |
-| [SizeResult](arkts-arkui-sizeresult-i.md) |  |
+| [SizeResult](arkts-arkui-sizeresult-i.md) | Provides the component size information. |
 | [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | Smart gesture response behavior configuration object. |
 | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) | Spatial effect params. |
 | [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
@@ -342,7 +342,7 @@ Constructor
 | [PreviewScaleMode](arkts-arkui-previewscalemode-e.md) | Enumerates the scale modes of the preview image. |
 | [RepeatMode](arkts-arkui-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
 | [ReusableMemOptStrategy](arkts-arkui-reusablememoptstrategy-e.md) | Defines a type for memory optimization strategy. |
-| [SafeAreaEdge](arkts-arkui-safeareaedge-e.md) | Enumerates the edges for expanding the safe area. |
+| [SafeAreaEdge](arkts-arkui-safeareaedge-e.md) | Edge of the safe area for expanding the layout. |
 | [SafeAreaType](arkts-arkui-safeareatype-e.md) | Enumerates the types for expanding layout safe areas. |
 | [ScrollSizeMode](arkts-arkui-scrollsizemode-e.md) | Define the scroll size mode of the sheet. |
 | [ShadowStyle](arkts-arkui-shadowstyle-e.md) | enum Shadow style |

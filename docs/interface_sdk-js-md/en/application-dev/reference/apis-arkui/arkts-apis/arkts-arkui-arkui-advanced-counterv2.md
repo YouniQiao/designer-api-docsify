@@ -12,32 +12,32 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 
 | Name | Description |
 | --- | --- |
-| [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md) | Defines the common options. |
-| [CounterV2DateData](arkts-arkui-arkui-advanced-counterv2-counterv2datedata-c.md) | Defines the date data. |
-| [CounterV2DateStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2datestyleoptions-c.md) | Defines the date style options. |
-| [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md) | Defines the inline style options. |
-| [CounterV2NumberStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md) | Defines the number style options. |
-| [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) | Defines the counter options. |
+| [CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md) | Defines the common attributes and events of the **CounterV2** component. |
+| [CounterV2DateData](arkts-arkui-arkui-advanced-counterv2-counterv2datedata-c.md) | Defines common date attributes and methods, including year, month, and day. |
+| [CounterV2DateStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2datestyleoptions-c.md) | Defines the attributes and events of the inline date **CounterV2**. |
+| [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md) | Defines the attributes and events of the inline number **CounterV2**. |
+| [CounterV2NumberStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2numberstyleoptions-c.md) | Defines the attributes and events of the list and compact **CounterV2**. |
+| [CounterV2Options](arkts-arkui-arkui-advanced-counterv2-counterv2options-c.md) | Defines the type and style of the **CounterV2** component. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [CounterV2Component](arkts-arkui-arkui-advanced-counterv2-counterv2component-s.md) | Defines Counter Component. |
+| [CounterV2Component](arkts-arkui-arkui-advanced-counterv2-counterv2component-s.md) | The **CounterV2** component enables precise numeric value adjustment. It provides four types: list, compact, inline number, and inline date, which are applicable to scenarios such as shopping cart quantity adjustment and date selection. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | Enum for the CounterV2 type. |
+| [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md) | Specifies the **CounterV2** type. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnCounterV2HoverCallback](arkts-arkui-oncounterv2hovercallback-t.md) | The hover callback of CounterV2. |
-| [OnDateCounterV2ChangeCallback](arkts-arkui-ondatecounterv2changecallback-t.md) | The change callback of the date style counter. |
-| [OnInlineCounterV2Change](arkts-arkui-oninlinecounterv2change-t.md) | The change callback of the inline CounterV2. |
+| [OnCounterV2HoverCallback](arkts-arkui-oncounterv2hovercallback-t.md) | Defines the mouse hover callback type for the **CounterV2** component. |
+| [OnDateCounterV2ChangeCallback](arkts-arkui-ondatecounterv2changecallback-t.md) | Defines the callback for date changes of the inline date **CounterV2**. |
+| [OnInlineCounterV2Change](arkts-arkui-oninlinecounterv2change-t.md) | Defines the callback for the value change of the inline number **CounterV2**. |
 
 ## Examples
 

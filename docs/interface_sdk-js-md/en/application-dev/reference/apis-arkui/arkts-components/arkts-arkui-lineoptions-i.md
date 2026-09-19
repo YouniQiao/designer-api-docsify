@@ -5,7 +5,8 @@ Describes the options of the line.
 > **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element's &gt;
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Since:** 18
 
@@ -17,7 +18,11 @@ Describes the options of the line.
 height?: Length
 ```
 
-Height. If the value is invalid or the default value is used, the height required for the content is used. Unit: vp.
+Height.
+
+If the value is an abnormal value or is not set, the height of the drawing area is automatically calculated based on **startPoint** and **endPoint**.
+
+Default unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -35,7 +40,11 @@ Height. If the value is invalid or the default value is used, the height require
 width?: Length
 ```
 
-Width. If the value is invalid or the default value is used, the width required for the content is used. Unit: vp.
+Width.
+
+If the value is an abnormal value or is not set, the width of the drawing area is automatically calculated based on **startPoint** and **endPoint**.
+
+Default unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

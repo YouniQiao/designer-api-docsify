@@ -12,22 +12,22 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 
 | Name | Description |
 | --- | --- |
-| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) |  |
-| [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) | The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content. |
+| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) | The **ChipGroup** component provides chip group capabilities, supporting single-selection or multi-selection modes, customizable styles, icons, and spacing, as well as selected state management and event callbacks. It is suitable for various scenarios such as file categorization, resource filtering, tag selection, and content grouping, helping developers quickly implement selection functionality while delivering a consistent visual and interactive experience. |
+| [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) | The **ChipGroup** component provides chip group capabilities, supporting single-selection or multi-selection modes, customizable styles, icons, and spacing, as well as selected state management and event callbacks. It is suitable for various scenarios such as file categorization, resource filtering, tag selection, and content grouping, helping developers quickly implement selection functionality while delivering a consistent visual and interactive experience. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
 | [ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md) | Defines the specific attributes of individual chips. |
-| [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md) | Defines the top and bottom padding of a **ChipGroup** component, which is used to control the overall height of the ChipGroup. |
+| [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md) | Defines the top and bottom padding of a **ChipGroup** component, which is used to control the overall height of the **ChipGroup**. |
 | [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md) | Defines the left and right padding of the chip group, and the spacing between chips. |
-| [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md) | Defines the common attributes shared by all chips. |
-| [IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) | Defines the configuration for the trailing builder, with constraints applied to background size and color settings. |
+| [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md) | Defines the common attributes of chips. |
+| [IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) | Defines the trailing builder API, which is used to configure the display properties of the trailing icon and its background area. |
 | [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md) | Defines the common attributes of icons. |
-| [LabelOptions](arkts-arkui-arkui-advanced-chipgroup-labeloptions-i.md) | Defines the label configuration options. |
+| [LabelOptions](arkts-arkui-arkui-advanced-chipgroup-labeloptions-i.md) | Defines the text attributes. |
 | [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons. |
-| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md) | Suffix icon option type of ChipGroup. |
+| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md) | Defines the suffix icon option type for **ChipGroup**. |
 
 ## Examples
 

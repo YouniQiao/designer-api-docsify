@@ -1,6 +1,6 @@
 # PixelRoundPolicy
 
-Enumerates the directions of pixel rounding at the component level.
+Rounding strategy for the boundary of the current component.
 
 @interface PixelRoundPolicy
 
@@ -14,7 +14,7 @@ Enumerates the directions of pixel rounding at the component level.
 bottom?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's bottom edge. <br>Invalid values are rounded using the round-half-up rule.
+Boundary rounding strategy for the bottom edge of the component. <br>Since API version 12, the default rounding rule is round-to-nearest. The default value is used when pixelRound is not set or when a value other than the PixelRoundCalcPolicy enum is set.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -36,7 +36,7 @@ Rounding alignment for the component's bottom edge. <br>Invalid values are round
 end?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's end edge. <br>Invalid values are rounded using the round-half-up rule.
+Boundary rounding strategy for the tail edge of the component. <br>Since API version 12, the default rounding rule is round-to-nearest. The default value is used when pixelRound is not set or when a value other than the PixelRoundCalcPolicy enum is set.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -58,7 +58,7 @@ Rounding alignment for the component's end edge. <br>Invalid values are rounded 
 start?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's start edge. <br>Invalid values are rounded using the round-half-up rule.
+Boundary rounding strategy for the front edge of the component. <br>Since API version 12, the default rounding rule is round-to-nearest. The default value is used when pixelRound is not set or when a value other than the PixelRoundCalcPolicy enum is set.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 
@@ -80,7 +80,7 @@ Rounding alignment for the component's start edge. <br>Invalid values are rounde
 top?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's top edge. <br>Invalid values are rounded using the round-half-up rule.
+Boundary rounding strategy for the top edge of the component. <br>Since API version 12, the default rounding rule is round-to-nearest. The default value is used when pixelRound is not set or when a value other than the PixelRoundCalcPolicy enum is set.
 
 **Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
 

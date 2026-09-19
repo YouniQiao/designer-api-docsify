@@ -1,8 +1,6 @@
 # SizeType
 
-Defines the size type.
-
-@enum { number }
+Enumerates device width types, used to distinguish device types of different widths in the grid layout to implement responsive layout.
 
 **Since:** 7
 
@@ -18,7 +16,7 @@ Defines the size type.
 Auto
 ```
 
-Select a value based on the device type.
+Automatically matches the appropriate size type based on the device width.
 
 **Since:** 7
 
@@ -34,7 +32,7 @@ Select a value based on the device type.
 XS
 ```
 
-Extra Small width type device.
+Device with minimum width. Width ≤320 vp.
 
 **Since:** 7
 
@@ -50,7 +48,7 @@ Extra Small width type device.
 SM
 ```
 
-Small width type device.
+Device with small width. Width 320 vp–600 vp.
 
 **Since:** 7
 
@@ -66,7 +64,7 @@ Small width type device.
 MD
 ```
 
-Medium width type device.
+Device with medium width. Width 600 vp–840 vp.
 
 **Since:** 7
 
@@ -82,7 +80,7 @@ Medium width type device.
 LG
 ```
 
-Large width type device.
+Device with large width. Width ≥840 vp.
 
 **Since:** 7
 

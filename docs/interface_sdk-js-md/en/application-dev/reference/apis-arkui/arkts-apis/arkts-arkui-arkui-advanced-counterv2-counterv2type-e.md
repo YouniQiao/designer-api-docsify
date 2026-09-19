@@ -1,6 +1,6 @@
 # CounterV2Type
 
-Enum for the CounterV2 type.
+Specifies the **CounterV2** type.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,7 @@ Enum for the CounterV2 type.
 LIST = 0
 ```
 
-List counter.
+List **CounterV2**.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ List counter.
 COMPACT = 1
 ```
 
-Compact counter.
+Compact **CounterV2**.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ Compact counter.
 INLINE = 2
 ```
 
-Inline counter.
+Inline number **CounterV2**.
 
 **Since:** 26.0.0
 
@@ -60,7 +60,7 @@ Inline counter.
 INLINE_DATE = 3
 ```
 
-Date inline counter.
+Inline date **CounterV2**.
 
 **Since:** 26.0.0
 

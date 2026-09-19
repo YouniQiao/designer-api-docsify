@@ -1,6 +1,6 @@
 # Polyline properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** PolylineAttribute extends CommonShapeMethod<PolylineAttribute>
 
@@ -14,7 +14,7 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 points(value: Array<any>)
 ```
 
-Sets the list of coordinates through which the polyline passes. This attribute can be dynamically set using attributeModifier.
+Sets the list of coordinate points that the polyline passes through. This attribute supports attributeModifier for dynamic setting of the attribute.
 
 **Since:** 7
 
@@ -28,4 +28,4 @@ Sets the list of coordinates through which the polyline passes. This attribute c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;any&gt; | Yes | List of coordinates that the polyline passes through. A two-dimensional array is passed, and each subarray indicates the `[x, y]` coordinates of a vertex.<br>Default value: **[]** (empty array) <br>Default unit: vp<br>The **undefined** and **null** values are invalid and treated as the default value. |
+| value | Array&lt;any&gt; | Yes | List of coordinate points that the polyline passes through. Pass in a two-dimensional array, where each sub-array represents the [x, y] coordinates of a vertex.<br>Default value: [] (empty array) <br>Default unit: vp <br>Abnormal values undefined and null are processed as the default value. |

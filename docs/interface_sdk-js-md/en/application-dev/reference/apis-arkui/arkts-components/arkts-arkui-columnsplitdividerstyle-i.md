@@ -4,12 +4,12 @@ Sets the distance between the child component and the upper and lower dividers.
 
 > **NOTE:** 
 > 
-> Similar to [RowSplit](arkts-arkui-rowsplit-comp-attribute.md#rowsplit), the dividers of **ColumnSplit** adjust the height of adjacent child
+> Similar to RowSplit, the dividers of **ColumnSplit** adjust the height of adjacent child
 > components. However, this adjustment is only applied to the extent that the resulting height stays within the
 > height limits of the child components.
 > 
-> Universal attributes such as clip and margin are supported.
-> If **clip** is not set, the default value **true** is used.
+> Universal attributes such as clip and
+> margin are supported. If **clip** is not set, the default value **true** is used.
 
 **Since:** 10
 
@@ -21,7 +21,13 @@ Sets the distance between the child component and the upper and lower dividers.
 endMargin?: Dimension
 ```
 
-Distance between the child component and the lower divider.<br>Default value: **0vp**<br>Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+Distance between the child component and the divider below it. This spacing can be adjusted (for example, to prevent content from overlapping with the divider or to improve layout aesthetics).
+
+Default value: **0vp**
+
+Value range: negative values are not supported.
+
+Illegal value: treated as the default value, in which case the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) API is **undefined**.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -41,7 +47,13 @@ Distance between the child component and the lower divider.<br>Default value: **
 startMargin?: Dimension
 ```
 
-Distance between the child component and the upper divider.<br>Default value: **0vp**<br>Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+Distance between the child component and the divider above it. This spacing can be adjusted (for example, to prevent content from overlapping with the divider or to improve layout aesthetics).
+
+Default value: **0vp**
+
+Value range: negative values are not supported.
+
+Illegal value: treated as the default value, in which case the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) API is **undefined**.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

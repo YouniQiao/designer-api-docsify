@@ -12,7 +12,13 @@ Provides the gutter options for the grid layout to define the spacing between ch
 x?: Length | GridRowSizeOption
 ```
 
-Horizontal spacing between grid child components. Unit: vp.
+Horizontal gutter between child components in the grid. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**.
+
+Invalid value: the default value is used.
+
+Unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
@@ -30,7 +36,13 @@ Horizontal spacing between grid child components. Unit: vp.
 y?: Length | GridRowSizeOption
 ```
 
-Vertical spacing between grid child components. Unit: vp.
+Vertical gutter between child components in the grid. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**.
+
+Invalid value: the default value is used.
+
+Unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 

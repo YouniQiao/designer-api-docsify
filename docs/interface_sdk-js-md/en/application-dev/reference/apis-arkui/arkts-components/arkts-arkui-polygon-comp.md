@@ -1,6 +1,12 @@
 # Polygon
 
-The **Polygon** component is used to draw a polygon. > **NOTE** > > This component supports dynamic constructor parameter updates using the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20. > > **Child Components** > > None
+The **Polygon** component is used to draw a polygon. This component defines the shape of a polygon by setting a list of vertex coordinates, and supports attribute configuration such as fill color and border style. The component uses a two-dimensional coordinate system and connects the vertices in sequence to form a closed polygon area. It is suitable for drawing custom polygon shapes such as triangles, quadrilaterals, and pentagons, as well as for implementing visualization scenarios such as charts and icons that require polygon elements.
+
+> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class.
+
+## Child Components
+
+None
 
 ## Polygon
 
@@ -8,7 +14,7 @@ The **Polygon** component is used to draw a polygon. > **NOTE** > > This compone
 Polygon(options?: PolygonOptions)
 ```
 
-Uses new to create Polygon. Anonymous Object Rectification.
+Draws a polygon.
 
 **Since:** 7
 
@@ -23,7 +29,7 @@ Uses new to create Polygon. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Polygon options |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Configuration options of the **Polygon** component, used to define the width and height of the drawing area. Pass this parameter when the polygon size needs to be specified. If it is not passed, the default width and height (both 0) are used. If **undefined** or **null** is passed, the parameter setting does not take effect and the component attributes remain unchanged. |
 
 ## Polygon
 
@@ -31,7 +37,7 @@ Uses new to create Polygon. Anonymous Object Rectification.
 Polygon(options?: PolygonOptions)
 ```
 
-Defines the constructor of Polygon component.
+Draws a polygon.
 
 **Since:** 7
 
@@ -45,7 +51,7 @@ Defines the constructor of Polygon component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Options of the polygon.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Configuration options of the **Polygon** component, used to define the width and height of the drawing area. Pass this parameter when the polygon size needs to be specified. If it is not passed, the default width and height (both 0) are used. If **undefined** or **null** is passed, the parameter setting does not take effect and the component attribute remains unchanged. |
 
 ## Summary
 

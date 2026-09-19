@@ -1,13 +1,15 @@
 # ChipItemStyle
 
-Defines the common attributes shared by all chips.
+Defines the common attributes of chips.
 
 > **NOTE:** 
 > 
-> 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,
-> **NORMAL** and **SMALL**; (2) **SizeOptions**.
+> 1. The size settings for chips can be of two types: (1) **ChipSize**, which offers two size options, **NORMAL** and
+> **SMALL**; (2) **SizeOptions**.
 > 
-> 2. If **backgroundColor** or **selectedBackgroundColor** is set to **undefined**, the default background color is used. If an invalid value is provided, the background color is transparent.
+> 2. When **backgroundColor** and **selectedBackgroundColor** are set to **undefined**, the default background color is displayed. When an invalid value is passed in, the background color is transparent.
+> 
+> 3. Starting from API version 26.0.0, when **backgroundSystemMaterial** is set to a system material with auto-invert, **fontColor** uses a system-predefined invertible color resource (such as `&#36;r('sys.color.font_primary')`),and the color automatically adapts to the inverted color of the material background color.
 
 **Since:** 12
 
@@ -29,7 +31,9 @@ Chip background color.
 
 Default value: **&#36;r('sys.color.ohos_id_color_button_normal')**
 
-If this parameter is set to **undefined**, the default value is used.
+**Note:** Since API version 26.0.0, when **backgroundSystemMaterial** is set, **backgroundColor** must be set to **Color.Transparent**; otherwise, it conflicts with the system material. When **backgroundSystemMaterial** is undefined, the **backgroundColor** attribute takes effect.
+
+When the value is **undefined**, the default value of **backgroundColor** is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -51,7 +55,9 @@ Chip text color.
 
 Default value: **&#36;r('sys.color.ohos_id_color_text_primary')**
 
-If this parameter is set to **undefined**, the default value is used.
+**Note:** Since API version 26.0.0, when **backgroundSystemMaterial** is set to a system material with auto-invert, **fontColor** uses a system-predefined invertible color resource, and the text color automatically adapts to the inverted color of the material background color.
+
+When the value is **undefined**, the default value of **fontColor** is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -69,11 +75,13 @@ If this parameter is set to **undefined**, the default value is used.
 selectedBackgroundColor?: ResourceColor
 ```
 
-Background color of the chip when it is activated.
+Chip background color when selected.
 
 Default value: **&#36;r('sys.color.ohos_id_color_emphasize')**
 
-If this parameter is set to **undefined**, the default value is used.
+**Note:** Since API version 26.0.0, when **selectedBackgroundSystemMaterial** is set, **selectedBackgroundColor** must be set to **Color.Transparent**; otherwise, it conflicts with the system material. When **selectedBackgroundSystemMaterial** is **undefined**, the **selectedBackgroundColor** attribute takes effect.
+
+When the value is **undefined**, the default value of **selectedBackgroundColor** is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -91,11 +99,13 @@ If this parameter is set to **undefined**, the default value is used.
 selectedFontColor?: ResourceColor
 ```
 
-Text color of the chip when it is activated.
+Chip text color when selected.
 
 Default value: **&#36;r('sys.color.ohos_id_color_text_primary_contrary')**
 
-If this parameter is set to **undefined**, the default value is used.
+**Note:** Since API version 26.0.0, when **selectedBackgroundSystemMaterial** is set to a system material with auto -invert, **selectedFontColor** uses a system-predefined invertible color resource (for example, `&#36;r('sys.color.font_primary')`), and the color automatically adapts to the inverted color of the material background color.
+
+When the value is **undefined**, the default value of **selectedFontColor** is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -113,11 +123,11 @@ If this parameter is set to **undefined**, the default value is used.
 size?: ChipSize | SizeOptions
 ```
 
-Chip size. The ChipSize type needs to be imported from the Chip component.
+Chip size. To use it, import the **ChipSize** type from the **Chip** component. **ChipSize.NORMAL** applies to most standard scenarios; **ChipSize.SMALL** applies to compact layouts or space-constrained scenarios; **SizeOptions** applies to special scenarios where a custom precise size is required.
 
 Default value: **ChipSize.NORMAL** or **{ height: 0, width: 0 }**
 
-If the value is **undefined**, the default value is used.
+When the value is **undefined**, the default value is used.
 
 **Type:** [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) &#124; [SizeOptions](arkts-arkui-sizeoptions-i.md)
 

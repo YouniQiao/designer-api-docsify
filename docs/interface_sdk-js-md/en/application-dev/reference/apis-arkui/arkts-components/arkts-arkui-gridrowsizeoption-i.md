@@ -12,7 +12,13 @@ Describes the gutter sizes for different device width types.
 lg?: Length
 ```
 
-Gutter size for large device width. Unit: vp. Default value: **0vp**.
+Gutter of the grid child components on large-width type devices. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**
+
+Unit: vp
+
+Invalid value: handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -30,7 +36,13 @@ Gutter size for large device width. Unit: vp. Default value: **0vp**.
 md?: Length
 ```
 
-Gutter size for medium device width. Unit: vp. Default value: **0vp**.
+Gutter of the grid child components on medium-width type devices. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**
+
+Unit: vp
+
+Invalid value: handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -48,7 +60,13 @@ Gutter size for medium device width. Unit: vp. Default value: **0vp**.
 sm?: Length
 ```
 
-Gutter size for small device width. Unit: vp. Default value: **0vp**.
+Gutter of the grid child components on small-width type devices. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**
+
+Unit: vp
+
+Invalid value: handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -66,7 +84,13 @@ Gutter size for small device width. Unit: vp. Default value: **0vp**.
 xl?: Length
 ```
 
-Gutter size for extra large device width. Unit: vp. Default value: **0vp**.
+Gutter of the grid child components on extra-large-width type devices. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**
+
+Unit: vp
+
+Invalid value: handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -84,7 +108,13 @@ Gutter size for extra large device width. Unit: vp. Default value: **0vp**.
 xs?: Length
 ```
 
-Gutter size for minimum device width. Unit: vp. Default value: **0vp**.
+Gutter of the grid child components on minimum-width type devices. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**
+
+Unit: vp
+
+Invalid value: handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -102,7 +132,13 @@ Gutter size for minimum device width. Unit: vp. Default value: **0vp**.
 xxl?: Length
 ```
 
-Gutter size for extra extra large device width. Unit: vp. Default value: **0vp**.
+Gutter of the grid child components on extra-extra-large-width type devices. Value range: a number or string greater than or equal to 0.
+
+Default value: **0vp**
+
+Unit: vp
+
+Invalid value: handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

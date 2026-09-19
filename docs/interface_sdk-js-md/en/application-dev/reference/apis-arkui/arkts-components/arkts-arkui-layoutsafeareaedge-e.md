@@ -78,7 +78,7 @@ End edge. This represents the right edge in LTR mode and the left edge in RTL mo
 VERTICAL = 4
 ```
 
-Vertical edge of the safe area.
+Vertical edges.
 
 **Since:** 20
 
@@ -94,7 +94,7 @@ Vertical edge of the safe area.
 HORIZONTAL = 5
 ```
 
-Horizontal edge of the safe area.
+Horizontal edges.
 
 **Since:** 20
 
@@ -110,7 +110,7 @@ Horizontal edge of the safe area.
 ALL = 6
 ```
 
-All edges of the safe area.
+All edges.
 
 **Since:** 20
 

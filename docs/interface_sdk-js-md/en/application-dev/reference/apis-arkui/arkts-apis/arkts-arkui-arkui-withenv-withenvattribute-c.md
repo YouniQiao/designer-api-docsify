@@ -1,6 +1,8 @@
 # WithEnvAttribute
 
-Define the WithEnv attribute functions.
+Supports the following **WithEnv**-specific attributes.
+
+The [universal events](../arkts-components/arkts-arkui-commonmethod-c.md) are not supported.
 
 **Since:** 26.0.0
 
@@ -18,7 +20,7 @@ import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 ```
 
-Defining Custom Environment Variables
+Sets a custom environment variable that can be read by descendant custom components within the scope.
 
 **Since:** 26.0.0
 
@@ -32,8 +34,8 @@ Defining Custom Environment Variables
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | Key for custom environment variables. |
-| value | T | Yes | Value of custom environment variables. |
+| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | Key of the custom environment variable. |
+| value | T | Yes | Value of the custom environment variable. The type T of value corresponds to the type T of CustomEnvKey&lt;T&gt;. |
 
 **Return value:**
 
@@ -47,7 +49,13 @@ Defining Custom Environment Variables
 env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 ```
 
-Defining System Environment Variables
+Sets the system environment variable within the scope. The currently officially supported system environment variable keys are **WritableEnvKey.FONT_SCALE** and **WritableEnvKey.DIRECTION**.
+
+> **NOTE:** 
+> 
+> - `WithEnv.env(WritableEnvKey.FONT_SCALE, value)` provides a local font scale for components within the scope of the trailing closure. `value` is of the number type, indicating the font scale multiplier. If the set `value` is less than 0, it is treated as 0.
+> 
+> - The effective font scale of components within the scope of the **WithEnv** trailing closure is jointly determined by the value set through the **env** attribute with the key **WritableEnvKey.FONT_SCALE** and the component's own font scale constraints. These constraints can be set through the component's `minFontScale` and `maxFontScale` attributes, or through global configurations such as [fontSizeMaxScale](../../../quick-start/app-configuration-file.md) in the app configuration. The final effective value is the value of **WritableEnvKey.FONT_SCALE** within the range of each constraint.
 
 **Since:** 26.0.0
 
@@ -61,8 +69,8 @@ Defining System Environment Variables
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Key for system environment variables. |
-| value | T | Yes | Value of system environment variables. |
+| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | System environment variable key. Currently, **WritableEnvKey.FONT_SCALE** and **WritableEnvKey.DIRECTION** are officially supported. |
+| value | T | Yes | System environment variable value. The type T of **value** corresponds to the type T in **WritableSystemEnvKey&lt;T&gt;**. When `key` is `WritableEnvKey.FONT_SCALE`, the type of `value` is number. When `key` is `WritableEnvKey.DIRECTION`, the type of `value` is Direction. |
 
 **Return value:**
 

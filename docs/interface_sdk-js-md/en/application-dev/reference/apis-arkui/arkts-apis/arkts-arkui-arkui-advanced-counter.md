@@ -12,24 +12,24 @@ import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.Ar
 
 | Name | Description |
 | --- | --- |
-| [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) | Defines the common options. |
-| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) | Defines the counter options. |
-| [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Defines the date data. |
-| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) | Defines the date style options. |
-| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) | Defines the inline style options. |
-| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) | Defines the number style options. |
+| [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) | Defines the common attributes and events of the **Counter** component. |
+| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) | Defines the type and style of the **Counter** component. |
+| [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | Defines date attributes and methods, including year, month, and day. |
+| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) | Defines the attributes and events of the inline date counter. |
+| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) | Defines the inline numeric counter attributes and events. |
+| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) | Defines the list and compact counter attributes and events. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [CounterComponent](arkts-arkui-arkui-advanced-counter-countercomponent-s.md) | Defines Counter Component. |
+| [CounterComponent](arkts-arkui-arkui-advanced-counter-countercomponent-s.md) | The **Counter** component is used for precise numerical value adjustment. It supports four styles: list, compact, inline numeric, and inline date, and is suitable for scenarios such as shopping quantity adjustment, parameter setting, and date selection. It provides flexible style configuration and event callback capabilities. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) | Enum for the counter type. |
+| [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) | Enumerates counter types. |
 
 ## Examples
 

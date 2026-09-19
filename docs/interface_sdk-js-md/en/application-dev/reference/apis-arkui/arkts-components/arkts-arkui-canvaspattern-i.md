@@ -1,6 +1,6 @@
 # CanvasPattern
 
-**CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode.
+**CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency.
 
 **Since:** 8
 
@@ -12,7 +12,7 @@
 setTransform(transform?: Matrix2D): void
 ```
 
-Uses a **Matrix2D** object as a parameter to perform matrix transformation on the current **CanvasPattern** object.
+Applies a matrix transformation to the current **CanvasPattern** using a **Matrix2D** object as the parameter. This is suitable for scenarios where geometric transformations such as translation, scaling, and rotation need to be applied to the pattern fill. If no parameter is passed, no matrix transformation is applied to the **CanvasPattern**.
 
 **Since:** 8
 
@@ -26,4 +26,4 @@ Uses a **Matrix2D** object as a parameter to perform matrix transformation on th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.<br>The **undefined** and **null** values are treated as invalid.<br>Default value: **null**. |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix used to perform geometric transformations such as translation, scaling, and rotation on the **CanvasPattern**.<br>Note: No matrix transformation is performed when the parameter is **undefined** or **null**.<br>Default value: **null** |

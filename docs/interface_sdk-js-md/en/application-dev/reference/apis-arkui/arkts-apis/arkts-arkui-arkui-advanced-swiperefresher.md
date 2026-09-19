@@ -12,7 +12,7 @@ import { SwipeRefresher } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher |
+| [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) | The swipe refresher is a component used to obtain and load content, typically with a pull-down gesture. |
 
 ## Examples
 

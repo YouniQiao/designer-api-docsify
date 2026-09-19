@@ -1,6 +1,10 @@
 # Circle
 
-The **Circle** component is used to draw a circle. > **Child Components** > > None.
+The **Circle** component is used to draw a circle.
+
+## Child Components
+
+None
 
 ## Circle
 
@@ -8,7 +12,7 @@ The **Circle** component is used to draw a circle. > **Child Components** > > No
 Circle(value?: CircleOptions)
 ```
 
-use new function to set the value.
+Creates a circle. After the call, a **Circle** object is created, and its width and height can be set.
 
 **Since:** 7
 
@@ -22,7 +26,7 @@ use new function to set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No |  |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Circle size. Pass this parameter when you need to customize the circle size. If it is not passed, width and height default to **0**.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Circle
 
@@ -30,7 +34,7 @@ use new function to set the value.
 Circle(value?: CircleOptions)
 ```
 
-set the value.
+Creates a circle. After the call, a **Circle** object is created, and its width and height can be set.
 
 **Since:** 7
 
@@ -44,7 +48,7 @@ set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Options of the circle.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Circle size. Pass this parameter when you need to customize the circle size. If it is not passed, width and height default to **0**.<br>The abnormal values **undefined** and **null** are treated as invalid values, and this setting does not take effect. |
 
 ## Summary
 
@@ -52,7 +56,7 @@ set the value.
 
 | Name | Description |
 | --- | --- |
-| [CircleOptions](arkts-arkui-circleoptions-i.md) | Describes the options of the circle. |
+| [CircleOptions](arkts-arkui-circleoptions-i.md) | Describes the drawing attributes of the **Circle** component. |
 
 ## Examples
 

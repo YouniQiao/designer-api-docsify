@@ -2,8 +2,6 @@
 
 Sets the alignment method of the stack layout algorithm.
 
-@interface StackLayoutAlgorithmOptions
-
 **Since:** 24
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

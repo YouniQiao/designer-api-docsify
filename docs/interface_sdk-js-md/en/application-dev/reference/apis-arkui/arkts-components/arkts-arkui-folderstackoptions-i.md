@@ -1,11 +1,12 @@
 # FolderStackOptions
 
+Configuration object for the **FolderStack** hover status, which describes the information about child components that need to be moved to the upper screen in hover status.
 
 > **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Since:** 18
 
@@ -17,9 +18,11 @@
 upperItems?: Array<string>
 ```
 
-Array of IDs of child components that will be moved to the upper half screen in the hover state.
+Array of IDs of child components that will be moved to the upper half-screen in hover status.
 
-On hover, child components with IDs in this array automatically shift away from the crease area and move to the upper half screen, while other components are stacked in the lower half screen.
+Default value: **[]**
+
+When hover is triggered, the child components in the **upperItems** array automatically avoid the foldable screen crease area and move to the upper half-screen, while other components are stacked in the lower half-screen area.
 
 **Type:** Array&lt;string&gt;
 

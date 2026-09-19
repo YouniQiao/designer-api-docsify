@@ -27,7 +27,7 @@ layout behavior caused by automatic value inheritance.
 lg?: number
 ```
 
-Number of grid columns on the device where the grid size is lg.
+Number of grid columns occupied by the grid child component on a large-width device. The value is a non-negative integer. The default value is **1**. Illegal value: handled as the default value.
 
 **Type:** number
 
@@ -45,7 +45,7 @@ Number of grid columns on the device where the grid size is lg.
 md?: number
 ```
 
-Number of grid columns on the device where the grid size is md.
+Number of grid columns occupied by the grid child component on a medium-width device. The value is a non-negative integer. The default value is **1**. Illegal value: handled as the default value.
 
 **Type:** number
 
@@ -63,7 +63,7 @@ Number of grid columns on the device where the grid size is md.
 sm?: number
 ```
 
-Number of grid columns on the device where the grid size is sm.
+Number of grid columns occupied by the grid child component on a small-width device. The value is a non-negative integer. The default value is **1**. Illegal value: handled as the default value.
 
 **Type:** number
 
@@ -81,7 +81,7 @@ Number of grid columns on the device where the grid size is sm.
 xl?: number
 ```
 
-Number of grid columns on the device where the grid size is xl.
+Number of grid columns occupied by the grid child component on an extra-large-width device. The value is a non- negative integer. The default value is **1**. Illegal value: handled as the default value.
 
 **Type:** number
 
@@ -99,7 +99,7 @@ Number of grid columns on the device where the grid size is xl.
 xs?: number
 ```
 
-Number of grid columns on the device where the grid size is xs.
+Number of grid columns occupied by the grid child component on a minimum-width device. The value is a non-negative integer. The default value is **1**. Illegal value: handled as the default value.
 
 **Type:** number
 
@@ -117,7 +117,7 @@ Number of grid columns on the device where the grid size is xs.
 xxl?: number
 ```
 
-Number of grid columns on the device where the grid size is xxl.
+Number of grid columns occupied by the grid child component on an extra-extra-large-width device. The value is a non-negative integer. The default value is **1**. Illegal value: handled as the default value.
 
 **Type:** number
 

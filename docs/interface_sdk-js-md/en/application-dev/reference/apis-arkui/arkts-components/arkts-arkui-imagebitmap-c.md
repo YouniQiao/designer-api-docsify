@@ -2,6 +2,11 @@
 
 An **ImageBitmap** object stores pixel data rendered on a canvas. Since API version 11, when an application creates a [worker thread](../../../arkts-utils/worker-introduction.md), it can use **postMessage** to transfer the **ImageBitmap** instance to the worker thread for drawing, and use **onmessage** to receive the drawing results sent by the worker thread for display.
 
+> **NOTE:** 
+> 
+> The **ImageBitmap** object only supports loading static images. To play animated
+> images, use the Image component.
+
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +17,12 @@ An **ImageBitmap** object stores pixel data rendered on a canvas. Since API vers
 close(): void
 ```
 
-Releases all graphics resources associated with this **ImageBitmap** object and sets its width and height to **0**.
+Releases all image resources associated with the **ImageBitmap** object and sets its width and height to **0**.
+
+> **NOTE:** 
+> 
+> - This method must be used together with the [constructor()](#constructor)method. After creating an **ImageBitmap** object, call **close()** to release resources when they are no longer needed. Failure to call **close()** may cause image resource leaks and affect app performance.
+> - It is recommended to call this method after **Canvas** drawing is complete, for example, at the end of the [onReady](arkts-arkui-canvas-comp-attribute.md#onready)callback.
 
 **Since:** 8
 
@@ -28,7 +38,12 @@ Releases all graphics resources associated with this **ImageBitmap** object and 
 constructor(src: string)
 ```
 
-Creates an **ImageBitmap** object using an **ImageSrc** object.
+Creates an **ImageBitmap** object using an image data source.
+
+> **NOTE:** 
+> 
+> Call the **close()** method to release resources after use to avoid image
+> resource leaks.
 
 **Since:** 8
 
@@ -42,7 +57,7 @@ Creates an **ImageBitmap** object using an **ImageSrc** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br>   **NOTE:** <br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
+| src | string | Yes | Image data source. Supports local images.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For modules of the "entry" and"feature" types, the starting point of the image loading path is the **ets** folder of the current module. For modules of the "har" and "shared" types, the starting point of the image loading path is the **ets** folder of the currently built "entry" or "feature" type module.<br> For modules of the "har" and "shared" types, it is recommended to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** for loading.<br> 2. Supported local image types: bmp, jpg, png, svg, and webp.<br>   **NOTE:** <br> - In ArkTS widgets, strings with network-related path prefixes such as **http://**, the **datashare://** path prefix, and the **file://data/storage** path prefix are not supported. |
 
 ## constructor
 
@@ -50,7 +65,12 @@ Creates an **ImageBitmap** object using an **ImageSrc** object.
 constructor(src: string, unit: LengthMetricsUnit)
 ```
 
-Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of the Path2D object can be configured using **unit**.
+Creates an **ImageBitmap** object using an image data source. This API supports configuring the unit mode of the **ImageBitmap** object with **unit**.
+
+> **NOTE:** 
+> 
+> Call the **close()** method to release resources after use to avoid image
+> resource leaks.
 
 **Since:** 12
 
@@ -66,8 +86,8 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | Image source. Local images are supported.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.<br> For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.<br> 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.<br>   **NOTE:** <br> - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
+| src | string | Yes | Image data source, which supports local images.<br> 1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For modules of the "entry" and"feature" types, the image loading path starts from the **ets** folder of the current module. For modules of the "har" and "shared" types, the image loading path starts from the **ets** folder of the currently built "entry" or "feature"type module.<br> For modules of the "har" and "shared" types, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** for loading.<br> 2. Supported local image types: bmp, jpg, png, svg, and webp.<br>   **NOTE:** <br> - ArkTS widgets do not support strings with network-related path prefixes such as **http://**, the **datashare://** path prefix, or the **file://data/storage** path prefix. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode for configuring the **ImageBitmap** object. The mode cannot be dynamically changed after configuration. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Default value: **LengthMetricsUnit.DEFAULT**.<br> Abnormal values such as **undefined**, **NaN**, and **Infinity** are processed as the default value. |
 
 ## constructor
 
@@ -76,6 +96,11 @@ constructor(data: PixelMap)
 ```
 
 Creates an **ImageBitmap** object using a **PixelMap** object.
+
+> **NOTE:** 
+> 
+> Call the **close()** method to release resources after use to avoid image
+> resource leaks.
 
 **Since:** 8
 
@@ -87,7 +112,7 @@ Creates an **ImageBitmap** object using a **PixelMap** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image data source, which supports **PixelMap** objects. |
+| data | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image data source, set through a **PixelMap** object. Applicable to scenarios where images need to be decoded and processed before drawing, which can improve image loading performance. |
 
 ## constructor
 
@@ -95,7 +120,12 @@ Creates an **ImageBitmap** object using a **PixelMap** object.
 constructor(data: PixelMap, unit: LengthMetricsUnit)
 ```
 
-Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of the Path2D object can be configured using **unit**.
+Creates an **ImageBitmap** object using a **PixelMap** object. This API supports configuring the unit mode of the **ImageBitmap** object with **unit**.
+
+> **NOTE:** 
+> 
+> Call the **close()** method to release resources after use to avoid image
+> resource leaks.
 
 **Since:** 12
 
@@ -109,8 +139,8 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image data source, which supports **PixelMap** objects. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). |
+| data | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image data source, set through a **PixelMap** object. This is suitable for scenarios where images need to be decoded and processed before drawing, which can improve image loading performance. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode for configuring the **ImageBitmap** object. Once configured, it cannot be changed dynamically. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Default value: **LengthMetricsUnit.DEFAULT**.<br> Abnormal values such as **undefined**, **NaN**, and **Infinity** are processed as the default value. |
 
 ## constructor
 
@@ -118,7 +148,12 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 constructor(data: Resource, unit?: LengthMetricsUnit)
 ```
 
-Transfer a Resource object to construct an ImageBitmap object.
+Creates an **ImageBitmap** object using a **Resource** object. This API supports configuring the unit mode of the **ImageBitmap** object with **unit**.
+
+> **NOTE:** 
+> 
+> Call the **close()** method to release resources after use to avoid image
+> resource leaks.
 
 **Since:** 26.0.0
 
@@ -132,8 +167,8 @@ Transfer a Resource object to construct an ImageBitmap object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Resource object |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
+| data | [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Image data source, set by referencing a **Resource** object. This is used to reference image resources in the app resource directory, for example, **&#36;r('app.media.example')**, which avoids hardcoding paths.<br> Supported image types: bmp, jpg, png, svg, and webp. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **ImageBitmap** object. Once configured, it cannot be changed dynamically. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Default value: **LengthMetricsUnit.DEFAULT**.<br> Abnormal values **undefined**, **NaN**, and **Infinity** are processed as the default value. |
 
 ## height
 
@@ -141,9 +176,7 @@ Transfer a Resource object to construct an ImageBitmap object.
 readonly height: number
 ```
 
-Pixel height of the **ImageBitmap** object.
-
-Default unit: vp
+Height of the **ImageBitmap**.<br>Unit: vp.
 
 **Type:** number
 
@@ -161,9 +194,7 @@ Default unit: vp
 readonly width: number
 ```
 
-Pixel width of the **ImageBitmap** object.
-
-Default unit: vp
+Width of the **ImageBitmap**.<br>Unit: vp.
 
 **Type:** number
 

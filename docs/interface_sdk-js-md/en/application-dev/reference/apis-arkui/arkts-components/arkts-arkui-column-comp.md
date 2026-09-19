@@ -1,6 +1,12 @@
 # Column
 
-The **Column** component lays out child components vertically. > **NOTE** > > If no height or width is set for the **Column** component, the component automatically adapts to the size of its > child components in the main axis and cross axis respectively. > > **Child Components** > > Supported
+A container that lays out child components along the vertical direction. It is suitable for scenarios where multiple child components need to be arranged sequentially in the vertical direction, such as list items, form items, and card content. It supports setting attributes such as child component spacing and alignment, enabling quick implementation of vertical linear layout.
+
+> **NOTE** > > If no height or width is set for the **Column** component, it adapts to the size of child components in the main > axis (vertical direction) or cross axis (horizontal direction).
+
+## Child Components
+
+Supported
 
 ## Column
 
@@ -12,13 +18,10 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 > **NOTE:** 
 > 
-> Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant
-> performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the
-> component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control
-> syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the
-> best practices, see
-> [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance)
-> .
+> When using multi-component nesting in complex UIs, if layout components are nested too deeply or too many
+> components are nested, additional overhead will be incurred. It is recommended to optimize performance by
+> removing redundant nodes, using layout boundaries to reduce layout calculations, and properly adopting rendering
+> control syntax and layout component methods.
 
 **Since:** 7
 
@@ -32,7 +35,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) | No | Vertical spacing between two adjacent child components. The value can be of the number or string type. |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) | No | Spacing configuration options of the **Column** component. It sets the vertical spacing between elements in the column layout through the **space** attribute. Pass this parameter when a fixed vertical spacing needs to be set for child components; if omitted, no child component spacing is set.<br> |
 
 ## Column
 
@@ -41,6 +44,13 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 ```
 
 Creates a vertical linear layout container. You can set the spacing between child components.
+
+> **NOTE:** 
+> 
+> When using multi-component nesting in complex UIs, if layout components are nested too deeply or too many
+> components are nested, additional overhead will be incurred. It is recommended to optimize performance by
+> removing redundant nodes, using layout boundaries to reduce layout calculations, and properly adopting rendering
+> control syntax and layout component methods.
 
 **Since:** 18
 
@@ -56,7 +66,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) &#124; [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | No | Vertical spacing between two adjacent child components. The value can be of the number, string, or Resource type. |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) &#124; [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | No | Spacing configuration options of the **Column** component. The **space** attribute sets the vertical spacing between elements in the column layout. **space** supports settings of the number, string, or Resource type. Pass this parameter when a fixed vertical spacing needs to be set for child components; if omitted, no child component spacing is set. |
 
 ## Summary
 
@@ -65,7 +75,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 | Name | Description |
 | --- | --- |
 | [ColumnOptions](arkts-arkui-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. |
-| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. |
+| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. The spacing type **SpaceType** can be number, string, or Resource. |
 
 ### Types
 

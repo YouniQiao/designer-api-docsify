@@ -1,12 +1,12 @@
 # RectOptions
 
-Describes the options of the rectangle.
+Describes the drawing attributes of the **Rect** component.
 
 > **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Since:** 18
 
@@ -18,7 +18,13 @@ Describes the options of the rectangle.
 height?: Length
 ```
 
-Height. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
+Height, with the value range greater than or equal to 0.
+
+Default value: **0**
+
+Default unit: vp.
+
+Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -36,7 +42,15 @@ Height. Unit: vp, The value must be greater than or equal to 0, The **undefined*
 radius?: Length | Array<any>
 ```
 
-Radius of the rounded corner. You can set separate radii for the four rounded corners. The value must be greater than or equal to 0. This attribute takes precedence over **radiusWidth** and **radiusHeight** when used together. Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
+Rounded corner radius. The radius of each of the four corners can be set separately, with the value range greater than or equal to 0.
+
+This attribute has an effect similar to that of **radiusWidth**\/**radiusHeight**. When used together, it takes precedence over **radiusWidth**\/**radiusHeight**.
+
+Default value: **0**
+
+Default unit: vp.
+
+Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; Array&lt;any&gt;
 
@@ -54,7 +68,13 @@ Radius of the rounded corner. You can set separate radii for the four rounded co
 width?: Length
 ```
 
-Width. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
+Width, with the value range greater than or equal to 0.
+
+Default value: **0**
+
+Default unit: vp.
+
+Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

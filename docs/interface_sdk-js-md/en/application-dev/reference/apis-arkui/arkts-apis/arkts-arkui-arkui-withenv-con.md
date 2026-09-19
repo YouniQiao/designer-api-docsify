@@ -6,7 +6,13 @@
 export declare const WithEnv: WithEnvInterface
 ```
 
-Define the WithEnv component that allows setting environment properties for child components.
+The **WithEnv** component is used to set a local environment variable scope for a child component tree. Developers can use this component to provide custom environment variables for descendant components, or set system environment variables.
+
+> **NOTE:** 
+> 
+> - Custom environment variables can be set through [customEnv](arkts-arkui-arkui-withenv-withenvattribute-c.md#customenv).
+> - System environment variable keys can be set through [env](arkts-arkui-arkui-withenv-withenvattribute-c.md#env). They are stored in [WritableEnvKey](../arkts-components/arkts-arkui-writableenvkey-c.md).
+> - When **WithEnv** is nested, the nearest scope takes effect for environment variables with the same name.
 
 **Since:** 26.0.0
 

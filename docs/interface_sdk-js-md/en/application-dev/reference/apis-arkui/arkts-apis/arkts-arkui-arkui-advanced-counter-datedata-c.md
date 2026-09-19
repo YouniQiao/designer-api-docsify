@@ -1,6 +1,6 @@
 # DateData
 
-Defines the date data.
+Defines date attributes and methods, including year, month, and day.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@ import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.Ar
 constructor(year: number, month: number, day: number)
 ```
 
-Constructor of the DateData.
+DateData constructor for initializing date objects.
 
 **Since:** 11
 
@@ -32,9 +32,9 @@ Constructor of the DateData.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | number | Yes | set the year of the DateData. |
-| month | number | Yes | set the month of the DateData. |
-| day | number | Yes | set the day of the DateData. |
+| year | number | Yes | Year of the inline date type. Value range: [1, 5000]. |
+| month | number | Yes | Month of the inline date type. Value range: [1, 12]. |
+| day | number | Yes | Day of the inline date type. Value range: [1, 31]. The specific value is determined by the actual number of days in the month. |
 
 ## toString
 
@@ -42,7 +42,7 @@ Constructor of the DateData.
 toString(): string
 ```
 
-Convert the date data to string.
+Returns the current date value in the string format, which is **YYYY-MM-DD**.
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ Convert the date data to string.
 
 | Type | Description |
 | --- | --- |
-| string | date data in string form. |
+| string | Current date. |
 
 ## day
 
@@ -64,7 +64,7 @@ Convert the date data to string.
 day: number
 ```
 
-The day of the DateData.
+Day of the inline date type. Value range: [1, 31]. The specific value is determined by the actual number of days in the month.
 
 **Type:** number
 
@@ -82,7 +82,7 @@ The day of the DateData.
 month: number
 ```
 
-The month of the DateData.
+Month of the inline date type. Value range: [1, 12].
 
 **Type:** number
 
@@ -100,7 +100,7 @@ The month of the DateData.
 year: number
 ```
 
-The year of the DateData, ranges from 1 to 5000.
+Year of the inline date type. Value range: [1, 5000].
 
 **Type:** number
 

@@ -12,7 +12,7 @@ import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | Define the WithEnv attribute functions. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | Supports the following **WithEnv**-specific attributes. |
 
 ### Types
 
@@ -24,7 +24,7 @@ import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [WithEnv](arkts-arkui-arkui-withenv-con.md) | Define the WithEnv component that allows setting environment properties for child components. |
+| [WithEnv](arkts-arkui-arkui-withenv-con.md) | The **WithEnv** component is used to set a local environment variable scope for a child component tree. Developers can use this component to provide custom environment variables for descendant components, or set system environment variables. |
 | [WithEnvInstance](arkts-arkui-arkui-withenv-con.md#withenvinstance) | Define WithEnv Logic Component Instance. |
 
 ## Examples

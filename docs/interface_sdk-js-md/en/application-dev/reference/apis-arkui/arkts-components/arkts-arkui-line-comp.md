@@ -1,6 +1,12 @@
 # Line
 
-The **Line** component is used to draw a straight line. > **NOTE** > > This component supports dynamic constructor parameter updates using the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20. > > **Child Components** > > None
+The **Line** component is used to draw a straight line in the app UI. It supports customizing the start point, end point, color, width, opacity, dash style, and cap style of the line. It is suitable for drawing separators, decorative lines, coordinate axes or connecting lines in charts, and custom graphic borders.
+
+> **NOTE** > > Since API version 20, this component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class. > > - The **Line** component cannot form a closed area, so the **fill** and **fillOpacity** attributes do not take > effect. > > - The **Line** component does not support corners, so the **strokeLineJoin** and **strokeMiterLimit** attributes do > not take effect.
+
+## Child Components
+
+None
 
 ## Line
 
@@ -8,7 +14,7 @@ The **Line** component is used to draw a straight line. > **NOTE** > > This comp
 Line(options?: LineOptions)
 ```
 
-Uses new to create the line. Anonymous Object Rectification.
+Draws a straight line. The **Line** component draws the line within the rectangular area defined by **width** and **height**. The upper left corner of the drawing area is the coordinate origin (0,0), with the x-axis extending to the right and the y-axis extending downward.
 
 **Since:** 7
 
@@ -22,7 +28,7 @@ Uses new to create the line. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Line options |
+| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Drawing area of the **Line** component, which contains the **width** and **height** attributes used to set the width and height of the **Line** component. If this parameter is not passed, the **width** and **height** attributes of the **Line** component are processed according to the default logic of their respective attributes (see the **LineOptions** object description).<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Line
 
@@ -30,7 +36,7 @@ Uses new to create the line. Anonymous Object Rectification.
 Line(options?: LineOptions)
 ```
 
-Defines the constructor of Line component.
+Draws a straight line. The **Line** component draws the line within the rectangular area defined by **width** and **height**. The upper left corner of the drawing area is the coordinate origin (0,0), with the x-axis extending to the right and the y-axis extending downward.
 
 **Since:** 7
 
@@ -44,7 +50,7 @@ Defines the constructor of Line component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Options of the line.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Drawing area of the **Line** component, which contains the **width** and **height** attributes used to set the width and height of the **Line** component. If this parameter is not passed, the **width** and **height** attributes of the Line component are processed based on their respective default logic (see **LineOptions** object description).<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Summary
 

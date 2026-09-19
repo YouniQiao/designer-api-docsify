@@ -1,6 +1,10 @@
 # GridCol
 
-The **GridCol** component must be used as a child component of the GridRow container. > **Child Components** > > This component can contain only one child component.
+A column component in the grid layout system. It must be used as a child component of the grid container component (GridRow). It is suitable for responsive layout, multi-device adaptation, and other scenarios that require dynamic column width adjustment. It supports responsive breakpoint configuration, cross-column layout, offset, and sorting. Using the **GridCol** component enables quick implementation of responsive layouts, simplifying multi-device adaptation development.
+
+## Child Components
+
+This component can contain only one child component.
 
 ## GridCol
 
@@ -8,7 +12,7 @@ The **GridCol** component must be used as a child component of the GridRow conta
 GridCol(option?: GridColOptions)
 ```
 
-Creates a **GridCol** component.
+Defines a grid column layout component. After creation, it participates in the layout calculation of the grid system as a child component of **GridRow**, based on the configured **span**, **offset**, and **order** attributes.
 
 **Since:** 9
 
@@ -22,7 +26,7 @@ Creates a **GridCol** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridColOptions](arkts-arkui-gridcoloptions-i.md) | No |  |
+| option | [GridColOptions](arkts-arkui-gridcoloptions-i.md) | No | Configuration options for the grid layout child component, which can be used to configure **span** (number of occupied columns), **offset** (number of offset columns), and **order** (sorting sequence). Pass this parameter when custom grid layout behavior is required (such as responsive column width, fixed offset position, and specified rendering order). This parameter can be omitted when the default grid layout is used. The default configuration is used when this parameter is not passed. |
 
 ## Summary
 

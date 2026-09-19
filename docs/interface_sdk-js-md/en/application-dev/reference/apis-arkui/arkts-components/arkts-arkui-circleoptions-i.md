@@ -1,6 +1,6 @@
 # CircleOptions
 
-Describes the options of the circle.
+Describes the drawing attributes of the **Circle** component.
 
 **Since:** 7
 
@@ -12,7 +12,11 @@ Describes the options of the circle.
 height?: Length
 ```
 
-Height. Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
+Height. The value must be greater than or equal to 0. Set this attribute when you need to customize the circle size. If it is not set, the default value **0** is used.
+
+Default unit: vp
+
+Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -30,7 +34,11 @@ Height. Unit: vp, The value must be greater than or equal to 0, Default The **un
 width?: Length
 ```
 
-Width. Unit: vp, The value must be greater than or equal to 0, Default The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
+Width. The value must be greater than or equal to 0. Set this attribute when you need to customize the circle size. If it is not set, the default value **0** is used.
+
+Default unit: vp
+
+Abnormal values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

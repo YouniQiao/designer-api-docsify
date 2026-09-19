@@ -2,6 +2,14 @@
 
 Enumerates video seek modes.
 
+| Name | Value | Description |  
+| ---------------- |--| ---------------------------- |  
+| [PreviousKeyframe](arkts-arkui-seekmode-e.md) |0| Seeks to the nearest keyframe before the current playback position. |
+| [NextKeyframe](arkts-arkui-seekmode-e.md) |1| Seeks to the nearest keyframe after the current playback position. |
+| [ClosestKeyframe](arkts-arkui-seekmode-e.md) |2| Seeks to the keyframe closest to the current playback position. |
+| [Accurate](arkts-arkui-seekmode-e.md) |3| Seeks precisely to the specified time point, regardless of whether it is a keyframe. |
+| | |This mode is highly accurate but may require decoding more frames. |
+
 **Since:** 8
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

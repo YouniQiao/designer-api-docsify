@@ -1,12 +1,6 @@
 # ColumnOptionsV2
 
-Sets the spacing between child components of the **Column** component.
-
-> **NOTE:** 
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's
+Sets the spacing between child components of the **Column** component. The spacing type **SpaceType** can be number, string, or Resource.
 
 **Since:** 18
 
@@ -18,7 +12,21 @@ Sets the spacing between child components of the **Column** component.
 space?: SpaceType
 ```
 
-Vertical spacing between two adjacent child components. This parameter has no effect if the value specified is a negative number, or if **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**. Unit: vp, Invalid values are treated as the default value. **NOTE:** The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a Resource type that can be converted to a number. Default value: **0**.
+Vertical spacing between elements in the column layout.
+
+If **space** is a negative number or [justifyContent](arkts-arkui-column-comp-attribute.md#justifycontent) is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**, **space** does not take effect.
+
+Value range: [0, +∞)
+
+Default value: **0**
+
+Unit: vp
+
+Invalid value: The default value is used.
+
+**NOTE:** 
+
+The value of **space** is a number greater than or equal to 0, a string that can be converted to a non-negative number, or a Resource type that can be converted to a number.
 
 **Type:** [SpaceType](arkts-arkui-spacetype-t.md)
 

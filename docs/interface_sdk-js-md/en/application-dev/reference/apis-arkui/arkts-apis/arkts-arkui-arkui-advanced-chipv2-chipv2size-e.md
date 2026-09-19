@@ -1,6 +1,6 @@
 # ChipV2Size
 
-Enum for ChipV2 Size
+Defines the size type that can be specified for the **ChipV2** component, such as a normal **ChipV2**.
 
 **Since:** 26.0.0
 
@@ -12,7 +12,7 @@ Enum for ChipV2 Size
 NORMAL = 'NORMAL'
 ```
 
-Normal type.
+Normal **ChipV2**.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ Normal type.
 SMALL = 'SMALL'
 ```
 
-Small type.
+Small **ChipV2**.
 
 **Since:** 26.0.0
 

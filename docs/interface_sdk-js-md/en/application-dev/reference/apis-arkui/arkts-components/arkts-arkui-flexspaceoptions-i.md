@@ -12,9 +12,9 @@ Sets the spacing between child components along the main axis or cross axis of t
 cross?: LengthMetrics
 ```
 
-Space on the cross axis of the **Flex** component.
+Spacing between adjacent lines on the cross axis of the **Flex** container. After being set, adjacent lines in the cross axis direction are separated by the specified spacing. This takes effect only in multi-line layouts (when **wrap** is set to **Wrap** or **WrapReverse**). This parameter does not take effect when **space.cross** is a negative number, or when **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.
 
-Default value: **LengthMetrics.px(0)**.
+Default value: **LengthMetrics.px(0)**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -32,9 +32,9 @@ Default value: **LengthMetrics.px(0)**.
 main?: LengthMetrics
 ```
 
-Space on the main axis of the **Flex** component.
+Spacing between adjacent child components on the main axis of the **Flex** container. After being set, adjacent child components in the main axis direction are separated by the specified spacing. This takes effect in both single-line and multi-line layouts. This parameter does not take effect when **space.main** is a negative number, or when **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.
 
-Default value: **LengthMetrics.px(0)**.
+Default value: **LengthMetrics.px(0)**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

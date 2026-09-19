@@ -1,6 +1,6 @@
 # GeometryInfo
 
-Provides layout geometry information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md).
+Provides layout information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md). In the **onMeasureSize** and **onPlaceChildren** methods, the **GeometryInfo** object can be obtained through the **selfLayoutInfo** parameter. It contains the border width, margin, and padding information of the parent component, which developers need to consider when calculating the layout of child components.
 
 **Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md)
 
@@ -14,7 +14,7 @@ Provides layout geometry information of the parent component (a custom component
 borderWidth: EdgeWidth
 ```
 
-Width of the parent component's border. Unit: vp.
+Border width of the parent component. Unit: vp.
 
 **Type:** [EdgeWidth](../arkts-apis/arkts-arkui-edgewidth-t.md)
 
@@ -32,7 +32,7 @@ Width of the parent component's border. Unit: vp.
 margin: Margin
 ```
 
-Margin values of the parent component. Unit: vp.
+Margin of the parent component. Unit: vp.
 
 **Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
@@ -50,7 +50,7 @@ Margin values of the parent component. Unit: vp.
 padding: Padding
 ```
 
-Padding values of the parent component. Unit: vp.
+Padding of the parent component. Unit: vp.
 
 **Type:** Padding
 

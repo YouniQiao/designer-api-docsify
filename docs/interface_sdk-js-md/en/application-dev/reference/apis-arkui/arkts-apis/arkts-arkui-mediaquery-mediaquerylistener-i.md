@@ -22,7 +22,7 @@ import { mediaquery } from '@kit.ArkUI';
 off(type: 'change', callback?: Callback<MediaQueryResult>): void
 ```
 
-Deregisters a media query listener, so that no callback is triggered when the media attributes change.
+Unregisters a media query listener, so that no callback is triggered when the media attributes change.
 
 **Since:** 7
 

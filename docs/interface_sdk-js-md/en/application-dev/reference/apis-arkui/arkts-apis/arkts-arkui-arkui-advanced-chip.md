@@ -12,15 +12,15 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 
 | Name | Description |
 | --- | --- |
-| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md) | Build function of Chip. |
+| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md) | Creates a **Chip** component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
 | [AccessibilityOptions](arkts-arkui-arkui-advanced-chip-accessibilityoptions-i.md) | Defines the accessibility options of the suffix icon. |
-| [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | Defines the type and style parameters of the chip. |
-| [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md) | Defines the accessibility options of the symbol-type suffix icon. |
+| [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | Defines the style and specific style parameters of the **Chip** component. |
+| [ChipSuffixSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsuffixsymbolglyphoptions-i.md) | Defines the accessibility reading functional attributes and tap event callback of the symbol-type suffix icon. |
 | [ChipSymbolGlyphOptions](arkts-arkui-arkui-advanced-chip-chipsymbolglyphoptions-i.md) | Defines the prefix and suffix icon options. |
 | [CloseOptions](arkts-arkui-arkui-advanced-chip-closeoptions-i.md) | Defines the default close icon behavior attributes for the chip, including accessibility attributes. The default value of **accessibilityText** is **"Delete"**. |
 | [IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md) | Defines the common icon options of the chip. |
@@ -34,8 +34,8 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 
 | Name | Description |
 | --- | --- |
-| [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md) | Enumerates the selected state types of the chip. It allows you to specify how accessibility services convey the component's selected state to users. Different selected state types provide distinct semantics and user experiences. |
-| [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) | Enumerates the chip size types. |
+| [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md) | Defines the selected state types that can be specified for **Chip**. This API is used to control how the accessibility service conveys the component's selected state to users. Different selected state types provide different semantics and user experiences. |
+| [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) | Enumerates the size types that can be specified for the **Chip** component, such as normal and small. |
 
 ## Examples
 

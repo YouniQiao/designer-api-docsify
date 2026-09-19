@@ -1,7 +1,5 @@
 # HoverEventParam
 
-The param of hover event.
-
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +10,7 @@ The param of hover event.
 appRotation: AppRotation
 ```
 
-Current orientation.
+Rotation angle of the current app orientation.
 
 **Type:** [AppRotation](../arkts-apis/arkts-arkui-approtation-e.md)
 

@@ -958,6 +958,11 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 Obtains the avoidance mode of the virtual keyboard.
 
+> **NOTE:** 
+> 
+> Since API version 18, the **getKeyboardAvoidMode** API returns an enumeration value of **KeyboardAvoidMode**,
+> which is an integer. Before API version 18, the **getKeyboardAvoidMode** API returns a string.
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
@@ -2016,7 +2021,7 @@ Sets the avoidance mode for the virtual keyboard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**. |
 
 ## setOverlayManagerOptions
 
@@ -2052,7 +2057,7 @@ Init OverlayManager.
 setPixelRoundMode(mode: PixelRoundMode): void
 ```
 
-Sets the pixel rounding mode for this page.
+Sets the pixel rounding mode of the current page.
 
 **Since:** 18
 
@@ -2066,7 +2071,7 @@ Sets the pixel rounding mode for this page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Yes | Pixel rounding mode. Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**.<br>If this parameter is set to an invalid value, the default value will be used. |
+| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Yes | Pixel rounding mode.<br>Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**. |
 
 ## setResourceManagerCacheMaxCountForHSP
 

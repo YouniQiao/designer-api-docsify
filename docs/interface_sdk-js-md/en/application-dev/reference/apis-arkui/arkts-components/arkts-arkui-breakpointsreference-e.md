@@ -12,7 +12,7 @@ Breakpoint reference of the grid container component.
 WindowSize
 ```
 
-The window is used as a reference.
+Uses the window as the reference. Breakpoint calculation is based on the app window size, suitable for scenarios where responsive layout needs to adapt to overall window size changes.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ The window is used as a reference.
 ComponentSize
 ```
 
-The container is used as a reference.
+Uses the container as the reference. Breakpoint calculation is based on the size of the **GridRow** component itself, suitable for scenarios where responsive layout needs to adapt to component container size changes, for example, when **GridRow** is nested in another container.
 
 **Since:** 9
 

@@ -12,29 +12,29 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 
 | Name | Description |
 | --- | --- |
-| [ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md) | Defines chip group item. |
-| [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md) | Defines items of chip group. |
-| [ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md) | Defines ChipGroupV2 item style. |
-| [ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md) | Defines chip group padding. |
-| [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md) | Defines chip group space. |
+| [ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md) | Defines a single chip item in the **ChipGroupV2** component. |
+| [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md) | Defines the array class of the **ChipGroupV2** item, which inherits from Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)&gt;. |
+| [ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md) | Defines the common attribute class of **ChipV2**. |
+| [ChipGroupV2Padding](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2padding-c.md) | Defines the top and bottom padding of **ChipGroupV2**, which is used to control its overall height. |
+| [ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md) | Defines the left and right padding of **ChipGroupV2** and the spacing between **ChipV2** components. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md) | Defines chipGroupV2. |
-| [ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md) | Defines IconGroupSuffix. |
+| [ChipGroupV2](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2-s.md) | The **ChipGroupV2** component provides a chip group container that supports single or multiple selection, custom styles and spacing, and custom suffix content. It is suitable for scenarios such as file or resource content categorization, tag selection, and filtering, helping you quickly build visually appealing and interactive chip group UIs. |
+| [ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md) | Display custom content on the far right of the **ChipGroupV2** component. It supports configuring image icons, symbol icons, symbol icon configuration items, and icon background material styles. It is suitable for scenarios where an additional operation entry needs to be added at the end of a chip group. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ChipGroupV2IconItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) | Defines ChipGroupV2 IconItemConfig. |
-| [ChipGroupV2ItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md) | Defines chip item config. |
-| [ChipGroupV2ItemStyleConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | Defines ChipGroupV2 item style. |
-| [ChipGroupV2PaddingConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Defines ChipGroupV2 padding config. |
-| [ChipGroupV2SpaceConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | Defines chip group space config. |
-| [ChipGroupV2SymbolItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md) | Defines symbol item config. |
+| [ChipGroupV2IconItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) | Defines the configuration of the suffix icon item, which is used to set the style, interaction, and accessibility attributes of the suffix icon. |
+| [ChipGroupV2ItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md) | Defines the non-common attribute configuration of a **ChipV2**. |
+| [ChipGroupV2ItemStyleConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | Defines the common attribute configuration of **ChipV2**. |
+| [ChipGroupV2PaddingConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Defines the top and bottom padding configuration of **ChipGroupV2**, which is used to control its overall height. |
+| [ChipGroupV2SpaceConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | Defines the left and right padding of **ChipGroupV2** and the spacing configuration between **ChipV2** components. |
+| [ChipGroupV2SymbolItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md) | Defines the configuration type of the suffix symbol icon. |
 
 ## Examples
 

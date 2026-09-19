@@ -1,6 +1,12 @@
 # Row
 
-The **Row** component lays out child components horizontally. > **NOTE** > > If no width or height is set for the **Row** component, the component automatically adapts to the size of its child > components in the main axis and cross axis respectively. > > **Child Components** > > Supported
+Defines a container that lays out child components horizontally. It supports setting the spacing between child components and the alignment mode, and is suitable for scenarios where multiple child components need to be arranged horizontally, such as toolbars, tab bars, and button groups.
+
+> **NOTE** > > If no width or height is set for the **Row** component, it adapts to the size of child components in the main axis > or cross axis direction.
+
+## Child Components
+
+Supported
 
 ## Row
 
@@ -12,13 +18,10 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 > **NOTE:** 
 > 
-> Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant
-> performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the
-> component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control
-> syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the
-> best practices, see
-> [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance)
-> .
+> When using multi-component nesting in complex UIs, if layout components are nested too deeply or too many
+> components are nested, additional overhead will be incurred. It is recommended to optimize performance by
+> removing redundant nodes, using layout boundaries to reduce layout calculations, and properly adopting rendering
+> control syntax and layout component methods.
 
 **Since:** 7
 
@@ -32,7 +35,7 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RowOptions](arkts-arkui-rowoptions-i.md) | No | Spacing between elements in the horizontal layout. The value can be of the number or string type. |
+| options | [RowOptions](arkts-arkui-rowoptions-i.md) | No | Configuration object of the horizontal layout, used to set the spacing between child components (unit: vp). The **space** attribute supports values of the number or string type. Pass this parameter when you need to customize the spacing between child components. If this parameter is not passed, the default spacing is 0.<br> <br>**Note:** Since API version 9, the **space** attribute does not take effect when it is set to a negative value or when **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**. |
 
 ## Row
 
@@ -41,6 +44,13 @@ Row(options?: RowOptions | RowOptionsV2)
 ```
 
 Creates a horizontal linear layout container. You can set the spacing between child components.
+
+> **NOTE:** 
+> 
+> When using multi-component nesting in complex UIs, if layout components are nested too deeply or too many
+> components are nested, additional overhead will be incurred. It is recommended to optimize performance by
+> removing redundant nodes, using layout boundaries to reduce layout calculations, and properly adopting rendering
+> control syntax and layout component methods.
 
 **Since:** 18
 
@@ -56,7 +66,7 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RowOptions](arkts-arkui-rowoptions-i.md) &#124; [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | No | Spacing between elements in a horizontal layout. The value can be of the number, string, or Resource type. |
+| options | [RowOptions](arkts-arkui-rowoptions-i.md) &#124; [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | No | Configuration object of the horizontal layout, used to set the spacing between child components (in vp). The space property supports values of the number, string, or Resource type. If not set, the default spacing is 0.<br>**Note:** Since API version 9, this property does not take effect when space is a negative number or **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**. |
 
 ## Summary
 
@@ -65,7 +75,7 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 | Name | Description |
 | --- | --- |
 | [RowOptions](arkts-arkui-rowoptions-i.md) | Sets the spacing between child components of the **Row** component. |
-| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | Sets the spacing between child components of the **Row** component. |
+| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | Sets the spacing between child components of the **Row** component. The spacing type **SpaceType** can be of the number, string, or Resource type. |
 
 ## Examples
 

@@ -5,8 +5,8 @@ Describes the current progress of video playback.
 > **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's
+> While the initial version information of historical anonymous objects is preserved, there may be cases where the
+> outer element's
 
 **Since:** 18
 
@@ -18,9 +18,9 @@ Describes the current progress of video playback.
 time: number
 ```
 
-Callback that provides the current playback progress.
+Playback progress of the current video.
 
-Unit: second
+Unit: s
 
 Value range: [0, +∞)
 

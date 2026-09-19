@@ -1,6 +1,6 @@
 # Ellipse properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+The [universal attributes](arkts-arkui-commonmethod-c.md) and [universal attributes for drawing components](arkts-arkui-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** EllipseAttribute extends CommonShapeMethod<EllipseAttribute>
 

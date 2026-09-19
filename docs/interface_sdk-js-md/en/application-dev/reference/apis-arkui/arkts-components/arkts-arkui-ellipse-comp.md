@@ -1,6 +1,10 @@
 # Ellipse
 
-The **Ellipse** component is used to draw an ellipse. > **Child Components** > > None
+The **Ellipse** component is used to draw an ellipse. It draws an ellipse shape by setting the width and height attributes, rendering the ellipse outline and fill area within a given rectangular region.
+
+## Child Components
+
+None
 
 ## Ellipse
 
@@ -8,7 +12,7 @@ The **Ellipse** component is used to draw an ellipse. > **Child Components** > >
 Ellipse(options?: EllipseOptions)
 ```
 
-use new function to set the value. Anonymous Object Rectification.
+Constructor used to draw an ellipse. After being called, it creates an **Ellipse** object, for which the width and height attributes can be set.
 
 **Since:** 7
 
@@ -22,7 +26,7 @@ use new function to set the value. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | ellipse options |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Ellipse drawing configuration options, including the width and height settings. If not passed, the default size (both width and height are 0) is used.<br>The abnormal values **undefined** and **null** are handled as invalid values, and this setting does not take effect. <br>**Note:** Since API version 18, the **EllipseOptions** parameter must be used in the stage model. |
 
 ## Ellipse
 
@@ -30,7 +34,7 @@ use new function to set the value. Anonymous Object Rectification.
 Ellipse(options?: EllipseOptions)
 ```
 
-Set the value.
+Constructor used to draw an ellipse. After being called, it creates an **Ellipse** object, for which the width and height attributes can be set.
 
 **Since:** 7
 
@@ -44,7 +48,7 @@ Set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Options of the ellipse.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Ellipse drawing configuration options, including the width and height settings. If not passed, the default size (both width and height are 0) is used.<br>The abnormal values **undefined** and **null** are handled as invalid values, and the setting does not take effect. <br>**Note:** Since API version 18, the EllipseOptions parameter must be used in the stage model. |
 
 ## Summary
 

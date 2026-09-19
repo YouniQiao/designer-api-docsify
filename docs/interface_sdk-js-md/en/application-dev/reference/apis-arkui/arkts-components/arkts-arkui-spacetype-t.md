@@ -18,6 +18,6 @@ Describes the supported data types for the **space** parameter in the constructo
 
 | Type | Description |
 | --- | --- |
-| string | Represents a string value. It can take any string value. |
-| number | Represents a numeric value. It can take any numerical value. |
-| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Represents a resource reference type. It can take values from system resources or application resources. |
+| string | The value type is string, and the value must be a string that can be converted to a non- negative number. If a negative number or a string that cannot be converted is set, the default value **0** is used. |
+| number | The value type is number, and the value must be greater than or equal to 0. If a negative number or invalid value is set, the default value **0** is used. |
+| [Resource](../arkts-apis/arkts-arkui-resource-t.md) | The value type is a resource reference type. It can take values from system resources or application resources. |

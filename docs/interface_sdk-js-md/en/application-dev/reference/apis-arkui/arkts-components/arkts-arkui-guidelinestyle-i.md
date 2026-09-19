@@ -1,6 +1,6 @@
 # GuideLineStyle
 
-Defines the ID, direction, and position of a guideline.
+Defines the style of a guideline, which used to define the ID, direction, and position of a guideline, helping child components to be positioned and aligned in the **RelativeContainer**.
 
 **Since:** 12
 
@@ -12,13 +12,11 @@ Defines the ID, direction, and position of a guideline.
 direction : Axis
 ```
 
-Direction of the guideline.
-
-A guideline in the vertical direction can only be used as the anchor of the component in the horizontal direction, and the value is **0** when it is used as the anchor in the vertical direction. A guideline in the horizontal direction can only be used as the anchor of the component in the vertical direction, and the value is **0** when it is used as the anchor in the horizontal direction.
+Direction of the guideline. **Axis.Vertical** indicates a vertical guideline, which can be used only as a horizontal anchor of a component. **Axis.Horizontal** indicates a horizontal guide line, which can be used only as a vertical anchor of a component.
 
 Default value: **Axis.Vertical**
 
-Invalid values are treated as the default value.
+Invalid value: The default value is used.
 
 **Type:** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
@@ -36,7 +34,7 @@ Invalid values are treated as the default value.
 id : string
 ```
 
-ID of the guideline, which must be unique and cannot be the same as the name of any component in the container.
+ID of the guideline, used to identify the guideline. A child component can reference this guideline as an anchor by using this ID. The ID must be unique and cannot be the same as the name of any component in the container.
 
 **Type:** string
 
@@ -56,16 +54,11 @@ position : GuideLinePosition
 
 Position of the guideline.
 
-If no value is specified or an invalid value (for example, **undefined**) is provided, the guideline position defaults to **start: 0**. Only **start** or **end** can be selected for the guideline position. If both are declared, only **start** takes effect. If the container size in a certain direction is set to **"auto"**, the guideline position in that direction must be declared in **start** mode, and the value cannot be a percentage.
+If this parameter is not declared or an invalid value (for example, **undefined**) is declared, the position of the guideline defaults to **start: 0**. You can declare either **start** or **end**. If both are declared, only **start** takes effect. If the width of the container is declared as **"auto"**, the position of an **Axis.Vertical** guideline can be declared only by using **start** (percentages are not allowed). If the **height** of the container is declared as **"auto"**, the position of an **Axis.Horizontal** guideline can be declared only by using **start** (percentages are not allowed).
 
-Default value:  
-```
-{
- start: 0
-}
-``` 
+Default value: **{ start: 0 }**
 
-Invalid values are treated as the default value.
+Invalid value: The default value is used.
 
 **Type:** [GuideLinePosition](arkts-arkui-guidelineposition-i.md)
 

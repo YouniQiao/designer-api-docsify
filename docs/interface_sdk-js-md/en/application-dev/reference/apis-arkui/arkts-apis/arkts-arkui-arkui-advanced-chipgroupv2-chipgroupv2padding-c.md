@@ -1,6 +1,6 @@
 # ChipGroupV2Padding
 
-Defines chip group padding.
+Defines the top and bottom padding of **ChipGroupV2**, which is used to control its overall height.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 constructor(config: ChipGroupV2PaddingConfig)
 ```
 
-The constructor of ChipGroupV2PaddingConfig
+A constructor used to create a **ChipGroupV2Padding** object.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ The constructor of ChipGroupV2PaddingConfig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2PaddingConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Yes | config of ChipGroupV2 padding |
+| config | [ChipGroupV2PaddingConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Yes | Padding configuration of **ChipGroupV2**. |
 
 ## bottom
 
@@ -42,7 +42,15 @@ The constructor of ChipGroupV2PaddingConfig
 public bottom: Length
 ```
 
-Bottom of chip group padding.
+Bottom padding of **ChipGroupV2** (percentage not supported).
+
+Default value: **14**
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
+
+Decorator: **@Trace**
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -62,7 +70,15 @@ Bottom of chip group padding.
 public top: Length
 ```
 
-Top of chip group padding.
+Top padding of **ChipGroupV2** (percentage not supported).
+
+Default value: **14**
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
+
+Decorator: **@Trace**
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

@@ -4,7 +4,7 @@
 declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void
 ```
 
-Current fold state of the device.
+Triggered when the fold status changes&lt;!--RP4--&gt;, which takes effect only in landscape mode&lt;!--RP4End--&gt;.
 
 **Since:** 18
 
@@ -18,4 +18,4 @@ Current fold state of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md) | Yes | Current fold state of the device. |
+| event | [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md) | Yes | Information about the fold status change. This takes effect only in landscape mode. |

@@ -1,6 +1,6 @@
 # ChipSize
 
-Enum for ChipSize
+ChipSize定义Chip组件可指定的尺寸类型，如普通类型和小尺寸型。
 
 **起始版本：** 11
 

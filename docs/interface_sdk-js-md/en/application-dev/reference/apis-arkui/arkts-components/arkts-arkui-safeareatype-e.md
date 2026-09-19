@@ -28,7 +28,7 @@ Default non-safe area of the system, including the status bar and navigation bar
 CUTOUT = 1
 ```
 
-Device-specific non-safe area, such as the notch area or camera cutout area.
+The non-safe area of the device, for example, the notch or punch-hole area. The CUTOUT type does not take effect when no Metadata configuration item is added.
 
 **Since:** 10
 

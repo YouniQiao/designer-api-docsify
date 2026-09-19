@@ -1,6 +1,6 @@
 # CanvasRenderingContext2D
 
-After the **CanvasRenderingContext2D** object is bound to the **Canvas** component, you can draw shapes, texts, and images on the **Canvas** component.
+**CanvasRenderingContext2D** is the 2D drawing context object of the **Canvas** component, used for custom drawing on the **Canvas** component. It supports drawing shapes (rectangles, circles, ellipses, paths, etc.), text, images, gradients, shadows, and many other drawing types, and is suitable for scenarios such as data visualization, game development, image editing, and custom UI drawing. With this object, developers can flexibly control the drawing process to achieve complex 2D graphic effects.
 
 > **NOTE:** 
 > 
@@ -10,7 +10,14 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > 
 > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**and do not affect paths defined in [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)or [Path2D](arkts-arkui-path2d-c.md):[beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),[bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),[arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
 > 
-> * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes significant performance degradation.
+> * When the width or height of the **Canvas** component exceeds 8000 px and CPU rendering is used, significant performance degradation may occur. In this case, it is recommended to use custom render nodes (RenderNode).
+> 
+> * When the graphics transformation APIs (**rotate**, **scale**, **transform**, **setTransform**,
+> **translate**) and the **getPixelMap** **toDataURL** APIs are executed in
+> different frames, the content created by the latter does not have the graphics transformation
+> effect.
+> 
+> * The common canvas drawing methods and common canvas drawing attributes are supported.
 
 **Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
@@ -38,7 +45,7 @@ Constructs a canvas object, which supports configuration of parameters for the *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. This parameter is passed when advanced configurations such as anti-aliasing need to be enabled. If not passed, the default configuration (anti-aliasing disabled) is used. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>If abnormal values **undefined** and **null** are passed in, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
 
 **Examples**
 
@@ -68,8 +75,8 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set.<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. <br>Default value: **DEFAULT**. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. Pass this parameter when advanced configurations such as anti-aliasing need to be enabled. If not passed, the default configuration (anti-aliasing disabled) is used. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>If abnormal values **undefined** and **null** are passed in, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The configuration cannot be changed after being set. **DEFAULT**: default vp unit, suitable for most scenarios. **PX**: pixel unit, suitable for scenarios requiring precise pixel control.<br>If abnormal values **undefined**, **NaN**, and **Infinity** are passed in, the default value is used. <br>Default value: **DEFAULT** |
 
 **Examples**
 
@@ -101,8 +108,8 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.<br>**undefined** and **null** are treated as invalid values. |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context.<br>Default value: **{ antialias: false }** |
+| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | A **DrawingRenderingContext** object.<br>The abnormal value **undefined** or **null** is treated as an invalid value. |
+| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context.<br>The abnormal value **undefined** or **null** is treated as the default value. <br>Default value: { antialias: false } |
 
 **Return value:**
 
@@ -164,8 +171,8 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.<br>If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.<br>**undefined** and **null** are treated as invalid values. |
+| type | 'onAttach' | Yes | Event type for unsubscribing from the binding event between **CanvasRenderingContext2D** and the **Canvas** component. The value is fixed as **'onAttach'**.<br>Abnormal values such as **undefined** or **null** are treated as invalid. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If empty, cancels all callbacks subscribed for the binding event between **CanvasRenderingContext2D** and the **Canvas** component.<br>If not empty, cancels the callback subscribed for the binding event.<br>Abnormal values such as **undefined** or **null** are treated as invalid. |
 
 **Error codes:**
 
@@ -193,8 +200,8 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.<br>If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.<br>**undefined** and **null** are treated as invalid values. |
+| type | 'onDetach' | Yes | Event type for unsubscribing from the **CanvasRenderingContext2D** detach event. It is fixed as **'onDetach'**.<br>Abnormal values such as **undefined** or **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is empty, all callbacks subscribed for the **CanvasRenderingContext2D** detach event are unsubscribed.<br>If this parameter is not empty, the specific callback for the detach event is unsubscribed.<br>Abnormal values such as **undefined** or **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -238,8 +245,8 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.<br>**undefined** and **null** are treated as invalid values. |
+| type | 'onAttach' | Yes | Event type for subscribing to the binding event between **CanvasRenderingContext2D** and the **Canvas** component. Fixed as **'onAttach'**.<br> Abnormal values such as **undefined** or **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when **CanvasRenderingContext2D** is bound to the **Canvas** component.<br>Abnormal values such as **undefined** or **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -275,8 +282,8 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.<br>**undefined** and **null** are treated as invalid values. |
+| type | 'onDetach' | Yes | Event type for subscribing to the event of the **CanvasRenderingContext2D** being detached from the **Canvas** component. The value is fixed as **'onDetach'**.<br>Abnormal values **undefined** and **null** are treated as invalid values. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the **CanvasRenderingContext2D** is detached from the **Canvas** component.<br>Abnormal values **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -312,7 +319,7 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI analyzer.<br>**undefined** and **null** are treated as invalid values. |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Input parameter required for performing AI analysis, used to configure the type of AI analysis (such as subject recognition, text recognition, etc.). For details, see **ImageAnalyzerConfig**.<br>Abnormal values **undefined** or **null** are treated as invalid values. |
 
 **Return value:**
 
@@ -436,8 +443,8 @@ Creates a data URL that contains a representation of an image. This API involves
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | Image format.<br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png** |
-| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92** |
+| type | string | No | Used to specify the image format.<br>Available options: **"image/png"** (lossless compression, suitable for scenarios requiring precise pixels), **"image/jpeg"** (lossy compression, suitable for photo-like images), **"image/webp"** (efficient compression, suitable for network transmission scenarios). <br>If abnormal values **undefined** and **null** are passed in, the default value is used. <br>Default value: **image/png** |
+| quality | any | No | When the image format is set to **image/jpeg** or **image/webp**, specifies the image quality in the range from 0 to 1. 0-0.5 is suitable for fast transmission or low-bandwidth scenarios, 0.6-0.8 is suitable for common scenarios, and 0.9-1.0 is suitable for high-quality requirements. If the value is out of range, the default value 0.92 is used.<br>If abnormal values **undefined**, **null**, **NaN**, and **Infinity** are passed in, the default value is used. <br>Default value: **0.92** |
 
 **Return value:**
 

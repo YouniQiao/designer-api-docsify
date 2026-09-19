@@ -6,10 +6,13 @@ When the Canvas component or **CanvasRenderingContext2D** object is used, render
 
 > **NOTE:** 
 > 
-> **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended
-> that you use the
-> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> for offscreen drawing in ServiceExtensionAbility.
+> **OffscreenCanvas** cannot be used in **ServiceExtensionAbility**. For offscreen
+> drawing in **ServiceExtensionAbility**, use the
+> [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md) instead.
+
+## Child Components
+
+Not supported.
 
 @extends CanvasRenderer [since 8 - 10]
 
@@ -23,7 +26,7 @@ When the Canvas component or **CanvasRenderingContext2D** object is used, render
 constructor(width: number, height: number)
 ```
 
-Constructs an OffscreenCanvas for creating an offscreen canvas object.
+Constructs an **OffscreenCanvas** object.
 
 **Since:** 8
 
@@ -37,8 +40,8 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
-| height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| width | number | Yes | Width of the **OffscreenCanvas** component.<br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>Unit: vp. |
+| height | number | Yes | Height of the **OffscreenCanvas** component.<br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>Unit: vp. |
 
 ## constructor
 
@@ -46,7 +49,7 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 constructor(width: number, height: number, unit: LengthMetricsUnit)
 ```
 
-Constructs an **OffscreenCanvas** object for creating an offscreen canvas object. The unit mode is configurable for the **OffscreenCanvas** object.
+Creates an **OffscreenCanvas** object, with support for configuring the unit mode.
 
 **Since:** 12
 
@@ -62,9 +65,9 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
-| height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
+| width | number | Yes | Width of the **OffscreenCanvas** component.<br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>The unit is determined by the unit parameter. Default unit: vp. |
+| height | number | Yes | Height of the **OffscreenCanvas** component.<br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>The unit is determined by the unit parameter. Default unit: vp. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **OffscreenCanvas** object. Once configured, it cannot be changed dynamically. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). Optional values: **DEFAULT** (default unit mode, which uses vp as the unit and automatically adapts based on the screen density) and PX (px pixel unit, which is suitable for scenarios requiring precise pixel control, where the width and height values are calculated based on physical pixels). <br>Abnormal values **NaN** and **Infinity** are treated as the default value. <br>Default value: **DEFAULT**. |
 
 ## getContext
 
@@ -73,6 +76,14 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 ```
 
 Obtains the drawing context of the offscreen canvas.
+
+> **NOTE:** 
+> 
+> - After the **OffscreenCanvas** object uses **getContext** to obtain the drawing context, the object cannot be passed to any other thread through **postMessage**.Otherwise, an exception is thrown.
+> 
+> - After the **OffscreenCanvas** object has been passed to a Worker thread through
+> **postMessage**, the original thread (sender) is not allowed to call the
+> **getContext** method of the object. Otherwise, an exception is thrown.
 
 **Since:** 10
 
@@ -86,8 +97,8 @@ Obtains the drawing context of the offscreen canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | "2d" | Yes | Type of the drawing context of the offscreen canvas. The value can only be **"2d"**.<br> **"2d"**: creates an **OffscreenCanvasRenderingContext2D** object that represents a two-dimensional rendering context.<br> The values **undefined** and **null** are considered as invalid values, and **undefined** is returned. |
-| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null**. |
+| contextType | "2d" | Yes | Type of the drawing context of the **OffscreenCanvas** component. Currently, only the "2d" type is supported.<br>"2d": Creates an **OffscreenCanvasRenderingContext2D** object that represents a 2D rendering context. <br>The abnormal values **undefined** and **null** are treated as invalid values, and the API returns **undefined**. |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters used to configure the **OffscreenCanvasRenderingContext2D** object. See [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). This parameter is passed when custom rendering context settings (such as enabling antialiasing) are required. If not passed, the default settings are used (**antialias** defaults to **false**). <br>The abnormal values **undefined** and **null** are treated as the default values of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). <br>Default value: **null**. |
 
 **Return value:**
 
@@ -101,7 +112,13 @@ Obtains the drawing context of the offscreen canvas.
 transferToImageBitmap(): ImageBitmap
 ```
 
-Creates an **ImageBitmap** object from the most recently rendered image of the offscreen canvas.
+Creates an **ImageBitmap** object from the current content of the **OffscreenCanvas** component.
+
+> **NOTE:** 
+> 
+> After the **OffscreenCanvas** object has been passed to a Worker thread through
+> **postMessage**, the original thread (sender) is not allowed to call the
+> **transferToImageBitmap** method of the object. Otherwise, an exception is thrown.
 
 **Since:** 8
 
@@ -123,9 +140,7 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 height: number
 ```
 
-Height of the offscreen canvas.
-
-Default unit: vp
+Height of the **OffscreenCanvas** component. <br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>Unit: vp.
 
 **Type:** number
 
@@ -143,9 +158,7 @@ Default unit: vp
 width: number
 ```
 
-Width of the offscreen canvas.
-
-Default unit: vp
+Width of the **OffscreenCanvas** component. <br>Abnormal values **NaN** and **Infinity** are treated as invalid values, and negative numbers are treated as 0. <br>Unit: vp.
 
 **Type:** number
 

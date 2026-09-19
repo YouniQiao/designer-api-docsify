@@ -16,11 +16,11 @@ The universal events are supported.
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier.
 
-For the settings to take effect, this attribute must be used together with [startImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#startimageanalyzer) and [stopImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#stopimageanalyzer) of CanvasRenderingContext2D.
+This API must be used together with [startImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#startimageanalyzer) and [stopImageAnalyzer](arkts-arkui-canvasrenderingcontext2d-c.md#stopimageanalyzer) in [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).
 
-This attribute cannot be used together with the overlay attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
+This attribute cannot be used together with the overlay attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** will become invalid. This feature depends on the device capability. You can use the [ImageAnalyzerController.getImageAnalyzerSupportTypes](../arkts-apis/arkts-arkui-imageanalyzercontroller-c.md#getimageanalyzersupporttypes) API to query the analysis types supported by the device.
 
 > **NOTE:** 
 > 
@@ -40,7 +40,7 @@ This attribute cannot be used together with the overlay attribute. If they are s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer for subject recognition, text recognition, and object lookup within the component content.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI analyzer. <br>The **null** and **undefined** values are handled as the default value. <br>Default value: **false** |
+| enable | boolean | Yes | Whether to enable the AI analysis function for the component. When enabled, the component content must support subject recognition, text recognition, or object search.<br>When set to **true**, the component can perform AI analysis; when set to **false**, the component cannot perform AI analysis. <br>Abnormal values **null** and **undefined** are processed as **false**. <br>Default value: **false** |
 
 ## onReady
 
@@ -48,7 +48,7 @@ This attribute cannot be used together with the overlay attribute. If they are s
 onReady(event: VoidCallback)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes.
+Triggered when the **Canvas** component is initialized or when its size changes. Dynamic attribute setting using attributeModifier is supported.
 
 When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered after the **onReady** event.
 
@@ -64,7 +64,7 @@ When this event is triggered, the canvas is cleared. The width and height of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Triggered when the **Canvas** component is initialized or when its size changes. |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback event triggered when the **Canvas** component initialization is complete or when its size changes. |
 
 ## onReady
 
@@ -72,7 +72,7 @@ When this event is triggered, the canvas is cleared. The width and height of the
 onReady(event: Callback<DrawingRenderingContext | undefined> | undefined)
 ```
 
-Triggered when the **Canvas** component is initialized or when its size changes.
+Triggered when the **Canvas** component is initialized or when its size changes. Dynamic attribute setting using attributeModifier is supported.
 
 When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event is triggered after the **onReady** event.
 
@@ -90,4 +90,4 @@ When this event is triggered, the canvas is cleared. The width and height of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) &#124; undefined&gt; &#124; undefined | Yes | Triggered when the **Canvas** component is initialized or when its size changes. <br>Constraints on input parameters of the Callback&lt;DrawingRenderingContext &#124; undefined&gt; type: <br>1. Only **Canvas** components created using [CanvasParams](arkts-arkui-canvasparams-i.md) will return a **DrawingRenderingContext** object in this callback; otherwise, **undefined** is returned. <br>2. The **DrawingRenderingContext** object returned by this callback must not be used as a parameter to create **Canvas** components, as doing so will cause the application to crash. |
+| event | Callback&lt;[DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) &#124; undefined&gt; &#124; undefined | Yes | Callback invoked when the **Canvas** component initialization is complete or when its size changes. <br>Regarding the input parameter of the **Callback&lt;DrawingRenderingContext &#124; undefined&gt;** type: <br>1. Only the **Canvas** component created using [CanvasParams](arkts-arkui-canvasparams-i.md) returns a **DrawingRenderingContext** object in this callback; otherwise, **undefined** is returned. <br>2. The **DrawingRenderingContext** object returned by this callback must not be used as a parameter to create a **Canvas** component; otherwise, the app will crash. |

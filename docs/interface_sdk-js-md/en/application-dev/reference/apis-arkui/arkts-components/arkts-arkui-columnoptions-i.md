@@ -18,7 +18,21 @@ Sets the spacing between child components of the **Column** component.
 space?: string | number
 ```
 
-Vertical spacing between two adjacent child components. This parameter has no effect if the value specified is a negative number, or if [justifyContent](@ColumnAttribute#justifyContent) is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly** Unit: vp, Invalid values are treated as the default value. **NOTE:** The value of **space** can be a number greater than or equal to 0 or a string that can be converted to a number. Default value: **0**.
+Vertical spacing between child components in the column layout.
+
+If **space** is a negative number or [justifyContent](arkts-arkui-column-comp-attribute.md#justifycontent) is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**, **space** does not take effect.
+
+Value range: [0, +∞)
+
+Default value: **0**
+
+Invalid value: handled as the default value.
+
+Unit: vp
+
+**NOTE:** 
+
+The value of **space** is a number greater than or equal to 0, or a string that can be converted to a non-negative number.
 
 **Type:** string &#124; number
 

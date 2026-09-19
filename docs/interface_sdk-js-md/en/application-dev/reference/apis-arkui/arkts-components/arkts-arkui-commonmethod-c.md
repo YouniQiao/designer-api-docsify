@@ -683,7 +683,7 @@ Sets an accessibility virtual child node. For custom drawing components, a **Cus
 align(value: Alignment): T
 ```
 
-Sets the alignment mode for child elements within the container's drawing area. This attribute can be dynamically set using [attributeModifier](#attributemodifier).
+Sets the alignment mode for child components within the component's drawing area. This attribute can be dynamically set using [attributeModifier](#attributemodifier).
 
 **Since:** 7
 
@@ -697,7 +697,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | Alignment mode for child elements in container drawing area. This setting takes effect only in Stack, FolderStack, Shape, Button, Marquee, StepperItem, Text, TextArea, TextInput, RichEditor, Hyperlink, SymbolGlyph, ListItem, GridItem, Scroll, FlowItem, ImageAnimator, LoadingProgress, PatternLock, Progress, QRCode, TextClock, TextTimer, MenuItem, Toggle, Checkbox, and [NodeContainer](arkts-arkui-nodecontainer-comp-attribute.md#nodecontainer). For the alignment of the **Marquee**, **Text**, **TextArea**, **TextInput**, **RichEditor**, and **Hyperlink** components related to text, see textAlign. If a component does not support the **textAlign** attribute, horizontal text alignment cannot be configured. <br>Default value: **Alignment.Center** <br>**NOTE:** <br> This attribute supports the mirroring capability only in the Stack component. In the **Stack** component, this attribute has the same effect as **alignContent**, which means that it sets the alignment mode of child components in the container |
+| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | Sets the alignment mode of child components within the drawing region of the current component. <br>This attribute takes effect only in Stack, FolderStack, Shape, Button, Marquee, StepperItem, Text, TextArea, TextInput, RichEditor, Hyperlink, SymbolGlyph, ListItem, GridItem, Scroll, FlowItem, ImageAnimator, LoadingProgress, PatternLock, Progress, QRCode, TextClock, TextTimer, MenuItem, Toggle, Checkbox, and [NodeContainer](arkts-arkui-nodecontainer-comp-attribute.md#nodecontainer). For text-related components **Marquee**, **Text**, **TextArea**, **TextInput**, **RichEditor**, and **Hyperlink**, the align result refers to textAlign. <br>Components that do not support the **textAlign** attribute cannot set horizontal text alignment. <br>Default value: **Alignment.Center** <br>**NOTE:** <br> This attribute supports mirroring on the Stack component, but not on other components. <br>In **Stack**, this attribute has the same effect as **alignContent** and can only set the alignment mode of child components within the current component. |
 
 **Return value:**
 
@@ -711,7 +711,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 align(alignment: Alignment | LocalizedAlignment): T
 ```
 
-Sets the alignment mode for child elements within the container's drawing area. The mirroring capability is supported. This attribute can be dynamically set using [attributeModifier](#attributemodifier).
+Sets the alignment mode for child components within the component's drawing area. The mirroring capability is supported. This attribute can be dynamically set using [attributeModifier](#attributemodifier).
 
 **Since:** 20
 
@@ -727,7 +727,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) &#124; [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes | Alignment mode for child elements in container drawing area. The mirroring capability is supported. The [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) type is effective only in the following components: Shape, Button, GridItem, FlowItem, ImageAnimator, LoadingProgress, PatternLock, Progress, QRCode, TextClock, TextTimer, StepperItem, MenuItem, Toggle, Checkbox, and ListItem. For the above components, mirror switching is effective for all except the ListItem, component, which behaves identically to [Alignment](../arkts-apis/arkts-arkui-alignment-e.md). Components where **LocalizedAlignment** is not applicable will be rendered in accordance with their default behavior. <br>Default value: **Alignment.Center**, **LocalizedAlignment.CENTER**. If an invalid value is passed, the default value will be used, indicating center alignment. <br>**NOTE:** <br> The [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) type does not support the mirroring capability. The [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) type supports mirroring based on the layout direction (configurable via direction) or system language. The **direction** setting takes precedence over the system language direction. When **direction** is explicitly set to any value other than **auto**, **LocalizedAlignment** mirroring follows the specified direction. If **direction** is set to **auto** or not configured, **LocalizedAlignment** mirroring adapts to the system language direction |
+| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) &#124; [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes | Sets the alignment mode of child components within the drawing region of the current component, and adds the mirroring capability. The [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) type is effective only in the following components: Shape, Button, GridItem, FlowItem, ImageAnimator, LoadingProgress, PatternLock, Progress, QRCode, TextClock, TextTimer, StepperItem, MenuItem, Toggle, Checkbox, and ListItem. Among them, except that ListItem behaves the same as [Alignment](../arkts-apis/arkts-arkui-alignment-e.md), mirroring switching takes effect for all other components; components for which **LocalizedAlignment** has no effect are displayed according to their default behavior. <br>Default value: **Alignment.Center**, **LocalizedAlignment.CENTER** <br>If an invalid value is set, the default value is used, and the component is displayed centered. <br>**NOTE:** <br> The [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) type does not support the mirroring capability; the [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) type supports the mirroring capability. Select an enum value in [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) to implement mirroring switching based on the change of direction or the system language direction. The priority of **direction** is higher than that of the system language direction. When **direction** is set and is not **auto**, the mirroring of [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) performs layout according to **direction**; when **direction** is set to **auto** or is not set, the mirroring of [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) performs layout according to the system language direction. |
 
 **Return value:**
 
@@ -799,7 +799,7 @@ Sets the alignment rules in the relative container. This API is valid only when 
 alignSelf(value: ItemAlign): T
 ```
 
-Sets the alignment mode of the child components along the cross axis of the parent container.
+The alignment mode of the child component along the cross axis (the direction perpendicular to the main axis) of the parent container. After it is set, it overrides the alignItems setting of the parent container. This attribute is supported only by Flex, Column, Row, DynamicLayout, and GridRow containers.
 
 **Since:** 7
 
@@ -813,7 +813,7 @@ Sets the alignment mode of the child components along the cross axis of the pare
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment mode of the child components along the cross axis of the parent container. The setting overwrites the **alignItems** setting of the parent container (Flex, Column, Row, or GridRow). GridCol can have the **alignSelf** attribute bound to change its own layout along the cross axis.<br>Default value: **ItemAlign.Auto** |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment format of the child component on the cross axis of the parent container, which overrides the alignItems setting in the Flex, Column, Row, DynamicLayout, and GridRow layout containers. Use it when a child component needs a different alignment from other child components in the parent container (typical scenarios: most child components in the parent container are center-aligned, but a specific child component needs top or bottom alignment; or a special alignment needs to be specified for a single child component).<br>GridCol can bind the alignSelf attribute to change its own layout in the cross axis direction.<br>Default value: ItemAlign.Auto (indicates inheriting the alignment setting of the parent container) |
 
 **Return value:**
 
@@ -918,7 +918,7 @@ Sets a property animation for the component.
 aspectRatio(value: number): T
 ```
 
-Sets the aspect ratio of the component, which can be obtained using the following formula: width/height. <br>- If only **width** and **aspectRatio** are set, the height is calculated using the following formula: width/aspectRatio. <br>- If only **height** and **aspectRatio** are set, the width is calculated using the following formula: height x aspectRatio. <br>- If **width**, **height**, and **aspectRatio** are all set, the explicitly set height is ignored, and the effective height is calculated using the following formula: width/aspectRatio. <br>After the **aspectRatio** attribute is set, the component's width and height will be limited by the size of the parent component's content area. The priority of [constraintSize](#constraintsize) is higher than that of **aspectRatio**.
+Sets the aspect ratio of the component, which can be obtained using the following formula: width/height. <br>- If only **width** and **aspectRatio** are set, the height is calculated using the following formula: width/aspectRatio. <br>- If only **height** and **aspectRatio** are set, the width is calculated using the following formula: height x aspectRatio. <br>- If **width**, **height**, and **aspectRatio** are set at the same time, the height is recalculated as width/aspectRatio, and the explicitly set height value does not take effect. <br>Applies to components that need to maintain a fixed aspect ratio, such as image display, video players, and maintaining proportions in responsive layouts. <br>After the **aspectRatio** attribute is set, the component's width and height are limited by the size of the parent component's content area. The maxWidth/maxHeight of [constraintSize](#constraintsize) takes precedence over **aspectRatio**. When the maxWidth/maxHeight constraints set by constraintSize conflict with the aspectRatio calculation result, the component follows the maxWidth/maxHeight constraints of constraintSize first, in which case aspectRatio may not take effect.
 
 **Since:** 7
 
@@ -932,7 +932,7 @@ Sets the aspect ratio of the component, which can be obtained using the followin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Aspect ratio of the component. The default value varies by API version.<br>API version 9 and earlier: **1.0** <br>API version 10: none <br>**NOTE:** <br> This parameter takes effect only when a valid value greater than 0 is specified. For example, if a **Row** component has only its width set and does not have any child component, then when **aspectRatio** is not set or is set to a negative value, the height of the **Row** component is 0 <br>The value range is all integers. |
+| value | number | Yes | Specifies the aspect ratio of the current component. The value range is (0, +∞). <br>In API version 9 and earlier, the default value is **1.0**. <br>Since API version 10, there is no default value. <br>**NOTE:** <br> Use it when the aspect ratio of the component needs to be maintained (for example, when displaying images, videos, and other content that needs to maintain their ratio). <br>This attribute does not take effect when it is set to an invalid value (less than or equal to 0). Since API version 10, this attribute does not take effect when no value is set. <br>After this attribute is set, the width and height of the component are limited by the size of the parent component's content area, and the maxWidth/maxHeight of [constraintSize](#constraintsize) take precedence over aspectRatio. <br>For example, when **Row** has only the width set and no child components, if **aspectRatio** is not set or is a negative value, the height is 0. |
 
 **Return value:**
 
@@ -2144,7 +2144,11 @@ Applies a foreground blur effect to the component. Compared to [blur&lt;sup&gt;1
 border(value: BorderOptions): T
 ```
 
-Sets the border. When neither color nor radius is specified, set borderColor and borderRadius after border to ensure they take effect.
+Sets the border.  
+> **NOTE:** 
+> 
+> When neither **color** nor **radius** is specified, set borderColor and borderRadius after
+> border to ensure they take effect.
 
 **Since:** 7
 
@@ -2158,7 +2162,7 @@ Sets the border. When neither color nor radius is specified, set borderColor and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderOptions](../arkts-apis/arkts-arkui-borderoptions-i.md) | Yes | Unified border style.<br>The default value is **0**, indicating that no border is displayed.<br>Since API version 9, the parent node's border is displayed above child node content. |
+| value | [BorderOptions](../arkts-apis/arkts-arkui-borderoptions-i.md) | Yes | Unified border style setting API.<br>The default border width is **0**, that is, no border is displayed.<br>The default border corner radius is **0**, that is, no corner radius is displayed.<br>The default border color is Color.Black.<br>Since API version 9, the border of the parent node is displayed above the content of the child node.<br>When color and radius are not set, to ensure that borderColor and borderRadius take effect, set borderColor and borderRadius after border. |
 
 **Return value:**
 
@@ -2172,7 +2176,8 @@ Sets the border. When neither color nor radius is specified, set borderColor and
 borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 ```
 
-Sets the border color.
+Sets the border color.  
+> **NOTE:** <br>When using border for unified setting of the border and the color parameter is omitted, borderColor must be called after border to take effect.
 
 **Since:** 7
 
@@ -2186,7 +2191,7 @@ Sets the border color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes | Border color.<br>Default value: **Color.Black** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes | Sets the border color of the element. After setting, the border is displayed in the corresponding color.<br>Default value: **Color.Black**<br>**Note:** When using the LocalizedEdgeColors type, the border color settings differ under different language directions. See Example 2. |
 
 **Return value:**
 
@@ -2228,7 +2233,8 @@ Sets the border image of the component.
 borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 ```
 
-Sets the border radius.
+Sets the border radius.  
+> **NOTE:** <br>When using border for unified setting of the border and the radius parameter is omitted, borderRadius must be called after border to take effect.
 
 **Since:** 7
 
@@ -2242,7 +2248,7 @@ Sets the border radius.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Radius of the border corners. The value can be expressed as a percentage of the component's width. When combined with the [clip](#clip) attribute, this setting clips child components to prevent them from extending beyond the component's boundaries.<br>**Since:** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Element border corner radius. Percentage is supported, and the percentage is based on the component width. Default unit: vp.<br>Default value: **0**. After the corner radius is set, you can use the [clip](#clip) attribute to clip the component so that child components do not exceed the component itself.<br>**NOTE:** <br>When the LocalizedBorderRadiuses type is used, the border corner radius settings differ under different language directions. See Also example 2.<br>Set four different corner radii. If a corner radius exceeds half of the smaller value between the height and the width, the irregular corner radius is drawn differently by value ratio. See example 4 for the effect.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -2256,11 +2262,8 @@ Sets the border radius.
 borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: RenderStrategy): T
 ```
 
-Sets the border corner radius and the rendering strategy for rounded corners. NOTE
-1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly
-onto the canvas with rounded corners applied.
-2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto
-an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
+Sets the border corner radius and the rendering strategy for rounded corners.  
+> **NOTE:** <br>When using border for unified setting of the border and the radius parameter is omitted, borderRadius must be called after border to take effect.
 
 **Since:** 22
 
@@ -2276,8 +2279,8 @@ an off-screen canvas, then undergo a rounded corner clipping, and finally be dra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Radius of the border corners. The value can be expressed as a percentage of the component's width. When combined with the clip attribute, this setting clips child components to prevent them from extending beyond the component's boundaries. |
-| type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No | Rendering strategy for drawing rounded corners.<br>Default value: RenderStrategy.FAST. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) &#124; [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes | Set the border corner radius of the element. Percentage is supported, and the percentage is based on the component width. Default you can use the [clip](#clip) attribute to clip the component so that child components do not exceed the component itself.<br> **Note:** When using the LocalizedBorderRadiuses type, the border corner radius settings differ under different language directions. See also example 2.<br>Set four different corner radius values. If a corner radius value exceeds half of the smaller value of the height and width, the irregular corner radius is drawn differently by value ratio. See example 4 for the effect. <br>Unit: vp.<br>After the corner radius is set. Default value: **0**. |
+| type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No | Sets the mode for drawing the corner radius of the component.<br><br>Optional values:<br>- **RenderStrategy.FAST**: fast rendering mode, suitable for common corner radius scenarios with better performance. If the component contains complex visual effects such as blur, using this mode may cause abnormal corner radius clipping.<br>- **RenderStrategy.OFFSCREEN**: offscreen rendering mode, suitable for corner radius scenarios with complex visual effects such as blur. It can render the corner radius correctly but incurs higher performance overhead. <br>Default value: **RenderStrategy.FAST**. |
 
 **Return value:**
 
@@ -2291,7 +2294,7 @@ an off-screen canvas, then undergo a rounded corner clipping, and finally be dra
 borderStyle(value: BorderStyle | EdgeStyles): T
 ```
 
-Border style
+Sets the border style.
 
 **Since:** 7
 
@@ -2305,7 +2308,7 @@ Border style
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | Yes | Border style.<br>Default value: **BorderStyle.Solid**.<br>**Since:** 9 |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | Yes | Element border style.<br>Default value: **BorderStyle.Solid**<br>**Since:** 9 |
 
 **Return value:**
 
@@ -2333,7 +2336,7 @@ Sets the border width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | Yes | Border width. This parameter cannot be set in percentage.<br>**Since:** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | Yes | Sets the border width of the element. Percentage is not supported. Default unit: vp.<br>Default value: **0**.<br>**Note:** When the LocalizedEdgeWidths type is used, the border width setting differs under different language directions. See Example 2.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -2786,7 +2789,7 @@ Sets the visual effect of the compositing filter.
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-Sets the constraint size of the component, which is used to limit the size range during component layout. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the constraint size, which limits the size range during component layout. After the setting, the width and height of the component are limited to the specified minimum and maximum values. The priority of **constraintSize** is higher than that of the **width** and **height** attributes. <br>Since API version 10, this API supports the calc calculation feature.
 
 **Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height**
 
@@ -2819,7 +2822,7 @@ Sets the constraint size of the component, which is used to limit the size range
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size of the component to set. **constraintSize** takes precedence over **width** and **height**.<br> Default value: {minWidth: 0, maxWidth: Infinity, minHeight: 0, maxHeight: Infinity} <br>Exception handling: For strings beginning with numerals, only the numeric part is parsed. Strings not beginning with numerals are parsed as 0. For other invalid values, the **constraintSize** attribute reverts to its default behavior when unconfigured. <br>Unit: vp. |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size. The priority of **constraintSize** is higher than that of [width](#width) and [height](#height). For the value result, refer to the impact of the **constraintSize** value on width and height. <br>Default value:<br>**{<br>minWidth:&nbsp;0,<br>maxWidth:&nbsp;Infinity,<br>minHeight:&nbsp;0, <br>maxHeight:&nbsp;Infinity<br>}**<br>Abnormal value: For a string starting with a number, only the numeric part is parsed; for a string not starting with a number, it is parsed as 0. For other abnormal values, the **constraintSize** attribute is restored to the default behavior when it is not configured. <br>Unit: vp |
 
 **Return value:**
 
@@ -2955,7 +2958,7 @@ Specifies whether to set this component as the default focus of the current [hie
 direction(value: Direction): T
 ```
 
-Sets how elements are laid out along the main axis of the container. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
+Sets the layout along the main axis within the component's drawing area. This attribute can be dynamically set using [attributeModifier](#attributemodifier).
 
 **Since:** 7
 
@@ -2969,7 +2972,7 @@ Sets how elements are laid out along the main axis of the container. This attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Direction](../arkts-apis/arkts-arkui-direction-e.md) | Yes | How elements are laid out along the main axis of the container. If this parameter is set to **auto**, the layout is subject to the system language. The setting does not take effect in the **Column** component.<br>Default value: **Direction.Auto**. If the **direction** attribute receives an **undefined** or **null** input parameter, the system will apply the default value |
+| value | [Direction](../arkts-apis/arkts-arkui-direction-e.md) | Yes | Sets the layout along the main axis within the drawing region of the current component.<br>When the attribute is set to **auto**, the layout follows the system language direction. <br>This attribute does not take effect on the **Column** component. <br>Default value: **Direction.Auto** <br>When **direction** is **undefined** or **null**, the default value is used. |
 
 **Return value:**
 
@@ -2983,7 +2986,7 @@ Sets how elements are laid out along the main axis of the container. This attrib
 displayPriority(value: number): T
 ```
 
-Sets the display priority for the component in the layout container. <br>This parameter is only effective in Row, Column, and Flex (single-line) container components.
+Sets the display priority of the current component in a Row/Column/Flex (single-line) container. The priority is determined by the integer part of the value, and a larger integer part indicates a higher priority. <br>Applies to scenarios where child components are dynamically shown or hidden based on the parent container space in responsive layouts. For example, important content is displayed first and secondary content is hidden on different screen sizes.
 
 **Since:** 7
 
@@ -2997,7 +3000,7 @@ Sets the display priority for the component in the layout container. <br>This pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Display priority of the component in the layout container.<br>The value range is all integers. Default value: **1**. <br>**NOTE:** <br> The digits after the decimal point are not counted in determining the display priority. That is, numbers in the [x, x + 1) range are considered to represent the same priority. For example, **1.0** and **1.9** represent the same priority. <br>If the **displayPriority** value of all child components is not greater than 1, there is no difference in priority. When the **displayPriority** value of a child component is greater than 1, a larger value indicates higher priority. If the parent container does not have enough space, child components with lower priority are hidden. If child components of a certain priority are hidden, those with an even lower priority are also hidden. <br>The value range is all integers. |
+| value | number | Yes | Sets the display priority of the current component in the layout container. The value range is 0, +∞).<br>Default value: **1** <br>**NOTE:** <br> Takes effect only in [Row/Column/Flex (single-line) container components. <br>Used when the container space is limited and the display order of components needs to be controlled or low-priority components need to be hidden (for example, dynamically displaying content based on the available space in a Flex container). It is recommended to set the priority based on the importance of the component, with a larger value (such as 2-10) for key components and a smaller value (such as 1) for secondary components. <br>The digits after the decimal point do not affect the priority. All values not greater than 1 have the same priority. When the value is greater than 1, the larger the integer part of displayPriority, the higher the priority; values within the same integer range have the same priority. For example, **0.5** and **1.0** have the same priority (both are not greater than 1); **1.5** and **1.9** have the same priority (both have an integer part of 1); **2.0** and **2.9** have the same priority (both have an integer part of 2), and their priority is higher than that of 1.x. <br>If the parent container has insufficient space, child components with lower priority are hidden. If child components at a certain priority level are hidden, all child components with lower priority are also hidden. |
 
 **Return value:**
 
@@ -3247,32 +3250,36 @@ If the value is true, the component is available and can respond to operations s
 expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 ```
 
-Expands the safe area.
+Controls a component to expand its safe area to achieve an immersive effect.
 
 > **NOTE:** 
 > 
-> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged after safe area expansion.
+> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values (except percentages). If fixed width and height values or 'auto' are set, the safe area can be expanded only upward (SafeAreaEdge.TOP) and toward the start direction (SafeAreaEdge.START, which indicates the left side in LTR mode and the right side in RTL mode), and the size of the expanded component remains unchanged.
 > 
-> - The safe area does not restrict the layout or size of components inside, nor does it clip the components.
+> - The safe area does not restrict the layout and size of internal components, nor does it clip internal components.
 > 
-> - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea**attribute is set, but it can still trigger updates to the extension range of its child nodes that have
-> **expandSafeArea** set.
+> - When the parent container is a scrollable container, after the **expandSafeArea** attribute is set on a component, the component itself does not extend, but it can still trigger the update of the extension range of its child nodes on which **expandSafeArea** is set.
 > 
-> - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])**is used with empty arrays, the setting has no effect.
+> - When **expandSafeArea()** is set without parameters, the default values are used. When
+> **expandSafeArea([],[])** is set, the input parameters are empty arrays, and the **expandSafeArea** attribute
+> does not take effect.
 > 
-> - Prerequisites for the **expandSafeArea** attribute to take effect:
-> 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the component not avoiding the virtual keyboard.
-> 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the safe area. For example, if the height of the status bar is 100, the absolute position of the component on the screen must be 0 &lt;= y &lt;= 100 for the settings to take effect.
+> - The conditions for the **expandSafeArea** attribute to take effect on a component are as follows:
+> 1. When type is SafeAreaType.KEYBOARD, it takes effect by default, meaning that the component does not avoid the keyboard.<br>
+> 2. When other types are set, the component can extend under the safe area only when the component boundary coincides with the safe area. For example, if the height of the status bar at the top of the device is 100, the absolute position of the component on the screen must satisfy 0 &lt;= y &lt;= 100.
 > 
-> - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be intercepted by the system. Built-in components like the status bar will be given priority to respond to these events.
+> - When a component extends into a non-safe area, events in the non-safe area, such as click events, may be intercepted by the system and preferentially responded to by system components such as the status bar. &gt;
+
+> - It is not recommended to set the **expandSafeArea** attribute on components in a scrollable container. If it is set, the **expandSafeArea** attribute must be set on all direct nodes from the current node to the scrollable ancestor container according to the component nesting relationship. Otherwise, the **expandSafeArea** attribute may become invalid after scrolling.
 > 
-> - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it,you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may become ineffective after scrolling.
+> - The **expandSafeArea** attribute takes effect only on the current component and is not passed to parent or child components. Therefore, developers must configure this attribute separately for all related components.
 > 
-> - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child components. Therefore, all relevant components must be configured individually.
+> - When both **expandSafeArea** and **position** are set, the **position** attribute takes effect first, and the
+> **expandSafeArea** attribute takes effect later. For components on which drawing attributes such as position and
+> offset are not set, if their boundaries do not overlap with the non-safe area, setting the **expandSafeArea**
+> attribute does not take effect, such as dialog boxes and semi-modal components.
 > 
-> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first,followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if their boundaries do not overlap with the non-safe area.
-> 
-> - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the safe area, you will need to manually adjust the component's coordinates.
+> - For scenarios where the **expandSafeArea** attribute cannot take effect, to place a component in the non-safe area, you need to manually adjust the coordinates of the component.
 
 **Since:** 10
 
@@ -3286,8 +3293,8 @@ Expands the safe area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;[SafeAreaType](arkts-arkui-safeareatype-e.md)&gt; | No | Types of non-safe areas to extend into. For the CUTOUT type to take effect, the Metadata item must be added to the configuration file.<br>Default value: [SafeAreaType.SYSTEM, SafeAreaType.CUTOUT, SafeAreaType.KEYBOARD]. <br>Invalid values are treated as the default value. |
-| edges | Array&lt;[SafeAreaEdge](arkts-arkui-safeareaedge-e.md)&gt; | No | Edges for expanding the safe area.<br>Default value: [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM, SafeAreaEdge.START, SafeAreaEdge.END]. <br>Invalid values are treated as the default value. The default value means to extend to all non-safe areas. |
+| types | Array&lt;[SafeAreaType](arkts-arkui-safeareatype-e.md)&gt; | No | Types of the safe areas to expand. By default, SafeAreaType.CUTOUT is included. However, if the Metadata configuration item is not added, the page does not avoid the cutout, and the CUTOUT type does not take effect.<br>Default value: [SafeAreaType.SYSTEM, SafeAreaType.CUTOUT, SafeAreaType.KEYBOARD]<br>Invalid value: handled by default. |
+| edges | Array&lt;[SafeAreaEdge](arkts-arkui-safeareaedge-e.md)&gt; | No | Edges of the safe areas to expand. By default, the component expands to all avoidance areas.<br>Default value: [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM, SafeAreaEdge.START, SafeAreaEdge.END].<br>Invalid value: handled by default. |
 
 **Return value:**
 
@@ -3301,7 +3308,7 @@ Expands the safe area.
 flexBasis(value: number | string): T
 ```
 
-Sets the base size of the component.
+Sets the base size of a component. This attribute can be set only when the component is a child of a Flex, Column, Row, or DynamicLayout container. After it is set, the component uses this base size as its initial size in layout calculation. When the parent container is Column or Row, you must set the size along the main axis. When the main axis size (width/height/size) is not set, Column and Row still follow the default layout behavior and adapt to the child component size on the main axis, which may affect the effect of flexBasis.
 
 **Since:** 7
 
@@ -3315,7 +3322,7 @@ Sets the base size of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string | Yes | Base size of the component in the main axis of the parent container (indicating that the base size of the component in the main axis is the original size of the component). Default value: **'auto'**.<br>For the string type, the value must be a string that can be converted into a number (for example,**'10'**), a string that includes a length unit (for example, **'10px'**), or the literal string **'auto'**; percentage-based strings are not supported. <br>For the number type, the value range is (0, +∞), and the unit is vp. <br>Invalid values are treated as the default value **'auto'** |
+| value | number &#124; string | Yes | Base size of the component on the main axis of the parent container. <br>Default value: 'auto' (indicating that the base size of the component on the main axis is the original size of the component). <br>string type: percentage strings are not allowed. Optional values: a string that can be converted to a number (for example, '10'), a string with a length unit (for example, '10px'), or 'auto'. If a string that does not meet the requirements is passed in, the default value 'auto' is used. <br>number: value range (0, +∞), in vp (virtual pixel). <br>When an invalid value is set, this attribute is processed as the default value 'auto'. <br>[constraintSize](#constraintsize) restricts the size range of the component. When the base size set by flexBasis exceeds the restriction range of constraintSize, it is constrained by constraintSize. |
 
 **Return value:**
 
@@ -3329,7 +3336,7 @@ Sets the base size of the component.
 flexGrow(value: number): T
 ```
 
-Sets the percentage of the parent container's remaining space that is allocated to the component.
+Sets the proportion of the component in the remaining space of the parent container. This attribute can be set only when the component is a child of a Flex, Column, Row, or DynamicLayout container. After it is set, the component expands according to the ratio to occupy the remaining space of the parent container. When the parent container is Column or Row, you must set the size along the main axis. When the main axis size (width/height/size) is not set, Column and Row still follow the default layout behavior and adapt to the child component size on the main axis, which may affect the remaining space allocation effect of flexGrow. Setting this attribute triggers a second layout. In scenarios with strict performance requirements, use **layoutWeight** instead.
 
 **Since:** 7
 
@@ -3343,7 +3350,7 @@ Sets the percentage of the parent container's remaining space that is allocated 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Percentage of the parent container's remaining space that is allocated to the component.<br>The value must be greater than or equal to 0, <br>. Default value: **0**. <br>If this parameter is set to an invalid value, the default value will be used. |
+| value | number | Yes | Sets the proportion of the remaining space in the parent container along the main axis (horizontal for row layout and vertical for column layout) allocated to the component where this attribute resides. The value 0 means the component does not participate in the allocation of remaining space and keeps its original size. When the value is greater than 0, the remaining space of the parent container is allocated proportionally; the larger the value, the more space is allocated.<br>Value range: 0, +∞)<br>Default value: 0<br>When the parent container is [Column or Row, you need to set the size along the main axis (width/height/size); otherwise, the remaining space allocation effect of flexGrow may be affected.<br>[constraintSize](#constraintsize) restricts the size range of the component. When the component size after flexGrow expansion exceeds the maximum limit of constraintSize, it is constrained by constraintSize.<br>When an invalid value is set, this attribute takes the default value. |
 
 **Return value:**
 
@@ -3357,9 +3364,9 @@ Sets the percentage of the parent container's remaining space that is allocated 
 flexShrink(value: number): T
 ```
 
-Sets the percentage of the parent container's shrink size that is allocated to the component. When the parent container is Column or Row, you must set the size along the main axis.
+Sets the proportion of the shrink size allocated to the component where this attribute resides when the parent container runs out of space. This attribute can be set only when the component is a child of a Flex, Column, Row, or DynamicLayout container. When the parent container is Column or Row, the parent container must set the size along the main axis (that is, width/height/size) for flexShrink to take effect. When the main axis size (width/height/size) is not set, Column and Row still follow the default layout behavior and adapt to the child component size on the main axis, in which case flexShrink does not take effect. Setting this attribute triggers a second layout. In scenarios with strict performance requirements, use **layoutWeight** instead.
 
-When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value of **1** is returned by default.
+When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value of **1** is returned by default (consistent with the default value of the Flex container, but different from the default value **0** of the Column and Row containers).
 
 **Since:** 7
 
@@ -3373,7 +3380,7 @@ When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Percentage of the parent container's shrink size that is allocated to the component <br>The value range is all integers, If the parent container is Column or Row, the default value is **0**, and the value range is (0, +∞). If the parent container is Flex, the default value is **1**. <br>[constraintSize](#constraintsize) limits the component's size range. For Column and Row components without explicit main axis size specified (through width, height, or size), the default layout behavior (adapt-to-fit child components) applies, even when constraintSize is configured. In this case, **flexShrink** has no effect. <br>If this parameter is set to an invalid value, the default value will be used. |
+| value | number | Yes | Sets the proportion of the compressed size allocated to the component to which this attribute belongs when the parent container space is insufficient. The value 0 indicates that the component does not participate in compression; when the value is greater than 0, compression is performed proportionally, and a larger value indicates a larger compression amount.<br>When the parent container is Column or Row, default value: 0, value range: 0, +∞).<br>When the parent container is [Flex, default value: 1, value range: [0, +∞).<br>[constraintSize](#constraintsize) restricts the size range of the component. Even if [constraintSize](#constraintsize) is set for Column and Row, when the main axis size (width/height/size) is not set in the parent container, the default layout behavior is still followed, and the component size is adapted to the children on the main axis. In this case, flexShrink does not take effect.<br>When an exception value is set, this attribute uses the default value. |
 
 **Return value:**
 
@@ -4005,9 +4012,16 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 gridOffset(value: number): T
 ```
 
-The default offset column number indicates the number of offset columns of the current component in the start direction of the parent component when the useSizeType attribute does not set the offset of the corresponding dimension. That is, the current component is located in the nth column.
+Default offset column count, which refers to the number of columns by which the current component is offset along the Start direction of its parent component when the useSizeType attribute does not set the offset for the corresponding size. That is, the starting position of the component is offset by n columns relative to the Start direction of the parent component. It must be a non-negative integer. When passing a negative number, use the default value 0. When useSizeType sets the offset for the corresponding size, the gridOffset setting does not take effect.
 
-**Since:** 11
+> **NOTE:** 
+> 
+> - When calling this attribute, its parent component or ancestor component must be GridContainer.
+> - After this attribute is configured, the layout of the current component in the horizontal direction of the parent component no longer follows the original layout mode of the parent component. Instead, the component is offset by a certain distance along the Start direction of the parent component.
+> - Offset distance = (column width + spacing)* offset column count.
+> - Sibling components after the component with the offset (gridOffset) set are laid out relative to this component.
+
+**Since:** 7
 
 **Deprecated since:** 14
 
@@ -4021,7 +4035,7 @@ The default offset column number indicates the number of offset columns of the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes |  |
+| value | number | Yes | Default offset column count. Default value: **0** |
 
 **Return value:**
 
@@ -4035,9 +4049,14 @@ The default offset column number indicates the number of offset columns of the c
 gridSpan(value: number): T
 ```
 
-Default number of occupied columns, indicating the number of occupied grid columns when the number of columns (span) of the corresponding size is not set in the useSizeType attribute.
+Default column count, which refers to the grid column count occupied when the useSizeType attribute does not set the column count (span) for the corresponding size. It must be a non-negative integer. When passing a negative number or a value exceeding the total column count of GridContainer, use the default value 1.
 
-**Since:** 11
+> **NOTE:** 
+> 
+> - When calling this attribute, its parent component or ancestor component must be GridContainer.
+> - When the grid span attribute is set, the width of the component is determined by the grid layout.
+
+**Since:** 7
 
 **Deprecated since:** 14
 
@@ -4051,7 +4070,7 @@ Default number of occupied columns, indicating the number of occupied grid colum
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes |  |
+| value | number | Yes | Default column count. Default value: **1** |
 
 **Return value:**
 
@@ -4091,7 +4110,13 @@ Specifies whether to set the component as the default focus of the container. If
 height(value: Length): T
 ```
 
-Sets the height of the component. By default, the height required to fully hold the component content is used. If a component is higher than its parent, it will overflow. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the height of the component itself. By default, the height required for the content of the child component is used. If the height of a child component is greater than that of its parent component, the child component overflows and is displayed outside the parent component. <br>Since API version 10, this API supports the calc calculation feature.
+
+> **NOTE:** 
+> 
+> In the Row, Column, and RelativeContainer
+> components, setting **width** and **height** to **auto** means that the size adapts to the size of their
+> child components.
 
 **Since:** 7
 
@@ -4105,7 +4130,7 @@ Sets the height of the component. By default, the height required to fully hold 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the component to set.<br>Unit: vp &gt; **NOTE:**  >  > In the Row, Column, and RelativeContainer components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Component height to set.<br>Unit: vp<br>When a percentage is set, the height of the parent container is used as the base value.<br>Abnormal values: If the parameter is **undefined**, the attribute setting does not take effect; for other abnormal values, the height attribute is restored to the default behavior when it is not configured. |
 
 **Return value:**
 
@@ -4119,7 +4144,7 @@ Sets the height of the component. By default, the height required to fully hold 
 height(heightValue: Length | LayoutPolicy): T
 ```
 
-Sets the height of the component or its vertical layout policy. By default, the component uses the height required for its content. If a component is higher than its parent, it will overflow.
+Sets the height of the component itself or its vertical layout policy. By default, the height required for the content of the child component is used. If the height of a child component is greater than that of its parent component, the child component overflows and is displayed outside the parent component. <br>Since API version 15, when the parameter is of the Length type, this API supports the calc calculation feature.
 
 **Since:** 15
 
@@ -4135,7 +4160,7 @@ Sets the height of the component or its vertical layout policy. By default, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes | Height of the component to set.<br>Unit: vp. |
+| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes | Component height or vertical layout policy to set.<br>Unit: vp<br>When a percentage is set, the height of the parent container is used as the base value. |
 
 **Return value:**
 
@@ -4291,7 +4316,7 @@ Id. User can set an id to the component to identify it.
 ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>): T
 ```
 
-Ignores the safe area for component layout.
+Safe area when expanding the component layout. The component layout position and size may change, which differs from the expandSafeArea mechanism (which only expands the drawing area and keeps the layout unchanged).
 
 > **NOTE:** 
 > 
@@ -4315,8 +4340,8 @@ Ignores the safe area for component layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No | Types of layout safe areas to expand.<br>Default value: [LayoutSafeAreaType.SYSTEM] (expands to all safe areas, including the status bar, navigation bar, and component-level safe area (safeAreaPadding)). navigation bar, and component-level safe area<br>Invalid values are treated as the default value. |
-| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No | Edges of the layout safe area to expand, with mirroring capability supported.<br>Default value: [LayoutSafeAreaEdge.ALL] (expands all edges of the component).<br>Invalid values are treated as the default value. |
+| types | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No | Type of the expanded layout safe area.<br>Default value: [LayoutSafeAreaType.SYSTEM], which extends to the system safe area, for example, the status bar, navigation bar, punch-hole area, and component-level safe area ([safeAreaPadding](#safeareapadding)). <br>Invalid value: handled by default. |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No | Edges of the expanded layout safe area, with mirroring supported.<br>Default value: [LayoutSafeAreaEdge.ALL], which expands all edges of the component.<br>Invalid value: handled by default. |
 
 **Return value:**
 
@@ -4506,7 +4531,7 @@ Sets the alignment rule for child components in the **Stack** container. This AP
 layoutWeight(value: number | string): T
 ```
 
-Sets the weight of the component during layout. A component with this attribute is allocated space along the main axis of its parent container (Row, Column, or Flex based on its specified weight.
+Sets the layout weight of a component so that the component is allocated a size in the main-axis direction of the parent container (Row/Column/Flex) according to the weight. It applies to scenarios where the parent container size is determined and multiple child components need to allocate the remaining space proportionally.
 
 **Since:** 7
 
@@ -4520,7 +4545,7 @@ Sets the weight of the component during layout. A component with this attribute 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number &#124; string | Yes | Layout weight of the component. <br>When the parent container size is determined: <br>Elements without **layoutWeight** or with **layoutWeight** set to **0** take precedence in occupying space. <br>The remaining space on the main axis is then allocated proportionally among elements with a **layoutWeight** value greater than 0, ignoring their own size settings. <br>Default value: **0** <br>**NOTE:** <br>This parameter is only effective in Row, Column, and Flex container components. <br>The value can be a number greater than or equal to 0 or a string that can be converted to a number. <br>If any child component in a container has the **layoutWeight** attribute set to a value greater than 0, then child components will no longer be laid out based on [flexShrink](#flexshrink) and [flexGrow](#flexgrow). |
+| value | number &#124; string | Yes | When the size of the parent container is determined, child components that do not have the **layoutWeight** attribute set or whose effective **layoutWeight** value is **0** take priority in occupying space. The space left on the main axis after these child components occupy space is called the remaining space on the main axis. Child components that have the **layoutWeight** attribute set and whose effective **layoutWeight** value is greater than 0 are allocated sizes from the remaining space on the main axis according to their respective weight proportions. During allocation, the **width**\/**height** settings of the child components are ignored, but the **minWidth**\/ **minHeight** constraints are retained.<br>Default value: 0<br>Value range: 0, +∞)<br>When the value is out of range: if a value less than 0 is passed in, it is processed as 0.<br>**NOTE:** <br>This attribute takes effect only in the [Row/Column/Flex layout.<br>The optional value is a number greater than or equal to 0, or a string that can be converted to a number (integer and decimal formats are supported).<br>If a child component in the container has the **layoutWeight** attribute set and the set value is greater than 0, all child components are no longer laid out based on [flexShrink](#flexshrink) and [flexGrow](#flexgrow). |
 
 **Return value:**
 
@@ -4720,7 +4745,7 @@ Sets the margin of the component. The margin is considered as a part of the comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | Yes | Margin of the component to set.<br>When the parameter is of the **Length** type, the four margins take effect. <br>Default value: **0** <br>Unit: vp <br>When **margin** is set to a percentage, the width of the parent container is used as the basic value. When child components are laid out along the cross axis of the Row, Column, or Flex container, the cross axis size of the child components and the margins add up to the total size of the container. <br>For example, if the width of the **Column** container is 100, the width of the child component is 50, the left margin is 10, and the right margin is 20, then the actual horizontal offset of the child component is 10.<br>**Since:** 12 |
+| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | Yes | Margin of the component.<br>When the parameter is of the **Length** type, the margins in all four directions take effect at the same time.<br>Default value: **0**<br>Unit: vp<br>When **margin** is set as a percentage, the top, bottom, left, and right margins all use the width of the parent container as the base value. When laying out in the cross-axis direction of Row, Column, and Flex, the space occupied by a child component in the cross-axis direction includes the size of the child component itself and the **margin** value.<br>For example, if a **Column** container has a width of 100, a child component has a width of 50, and the left and right margins are 10 and 20 respectively, the sum of the child component width and the left and right margins is 50 + 10 + 20 = 80, which is less than the container width of 100. The child component is center-aligned in the cross-axis direction, leaving (100 - 80)/2 = 10 of blank space on each of the left and right sides in the horizontal direction.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -5177,7 +5202,7 @@ Sets the offset of the component relative to its original position. When **offse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position &#124; [Edges](../arkts-apis/arkts-arkui-edges-i.md) &#124; [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes | Offset of the component relative to its original layout position. The **offset** attribute does not affect the layout of the parent container. It adjusts the component position only during drawing. If of the Position type, this parameter sets the offset relative to the upper left corner of the component. If of the Edges type, this parameter sets the offset relative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and **{right: -x, bottom: -y}**. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type supports the mirror mode: **start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts. <br>API version 9 and earlier: The default value is **{x: 0, y: 0}**. <br>Default unit: vp <br>API version 10: no default value. <br>This attribute does not take effect when it is set to an abnormal value.<br>**Since:** 12 |
+| value | Position &#124; [Edges](../arkts-apis/arkts-arkui-edges-i.md) &#124; [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes | Relative offset. The component is offset based on its original layout position. The **offset** attribute does not affect the parent component layout; it only adjusts the position during drawing. <br>The Position type is offset based on the top-left corner of the component itself, and the Edges type is offset based on the four edges of the component itself. Setting **{x: x, y: y}** for the **offset** attribute has the same effect as setting **{left: x, top: y}** and **{right: -x, bottom: -y}**. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type supports mirroring mode: in LTR mode, **start** is equivalent to **x**; in RTL mode, **start** is equivalent to **-x**. <br>API version 9 and earlier: The default value is **{x: 0, y: 0}**. <br>Default unit: vp <br>API version 10: no default value. <br>When the value is abnormal, this attribute does not take effect.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -6980,7 +7005,7 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 padding(value: Padding | Length | LocalizedPadding): T
 ```
 
-Sets the padding of the component. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the padding attribute of the component. After the setting, extra space is created between the component content and the border, affecting the layout area of the component's internal content. <br>Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -6994,7 +7019,7 @@ Sets the padding of the component. <br>Since API version 10, this API supports t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the component to set<br> When the parameter is of the **Length** type, the four paddings take effect. <br>Default value: **0** <br>Unit: vp <br>When **padding** is set to a percentage, the width of the parent container is used as the basic value.<br>**Since:** 12 |
+| value | Padding &#124; [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Padding of the component.<br>When the parameter is of the **Length** type, the padding takes effect on all four sides simultaneously.<br>Default value: **0** <br>Unit: vp <br> When padding is set to a percentage, the padding on all four sides uses the **width** of the parent container as the base value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -7039,22 +7064,22 @@ Gesture that can be recognized at once by the component and its child component.
 pixelRound(value: PixelRoundPolicy): T
 ```
 
-Sets the pixel rounding policy for the current component in the specified direction. If a direction is not set, the pixels are rounded to the nearest whole number in that direction.
+Specifies the pixel rounding alignment mode of the current component in the specified direction. After this attribute is set, the boundary coordinates of the component are rounded according to the specified strategy, thereby avoiding visual anomalies caused by floating-point rendering (such as 1px gaps, overlapping components, and disappearing dividers). Since API version 12, if a direction is not set, the pixels are rounded to the nearest whole number in that direction by default.
 
 > **NOTE:** 
 > 
-> - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5,0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to disable pixel rounding for individual components.
+> - In API version 11, this API uses half-pixel alignment (that is, 0~0.25 rounds to 0, 0.25~0.75 rounds to 0.5,0.75~1.0 rounds to 1). This mode reduces the cumulative error that may result from continuous rounding by preserving the 0.5 pixel value. Since API version 12, the direction for which no rounding strategy is set uses rounding to the nearest whole number by default, and pixel rounding in a specified direction can be disabled through PixelRoundCalcPolicy.NO_FORCE_ROUND.
 > 
-> - This API can be called within [attributeModifier](#attributemodifier)since API version 12.
+> - Since API version 12, this API can be called in [attributeModifier](#attributemodifier).
 
-In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right.
+In normal calculations, the vertical direction (top and bottom) corresponds to the component height. In a left-to-right layout, start corresponds to the left direction and end corresponds to the right direction; in a mirrored layout (right-to-left), the correspondence is reversed. The horizontal direction (left and right) corresponds to the component width. For ease of description, the two groups of directions are referred to as top-left and bottom-right.
 
-- Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the  
+- Calculate the top-left coordinates of the current component: the offset of the top-left corner relative to the  
 parent container.  
 - Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the  
 parent container plus the size of the component itself.  
-- Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner  
-rounded value.
+- Recalculate the size of the current component: rounded bottom-right coordinates minus rounded top-left  
+coordinates (API version 11 uses half-pixel alignment, and API version 12 uses rounding to the nearest whole number).
 
 **Since:** 11
 
@@ -7070,7 +7095,7 @@ rounded value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | Yes | Rounding policy for the bounds of the component.<br>**NOTE:** <br> This attribute is applicable in scenarios where artifacts occur due to floating-point drawing. The rounding result is related not only to the component's width and height but also to its position. Even if the component's width and height are set to be the same, due to different floating-point positions described, the final width and height of the component may also be different after rounding. |
+| value | [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | Yes | Boundary rounding strategy of the current component. [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) contains four optional attributes: start, top, end, and bottom, which correspond to the front, top, end, and bottom boundaries of the component, respectively. Each attribute can be set to a [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md) enum value. Setting PixelRoundCalcPolicy.NO_FORCE_ROUND disables pixel rounding in the corresponding direction. Attributes that are not set are rounded by default using the round-half-up rule. <br>**NOTE:** <br> This attribute is used in scenarios where floating-point drawing causes visual anomalies. Since API version 12, the round-half-up rounding method is used; API version 11 uses half-pixel alignment. The rounding result is related not only to the width and height of the component, but also to its position. Even if the width and height set for components are the same, the final width and height of the components after rounding may differ because the component positions described by floating-point numbers are different. |
 
 **Return value:**
 
@@ -7142,16 +7167,15 @@ position(value: Position | Edges | LocalizedEdges): T
 
 Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](#attributemodifier) is supported.
 
-**NOTE:** 
-- This API takes effect after the component's size measurement is complete.
-- When the parent container is Row,Column, or Flex, the child component with **position** set does not occupy any space.
-- The Position type uses the upper left corner of the parent's content area as the
-reference point. The Edges type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
-- This attribute is applicable to scenarios where the component's position in the parent container is fixed, for  
-example, where it is pinned to top or floating on the UI.  
-- This attribute is unavailable for a layout container whose width and height are zero.  
-- In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child  
-component has [alignRules](#alignrules) set, the **position** attribute will not take effect
+> **NOTE:** 
+> 
+> - The effect of **position** on the position takes effect after the component's size measurement is complete.
+> - When the parent component is Row, Column, or Flex, a child component with **position** set does not occupy space. In this scenario, if all child components contained in the parent component have **position** set, the parent component's size cannot be determined by other child components, and layout measurement is performed based on the size (0, 0).
+> - The Position type determines the position based on the upper left corner of the parent component's content area. The Edges type determines the position based on the four edges of the parent component's content area, where **top**, **left**, **right**, and **bottom** are the distances from each edge of the component to the corresponding edge of the parent component's content area, and the component's position relative to the parent component's content area is determined by these distances. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type determines the position based on the four edges of the parent component's content area and supports mirroring mode.
+> - This attribute is applicable to scenarios where components such as top-displayed elements and floating buttons have fixed positions within the parent component.
+> - This attribute is not supported on layout components with zero width and height.
+> - When the parent component is RelativeContainer and the child component has the [alignRules](#alignrules) attribute set, the child component's **position** attribute does not take effect.
+> - If the parent component of the component where this attribute is located does not have a fixed width and height, this component performs absolute positioning with reference to the first ancestor component that has a fixed width and height.
 
 **Since:** 7
 
@@ -7623,22 +7647,26 @@ Sets the component rotation effect. Compared with [rotate](#rotate-1), this API 
 safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 ```
 
-Sets the safe area padding. This allows the container to add a component-level safe area for its child components to extend into. This attribute can be dynamically set using [attributeModifier](#attributemodifier).
+Sets the safe area padding attribute. It allows a container to add a component-level safe area to itself for child components to extend into, and supports the [attributeModifier](#attributemodifier) method for dynamically setting attributes. Unlike padding, **safeAreaPadding** is used to set a component-level safe area for child components to extend into, while **padding** is used to set the inner padding of the component content area. The two can be set at the same time and take effect separately.
 
 > **NOTE:** 
-> In API version 18, this API can be invoked in attributeModifier.
-> When parent and ancestor containers define component-level safe areas, child components can detect and utilize
-> these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum extendable length
-> in each direction.
-> When ancestor containers have contiguous safeAreaPadding (undivided by margin, border, or padding),
-> SAE accumulates recursively outward until no adjacent outer safeAreaPadding exists or the recursion extends
-> beyond the page container.
-> System-level avoid areas (status bar, navigation bar, notch areas, and more) are treated as the page container's
-> inherent safeAreaPadding and participate in SAE calculations.
-> For details about the avoid areas, see Safe Area. These component-level safe areas can be leveraged by combining
-> with other attributes.
-> For example, setting the ignoreLayoutSafeArea attribute on a child component allows it to extend its layout into
-> the SAE region.
+> 
+> This API can be called within
+> [attributeModifier](#attributemodifier) since API version 18.
+> 
+> When parent and ancestor containers define component-level safe areas, child components can detect and
+> utilize these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum
+> extendable length in each direction. When ancestor containers have contiguous **safeAreaPadding**
+> (undivided by margin, border, or padding), SAE accumulates recursively outward until no adjacent outer
+> **safeAreaPadding** exists or the recursion extends beyond the page container. System-level avoid areas
+> (status bar, navigation bar, notch areas, and more) are treated as the page container's inherent
+> **safeAreaPadding** and participate in SAE calculations. For details about the avoid areas, see
+> [Safe Area](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-expand-safe-area.md).
+> These component-level safe areas can be leveraged by combining with other attributes. For example,
+> setting the
+> [ignoreLayoutSafeArea]
+> (../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-expand-safe-area.md#ignorelayoutsafearea20)
+> attribute on a child component allows it to extend its layout into the SAE region.
 
 **Since:** 14
 
@@ -7654,7 +7682,7 @@ Sets the safe area padding. This allows the container to add a component-level s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | Padding &#124; [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Safe area padding.<br>Unit: vp. Default value: **0**. |
+| paddingValue | Padding &#124; [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) &#124; [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes | Safe area padding of the component, which is used to create a component-level safe area inside the component for child components to extend into.<br>Default value: **0** <br>Unit: vp<br>When **paddingValue** is set to a percentage, the top, bottom, left, and right padding all use the width of the parent container as the base value. |
 
 **Return value:**
 
@@ -7987,7 +8015,7 @@ Provides a callback to set the parallel relationship between gestures of the cur
 size(value: SizeOptions): T
 ```
 
-Sets the width and height of the component. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the width and height of the component itself. After the setting, the layout and display size of the component in the parent container are affected. <br>Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -8001,7 +8029,7 @@ Sets the width and height of the component. <br>Since API version 10, this API s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes | The [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) type is used to set the width and height.<br>Exception handling: If the parameter is **undefined**, the attribute setting does not take effect. For other invalid values, the **size** attribute reverts to its default behavior when unconfigured.<br>Unit: vp |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes | Width and height.<br>Abnormal value: If the parameter is **undefined**, the attribute setting does not take effect. For other abnormal values, the **size** attribute is restored to the default behavior when it is not configured.<br>Unit: vp |
 
 **Return value:**
 
@@ -8797,7 +8825,16 @@ Sets a visual effect that is not a filter effect.
 width(value: Length): T
 ```
 
-Sets the width of the component. By default, the width required to fully hold the component content is used. If a component is wider than its parent, it will overflow. <br>Since API version 10, this API supports the calc calculation feature.
+Sets the width of the component itself. By default, the width required for the content of the child component is used. If the width of a child component is greater than that of its parent component, the child component overflows and is displayed outside the parent component. <br>Since API version 10, this API supports the calc calculation feature.
+
+> **NOTE:** 
+> 
+> - In the [TextInput](./ts-basic-components-textinput.md) component, setting width to **auto** means adapting to the text width.
+> 
+> - In the [AlphabetIndexer](./ts-container-alphabet-indexer.md) component, setting **width** to
+> **auto** means adapting to the width of the largest index item.
+> 
+> - In the Row, Column, and RelativeContainercomponents, setting width to auto means adapting to the child components.
 
 **Since:** 7
 
@@ -8811,7 +8848,7 @@ Sets the width of the component. By default, the width required to fully hold th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.<br>Unit: vp &gt; **NOTE:**  >  > - In the TextInput component, setting **width** to **auto** means that the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto**means that the width adapts to the maximum width of index entries. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.<br>Unit: vp<br>When a percentage is set, the width of the parent container is used as the base value.<br>Exception values: when the parameter is **undefined**, the attribute setting does not take effect; for other exception values, the width attribute is restored to the default behavior when it is not configured. |
 
 **Return value:**
 
@@ -8825,7 +8862,7 @@ Sets the width of the component. By default, the width required to fully hold th
 width(widthValue: Length | LayoutPolicy): T
 ```
 
-Sets the width of the component or its horizontal layout policy. By default, the component uses the width required for its content. If a component is wider than its parent, it will overflow.
+Sets the width of the component itself or its horizontal layout policy. By default, the width required for the content of the child component is used. If the width of a child component is greater than that of its parent component, the child component overflows and is displayed outside the parent component. <br>Since API version 15, when the parameter is of the **Length** type, this API supports the **calc** calculation feature.
 
 **Since:** 15
 
@@ -8841,7 +8878,7 @@ Sets the width of the component or its horizontal layout policy. By default, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes | Width of the component to set<br>Unit: vp. |
+| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes | Width or horizontal layout policy of the component to set.<br>Unit: vp<br>When a percentage is set, the width of the parent container is used as the base value. |
 
 **Return value:**
 

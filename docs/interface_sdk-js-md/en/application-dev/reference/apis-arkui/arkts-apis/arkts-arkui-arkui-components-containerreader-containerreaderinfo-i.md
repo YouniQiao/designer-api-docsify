@@ -1,6 +1,6 @@
 # ContainerReaderInfo
 
-Defines the configuration options for ContainerReader component. Used to specify the parameters for container dimension reading and breakpoint analysis.
+Defines the configuration options for the **ContainerReader** component, used to specify parameters for reading container size and obtaining breakpoint values. The component size and breakpoint values cannot be changed through this parameter.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,11 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 heightBreakpoint?: HeightBreakpoint
 ```
 
-Optional height breakpoint configuration for container height analysis. Defines the height thresholds that trigger different layout behaviors.
+Height breakpoint of the container, which is the height breakpoint enum value of the **ContainerReader** component under different aspect ratio thresholds.
+
+Note:
+
+This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). After binding, when the component height breakpoint value changes, the bound variable of **heightBreakpoint** automatically updates.
 
 **Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
@@ -38,7 +42,11 @@ Optional height breakpoint configuration for container height analysis. Defines 
 size: Size
 ```
 
-The target container size for layout analysis. Defines the reference dimensions used for breakpoint calculation and layout adaptation.
+Size of the **ContainerReader** component, used for layout analysis and breakpoint calculation.
+
+Note:
+
+This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). After binding, when the component size value changes, the bound variable of **size** automatically updates.
 
 **Type:** Size
 
@@ -58,7 +66,11 @@ The target container size for layout analysis. Defines the reference dimensions 
 widthBreakpoint?: WidthBreakpoint
 ```
 
-Optional width breakpoint configuration for container width analysis. Defines the width thresholds that trigger different layout behaviors.
+Width breakpoint of the container, which is the obtained width breakpoint enum value of the **ContainerReader** component.
+
+Note:
+
+This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). After binding, when the component width breakpoint value changes, the bound variable of **widthBreakpoint** automatically updates.
 
 **Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 

@@ -12,20 +12,13 @@ Defines layout options of the **GridRow** container.
 breakpoints?: BreakPoints
 ```
 
-Array of breakpoint values and the corresponding reference based on the application window or container size.
+Used to set the monotonically increasing array of breakpoint positions, and the reference object for breakpoint switching (based on the app window or container size).
 
-Default value:
+Default value: **{value: ["320vp", "600vp", "840vp"], reference: BreakpointsReference.WindowSize}**
 
-```
-{
- value: ["320vp", "600vp", "840vp"],
- reference: BreakpointsReference.WindowSize
-}
-```
+Invalid value: The default value is used.
 
-Invalid values are treated as the default value.
-
-Unit: vp.
+Unit: vp
 
 **Type:** [BreakPoints](arkts-arkui-breakpoints-i.md)
 
@@ -43,14 +36,14 @@ Unit: vp.
 columns?: number | GridRowColumnOption
 ```
 
-Number of columns in the grid layout.
+Number of layout columns.
 
-The value is an integer greater than 0.
+The value must be a positive integer.
 
-- Before API version 20: The default value is 12.  
-- API version 20 or later: The default value is { xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }.
+- Before API version 20: The default value is **12**.  
+- Since API version 20: The default value is **{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }**.
 
-Invalid values are treated as the default value.
+Invalid value: The default value is used.
 
 **Type:** number &#124; [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
@@ -68,11 +61,11 @@ Invalid values are treated as the default value.
 direction?: GridRowDirection
 ```
 
-Arrangement direction of the grid layout.
+Grid layout arrangement direction. Supports **Row** (row-wise arrangement, suitable for conventional LTR layouts) and **RowReverse** (reverse row-wise arrangement, suitable for RTL layouts or scenarios requiring reverse arrangement).
 
 Default value: **GridRowDirection.Row**
 
-Invalid values are treated as the default value.
+Invalid value: The default value is used.
 
 **Type:** [GridRowDirection](arkts-arkui-gridrowdirection-e.md)
 
@@ -90,13 +83,13 @@ Invalid values are treated as the default value.
 gutter?: Length | GutterOption
 ```
 
-Gutter of the grid layout.
+Grid layout gutter.
 
-Default value: **0**
+Default value: **0vp**
 
-Invalid values are treated as the default value.
+Invalid value: The default value is used.
 
-Unit: vp.
+Unit: vp
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; [GutterOption](arkts-arkui-gutteroption-i.md)
 

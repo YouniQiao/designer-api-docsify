@@ -12,7 +12,9 @@ Defines the options of the **Video** component.
 controller?: VideoController
 ```
 
-Video controller to control the video playback status.
+Video controller, which can control the playback state of the video. When **controllerAsync** is set, the **controller** parameter does not take effect.
+
+Default value: no video controller is set.
 
 **Type:** [VideoController](arkts-arkui-videocontroller-c.md)
 
@@ -28,7 +30,9 @@ Video controller to control the video playback status.
 controllerAsync?: VideoControllerAsync
 ```
 
-controllerAsync of video.
+Asynchronous video controller, which can control the playback state of the video and obtain the return result through a promise. When **controllerAsync** is set, **controller** is ignored.
+
+Default value: empty
 
 **Type:** [VideoControllerAsync](arkts-arkui-videocontrollerasync-c.md)
 
@@ -48,18 +52,17 @@ currentProgressRate?: number | string | PlaybackSpeed
 
 Video playback speed.
 
-> **NOTE:** 
-> 
-> The value of the number type can only be **0.75**, **1.0**, **1.25**, **1.75**, or **2.0**. Values **0.5**,
-> **1.5**, **3**, **0.25**, and **0.125** are supported since API version 22.
+**NOTE:** 
 
-For the string type, numeric string values, for example, **0.75**, **1.0**, **1.25**, **1.75**, and **2.0**, are supported. Values **"0.5"**, **"1.5"**, **"3"**, **"0.25"**, and **"0.125"** are supported since API version 22.
+The number format supports only the following values: 0.75, 1.0, 1.25, 1.75, and 2.0. Since API version 22, the values 0.5, 1.5, 3, 0.25, and 0.125 are also supported. Since API version 26.0.0, the supported value range is [0.125, 8].
 
-Other values, for example, **"abc"** or **"1.5+1.5"**, are considered as invalid values.
+The string format supports the string forms of the number values: "0.75", "1.0", "1.25", "1.75", and "2.0". Since API version 22, the values "0.5", "1.5", "3", "0.25", and "0.125" are also supported.
 
-Default value: 1.0 | PlaybackSpeed.Speed_Forward_1_00_X
+Other values, such as "abc" or "1.5+1.5", are processed as abnormal values.
 
-If an invalid value is passed, the default value will be used.
+Default value: **1.0 | PlaybackSpeed.Speed_Forward_1_00_X**
+
+Abnormal value: processed as the default value.
 
 **Type:** number &#124; string &#124; [PlaybackSpeed](arkts-arkui-playbackspeed-e.md)
 
@@ -75,7 +78,7 @@ If an invalid value is passed, the default value will be used.
 imageAIOptions?: ImageAIOptions
 ```
 
-AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
+Image AI analysis options, which can configure the analysis type or bind an analysis controller. After configuration, the image AI analysis function is enabled, and the analysis process can be controlled through the analysis controller. Pass this parameter when the AI analysis function is required. If it is not passed, the AI analysis function is disabled by default.
 
 **Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
 
@@ -93,7 +96,7 @@ AI image analysis options. You can configure the analysis type or bind an analyz
 posterOptions?: PosterOptions
 ```
 
-Display options for the first frame of the video.
+First-frame display options for video playback, which can control whether the video supports first-frame display. Pass this parameter when the first-frame display function needs to be enabled. If it is not passed, first-frame display is disabled by default.
 
 **Type:** [PosterOptions](arkts-arkui-posteroptions-i.md)
 
@@ -111,24 +114,23 @@ Display options for the first frame of the video.
 previewUri?: string | PixelMap | Resource
 ```
 
-Path of the preview image displayed before the video playback starts. By default, no preview image is displayed.
+Path of the preview image displayed before the video is played.
 
-The string type can be used to load network images and local images.
+The string format can be used to load local images and network images.
 
-- URLs are supported for loading online images.  
-- Relative paths are supported for loading local images, for example, **previewUri: "common/test.jpg"**. When using  
-an image referenced using a relative path, the component cannot be called across bundles or modules.  
-- Strings with the **file://** prefix, that is,[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
+- Network image URLs are supported.  
+- Relative paths are supported for referencing local images, for example, **previewUri: "common/test.jpg"**. When a  
+relative path is used to reference a local image, cross-package or cross-module calls are not supported.  
+- Strings with the file:// path prefix are supported, that is, the app sandbox URI (see [uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)): **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**. It is used to read resources in the app sandbox path. Ensure that the files in the directory package path have read permission.
 
-The Resource type allows cross-package and cross-module access to resource files.
+The Resource format can access resource files across packages or modules.
 
-- Resources in the **rawfile** folder are supported, which means that you can reference image files with  
-**&#36;rawfile**.  
-- &#36;r can be used to reference images in system resources or application resources.
+- Resources in the rawfile directory are supported, that is, images referenced through **&#36;rawfile**.  
+- Images in system resources or app resources referenced through **&#36;r** are supported.
 
-The default value is an empty string.
+Default value: empty string
 
-If an invalid value is passed, the default value will be used.
+Abnormal value: processed as the default value.
 
 **Type:** string &#124; [PixelMap](arkts-arkui-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 
@@ -146,25 +148,24 @@ If an invalid value is passed, the default value will be used.
 src?: string | Resource
 ```
 
-Video source, which can be either a local or a network video.
+Data source of the video, which supports local videos and network videos.
 
-The Resource type allows cross-package and cross-module access to resource files and is commonly used for accessing local videos.
+The Resource format can access resource files across packages or modules and is commonly used to access local videos.
 
-- Only resources in the rawfile folder are supported, which means that you can reference video files only with  
-**&#36;rawfile**.
+- Only resources in the rawfile directory are supported, that is, video files referenced through &#36;rawfile.
 
-The string type is used for loading local videos and, more frequently, network videos.
+The string format can be used to load network videos and local videos, and is commonly used to load network videos.
 
-- Network video URLs are supported.  
-- Strings with the **file://** prefix, that is,[application sandbox URIs](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor): **file://`&lt;bundleName&gt;`/`&lt;sandboxPath&gt;`**, are supported. They are used to access resources in the application sandbox path. Ensure that the application has the read permission to the files in the specified path.
+- Network video URLs are supported. For details about the formats supported by network video URLs, see [Formats Supported by Streaming Media](../../../media/media/streaming-media-playback-development-guide.md#formats-supported-by-streaming-media).  
+- Strings with the file:// path prefix are supported, that is, the app sandbox URI (see [uriOrPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)): **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**. It is used to read resources in the app sandbox path. Ensure that the files in the directory package path have read permission.
 
-The default value is an empty string.
+Default value: empty string
 
-If an invalid value is passed, the default value will be used.
+Abnormal value: processed as the default value.
 
-> **NOTE:** 
-> 
-> The supported video formats are MP4, MKV, and TS.
+**NOTE:** 
+
+The supported video formats are mp4, mkv, and TS.
 
 **Type:** string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md)
 

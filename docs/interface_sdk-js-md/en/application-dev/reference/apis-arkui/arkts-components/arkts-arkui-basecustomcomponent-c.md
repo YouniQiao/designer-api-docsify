@@ -230,6 +230,12 @@ onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constr
 
 Invoked when the custom component needs to determine its size. Through this callback the component receives its layout information and size constraints from the ArkUI framework. State variables should not be changed in this callback.
 
+> **NOTE:** 
+> 
+> - When a custom layout is created in builder mode, only **this.builder()** is allowed in the **build()** method of a custom component, as shown in the recommended usage in the example below.
+> - The size parameters of the parent component (custom component), except **aspectRatio**, are at a lower priority than those specified by [onMeasureSize](#onmeasuresize).
+> - The position parameters of the child component, except **offset**, **position**, and **markAnchor**, are at a lower priority than those specified by [onPlaceChildren](#onplacechildren),and do not take effect.
+
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.

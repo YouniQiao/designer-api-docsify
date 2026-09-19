@@ -12,7 +12,7 @@ import { inputDevice } from '@kit.InputKit';
 function off(type: 'change', listener?: Callback<DeviceListener>): void
 ```
 
-取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。使用callback异步回调。
+取消监听输入设备的热插拔事件。使用callback异步回调。取消监听需要与注册监听在同一线程执行。
 
 **起始版本：** 9
 

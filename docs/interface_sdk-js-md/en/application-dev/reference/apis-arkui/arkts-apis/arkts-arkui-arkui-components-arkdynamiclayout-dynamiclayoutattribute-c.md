@@ -4,13 +4,15 @@ The [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) ar
 
 > **NOTE:** 
 > 
-> - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md),the [Flex layout](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-flex-layout.md) attributes set for child components take effect.
+> - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md), the flex layout attributes set on child components take effect, while the [layoutGravity](../arkts-components/arkts-arkui-commonmethod-c.md#layoutgravity) attribute does not.
 > 
-> - When the layout algorithm is [StackLayoutAlgorithm](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md),the [layoutGravity](../arkts-components/arkts-arkui-commonmethod-c.md#layoutgravity) attribute set for child components takes effect.
+> - When the layout algorithm is [StackLayoutAlgorithm](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md), the [layoutGravity](../arkts-components/arkts-arkui-commonmethod-c.md#layoutgravity) attribute set on child components takes effect, while the flex layout attributes do not.
 > 
-> - When the layout algorithm is [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md),the [setMeasuredSize](arkts-arkui-framenode-c.md#setmeasuredsize) method of the [FrameNode](arkts-arkui-framenode-c.md) component of **DynamicLayout** has a higher priority than the sizing and [border styling](../arkts-components/arkts-arkui-commonmethod-c.md#border) attributes. The [measure](arkts-arkui-framenode-c.md#measure) and [layout](arkts-arkui-framenode-c.md#layout) methods of the child component [FrameNode](arkts-arkui-framenode-c.md) have a higher priority than the ignoreLayoutSafeArea attribute.
+> - When the layout algorithm is [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md),the setMeasuredSize method of the **DynamicLayout** component's FrameNode takes precedence over the size settings and border attributes, and the measure and layout methods of the child component's FrameNode take precedence over the ignoreLayoutSafeArea attribute.
+> 
+> - When the layout algorithm is [GridLayoutAlgorithm](arkts-arkui-layoutalgorithm-gridlayoutalgorithm-c.md), the flex layout attributes set on child components do not take effect, the [layoutGravity](../arkts-components/arkts-arkui-commonmethod-c.md#layoutgravity) attribute does not take effect, and the positions of child components are controlled by the **GridLayoutAlgorithm** parameters.
 
-The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+The [universal events](../arkts-components/arkts-arkui-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>
 

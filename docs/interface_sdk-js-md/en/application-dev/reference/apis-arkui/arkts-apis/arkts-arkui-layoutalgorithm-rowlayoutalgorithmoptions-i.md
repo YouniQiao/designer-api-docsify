@@ -2,8 +2,6 @@
 
 Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the horizontal linear layout algorithm.
 
-@interface RowLayoutAlgorithmOptions
-
 **Since:** 24
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -40,7 +38,7 @@ Invalid values are treated as the default value.
 isReverse?: boolean
 ```
 
-Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute direction. If the direction attribute takes effect, the child components are arranged based on **direction** and then are reversed based on **isReverse**. **false** indicates to arrange child components in the horizontal direction in normal order.
 
 Default value: **false**
 
@@ -92,7 +90,9 @@ Invalid values are treated as the default value.
 space?: LengthMetrics
 ```
 
-Horizontal spacing between elements in a horizontal layout.
+Horizontal spacing between child components in a horizontal layout.
+
+Value range: a non-negative number.
 
 Default value: **LengthMetrics.vp(0)**
 

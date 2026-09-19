@@ -4,7 +4,11 @@
 declare const Preview: ClassDecorator & ((value: PreviewParams) => ClassDecorator)
 ```
 
-Defining Preview ClassDecorator.
+The @Preview decorator decorates custom components for preview.
+
+> **NOTE:** 
+> 
+> This API is supported in ArkTS widgets, though component preview itself is not supported in ArkTS widgets.
 
 **Since:** 7
 

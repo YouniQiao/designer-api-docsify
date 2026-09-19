@@ -1,6 +1,8 @@
 # ChipV2SymbolIcon
 
-Defines chip symbol icon.
+Defines the symbol icon class.
+
+This API inherits from [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md).
 
 **Inheritance/Implementation:** ChipV2SymbolIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
@@ -22,7 +24,7 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 constructor(config: ChipV2SymbolIconConfig)
 ```
 
-The constructor of ChipV2SymbolIcon
+A constructor used to create a **ChipV2SymbolIcon** object.
 
 **Since:** 26.0.0
 
@@ -36,7 +38,7 @@ The constructor of ChipV2SymbolIcon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md) | Yes | config of chip symbol icon |
+| config | [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md) | Yes | Attribute configuration of the symbol icon, which is used to set the display attributes of the symbol icon in different states, including configuration options such as **normal** and **activated**. |
 
 ## activated
 
@@ -44,7 +46,13 @@ The constructor of ChipV2SymbolIcon
 public activated?: SymbolGlyphModifier
 ```
 
-Symbol activated.
+Icon settings in the active state.
+
+Default value: **undefined**, which means no prefix icon or suffix icon is displayed. When the value is **undefined**, the default value is used.
+
+Modifying the animation type using [SymbolEffect](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#symboleffect) and setting the animation effect using effectStrategy are not supported.
+
+**Decorator:** @Trace
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -64,7 +72,13 @@ Symbol activated.
 public normal?: SymbolGlyphModifier
 ```
 
-Symbol normal.
+Icon settings in the inactive state.
+
+Default value: **undefined**, which means no prefix icon or suffix icon is displayed. When the value is **undefined**, the default value is used.
+
+Modifying the animation type using [SymbolEffect](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#symboleffect) and setting the animation effect using effectStrategy are not supported.
+
+**Decorator:** @Trace
 
 **Type:** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

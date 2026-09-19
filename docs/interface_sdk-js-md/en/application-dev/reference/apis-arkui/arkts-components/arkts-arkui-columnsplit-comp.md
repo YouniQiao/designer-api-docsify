@@ -1,6 +1,14 @@
 # ColumnSplit
 
-The **ColumnSplit** component lays out child components vertically and inserts a horizontal divider between every two child components.
+The **ColumnSplit** component lays out child components vertically and inserts a horizontal divider between every two child components. It is suitable for scenarios that require a vertical multi-area layout with dynamic area resizing, such as dashboard UIs and adjustable top-bottom split layouts. Through draggable dividers, users can flexibly adjust the height of each area, enhancing UI interactivity and user experience.
+
+## Child Components
+
+Supported
+
+**ColumnSplit** limits the height of child components through dividers. During initialization, the divider positions are calculated based on the heights of the child components. After initialization, dynamically modifying the height of child components does not take effect, and the divider positions remain unchanged. After **resizeable** is set to **true**, the height of child components can be changed by dragging adjacent dividers.
+
+After initialization, when dynamic modification of the margin, [border](arkts-arkui-commonmethod-c.md#border), or padding universal attributes causes a child component size to exceed the spacing between adjacent dividers, dragging the divider to change the child component height is not supported.
 
 ## ColumnSplit
 

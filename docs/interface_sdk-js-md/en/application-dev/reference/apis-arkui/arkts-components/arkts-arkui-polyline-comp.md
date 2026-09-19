@@ -1,6 +1,12 @@
 # Polyline
 
-The **Polyline** component is used to draw a polyline. > **NOTE** > > This component supports dynamic constructor parameter updates using the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > [AttributeUpdater](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20. > > **Child Components** > > None
+The **Polyline** component is used to draw a polyline.
+
+> **NOTE** > > This component is supported since API version 7. Updates to new APIs in later versions are marked with a > superscript to indicate their earliest API version. > > This component supports updating constructor parameters through the > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the > AttributeUpdater class since API version 20.
+
+## Child Components
+
+None
 
 ## Polyline
 
@@ -8,7 +14,7 @@ The **Polyline** component is used to draw a polyline. > **NOTE** > > This compo
 Polyline(options?: PolylineOptions)
 ```
 
-Uses new to create Polyline. Anonymous Object Rectification.
+Creates a polyline.
 
 **Since:** 7
 
@@ -22,7 +28,7 @@ Uses new to create Polyline. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Poly line options |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Drawing area of the polyline, used to set the width and height of the **Polyline** component. Pass this parameter when the drawing area size of the polyline needs to be specified. If it is not passed, the default width and height (both 0) are used.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Polyline
 
@@ -30,7 +36,7 @@ Uses new to create Polyline. Anonymous Object Rectification.
 Polyline(options?: PolylineOptions)
 ```
 
-Defines the constructor of Polyline component.
+Creates a polyline.
 
 **Since:** 7
 
@@ -44,7 +50,7 @@ Defines the constructor of Polyline component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Options of the polyline.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Drawing area of the **Polyline**, used to set the width and height of the **Polyline** component. Pass this parameter when the drawing area size of the **Polyline** needs to be specified. If it is not passed, the default width and height (both 0) are used.<br>The abnormal values **undefined** and **null** are processed as invalid values, and this setting does not take effect. |
 
 ## Summary
 

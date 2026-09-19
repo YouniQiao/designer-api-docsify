@@ -2,11 +2,9 @@
 
 CommonShapeMethod
 
-@extends CommonMethod&lt;T&gt;
-
 **Inheritance/Implementation:** CommonShapeMethod extends CommonMethod<T>
 
-**Since:** 11
+**Since:** 7
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +16,7 @@ constructor()
 
 constructor.
 
-**Since:** 9
+**Since:** 7
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

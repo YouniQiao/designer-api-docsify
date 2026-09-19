@@ -12,13 +12,13 @@ import { ProgressButton } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) | Declare Component ProgressButton |
+| [ProgressButton](arkts-arkui-arkui-advanced-progressbutton-progressbutton-s.md) | The **ProgressButton** component is a text-based download button with a progress indicator that shows the download progress. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Declare Color options of the ProgressButton. |
+| [ProgressButtonColorOptions](arkts-arkui-arkui-advanced-progressbutton-progressbuttoncoloroptions-i.md) | Defines the color options for the download button. |
 
 ## Examples
 

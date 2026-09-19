@@ -1,21 +1,26 @@
 # OffscreenCanvasRenderingContext2D
 
-Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Rendering offscreen onto a canvas is a process where content to draw onto the canvas is first drawn in the buffer, and then converted into a picture, and finally the picture is drawn on the canvas. Since off-screen rendering utilizes the CPU, its performance is relatively slow. Therefore, it should be avoided in scenarios where drawing speed is a critical requirement.
+Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Offscreen drawing is a process where content to draw is first drawn into a buffer, then converted into an image, and finally drawn onto the canvas at once. Offscreen drawing uses the CPU for rendering, which is relatively slow. Therefore, avoid using offscreen drawing in scenarios that require high rendering speed.
 
 > **NOTE:** 
 > 
-> **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is
-> recommended that you use the
-> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> for offscreen rendering in **ServiceExtensionAbility**.
+> **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. In
+> **ServiceExtensionAbility**, you are advised to use the
+> [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md) for offscreen drawing.
 > 
-> The following path-related APIs apply only to paths created within
-> **OffscreenCanvasRenderingContext2D** and do not affect paths defined in
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
-> or [Path2D](arkts-arkui-path2d-c.md):
-> [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
-> [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
-> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
+> The beginPath, [moveTo](arkts-arkui-canvaspath-c.md#moveto),
+> [lineTo](arkts-arkui-canvaspath-c.md#lineto), [closePath](arkts-arkui-canvaspath-c.md#closepath),
+> [bezierCurveTo](arkts-arkui-canvaspath-c.md#beziercurveto), [quadraticCurveTo](arkts-arkui-canvaspath-c.md#quadraticcurveto),
+> [arc](arkts-arkui-canvaspath-c.md#arc),
+> [arcTo](arkts-arkui-canvaspath-c.md#arcto),
+> [ellipse](arkts-arkui-canvaspath-c.md#ellipse),
+> [rect](arkts-arkui-canvaspath-c.md#rect), and
+> [roundRect](arkts-arkui-canvaspath-c.md#roundrect)
+> APIs take effect only on the path in **OffscreenCanvasRenderingContext2D**, and cannot take
+> effect on the path set in [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) and
+> [Path2D](arkts-arkui-path2d-c.md) objects.
+> 
+> The [common canvas drawing methods](arkts-arkui-canvaspath-c.md) and [common canvas drawing properties](arkts-arkui-canvasrenderer-c.md) are supported.
 
 **Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
 
@@ -43,9 +48,9 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
-| height | number | Yes | Height of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.<br>The value **undefined** is treated as the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null** |
+| width | number | Yes | Width of the offscreen canvas. The default unit is vp.<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| height | number | Yes | Height of the offscreen canvas. The default unit is vp.<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Used to configure the parameters of the **OffscreenCanvasRenderingContext2D** object. Pass this parameter when advanced configurations such as antialiasing need to be enabled. See the description of the **RenderingContextSettings** API.<br>The exception value **undefined** is handled as the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null** |
 
 ## constructor
 
@@ -69,10 +74,10 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
-| height | number | Yes | Height of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.<br>The value **undefined** is treated as the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null** |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT** |
+| width | number | Yes | Width of the offscreen canvas. The default unit is vp.<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| height | number | Yes | Height of the offscreen canvas. The default unit is vp.<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Used to configure the parameters of the **OffscreenCanvasRenderingContext2D** object. Pass this parameter when advanced configurations such as antialiasing need to be enabled. See the description of the **RenderingContextSettings** API.<br>The exception value **undefined** is handled as the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).<br> Default value: **null** |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Used to configure the unit mode of the **OffscreenCanvasRenderingContext2D** object. **DEFAULT** (default vp unit, suitable for most scenarios) and PX (px pixel unit, suitable for scenarios that require precise pixel control). Once configured, it cannot be changed dynamically. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> The exception values **undefined**, **NaN**, and **Infinity** are handled as default values.<br> Default value: **DEFAULT** |
 
 ## toDataURL
 
@@ -94,8 +99,8 @@ Creates a data URL that contains a representation of an image. This API involves
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | Image format.<br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png** |
-| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92** |
+| type | string | No | Used to specify the image format.<br>Optional values: **image/png**, **image/jpeg**, and **image/webp**. <br>The exception values **undefined** and **null** are handled as the default value. <br>Default value: **image/png** |
+| quality | any | No | When the image format is image/jpeg or image/webp, selects the image quality in the range [0, 1]. If the value is out of range, the default value **0.92** is used.<br>The exception values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value. <br>Default value: **0.92** |
 
 **Return value:**
 

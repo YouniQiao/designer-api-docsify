@@ -12,7 +12,7 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [SwipeRefresherV2](arkts-arkui-arkui-advanced-swiperefresherv2-swiperefresherv2-s.md) | Declare component SwipeRefresherV2 |
+| [SwipeRefresherV2](arkts-arkui-arkui-advanced-swiperefresherv2-swiperefresherv2-s.md) | The **SwipeRefresherV2** component is used to implement the pull-to-refresh feature. It supports custom loading prompt text and loading state control, and is suitable for scenarios where pull-to-refresh interaction needs to be implemented on a page. |
 
 ## Examples
 

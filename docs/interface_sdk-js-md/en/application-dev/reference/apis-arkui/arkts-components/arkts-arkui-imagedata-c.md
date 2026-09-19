@@ -1,13 +1,14 @@
 # ImageData
 
-An **ImageData** object stores pixel data rendered on a canvas.
+The **ImageData** object stores pixel data rendered on a canvas, supporting reading, modifying, and manipulating pixels. It is suitable for scenarios such as image processing, pixel-level editing, and special effect filters. With **ImageData**, you can precisely control each pixel of an image, implement custom image processing algorithms, and provide flexible pixel-level data access for canvas drawing.
 
 > **NOTE:** 
 > 
-> A constructor used to create an **ImageData** object. To ensure successful drawing,
-> make sure the object's area does not exceed 16000 x 16000, with its width and height
-> not greater than 16384 px. If the created area exceeds 536870911 px, the returned
-> width and height are both 0 px, and **data** is **undefined**.
+> When creating an **ImageData** object, the width and height must not exceed
+> 16384 px, and the area must not exceed 16000 px × 16000 px. If the area exceeds
+> this limit, the object cannot be rendered properly. If the created area exceeds
+> 536870911 square pixels, the width and height of the return value are both 0 px,
+> and **data** is **undefined**.
 
 **Since:** 8
 
@@ -19,7 +20,7 @@ An **ImageData** object stores pixel data rendered on a canvas.
 constructor(width: number, height: number, data?: Uint8ClampedArray)
 ```
 
-Creates an **ImageData** object with the specified width, height, and color. If data is not defined, it is populated with a one-dimensional array of 0s.
+Creates an **ImageData** object with the specified width, height, and pixel data. If **data** is not defined, a one-dimensional array filled with zeros is used. When creating the object, the width and height must not exceed 16384 px, and the maximum area must not exceed 16000 px × 16000 px. If the area exceeds the maximum limit, the object cannot be rendered properly. If the created area exceeds 536870911 square pixels, the width and height of the return value are both 0 px, and **data** is **undefined**.
 
 **Since:** 8
 
@@ -33,9 +34,9 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
-| height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
+| width | number | Yes | Width of the rectangular area, in vp. The width and height must not exceed 16384 px, and the maximum area must not exceed 16000 px × 16000 px. If the maximum area is exceeded, rendering will be abnormal. When the created area exceeds 536870911 square pixels, the width and height of the returned object are 0, and **data** is **undefined**.<br> Invalid values such as **NaN**, **Infinity**, negative numbers, and **0** are treated as **0**. |
+| height | number | Yes | Height of the rectangular area, in vp. The width and height must not exceed 16384 px, and the maximum area must not exceed 16000 px × 16000 px. If the maximum area is exceeded, rendering will be abnormal. When the created area exceeds 536870911 square pixels, the width and height of the returned object are 0, and **data** is **undefined**.<br> Invalid values such as **NaN**, **Infinity**, negative numbers, and **0** are treated as **0**. |
+| data | Uint8ClampedArray | No | One-dimensional array that stores pixel data in RGBA format. Each pixel occupies 4 bytes, in the order of R, G, B, and A. Data values range from 0 to 255. The array length must be width × height × 4. Pass this parameter when custom pixel data for **ImageData** is needed, for example, when pixel-level processing or modification of an image is required. When the invalid value **undefined** is passed, **data** is **undefined**.<br> Default value: a one-dimensional array with all values set to 0 |
 
 ## constructor
 
@@ -43,7 +44,7 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)
 ```
 
-Creates an **ImageData** object with the specified width, height, and color. If data is not defined, it is populated with a one-dimensional array of 0s. The unit of the **ImageData** object can be configured using **unit**.
+Creates an **ImageData** object with the specified width, height, and pixel data. If **data** is not defined, a one-dimensional array filled with zeros is used. The unit parameter can be used to configure the unit mode of the **ImageData** object. When creating the object, the width and height must not exceed 16384 px, and the maximum area must not exceed 16000 px × 16000 px. If the area exceeds the maximum limit, the object cannot be rendered properly. If the created area exceeds 536870911 square pixels, the width and height of the return value are both 0 px, and **data** is **undefined**. Invalid values such as **NaN**, **Infinity**, negative numbers, and **0** are treated as 0. When you need to use the vp unit for responsive layout or to adapt to different screen densities, you can specify the unit mode through the **unit** parameter.
 
 **Since:** 12
 
@@ -59,10 +60,10 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
-| height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
+| width | number | Yes | Width of the rectangular area. The unit is determined by the unit parameter, and the default unit is vp. The width and height cannot exceed 16384 px, and the maximum area cannot exceed 16000 px × 16000 px. If the maximum area is exceeded, the content cannot be rendered properly. If the created area exceeds 536870911 square pixels, the width and height of the returned object are 0, and **data** is **undefined**.<br> Invalid values such as **NaN**, **Infinity**, negative numbers, and **0** are treated as 0. |
+| height | number | Yes | Height of the rectangular area. The unit is determined by the **unit** parameter, and the default unit is vp. The width and height cannot exceed 16384 px, and the maximum area cannot exceed 16000 px × 16000 px. If the maximum area is exceeded, the content cannot be rendered properly. If the created area exceeds 536870911 square pixels, the width and height of the returned object are 0, and **data** is **undefined**.<br> Invalid values such as **NaN**, **Infinity**, negative numbers, and **0** are treated as **0**. |
+| data | Uint8ClampedArray | No | One-dimensional array that stores pixel data in RGBA format. Each pixel occupies 4 bytes, in the order of R, G, B, and A, with data values ranging from 0 to 255. Pass this parameter when custom pixel data of **ImageData** is required, for example, when pixel-level processing or modification of an image is needed.<br> If the invalid value **undefined** is passed, **data** is **undefined**.<br> Default value: a one-dimensional array with all values set to 0. |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **ImageData** object. Once configured, it cannot be dynamically changed. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). Pass this parameter when the vp unit is needed for responsive layout or adaptation to different screen densities.<br> Invalid values such as **undefined**, **NaN**, and **Infinity** are processed as the default value.<br> Default value: **DEFAULT**. |
 
 ## data
 
@@ -70,7 +71,12 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 readonly data: Uint8ClampedArray
 ```
 
-A one-dimensional array of color values. The values range from 0 to 255.
+One-dimensional array that stores pixel data in RGBA format. Each pixel occupies 4 bytes, in the order of R, G, B, and A, with data values ranging from 0 to 255.
+
+> **NOTE:** 
+> 
+> The px2vp
+> API can be used for unit conversion.
 
 **Type:** Uint8ClampedArray
 
@@ -88,9 +94,12 @@ A one-dimensional array of color values. The values range from 0 to 255.
 readonly height: number
 ```
 
-Actual height of the rectangle on the canvas.
+Actual height of the rectangle.<br>The unit is px.
 
-The unit is px.
+> **NOTE:** 
+> 
+> The px2vp
+> API can be used for unit conversion.
 
 **Type:** number
 
@@ -108,9 +117,7 @@ The unit is px.
 readonly width: number
 ```
 
-Actual width of the rectangle on the canvas.
-
-The unit is px.
+Actual width of the rectangle.<br>The unit is px.
 
 > **NOTE:** 
 > 

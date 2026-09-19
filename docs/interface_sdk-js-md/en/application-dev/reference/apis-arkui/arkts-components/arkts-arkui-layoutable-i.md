@@ -1,6 +1,6 @@
 # Layoutable
 
-Provides the child component layout information.
+Provides layout information of a child component. The **Layoutable** object is created and passed in by the ArkUI framework when **onPlaceChildren** is called. It contains the measurement result and unique identifier of the child component. Developers set the position of the child component through the **layout** method of **Layoutable**, and obtain the margin information of the child component through the **getMargin**, **getPadding**, and **getBorderWidth** methods for precise layout calculation.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Provides the child component layout information.
 getBorderWidth() : DirectionalEdgesT<number>
 ```
 
-Obtains the border widths of the child component.
+Obtains the **borderWidth** information of the child component.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Obtains the border widths of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border widths of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border width object of the child component, containing the border width values in four directions. Unit: vp. |
 
 ## getMargin
 
@@ -34,7 +34,7 @@ Obtains the border widths of the child component.
 getMargin() : DirectionalEdgesT<number>
 ```
 
-Obtains the margin values of the child component.
+Obtains the margin information of the child component.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Obtains the margin values of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin object of the child component, containing the margin values in four directions. Unit: vp. |
 
 ## getPadding
 
@@ -56,7 +56,7 @@ Obtains the margin values of the child component.
 getPadding() : DirectionalEdgesT<number>
 ```
 
-Obtains the padding values of the child component.
+Obtains the padding information of the child component.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Obtains the padding values of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding object of the child component, containing the padding values in four directions. Unit: vp. |
 
 ## layout
 
@@ -78,7 +78,7 @@ Obtains the padding values of the child component.
 layout(position: Position): void
 ```
 
-Applies the specified position constraints to the child component.
+Call this method to set the position information of the child component.
 
 **Since:** 10
 
@@ -92,7 +92,7 @@ Applies the specified position constraints to the child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | Position | Yes | Absolute position. |
+| position | Position | Yes | Absolute position, containing the x and y coordinates (with the origin at the upper left corner of the parent component, the x-axis pointing right as positive and the y-axis pointing down as positive). Unit: vp. |
 
 ## measureResult
 
@@ -100,7 +100,7 @@ Applies the specified position constraints to the child component.
 measureResult: MeasureResult
 ```
 
-Measurement result of the child component. Unit: vp.
+Size information of the child component after measurement. Unit: vp.
 
 **Type:** [MeasureResult](arkts-arkui-measureresult-i.md)
 
@@ -118,7 +118,7 @@ Measurement result of the child component. Unit: vp.
 uniqueId?: number
 ```
 
-Unique ID that the system assigns to the child component. The value must be an integer greater than or equal to 0.
+Unique ID assigned by the system to the child component. It is used to uniquely identify the child component for subsequent operations (for example, obtaining the **FrameNode** through **getFrameNodeByUniqueId**). The value range is [0, +∞).
 
 **Type:** number
 

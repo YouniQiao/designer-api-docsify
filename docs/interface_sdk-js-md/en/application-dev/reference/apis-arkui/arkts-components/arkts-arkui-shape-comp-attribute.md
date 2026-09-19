@@ -1,6 +1,6 @@
 # Shape properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported:
 
 **Inheritance/Implementation:** ShapeAttribute extends CommonMethod<ShapeAttribute>
 
@@ -50,7 +50,7 @@ Sets the color of the fill area. This attribute can be dynamically set using att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the fill area.<br>Default value: [Color](../arkts-apis/arkts-arkui-color-e.md).Black<br>The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the fill area.<br>Default value: Color.Black<br>The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. |
 
 ## fillOpacity
 
@@ -80,7 +80,9 @@ Sets the opacity of the fill area. This attribute can be dynamically set using a
 mesh(value: Array<any>, column: number, row: number)
 ```
 
-Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes. The coordinates of each mesh intersection point are stored in the array. (Every two elements indicate the x and y coordinates of an intersection point.) The mesh vertex position is relocated based on the coordinates in the array value to implement partial image distortion. This attribute can be dynamically set using attributeModifier.
+Sets the mesh effect. Divides the image into a grid of (row + 1) × (column + 1), with the coordinates of each grid intersection stored in an array (every two elements represent the x and y coordinates of an intersection). The coordinates in the **value** array are used to reposition the grid vertices, implementing local distortion of the image. This attribute can be dynamically set using attributeModifier. It is applicable to scenarios that require image deformation effects, such as image distortion and wave effects.
+
+The coordinate array is stored in row-major order. After the original image is evenly divided, each grid area is transformed based on the new coordinates of its vertices, ultimately producing a distortion effect.
 
 > **NOTE:** 
 > 
@@ -102,9 +104,9 @@ Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;any&gt; | Yes | Array with a length of (row + 1) × (column + 1) × 2, which records the position of each vertex of the distorted bitmap.<br>Invalid values **undefined** and **null** are treated as an empty array. If the value is set to an empty array, the values of **column** and **row** are handled as **0**, and the value is handled as an empty array. |
-| column | number | Yes | Number of mesh matrix columns.<br>If the value is **undefined**, **null**, **NaN**, or **Infinity**, the values of **column** and **row** are treated as **0**, and the value of **value** is treated as an empty array. |
-| row | number | Yes | Number of mesh matrix rows.<br>If the value is **undefined**, **null**, **NaN**, or **Infinity**, the values of **column** and **row** are treated as **0**, and the value of **value** is treated as an empty array. |
+| value | Array&lt;any&gt; | Yes | Array of length (row + 1) × (column + 1) × 2, which records the position of each vertex of the distorted bitmap. The coordinate system is based on the display area of the **Shape** component, with the origin (0,0) at the upper left corner, the x-axis extending to the right, and the y-axis extending downward.<br>Default unit: vp <br>When the abnormal values **undefined** and **null** are set, the parameter is processed as an empty array. |
+| column | number | Yes | Number of columns in the mesh matrix.<br>The value range is ≥ 0. <br>Default value: **0** <br>When the abnormal values **undefined**, **null**, **NaN**, and **Infinity** are set, the column and row parameters are processed as the default value **0**, and the value parameter is processed as an empty array. |
+| row | number | Yes | Number of rows in the mesh matrix.<br>The value range is ≥ 0. <br>Default value: **0** <br>When the abnormal values **undefined**, **null**, **NaN**, and **Infinity** are set, the column and row parameters are processed as the default value **0**, and the **value** parameter is processed as an empty array. |
 
 ## stroke
 
@@ -126,7 +128,7 @@ Sets the stroke color. This attribute can be dynamically set using attributeModi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Stroke color.<br>Default value: [Color](../arkts-apis/arkts-arkui-color-e.md).Transparent<br>Invalid values **undefined** and **null** values are treated as the default value, and invalid values **NaN** and **Infinity** are treated as [Color](../arkts-apis/arkts-arkui-color-e.md).Black. |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Stroke color.<br>Default value: Color.Transparent<br>Invalid values **undefined** and **null** values are treated as the default value, and invalid values **NaN** and **Infinity** are treated as Color.Black. |
 
 ## strokeDashArray
 
@@ -292,6 +294,8 @@ viewPort(value: ViewportRect)
 
 Sets the viewport of the shape.
 
+The viewport defines the coordinate system and display area of the drawing content. The start point coordinates (x, y) and the width and height (width, height) of the viewport determine the display position and range of the drawing content in the component. When the viewport range differs from the component size, the drawing content is automatically scaled to fit. The viewport is commonly used to adjust the display scale and position of the drawing content.
+
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -304,4 +308,4 @@ Sets the viewport of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | Yes | Options of the viewport.<br>Default value: **{}**<br>The **undefined** and **null** values are invalid and treated as the default value.<br>**Since:** 18 |
+| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | Yes | Viewport drawing attribute.<br>Default value: **{x: 0, y: 0, width: 0, height: 0}** <br>The abnormal values **undefined** and **null** are processed as the default value.<br>**Since:** 18 |

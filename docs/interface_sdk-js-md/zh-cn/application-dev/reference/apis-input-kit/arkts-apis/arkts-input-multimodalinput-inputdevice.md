@@ -32,8 +32,8 @@ import { inputDevice } from '@kit.InputKit';
 | [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md) | 获取输入设备的键盘类型，使用Promise异步回调。 |
 | [getKeyboardTypeSync](arkts-input-inputdevice-getkeyboardtypesync-f.md) | 获取输入设备的键盘类型。 |
 | [isFunctionKeyEnabled](arkts-input-inputdevice-isfunctionkeyenabled-f.md) | 检查功能键（如：CapsLock键）是否使能。使用Promise异步回调。 |
-| [off](arkts-input-inputdevice-off-f.md#offchange) | 取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。使用callback异步回调。 |
-| [on](arkts-input-inputdevice-on-f.md#onchange) | 注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等外部设备。使用callback异步回调。 |
+| [off](arkts-input-inputdevice-off-f.md#offchange) | 取消监听输入设备的热插拔事件。使用callback异步回调。取消监听需要与注册监听在同一线程执行。 |
+| [on](arkts-input-inputdevice-on-f.md#onchange) | 注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等外部设备。使用callback异步回调。建议在应用主线程执行此操作，且需要在此线程退出前取消监听。 |
 | [setFunctionKeyEnabled](arkts-input-inputdevice-setfunctionkeyenabled-f.md) | 设置功能键（如：CapsLock键）使能状态。使用Promise异步回调。 |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md) | 查询指定输入设备是否支持指定按键，使用callback异步回调。 |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md) | 查询指定输入设备是否支持指定按键，使用Promise异步回调。 |

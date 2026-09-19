@@ -7,17 +7,15 @@ Grid element arrangement direction.
 > - Grid elements can be arranged only in the **Row** or **RowReverse** direction, but not in the **Column** or
 > **ColumnReverse** direction.
 > 
-> - The location and size of a grid child component can be calculated only based on **span** and **offset**. If the
-> **span** values of child components add up to a number greater than the allowed number of columns, the grid will
-> automatically wrap lines.
+> - The location and size of a grid child component can only be calculated through **span** and **offset**. When the
+> **span** values of multiple child components exceed the specified number of columns, they automatically wrap to a
+> new row.
 > 
-> - If the **span** value of a single child component exceeds the maximum number of columns, the maximum number of columns is used.
+> - When the **span** of a single element exceeds the maximum number of columns, the **span** is set to the maximum number of columns by default.
 > 
-> - If a child component takes up more than the total number of columns according to its **offset** and **span**settings, it will be placed in a new row.
+> - When the **offset** of a new row plus the **span** of the child component exceeds the total number of columns,the next child component is placed on a new row.
 > 
-> - Example: Item1: GridCol({ span: 6 }), Item2: GridCol({ span: 8, offset:11 })
-> 
-> 
+> - Example: Item1: GridCol({ span: 6 }), Item2: GridCol({ span: 8, offset:11 }).
 > 
 > ![figures/gridRowOffsetToNextLine.png](../../../reference/apis-arkui/arkui-ts/figures/gridRowOffsetToNextLine.png)
 
@@ -31,7 +29,7 @@ Grid element arrangement direction.
 Row
 ```
 
-Grid elements are arranged in the row direction.
+Grid elements are arranged in the row direction. This is suitable for regular LTR (left-to-right) layout scenarios.
 
 **Since:** 9
 
@@ -47,7 +45,7 @@ Grid elements are arranged in the row direction.
 RowReverse
 ```
 
-Grid elements are arranged in the reverse row direction.
+Grid elements are arranged in the reverse row direction. This is suitable for RTL (right-to-left) language layouts or scenarios that require reverse arrangement.
 
 **Since:** 9
 

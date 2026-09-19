@@ -35,7 +35,7 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 | 名称 | 说明 |
 | --- | --- |
 | [AccessibilitySelectedType](arkts-arkui-arkui-advanced-chip-accessibilityselectedtype-e.md) | AccessibilitySelectedType定义Chip可指定的选中态类型，用于控制无障碍服务如何向用户传达组件的选中状态。不同的选中态类型提供了不同的语义和用户体验。 |
-| [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) | Enum for ChipSize |
+| [ChipSize](arkts-arkui-arkui-advanced-chip-chipsize-e.md) | ChipSize定义Chip组件可指定的尺寸类型，如普通类型和小尺寸型。 |
 
 ## 示例
 

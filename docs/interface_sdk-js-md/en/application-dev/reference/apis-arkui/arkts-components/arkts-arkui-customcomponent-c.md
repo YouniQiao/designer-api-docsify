@@ -38,7 +38,7 @@ aboutToReuse Method
 onLayout?(children: Array<LayoutChild>, constraint: ConstraintSizeOptions): void
 ```
 
-Invoked when the custom component lays out its child components. Through this callback the component receives its child component layout information and size constraint from the ArkUI framework. State variables should not be changed in this callback. This API is supported since API version 9 and deprecated since API version 10. You are advised to use onPlaceChildren instead.
+Invoked when the custom component lays out its child components. Through this callback the component receives its child component layout information and size constraint from the ArkUI framework. State variables should not be changed in this callback.
 
 **Since:** 9
 
@@ -63,7 +63,7 @@ Invoked when the custom component lays out its child components. Through this ca
 onMeasure?(children: Array<LayoutChild>, constraint: ConstraintSizeOptions): void
 ```
 
-Invoked when the custom component needs to determine its size. Through this callback the component receives its child component layout information and its own size constraints from the ArkUI framework. State variables should not be changed in this callback. This API is supported since API version 9 and deprecated since API version 10. You are advised to use onMeasureSize instead.
+Invoked when the custom component needs to determine its size. Through this callback the component receives its child component layout information and its own size constraints from the ArkUI framework. State variables should not be changed in this callback.
 
 **Since:** 9
 

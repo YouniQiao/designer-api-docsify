@@ -1,14 +1,22 @@
 # Video
 
-The **Video** component is used to play a video and control its playback. > **NOTE** > > The **Video** component provides only simple video playback features. For complex video playback control > scenarios, consider using the [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) APIs in conjunction with the > XComponent component. > When using **expandSafeArea** to extend into safe areas, the **Video** component's content display area does not > support expansion. > > **Required Permissions** > > To use online videos, you must apply for the ohos.permission.INTERNET permission. For details about how to apply > for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md). > > **Child Components** > > Not supported.
+The **Video** component is used to play a video and control its playback state. It supports playback, pause, progress control, playback speed, full-screen switching, and other functions.
+
+> **NOTE** > > > The **Video** component provides only simple video playback and cannot support complex video playback control > scenarios. For complex development scenarios, you are advised to use the > [AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md) playback control API and the > XComponent component. > <br> > > When the **Video** component uses [expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea) to expand the safe area, the > video display content area of the component cannot be expanded.
+
+## Required Permissions
+
+To use online videos, you must apply for the ohos.permission.INTERNET permission. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+
+## Child Components
+
+Not supported
 
 ## Video
 
 ```TypeScript
 Video(value: VideoOptions)
 ```
-
-Defines the constructor of video component.
 
 **Since:** 7
 

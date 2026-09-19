@@ -2,6 +2,18 @@
 
 Enumerates the directions of barriers with mirror mode support.
 
+| Name| Value | Description |  
+| ------ | -- | ----------------------------- |  
+| START | 0 |The barrier is on the start side of all its |
+| | |[referencedId](arkts-arkui-localizedbarrierstyle-i.md), that is, the |
+| | |leftmost side in LTR mode and the rightmost side in RTL mode.|
+| END | 1 | The barrier is on the end side of all its [referencedId](arkts-arkui-localizedbarrierstyle-i.md), that is, the |
+| | |rightmost side in LTR mode and the leftmost side in RTL mode.|
+| TOP | 2 | The barrier is at the top of all the referenced components specified by |
+| | |[referencedId](arkts-arkui-localizedbarrierstyle-i.md).|
+| BOTTOM | 3 | The barrier is at the bottom of all the referenced components specified by |
+| | |[referencedId](arkts-arkui-localizedbarrierstyle-i.md).|
+
 **Since:** 12
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -12,7 +24,7 @@ Enumerates the directions of barriers with mirror mode support.
 START = 0
 ```
 
-The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
+The barrier is on the start side of all its [referencedId](arkts-arkui-localizedbarrierstyle-i.md), that is, the leftmost side in LTR mode and the rightmost side in RTL mode.
 
 **Since:** 12
 
@@ -28,7 +40,7 @@ The barrier is on the left (for left-to-right scripts) or right (for right-to-le
 END = 1
 ```
 
-The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md).
+The barrier is on the end side of all its [referencedId](arkts-arkui-localizedbarrierstyle-i.md), that is, the rightmost side in LTR mode and the leftmost side in RTL mode.
 
 **Since:** 12
 

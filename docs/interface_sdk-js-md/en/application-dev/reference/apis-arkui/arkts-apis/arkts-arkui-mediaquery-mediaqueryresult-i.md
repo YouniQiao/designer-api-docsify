@@ -1,6 +1,6 @@
 # MediaQueryResult
 
-Provides the media query result.
+Represents the media query result.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ import { mediaquery } from '@kit.ArkUI';
 readonly matches: boolean
 ```
 
-Whether the media query condition is met. The value **true** means that the query conditions are met, and **false** means the opposite. This parameter is read-only.
+Whether the media query condition is met. The value **true** means that the query conditions are met, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ Whether the media query condition is met. The value **true** means that the quer
 readonly media: string
 ```
 
-Matching condition of a media event. This parameter is read-only.
+Media query condition.
 
 **Type:** string
 

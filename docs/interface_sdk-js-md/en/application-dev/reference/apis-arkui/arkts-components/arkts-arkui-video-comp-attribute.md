@@ -54,7 +54,7 @@ Sets whether to enable autoplay. This attribute can be dynamically set using att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable autoplay.<br>**true**: Enable autoplay.<br>**false**: Disable autoplay.<br>Default value: **false**. |
+| value | boolean | Yes | Whether to enable autoplay.<br>The value **true** means to enable autoplay, and **false** means to disable autoplay. <br>Default value: **false** |
 
 ## controls
 
@@ -63,6 +63,13 @@ controls(value: boolean)
 ```
 
 Sets whether to display the video playback control bar. This attribute can be dynamically set using attributeModifier.
+
+> **NOTE:** 
+> 
+> The style of the control bar built into the **Video** component cannot be customized. To customize the control
+> bar, set the **controls** attribute to **false** and implement the style or functions of the control bar by
+> yourself. For details, see
+> [Video Playback](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/BasicFeature/Media/VideoPlay).
 
 **Since:** 7
 
@@ -74,7 +81,7 @@ Sets whether to display the video playback control bar. This attribute can be dy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the video playback control bar.<br>**true**: Display the video playback control bar.<br>**false**: Do not display the video playback control bar.<br>Default value: **true** |
+| value | boolean | Yes | Whether to display the control bar for video playback. <br>**true**: the control bar is displayed; **false**: the control bar is not displayed. <br>Default value: **true** <br>**Note:** To use the [enableAnalyzer](#enableanalyzer) function for AI analysis, set this parameter to **false** and use a custom control bar. |
 
 ## enableAnalyzer
 
@@ -86,13 +93,17 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
-Note that if this attribute and the overlay attribute are both set, [CustomBuilder](arkts-arkui-custombuilder-t.md) specified in [overlay](arkts-arkui-commonmethod-c.md) has no effect.
+This attribute cannot be used together with the overlay attribute. If both are set, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) attribute in overlay becomes invalid.
 
 > **NOTE:** 
 > 
 > This API can be called within attributeModifier since API version 20.
 
-After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
+> **NOTE:** 
+> 
+> This feature is available only when the custom control bar is used (that is, when the
+> [controls](#controls) attribute is set to **false**).
+> This feature depends on device capabilities.
 
 **Since:** 12
 
@@ -106,7 +117,7 @@ After this feature is enabled, the video automatically enters an analysis state 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI image analyzer.<br>Default value: **false** |
+| enable | boolean | Yes | Whether to enable the AI analysis function. <br>**true**: enables the AI analysis function; **false**: disables the AI analysis function. <br>Default value: **false** <br>**Note:** <br>This attribute cannot be used together with overlay. When both are set, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) attribute in overlay does not take effect. |
 
 ## enableShortcutKey
 
@@ -117,6 +128,11 @@ enableShortcutKey(enabled: boolean)
 Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using attributeModifier.
 
 Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
+
+> **NOTE:** 
+> 
+> When **enabled** is set to **false** and **controls** is set to **true**, you can still use the left and
+> right arrow keys to fast-forward or rewind the progress bar.
 
 **Since:** 15
 
@@ -130,7 +146,7 @@ Currently, the component can respond to the following keys when it is in focus: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the component responds to keyboard shortcuts when it has focus.<br>**true**: The component responds to keyboard shortcuts when it has focus.<br>**false**: The component does not respond to keyboard shortcuts when it has focus.<br>Default value: **false**. |
+| enabled | boolean | Yes | Whether to enable shortcut key response.<br>The value **true** means to enable shortcut key response, and **false** means to disable it. <br>Default value: **false** |
 
 ## loop
 
@@ -138,7 +154,7 @@ Currently, the component can respond to the following keys when it is in focus: 
 loop(value: boolean)
 ```
 
-Sets whether to repeat the video. This attribute can be dynamically set using attributeModifier.
+Sets whether to loop the video. This attribute can be dynamically set using attributeModifier.
 
 **Since:** 7
 
@@ -150,7 +166,7 @@ Sets whether to repeat the video. This attribute can be dynamically set using at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to repeat the video.<br>**true**: Repeat the video.<br>**false**: Do not repeat the video.<br>Default value: **false**. |
+| value | boolean | Yes | Whether to loop a single video.<br>The value **true** means to enable loop playback, and **false** means to disable loop playback. <br>Default value: **false** |
 
 ## muted
 
@@ -160,6 +176,11 @@ muted(value: boolean)
 
 Sets whether to mute the video. This attribute can be dynamically set using attributeModifier.
 
+> **NOTE:** 
+> 
+> When not muted, the **Video** component acquires audio focus when playback starts. To play without acquiring
+> audio focus, mute the component before starting playback.
+
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -170,7 +191,7 @@ Sets whether to mute the video. This attribute can be dynamically set using attr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to mute the video.<br>**true**: Mute the video.<br>**false**: Unmute the video.<br>Default value: **false**. |
+| value | boolean | Yes | Whether the video is muted.<br>The value **true** means to enable muting, and **false** means to disable muting. <br>Default value: **false** |
 
 ## objectFit
 
@@ -190,7 +211,7 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values, including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) enumeration range, will result in an effect the same as **Cover**. |
+| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | Yes | Video fill mode. <br>Default value: **ImageFit.Cover** <br>Restriction: The enum value **MATRIX** in the **ImageFit** type is not supported. If it is set, the effect is the same as that of **ImageFit.Cover**. <br>Abnormal value: If an abnormal value such as **undefined** or **null**, or a value outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) enum range is set, the effect is the same as that of **ImageFit.Cover**. |
 
 ## onError
 
@@ -198,7 +219,11 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 ```
 
-Called when playback fails.
+Triggered when video playback fails. Dynamic property modification using attributeModifier is supported.
+
+> **NOTE:** 
+> 
+> This API can be called within attributeModifier since API version 20.
 
 **Since:** 7
 
@@ -210,7 +235,7 @@ Called when playback fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) &#124; import('../api/@ohos.base').ErrorCallback | Yes | <br>**Since:** 20 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) &#124; import('../api/@ohos.base').ErrorCallback | Yes | Callback invoked when video playback fails. The callback of the [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) type is used to receive exception information. For details about the error codes returned by the callback, see [Video Component Error Codes](../../../reference/apis-arkui/errorcode-video.md) and [Media Error Codes](../../../reference/apis-media-kit/errorcode-media.md).<br>**Since:** 20 |
 
 ## onFinish
 
@@ -218,7 +243,7 @@ Called when playback fails.
 onFinish(event: VoidCallback)
 ```
 
-Called when the video playback ends. Anonymous Object Rectification.
+Triggered when video playback is finished. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -230,7 +255,7 @@ Called when the video playback ends. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | <br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when video playback is finished.<br>**Since:** 18 |
 
 ## onFullscreenChange
 
@@ -238,7 +263,7 @@ Called when the video playback ends. Anonymous Object Rectification.
 onFullscreenChange(callback: Callback<FullscreenInfo>)
 ```
 
-Called when the video enters and exits the full screen. Anonymous Object Rectification.
+Triggered when video playback is switched between full-screen mode and non-full-screen mode. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -250,7 +275,7 @@ Called when the video enters and exits the full screen. Anonymous Object Rectifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[FullscreenInfo](arkts-arkui-fullscreeninfo-i.md)&gt; | Yes | <br>**Since:** 18 |
+| callback | Callback&lt;[FullscreenInfo](arkts-arkui-fullscreeninfo-i.md)&gt; | Yes | Callback invoked when switching between full-screen playback and non -full-screen playback states.<br>**Since:** 18 |
 
 ## onPause
 
@@ -258,7 +283,7 @@ Called when the video enters and exits the full screen. Anonymous Object Rectifi
 onPause(event: VoidCallback)
 ```
 
-Called when the video is paused. Anonymous Object Rectification.
+Triggered when video playback is paused. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -270,7 +295,7 @@ Called when the video is paused. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | <br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when video playback is paused.<br>**Since:** 18 |
 
 ## onPrepared
 
@@ -278,7 +303,7 @@ Called when the video is paused. Anonymous Object Rectification.
 onPrepared(callback: Callback<PreparedInfo>)
 ```
 
-Called when the video preparation is complete. Anonymous Object Rectification.
+Triggered when video preparation is complete. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -290,7 +315,7 @@ Called when the video preparation is complete. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PreparedInfo](arkts-arkui-preparedinfo-i.md)&gt; | Yes | <br>**Since:** 18 |
+| callback | Callback&lt;[PreparedInfo](arkts-arkui-preparedinfo-i.md)&gt; | Yes | Callback invoked when video preparation is complete.<br>**Since:** 18 |
 
 ## onSeeked
 
@@ -298,7 +323,7 @@ Called when the video preparation is complete. Anonymous Object Rectification.
 onSeeked(callback: Callback<PlaybackInfo>)
 ```
 
-Called when the playback time information is reported after the operation progress bar is completed. Anonymous Object Rectification.
+Triggered to report the time information while seeking is completed. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -310,7 +335,7 @@ Called when the playback time information is reported after the operation progre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | <br>**Since:** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | Callback invoked when the operation progress bar is completed.<br>**Since:** 18 |
 
 ## onSeeking
 
@@ -318,7 +343,7 @@ Called when the playback time information is reported after the operation progre
 onSeeking(callback: Callback<PlaybackInfo>)
 ```
 
-Called when the time information is reported when the progress bar process is operated. Anonymous Object Rectification.
+Triggered to report the time information while seeking is in progress (the progress bar is being dragged). Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -330,7 +355,7 @@ Called when the time information is reported when the progress bar process is op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | <br>**Since:** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | Callback invoked when the progress bar is operated.<br>**Since:** 18 |
 
 ## onStart
 
@@ -338,7 +363,7 @@ Called when the time information is reported when the progress bar process is op
 onStart(event: VoidCallback)
 ```
 
-Called when the video is played. Anonymous Object Rectification.
+Triggered when playback starts. This attribute supports dynamic setting through attributeModifier.
 
 **Since:** 7
 
@@ -350,7 +375,7 @@ Called when the video is played. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | <br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered when video playback starts.<br>**Since:** 18 |
 
 ## onStop
 
@@ -358,7 +383,7 @@ Called when the video is played. Anonymous Object Rectification.
 onStop(event: Callback<void>)
 ```
 
-Called when the video is stopped.
+Triggered when the video playback is stopped (after **stop()** is called). Dynamic property modification using attributeModifier is supported.
 
 **Since:** 12
 
@@ -372,7 +397,7 @@ Called when the video is stopped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback&lt;void&gt; | Yes |  |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when video playback stops. |
 
 ## onUpdate
 
@@ -380,7 +405,7 @@ Called when the video is stopped.
 onUpdate(callback: Callback<PlaybackInfo>)
 ```
 
-Called when the playback progress changes. Anonymous Object Rectification.
+Triggered when playback progress changes. Dynamic property modification using attributeModifier is supported.
 
 **Since:** 7
 
@@ -392,4 +417,4 @@ Called when the playback progress changes. Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | <br>**Since:** 18 |
+| callback | Callback&lt;[PlaybackInfo](arkts-arkui-playbackinfo-i.md)&gt; | Yes | Callback invoked when the playback progress changes.<br>**Since:** 18 |

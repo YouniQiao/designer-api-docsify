@@ -12,7 +12,7 @@ Defines the specific configuration parameters for the rendering context.
 antialias?: boolean
 ```
 
-Indicates whether to enable anti-aliasing for the **RenderingContext**. <br>A value of **undefined** is treated as the default value. <br>**true**: Enable anti-aliasing. **false**: Disable anti-aliasing. <br>Default value: **false**
+Whether to enable anti-aliasing for the **RenderingContext**. <br>The abnormal value **undefined** or **null** is processed as the default value. <br>The value **true** indicates anti-aliasing enabled, and **false** indicates the opposite. <br>Default value: **false**
 
 **Type:** boolean
 

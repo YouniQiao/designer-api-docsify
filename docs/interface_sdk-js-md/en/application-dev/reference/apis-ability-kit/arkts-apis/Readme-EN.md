@@ -559,6 +559,8 @@
   - [ReturnMode](arkts-ability-insightintent-returnmode-e.md)
 - [@ohos.app.ability.InsightIntentContext(Intent Execution Context)](arkts-ability-app-ability-insightintentcontext.md)
   - [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
+  <!--Del-->
+  - [InsightIntentContext(system api)](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.InsightIntentDecorator(Intent Decorator)](arkts-ability-app-ability-insightintentdecorator.md)
   - [@InsightIntentEntity](arkts-ability-app-ability-insightintentdecorator-insightintententity-d.md)
   - [@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md)
@@ -696,6 +698,8 @@
 - [@ohos.app.ability.scriptManager(Script Management)](arkts-ability-app-ability-scriptmanager.md)
   - [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md)
   - [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md)
+  <!--Del-->
+  - [ArkTSScriptInfo(system api)](arkts-ability-scriptmanager-arktsscriptinfo-i-sys.md)<!--DelEnd-->
   - [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md)
 - [@ohos.app.ability.sendableContextManager](arkts-ability-app-ability-sendablecontextmanager.md)
   - [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md)

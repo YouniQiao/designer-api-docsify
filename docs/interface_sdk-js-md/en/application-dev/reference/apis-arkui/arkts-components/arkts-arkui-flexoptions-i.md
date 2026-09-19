@@ -12,7 +12,20 @@ Describes the layout and alignment of child components within the **Flex** compo
 alignContent?: FlexAlign
 ```
 
-Alignment mode of multiple lines when there is extra space along the cross axis. This parameter is valid only when **wrap** is set to **Wrap** or **WrapReverse**. If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
+Alignment of multiple lines of content when there is extra space on the cross axis. This attribute takes effect only when wrap is set to **Wrap** or **WrapReverse**.
+
+Default value: **FlexAlign.Start**
+
+Invalid values are handled as the default value.
+
+The options are as follows:
+
+- **Start**: Aligned with the start edge.  
+- **Center**: Center alignment.  
+- **End**: Aligned with the end edge.  
+- **SpaceBetween**: Aligned with both edges, with equal spacing between lines.  
+- **SpaceAround:** Equal spacing on both sides of each line.  
+- **SpaceEvenly**: Equal spacing between lines and at both ends.
 
 **Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
@@ -30,7 +43,20 @@ Alignment mode of multiple lines when there is extra space along the cross axis.
 alignItems?: ItemAlign
 ```
 
-Alignment mode of the child components in the **Flex** component along the cross axis. If an invalid value is passed, the default value will be used. Default value: **ItemAlign.Start**.
+Alignment of all child components on the cross axis of the **Flex** container. After this attribute is set, child components are positioned along the cross axis according to the specified alignment.
+
+Default value: **ItemAlign.Start**
+
+Invalid values are handled as the default value.
+
+The options are as follows:
+
+- **Auto**: Uses the alignment of the parent container.  
+- **Start**: Aligned with the start edge.  
+- **Center**: Center alignment.  
+- **End**: Aligned with the end edge.  
+- **Stretch**: Stretched to fill the container.  
+- **Baseline**: Aligned with the baseline.
 
 **Type:** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
 
@@ -48,7 +74,20 @@ Alignment mode of the child components in the **Flex** component along the cross
 direction?: FlexDirection
 ```
 
-Direction in which child components are arranged in the **Flex** component, that is, the direction of the main axis. If an invalid value is passed, the default value will be used. Default value: **FlexDirection.Row**.
+Direction in which child components are arranged in the **Flex** container, that is, the direction of the main axis. After this attribute is set, child components are arranged along the main axis in the specified direction.
+
+Default value: **FlexDirection.Row**
+
+Invalid values are handled as the default value.
+
+The options are as follows:
+
+- **Row**: The main axis runs horizontally, starting from the left.  
+- **RowReverse**: The main axis runs horizontally, starting from the right.  
+- **Column**: The main axis runs vertically, starting from the top.  
+- **ColumnReverse**: The main axis runs vertically, starting from the bottom.
+
+The starting positions of **Row** and **RowReverse** are affected by the **direction** attribute of the container.
 
 **Type:** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
 
@@ -66,7 +105,22 @@ Direction in which child components are arranged in the **Flex** component, that
 justifyContent?: FlexAlign
 ```
 
-Alignment mode of the child components in the **Flex** component along the main axis. If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
+Alignment of all child components on the main axis of the **Flex** container. After this attribute is set, child components are distributed and arranged along the main axis according to the specified alignment.
+
+Default value: **FlexAlign.Start**
+
+Invalid values are handled as the default value.
+
+The options are as follows:
+
+- **Start**: Aligned with the start edge.  
+- **Center**: Center alignment.  
+- **End**: Aligned with the end edge.  
+- **SpaceBetween**: Aligned with both edges, with equal spacing between child components.  
+- **SpaceAround**: Equal spacing on both sides of each child component.  
+- **SpaceEvenly**: Equal spacing between child components and at both ends.
+
+**Note:** When **justifyContent** is set to **SpaceBetween**, **SpaceAround**, or **SpaceEvenly**, the **space** parameter does not take effect.
 
 **Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
 
@@ -84,7 +138,13 @@ Alignment mode of the child components in the **Flex** component along the main 
 space?: FlexSpaceOptions
 ```
 
-Spacing between child components along the main axis or cross axis of the **Flex** component. Invalid values are treated as the default value. This parameter does not take effect if the value specified is a negative number or percentage, or if **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**. Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**.
+Spacing between child components in the **Flex** container on the main axis and cross axis. It contains two attributes: **main** and **cross**. Pass this parameter when you need to adjust the spacing between child components. If not passed, there is no spacing between child components.
+
+Default value: **{main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}**
+
+Invalid values are handled as the default value.
+
+When **space.main** or **space.cross** is a negative value, or when **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**, the **space** parameter does not take effect. The **main** attribute takes effect in both single-line and multi-line layouts, while the **cross** attribute takes effect only when **wrap** is set to **Wrap** or **WrapReverse** (multi-line layout).
 
 **Type:** [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
 
@@ -102,11 +162,19 @@ Spacing between child components along the main axis or cross axis of the **Flex
 wrap?: FlexWrap
 ```
 
-Whether the **Flex** component has a single line or multiple lines. If an invalid value is passed, the default value will be used.  
-> **NOTE:** 
-> 
-> When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the
-> cross axis direction. Default value: **FlexWrap.NoWrap**.
+Whether the **Flex** container has a single line/column or multiple lines/columns. After this attribute is set, child components are laid out in the container according to the specified wrap mode.
+
+Default value: **FlexWrap.NoWrap**
+
+Invalid values are handled as the default value.
+
+The options are as follows:
+
+- **NoWrap**: No wrapping. Child components are truncated if their total width exceeds the container width.  
+- **Wrap**: Wrapping is enabled. The first line is at the top.  
+- **WrapReverse**: Wrapping is enabled. The first line is at the bottom.
+
+**Note:** In multi-line layout, the stacking direction of new lines is determined by the cross axis direction.
 
 **Type:** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
 

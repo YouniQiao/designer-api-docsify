@@ -1,6 +1,6 @@
 # BarrierStyle
 
-Defines the ID, direction, and referenced components of a barrier.
+Defines the style of a barrier, which is used to define the ID, direction, and dependent components of a barrier. Child components can reference the barrier by its ID as an anchor for alignment and positioning.
 
 **Since:** 12
 
@@ -14,11 +14,11 @@ direction : BarrierDirection
 
 Direction of the barrier.
 
-Vertical-direction barriers (including **TOP** and **BOTTOM**) can only serve as the horizontal anchor of a component. If they are used as a vertical anchor, the anchor value will be **0**. Horizontal-direction barriers (including **LEFT** and **RIGHT**) can only serve as the vertical anchor of a component. If they are used as a horizontal anchor, the anchor value will be **0**.
+A horizontal barrier line (**TOP**\/**BOTTOM**) can serve only as a vertical directional anchor (**top** or **bottom**) of a component. When it is used as a horizontal directional anchor, its position is treated as **0**. A vertical barrier line (**LEFT**\/**RIGHT**) can serve only as a horizontal directional anchor (**left** or **right**) of a component. When it is used as a vertical directional anchor, its position is treated as **0**.
 
 Default value: **BarrierDirection.LEFT**
 
-Invalid values are treated as the default value.
+Invalid value: processed as the default value.
 
 **Type:** [BarrierDirection](arkts-arkui-barrierdirection-e.md)
 
@@ -36,7 +36,7 @@ Invalid values are treated as the default value.
 id : string
 ```
 
-ID of the barrier, which must be unique and cannot be the same as the name of any component in the container.
+ID of the barrier, used to identify the barrier. A child component can reference this barrier as an anchor by this ID. It must be unique and cannot duplicate the name of any component in the container.
 
 **Type:** string
 
@@ -54,7 +54,7 @@ ID of the barrier, which must be unique and cannot be the same as the name of an
 referencedId : Array<string>
 ```
 
-Referenced components of the barrier.
+Components on which the barrier is generated. Put the IDs of the components that serve as the barrier reference into the array. At least one valid component ID is required. IDs that do not exist are ignored. The barrier position is calculated based on the component boundaries: **LEFT** takes the leftmost, **RIGHT** takes the rightmost, **TOP** takes the topmost, and **BOTTOM** takes the bottommost.
 
 **Type:** Array&lt;string&gt;
 

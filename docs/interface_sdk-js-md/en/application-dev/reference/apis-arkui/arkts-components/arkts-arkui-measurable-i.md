@@ -1,6 +1,6 @@
 # Measurable
 
-Provides the child component position information.
+Provides measurement information of a child component. The **Measurable** object is created and passed in by the ArkUI framework when **onMeasureSize** is called, and is used in the measurement phase. Unlike **Layoutable** (used in the layout phase), Measurable is mainly used to measure the size of a child component. Developers set constraint conditions and obtain measurement results through the **measure** method. **Measurable** and **Layoutable** are two representations of the same child component in different layout phases.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Provides the child component position information.
 getBorderWidth() : DirectionalEdgesT<number>
 ```
 
-Obtains the border widths of the child component.
+Obtains the **borderWidth** information of the child component.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Obtains the border widths of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border widths of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border width object of the child component, containing the border width values in four directions. Unit: vp. |
 
 ## getMargin
 
@@ -34,7 +34,7 @@ Obtains the border widths of the child component.
 getMargin() : DirectionalEdgesT<number>
 ```
 
-Obtains the margin values of the child component.
+Obtains the margin information of the child component.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ Obtains the margin values of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin object of the child component, containing the margin values in four directions. Unit: vp. |
 
 ## getPadding
 
@@ -56,7 +56,7 @@ Obtains the margin values of the child component.
 getPadding() : DirectionalEdgesT<number>
 ```
 
-Obtains the padding values of the child component.
+Obtains the padding information of the child component.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ Obtains the padding values of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding values of the child component. |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding object of the child component, containing the padding values in four directions. Unit: vp. |
 
 ## measure
 
@@ -78,7 +78,7 @@ Obtains the padding values of the child component.
 measure(constraint: ConstraintSizeOptions) : MeasureResult
 ```
 
-Imposes size constraints on the child component.
+Imposes size constraints on the child component and returns the measured layout information of the component.
 
 **Since:** 10
 
@@ -92,13 +92,13 @@ Imposes size constraints on the child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraint. |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size, including constraint conditions such as **minWidth**, **maxWidth**, **minHeight**, and **maxHeight**, used to limit the size range of the child component. Value principle: **minWidth** ≤ **maxWidth**, **minHeight** ≤ **maxHeight**; unit: vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. |
+| [MeasureResult](arkts-arkui-measureresult-i.md) | Layout information of the component after measurement, including the measured width and height. |
 
 ## uniqueId
 
@@ -106,7 +106,7 @@ Imposes size constraints on the child component.
 uniqueId?: number
 ```
 
-Unique ID that the system assigns to the child component. The value range is all integers.
+Unique ID assigned by the system to the child component. It uniquely identifies the child component for subsequent operations (for example, obtaining the **FrameNode** through **getFrameNodeByUniqueId**). The value range is [0, +∞). The system automatically assigns a UniqueID to each child component. Developers can read it as needed and do not need to set it proactively.
 
 **Type:** number
 

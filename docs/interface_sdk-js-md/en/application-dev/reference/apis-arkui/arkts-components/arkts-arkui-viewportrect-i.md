@@ -17,13 +17,13 @@ Describes the options of the viewport.
 height?: Length
 ```
 
-Height of the viewport. The value must be greater than or equal to 0.
+Height of the shape viewport. The value range is ≥ 0.
 
 Default value: **0**
 
 Default unit: vp
 
-Invalid values are treated as the default value.
+The abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -41,13 +41,13 @@ Invalid values are treated as the default value.
 width?: Length
 ```
 
-Width of the viewport. The value must be greater than or equal to 0.
+Width of the shape viewport. The value range is ≥ 0.
 
 Default value: **0**
 
 Default unit: vp
 
-Invalid values are treated as the default value.
+The abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -65,13 +65,13 @@ Invalid values are treated as the default value.
 x?: Length
 ```
 
-Horizontal coordinate of the start point of the viewport.
+Horizontal coordinate of the start point of the shape viewport.
 
 Default value: **0**
 
 Default unit: vp
 
-Invalid values are treated as the default value.
+The abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -89,13 +89,13 @@ Invalid values are treated as the default value.
 y?: Length
 ```
 
-Vertical coordinate of the start point of the viewport.
+Vertical coordinate of the start point of the shape viewport.
 
 Default value: **0**
 
 Default unit: vp
 
-Invalid values are treated as the default value.
+The abnormal values **undefined**, **null**, **NaN**, and **Infinity** are handled as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

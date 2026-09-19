@@ -10,6 +10,8 @@ Canvas(context?: CanvasRenderingContext2D | DrawingRenderingContext)
 
 Creates a **Canvas** component. The maximum allowed size cannot exceed 10000 px × 10000 px. If the size exceeds this limit, the **Canvas** component will fail to be created.
 
+The **Canvas** component created using this API does not respond to drawing instructions when the component is invisible. Invisible scenarios mainly include the page where the component is located entering the background, the component sliding out of the window, and setting the visibility attribute to hidden. Scenarios where the component is obscured by other components or other windows are not included.
+
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -22,7 +24,7 @@ Creates a **Canvas** component. The maximum allowed size cannot exceed 10000 px 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | No | 2D rendering context for a canvas.<br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. <br>If the value is **null** or **undefined**, **context** is considered unset. |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | No | 2D rendering context for a canvas. <br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. For details, see [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. For details, see [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md). <br>If the value is **null** or **undefined**, **context** is considered unset. |
 
 ## Canvas
 
@@ -30,7 +32,9 @@ Creates a **Canvas** component. The maximum allowed size cannot exceed 10000 px 
 Canvas(context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions)
 ```
 
-Creates a **Canvas** component. You can specify a **CanvasRenderingContext2D** or **DrawingRenderingContext** object, along with AI image analysis options.
+When creating a **Canvas** component, the maximum area cannot exceed 10000 px × 10000 px. If the size exceeds this limit, the **Canvas** component will fail to be created. You can specify a **CanvasRenderingContext2D** or **DrawingRenderingContext** object, along with AI analysis options.
+
+The **Canvas** component created using this API does not respond to drawing instructions when the component is invisible. Invisible scenarios mainly include the page where the component is located entering the background, the component sliding out of the window, and setting the visibility attribute to hidden. Scenarios where the component is obscured by other components or other windows are not included.
 
 **Since:** 12
 
@@ -44,8 +48,8 @@ Creates a **Canvas** component. You can specify a **CanvasRenderingContext2D** o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | 2D rendering context for a canvas.<br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. <br>If the value is **null** or **undefined**, **context** is considered unset. |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | Yes | AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.<br>If the value is **null** or **undefined**, the default value of **ImageAIOptions** is used. |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &#124; [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | 2D rendering context for a canvas. <br>**CanvasRenderingContext2D**: Canvases cannot share one **CanvasRenderingContext2D** object. For details, see [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). **DrawingRenderingContext**: Canvases cannot share one **DrawingRenderingContext** object. For details, see [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md). <br>If the value is **null** or **undefined**, **context** is considered unset. |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | Yes | AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.<br>If the value is **null** or **undefined**, the default value of **ImageAIOptions** is used. The default value is **{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }**, indicating that subject recognition and text recognition are enabled. |
 
 ## Canvas
 
@@ -53,16 +57,15 @@ Creates a **Canvas** component. You can specify a **CanvasRenderingContext2D** o
 Canvas(params: CanvasParams)
 ```
 
-Creates a **Canvas** component that does not cache commands using **CanvasParams**. The maximum allowed size cannot exceed 10000 px × 10000 px. If the size exceeds this limit, the **Canvas** component will fail to be created.
+Creates a **Canvas** component that does not cache commands using **CanvasParams**. When creating a **Canvas** component, the maximum area cannot exceed 10000 px × 10000 px. If the area exceeds this limit, the **Canvas** component cannot be created properly. When the **Canvas** component does not have a fixed size set, it expands to its maximum available size by default.
 
 > **NOTE:** 
 > 
-> * The **Canvas** component created using this API will return a DrawingRenderingContext object in the input parameter of the onReady callback, which can be used for drawing on the
-> **Canvas** component.
+> * The **Canvas** component created using this API returns a [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) object in the input parameter of the [onReady](arkts-arkui-canvas-comp-attribute.md#onready) callback, which can be used for drawing on the **Canvas** component.
 > 
-> * The **Canvas** component created using this API will not respond to drawing commands when it is not visible.
+> * The **Canvas** component created using this API does not respond to drawing instructions when the component is invisible.
 > 
-> * Scenarios where the component is not visible mainly include: the page containing the component moves to the background, the component slides outside the window, or the visibilityattribute is set to hidden. This does not include scenarios where the component is obscured by other components or windows.
+> * Invisible scenarios mainly include the page where the component is located entering the background, the component sliding out of the window, and setting the visibility attribute to hidden. Scenarios where the component is obscured by other components or other windows are not included.
 
 **Since:** 23
 
@@ -76,7 +79,7 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [CanvasParams](arkts-arkui-canvasparams-i.md) | Yes | Construction parameters of the **Canvas** component. |
+| params | [CanvasParams](arkts-arkui-canvasparams-i.md) | Yes | Construction parameters of the **Canvas** component, used to create a **Canvas** component that does not cache drawing instructions. For details about the configuration parameters, see [CanvasParams](arkts-arkui-canvasparams-i.md). |
 
 ## Summary
 
@@ -85,7 +88,7 @@ Creates a **Canvas** component that does not cache commands using **CanvasParams
 | Name | Description |
 | --- | --- |
 | [CanvasParams](arkts-arkui-canvasparams-i.md) | Defines the parameters of the **Canvas** component. |
-| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | **CanvasPattern** represents an object, created by the createPattern API, describing an image filling pattern based on the image and repetition mode. It is suitable for scenarios where pattern filling or background textures are needed on a canvas, simplifying pattern filling implementation and improving drawing efficiency. |
 | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | Defines the specific configuration parameters for the rendering context. |
 | [Size](arkts-arkui-size-i.md) | Provides size information of the **DrawingRenderingContext** object. |
 | [TextMetrics](arkts-arkui-textmetrics-i.md) | Size information of the text. |

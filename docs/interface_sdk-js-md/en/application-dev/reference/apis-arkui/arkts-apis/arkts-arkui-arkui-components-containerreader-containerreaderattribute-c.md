@@ -1,6 +1,8 @@
 # ContainerReaderAttribute
 
-Defines the ContainerReader attribute functions. Provides methods for configuring container reading parameters and breakpoint analysis properties.
+In addition to the [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md), the following attributes are supported:
+
+[Universal events](../arkts-components/arkts-arkui-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** ContainerReaderAttribute extends CommonMethod<ContainerReaderAttribute>
 
@@ -20,7 +22,7 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 ```
 
-Sets the breakpoint configuration for container dimension analysis. Defines a set of threshold values that trigger different layout behaviors based on container size.
+Sets the breakpoint configuration options, defining the size thresholds that trigger different layout behaviors.
 
 **Since:** 26.0.0
 
@@ -36,7 +38,7 @@ Sets the breakpoint configuration for container dimension analysis. Defines a se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
+| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | Breakpoint configuration options, containing arrays of width and height breakpoint thresholds. |
 
 **Return value:**
 

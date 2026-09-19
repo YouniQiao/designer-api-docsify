@@ -1,6 +1,6 @@
 # SafeAreaEdge
 
-Enumerates the edges for expanding the safe area.
+Edge of the safe area for expanding the layout.
 
 **Since:** 10
 

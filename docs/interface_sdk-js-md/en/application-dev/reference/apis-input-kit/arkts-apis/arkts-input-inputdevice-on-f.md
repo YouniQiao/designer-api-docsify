@@ -12,7 +12,7 @@ import { inputDevice } from '@kit.InputKit';
 function on(type: 'change', listener: Callback<DeviceListener>): void
 ```
 
-Enables listening for device hot swap events. When performing this operation, you need to connect to external devices such as a mouse, keyboard, and touchscreen. This API uses an asynchronous callback to return the result.
+Registers a listener for input device hot-swap events. This feature requires connecting external devices such as a mouse, keyboard, or touchscreen. This API uses an asynchronous callback to return the result. You are advised to execute this operation on the main application thread and unregister the listener before the thread exits.
 
 **Since:** 9
 

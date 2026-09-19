@@ -12,16 +12,16 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 
 | Name | Description |
 | --- | --- |
-| [FoldSplitContainer](arkts-arkui-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md) | **FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state. |
+| [FoldSplitContainer](arkts-arkui-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md) | The **FoldSplitContainer** component implements split-screen layout, providing region control for two-panel and three -panel layouts on foldable screens in the expanded state (device fully unfolded), hover state (device half-folded), and folded state (device fully folded). It is suitable for responsive layout adaptation scenarios in foldable screen apps, helping developers implement intelligent split-panel layouts across multiple screen states and improving user experience. For details about fold status, see [display.FoldStatus](arkts-arkui-display-foldstatus-e.md). |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md) | Layout information for the expanded state. |
-| [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md) | Provides the layout information of the folded state. |
-| [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md) | Layout information for the semi-folded state. |
-| [HoverModeStatus](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermodestatus-i.md) | Provides information about the device or application's folding, rotation, and window state. |
+| [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md) | Defines layout information for the expanded state. |
+| [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md) | Defines the layout information for the folded state. |
+| [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md) | Defines layout information for the hover state. |
+| [HoverModeStatus](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermodestatus-i.md) | Provides device or application information covering fold status, hover mode, application rotation, and window status type. |
 
 ### Enums
 
@@ -34,7 +34,7 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 
 | Name | Description |
 | --- | --- |
-| [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md) | Implements a handler for the **onHoverStatusChange** event. |
+| [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md) | Defines an event handler for hover state changes. |
 
 ## Examples
 

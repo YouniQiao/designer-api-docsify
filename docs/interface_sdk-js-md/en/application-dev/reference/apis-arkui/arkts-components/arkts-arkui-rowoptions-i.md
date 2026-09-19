@@ -18,11 +18,19 @@ Sets the spacing between child components of the **Row** component.
 space?: string | number
 ```
 
-Spacing between child components. Since API version 9, this parameter does not take effect when it is set to a negative number or when **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround** or **FlexAlign.SpaceEvenly**. Unit: vp. If an invalid value is set, the default value is used instead.  
-> **NOTE:** 
-> 
-> The value of **space** can be a number greater than or equal to 0 or a string that can be converted to a number.
-> Default value: **0**.
+Spacing between child components in the horizontal layout.
+
+Since API version 9, this attribute does not take effect when **space** is a negative number or **justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.
+
+Default value: **0**
+
+Unit: vp
+
+Invalid value: the default value is used.
+
+**NOTE:** 
+
+The value of **space** is a number greater than or equal to 0, or a string that can be converted to a number.
 
 **Type:** string &#124; number
 
