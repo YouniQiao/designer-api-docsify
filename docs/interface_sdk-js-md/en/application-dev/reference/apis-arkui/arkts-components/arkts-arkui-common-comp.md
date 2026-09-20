@@ -38,7 +38,7 @@ Constructor
 | [@Entry](arkts-arkui-common-comp-entry-d.md) | Defines Entry ClassDecorator. |
 | [@Env](arkts-arkui-common-comp-env-d.md) | Defining Env PropertyDecorator. On API 26.0.0 and above, the parameter also supports the SystemEnvKey&lt;T&gt; type. |
 | [@Event](arkts-arkui-common-comp-event-d.md) | Defining Event PropertyDecorator. |
-| [@Extend](arkts-arkui-common-comp-extend-d.md) | Defining Extend MethodDecorator |
+| [@Extend](arkts-arkui-common-comp-extend-d.md) | The @Extend decorator is used to extend the styles of specified components. It supports defining multiple style attributes in a unified manner within the decorated function, and enables flexible style reuse through parameter passing. This is suitable for scenarios where the same styles need to be applied to multiple components, reducing style code duplication. |
 | [@Link](arkts-arkui-common-comp-link-d.md) | Defining Link PropertyDecorator. |
 | [@Local](arkts-arkui-common-comp-local-d.md) | Defining Local PropertyDecorator. |
 | [@LocalBuilder](arkts-arkui-common-comp-localbuilder-d.md) | Defining LocalBuilder MethodDecorator |
@@ -61,7 +61,6 @@ Constructor
 | [@State](arkts-arkui-common-comp-state-d.md) | Defining State PropertyDecorator. |
 | [@StorageLink](arkts-arkui-common-comp-storagelink-d.md) | Defining StorageLink PropertyDecorator. |
 | [@StorageProp](arkts-arkui-common-comp-storageprop-d.md) | Defining StorageProp PropertyDecorator. |
-| [@Styles](arkts-arkui-common-comp-styles-d.md) | Defining Styles MethodDecorator |
 | [@SyncMonitor](arkts-arkui-common-comp-syncmonitor-d.md) | Define SyncMonitor MethodDecorator. Decorator path parameters are the same as defined for Monitor. The function decorator is functionally equivalent to the UIUtils.addMonitor API with isSynchronous enabled. SyncMonitor must contain at least one path item, with multiple path items separated by commas. Path items are either observed attribute names or array item indices.The path in SyncMonitor supports wildcard at the end of a path item, but path items must never appear at the beginning or in the middle of a path. All other paths using one or more wildcard are invalid. |
 | [@Trace](arkts-arkui-common-comp-trace-d.md) | Defining Trace PropertyDecorator. |
 | [@Track](arkts-arkui-common-comp-track-d.md) | Defining Track PropertyDecorator. |
@@ -220,6 +219,7 @@ Constructor
 | [UICommonEvent](arkts-arkui-uicommonevent-i.md) | Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback. |
 | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | Provides APIs for configuring gestures bound to a component. |
 | [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
+| [VersionCondition](arkts-arkui-versioncondition-i.md) | Defines VersionCondition interface |
 | [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md) | Defines the vertical align rule of relative container. |
 | [VisibleAreaEventOptions](arkts-arkui-visibleareaeventoptions-i.md) | Describes visible area change configuration options. |
 
@@ -283,6 +283,7 @@ Constructor
 | [ShouldRecognizerParallelWithCallback](arkts-arkui-shouldrecognizerparallelwithcallback-t.md) | Represents the callback used to set the parallel relationship between gestures of the current component and gestures of other components in the response chain. |
 | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) | Defines the callback type used in onSizeChange. The value of oldValue is last size of the component. The value of newValue is new size of the component. |
 | [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md) | Defines callback context information, which is passed to the application in the hover detection callback to allow the application to access the drag status. |
+| [StylesVersionDecorator](arkts-arkui-stylesversiondecorator-t.md) | Define Styles Decorator type with version control. |
 | [Summary](arkts-arkui-summary-t.md) | Provides a summary of drag-related data. |
 | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | Defines custom icon symbol configurations. |
 | [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) | Base class for system material objects. |

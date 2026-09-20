@@ -878,9 +878,13 @@
   <!--Del-->
   - [queryToolSummaries(system api)](arkts-ability-climanager-querytoolsummaries-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [registerCliHook(system api)](arkts-ability-climanager-registerclihook-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [sendMessage(system api)](arkts-ability-climanager-sendmessage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [subscribeSession(system api)](arkts-ability-climanager-subscribesession-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterCliHook(system api)](arkts-ability-climanager-unregisterclihook-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CliSessionInfo(system api)](arkts-ability-climanager-clisessioninfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -897,6 +901,10 @@
   - [invokeFunction(system api)](arkts-ability-functionmanager-invokefunction-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [queryFunctions(system api)](arkts-ability-functionmanager-queryfunctions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [registerFunctionHook(system api)](arkts-ability-functionmanager-registerfunctionhook-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterFunctionHook(system api)](arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [InvokeOptions(system api)](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1779,6 +1787,16 @@
   - [ChildProcessInformation](arkts-ability-childprocessinformation.md)
     - [ChildProcessInformation](arkts-ability-childprocessinformation-i.md)
   <!--Del-->
+  - [CliHook](arkts-ability-clihook.md)<!--DelEnd-->
+    <!--Del-->
+    - [CliHook(system api)](arkts-ability-clihook-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ExecCmdParam(system api)](arkts-ability-clihook-execcmdparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ExecResultWrap(system api)](arkts-ability-clihook-execresultwrap-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ExecToolParam(system api)](arkts-ability-clihook-exectoolparam-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [CliToolEvent](arkts-ability-clitoolevent.md)<!--DelEnd-->
     <!--Del-->
     - [CliToolEvent(system api)](arkts-ability-clitoolevent-i-sys.md)<!--DelEnd-->
@@ -1822,6 +1840,14 @@
   - [ExtensionRunningInfo(ExtensionRunningInfo)](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
     <!--Del-->
     - [ExtensionRunningInfo(system api)](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FunctionHook](arkts-ability-functionhook.md)<!--DelEnd-->
+    <!--Del-->
+    - [FunctionHook(system api)](arkts-ability-functionhook-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [FunctionResultWrap(system api)](arkts-ability-functionhook-functionresultwrap-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [InvokeFunctionParam(system api)](arkts-ability-functionhook-invokefunctionparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FunctionInfo](arkts-ability-functioninfo.md)<!--DelEnd-->
     <!--Del-->

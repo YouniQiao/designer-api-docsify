@@ -1,6 +1,6 @@
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">ArkTS API <span class="tree-count">(1440)</span></summary>
+    <summary class="tree-section-label">ArkTS API <span class="tree-count">(1453)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>@ohos.ability.ability <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability-ability.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
@@ -985,8 +985,10 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-querysession-f-sys.md">querySession(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-querytools-f-sys.md">queryTools(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-querytoolsummaries-f-sys.md">queryToolSummaries(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-registerclihook-f-sys.md">registerCliHook(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-sendmessage-f-sys.md">sendMessage(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-subscribesession-f-sys.md">subscribeSession(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-unregisterclihook-f-sys.md">unregisterCliHook(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-clisessioninfo-i-sys.md">CliSessionInfo(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-execcmdoptions-i-sys.md">ExecCmdOptions(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-climanager-execoptions-i-sys.md">ExecOptions(system api)</a></li>
@@ -999,6 +1001,8 @@
 <ul class="tree-l2">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionmanager-invokefunction-f-sys.md">invokeFunction(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionmanager-queryfunctions-f-sys.md">queryFunctions(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionmanager-registerfunctionhook-f-sys.md">registerFunctionHook(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionmanager-unregisterfunctionhook-f-sys.md">unregisterFunctionHook(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionmanager-invokeoptions-i-sys.md">InvokeOptions(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionmanager-invokeresult-i-sys.md">InvokeResult(system api)</a></li>
 </ul>
@@ -1874,6 +1878,15 @@
 </ul>
 </details></li>
 <li class="has-children"><details>
+<summary>CliHook <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clihook.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
+<ul class="tree-l3">
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clihook-i-sys.md">CliHook(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clihook-execcmdparam-i-sys.md">ExecCmdParam(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clihook-execresultwrap-i-sys.md">ExecResultWrap(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clihook-exectoolparam-i-sys.md">ExecToolParam(system api)</a></li>
+</ul>
+</details></li>
+<li class="has-children"><details>
 <summary>CliToolEvent <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clitoolevent.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l3">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-clitoolevent-i-sys.md">CliToolEvent(system api)</a></li>
@@ -1946,6 +1959,14 @@
 <summary>ExtensionRunningInfo(ExtensionRunningInfo) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-extensionrunninginfo.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l3">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-extensionrunninginfo-i-sys.md">ExtensionRunningInfo(system api)</a></li>
+</ul>
+</details></li>
+<li class="has-children"><details>
+<summary>FunctionHook <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionhook.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
+<ul class="tree-l3">
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionhook-i-sys.md">FunctionHook(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionhook-functionresultwrap-i-sys.md">FunctionResultWrap(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-functionhook-invokefunctionparam-i-sys.md">InvokeFunctionParam(system api)</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>

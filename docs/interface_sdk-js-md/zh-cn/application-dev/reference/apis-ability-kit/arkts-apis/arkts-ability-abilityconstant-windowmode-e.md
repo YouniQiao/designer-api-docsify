@@ -51,3 +51,17 @@ WINDOW_MODE_SPLIT_SECONDARY = 101
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## WINDOW_MODE_SPLIT
+
+```TypeScript
+WINDOW_MODE_SPLIT = 105
+```
+
+分屏窗口模式。仅在应用内跳转场景下生效，且仅在折叠屏设备和平板上生效。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core

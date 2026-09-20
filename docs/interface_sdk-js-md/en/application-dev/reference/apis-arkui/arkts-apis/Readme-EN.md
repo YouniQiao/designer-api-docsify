@@ -1564,6 +1564,7 @@
   - [ImageRepeat](arkts-arkui-imagerepeat-e.md)
   - [ImageSize](arkts-arkui-imagesize-e.md)
   - [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
+  - [ImmersiveStrategy](arkts-arkui-immersivestrategy-e.md)
   - [InputEventInterceptAction](arkts-arkui-inputeventinterceptaction-e.md)
   - [InputEventSubTypeMask](arkts-arkui-inputeventsubtypemask-e.md)
   - [InteractionHand](arkts-arkui-interactionhand-e.md)

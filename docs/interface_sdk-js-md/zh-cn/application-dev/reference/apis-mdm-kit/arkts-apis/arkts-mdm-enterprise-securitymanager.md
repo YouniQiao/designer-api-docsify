@@ -45,6 +45,7 @@ import { securityManager } from '@kit.MDMKit';
 | [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md) | 安装用户证书，使用Promise异步回调。企业可通过此接口将证书安装到设备上，用于企业VPN连接、安全认证、数字签名等场景，实现企业级的安全通信和数据保护。 |
 | [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installusercertificate-1) | 支持按系统账户安装用户证书。企业可为不同用户账户安装独立的证书，实现多用户环境下的安全隔离和个性化证书管理，满足多用户设备的安全管控需求。 |
 | [isScreenLockDisabledForAccount](arkts-mdm-securitymanager-isscreenlockdisabledforaccount-f.md) | 查询当前用户的滑动解锁能力是否被禁用。 |
+| [isWeakPinEnabled](arkts-mdm-securitymanager-isweakpinenabled-f.md) | 检查是否开启了弱PIN校验。 |
 | [removeAllowedPermissionBundle](arkts-mdm-securitymanager-removeallowedpermissionbundle-f.md) | 从权限使用例外名单中移除指定应用，移除后该应用不能继续使用对应的权限。 |
 | [setAppClipboardPolicy](arkts-mdm-securitymanager-setappclipboardpolicy-f.md) | 设置设备剪贴板策略。策略设置后，应用将按照设置的策略限制剪贴板的使用范围。适用于企业数据防泄露场景，如限制敏感应用（如企业邮箱、财务系统）的剪贴板使用范围，防止敏感数据被复制到非授权应用，降低数据泄露风险。企业可通过此接口控制应用的剪贴板使用权限，防止敏感数据通过剪贴板泄露到未授权应用，增强企业数据安全防护能力。 |
 | [setAppClipboardPolicy](arkts-mdm-securitymanager-setappclipboardpolicy-f.md#setappclipboardpolicy-1) | 设置指定用户下指定应用的设备剪贴板策略。策略设置后，指定应用的剪贴板将按照策略限制使用范围。企业可为不同用户的不同应用配置差异化的剪贴板使用权限，实现精细化的数据访问控制，满足多用户多应用场景下的安全管控需求。 |
@@ -56,6 +57,7 @@ import { securityManager } from '@kit.MDMKit';
 | [setScreenWatermarkImage](arkts-mdm-securitymanager-setscreenwatermarkimage-f.md) | 设置屏幕水印策略，对所有用户生效。 |
 | [setWatermarkImage](arkts-mdm-securitymanager-setwatermarkimage-f.md) | 为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。 |
 | [setWatermarkImage](arkts-mdm-securitymanager-setwatermarkimage-f.md#setwatermarkimage-1) | 为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。 |
+| [setWeakPinEnable](arkts-mdm-securitymanager-setweakpinenable-f.md) | 使能弱密码库。 |
 | [uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md) | 卸载企业应用重签名证书。卸载企业重签名证书后，使用该证书签名的应用在设备重启前正常运行，设备重启后无法运行。 |
 | [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md) | 卸载用户证书，使用Promise异步回调。适用于企业证书管理场景，如证书过期更换、撤销员工对企业资源的访问权限等。企业可在证书过期、更换或不再需要时调用此接口卸载证书，确保设备证书管理的灵活性和安全性。 |
 

@@ -131,6 +131,7 @@ import { audio } from '@kit.AudioKit';
 | [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) | Provides APIs for tone playing. |
 | [VolumeEvent](arkts-audio-audio-volumeevent-i-sys.md) | Describes the event received by the application when the volume is changed. |
 | [VolumeGroupInfo](arkts-audio-audio-volumegroupinfo-i-sys.md) | Describes an audio volume group. |
+| [VolumeLimitExceededEvent](arkts-audio-audio-volumelimitexceededevent-i-sys.md) | Describes the notification event indicating that the volume exceeds the threshold. after receiving the notification, the app must send the acknowledgment result. through [confirmVolumeLimitExceeded](arkts-audio-audio-audiovolumemanager-i-sys.md#confirmvolumelimitexceeded) before continuing to adjust the volume. |
 <!--DelEnd-->
 
 ### Enums

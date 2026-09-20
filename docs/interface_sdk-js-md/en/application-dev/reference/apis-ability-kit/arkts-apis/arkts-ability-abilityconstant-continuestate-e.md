@@ -6,6 +6,8 @@ export enum ContinueState
 
 Enumerates the mission continuation states of the application. It is used in the [setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate) API of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md).
 
+> **NOTE:** This API does not take effect on Wearable devices that do not support distributed services.
+
 **Since:** 10
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

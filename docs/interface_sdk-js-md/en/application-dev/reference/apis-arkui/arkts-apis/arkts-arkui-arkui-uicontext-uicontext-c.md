@@ -171,6 +171,32 @@ Specifies a clear animation host instance context via the UIContext object and t
 | param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
 | processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
 
+## applyDefaultImmersiveStrategy
+
+```TypeScript
+applyDefaultImmersiveStrategy(...types: ImmersiveStrategy[]): void
+```
+
+Applies the default safe area immersive strategy on the current page. This API applies to scenarios such as full-screen or immersive applications. You can centrally configure the safe area immersive strategy before the first layout. After the strategies are applied, the way the page handles the safe area is adjusted based on the specified strategies.
+
+> **NOTE:** 
+> 
+> - Dynamic update is not supported. This API takes effect only when called before the first layout process starts on the current page. If it is called after the page enters the first layout process, the applied strategies remain unchanged and this API does not take effect.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| types | [ImmersiveStrategy](arkts-arkui-immersivestrategy-e.md)[] | Yes | Immersive strategies to apply. An empty array clears all applied immersive strategies. |
+
 ## bindTabsToNestedScrollable
 
 ```TypeScript

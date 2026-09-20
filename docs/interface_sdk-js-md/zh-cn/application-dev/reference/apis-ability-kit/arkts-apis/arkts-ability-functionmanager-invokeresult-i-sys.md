@@ -15,7 +15,7 @@ Function调用的结果。包含Function调用成功时返回的数据，调用�
 ## 导入模块
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager, FunctionHook, InvokeFunctionParam, FunctionResultWrap } from '@kit.AbilityKit';
 ```
 
 ## data

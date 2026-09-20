@@ -29,6 +29,9 @@ onConfigurationUpdate(newConfig: Configuration): void
 > 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口设置
 > 应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+> 
+> 如果需要在页面中监控Ability的环境变量，可以使用
+> ApplicationContext.on('environment')方法。
 
 **起始版本：** 9
 
@@ -42,7 +45,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 | 表示更新后的配置信息。 |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | 是 | 表示更新后的配置信息，包含语言、颜色模式等系统配置项。 |
 
 **示例**
 
@@ -68,6 +71,9 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 > **说明：** 
 > 
 > onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
+> 
+> 如果需要在页面中监控Ability的环境变量，可以使用
+> ApplicationContext.on('environment')方法。
 
 **起始版本：** 9
 

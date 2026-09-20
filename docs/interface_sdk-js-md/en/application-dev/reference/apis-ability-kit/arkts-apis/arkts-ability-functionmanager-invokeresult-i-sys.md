@@ -15,7 +15,7 @@ Encapsulates the success or failure status of function invocation.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager, FunctionHook, InvokeFunctionParam, FunctionResultWrap } from '@kit.AbilityKit';
 ```
 
 ## data

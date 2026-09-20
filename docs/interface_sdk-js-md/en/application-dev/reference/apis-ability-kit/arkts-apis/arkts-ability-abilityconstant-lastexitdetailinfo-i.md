@@ -58,7 +58,7 @@ Specific reason for the last exit of the ability.
 killReason?: string
 ```
 
-Indecates kill reason message.
+Indicates the reason for the last exit of the Ability. For details about the values, see [Application Termination Event Reason Field Description](../../../dfx/hiappevent-watcher-app-killed-events.md#reason字段说明).
 
 **Type:** string
 

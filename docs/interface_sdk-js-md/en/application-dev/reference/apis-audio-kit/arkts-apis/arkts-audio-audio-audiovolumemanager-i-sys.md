@@ -22,6 +22,37 @@ Before calling any API in AudioVolumeManager, you must use [getVolumeManager](ar
 import { audio } from '@kit.AudioKit';
 ```
 
+## confirmVolumeLimitExceeded
+
+```TypeScript
+confirmVolumeLimitExceeded(volumeType: AudioVolumeType, result: boolean): void
+```
+
+Confirms the result of adjusting the volume that exceeds the volume protection threshold.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type, different volume types have different thresholds, volumeType is used to identify the current volume type threshold. |
+| result | boolean | Yes | Confirm that the volume adjustment exceeds the volume protection threshold, and false indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. |
+
 ## forceVolumeKeyControlType
 
 ```TypeScript
@@ -816,6 +847,35 @@ Unsubscribes from the system volume change events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
+## offVolumeLimitExceeded
+
+```TypeScript
+offVolumeLimitExceeded(callback?: Callback<VolumeLimitExceededEvent>): void
+```
+
+Unsubscribes from monitoring whether the current volume exceeds the volume protection threshold.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeLimitExceededEvent](arkts-audio-audio-volumelimitexceededevent-i-sys.md)&gt; | No | Callback used to get the volume limit event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
 ## offVolumePercentageChange
 
 ```TypeScript
@@ -978,6 +1038,35 @@ Subscribes to system volume change events. When the system volume for the target
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system app. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onVolumeLimitExceeded
+
+```TypeScript
+onVolumeLimitExceeded(callback: Callback<VolumeLimitExceededEvent>): void
+```
+
+Listens for the event when the current volume exceeds the volume protection threshold.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeLimitExceededEvent](arkts-audio-audio-volumelimitexceededevent-i-sys.md)&gt; | Yes | Callback used to get the volume limit event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## onVolumePercentageChange

@@ -42,6 +42,26 @@
   - [CooperateMsg(系统接口)](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CooperateState(系统接口)](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.distributed.softbusBase(This module provides the capabilities for device perception.)](arkts-distributedservice-distributed-softbusbase.md)<!--DelEnd-->
+  <!--Del-->
+  - [getPerceptionDeviceList(系统接口)](arkts-distributedservice-softbusbase-getperceptiondevicelist-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setPerceptionAdvHighFreq(系统接口)](arkts-distributedservice-softbusbase-setperceptionadvhighfreq-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startPerceptionAdv(系统接口)](arkts-distributedservice-softbusbase-startperceptionadv-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startPerceptionScan(系统接口)](arkts-distributedservice-softbusbase-startperceptionscan-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [stopPerceptionAdv(系统接口)](arkts-distributedservice-softbusbase-stopperceptionadv-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [stopPerceptionScan(系统接口)](arkts-distributedservice-softbusbase-stopperceptionscan-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionDeviceInfo(系统接口)](arkts-distributedservice-softbusbase-perceptiondeviceinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionCycle(系统接口)](arkts-distributedservice-softbusbase-perceptioncycle-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionType(系统接口)](arkts-distributedservice-softbusbase-perceptiontype-e-sys.md)<!--DelEnd-->
 - [@ohos.distributedDeviceManager(设备管理)](arkts-distributedservice-distributeddevicemanager.md)
   - [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md)
   - [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md)
